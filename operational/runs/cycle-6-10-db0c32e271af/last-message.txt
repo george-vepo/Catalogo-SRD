@@ -1,0 +1,12 @@
+Resultado: `BLOCKED / UNKNOWN` — o ciclo 6–10 não foi processado.
+
+Evidências observadas:
+
+- Pacote-base validado pelo supervisor: SHA-256 `2a8b416c…0fe77`, 607 IDs, 190 fichas completas e 23 imagens verificadas.
+- Tentativas anteriores falharam por texto vazio e stdin não UTF-8.
+- A tentativa atual permanece `RUNNING`, sem `stdout`, `stderr`, `last-message` ou ZIP produzido.
+- O executor retorna `helper_unknown_error: setup refresh had errors` para execução, hash, extração, testes e empacotamento.
+- Nenhum ID foi selecionado, nenhuma pesquisa foi realizada e nenhum pacote `LOTE10` foi gerado.
+- O pacote-base não foi alterado. O relatório de bloqueio também não pôde ser gravado por falha de escrita do ambiente.
+
+É necessário restabelecer o executor/UTF-8 e reconciliar a tentativa atual antes de qualquer retry.

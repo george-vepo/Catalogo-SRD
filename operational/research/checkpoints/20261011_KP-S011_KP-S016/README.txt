@@ -1,0 +1,1 @@
+5 research records researched through ChatGPT, persisted via V-Bridge directly; no agents. No catalog integration or image approval. KP-S011 ambiguous old source; KP-S013 errata; KP-S016 source edition mismatch. Visual/review gates pending.

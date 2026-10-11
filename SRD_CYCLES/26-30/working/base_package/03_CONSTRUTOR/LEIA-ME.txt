@@ -1,0 +1,9 @@
+Construtor de continuidade — versão 2.1.0 / ciclo operacional 16-20
+
+Este script reproduz os entregáveis v2.1.0 com as cópias de trabalho dos arquivos-base que estão nesta pasta. O pacote-base validado LOTE15 permanece separado em 00_PACOTE_BASE no pacote final.
+
+Este ciclo processou exatamente KP-A006, KP-A016, KP-A017, KP-A018 e KP-A019: quatro fichas mecânicas completas e um registro parcial preservado. O estado resultante é 203/607 fichas completas e 23/607 imagens diretas verificadas; os cinco registros deste ciclo não receberam URL de imagem sem validação técnica e visual.
+
+Para o ciclo seguinte, preserve este checkpoint; crie uma pasta de lote nova, copie o construtor e os quatro arquivos de entrada, altere VERSION e LOT, integre somente dados verificáveis e gere um novo pacote sem substituir versões anteriores. A próxima execução deve processar as posições 21 a 25 e parar após publicar/auditar a posição 25, salvo se alcançar antes as 607 fichas e as 607 imagens verificadas.
+
+Gate pendente: o render_docx.py não conseguiu iniciar a conversão visual porque soffice.exe/LibreOffice não está instalado nem disponível no PATH. A inspeção página a página dos dois DOCX deve ser repetida antes da aprovação final.

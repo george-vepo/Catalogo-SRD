@@ -1,0 +1,1 @@
+SRD 607 ledger v3. 15 pesquisas persistidas, 380 fichas ainda sem pesquisa, 212 fichas completas no ultimo pacote canonico, 23 imagens verificadas, 584 imagens pendentes. 76 conjuntos de cinco ainda para pesquisa. Estado de pesquisa NAO equivale a conclusao. Pesquisado diretamente pelo ChatGPT, gravado pelo V-Bridge, sem agentes.

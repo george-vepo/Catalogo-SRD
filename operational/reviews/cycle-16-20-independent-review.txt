@@ -1,0 +1,48 @@
+Você é o revisor independente Codex do ciclo SRD-607 16–20. Não implementou esta
+execução. Faça somente uma revisão read-only e não altere, crie, remova,
+limpe, reverta, faça commit ou empacote qualquer arquivo. Não use navegador,
+não crie conversa e não use codex exec resume.
+
+Alvo:
+D:\Repos\SRD-Card-Game-607-Supervisor\SRD_CYCLES\16-20\SRD_PACOTE_CONTINUIDADE_LOTE20_2026-10-10.zip
+
+Pacote-base esperado:
+D:\Repos\SRD-Card-Game-607-Supervisor\SRD_CYCLES\11-15\SRD_PACOTE_CONTINUIDADE_LOTE15_2026-10-10.zip
+SHA-256 esperado do pacote-base:
+568fe7a613d8efae964748f821306aa9f99e6f0a1addf7a8aded26b94d61dd72
+
+Revise independentemente, usando apenas comandos de leitura:
+1. SHA-256 do pacote final e do pacote-base; ZIP externo legível e sem entradas
+   inesperadas ou duplicadas.
+2. Presença de 00_PACOTE_BASE, 01_CONTINUIDADE, 02_SAIDA_v2.1.0,
+   03_CONSTRUTOR e 04_INSUMOS. Confira o manifesto SHA-256 contra todos os
+   arquivos que ele lista e confira a cópia do pacote-base.
+3. Estado e prompt de continuidade: ciclo 16–20, próximo ciclo 21–25,
+   posições 21, 22, 23, 24 e 25, contagens 203 fichas completas e 23 imagens.
+4. JSON e os três CSVs de saída: 607 linhas/IDs únicos, mesmos conjuntos de
+   IDs, estatísticas coerentes e preservação do critério de exclusão das 28
+   criaturas autorais. Compare o conjunto de IDs com o pacote-base.
+5. Verifique exatamente a seleção desta execução:
+   KP-A006 parcial e pendente; KP-A016, KP-A017, KP-A018 e KP-A019 completos;
+   ND de catálogo igual ao ND de fonte; nenhuma das cinco fichas deve ter URL
+   de imagem direta ou candidata não verificada.
+6. ZIP interno de imagens/entregáveis: legibilidade, 7 entradas, sem
+   duplicatas. DOCX devem ser ZIPs válidos e conter os cinco IDs do ciclo.
+   Não instale LibreOffice e não trate a inspeção visual como concluída: o
+   relatório deve documentar o bloqueio por ausência de soffice.exe.
+7. Procure tokens de citação internos (padrões turn...search/view...) e
+   possíveis credenciais/segredos nos artefatos, sem exibir qualquer segredo
+   caso encontre um.
+
+Não confie em afirmações do executor. Registre evidência observada. Retorne
+somente:
+REVIEW_STATUS: PASS_WITH_BLOCKER, FINDINGS ou BLOCKED
+FINDINGS:
+- [SEVERITY] finding com caminho e evidência observável
+...
+EVIDENCE:
+- comandos/contagens/hashes observados
+
+PASS_WITH_BLOCKER só é aceitável se os gates mecânicos passarem e o único
+bloqueio for a renderização visual indisponível; nesse caso, deixe claro que o
+pacote não está aprovado para conclusão final.

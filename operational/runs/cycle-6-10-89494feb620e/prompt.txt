@@ -1,0 +1,22 @@
+Você é uma execução independente do Codex CLI iniciada pelo supervisor local da campanha SRD Card Game 607.
+
+MODELO: gpt-5.6-luna
+RACIOCÍNIO: max
+NÃO use codex exec resume, não abra nem simule conversa do ChatGPT e não use automação de navegador para criar conversa.
+
+Campanha: SRD-607
+Pacote de continuidade-base validado: D:\Repos\SRD-Card-Game-607-Supervisor\batches\batch-0001\SRD_PACOTE_CONTINUIDADE_LOTE5_2026-10-10.zip
+SHA-256 do pacote-base: 2a8b416dc37747abd9981ec6ad54363c65046f77719206a0dbaa8419ad80fe77
+Intervalo desta execução: ciclo operacional 6–10 (exatamente cinco posições consecutivas; selecione as cinco próximas fichas pendentes do estado confirmado, sem tratar números históricos de lote como novos IDs).
+Contagem confirmada antes do ciclo: fichas completas=190; imagens diretas verificadas=23.
+Diretório obrigatório de saída desta execução: D:\Repos\SRD-Card-Game-607-Supervisor\SRD_CYCLES\6-10
+
+Use o estado e os construtores existentes no pacote. O helper local de empacotamento, quando aplicável, é $script:SupervisorRoot\New-SRDOperationalContinuationPackage.ps1; a saída final deve ser um pacote único SRD_PACOTE_CONTINUIDADE_LOTE10_<data>.zip dentro do diretório do ciclo, preservando o pacote-base recebido.
+
+Leia o pacote-base e as instruções do projeto. Derive quantidade de registros, limites e seleção do estado real; não invente limites, IDs, atributos, valores, ações, CDs, URLs, status HTTP ou confirmações. Preserve exatamente os 607 IDs válidos e os 28 homebrews autorais excluídos; mantenha os homebrews publicados por Kobold Press, EN Publishing/A5E e MCDM quando forem válidos.
+
+Execute apenas os lotes atribuídos a esta execução. Gere os documentos, JSON, CSVs, relatório, manifesto SHA-256 e ZIP versionado exigidos pelo projeto. Audite IDs sem duplicatas, identidade/publicação/editora/edição/sistema/variante/porte/tipo/ND, mecânica e referências rastreáveis, URLs de imagem somente após verificação configurada, contagens entre formatos e integridade dos ZIPs. Registre pendências honestamente.
+
+Ao finalizar, deixe no diretório obrigatório um pacote de continuidade cujo nome contenha o último ciclo realmente processado (por exemplo, LOTE10), sem sobrescrever pacotes anteriores. O pacote deve conter 01_CONTINUIDADE, 02_SAIDA_<versão>, 03_CONSTRUTOR, 04_INSUMOS e, a partir do segundo ciclo, 00_PACOTE_BASE com o pacote validado anterior. Inclua no prompt de continuidade as cinco próximas posições consecutivas. Se execução, preflight, credential broker, auditoria, empacotamento ou ferramenta de pesquisa bloquear, retorne código de saída diferente de zero ou deixe o bloqueio explicitamente documentado; não converta bloqueio em sucesso.
+
+Não grave credenciais, tokens ou segredos em prompts, arquivos de estado ou logs. O supervisor só avançará depois de validar este pacote e suas hashes.

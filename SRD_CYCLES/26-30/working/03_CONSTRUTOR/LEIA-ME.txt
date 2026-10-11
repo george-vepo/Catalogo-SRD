@@ -1,0 +1,11 @@
+Construtor de continuidade — versão 2.1.0 / ciclo operacional 26-30
+
+Este script reproduz os entregáveis v2.1.0 com as cópias de trabalho dos arquivos-base que estão nesta pasta. O pacote-base validado LOTE25 permanece separado em 00_PACOTE_BASE no pacote final.
+
+Este ciclo processa exatamente KP-S008, KP-S009, KP-S010, KP-S011 e KP-S012: quatro fichas mecânicas completas e um registro parcial preservado por inconsistência textual da fonte. O estado resultante esperado é 212/607 fichas completas e 23/607 imagens diretas verificadas; os cinco registros deste ciclo não recebem URL de imagem sem validação técnica e visual.
+
+Para o ciclo seguinte, preserve este checkpoint; crie uma pasta de lote nova, copie o construtor e os quatro arquivos de entrada, altere VERSION e LOT, integre somente dados verificáveis e gere um novo pacote sem substituir versões anteriores. A próxima execução deve processar as posições 31 a 35 e parar após publicar/auditar a posição 35, salvo se alcançar antes as 607 fichas e as 607 imagens verificadas.
+
+Gate pendente: o render_docx.py não conseguiu iniciar a conversão visual porque soffice.exe/LibreOffice não está instalado nem disponível no PATH. A inspeção página a página dos dois DOCX deve ser repetida antes da aprovação final.
+
+Escopo do gate de citações internas: a limpeza e a verificação deste ciclo aplicam-se aos artefatos atuais (construtor, JSON, CSVs, DOCX/XML, relatório, manifesto e prompt). O 00_PACOTE_BASE é um checkpoint histórico preservado byte a byte para manter o SHA-256 do Lote25; ele não é reescrito nem usado como prova de ausência de marcadores nos artefatos atuais.

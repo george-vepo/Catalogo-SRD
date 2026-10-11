@@ -1,0 +1,56 @@
+SRD CARD GAME — MISSÃO DO WORKER: FICHAS INTEGRAIS E LINKS DIRETOS DE ARTES (607 CRIATURAS)
+VERSÃO DA SOLICITAÇÃO: 2026-10-09
+
+OBJETIVO
+Concluir, com pesquisa e verificação na web, o acervo do SRD Card Game relativo às 607 criaturas existentes no catálogo curado. Entregar (A) um documento consultável com as fichas de combate completas das 607 criaturas, separando texto original disponível sob licença/permissão e dados estruturados; e (B) um documento com URLs DIRETAS e verificadas para imagens da criatura, uma ficha de imagem por ID. Não inventar criaturas, estatísticas, páginas, artes, URLs nem habilidades de assinatura. Preservar dados já validados, identificar divergências e rastrear a origem.
+
+INSUMOS OBRIGATÓRIOS
+1. SRD_Worker_Base_Pendencias_607.csv — 607 IDs, estados e fontes conhecidos.
+2. SRD_Worker_499_Fichas_Pendentes.csv — fichas não arquivadas integralmente.
+3. SRD_Worker_600_Imagens_Pendentes.csv — imagens sem URL direta registrada.
+4. SRD_Card_Game_Fichas_607_Fontes_Web_Lote2.csv — histórico de validação do lote 2.
+5. SRD_Card_Game_Referencia_URL_Imagens_607_v3.csv — 7 URLs diretas cadastradas e links de pesquisa/candidatos.
+6. SRD_Card_Game_Fichas_607_Indice_e_Textos_Extraidos.json — textos já extraídos, quando disponíveis.
+7. SRD_Card_Game_Compendio_SRD_108_fichas.pdf — 108 fichas locais completas.
+8. SRD_Card_Game_Catalogo_607_Suportes_Beta_v2_0.xlsx — catálogo curado e suporte beta.
+Não recadastrar ou recriar as 28 criaturas autorais do nosso jogo que foram excluídas. Homebrew publicado por terceiros permanece válido: Kobold Press, EN Publishing/Level Up A5E e MCDM.
+
+STATUS DE PARTIDA (NÃO CONFUNDIR LINK COM FICHA COMPLETA)
+Total 607; 108 fichas integrais locais; 53 fichas com URL individual localizada, mas texto integral não armazenado; 446 fichas sem página individual confirmada. Logo 499 fichas ainda carecem de coleta documental. Existem 7 URLs diretas de arte cadastradas, mas downloads e acessibilidade ainda não comprovados; 600 não possuem URL direta. Revalidar estas contagens ao concluir; registrar status por ID.
+
+ETAPA 1 — IDENTIFICAÇÃO E CORRESPONDÊNCIA
+Ler todo o índice de 607 IDs. Nunca alterar o ID ou eliminar registros apenas por ausência de fontes. Para cada criatura comparar nome canônico, grafias variantes, editora, publicação, tipo, ND/CR e edição. Não usar ficha de monstro homônimo, outra edição, outro estágio etário ou forma. Registrar conflito ND_catálogo vs ND_fonte e colocar 'REVISÃO_ND'; não corrigir ND sem decisão auditável. Priorizar editora/site oficial e material indicado no catálogo; depois publicações secundárias confiáveis. Para fontes de terceiros, separar a mecânica original (A5E, KP, MCDM) da adaptação ao SRD 5.2.1; não converter automaticamente condições exclusivas de outro sistema.
+
+ETAPA 2 — COLETA COMPLETA DAS FICHAS
+Começar pelas 53 URLs individuais já localizadas; checar se exibem de fato a ficha correta, depois trabalhar as 446 pendências. Para cada ficha registrar, conforme disponível:
+- identidade (ID, nome, nome alternativo, sistema, editora, livro/publicação, edição, URL e data de consulta);
+- tipo, tamanho/porte, tendência quando houver, ND e XP, bônus de proficiência;
+- CA e origem, PV e fórmula de dados, deslocamentos (andar, voar, nadar, escalar, escavar);
+- atributos FOR/DES/CON/INT/SAB/CAR, modificadores, salvaguardas, perícias;
+- resistências, imunidades e vulnerabilidades de dano; imunidades a condições;
+- sentidos, percepção passiva, idiomas, telepatia;
+- iniciativa, traços passivos, auras e efeitos contínuos;
+- ações, ataques, modificador de acerto, alcance/área, alvos, dados e tipos de dano, CD/testes, condições, duração;
+- multiataque, ações bônus, reações, ações lendárias, míticas e de covil, se houver;
+- magia/conjuração (nome de magia, atributo, CD, bônus, espaços/usos), concentração, recarga, recursos por dia;
+- condições especiais de ativação, duração, término, limites, movimentação e posicionamento;
+- nomes e descrições verificadas de habilidades características relevantes para proposta de suportes (NÃO substituir efeito de suporte beta pelo efeito original).
+Registrar unidades e texto original da fonte; quando houver restrição de reprodução, armazenar link + fatos mecânicos estruturados e um resumo próprio, em vez de copiar texto protegido sem autorização. Se a fonte for ilegível, restrita, paga ou apenas índice, marcar 'FONTE_RESTRITA' ou 'INCOMPLETA', preservando os dados conhecidos. Não fabricar valores faltantes. Deixar diferenciação explícita entre ficha oficial, ficha de terceiros, transcrição fiel autorizada, resumo factual e interpretação de regras.
+
+ETAPA 3 — IMAGENS E URLS DIRETAS
+Para cada uma das 600 sem URL, buscar imagem exata vinculada ao monstro e à fonte correta. Priorizar página da editora/artista que identifique a criatura com clareza. Diferenciar URL da página de catálogo, URL da página da imagem e URL binária DIRETA; não aceitar Google Images, thumbnails de resultados, páginas HTML ou busca como imagem direta. Verificar que a URL direta resolve (HTTP 200, Content-Type image/jpeg/png/webp/etc. ou equivalente), testar resposta e inspecionar visualmente a criatura. Registrar título da imagem, artista se conhecido, página de origem, URL direta, extensão/formato, largura/altura, data da verificação, fonte e se representa a variante correta; se permitido baixar, registrar SHA-256. Se não conseguir confirmar, manter vazia a URL direta e marcar 'NAO_LOCALIZADA' ou 'CANDIDATA_SEM_VALIDACAO'. As 7 URLs prévias precisam ser revalidadas antes de serem chamadas de ativas.
+
+ETAPA 4 — VALIDAÇÃO E EXCEÇÕES
+Conferir cruzamento dos 607 IDs em cada artefato; zero duplicações de ID, zero IDs eliminados, zero homebrew próprio reintroduzido. Gerar relatório de divergências: ND, porte, CA/PV, editoras, nomes, edição, páginas alternativas e URLs quebradas. Qualquer ficha com estatísticas incompletas NÃO pode ser marcada 'COMPLETA'. Não declarar 607 concluídas enquanto houver ficha ou link faltando. Apresentar resumo por editora e por status de coleta. A pesquisa tem de ser rastreável, e fonte verificável é mais importante que forçar 100% de preenchimento.
+
+SAÍDAS OBRIGATÓRIAS
+A. SRD_FICHAS_607_COMPLETAS.docx (ou PDF) — uma seção por ID, com TODOS os campos encontrados, habilidades e links de origem; separar fichas completas de pendências e indicar a licença/permissão quando houver texto integral de terceiros. Também entregar SRD_FICHAS_607.json com dados estruturados, texto quando autorizado e campo a campo sua procedência.
+B. SRD_URLS_IMAGENS_607.docx — índice com ID, criatura, editora, status, URL direta, URL da página-fonte, miniatura opcional e data/status de validação. Também entregar SRD_URLS_IMAGENS_607.csv (UTF-8 com separador ;).
+C. SRD_AUDITORIA_PENDENCIAS_607.csv e SRD_RELATORIO_DE_COLETA.md — registro dos 607 com status de ficha e arte, faltas, divergências, quantidade verificada, motivos de bloqueio e URLs de apoio.
+D. Compactar o trabalho atualizado em um ZIP; arquivos devem ter versão/data, preservando todos os insumos originais e evitando sobrescrita silenciosa.
+
+CRITÉRIOS DE ACEITAÇÃO
+607 IDs únicos em cada índice; 108 SRD locais reutilizadas; 499 externas trabalhadas até o limite das fontes verificáveis; páginas individuais não contadas como texto completo; URL direta de arte verificada em vez de URL de pesquisa; cobertura reportada com números verdadeiros; nenhuma ficha fictícia; nenhuma confusão entre homebrew de terceiros e criaturas inventadas para este jogo. Em caso de bloqueio, entregar resultado PARCIAL utilizável com pendências explícitas, sem anunciar conclusão total.
+
+FORMA DE TRABALHO
+Executar por lotes curtos e auditáveis, priorizando as 53 fichas já localizadas, depois EN Publishing/A5E (fontes estruturadas), Kobold Press (maior volume) e MCDM. Para cada lote, atualizar CSV/JSON, documentar links de origem e fornecer contagem incremental de fichas integrais, páginas individuais e imagens diretas realmente validadas. Não prosseguir com suposições quando a identidade da criatura não puder ser confirmada.

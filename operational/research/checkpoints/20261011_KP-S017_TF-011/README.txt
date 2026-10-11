@@ -1,0 +1,1 @@
+Checkpoint de pesquisa KP-S017/KP-S018/TF-004/TF-010/TF-011. Nenhum agente; sem alteracao no pacote canonico. KP-S017 parcial por acoes ainda nao reconciliadas. Chelicerae distingue versao 2023 da 2018. 5 imagens pendentes. Requer revisao, integracao e gate visual.
