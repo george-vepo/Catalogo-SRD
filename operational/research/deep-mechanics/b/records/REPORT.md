@@ -1,3 +1,15 @@
+## Auditoria consolidada B — 14/10/2026 — 113 imagens, 19 ausentes, 9 confrontos no índice KP
+
+**Persistência verificada por releitura da branch B:** 132 JSONs com ID, SHA Git, tamanho e total de **760.457 bytes** reconciliados; 113 imagens físicas, cada arquivo com SHA Git e bytes correspondentes ao manifesto; 19 imagens ainda ausentes. O checkpoint [`7236f577`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/7236f57729fa25dcfd2e1e2858ef0f1d89e62929) introduziu TF-356 Grendel como WebP real de ilustração histórica de 1908, em [domínio público conforme Commons](https://commons.wikimedia.org/wiki/File:Stories_of_beowulf_grendel.jpg), e sua assinatura/bytes e SHA foram reabertos com sucesso. É **arte histórica**, não arte A5E oficial e sua adequação estética final depende de revisão.
+
+**Auditoria mecânica de novos checkpoints:** [`0f63d42`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/0f63d42e3fcba2c15343c4b6ca6c96e895b4f694) confrontou individualmente TF-381 Aracnecore e TF-408 Grove Swarm no portal A5E, mantendo null no ND inconsistente e na CD de agarrar de TF-408. [`cb5fc5c4`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/cb5fc5c4f40d0397c29df3cd39ef339bc05c3053) e [`92b3824a`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/92b3824ac88489f975ed4810006f02c9cdcf8dde) acrescentaram verificação de identidade/ND/tamanho/tipo/publicação pelo **índice oficial Kobold Press** para nove criaturas com conflito, em checkpoints de cinco e quatro. Os nove JSONs foram reabertos com hash/tamanho corretos; nenhum ND/PV conflituoso foi consolidado por suposição.
+
+**Contagem editorial corrigida:** há **12 criaturas distintas com cotejos pontuais contra páginas de statblock no portal oficial A5E**, e mais **nove identidades documentadas contra índice editorial KP (não estatísticas completas)**. O contador intermediário 13 duplicava TF-408, já verificada previamente. A pesquisa tem 132 inventários estruturados (14 originalmente editoriais A5E, 118 secundários), mas **zero fichas integralmente confrontadas com exemplar e errata, zero homologações independentes**, **13 conflitos históricos ainda sem resolução definitiva** e **zero integrações**.
+
+**Licenças e bloqueios:** artes oficiais do módulo A5E anteriormente importadas têm uso não comercial; TF-356 é reprodução de obra histórica de domínio público, ainda sujeita a revisão artística. Falta arte para 19 IDs. Não usar imagens ou texto de repositórios que não declarem direitos de reutilização como equivalentes a recursos licenciados. PR #6 permanece DRAFT sem merge ou aprovação própria.
+
+---
+
 ## Segundo checkpoint de índice editorial Kobold Press — 14/10/2026
 
 Prosseguiu a conferência da [fonte editorial de identidade](https://koboldpress.com/tools/kobold-press-monsters/) de quatro criaturas adicionais, sem usar o índice como substituto de livro ou errata:

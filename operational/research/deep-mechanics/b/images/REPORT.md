@@ -1,3 +1,11 @@
+## Auditoria visual consolidada B — 14/10/2026: 113/132 imagens reais
+
+**TF-356** [WebP real](TF-356.webp) incorporado a partir de [reprodução de ilustração histórica de domínio público](https://commons.wikimedia.org/wiki/File:Stories_of_beowulf_grendel.jpg), artista Joseph Ratcliffe Skelton (1908). O arquivo foi reaberto no GitHub após [commit `7236f577`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/7236f57729fa25dcfd2e1e2858ef0f1d89e62929): SHA Git, bytes e assinatura WebP coincidem com a fonte. Não é arte oficial EN Publishing. Dimensões: 960×1234; bytes: 296.630; SHA-256: `31e2b42366b8f4f8acb3ffa49b5afd0af4bdc399024d02f5771aceb5799dd279`.
+
+**113 arquivos binários fisicamente presentes**, com correspondência SHA Git e bytes dos manifestos. **19 ausentes**: TF-303, TF-326, TF-335, TF-336, TF-341, TF-342, TF-353, TF-358, TF-370, TF-379, TF-381, TF-386, TF-395, TF-397, TF-398, TF-402, TF-405, TF-408, TF-411. Alguns repositórios alternativos contêm sprites genéricos, arte editorial sem licença ou imagens incongruentes; não foram importados para inflar a contagem. Qualidade e direitos comerciais do acervo restante requerem revisão independente antes do lançamento.
+
+---
+
 ## Checkpoint de imagem TF-356 — ilustração histórica de Grendel (14/10/2026)
 
 **Arquivo:** [TF-356.webp](TF-356.webp), 960×1234, 296.630 bytes, image/webp, Git SHA `beda0c092ce58ce433e42825c14b692cf9d8d3dd`, SHA-256 `31e2b42366b8f4f8acb3ffa49b5afd0af4bdc399024d02f5771aceb5799dd279`.

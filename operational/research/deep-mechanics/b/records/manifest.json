@@ -39,7 +39,7 @@
   },
   "integridade": {
     "controle": "Auditoria GitHub 14/10/2026: 132/132 JSONs físicos com SHA Git e bytes iguais ao manifesto na árvore da branch antes deste checkpoint; 101/101 imagens binárias físicas com SHA Git e bytes iguais; 3 blobs binários adicionais importados por identidade de SHA Git da branch F. Verificar os 104/104 após commit. Nenhuma homologação independente.",
-    "checkpoints": 34,
+    "checkpoints": 35,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
     "sem_duplicatas": true,
@@ -264,7 +264,7 @@
       "hash_e_bytes_json_iguais": 132,
       "bytes_json": 760457,
       "binarios_persistidos": 113,
-      "binarios_hash_e_bytes_iguais": 112,
+      "binarios_hash_e_bytes_iguais": 113,
       "imagens_faltantes": 19,
       "estruturadas": 132,
       "a5e_editorial_origem": 14,
@@ -279,11 +279,25 @@
       "direitos": "A5E fontes/imagens: módulos têm limitação expressa de uso não comercial; autorização para exploração comercial não verificada.",
       "branch_draft": true,
       "imagens_binarias": 113,
-      "cotejos_editoriais_pontuais_unicos_ate_agora": 13,
+      "cotejos_editoriais_pontuais_unicos_ate_agora": 12,
       "cotejos_de_tres_ja_conferidas_repetidos": 3,
       "verificacoes_editoriais_integralmente_concluidas": 0,
-      "rights_review": "Novas imagens A5E: uso nao comercial; nao liberar comercialmente sem licenca especifica",
-      "identidades_indice_kp_documentadas": 9
+      "rights_review": "TF-356 imagem histórica PD Commons, não A5E; outras imagens requerem checagem individual de licença e padrão visual; A5E public/assets não comercial.",
+      "identidades_indice_kp_documentadas": 9,
+      "cotejos_editoriais_pontuais_ids": [
+        "TF-094",
+        "TF-095",
+        "TF-355",
+        "TF-356",
+        "TF-361",
+        "TF-386",
+        "TF-408",
+        "TF-351",
+        "TF-384",
+        "TF-389",
+        "TF-393",
+        "TF-381"
+      ]
     },
     "checkpoint_cinco_4_imagens_a5e_20261014": {
       "ids": [
@@ -359,9 +373,10 @@
         "width": 960,
         "height": 1234
       },
-      "estado": "AGUARDA_READBACK_POS_COMMIT",
+      "estado": "READBACK_GITHUB_PASSOU_SHA_GIT_BYTES_ASSINATURA",
       "status_direitos": "obra original em dominio publico segundo Commons; acompanhar atribuicao por transparencia, avaliar adaptacao WebP se necessario",
-      "nao_e_arte_editorial_a5e": true
+      "nao_e_arte_editorial_a5e": true,
+      "commit": "7236f57729fa25dcfd2e1e2858ef0f1d89e62929"
     },
     "revisao_editorial_381_408_20261014": {
       "ids": [
@@ -377,7 +392,8 @@
       "conflitos_herdados_restantes": 13,
       "homologacoes_independentes": 0,
       "integracoes": 0,
-      "persistencia": "READBACK_PENDENTE"
+      "persistencia": "READBACK_GITHUB_PASSOU_SHA_E_BYTES_2_JSONS",
+      "commit": "0f63d42e3fcba2c15343c4b6ca6c96e895b4f694"
     },
     "cotejo_kp_indice_primeiro_lote_20261014": {
       "ids": [
@@ -391,7 +407,8 @@
       "tipo": "CONFRONTO_IDENTIDADE_ND_TAMANHO_TIPO_SEM_VALIDACAO_INTEGRAL",
       "conflitos_restantes": 13,
       "homologacoes": 0,
-      "persistencia": "READBACK_PENDENTE"
+      "persistencia": "READBACK_GITHUB_PASSOU_5_JSONS",
+      "commit": "cb5fc5c4f40d0397c29df3cd39ef339bc05c3053"
     },
     "cotejo_kp_indice_segundo_lote_20261014": {
       "ids": [
@@ -404,7 +421,27 @@
       "tipo": "CONFRONTO_IDENTIDADE_ND_TAMANHO_TIPO_SEM_VALIDACAO_INTEGRAL",
       "conflitos_restantes": 13,
       "homologacoes": 0,
-      "persistencia": "READBACK_PENDENTE"
+      "persistencia": "READBACK_GITHUB_PASSOU_4_JSONS",
+      "commit": "92b3824ac88489f975ed4810006f02c9cdcf8dde"
+    },
+    "reconciliacao_contagem_cotejos_20261014": {
+      "contagem_anterior": "13 registradas em etapa intermediária, mas TF-408 já havia sido incluída em um checkpoint anterior",
+      "contagem_correta_de_ids_distintos": 12,
+      "ids": [
+        "TF-094",
+        "TF-095",
+        "TF-355",
+        "TF-356",
+        "TF-361",
+        "TF-386",
+        "TF-408",
+        "TF-351",
+        "TF-384",
+        "TF-389",
+        "TF-393",
+        "TF-381"
+      ],
+      "escopo": "Conferências pontuais no portal editorial A5E, não homologação completa. Nove outros casos tiveram somente identificação via índice Kobold Press."
     }
   },
   "commits_checkpoint": [
@@ -531,6 +568,10 @@
     {
       "sha": "cb5fc5c4f40d0397c29df3cd39ef339bc05c3053",
       "message": "research(srd607/b): documentar 5 conflitos no indice oficial KP sem reconciliar variantes"
+    },
+    {
+      "sha": "92b3824ac88489f975ed4810006f02c9cdcf8dde",
+      "message": "research(srd607/b): cotejar outros 4 conflitos no indice Kobold Press preservando edicoes"
     }
   ],
   "records": [
