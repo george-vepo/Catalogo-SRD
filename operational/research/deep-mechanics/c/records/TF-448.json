@@ -4,9 +4,9 @@
   "nome": "Imprisoned Celestial",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 16,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FICHA_ORIGEM_ESTRUTURADA_PENDENTE_ADAPTACAO_A5E",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Gate Pass Gazette",
@@ -18,9 +18,9 @@
     "nd_fonte": "10",
     "ca": 17,
     "pv": 178,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "17d10+85",
+    "porte": "Large",
+    "tipo": "Construct",
     "alinhamento": null,
     "atributos": {
       "forca": 22,
@@ -38,100 +38,187 @@
       "sabedoria": 1,
       "carisma": 6
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar": 30
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "compreende Celestial; não fala"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "poison",
+      "psychic",
+      "bludgeoning/piercing/slashing de armas não mágicas não adamantinas"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "fatigue",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "bloodied": 89,
+    "proficiencia": 4,
+    "cd_manobra": 18
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Absorção radiante recupera PV, falsa aparência, resistência mágica e imutabilidade.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Divine Absorption",
+        "gatilho": "Ao sofrer dano radiant",
+        "efeito": "Em vez de receber o dano, recupera PV iguais ao valor do dano radiante",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "False Appearance",
+        "gatilho": "Enquanto imóvel",
+        "efeito": "Aparência indistinguível de uma estátua de pedra",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Immutable Form",
+        "gatilho": "Ao receber efeito de transformação",
+        "efeito": "Imune a alteração de forma",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Magic Resistance",
+        "gatilho": "Salvaguarda contra magia ou efeito mágico",
+        "efeito": "Vantagem no teste",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Constructed Nature",
+        "gatilho": "Permanente",
+        "efeito": "Não necessita respirar, alimentar-se nem dormir",
+        "fonte_verificada": true
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Duas Slam, Radiant Blast CD 18 com recarga, Slow como ação bônus.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "gatilho": "Ao gastar ação",
+        "efeito": "Executa dois ataques Slam",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Slam",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "3d8",
+          "modificador": 6,
+          "tipo": "bludgeoning"
+        },
+        "dano_medio": 19,
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Radiant Blast",
+        "gatilho": "Ação; recarga 5–6",
+        "efeito": "Escolhe um ponto visto até 120 pés; cada criatura em raio de 10 pés testa DES CD18; falha recebe 6d8 radiant e fica blinded até fim do próximo turno, sucesso recebe metade e não fica blinded",
+        "alcance_ft": 120,
+        "area": {
+          "forma": "esfera",
+          "raio_ft": 10
+        },
+        "recarga": "5–6",
+        "teste_resistencia": {
+          "atributo": "DES",
+          "cd": 18
+        },
+        "dano": {
+          "dados": "6d8",
+          "modificador": 0,
+          "tipo": "radiant",
+          "media": 27
+        },
+        "falha": {
+          "dano": "27 radiant",
+          "condicoes": [
+            "blinded"
+          ],
+          "duracao": "até fim do próximo turno"
+        },
+        "sucesso": {
+          "dano": "metade",
+          "condicoes": []
+        },
+        "fonte_verificada": true
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": [],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "3d8",
+          "modificador": 6,
+          "tipo": "bludgeoning"
+        },
+        "dano_medio": 19,
+        "fonte_verificada": true
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "gatilho": "Ao gastar ação",
+      "efeito": "Executa dois ataques Slam",
+      "fonte_verificada": true
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Slow",
+        "gatilho": "Ação bônus; recarga 5–6",
+        "efeito": "Alvos até 30 pés fazem SAB CD17; em falha recebem slowed por 1 minuto, repetindo o teste ao fim de cada turno; sucesso encerra condição",
+        "alcance_ft": 30,
+        "recarga": "5–6",
+        "teste_resistencia": {
+          "atributo": "SAB",
+          "cd": 17
+        },
+        "falha": {
+          "condicoes": [
+            "slowed"
+          ],
+          "duracao": "1 minuto"
+        },
+        "sucesso": {
+          "encerra": true
+        },
+        "repeticao": "fim de cada turno",
+        "fonte_verificada": true
+      }
+    ],
     "reacoes": [],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
     "Publicação associada a Gate Pass Gazette #31; confirmar número da edição editorial.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Ficha A5E da fonte estruturada; adequação de regras ao jogo e revisão independente ainda pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "Integração das mecânicas A5E e revisão independente"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/5406",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "ficha individual na ferramenta editorial Level Up A5E (conferência direta 14/10/2026)",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
@@ -143,7 +230,7 @@
     "csv_estado": "PENDENTE_PESQUISA",
     "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
     "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-    "dados_anteriores_sem_revalidacao": true
+    "dados_anteriores_sem_revalidacao": false
   },
   "checkpoint_anterior": {
     "id": "TF-448",
@@ -191,5 +278,7 @@
       "verificada": false
     },
     "integrada": false
-  }
+  },
+  "ficha_individual_estruturada_em_detalhe": true,
+  "ficha_origem_integral_verificada_na_pagina": true
 }

@@ -4,9 +4,9 @@
   "nome": "Flying Lion",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 22,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FICHA_ORIGEM_ESTRUTURADA_COM_CONFLITO",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Monstrous Menagerie",
@@ -18,9 +18,9 @@
     "nd_fonte": "3",
     "ca": 12,
     "pv": 57,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "6d10+24",
+    "porte": "Large",
+    "tipo": "Monstrosity",
     "alinhamento": null,
     "atributos": {
       "forca": 18,
@@ -38,100 +38,135 @@
       "sabedoria": 3,
       "carisma": -1
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar": 30,
+      "voar": 80
+    },
+    "pericias": {
+      "Perception": 5
+    },
+    "salvaguardas": [],
+    "sentidos": [],
+    "percepcao_passiva": 15,
+    "idiomas": [],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "bloodied": 28,
+    "proficiencia": 2,
+    "cd_manobra": 14
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Predador alado com faro apurado e manobras de mergulho.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Keen Smell",
+        "gatilho": "Teste de percepção envolvendo olfato",
+        "efeito": "Vantagem",
+        "fonte_verificada": true
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Mordida, garras e ações ligadas à queda/voo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "gatilho": "Ação",
+        "efeito": "Fonte diz literalmente 'griffon attacks once with its beak and once with its talons', mas Flying Lion apresenta Bite e Talons — referências não conciliadas",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Bite",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d4",
+          "modificador": 4,
+          "tipo": "piercing"
+        },
+        "dano_medio": 9,
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Talons",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "slashing"
+        },
+        "dano_medio": 7,
+        "alternativa": "2d6+4 (11) slashing se começou turno 20+ pés acima do alvo",
+        "condicoes": [
+          "grappled"
+        ],
+        "fuga_cd": 14,
+        "limite": "não usa Talons contra outro alvo enquanto mantém agarrão",
+        "fonte_verificada": true
       }
     ],
-    "ataques": [],
-    "multiataque": null,
+    "ataques": [
+      {
+        "nome": "Bite",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d4",
+          "modificador": 4,
+          "tipo": "piercing"
+        },
+        "dano_medio": 9,
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Talons",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "slashing"
+        },
+        "dano_medio": 7,
+        "alternativa": "2d6+4 (11) slashing se começou turno 20+ pés acima do alvo",
+        "condicoes": [
+          "grappled"
+        ],
+        "fuga_cd": 14,
+        "limite": "não usa Talons contra outro alvo enquanto mantém agarrão",
+        "fonte_verificada": true
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "gatilho": "Ação",
+      "efeito": "Fonte diz literalmente 'griffon attacks once with its beak and once with its talons', mas Flying Lion apresenta Bite e Talons — referências não conciliadas",
+      "fonte_verificada": true
+    },
     "acoes_bonus": [],
     "reacoes": [],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
     "Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Multiattack da própria ficha Flying Lion usa 'griffon', 'beak' sem Beak nos ataques. Não substituir Beak por Bite automaticamente.",
+    "Ficha A5E da fonte estruturada; adequação de regras ao jogo e revisão independente ainda pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "Integração das mecânicas A5E e revisão independente",
+    "Multiattack da própria ficha Flying Lion usa 'griffon', 'beak' sem Beak nos ataques. Não substituir Beak por Bite automaticamente."
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/1663",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "ficha individual na ferramenta editorial Level Up A5E (conferência direta 14/10/2026)",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
@@ -143,7 +178,7 @@
     "csv_estado": "PENDENTE_PESQUISA",
     "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
     "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-    "dados_anteriores_sem_revalidacao": true
+    "dados_anteriores_sem_revalidacao": false
   },
   "checkpoint_anterior": {
     "id": "TF-473",
@@ -191,5 +226,7 @@
       "verificada": false
     },
     "integrada": false
-  }
+  },
+  "ficha_individual_estruturada_em_detalhe": true,
+  "ficha_origem_integral_verificada_na_pagina": true
 }

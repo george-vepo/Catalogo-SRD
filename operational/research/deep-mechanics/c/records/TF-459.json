@@ -4,9 +4,9 @@
   "nome": "Ankheg Empress",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 18,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FICHA_ORIGEM_ESTRUTURADA_COM_CONFLITO",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "To Save A Kingdom",
@@ -18,9 +18,9 @@
     "nd_fonte": "8",
     "ca": 16,
     "pv": 174,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "12d20+48",
+    "porte": "Gargantuan",
+    "tipo": "Monstrosity",
     "alinhamento": null,
     "atributos": {
       "forca": 21,
@@ -38,100 +38,233 @@
       "sabedoria": 3,
       "carisma": 0
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar": 45,
+      "escavar": 30
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      "tremorsense 40 ft"
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [],
+    "resistencias": [
+      "acid",
+      "cold",
+      "fire",
+      "bludgeoning",
+      "piercing",
+      "slashing"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "bloodied_fonte": 65,
+    "proficiencia": 3,
+    "cd_manobra": 16,
+    "ca_quando_prone": 12
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Exoesqueleto; variante de CA ao ser derrubada; Hordesense detecta membros da horda.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Hordesense",
+        "gatilho": "Permanente",
+        "efeito": "Detecta criaturas percebidas por qualquer outro ankheg a até 1000 pés",
+        "fonte_verificada": true
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Mordida/garras e ataques ácidos, com gatilhos próprios de enxame.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "gatilho": "Ação",
+        "efeito": "Bite + Claws, ou dois Acid Glob",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Bite",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "3d8",
+          "modificador": 5,
+          "tipo": "slashing"
+        },
+        "dano_medio": 18,
+        "efeito_adicional": "se dano matar criatura Huge ou menor, decepação da cabeça",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Claws",
+        "bonus_acerto": 8,
+        "alcance_ft": 15,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "slashing"
+        },
+        "dano_medio": 14,
+        "alvo_tipo": "criatura Huge ou menor",
+        "condicoes": [
+          "grappled",
+          "restrained"
+        ],
+        "fuga_cd": 16,
+        "limite": "não usa Claws ou Grabby contra outros enquanto mantiver agarrão",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Acid Glob",
+        "bonus_acerto": 5,
+        "alcance_ft": "30/90",
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d6",
+          "modificador": 2,
+          "tipo": "acid"
+        },
+        "dano_medio": 9,
+        "tipo_ataque": "ranged",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Acid Spray",
+        "gatilho": "Ação; recarga 4–6",
+        "efeito": "Jato 60 × 10 pés; DES CD16; falha 6d8 acid, sucesso metade. Se agarra alvo, pode afetar apenas esse alvo sem salvaguarda",
+        "recarga": "4–6",
+        "area": {
+          "tipo": "linha",
+          "comprimento_ft": 60,
+          "largura_ft": 10
+        },
+        "teste_resistencia": {
+          "atributo": "DES",
+          "cd": 16
+        },
+        "dano": {
+          "dados": "6d8",
+          "media": 27,
+          "tipo": "acid"
+        },
+        "alternativa": "alvo agarrado automaticamente sofre dano sem save",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Burrowing Ambush",
+        "gatilho": "Ação; 1/dia",
+        "efeito": "Escava até 30 pés sem provocar ataques de oportunidade, emerge e faz Claws com vantagem se alvo no alcance",
+        "frequencia": "1/dia",
+        "limite": "distância máxima igual ao deslocamento de escavação",
+        "acao_sequencial": "Claws em vantagem",
+        "fonte_verificada": true
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": [],
-    "reacoes": [],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "3d8",
+          "modificador": 5,
+          "tipo": "slashing"
+        },
+        "dano_medio": 18,
+        "efeito_adicional": "se dano matar criatura Huge ou menor, decepação da cabeça",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Claws",
+        "bonus_acerto": 8,
+        "alcance_ft": 15,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "slashing"
+        },
+        "dano_medio": 14,
+        "alvo_tipo": "criatura Huge ou menor",
+        "condicoes": [
+          "grappled",
+          "restrained"
+        ],
+        "fuga_cd": 16,
+        "limite": "não usa Claws ou Grabby contra outros enquanto mantiver agarrão",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Acid Glob",
+        "bonus_acerto": 5,
+        "alcance_ft": "30/90",
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d6",
+          "modificador": 2,
+          "tipo": "acid"
+        },
+        "dano_medio": 9,
+        "tipo_ataque": "ranged",
+        "fonte_verificada": true
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "gatilho": "Ação",
+      "efeito": "Bite + Claws, ou dois Acid Glob",
+      "fonte_verificada": true
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Grabby",
+        "gatilho": "Ação bônus",
+        "efeito": "Tentativa de agarrar criatura ao alcance que causa 6 slashing",
+        "dano": {
+          "fixo": 6,
+          "tipo": "slashing"
+        },
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Monarch's Command",
+        "gatilho": "Ação bônus",
+        "efeito": "Ankheg à escolha em até 100 pés usa sua reação para atacar ou usar Acid Spray",
+        "alcance_ft": 100,
+        "custo_aliado": "reação",
+        "fonte_verificada": true
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Cinch",
+        "gatilho": "alvo agarrado tenta escapar",
+        "efeito": "Executa Claws contra a vítima",
+        "ataque": "Claws",
+        "fonte_verificada": true
+      }
+    ],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
     "Confirmar alcance exato de cada ataque ácido.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "O campo bloodied 65 não é metade de 174 (87): contradição numérica da página; preservar 65 até errata.",
+    "Ficha A5E da fonte estruturada; adequação de regras ao jogo e revisão independente ainda pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "Integração das mecânicas A5E e revisão independente",
+    "O campo bloodied 65 não é metade de 174 (87): contradição numérica da página; preservar 65 até errata."
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/3424",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "ficha individual na ferramenta editorial Level Up A5E (conferência direta 14/10/2026)",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
@@ -143,7 +276,7 @@
     "csv_estado": "PENDENTE_PESQUISA",
     "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
     "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-    "dados_anteriores_sem_revalidacao": true
+    "dados_anteriores_sem_revalidacao": false
   },
   "checkpoint_anterior": {
     "id": "TF-459",
@@ -191,5 +324,7 @@
       "verificada": false
     },
     "integrada": false
-  }
+  },
+  "ficha_individual_estruturada_em_detalhe": true,
+  "ficha_origem_integral_verificada_na_pagina": true
 }

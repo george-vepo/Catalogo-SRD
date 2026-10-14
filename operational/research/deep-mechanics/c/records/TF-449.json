@@ -4,9 +4,9 @@
   "nome": "Imprisoned Fiend",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 17,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FICHA_ORIGEM_ESTRUTURADA_COM_CONFLITO",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Gate Pass Gazette",
@@ -18,9 +18,9 @@
     "nd_fonte": "9",
     "ca": 14,
     "pv": 133,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "14d10+56",
+    "porte": "Large",
+    "tipo": "Construct",
     "alinhamento": null,
     "atributos": {
       "forca": 20,
@@ -38,100 +38,211 @@
       "sabedoria": 0,
       "carisma": 6
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar": 25
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "compreende Abyssal se caótico ou Infernal se leal; não fala"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "acid",
+      "poison",
+      "psychic",
+      "bludgeoning/piercing/slashing de armas não mágicas não adamantinas"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "fatigue",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "bloodied": 66,
+    "proficiencia": 4,
+    "cd_manobra": 17
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Absorção ácida, Berserk/Bloodied Fury quando ferido e mudança de tamanho.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Constructed Nature",
+        "gatilho": "Permanente",
+        "efeito": "Dispensa ar, comida e sono",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Acid Absorption",
+        "gatilho": "Dano ácido",
+        "efeito": "Recupera PV iguais ao dano ácido que receberia",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Berserk",
+        "gatilho": "Inicia turno com PV abaixo ou iguais ao limiar bloodied (66)",
+        "efeito": "Rola d6; com 6 passa a atacar a criatura visível mais próxima, ou objeto se nenhuma alcançável; encerra apenas quando destruído ou restaurado ao máximo",
+        "frequencia": "a cada início de turno bloodied",
+        "rolagem": "1d6 = 6",
+        "duracao": "até PV máximos ou destruição",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Bloodied Fury",
+        "gatilho": "Enquanto bloodied",
+        "efeito": "Torna-se Huge; sempre que sofre piercing/slashing, si próprio e cada criatura a 5 pés sofrem 2d6 acid",
+        "gatilho_secundario": "recebe piercing ou slashing",
+        "area": {
+          "raio_ft": 5
+        },
+        "dano": {
+          "dados": "2d6",
+          "tipo": "acid",
+          "media": 7
+        },
+        "fonte_verificada": true
+      },
+      {
+        "nome": "False Appearance",
+        "gatilho": "Enquanto imóvel",
+        "efeito": "Indistinguível de estátua de argila",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Immutable Form",
+        "gatilho": "Ao sofrer alteração de forma",
+        "efeito": "Imune",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Magic Resistance",
+        "gatilho": "Teste de resistência contra magia/efeito mágico",
+        "efeito": "Vantagem",
+        "fonte_verificada": true
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Duas Slam com redução de PV; Fiendfire Breath 1/dia e condição strife.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "gatilho": "Ação",
+        "efeito": "Duas pancadas Slam",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Slam",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d10",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        },
+        "dano_medio": 16,
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 15,
+          "aplicacao": "se alvo é criatura"
+        },
+        "falha": "PV máximos reduzidos por quantidade de dano da pancada; morre se máximo chega a 0",
+        "sucesso": "não reduz máximo de PV",
+        "remocao": "greater restoration ou magia equivalente",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Fiendfire Breath",
+        "gatilho": "Ação; 1/dia",
+        "efeito": "Cone de 30 pés; teste CON CD16; em falha 3d6 fire e 3d6 necrotic e 1 nível de strife A5E; em sucesso metade dos dois danos e sem strife",
+        "frequencia": "1/dia",
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 30
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 16
+        },
+        "danos": [
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "fire"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "necrotic"
+          }
+        ],
+        "falha": {
+          "dano": "inteiro",
+          "condicoes": [
+            "strife +1 (A5E)"
+          ]
+        },
+        "sucesso": {
+          "dano": "metade",
+          "condicoes": []
+        },
+        "fonte_verificada": true
       }
     ],
-    "ataques": [],
-    "multiataque": null,
+    "ataques": [
+      {
+        "nome": "Slam",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d10",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        },
+        "dano_medio": 16,
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 15,
+          "aplicacao": "se alvo é criatura"
+        },
+        "falha": "PV máximos reduzidos por quantidade de dano da pancada; morre se máximo chega a 0",
+        "sucesso": "não reduz máximo de PV",
+        "remocao": "greater restoration ou magia equivalente",
+        "fonte_verificada": true
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "gatilho": "Ação",
+      "efeito": "Duas pancadas Slam",
+      "fonte_verificada": true
+    },
     "acoes_bonus": [],
     "reacoes": [],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
     "Publicação ligada a Gate Pass Gazette #31; tratar strife como A5E.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Não converter strife para condição D&D 5e comum sem regra de adaptação",
+    "Ficha A5E da fonte estruturada; adequação de regras ao jogo e revisão independente ainda pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "Integração das mecânicas A5E e revisão independente",
+    "Não converter strife para condição D&D 5e comum sem regra de adaptação"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/5407",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "ficha individual na ferramenta editorial Level Up A5E (conferência direta 14/10/2026)",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
@@ -143,7 +254,7 @@
     "csv_estado": "PENDENTE_PESQUISA",
     "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
     "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-    "dados_anteriores_sem_revalidacao": true
+    "dados_anteriores_sem_revalidacao": false
   },
   "checkpoint_anterior": {
     "id": "TF-449",
@@ -191,5 +302,7 @@
       "verificada": false
     },
     "integrada": false
-  }
+  },
+  "ficha_individual_estruturada_em_detalhe": true,
+  "ficha_origem_integral_verificada_na_pagina": true
 }
