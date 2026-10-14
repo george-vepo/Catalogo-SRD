@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 111 / 195.**
+**Armazenadas e verificadas: 120 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -19,6 +19,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/819e16a6e0721d8b97bc1f0d93568d61054ef8c1 — 10/10 verificadas: TF-155, TF-156, TF-157, TF-158, TF-159, TF-160, TF-161, TF-162, TF-163, TF-164
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c182357971d4d8a09d5fd6a7f531abee48d8db03 — 10/10 verificadas: TF-165, TF-166, TF-167, TF-168, TF-169, TF-170, TF-171, TF-172, TF-173, TF-174
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2b2c0e6880675869044734d993c82311e9d6a28a — 10/10 verificadas: TF-175, TF-176, TF-177, TF-178, TF-179, TF-180, TF-181, TF-182, TF-186, TF-187
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5 — 10/10 verificadas: TF-188, TF-189, TF-190, TF-191, TF-192, TF-193, TF-194, TF-195, TF-196, TF-197
 
 ## Binários publicados e conferidos
 
@@ -132,7 +133,16 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-181 / Ooze, Snow: operational/assets/creature-images/TF-181.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Snow%20Ooze.webp; 168646 bytes; 1200x1068 px; SHA-256: 9a9f7e63a6a5a4ce177986dd1e6fdfb28f9c59ee194070a5e5c6ce69d33bd98f; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
 - TF-182 / Ooze, Tar: operational/assets/creature-images/TF-182.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Tar%20Ooze.webp; 149430 bytes; 1223x797 px; SHA-256: 4bd4ea76740f16e93879796c0c824f7c959290bd8c85703c2b45a61e11a1fa33; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
 - TF-186 / Atavist: operational/assets/creature-images/TF-186.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Atavist.webp; 109426 bytes; 1030x1200 px; SHA-256: 05f6731faeeb530fbac88404ff884011bce8fc8bbb6aa2a103760f470514788d; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
-- TF-187 / Bearfolk: operational/assets/creature-images/TF-187.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Bearfolk.webp; 96550 bytes; 709x800 px; SHA-256: 0a5dc138e3fc53b35ee55c07162ccdac7b639b752b2bb680a79c5157f874e3ec; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-188 / Behtu: operational/assets/creature-images/TF-188.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Behtu.webp; 64192 bytes; 542x800 px; SHA-256: 38d959ece7e7623eab45741aba7bdec08c47fea3dc54480a2c91b4f0d086be84; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-189 / Black Knight Commander: operational/assets/creature-images/TF-189.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Black%20Knight%20Commander.webp; 59770 bytes; 504x801 px; SHA-256: dd8812c82aaf69d5b8d2e989802a65036ee3b55a84e2f59c3ed5b100017f4c86; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-190 / City Watch Captain: operational/assets/creature-images/TF-190.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/City%20Watch%20Captain.webp; 49984 bytes; 469x800 px; SHA-256: 7d365e7540712f46d294b2a2b6b9fdcb51148577fd762f095e1879fe6e05f680; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-191 / Corpse Thief: operational/assets/creature-images/TF-191.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/corpsethief.jpg; 55246 bytes; 602x700 px; SHA-256: 02fb3f0051883688e7ab2ffd140bed04cf31f0752ab007f4562d0992301bef3a; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-192 / Cueyatl Moon Priest: operational/assets/creature-images/TF-192.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cueyatlmoonpriest.jpg; 49524 bytes; 503x700 px; SHA-256: f5502d72e5af2d26122d920d201fe7ee1d99c6375def698f6b8c0052a4b6e8a8; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-193 / Cueyatl Sea Priest: operational/assets/creature-images/TF-193.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cueyatlseapriest.jpg; 54957 bytes; 494x700 px; SHA-256: 2500bc1d8888d0ce7ce92bbe937853407077103f93d40e09012d7d705dcbefdf; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-194 / Cueyatl Warrior: operational/assets/creature-images/TF-194.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cueyatlwarrior.jpg; 52763 bytes; 449x700 px; SHA-256: e4c693018cca652d6bc5ac8573ac8c5bfedbbaa73d507038fada5163881eb32b; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-195 / Tosculi, Drone: operational/assets/creature-images/TF-195.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tosculi%20Drone.webp; 62842 bytes; 519x800 px; SHA-256: f7bea847ebc5e61644c325f1f9049872181274bf63d1ed1e85f4102cc24c9041; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-196 / Tosculi, Elite Bow Raider: operational/assets/creature-images/TF-196.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tosculi%20Elite%20Bow%20Raider.webp; 62060 bytes; 747x800 px; SHA-256: a0e5923c08039e6de88a56a75505d160b96c56fc3e569a9def47c313ff421db8; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-197 / Tosculi, Jeweled Drone: operational/assets/creature-images/TF-197.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Tosculijeweleddrone.jpg; 65411 bytes; 519x700 px; SHA-256: 9ad0c9559b907ed938c76f708087419db76752667e7b8422bba9c577605d1ef1; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
 
 ## Não obtidos
 
@@ -140,16 +150,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
 - TF-185 / Alleyway Strangler: source_not_found; 
-- TF-188 / Behtu: pending; 
-- TF-189 / Black Knight Commander: pending; 
-- TF-190 / City Watch Captain: pending; 
-- TF-191 / Corpse Thief: pending; 
-- TF-192 / Cueyatl Moon Priest: pending; 
-- TF-193 / Cueyatl Sea Priest: pending; 
-- TF-194 / Cueyatl Warrior: pending; 
-- TF-195 / Tosculi, Drone: pending; 
-- TF-196 / Tosculi, Elite Bow Raider: pending; 
-- TF-197 / Tosculi, Jeweled Drone: pending; 
+- TF-187 / Bearfolk: blocked; RACE: new commit not branch HEAD
 - TF-198 / Tosculi, Warrior: source_not_found; 
 - TF-199 / Yakirian: pending; 
 - TF-200 / Aboleth Champion: source_not_found; 
