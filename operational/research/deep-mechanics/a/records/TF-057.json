@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (conferir edição)",
+    "publisher": "Kobold Press",
     "publication": "Tome of Beasts 2",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "4",
     "size": "Large",
     "type": "construct",
-    "alignment": "unaligned"
+    "alignment": "unaligned",
+    "edition": "Tome of Beasts 2 (5e), p.24",
+    "source_page": 24,
+    "experience_points": 1100,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 13,
@@ -27,20 +31,22 @@
       "CHA": 1
     },
     "speeds": {
-      "andar": 20
+      "walk_ft": 20
     },
-    "senses": [
-      "blindsight 60 ft., blind beyond"
-    ],
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_ft": 60,
+      "passive_perception": 6
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
     "damage_immunities": [
       "poison",
       "psychic"
     ],
-    "damage_vulnerabilities": null,
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "blinded",
       "charmed",
@@ -49,169 +55,224 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 1,
+      "CON": 1,
+      "INT": -5,
+      "WIS": -4,
+      "CHA": -5
+    },
+    "armor_class_type": "natural armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Antimagic Susceptibility",
-        "category": "passive",
-        "legacy_summary": "Fica incapacitado sob campo antimagia e pode ficar inconsciente após dispel magic e CON contra CD do conjurador.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "passive_conditional",
+        "triggers": [
+          {
+            "while_in": "antimagic field",
+            "condition": "incapacitated"
+          },
+          {
+            "targeted_by": "dispel magic",
+            "saving_throw": {
+              "ability": "CON",
+              "dc": "caster_spell_save_dc",
+              "on_failure": {
+                "condition": "unconscious",
+                "duration": "1 minute"
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            }
+          }
+        ]
       },
       {
         "name": "Damage Transfer",
-        "category": "passive",
-        "legacy_summary": "Parte do dano recebido pode atingir criatura que esteja envolvendo/agarrando conforme ficha original.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "passive_conditional",
+        "requires": {
+          "is_grappling_creature": true
+        },
+        "effect": {
+          "split_incoming_damage": {
+            "rug_fraction": 0.5,
+            "grappled_creature_fraction": 0.5
+          }
+        }
       },
       {
         "name": "False Appearance",
         "category": "passive",
-        "legacy_summary": "Enquanto imóvel é indistinguível de um tapete de pele.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "if_motionless": "indistinguishable from ordinary bearskin rug"
+        }
       },
       {
         "name": "Construct Nature",
-        "category": "passive",
-        "legacy_summary": "Dispensa ar, comida, bebida e sono.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "source_narrative_not_core_statblock",
+        "effect": {
+          "needs_air": false,
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "legacy_summary": "Usa mordida e garras; pode substituir ataque de garras por Envelop.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Claws",
+            "count": 1
+          }
+        ],
+        "allowed_substitutions": [
+          {
+            "replace_one": "Claws",
+            "with": "Envelop"
+          }
+        ]
       },
       {
         "name": "Bite",
-        "category": "action",
-        "legacy_summary": "+6, 5 pés, 1d10+4 perfurante.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 9
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Claws",
-        "category": "action",
-        "legacy_summary": "+6, 5 pés, 2d6+4 cortante.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target_not_grappled_by_rug"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 9
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Envelop",
-        "category": "action",
-        "legacy_summary": "+6, envolve alvo Medium ou menor, agarra/restringe com fuga CD14.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_creature",
+          "max_size": "Medium"
+        },
+        "on_hit": {
+          "damage": [],
+          "conditions": [
+            "grappled",
+            "restrained"
+          ],
+          "escape_dc": 14,
+          "restriction": "cannot envelop another until grapple ends"
+        }
       },
       {
         "name": "Menacing Roar",
-        "category": "action",
-        "legacy_summary": "Recarga 6, SAB CD13 contra medo e fuga por até um minuto.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            6
+          ]
+        },
+        "targets": {
+          "range_ft": 20,
+          "requirements": "can hear roar"
+        },
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 13,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "1 minute",
+            "forced_movement": "move as far away as possible",
+            "action_restrictions": [
+              "Dash",
+              "escape effect preventing movement",
+              "Dodge if nowhere to move"
+            ],
+            "repeat_save": "end of each turn and whenever takes damage; success ends"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/animated-bearskin-rug/",
       "type": "ficha_individual_localizada_em_checkpoint",
       "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/tree/master/creature",
+      "type": "Kobold Press OGL structured statblock transcription",
+      "source_book": "ToB2",
+      "source_page": 24,
+      "source_creature": "Animated Bearskin Rug",
+      "official_book_verified": false,
+      "verification": "full individually named actions and traits transcribed from structured community JSON"
     }
   ],
   "source_checkpoint": {
@@ -225,8 +286,14 @@
     "Imagem/direitos pendentes."
   ],
   "outstanding": [
-    "Estruturar individualmente traços, ataques, bônus, reações, lendárias, CDs, efeitos, duração, alcance, dados, recargas e limites.",
-    "Checar edições originais, erratas e versões conflitantes antes da integração.",
-    "Dado não verificado permanece null, resumos legados servem apenas como índice de pesquisa."
-  ]
+    "Compare primary book printing, correct variant and errata; community OGL JSON is not canonical validation.",
+    "Independently verify mechanical behavior and artwork license/quality."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_individually_structured": true,
+    "official_printing_or_errata_compared": false,
+    "independent_engine_tested": false,
+    "final_approval": false
+  }
 }

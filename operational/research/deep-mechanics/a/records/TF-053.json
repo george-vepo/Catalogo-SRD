@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (conferir edição)",
+    "publisher": "Kobold Press",
     "publication": "Tome of Beasts 2",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "12",
     "size": "Gargantuan",
     "type": "celestial",
-    "alignment": "chaotic good"
+    "alignment": "chaotic good",
+    "edition": "Tome of Beasts 2 (5e), p.347",
+    "source_page": 347,
+    "experience_points": 8400,
+    "proficiency_bonus": 4
   },
   "statistics": {
     "armor_class": 17,
@@ -27,12 +31,13 @@
       "CHA": 10
     },
     "speeds": {
-      "andar": 60
+      "walk_ft": 60
     },
-    "senses": [
-      "darkvision 120 ft."
-    ],
-    "skills": null,
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 12
+    },
+    "skills": [],
     "saving_throws": {
       "DEX": 8,
       "WIS": 6,
@@ -41,7 +46,7 @@
     "languages": [
       "Common",
       "Giant",
-      "telepathy 60 ft."
+      "telepathy 60 ft"
     ],
     "damage_resistances": [
       "cold",
@@ -51,173 +56,211 @@
       "lightning",
       "poison"
     ],
-    "damage_vulnerabilities": null,
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "poisoned"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 4,
+      "CON": 6,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": 0
+    },
+    "armor_class_type": "natural armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Lightning Absorption",
-        "category": "passive",
-        "legacy_summary": "Converte dano elétrico recebido em igual quantidade de cura.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "passive_triggered",
+        "trigger": "would take lightning damage",
+        "effect": {
+          "prevent_damage": true,
+          "restore_hp_equal_to_prevented_damage": true
+        }
       },
       {
         "name": "Magic Resistance",
         "category": "passive",
-        "legacy_summary": "Vantagem em salvaguardas mágicas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
       },
       {
         "name": "Magic Weapons",
         "category": "passive",
-        "legacy_summary": "Ataques com armas são mágicos.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "weapon_attacks_magical": true
+        }
       },
       {
         "name": "Storm Hide",
-        "category": "passive",
-        "legacy_summary": "Criatura que toque ou acerte corpo a corpo a até 5 pés sofre 2d6 elétrico; o cavaleiro pode ser excluído.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "passive_triggered",
+        "trigger": "another creature touches it or hits with melee attack from within 5ft",
+        "effect": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "modifier": 0,
+              "type": "lightning",
+              "average": 7
+            }
+          ],
+          "can_exclude_rider": true
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "legacy_summary": "Um Gore e um Hooves.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Gore",
+            "count": 1
+          },
+          {
+            "action": "Hooves",
+            "count": 1
+          }
+        ]
       },
       {
         "name": "Gore",
-        "category": "action",
-        "legacy_summary": "+9, alcance 15 pés; 3d12+5 perfurante e 3d6 elétrico.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "3d12",
+              "modifier": 5,
+              "type": "piercing",
+              "average": 24
+            },
+            {
+              "dice": "3d6",
+              "modifier": 0,
+              "type": "lightning",
+              "average": 10
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Hooves",
-        "category": "action",
-        "legacy_summary": "+9, 10 pés; 2d8+5 contundente e 3d6 trovão.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "modifier": 5,
+              "type": "bludgeoning",
+              "average": 14
+            },
+            {
+              "dice": "3d6",
+              "modifier": 0,
+              "type": "thunder",
+              "average": 10
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Thunder Stomp",
-        "category": "action",
-        "legacy_summary": "Recarga 5–6; criaturas a até 20 pés testam FOR CD17; na falha sofrem 10d6 trovão, são empurradas até 10 pés e ensurdecidas até fim do turno seguinte; no sucesso metade sem efeitos adicionais.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "targets": "each creature within 20ft",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "10d6",
+                "modifier": 0,
+                "type": "thunder",
+                "average": 35
+              }
+            ],
+            "pushed_ft_up_to": 10,
+            "condition": "deafened",
+            "duration": "until end of next turn"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "pushed_ft": 0,
+            "condition": null
+          }
+        }
       }
     ],
-    "bonus_actions": null,
+    "bonus_actions": [],
     "reactions": [
       {
         "name": "Protect Rider",
         "category": "reaction",
-        "legacy_summary": "Interceta ataque visível direcionado a seu cavaleiro, tornando-se o novo alvo.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "action_economy": "reaction",
+        "trigger": "rider is targeted by attack visible to Thrummren",
+        "effect": {
+          "redirect_target": "Thrummren"
+        }
       }
     ],
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/thrummren/",
       "type": "ficha_individual_localizada_em_checkpoint",
       "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/tree/master/creature",
+      "type": "Kobold Press OGL structured statblock transcription",
+      "source_book": "ToB2",
+      "source_page": 347,
+      "source_creature": "Thrummren",
+      "official_book_verified": false,
+      "verification": "full individually named actions and traits transcribed from structured community JSON"
     }
   ],
   "source_checkpoint": {
@@ -229,8 +272,14 @@
     "Imagem e direitos pendentes."
   ],
   "outstanding": [
-    "Estruturar individualmente traços, ataques, bônus, reações, lendárias, CDs, efeitos, duração, alcance, dados, recargas e limites.",
-    "Checar edições originais, erratas e versões conflitantes antes da integração.",
-    "Dado não verificado permanece null, resumos legados servem apenas como índice de pesquisa."
-  ]
+    "Compare primary book printing, correct variant and errata; community OGL JSON is not canonical validation.",
+    "Independently verify mechanical behavior and artwork license/quality."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_individually_structured": true,
+    "official_printing_or_errata_compared": false,
+    "independent_engine_tested": false,
+    "final_approval": false
+  }
 }

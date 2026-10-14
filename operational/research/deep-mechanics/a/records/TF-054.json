@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (conferir edição)",
-    "publication": "Tome of Beasts 1",
-    "edition_family": "5e",
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1 (2023 revised)",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "12",
     "size": "Gargantuan",
-    "type": "celestial titan",
-    "alignment": "neutral good"
+    "type": "celestial (titan)",
+    "alignment": "neutral good",
+    "edition": "Tome of Beasts 1 (2023 revised) (5e), p.361",
+    "source_page": 361,
+    "experience_points": 8400,
+    "proficiency_bonus": 4
   },
   "statistics": {
     "armor_class": 15,
@@ -27,12 +31,13 @@
       "CHA": 20
     },
     "speeds": {
-      "andar": 50,
-      "nadar": 30
+      "walk_ft": 50,
+      "swim_ft": 30
     },
-    "senses": [
-      "darkvision 120 ft."
-    ],
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 17
+    },
     "skills": {
       "Athletics": 12,
       "Intimidation": 9,
@@ -47,144 +52,222 @@
       "Common",
       "Giant",
       "Primordial",
-      "telepathy 120 ft."
+      "telepathy 120 ft"
     ],
-    "damage_resistances": [
-      "bludgeoning/piercing/slashing de ataques não mágicos"
-    ],
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 8,
+      "DEX": 1,
+      "CON": 6,
+      "INT": 3,
+      "WIS": 3,
+      "CHA": 5
+    },
+    "armor_class_type": "breastplate"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Amphibious",
         "category": "passive",
-        "legacy_summary": "Respira ar ou água.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "breathes": [
+            "air",
+            "water"
+          ]
+        }
       },
       {
         "name": "Magic Resistance",
         "category": "passive",
-        "legacy_summary": "Vantagem em salvaguardas contra magia.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "legacy_summary": "Usa Reality-Altering Words e realiza dois Greatsword ou três Word of Pain.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "optional_pre_action": "Reality-Altering Words",
+        "options": [
+          [
+            {
+              "action": "Greatsword",
+              "count": 2
+            }
+          ],
+          [
+            {
+              "action": "Word of Pain",
+              "count": 3
+            }
+          ]
+        ]
       },
       {
         "name": "Greatsword",
-        "category": "action",
-        "legacy_summary": "+12, 10 pés, 8d6+8 cortante.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 12,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "8d6",
+              "modifier": 8,
+              "type": "slashing",
+              "average": 36
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Word of Pain",
-        "category": "action",
-        "legacy_summary": "+9, 120 pés, 4d8+5 força, CON CD17 contra desvantagem em ataques, testes e salvaguardas até fim do próximo turno.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 9,
+        "range_ft": 120,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d8",
+              "modifier": 5,
+              "type": "force",
+              "average": 23
+            }
+          ],
+          "saving_throw": {
+            "ability": "CON",
+            "dc": 17,
+            "on_failure": {
+              "disadvantage_on": [
+                "attack rolls",
+                "ability checks",
+                "saving throws"
+              ],
+              "duration": "until end of target next turn"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        }
       },
       {
         "name": "Reality-Altering Words",
-        "category": "action",
-        "legacy_summary": "Alvos até 30 pés fazem DES CD17; falha empurra/puxa até 25 pés e derruba. Em vez disso pode dissipar um efeito de magia de 4º círculo ou inferior sobre o alvo. Área vira terreno difícil até começo do próximo turno.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "area_save",
+        "action_economy": "action",
+        "area": {
+          "radius_ft": 30,
+          "origin": "Titan"
+        },
+        "targets": "each creature within radius",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "choice": [
+              {
+                "push_or_pull_ft_up_to": 25,
+                "condition": "prone"
+              },
+              {
+                "end_one_magical_effect_on_target_max_spell_level": 4
+              }
+            ]
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "environment": {
+          "difficult_terrain_in_area": true,
+          "duration": "until start of titan next turn",
+          "titan_ignores_extra_movement": true
+        }
       },
       {
         "name": "Stunning Word",
-        "category": "action",
-        "legacy_summary": "Recarga 5–6; até três criaturas a 60 pés fazem CON CD17; falha causa 10d8 força e atordoamento, sucesso metade sem atordoamento.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "multi_target_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "targets": {
+          "up_to": 3,
+          "range_ft": 60,
+          "requires_visible": true
+        },
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "10d8",
+                "modifier": 0,
+                "type": "force",
+                "average": 45
+              }
+            ],
+            "condition": "stunned",
+            "duration": "1 minute",
+            "repeat_save": "end of each affected turn; success ends"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "condition": null
+          }
+        }
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/titan-ancient-3pp/",
       "type": "ficha_individual_localizada_em_checkpoint",
       "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/tree/master/creature",
+      "type": "Kobold Press OGL structured statblock transcription",
+      "source_book": "ToB1_2023",
+      "source_page": 361,
+      "source_creature": "Ancient Titan",
+      "official_book_verified": false,
+      "verification": "full individually named actions and traits transcribed from structured community JSON"
     }
   ],
   "source_checkpoint": {
@@ -196,8 +279,14 @@
     "Direitos de uso e imagem pendentes."
   ],
   "outstanding": [
-    "Estruturar individualmente traços, ataques, bônus, reações, lendárias, CDs, efeitos, duração, alcance, dados, recargas e limites.",
-    "Checar edições originais, erratas e versões conflitantes antes da integração.",
-    "Dado não verificado permanece null, resumos legados servem apenas como índice de pesquisa."
-  ]
+    "Compare primary book printing, correct variant and errata; community OGL JSON is not canonical validation.",
+    "Independently verify mechanical behavior and artwork license/quality."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_individually_structured": true,
+    "official_printing_or_errata_compared": false,
+    "independent_engine_tested": false,
+    "final_approval": false
+  }
 }
