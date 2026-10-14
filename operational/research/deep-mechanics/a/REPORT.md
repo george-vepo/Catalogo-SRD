@@ -6,6 +6,8 @@
 
 **Contagem:** 78/132 estruturas individuais pesquisadas, 54 ainda resumidas, 0 homologadas; 124 binários de imagem, 8 ausentes, 0 aprovados para uso nas cartas. Fontes comunitárias individuais não são validação final de edição, licença nem engine; a PR permanece em rascunho, sem merge, mudanças em outros grupos ou V-Bridge.
 
+**Auditoria #56:** [`67272d12c2c1`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/67272d12c2c1006821ade9d81f8f09ea02ae7789). Três JSONs reabertos por API, IDs conferidos, TF-277/278 com blobs de imagem SHA Git e bytes válidos, TF-276 sem imagem; 124 arquivos no diretório. Diff do checkpoint limitado a 5 arquivos do grupo A. Revisão visual e direitos pendentes.
+
 ---
 
 # Grupo A — checkpoint 55: Light Eater, Sooze e Minor Malleable (14/10/2026)
