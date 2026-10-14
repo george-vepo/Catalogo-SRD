@@ -10,14 +10,16 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "2",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "chaotic_neutral",
+    "experience_points": 450,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 11,
     "hit_points": 36,
-    "hit_dice": null,
+    "hit_dice": "8d8",
     "ability_scores": {
       "STR": 12,
       "DEX": 13,
@@ -26,24 +28,147 @@
       "WIS": 14,
       "CHA": 5
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 40,
+      "hover": true
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 11
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": {
+      "known": "languages_known_by_any_constituent_soul_in_life"
+    },
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "thunder",
+      "nonmagical_attack_bludgeoning",
+      "nonmagical_attack_piercing",
+      "nonmagical_attack_slashing"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 1,
+      "CON": 0,
+      "INT": 1,
+      "WIS": 2,
+      "CHA": -3
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Frightening Madness",
+        "category": "turn_start_aura_save",
+        "trigger": "another_creature_starts_turn_within_range",
+        "radius_ft": 10,
+        "targets": "any_creature",
+        "save": {
+          "ability": "WIS",
+          "dc": 12,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "until_start_of_affected_creature_next_turn"
+          },
+          "on_success": {
+            "immunity_to_trait_hours": 24
+          }
+        },
+        "post_success_immunity_applies_to": "Frightening Madness"
+      },
+      {
+        "name": "Incorporeal Movement",
+        "category": "movement",
+        "through": [
+          "creatures",
+          "objects"
+        ],
+        "terrain_cost": "difficult_terrain",
+        "trigger": "ends_turn_inside_object",
+        "self_damage": {
+          "dice": "1d10",
+          "average": 5,
+          "type": "force"
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "needs_air": false,
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Maddening Grasp",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Maddening Grasp",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 2,
+              "average": 9,
+              "type": "necrotic"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Fantasma formado por almas fragmentadas; aura de loucura gera medo nos próximos."
@@ -60,15 +185,15 @@
       "url": "https://www.5esrd.com/database/creature/chimeric-phantom/",
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Tome of Beasts 2",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "Leitura do bloco individual online com todos os valores, traços, ações e condicionais",
+      "verification": "Consultado 14/10/2026, edição impressa e testes pendentes"
     },
     {
       "url": "https://kpogl.wikidot.com/monster:chimeric-phantom",
       "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
       "edition": "Tome of Beasts 2",
-      "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "Leitura do bloco individual online com todos os valores, traços, ações e condicionais",
+      "verification": "Consultado 14/10/2026, edição impressa e testes pendentes"
     }
   ],
   "source_checkpoint": {
@@ -80,9 +205,8 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Comparar impressão editorial, erratas e eventuais versões divergentes com o modelo estruturado.",
+    "Executar revisão independente e testes de regras/condições no motor antes de homologar."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -106,5 +230,18 @@
       "licença",
       "qualidade para impressão"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:chimeric-phantom",
+      "https://www.5esrd.com/database/creature/chimeric-phantom/"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Secundária online comparada quando disponível; publicação, erratas e engine não homologadas."
   }
 }

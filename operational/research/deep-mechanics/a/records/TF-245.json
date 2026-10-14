@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral_evil",
+    "experience_points": 1800,
+    "proficiency_bonus": 3,
+    "source_page": 304
   },
   "statistics": {
     "armor_class": 15,
     "hit_points": 117,
-    "hit_dice": null,
+    "hit_dice": "18d8+36",
     "ability_scores": {
       "STR": 13,
       "DEX": 16,
@@ -26,24 +29,205 @@
       "WIS": 14,
       "CHA": 10
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 30,
+      "swim_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 12
+    },
+    "skills": {
+      "Athletics": 4,
+      "Acrobatics": 6,
+      "Stealth": 6,
+      "Survival": 5
+    },
+    "saving_throws": {
+      "WIS": 3
+    },
+    "languages": {
+      "known": "languages_known_in_life"
+    },
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 3,
+      "CON": 2,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": 0
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Experienced Sailor",
+        "category": "situational_advantage",
+        "checks": [
+          {
+            "ability": "STR",
+            "skill": "Athletics",
+            "purpose": "climb",
+            "precondition": "aboard_sailing_ship",
+            "advantage": true
+          },
+          {
+            "ability": "DEX",
+            "skill": "Acrobatics",
+            "purpose": "maintain_footing",
+            "precondition": "aboard_sailing_ship",
+            "advantage": true
+          }
+        ]
+      },
+      {
+        "name": "Seaside Rejuvenation",
+        "category": "post_death_respawn",
+        "trigger": "destroyed",
+        "precondition": {
+          "operator": "OR",
+          "any": [
+            "one_or_more_accusers_alive",
+            "name_not_cleared"
+          ]
+        },
+        "delay_days": 13,
+        "new_hp": "max",
+        "respawn_location": "nearest_beach_or_dock_to_a_living_accuser",
+        "unresolved_edge_case": "Quando não resta acusador vivo mas nome não foi limpo, local do reaparecimento não explicitado na transcrição"
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "needs_air": false,
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Desiccating Slam",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Desiccating Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 3,
+              "average": 12,
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "average": 7,
+              "type": "necrotic"
+            }
+          ],
+          "save": {
+            "ability": "CON",
+            "dc": 15,
+            "on_failure": {
+              "reduce_hit_point_maximum": "necrotic_damage_actually_taken",
+              "duration": "until_target_finishes_long_rest",
+              "death_if_maximum_hit_points_reaches": 0
+            },
+            "on_success": {
+              "reduce_hp_maximum": false
+            }
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Wave of Seawater",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "targets": "each_creature",
+        "save": {
+          "ability": "DEX",
+          "dc": 15,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "6d6",
+                "average": 21,
+                "type": "bludgeoning"
+              }
+            ],
+            "condition": "choking",
+            "choking_exception": "can_breathe_water",
+            "effect_end_save": {
+              "ability": "CON",
+              "dc": 15,
+              "timing": "end_of_each_affected_turn",
+              "success_ends": true
+            }
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "choking": false
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Cunning Action",
+        "category": "action_options",
+        "action_economy": "bonus_action",
+        "choices": [
+          "Dash",
+          "Disengage",
+          "Hide"
+        ]
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Morto-vivo do mar que rejuvenesce enquanto acusadores vivem; golpes necróticos drenam máximo de PV."
@@ -60,8 +244,8 @@
       "url": "https://kpogl.wikidot.com/monster:old-salt",
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Tome of Beasts 3",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "Leitura do bloco individual online com todos os valores, traços, ações e condicionais",
+      "verification": "Consultado 14/10/2026, edição impressa e testes pendentes"
     }
   ],
   "source_checkpoint": {
@@ -70,12 +254,14 @@
     "reference_commit": null
   },
   "edition_conflicts": [
-    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada.",
+    "Fonte secundária registra Wisdom saving throw +3, embora SAB 14 (+2) e proficiência declarada +3 sugiram +5 se proficiente; não recalcular sem confirmação editorial."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Comparar impressão editorial, erratas e eventuais versões divergentes com o modelo estruturado.",
+    "Executar revisão independente e testes de regras/condições no motor antes de homologar.",
+    "Investigar discrepância matemática de Wisdom saving throw (+3 na transcrição versus proficiência +3).",
+    "Esclarecer reaparecimento da Seaside Rejuvenation se só permanecer a condição de nome não limpo sem acusador vivo."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -99,5 +285,17 @@
       "licença",
       "qualidade para impressão"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:old-salt"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Secundária online comparada quando disponível; publicação, erratas e engine não homologadas."
   }
 }

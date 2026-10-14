@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 48: Chimeric Phantom, Old Salt e Yowler (14/10/2026)
+
+- **TF-244 Chimeric Phantom:** medo automático condicionado no começo do turno a 10 pés, imunidade 24h no sucesso, incorporeidade, Multiattack 2× Maddening Grasp.
+- **TF-245 Old Salt:** vantagem em perícias no navio, renovação após 13 dias com lógica OR, duas Desiccating Slams com redução de PV máximo, Wave of Seawater e engasgamento, Cunning Action como bônus. **Inconsistência preservada:** salvaguarda Wisdom +3, embora Sabedoria 14 e proficiência +3 sugiram +5 para proficiência. Sem corrigir por inferência.
+- **TF-246 Yowler:** Living Projection, Bite e veneno, Claws, Yowl e substituição no Multiattack. Variantes opcionais **Decayed Dander**, **Grave Visage** e **Unliving Vengeance** isoladas da ficha-base e apoiadas por [publicação oficial Kobold Press](https://koboldpress.com/tome-unbound-yowler/); Yowler Clowder não incorporado.
+
+**Totais:** **54** statblocks estruturados no nível digital individual, **78** ainda resumidos, **0** fichas editorialmente homologadas; **124** imagens binárias e **8** ausentes, **0** aprovadas. Fichas continuam PARCIAIS até livro, erratas e motor. Sem V-Bridge, merge ou alterações fora de A.
+
+---
+
 # Grupo A — checkpoint 47: Chill Haunt, Ash Phoenix e Ogrepede (14/10/2026)
 
 - **TF-243 Chill Haunt:** Cryophobia suplanta a imunidade ao medo com CD 13; absorção de fogo; movimento incorpóreo; Shivering Touch (CD 12, dano contínuo e término por fogo) estruturados.

@@ -10,14 +10,16 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "0.5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Tiny",
+    "type": "undead",
+    "alignment": "chaotic_evil",
+    "experience_points": 100,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 12,
     "hit_points": 22,
-    "hit_dice": null,
+    "hit_dice": "4d4+12",
     "ability_scores": {
       "STR": 3,
       "DEX": 15,
@@ -26,24 +28,273 @@
       "WIS": 10,
       "CHA": 5
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40,
+      "climb_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 12
+    },
+    "skills": {
+      "Perception": 2,
+      "Stealth": 4
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "frightened",
+      "poisoned"
+    ],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": -4,
+      "DEX": 2,
+      "CON": 3,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -3
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Living Projection",
+        "category": "magical_illusion",
+        "effect": "appears_as_in_life",
+        "suppression": {
+          "trigger": [
+            "attacks",
+            "uses_Yowl"
+          ],
+          "duration": "1_minute"
+        },
+        "physical_inspection": "illusion_not_matching_touch",
+        "visual_detection": {
+          "requires_action": true,
+          "ability": "INT",
+          "skill": "Investigation",
+          "dc": 15
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "needs_air": false,
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Bite",
+            "count": 1,
+            "can_replace_with": "Yowl"
+          },
+          {
+            "attack": "Claws",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 2,
+              "average": 4,
+              "type": "piercing"
+            }
+          ],
+          "save": {
+            "ability": "CON",
+            "dc": 12,
+            "on_failure": {
+              "condition": "poisoned",
+              "duration": "until_end_of_target_next_turn"
+            },
+            "on_success": {
+              "condition": null
+            }
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 2,
+              "average": 5,
+              "type": "slashing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Yowl",
+        "category": "area_save",
+        "action_economy": "action",
+        "targets": "hostile_creatures_that_can_hear",
+        "radius_ft": 30,
+        "save": {
+          "ability": "WIS",
+          "dc": 12,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "1_minute",
+            "repeat_save": {
+              "ability": "WIS",
+              "dc": 12,
+              "timing": "end_of_each_target_turn",
+              "success_ends": true
+            }
+          },
+          "on_success": {
+            "condition": null
+          }
+        },
+        "immunity_to_Yowl_after_success_or_effect_ends_hours": 24
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Tome Unbound optional variants",
+        "kind": "publication_variant_package",
+        "source": "https://koboldpress.com/tome-unbound-yowler/",
+        "default_applied": false,
+        "individual_options": [
+          {
+            "name": "Decayed Dander",
+            "category": "optional_action",
+            "action_economy": "action",
+            "recharge": "5-6",
+            "area": {
+              "radius_ft": 10,
+              "center": "yowler"
+            },
+            "save": {
+              "ability": "DEX",
+              "dc": 12,
+              "on_failure": {
+                "damage": [
+                  {
+                    "dice": "2d6",
+                    "average": 7,
+                    "type": "necrotic"
+                  }
+                ],
+                "condition": "poisoned",
+                "condition_ends": "end_of_target_next_turn",
+                "additional_if_save_fails_by_5_or_more": {
+                  "condition": "incapacitated",
+                  "duration": "until_end_of_target_next_turn"
+                }
+              },
+              "on_success": {
+                "damage_multiplier": 0.5,
+                "poisoned": false
+              }
+            },
+            "tradeoff": {
+              "speed_ft_minus": 10
+            }
+          },
+          {
+            "name": "Grave Visage",
+            "category": "optional_bonus_action",
+            "action_economy": "bonus_action",
+            "target": {
+              "living": true,
+              "max_size": "Medium",
+              "range_ft": 30,
+              "count": 1
+            },
+            "save": {
+              "ability": "CHA",
+              "dc": 12,
+              "on_success": {
+                "illusion": false
+              },
+              "on_failure": {
+                "illusion": "appears_undead"
+              }
+            },
+            "replaces_trait": "Living Projection",
+            "simultaneous_targets_max": 1,
+            "old_target_ends_on_reuse_even_if_new_target_succeeds": true,
+            "visual_detection": {
+              "requires_action": true,
+              "ability": "INT",
+              "skill": "Investigation",
+              "dc": 15
+            },
+            "physical_inspection": "reveals_illusion"
+          },
+          {
+            "name": "Unliving Vengeance",
+            "category": "optional_trait",
+            "target": "former_master",
+            "advantage": [
+              "attack_rolls_against_former_master",
+              "Wisdom_Survival_checks_to_track_former_master"
+            ],
+            "while_sees_or_hears_former_master": {
+              "attack_rolls_against_other_creatures": "disadvantage"
+            },
+            "removes_action": "Yowl"
+          }
+        ]
+      }
+    ]
   },
   "prior_research_summary_unverified_for_implementation": [
     "Ilusão o faz parecer vivo até atacar ou uivar, revelando a aparência espectral."
@@ -67,8 +318,15 @@
       "url": "https://kpogl.wikidot.com/monster:yowler",
       "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
       "edition": "Tome of Beasts 2",
-      "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "Leitura do bloco individual online com todos os valores, traços, ações e condicionais",
+      "verification": "Consultado 14/10/2026, edição impressa e testes pendentes"
+    },
+    {
+      "url": "https://koboldpress.com/tome-unbound-yowler/",
+      "type": "fonte oficial Kobold Press de regras alternativas",
+      "edition": "Tome of Beasts 2",
+      "scope": "Mecânicas da entrada individual ou variante explicitamente separada",
+      "verification": "Consultado 14/10/2026; impressão não homologada"
     }
   ],
   "source_checkpoint": {
@@ -80,9 +338,8 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Comparar impressão editorial, erratas e eventuais versões divergentes com o modelo estruturado.",
+    "Executar revisão independente e testes de regras/condições no motor antes de homologar."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -106,5 +363,18 @@
       "licença",
       "qualidade para impressão"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:yowler",
+      "https://koboldpress.com/tome-unbound-yowler/"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Secundária online comparada quando disponível; publicação, erratas e engine não homologadas."
   }
 }
