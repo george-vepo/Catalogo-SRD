@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 10 lotes validados, 100/395 fichas (295 restantes).
+**Situação:** EM ANDAMENTO — 11 lotes validados, 110/395 fichas (285 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -81,4 +81,11 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 7 completas em conteúdo, 3 completas com ressalvas: TF-110 (origem editorial divergente Tome of Beasts 1 vs 2), TF-113 (homônimo/edições distintas do Clurichaun) e TF-115 (Acrobatics +3 apesar de DES 18, valor a conferir). As dez imagens físicas estão vinculadas pelo manifesto E, com SHA Git e bytes conferidos; TF-115 tem largura 481 px. TF-107 é a versão 2023 explicitamente escolhida, distinta da edição antiga. Não representa autorização de direitos, inspeção visual ou adaptação concluída.
 
 **Consolidado:** 100/395, 62 completas em conteúdo, 18 com ressalvas, 19 incompletas, 1 não verificável; 49 imagens diretas, 48 vinculadas por manifesto e 3 ausentes.
+
+
+## Lote 011 — TF-116–TF-125 (10 IDs da ordem do CSV)
+
+6 completas em conteúdo, 3 com ressalvas (TF-121: Multiattack por forma e typo original; TF-123: conflito de copyright/proveniência da fonte que contém ações lendárias; TF-125: Trunk Slam sem restrição inequívoca de forma) e 1 incompleta (**TF-124**: Bestowal of Trust sem custo/ação e alcance). A partir de TF-120 começa o grupo C, com referência direta a imagens no JSON; quatro primeiras imagens vinculadas via manifesto E. Dez imagens presentes com SHA e bytes verificados. Duas com dimensão inferior a 500 px. Não houve cotejo integral do original impresso, homologação de arte ou adaptação de card game.
+
+**Consolidado:** 110/395; 68 completas em conteúdo, 21 com ressalvas, 20 incompletas, 1 não verificável; 55 imagens diretas, 52 via manifesto, 3 ausentes.
 
