@@ -4,9 +4,9 @@
   "nome": "Ooze, Shadow",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 45,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Creature Codex",
@@ -21,7 +21,7 @@
     "dados_vida": "9d8+36",
     "porte": "Medium",
     "tipo": "ooze",
-    "alinhamento": null,
+    "alinhamento": "unaligned",
     "atributos": {
       "FOR": 16,
       "DES": 6,
@@ -42,259 +42,156 @@
       "andar": 20,
       "escalar": 20
     },
-    "pericias": {
-      "Stealth": 2
-    },
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": 2
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [],
     "imunidades_dano": [
       "acid",
       "necrotic"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 700,
+    "bonus_proficiencia": 2
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Amorphous",
-        "resumo_anterior": "Passa por uma polegada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "atravessa abertura 1 inch"
       },
       {
         "nome": "Aura of Darkness",
-        "resumo_anterior": "Extingue luz natural e mágica num raio de 30 pés, com exceção visual para shadow fey.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "raio_ft": 30,
+        "efeito": "extingue luz natural/mágica, área heavily obscured para todos exceto shadow fey"
       },
       {
         "nome": "Frozen Defense",
-        "resumo_anterior": "Agressor com arma metálica corpo a corpo toma 2d4 frio ao atingir.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "criatura com arma melee metálica acerta ooze",
+        "efeito": {
+          "dano": {
+            "dados": "2d4",
+            "media": 5,
+            "tipo": "cold"
+          }
+        }
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
       },
       {
         "nome": "Spider Climb",
-        "resumo_anterior": "Escala paredes e tetos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "escalada tetos/verticais sem teste"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Pseudopod seguido de Snuff Out.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          "Pseudopod",
+          "Snuff Out"
+        ],
+        "ordem": "Pseudopod antes de Snuff Out"
       },
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+5, 5 pés, 2d6+3 contundente, 2d6 necrótico e 1d6 ácido.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "necrotic"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ]
       },
       {
         "nome": "Snuff Out",
-        "resumo_anterior": "Apaga uma fonte de luz em até 60 pés, dissipando se for criada por magia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "alvo": "uma fonte de luz natural ou mágica até 60ft",
+        "efeito": "extingue, se originada de spell dissipa essa spell"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Pseudopod seguido de Snuff Out.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
         "nome": "Pseudopod",
-        "resumo_anterior": "+5, 5 pés, 2d6+3 contundente, 2d6 necrótico e 1d6 ácido.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "necrotic"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ]
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Pseudopod seguido de Snuff Out.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Pseudopod",
+        "Snuff Out"
+      ],
+      "ordem": "Pseudopod antes de Snuff Out"
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Variante Freezing Shadow Ooze aparece na página; não misturar com ficha principal.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Freezing Shadow Ooze em seção Variant não faz parte da ficha base; sem incorporar imunidade cold variante.",
+    "Aura Darkness 30ft heavily obscured exceto shadow fey, Snuff Out 60ft único alvo.",
+    "Validação livro/licença e imagem ainda pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferir livro/errata",
+    "imagem legal e visual pendentes"
   ],
   "fontes": [
     {
@@ -305,6 +202,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-shadow/",
+      "tipo": "ficha individual revisada no checkpoint 39",
       "conferida_nesta_execucao": true
     }
   ],
@@ -403,5 +305,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 39,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-shadow/",
+    "publicacao": "Creature Codex",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

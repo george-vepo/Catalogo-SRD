@@ -4,9 +4,9 @@
   "nome": "Ooze, Manure",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 43,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 3",
@@ -21,7 +21,7 @@
     "dados_vida": "6d8+18",
     "porte": "Medium",
     "tipo": "ooze",
-    "alinhamento": null,
+    "alinhamento": "unaligned",
     "atributos": {
       "FOR": 14,
       "DES": 5,
@@ -42,219 +42,141 @@
       "andar": 20,
       "escalar": 20
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [],
     "imunidades_dano": [
       "acid",
       "cold",
       "slashing"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 200,
+    "bonus_proficiencia": 2
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Amorphous",
-        "resumo_anterior": "Passa por aberturas de uma polegada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "atravessa abertura 1 inch sem squeeze"
       },
       {
         "nome": "Eye-Watering Stench",
-        "resumo_anterior": "Criaturas que iniciam turno a 20 pés testam Constituição CD13 ou têm desvantagem no ataque até o próximo turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "criatura inicia turno até 20ft da ooze",
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": "desvantagem em attack rolls até início do próximo turno da vítima"
       },
       {
         "nome": "Flammable",
-        "resumo_anterior": "Ao sofrer dano de fogo, fica em chamas até fim do próximo turno e Pseudopod ganha 1d6 de fogo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "sofre fire damage",
+        "duracao": "até fim do próximo turno",
+        "bonus_ataque": "Pseudopod causa +1d6 fire enquanto em chamas"
       },
       {
         "nome": "Ooze Nature",
-        "resumo_anterior": "Não precisa dormir.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "não dorme"
       }
     ],
     "acoes": [
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+4, 5 pés, 1d6+2 contundente mais 1d6 veneno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "poison"
+          }
+        ],
+        "dano_adicional_em_chamas": {
+          "dados": "1d6",
+          "media": 3,
+          "tipo": "fire"
+        }
       },
       {
         "nome": "Digest Corpse",
-        "resumo_anterior": "Consome cadáver recente no próprio espaço e recupera 1d6 PV por categoria de tamanho; cadáver é destruído.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "precondicao": "cadáver no mesmo espaço e morto há menos de 1 week",
+        "cura": "1d6 HP por categoria de tamanho do cadáver, Tiny=1d6, Large=4d6",
+        "apos_uso": "cadáver destruído, não reutilizável"
       }
     ],
     "ataques": [
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+4, 5 pés, 1d6+2 contundente mais 1d6 veneno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "poison"
+          }
+        ],
+        "dano_adicional_em_chamas": {
+          "dados": "1d6",
+          "media": 3,
+          "tipo": "fire"
+        }
       }
     ],
     "multiataque": null,
-    "acoes_bonus": null,
+    "acoes_bonus": [],
     "reacoes": [
       {
         "nome": "Split",
-        "resumo_anterior": "Ao sofrer dano cortante sendo Medium+ e possuindo 10+ PV, divide-se em duas oozes de categoria menor, cada uma com metade dos PV.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "ooze Medium ou maior sujeita a slashing damage",
+        "precondicao": "pelo menos 10 HP",
+        "efeito": "divide em duas ooze um tamanho menor, metade HP arredondada para baixo para cada",
+        "nota": "imunidade slashing coexiste na mesma fonte; não deduzir que dano efetivo precisa ser maior que 0"
       }
     ],
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Verificar interação entre imunidade a slashing e reação Split; a fonte lista ambos e não deve ser silenciosamente reinterpretada.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Split acionada por slashing mesmo com imunidade slashing publicada; interação requer verificação editorial, não apagar nenhum.",
+    "Digest Corpse exige cadáver com menos de uma semana e destrói original, cura por tamanho.",
+    "Revisão livro/erratas e imagem sem aprovação."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferir livro/errata",
+    "imagem legal e visual pendentes"
   ],
   "fontes": [
     {
@@ -265,6 +187,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-manure/",
+      "tipo": "ficha individual revisada no checkpoint 39",
       "conferida_nesta_execucao": true
     }
   ],
@@ -363,5 +290,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 39,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-manure/",
+    "publicacao": "Tome of Beasts 3",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

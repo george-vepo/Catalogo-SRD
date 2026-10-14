@@ -4,9 +4,9 @@
   "nome": "Ooze, Sinkhole",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 46,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 3",
@@ -21,7 +21,7 @@
     "dados_vida": "8d20+24",
     "porte": "Gargantuan",
     "tipo": "ooze",
-    "alinhamento": null,
+    "alinhamento": "unaligned",
     "atributos": {
       "FOR": 18,
       "DES": 5,
@@ -43,280 +43,181 @@
       "escavar": 40,
       "escalar": 20
     },
-    "pericias": null,
-    "salvaguardas": {
-      "STR": 6
-    },
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
+    "pericias": [],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 120,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [],
     "imunidades_dano": [
       "acid"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Amorphous",
-        "resumo_anterior": "Atravessa polegada de abertura.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "atravessa abertura 1 inch"
       },
       {
         "nome": "Hollow Cylindrical Form",
-        "resumo_anterior": "Em modo alongado forma cilindro oco, permitindo ocupação interna e mantendo espaço ao alcance.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "precondicao": "stretched body",
+        "efeito": "centro do cilindro pode conter criaturas, sempre dentro de alcance da ooze"
       },
       {
         "nome": "Seizing Pseudopods",
-        "resumo_anterior": "Até seis pseudópodes atacáveis individualmente (CA10/PV10), cada um regenerável; Força CD14 para romper.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "maximo": 6,
+        "por_pseudopod": {
+          "ca": 10,
+          "pv": 10,
+          "imunidades": [
+            "acid",
+            "poison",
+            "psychic"
+          ]
+        },
+        "destruicao": "não afeta HP da ooze; recompõe um no próximo turno",
+        "quebra": {
+          "economia": "action",
+          "teste": "STR DC14"
+        }
+      },
+      {
+        "nome": "Slimy Appearance",
+        "precondicao": "stretched e imóvel",
+        "efeito": "parece superfície interna úmida do poço"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
       },
       {
         "nome": "Spider Climb",
-        "resumo_anterior": "Escala superfícies difíceis.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "escalada sem teste"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Dois Pseudopods.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ]
       },
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+6, 15 pés, 1d10+4 contundente e 1d6 ácido; agarra e restringe, fuga CD14, causa ácido contínuo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 15,
+        "alvos": "one creature",
+        "dano": [
+          {
+            "dados": "1d10+4",
+            "media": 9,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ],
+        "grapple": {
+          "escape_cd": 14,
+          "condicao": "restrained",
+          "dano_continuo": {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid",
+            "momento": "início de cada turno do alvo"
+          },
+          "limite": "pseudopod individual não ataca outros alvos enquanto grapple"
+        }
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Dois Pseudopods.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
         "nome": "Pseudopod",
-        "resumo_anterior": "+6, 15 pés, 1d10+4 contundente e 1d6 ácido; agarra e restringe, fuga CD14, causa ácido contínuo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 15,
+        "alvos": "one creature",
+        "dano": [
+          {
+            "dados": "1d10+4",
+            "media": 9,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ],
+        "grapple": {
+          "escape_cd": 14,
+          "condicao": "restrained",
+          "dano_continuo": {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid",
+            "momento": "início de cada turno do alvo"
+          },
+          "limite": "pseudopod individual não ataca outros alvos enquanto grapple"
+        }
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Dois Pseudopods.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ]
     },
     "acoes_bonus": [
       {
         "nome": "Stretch Body",
-        "resumo_anterior": "Revestimento cilíndrico de poço até 25 pés de altura e raio; pode desfazer por ação bônus.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "local": "paredes internas de buraco/poço circular",
+        "efeito": "torna cilindro oco de até 25ft altura e raio 25ft",
+        "desfazer": "bonus action para encerrar e ocupar espaço desocupado mais próximo"
       }
     ],
-    "reacoes": [
-      {
-        "nome": "Pluck",
-        "resumo_anterior": "Enquanto esticado, ao menos uma criatura cai no cilindro: até dois alvos, Destreza CD14 ou agarrados.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Stretch Body é bonus action indispensável para Hollow Cylindrical Form, Slimy Appearance e Pluck; nunca disponibilizar Pluck sem estado stretched.",
+    "Cada um dos até 6 pseudopods é entidade local atacável CA10/HP10, destruída não tira HP da ooze.",
+    "Imagem/edição/errata pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferir livro/errata",
+    "imagem legal e visual pendentes"
   ],
   "fontes": [
     {
@@ -327,6 +228,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/sinkhole-ooze/",
+      "tipo": "ficha individual revisada no checkpoint 39",
       "conferida_nesta_execucao": true
     }
   ],
@@ -432,5 +338,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 39,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/sinkhole-ooze/",
+    "publicacao": "Tome of Beasts 3",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

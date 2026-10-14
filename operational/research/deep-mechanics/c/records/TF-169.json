@@ -4,9 +4,9 @@
   "nome": "Ooze, Suppurating",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 47,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Creature Codex",
@@ -21,7 +21,7 @@
     "dados_vida": "4d8+12",
     "porte": "Medium",
     "tipo": "ooze",
-    "alinhamento": null,
+    "alinhamento": "unaligned",
     "atributos": {
       "FOR": 16,
       "DES": 6,
@@ -42,13 +42,22 @@
       "andar": 10,
       "escalar": 10
     },
-    "pericias": null,
-    "salvaguardas": {
-      "CON": 5
-    },
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
+    "pericias": [],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
     "resistencias": [
       "cold",
       "necrotic",
@@ -57,142 +66,125 @@
     "imunidades_dano": [
       "poison"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "poisoned",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 200,
+    "bonus_proficiencia": 2
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Amorphous",
-        "resumo_anterior": "Passa por uma polegada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "atravessa abertura de 1 inch"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
       },
       {
         "nome": "Seeping Death",
-        "resumo_anterior": "Contato ou ataque corpo a corpo próximo causa 1d8 necrótico e Constituição CD13 contra doença; novas falhas após descanso longo reduzem Destreza em 1d4, podendo causar morte e transformação. Cura por magia apropriada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "criatura viva toca ooze ou acerta com melee a até 5ft",
+        "dano": {
+          "dados": "1d8",
+          "media": 4,
+          "tipo": "necrotic"
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": "infected with Seeping Death",
+        "doenca": {
+          "intervalo": "fim de cada long rest",
+          "teste": "CON DC13",
+          "falha": "DEX score reduzido em 1d4",
+          "reversao": "long rest após doença curada",
+          "morte": "se DEX chegar a 0",
+          "transformacao": "cadáver vira suppurating ooze 1d4 horas depois",
+          "cura": "lesser restoration ou magia similar"
+        }
       },
       {
         "nome": "Spider Climb",
-        "resumo_anterior": "Escala paredes e tetos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "escalada tetos sem teste"
       }
     ],
     "acoes": [
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+5, 5 pés, 1d6+3 contundente e 2d8 necrótico; Constituição CD13 ou doença Seeping Death.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "necrotic"
+          }
+        ],
+        "teste_infeccao": {
+          "alvo": "creature",
+          "atributo": "CON",
+          "cd": 13,
+          "falha": "Seeping Death"
+        }
       }
     ],
     "ataques": [
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+5, 5 pés, 1d6+3 contundente e 2d8 necrótico; Constituição CD13 ou doença Seeping Death.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "necrotic"
+          }
+        ],
+        "teste_infeccao": {
+          "alvo": "creature",
+          "atributo": "CON",
+          "cd": 13,
+          "falha": "Seeping Death"
+        }
       }
     ],
     "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Variante Seeping Death Skeleton é entidade distinta, não integrar à ficha de ooze.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Seeping Death causa perda DEX apenas se CON CD13 falha ao fim de cada long rest, morte quando DEX=0, reversão long rest depois de cura e transformação 1d4h após morte.",
+    "Seeping Death Skeleton é variante CR2 de entidade distinta; não integrar.",
+    "Revisão editorial de livro e autorização de imagem pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferir livro/errata",
+    "imagem legal e visual pendentes"
   ],
   "fontes": [
     {
@@ -203,6 +195,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-suppurating/",
+      "tipo": "ficha individual revisada no checkpoint 39",
       "conferida_nesta_execucao": true
     }
   ],
@@ -293,5 +290,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 39,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-suppurating/",
+    "publicacao": "Creature Codex",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
