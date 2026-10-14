@@ -1,3 +1,39 @@
+# SRD Card Game 607 — Grupo A: checkpoint adicional de mecânicas completas online (2026-10-14)
+
+## Estado atual — substitui métricas históricas deste relatório
+
+| Métrica | Estado |
+|---|---:|
+| Escopo exclusivo e arquivos JSON presentes | **132/132** |
+| Mecânicas completas com homologação editorial e revisão independente | **0/132** |
+| Mecânicas integralmente estruturadas segundo fichas individuais online, sem homologação final | **27/132** |
+| Registros parciais | **131** |
+| Registros bloqueados | **1 (KP-S011)** |
+| Imagens binárias existentes na branch A | **73/132** |
+| Imagens ausentes | **59** |
+| Imagens aprovadas para produção | **0** |
+
+**A meta de 132 fichas homologadas ainda NÃO está atingida.** O termo "estruturada online" não é equivalente a "MECANICA_COMPLETA_VERIFICADA": falta validar a variante/impressão correta, erratas, resolução de divergências e comportamento da engine. As imagens permanecem em gate editorial/visual/autorizações.
+
+## Pesquisa comprovável nesta retomada: 10 IDs distintos, 3 commits
+
+- [`d0642b33`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/d0642b33e893b5e55d043abcac1bcce3b25d645d): TF-046, TF-047, TF-048, TF-050, TF-051; inseridas ações, conjuração e usos diários, bônus, reação, economia lendária e ataque em área.
+- [`5b617abb`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5b617abbd186c6766d59f17c4af6c237330495f2): TF-052, TF-053, TF-054, TF-057 e correção de TF-048. Dados de ataque, condições, recargas e substituições de Multiattack. TF-057 `Claws` corrigido de resumo incorreto para **1d10+4 perfurante**, conforme ficha OGL.
+- [`fde4a598`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/fde4a59820f1b47256a8739d9b6ed5020273c26a): TF-049 (Agonized Khyphon) estruturado por [fonte digital oficial de Advanced 5E](https://www.a5e.tools/node/3400). Mantidos conceitos A5E exclusivos: bloodied 97, Maneuver DC 17, expertise die, disease tier, duas reações por rodada. Alinhamento/tipo corrigidos para TF-046, TF-047, TF-050, TF-051.
+
+## Pendências bloqueadoras identificadas e preservadas
+
+- **TF-047 (Ursan Archon):** `Celestial Weapons` declara dano adicional de força de 4d8 já incluído, mas `Greataxe` registra apenas 3d8. Corrigir apenas com edição/errata comprovadas, sem inferência.
+- **TF-052 (Cosmic Symphony):** `Celestial Crescendo` exige salvaguarda de CON, mas o trecho publicado não especifica CD. Mantido **null**, sem presumir CD 18 de outras ações.
+- **TF-049:** fonte digital é da **Advanced 5th Edition**, NÃO converter habilidades, perícias ou resistências para 5e genérico.
+- Continuam pendentes **KP-S011** (2016 vs 2023), **TF-039** (fórmula Bite incompatível) e **TF-041** (Multiattack condicional ambíguo).
+
+Fontes: [TheGiddyLimit/homebrew](https://github.com/TheGiddyLimit/homebrew/tree/master/creature) (dados OGL transcritos, não homologação do livro), [A5E oficial](https://www.a5e.tools/node/3400), [Kobold Press erratas](https://koboldpress.com/errata/).
+
+**Auditoria:** foram lidos novamente os dez JSONs alterados a partir de commit remoto, conferindo IDs, campos e estrutura; o diff desde o commit anterior à rodada alterou apenas 10 registros sob `operational/research/deep-mechanics/a/`; total da árvore permanece **132 registros e 73 imagens**. Sem merge, sem alteração do ledger ou dos grupos B/C. PR #8 permanece draft.
+
+---
+
 # SRD Card Game 607 — Grupo A: continuação de pesquisa de 15 fichas (14/10/2026)
 
 **PR #8 segue rascunho, sem merge; nenhuma ficha foi aprovada sem confrontação editorial.**
