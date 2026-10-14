@@ -177,3 +177,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 2 completas em conteúdo, 7 com ressalvas (TF-266, 267, 269, 272, 273, 274, 276: dependências/ambiguidade de regras e versões) e 1 incompleta (**TF-265**, sem mecânicas). Oito imagens diretamente vinculadas com SHA e tamanho conferidos. **TF-274 e TF-276 não possuem imagem**, confirmado também no manifesto F; TF-272 (280×280) e TF-273 (373×669) têm dimensões reduzidas. Fonte primária, licença, inspeção visual e adaptação não homologadas.
 
 **Consolidado:** 250/395 (145 restantes); 159 completas, 55 com ressalvas, 35 incompletas e 1 não verificável; 191 imagens diretas, 54 por manifesto e 5 ausentes.
+
+## Lote 026 — TF-277–TF-289 (10 IDs da ordem do CSV)
+
+4 completas em conteúdo, 5 com ressalvas (TF-277, 279, 283, 284, 286 por variantes/regras dependentes de outros registros ou arredondamento não definido) e 1 incompleta (**TF-285**, sem atributos/ações estruturados). Sete imagens diretamente vinculadas; **TF-283, TF-284 e TF-286 ausentes**, também pendentes no manifesto F. TF-278 e TF-289 são tokens 280×280; TF-285 tem miniatura 64×80, todas de resolução insuficiente para inferir aptidão editorial. Licenças e adequação visual não homologadas.
+
+**Consolidado:** 260/395 (135 restantes); 163 completas, 60 com ressalvas, 36 incompletas e 1 não verificável; 198 imagens diretas, 54 via manifesto, 8 ausentes.
