@@ -2,28 +2,37 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-302",
   "nome": "Angel, Shrouded",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_REQUER_VALIDACAO_EDITORIAL",
   "edicao": {
-    "sistema": "D&D 5e (publicação informada em checkpoint)",
-    "publicacao": "Tome of Beasts 3",
     "editora": "Kobold Press",
-    "edicao_exata_verificada": false
+    "publicacao": "Tome of Beasts 3 (p.29)",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "Transcrição individual KPOGL rotulada com publicação Tome of Beasts indicada",
+    "proibida_mistura_de_versoes": true
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/angel-shrouded/",
-      "natureza": "secundaria_ou_transcricao_nao_reverificada"
+      "url": "https://kpogl.wikidot.com/monster:shrouded-angel",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "escopo": "Ficha completa transcrita, características, ataques, reações e conjuração"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_preexistente"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial",
+      "escopo": "Identidade, publicação e ND"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_historico",
+      "escopo": "Continuidade, não validação canônica"
     }
   ],
   "estatisticas": {
     "nd": "13",
     "ca": 18,
     "pv": 161,
-    "dados_vida": null,
+    "dados_vida": "17d8+85",
     "atributos": {
       "FOR": 18,
       "DES": 20,
@@ -32,46 +41,233 @@
       "SAB": 22,
       "CAR": 10
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 40; voar 60 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "deslocamentos_ft": {
+      "andar": 40,
+      "voar": 60
+    },
+    "salvaguardas": {
+      "FOR": 9,
+      "DES": 10,
+      "SAB": 11,
+      "CAR": 5
+    },
+    "pericias": {
+      "Insight": 11,
+      "Perception": 11,
+      "Stealth": 10
+    },
+    "resistencias_dano": [
+      "poison",
+      "radiant",
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "poisoned"
+    ],
+    "sentidos": [
+      "blindsight 30 ft",
+      "darkvision 120 ft"
+    ],
+    "percepcao_passiva": 21,
+    "idiomas": [
+      "all",
+      "telepathy 120 ft"
+    ]
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "acoes": [],
-  "ataques": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Angelic Poison",
+      "efeito": "Ataques com arma são mágicos e seu veneno sobrenatural afeta até seres resistentes ou imunes a veneno/poisoned; estes possuem vantagem na salvaguarda contra o veneno.",
+      "salvaguarda_condicional": "vantagem a alvos com resistência/imunidade a veneno ou poisoned"
+    },
+    {
+      "nome": "Divine Awareness",
+      "efeito": "Percebe se declaração que escuta é uma mentira."
+    },
+    {
+      "nome": "Evasion",
+      "efeito": "Em salvaguarda DES normalmente para metade do dano, sofre 0 em sucesso e metade em falha."
+    },
+    {
+      "nome": "Immortal Nature",
+      "efeito": "Não necessita comida, bebida ou sono."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias ou outros efeitos mágicos."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Justicar's Blade",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "4d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ],
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 17,
+        "efeito_sucesso": "evita poisoned",
+        "efeito_falha": "poisoned"
+      },
+      "condicao_aplicada": "poisoned",
+      "duracao": "indefinida até encerramento",
+      "encerramento": "lesser restoration ou magia de efeito equivalente"
+    },
+    {
+      "nome": "Justicar's Blast",
+      "tipo": "ataque_magico_a_distancia",
+      "bonus_acerto": 11,
+      "alcance_ft": 120,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "4d8",
+          "modificador": 6,
+          "tipo": "radiant"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "tipo": "multiataque",
+      "quantidade": 3,
+      "escolhas_de_ataques": [
+        "Justicar's Blade",
+        "Justicar's Blast"
+      ],
+      "regra": "Três ataques escolhidos dentre as duas opções apresentadas."
+    },
+    {
+      "nome": "Justicar's Blade",
+      "tipo": "ataque",
+      "referencia_ataque": "Justicar's Blade"
+    },
+    {
+      "nome": "Justicar's Blast",
+      "tipo": "ataque",
+      "referencia_ataque": "Justicar's Blast"
+    },
+    {
+      "nome": "Spellcasting",
+      "tipo": "conjuracao",
+      "referencia_conjuracao": "Spellcasting",
+      "acao_utilizada": "1 ação"
+    }
+  ],
   "acoes_bonus": [],
-  "reacoes": [],
+  "reacoes": [
+    {
+      "nome": "Executioner's Judgment",
+      "tipo": "reacao",
+      "gatilho": "criatura afetada pelo veneno do anjo inicia o turno",
+      "recurso_desbloqueio": "após utilizar uma vez, deve causar novamente dano de veneno a um alvo poisoned antes de voltar a usar",
+      "decisao_do_alvo": "arrependimento ou recusa",
+      "se_recusa": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 17,
+          "efeito_sucesso": "5d8 radiant",
+          "efeito_falha": "PV reduzidos a 0"
+        },
+        "dano_sucesso": {
+          "dados": "5d8",
+          "modificador": 0,
+          "tipo": "radiant"
+        },
+        "falha": "PV atuais tornam-se 0"
+      },
+      "se_arrepende": {
+        "efeito": "uma ação seguinte do alvo escolhida pelo anjo, simulando falha no command",
+        "comandos": [
+          "approach",
+          "drop",
+          "flee",
+          "grovel",
+          "halt"
+        ]
+      }
+    }
+  ],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Veneno angelical pode afetar alvos"
+      "nome": "Spellcasting",
+      "atributo": "SAB",
+      "cd": 19,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "bane",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "bless",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "locate creature",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "invisibility",
+          "usos": "3/dia cada",
+          "observacao": "somente a si"
+        },
+        {
+          "nome": "healing word",
+          "usos": "3/dia cada",
+          "observacao": "conjurada no 5º círculo"
+        },
+        {
+          "nome": "nondetection",
+          "usos": "3/dia cada",
+          "observacao": null
+        }
+      ]
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Ataques angelicais e efeitos de veneno"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
-  "campos_em_conflito": [],
+  "imagem": {
+    "status": "VERIFICADA_BINARIO_PRESENTE",
+    "path": "operational/research/deep-mechanics/b/images/TF-302.webp",
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-302.webp",
+    "blob_sha": "2a990beeef514c9fdb4f6643e157e0426b9cf3f2",
+    "sha256": "0b4804ce928ed6b2c1321dc07ffbfb75e6a78fd8a6b18c91cd7571daee948481",
+    "bytes": 84230,
+    "dimensions": {
+      "width": 280,
+      "height": 280
+    },
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "source_commit": "c26a1213e77cf1bdbbca12a14e4b71b1cee99d9d",
+    "source_original_path": "operational/assets/creature-images/TF-302.webp",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/ToB3/bestiary/tokens/Shrouded%20Angel.webp"
+  },
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": null,
   "pendencias": [
-    "Confirmar bloco mecânico integral da edição correta contra ficha individual; resumos não constituem ações.",
-    "Registrar nominalmente TODOS os ataques, passivas, ações, ações bônus, reações, legendárias e regras de conjuração com dados/CD/duração/recarga/limites.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "A transcrição KPOGL indica todos os traços e ações listados; ainda é fonte secundária. Conferir ficha da edição impressa e erratas antes de homologação.",
+    "Sem revisão independente, testes de combate ou promoção canônica."
   ],
   "integrada": false
 }

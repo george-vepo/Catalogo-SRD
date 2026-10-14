@@ -2,28 +2,37 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-303",
   "nome": "Angel, Uridimmu",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_REQUER_VALIDACAO_EDITORIAL",
   "edicao": {
-    "sistema": "D&D 5e (publicação informada em checkpoint)",
-    "publicacao": "Tome of Beasts 2",
     "editora": "Kobold Press",
-    "edicao_exata_verificada": false
+    "publicacao": "Tome of Beasts 2",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "Transcrição individual KPOGL rotulada com publicação Tome of Beasts indicada",
+    "proibida_mistura_de_versoes": true
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/angel-uridimmu/",
-      "natureza": "secundaria_ou_transcricao_nao_reverificada"
+      "url": "https://kpogl.wikidot.com/monster:uridimmu",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "escopo": "Ficha completa transcrita, características, ataques, reações e conjuração"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_preexistente"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial",
+      "escopo": "Identidade, publicação e ND"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_historico",
+      "escopo": "Continuidade, não validação canônica"
     }
   ],
   "estatisticas": {
     "nd": "14",
     "ca": 18,
     "pv": 150,
-    "dados_vida": null,
+    "dados_vida": "12d10+84",
     "atributos": {
       "FOR": 22,
       "DES": 17,
@@ -32,46 +41,219 @@
       "SAB": 18,
       "CAR": 21
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 30; voar 90 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": 90
+    },
+    "salvaguardas": {
+      "CON": 12,
+      "SAB": 9,
+      "CAR": 10
+    },
+    "pericias": {
+      "Insight": 14,
+      "Perception": 9
+    },
+    "resistencias_dano": [
+      "fire",
+      "lightning",
+      "radiant",
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened"
+    ],
+    "sentidos": [
+      "truesight 90 ft"
+    ],
+    "percepcao_passiva": 19,
+    "idiomas": [
+      "all",
+      "telepathy 60 ft"
+    ]
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "acoes": [],
-  "ataques": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Chaos Mace",
+      "efeito": "Ataques com maça são mágicos; ao acertar, adiciona 4d8 de dano do tipo fogo, eletricidade ou radiante, escolhido ao atacar.",
+      "dano_adicional": {
+        "dados": "4d8",
+        "modificador": 0,
+        "tipo": "fire | lightning | radiant"
+      },
+      "tipo_variavel": true
+    },
+    {
+      "nome": "Heroic Aura",
+      "efeito": "Aliados a até 20 pés são imunes a charmed e frightened e adicionam 1d4 a ataque ou salvaguarda; aura não funciona em campo antimagia ou em templo/santuário dedicado a divindade caótica.",
+      "alcance_ft": 20,
+      "dado_bonus": "1d4",
+      "aliados": true,
+      "interrupcoes": [
+        "antimagic field",
+        "templo ou santuário de divindade caótica"
+      ]
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias ou outros efeitos mágicos."
+    },
+    {
+      "nome": "Immortal Nature",
+      "efeito": "Não precisa comida, bebida nem sono."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "3d8",
+          "modificador": 6,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Mace",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 6,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "4d8",
+          "modificador": 0,
+          "tipo": "fire | lightning | radiant"
+        }
+      ],
+      "tipo_dano_adicional_escolhido_ao_atacar": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "tipo": "multiataque",
+      "sequencia": [
+        "Bite",
+        "Mace",
+        "Mace"
+      ]
+    },
+    {
+      "nome": "Bite",
+      "tipo": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Mace",
+      "tipo": "ataque",
+      "referencia_ataque": "Mace"
+    },
+    {
+      "nome": "Heavenly Roar",
+      "tipo": "area",
+      "recarga": "5-6",
+      "area": {
+        "forma": "cone",
+        "comprimento_ft": 30
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 18,
+        "efeito_sucesso": "metade de 10d8 thunder",
+        "efeito_falha": "10d8 thunder"
+      },
+      "dano": [
+        {
+          "dados": "10d8",
+          "modificador": 0,
+          "tipo": "thunder"
+        }
+      ],
+      "aplica_condicao_se_falhar_por_5_ou_mais": {
+        "condicao": "frightened",
+        "duracao": "1 minuto",
+        "encerramento": "nova CON CD18 ao fim de cada turno",
+        "atributo": "CON",
+        "cd": 18
+      },
+      "modificador_salvaguarda": "fiends realizam o teste com desvantagem"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Origem celestial com maça de energia caótica"
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 18,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "detect evil and good",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "light",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "protection from evil and good",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "dispel magic",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "glyph of warding",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "lightning bolt",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "flame strike",
+          "usos": "1/dia cada"
+        },
+        {
+          "nome": "heal",
+          "usos": "1/dia cada"
+        },
+        {
+          "nome": "wall of fire",
+          "usos": "1/dia cada"
+        }
+      ]
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Maça com dano elemental e ações especiais"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
-  "campos_em_conflito": [],
+  "imagem": {
+    "status": "PENDENTE_IMAGEM",
+    "path": null,
+    "url": null
+  },
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": null,
   "pendencias": [
-    "Confirmar bloco mecânico integral da edição correta contra ficha individual; resumos não constituem ações.",
-    "Registrar nominalmente TODOS os ataques, passivas, ações, ações bônus, reações, legendárias e regras de conjuração com dados/CD/duração/recarga/limites.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "A transcrição KPOGL indica todos os traços e ações listados; ainda é fonte secundária. Conferir ficha da edição impressa e erratas antes de homologação.",
+    "Sem revisão independente, testes de combate ou promoção canônica."
   ],
   "integrada": false
 }
