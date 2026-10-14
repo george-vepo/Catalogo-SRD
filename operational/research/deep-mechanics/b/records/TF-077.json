@@ -2,19 +2,24 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-077",
   "nome": "Clockwork Assassin",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
+    "sistema": "D&D 5ª edição",
+    "editora": "Kobold Press",
     "publicacao": "Creature Codex",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-assassin/",
-      "natureza": "secundaria_previamente_indicada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-assassin",
+      "natureza": "wiki_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "alcance": "statblock individual completo, ações e passivas"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-075_TF-080/research.json",
-      "natureza": "checkpoint_original"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao",
+      "alcance": "não valida números nem edição"
     }
   ],
   "estatisticas": {
@@ -34,9 +39,8 @@
       "andar": 30,
       "escalar": 30
     },
-    "deslocamentos_texto": null,
     "salvaguardas": {
-      "DEX": 6,
+      "DES": 6,
       "CON": 4
     },
     "pericias": {
@@ -46,19 +50,12 @@
       "Perception": 4,
       "Survival": 4
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 14,
-    "idiomas": [
-      "entende Common, mas não fala"
-    ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "lightning",
       "poison"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -66,105 +63,152 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "entende Common, não fala"
+    ],
+    "tamanho": "Medium"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "qualidade_estatisticas": "ESTRUTURADA_DE_FONTE_SECUNDARIA_SEM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, comida, bebida e sono."
+    },
+    {
+      "nome": "Assassinate",
+      "efeito": "No primeiro turno, tem vantagem ao atacar inimigo que ainda não agiu. Ataque que atinge alvo surprised é crítico.",
+      "primeiro_turno": true,
+      "ganha_vantagem": "alvo ainda não agiu",
+      "critico_automatico": "surprised"
+    },
+    {
+      "nome": "Explosive Core",
+      "efeito": "Quando destruído: DES CD13 numa área de 5 pés, 3d6 fogo ou metade.",
+      "raio_ft": 5,
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 13,
+        "falha": "3d6 fire",
+        "sucesso": "metade"
+      },
+      "dano": {
+        "dados": "3d6",
+        "modificador": 0,
+        "tipo": "fire"
+      }
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos que alterem sua forma, exceto quando a própria característica específica permitir."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem nas salvaguardas contra magias e efeitos mágicos."
+    },
+    {
+      "nome": "Psychic Susceptibility",
+      "efeito": "Após receber dano psychic, sofre desvantagem em ataques, testes de atributo e salvaguardas até final de seu próximo turno."
+    },
+    {
+      "nome": "Sneak Attack",
+      "efeito": "1/turno, +3d6 dano se atacar com vantagem ou se aliado ativo do assassino estiver a 5 pés do alvo e o assassino não tiver desvantagem.",
+      "frequencia": "1/turno",
+      "dano_extra": {
+        "dados": "3d6",
+        "modificador": 0,
+        "tipo": "mesmo_tipo_do_ataque"
+      },
+      "condicoes": [
+        "ataque com vantagem",
+        "alvo próximo de aliado não incapacitado sem desvantagem"
+      ]
+    },
+    {
+      "nome": "Standing Leap",
+      "efeito": "Salto horizontal até 20 pés, vertical até 10 pés, sem corrida.",
+      "longo_ft": 20,
+      "alto_ft": 10
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Rapier",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d8",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 15,
+            "falha": "2d10 poison e poisoned por 1 minuto",
+            "sucesso": "sem dano adicional ou poisoned"
+          },
+          "dano_condicional": {
+            "dados": "2d10",
+            "modificador": 0,
+            "tipo": "poison"
+          },
+          "condicao": "poisoned",
+          "duracao": "1 minuto",
+          "repeticao_salvaguarda": null
+        }
+      ],
+      "confirmado_na_transcricao": true
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "Dois ataques com rapier.",
-      "confirmado": false
+      "categoria": "multiataque",
+      "sequencia": [
+        "Rapier",
+        "Rapier"
+      ],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Rapier",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "+6, alcance 5 pés, 1d8+3 perfurante; CON CD15 para evitar 2d10 veneno e condição envenenado por 1 min.",
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Rapier",
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Disassembly",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "Torna-se cilindro segmentado que atravessa espaços de 6 polegadas; não ataca enquanto desmontado e ataques contra ele têm vantagem; remontagem usa ação.",
-      "confirmado": false
+      "categoria": "transformacao",
+      "efeito": "desmonta-se em cilindro articulado tipo serpente e atravessa aberturas a partir de 6 polegadas; mesma ação reverte",
+      "passagem_polegadas": 6,
+      "impedimentos": [
+        "não pode atacar na forma desmontada"
+      ],
+      "vulnerabilidade": [
+        "inimigos têm vantagem ao atacar forma desmontada"
+      ],
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Assassinate",
-      "resumo": "Vantagem no primeiro turno contra quem ainda não agiu; acerto em alvo surpreso é crítico."
-    },
-    {
-      "nome": "Explosive Core",
-      "resumo": "Quando destruído, explosão de 5 pés; DES CD13, 3d6 fogo ou metade."
-    },
-    {
-      "nome": "Clockwork Immutable Form",
-      "resumo": "Não muda de forma, exceto por sua própria ação de desmontagem."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra magia."
-    },
-    {
-      "nome": "Psychic Susceptibility",
-      "resumo": "Após dano psíquico, sofre desvantagem em ataques, salvaguardas e testes até o fim do próximo turno."
-    },
-    {
-      "nome": "Sneak Attack",
-      "resumo": "Uma vez por turno, +3d6 com vantagem no ataque ou aliado adjacente ao alvo, obedecidas as condições da fonte."
-    },
-    {
-      "nome": "Standing Leap",
-      "resumo": "Salta 20 pés em distância ou 10 em altura sem corrida."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": null,
   "pendencias": [
-    "Ficha individual não revisada; registro mecânico PRELIMINAR sem ações integralmente comprovadas.",
-    "Verificar edição, campos faltantes, dados de dano, CD, alcance, gatilhos, durações, usos e recargas.",
-    "Há homônimo no livro Mechanical Monsters (5E), ND13, CA17/PV143; NÃO misturar com a criatura de Creature Codex ND6."
+    "Conferir exemplar do editor e erratas; descrição comunitária não é homologação mecânica."
   ],
   "integrada": false
 }

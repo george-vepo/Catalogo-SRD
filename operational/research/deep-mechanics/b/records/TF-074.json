@@ -2,19 +2,24 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-074",
   "nome": "Yali",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 3",
+    "sistema": "D&D 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 p.398",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/yali/",
-      "natureza": "secundaria_previamente_indicada"
+      "url": "https://kpogl.wikidot.com/monster:yali",
+      "natureza": "wiki_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "alcance": "statblock individual completo, ações e passivas"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-064_TF-074/research.json",
-      "natureza": "checkpoint_original"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao",
+      "alcance": "não valida números nem edição"
     }
   ],
   "estatisticas": {
@@ -33,28 +38,20 @@
     "deslocamentos_ft": {
       "andar": 50
     },
-    "deslocamentos_texto": null,
     "salvaguardas": {
-      "DEX": 4,
-      "WIS": 4
+      "DES": 4,
+      "SAB": 4
     },
     "pericias": {
       "Perception": 6,
       "Stealth": 4
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 16,
-    "idiomas": [
-      "entende Common, não fala"
-    ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -62,109 +59,149 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "entende Common, não fala"
+    ],
+    "proficiencia": 2,
+    "tamanho": "Medium"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "ESTRUTURADA_DE_FONTE_SECUNDARIA_SEM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "Tusk e Claw.",
-      "confirmado": false
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, comida, bebida e sono."
     },
     {
+      "nome": "False Appearance",
+      "efeito": "Imóvel, indistinguível de uma estátua inanimada."
+    },
+    {
+      "nome": "Flinging Pounce",
+      "efeito": "Após avançar >=20 pés em linha reta e acertar Tusk em alvo Large ou menor, FOR CD12 ou alvo arremessado até 15 pés aleatoriamente e prone; colisão 1d6 contundente por 10 pés; se atingir outra criatura, esta faz DES CD12 para evitar o mesmo dano e prone.",
+      "movimento_minimo_ft": 20,
+      "alvo_maximo": "Large",
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 12,
+        "falha": "arremessado <=15 pés em direção aleatória e prone",
+        "sucesso": "sem empurrão ou queda"
+      },
+      "dano_colisao_por_10ft": {
+        "dados": "1d6",
+        "modificador": 0,
+        "tipo": "bludgeoning"
+      },
+      "salvaguarda_impacto_secundaria": {
+        "atributo": "DES",
+        "cd": 12,
+        "falha": "mesmo dano e prone",
+        "sucesso": "nenhum dano/queda"
+      }
+    },
+    {
+      "nome": "Standing Leap",
+      "efeito": "Saltos longos de até 40 pés e verticais até 20 pés, com ou sem corrida.",
+      "salto_longo_ft": 40,
+      "salto_alto_ft": 20
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Tusk",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "+7, 5 pés, 1d6+5 perfurante.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d6",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Claw",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "+7, 5 pés, 1d4+5 cortante.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d4",
+          "modificador": 5,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Tusk",
+        "Claw"
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Tusk",
+      "categoria": "ataque",
+      "referencia_ataque": "Tusk",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Claw",
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Trumpeting Blast",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "Recarga 5–6, cone 15 pés, CON CD12, 4d4 trovão mais surdez por 1 min na falha; sucesso metade, sem surdez; alvo surdo repete teste a cada turno.",
-      "confirmado": false
+      "categoria": "area",
+      "recarga": "5-6",
+      "area": {
+        "forma": "cone",
+        "comprimento_ft": 15
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 12,
+        "falha": "4d4 thunder e deafened por 1 minuto",
+        "sucesso": "metade dano e sem deafened"
+      },
+      "dano": [
+        {
+          "dados": "4d4",
+          "modificador": 0,
+          "tipo": "thunder"
+        }
+      ],
+      "condicao": "deafened",
+      "duracao": "1 minuto",
+      "salvaguarda_repetida": "CON CD12 no fim de cada turno enquanto deafened",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa ar, comida, bebida e sono."
-    },
-    {
-      "nome": "False Appearance",
-      "resumo": "Enquanto imóvel é indistinguível de estátua normal."
-    },
-    {
-      "nome": "Flinging Pounce",
-      "resumo": "Avanço 20 pés seguido de Tusk contra Large ou menor exige FOR CD12 ou arremessa até 15 pés em direção aleatória e derruba; colisões geram dano e salvaguarda ao possível segundo alvo."
-    },
-    {
-      "nome": "Standing Leap",
-      "resumo": "Salto em distância até 40 pés, altura até 20, com ou sem corrida."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": null,
   "pendencias": [
-    "Ficha individual não revisada; registro mecânico PRELIMINAR sem ações integralmente comprovadas.",
-    "Verificar edição, campos faltantes, dados de dano, CD, alcance, gatilhos, durações, usos e recargas."
+    "Conferir exemplar do editor e erratas; descrição comunitária não é homologação mecânica."
   ],
   "integrada": false
 }
