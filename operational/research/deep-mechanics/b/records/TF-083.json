@@ -1,0 +1,172 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-083",
+  "nome": "Void Knight",
+  "estado": "BLOQUEADO_CONFLITO_OU_AMBIGUIDADE",
+  "edicao": {
+    "publicacao": "Tome of Beasts 3",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/void-knight/",
+      "natureza": "referencia_secundaria_herdada"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-081_TF-085/research.json",
+      "natureza": "checkpoint"
+    }
+  ],
+  "estatisticas": {
+    "nd": "10",
+    "ca": 18,
+    "pv": 153,
+    "dados_vida": "18d8+72",
+    "atributos": {
+      "FOR": 22,
+      "DES": 7,
+      "CON": 18,
+      "INT": 12,
+      "SAB": 16,
+      "CAR": 10
+    },
+    "deslocamentos_ft": {
+      "andar": 20
+    },
+    "salvaguardas": {
+      "STR": 10,
+      "CON": 8,
+      "WIS": 7
+    },
+    "pericias": {
+      "Athletics": 10,
+      "Perception": 7
+    },
+    "sentidos": [
+      "blindsight 120 ft., cego além desse alcance"
+    ],
+    "idiomas": [
+      "Void Speech",
+      "telepathy 120 ft."
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "force",
+      "poison"
+    ],
+    "vulnerabilidades_dano": null,
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhausted (grafia da fonte)",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ]
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [],
+  "ataques": [],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "indicacao_herdada": "Dois ataques Void Gauntlet ou três Void Bolt.",
+      "bonus_acerto": null,
+      "alcance_ft": null,
+      "alvo": null,
+      "dado_dano": null,
+      "tipo_dano": null,
+      "cd": null,
+      "salvaguarda": null,
+      "duracao": null,
+      "condicoes": null,
+      "recarga": null,
+      "usos": null,
+      "confirmado": false
+    },
+    {
+      "nome": "Void Gauntlet",
+      "indicacao_herdada": "+10, 5 pés; 2d6+6 cortante mais 4d8 força; Médio ou menor FOR CD16 para não cair.",
+      "bonus_acerto": null,
+      "alcance_ft": null,
+      "alvo": null,
+      "dado_dano": null,
+      "tipo_dano": null,
+      "cd": null,
+      "salvaguarda": null,
+      "duracao": null,
+      "condicoes": null,
+      "recarga": null,
+      "usos": null,
+      "confirmado": false
+    },
+    {
+      "nome": "Void Bolt",
+      "indicacao_herdada": "+7, 120 pés, 4d8+3 força.",
+      "bonus_acerto": null,
+      "alcance_ft": null,
+      "alvo": null,
+      "dado_dano": null,
+      "tipo_dano": null,
+      "cd": null,
+      "salvaguarda": null,
+      "duracao": null,
+      "condicoes": null,
+      "recarga": null,
+      "usos": null,
+      "confirmado": false
+    },
+    {
+      "nome": "Pull of the Void",
+      "indicacao_herdada": "Recarga 5–6; até três alvos vistos a 60 pés fazem FOR CD16 ou são puxados 30 pés; criaturas a 5 pés sofrem 8d8 força.",
+      "bonus_acerto": null,
+      "alcance_ft": null,
+      "alvo": null,
+      "dado_dano": null,
+      "tipo_dano": null,
+      "cd": null,
+      "salvaguarda": null,
+      "duracao": null,
+      "condicoes": null,
+      "recarga": null,
+      "usos": null,
+      "confirmado": false
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "pistas_de_tracos_nao_validadas": [
+    {
+      "nome": "Call of the Void",
+      "resumo": "Inimigo a 5 pés que tenta se afastar deve passar em FOR CD13, exceto movimentação por magia."
+    },
+    {
+      "nome": "Construct Nature",
+      "resumo": "Dispensa necessidades biológicas."
+    },
+    {
+      "nome": "Immovable",
+      "resumo": "Só pode ser deslocado à força por magia; desvantagem em Acrobacia e Furtividade."
+    },
+    {
+      "nome": "Implosive End",
+      "resumo": "Ao morrer, explosão de 5 pés, DES CD16, 4d8 força ou metade."
+    }
+  ],
+  "inventario_acoes_completo": false,
+  "conflito_editorial": "PARCIAL_GRAFIA_CONDICAO_FONTE",
+  "bloqueado": true,
+  "pendencias": [
+    "Revisão de bloco integral não executada; dados herdados do checkpoint, sem confirmação independente.",
+    "Dados ausentes e ações somente indicativas; completar separadamente bônus, alvo, dano, duração, CD, recarga e efeitos.",
+    "Na enumeração de imunidades da fonte aparece 'exhausted', não o nome padronizado 'exhaustion'; conservar grafia e conferir com obra original.",
+    "O bloco adicional 'Void Henge' aparece como informação contextual, NÃO como habilidade do Void Knight."
+  ],
+  "integrada": false
+}
