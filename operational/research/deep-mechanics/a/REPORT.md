@@ -1,3 +1,12 @@
+# Grupo A — checkpoint 44: Tigebra e Timingila (14/10/2026)
+
+- **TF-235 Tigebra:** [ficha individual KPOGL](https://kpogl.wikidot.com/monster:tigebra), Tome of Beasts 3 p.369. Estatísticas, três ataques via Multiattack, Hypnotic Gaze de bônus, veneno que altera resistência/imunidade e Final Fury com cabeça separada por 1d4 rodadas estruturados.
+- **TF-236 Timingila:** [ficha individual KPOGL](https://kpogl.wikidot.com/monster:timingila), Tome of Beasts 2. Multiattack de quatro ataques, engolir/regurgitar, condições, ataque de área com recarga e efeitos separados em veículos, Water Breathing, Siege Monster e Breach estruturados.
+
+**Novo total:** 45 statblocks estruturados no nível de fonte individual, nenhum homologado editorialmente, 87 ainda resumidos, 124 imagens binárias persistidas (8 ausentes), 0 aprovadas para produção. Fontes KPOGL secundárias, impressão/errata/engine pendentes. Nenhum merge.
+
+---
+
 # Grupo A — auditoria pós-checkpoint 43 (14/10/2026)
 
 HEAD inspecionado `523bf7dab5a2f19a4814feed8de26e5be3eeb6ec`: manifestos e árvore Git concordam em **124/132 imagens físicas** (124 caminhos, 124 hashes Git blob e tamanhos correspondentes) e **132 registros JSON**. Os **nove JSONs modificados** em #43 foram relidos e interpretados na API do GitHub. A auditoria anterior já havia relido os 132 JSONs completos individualmente. O diff comparado ao commit-base permanece restrito ao grupo A.

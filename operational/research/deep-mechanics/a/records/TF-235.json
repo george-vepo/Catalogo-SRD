@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "13",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "chaotic_evil",
+    "experience_points": 10000,
+    "proficiency_bonus": 5,
+    "source_page": 369
   },
   "statistics": {
     "armor_class": 18,
     "hit_points": 190,
-    "hit_dice": null,
+    "hit_dice": "20d10+80",
     "ability_scores": {
       "STR": 20,
       "DEX": 13,
@@ -26,24 +29,214 @@
       "WIS": 15,
       "CHA": 5
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40
+    },
+    "senses": {
+      "blindsight_ft": 10,
+      "passive_perception": 17
+    },
+    "skills": {
+      "Perception": 7
+    },
+    "saving_throws": {
+      "DEX": 6,
+      "CON": 9,
+      "WIS": 7
+    },
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "frightened",
+      "paralyzed",
+      "poisoned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 1,
+      "CON": 4,
+      "INT": -3,
+      "WIS": 2,
+      "CHA": -3
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Final Fury",
+        "trigger": "reduced_to_0_HP",
+        "effect": {
+          "create": "detached_cobra_head",
+          "immediate_attack": "Bite_against_nearest_creature",
+          "may_move_up_to_speed": true,
+          "regardless_of_earlier_turn": true
+        },
+        "remnant": {
+          "size": "Medium",
+          "hit_points": 30,
+          "otherwise_same_statistics": true,
+          "attacks_each_turn": [
+            {
+              "name": "Bite",
+              "count": 1
+            }
+          ],
+          "survives_rounds": "1d4",
+          "ends_early_if_killed": true
+        }
+      },
+      {
+        "name": "Keen Hearing and Smell",
+        "effect": {
+          "advantage_on": "Wisdom_Perception",
+          "based_on": [
+            "hearing",
+            "smell"
+          ]
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "effect": {
+          "advantage_on_saves_against": [
+            "spells",
+            "magical_effects"
+          ]
+        }
+      },
+      {
+        "name": "Potent Poison",
+        "effect": {
+          "normal_resistance_to_poison": "ignored_against_tigebra_poison",
+          "normal_immunity_to_poison": "reduced_to_resistance_against_tigebra_poison"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Bite",
+            "count": 1
+          },
+          {
+            "attack": "Claws",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 10,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d10",
+              "flat": 5,
+              "type": "piercing",
+              "average": 27
+            },
+            {
+              "dice": "3d6",
+              "flat": 0,
+              "type": "poison",
+              "average": 10
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "on_hit": {
+          "save": {
+            "ability": "CON",
+            "dc": 17,
+            "on_failure": {
+              "condition": "poisoned",
+              "duration_minutes": 1,
+              "speed_multiplier": 0.5,
+              "repeat_save": {
+                "when": "end_of_each_target_turn",
+                "on_success": "end_poison_and_slow"
+              }
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        }
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 10,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d8",
+              "flat": 5,
+              "type": "slashing",
+              "average": 23
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Hypnotic Gaze",
+        "category": "bonus_action",
+        "targets": {
+          "count": 1,
+          "range_ft": 60,
+          "visible_to_tigebra": true,
+          "must_see_tigebra": true
+        },
+        "save": {
+          "ability": "WIS",
+          "dc": 17,
+          "on_failure": {
+            "condition": "paralyzed",
+            "ends": "end_of_target_next_turn"
+          },
+          "on_success": {
+            "immune_to_hypnotic_gaze_hours": 24
+          }
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "O veneno reduz proteções normais e a cabeça separada continua atacando após a morte do corpo."
@@ -58,10 +251,10 @@
     },
     {
       "url": "https://kpogl.wikidot.com/monster:tigebra",
-      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "type": "KPOGL ficha individual secundária não oficial",
       "edition": "Tome of Beasts 3",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "estatísticas, traços, ações e economia de ações completas na transcrição",
+      "reviewed": "2026-10-14"
     }
   ],
   "source_checkpoint": {
@@ -73,9 +266,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Confirmar impressão original Tome of Beasts 3 p.369 e errata.",
+    "Testar o remanescente da cabeça, ataque imediato e duração 1d4 na engine.",
+    "Revisão visual, direitos e qualidade de imagem ainda pendentes."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -98,6 +291,16 @@
       "inspeção visual independente",
       "direitos de uso",
       "aprovação para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "mechanically_homologated": false,
+    "engine_tested": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:tigebra"
     ]
   }
 }

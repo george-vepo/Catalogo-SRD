@@ -10,14 +10,16 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "15",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Gargantuan",
+    "type": "monstrosity (titan)",
+    "alignment": "neutral_evil",
+    "experience_points": 13000,
+    "proficiency_bonus": null
   },
   "statistics": {
     "armor_class": 18,
     "hit_points": 232,
-    "hit_dice": null,
+    "hit_dice": "15d20+75",
     "ability_scores": {
       "STR": 28,
       "DEX": 5,
@@ -26,24 +28,290 @@
       "WIS": 7,
       "CHA": 14
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 0,
+      "swim_ft": 60
+    },
+    "senses": {
+      "blindsight_ft": 120,
+      "passive_perception": 18
+    },
+    "skills": {
+      "Perception": 8,
+      "Stealth": 7
+    },
+    "saving_throws": {
+      "CON": 10,
+      "WIS": 3
+    },
+    "languages": {
+      "understands": [
+        "Abyssal",
+        "Celestial",
+        "Draconic",
+        "Infernal"
+      ],
+      "can_speak": false
+    },
+    "damage_resistances": [],
+    "damage_immunities": [
+      "cold",
+      "thunder"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "frightened"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 9,
+      "DEX": -3,
+      "CON": 5,
+      "INT": -1,
+      "WIS": -2,
+      "CHA": 2
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Siege Monster",
+        "effect": {
+          "damage_to_objects_and_structures_multiplier": 2
+        }
+      },
+      {
+        "name": "Water Breathing",
+        "effect": {
+          "breathes_only_underwater": true
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Bite",
+            "count": 1
+          },
+          {
+            "attack": "Tail Slap",
+            "count": 1
+          },
+          {
+            "attack": "Flipper",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 14,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "3d10",
+              "flat": 9,
+              "type": "piercing",
+              "average": 25
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "on_hit": {
+          "if_target_kind": "creature",
+          "if_size_at_most": "Large",
+          "save": {
+            "ability": "DEX",
+            "dc": 18,
+            "on_failure": {
+              "swallowed": true,
+              "conditions": [
+                "blinded",
+                "restrained"
+              ],
+              "total_cover_from_outside": true,
+              "damage_at_start_of_timingila_turn": [
+                {
+                  "dice": "6d6",
+                  "flat": 0,
+                  "type": "acid",
+                  "average": 21
+                }
+              ]
+            },
+            "on_success": {
+              "not_swallowed": true
+            }
+          }
+        },
+        "escape": {
+          "if_timingila_takes_damage_in_one_turn_from_swallowed_creature_at_least": 30,
+          "save": {
+            "actor": "timingila",
+            "ability": "CON",
+            "dc": 20,
+            "when": "end_of_turn",
+            "on_failure": {
+              "regurgitates_all": true,
+              "placement_within_ft": 10,
+              "condition": "prone"
+            }
+          }
+        },
+        "on_timingila_death": {
+          "restrained_ends": true,
+          "escape_cost_movement_ft": 20,
+          "exit_condition": "prone"
+        }
+      },
+      {
+        "name": "Flipper",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 14,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 9,
+              "type": "bludgeoning",
+              "average": 16
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Tail Slap",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 14,
+        "reach_ft": 20,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 9,
+              "type": "bludgeoning",
+              "average": 18
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "on_hit": {
+          "save": {
+            "ability": "STR",
+            "dc": 18,
+            "on_failure": {
+              "push_away_up_to_ft": 10,
+              "condition": "prone"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        }
+      },
+      {
+        "name": "Breach",
+        "category": "special_movement_action",
+        "action_economy": "action",
+        "movement": {
+          "up_to_swim_speed_ft": 60,
+          "provokes_opportunity_attacks": false
+        },
+        "if_breaks_surface": {
+          "wave": {
+            "shape": "line",
+            "length_ft": 120,
+            "width_ft": 30,
+            "height_ft": 30
+          },
+          "vehicles": {
+            "size_max": "Gargantuan",
+            "pushed_up_to_ft": 100,
+            "capsize_chance_percent": 50
+          }
+        }
+      },
+      {
+        "name": "Resonating Roar",
+        "category": "area_action",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 90
+        },
+        "save": {
+          "ability": "CON",
+          "dc": 18,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "10d8",
+                "flat": 0,
+                "type": "thunder",
+                "average": 45
+              }
+            ],
+            "condition": "deafened",
+            "duration_minutes": 1,
+            "repeat_save": {
+              "when": "end_of_each_target_turn",
+              "on_success": "ends_deafened"
+            }
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "deafened": false
+          }
+        },
+        "vehicle_interaction": {
+          "affects_every_occupant_even_outside_cone": true,
+          "save": {
+            "ability": "CON",
+            "dc": 18,
+            "on_failure": {
+              "takes_half_roar_damage": true
+            }
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Titã aquático de cerco que morde, golpeia com nadadeiras e engole criaturas."
@@ -65,10 +333,10 @@
     },
     {
       "url": "https://kpogl.wikidot.com/monster:timingila",
-      "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
+      "type": "KPOGL ficha individual secundária não oficial",
       "edition": "Tome of Beasts 2",
-      "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "estatísticas, traços, ações e economia de ações completas na transcrição",
+      "reviewed": "2026-10-14"
     }
   ],
   "source_checkpoint": {
@@ -80,9 +348,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Confirmar impressão Tome of Beasts 2 e errata, especialmente regra do roar para passageiros.",
+    "Bônus de proficiência não explicitamente informado na fonte consultada; não inferido.",
+    "Homologar engine de engolir/regurgitar e interação com veículos; revisão de imagem/direitos pendente."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -105,6 +373,16 @@
       "inspeção visual independente",
       "direitos de uso",
       "aprovação para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "mechanically_homologated": false,
+    "engine_tested": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:timingila"
     ]
   }
 }
