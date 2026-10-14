@@ -22,7 +22,7 @@
     "ids_unicos": 132,
     "json_publicados": 132,
     "fichas_editoriais_detalhadas": 14,
-    "registros_incompletos": 87,
+    "registros_incompletos": 85,
     "conflitos_pr4": 13,
     "bloqueados": 124,
     "detalhados_com_conflito_pendente": 6,
@@ -30,15 +30,15 @@
     "homologacoes_independentes": 0,
     "promocoes_canonicas": 0,
     "merges": 0,
-    "fichas_secundarias_estruturadas": 31,
-    "fichas_com_acoes_individualizadas": 45,
+    "fichas_secundarias_estruturadas": 33,
+    "fichas_com_acoes_individualizadas": 47,
     "imagens_binarias_presentes": 100,
     "imagens_pendentes": 32,
     "imagens_no_escopo": 132,
     "fichas_homologadas_independentemente": 0
   },
   "integridade": {
-    "controle": "132 JSON individuais com SHA de blob no manifesto; 45 inventários de ações detalhados, 87 incompletos; 100 imagens binárias verificadas por SHA Git e tamanho, 32 ausentes; nenhuma homologação independente.",
+    "controle": "132 JSONs individuais indexados por SHA de blob; 47 mecânicas individualizadas mas nenhuma oficialmente homologada; 100 binários WebP/PNG/JPEG disponíveis, 32 ausentes, zero promoções canônicas.",
     "checkpoints": 21,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
@@ -2583,10 +2583,10 @@
       "id": "TF-085",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-085.json",
-      "git_blob_sha": "97efaa70c9fee2cd5f469856d7c143eb97fec443",
-      "bytes": 7319,
+      "git_blob_sha": "56e2dd3ff4d5809b563b24d42c710a215a7f2b13",
+      "bytes": 13158,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-085.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2691,10 +2691,10 @@
       "id": "TF-091",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-091.json",
-      "git_blob_sha": "a08d89472600505bcd4083f25bf6596e5f491768",
-      "bytes": 5765,
+      "git_blob_sha": "09f7581d2a352dcb9b912982f5e2aaa1605edf8c",
+      "bytes": 10053,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-091.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -3338,21 +3338,28 @@
   ],
   "ultima_continuacao": {
     "data": "2026-10-14",
-    "escopo": "cinco fichas TF-083,084,089,090,326 e cinco imagens TF-373,396,403,407,410",
-    "fichas_estruturadas_adicionadas": 5,
-    "imagens_binarias_adicionadas": 5,
-    "totais": {
-      "fichas_individualizadas": 45,
-      "incompletas": 87,
-      "imagens_binarias": 100,
-      "imagens_pendentes": 32,
-      "homologacoes": 0
-    },
-    "observacoes": [
-      "Versão do Vent Linnorm mantida separada da variante Warlock Grimoire 2",
-      "Conflitos de Void Knight e Zilaq preservados",
-      "Todos cinco aprofundamentos novos permanecem bloqueados para homologação editorial e revisão independente"
-    ]
+    "novos_aprofundamentos": [
+      "TF-083",
+      "TF-084",
+      "TF-085",
+      "TF-089",
+      "TF-090",
+      "TF-091",
+      "TF-326"
+    ],
+    "imagens_reaproveitadas": [
+      "TF-373",
+      "TF-396",
+      "TF-403",
+      "TF-407",
+      "TF-410"
+    ],
+    "fichas_individualizadas": 47,
+    "fichas_incompletas": 85,
+    "imagens_binarias": 100,
+    "imagens_pendentes": 32,
+    "homologacoes_independentes": 0,
+    "observacao": "7 fichas adicionais estruturadas sem alegar homologação; alterações preservam edições originais, conflitos e bloqueio."
   },
   "data_atualizacao": "2026-10-14",
   "imagens_manifest": "operational/research/deep-mechanics/b/images/manifest.json",
