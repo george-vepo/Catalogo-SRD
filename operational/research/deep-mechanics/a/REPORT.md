@@ -1,3 +1,15 @@
+# Grupo A — checkpoint 39 (14/10/2026)
+
+**Estado após checkpoint:** 132/132 JSONs; **39 fichas estruturadas segundo a fonte individual online**, 0 homologadas editorialmente, 131 PARCIAIS e 1 BLOQUEADA; 113 binários de imagem, 19 ausentes. Estatísticas da publicação e edição primária ainda exigem revisão de erratas e da engine.
+
+- **TF-227 Coastline Reaper (Tome of Beasts 3 p.92):** tentáculos físicos e venenosos, 3 ataques no Multiattack, veneno paralisante DC16, Frightening Visage recarga 5–6, testes WIS DC16, danos psychic e condição frightened com repetição, iluminação subaquática, respiração. [Fonte](https://kpogl.wikidot.com/monster:coastline-reaper).
+- **TF-228 Colláis (Tome of Beasts 2):** resistência mágica, Gore/Hooves, Impale and Toss bônus CD16 com dano e queda, Cry of the Forest com CD16 CHA, imunidade temporária 24h e regra especial de feras/floresta. [Fonte](https://kpogl.wikidot.com/monster:collais).
+- **TF-229 Conjoined Queen (Tome of Beasts 2):** Spellcasting CHA (9º nível, CD16, +8) com 6 níveis/cantrips e slots, Multiattack com Slam/Sting, Queen's Wrathful Clattering 1/dia, Pheromones, Tunneler e resistências. [Fonte](https://kpogl.wikidot.com/monster:conjoined-queen).
+
+**Validação editorial pendente:** o sítio KPOGL é fonte secundária e não homologada pela Kobold Press; não alterar `status:PARCIAL` sem comprovação de edição, revisão independente, resolução de conflitos e validação da engine.
+
+---
+
 # SRD Card Game 607 — Grupo A — auditoria consolidada após checkpoint 38 (14/10/2026)
 
 **Escopo e integridade:** 132 IDs únicos (40+40+52), 132 arquivos JSON lidos individualmente, interpretados e conferidos contra seus IDs; 113 imagens binárias na árvore Git do grupo A, sendo 40 copiadas de blobs D/E nesta retomada e vinculadas aos JSONs com SHA-256 de origem, SHA Git, tamanho, dimensões e proveniência. Diff com a branch de referência restrito ao diretório A.

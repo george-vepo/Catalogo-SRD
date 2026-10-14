@@ -10,14 +10,14 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "10",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "chaotic neutral"
   },
   "statistics": {
     "armor_class": 18,
     "hit_points": 168,
-    "hit_dice": null,
+    "hit_dice": "16d10+80",
     "ability_scores": {
       "STR": 18,
       "DEX": 16,
@@ -26,24 +26,287 @@
       "WIS": 14,
       "CHA": 18
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40,
+      "climb_ft": 30,
+      "burrow_ft": 20,
+      "swim_ft": 0,
+      "fly_ft": 0
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "tremorsense_ft": 60,
+      "passive_perception": 16
+    },
+    "skills": {
+      "Perception": 6
+    },
+    "saving_throws": {
+      "DEX": 7,
+      "WIS": 6
+    },
+    "languages": [
+      "Common"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "frightened",
+      "poisoned"
+    ],
+    "armor_class_note": "natural armor",
+    "hit_dice_count": 16,
+    "hit_die_size": 10,
+    "hit_points_modifier": 80,
+    "challenge_rating": 10,
+    "experience_points": 5900,
+    "proficiency_bonus": null,
+    "proficiency_bonus_unknown_reason": "Fonte online não especifica bônus de proficiência.",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 3,
+      "CON": 5,
+      "INT": 1,
+      "WIS": 2,
+      "CHA": 4
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "saving_throws_against_spells_and_other_magical_effects"
+        }
+      },
+      {
+        "name": "Pheromones",
+        "category": "aura_start_of_turn",
+        "radius_ft": 30,
+        "trigger": "creature_starts_turn_within_30_ft",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 14,
+          "on_failure": {
+            "condition": "charmed",
+            "duration": "1_minute",
+            "repeat_save": {
+              "timing": "end_of_each_affected_turn",
+              "on_success": "end_condition"
+            },
+            "additional_while_charmed": [
+              "drop_all_held_items",
+              "stunned"
+            ]
+          },
+          "on_success": {
+            "immune_to_queen_pheromones_hours": 24
+          }
+        },
+        "on_condition_end": {
+          "immune_to_queen_pheromones_hours": 24
+        }
+      },
+      {
+        "name": "Tunneler",
+        "category": "movement",
+        "burrow_through": "solid_rock",
+        "speed_fraction": 0.5,
+        "leaves_tunnel_diameter_ft": 5
+      },
+      {
+        "name": "Spellcasting",
+        "category": "spellcasting",
+        "class": "sorcerer",
+        "caster_level": 9,
+        "spellcasting_ability": "CHA",
+        "spell_save_dc": 16,
+        "spell_attack_bonus": 8,
+        "spells": "see mechanics.spellcasting"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Slam",
+            "count": 2
+          },
+          {
+            "action": "Sting",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "modifier": 4,
+              "type": "bludgeoning",
+              "average": 13
+            }
+          ],
+          "average_damage": 13
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Sting",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 9
+            },
+            {
+              "dice": "4d6",
+              "modifier": 0,
+              "type": "poison",
+              "average": 14
+            }
+          ],
+          "average_damage": 23
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Queen’s Wrathful Clattering",
+        "category": "area_allies_benefit",
+        "action_economy": "action",
+        "uses_per_day": 1,
+        "targets": {
+          "relation": "each_ally",
+          "radius_ft": 60,
+          "requirements": [
+            "can_hear_queen"
+          ]
+        },
+        "effects": [
+          {
+            "type": "advantage_on_next_attack_roll",
+            "duration": "one_next_attack_roll"
+          },
+          {
+            "type": "speed_bonus",
+            "feet": 10,
+            "duration": "until_end_of_ally_next_turn"
+          }
+        ]
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Spellcasting",
+        "class": "sorcerer",
+        "caster_level": 9,
+        "ability": "CHA",
+        "spell_save_dc": 16,
+        "spell_attack_bonus": 8,
+        "spell_list": [
+          {
+            "level": 0,
+            "slots": "at_will",
+            "spells": [
+              "acid splash",
+              "mage hand",
+              "prestidigitation",
+              "ray of frost"
+            ]
+          },
+          {
+            "level": 1,
+            "slots": 4,
+            "spells": [
+              "burning hands",
+              "magic missile",
+              "shield",
+              "thunderwave"
+            ]
+          },
+          {
+            "level": 2,
+            "slots": 3,
+            "spells": [
+              "detect thoughts",
+              "misty step",
+              "web"
+            ]
+          },
+          {
+            "level": 3,
+            "slots": 3,
+            "spells": [
+              "clairvoyance",
+              "counterspell",
+              "haste"
+            ]
+          },
+          {
+            "level": 4,
+            "slots": 3,
+            "spells": [
+              "banishment",
+              "confusion"
+            ]
+          },
+          {
+            "level": 5,
+            "slots": 1,
+            "spells": [
+              "insect plague"
+            ]
+          }
+        ],
+        "material_components": "according_to_spell",
+        "spell_effects_referenced_to": "edition_spell_rules",
+        "ritual_status": "not_specified_in_statblock"
+      }
+    ],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Resistência mágica e feromônios que encantam e incapacitam; escava e escala."
@@ -69,6 +332,13 @@
       "edition": "Tome of Beasts 2",
       "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
       "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:conjoined-queen",
+      "type": "statblock_individual_online_verificado_2026_10_14",
+      "edition": "Tome of Beasts 2",
+      "scope": "estatísticas completas, traços, ações, recargas, salvaguardas, recursos e categorias ausentes",
+      "editorial_confirmation": false
     }
   ],
   "source_checkpoint": {
@@ -80,9 +350,10 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Confrontar o bloco com impressão/errata original da edição correta.",
+    "Revisar interações da engine e ação/reação/conjuração independente.",
+    "Conferir imagens, proveniência, direitos e adequação para produção.",
+    "Revisar implementação das 18 magias referenciadas, slots e ações de conjuração segundo edição aplicável."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -105,6 +376,18 @@
       "inspeção visual independente",
       "licença e direitos",
       "aprovação para impressão"
+    ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "status": "PENDENTE_HOMOLOGACAO_EDITORIAL_E_ENGINE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "Transcrição KPOGL fonte OGL comunitária não homologada contra edição e errata oficiais.",
+      "Habilidades condicionais dependem de testes independentes na engine."
     ]
   }
 }
