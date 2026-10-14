@@ -1,3 +1,15 @@
+## Atualização 14/10/2026 — três imagens físicas importadas
+
+**95/132 imagens binárias reais, 37 pendentes.** Nesta execução foram adicionadas e relidas: 
+
+| ID | Criatura | Arquivo real | Tamanho | Blob SHA verificado |
+|---|---|---|---:|---|
+| TF-069 | Clockwork Servant | [TF-069.webp](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-069.webp) | 86490 | `6198f481b27aa834977ddf74263b96a9a1534322` |
+| TF-099 | Ankou Soul Herald | [TF-099.webp](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-099.webp) | 300594 | `b8e866d5dc3160f0b60d6a856090433ef6658759` |
+| TF-364 | Kapi | [TF-364.webp](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-364.webp) | 82158 | `5089690fa8cefa644b5bdfe20fd456016b72dcf1` |
+
+Origem: `TheGiddyLimit/homebrew-img/img/CCodex/tokens/`. O Git confirmou SHA dos blobs binários idênticos ao arquivo de origem. As seções abaixo documentam os 92 arquivos incorporados anteriormente e constituem histórico de 13/10/2026.
+
 # Imagens reais — lote B
 
 **92/132 imagens binárias copiadas e verificadas na branch B; 40 pendentes.** Cada imagem possui Git blob SHA idêntico ao arquivo físico de origem (branches E/F), tamanho e caminho conferidos na nova branch.

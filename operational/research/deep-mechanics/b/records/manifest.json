@@ -22,7 +22,7 @@
     "ids_unicos": 132,
     "json_publicados": 132,
     "fichas_editoriais_detalhadas": 14,
-    "registros_incompletos": 108,
+    "registros_incompletos": 98,
     "conflitos_pr4": 13,
     "bloqueados": 124,
     "detalhados_com_conflito_pendente": 6,
@@ -30,16 +30,16 @@
     "homologacoes_independentes": 0,
     "promocoes_canonicas": 0,
     "merges": 0,
-    "fichas_secundarias_estruturadas": 10,
-    "fichas_com_acoes_individualizadas": 24,
-    "imagens_binarias_presentes": 92,
-    "imagens_pendentes": 40,
+    "fichas_secundarias_estruturadas": 20,
+    "fichas_com_acoes_individualizadas": 34,
+    "imagens_binarias_presentes": 95,
+    "imagens_pendentes": 37,
     "imagens_no_escopo": 132,
     "fichas_homologadas_independentemente": 0
   },
   "integridade": {
-    "controle": "IDs e Git blob SHA dos 132 registros individuais atualizados; 92 imagens com SHA/bytes conferidos no Github; checkpoints de até 10 criaturas com releitura",
-    "checkpoints": 18,
+    "controle": "132 registros conferidos por Git blob SHA e tamanho; 95 imagens reais listadas; atualizações com lease no ref e readback de JSONs publicados",
+    "checkpoints": 20,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
     "sem_duplicatas": true,
@@ -121,6 +121,14 @@
     {
       "sha": "804f3a2c94b8900550225b78ef928c0b60fc3c27",
       "message": "research(srd607/b): individualizar 4 fichas KPOGL com ataques, efeitos e recargas"
+    },
+    {
+      "sha": "0d02df2b23a11269cf46503450fe6f115764edf5",
+      "message": "research(srd607): B detalhar 6 clockworks KPOGL e limites editoriais"
+    },
+    {
+      "sha": "94c96225e38cc15b8d55aca7ac9e5462ad65ca64",
+      "message": "research(srd607): B completar inventários secundários TF-071 072 074 077"
     }
   ],
   "records": [
@@ -1158,9 +1166,15 @@
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
-        "status": "PENDENTE_IMAGEM",
-        "path": null,
-        "url": null
+        "status": "VERIFICADA_BINARIO_PRESENTE",
+        "path": "operational/research/deep-mechanics/b/images/TF-364.webp",
+        "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-364.webp",
+        "blob_sha": "5089690fa8cefa644b5bdfe20fd456016b72dcf1",
+        "bytes": 82158,
+        "source_branch": "TheGiddyLimit/homebrew-img:main",
+        "source_original_path": "img/CCodex/tokens/Kapi.webp",
+        "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/tokens/Kapi.webp",
+        "integridade": "sha de blob git idêntico ao arquivo binário de origem"
       }
     },
     {
@@ -2000,10 +2014,10 @@
       "id": "TF-064",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-064.json",
-      "git_blob_sha": "59f30079443e24479e10a0557dc640afe3ebc46e",
-      "bytes": 4498,
+      "git_blob_sha": "b231114e496231878019c90c01f8ed98fb07ea11",
+      "bytes": 5022,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-064.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2027,10 +2041,10 @@
       "id": "TF-065",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-065.json",
-      "git_blob_sha": "059b93a6a3f6e4d231cbcf781fbbef3d361ec657",
-      "bytes": 3766,
+      "git_blob_sha": "4d35dfc3da99b527a81e55a21c189d0233926ab4",
+      "bytes": 4686,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-065.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2054,10 +2068,10 @@
       "id": "TF-066",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-066.json",
-      "git_blob_sha": "7bc007a1b2ec38484cb4eed51f8c0d1272879201",
-      "bytes": 4974,
+      "git_blob_sha": "8373f7f4d3ff7954d37f0ce327ec4766ce1394e5",
+      "bytes": 5368,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-066.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2081,10 +2095,10 @@
       "id": "TF-067",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-067.json",
-      "git_blob_sha": "1fee5ebebda8892290a8b2ef6b8a98ec59f0afcd",
-      "bytes": 3783,
+      "git_blob_sha": "d89edb87ca3b98936d1fb61e2b58eff9c4bffa24",
+      "bytes": 4695,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-067.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2135,26 +2149,32 @@
       "id": "TF-069",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-069.json",
-      "git_blob_sha": "489c44ac2d6ee60c5b10fbaaf5ab587a2cd5f6e3",
-      "bytes": 2864,
+      "git_blob_sha": "54b4bc52af4d31b8accb8663419b3a222fa9bf83",
+      "bytes": 3424,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-069.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
-        "status": "PENDENTE_IMAGEM",
-        "path": null,
-        "url": null
+        "status": "VERIFICADA_BINARIO_PRESENTE",
+        "path": "operational/research/deep-mechanics/b/images/TF-069.webp",
+        "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-069.webp",
+        "blob_sha": "6198f481b27aa834977ddf74263b96a9a1534322",
+        "bytes": 86490,
+        "source_branch": "TheGiddyLimit/homebrew-img:main",
+        "source_original_path": "img/CCodex/tokens/Clockwork Servant.webp",
+        "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/tokens/Clockwork%20Servant.webp",
+        "integridade": "sha de blob git idêntico ao arquivo binário de origem"
       }
     },
     {
       "id": "TF-070",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-070.json",
-      "git_blob_sha": "de372802c586a9b43031871fa63ec51eda2aa387",
-      "bytes": 3298,
+      "git_blob_sha": "e69cb3283d3d52cabf6147043ad2a13c29bc2e15",
+      "bytes": 3560,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-070.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2178,10 +2198,10 @@
       "id": "TF-071",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-071.json",
-      "git_blob_sha": "81c93ac53472a180781ee1e294dca3a0b4467972",
-      "bytes": 4274,
+      "git_blob_sha": "1c77644c1f91870cec785cd83084d311204774da",
+      "bytes": 4496,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-071.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2205,10 +2225,10 @@
       "id": "TF-072",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-072.json",
-      "git_blob_sha": "909348a29843143027d1bcf10638b5e703af8084",
-      "bytes": 3999,
+      "git_blob_sha": "7d5e7c509edf97cf315fd646dbf978d8dd493a3e",
+      "bytes": 4837,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-072.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2232,10 +2252,10 @@
       "id": "TF-074",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-074.json",
-      "git_blob_sha": "c6a0ea2c12582ac3c36546950919d41c8ca33180",
-      "bytes": 4429,
+      "git_blob_sha": "10e70ee3cdc949caf952493e1de350fbad6d6fa3",
+      "bytes": 5158,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-074.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2286,10 +2306,10 @@
       "id": "TF-077",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-077.json",
-      "git_blob_sha": "49b4bb3e61d0a4b08710fa4676e9370e14241493",
-      "bytes": 4753,
+      "git_blob_sha": "bb6fd342246a6a5c4843f5b0957b6ad81ec1002a",
+      "bytes": 5679,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-077.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
@@ -2703,9 +2723,15 @@
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
-        "status": "PENDENTE_IMAGEM",
-        "path": null,
-        "url": null
+        "status": "VERIFICADA_BINARIO_PRESENTE",
+        "path": "operational/research/deep-mechanics/b/images/TF-099.webp",
+        "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-099.webp",
+        "blob_sha": "b8e866d5dc3160f0b60d6a856090433ef6658759",
+        "bytes": 300594,
+        "source_branch": "TheGiddyLimit/homebrew-img:main",
+        "source_original_path": "img/CCodex/tokens/Ankou Soul Herald.webp",
+        "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/tokens/Ankou%20Soul%20Herald.webp",
+        "integridade": "sha de blob git idêntico ao arquivo binário de origem"
       }
     },
     {
@@ -3250,27 +3276,43 @@
     }
   ],
   "ultima_continuacao": {
-    "data": "2026-10-13",
-    "imagens_importadas": 92,
-    "imagens_pendentes": 40,
-    "criaturas_com_estrutura_mecanica": 24,
-    "criaturas_com_mecanica_ainda_resumida": 108,
-    "ids_mecanicos_desta_execucao": [
-      "TF-302",
-      "TF-303",
-      "TF-304",
-      "TF-305",
-      "TF-306",
-      "TF-312"
+    "data": "2026-10-14",
+    "fichas_secundarias_estruturadas_novas": 10,
+    "ids_mecanicos": [
+      "TF-064",
+      "TF-065",
+      "TF-066",
+      "TF-067",
+      "TF-069",
+      "TF-070",
+      "TF-071",
+      "TF-072",
+      "TF-074",
+      "TF-077"
     ],
-    "origem_mecanica_nova": "KPOGL comunidade, não conferida em edição editorial",
-    "blob_head": "804f3a2c94b8900550225b78ef928c0b60fc3c27"
+    "imagens_binarias_novas": 3,
+    "ids_imagens": [
+      "TF-069",
+      "TF-099",
+      "TF-364"
+    ],
+    "fichas_com_acoes_individualizadas": 34,
+    "fichas_pendentes": 98,
+    "imagens_reais": 95,
+    "imagens_pendentes": 37,
+    "commit_imagens": "4c193c1511ff043a62b523a0f157c0e21f282090",
+    "commits_mecanica": [
+      "0d02df2b23a11269cf46503450fe6f115764edf5",
+      "94c96225e38cc15b8d55aca7ac9e5462ad65ca64"
+    ],
+    "ressalva": "KPOGL é fonte comunitária não endossada; 10 novas fichas seguem bloqueadas para revisão da versão editorial/erratas."
   },
-  "data_atualizacao": "2026-10-13",
+  "data_atualizacao": "2026-10-14",
   "imagens_manifest": "operational/research/deep-mechanics/b/images/manifest.json",
   "imagens_snapshot": {
     "branch_E": "ba8a6c55ac8a0ea125757cc4e43ceaa92c523d51",
     "branch_F": "c26a1213e77cf1bdbbca12a14e4b71b1cee99d9d",
-    "data": "2026-10-13"
+    "data": "2026-10-14",
+    "fonte_adicional": "TheGiddyLimit/homebrew-img img/CCodex/tokens"
   }
 }
