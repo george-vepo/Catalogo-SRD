@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 8 lotes validados, 80/395 fichas (315 restantes).
+**Situação:** EM ANDAMENTO — 9 lotes validados, 90/395 fichas (305 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -68,3 +68,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 7 fichas completas em conteúdo, 3 completas com ressalvas: TF-083 exige conferência literal de `exhausted`, TF-089 tem divergência de idiomas/volume e duração de Enthralling Speech, TF-091 apresenta variantes editoriais entre 2016/2023. Dez imagens vinculadas pelo manifesto E; SHA e tamanho conferidos. Nenhuma arte homologada nem licença aprovada.
 
 **Consolidado:** 80/395; 48 fichas completas em conteúdo, 12 completas com ressalvas, 19 incompletas, 1 não verificável; 49 imagens diretas, 28 por manifesto, 3 ausentes.
+
+## Lote 009 — TF-094–TF-105 (dez IDs na ordem do CSV)
+
+7 completas em conteúdo; 3 completas com ressalvas: TF-094 (Whirlpool indefinido em caso de sucesso), TF-095 (poder Prophesy Doom citado mas ausente) e TF-099 (INT +5/+3, atribuição das mecânicas de toca e discrepância de artes). Dez imagens vinculadas via manifestos com SHA e bytes conferidos: TF-094/095 no grupo B com direitos restritos **a uso não comercial**, demais oito pelo manifesto E; TF-099 dispõe de duas imagens diferentes nos diretórios B e central, sem validação da escolha final. TF-101 (472×700) e TF-103 (459×800) apresentam largura inferior a 500 px. Qualidade visual e licenças restantes não homologadas.
+
+**Consolidado:** 90/395, 55 completas, 15 com ressalvas, 19 incompletas e 1 não verificável; 49 imagens diretas, 38 por manifesto e 3 ausentes. O próximo ID correto após a reconciliação é TF-106; o checkpoint anterior indicava TF-092 indevidamente.
+
