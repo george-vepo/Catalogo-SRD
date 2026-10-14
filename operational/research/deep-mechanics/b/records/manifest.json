@@ -39,7 +39,7 @@
   },
   "integridade": {
     "controle": "Auditoria GitHub 14/10/2026: 132/132 JSONs físicos com SHA Git e bytes iguais ao manifesto na árvore da branch antes deste checkpoint; 101/101 imagens binárias físicas com SHA Git e bytes iguais; 3 blobs binários adicionais importados por identidade de SHA Git da branch F. Verificar os 104/104 após commit. Nenhuma homologação independente.",
-    "checkpoints": 25,
+    "checkpoints": 26,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
     "sem_duplicatas": true,
@@ -229,9 +229,10 @@
       "actor_correspondence_checked": 4,
       "sha256_calculados": 4,
       "git_blobs_criados_e_iguais_origem": 4,
-      "readback": "PENDENTE_POS_COMMIT",
+      "readback": "PASSOU: 4/4 novos arquivos lidos na branch GitHub, todos WebP com SHA Git e bytes iguais aos originais e manifestos; 108/108 imagens físicas coincidentes.",
       "licenca": "FONTES_LIBERAM_APENAS_USO_NAO_COMERCIAL; NÃO DECLARAR COMERCIALMENTE LIBERADO",
-      "qualidade": "Imagens partilhadas entre variantes/idades nos próprios atores A5E"
+      "qualidade": "Imagens partilhadas entre variantes/idades nos próprios atores A5E",
+      "commit": "0e0ed70e2f665f3afc61acca208ad4779161a362"
     },
     "cotejo_pontual_editorial_a5e_20261014": {
       "ids_adicionais": [
@@ -252,7 +253,31 @@
       },
       "limites": "Não se comprovou ausência de erratas nem houve homologação editorial integral ou revisão independente. Direitos do conteúdo A5E sob avaliação.",
       "fontes_impressas_conferidas": 0,
-      "homologacoes_independentes": 0
+      "homologacoes_independentes": 0,
+      "commit": "45b84cafcbdf3858347bbc16f7b1a8f81774098d",
+      "readback": "PASSOU: 3 JSONs relidos com novos SHAs e tamanhos registrados; 132 JSONs permanecem iguais ao manifesto."
+    },
+    "status_atual": {
+      "atualizado_em": "2026-10-14",
+      "ids_esperados": 132,
+      "ids_validos": 132,
+      "hash_e_bytes_json_iguais": 132,
+      "bytes_json": 745152,
+      "binarios_persistidos": 108,
+      "binarios_hash_e_bytes_iguais": 108,
+      "imagens_faltantes": 24,
+      "estruturadas": 132,
+      "a5e_editorial_origem": 14,
+      "estruturadas_secundarias": 118,
+      "conferencias_editoriais_pontuais_7": 7,
+      "editoriais_integralmente_conferidas_com_edicao_e_erratas": 0,
+      "homologacoes_independentes": 0,
+      "conflitos_herdados": 13,
+      "conflitos_definitivamente_resolvidos": 0,
+      "integracoes_canonicas": 0,
+      "merge": 0,
+      "direitos": "A5E fontes/imagens: módulos têm limitação expressa de uso não comercial; autorização para exploração comercial não verificada.",
+      "branch_draft": true
     }
   },
   "commits_checkpoint": [
@@ -351,6 +376,10 @@
     {
       "sha": "0e0ed70e2f665f3afc61acca208ad4779161a362",
       "message": "research(srd607/b): importar 4 WebPs A5E não comerciais com origem e hashes (checkpoint 4)"
+    },
+    {
+      "sha": "45b84cafcbdf3858347bbc16f7b1a8f81774098d",
+      "message": "research(srd607/b): auditar A5E TF-094/095/355 e estruturar toca e ações (checkpoint 3)"
     }
   ],
   "records": [

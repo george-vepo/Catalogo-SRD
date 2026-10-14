@@ -1,3 +1,11 @@
+## Consolidação pós-readback B — 14/10/2026
+
+**Persistência certificada por releitura GitHub nesta rodada:** os 4 WebPs A5E [TF-094, TF-095, TF-355 e TF-361](../images/manifest.json) foram reabertos na branch B após o commit [`0e0ed70e2f66`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/0e0ed70e2f665f3afc61acca208ad4779161a362) e coincidem com fonte e manifestos em Git SHA e bytes; **108/108 imagens reais** na árvore permanecem indexadas sem divergências. O segundo checkpoint [`45b84cafcbdf`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/45b84cafcbdf3858347bbc16f7b1a8f81774098d) alterou só TF-094, TF-095 e TF-355 e seus controles: **3/3 JSONs** reabertos, sem divergência de SHA/tamanho, mantendo 132/132 JSONs físicos e válidos.
+
+**Estados separados:** estruturação de 132/132 inventários concluída; sete cotejos **pontuais** diretos com portal A5E nesta continuação, não equivalentes a verificações editoriais integrais contra livros/erratas; **0 verificações editoriais integrais declaradas**, **0 homologações independentes**, **0 integrações**. 13 conflitos herdados persistem, 24 imagens ainda ausentes. As quatro artes de A5E recém-importadas são fornecidas para **uso não comercial** e não foram licenciadas para publicação comercial do jogo. Branch B mantida isolada e PR #6 deve permanecer DRAFT.
+
+---
+
 ## Checkpoint B — 14/10/2026 — conferência pontual de três fichas A5E com fontes editoriais
 
 **TF-094 Adult River Dragon**: estruturadas separadamente as **quatro características opcionais de toca** — aliados aquáticos por ação bônus, aldeões que chegam no início da rodada, rochas que aumentam dano de colisão em 2d8 e limite de visão subaquática. Fonte: <https://a5e.tools/node/1555>. A fonte repete incorretamente `On a failure` no segundo ramo de Whirlpool; resultado de sucesso **permanece pendente**, sem inventar CD ou efeito.

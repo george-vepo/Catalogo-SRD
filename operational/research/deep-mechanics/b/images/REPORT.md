@@ -1,3 +1,11 @@
+## Releitura física confirmada — 14/10/2026
+
+**108/132 imagens são arquivos binários efetivamente presentes**, com Git SHA e tamanho de cada arquivo da árvore Git iguais aos registros do manifesto. As quatro imagens A5E do checkpoint [`0e0ed70e2f66`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/0e0ed70e2f665f3afc61acca208ad4779161a362) foram individualmente reabertas em Base64, com assinatura RIFF/WEBP e bytes confirmados. Restam **24 arquivos sem binário correspondente** no diretório B.
+
+**Ressalva obrigatória:** integridade física ≠ comprovação de identidade artística exclusiva, licença comercial ou homologação visual. As quatro imagens A5E têm restrição de **uso não comercial** informada na fonte; avaliação de direitos de todos os recursos permanece necessária antes de uso final.
+
+---
+
 ## Checkpoint imagens B — 14/10/2026 — quatro assets oficiais A5E com uso não comercial
 
 **4 arquivos reais de origem** da [implementação oficial do A5E para Foundry](https://github.com/Pjb518/FoundryVTT-Level-Up-Official), associados por nome e `img` no JSON do ator correspondente. Copiados sem recodificar; verificação pré-gravação: 4 WebPs com assinatura RIFF/WEBP/VP8X, tamanhos internos iguais aos bytes, SHA-256, dimensões e Git SHA iguais aos de origem.
