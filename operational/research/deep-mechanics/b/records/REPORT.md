@@ -1,3 +1,13 @@
+## Checkpoint B — cotejo pontual de quatro fichas no portal editorial A5E (14/10/2026)
+
+Reabertas as fontes primárias e confirmados **tamanho, tipo, limiar bloodied, bônus de proficiência e DC de manobra** em TF-351 ([Half-Demon Ogre](https://a5e.tools/node/3297), Large Giant, bloodied 34, prof +2, DC14), TF-384 ([Mutant Rust Monster](https://a5e.tools/node/2870), Large Monstrosity, bloodied 63, prof +3, DC16), TF-389 ([Supermutant Rust Monster](https://a5e.tools/node/2871), Huge Monstrosity, bloodied 97, prof +3, DC16) e TF-393 ([Minotaur Conqueror](https://a5e.tools/node/2966), Huge Monstrosity, bloodied 131, prof +5, DC19).
+
+**Rust Monsters:** os efeitos da ação Antennae passaram a discriminar dano à armadura/escudo, itens portados, contato com arma de metal, destruição por penalidade acumulada, limite de área corroída e reparo mágico de 1 minuto conforme portal editorial. Não houve fusão de edições ou alterações especulativas de ND/atributos.
+
+**Não homologado:** cotejo pontual de campos em quatro fichas contra site editorial **não equivale** à verificação integral com publicação e erratas nem à revisão independente. Persistem 13 conflitos, 20 imagens faltantes, 0 aprovações e 0 integrações. A licença de conteúdo A5E não foi presumida como aberta; conferir A5ESRD separadamente. As mudanças estão restritas a quatro fichas e arquivos de controle B. Os novos SHAs e tamanhos foram gravados no manifesto para releitura pós-commit.
+
+---
+
 ## Checkpoint de quatro imagens A5E (14/10/2026) — 112/132, 20 faltantes
 
 As seguintes imagens reais WebP foram copiadas por blob Git sem recodificar e vinculadas aos atores oficiais A5E:
