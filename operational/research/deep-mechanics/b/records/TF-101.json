@@ -2,24 +2,27 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-101",
   "nome": "Bilwis",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
   "edicao": {
+    "editora": "Kobold Press",
     "publicacao": "Creature Codex",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "Transcrição identificada em página individual, sem validação da impressão/errata oficial"
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/bilwis/",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-099_TF-103/research.json",
-      "natureza": "checkpoint"
+      "url": "https://kpogl.wikidot.com/monster:bilwis",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "estatísticas, passivas, ataques, ações e habilidades especiais"
     }
   ],
   "estatisticas": {
     "nd": "1",
+    "bonus_proficiencia": 2,
     "ca": 13,
+    "origem_ca": "sem armadura indicada",
     "pv": 49,
     "dados_vida": "11d8",
     "atributos": {
@@ -30,20 +33,24 @@
       "SAB": 13,
       "CAR": 16
     },
+    "modificadores": {
+      "FOR": 1,
+      "DES": 3,
+      "CON": 0,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": 3
+    },
     "deslocamentos_ft": {
       "andar": 0,
       "voar": 40,
-      "hover": true
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
     },
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 11,
-    "idiomas": [
-      "Auran"
-    ],
+    "pairar": true,
+    "salvaguardas": {},
+    "pericias": {},
     "resistencias_dano": [
       "lightning",
       "thunder"
@@ -51,7 +58,7 @@
     "imunidades_dano": [
       "poison"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "exhaustion",
       "grappled",
@@ -61,67 +68,104 @@
       "prone",
       "restrained",
       "unconscious"
-    ]
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Auran"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "qualidade_estatisticas": "CONFIRMADA_EM_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Elemental Nature",
+      "efeito": "Não requer respirar, alimentar-se, beber nem dormir."
+    },
+    {
+      "nome": "Air Form",
+      "efeito": "Pode entrar e parar no espaço de criatura hostil, e passar por aberturas de uma polegada sem se espremer.",
+      "largura_minima_passagem_polegadas": 1
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
   "acoes": [
     {
       "nome": "Slam",
-      "indicacao_herdada": "+5, 5 pés, 2d8+3 contundente.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Slam"
     },
     {
-      "nome": "Bilwis Whirlwind",
-      "indicacao_herdada": "Recarga 5–6, criaturas no espaço ou a 5 pés fazem FOR CD12 contra 4d6 contundente e queda; no sucesso, metade sem queda.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Whirlwind",
+      "categoria": "efeito_area",
+      "recarga": "5–6",
+      "area": {
+        "geometria": "espaço ocupado pelo Bilwis e área a até 5 pés",
+        "raio_ft": 5
+      },
+      "alvos": "todas as criaturas nessa área",
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 12
+      },
+      "dano": {
+        "dados": "4d6",
+        "modificador": 0,
+        "tipo": "bludgeoning"
+      },
+      "falha": {
+        "dano": "4d6",
+        "condicao": "prone"
+      },
+      "sucesso": {
+        "dano": "metade",
+        "condicao": null
+      }
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Air Form",
-      "resumo": "Entra no espaço de criaturas adversárias e passa por fenda de 1 polegada."
-    },
-    {
-      "nome": "Elemental Nature",
-      "resumo": "Não precisa comer, beber, respirar nem dormir; aparece na seção narrativa About."
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "Elemental Nature consta no texto About, não na área de Special Traits; verificação editorial posterior."
+    "Confirmar publicação/edição original, erratas e todos os detalhes com fonte editorial para homologação independente.",
+    "Nenhuma aprovação canônica ou revisão independente. Quaisquer ações inexistentes no bloco têm listas verificadas por esta fonte secundária, mas não pelo editor."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-101",
+    "nome_original": "Bilwis",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "tipo": "Elemental",
+    "tamanho": "Medium",
+    "alinhamento": "chaotic evil",
+    "nd": "1",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
 }

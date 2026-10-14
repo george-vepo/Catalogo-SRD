@@ -2,24 +2,27 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-100",
   "nome": "Befouled Weird",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
   "edicao": {
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "Transcrição identificada em página individual, sem validação da impressão/errata oficial"
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/befouled-weird/",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-099_TF-103/research.json",
-      "natureza": "checkpoint"
+      "url": "https://kpogl.wikidot.com/monster:befouled-weird",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "estatísticas, passivas, ataques, ações e habilidades especiais"
     }
   ],
   "estatisticas": {
     "nd": "5",
+    "bonus_proficiencia": 3,
     "ca": 14,
+    "origem_ca": "natural armor",
     "pv": 75,
     "dados_vida": "10d8+30",
     "atributos": {
@@ -30,27 +33,32 @@
       "SAB": 12,
       "CAR": 7
     },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 2,
+      "CON": 3,
+      "INT": -3,
+      "SAB": 1,
+      "CAR": -2
+    },
     "deslocamentos_ft": {
       "andar": 30,
-      "nadar": 60
+      "voar": null,
+      "escalar": null,
+      "nadar": 60,
+      "escavar": null
     },
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 11,
-    "idiomas": [
-      "Aquan"
-    ],
+    "pairar": false,
+    "salvaguardas": {},
+    "pericias": {},
     "resistencias_dano": [
       "acid",
-      "bludgeoning/piercing/slashing não mágicos"
+      "bludgeoning, piercing, slashing from nonmagical attacks"
     ],
     "imunidades_dano": [
       "poison"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "exhaustion",
       "grappled",
@@ -60,91 +68,199 @@
       "prone",
       "restrained",
       "unconscious"
-    ]
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Aquan"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "qualidade_estatisticas": "CONFIRMADA_EM_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Elemental Nature",
+      "efeito": "Não precisa ar, alimento, água ou sono."
+    },
+    {
+      "nome": "Freeze",
+      "gatilho": "recebe dano cold",
+      "efeito": "sua velocidade diminui 10 pés até fim do próximo turno",
+      "penalidade_deslocamento_ft": 10,
+      "duracao": "até o fim do turno seguinte"
+    },
+    {
+      "nome": "Parasitic Amoebas",
+      "gatilho": "criatura infectada pelo parasita",
+      "efeitos": [
+        "fica vulnerável a necrotic damage",
+        "ao final de cada descanso longo faz CON CD13, falha reduz INT em 1d4",
+        "morre se INT chega a zero"
+      ],
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 13,
+        "frequencia": "fim de cada descanso longo"
+      },
+      "reducao_atributo": {
+        "atributo": "INT",
+        "dados": "1d4",
+        "duracao": "até fim de descanso longo após cura da doença"
+      },
+      "encerramento": "lesser restoration ou magia semelhante",
+      "transformacao": {
+        "precondicao": "water elemental morre em decorrência desta doença",
+        "tempo": "1d4 horas",
+        "resultado": "se transforma em befouled weird"
+      }
+    },
+    {
+      "nome": "Unclean",
+      "gatilho": "creature targets weird with lesser restoration",
+      "precondicao": "conseguir ataque mágico corpo a corpo",
+      "dano": {
+        "dados": "2d8",
+        "tipo": "radiant"
+      },
+      "efeitos": [
+        "não infecta criaturas com Parasitic Amoebas por 1 minuto"
+      ],
+      "duracao": "1 minuto"
+    },
+    {
+      "nome": "Water Form",
+      "efeito": "pode entrar no espaço de hostil e parar ali, passar por abertura de uma polegada sem se espremer."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ],
+      "efeito_condicional": {
+        "gatilho": "alvo é criatura",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": "infectado por Parasitic Amoebas",
+        "sucesso": "não infectado"
+      }
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "indicacao_herdada": "Dois ataques Slam.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Slam",
+        "Slam"
+      ]
     },
     {
       "nome": "Slam",
-      "indicacao_herdada": "+5, 5 pés, 2d6+3 contundente e 2d6 necrótico; infecção CON CD13.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Slam"
     },
     {
       "nome": "Drown in Filth",
-      "indicacao_herdada": "Recarga 4–6, FOR CD13 para agarrar alvo em seu espaço, causar 2d6+3 contundente e 2d6 necrótico, impedir respiração e tentar infectar.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "especial_controle_e_dano",
+      "recarga": "4–6",
+      "alvo": "uma criatura no espaço do Befouled Weird",
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 13
+      },
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ],
+      "falha": {
+        "efeitos": [
+          "dano integral",
+          "alvo Medium ou menor fica grappled (escape DC13) e restrained",
+          "não pode respirar, exceto se respira água"
+        ]
+      },
+      "sucesso": {
+        "efeito": "alvo expulso do espaço do Befouled Weird"
+      },
+      "gatilho_recorrente": "no início de cada turno do Befouled Weird, alvo agarrado recebe o mesmo dano e faz CON CD13 para evitar infecção",
+      "escapar": {
+        "acao": "criatura até 5 pés usa ação",
+        "teste": {
+          "atributo": "FOR",
+          "cd": 13
+        },
+        "efeito": "puxa alvo para fora"
+      }
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Freeze",
-      "resumo": "Dano frio reduz velocidade em 10 pés por um turno."
-    },
-    {
-      "nome": "Parasitic Amoebas",
-      "resumo": "Infecta alvos, que ficam vulneráveis a necrótico; cada descanso CON CD13 ou -1d4 INT, sujeito à morte se cair a zero."
-    },
-    {
-      "nome": "Unclean",
-      "resumo": "Lesser restoration nele causa 2d8 radiante e impede infecção temporariamente."
-    },
-    {
-      "nome": "Water Form",
-      "resumo": "Pode ocupar o espaço inimigo e atravessar abertura de 1 polegada."
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual."
+    "Confirmar publicação/edição original, erratas e todos os detalhes com fonte editorial para homologação independente.",
+    "Nenhuma aprovação canônica ou revisão independente. Quaisquer ações inexistentes no bloco têm listas verificadas por esta fonte secundária, mas não pelo editor."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-100",
+    "nome_original": "Befouled Weird",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "tipo": "Elemental",
+    "tamanho": "Medium",
+    "alinhamento": "neutral evil",
+    "nd": "5",
+    "bonus_proficiencia": 3
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Slam",
+        "Slam"
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Doença propagável",
+      "efeito": "transmissão por Slam e Drown in Filth, mesmo após dano recorrente, até doença removida"
+    }
+  ]
 }

@@ -2,24 +2,27 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-106",
   "nome": "Akanka",
-  "estado": "BLOQUEADO_CONFLITO_OU_EDICAO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
   "edicao": {
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "Transcrição identificada em página individual, sem validação da impressão/errata oficial"
   },
   "fontes": [
     {
       "url": "https://kpogl.wikidot.com/monster:akanka",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-104_TF-108/research.json",
-      "natureza": "checkpoint"
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "estatísticas, passivas, ataques, ações e habilidades especiais"
     }
   ],
   "estatisticas": {
     "nd": "2",
+    "bonus_proficiencia": 2,
     "ca": 12,
+    "origem_ca": "não especificada",
     "pv": 45,
     "dados_vida": "7d8+14",
     "atributos": {
@@ -30,125 +33,198 @@
       "SAB": 10,
       "CAR": 16
     },
-    "deslocamentos_ft": {
-      "andar": 40
+    "modificadores": {
+      "FOR": 0,
+      "DES": 2,
+      "CON": 2,
+      "INT": 2,
+      "SAB": 0,
+      "CAR": 3
     },
-    "salvaguardas": null,
+    "deslocamentos_ft": {
+      "andar": 40,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {},
     "pericias": {
       "Deception": 5,
       "Perception": 2
     },
-    "sentidos": null,
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "unconscious"
+    ],
+    "sentidos": [],
     "percepcao_passiva": 12,
     "idiomas": [
       "Common"
     ],
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": [
-      "unconscious"
-    ]
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "qualidade_estatisticas": "CONFIRMADA_EM_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Spider Climb",
+      "ativacao": "passiva",
+      "efeito": "Anda por superfícies difíceis, inclusive tetos invertidos, sem teste de atributo.",
+      "restricoes": []
+    },
+    {
+      "nome": "Web Sense",
+      "gatilho": "akanka em contato com teia",
+      "efeito": "Conhece posição exata de outra criatura em contato com a mesma teia.",
+      "restricoes": [
+        "ambas em contato com a mesma teia"
+      ]
+    },
+    {
+      "nome": "Web Walker",
+      "efeito": "Ignora restrições de movimento impostas por teias."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ],
+      "efeito_adicional": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 12
+        },
+        "falha": {
+          "condicao": "unconscious",
+          "duracao": "1 minuto"
+        },
+        "sucesso": "sem inconsciência",
+        "encerramento": [
+          "alvo sofre dano",
+          "outra criatura usa uma ação para despertá-lo"
+        ]
+      }
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "indicacao_herdada": "Ativa Mirrored Carapace e realiza uma Bite.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "multiataque",
+      "sequencia": [
+        "Mirrored Carapace",
+        "Bite"
+      ],
+      "quantidade_ataques": 1
     },
     {
       "nome": "Bite",
-      "indicacao_herdada": "+4, alcance 5 pés, 1d6+2 perfurante; CON CD12 ou inconsciente até 1 minuto, sendo possível despertar com ação ou dano.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
     },
     {
       "nome": "Mirrored Carapace",
-      "indicacao_herdada": "Projeta duplicata ilusória em seu espaço: ataque com resultado inferior a 15 pode destruir a duplicata no lugar do Akanka; não afeta quem usa outros sentidos ou percebe ilusões, e não funciona na escuridão.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "ilusao_defensiva",
+      "efeito": "cria duplicata ilusória em seu próprio espaço",
+      "gatilho": "outra criatura mira ataque contra akanka",
+      "regra_condicional": {
+        "rolagem_de_ataque": "resultado menor que 15 mira a duplicata em vez da akanka",
+        "destruicao": "duplicata é destruída apenas por ataque que a acerte, imune a outros danos e efeitos"
+      },
+      "excecoes": [
+        "não afeta criaturas que não possam ver",
+        "não afeta criaturas que dependam de sentido não visual, como blindsight",
+        "não afeta criaturas que reconheçam ilusões como falsas, como truesight",
+        "akanka não pode usar em escuridão"
+      ]
     },
     {
       "nome": "Spellcasting",
-      "indicacao_herdada": "CAR CD13 sem componentes materiais: minor illusion e silent image à vontade; major image 3/dia; hallucinatory terrain 1/dia.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "conjuracao",
+      "referencia_conjuracao": "Spellcasting"
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Spider Climb",
-      "resumo": "Sobe por paredes e tetos sem testes, inclusive superfícies difíceis."
-    },
-    {
-      "nome": "Web Sense",
-      "resumo": "Detecta posição de criaturas em contato com a mesma teia."
-    },
-    {
-      "nome": "Web Walker",
-      "resumo": "Não sofre restrições de movimento devido a teias."
+      "nome": "Spellcasting",
+      "atributo": "CAR",
+      "cd": 13,
+      "bonus_ataque_magico": null,
+      "componentes_materiais": false,
+      "componentes_verbais": "não dispensados explicitamente",
+      "componentes_somaticos": "não dispensados explicitamente",
+      "magias": [
+        {
+          "nome": "minor illusion",
+          "nivel": 0,
+          "usos": "à vontade"
+        },
+        {
+          "nome": "silent image",
+          "nivel": 1,
+          "usos": "à vontade"
+        },
+        {
+          "nome": "major image",
+          "nivel": 3,
+          "usos": "3/dia"
+        },
+        {
+          "nome": "hallucinatory terrain",
+          "nivel": 4,
+          "usos": "1/dia"
+        }
+      ]
     }
   ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "A página /akanka/ no 5eSRD atribui conteúdo a Lasers & Liches, incluindo Southern Tongue; a fonte de Tome of Beasts 3/Kobold Press registra somente Common.; Site KPOGL é wiki independente não endossada oficialmente pela Kobold Press; identidade corrobora pelo índice oficial da editora e material de edição, mas não dá aval de publicação.; A ficha da wiki possui ação Spellcasting separada, não copiar 'Innate Spellcasting' da página homônima errada.; Imagem/licença pendentes.",
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "A página /akanka/ no 5eSRD atribui conteúdo a Lasers & Liches, incluindo Southern Tongue; a fonte de Tome of Beasts 3/Kobold Press registra somente Common.",
-    "Site KPOGL é wiki independente não endossada oficialmente pela Kobold Press; identidade corrobora pelo índice oficial da editora e material de edição, mas não dá aval de publicação.",
-    "A ficha da wiki possui ação Spellcasting separada, não copiar 'Innate Spellcasting' da página homônima errada."
+    "Confirmar publicação/edição original, erratas e todos os detalhes com fonte editorial para homologação independente.",
+    "Nenhuma aprovação canônica ou revisão independente. Quaisquer ações inexistentes no bloco têm listas verificadas por esta fonte secundária, mas não pelo editor."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-106",
+    "nome_original": "Akanka",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "tipo": "Fey",
+    "tamanho": "Medium",
+    "alinhamento": "chaotic evil",
+    "nd": "2",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Mirrored Carapace",
+        "Bite"
+      ],
+      "quantidade_ataques": 1
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Duplicata ilusória",
+      "observacao": "Apenas ataque que acerta a duplicata a destrói; demais danos/efeitos não a afetam"
+    }
+  ]
 }

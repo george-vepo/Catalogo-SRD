@@ -2,24 +2,27 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-104",
   "nome": "Cherufe",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
   "edicao": {
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "Transcrição identificada em página individual, sem validação da impressão/errata oficial"
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/cherufe/",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-104_TF-108/research.json",
-      "natureza": "checkpoint"
+      "url": "https://kpogl.wikidot.com/monster:cherufe",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "estatísticas, passivas, ataques, ações e habilidades especiais"
     }
   ],
   "estatisticas": {
     "nd": "14",
+    "bonus_proficiencia": 5,
     "ca": 19,
+    "origem_ca": "natural armor",
     "pv": 161,
     "dados_vida": "14d12+70",
     "atributos": {
@@ -30,159 +33,284 @@
       "SAB": 14,
       "CAR": 6
     },
+    "modificadores": {
+      "FOR": 6,
+      "DES": 0,
+      "CON": 5,
+      "INT": -1,
+      "SAB": 2,
+      "CAR": -2
+    },
     "deslocamentos_ft": {
       "andar": 40,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
       "escavar": 40
     },
+    "pairar": false,
     "salvaguardas": {
-      "STR": 11,
+      "FOR": 11,
       "CON": 10
     },
     "pericias": {
       "Perception": 7
     },
-    "sentidos": [
-      "darkvision 60 ft.",
-      "tremorsense 120 ft."
-    ],
-    "percepcao_passiva": 17,
-    "idiomas": [
-      "Ignan",
-      "Terran"
-    ],
     "resistencias_dano": [
       "acid",
       "lightning",
-      "bludgeoning/piercing/slashing de ataques não mágicos"
+      "bludgeoning, piercing, slashing from nonmagical attacks"
     ],
     "imunidades_dano": [
       "fire",
       "poison"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "exhaustion",
       "paralyzed",
       "petrified",
       "poisoned",
       "prone"
-    ]
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      },
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 17,
+    "idiomas": [
+      "Ignan",
+      "Terran"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "CONFIRMADA_EM_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "indicacao_herdada": "Quatro Slam, ou dois arremessos de Magma Ball.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Elemental Nature",
+      "efeito": "dispensa ar, alimento, água ou sono."
     },
-    {
-      "nome": "Slam",
-      "indicacao_herdada": "+11, 10 pés, 4d6+6 contundente.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
-    },
-    {
-      "nome": "Magma Ball",
-      "indicacao_herdada": "+11, alcance 60/240 pés; 3d10+6 contundente e 2d10 fogo; seres até 5 pés do impacto testam DES CD18 ou sofrem 2d6 fogo.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
-    },
-    {
-      "nome": "Fissure",
-      "indicacao_herdada": "Abre fenda a até 120 pés, 60x10 pés, profundidade de 2d4x10; DES CD18 evita queda. Limite de uma fenda ativa.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
-    },
-    {
-      "nome": "Quake",
-      "indicacao_herdada": "Recarga 6, chão em raio 60 pés, DES CD18; 10d8 contundente e derruba na falha; sucesso metade e sem queda.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
-    }
-  ],
-  "acoes_bonus": [],
-  "reacoes": [],
-  "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
     {
       "nome": "Firewalker",
-      "resumo": "Quando exposto a fogo, velocidade dobra até fim do próximo turno, quando também pode correr ou desengajar como ação bônus."
+      "gatilho": "submetido a dano fire",
+      "efeito": "velocidade duplica até fim do próximo turno, podendo Dash ou Disengage como ação bônus nesse próximo turno",
+      "duracao": "fim do próximo turno",
+      "acoes_bonus_concedidas": [
+        "Dash",
+        "Disengage"
+      ]
     },
     {
       "nome": "Internal Flame",
-      "resumo": "Contato ou ataque corpo a corpo adjacente causa 2d6 fogo ao atacante; emite luz fraca em 30 pés."
-    },
-    {
-      "nome": "Elemental Nature",
-      "resumo": "Não necessita respirar, se alimentar, beber ou dormir; texto está em seção descritiva."
+      "gatilho": "criatura o toca ou acerta ataque corpo a corpo estando a até 5 pés",
+      "alcance_ft": 5,
+      "dano": {
+        "dados": "2d6",
+        "tipo": "fire"
+      },
+      "efeito_constante": "emite luz fraca no raio de 30 pés"
     }
   ],
-  "inventario_acoes_completo": false,
+  "ataques": [
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "4d6",
+          "modificador": 6,
+          "tipo": "bludgeoning"
+        }
+      ]
+    },
+    {
+      "nome": "Magma Ball",
+      "tipo": "distancia",
+      "bonus_acerto": 11,
+      "alcance_normal_ft": 60,
+      "alcance_maximo_ft": 240,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "3d10",
+          "modificador": 6,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d10",
+          "modificador": 0,
+          "tipo": "fire"
+        }
+      ],
+      "efeito_area": {
+        "gatilho": "atinge alvo",
+        "alvos": "cada criatura a até 5 pés do alvo (inclui o alvo se aplicável)",
+        "raio_ft": 5,
+        "salvaguarda": {
+          "atributo": "DES",
+          "cd": 18
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d6",
+            "tipo": "fire"
+          }
+        },
+        "sucesso": "sem dano adicional previsto"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        {
+          "quantidade_ataques": 4,
+          "sequencia": [
+            "Slam",
+            "Slam",
+            "Slam",
+            "Slam"
+          ]
+        },
+        {
+          "quantidade_ataques": 2,
+          "sequencia": [
+            "Magma Ball",
+            "Magma Ball"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam"
+    },
+    {
+      "nome": "Magma Ball",
+      "categoria": "ataque",
+      "referencia_ataque": "Magma Ball"
+    },
+    {
+      "nome": "Fissure",
+      "categoria": "ambiente",
+      "alcance_ft": 120,
+      "area": {
+        "geometria": "linha_no_solo",
+        "comprimento_ft": 60,
+        "largura_ft": 10,
+        "profundidade_ft": {
+          "dados": "2d4",
+          "multiplicador": 10
+        }
+      },
+      "alvos": "criaturas em locais onde a fissura se abre",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 18
+      },
+      "falha": "cai na fissura",
+      "sucesso": "desloca-se para a borda enquanto ela abre",
+      "limite_simultaneo": 1,
+      "efeitos": [
+        "estruturas sob a fissura desmoronam como na magia earthquake",
+        "abrir segunda fissura fecha a primeira e expulsa seus ocupantes à superfície"
+      ]
+    },
+    {
+      "nome": "Quake",
+      "categoria": "area",
+      "recarga": "6",
+      "area": {
+        "geometria": "raio",
+        "raio_ft": 60
+      },
+      "alvos": "todas as criaturas sobre o chão no raio",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 18
+      },
+      "dano": {
+        "dados": "10d8",
+        "modificador": 0,
+        "tipo": "bludgeoning"
+      },
+      "falha": {
+        "dano": "integral",
+        "condicao": "prone"
+      },
+      "sucesso": {
+        "dano": "metade",
+        "condicao": null
+      }
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Dash ou Disengage (Firewalker)",
+      "custo": "ação bônus",
+      "precondicao": "sofreu dano de fogo e está no próximo turno",
+      "alternativas": [
+        "Dash",
+        "Disengage"
+      ]
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "Há três Cherufe de editoras diferentes: /cherufe/ é o elemental de Tome of Beasts 2 ND14; /cherufe-2/ e /cherufe-3/ são monstruosidades ND13 e ND18 de outras editoras.",
-    "Não converter a variante de outra publicação, nem considerar as descrições editoriais como regra sem revisão."
+    "Confirmar publicação/edição original, erratas e todos os detalhes com fonte editorial para homologação independente.",
+    "Nenhuma aprovação canônica ou revisão independente. Quaisquer ações inexistentes no bloco têm listas verificadas por esta fonte secundária, mas não pelo editor."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-104",
+    "nome_original": "Cherufe",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "tipo": "Elemental",
+    "tamanho": "Huge",
+    "alinhamento": "chaotic evil",
+    "nd": "14",
+    "bonus_proficiencia": 5
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "alternativas": [
+        [
+          "Slam",
+          "Slam",
+          "Slam",
+          "Slam"
+        ],
+        [
+          "Magma Ball",
+          "Magma Ball"
+        ]
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Fissure",
+      "limite_abertas": 1,
+      "evento_substituicao": "fecha anterior e projeta ocupantes à superfície"
+    }
+  ]
 }
