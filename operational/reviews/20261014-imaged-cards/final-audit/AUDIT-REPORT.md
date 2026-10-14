@@ -32,3 +32,7 @@
 ## Lote 002 — TF-012 a TF-024 (seleção exata por CSV)
 
 9 fichas incompletas, 1 completa com ressalvas (TF-024), 9 imagens vinculadas diretamente, 1 imagem ausente (TF-022). Três imagens de resolução baixa: TF-019 280×280, TF-020 190×190 e TF-021 280×280. TF-024 tem Illumination e Horn estruturadas, mas nota sobre dependência alimentar precisa de cotejo com a fonte editorial. Os outros nove registros têm habilidades com `status=INCOMPLETA` e `legacy_summary`, não mecânicas completas para execução. Não houve homologação nem verificação visual/licença.
+
+## Lote 003 — 10 fichas (TF-025 a TF-034 conforme CSV)
+
+**10 fichas completas em conteúdo**, pendentes de edição/licença/adaptação; 9 imagens diretamente vinculadas, 1 ausente (TF-034); 8 imagens têm ao menos uma dimensão menor que 500 px conforme metadados. TF-026 referencia miniatura 160×160 e TF-031 referencia prova 80×120, embora haja alternativas no diretório central ainda não vinculadas diretamente às fichas. TF-025 tem arquivo físico apesar da anotação legado de ausência. Nenhuma ficha/arte foi homologada.
