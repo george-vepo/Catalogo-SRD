@@ -4,73 +4,203 @@
   "nome": "Voidpool",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 48,
-  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 2",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Tome of Beasts 2 (edição original 5e)",
+    "fonte_identidade": "https://anyflip.com/myubd/cwps/basic/351-400"
   },
   "estatisticas": {
     "nd_catalogo": "5",
     "nd_fonte": "5",
-    "ca": null,
-    "pv": null,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": {},
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "ca": 8,
+    "pv": 112,
+    "dados_vida": "15d10+30",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 15,
+      "DES": 6,
+      "CON": 14,
+      "INT": 2,
+      "SAB": 6,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": -2,
+      "CON": 2,
+      "INT": -4,
+      "SAB": -2,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar": 15,
+      "escalar": 15
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "force",
+      "necrotic"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [
+      "radiant"
+    ],
+    "xp": 1800,
+    "bonus_proficiencia": null
   },
   "mecanicas": {
-    "tracos": null,
-    "acoes": null,
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "passagem_minima_inch": 1
+      },
+      {
+        "nome": "Grappler",
+        "condicao": "contra criatura grappled pela própria ooze",
+        "beneficio": "advantage on attack rolls"
+      },
+      {
+        "nome": "Planar Portal",
+        "gatilho": "início do turno de criatura grappled pela ooze",
+        "teste": {
+          "atributo": "STR",
+          "cd": 13
+        },
+        "sucesso": {
+          "dano": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "force"
+          },
+          "progresso_transporte": 0
+        },
+        "falha": {
+          "dano": 0,
+          "progresso_transporte": 1
+        },
+        "limite": "3 falhas antes de escapar do grapple",
+        "consequencia": "transportada ao Void pelo efeito equivalente ao uso de plane shift em criatura involuntária"
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "escala superfícies e tetos sem teste"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "necrotic"
+          }
+        ],
+        "grapple": {
+          "condicoes": [
+            "alvo Medium ou menor",
+            "menos de 2 outras criaturas grappled"
+          ],
+          "escape_cd": 13,
+          "alvo_fica": "restrained",
+          "libera_planar_portal": true
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "necrotic"
+          }
+        ],
+        "grapple": {
+          "condicoes": [
+            "alvo Medium ou menor",
+            "menos de 2 outras criaturas grappled"
+          ],
+          "escape_cd": 13,
+          "alvo_fica": "restrained",
+          "libera_planar_portal": true
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Índice da editora identifica Voidpool, Tome of Beasts 2, ND5, mas página 5eSRD /database/creature/voidpool/ retornou 404.",
-    "Encontrar fonte mecânica individual válida antes de preencher CA, PV e habilidades; não inferir da ficha de outras oozes.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Fonte 5eSRD original 404 foi substituída por reprodução de Tome of Beasts 2 p.362 e ficha Robinloft concordante; autorização editorial ainda pendente.",
+    "Planar Portal: sucesso no teste causa 2d6 force mas não avança puxão; falha não causa dano e soma etapa para três falhas antes de escape.",
+    "Licença e identidade visual da imagem ainda sem aprovação."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.ca",
-    "estatisticas.pv",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "erratas/validação final na edição editorial autorizada",
+    "imagem: licenciamento, identidade e aprovação visual"
   ],
   "fontes": [
     {
@@ -81,6 +211,21 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/myubd/cwps/basic/351-400",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.robinloft.com/monsters/voidpool/tome-of-beasts-2",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
       "conferida_nesta_execucao": true
     }
   ],
@@ -130,5 +275,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 40,
+    "publicacao": "Tome of Beasts 2 (edição original 5e)",
+    "fonte_mecanicas": "https://anyflip.com/myubd/cwps/basic/351-400",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

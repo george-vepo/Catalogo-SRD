@@ -4,115 +4,226 @@
   "nome": "Yaga Goo",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 49,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Creature Codex (versão impressa, p.389)",
+    "fonte_identidade": "https://fliphtml5.com/nvljc/hodl/KOBOLD_PRESS._CREATURE_CODEX/390/"
   },
   "estatisticas": {
     "nd_catalogo": "5",
     "nd_fonte": "5",
     "ca": 14,
     "pv": 85,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "10d6+50",
+    "porte": "Small",
+    "tipo": "ooze",
+    "alinhamento": "neutral evil",
+    "atributos": {
+      "FOR": 11,
+      "DES": 18,
+      "CON": 20,
+      "INT": 14,
+      "SAB": 12,
+      "CAR": 11
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 4,
+      "CON": 5,
+      "INT": 2,
+      "SAB": 1,
+      "CAR": 0
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20
+    },
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": 10
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "WIS",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "compreende Common; não fala"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "necrotic"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": null
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Amorphous; vantagens contra feéricos e locomoção em paredes",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Amorphous",
+        "passagem_minima_inch": 1
+      },
+      {
+        "nome": "Deadly to Fey",
+        "alvos": "fey e creatures with Fey Ancestry",
+        "beneficio": "advantage on attack rolls"
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "escalada de superfícies e tetos sem teste"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Multiattack com dois pseudópodes; Foul Transit (recarga 4–6) teleporta e deixa poça necrótica",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "sequencia_padrao": [
+          "Pseudopod",
+          "Pseudopod"
+        ],
+        "substituicao": "se disponível, Foul Transit pode substituir exatamente um Pseudopod"
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "necrotic"
+          }
+        ]
+      },
+      {
+        "nome": "Foul Transit",
+        "recarga": "4-6",
+        "efeito": "teleporta a espaço livre visível até 50ft; cria poça de origem",
+        "poça": {
+          "duracao": "1 minuto ou até morte da ooze",
+          "gatilho_imediato": "criaturas a 5ft do espaço deixado",
+          "teste": {
+            "atributo": "CON",
+            "cd": 16
+          },
+          "falha": {
+            "dano": {
+              "dados": "3d6",
+              "media": 10,
+              "tipo": "necrotic"
+            },
+            "condicao": "poisoned até fim do próximo turno"
+          },
+          "gatilho_posterior": "primeira entrada no espaço da poça ou início de turno ali",
+          "efeito_posterior": {
+            "dano": {
+              "dados": "3d6",
+              "media": 10,
+              "tipo": "necrotic"
+            },
+            "condicao": "poisoned"
+          }
+        }
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "necrotic"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia_padrao": [
+        "Pseudopod",
+        "Pseudopod"
+      ],
+      "substituicao": "se disponível, Foul Transit pode substituir exatamente um Pseudopod"
+    },
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Puddle Splash",
+        "gatilho": "criatura vista pela ooze a até 5ft escolhe a ooze como alvo de ataque melee",
+        "precondicao": "poça de Foul Transit com espaço desocupado",
+        "efeito": "teleporta para a poça, evitando dano do ataque",
+        "retaliação": {
+          "alvo": "agressor",
+          "teste": {
+            "atributo": "CON",
+            "cd": 16
+          },
+          "falha": {
+            "dano": {
+              "dados": "3d6",
+              "media": 10,
+              "tipo": "necrotic"
+            },
+            "condicao": "poisoned até fim do próximo turno"
+          }
+        }
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Fonte mecânica reproduzida em terceiros; ficha editorial deve ser revisada.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Fonte reproduz Creature Codex p.389; confirmar edição autorizada e erratas.",
+    "Puddle Splash só funciona com poça Foul Transit livre; a reação evita o dano do ataque que a acionou.",
+    "Direitos/adequação da imagem pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "erratas/validação final na edição editorial autorizada",
+    "imagem: licenciamento, identidade e aprovação visual"
   ],
   "fontes": [
     {
@@ -123,6 +234,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://fliphtml5.com/nvljc/hodl/KOBOLD_PRESS._CREATURE_CODEX/390/",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/yaga-goo",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +300,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 40,
+    "publicacao": "Creature Codex (versão impressa, p.389)",
+    "fonte_mecanicas": "https://fliphtml5.com/nvljc/hodl/KOBOLD_PRESS._CREATURE_CODEX/390/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

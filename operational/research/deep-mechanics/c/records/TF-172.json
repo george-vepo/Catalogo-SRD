@@ -4,115 +4,209 @@
   "nome": "Animated Offal",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 50,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Tome of Beasts 3 (p.38)",
+    "fonte_identidade": "https://kpogl.wikidot.com/monster:animated-offal"
   },
   "estatisticas": {
     "nd_catalogo": "9",
     "nd_fonte": "9",
     "ca": 8,
     "pv": 207,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "18d12+90",
+    "porte": "Huge",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 18,
+      "DES": 6,
+      "CON": 20,
+      "INT": 1,
+      "SAB": 7,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": -2,
+      "CON": 5,
+      "INT": -5,
+      "SAB": -2,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar": 30
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 120,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "necrotic"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 5000,
+    "bonus_proficiencia": 4
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Flowing Flesh permite apertar-se em frestas; Healing Sense percebe magia de cura e concede benefícios temporários",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Flowing Flesh",
+        "passagem_minima_inch": 6
+      },
+      {
+        "nome": "Healing Sense",
+        "alcance_detecao_ft": 120,
+        "detecta": "healing spells, effects e potions",
+        "ativacao": "recebe healing spell, consome potion ou efeito mágico similar",
+        "duracao": "1 minuto",
+        "beneficios": [
+          "+2 CA",
+          "advantage on DEX saving throws",
+          "pode usar Pseudopod como bonus action"
+        ]
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Pseudopod e reações relacionadas a cura.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "4d8",
+            "media": 18,
+            "tipo": "necrotic"
+          }
+        ],
+        "grapple": {
+          "alvo": "Large ou menor",
+          "limite": "não pode já manter duas outras criaturas grappled",
+          "escape_cd": 16
+        },
+        "pocao": {
+          "condicao": "alvo carrega ou segura pelo menos uma healing potion",
+          "chance_quebra_percent": 25,
+          "efeito": "potion se quebra e pode ativar Healing Sense"
+        }
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "4d8",
+            "media": 18,
+            "tipo": "necrotic"
+          }
+        ],
+        "grapple": {
+          "alvo": "Large ou menor",
+          "limite": "não pode já manter duas outras criaturas grappled",
+          "escape_cd": 16
+        },
+        "pocao": {
+          "condicao": "alvo carrega ou segura pelo menos uma healing potion",
+          "chance_quebra_percent": 25,
+          "efeito": "potion se quebra e pode ativar Healing Sense"
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Pseudopod (Healing Sense)",
+        "precondicao": "Healing Sense ativo",
+        "efeito": "realiza um ataque Pseudopod como bonus action"
+      },
+      {
+        "nome": "Subsume",
+        "alvo": "uma criatura grappled pela ooze",
+        "teste": {
+          "atributo": "CON",
+          "cd": 17
+        },
+        "falha": {
+          "dano": {
+            "dados": "4d8",
+            "media": 18,
+            "tipo": "necrotic"
+          }
+        },
+        "sucesso": "metade dano",
+        "cura": "metade do dano causado",
+        "cura_com_pv_cheio": "recebe temporary HP por uma hora; podem somar com temporários anteriores desta capacidade",
+        "limite_pv_temporario": 48,
+        "excedente": "se ultrapassaria 48 PV temporários, surge outra ooze Small com 10 PV em espaço livre até 5ft, sem Subsume",
+        "morte_do_alvo": "absorção completa; apenas resurrection ou magia similar pode restaurar"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "KPOGL é wiki independente; acesso integral ao livro não comprovado.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Fonte KPOGL é republicação independente OGL; conferir Tome of Beasts 3 p.38 em edição licenciada.",
+    "A reprodução dos temporary HP de Subsume tem teto 48 e criação de nova ooze quando excede.",
+    "Imagem física sem aprovação de licença/identidade."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "erratas/validação final na edição editorial autorizada",
+    "imagem: licenciamento, identidade e aprovação visual"
   ],
   "fontes": [
     {
@@ -123,6 +217,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:animated-offal",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://kpogl.wikidot.com/publication:tome-of-beasts-3",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +283,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 40,
+    "publicacao": "Tome of Beasts 3 (p.38)",
+    "fonte_mecanicas": "https://kpogl.wikidot.com/monster:animated-offal",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
