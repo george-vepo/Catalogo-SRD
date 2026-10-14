@@ -118,6 +118,9 @@ def main():
     queue=[x for x in m["entries"] if x["status"]=="pending" and x.get("source_candidate")]
     batch=[]
     print("PREFLIGHT",head(),"queue",len(queue),"verified",len(existing),flush=True)
+    if not queue:
+        print("NO_PENDING_IMAGE_CANDIDATES: preserve existing report and manifest",flush=True)
+        return
     def flush():
         nonlocal batch
         if not batch:return
