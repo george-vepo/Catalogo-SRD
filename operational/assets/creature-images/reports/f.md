@@ -29,6 +29,19 @@ Adicionados e relidos no GitHub: **TF-393 Minotaur Conqueror; TF-514 Drainpipe G
 
 Foram publicados e recuperados **TF-467 Corpse Fly**, **TF-477 Grimalkin**, **TF-503 Stuffed Crab** e **TF-469 Fateholder**. Cada sprite apresenta o tipo visual básico correto (mosca, gato, caranguejo morto-vivo e aranha arcana, respectivamente), mas nenhum representa todas as características específicas da ficha — portanto, **estado PARTIAL**. Fontes declaradas CC0 (crawl/tiles e pack DCSS CC0). Quatro sprites 32×32 totalizam 4.792 bytes; assinaturas, dimensões e SHA-256 calculados na origem e identidade completa conferida no GitHub após o commit.
 
+## Auditoria adicional de licenças — bloqueios de distribuição identificados
+
+**Verificado diretamente nos READMEs dos repositórios externos:**
+
+- **84 arquivos** originários de [TheGiddyLimit/homebrew-img](https://github.com/TheGiddyLimit/homebrew-img): o README apresenta diretrizes de armazenamento/URLs para o 5etools, porém **não concede licença de reutilização das ilustrações em um novo jogo**. Os 84 registros estão agora anotados individualmente no manifesto como `PARTIAL` com licença `UNVERIFIED`. Isso **não demonstra** que são ilegais, apenas que autorização não foi comprovada. Necessário obter permissão ou substituí-los por arte licenciada.
+- **8 arquivos** originários de [Pjb518/FoundryVTT-Level-Up-Official](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/README.md#licenses), todos em `public/assets/`: a seção **Licenses** do README especifica que as imagens restantes em `public/assets/` são disponibilizadas pela EN Publishing para **uso não comercial**. O código sob MIT e dados de jogo com OGL/CC BY não devem ser confundidos com licença de uso comercial dessas imagens. A utilização em jogo comercial exige autorização adicional ou substituição; cada um dos oito registros contém evidência e ressalva individual.
+- Outras origens anteriores ainda carecem de análise específica de direitos; **nenhum** binário foi apagado ou substituído sem autorização.
+- Estes achados afetam a **possibilidade de publicação comercial**, não os testes de integridade nem a contagem física de arquivos. O resumo segue **118 blobs binários no GitHub e 76 ainda ausentes**; apenas 4 foram classificados como `COMPLETE` no critério conservador da auditoria.
+
+**IDs sob permissão não comercial documentada:** TF-327, TF-429, TF-444, TF-450, TF-474, TF-476, TF-505, TF-515.
+
+A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja licenças ou permissões individuais em documentos não localizados, as quais devem ser incorporadas quando comprovadas.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
