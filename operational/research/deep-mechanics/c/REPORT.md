@@ -4,6 +4,8 @@
 
 ## Checkpoint 22 — fontes oficiais A5E (14/10/2026)
 
+- Commit mecânico `397757486790b6d31c911f95b18d821ceff018ff`; leitura confirmada de TF-499, TF-501, TF-503 e TF-504 pela API GitHub, IDs/JSON válidos.
+
 - TF-499 Cloud of Ghasthoppers: Swarm, Incorporeal Movement, Smoky Signals, Bleak Vibrations e Drain Health estruturados, variantes bloodied. **BLOQUEADA**: Despair Aura menciona salvaguarda sem CD, atributo ou momento do teste. Fonte: https://a5e.tools/node/4002.
 - TF-501 Lost Prospector: estatísticas, seis traços, Withering Touch, Ethereal Jaunt, Horrifying Visage, Possession com condições, fim/repetição de salvaguardas, recurso bônus de encerrar e reação. Fonte: https://a5e.tools/node/2965.
 - TF-503 Stuffed Crab: sete ghouls, quadrados do alvo, Multiattack com duas Pincer, grapple CD16, ação bônus Stuffing. **BLOQUEADA** por texto de saída de ghouls truncado e fuga de Stuffing incompleta. Fonte: https://a5e.tools/node/2213.
