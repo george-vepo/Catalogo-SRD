@@ -317,3 +317,14 @@ Abyssal Hordeling é um demônio Pequeno de forma variável (armas naturais e ca
 - Cada entrada possui caminho, bytes, resolução, SHA-256, Git blob SHA, origem e commit. Os últimos cinco foram relidos byte a byte do GitHub e confrontados com os originais. Os anteriores têm `verified_readback: true` conforme os logs da aquisição.
 - Nenhuma modificação no CSV, ledger global, `main`, PR #1 ou imagens D/F.
 - PR em rascunho; **não fazer merge** antes da revisão independente.
+
+
+## Aceite técnico autorizado pelo responsável — 2026-10-14
+
+O responsável pelo projeto autorizou o aceite da **entrega técnica de aquisição e persistência binária das imagens do lote E** e o registro dessa autorização no GitHub.
+
+- **Escopo técnico aceito:** 195 de 195 IDs exclusivos da partição `pending_images.slice(195,390)`, com arquivos binários existentes na branch, 195 SHA-256 distintos, manifesto individual e histórico de validação de leitura (`verified_readback: true`).
+- **Arquivos já publicados:** os 195 binários foram previamente enviados à branch `chatgpt/srd607-image-assets-e`. Este registro é documental e não exige reenviar imagens.
+- **Não é aprovação formal de PR:** a conta GitHub conectada (`george-vepo`) também é autora da PR #7, portanto não pode dar aprovação independente à própria PR. A PR permanece em rascunho até as revisões pertinentes.
+- **Pendente:** seleção artística/editorial de cada ilustração, correspondência de identidade/edição, e análise de direitos/licenças de uso e redistribuição (incluindo imagens obtidas de acervos de terceiros e artes geradas por IA). Aceite binário **não** implica autorização de uso comercial.
+- **Integração:** não foi autorizado merge nesta solicitação. Não integrar à `main` nem promover a PR sem os gates independentes e autorização específica de merge.
