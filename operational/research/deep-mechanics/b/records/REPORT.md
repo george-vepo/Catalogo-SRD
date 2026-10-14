@@ -1,3 +1,13 @@
+## Checkpoint 14/10/2026 — 89 de 132 inventários individualizados
+
+**Estado PARCIAL atualizado: 89 fichas com ações, ataques e características estruturadas a partir da fonte identificada; 43 ainda sem inventário mecânico integral.** Do total estruturado, 14 usaram fonte editorial A5E e 75 usaram reproduções/transcrições secundárias ainda **não homologadas editorialmente**. As imagens seguem **100/132 binários reais, 32 pendentes**; **nenhuma** nova imagem foi adquirida nesta continuação. **Zero revisão independente, zero promoção canônica, PR continua em rascunho**.
+
+**17 fichas aprofundadas nesta continuação** (TF-316, TF-317, TF-328, TF-329, TF-335, TF-336, TF-338, TF-340, TF-341, TF-342, TF-350, TF-353, TF-364, TF-366, TF-367, TF-392, TF-348): [links individuais no manifesto](manifest.json). Incluem inventários de passivas, ataques, danos e bônus, salvaguardas, CDs, condições, durações, bônus, reações, conjuração e habilidades de forma própria quando publicados. Foi preservada a identidade mecânica individual de cada criatura, sem nivelamento artificial. Fontes comunitárias KPOGL são explicitamente não endossadas pela Kobold Press: **não equivalem a confronto com livro e errata**.
+
+**Auditoria pós-gravação: 17/17 JSONs com SHA e bytes iguais ao manifesto, inventário de ações individualizado, pelo menos uma ação, URL da fonte e `bloqueado:true`.** Nenhuma escrita fora do diretório B; nenhuma atualização canônica. Pendências: 43 inventários, 32 imagens, conflitos de edição e homologação editorial independente, gates e testes.
+
+---
+
 ## Continuação 14/10/2026 — 87/132 inventários mecânicos, 45 parciais
 
 **Resultado após esta execução: 15 registros aprofundados, 87/132 fichas com inventário de ataques e ações individualizados (14 A5E a partir do portal editorial, 73 fichas baseadas em fontes secundárias), 45 fichas sem inventário integral; 100/132 imagens binárias reais, 32 faltantes.** Permanecem **0 homologações editoriais independentes, 0 promoções canônicas**. A PR #6 deve ficar em **DRAFT**.
