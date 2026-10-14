@@ -165,3 +165,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 5 completas em conteúdo, 3 com ressalvas (**TF-245**: Seaside Rejuvenation/save de Wisdom; **TF-251**: INT 6/8 e arredondamento de Absorb the Dead; **TF-253**: novo teste sem atributo/CD inequívocos) e 2 incompletas (**TF-249, TF-252**, sem ações/traços). As dez imagens A estão vinculadas e o SHA/tamanho físico corresponde; TF-252 tem altura declarada de 460 px. Licenciamento, imagem e impressão primária não homologados.
 
 **Consolidado:** 230/395 (165 restantes); 151 completas, 45 com ressalvas, 33 incompletas, 1 não verificável; 173 imagens diretas, 54 por manifesto e 3 ausentes.
+
+## Lote 024 — TF-254–TF-264 (10 IDs da ordem do CSV)
+
+6 fichas completas em conteúdo, 3 com ressalvas (**TF-254** e **TF-260**, versões editoriais divergentes; **TF-263**, bônus de ataque/componentes A5E) e 1 incompleta (**TF-264**, variante Sticky sem CD e dados de vida/proficiência não confirmados). Dez imagens diretamente vinculadas ao grupo A, com SHA/tamanho conferidos. Nenhuma dimensão declarada abaixo de 500 px. Sem homologação editorial, visual ou jurídica.
+
+**Consolidado:** 240/395 (155 restantes); 157 completas, 48 com ressalvas, 34 incompletas, 1 não verificável; 183 imagens diretas, 54 via manifesto e 3 ausentes.
