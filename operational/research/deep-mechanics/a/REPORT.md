@@ -6,6 +6,8 @@
 
 **Fontes secundárias online:** KPOGL (3) e 5eSRD (TF-247/TF-248); livros/erratas oficiais, licença e engine não homologados. **51/132 estruturas individuais online, 81 ainda resumidas, 0/132 homologadas; 124/132 imagens binárias, 8 ausentes, 0 aprovadas para produção.** Checkpoint de três criaturas, sem modificação de outros grupos ou merge.
 
+**Auditoria checkpoint #47:** [commit `3a780984ff07`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3a780984ff0720417d4ccd0c988611a3adc520cb); três JSONs relidos via API e parseados (IDs e categorias de ações conferidos), comparação confirmou **somente cinco arquivos dentro de A**, sem alterações de imagens. Nenhum binário novo incorporado; 124/132 imagens segue como contagem previamente conciliada na árvore Git.
+
 ---
 
 # Grupo A — auditoria final desta execução (14/10/2026)
