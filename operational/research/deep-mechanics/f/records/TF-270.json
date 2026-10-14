@@ -1,0 +1,187 @@
+{
+  "schema": "SRD607_STRUCTURED_MONSTER_SHEET_F_V1",
+  "edition": "D&D 5e (Tome of Beasts 3)",
+  "publisher": "Kobold Press / Open Design LLC",
+  "status": "INVENTARIO_MECANICO_ESTRUTURADO_REVISÃO_EDITORIAL_PENDENTE",
+  "mechanics_inventory_structured": true,
+  "canonical_approved": false,
+  "integrated_into_card_game": false,
+  "review_pending": [
+    "Revisar mecanicas contra exemplar ou fonte editorial exata.",
+    "Definir conversao de 5e para cartas do SRD Card Game 607.",
+    "Revisao independente antes de promover ao catalogo."
+  ],
+  "provenance": {
+    "catalog_base": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "source_type": "transcricao_publica/secundaria",
+    "source_edition": "Tome of Beasts 3"
+  },
+  "id": "TF-270",
+  "name": "Black Shuck",
+  "source_urls": [
+    "https://www.5esrd.com/srd-content-source/tome-of-beasts-3/",
+    "https://anyflip.com/lphgc/rjrj/basic/51-100"
+  ],
+  "source_page": "Tome of Beasts 3, p.59",
+  "identity": {
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "chaotic evil",
+    "challenge_rating": "11",
+    "xp": 7200,
+    "proficiency_bonus": 4
+  },
+  "statistics": {
+    "ac": 17,
+    "hp": 157,
+    "hit_dice": "15d10+75",
+    "speed_ft": {
+      "walk": 50
+    },
+    "ability_scores": {
+      "STR": 19,
+      "DEX": 16,
+      "CON": 21,
+      "INT": 14,
+      "WIS": 17,
+      "CHA": 15
+    },
+    "saving_throws": {
+      "STR": 8,
+      "DEX": 7,
+      "CON": 9,
+      "WIS": 7
+    },
+    "skills": {
+      "Athletics": 8,
+      "Stealth": 11,
+      "Survival": 7
+    },
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning"
+    ],
+    "damage_immunities": [
+      "necrotic",
+      "poison",
+      "physical damage from nonsilvered nonmagical attacks"
+    ],
+    "condition_immunities": [
+      "charmed",
+      "frightened"
+    ],
+    "senses": [
+      "darkvision 90 ft",
+      "truesight 60 ft"
+    ],
+    "passive_perception": 13,
+    "languages": {
+      "understands": [
+        "Abyssal",
+        "Common"
+      ],
+      "speaks": false
+    }
+  },
+  "traits": [
+    {
+      "name": "Blood Frenzy",
+      "effect": "Vantagem em ataques contra criaturas que nao estejam com todos os PV."
+    },
+    {
+      "name": "Keen Hearing and Smell",
+      "effect": "Vantagem nos testes de Percepcao baseados em audicao ou olfato."
+    },
+    {
+      "name": "Water Walker",
+      "effect": "Desloca-se sobre a superficie da agua sem afundar, como no efeito water walk."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Multiattack",
+      "sequence": [
+        {
+          "attack": "Bite",
+          "count": 3
+        },
+        {
+          "action": "Curse of the Grave or Fearsome Howl",
+          "condition": "quando disponivel"
+        }
+      ],
+      "combined_hit_effect": {
+        "condition": "pelo menos dois Bites acertam um mesmo alvo Medium ou menor",
+        "save": "STR",
+        "dc": 17,
+        "failure": "2d6 slashing; arremesso aleatorio ate 15 ft e prone"
+      }
+    },
+    {
+      "name": "Bite",
+      "kind": "melee weapon attack",
+      "attack_bonus": 8,
+      "reach_ft": 5,
+      "targets": 1,
+      "damage": [
+        {
+          "dice": "2d8+4",
+          "type": "piercing"
+        },
+        {
+          "dice": "3d6",
+          "type": "necrotic"
+        }
+      ]
+    },
+    {
+      "name": "Curse of the Grave",
+      "range_ft": 30,
+      "targets": 1,
+      "save": "WIS",
+      "dc": 17,
+      "failed_save": "Desvantagem nos proximos dois testes de salvaguarda contra a morte realizados em ate 7 dias.",
+      "ends": "apos dois testes, em 7 dias, ou ao remover a maldicao"
+    },
+    {
+      "name": "Fearsome Howl",
+      "recharge": "5-6",
+      "radius_ft": 60,
+      "affects": "criaturas que possam ouvir",
+      "save": "WIS",
+      "dc": 17,
+      "failed_save": "frightened ate o fim do proximo turno do alvo",
+      "concentration_save": {
+        "condition": "se o alvo estiver concentrando magia e falhar contra medo",
+        "save": "CON",
+        "dc": 17,
+        "effect": "perde concentracao"
+      }
+    }
+  ],
+  "bonus_actions": [
+    {
+      "name": "Mist Stalker",
+      "condition": "em penumbra, nevoa ou bruma",
+      "effect": "pode executar Hide como acao bonus"
+    }
+  ],
+  "reactions": [],
+  "legendary_actions": [],
+  "lair_actions": [],
+  "spells": [],
+  "variant_rules": [],
+  "image": {
+    "file": "operational/assets/creature-images/TF-270.png",
+    "sha256": "811ad2b19e7381185f49cbc043a8c754446a8dc7a3de5041723ee2141a3468cb",
+    "width": 512,
+    "height": 809,
+    "bytes": 80532,
+    "mime": "image/png"
+  },
+  "notes": [
+    "Nao confundir com Black Shuck folklorico ND 5, CA15 e PV97 de outra fonte.",
+    "Este registro usa exclusivamente a variante fiend ND11 do Tome of Beasts 3."
+  ]
+}

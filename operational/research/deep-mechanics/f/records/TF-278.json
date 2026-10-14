@@ -1,0 +1,146 @@
+{
+  "schema": "SRD607_STRUCTURED_MONSTER_SHEET_F_V1",
+  "edition": "D&D 5e (Tome of Beasts 3)",
+  "publisher": "Kobold Press / Open Design LLC",
+  "status": "INVENTARIO_MECANICO_ESTRUTURADO_REVISÃO_EDITORIAL_PENDENTE",
+  "mechanics_inventory_structured": true,
+  "canonical_approved": false,
+  "integrated_into_card_game": false,
+  "review_pending": [
+    "Revisar mecanicas contra exemplar ou fonte editorial exata.",
+    "Definir conversao de 5e para cartas do SRD Card Game 607.",
+    "Revisao independente antes de promover ao catalogo."
+  ],
+  "provenance": {
+    "catalog_base": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "source_type": "transcricao_publica/secundaria",
+    "source_edition": "Tome of Beasts 3"
+  },
+  "id": "TF-278",
+  "name": "Snatch Bat",
+  "source_urls": [
+    "https://www.5esrd.com/database/creature/snatch-bat/"
+  ],
+  "source_page": "Tome of Beasts 3, p.349",
+  "identity": {
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "chaotic neutral",
+    "challenge_rating": "5",
+    "xp": 1800,
+    "proficiency_bonus": 3
+  },
+  "statistics": {
+    "ac": 16,
+    "hp": 97,
+    "hit_dice": "15d8+30",
+    "speed_ft": {
+      "walk": 20,
+      "fly": 40
+    },
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 20,
+      "CON": 14,
+      "INT": 6,
+      "WIS": 12,
+      "CHA": 5
+    },
+    "saving_throws": {},
+    "skills": {
+      "Perception": 4,
+      "Sleight of Hand": 8,
+      "Stealth": 8
+    },
+    "damage_resistances": [
+      "force",
+      "psychic"
+    ],
+    "damage_immunities": [],
+    "condition_immunities": [
+      "blinded",
+      "charmed",
+      "exhaustion"
+    ],
+    "senses": [
+      "blindsight 60 ft; nao enxerga alem desse raio"
+    ],
+    "passive_perception": 14,
+    "languages": {
+      "understands": [
+        "Deep Speech",
+        "Umbral"
+      ],
+      "speaks": false
+    }
+  },
+  "traits": [
+    {
+      "name": "Flyby",
+      "effect": "Nao provoca ataque de oportunidade ao voar para fora do alcance de inimigo."
+    },
+    {
+      "name": "Treasure Sense",
+      "effect": "Detecta posicao exata de joias, pedras preciosas e metais valiosos a 60 ft por cheiro; percebe direcao geral ate 1 milha."
+    }
+  ],
+  "actions": [
+    {
+      "name": "Multiattack",
+      "alternatives": [
+        [
+          "Claw",
+          "Claw",
+          "Claw"
+        ],
+        [
+          "Claw",
+          "Claw",
+          "Pilfering Bite"
+        ]
+      ]
+    },
+    {
+      "name": "Claw",
+      "kind": "melee weapon attack",
+      "attack_bonus": 8,
+      "reach_ft": 5,
+      "targets": 1,
+      "damage": [
+        {
+          "dice": "2d6+5",
+          "type": "slashing"
+        }
+      ]
+    },
+    {
+      "name": "Pilfering Bite",
+      "kind": "melee weapon attack",
+      "attack_bonus": 8,
+      "reach_ft": 10,
+      "targets": 1,
+      "damage": [
+        {
+          "dice": "2d4+5",
+          "type": "piercing"
+        }
+      ],
+      "alternative": "Em lugar de causar dano, rouba objeto portado (peso maximo 10 lb), excluindo armas e objetos firmemente presos ou envoltos no alvo.",
+      "restriction": "Enquanto segura um objeto roubado na boca/mao, deve regurgita-lo sem gastar acao antes de novo Pilfering Bite."
+    }
+  ],
+  "bonus_actions": [],
+  "reactions": [],
+  "legendary_actions": [],
+  "lair_actions": [],
+  "spells": [],
+  "variant_rules": [],
+  "image": {
+    "file": "operational/assets/creature-images/TF-278.webp",
+    "sha256": "415bae35a313b9751c41ed45f754b5644b01b53ef4a6c9474c1233e57bacf95f",
+    "width": 280,
+    "height": 280,
+    "bytes": 83964,
+    "mime": "image/webp"
+  }
+}
