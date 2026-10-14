@@ -1,3 +1,12 @@
+# Grupo A — checkpoint 54: Vexxeh e Black Shuck (14/10/2026)
+
+- **TF-269 Vexxeh:** divergência de edições examinada diretamente. [5eSRD legado](https://www.5esrd.com/database/creature/vexxeh/) corresponde a **105 PV (10d12+40)** do ledger, Multiattack de 2 garras e Rend 4d6 (tipo de dano não informado); [KPOGL](https://kpogl.wikidot.com/monster:vexxeh) e reprodução do livro apresentam **94 PV (9d12+36)**, mordida + 2 garras e medo quando ambas acertam. A variante 105 PV foi estruturada sem misturar com as outras; **qual edição é canônica ainda depende de confirmação editorial**.
+- **TF-270 Black Shuck:** três mordidas por Multiattack e Curse of the Grave ou Fearsome Howl opcionais no mesmo turno, teste condicionado quando duas mordidas acertam alvo Médio ou menor, maldição nos dois próximos death saves em sete dias, Fearsome Howl CD17/concentração, Mist Stalker bônus, Blood Frenzy e Water Walker.
+
+**Contagem após checkpoint:** 72/132 estruturadas no nível individual online, 60 ainda resumidas, 0 homologadas editorialmente; 124/132 binários, 8 ausentes e 0 artes aprovadas. Diferenças de edição documentadas, sem V-Bridge e sem merge.
+
+---
+
 # Grupo A — checkpoint 53: Chemosit, Arx e Chatterlome (14/10/2026)
 
 - **TF-266 Chemosit:** Inner Light, Multiattack Beak + 2 Crutch, infecção por cackle fever (doença externa a consultar), Inviting Song com charme, repetição de salvaguardas e sustentação como ação bônus, Change Shape como bônus concorrente.

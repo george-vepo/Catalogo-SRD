@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "11",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "chaotic_evil",
+    "proficiency_bonus": 4,
+    "experience_points": 7200,
+    "source_page": 59
   },
   "statistics": {
     "armor_class": 17,
     "hit_points": 157,
-    "hit_dice": null,
+    "hit_dice": "15d10+75",
     "ability_scores": {
       "STR": 19,
       "DEX": 16,
@@ -26,24 +29,244 @@
       "WIS": 17,
       "CHA": 15
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 50
+    },
+    "senses": {
+      "darkvision_ft": 90,
+      "truesight_ft": 60,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Athletics": 8,
+      "Stealth": 11,
+      "Survival": 7
+    },
+    "saving_throws": {
+      "STR": 8,
+      "DEX": 7,
+      "CON": 9,
+      "WIS": 7
+    },
+    "languages": {
+      "understands": [
+        "Abyssal",
+        "Common"
+      ],
+      "can_speak": false
+    },
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning"
+    ],
+    "damage_immunities": [
+      "necrotic",
+      "poison",
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "from": "nonmagical_attacks_not_made_with_silvered_weapons"
+      }
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "frightened"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 3,
+      "CON": 5,
+      "INT": 2,
+      "WIS": 3,
+      "CHA": 2
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Blood Frenzy",
+        "category": "attack_advantage",
+        "trigger": "attacking_creature_not_at_full_hit_points",
+        "advantage_on_attack_rolls": true
+      },
+      {
+        "name": "Keen Hearing and Smell",
+        "category": "perception_advantage",
+        "skill": "Perception",
+        "ability": "WIS",
+        "when_relying_on": [
+          "hearing",
+          "smell"
+        ]
+      },
+      {
+        "name": "Water Walker",
+        "category": "environmental_movement",
+        "move_across_water_surface": "as_harmless_solid_ground",
+        "otherwise_follows_spell": "water walk",
+        "spell_target_scope": null,
+        "spell_target_scope_reason": "trait refers only to creature's own movement"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Bite",
+            "count": 3
+          }
+        ],
+        "optional_additional_action_one_of": [
+          "Curse of the Grave",
+          "Fearsome Howl"
+        ],
+        "optional_action_must_be_available": true,
+        "conditional_follow_up": {
+          "trigger": "at_least_2_Bite_attacks_hit_same_Medium_or_smaller_creature",
+          "save": {
+            "ability": "STR",
+            "dc": 17,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "2d6",
+                  "average": 7,
+                  "type": "slashing"
+                }
+              ],
+              "thrown": {
+                "distance_ft_max": 15,
+                "direction": "random"
+              },
+              "condition": "prone"
+            },
+            "on_success": {
+              "no_shake_throw_effect": true
+            }
+          }
+        }
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 4,
+              "average": 13,
+              "type": "piercing"
+            },
+            {
+              "dice": "3d6",
+              "flat": 0,
+              "average": 10,
+              "type": "necrotic"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Curse of the Grave",
+        "category": "single_target_save",
+        "action_economy": "action",
+        "targets": {
+          "count": 1,
+          "visible": true,
+          "range_ft": 30
+        },
+        "save": {
+          "ability": "WIS",
+          "dc": 17,
+          "on_failure": {
+            "condition": "cursed",
+            "effect": {
+              "death_saving_throws_with_disadvantage": 2,
+              "time_window_days": 7
+            },
+            "ends_when_any": [
+              "target_has_made_2_death_saving_throws",
+              "7_days_elapsed",
+              "remove_curse_or_similar_magic"
+            ]
+          },
+          "on_success": {
+            "curse": false
+          }
+        }
+      },
+      {
+        "name": "Fearsome Howl",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "radius_ft": 60,
+        "targets": "each_creature_that_can_hear",
+        "save": {
+          "ability": "WIS",
+          "dc": 17,
+          "on_failure": {
+            "condition": "frightened",
+            "until": "end_of_target_next_turn",
+            "if_concentrating_on_spell": {
+              "save": {
+                "ability": "CON",
+                "dc": 17,
+                "on_failure": {
+                  "concentration_ends": true
+                },
+                "on_success": {
+                  "concentration_maintained": true
+                }
+              }
+            }
+          },
+          "on_success": {
+            "frightened": false
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Mist Stalker",
+        "category": "hide",
+        "action_economy": "bonus_action",
+        "precondition": {
+          "location_any": [
+            "dim_light",
+            "fog",
+            "mist"
+          ]
+        },
+        "effect": "take_Hide_action"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Canídeo demoníaco atravessa águas, ganha vantagem contra feridos e realiza múltiplas mordidas; uivo e maldição sobrenaturais."
@@ -61,7 +284,7 @@
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Tome of Beasts 3",
       "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "verification": "Statblock individual lido em 14/10/2026: habilidades/ações/bonus completas no nível online; edição e direitos pendentes."
     }
   ],
   "source_checkpoint": {
@@ -72,9 +295,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Confrontar Tome of Beasts 3 impresso e erratas; validar a interpretação das opções simultâneas do Multiattack na engine.",
+    "A fonte referencia water walk sem detalhar um novo alvo/duração; não extrapolar.",
+    "Inspecionar arte e licença do binário existente antes de produção."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -98,5 +321,18 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:black-shuck"
+    ],
+    "source_tier": "secondary_kpogl",
+    "statblock_url_read_online": true,
+    "notes": "Bloco individual completo online; não homologado contra edição impressa e erratas. Ataques, condição de lançar e ações bônus detalhados."
   }
 }
