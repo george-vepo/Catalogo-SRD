@@ -22,24 +22,26 @@
     "ids_unicos": 132,
     "json_publicados": 132,
     "fichas_editoriais_detalhadas": 14,
-    "registros_incompletos": 118,
+    "registros_incompletos": 114,
     "conflitos_pr4": 13,
     "bloqueados": 124,
     "detalhados_com_conflito_pendente": 6,
     "detalhados_sem_conflito_identificado": 8,
     "homologacoes_independentes": 0,
     "promocoes_canonicas": 0,
-    "merges": 0
+    "merges": 0,
+    "fichas_secundarias_estruturadas": 4,
+    "fichas_com_acoes_individualizadas": 18
   },
   "integridade": {
-    "controle": "Git blob SHA de cada registro vinculado ao nome e tamanho informados pela API do GitHub; checkpoints relidos após publicação",
-    "checkpoints": 15,
+    "controle": "Blob SHA e tamanho por JSON rechecados no GitHub; após publicação de cada checkpoint arquivos JSON relidos",
+    "checkpoints": 16,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
     "sem_duplicatas": true,
     "sem_ids_extras": true,
-    "total_bytes_json": 458821,
-    "comparacao_pre_relatorio": "15 commits antes de nova publicação do relatório; somente 132 registros JSON e dois documentos dentro do diretório exclusivo B"
+    "total_bytes_json": 465233,
+    "comparacao_pre_relatorio": "16 checkpoints de alterações de registros; nenhuma escrita de arquivo fora do diretório exclusivo B"
   },
   "commits_checkpoint": [
     {
@@ -101,6 +103,10 @@
     {
       "sha": "ac90d0d4394907f85fe91a195405fac60a2c1f5d",
       "message": "research(srd607): B aprofundar fichas A5E TF-094/095/097/408 e preservar ambiguidades"
+    },
+    {
+      "sha": "4b9d13b7999914f1dce88ed3b242a1b49a1d390d",
+      "message": "research(srd607): B estruturar 4 clockworks com fonte secundária e bloqueio editorial"
     }
   ],
   "records": [
@@ -988,10 +994,10 @@
       "id": "TF-060",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-060.json",
-      "git_blob_sha": "c6ff400c7c1e9a8d94409d06514045ce9d58a0e4",
-      "bytes": 4969,
+      "git_blob_sha": "759538191351c49de488b2559f6f718ca2b28742",
+      "bytes": 6396,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-060.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true
     },
@@ -999,10 +1005,10 @@
       "id": "TF-061",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-061.json",
-      "git_blob_sha": "547172faf481203a5307db47632f333efb2370e9",
-      "bytes": 3678,
+      "git_blob_sha": "36fe85161b847878c8a8ec5428caeb7681b77560",
+      "bytes": 5284,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-061.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true
     },
@@ -1010,10 +1016,10 @@
       "id": "TF-062",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-062.json",
-      "git_blob_sha": "52646b127b261197b93f474deb7b256480cb8645",
-      "bytes": 2646,
+      "git_blob_sha": "488691fc3d32e3c9b22a8c0e966291266a450a58",
+      "bytes": 4724,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-062.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true
     },
@@ -1021,10 +1027,10 @@
       "id": "TF-063",
       "grupo": "historical.slice(52,104)",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-063.json",
-      "git_blob_sha": "7a622b328ef3c42d7980ce41a5931035c3e9549d",
-      "bytes": 3028,
+      "git_blob_sha": "50b6edf6675a6393370f1f7284040a4ea11d524f",
+      "bytes": 4329,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-063.json",
-      "nivel": "INCOMPLETA_HERDADA",
+      "nivel": "DETALHADA_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
       "conflito_pr4": false,
       "bloqueado": true
     },
@@ -1559,30 +1565,28 @@
   ],
   "ultima_continuacao": {
     "data": "2026-10-13",
-    "checkpoint": "ac90d0d4394907f85fe91a195405fac60a2c1f5d",
-    "ids": [
+    "novos_commits": [
+      "ac90d0d4394907f85fe91a195405fac60a2c1f5d",
+      "4b9d13b7999914f1dce88ed3b242a1b49a1d390d"
+    ],
+    "ids_editoriais_novos": [
       "TF-094",
       "TF-095",
       "TF-097",
       "TF-408"
     ],
-    "fichas_detalhadas_novas": 4,
-    "unicos_com_ambiguidades": [
-      "TF-094",
-      "TF-095",
-      "TF-408"
+    "ids_secundarios_novos": [
+      "TF-060",
+      "TF-061",
+      "TF-062",
+      "TF-063"
     ],
-    "fontes_editoriais": [
-      "https://a5e.tools/node/1555",
-      "https://a5e.tools/node/1571",
-      "https://a5e.tools/node/1562",
-      "https://a5e.tools/node/3542"
-    ],
+    "pendentes_mecanica_integral": 114,
     "observacoes": [
-      "TF-094: resultado de sucesso de Whirlpool permanece nulo (fonte repete failure).",
-      "TF-095: Legendary Resistance menciona Prophesy Doom, inexistente em ações listadas.",
-      "TF-097: foram estruturados dois ataques, ações psiônicas, reações, conjuração e ações lendárias.",
-      "TF-408: ND e CD de grapple permanecem nulos, conforme falta de suporte no texto editorial."
+      "TF-094: Whirlpool sucesso ambíguo",
+      "TF-095: Prophesy Doom ausente",
+      "TF-408: ND e CD do agarrão nulos",
+      "TF-062: KPOGL 20 PV vs 5ecompendium 15 PV"
     ]
   },
   "data_atualizacao": "2026-10-13"
