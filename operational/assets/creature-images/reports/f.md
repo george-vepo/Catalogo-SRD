@@ -13,18 +13,22 @@
 - Checkpoints 22 e 23: cinco imagens usadas diretamente pelos registros de monstros do sistema Foundry A5E: Azer Forgemaster, Clockwork Sentinel, Greater Sphinx, Giant Grick e Demilich Mastermind. Os registros de ficha apontam para artes da mesma espécie/tipo, mas **não provam arte exclusiva de cada variante**. Integridade binária confirmada; revisar especificidade artística para a produção final.
 - Não foi efetuada nova leitura individual de todas as imagens dos checkpoints anteriores nesta execução; os resultados antigos são evidências registradas em cada checkpoint.
 
+## Checkpoint 24: four new CC0 sprite assets
+
+Four new 32×32 PNG binaries are published and refetched from GitHub: **TF-442 (Flame-Spitting Statue); TF-471 (Fiendish Dire Boar); TF-492 (Slime Mold); TF-431 (Conjured Guardian)**. The verified source is [crawl/tiles](https://github.com/crawl/tiles), its [Nov-2015 clean export](https://github.com/crawl/tiles/tree/master/releases/Nov-2015/mon). The maintainer describes CC0 releases with known uncertain-ownership art excluded; **older per-tile provenance is not independently proven**. Publisher credit: Dungeon Crawl Stone Soup Team; CC0 attribution is optional. Exact 32×32 pixel-art sprites are suitable only if pixel art is acceptable at the final card size; art direction and enlargement require review. The preceding 100 binary records have **not had licensing reverified** in this checkpoint, and are conservatively marked PARTIAL on legal review despite their previously recorded binary validations. 90 remain without images. No new external URL is treated as a binary.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **100** |
-| Imagens com validação pós-upload registrada | **100** |
-| IDs ainda ausentes | **94** |
-| Tamanho total dos binários | **13.160.085 bytes** |
-| Checkpoints (máximo 10 arquivos) | **23** |
+| Imagens físicas persistidas no GitHub | **104** |
+| Imagens com validação pós-upload registrada | **104** |
+| IDs ainda ausentes | **90** |
+| Tamanho total dos binários | **13.163.449 bytes** |
+| Checkpoints (máximo 10 arquivos) | **24** |
 
-## Binários confirmados (100)
+## Binários confirmados (104)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -128,8 +132,12 @@
 | TF-515 | Malcubus | `operational/assets/creature-images/TF-515.webp` | [origem](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/malcubus.webp) | .webp / image/webp | 300×300 | 111236 | `9755c6c87dbde1cd141cdb32cfea7fb281dc1d65301136d490320a8e99c597ef` | `e63b1f98355843db07fb02b5e5b04d553b7847b6` | PASS |
 | TF-519 | Frilled Lizard | `operational/assets/creature-images/TF-519.png` | [origem](https://github.com/ANTALLIS/grahams-game/blob/HEAD/rltiles/mon/animals/frilled_lizard.png) | .png / image/png | 32×32 | 3417 | `cce2fa7f14e82fa99082e2bb0b0e0c45f5a58dd78b05d697abbfd89bcb2ebbb2` | `d5c3301e83107e2a994669536f992f2d54c0cc78` | PASS |
 | TF-523 | Pugilist | `operational/assets/creature-images/TF-523.webp` | [origem](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/Pugilist2024/Class/Pugilist.webp) | .webp / image/webp | 1700×2397 | 158588 | `00d13e3fd97164282f6b614a042d77e526065786f500af9d1169e196b75fade6` | `bc23a4631d08c4a308793a3b75bd6f66cb1ba106` | PASS |
+| TF-442 | Flame-Spitting Statue | `operational/assets/creature-images/TF-442.png` | [origem](https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/statues/firespitter_statue.png) | .png / image/png | 32×32 | 449 | `89d6436248559cfb061570aea5dd98743f225ed4b7b7b4571670a77da8938f2c` | `7655c4f7554d03d53b5dfea6d53eadf1edd14768` | PASS; CC0 (2015 curated), low-res |
+| TF-471 | Fiendish Dire Boar | `operational/assets/creature-images/TF-471.png` | [origem](https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/animals/hell_hog.png) | .png / image/png | 32×32 | 387 | `2bd12034553a526e97d4e156bf95c1e66c84dac39c644795437409a43c086e4f` | `7655c4f7554d03d53b5dfea6d53eadf1edd14768` | PASS; CC0 (2015 curated), low-res |
+| TF-492 | Slime Mold | `operational/assets/creature-images/TF-492.png` | [origem](https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/amorphous/ooze.png) | .png / image/png | 32×32 | 1117 | `130be05f3e47c0b02a9648da65a309ecfecbf590a7a6ebb84157d3ea8f5ce3f5` | `7655c4f7554d03d53b5dfea6d53eadf1edd14768` | PASS; CC0 (2015 curated), low-res |
+| TF-431 | Conjured Guardian | `operational/assets/creature-images/TF-431.png` | [origem](https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/nonliving/guardian_golem.png) | .png / image/png | 32×32 | 1411 | `6ed5c241b2515c92c945a41a95d0d114b39eeff009bda09817f7556cd61e1f51` | `7655c4f7554d03d53b5dfea6d53eadf1edd14768` | PASS; CC0 (2015 curated), low-res |
 
-## IDs bloqueados / pendentes (94)
+## IDs bloqueados / pendentes (90)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -176,9 +184,7 @@
 | TF-414 | Wallflower | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-420 | Mandriano, Ancient | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-425 | Snow Terror | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-431 | Conjured Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-434 | Crusher | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-442 | Flame-Spitting Statue | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-446 | Grave Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-447 | Hound Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-448 | Imprisoned Celestial | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -193,7 +199,6 @@
 | TF-468 | Faerie Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-469 | Fateholder | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-470 | Fiendish Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-471 | Fiendish Dire Boar | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-473 | Flying Lion | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-475 | Giant Lanternfish | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-477 | Grimalkin | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -204,7 +209,6 @@
 | TF-483 | Squashling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-489 | Swarm of Skitterlings | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-491 | Blazing Black Pudding | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-492 | Slime Mold | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-494 | Askwise Keeper | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-495 | Mykand | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-496 | Tyskri | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -255,5 +259,6 @@
 | 21 | TF-399, TF-344 | `beae4e8631a1fde3c09e0ab743374614b01dfdf5` | Source JPEG/WebP header, dimensions, bytes, SHA-256 checked before upload. Target images refetched with GitHub; complete binary base64 matched original; Git blob hashes equal. |
 | 22 | TF-327, TF-429 | `282ca570a68d6f4576e3c6a96f66ff0b197ba3b0` | Verified GitHub-stored WebP signatures, dimensions, bytes, Git blob SHA and SHA-256 after upload, against individually preverified sources. |
 | 23 | TF-476, TF-474, TF-505 | `bdaaa36c2172f37d384ee6f7af99732b8ecbae23` | Verified GitHub-stored WebP signatures, dimensions, bytes, Git blob SHA and SHA-256 after upload, against individually preverified sources. |
+| 24 | TF-442, TF-471, TF-492, TF-431 | `7655c4f7554d03d53b5dfea6d53eadf1edd14768` | Official crawl/tiles CC0-excluded set; source PNG signatures/dimensions/hash; GitHub post-upload byte identity; 32x32 (needs design review) |
 
-**Estado: parcial (100/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (104/194). Manter PR em rascunho e não executar merge.**
