@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "fiend",
+    "alignment": "neutral_evil",
+    "proficiency_bonus": 3,
+    "experience_points": 1800,
+    "source_page": 82
   },
   "statistics": {
     "armor_class": 15,
     "hit_points": 119,
-    "hit_dice": null,
+    "hit_dice": "14d8+56",
     "ability_scores": {
       "STR": 16,
       "DEX": 17,
@@ -26,24 +29,228 @@
       "WIS": 14,
       "CHA": 15
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 15
+    },
+    "skills": {
+      "Athletics": 6,
+      "Deception": 5,
+      "Perception": 5
+    },
+    "saving_throws": {
+      "STR": 6,
+      "CON": 7,
+      "WIS": 5,
+      "CHA": 5
+    },
+    "languages": [
+      "Abyssal",
+      "Common",
+      "Infernal"
+    ],
+    "damage_resistances": [
+      "fire",
+      "cold",
+      "lightning",
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "from": "nonmagical_attacks_not_made_with_silvered_weapons"
+      }
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 3,
+      "CON": 4,
+      "INT": 1,
+      "WIS": 2,
+      "CHA": 2
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Inner Light",
+        "category": "light_emission",
+        "trigger": "mouth_open",
+        "bright_ft": 10,
+        "additional_dim_ft": 10,
+        "open_close_action_cost": "none"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Beak",
+            "count": 1
+          },
+          {
+            "attack": "Crutch",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Beak",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 3,
+              "average": 12,
+              "type": "piercing"
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "average": 7,
+              "type": "fire"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Crutch",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "flat": 3,
+              "average": 7,
+              "type": "bludgeoning"
+            }
+          ],
+          "save": {
+            "ability": "CON",
+            "dc": 14,
+            "on_failure": {
+              "infected_with_disease": "cackle_fever"
+            },
+            "on_success": {
+              "infection": false
+            }
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Inviting Song",
+        "category": "area_charm",
+        "action_economy": "action",
+        "range_ft": 300,
+        "targets": {
+          "type": "creature",
+          "min_intelligence_score": 5,
+          "must_hear": true
+        },
+        "save": {
+          "ability": "WIS",
+          "dc": 15,
+          "on_failure": {
+            "condition": "charmed",
+            "duration": "until_song_ends",
+            "forced_movement": {
+              "when": "charmed_creature_turn",
+              "if_distance_ft_above": 5,
+              "move": "toward_chemosit_along_direct_route_avoiding_damage",
+              "does_not_enter_damaging_terrain": true,
+              "ends_if_no_safe_route": true
+            },
+            "repeat_save": {
+              "on": [
+                "whenever_takes_damage",
+                "end_of_each_target_turn"
+              ],
+              "ability": "WIS",
+              "dc": 15,
+              "success_ends": true
+            }
+          },
+          "on_success": {
+            "immunity_to_this_chemosit_song_hours": 24
+          }
+        },
+        "sustain": {
+          "action_economy": "bonus_action",
+          "every_subsequent_chemosit_turn": true
+        },
+        "can_stop_voluntarily_any_time": true,
+        "ends_when": "chemosit_is_incapacitated"
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Continue Inviting Song",
+        "category": "sustain",
+        "action_economy": "bonus_action",
+        "precondition": "Inviting Song active",
+        "effect": "maintain_song_this_turn"
+      },
+      {
+        "name": "Change Shape",
+        "category": "transformation",
+        "action_economy": "bonus_action",
+        "forms": [
+          "Small_humanoid",
+          "Medium_humanoid",
+          "true_fiend_form"
+        ],
+        "statistics_unchanged_except": [
+          "size"
+        ],
+        "constant_properties": [
+          "one_leg",
+          "crutch_fits_form"
+        ],
+        "other_equipment_transforms": false,
+        "on_death": {
+          "revert_to": "true_form",
+          "crutch_becomes_nonmagical": true
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Canto de encanto, golpe que transmite doença, bicada flamejante e luz interna."
@@ -60,8 +267,8 @@
       "url": "https://kpogl.wikidot.com/monster:chemosit",
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Tome of Beasts 3",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Estatísticas, traços, ações normais e bônus, economia de ações e condicionais",
+      "verification": "Transcrição individual lida diretamente em 14/10/2026; impressão, direitos e engine pendentes"
     }
   ],
   "source_checkpoint": {
@@ -72,9 +279,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Confirmar edição impressa e erratas corretas (não presumir equivalência entre revisões).",
+    "Validar detalhes de ações, condições e recursos na engine e verificar direitos de adaptação e arte.",
+    "Cackle fever é uma doença referenciada, não detalhada no bloco individual; requer fonte da doença antes de implementar todos os seus efeitos."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -98,5 +305,19 @@
       "direitos",
       "arte para produção"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:chemosit"
+    ],
+    "source_tier": "secondary_kpogl",
+    "statblock_url_read_online": true,
+    "copyright_license_qa_completed": false,
+    "notes": "Dados da transcrição individual comunitária KPOGL, ainda sem homologação de livro, erratas e engine."
   }
 }

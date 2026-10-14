@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 53: Chemosit, Arx e Chatterlome (14/10/2026)
+
+- **TF-266 Chemosit:** Inner Light, Multiattack Beak + 2 Crutch, infecção por cackle fever (doença externa a consultar), Inviting Song com charme, repetição de salvaguardas e sustentação como ação bônus, Change Shape como bônus concorrente.
+- **TF-267 Arx:** ataques de garra e lança com distinção 2 mãos, armadura de espinhos, Emplace Wall com dois painéis AC 17/PV 50 (recarga 3–6), salvaguarda para deslocar ocupantes, Wall Smash e retração. Uso de Wall Smash com só um painel continua pendente de esclarecimento.
+- **TF-268 Chatterlome:** Multiattack quatro Chisels, Box Teleport até 120 pés, Hide com ação bônus após teleporte, retorno aos Infernos a partir de recipiente. Caixa original destruída é descrita apenas na narrativa, registrada separadamente e sem inventar custo de ação.
+
+**Após este checkpoint:** 70/132 fichas estruturadas em nível individual online (67 KPOGL/secundárias e 3 A5E digital oficial), 62 registros resumidos, 0 editorialmente homologados. 124 imagens físicas, 8 ausentes, 0 imagens de produção aprovadas. Sem V-Bridge, merge ou alterações fora do grupo A. Pendem impressão, erratas, licença, verificação visual e engine.
+
+---
+
 # Grupo A — checkpoint 52: quatro statblocks individuais verificados online (14/10/2026)
 
 - **TF-260 — Vine Lord (Tome of Beasts 1, revisão CR9):** estatísticas da transcrição individual, regeneração e Root Mind, infecção em estágios com dano ao PV máximo, Multiattack com Tendril + 2 Thorned Slam, Forest Protectors 1/dia e dispensa por ação bônus. Edição CR7 anterior é diferente e não foi mesclada.
