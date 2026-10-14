@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens D (entrega parcial, atualização 2026-10-14)
 
-> **Status vigente: 190/195 imagens validadas, 5 pendentes, 41.022.998 bytes.** O detalhamento histórico de 173/195 abaixo descreve checkpoints anteriores; consulte a consolidação mais recente no final.
+> **Status vigente: 191/195 imagens verificadas, 4 pendentes, 41.375.642 bytes.** Os checkpoints de 173/195 e 190/195 abaixo são históricos; a atualização mais recente está no final.
 
 ## Preflight, lote e isolamento
 
@@ -113,3 +113,20 @@ Dois arquivos PNG brevemente publicados para TF-022 e TF-034 foram **excluídos 
 
 **Escopo:** nenhum arquivo de imagens E/F, nenhuma das 23 imagens originalmente verificadas e nenhuma linha do CSV global alterados; PR #11 permanece draft e sem merge.
 
+## Continuidade de pesquisa e auditoria — 2026-10-14, checkpoint 41
+
+- **Status atualizado e efetivo: 191/195 imagens persistidas, 4 pendentes, 41.375.642 bytes**. A contagem anterior de 190/195 e os checkpoints 38–40 permanecem acima como histórico, não são o status corrente.
+- **Novo arquivo:** `TF-017.webp` (Ancient Aboleth), publicado diretamente no GitHub por blob binário Base64 no checkpoint 41, commit `1b5a1b5232ecb7b697a92907a21b85bb583dc075`. A associação de origem é explícita: `Pjb518/FoundryVTT-Level-Up-Official/packs/monsters/ancient-aboleth.json` atribui `systems/a5e/assets/aboleth.webp` à entrada **Ancient Aboleth**. O arquivo real é `public/assets/aboleth.webp` no mesmo repositório.
+- **Integridade confirmada:** SHA Git blob `cafbcd7e2534075f85a5468baa10e3ed1cb63554` idêntico à fonte; leitura de volta do arquivo persistido no GitHub idêntica byte a byte ao Base64 original; formato real WebP, 600×600 px, 352.644 bytes, SHA-256 recalculado `8d44b4d987d207a959485af96ae1d0636ed783f047c4fb741373614762ed9cae`; contêiner RIFF/WEBP e tamanho interno válidos.
+- **Ressalva visual relevante:** o catálogo oficial de A5E usa arte de Aboleth para a variante Ancient Aboleth. A arte não foi retirada de outra espécie e é distinta do arquivo `AT-003.webp`; contudo, **não é uma ilustração exclusiva da forma ancestral**. Revisão editorial recomendada se o jogo exigir distinção de idade explicitamente visível.
+
+### Quatro pendências e motivos concretos
+
+- `TF-022` — **Beetle, Giant Bombardier**: A criatura Giant Bombardier Beetle consta no Tome of Beasts 2, mas não foi localizado um binário inequivocamente correspondente em repositório GitHub acessível para armazenamento; arquivos PNG anteriormente encontrados foram excluídos por serem placeholders. Há uma ilustração externa de besouro bombardeiro gigante, mas ela não foi adquirida nem persistida neste GitHub.
+- `TF-034` — **Giant Mongoose**: Giant Mongoose consta no Tome of Beasts 2 / Margreve Player's Guide. A coleção nominal '_img/ToB2/creature/' não contém arte específica sob o nome Giant Mongoose; não substituir por foto de mangusto comum ou outro animal.
+- `TF-049` — **Agonized Khyphon**: Agonized Khyphon consta em 'To Save A Kingdom'; a página A5E tem descrição visual detalhada de bandagens, olhos, pus e aura magenta, porém não disponibiliza a ilustração específica. O registro Foundry correspondente usa 'icons/svg/mystery-man.svg', que é placeholder e não uma imagem válida.
+- `TF-055` — **Aklea**: Aklea é uma variante feminina nomeada de Empyrean, filha de um deus da guerra. A página A5E associa uma ilustração de tiefling guerreira, e o Foundry associa um avatar masculino genérico de empyrean; nenhuma representa adequadamente Aklea, então ambas rejeitadas.
+
+As fontes de definição das criaturas foram confirmadas no catálogo Kobold Press (para besouro e mangusto) e no A5E (para Khyphon e Aklea), mas páginas descritivas e URLs externas isoladas **não foram contabilizadas como aquisição de binário**. Não houve substituição por sprites genéricos, placeholders ou criaturas diferentes.
+
+O PR continua em **DRAFT**, sem merge. Não houve modificação do CSV global, das 23 imagens previamente verificadas ou dos lotes E e F.
