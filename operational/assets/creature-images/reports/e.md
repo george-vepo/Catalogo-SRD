@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 181 / 195.**
+**Armazenadas e verificadas: 183 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -28,6 +28,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/356a9426a14d9d9b2adbb433e92e0b3ef33364e2 — 5/5 verificadas: TF-261, TF-265, TF-266, TF-268, TF-269
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/65c6230d26b47cd70ccbe22195b4bdebfd4aba88 — 2/2 verificadas: TF-097, TF-240
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/22fc79040f6d595328fdc83ffa1c64cebbf7cb31 — 3/3 verificadas: TF-198, TF-209, TF-252
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2d0d20ab7c63f820940fd968cbfab00620e5d587 — 2/2 verificadas: TF-232, TF-242
 
 ## Binários publicados e conferidos
 
@@ -182,6 +183,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-228 / Colláis: operational/assets/creature-images/TF-228.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Collais.webp; 304172 bytes; 874x1249 px; SHA-256: 40b03ff86616f831ea44d48cee1b7a478a4750aacf7b91c6b17147196ff1610e; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-229 / Conjoined Queen: operational/assets/creature-images/TF-229.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Conjoined%20Queen.webp; 284564 bytes; 973x1020 px; SHA-256: a7f66f3d415cf29fe39fcbea22a2046bcfd2996e184f5d30e5b1a49fc2eb092d; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-230 / Cryoceros: operational/assets/creature-images/TF-230.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Cryoceros.webp; 317876 bytes; 1147x751 px; SHA-256: 722a9fd014f0e34e1eed6ebd27621a89799ea2839928713604c600349ce7de3d; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-232 / Annelidast: operational/assets/creature-images/TF-232.jpg; origem: https://mz4250.com/posts/tome-of-beasts-93739908; 88440 bytes; 1122x831 px; SHA-256: e21b42f7e99c2f3a1d6791e30252225d3ca1f0c0dda448ea02ff4eb33d0e0431; commit: 2d0d20ab7c63f820940fd968cbfab00620e5d587
 - TF-233 / Chaos Raptor: operational/assets/creature-images/TF-233.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chaos%20Raptor.webp; 246680 bytes; 1000x980 px; SHA-256: 56aafff061fa6111ed8cc76e77db7ba7006cb3ba12ea1b19638006eff1d81dae; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-234 / Chimera, Royal: operational/assets/creature-images/TF-234.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Royal%20Chimera.webp; 112540 bytes; 1000x1208 px; SHA-256: a406c1a30f4d70378691aac15940cd3e4dd31dd2e6f5b14df79aa6c5941941c4; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-235 / Tigebra: operational/assets/creature-images/TF-235.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Tigebra.webp; 196734 bytes; 1200x1221 px; SHA-256: a7c6de63af5e7d5fb104e53dc82aeff151ad5c17d50cd4985fb098f472d445fe; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
@@ -190,6 +192,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-238 / Zaratan: operational/assets/creature-images/TF-238.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Zaratan.webp; 88488 bytes; 1000x630 px; SHA-256: fcb988ed958efad2a5c40301e0fb40bae26970b641c210cb031b0e4fcfa527b9; commit: be688c5ccc441a45fffd0ec796554b323704fa90
 - TF-240 / Aboleth, Nihileth, Nihilethic Zombie: operational/assets/creature-images/TF-240.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Nihilethic%20Zombie.webp; 74410 bytes; 677x800 px; SHA-256: 3ebedd6b661ae03374de0c37074daf4d1b4b5791539eb8cdaac392ca8570cd53; commit: 65c6230d26b47cd70ccbe22195b4bdebfd4aba88
 - TF-241 / Accursed Defiler: operational/assets/creature-images/TF-241.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Accursed%20Defiler.webp; 63400 bytes; 597x801 px; SHA-256: 3cdec0b00447264ddd0f37b1d4ce10f9cae7c902c859e252ba35677d885fce79; commit: be688c5ccc441a45fffd0ec796554b323704fa90
+- TF-242 / Ashwalker: operational/assets/creature-images/TF-242.jpg; origem: https://mz4250.com/posts/tome-of-beasts-93739908; 74920 bytes; 1022x857 px; SHA-256: 3386caf779cc581b9cc9c74def54b74368b6f104fdcf73bf5eff0edc4a9f19ac; commit: 2d0d20ab7c63f820940fd968cbfab00620e5d587
 - TF-243 / Chill Haunt: operational/assets/creature-images/TF-243.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chill%20Haunt.webp; 278938 bytes; 843x1119 px; SHA-256: 3818d54438e924ebb461df7a7b8b0322ffe972295de1c1e128eacc4e0fa70920; commit: be688c5ccc441a45fffd0ec796554b323704fa90
 - TF-244 / Chimeric Phantom: operational/assets/creature-images/TF-244.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chimeric%20Phantom.webp; 224644 bytes; 817x1222 px; SHA-256: bbcf058ec5cf05b72bb84a58d419d1da361adb0bb4aab2613df1aa214c493e21; commit: be688c5ccc441a45fffd0ec796554b323704fa90
 - TF-245 / Old Salt: operational/assets/creature-images/TF-245.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Old%20Salt.webp; 98574 bytes; 703x1200 px; SHA-256: c2325bbacffb29c4cd8d6b82b331735c43c9d53f9ef8ada413927fdb6bdc4e60; commit: be688c5ccc441a45fffd0ec796554b323704fa90
@@ -222,11 +225,9 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-201 / Alpha Werewolf: source_not_found; 
 - TF-226 / Accursed Spirit Naga: source_not_found; 
 - TF-231 / Accursed Guardian Naga: source_not_found; 
-- TF-232 / Annelidast: source_not_found; 
 - TF-239 / Aboleth, Nihileth, Nihilethic Dominator: source_not_found; 
-- TF-242 / Ashwalker: source_not_found; 
 - TF-255 / Citrullus: source_not_found; 
-- TF-263 / Abrikandilu: source_not_found; 
+- TF-263 / Abrikandilu: blocked; <urlopen error timed out>
 - TF-264 / Abyssal Hordeling: source_not_found; 
 - TF-267 / Arx: source_not_found; 
 

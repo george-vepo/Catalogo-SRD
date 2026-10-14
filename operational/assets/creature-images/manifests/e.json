@@ -4,8 +4,8 @@
   "branch": "chatgpt/srd607-image-assets-e",
   "scope": "pending_images.slice(195,390)",
   "total": 195,
-  "verified": 181,
-  "not_found": 13,
+  "verified": 183,
+  "not_found": 10,
   "last_commit": "a90f1ba1db57873052c1b0b231c056acd523fa9b",
   "checkpoints": [
     {
@@ -335,9 +335,24 @@
       ],
       "total": 3,
       "verified": 3
+    },
+    {
+      "commit": "2d0d20ab7c63f820940fd968cbfab00620e5d587",
+      "ids": [
+        "TF-232",
+        "TF-242"
+      ],
+      "total": 2,
+      "verified": 2
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "id": "TF-263",
+      "stage": "acquisition",
+      "error": "<urlopen error timed out>"
+    }
+  ],
   "entries": [
     {
       "id": "TF-059",
@@ -3430,14 +3445,24 @@
       "id": "TF-232",
       "creature": "Annelidast",
       "position": 353,
-      "status": "pending",
+      "status": "verified",
       "source_candidate": "Annelidast.JPG",
       "source_candidates": [
         "Annelidast.JPG"
       ],
       "source_url_direct": "https://www.patreon.com/file?h=93739908&m=250870091",
       "source_page": "https://mz4250.com/posts/tome-of-beasts-93739908",
-      "asset_provenance_note": "foto/renderização de miniatura 3D nomeada Annelidast (mz4250), não ilustração editorial"
+      "asset_provenance_note": "foto/renderização de miniatura 3D nomeada Annelidast (mz4250), não ilustração editorial",
+      "path": "operational/assets/creature-images/TF-232.jpg",
+      "source_url": "https://mz4250.com/posts/tome-of-beasts-93739908",
+      "bytes": 88440,
+      "width": 1122,
+      "height": 831,
+      "extension": "jpg",
+      "sha256": "e21b42f7e99c2f3a1d6791e30252225d3ca1f0c0dda448ea02ff4eb33d0e0431",
+      "blob_sha": "37304db88507738541101dd3be1749fab333ffd8",
+      "commit": "2d0d20ab7c63f820940fd968cbfab00620e5d587",
+      "verified_readback": true
     },
     {
       "id": "TF-233",
@@ -3611,14 +3636,24 @@
       "id": "TF-242",
       "creature": "Ashwalker",
       "position": 363,
-      "status": "pending",
+      "status": "verified",
       "source_candidate": "Ashwalker.JPG",
       "source_candidates": [
         "Ashwalker.JPG"
       ],
       "source_url_direct": "https://www.patreon.com/file?h=93739908&m=250869785",
       "source_page": "https://mz4250.com/posts/tome-of-beasts-93739908",
-      "asset_provenance_note": "foto/renderização de miniatura 3D nomeada Ashwalker (mz4250), não ilustração editorial"
+      "asset_provenance_note": "foto/renderização de miniatura 3D nomeada Ashwalker (mz4250), não ilustração editorial",
+      "path": "operational/assets/creature-images/TF-242.jpg",
+      "source_url": "https://mz4250.com/posts/tome-of-beasts-93739908",
+      "bytes": 74920,
+      "width": 1022,
+      "height": 857,
+      "extension": "jpg",
+      "sha256": "3386caf779cc581b9cc9c74def54b74368b6f104fdcf73bf5eff0edc4a9f19ac",
+      "blob_sha": "ba48e8252528bb2e0e00075f5e750921940dee62",
+      "commit": "2d0d20ab7c63f820940fd968cbfab00620e5d587",
+      "verified_readback": true
     },
     {
       "id": "TF-243",
@@ -3995,14 +4030,15 @@
       "id": "TF-263",
       "creature": "Abrikandilu",
       "position": 383,
-      "status": "pending",
+      "status": "blocked",
       "source_candidate": "Abrikandilu.png",
       "source_candidates": [
         "Abrikandilu.png"
       ],
       "source_url_direct": "https://2e.aonprd.com/Images/Monsters/Abrikandilu.png",
       "source_page": "https://2e.aonprd.com/Monsters.aspx?ID=499",
-      "asset_provenance_note": "ilustração identificada como Abrikandilu no acervo Pathfinder; edição editorial diferente do catálogo"
+      "asset_provenance_note": "ilustração identificada como Abrikandilu no acervo Pathfinder; edição editorial diferente do catálogo",
+      "error": "<urlopen error timed out>"
     },
     {
       "id": "TF-264",
@@ -4102,5 +4138,5 @@
       "verified_readback": true
     }
   ],
-  "remaining": 14
+  "remaining": 12
 }
