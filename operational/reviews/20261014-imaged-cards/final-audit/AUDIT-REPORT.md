@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 13 lotes validados, 130/395 fichas (265 restantes).
+**Situação:** EM ANDAMENTO — 14 lotes validados, 140/395 fichas (255 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -102,4 +102,11 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 6 completas em conteúdo, 3 com ressalvas: TF-136 (erro de digitação na DC), TF-138 (Rock +2 descompassado de FOR22) e TF-144 (combinação de ataques no Multiattack sem confirmação). **TF-143 é incompleta**: fonte não relaciona cada espírito a um traço perdido ao expulsá-lo. Dez imagens físicas diretamente vinculadas nos JSONs C, com SHA/tamanho conferidos; três imagens têm dimensão inferior a 500 px (TF-138, TF-139 e TF-143). Não houve homologação de arte, fonte editorial ou direitos.
 
 **Consolidado:** 130/395; 83 completas em conteúdo, 25 com ressalvas, 21 incompletas, 1 não verificável; 75 vínculos diretos, 52 via manifesto, 3 imagens ausentes.
+
+
+## Lote 014 — TF-148–TF-157 (dez IDs do CSV)
+
+8 fichas completas em conteúdo e 2 completas com ressalvas: TF-154 (fórmula de HP conflitante em livro/republicação), TF-157 (3 vs 4 ações lendárias entre fontes). Dez imagens diretamente vinculadas e hashes/tamanhos conferidos; TF-157 tem largura 490 px. Sem homologação de direito comercial ou identidade visual.
+
+**Consolidado:** 140/395; 91 completas em conteúdo, 27 com ressalvas, 21 incompletas e 1 não verificável. Imagens: 85 diretas, 52 por manifesto, 3 ausentes.
 
