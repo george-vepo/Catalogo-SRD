@@ -135,3 +135,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 5 completas em conteúdo, 4 com ressalvas (TF-194, TF-195, TF-196 por divergências entre fontes/edições; TF-200 por origem Level Up A5E não-SRD e restrições de licença) e 1 incompleta (**TF-199**: condição temporal de Consume Heart truncada, sem extrapolar). 9 imagens diretamente vinculadas com SHA/tamanho correspondentes; TF-200 vinculada via manifesto E, arte gerada por IA não oficial. Imagens declaradas de baixa largura (<500 px): TF-193, TF-194. Não houve homologação editorial, visual ou jurídica.
 
 **Consolidado:** 180/395 (215 restantes); 121 completas, 36 com ressalvas, 22 incompletas, 1 não verificável; 124 imagens diretas, 53 por manifesto e 3 ausentes.
+
+## Lote 019 — TF-201–TF-212 (10 IDs do CSV)
+
+2 fichas completas em conteúdo (TF-211, TF-212), 2 com ressalvas (TF-201 A5E não-SRD/licença e TF-202 Book of Ebon Tides vs Tome of Beasts 3) e 6 incompletas (**TF-203, TF-204, TF-205, TF-206, TF-208, TF-210**: registros C contêm apenas sínteses, não mecânicas nem atributos estruturados). Nove imagens diretamente vinculadas e uma (TF-201) via manifesto E, com SHA/tamanho conferidos; TF-210 tem largura declarada de 452 px. Edição, identidade visual e licenciamento não homologados.
+
+**Consolidado:** 190/395 (205 restantes); 123 completas, 38 com ressalvas, 28 incompletas, 1 não verificável; 133 imagens diretas, 54 por manifesto e 3 ausentes.
