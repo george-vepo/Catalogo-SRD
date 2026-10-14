@@ -7,12 +7,15 @@
   "identity": {
     "publisher": "Kobold Press",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "4",
     "size": "Large",
     "type": "construct",
-    "alignment": null
+    "alignment": "unaligned",
+    "edition": "Tome of Beasts 3 (D&D 5e)",
+    "experience_points": 1100,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 14,
@@ -27,24 +30,26 @@
       "CHA": 18
     },
     "speeds": {
-      "andar": 30,
-      "voar": 50,
+      "walk_ft": 30,
+      "fly_ft": 50,
       "hover": true
     },
-    "senses": [
-      "blindsight 60 ft. cego além"
-    ],
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_ft": 60,
+      "passive_perception": 7
+    },
     "skills": {
       "Performance": 8
     },
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
     "damage_immunities": [
       "poison",
       "psychic"
     ],
-    "damage_vulnerabilities": null,
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "blinded",
       "charmed",
@@ -54,185 +59,232 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "armor_class_type": "natural armor",
+    "ability_modifiers": {
+      "STR": 0,
+      "DEX": 3,
+      "CON": 3,
+      "INT": -3,
+      "WIS": -3,
+      "CHA": 4
+    }
   },
   "mechanics": {
     "traits": [
       {
         "name": "Antimagic Susceptibility",
-        "category": "trait",
-        "prior_summary_unverified": "Incapacitado em campo antimagia e sujeito a perda de consciência após dispel magic com salvaguarda CON.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "triggers": [
+          {
+            "condition": "inside antimagic field",
+            "effect": "incapacitated"
+          },
+          {
+            "condition": "targeted by dispel magic",
+            "saving_throw": {
+              "ability": "CON",
+              "dc": "caster_spell_save_dc",
+              "on_failure": {
+                "condition": "unconscious",
+                "duration": "1 minute"
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            }
+          }
+        ]
       },
       {
         "name": "Construct Nature",
-        "category": "trait",
-        "prior_summary_unverified": "Dispensa ar, comida, bebida e sono.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "requires_air": false,
+          "food": false,
+          "water": false,
+          "sleep": false
+        }
       },
       {
         "name": "False Appearance",
-        "category": "trait",
-        "prior_summary_unverified": "Imóvel em solo parece conjunto ordinário de instrumentos.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "requirements": {
+          "motionless": true,
+          "not_flying": true
+        },
+        "effect": "indistinguishable from normal musical instrument(s)"
       },
       {
         "name": "Four-Part Harmony",
-        "category": "trait",
-        "prior_summary_unverified": "Quatro instrumentos operam conjuntamente; se uma instância de dano atingir 25 ou mais, um instrumento perde consciência e ataques perdem um dado de dano.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive_triggered",
+        "initial_instruments": 4,
+        "trigger": "single attack inflicts at least 25 damage to quartet",
+        "effect": {
+          "one_instrument": "unconscious",
+          "decrease_damage_dice_count_per_attack_of": [
+            "Trouble Clef",
+            "Orchestra Hit"
+          ],
+          "dice_count_reduction": 1
+        },
+        "accumulation": "exact stacking/maximum reduction not explicit in source"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "prior_summary_unverified": "Usa Musical Arrangement e faz dois ataques Trouble Clef ou Orchestra Hit.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Musical Arrangement",
+            "count": 1
+          },
+          {
+            "action": "Trouble Clef or Orchestra Hit",
+            "count": 2
+          }
+        ],
+        "note": "source does not explicitly specify whether mix of Trouble Clef and Orchestra Hit is permitted"
       },
       {
         "name": "Trouble Clef",
-        "category": "action",
-        "prior_summary_unverified": "+5, alcance 5 pés, 4d4+3 contundente.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d4",
+              "modifier": 3,
+              "type": "bludgeoning",
+              "average": 13
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Orchestra Hit",
-        "category": "action",
-        "prior_summary_unverified": "+6, 60 pés, 4d6+4 trovão.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 6,
+        "range_ft": 60,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "modifier": 4,
+              "type": "thunder",
+              "average": 18
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
-        "name": "Musical Arrangement - Dreadful Dirge",
-        "category": "action",
-        "prior_summary_unverified": "Hostis a 30 pés testam SAB CD14 contra medo até fim do próximo turno.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Musical Arrangement",
+        "category": "choice_action",
+        "action_economy": "action",
+        "choices": [
+          "Dreadful Dirge",
+          "Oppressive Overture",
+          "Seditious Sonata"
+        ]
       },
       {
-        "name": "Musical Arrangement - Oppressive Overture",
-        "category": "action",
-        "prior_summary_unverified": "Hostis a 30 pés testam FOR CD14 ou ficam caídos.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Dreadful Dirge",
+        "category": "musical_arrangement_option",
+        "action_economy": "part_of_Musical_Arrangement",
+        "targets": "each hostile creature within 30ft",
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 14,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "until end of target next turn"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
       },
       {
-        "name": "Musical Arrangement - Seditious Sonata",
-        "category": "action",
-        "prior_summary_unverified": "Hostis a 30 pés testam CAR CD14 ou ficam enfeitiçados por até 1 minuto, evitando ações hostis e auxílio aos aliados; efeitos podem cessar por dano ou salvaguarda.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "targets": null,
-        "reach": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "conditions": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Oppressive Overture",
+        "category": "musical_arrangement_option",
+        "action_economy": "part_of_Musical_Arrangement",
+        "targets": "each hostile creature within 30ft",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 14,
+          "on_failure": {
+            "condition": "prone"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      },
+      {
+        "name": "Seditious Sonata",
+        "category": "musical_arrangement_option",
+        "action_economy": "part_of_Musical_Arrangement",
+        "targets": "each hostile creature within 30ft",
+        "saving_throw": {
+          "ability": "CHA",
+          "dc": 14,
+          "on_failure": {
+            "condition": "charmed",
+            "duration": "up to 1 minute",
+            "prohibitions": [
+              "attacking other creatures",
+              "targeting other creatures with harmful abilities or magical effects",
+              "aiding allies"
+            ],
+            "repeat_save": "end of each affected target turn; success ends",
+            "ends_if": "charmed target takes damage"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://kpogl.wikidot.com/monster:animated-quartet",
       "type": "ficha_individual_segundo_checkpoint_anterior",
       "verification": "incompleta para implementação"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "individual_creature_structured_OGL_transcription",
+      "source_creature": "Animated Quartet",
+      "verification": "all individual statblock fields, actions, bonus continuation, song choices, damage effects and conditional abilities",
+      "primary_editorial": false
     }
   ],
   "source_checkpoint": {
@@ -242,9 +294,9 @@
   "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
   "legacy_note": null,
   "outstanding": [
-    "Conferir todas as ações e efeitos mecânicos de cada instrumento individualmente, inclusive ataques e sinergias.",
-    "Rever publicação, edição e erratas exatas.",
-    "Mecânicas históricas são apenas pesquisa parcial; nenhum conjunto foi promovido a completo."
+    "Confront original printing and published errata; source-level reconstruction is not editorial homologation.",
+    "Four-Part Harmony: source does not explicitly specify maximum stack size of die reductions, or whether mixed attacks are permitted; review engine behavior.",
+    "Verify artwork production resolution and image usage rights."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -268,5 +320,12 @@
       "licença e direitos",
       "aprovação para impressão"
     ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_full_source_structured": true,
+    "source_edition_primary_printing_checked": false,
+    "combat_engine_independently_reviewed": false,
+    "final_approval": false
   }
 }
