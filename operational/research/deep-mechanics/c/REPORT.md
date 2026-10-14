@@ -1,5 +1,16 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 36 — Titan, Cave Shaman, Lantern, Shadow e Xing Tian (14/10/2026)
+
+**[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9627492b8f32e85ea52e07db641a9b0dd17cc558).**
+
+- TF-151 Degenerate Titan: Reality-Bending Shout exige check +4 até magia lvl3, Multiattack opcional, Earthstrike 60×10 ft (10d6 force), colisão e dano de segundo alvo diferenciados. Fonte https://www.5esrd.com/database/creature/titan-degenerate-3pp/.
+- TF-152 Cave Giant Shaman: conjuração completa CHA CD18 ataque +10, wizard prepared por níveis, slots até 7º; sunlight petrification e Tusks condicionados. Fonte https://www.5esrd.com/database/creature/giant-cave-giant-shaman/.
+- TF-153 Lantern Giant: Hypnotic Luminescence 60+60 ft e charm CHA CD18, imunidade posterior por 24h, Spellcasting substitui um dos três ataques, exceção de identify como ação. Fonte https://www.5esrd.com/database/creature/lantern-giant/.
+- TF-154 Shadow Giant: **BLOQUEIO PRESERVADO**: impressão de Tome of Beasts 2 dá 209 HP com 22d20+66; KPOGL republica 22d12+66 (compatível com 209). Ambos registrados; nenhuma inferência promovida a dado oficial. Umbral Glimmer, Blacklight Strobe e Cold Shadow estruturados. Fontes https://kpogl.wikidot.com/monster:shadow-giant e https://anyflip.com/dhfzu/umbm/basic/151-200.
+- TF-155 Xing Tian: Dance of the Unyielding com cura inicial e manutenção por bonus action, bite condicional se ambos os battleaxe acertarem mesmo alvo e Indomitable limitado por fim de próximo turno. Fonte https://www.5esrd.com/database/creature/xing-tian/.
+- **Progresso provisório: 74/131 aprofundadas, 57 aguardando, 94 parciais, 37 bloqueadas, 0 integralmente aprovadas.** Imagens permanecem 96 blobs, 35 faltantes, 0 aprovadas visualmente. Nenhuma imagem publicada no checkpoint. Verificação editorial/licenças ainda pendentes.
+
 ## Checkpoint 35 — Hellfire Giant, Shire Giant, Thin Giant, Thursir Armorer, Void-Blessed Ogre (14/10/2026)
 
 **[Commit com 5 JSONs mecânicos](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/77fd2403f2f351cf439580df9de9d59960d8a15e).** Read-back confirmado via GitHub: cinco JSONs com IDs e sintaxe corretos, 69/131 profundos, 94 parciais, 37 bloqueados. Nenhuma nova imagem. Auditoria 96/96 hashes válida do CP33.
