@@ -16,16 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 120,
-    "verified_after_upload": 120,
-    "pending": 74,
-    "stored_bytes": 13313242,
-    "checkpoint_count": 28,
+    "persisted_binary_files": 123,
+    "verified_after_upload": 123,
+    "pending": 71,
+    "stored_bytes": 13315086,
+    "checkpoint_count": 29,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 74,
+    "partial_missing_files": 71,
     "blocked_confirmed": 0,
-    "partial_variant_art": 16,
+    "partial_variant_art": 19,
     "license_rights_review": {
       "foundry_noncommercial_restricted": 8,
       "homebrew_img_unlicensed_for_reuse": 84,
@@ -349,6 +349,16 @@
       ],
       "commit": "54cbf17c2c686170edc86d1ff09961021866448b",
       "validation": "Post-upload source/destination byte-for-byte identity, Git blob SHA checked. PNG dimensions/size and SHA-256 computed; licensing records CC0 and CC BY-SA 4.0; visual compatibility PARTIAL."
+    },
+    {
+      "sequence": 29,
+      "images_added": [
+        "TF-481",
+        "TF-405",
+        "TF-510"
+      ],
+      "commit": "9afec073ed6536d61ac4d5d94c5ea140e143f3ae",
+      "validation": "Three PNGs source/destination byte-for-byte identical after GitHub push; PNG 32x32, SHA-256 size and Git blob SHA captured. CC0 source declaration but independent historic rights and variant art quality PARTIAL."
     }
   ],
   "blocked_ids": [
@@ -383,7 +393,6 @@
     "TF-397",
     "TF-398",
     "TF-402",
-    "TF-405",
     "TF-408",
     "TF-411",
     "TF-414",
@@ -403,7 +412,6 @@
     "TF-475",
     "TF-478",
     "TF-480",
-    "TF-481",
     "TF-482",
     "TF-483",
     "TF-489",
@@ -420,7 +428,6 @@
     "TF-507",
     "TF-508",
     "TF-509",
-    "TF-510",
     "TF-516",
     "TF-517",
     "TF-518",
@@ -3281,20 +3288,37 @@
     {
       "id": "TF-405",
       "name": "Lich, Virtuoso",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/ancient_lich.png",
+      "repository_path": "operational/assets/creature-images/TF-405.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 476,
+      "sha256": "59aa7f3e3d86c1c50d3616106f6c3d17d2fee1fb95ed1d215735112ed5accfcd",
+      "persistence_commit": "9afec073ed6536d61ac4d5d94c5ea140e143f3ae",
+      "validation": {
+        "result": "passed",
+        "method": "PNG signature/IHDR/IEND and dimensions checked before GitHub commit; SHA-256 computed and implementation vector tested; after push fetch_file(encoding=base64) from source and destination bytes identical, Git blob SHA identical.",
+        "git_blob_sha": "4d2dc3f4f73366084b2ce4c36ee7046ce84b72d2",
+        "quality_note": "Undead spellcaster/lich visually apparent, but virtuoso abilities and identity not visually explicit. Tiny 32×32 pixel art."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/undead/ancient_lich.png",
+      "source_git_blob_sha": "4d2dc3f4f73366084b2ce4c36ee7046ce84b72d2",
+      "source_license": "CC0 1.0 Universal (cleaned repository release assertion; per-artwork historical provenance not independently verified)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup contributors (recommended credit; CC0 source release declares attribution optional)",
+      "rights_review": "Source repo README says CC0-curated tiles with uncertain rights excluded; basename not listed in its exclusions. Per-image historical permissions were not established independently."
     },
     {
       "id": "TF-406",
@@ -4575,20 +4599,37 @@
     {
       "id": "TF-481",
       "name": "Spell Shrieker",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/deathcap.png",
+      "repository_path": "operational/assets/creature-images/TF-481.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 472,
+      "sha256": "4ef67cd2cca0c7bd172909f0d28f434163cd8dbbd9ab7efb31249036a412d1e1",
+      "persistence_commit": "9afec073ed6536d61ac4d5d94c5ea140e143f3ae",
+      "validation": {
+        "result": "passed",
+        "method": "PNG signature/IHDR/IEND and dimensions checked before GitHub commit; SHA-256 computed and implementation vector tested; after push fetch_file(encoding=base64) from source and destination bytes identical, Git blob SHA identical.",
+        "git_blob_sha": "53378df49793b696cba6304d3ac72421d9aaa215",
+        "quality_note": "Monstrous green-capped fungus is a species-level match for the shrieker; scream/magical detection/false motionless appearance not evidenced. Tiny 32×32 pixel art."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/fungi_plants/deathcap.png",
+      "source_git_blob_sha": "53378df49793b696cba6304d3ac72421d9aaa215",
+      "source_license": "CC0 1.0 Universal (cleaned repository release assertion; per-artwork historical provenance not independently verified)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup contributors (recommended credit; CC0 source release declares attribution optional)",
+      "rights_review": "Source repo README says CC0-curated tiles with uncertain rights excluded; basename not listed in its exclusions. Per-image historical permissions were not established independently."
     },
     {
       "id": "TF-482",
@@ -5132,20 +5173,37 @@
     {
       "id": "TF-510",
       "name": "Infernal Mammoth",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/elephant_demonic.png",
+      "repository_path": "operational/assets/creature-images/TF-510.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 896,
+      "sha256": "9aacfe4824a78db0536e5cc0d0f693ce8ce90e011cb6d13b08468556f5f5f855",
+      "persistence_commit": "9afec073ed6536d61ac4d5d94c5ea140e143f3ae",
+      "validation": {
+        "result": "passed",
+        "method": "PNG signature/IHDR/IEND and dimensions checked before GitHub commit; SHA-256 computed and implementation vector tested; after push fetch_file(encoding=base64) from source and destination bytes identical, Git blob SHA identical.",
+        "git_blob_sha": "22c2d6ce2acc1cf252c1fe304353c390eb19f05f",
+        "quality_note": "Red infernal tusked elephant, suitable approximate infernal proboscidean; does not show large woolly mammoth hair or full scale. Tiny 32×32 pixel art."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/animals/elephant_demonic.png",
+      "source_git_blob_sha": "22c2d6ce2acc1cf252c1fe304353c390eb19f05f",
+      "source_license": "CC0 1.0 Universal (cleaned repository release assertion; per-artwork historical provenance not independently verified)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup contributors (recommended credit; CC0 source release declares attribution optional)",
+      "rights_review": "Source repo README says CC0-curated tiles with uncertain rights excluded; basename not listed in its exclusions. Per-image historical permissions were not established independently."
     },
     {
       "id": "TF-511",
