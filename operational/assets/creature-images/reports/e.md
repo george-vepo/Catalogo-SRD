@@ -256,6 +256,50 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
   - Investigação: Abyssal Hordeling é um demônio Pequeno de forma variável (armas naturais e características definidas por tabelas) e a ficha A5E não disponibiliza ilustração própria. Não atribuir a ele imagem genérica de outro demônio sem proveniência.
   - Referência: https://www.a5e.tools/node/5383
 
+## Investigação complementar de 2026-10-14
+
+Esta rodada confirmou identidades e fontes, mas **não obteve binários adicionais**. Permanecem 190/195 verificadas e 5 pendências. Não cadastrar como imagem concluída arquivos apenas mencionados em pesquisas.
+
+### TF-099 — Ankou Soul Herald
+
+Os dois arquivos da coleção TheGiddyLimit têm exatamente o mesmo Git blob SHA fd93f0c0ffbfe537592bdbd74e1a2dd5e40c6d47 e tamanho 75.629 bytes. Ankou Soul Herald é um dragão Gargantuan esquelético; imagens do ceifador folclórico humanoide não representam esta ficha.
+
+**Decisão:** Arte diferenciada não encontrada; não publicar o mesmo conteúdo de TF-090, nem um Ankou humanoide de lenda folclórica.
+
+**Fontes verificadas:** [referência](https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/ankousoulherald.jpg) · [referência](https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/ankousoulseeker.jpg) · [referência](https://www.5esrd.com/database/creature/Ankou-Soul-Herald/)
+
+### TF-185 — Alleyway Strangler
+
+O registro A5E descreve humanoide furtivo com tecido acolchoado, garrote travável e adagas. Publicação original Gate Pass Gazette #32, seção Murderous Menagerie. Nenhum arquivo binário vinculado especificamente ao Alleyway Strangler foi confirmado nessas referências.
+
+**Decisão:** Ilustração de assassino/ladino genérico não comprova identidade específica.
+
+**Fontes verificadas:** [referência](https://a5e.tools/node/5497) · [referência](https://a5e.tools/node/5463) · [referência](https://www.levelup5e.com/news/whats-in-gate-pass-gazette-annual-2024)
+
+### TF-200 — Aboleth Champion
+
+A ficha A5E define um humanoide Médio, com cota de malha e espada serrilhada; no módulo público Foundry Level Up Official, o NPC Aboleth Champion referencia systems/a5e/assets/aboleth.webp, arte da espécie aberrante base.
+
+**Decisão:** Referência artística no módulo Foundry é de um aboleth não humanoide; fonte específica do campeão humanoide não comprovada.
+
+**Fontes verificadas:** [referência](https://www.a5e.tools/node/2839) · [referência](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/aboleth-champion.json)
+
+### TF-239 — Aboleth, Nihileth, Nihilethic Dominator
+
+Em discussão pública datada de 21-22/03/2024 no D&D Beyond, comprador relata ausência de arte do Nihilethic Dominator no Tome of Beasts 1, confirmada por outro leitor. A criatura é forma maior derivada de Nihilethic Zombie; a lista de pawns menciona o nome, mas não há arquivo individual recuperado.
+
+**Decisão:** Reutilizar imagem do Nihilethic Zombie ou um monstro marinho genérico não representaria arquivo específico e diferenciado do dominator.
+
+**Fontes verificadas:** [referência](https://koboldpress.com/tome-of-beasts-1-what-changed/) · [referência](https://www.dndbeyond.com/posts/1690-unleash-over-400-monsters-in-kobold-presss-tome-of) · [referência](https://www.5esrd.com/database/creature/nihilethic-dominator-2/) · [referência](https://koboldpress.com/kpstore/product/tome-of-beasts-3-pawns/)
+
+### TF-264 — Abyssal Hordeling
+
+A ficha A5E descreve demônio Pequeno invocado com arma natural (mordida, garras, chifres ou tentáculos) e característica variável em tabelas; nenhuma ilustração vinculada especificamente a Abyssal Hordeling foi identificada.
+
+**Decisão:** Arte de qualquer demônio aleatório não seria prova de identidade para um monstro com aparência variável.
+
+**Fontes verificadas:** [referência](https://a5e.tools/node/5383) · [referência](https://a5e.tools/rules/gate-pass-gazette)
+
 ## Duplicações e ressalvas
 
 TF-099: same SHA-256 as TF-090
