@@ -2,7 +2,7 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-336",
   "nome": "Far Dorocha",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_PENDENTE_EDITORIAL",
   "edicao": {
     "sistema": "D&D 5e",
     "publicacao": "Tome of Beasts 2",
@@ -11,19 +11,17 @@
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/far-dorocha/",
-      "natureza": "secundaria_ou_reproducao_nao_reverificada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_anterior"
+      "url": "https://kpogl.wikidot.com/monster:far-dorocha",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "escopo": "regras detalhadas da criatura individual"
     }
   ],
   "estatisticas": {
     "nd": "5",
     "ca": 14,
     "pv": 82,
-    "dados_vida": null,
+    "dados_vida": "15d8+15",
     "atributos": {
       "FOR": 10,
       "DES": 18,
@@ -32,46 +30,187 @@
       "SAB": 10,
       "CAR": 18
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 30
+    },
     "deslocamentos_texto": "caminhar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {},
+    "pericias": {
+      "Deception": 7,
+      "Perception": 3,
+      "Stealth": 7
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Common",
+      "Elvish",
+      "Sylvan",
+      "Umbral"
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened"
+    ],
+    "origem_ca": "natural armor (CA 18 em penumbra ou escuridão)",
+    "proficiencia": 3
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
-  "acoes_bonus": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Traveler in Darkness",
+      "efeito": "Vantagem em INT (Arcana) envolvendo estradas sombrias e magia/itens das sombras."
+    },
+    {
+      "nome": "Under the Cloak of Night",
+      "gatilho": "está em penumbra ou escuridão",
+      "efeitos": [
+        "CA passa a 18, incluindo CAR",
+        "vantagem em salvaguardas"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Dirk",
+      "bonus_acerto": 7,
+      "tipo": "corpo_a_corpo_ou_distancia",
+      "alcance_ft": 5,
+      "distancia_ft": {
+        "normal": 20,
+        "longo": 60
+      },
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "4d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "falha": {
+          "condicao": "poisoned",
+          "duracao": "1 minuto"
+        },
+        "repetir": "fim de cada turno"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Dirk",
+        "Dirk"
+      ]
+    },
+    {
+      "nome": "Dirk",
+      "referencia_ataque": "Dirk"
+    },
+    {
+      "nome": "Dark Invitation",
+      "alcance_ft": 30,
+      "alvo": "um humanoide que ouve",
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 15
+      },
+      "falha": {
+        "condicao": "charmed",
+        "duracao": "1 dia",
+        "efeito": "acredita ter sido convidado a conhecer o senhor do far dorocha; segue voluntariamente, interpreta pedidos favoravelmente"
+      },
+      "repetir": "cada vez que sofre dano ou ação prejudicial do far dorocha ou companheiros",
+      "termino": [
+        "destruição do far dorocha",
+        "alvo está em plano diferente",
+        "far dorocha usa ação bônus",
+        "outro alvo enfeitiçado substitui anterior"
+      ],
+      "max_alvos": 1,
+      "imunidade": "24 horas após sucesso ou término"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Shadow Traveler",
+      "usos": "3/dia",
+      "precondicao": "em sombra, penumbra ou escuridão",
+      "efeito": "teleporta para espaço livre visível a até 30 pés"
+    },
+    {
+      "nome": "Encerrar Dark Invitation",
+      "precondicao": "alvo enfeitiçado",
+      "efeito": "encerra a condição sobre o alvo"
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "CA passa a 18 em luz tênue/escuro; teleporte em sombra"
+      "nome": "Innate/Spellcasting",
+      "atributo": "CAR",
+      "cd": 15,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "disguise self",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "thaumaturgy",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "command",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "phantom steed",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "compulsion",
+          "usos": "1/dia cada"
+        },
+        {
+          "nome": "darkness",
+          "usos": "1/dia cada"
+        }
+      ]
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Lâminas e dardos com movimentação nas trevas"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Falta conferir todas as mecânicas e ações individuais contra edição exata.",
-    "Campos de ação ainda sem dados completos (acerto, dano, alvos, resistências, condição, CDs, duração, usos e recargas).",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Validar dados e erratas da edição editorial exata. Não homologada por fonte comunitária.",
+    "Sem revisão independente ou promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Far Dorocha",
+    "tipo": "fey",
+    "tamanho": "Medium",
+    "alinhamento": "lawful evil",
+    "publicacao": "Tome of Beasts 2"
+  }
 }
