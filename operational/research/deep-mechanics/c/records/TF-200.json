@@ -4,114 +4,278 @@
   "nome": "Aboleth Champion",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 75,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "BLOQUEADA_LICENCA_FONTE_A5E_NAO_SRD",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing (Level Up A5E)",
     "publicacao": "Dungeon Delver's Guide",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Level Up Advanced 5E — Dungeon Delver's Guide (NÃO D&D 5e SRD)",
+    "fonte_identidade": "https://a5e.tools/node/2839"
   },
   "estatisticas": {
     "nd_catalogo": "7",
     "nd_fonte": "7",
     "ca": 14,
     "pv": 135,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "18d8+54",
+    "porte": "Medium",
+    "tipo": "humanoid",
     "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "atributos": {
+      "FOR": 18,
+      "DES": 12,
+      "CON": 16,
+      "INT": 14,
+      "SAB": 14,
+      "CAR": 16
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 1,
+      "CON": 3,
+      "INT": 2,
+      "SAB": 2,
+      "CAR": 3
+    },
+    "deslocamentos": {
+      "andar": 30
+    },
+    "pericias": [
+      {
+        "nome": "Deception",
+        "bonus": 6
+      },
+      {
+        "nome": "Intimidation",
+        "bonus": 6
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 30
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Common",
+      "Deep Speech",
+      "one additional"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 2900,
+    "bonus_proficiencia": 3,
+    "ca_origem": "chain shirt",
+    "system": "Level Up A5E"
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Abolethic Agent interage com reação Self-Sacrifice dos thralls; usa condições A5E bloodied/rattled",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Abolethic Agent",
+        "interacao": "aboleth thrall pode usar reação Self-Sacrifice para o champion como se fosse aboleth"
+      },
+      {
+        "nome": "Bloodied",
+        "regra_A5E": true,
+        "limiar_PV": 67
+      },
+      {
+        "nome": "Maneuver DC",
+        "cd": 15
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Dois golpes corpo a corpo; Serrated Sword produz wound com dano persistente; outras ações A5E dependem do compêndio.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "quantidade": 2,
+        "tipo_ataque": "melee",
+        "opcoes": [
+          "Serrated Sword",
+          "Strangling Grasp"
+        ]
+      },
+      {
+        "nome": "Serrated Sword",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+4",
+            "media": 8,
+            "tipo": "slashing"
+          }
+        ],
+        "wound": {
+          "alvos": "não undead/construct",
+          "teste": {
+            "atributo": "CON",
+            "cd": 15
+          },
+          "falha": {
+            "dano_continuo": {
+              "dados": "1d8",
+              "media": 4,
+              "tipo": "slashing"
+            },
+            "estado_A5E": "rattled"
+          },
+          "acumulo": "novas feridas em alvo já ferido não agravam",
+          "encerra": [
+            "action Medicine check DC12",
+            "ao receber pelo menos 1 HP de cura mágica"
+          ]
+        }
+      },
+      {
+        "nome": "Strangling Grasp",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "grapple": {
+          "alvo": "Large ou menor",
+          "escape_cd": 15,
+          "estados": [
+            "grappled",
+            "restrained",
+            "can't breathe"
+          ],
+          "limite": "não pode agarrar novo alvo com a mesma ação enquanto mantiver este"
+        }
+      },
+      {
+        "nome": "Mental Blast",
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 15
+        },
+        "teste": {
+          "atributo": "INT",
+          "cd": 13
+        },
+        "falha": {
+          "dano": {
+            "dados": "5d10",
+            "media": 27,
+            "tipo": "psychic"
+          },
+          "estado": "rattled A5E até fim do próximo turno"
+        },
+        "sucesso": "metade dano sem rattled"
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Serrated Sword",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+4",
+            "media": 8,
+            "tipo": "slashing"
+          }
+        ],
+        "wound": {
+          "alvos": "não undead/construct",
+          "teste": {
+            "atributo": "CON",
+            "cd": 15
+          },
+          "falha": {
+            "dano_continuo": {
+              "dados": "1d8",
+              "media": 4,
+              "tipo": "slashing"
+            },
+            "estado_A5E": "rattled"
+          },
+          "acumulo": "novas feridas em alvo já ferido não agravam",
+          "encerra": [
+            "action Medicine check DC12",
+            "ao receber pelo menos 1 HP de cura mágica"
+          ]
+        }
+      },
+      {
+        "nome": "Strangling Grasp",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "grapple": {
+          "alvo": "Large ou menor",
+          "escape_cd": 15,
+          "estados": [
+            "grappled",
+            "restrained",
+            "can't breathe"
+          ],
+          "limite": "não pode agarrar novo alvo com a mesma ação enquanto mantiver este"
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 2,
+      "tipo_ataque": "melee",
+      "opcoes": [
+        "Serrated Sword",
+        "Strangling Grasp"
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Vicious Taunt",
+        "precondicao": "alvo rattled consegue ouvir e entender",
+        "teste": {
+          "atributo": "CHA",
+          "cd": 14
+        },
+        "falha": {
+          "dano": {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "psychic"
+          },
+          "efeito": "disadvantage attack rolls até fim do próximo turno do alvo"
+        }
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição."
+    "A5E: Bloodied e rattled NÃO converter automaticamente para 5e; Abolethic Agent depende de reação Self-Sacrifice do thrall.",
+    "Licença de a5e.tools é explícita: site não é A5ESRD nem fonte de open content. DADOS PARA VERIFICAÇÃO; não aprovar reprodução ou exportação sem checar A5E SRD licenciado.",
+    "XP 7 CR não listado na fonte, XP foi extrapolado da tabela usual 5e e NÃO pode ser considerado oficial até conferir escala A5E.",
+    "Imagem/edição editorial pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com edição correta"
+    "verificação editorial da origem/erratas/condições de licença",
+    "direito de imagem, identidade e revisão visual"
   ],
   "fontes": [
     {
@@ -122,6 +286,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://a5e.tools/node/2839",
+      "tipo": "pesquisa individual CP45, não equivalente a autorização de publicação",
       "conferida_nesta_execucao": true
     }
   ],
@@ -164,5 +333,13 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 45,
+    "publicacao": "Level Up Advanced 5E — Dungeon Delver's Guide (NÃO D&D 5e SRD)",
+    "fonte_mecanicas": "https://a5e.tools/node/2839",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

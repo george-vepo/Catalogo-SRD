@@ -4,115 +4,290 @@
   "nome": "Alpha Werewolf",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 76,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "BLOQUEADA_LICENCA_FONTE_A5E_NAO_SRD",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing (Level Up A5E)",
     "publicacao": "Monstrous Menagerie",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Level Up A5E — Monstrous Menagerie (NÃO o Alpha Werewolf D&D 5e CR13)",
+    "fonte_identidade": "https://a5e.tools/node/1721"
   },
   "estatisticas": {
     "nd_catalogo": "6",
     "nd_fonte": "6",
     "ca": 12,
     "pv": 104,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "16d8+32",
+    "porte": "Medium",
+    "tipo": "humanoid",
     "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "atributos": {
+      "FOR": 14,
+      "DES": 14,
+      "CON": 14,
+      "INT": 10,
+      "SAB": 10,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": 2,
+      "CON": 2,
+      "INT": 0,
+      "SAB": 0,
+      "CAR": 0
+    },
+    "deslocamentos": {
+      "andar": 30,
+      "forma_lobo": 40
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 2,
+        "extra": "+1d4"
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 4
+      },
+      {
+        "nome": "Survival",
+        "bonus": 2
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 30,
+        "restricao": "somente wolf ou hybrid"
+      }
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "damage from nonmagical NON-silvered weapons"
+    ],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 2300,
+    "bonus_proficiencia": 2,
+    "ca_origem": null,
+    "system": "Level Up A5E"
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Pack Tactics, Keen Hearing and Smell e vulnerabilidade a Wolfsbane; interações do sistema A5E",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Bloodied",
+        "limiar_PV": 52,
+        "regra": "A5E"
+      },
+      {
+        "nome": "Keen Hearing and Smell",
+        "efeito": "advantage Perception checks baseados em audição ou olfato"
+      },
+      {
+        "nome": "Pack Tactics",
+        "gatilho": "aliado até 5ft do alvo e não incapacitated",
+        "efeito": "advantage attack rolls"
+      },
+      {
+        "nome": "Wolfsbane",
+        "em_forma": "wolf ou hybrid",
+        "condicao": "flor vivente ou seca a até 10ft cujo cheiro percebe",
+        "efeito": "poisoned",
+        "armas_com_wolfsbane": "tratadas como silvered para esse alvo por 1h"
+      },
+      {
+        "nome": "Cursed Wounds",
+        "aplica": [
+          "Bite",
+          "Claw"
+        ],
+        "dano_extra": {
+          "dados": "2d6",
+          "media": 7,
+          "tipo": "necrotic"
+        },
+        "reducao_pv_max": "igual ao dano necrotic sofrido até long rest; alvo morre ao chegar a 0"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Mordidas/garras e transformação sob regras do Monstrous Menagerie; confirmar ações específicas no bloco editorial.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "quantidade": 2,
+        "restricao": "no máximo um Bite",
+        "formas_condicionam_opcoes": true
+      },
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "formas": [
+          "humanoid",
+          "hybrid"
+        ]
+      },
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "slashing"
+          }
+        ],
+        "formas": [
+          "wolf",
+          "hybrid"
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ],
+        "formas": [
+          "wolf",
+          "hybrid"
+        ],
+        "humanoid_alvo": {
+          "teste": {
+            "atributo": "CON",
+            "cd": 12
+          },
+          "falha": "cursed with werewolf lycanthropy"
+        }
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "formas": [
+          "humanoid",
+          "hybrid"
+        ]
+      },
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "slashing"
+          }
+        ],
+        "formas": [
+          "wolf",
+          "hybrid"
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ],
+        "formas": [
+          "wolf",
+          "hybrid"
+        ],
+        "humanoid_alvo": {
+          "teste": {
+            "atributo": "CON",
+            "cd": 12
+          },
+          "falha": "cursed with werewolf lycanthropy"
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 2,
+      "restricao": "no máximo um Bite",
+      "formas_condicionam_opcoes": true
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Shapeshift",
+        "formas": [
+          "wolf",
+          "wolf-humanoid hybrid",
+          "humanoid"
+        ],
+        "regras": [
+          "atributos não mudam",
+          "não fala em forma wolf",
+          "equipamento não transforma",
+          "retorna a humanoid na morte"
+        ]
+      },
+      {
+        "nome": "Frenzied Bite",
+        "precondicoes": [
+          "bloodied (PV<=52)",
+          "wolf OU hybrid"
+        ],
+        "efeito": "um ataque Bite"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "A5E ND6 HP104 difere do 'Alpha Werewolf' 5eSRD ND13 HP180; não utilizar homônimo nem mesclar sistemas.",
-    "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição."
+    "Alpha Werewolf escolhido é A5E CR6 104 PV, NÃO nome homônimo 5e CR13 180 PV. Vulnerabilidade Wolfsbane é condição de forma/cheiro, não dano normal.",
+    "Cursed Wounds aplica dano necrotic extra somente Claw e Bite; Shapeshift / Frenzied Bite condicionais.",
+    "a5e.tools diz que NÃO constitui A5ESRD aberto; licença do material precisa ser conferida em edição licenciada antes de aprovação.",
+    "XP deve ser revisado no sistema A5E e imagens não verificadas."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com edição correta"
+    "verificação editorial da origem/erratas/condições de licença",
+    "direito de imagem, identidade e revisão visual"
   ],
   "fontes": [
     {
@@ -123,6 +298,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://a5e.tools/node/1721",
+      "tipo": "pesquisa individual CP45, não equivalente a autorização de publicação",
       "conferida_nesta_execucao": true
     }
   ],
@@ -166,5 +346,13 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 45,
+    "publicacao": "Level Up A5E — Monstrous Menagerie (NÃO o Alpha Werewolf D&D 5e CR13)",
+    "fonte_mecanicas": "https://a5e.tools/node/1721",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
