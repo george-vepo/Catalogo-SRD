@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 61 / 195.**
+**Armazenadas e verificadas: 71 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -14,6 +14,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/264cc13c326def74e593723382600d4a0e54c0ff — 10/10 verificadas: TF-103, TF-104, TF-105, TF-106, TF-107, TF-108, TF-109, TF-110, TF-111, TF-112
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d — 10/10 verificadas: TF-113, TF-114, TF-115, TF-116, TF-117, TF-118, TF-119, TF-120, TF-121, TF-122
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9c6cee61e6a3cad23d40f6672a753993797c5d74 — 10/10 verificadas: TF-123, TF-124, TF-125, TF-126, TF-127, TF-128, TF-129, TF-130, TF-131, TF-132
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/f78b0d30b81a74efabaa38f0f9dd737b7f96b329 — 10/10 verificadas: TF-133, TF-134, TF-135, TF-136, TF-137, TF-138, TF-139, TF-140, TF-141, TF-142
 
 ## Binários publicados e conferidos
 
@@ -78,22 +79,22 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-130 / Giant, Thursir Hearth Priestess: operational/assets/creature-images/TF-130.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Thursir%20Hearth%20Priestess.webp; 193826 bytes; 1000x1591 px; SHA-256: c2f4ca510feb3d988fb5d8b452ea2de2e0f696b402d37f3e1e76659afbb5ef4f; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
 - TF-131 / Ogre, Rainforest: operational/assets/creature-images/TF-131.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Rainforest%20Ogre.webp; 201916 bytes; 1081x1200 px; SHA-256: 7af8723efec264ce172306b95043c98d61d3793950f649ce929517dc3a2f880e; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
 - TF-132 / Ogre, Rockchewer: operational/assets/creature-images/TF-132.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Rockchewer%20Ogre.webp; 97704 bytes; 1200x1198 px; SHA-256: fac2e992817970c16203f120c19794429834e1bffe06d4852e09fa195bfa20d2; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-133 / Ogre, Tusked Crimson: operational/assets/creature-images/TF-133.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Tuskedcrimsonogre.jpg; 81448 bytes; 616x700 px; SHA-256: ec7cfb92ee6a73367d2c1a833dcdd245e809b88990b2526b7e334bd56fa40cb1; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-134 / Zimwi: operational/assets/creature-images/TF-134.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Zimwi.webp; 82702 bytes; 800x800 px; SHA-256: 6510ae33ccd855a0c0a8d8cb34ad9e535439b997c4623ce6379681eb35a23bcd; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-135 / Abaasy: operational/assets/creature-images/TF-135.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Abaasy.webp; 92082 bytes; 1000x1252 px; SHA-256: b125f78b0d372462668cde39f66f920c6ecbf7583269c4e7e0d1c4f837b23efc; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-136 / Belu: operational/assets/creature-images/TF-136.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Belu.webp; 149038 bytes; 1000x1447 px; SHA-256: 30fb00afd15527870e1f03a89eaad332c78dccac4e39c3cc5addcc3172cd03c9; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-137 / Berberoka: operational/assets/creature-images/TF-137.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Berberoka.webp; 170264 bytes; 1000x1095 px; SHA-256: 7a1f459b6651cb880afcb99e7c8b95077ed264933757141e2d7887b900a91f54; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-138 / Chuhaister: operational/assets/creature-images/TF-138.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/chuhaister.jpg; 67807 bytes; 466x700 px; SHA-256: 2378e401846b5ca8113b13e6c691d35a939c52d512c943994584932ae92f85f4; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-139 / Giant, Cacus: operational/assets/creature-images/TF-139.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cacusgiant.jpg; 67887 bytes; 471x700 px; SHA-256: ff7713debc84b7d792f451bb3ac3e7859e7973e19909038b2071bde60a5dde7a; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-140 / Giant, Cave: operational/assets/creature-images/TF-140.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cavegiant.jpg; 67041 bytes; 648x700 px; SHA-256: d3d6c7020616dfeca6d47dba7d5c3c5ff3806fda0015e28dd6c38aea01b96b2c; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-141 / Giant, Desert: operational/assets/creature-images/TF-141.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Desert%20Giant.webp; 74934 bytes; 613x801 px; SHA-256: 2ada9766f292672e855f5df119ce051d358caf5508cd6e91cf528ebf65c49b96; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-142 / Giant, Firestorm: operational/assets/creature-images/TF-142.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Firestorm%20Giant.webp; 179390 bytes; 1000x1247 px; SHA-256: 06e75ac3041253712654597244426da658ec3743e39a79bb0cb97db85e6f2a1f; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
-- TF-133 / Ogre, Tusked Crimson: pending; 
-- TF-134 / Zimwi: pending; 
-- TF-135 / Abaasy: pending; 
-- TF-136 / Belu: pending; 
-- TF-137 / Berberoka: pending; 
-- TF-138 / Chuhaister: pending; 
-- TF-139 / Giant, Cacus: pending; 
-- TF-140 / Giant, Cave: pending; 
-- TF-141 / Giant, Desert: pending; 
-- TF-142 / Giant, Firestorm: pending; 
 - TF-143 / Giant, Haunted: pending; 
 - TF-144 / Giant, Hellfire: pending; 
 - TF-147 / Giant, Shire: pending; 
