@@ -1,0 +1,186 @@
+# SRD Card Game 607 — auditoria da pesquisa mecânica C
+
+**Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 13/10/2026.
+
+## Resultado mensurável
+
+- **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
+- **7 fichas consultadas diretamente em detalhe nesta execução** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **124 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **0 criaturas declaradas mecanicamente completas**, **109 parciais**, **22 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
+- Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
+- **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
+
+## Persistência: 14 checkpoints
+
+| N.º | Primeiro–último ID | Commit GitHub | Confirmação |
+|---:|---|---|---|
+| 1 | TF-412–TF-421 | `878c67f0b4c4313c6787a94808ab11ec2a39a2b9` | read-back de JSON: OK |
+| 2 | TF-423–TF-462 | `41283bead2dec0ed6646271ffb45153ee4ec5018` | read-back de JSON: OK |
+| 3 | TF-468–TF-505 | `039fd608cb74a648aebb04368df8eb74c45252cb` | read-back de JSON: OK |
+| 4 | TF-506–TF-522 | `46b55be00f5ad75a303870fd7522ebdb4666a29d` | read-back de JSON: OK |
+| 5 | TF-120–TF-129 | `0488c3a02c3cce12db65c4478c6cab0e45841495` | read-back de JSON: OK |
+| 6 | TF-130–TF-139 | `f749e3876ff3a16abdb2f9c62760075909888eec` | read-back de JSON: OK |
+| 7 | TF-140–TF-151 | `d6b5a6738c2dd0b7349ca279c13e03709e298dd6` | read-back de JSON: OK |
+| 8 | TF-152–TF-161 | `2c42a0e62128f204b77b0e24cbb1d70c0b871e96` | read-back de JSON: OK |
+| 9 | TF-162–TF-171 | `bc86b2adfdb8341ba552d8edeac10c0fe80772b1` | read-back de JSON: OK |
+| 10 | TF-172–TF-181 | `330613ec75a608fc402c2a7ec6f3cffe659f77d5` | read-back de JSON: OK |
+| 11 | TF-182–TF-194 | `f0ffc0b144239b213176a533c7727177be4c1ef7` | read-back de JSON: OK |
+| 12 | TF-195–TF-204 | `96c581caf3c3f383a6cd023e60181de2b97df236` | read-back de JSON: OK |
+| 13 | TF-205–TF-502 | `9720a96e82d194b5bad3c57dba7818eea15da942` | read-back de JSON: OK |
+| 14 | TF-512–TF-512 | `4fd97b161de6b468b827b2eb014c547775d047c6` | read-back de JSON: OK |
+
+**Enriquecimento A5E:** `29ba80ad47084ddb342d943beaddf65031400718` (sete JSONs com mecânicas detalhadas, verificados novamente na branch).
+
+## Auditoria individual: todos os 131 IDs
+
+| ID | Criatura | Estado | Detalhe novo | Fonte | Pendência principal |
+|---|---|---|---|---|---|
+| TF-412 | Mandrake, Great | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/mandrake-great/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-413 | Sinstar, Star Thrall | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/star-thrall/) | Não confundir com a criatura Sinstar principal, ND 17: a ficha do catálogo é Star Thrall. |
+| TF-414 | Wallflower | BLOQUEADA | sim | [individual](https://a5e.tools/node/1660) | Texto editorial da ação Beak referencia grick, não Wallflower; falta determinar interpretação correta. |
+| TF-415 | Gloomflower | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/gloomflower/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
+| TF-416 | Wind Witch | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/wind-witch/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
+| TF-417 | Mandriano | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:mandriano) | Fonte KPOGL independente; comparar uso e limite de mortos-vivos com Creature Codex original. |
+| TF-418 | Sodwose | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/sodwose/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-419 | Witchalder | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/witchalder/) | Confirmar termos/recargas da nuvem de pólen contra livro. |
+| TF-420 | Mandriano, Ancient | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:ancient-mandriano) | Variante Ancient distinta de TF-417; KPOGL independente, confirmar edição. |
+| TF-421 | Planar Flora, Execrable Shrub | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/execrable-shrub/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-423 | Spawn of Chernobog | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/spawn-of-chernobog/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-424 | Soul Eater | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:soul-eater) | Revisar edição original vs revisão de Tome of Beasts 1 e condição precisa de Soul Drain; referência comunitária. |
+| TF-425 | Snow Terror | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/snow-terror/) | Conferir ações e CDs em detalhe na fonte e suplemento original. |
+| TF-426 | Planar Flora, Thorned Sulfurlord | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/thorned-sulfurlord/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-428 | Cerberus Guardian | PARCIAL | sim | [individual](https://a5e.tools/node/2854) | A5E: limite de ações lendárias e Legendary Resistance mudam conforme cabeças ativas. |
+| TF-431 | Conjured Guardian | PARCIAL | sim | [individual](https://a5e.tools/node/5171) | Challenge — no bloco editorial; CD e ataque dependem do conjurador, não fixar ND 0. |
+| TF-448 | Imprisoned Celestial | PARCIAL | não | [individual](https://a5e.tools/node/5406) | Publicação associada a Gate Pass Gazette #31; confirmar número da edição editorial. |
+| TF-449 | Imprisoned Fiend | PARCIAL | não | [individual](https://a5e.tools/node/5407) | Publicação ligada a Gate Pass Gazette #31; tratar strife como A5E. |
+| TF-459 | Ankheg Empress | PARCIAL | não | [individual](https://a5e.tools/node/3424) | Confirmar alcance exato de cada ataque ácido. |
+| TF-462 | Behir Magus | PARCIAL | não | [individual](https://a5e.tools/node/1465) | Conferir quais reações são apenas da variante Magus e o texto de suas CDs. |
+| TF-468 | Faerie Chimera | BLOQUEADA | sim | [individual](https://a5e.tools/node/3239) | Breath Weapon descreve fire mas inflige cold; sem correção presumida. |
+| TF-470 | Fiendish Chimera | BLOQUEADA | sim | [individual](https://a5e.tools/node/3240) | Ações lendárias Bite/Claw e reação headbutt não correspondem aos nomes de ações da variante. |
+| TF-473 | Flying Lion | PARCIAL | não | [individual](https://a5e.tools/node/1663) | Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico. |
+| TF-476 | Greater Sphinx | PARCIAL | não | [individual](https://a5e.tools/node/1797) | Não confundir com esfinge comum CR 11; diferenciar regras de covil opcionais. |
+| TF-499 | Cloud of Ghasthoppers | PARCIAL | não | [individual](https://a5e.tools/node/4002) | Revisar trechos editoriais truncados do teste de resistência da Despair Aura. |
+| TF-500 | Gorger Zombie Horde | BLOQUEADA | sim | [individual](https://a5e.tools/node/2522) | Página editorial individual Source Gate Pass Gazette, divergente da atribuição histórica. |
+| TF-501 | Lost Prospector | PARCIAL | não | [individual](https://a5e.tools/node/2965) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-503 | Stuffed Crab | PARCIAL | não | [individual](https://a5e.tools/node/2213) | Confirmar número de ghouls e procedimento de libertação dos presos. |
+| TF-504 | Warlord's Ghost | PARCIAL | não | [individual](https://a5e.tools/node/1464) | Ficha editorial mantém termos banshee: distinguir variante Warlord's Ghost do monstro-base. |
+| TF-505 | Demilich Mastermind | PARCIAL | não | [individual](https://a5e.tools/node/1478) | Não confundir com demilich padrão (PV 159, outro bloco). |
+| TF-506 | Mariner Ghost Swarm | PARCIAL | não | [individual](https://a5e.tools/node/3406) | Conferir lacunas de formatação na descrição da ferramenta editorial. |
+| TF-507 | Fogborn Skeleton Horde | PARCIAL | não | [individual](https://a5e.tools/node/3460) | Tratar bloodied e manejo da horda segundo A5E, não converter sem revisão. |
+| TF-509 | Fogborn Zombie Horde | PARCIAL | não | [individual](https://a5e.tools/node/3462) | Regra de grupo e atributos podem coincidir com Gorger Zombie Horde, mas variantes são distintas. |
+| TF-510 | Infernal Mammoth | PARCIAL | não | [individual](https://a5e.tools/node/3426) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-511 | Fiendbloom Awakened Tree | PARCIAL | não | [individual](https://a5e.tools/node/3414) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-516 | Kanos Spawn | PARCIAL | não | [individual](https://a5e.tools/node/2991) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-517 | Imp Flock | PARCIAL | não | [individual](https://a5e.tools/node/3394) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-518 | Infernal Dwarf | PARCIAL | não | [individual](https://a5e.tools/node/3425) | Confirmar seleção de magias preparada e gatilhos de United in Action. |
+| TF-521 | Bugbear Door Breaker | PARCIAL | não | [individual](https://a5e.tools/node/4185) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-522 | Crime Boss | PARCIAL | não | [individual](https://a5e.tools/node/1895) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-120 | Ashen Custodian | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/ashen-custodian/) | A página inclui 'Alternate Critical (Source: Monster Crits for 5e)' após Cleansing Strike. Esse texto é de outro suplemento, foi EXCLUÍDO da mecânica-base. |
+| TF-121 | Animal Lord, Queen of Birds | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-birds/) | Multiattack na página tem erro de digitação 'oOne' em descrição de ataques da forma verdadeira; tratado como leitura contextual, sem substituir fonte editorial original. |
+| TF-122 | Animal Lord, Queen of Cats | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-cats/) | As formas determinam ações disponíveis; não permitir bite/claw em forma humana. |
+| TF-123 | Animal Lord, Queen of Scorpions | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-scorpions/) | A página 5eSRD inclui parágrafo narrativo sobre a apresentação dos Animal Lords NO MEIO das linhas de REGIONAL EFFECTS. Esse trecho não é habilidade, foi descartado. |
+| TF-124 | Animal Lord, Queen of Serpents | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/) | As ações são restritas às formas humana/serpente/híbrida; ações lendárias não podem ser tratadas como ações comuns. |
+| TF-125 | Animal Lord, Queen of Mammoths | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/queen-of-mammoths/) | A fonte intercala um parágrafo narrativo depois das ações lendárias; não registrar como mecânica. |
+| TF-126 | Giant, Abbanith | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-abbanith/) | Earth Counter é reação com limitação temática, não counterspell genérico. |
+| TF-127 | Giant, Laestrigonian | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-laestrigonian/) | A doença possui efeitos persistentes próprios; não transformar em veneno. |
+| TF-128 | Giant, Phase | PARCIAL | não | [individual](https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2) | Página individual /giant-phase/ do 5eSRD indisponível; dados conferidos em resumo de terceiros e em reprodução de Tome of Beasts 2, não em publicação editorial oficial acessível. |
+| TF-129 | Giant, Snow | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-snow/) | Imune a frio e vulnerável a fogo; regeneração depende de terreno nevado. |
+| TF-130 | Giant, Thursir Hearth Priestess | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/thursir-hearth-priestess/) | Três opções de Hearth Blessing são variantes da mesma ação, não três ações distintas. |
+| TF-131 | Ogre, Rainforest | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ogre-rainforest/) | Change Shape não transforma equipamento; spear somente na forma ogre. |
+| TF-132 | Ogre, Rockchewer | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ogre-rockchewer/) | Gravel Spray depende de Chew Rock prévio, não é ação livre independente. |
+| TF-133 | Ogre, Tusked Crimson | PARCIAL | não | [individual](https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex) | A ficha do Ogre Tusked Crimson não abriu como página individual do 5eSRD; mecânica corroborada por bestiário de terceiros e referência do Creature Codex. |
+| TF-134 | Zimwi | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/zimwi-3pp) | A página é rotulada como revisão de Tome of Beasts 1; comparar com versão original para aprovação. |
+| TF-135 | Abaasy | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/abaasy/) | Há restrição de mãos quando usa Spear com ambas; não permitir Iron Axe simultâneo. |
+| TF-136 | Belu | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/belu/) | Rever se 'cures any diseases or conditions' da pomada possui restrições editoriais; não presumir que remove qualquer estado sem exceção. |
+| TF-137 | Berberoka | BLOQUEADA | não | [individual](https://anyflip.com/lphgc/rjrj/basic/51-100) | Página individual /berberoka/ do 5eSRD não encontrada; mecânica verificada em reprodução não oficial de Tome of Beasts 3 e índice da Kobold Press. |
+| TF-138 | Chuhaister | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/chuhaister/) | Página do 5eSRD não identifica publicação no rodapé; a identidade Creature Codex e ND7 são confirmados pelo índice oficial Kobold Press. |
+| TF-139 | Giant, Cacus | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-cacus/) | Há homônimo em 5E RPG: Ancient Adventures ND14, CA14/PV162, na URL /giant-cacus-2/; descartado para o catálogo. |
+| TF-140 | Giant, Cave | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-cave/) | Homônimo /giant-cave-3/ pertence a Tome of Horrors, ND6 e CA14/PV137, portanto descartado. |
+| TF-141 | Giant, Desert | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/giant-desert-3pp/) | A página 5eSRD inclui trecho de descrição narrativa colado à ação Rock; removê-lo da mecânica. |
+| TF-142 | Giant, Firestorm | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/firestorm-giant/) | A fonte chama a criatura Firestorm Giant, enquanto o catálogo ordena Giant, Firestorm; mesma identidade pelo índice Kobold Press. |
+| TF-143 | Giant, Haunted | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-haunted/) | Três espíritos reconstituem-se segundo regras narrativas; traços dados por espíritos são removidos individualmente. |
+| TF-144 | Giant, Hellfire | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster%3Ahellfire-giant) | Imagem final e revisão independente pendentes. |
+| TF-147 | Giant, Shire | PARCIAL | não | [individual](https://www.dndgrove.com/bestiary/8/giant-shire) | Página individual 5eSRD não localizada; confirmar seção de habilidades e ações na publicação de origem. |
+| TF-148 | Giant, Thin | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-thin/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-149 | Giant, Thursir Armorer | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/thursir-armorer/) | Conferir regras de armadura quebrada e gatilhos dos acertos críticos na revisão. |
+| TF-150 | Ogre, Void-Blessed | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster%3Avoid-blessed-ogre) | Revisão de duração dos efeitos de Volatile Stomach. |
+| TF-151 | Titan, Degenerate | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/titan-degenerate-3pp/) | Conferir versão 2023 do Tome of Beasts 1; não misturar com edição anterior. |
+| TF-152 | Giant, Cave Shaman | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-cave-giant-shaman/) | Revisar lista de magias e atribuição do material antes de publicação. |
+| TF-153 | Giant, Lantern | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/lantern-giant/) | Verificar duração e raio luminoso na revisão independente. |
+| TF-154 | Giant, Shadow | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/giant-shadow/) | A página publica 209 PV (22d20+66); essa fórmula é incompatível com 209 PV e deve ser corrigida por errata/editor antes da integração, preservando ambos os valores originais. |
+| TF-155 | Xing Tian | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/xing-tian/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-156 | Giant, Hraesvelgr | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-corpse-swallower-3pp/) | Publicação de 2023 difere mecanicamente da versão antiga; não misturar Shapechanger e conjuração de 2016. |
+| TF-157 | Giant, Mountain | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/Giant-Mountain/) | Seção de ações comuns incompleta na resposta de busca; bloco de Mountain Master contaminado por efeitos regionais. |
+| TF-158 | Ooze, Alchemical Apprentice | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-alchemical-apprentice/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-159 | Ooze, Amber | BLOQUEADA | não | [individual](https://anyflip.com/jfxvv/vjtj/basic/251-300) | A criatura de CR 4 do Tome of Beasts 2 não é a versão homônima CR 1/2 do 5eSRD (AC8 PV13). |
+| TF-160 | Ooze, Corrupting | PARCIAL | não | [individual](https://anyflip.com/usqxr/fcko/basic/301-350) | Confirmação editorial e imagem pendentes. |
+| TF-161 | Ooze, Eldritch | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-eldritch/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-162 | Ooze, Ichor | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-ichor/) | Revisar limitações de Life Drain; arte pendente. |
+| TF-163 | Ooze, Ink Guardian | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-ink-guardian/) | Revisar exceção ao dano de thunder e frasco de ressurgimento na publicação. |
+| TF-164 | Ooze, Leavesrot | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-leavesrot/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-165 | Ooze, Manure | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-manure/) | Verificar interação entre imunidade a slashing e reação Split; a fonte lista ambos e não deve ser silenciosamente reinterpretada. |
+| TF-166 | Ooze, Mineral | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-mineral/) | Multiattack cita Slam mas única opção de ataque impressa na página é Pseudopod; confirmar nome na publicação. |
+| TF-167 | Ooze, Shadow | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-shadow/) | Variante Freezing Shadow Ooze aparece na página; não misturar com ficha principal. |
+| TF-168 | Ooze, Sinkhole | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/sinkhole-ooze/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-169 | Ooze, Suppurating | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-suppurating/) | Variante Seeping Death Skeleton é entidade distinta, não integrar à ficha de ooze. |
+| TF-170 | Voidpool | BLOQUEADA | não | ausente | Índice da editora identifica Voidpool, Tome of Beasts 2, ND5, mas página 5eSRD /database/creature/voidpool/ retornou 404. |
+| TF-171 | Yaga Goo | PARCIAL | não | [individual](https://www.herebetaverns.com/srd/dnd-5e/monsters/yaga-goo) | Fonte mecânica reproduzida em terceiros; ficha editorial deve ser revisada. |
+| TF-172 | Animated Offal | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:animated-offal) | KPOGL é wiki independente; acesso integral ao livro não comprovado. |
+| TF-173 | Black Patch | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/black-patch/) | Regra de encantamento inclui salvaguardas repetidas: exigir verificação antes de implementar. |
+| TF-174 | Oozasis | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/oozasis-3pp) | ATENÇÃO: página 5eSRD revisão 2023 diverge da versão original CR9, inclusive nos atributos/salvaguardas; CA/PV compatíveis, mas não combinar demais mecânicas das duas edições. |
+| TF-175 | Ooze, Blood | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-blood/) | Não usar homônimo /ooze-blood-2/, que é uma besta Tiny CR0. |
+| TF-176 | Ooze, Foxfire | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-foxfire/) | Espalhamento de dano elétrico a alvos que portam metal exige revisão. |
+| TF-177 | Ooze, Giant Shark Bowl | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/) | Estrutura representa criatura composta; não assumir que o tubarão separado seja uma ficha independente. |
+| TF-178 | Ooze, Ruby | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-ruby) | Corrosão permanente depende de material e regras de equipamento; revisar antes de implementar. |
+| TF-179 | Ooze, Shoal | BLOQUEADA | não | [individual](https://anyflip.com/myubd/nuoj/basic/301-350) | Fonte secundária reproduzida; só dados básicos e identificação ND10/CA9/PV232 conferidos; bloco completo ainda pendente. |
+| TF-180 | Ooze, Sinoper | PARCIAL | não | [individual](https://anyflip.com/myubd/nuoj/basic/301-350) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-181 | Ooze, Snow | BLOQUEADA | não | [individual](https://kpogl.wikidot.com/monster:snow-ooze) | Wiki não oficial; dados CA/PV/ND conferidos mas ações não transcritas integralmente. |
+| TF-182 | Ooze, Tar | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ooze-tar/) | O fogo recebido não deve causar dano à gosma imune ao fogo, mas pode incendiá-la. |
+| TF-186 | Atavist | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/npc-atavist/) | Identificado como NPC Atavist, evitar homônimo de outras fontes. |
+| TF-187 | Bearfolk | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/bearfolk-3pp/) | Edição de 2023, possível diferença com Tome of Beasts original. |
+| TF-188 | Behtu | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/behtu-3pp) | Não tratar infusão carregada como suprimento ilimitado. |
+| TF-189 | Black Knight Commander | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/black-knight-commander-3pp/) | Não aplicar ataques da montaria sem tê-la presente. |
+| TF-190 | City Watch Captain | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/city-watch-captain-3pp/) | A edição 2023 usa iniciativa coletiva opcional; não misturar com mecânicas SRD padrão. |
+| TF-191 | Corpse Thief | PARCIAL | não | [individual](https://anyflip.com/myubd/zdka/basic/51-100) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-192 | Cueyatl Moon Priest | PARCIAL | não | [individual](https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest) | Página 5eSRD individual não encontrada; reproduções com estatísticas consistentes. |
+| TF-193 | Cueyatl Sea Priest | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/cueyatl-sea-priest/) | Referência a regras de comunicação com vida marinha requer classificação das espécies. |
+| TF-194 | Cueyatl Warrior | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/cueyatl-warrior/) | Robinloft apresenta CA12 e a ficha 5eSRD mostra CA13; reavaliar armor/stats e errata, sem mesclar dados. |
+| TF-195 | Tosculi, Drone | BLOQUEADA | não | [individual](https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone) | Duas redações diferentes dos traços Skittering/Crowd Tactics entre edições; manter status parcial até comparação. |
+| TF-196 | Tosculi, Elite Bow Raider | PARCIAL | não | [individual](https://dr-eigenvalue.github.io/bestiary/creature/tosculi-elite-bow-raider) | Fonte secundária, mas CR5/CA16/PV97 também constam da edição original; verificar alteração de 2023. |
+| TF-197 | Tosculi, Jeweled Drone | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/tosculi-jeweled-drone/) | Não acumular múltiplos dados de Pheromones. |
+| TF-198 | Tosculi, Warrior | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/tosculi-warrior-3pp/) | Tome of Beasts original indexado como ND2 com três ataques; catálogo oficial revisado e arquivo local indicam ND3. Preservar revisão 2023 como referência e NÃO combinar duas edições. |
+| TF-199 | Yakirian | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/yakirian/) | Resistência a frio e deslocamento 40 pés devem ser preservados. |
+| TF-200 | Aboleth Champion | PARCIAL | não | [individual](https://a5e.tools/node/2839) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-201 | Alpha Werewolf | PARCIAL | não | [individual](https://a5e.tools/node/1721) | A5E ND6 HP104 difere do 'Alpha Werewolf' 5eSRD ND13 HP180; não utilizar homônimo nem mesclar sistemas. |
+| TF-202 | Bearfolk Thunderstomper | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/bearfolk-thunderstomper/) | A página apresenta regra externa Alternate Critical de Monster Crits for 5e; foi EXCLUÍDA do resumo mecânico-base. |
+| TF-203 | Cueyatl Warchief | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/cueyatl-warchief/) | A montaria tem bloco separado e só participa se presente. |
+| TF-204 | Thripper | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/thripper/) | Fonte tem typo 'tripper' na multiattack, não confundir criatura ou generalizar counterspell. |
+| TF-205 | Yathon | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/yathon/) | O bloco web mostra modificador CHA corrompido '7 (?2)' e alcance de Claw redundante; preservar dados claros e marcar tipografias. |
+| TF-206 | Zeitgeist | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/zeitgeist/) | Uma ficha humanoide viva, não fantasma morto-vivo, apesar do nome; registrar duas CA. |
+| TF-208 | Acid Ant | PARCIAL | não | [individual](https://www.wobblerocket.com/2025/07/20/acid-ants-worldbuilding-with-the-creature-codex/) | ND0.3 no catálogo representa CR1/4; descrição contém variante Fungi Bloom opcional, não incorporar ao bloco base. |
+| TF-210 | Agnibarra | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/agnibarra/) | Dano adicional de fogo por turno termina quando apagado, não aplicar permanentemente. |
+| TF-285 | Snallygaster | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/snallygaster/) | Distinguir variante Tome of Beasts 3 CR15 de homônimo; revisão mecânica independente |
+| TF-469 | Fateholder | BLOQUEADA | não | [individual](https://a5e.tools/node/2194) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-483 | Squashling | BLOQUEADA | não | [individual](https://a5e.tools/node/3666) | Lacunas nos efeitos Seed Shot e Charming Aspect |
+| TF-493 | Rock Troll | PARCIAL | não | [individual](https://www.a5e.tools/node/2270) | Não aplicar lore geral de troll; conferir frio e trovejante no bloco específico |
+| TF-494 | Askwise Keeper | PARCIAL | não | [individual](https://www.a5e.tools/node/2206) | Texto menciona voo, mas não há velocidade de voo no bloco |
+| TF-502 | Ghasthopper | BLOQUEADA | sim | [individual](https://a5e.tools/node/4001) | CA/PV e ataques recuperados da ficha individual A5E, mas Despair Aura cita saving throw sem CD/atributo. |
+| TF-512 | Anzû | PARCIAL | não | [individual](https://www.a5e.tools/node/2393) | Fonte Mythological Figures & Maleficent Monsters; comparar variante do catálogo |
+
+## Divergências a preservar
+
+- **TF-414** — fonte menciona grick na bicada de Wallflower: não corrigir por inferência.
+- **TF-431** — não possui ND fixo na ficha; dependente de CD, ataque, proficiência e slot do conjurador.
+- **TF-468** — texto do sopro fala fire, valores de dano falam cold; manter ambos e bloquear resolução.
+- **TF-470** — inconsistência dos nomes nas ações lendárias e na reação Winged Charge.
+- **TF-500** — campo Source da página aponta Gate Pass Gazette, diferente da atribuição anterior.
+- **TF-502** — página atual fornece CA13 PV31 atributos e ataques, mas falta salvaguarda completa de Despair Aura.
+- Registros históricos sinalizados como BLOQUEADA mantêm incertezas específicas, incluindo fontes contaminadas, variantes e edições divergentes.
+
+## Validação e encaminhamento
+
+- A5E e D&D 5e são mantidos como linhas distintas. Regras de `bloodied`, `rattled`, `fatigue`, `horde`, conjuração dinâmica e outras não foram automaticamente traduzidas.
+- O registro `checkpoint_anterior` preserva a evidência preexistente sem tratá-la como conferência integral nova.
+- Para concluir o escopo integral, é necessário conferir página/bloco integral de cada um dos 124 IDs restantes, resolver as divergências e preencher os campos ainda desconhecidos; sem isso, 0/131 está completo.
+- O manifesto lista cada arquivo e suas pendências individualmente. Nenhum merge autorizado.
