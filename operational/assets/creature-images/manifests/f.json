@@ -16,16 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 124,
-    "verified_after_upload": 124,
-    "pending": 70,
-    "stored_bytes": 13320241,
-    "checkpoint_count": 30,
+    "persisted_binary_files": 126,
+    "verified_after_upload": 126,
+    "pending": 68,
+    "stored_bytes": 13321085,
+    "checkpoint_count": 31,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 70,
+    "partial_missing_files": 68,
     "blocked_confirmed": 0,
-    "partial_variant_art": 20,
+    "partial_variant_art": 22,
     "license_rights_review": {
       "foundry_noncommercial_restricted": 8,
       "homebrew_img_unlicensed_for_reuse": 84,
@@ -367,6 +367,15 @@
       ],
       "commit": "53d65954ef72fa63085986531b0c1d07f504fb21",
       "validation": "PNG 96x256 from GitHub mirror, postupload byte-for-byte identity to mirror; SHA-256, format, bytes and rights/attribution recorded. OpenGameArt original visually corroborated, no original server binary hash comparison."
+    },
+    {
+      "sequence": 31,
+      "images_added": [
+        "TF-504",
+        "TF-508"
+      ],
+      "commit": "b35b04917c221a1f22663d91523ff5ba2b251a53",
+      "validation": "GitHub fetched both source and target binary after push; Git blob SHA identical and base64 bytes equal. Source PNG header/end, 32x32 and SHA256 validated; both PARTIAL visually."
     }
   ],
   "blocked_ids": [
@@ -430,10 +439,8 @@
     "TF-500",
     "TF-501",
     "TF-502",
-    "TF-504",
     "TF-506",
     "TF-507",
-    "TF-508",
     "TF-509",
     "TF-516",
     "TF-517",
@@ -5081,20 +5088,37 @@
     {
       "id": "TF-504",
       "name": "Warlord's Ghost",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/phantasmal_warrior.png",
+      "repository_path": "operational/assets/creature-images/TF-504.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 408,
+      "sha256": "e6ee8938971103e735782c4a294b6940730d742b28602502e7051c4d1c432fd0",
+      "persistence_commit": "b35b04917c221a1f22663d91523ff5ba2b251a53",
+      "validation": {
+        "result": "passed",
+        "method": "PNG IHDR / signature / IEND, dimensions and SHA-256 computed before upload, SHA-256 routine verified with published abc test vector; after upload, full base64 bytes and Git blob SHA of source and destination matched.",
+        "git_blob_sha": "f4b1f0be9fd7298b01fdccd3a7173e93231f67a1",
+        "quality_note": "Green spectral armed warrior. Accurate ghost/armed commander archetype, but lacks a bugle, distinct armour, and his supernatural spectral soldier retinue. 32x32 asset; needs illustrated card artwork."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/undead/phantasmal_warrior.png",
+      "source_git_blob_sha": "f4b1f0be9fd7298b01fdccd3a7173e93231f67a1",
+      "source_license": "CC0 1.0 Universal (source repository curated release declaration, historical rights not individually re-proven)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup developers/artists (repository asks for maintainer contact on incorrect licenses; credit recommended)",
+      "rights_review": "Curated repository claims CC0 release with tiles of unknown license excluded. Source file basename not present in exclusions checked. No independent contemporary per-tile copyright audit: verify before commercial release."
     },
     {
       "id": "TF-505",
@@ -5166,20 +5190,37 @@
     {
       "id": "TF-508",
       "name": "Fogborn Zombie",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/necrophage.png",
+      "repository_path": "operational/assets/creature-images/TF-508.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 436,
+      "sha256": "eaa8d61fe1c639434797cbd61294959810ada5d85df489cd0ddfadfb23eb270b",
+      "persistence_commit": "b35b04917c221a1f22663d91523ff5ba2b251a53",
+      "validation": {
+        "result": "passed",
+        "method": "PNG IHDR / signature / IEND, dimensions and SHA-256 computed before upload, SHA-256 routine verified with published abc test vector; after upload, full base64 bytes and Git blob SHA of source and destination matched.",
+        "git_blob_sha": "7d91859c477fb6662cf24370339fb12e200bd22c",
+        "quality_note": "Decaying green humanoid undead. Correct zombie type; magical fog and water-walking properties of Fogborn Zombie cannot be seen. 32x32, artistic replacement recommended."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/undead/necrophage.png",
+      "source_git_blob_sha": "7d91859c477fb6662cf24370339fb12e200bd22c",
+      "source_license": "CC0 1.0 Universal (source repository curated release declaration, historical rights not individually re-proven)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup developers/artists (repository asks for maintainer contact on incorrect licenses; credit recommended)",
+      "rights_review": "Curated repository claims CC0 release with tiles of unknown license excluded. Source file basename not present in exclusions checked. No independent contemporary per-tile copyright audit: verify before commercial release."
     },
     {
       "id": "TF-509",
