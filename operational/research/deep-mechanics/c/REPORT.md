@@ -2,6 +2,14 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Auditoria de read-back — 14/10/2026
+
+- **Checkpoints 18 e 19 efetivamente publicados**: `f869eacf0239a31a56bf2cd9e019862aa498680f` (TF-417/420/425) e `d128143197cd7cb21f2d5da96dda87cc738eafb7` (TF-414/428/431). Seis JSONs reabertos na branch, IDs exatos e sintaxe JSON verificados.
+- Número de registros mecanicamente aprofundados com fonte individual: **20/131**. Outros **111** sem revalidação detalhada. **0** declarados completos; **104** parciais e **27** bloqueados.
+- Diferenças preservadas: limitações de zombies TF-420, Beak/grick TF-414, mecânicas dependentes de conjurador TF-431, dependência de cabeças TF-428.
+- Campos ausentes explicitados como ausentes no bloco, sem confundi-los com desconhecidos. Para A5E, XP não declarado permanece `null` e ND da invocação TF-431 continua indefinido, não `0`.
+- Nenhuma imagem nova foi adquirida nos checkpoints; **96 arquivos físicos existentes e 35 IDs sem imagem** são os valores de referência anteriores, sujeitos a uma nova conferência de hash nesta execução.
+
 ## Checkpoint 18/19 — pesquisa adicional de 14/10/2026
 
 Foram reconstruídas as fichas individuais **TF-417 Mandriano**, **TF-420 Mandriano Ancient** e **TF-425 Snow Terror**, consultando blocos completos e preservando a variante (sem reutilização mecânica). A diferença entre limite 12 undead via Consume the Spark e limite 20 zombies via Call the Dead da variante Ancient não foi resolvida por suposição. A imagem dos dois Mandrianos usa o mesmo blob e não está aprovada. As 3 fichas mantêm pendência de exemplar editorial/errata. Fonte: [Mandriano](https://kpogl.wikidot.com/monster:mandriano), [Ancient Mandriano](https://kpogl.wikidot.com/monster:ancient-mandriano), [Snow Terror](https://www.5esrd.com/database/creature/snow-terror/), [Tome of Beasts 2 transcrição](https://anyflip.com/aqmdu/uasq/basic/301-350).
@@ -27,7 +35,7 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 - **TF-423 Spawn of Chernobog:** testes de infecção, dois sucessos para cura, cinco estágios progressivos de Night's Blood, transformação ao morrer, sensibilidade solar, Bite e Claws.
 - TF-412 permanece bloqueada pela discrepância `SAB 11 (+1)` da fonte; TF-419 pela `Perception +6`/passiva `15` da fonte. Não aplicar reparos automáticos.
 - Fontes: [Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/), [Wind Witch](https://www.5esrd.com/database/creature/wind-witch/), [Execrable Shrub](https://www.5esrd.com/database/creature/execrable-shrub/), [Spawn of Chernobog](https://www.5esrd.com/database/creature/spawn-of-chernobog/).
-- Auditoria acumulada: **15 aprofundadas; 116 ainda sem revalidação detalhada; 0 mecanicamente integrais; 105 parciais; 26 bloqueadas; 96 imagens físicas e 35 faltantes**.
+- Auditoria acumulada: **15 aprofundadas; 116 ainda sem revalidação detalhada; 0 mecanicamente integrais; 104 parciais; 27 bloqueadas; 96 imagens físicas e 35 faltantes**.
 
 ## Checkpoint 15 — aprofundamento mecânico de 14/10/2026
 
@@ -42,9 +50,9 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **17 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **114 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
-- **0 criaturas declaradas mecanicamente completas**, **105 parciais**, **26 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
+- **20 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **111 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **0 criaturas declaradas mecanicamente completas**, **104 parciais**, **27 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
 

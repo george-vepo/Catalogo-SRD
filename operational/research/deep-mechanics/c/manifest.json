@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 17,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 20,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 105,
-    "bloqueadas": 26,
-    "registros_aproveitados_sem_nova_verificacao_integral": 114,
+    "parciais": 104,
+    "bloqueadas": 27,
+    "registros_aproveitados_sem_nova_verificacao_integral": 111,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -304,9 +304,22 @@
       "commit": "f869eacf0239a31a56bf2cd9e019862aa498680f",
       "leitura_persistencia": "CONFIRMADA por consulta direta ao GitHub; hashes verificáveis",
       "tipo": "3 fichas reconstruídas do stat block integral"
+    },
+    {
+      "numero": 19,
+      "inicio": "TF-414",
+      "fim": "TF-431",
+      "ids": [
+        "TF-414",
+        "TF-428",
+        "TF-431"
+      ],
+      "commit": "d128143197cd7cb21f2d5da96dda87cc738eafb7",
+      "leitura_persistencia": "CONFIRMADA: 3 arquivos lidos após publicação no GitHub",
+      "tipo": "fontes oficiais A5E; mecânicas estruturadas"
     }
   ],
-  "atualizacao_detalhada_sha": "4bb79b4994ca6529053ce0419279db889bc7d605",
+  "atualizacao_detalhada_sha": "d128143197cd7cb21f2d5da96dda87cc738eafb7",
   "criaturas": [
     {
       "id": "TF-412",
@@ -461,16 +474,19 @@
       "escopo": "next_batches[4]",
       "posicao": 5,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-417.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://kpogl.wikidot.com/monster:mandriano",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Fonte KPOGL independente; comparar uso e limite de mortos-vivos com Creature Codex original."
+        "Comparar bloco KPOGL de Mandriano ao Creature Codex original e respectivas erratas.",
+        "Verificar valor de dano impresso 2d6+4 no Swipe com FOR +2; preservar o valor original.",
+        "Imagem existente é idêntica à da variante Ancient; requer arte distinta ou aprovação visual individual."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "conferência com edição Creature Codex e errata",
+        "interpretação editorial do modificador +4 de Swipe",
+        "aprovação visual da imagem compartilhada"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -480,7 +496,8 @@
         "bytes": 69026,
         "validacao_visual": "PENDENTE",
         "nota": "arte compartilhada entre variantes"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-418",
@@ -548,16 +565,20 @@
       "escopo": "next_batches[4]",
       "posicao": 8,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-420.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_LIMITE_CONTROLE_MORTOS_VIVOS_AMBIGUO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://kpogl.wikidot.com/monster:ancient-mandriano",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Variante Ancient distinta de TF-417; KPOGL independente, confirmar edição."
+        "Fonte Ancient Mandriano diferencia limite de 12 undead de Consume the Spark e 20 zombies de Call the Dead; não presumir se os recursos compartilham ou não um teto de controle.",
+        "Não herdar darkvision da variante Mandriano comum; seção de sentidos do Ancient lista somente Perception passiva.",
+        "Conferência com Creature Codex e errata ainda pendente.",
+        "Arquivo de imagem utiliza mesmo blob que TF-417, portanto exige revisão visual e imagem individual distinta quando adequada."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "relação entre limite 12 undead de Consume the Spark e limite 20 zombies de Call the Dead",
+        "conferência editorial Creature Codex",
+        "revisão visual e diferenciação das artes"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -567,7 +588,8 @@
         "bytes": 69026,
         "validacao_visual": "PENDENTE",
         "nota": "arte compartilhada entre variantes"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-421",
@@ -667,16 +689,18 @@
       "escopo": "next_batches[4]",
       "posicao": 12,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-425.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/snow-terror/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Conferir ações e CDs em detalhe na fonte e suplemento original."
+        "Ficha individual Snow Terror e reprodução integral de Tome of Beasts 2 consultadas; ainda requer conferência editorial e errata diretamente em publicação oficial.",
+        "Não confundir o deslocamento para sair do cadáver do Snow Terror com teste para escapar da digestão enquanto vivo.",
+        "Conferir identidade visual da imagem binária já persistida."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "conferência independente da edição e errata de Tome of Beasts 2",
+        "revisão visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -686,7 +710,8 @@
         "bytes": 97454,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-426",
