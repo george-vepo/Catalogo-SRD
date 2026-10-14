@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 140 / 195.**
+**Armazenadas e verificadas: 150 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -22,6 +22,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5 — 10/10 verificadas: TF-188, TF-189, TF-190, TF-191, TF-192, TF-193, TF-194, TF-195, TF-196, TF-197
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/bc1ee577f9b9e40721ccfc7b212a7b791c9b7380 — 10/10 verificadas: TF-199, TF-202, TF-203, TF-204, TF-205, TF-206, TF-208, TF-210, TF-211, TF-212
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/4381bc3d339a79d125a328df3eb12d3698c8806d — 10/10 verificadas: TF-213, TF-214, TF-215, TF-216, TF-217, TF-218, TF-219, TF-220, TF-221, TF-222
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/fe22e5efef6af67a50cd68a58cdae797928e912d — 10/10 verificadas: TF-223, TF-224, TF-225, TF-227, TF-228, TF-229, TF-230, TF-233, TF-234, TF-235
 
 ## Binários publicados e conferidos
 
@@ -165,6 +166,16 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-220 / Corpse Worm: operational/assets/creature-images/TF-220.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Corpse%20Worm.webp; 237726 bytes; 982x857 px; SHA-256: cf5cb99188f15b13d8ee391525e66c6e3e744b1c358417654cb5f97b0fd4668a; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
 - TF-221 / Crab, Duffel: operational/assets/creature-images/TF-221.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Duffel%20Crab.webp; 95836 bytes; 1200x1000 px; SHA-256: debbb837b06c93bb1a63244b47dd141fc946499357f3796162c465d8c7c33ede; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
 - TF-222 / Crocotta: operational/assets/creature-images/TF-222.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Crocotta.webp; 205668 bytes; 924x893 px; SHA-256: 3c00548e7a47f7a825e80d657524354c51987b45cb0fc50b833c8b561070a21b; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-223 / Three-Headed Cobra: operational/assets/creature-images/TF-223.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Threeheadedcobra.jpg; 92116 bytes; 960x599 px; SHA-256: c3cf4beeb36485a6f77987cbdbd23502815637ae8bbc8d4ec46b53bf7f63574b; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-224 / Torch Mimic: operational/assets/creature-images/TF-224.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Torch%20Mimic.webp; 188718 bytes; 1000x1527 px; SHA-256: c1d1a303fbccd0e9fb60e0585172aa5d25b45bd46c940689af260668200b0690; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-225 / Aalpamac: operational/assets/creature-images/TF-225.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Aalpamac.webp; 330442 bytes; 793x1175 px; SHA-256: 8092d981f98e5a53e743042e430c6c6e85d3dc68f088f14dfbb2f12d265a15d5; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-227 / Coastline Reaper: operational/assets/creature-images/TF-227.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Coastline%20Reaper.webp; 192992 bytes; 1000x1122 px; SHA-256: d2004ef5d832fd765dd1c800972dc602c0baf83275015e857413b18c2b4533fb; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-228 / Colláis: operational/assets/creature-images/TF-228.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Collais.webp; 304172 bytes; 874x1249 px; SHA-256: 40b03ff86616f831ea44d48cee1b7a478a4750aacf7b91c6b17147196ff1610e; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-229 / Conjoined Queen: operational/assets/creature-images/TF-229.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Conjoined%20Queen.webp; 284564 bytes; 973x1020 px; SHA-256: a7f66f3d415cf29fe39fcbea22a2046bcfd2996e184f5d30e5b1a49fc2eb092d; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-230 / Cryoceros: operational/assets/creature-images/TF-230.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Cryoceros.webp; 317876 bytes; 1147x751 px; SHA-256: 722a9fd014f0e34e1eed6ebd27621a89799ea2839928713604c600349ce7de3d; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-233 / Chaos Raptor: operational/assets/creature-images/TF-233.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chaos%20Raptor.webp; 246680 bytes; 1000x980 px; SHA-256: 56aafff061fa6111ed8cc76e77db7ba7006cb3ba12ea1b19638006eff1d81dae; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-234 / Chimera, Royal: operational/assets/creature-images/TF-234.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Royal%20Chimera.webp; 112540 bytes; 1000x1208 px; SHA-256: a406c1a30f4d70378691aac15940cd3e4dd31dd2e6f5b14df79aa6c5941941c4; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-235 / Tigebra: operational/assets/creature-images/TF-235.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Tigebra.webp; 196734 bytes; 1200x1221 px; SHA-256: a7c6de63af5e7d5fb104e53dc82aeff151ad5c17d50cd4985fb098f472d445fe; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 
 ## Não obtidos
 
@@ -177,19 +188,9 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-200 / Aboleth Champion: source_not_found; 
 - TF-201 / Alpha Werewolf: source_not_found; 
 - TF-209 / Adamanticore: source_not_found; 
-- TF-223 / Three-Headed Cobra: pending; 
-- TF-224 / Torch Mimic: pending; 
-- TF-225 / Aalpamac: pending; 
 - TF-226 / Accursed Spirit Naga: source_not_found; 
-- TF-227 / Coastline Reaper: pending; 
-- TF-228 / Colláis: pending; 
-- TF-229 / Conjoined Queen: pending; 
-- TF-230 / Cryoceros: pending; 
 - TF-231 / Accursed Guardian Naga: source_not_found; 
 - TF-232 / Annelidast: source_not_found; 
-- TF-233 / Chaos Raptor: pending; 
-- TF-234 / Chimera, Royal: pending; 
-- TF-235 / Tigebra: pending; 
 - TF-236 / Timingila: pending; 
 - TF-237 / Tosculi, Hive Queen: pending; 
 - TF-238 / Zaratan: pending; 
