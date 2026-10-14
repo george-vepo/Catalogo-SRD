@@ -16,16 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 123,
-    "verified_after_upload": 123,
-    "pending": 71,
-    "stored_bytes": 13315086,
-    "checkpoint_count": 29,
+    "persisted_binary_files": 124,
+    "verified_after_upload": 124,
+    "pending": 70,
+    "stored_bytes": 13320241,
+    "checkpoint_count": 30,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 71,
+    "partial_missing_files": 70,
     "blocked_confirmed": 0,
-    "partial_variant_art": 19,
+    "partial_variant_art": 20,
     "license_rights_review": {
       "foundry_noncommercial_restricted": 8,
       "homebrew_img_unlicensed_for_reuse": 84,
@@ -359,6 +359,14 @@
       ],
       "commit": "9afec073ed6536d61ac4d5d94c5ea140e143f3ae",
       "validation": "Three PNGs source/destination byte-for-byte identical after GitHub push; PNG 32x32, SHA-256 size and Git blob SHA captured. CC0 source declaration but independent historic rights and variant art quality PARTIAL."
+    },
+    {
+      "sequence": 30,
+      "images_added": [
+        "TF-478"
+      ],
+      "commit": "53d65954ef72fa63085986531b0c1d07f504fb21",
+      "validation": "PNG 96x256 from GitHub mirror, postupload byte-for-byte identity to mirror; SHA-256, format, bytes and rights/attribution recorded. OpenGameArt original visually corroborated, no original server binary hash comparison."
     }
   ],
   "blocked_ids": [
@@ -410,7 +418,6 @@
     "TF-470",
     "TF-473",
     "TF-475",
-    "TF-478",
     "TF-480",
     "TF-482",
     "TF-483",
@@ -4563,20 +4570,37 @@
     {
       "id": "TF-478",
       "name": "Gourdling",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://opengameart.org/content/pumpkin-monster",
+      "repository_path": "operational/assets/creature-images/TF-478.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 96,
+        "height": 256
       },
-      "state": "PARTIAL"
+      "size_bytes": 5155,
+      "sha256": "6716b48b1f321926d9a89e279abf3de2a215321ff110402ebb7688d7c2c62f3c",
+      "persistence_commit": "53d65954ef72fa63085986531b0c1d07f504fb21",
+      "validation": {
+        "result": "passed",
+        "method": "PNG signature/IHDR/IEND/size/SHA-256 checked prior to GitHub upload; GitHub original mirror and destination fetched after upload and all base64 bytes and Git blob SHA identical.",
+        "git_blob_sha": "bd66310a60ca0272a44a8f3b0cb979c0fdb3f0fb",
+        "quality_note": "Visually matches gourd-headed vine-limbed humanoid Gourdling archetype; 96x256 animation sheet with twelve frames, not a final composed single-creature card. Plant grasping abilities not illustrated. Keep PARTIAL pending authorized composition and final artwork review."
+      },
+      "state": "PARTIAL",
+      "source_original_binary_url": "https://opengameart.org/sites/default/files/pumpkin_monster_0.png",
+      "source_repo": "lpereira504/DarkTrail_PAP",
+      "source_ref": "main",
+      "source_path": "characters/enemies/pumpkin_monster.png",
+      "source_git_blob_sha": "bd66310a60ca0272a44a8f3b0cb979c0fdb3f0fb",
+      "source_license": "CC BY 4.0 (one of multiple author-listed choices on OpenGameArt)",
+      "license_evidence": [
+        "https://opengameart.org/content/pumpkin-monster",
+        "https://creativecommons.org/licenses/by/4.0/"
+      ],
+      "attribution": "Pumpkin monster by Tuomo Untinen (Reemax). Source: https://opengameart.org/content/pumpkin-monster. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).",
+      "rights_review": "OpenGameArt lists CC BY 4.0 among four reuse licenses, with creator credit. GitHub mirror asset visually matches the original OpenGameArt preview; binary SHA equality directly against OpenGameArt server was not established. Reconfirm mirror identity before commercial release."
     },
     {
       "id": "TF-480",
