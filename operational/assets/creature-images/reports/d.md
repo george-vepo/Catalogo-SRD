@@ -151,3 +151,24 @@ Para `TF-049`, a [página A5E Agonized Khyphon](https://www.a5e.tools/node/3400)
 Para `TF-055`, a [página A5E Aklea](https://a5e.tools/node/1801) associa um JPG intitulado `Ellis Goodson-Against Type-Tiefling_Woman_Warrior.jpg`, ilustrando uma tiefling guerreira, ao invés da empyrean feminina descrita. O [registro Foundry de Aklea](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/packs/monsters/aklea.json) usa `systems/a5e/assets/empyrean.webp`, que foi renderizado como homem; não reutilizar essas imagens sem adequada correspondência visual.
 
 **Resultado:** os quatro IDs continuam pendentes por impossibilidade de identificar e publicar uma ilustração adequada que passe pelo requisito de identidade visual. Nenhum placeholder, SVG, pseudoarquivo ou URL externo foi contabilizado. A integridade dos 191 arquivos anteriores permanece documentada no checkpoint 41, sem alterações nos binários existentes. CSV, imagens verificadas de origem e lotes E/F intactos; PR #11 mantido DRAFT, sem merge.
+
+## Checkpoint 43 — busca de fontes externas e avaliação de qualidade (2026-10-14)
+
+**Estado invariável: 191/195 imagens armazenadas e verificadas, 4 pendentes, 41.375.642 bytes. Nenhum binário foi acrescentado neste checkpoint.**
+
+### TF-022 — Giant Bombardier Beetle
+
+1. Identificada imagem ilustrativa de um besouro bombardeiro gigante na [Authentic D&D Wiki](https://wiki.alexissmolensk.com/index.php/Bombadier_Beetle_(giant)); endereço direto publicado da arte: `https://wiki.alexissmolensk.com/images/f/f7/Beetle_%28bombadier%29.jpg`. Essa imagem de fato representa um inseto colossal com carapaça e pernas segmentadas, mas o binário remoto **não pôde ser recuperado nesta execução** (falha de rede/DNS); portanto, não foi convertido em Git blob nem registrado como sucesso.
+2. O repositório [ANTALLIS/grahams-game](https://github.com/ANTALLIS/grahams-game/blob/master/rltiles/mon/animals/bombardier_beetle.png) tem um PNG decodificável rotulado `bombardier_beetle.png`, Git blob `be5ad164e58c602f4273e0b898cd35b33d77b62d`. A arte foi visualizada, mas o sprite é somente **32 × 32 pixels**, insuficiente como ilustração principal do cartão; rejeitado.
+3. [MalharChoure/Morphogen](https://github.com/MalharChoure/Morphogen/blob/master/sprites/beetle%20sprites.png) possui uma folha de animação colorida da criatura (`848ffe419991f251dfbe10a20334f719492fa8bd`), mas é uma composição de muitos quadros, não uma ilustração individual para a carta. Não gravar a folha inteira como `TF-022.png`.
+4. Os dois tokens encontrados nos checkpoints anteriores que contêm somente o nome da criatura foram mantidos rejeitados.
+
+### TF-034 — Giant Mongoose
+
+Resultados de pesquisa de arte específica ficaram limitados a pequenos recursos de sprites, representações de mangustos comuns ou criaturas mitológicas semelhantes (como *ichneumon*). Não foi encontrada correspondência inequívoca com ilustração adequada do **Giant Mongoose** de Kobold Press, armazenável em binário no GitHub. Continua pendente.
+
+### TF-049 e TF-055
+
+Fontes adicionais não forneceram arte atribuível de forma precisa a *Agonized Khyphon* ou à personagem *Aklea*. Preservar a restrição de não usar o avatar placeholder `mystery-man.svg`, a imagem de uma tiefling para Aklea, ou um empyrean masculino que não reproduza a personagem feminina. Ambas continuam pendentes.
+
+**Auditoria de escopo:** este checkpoint altera somente o manifesto `manifests/d.json` (motivo de TF-022) e o relatório `reports/d.md`. Nenhum binário novo, nenhuma alteração no CSV global, nas 23 imagens pré-verificadas ou nos lotes E/F. PR #11 permanece DRAFT, sem merge.
