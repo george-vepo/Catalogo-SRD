@@ -16,11 +16,11 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 91,
-    "verified_after_upload": 91,
-    "pending": 103,
-    "stored_bytes": 11777398,
-    "checkpoint_count": 19
+    "persisted_binary_files": 93,
+    "verified_after_upload": 93,
+    "pending": 101,
+    "stored_bytes": 12018022,
+    "checkpoint_count": 20
   },
   "checkpoints": [
     {
@@ -246,6 +246,15 @@
       ],
       "commit": "e63b1f98355843db07fb02b5e5b04d553b7847b6",
       "validation": "GitHub post-upload fetch: full binary bytes equal original, Git blob SHA equal; SHA-256 and dimensions measured from source"
+    },
+    {
+      "sequence": 20,
+      "images_added": [
+        "TF-428",
+        "TF-493"
+      ],
+      "commit": "c9a25e03079bf0c7848ec729bc7fbb75827b7aaf",
+      "validation": "Source PNG signature+IHDR, size and SHA-256 pre-upload; destination refetched and full base64 identity plus Git blob SHA verified after upload; source rights require review"
     }
   ],
   "blocked_ids": [
@@ -295,7 +304,6 @@
     "TF-414",
     "TF-420",
     "TF-425",
-    "TF-428",
     "TF-429",
     "TF-431",
     "TF-434",
@@ -328,7 +336,6 @@
     "TF-489",
     "TF-491",
     "TF-492",
-    "TF-493",
     "TF-494",
     "TF-495",
     "TF-496",
@@ -3112,19 +3119,28 @@
     {
       "id": "TF-428",
       "name": "Cerberus Guardian",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/ZachA-SNHU/ttrpg-display-map/blob/main/assets/Tokens/1st%20D%26D%20Token%20Collection-20250419T232112Z-001/1st%20D%26D%20Token%20%20Collection/Beasts/Dogs-Lupines/cerberus.png",
+      "repository_path": "operational/assets/creature-images/TF-428.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "size_bytes": 123701,
+      "sha256": "b1f4d8883e98cfc10a63c8313a7bec37156a1d7348004e250623ef1f8b823a00",
+      "persistence_commit": "c9a25e03079bf0c7848ec729bc7fbb75827b7aaf",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "PNG signature and IHDR dimensions verified, byte count and SHA-256 calculated; original Git blob transferred as base64 and recovered from destination branch, matching full original binary and Git blob SHA.",
+        "git_blob_sha": "62163ccdadcc7dfb0065799898a93188e31e39b9",
+        "quality_note": "Ilustração de cão monstruoso multicéfalo identificada como Cerberus; representação compatível com Cerberus Guardian, mas identidade da variante exata não atestada pela fonte. Token circular 256×256: revisar resolução/arte final. Direitos de redistribuição e uso comercial da coleção de origem não verificados.",
+        "license_review_required": true
+      },
+      "source_repo": "ZachA-SNHU/ttrpg-display-map",
+      "source_path": "assets/Tokens/1st D&D Token Collection-20250419T232112Z-001/1st D&D Token  Collection/Beasts/Dogs-Lupines/cerberus.png",
+      "source_git_blob_sha": "62163ccdadcc7dfb0065799898a93188e31e39b9"
     },
     {
       "id": "TF-429",
@@ -3798,19 +3814,28 @@
     {
       "id": "TF-493",
       "name": "Rock Troll",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/ZachA-SNHU/ttrpg-display-map/blob/main/assets/Tokens/1st%20D%26D%20Token%20Collection-20250419T232112Z-001/1st%20D%26D%20Token%20%20Collection/Miscellaneous%20Monsters/Trolls/aggressive%20rock%20troll.png",
+      "repository_path": "operational/assets/creature-images/TF-493.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "size_bytes": 116923,
+      "sha256": "eecf9cf09087ed8474d0fc91ce4aad5a595485e8879866bf034043b52ff7c104",
+      "persistence_commit": "c9a25e03079bf0c7848ec729bc7fbb75827b7aaf",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "PNG signature and IHDR dimensions verified, byte count and SHA-256 calculated; original Git blob transferred as base64 and recovered from destination branch, matching full original binary and Git blob SHA.",
+        "git_blob_sha": "f66f3a3ce435270ba332dc8a15538b8a91f5134c",
+        "quality_note": "Arte intitulada aggressive rock troll, representando um troll rochoso. Mesma categoria visual da criatura Rock Troll. Token circular 256×256: revisar resolução/arte final. Direitos de redistribuição e uso comercial da coleção de origem não verificados.",
+        "license_review_required": true
+      },
+      "source_repo": "ZachA-SNHU/ttrpg-display-map",
+      "source_path": "assets/Tokens/1st D&D Token Collection-20250419T232112Z-001/1st D&D Token  Collection/Miscellaneous Monsters/Trolls/aggressive rock troll.png",
+      "source_git_blob_sha": "f66f3a3ce435270ba332dc8a15538b8a91f5134c"
     },
     {
       "id": "TF-494",
