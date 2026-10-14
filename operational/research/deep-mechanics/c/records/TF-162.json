@@ -4,9 +4,9 @@
   "nome": "Ooze, Ichor",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 40,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 2",
@@ -21,7 +21,7 @@
     "dados_vida": "6d8+12",
     "porte": "Medium",
     "tipo": "ooze",
-    "alinhamento": null,
+    "alinhamento": "neutral evil",
     "atributos": {
       "FOR": 15,
       "DES": 6,
@@ -43,219 +43,173 @@
       "escalar": 20,
       "nadar": 20
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
     "resistencias": [
       "necrotic",
       "poison",
-      "físico não mágico"
+      "bludgeoning, piercing and slashing from nonmagical attacks"
     ],
     "imunidades_dano": [
       "fire"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 450,
+    "bonus_proficiencia": 2
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Amorphous",
-        "resumo_anterior": "Passa por aberturas de uma polegada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "atravessa espaço de 1 inch sem squeezing"
       },
       {
         "nome": "Magic Resistance",
-        "resumo_anterior": "Vantagem em salvaguardas contra magia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem em saving throws contra spells/magic effects"
       },
       {
         "nome": "Sense Destroyer",
-        "resumo_anterior": "Sente direção/distância de quem destruiu o fiend criador, no mesmo plano.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "sabe direção e distância da criatura que deu killing blow no fiend criador, se ambos estiverem mesmo plano"
       },
       {
         "nome": "Spider Climb",
-        "resumo_anterior": "Escala paredes e tetos sem teste.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "escalada tetos/vertical sem teste"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não requer sono"
       }
     ],
     "acoes": [
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+4, 5 pés, 1d6+2 contundente +1d6 fogo; agarra Large ou menor (fuga CD12).",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ],
+        "condicao": "Large ou menor grappled, escape DC12"
       },
       {
         "nome": "Hurl Mote",
-        "resumo_anterior": "+4, 10/30 pés, 1d6+2 fogo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": {
+          "normal": 10,
+          "longo": 30
+        },
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "fire"
+          }
+        ]
       },
       {
         "nome": "Life Drain",
-        "resumo_anterior": "Criatura agarrada faz Constituição CD12 ou 3d6 necrótico (metade no sucesso), máximo de PV reduzido e cura da ooze por esse dano.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "precondicao": "alvo grappled pela ooze",
+        "teste": {
+          "atributo": "CON",
+          "cd": 12
+        },
+        "falha": {
+          "dano": {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "necrotic"
+          }
+        },
+        "sucesso": "metade de 3d6 necrotic",
+        "efeitos": [
+          {
+            "reduz_hp_maximo": "pelo dano realmente sofrido",
+            "restauracao_reducao": "long rest do alvo",
+            "ooze_cura": "dano realmente sofrido",
+            "morte": "HP máximo reduzido a zero"
+          }
+        ]
       }
     ],
     "ataques": [
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+4, 5 pés, 1d6+2 contundente +1d6 fogo; agarra Large ou menor (fuga CD12).",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ],
+        "condicao": "Large ou menor grappled, escape DC12"
+      },
+      {
+        "nome": "Hurl Mote",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": {
+          "normal": 10,
+          "longo": 30
+        },
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "fire"
+          }
+        ]
       }
     ],
     "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Revisar limitações de Life Drain; arte pendente.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Life Drain reduz max HP e cura pelo dano necrótico efetivamente sofrido, MESMO em save bem sucedido pela metade; não limitar ao fracasso.",
+    "Fonte individual 5eSRD ToB2, confronto editorial/arte ainda pendente."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferência do livro autorizado e errata",
+    "verificação visual, direitos e adequação da arte"
   ],
   "fontes": [
     {
@@ -266,6 +220,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-ichor/",
+      "tipo": "ficha individual analisada no CP38",
       "conferida_nesta_execucao": true
     }
   ],
@@ -365,5 +324,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 38,
+    "publicacao": "Tome of Beasts 2",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-ichor/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

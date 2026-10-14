@@ -4,9 +4,9 @@
   "nome": "Ooze, Ink Guardian",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 41,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Creature Codex",
@@ -21,7 +21,7 @@
     "dados_vida": "12d10+36",
     "porte": "Large",
     "tipo": "ooze",
-    "alinhamento": null,
+    "alinhamento": "unaligned",
     "atributos": {
       "FOR": 16,
       "DES": 7,
@@ -41,11 +41,17 @@
     "deslocamentos": {
       "andar": 20
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
     "resistencias": [
       "fire",
       "slashing",
@@ -54,226 +60,146 @@
     "imunidades_dano": [
       "acid"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Amorphous",
-        "resumo_anterior": "Passa por aberturas de uma polegada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "atravessa abertura 1 inch sem squeezing"
       },
       {
         "nome": "Bottled Rejuvenation",
-        "resumo_anterior": "Surge de frasco inicialmente Tiny e cresce a cada turno até Large; após morrer o frasco o restaura em 3d8 horas, a menos que destruído (CA20/PV10, vulnerável apenas a bludgeoning).",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "ativacao": "salta para espaço em até 20ft da garrafa",
+        "tamanho_inicial": "Tiny",
+        "crescimento": "um grau de tamanho por início de turno até Large",
+        "ao_morrer": "garrafa inativa 3d8 horas, depois recupera todos HP",
+        "garrafa": {
+          "ca": 20,
+          "pv": 10,
+          "imune_exceto": "bludgeoning"
+        },
+        "destruicao_garrafa": "ooze morre sem possibilidade de rejuvenescer"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
       },
       {
         "nome": "Selectively Caustic",
-        "resumo_anterior": "Contato ou ataque corpo a corpo a 5 pés causa 1d8 ácido; não corrói metal, madeira ou papel.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "criatura toca ou acerta com melee dentro de 5ft",
+        "dano": {
+          "dados": "1d8",
+          "media": 4,
+          "tipo": "acid"
+        },
+        "nao_corroe": [
+          "metal",
+          "wood",
+          "paper"
+        ]
       },
       {
         "nome": "Volatile",
-        "resumo_anterior": "Thunder não causa dano e espalha ácido em criaturas a 5 pés; ao zerar PV explode em 15 pés, Destreza CD13 contra 2d8 ácido (metade em sucesso).",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "ao_sofrer_thunder": "sofre zero thunder, salpica inimigos até 5ft por 1d8 acid",
+        "ao_zerar_hp": {
+          "raio_ft": 15,
+          "teste": {
+            "atributo": "DEX",
+            "cd": 13
+          },
+          "falha": {
+            "dano": {
+              "dados": "2d8",
+              "media": 9,
+              "tipo": "acid"
+            }
+          },
+          "sucesso": "metade"
+        }
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Medium ou Large faz dois Pseudopods.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "precondicao": "tamanho Medium ou Large",
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ]
       },
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+5, 5 pés, 1d8+3 contundente e 2d6 ácido.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "acid"
+          }
+        ]
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Medium ou Large faz dois Pseudopods.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
         "nome": "Pseudopod",
-        "resumo_anterior": "+5, 5 pés, 1d8+3 contundente e 2d6 ácido.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "acid"
+          }
+        ]
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Medium ou Large faz dois Pseudopods.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "precondicao": "tamanho Medium ou Large",
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Revisar exceção ao dano de thunder e frasco de ressurgimento na publicação.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Volatile prevalece sobre resistência thunder: fonte impõe dano thunder zero e respingo de acid mesmo que esse damage type esteja listado como resistência.",
+    "Bottled Rejuvenation exige preservar HP e CA da garrafa e crescimento por turno, não confundir com spawn novo aleatório.",
+    "Livro Creature Codex/errata e direitos da imagem não aprovados."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferência do livro autorizado e errata",
+    "verificação visual, direitos e adequação da arte"
   ],
   "fontes": [
     {
@@ -284,6 +210,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-ink-guardian/",
+      "tipo": "ficha individual analisada no CP38",
       "conferida_nesta_execucao": true
     }
   ],
@@ -378,5 +309,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 38,
+    "publicacao": "Creature Codex",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-ink-guardian/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

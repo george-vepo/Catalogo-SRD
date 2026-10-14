@@ -4,9 +4,9 @@
   "nome": "Ooze, Leavesrot",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 42,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 3",
@@ -21,7 +21,7 @@
     "dados_vida": "14d10+28",
     "porte": "Large",
     "tipo": "ooze",
-    "alinhamento": null,
+    "alinhamento": "unaligned",
     "atributos": {
       "FOR": 17,
       "DES": 7,
@@ -41,175 +41,157 @@
     "deslocamentos": {
       "andar": 20
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [],
+    "resistencias": [],
     "imunidades_dano": [
       "acid",
       "bludgeoning",
       "cold"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Amorphous",
-        "resumo_anterior": "Passa por aberturas de uma polegada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "atravessa abertura 1 inch sem squeezing"
       },
       {
         "nome": "False Appearance",
-        "resumo_anterior": "Imóvel parece pilha comum de folhas.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "precondicao": "imóvel",
+        "efeito": "indistinguível de amontoado de folhas"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
       },
       {
         "nome": "Rotting Leaves",
-        "resumo_anterior": "Ao sofrer ataque corpo a corpo por agressor a 5 pés, criaturas próximas testam Constituição CD13 ou envenenadas até o final do próximo turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "sofre acerto melee de criatura a até 5ft",
+        "area": {
+          "raio_ft": 5,
+          "alvos": "each creature, including attacker"
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": "poisoned até fim do próximo turno da vítima"
       }
     ],
     "acoes": [
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+5, 5 pés, 2d6+3 contundente e 3d8 ácido, agarra fuga CD13 e restringe; enquanto agarrado, acerta esse alvo automaticamente e não ataca outros.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d8",
+            "media": 13,
+            "tipo": "acid"
+          }
+        ],
+        "on_hit": {
+          "alvo": "grappled escape DC13",
+          "efeitos": [
+            "restrained enquanto grappled",
+            "auto-hit nesse alvo",
+            "não pode atacar outros alvos com Pseudopod até encerrar grapple"
+          ]
+        }
       },
       {
-        "nome": "Release Spores (Recharge 5–6)",
-        "resumo_anterior": "Criaturas a 20 pés testam Constituição CD13 contra 4d6 veneno (metade em sucesso). Falha gera sufocamento até novo sucesso.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Release Spores",
+        "recarga": "5-6",
+        "area": {
+          "raio_ft": 20
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": {
+          "dano": {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "poison"
+          },
+          "estado": "choking"
+        },
+        "sucesso": "metade sem choking",
+        "repetir": "end of each of choking creature's turns, save success termina"
       }
     ],
     "ataques": [
       {
         "nome": "Pseudopod",
-        "resumo_anterior": "+5, 5 pés, 2d6+3 contundente e 3d8 ácido, agarra fuga CD13 e restringe; enquanto agarrado, acerta esse alvo automaticamente e não ataca outros.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d8",
+            "media": 13,
+            "tipo": "acid"
+          }
+        ],
+        "on_hit": {
+          "alvo": "grappled escape DC13",
+          "efeitos": [
+            "restrained enquanto grappled",
+            "auto-hit nesse alvo",
+            "não pode atacar outros alvos com Pseudopod até encerrar grapple"
+          ]
+        }
       }
     ],
     "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Rotting Leaves afeta cada criatura dentro de 5ft, não apenas atacante; efeito dura até fim do turno de cada vítima.",
+    "Release Spores choking pede save no fim de cada turno; estado não é sinônimo de poisoned.",
+    "Aprovação editor/licença de imagem ainda pendente."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferência do livro autorizado e errata",
+    "verificação visual, direitos e adequação da arte"
   ],
   "fontes": [
     {
@@ -220,6 +202,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-leavesrot/",
+      "tipo": "ficha individual analisada no CP38",
       "conferida_nesta_execucao": true
     }
   ],
@@ -306,5 +293,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 38,
+    "publicacao": "Tome of Beasts 3",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-leavesrot/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
