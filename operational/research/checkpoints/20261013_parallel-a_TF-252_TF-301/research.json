@@ -7,15 +7,17 @@
   "branch": "chatgpt/srd607-parallel-a",
   "source_ledger": "operational/research/catalog-ledger-20261011-v27/campaign.json",
   "reference_commit": "a962c48a1169c2ef2be8137715a095a596753b32",
-  "method": "Confronto exato dos 40 IDs com next_batches do ledger v27 e os nomes do CSV v27; pesquisa no índice oficial de criaturas 5E Kobold Press para publicação e ND, ou fichas oficiais Level Up A5E; síntese de fichas individuais terceirizadas apenas nos casos consultados. Não houve acesso integral aos livros para validação exaustiva.",
-  "limits": "Identificação editorial e ND verificados para todos os 40; CA/PV/atributos só onde consultada ficha individual indicada, e habilidades descritas apenas em síntese não normativa. A pesquisa não completa automaticamente fichas nem aprova conteúdo, arte ou integração.",
+  "method": "Confronto dos IDs exatos do ledger e CSV v27; consulta ao índice oficial Kobold Press e às fichas oficiais Level Up A5E; prévia oficial Tome of Beasts 3 e páginas individuais de terceiros. CA/PV/atributos pesquisados sempre com URL da ficha, sem validação integral de livro/erratas.",
+  "limits": "O campo legado verified_individual_statblock_count contabiliza fichas individuais com CA/PV/seis atributos documentados, NÃO significa validação editorial/canônica ou implementação. Nenhuma mecânica integral é aprovada. Divergências entre edições, direitos e lacunas estão por registro.",
   "source_urls": [
     "https://koboldpress.com/tools/kobold-press-monsters/",
-    "https://a5e.tools/monsters"
+    "https://a5e.tools/monsters",
+    "https://koboldpress.s3.us-east-2.amazonaws.com/tob3-preview.pdf",
+    "https://koboldpress.com/errata/"
   ],
-  "verified_individual_statblock_count": 4,
+  "verified_individual_statblock_count": 39,
   "editor_and_nd_identification_count": 40,
-  "records_pending_individual_statblock": 36,
+  "records_pending_individual_statblock": 1,
   "canonical_promotions": 0,
   "verified_images_added": 0,
   "gates": {
@@ -76,7 +78,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_PRIMARIA_EDITORA_A5E"
     },
     {
       "id": "TF-253",
@@ -84,21 +89,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "4",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 13,
+      "pv": 55,
+      "atributos": {
+        "forca": 14,
+        "destreza": 12,
+        "constituicao": 12,
+        "inteligencia": 1,
+        "sabedoria": 3,
+        "carisma": 1
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Planta venenosa disfarçada, com mordida e capacidade de agarrar presas."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/asp-vine/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -108,7 +127,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-254",
@@ -116,32 +138,55 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "1",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 13,
+      "pv": 50,
+      "atributos": {
+        "forca": 6,
+        "destreza": 17,
+        "constituicao": 11,
+        "inteligencia": 13,
+        "sabedoria": 10,
+        "carisma": 14
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Feérico de espinhos, ataques de garras e efeitos de agarrar; distinguir versão original."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/child-of-the-briar-3pp/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/child-of-the-briar/",
+          "tipo": "evidência histórica, fonte editorial ou transcrição alternativa",
+          "escopo": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+        "Não foi confirmada comparação integral de erratas/edições para esta entrada.",
+        "Child of the Briar: primeira edição tinha traços e ações diferentes da versão 2023, apesar dos atributos equivalentes."
       ],
       "imagem": {
         "status": "PENDENTE",
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-255",
@@ -149,22 +194,36 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "3",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 85,
+      "atributos": {
+        "forca": 18,
+        "destreza": 8,
+        "constituicao": 16,
+        "inteligencia": 3,
+        "sabedoria": 10,
+        "carisma": 1
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Planta carnívora que expele bile ácida e ataca com mordida."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/citrullus/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -174,7 +233,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-256",
@@ -182,22 +244,36 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "0.1",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 11,
+      "pv": 13,
+      "atributos": {
+        "forca": 13,
+        "destreza": 7,
+        "constituicao": 15,
+        "inteligencia": 1,
+        "sabedoria": 7,
+        "carisma": 1
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Trepadeira agressiva, aprisiona e fere com secreções; ND decimal no índice."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/climbing-vine/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Índice editorial apresenta ND decimal; conferir fração correspondente na ficha original.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "ND 0.1 é valor decimal mostrado pelo índice; interpretar a fração de desafio apenas após conferir ficha original."
@@ -207,7 +283,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-257",
@@ -215,21 +294,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 2",
       "nd_indice_editora": "3",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 13,
+      "pv": 85,
+      "atributos": {
+        "forca": 16,
+        "destreza": 6,
+        "constituicao": 17,
+        "inteligencia": 1,
+        "sabedoria": 12,
+        "carisma": 5
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Vegetal que detecta e devora infecções/doenças; golpes vegetais."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/viiret/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -239,7 +332,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-258",
@@ -247,32 +343,50 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "2",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 13,
+      "pv": 51,
+      "atributos": {
+        "forca": 16,
+        "destreza": 15,
+        "constituicao": 18,
+        "inteligencia": 6,
+        "sabedoria": 6,
+        "carisma": 8
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Puppet de videira com elo mental, regeneração florestal e arremesso de espinhos."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/tendril-puppet-3pp/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Tendril Puppet e Vine Lord são criaturas distintas do mesmo grupo; não herdar as estatísticas da criatura principal."
+        "Tendril Puppet e Vine Lord são criaturas distintas do mesmo grupo; não herdar as estatísticas da criatura principal.",
+        "Tendril Puppet original pode ter PV 34/DEX 12; revisão 2023 registra PV 51/DEX 15. Não confundir com Vine Lord."
       ],
       "imagem": {
         "status": "PENDENTE",
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-259",
@@ -280,21 +394,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "9",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 16,
+      "pv": 150,
+      "atributos": {
+        "forca": 13,
+        "destreza": 18,
+        "constituicao": 16,
+        "inteligencia": 10,
+        "sabedoria": 12,
+        "carisma": 17
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Trepadeira caótica cuja fruta e efeitos mágicos alteram os encontros."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/chaos-creeper/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -304,7 +432,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-260",
@@ -321,23 +452,33 @@
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/vine-lord-3pp/",
+          "tipo": "evidência histórica, fonte editorial ou transcrição alternativa",
+          "escopo": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "BLOQUEIO_EDICAO_DIVERGENTE_SEM_ESTATISTICAS_CONFIAVEIS",
       "pendencias": [
         "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Obter fonte editorial ou reprodução individual que corresponda ao ND 9 do índice, em vez da versão ND 7 encontrada."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Vine Lord é diferente de Tendril Puppet (TF-258)."
+        "Vine Lord é diferente de Tendril Puppet (TF-258).",
+        "BLOQUEIO: o índice da Kobold Press atribui ND 9, mas 5eSRD o cataloga sob ND 7. CA/PV/atributos da versão ND 7 NÃO foram copiados por falta de correspondência segura."
       ],
       "imagem": {
         "status": "PENDENTE",
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "SEM_FICHA_INDIVIDUAL_CONGRUENTE"
     },
     {
       "id": "TF-261",
@@ -345,21 +486,35 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "8",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 133,
+      "atributos": {
+        "forca": 19,
+        "destreza": 12,
+        "constituicao": 19,
+        "inteligencia": 5,
+        "sabedoria": 13,
+        "carisma": 5
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Emaranhado de cipós, aparência falsa e capacidade de dispersar corpo vegetal."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/vines-of-nemthyr/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -369,7 +524,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-263",
@@ -410,7 +568,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_PRIMARIA_EDITORA_A5E"
     },
     {
       "id": "TF-264",
@@ -451,7 +612,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_PRIMARIA_EDITORA_A5E"
     },
     {
       "id": "TF-265",
@@ -459,21 +623,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "4",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 14,
+      "pv": 72,
+      "atributos": {
+        "forca": 16,
+        "destreza": 15,
+        "constituicao": 13,
+        "inteligencia": 9,
+        "sabedoria": 15,
+        "carisma": 14
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Variante sanguinária de Alabroza ND 4; poderes distintos da forma comum."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/alabroza-bloodfiend/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Alabroza, Bloodfiend, ND 4 é criatura distinta de Alabroza ND 1 (TF-212)."
@@ -483,7 +661,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-266",
@@ -491,21 +672,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 119,
+      "atributos": {
+        "forca": 16,
+        "destreza": 17,
+        "constituicao": 18,
+        "inteligencia": 13,
+        "sabedoria": 14,
+        "carisma": 15
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Ave demoníaca com bico perigoso, influência musical e luz interna."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:chemosit",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -515,7 +710,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-267",
@@ -523,22 +721,36 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "9",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 17,
+      "pv": 171,
+      "atributos": {
+        "forca": 20,
+        "destreza": 8,
+        "constituicao": 19,
+        "inteligencia": 11,
+        "sabedoria": 15,
+        "carisma": 8
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Fortaleza viva que usa escudos e investidas perfurantes."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:arx",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -548,7 +760,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-268",
@@ -556,21 +771,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 2",
       "nd_indice_editora": "7",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 16,
+      "pv": 93,
+      "atributos": {
+        "forca": 15,
+        "destreza": 18,
+        "constituicao": 18,
+        "inteligencia": 11,
+        "sabedoria": 14,
+        "carisma": 10
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Pequeno predador que usa ocultação e teleporte em baús."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/chatterlome/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -580,7 +809,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-269",
@@ -588,31 +820,54 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 2",
       "nd_indice_editora": "6",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 105,
+      "atributos": {
+        "forca": 20,
+        "destreza": 13,
+        "constituicao": 19,
+        "inteligencia": 12,
+        "sabedoria": 10,
+        "carisma": 12
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Demônio com ataques físicos e comportamento cruel; PV difere em fonte alternativa."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/vexxeh/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://www.robinloft.com/monsters/vexxeh/tome-of-beasts-2",
+          "tipo": "evidência histórica, fonte editorial ou transcrição alternativa",
+          "escopo": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+        "Não foi confirmada comparação integral de erratas/edições para esta entrada.",
+        "Vexxeh: transcrição Robinloft registra 94 PV contra 105 PV em 5eSRD; revisão de edição pendente."
       ],
       "imagem": {
         "status": "PENDENTE",
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-270",
@@ -620,21 +875,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "11",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 17,
+      "pv": 157,
+      "atributos": {
+        "forca": 19,
+        "destreza": 16,
+        "constituicao": 21,
+        "inteligencia": 14,
+        "sabedoria": 17,
+        "carisma": 15
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Canídeo espectral amaldiçoado com uivo de terror e sede de sangue."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:black-shuck",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -644,7 +913,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-272",
@@ -652,21 +924,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "0.5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 14,
+      "pv": 26,
+      "atributos": {
+        "forca": 8,
+        "destreza": 14,
+        "constituicao": 16,
+        "inteligencia": 4,
+        "sabedoria": 17,
+        "carisma": 8
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Espírito devorador de iluminação; apaga chamas e produz clarões."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:light-eater",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -676,7 +962,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-273",
@@ -684,21 +973,35 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "0.5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 12,
+      "pv": 49,
+      "atributos": {
+        "forca": 14,
+        "destreza": 10,
+        "constituicao": 10,
+        "inteligencia": 10,
+        "sabedoria": 14,
+        "carisma": 16
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Criatura amorfa shoth de casta Sooze; separar da casta Oth."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/sooze/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Shoth, Sooze e Shoth, Oth são entradas editoriais distintas."
@@ -708,7 +1011,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-274",
@@ -716,21 +1022,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 2",
       "nd_indice_editora": "1",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 11,
+      "pv": 32,
+      "atributos": {
+        "forca": 16,
+        "destreza": 8,
+        "constituicao": 14,
+        "inteligencia": 15,
+        "sabedoria": 14,
+        "carisma": 10
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Morfologia maleável da variante Minor."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/malleable-minor/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Malleable, Minor é variante própria ND 1; não copiar estatísticas dos graus Moderate, Major e Massive."
@@ -740,7 +1060,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-276",
@@ -748,21 +1071,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 2",
       "nd_indice_editora": "5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 12,
+      "pv": 136,
+      "atributos": {
+        "forca": 18,
+        "destreza": 8,
+        "constituicao": 16,
+        "inteligencia": 17,
+        "sabedoria": 15,
+        "carisma": 10
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Forma intermediária dos Malleable com habilidades de absorção e mudança."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/malleable-moderate/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Malleable, Moderate é variante própria ND 5."
@@ -772,7 +1109,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-277",
@@ -780,21 +1120,35 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 119,
+      "atributos": {
+        "forca": 16,
+        "destreza": 10,
+        "constituicao": 16,
+        "inteligencia": 11,
+        "sabedoria": 14,
+        "carisma": 18
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Shoth da casta Oth, com manifestações arcanas ou marciais."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/oth/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Shoth, Oth e Shoth, Sooze são entradas distintas."
@@ -804,7 +1158,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-278",
@@ -812,21 +1169,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 16,
+      "pv": 97,
+      "atributos": {
+        "forca": 16,
+        "destreza": 20,
+        "constituicao": 14,
+        "inteligencia": 6,
+        "sabedoria": 12,
+        "carisma": 5
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Morcego predador de objetos brilhantes com mobilidade aérea veloz."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/snatch-bat/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -836,7 +1207,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-279",
@@ -844,32 +1218,55 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "6",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 16,
+      "pv": 130,
+      "atributos": {
+        "forca": 18,
+        "destreza": 12,
+        "constituicao": 14,
+        "inteligencia": 18,
+        "sabedoria": 16,
+        "carisma": 9
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Entidade que interfere no destino e ataca a probabilidade; PV revisado."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/fate-eater-3pp/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/fate-eater",
+          "tipo": "evidência histórica, fonte editorial ou transcrição alternativa",
+          "escopo": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+        "Não foi confirmada comparação integral de erratas/edições para esta entrada.",
+        "Fate Eater revisado 2023 tem PV 130; outra transcrição da edição original registra PV 182."
       ],
       "imagem": {
         "status": "PENDENTE",
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-280",
@@ -877,22 +1274,36 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "6",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 16,
+      "pv": 112,
+      "atributos": {
+        "forca": 8,
+        "destreza": 18,
+        "constituicao": 19,
+        "inteligencia": 17,
+        "sabedoria": 11,
+        "carisma": 16
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Criatura voadora que perturba conjuração com tagarelice contínua."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:mamura",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -902,7 +1313,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-283",
@@ -910,21 +1324,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 2",
       "nd_indice_editora": "9",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 17,
+      "pv": 115,
+      "atributos": {
+        "forca": 22,
+        "destreza": 12,
+        "constituicao": 18,
+        "inteligencia": 8,
+        "sabedoria": 12,
+        "carisma": 6
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Consegue produzir duplicatas e realizar assaltos coordenados."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/shukankor/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -934,7 +1362,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-284",
@@ -942,21 +1373,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 2",
       "nd_indice_editora": "10",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 13,
+      "pv": 218,
+      "atributos": {
+        "forca": 22,
+        "destreza": 8,
+        "constituicao": 17,
+        "inteligencia": 19,
+        "sabedoria": 16,
+        "carisma": 10
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Forma Major de criatura mutável."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/malleable-major/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Malleable, Major é variante própria ND 10."
@@ -966,7 +1411,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-286",
@@ -974,21 +1422,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 2",
       "nd_indice_editora": "16",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 14,
+      "pv": 248,
+      "atributos": {
+        "forca": 26,
+        "destreza": 8,
+        "constituicao": 20,
+        "inteligencia": 21,
+        "sabedoria": 17,
+        "carisma": 10
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Forma Massive, muito resistente, com mutação corporal."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/malleable-massive/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Malleable, Massive é variante própria ND 16."
@@ -998,7 +1460,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-288",
@@ -1006,33 +1471,51 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "0.3",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 13,
+      "pv": 18,
+      "atributos": {
+        "forca": 4,
+        "destreza": 16,
+        "constituicao": 12,
+        "inteligencia": 1,
+        "sabedoria": 10,
+        "carisma": 4
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Pequena víbora pantanosa venenosa; índice escreve ND 0.3 e ficha ND 1/4."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:swamp-adder",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
         "Índice editorial apresenta ND decimal; conferir fração correspondente na ficha original.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "O índice representa desafio fracionário pelo decimal 0.3; correspondência com fração e revisão de edição precisam ser confirmadas na ficha."
+        "O índice representa desafio fracionário pelo decimal 0.3; correspondência com fração e revisão de edição precisam ser confirmadas na ficha.",
+        "Desafio 0.3 no índice é aproximação decimal de ND 1/4 da ficha; não converter literalmente para 3/10."
       ],
       "imagem": {
         "status": "PENDENTE",
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-289",
@@ -1040,21 +1523,35 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 3",
       "nd_indice_editora": "0.5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 13,
+      "pv": 28,
+      "atributos": {
+        "forca": 8,
+        "destreza": 16,
+        "constituicao": 12,
+        "inteligencia": 3,
+        "sabedoria": 10,
+        "carisma": 6
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Criatura de comportamento grupal com carne tóxica."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:porcellina",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -1064,7 +1561,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-290",
@@ -1072,22 +1572,36 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "1",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 45,
+      "atributos": {
+        "forca": 15,
+        "destreza": 14,
+        "constituicao": 12,
+        "inteligencia": 4,
+        "sabedoria": 10,
+        "carisma": 5
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Predador vítreo que se mimetiza com transparência."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/glass-gator-3pp/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -1097,7 +1611,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-292",
@@ -1105,22 +1622,36 @@
       "editora": "Kobold Press",
       "publicacao": "Tome of Beasts 1",
       "nd_indice_editora": "1",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 14,
+      "pv": 34,
+      "atributos": {
+        "forca": 15,
+        "destreza": 11,
+        "constituicao": 17,
+        "inteligencia": 2,
+        "sabedoria": 13,
+        "carisma": 2
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Víbora de mordida altamente venenosa."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:zanskaran-viper",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
         "Distinguir primeira edição de Tome of Beasts, eventuais revisões de 2023 e adaptações Tales of the Valiant antes de codificar.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -1130,7 +1661,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-293",
@@ -1138,21 +1672,35 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "0.5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 13,
+      "pv": 22,
+      "atributos": {
+        "forca": 14,
+        "destreza": 10,
+        "constituicao": 10,
+        "inteligencia": 7,
+        "sabedoria": 14,
+        "carisma": 10
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Vegetal planar que imobiliza, possui conexão sagrada e pode renascer."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:hallowed-reed",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Planar Flora é uma família de formas distintas; Hallowed Reeds não deve herdar Ecstatic Bloom."
@@ -1162,7 +1710,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-296",
@@ -1208,7 +1759,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-297",
@@ -1216,21 +1770,35 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "5",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 108,
+      "atributos": {
+        "forca": 18,
+        "destreza": 11,
+        "constituicao": 17,
+        "inteligencia": 14,
+        "sabedoria": 17,
+        "carisma": 16
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Ave celestial capaz de magias divinas e ataque com vento."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:simurg",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -1240,7 +1808,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-298",
@@ -1248,21 +1819,35 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "6",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 76,
+      "atributos": {
+        "forca": 12,
+        "destreza": 16,
+        "constituicao": 16,
+        "inteligencia": 18,
+        "sabedoria": 18,
+        "carisma": 21
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Anjo musical com armas e canto sobrenatural."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/angel-song/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -1272,7 +1857,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-299",
@@ -1280,21 +1868,35 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "7",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 16,
+      "pv": 104,
+      "atributos": {
+        "forca": 18,
+        "destreza": 10,
+        "constituicao": 14,
+        "inteligencia": 10,
+        "sabedoria": 19,
+        "carisma": 12
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Anjo com armas sacras e deveres celestiais especiais."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/angel-sammael/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -1304,7 +1906,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-300",
@@ -1312,21 +1917,35 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "8",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 14,
+      "pv": 104,
+      "atributos": {
+        "forca": 16,
+        "destreza": 10,
+        "constituicao": 14,
+        "inteligencia": 10,
+        "sabedoria": 18,
+        "carisma": 18
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Anjo associado a fogo e passagem celestial."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/angel-zoryas/",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -1336,7 +1955,10 @@
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     },
     {
       "id": "TF-301",
@@ -1344,31 +1966,55 @@
       "editora": "Kobold Press",
       "publicacao": "Creature Codex",
       "nd_indice_editora": "11",
-      "ca": null,
-      "pv": null,
-      "atributos": null,
-      "habilidades_e_acoes_resumidas": [],
+      "ca": 15,
+      "pv": 171,
+      "atributos": {
+        "forca": 10,
+        "destreza": 9,
+        "constituicao": 16,
+        "inteligencia": 20,
+        "sabedoria": 19,
+        "carisma": 14
+      },
+      "habilidades_e_acoes_resumidas": [
+        "Planta planar restauradora, com efeitos de luz sagrada e renovação."
+      ],
       "fontes": [
         {
           "url": "https://koboldpress.com/tools/kobold-press-monsters/",
           "tipo": "indice oficial da editora Kobold Press",
           "escopo": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades"
+        },
+        {
+          "url": "https://www.robinloft.com/monsters/ecstatic-bloom/creature-codex",
+          "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+          "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
         }
       ],
-      "estado": "IDENTIFICACAO_EDITORA_ND_CONFIRMADOS_MECANICA_PENDENTE",
+      "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
-        "Ficha individual desta criatura ainda não confirmada: CA, PV, atributos, traços e ações indisponíveis; não inferir.",
-        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes."
+        "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Planar Flora, Ecstatic Bloom não é sinônimo de Hallowed Reeds (TF-293)."
+        "Planar Flora, Ecstatic Bloom não é sinônimo de Hallowed Reeds (TF-293).",
+        "Ecstatic Bloom não equivale a Hallowed Reeds TF-293, apesar da família Planar Flora."
       ],
       "imagem": {
         "status": "PENDENTE",
         "verificada": false
       },
       "integrada": false,
-      "aprovada": false
+      "aprovada": false,
+      "mecanica_integral_validada": false,
+      "revisao_independente_realizada": false,
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
     }
-  ]
+  ],
+  "statblock_summary_count": 39,
+  "fully_verified_canonical_mechanics_count": 0,
+  "unresolved_major_source_mismatch_ids": [
+    "TF-260"
+  ],
+  "evidence_revision": "PARALLEL_A_INDIVIDUAL_SOURCES_V2"
 }
