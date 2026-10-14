@@ -1,0 +1,199 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-102",
+  "nome": "Alazai",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 3",
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:alazai",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Tome of Beasts 3"
+    }
+  ],
+  "estatisticas": {
+    "nd": "10",
+    "ca": 16,
+    "pv": 149,
+    "dados_vida": "13d10+78",
+    "atributos": {
+      "FOR": 21,
+      "DES": 15,
+      "CON": 22,
+      "INT": 10,
+      "SAB": 16,
+      "CAR": 20
+    },
+    "deslocamentos_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {
+      "DES": 6,
+      "SAB": 7
+    },
+    "pericias": {},
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Ignan"
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "fire",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "poisoned"
+    ],
+    "origem_ca": "natural armor",
+    "proficiencia": 4
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Conditional Invisibility",
+      "efeito": "geralmente invisível",
+      "excecoes": [
+        "temperatura abaixo de 50°F, cerca de 10°C",
+        "até uma rodada após receber dano cold",
+        "em escuridão, olhos flamejantes mostram a posição"
+      ],
+      "efeito_excecao": "ataques contra alazai deixam de receber desvantagem por invisibilidade enquanto exceção durar"
+    },
+    {
+      "nome": "Elemental Nature",
+      "efeito": "não necessita ar, comida, bebida ou sono"
+    },
+    {
+      "nome": "Fire Form",
+      "efeitos": [
+        "atravessa espaços de 1 polegada sem se espremer",
+        "criatura que toca ou acerta alazai com ataque corpo a corpo a até 5 pés sofre 1d8 fire"
+      ]
+    },
+    {
+      "nome": "Iron Disruption",
+      "gatilho": "atingido por arma de ferro frio",
+      "efeitos": [
+        "fica visível",
+        "não pode usar Hurl Flame nem Scorching Aura até início do próximo turno"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Burning Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 9,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d10",
+          "modificador": 0,
+          "tipo": "fire"
+        }
+      ],
+      "efeito": {
+        "alvo": "criatura ou objeto inflamável",
+        "condicao": "incendeia",
+        "dano_inicio_turno": {
+          "dados": "1d10",
+          "tipo": "fire"
+        },
+        "remover": "criatura usa ação para apagar"
+      }
+    },
+    {
+      "nome": "Hurl Flame",
+      "tipo": "magico_a_distancia",
+      "bonus_acerto": 9,
+      "alcance_normal_ft": 120,
+      "alcance_maximo_ft": 120,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "4d6",
+          "modificador": 5,
+          "tipo": "fire"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        [
+          "Burning Slam",
+          "Burning Slam"
+        ],
+        [
+          "Hurl Flame",
+          "Hurl Flame",
+          "Hurl Flame"
+        ]
+      ]
+    },
+    {
+      "nome": "Burning Slam",
+      "referencia_ataque": "Burning Slam"
+    },
+    {
+      "nome": "Hurl Flame",
+      "referencia_ataque": "Hurl Flame"
+    },
+    {
+      "nome": "Scorching Aura",
+      "recarga": "6",
+      "area": {
+        "raio_ft": 30
+      },
+      "alvo": "criatura em contato com objeto metálico manufaturado",
+      "dano": {
+        "dados": "5d8",
+        "tipo": "fire"
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 16
+      },
+      "falha": "solta objeto se possível; se não soltar ou não puder remover armadura, tem desvantagem nos ataques e testes de habilidade até início do próximo turno",
+      "sucesso": "sem restrição adicional além do dano"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "A transcrição KPOGL não constitui homologação oficial; confrontar com Tome of Beasts 3, erratas e revisão independente.",
+    "Sem promoção canônica nem merge."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Alazai",
+    "tipo_alinhamento": "Large elemental, chaotic neutral"
+  }
+}

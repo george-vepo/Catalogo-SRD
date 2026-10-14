@@ -1,0 +1,332 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-347",
+  "nome": "Animal Lord, Bat King",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "publicacao": "Creature Codex (2018)",
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/animal-lord-bat-king/",
+      "natureza": "reproducao_secundaria_5esrd",
+      "data": "2026-10-14",
+      "edicao_identificada": "Creature Codex ©2018",
+      "escopo": "bloco integral individual, formas, magias e lendárias"
+    }
+  ],
+  "estatisticas": {
+    "nd": "13",
+    "ca": 17,
+    "pv": 150,
+    "dados_vida": "20d6+80",
+    "atributos": {
+      "FOR": 16,
+      "DES": 20,
+      "CON": 19,
+      "INT": 19,
+      "SAB": 17,
+      "CAR": 16
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": 50
+    },
+    "deslocamentos_texto": "caminhar 30; voar 50 pés",
+    "salvaguardas": {
+      "DES": 10,
+      "CON": 9,
+      "SAB": 8,
+      "CAR": 8
+    },
+    "pericias": {
+      "Acrobatics": 15,
+      "Arcana": 14,
+      "Deception": 8,
+      "History": 14,
+      "Nature": 14,
+      "Perception": 8,
+      "Stealth": 15,
+      "Survival": 8
+    },
+    "sentidos": [
+      "blindsight 60 ft"
+    ],
+    "idiomas": [
+      "todos"
+    ],
+    "resistencias_dano": [
+      "lightning",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic",
+      "thunder"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "incapacitated",
+      "poisoned",
+      "stunned"
+    ],
+    "origem_ca": "natural armor",
+    "proficiencia": 5,
+    "percepcao_passiva": 18,
+    "telepatia_ft": 120
+  },
+  "qualidade_estatisticas": "REPRODUCAO_SECUNDARIA_INDIVIDUAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Bat Passivism",
+      "efeito": "morcegos e werebats não atacam voluntariamente, exceto se forçados magicamente"
+    },
+    {
+      "nome": "Keen Hearing",
+      "efeito": "vantagem em SAB (Perception) por audição"
+    },
+    {
+      "nome": "Legendary Resistance",
+      "usos": "3/dia",
+      "efeito": "falha em salvaguarda convertida em sucesso"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra magia e efeitos mágicos"
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "ataques de arma mágicos"
+    },
+    {
+      "nome": "Rejuvenation",
+      "gatilho": "morte",
+      "efeito": "alma no Astral; 1d6 dias depois ocupa um morcego no Material, recuperando integralmente capacidades. Só eliminar todos os morcegos impede."
+    },
+    {
+      "nome": "Shapechanger",
+      "ativacao": "ação",
+      "formas": [
+        "bat verdadeiro Small",
+        "human Medium",
+        "hybrid Medium"
+      ],
+      "excecao": "velocidade de voo só no morcego ou híbrido",
+      "equipamento": "transforma com ele"
+    },
+    {
+      "nome": "Speak to Bats",
+      "efeito": "comunica-se com morcegos independentemente do idioma"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Blood Bite",
+      "formas": [
+        "bat",
+        "hybrid"
+      ],
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "5d6",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ],
+      "efeito_condicional": {
+        "alvo": "humanoid",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": "amaldiçoado com licantropia de werebat"
+      }
+    },
+    {
+      "nome": "Oblivion’s Mace",
+      "formas": [
+        "human",
+        "hybrid"
+      ],
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "4d4",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "formas": [
+        "human",
+        "hybrid"
+      ],
+      "numero_ataques": 2,
+      "tipo": "dois ataques corpo a corpo permitidos na forma"
+    },
+    {
+      "nome": "Blood Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Blood Bite"
+    },
+    {
+      "nome": "Oblivion’s Mace",
+      "categoria": "ataque",
+      "referencia_ataque": "Oblivion’s Mace"
+    },
+    {
+      "nome": "Screech",
+      "categoria": "cone_dano_controle",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "cone",
+        "comprimento_ft": 20
+      },
+      "alvos": "criaturas que conseguem ouvir",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 18
+      },
+      "dano": {
+        "dados": "6d10",
+        "tipo": "thunder"
+      },
+      "falha": {
+        "dano": "total",
+        "condicao": "deafened",
+        "duracao": "1 minuto"
+      },
+      "sucesso": "metade; sem deafened",
+      "ambiente": "dano dobrado a objetos/estruturas"
+    },
+    {
+      "nome": "Summon Bats",
+      "usos": "2/dia",
+      "invoca": {
+        "normal": "2d4 swarms of bats",
+        "cidade": "1 werebat"
+      },
+      "atraso": "1d4 rodadas",
+      "duracao": "1 hora",
+      "encerramento": [
+        "fim de 1 hora",
+        "morte do Bat King",
+        "dispensa por ação bônus"
+      ],
+      "controle": "aliados obedecem comandos falados"
+    },
+    {
+      "nome": "Change Shape",
+      "categoria": "transformacao",
+      "custo": "ação",
+      "referencia_traco": "Shapechanger"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Dismiss Summoned Bats",
+      "custo": "ação bônus",
+      "efeito": "dispensa aliados invocados por Summon Bats"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [
+    {
+      "nome": "At Will Spell",
+      "custo": 1,
+      "efeito": "conjura magia da lista inata à vontade"
+    },
+    {
+      "nome": "Detect",
+      "custo": 1,
+      "efeito": "faz teste SAB (Perception)"
+    },
+    {
+      "nome": "Flight",
+      "custo": 1,
+      "precondicao": "bat ou hybrid",
+      "efeito": "voa até 50 pés sem ataques de oportunidade"
+    }
+  ],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 16,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "pass without trace",
+            "shatter",
+            "thunderwave"
+          ]
+        },
+        {
+          "usos": "3/dia cada",
+          "nomes": [
+            "darkness",
+            "scrying"
+          ]
+        },
+        {
+          "usos": "2/dia cada",
+          "nomes": [
+            "etherealness",
+            "freedom of movement"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "nomes": [
+            "astral projection",
+            "teleport"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "A fonte consultada não apresenta ações de toca ou efeitos regionais para Bat King; listas vazias registradas conforme o bloco da reprodução.",
+    "Cotejar livro impresso e errata do editor; 5eSRD não equivale a homologação editorial.",
+    "Executar revisão independente antes de integração."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_catalogo": "Animal Lord, Bat King",
+    "tipo": "Small fey (shapechanger)",
+    "alinhamento": "neutral",
+    "bonus_proficiencia": 5
+  },
+  "acoes_toca": [],
+  "efeitos_regionais": [],
+  "mecanicas_especiais": [
+    {
+      "nome": "Legendary Actions",
+      "pontos_por_rodada": 3,
+      "recupera": "início do próprio turno",
+      "uso": "somente no final do turno de outra criatura"
+    }
+  ]
+}

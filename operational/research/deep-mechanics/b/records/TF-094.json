@@ -1,0 +1,416 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-094",
+  "nome": "Adult River Dragon",
+  "estado": "DETALHADA_EDITORIAL_COM_CAMPOS_BLOQUEADOS",
+  "edicao": {
+    "sistema": "Level Up: Advanced 5th Edition (A5E)",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "versao": "Ficha individual do portal editorial A5E consultada em 2026-10-13; edição impressa/erratas não conferidas",
+    "edicao_exata_verificada": true,
+    "edicao_impressa_e_erratas_verificadas": false
+  },
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1555",
+      "natureza": "fonte_editorial_ficha_individual",
+      "consultada": "2026-10-13",
+      "alcance": "Bloco completo de estatísticas, características e ações no portal do editor."
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-024_TF-469/recovery-index.json",
+      "natureza": "checkpoint_historico_preexistente",
+      "alcance": "Continuidade, não homologação."
+    }
+  ],
+  "estatisticas": {
+    "nd": "17",
+    "ca": 18,
+    "pv": 252,
+    "dados_vida": "24d12+96",
+    "atributos": {
+      "FOR": 18,
+      "DES": 20,
+      "CON": 18,
+      "INT": 14,
+      "SAB": 20,
+      "CAR": 16
+    },
+    "deslocamentos_ft": {
+      "andar": 60,
+      "voar": 80,
+      "nadar": 90
+    },
+    "salvaguardas": {
+      "DES": 9,
+      "CON": 8,
+      "INT": 6,
+      "SAB": 9,
+      "CAR": 7
+    },
+    "pericias": {
+      "Acrobatics": 8,
+      "Deception": 7,
+      "Insight": 9,
+      "Nature": 6,
+      "Perception": 9,
+      "Stealth": 9
+    },
+    "resistencias_dano": [
+      "damage from nonmagical weapons"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "fatigue (A5E)"
+    ],
+    "sentidos": [
+      "darkvision 120 ft",
+      "tremorsense 200 ft (apenas vibrações na água)"
+    ],
+    "percepcao_passiva": 19,
+    "idiomas": [
+      "Aquan",
+      "Common",
+      "Draconic"
+    ],
+    "proficiencia": 6,
+    "cd_manobra": 19,
+    "bloodied_pv": 126
+  },
+  "qualidade_estatisticas": "CONFERIDA_NA_FICHA_EDITORIAL_DO_PORTAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Amphibious",
+      "efeito": "Respira ar e água."
+    },
+    {
+      "nome": "Flowing Grace",
+      "efeito": "Ao voar ou nadar para fora do alcance inimigo, não provoca ataques de oportunidade."
+    },
+    {
+      "nome": "Legendary Resistance",
+      "efeito": "3/dia: transforma falha numa salvaguarda em sucesso; até o início do próximo turno perde Flowing Grace e Shimmering Scales.",
+      "usos": "3/dia",
+      "efeito_colateral": "desativa Flowing Grace e Shimmering Scales até início do próximo turno"
+    },
+    {
+      "nome": "Shimmering Scales",
+      "efeito": "Quando na água, ganha 3/4 de cobertura contra ataques originados de mais de 30 pés.",
+      "precondicoes": [
+        "na água",
+        "ataque a mais de 30 pés"
+      ]
+    },
+    {
+      "nome": "Essence Link",
+      "efeito": "Não se beneficia de descanso longo se estiver mais de 1 milha de região vinculada; morte retira essência local por séculos, criaturas recém-chegadas podem ganhar fatigue e strife até descanso longo fora da região.",
+      "raio_vinculo_milhas": 1,
+      "efeitos_pos_morte": [
+        "fatigue 1",
+        "strife 1"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 10,
+      "alvos": "uma criatura/alvo",
+      "dados_dano": [
+        {
+          "dados": "3d10",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Claws",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvos": "uma criatura/alvo",
+      "dados_dano": [
+        {
+          "dados": "3d8",
+          "modificador": 5,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_fonte": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Bite",
+        "Claws",
+        "Claws"
+      ],
+      "alternativas": [],
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Claws",
+      "categoria": "ataque",
+      "referencia_ataque": "Claws",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Torrential Breath",
+      "categoria": "sopro_area",
+      "recarga": "5-6",
+      "area": {
+        "forma": "linha",
+        "comprimento_ft": 60,
+        "largura_ft": 5
+      },
+      "alvos": "cada criatura na área",
+      "salvaguarda": {
+        "atributo": "DEX",
+        "cd": 18,
+        "falha": "16d6 contundente, prone, empurrar até 30 pés",
+        "sucesso": "metade dano, sem efeitos adicionais"
+      },
+      "dano": [
+        {
+          "dados": "16d6",
+          "modificador": 0,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "condicoes_falha": [
+        "prone"
+      ],
+      "empurrao_ft": 30,
+      "dano_colisao": {
+        "dados": "3d6",
+        "modificador": 0,
+        "tipo": "bludgeoning"
+      },
+      "gatilho_dano_colisao": "colidir com objeto sólido",
+      "confirmado_na_fonte": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Whirlpool",
+      "categoria": "area_bonus",
+      "alcance_ft": 60,
+      "area": {
+        "forma": "cilindro",
+        "altura_ft": 15,
+        "raio_ft": 10,
+        "meio": "água ou ar"
+      },
+      "salvaguarda": {
+        "atributo": "STR",
+        "cd": 18,
+        "falha": "5d6 bludgeoning, prone, empurrar até 15 pés",
+        "sucesso": null
+      },
+      "dano": [
+        {
+          "dados": "5d6",
+          "modificador": 0,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "texto_editorial_do_sucesso": "A página repete 'On a failure' para o segundo efeito (metade do dano), impossibilitando confirmação inequívoca do ramo de sucesso.",
+      "sucesso_dano": null,
+      "condicoes_falha": [
+        "prone"
+      ],
+      "empurrao_ft": 15,
+      "pendente": "resultado de sucesso indefinido por erro textual editorial",
+      "confirmado_na_fonte": true
+    }
+  ],
+  "reacoes": [
+    {
+      "nome": "Snap Back",
+      "categoria": "reacao",
+      "gatilho": "Enquanto bloodied, criatura visível o atinge em ataque melee com arma.",
+      "precondicao": "PV <=126 (bloodied)",
+      "efeito": "faz Bite no atacante",
+      "referencia_ataque": "Bite",
+      "confirmado_na_fonte": true
+    }
+  ],
+  "acoes_lendarias": [
+    {
+      "nome": "Dart Away",
+      "categoria": "lendaria",
+      "custo": 1,
+      "efeito": "nada até metade de seu deslocamento de natação",
+      "distancia_ft": 45,
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Lurk",
+      "categoria": "lendaria",
+      "custo": 1,
+      "efeito": "executa Hide",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "River Surge",
+      "categoria": "lendaria",
+      "custo": 2,
+      "area": {
+        "altura_ft": 20,
+        "largura_ft": 100,
+        "origem_ft": 90,
+        "deslocamento_ft": 45,
+        "meio": "superfície de água"
+      },
+      "efeito": "onda arrasta criaturas Huge ou menores e veículos",
+      "colisao_dano": {
+        "dados": "6d6",
+        "modificador": 0,
+        "tipo": "bludgeoning"
+      },
+      "chance_veiculo_emborcar": 0.25,
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Sudden Maelstrom",
+      "categoria": "lendaria",
+      "custo": 1,
+      "usos": "1/dia",
+      "precondicao": "bloodied (PV <=126)",
+      "duracao": "1 minuto",
+      "area": {
+        "raio_ft": 60
+      },
+      "gatilho": "início do turno ou primeira entrada no turno",
+      "salvaguarda": {
+        "atributo": "STR",
+        "cd": 18,
+        "falha": "prone e empurrado 15 pés",
+        "sucesso": "sem efeito descrito"
+      },
+      "empurrao_ft": 15,
+      "confirmado_na_fonte": true
+    }
+  ],
+  "conjuracoes": [
+    {
+      "tipo": "conjuracao_inata",
+      "atributo": "CAR",
+      "cd": 15,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "create or destroy water",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "fog cloud",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "control water",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "freedom of movement",
+          "usos": "3/dia"
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "acoes_opcionais_de_ambiente": [
+    {
+      "tipo": "opcoes_de_covil_nao_intrinsecas",
+      "quantidade_opcoes": 4,
+      "descricao": "Bônus de invocação 1d6 crocodiles ou 1d4 quippers (dispensa ou reinvoca), reforços em d6 5–6, +2d8 de dano em colisão, baixa visibilidade submarina (20 pés). Escolhas opcionais do covil, não habilitadas por padrão."
+    }
+  ],
+  "conflito_editorial": "Ambiguidade textual própria do portal A5E na ação bônus Whirlpool; nenhuma inferência do segundo ramo.",
+  "bloqueado": true,
+  "pendencias": [
+    "Pendente revisão independente e confronto com errata/publicação final; NÃO é ficha canônica.",
+    "Definir efeito do ramo de sucesso de Whirlpool: página editorial duplica 'On a failure' para falha e metade de dano."
+  ],
+  "integrada": false,
+  "caracteristicas_toca": {
+    "origem": "https://a5e.tools/node/1555",
+    "natureza": "Opções de características de toca de River Dragon: escolher ou rolar uma ou mais; NÃO são ações de toca padrão em todos os encontros",
+    "opcoes": [
+      {
+        "numero": 1,
+        "nome": "Aliados aquáticos",
+        "ativacao": "ação bônus do dragão",
+        "condicao": "toca com criaturas aquáticas",
+        "invocacao": {
+          "alternativas": [
+            {
+              "criatura": "crocodile",
+              "quantidade": "1d6"
+            },
+            {
+              "criatura": "swarm of quippers",
+              "quantidade": "1d4"
+            }
+          ]
+        },
+        "duracao": "até aliados morrerem, dragão dispensá-los por ação bônus ou voltar a usar esta habilidade",
+        "dispensa": "ação bônus",
+        "observacao": "não adicionar a toda ficha se a característica opcional não for selecionada"
+      },
+      {
+        "numero": 2,
+        "nome": "Defensores ribeirinhos",
+        "gatilho": "início de cada rodada de combate na toca",
+        "teste": "1d6",
+        "ativa_em": "5–6",
+        "aliados": {
+          "criatura": "thug",
+          "quantidade": "1d4",
+          "iniciativa": "mesma do dragão"
+        },
+        "duracao": "até morrerem ou dragão ordená-los a parar"
+      },
+      {
+        "numero": 3,
+        "nome": "Rochas afiadas",
+        "gatilho": "uma ação ou ataque do dragão faz criatura colidir com objeto sólido",
+        "dano_adicional": {
+          "dados": "2d8",
+          "modificador": 0,
+          "tipo": "bludgeoning"
+        },
+        "valor_medio": 9
+      },
+      {
+        "numero": 4,
+        "nome": "Rio turvo",
+        "efeito": "Visibilidade subaquática reduzida a 20 pés",
+        "visibilidade_ft": 20
+      }
+    ]
+  },
+  "auditoria_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/1555",
+    "tipo": "conferência pontual de ações e efeitos em fonte editorial A5E acessível",
+    "conclusao": "Lacunas identificadas e estruturadas neste checkpoint; não prova integralidade frente ao exemplar impresso/erratas nem homologação independente.",
+    "nao_promovido": true
+  }
+}

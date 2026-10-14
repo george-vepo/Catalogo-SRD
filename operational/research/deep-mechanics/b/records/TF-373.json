@@ -1,0 +1,231 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-373",
+  "nome": "Kobold, Wizard",
+  "estado": "MECANICA_INDIVIDUALIZADA_SEM_HOMOLOGACAO",
+  "edicao": {
+    "publicacao": "Creature Codex (2018, reprodução identificada)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/kobold-wizard/",
+      "natureza": "reproducao_secundaria_5esrd",
+      "consulta": "2026-10-14",
+      "publicacao_identificada": "Creature Codex (2018, reprodução identificada)",
+      "escopo": "bloco mecânico integral, incluindo ações especiais e lendárias"
+    }
+  ],
+  "estatisticas": {
+    "nd": "5",
+    "ca": 12,
+    "pv": 58,
+    "dados_vida": "13d6+13",
+    "atributos": {
+      "FOR": 6,
+      "DES": 14,
+      "CON": 13,
+      "INT": 17,
+      "SAB": 10,
+      "CAR": 8
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {
+      "INT": 6,
+      "SAB": 3
+    },
+    "pericias": {
+      "Arcana": 6
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "idiomas": [
+      "Common",
+      "Draconic",
+      "Infernal"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "origem_ca": "AC12 sem mage armor; AC15 sob mage armor",
+    "proficiencia": 3,
+    "percepcao_passiva": 10
+  },
+  "qualidade_estatisticas": "REPRODUCAO_INDIVIDUAL_CONSULTADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Pack Tactics",
+      "gatilho": "aliado não incapacitado está a até 5 pés do alvo",
+      "efeito": "vantagem nas jogadas de ataque"
+    },
+    {
+      "nome": "Sunlight Sensitivity",
+      "gatilho": "exposto à luz solar",
+      "efeito": "desvantagem em jogadas de ataque e testes SAB (Perception) baseados em visão"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Dagger",
+      "tipo": "corpo_a_corpo_ou_distancia",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alcance_normal_ft": 20,
+      "alcance_maximo_ft": 60,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Breath of the Visage",
+      "tipo": "magico_a_distancia",
+      "bonus_acerto": 6,
+      "alcance_normal_ft": 120,
+      "alcance_maximo_ft": 120,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "tipo de dano do sopro do dragão escolhido"
+        }
+      ],
+      "precondicao": "Draconic Visage ativo",
+      "nota": "disponível na ação de ativação e como bônus nos turnos seguintes"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Dagger",
+      "categoria": "ataque",
+      "referencia_ataque": "Dagger"
+    },
+    {
+      "nome": "Draconic Visage",
+      "categoria": "invocacao_espectral",
+      "usos": "1/dia",
+      "alcance_ft": 30,
+      "duracao": "1 minuto",
+      "local": "espaço livre visível a até 30 pés",
+      "luz_fraca_ft": 10,
+      "forma": "cabeça/pescoço espectral de dragão escolhido",
+      "aura": {
+        "alcance_ft": 30,
+        "alvo": "hostis que iniciam turno na área e conhecem o espectro",
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 14
+        },
+        "falha": "frightened até 1 minuto",
+        "repetir": "final de cada turno",
+        "imunidade_apos_sucesso": "24 horas"
+      },
+      "protecao": "wizard ganha imunidade ao tipo do sopro do dragão escolhido",
+      "ataque_imediato": "Breath of the Visage",
+      "ataque_sustentado": "Breath of the Visage por ação bônus nos turnos seguintes"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Breath of the Visage",
+      "precondicao": "Draconic Visage ativo e não no turno de ativação",
+      "custo": "ação bônus",
+      "referencia_ataque": "Breath of the Visage"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Spellcasting",
+      "conjurador_nivel": 8,
+      "atributo": "INT",
+      "cd": 14,
+      "bonus_ataque_magico": 6,
+      "preparadas": [
+        {
+          "nivel": 0,
+          "usos": "à vontade",
+          "magias": [
+            "fire bolt",
+            "minor illusion",
+            "poison spray",
+            "prestidigitation"
+          ]
+        },
+        {
+          "nivel": 1,
+          "espacos": 4,
+          "magias": [
+            "burning hands",
+            "mage armor",
+            "magic missile",
+            "shield"
+          ]
+        },
+        {
+          "nivel": 2,
+          "espacos": 3,
+          "magias": [
+            "hold person",
+            "mirror image",
+            "misty step"
+          ]
+        },
+        {
+          "nivel": 3,
+          "espacos": 3,
+          "magias": [
+            "blink",
+            "counterspell",
+            "fireball"
+          ]
+        },
+        {
+          "nivel": 4,
+          "espacos": 2,
+          "magias": [
+            "fire shield"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Confrontar edição impressa e erratas com fonte editorial oficial; reprodução 5eSRD é secundária.",
+    "Executar revisão mecânica independente, validação de balanceamento da identidade sem padronização e testes antes de promoção canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_catalogo": "Kobold, Wizard",
+    "tipo": "humanoid (kobold)",
+    "tamanho": "Small",
+    "alinhamento": "lawful neutral",
+    "bonus_proficiencia": 3
+  },
+  "mecanicas_especiais": [
+    {
+      "nome": "Mage Armor",
+      "ca_sem_magia": 12,
+      "ca_com_magia": 15
+    },
+    {
+      "nome": "Visage",
+      "dano_escolhido_no_sopro": "escolha da espécie de dragão"
+    }
+  ]
+}

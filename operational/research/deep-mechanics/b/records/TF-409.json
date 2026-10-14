@@ -1,0 +1,153 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-409",
+  "nome": "Mandrake",
+  "estado": "MECANICA_INDIVIDUALIZADA_COM_EDICAO_IDENTIFICADA_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Creature Codex (2018)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:mandrake",
+      "natureza": "reproducao_integral_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Creature Codex (2018)"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1/2",
+    "ca": 8,
+    "pv": 22,
+    "dados_vida": "4d4+12",
+    "atributos": {
+      "FOR": 10,
+      "DES": 6,
+      "CON": 16,
+      "INT": 1,
+      "SAB": 9,
+      "CAR": 12
+    },
+    "deslocamentos_ft": {
+      "andar": 5,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "deslocamentos_texto": "caminhar 5 pés",
+    "salvaguardas": {},
+    "pericias": {},
+    "sentidos": [
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 60,
+        "observacao": "cego além do alcance"
+      }
+    ],
+    "idiomas": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "poisoned"
+    ],
+    "origem_ca": "CA base 8, sem origem publicada",
+    "modificadores": {
+      "FOR": 0,
+      "DES": -2,
+      "CON": 3,
+      "INT": -5,
+      "SAB": -1,
+      "CAR": 1
+    },
+    "pairar": false,
+    "percepcao_passiva": 9,
+    "telepatia_ft": null,
+    "bonus_proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Medicinal Root",
+      "origem": "descrição, não ação de combate",
+      "efeito": "raiz em pó e fermentada por um ano e um dia pode se tornar elixir de saúde que cura venenos e aflições",
+      "duracao_preparo": "um ano e um dia"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 2,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d4",
+          "modificador": 0,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Shriek",
+      "categoria": "area_controle",
+      "recarga": "4–6",
+      "alcance_ft": 60,
+      "alvos": "todas as criaturas no raio que consigam ouvir",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 13
+      },
+      "dano": {
+        "dados": "2d4",
+        "tipo": "thunder"
+      },
+      "falha": "dano integral",
+      "sucesso": "sem dano",
+      "falha_por_5_ou_mais": {
+        "condicao": "stunned",
+        "duracao": "até fim do próximo turno"
+      },
+      "falha_por_10_ou_mais": {
+        "condicao": "unconscious",
+        "repetir": "salvaguarda CON no fim de cada turno; sucesso recupera consciência"
+      }
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Conferência final com livro e erratas de edição ainda não executada.",
+    "Revisão independente da implementação mecânica e integração canônica pendentes."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-409",
+    "nome_original": "Mandrake",
+    "tipo": "Tiny plant",
+    "alinhamento": "unaligned",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
+}

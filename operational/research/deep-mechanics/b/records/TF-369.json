@@ -1,0 +1,157 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-369",
+  "nome": "Gnoll, Havoc Runner",
+  "estado": "MECANICA_INDIVIDUALIZADA_SEM_HOMOLOGACAO",
+  "edicao": {
+    "publicacao": "Tome of Beasts 1 (2023, reprodução identificada)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/gnoll-havoc-runner-3pp/",
+      "natureza": "reproducao_secundaria_5esrd",
+      "consulta": "2026-10-14",
+      "publicacao_identificada": "Tome of Beasts 1 (2023, reprodução identificada)",
+      "escopo": "bloco mecânico integral, incluindo ações especiais e lendárias"
+    }
+  ],
+  "estatisticas": {
+    "nd": "3",
+    "ca": 15,
+    "pv": 58,
+    "dados_vida": "9d8+18",
+    "atributos": {
+      "FOR": 16,
+      "DES": 14,
+      "CON": 14,
+      "INT": 8,
+      "SAB": 12,
+      "CAR": 9
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {},
+    "pericias": {
+      "Athletics": 5,
+      "Perception": 5
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "idiomas": [
+      "Gnoll"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "origem_ca": "chain shirt",
+    "proficiencia": 2,
+    "percepcao_passiva": 15
+  },
+  "qualidade_estatisticas": "REPRODUCAO_INDIVIDUAL_CONSULTADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Harrying Attacks",
+      "gatilho": "ataca mais de uma criatura no mesmo turno",
+      "efeito": "primeiro alvo atacado tem desvantagem em suas jogadas de ataque até o fim do próximo turno dele"
+    },
+    {
+      "nome": "Pack Tactics",
+      "gatilho": "aliado não incapacitado adjacente até 5 pés do alvo",
+      "efeito": "vantagem em jogadas de ataque contra esse alvo"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Battleaxe",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 3,
+          "tipo": "slashing"
+        }
+      ],
+      "dano_alternativo": {
+        "condicao": "empunhado com duas mãos",
+        "dados": "1d10",
+        "modificador": 3,
+        "tipo": "slashing"
+      }
+    },
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Bite",
+        "Battleaxe",
+        "Battleaxe"
+      ],
+      "numero_ataques": 3
+    },
+    {
+      "nome": "Battleaxe",
+      "categoria": "ataque",
+      "referencia_ataque": "Battleaxe"
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Lightning Lope",
+      "custo": "ação bônus",
+      "opcoes": [
+        "Dash",
+        "Disengage"
+      ],
+      "efeito": "executa Dash ou Disengage como ação bônus"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Confrontar edição impressa e erratas com fonte editorial oficial; reprodução 5eSRD é secundária.",
+    "Executar revisão mecânica independente, validação de balanceamento da identidade sem padronização e testes antes de promoção canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_catalogo": "Gnoll, Havoc Runner",
+    "tipo": "humanoid (gnoll)",
+    "tamanho": "Medium",
+    "alinhamento": "chaotic evil",
+    "bonus_proficiencia": 2
+  },
+  "mecanicas_especiais": []
+}

@@ -1,0 +1,203 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-341",
+  "nome": "Shurale",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2",
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:shurale",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "data": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "7",
+    "ca": 14,
+    "pv": 105,
+    "dados_vida": "14d8+42",
+    "atributos": {
+      "FOR": 18,
+      "DES": 19,
+      "CON": 16,
+      "INT": 12,
+      "SAB": 15,
+      "CAR": 18
+    },
+    "deslocamentos_ft": {
+      "andar": 40
+    },
+    "deslocamentos_texto": "caminhar 40 pés",
+    "salvaguardas": {
+      "DES": 7,
+      "SAB": 5,
+      "CAR": 7
+    },
+    "pericias": {
+      "Acrobatics": 10,
+      "Deception": 7,
+      "Perception": 5,
+      "Persuasion": 7
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Common",
+      "Sylvan"
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": null,
+    "imunidades_condicao": [
+      "charmed"
+    ]
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Magic Weapons",
+      "efeito": "Ataques com arma contam como mágicos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia."
+    },
+    {
+      "nome": "Mirthful Regeneration",
+      "gatilho": "início do turno",
+      "cura": "5 PV por criatura incapacitated por Tickle a 30 pés",
+      "ganho_temporario": "15 PV temporários quando criatura morre enquanto ri por Tickle"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Battleaxe",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "alternativa_duas_maos": "1d10+4 slashing"
+    },
+    {
+      "nome": "Gore",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Tickle (opcional)",
+        "Gore",
+        "Battleaxe",
+        "Battleaxe"
+      ]
+    },
+    {
+      "nome": "Battleaxe",
+      "referencia_ataque": "Battleaxe"
+    },
+    {
+      "nome": "Gore",
+      "referencia_ataque": "Gore"
+    },
+    {
+      "nome": "Tickle",
+      "alcance_ft": 5,
+      "alvo": "uma criatura",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 15
+      },
+      "falha": {
+        "condicoes": [
+          "prone",
+          "incapacitated"
+        ],
+        "movimento_ft": 0,
+        "duracao": "1 minuto"
+      },
+      "repetir": "SAB CD15 no fim de cada turno",
+      "imunidade": "24h após passar/encerrar",
+      "terceira_falha": "CON CD15 ou PV reduzidos a zero, começando a morrer; sucesso encerra o efeito"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 15,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "dancing lights",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "invisibility (self)",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "minor illusion",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "detect thoughts",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "major image",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "misty step",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "confusion",
+          "usos": "1/dia"
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Verificação independente da edição editorial exata e erratas pendente.",
+    "Sem promoção canônica ou revisão independente."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Shurale",
+    "tipo": "fey",
+    "tamanho": "Medium",
+    "alinhamento": "neutral evil"
+  }
+}

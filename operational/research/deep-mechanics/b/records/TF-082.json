@@ -1,0 +1,216 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-082",
+  "nome": "Onyx Magistrate",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:onyx-magistrate",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "ficha individual com estatísticas e inventário de ações"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao"
+    }
+  ],
+  "estatisticas": {
+    "nd": "8",
+    "ca": 16,
+    "pv": 123,
+    "dados_vida": "13d10+52",
+    "atributos": {
+      "FOR": 19,
+      "DES": 10,
+      "CON": 18,
+      "INT": 16,
+      "SAB": 20,
+      "CAR": 20
+    },
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 30
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Insight": 8,
+      "Intimidation": 8,
+      "Perception": 8,
+      "Persuasion": 8,
+      "Religion": 6
+    },
+    "resistencias_dano": [
+      "cold",
+      "fire",
+      "psychic"
+    ],
+    "imunidades_dano": [
+      "necrotic",
+      "poison",
+      "bludgeoning/piercing/slashing não mágico sem adamantina"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "poisoned",
+      "prone"
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 18,
+    "idiomas": [
+      "Common",
+      "Infernal"
+    ],
+    "tamanho": "Large",
+    "pairar": true
+  },
+  "qualidade_estatisticas": "DADOS_DA_WIKI_KPOGL_AGUARDAM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, alimento, bebida e sono."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos de alteração de forma não explicitamente permitidos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia ou outros efeitos mágicos."
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "Ataques com arma do Magistrate contam como mágicos."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Scepter",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d10",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "FOR",
+            "cd": 15,
+            "falha": "prone",
+            "sucesso": "não cai"
+          }
+        }
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Necrotic Ray",
+      "tipo": "ataque_a_distancia",
+      "bonus_acerto": 8,
+      "alcance_normal_ft": 30,
+      "alcance_max_ft": 120,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "3d8",
+          "modificador": 4,
+          "tipo": "necrotic"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "opcoes": [
+        [
+          "Scepter",
+          "Scepter",
+          "Scepter"
+        ],
+        [
+          "Necrotic Ray",
+          "Necrotic Ray"
+        ]
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Scepter",
+      "categoria": "ataque",
+      "referencia_ataque": "Scepter",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Necrotic Ray",
+      "categoria": "ataque_distancia_magico",
+      "referencia_ataque": "Necrotic Ray",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Dire Judgement",
+      "categoria": "maldicao_em_area",
+      "usos": "1/dia",
+      "alcance_ft": 30,
+      "alvos": "criaturas escolhidas que percebem o Magistrate",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 16,
+        "falha": "cursed com -1d4 em ataque ou salvaguarda, sem cura mágica",
+        "sucesso": "não amaldiçoado"
+      },
+      "efeitos": [
+        "não recebe cura mágica",
+        "cura por descanso/não mágica preservada",
+        "-1d4 em ataques",
+        "-1d4 em salvaguardas"
+      ],
+      "duracao": "até remove curse ou magia equivalente",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Tip the Scales",
+      "categoria": "reacao",
+      "recarga": "5-6",
+      "alternativas": [
+        "recebe +3 CA contra ataque que iria acertá-lo",
+        "transforma uma salvaguarda falha em sucesso"
+      ],
+      "gatilho": "recebe ataque que acertaria OU falha em salvaguarda",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária."
+  ],
+  "integrada": false
+}

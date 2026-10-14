@@ -1,0 +1,173 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-317",
+  "nome": "Faux-Garou",
+  "estado": "MECANICA_INDIVIDUALIZADA_AGUARDA_COTEJO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e (publicação informada em checkpoint)",
+    "publicacao": "Tome of Beasts 3",
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:faux-garou",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "bloco de regras e estatísticas individualizado"
+    }
+  ],
+  "estatisticas": {
+    "nd": "5",
+    "ca": 12,
+    "pv": 93,
+    "dados_vida": "11d8+44",
+    "atributos": {
+      "FOR": 17,
+      "DES": 11,
+      "CON": 18,
+      "INT": 4,
+      "SAB": 12,
+      "CAR": 5
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {},
+    "pericias": {
+      "Perception": 4,
+      "Stealth": 6,
+      "Survival": 4
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "entende idiomas do criador, não fala"
+    ],
+    "resistencias_dano": [
+      "cold",
+      "fire",
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "proficiencia": 3
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, comida, água e sono."
+    },
+    {
+      "nome": "Druidic Vengeance",
+      "efeito": "Vantagem nos ataques e na Perception/Survival para localizar e rastrear alvos definidos na criação."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune à transformação de forma por magias ou efeitos externos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem nas salvaguardas contra magia."
+    },
+    {
+      "nome": "Necrotic Weapons",
+      "efeito": "Armas mágicas; +3d6 necrotic por acerto, já incluído em Claw."
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Frightening Gaze",
+        "Claw",
+        "Claw"
+      ]
+    },
+    {
+      "nome": "Claw",
+      "referencia_ataque": "Claw"
+    },
+    {
+      "nome": "Frightening Gaze",
+      "alcance_ft": 60,
+      "alvo": "uma criatura visível",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 15
+      },
+      "falha": {
+        "condicao": "frightened",
+        "duracao": "1 minuto"
+      },
+      "repetir": "fim de cada turno",
+      "imunidade_depois": "24 horas ao passar ou encerrar"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Claw",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 3,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "3d6",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ]
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Change Shape",
+      "custo": "ação bônus",
+      "forma": "beast Large ou menor equivalente ao tipo de licantropo que imita",
+      "preserva": "estatísticas exceto tamanho e velocidade",
+      "efeitos": [
+        "aparência continua artificial",
+        "equipamento não muda",
+        "reverte na morte"
+      ]
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Comparar com exemplar editorial e erratas do volume correto; fonte secundária não certifica revisão.",
+    "Ainda sem homologação independente, testes de combate ou promoção canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Faux-Garou",
+    "tipo": "Construct",
+    "tamanho": "Medium",
+    "alinhamento": "unaligned",
+    "publicacao": "Tome of Beasts 3"
+  }
+}

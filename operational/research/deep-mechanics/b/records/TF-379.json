@@ -1,0 +1,192 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-379",
+  "nome": "Snake with a Hundred Mage Hands",
+  "estado": "MECANICA_INDIVIDUALIZADA_COM_EDICAO_IDENTIFICADA_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2 (2020)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:snake-with-a-hundred-mage-hands",
+      "natureza": "reproducao_integral_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Tome of Beasts 2 (2020)"
+    }
+  ],
+  "estatisticas": {
+    "nd": "3",
+    "ca": 14,
+    "pv": 67,
+    "dados_vida": "15d6+15",
+    "atributos": {
+      "FOR": 8,
+      "DES": 18,
+      "CON": 12,
+      "INT": 18,
+      "SAB": 10,
+      "CAR": 6
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "escalar": 30,
+      "nadar": 30,
+      "escavar": null
+    },
+    "deslocamentos_texto": "caminhar 30; escalar 30; nadar 30 pés",
+    "salvaguardas": {},
+    "pericias": {
+      "Perception": 2,
+      "Sleight of Hand": 8,
+      "Stealth": 8
+    },
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 10
+      }
+    ],
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "origem_ca": "CA base 14",
+    "modificadores": {
+      "FOR": -1,
+      "DES": 4,
+      "CON": 1,
+      "INT": 4,
+      "SAB": 0,
+      "CAR": -2
+    },
+    "pairar": false,
+    "percepcao_passiva": 12,
+    "telepatia_ft": 60,
+    "bonus_proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "One Hundred Mage Hands",
+      "ativacao": "passiva",
+      "quantidade": 100,
+      "limite_alcance_ft": 30,
+      "efeitos": [
+        "mãos espectrais invulneráveis, não podem ser alvo de ataques ou magias",
+        "cada mão leva objeto de até 10 libras; máximo de três mãos no mesmo objeto",
+        "Sleight of Hand opera a até 30 pés e até quatro testes separados em uma mesma ação, cada um contra alvo diferente",
+        "podem executar operações de mãos como abrir portas e carregar lanternas, mas não usam armas, escudos ou ataques exceto Flying Fists"
+      ],
+      "visibilidade": "a serpente determina quais mãos são visíveis"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d4",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Bite",
+        "Bite"
+      ]
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Flying Fists",
+      "categoria": "area",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "cone",
+        "comprimento_ft": 30
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 14
+      },
+      "dano": {
+        "dados": "3d6",
+        "tipo": "bludgeoning"
+      },
+      "falha": {
+        "dano": "integral",
+        "condicao": "prone"
+      },
+      "sucesso": {
+        "dano": "metade",
+        "condicao": null
+      }
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Disruptive Ploy",
+      "custo": "ação bônus",
+      "alcance_ft": 30,
+      "alvo": "uma criatura visível",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 14
+      },
+      "falha": "desvantagem no próximo teste de atributo, jogada de ataque ou salvaguarda do alvo (escolha da serpente)",
+      "sucesso": "não aplica desvantagem"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Conferência final com livro e erratas de edição ainda não executada.",
+    "Revisão independente da implementação mecânica e integração canônica pendentes."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-379",
+    "nome_original": "Snake with a Hundred Mage Hands",
+    "tipo": "Small monstrosity",
+    "alinhamento": "neutral",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Bite",
+        "Bite"
+      ]
+    }
+  ],
+  "mecanicas_especiais": []
+}

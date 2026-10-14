@@ -1,0 +1,188 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-071",
+  "nome": "Clockwork Watchman",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 p.64",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:clockwork-watchman",
+      "natureza": "wiki_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "alcance": "statblock individual completo, ações e passivas"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao",
+      "alcance": "não valida números nem edição"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1/2",
+    "ca": 14,
+    "pv": 44,
+    "dados_vida": "8d8+8",
+    "atributos": {
+      "FOR": 14,
+      "DES": 12,
+      "CON": 12,
+      "INT": 5,
+      "SAB": 10,
+      "CAR": 1
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {
+      "CON": 3
+    },
+    "pericias": {
+      "Athletics": 4,
+      "Perception": 4
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common"
+    ],
+    "proficiencia": 2,
+    "tamanho": "Medium"
+  },
+  "qualidade_estatisticas": "ESTRUTURADA_DE_FONTE_SECUNDARIA_SEM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, comida, bebida e sono."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos que alterem sua forma, exceto quando a própria característica específica permitir."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem nas salvaguardas contra magias e efeitos mágicos."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Halberd",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d10",
+          "modificador": 2,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Slam",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d6",
+          "modificador": 2,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Net Cannon",
+      "tipo": "ataque_a_distancia",
+      "bonus_acerto": 3,
+      "alcance_normal_ft": 10,
+      "alcance_max_ft": 20,
+      "alvos": "um alvo",
+      "dados_dano": [],
+      "efeitos": [
+        {
+          "restricao": "alvo Large ou menor",
+          "condicao": "restrained",
+          "corda_ft": 20,
+          "escapar": {
+            "acao": "uma ação",
+            "teste": "FOR",
+            "cd": 10
+          },
+          "quebrar_rede": {
+            "ca": 10,
+            "dano_slashing": 5
+          }
+        }
+      ],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Halberd",
+      "categoria": "ataque",
+      "referencia_ataque": "Halberd",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Net Cannon",
+      "categoria": "ataque_distancia",
+      "referencia_ataque": "Net Cannon",
+      "usos": "4/dia",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Reel",
+      "categoria": "acao_bonus",
+      "precondicao": "alvo aprisionado na rede do próprio Watchman",
+      "efeito": "puxa a criatura em linha reta até 15 pés",
+      "distancia_ft": 15,
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Conferir exemplar do editor e erratas; descrição comunitária não é homologação mecânica."
+  ],
+  "integrada": false
+}

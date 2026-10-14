@@ -1,0 +1,168 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-353",
+  "nome": "Manggus",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
+  "edicao": {
+    "publicacao": "Tome of Beasts 2",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:manggus",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "5",
+    "ca": 14,
+    "pv": 127,
+    "dados_vida": "15d10+45",
+    "atributos": {
+      "FOR": 18,
+      "DES": 14,
+      "CON": 16,
+      "INT": 8,
+      "SAB": 7,
+      "CAR": 9
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {
+      "CON": 6
+    },
+    "pericias": {
+      "Intimidation": 5
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": null,
+    "imunidades_condicao": [
+      "frightened"
+    ],
+    "percepcao_passiva": 8
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Roaring Transformation",
+      "gatilho": "muda de gigante para hidra de três cabeças",
+      "alcance_ft": 30,
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 15
+      },
+      "falha": {
+        "condicao": "frightened",
+        "duracao": "até final do próximo turno"
+      },
+      "falha_por_5_ou_mais": "também paralyzed até fim do próximo turno",
+      "imunidade_sucesso": "24h contra transformação de todos os manggus"
+    },
+    {
+      "nome": "Shapechanger",
+      "ativacao": "ação",
+      "efeito": "Transforma em hidra Large de três cabeças ou retorna; conserva estatísticas, exceto tamanho. Equipamento não transforma; reverte após morrer."
+    },
+    {
+      "nome": "Three-Headed",
+      "precondicao": "forma de hidra",
+      "cabeças_iniciais": 3,
+      "efeitos": [
+        "vantagem em resistência a blinded, charmed, deafened, frightened, stunned e unconscious com mais de uma cabeça",
+        "perde uma cabeça se sofrer ao menos 15 de dano em um turno",
+        "se ficar sem cabeça, reverte e não pode voltar à hidra até descanso longo",
+        "fim do turno regenera duas cabeças por cabeça destruída desde o turno anterior, exceto se recebeu fogo desde então; cura 5 PV por cabeça restaurada"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "precondicao": "forma hidra",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 10,
+      "dano": [
+        {
+          "dados": "1d10",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Greataxe",
+      "precondicao": "forma gigante",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "2d12",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "alternativas": [
+        {
+          "forma": "hidra",
+          "sequencia": "um Bite por cabeça sobrevivente"
+        },
+        {
+          "forma": "gigante",
+          "sequencia": [
+            "Greataxe",
+            "Greataxe"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Bite",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Greataxe",
+      "referencia_ataque": "Greataxe"
+    },
+    {
+      "nome": "Change Shape",
+      "efeito": "Ação para alternar forma de gigante e hidra; ativa Roaring Transformation ao tornar-se hidra"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Confirmar a edição e erratas diretamente no editor; esta transcrição é secundária.",
+    "Sem revisão independente ou promoção canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Manggus",
+    "tipo": "Giant (shapechanger)",
+    "tamanho": "Large",
+    "alinhamento": "chaotic evil"
+  }
+}

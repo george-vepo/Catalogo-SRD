@@ -1,0 +1,219 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-060",
+  "nome": "Clockwork Abomination",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e - publicação da Kobold Press indicada no KPOGL",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (p.59; revisão 2023 ainda não confrontada)",
+    "edicao_exata_verificada": false,
+    "edicao_consultada": "Transcrição comunitária KPOGL, página individual com indicação do volume/página; não é comparação direta com exemplar do editor.",
+    "recortes_de_edicao_ou_revisao_pendentes": true
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:clockwork-abomination",
+      "natureza": "secundaria_wiki_comunitaria_nao_endossada",
+      "consultada": "2026-10-13",
+      "escopo": "estatísticas, passivas e ações da transcrição individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_para_identidade",
+      "escopo": "confirmar publicação/identidade; não contém ficha detalhada"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-059_TF-063/research.json",
+      "natureza": "checkpoint_anterior",
+      "escopo": "continuidade; campos não validados nesta fonte"
+    }
+  ],
+  "estatisticas": {
+    "nd": "5",
+    "ca": 16,
+    "pv": 76,
+    "dados_vida": "8d10+32",
+    "atributos": {
+      "FOR": 21,
+      "DES": 12,
+      "CON": 18,
+      "INT": 10,
+      "SAB": 10,
+      "CAR": 12
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "escalar": 30
+    },
+    "salvaguardas": {
+      "DES": 4,
+      "CON": 7
+    },
+    "pericias": {
+      "Athletics": 8,
+      "Perception": 3,
+      "Stealth": 4
+    },
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Common",
+      "Infernal"
+    ],
+    "proficiencia": 3
+  },
+  "qualidade_estatisticas": "ESTRUTURADA_APARTIR_FONTE_SECUNDARIA_NAO_CONFERIDA_NA_EDICAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não precisa de ar, comida, água ou sono."
+    },
+    {
+      "nome": "Explosive Infernal Power Source",
+      "efeito": "Ao ser destruído, explosão atinge todos até 10 pés: DES CD14, 4d6 fogo, metade em sucesso. Incendeia inflamáveis desguarnecidos.",
+      "gatilho": "destruição",
+      "area_ft": 10,
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 14
+      },
+      "dano": {
+        "dados": "4d6",
+        "modificador": 0,
+        "tipo": "fire"
+      }
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a magias/efeitos que alterem sua forma."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias e efeitos mágicos."
+    },
+    {
+      "nome": "Unstoppable",
+      "efeito": "Movimento não custa adicional em terreno difícil e seu deslocamento não pode ser reduzido."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "fire"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_fonte_secundaria": true
+    },
+    {
+      "nome": "Slam",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 15,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d6",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Bite",
+        "Slam"
+      ],
+      "confirmado_na_fonte_secundaria": true
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_fonte_secundaria": true
+    },
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam",
+      "confirmado_na_fonte_secundaria": true
+    },
+    {
+      "nome": "Fire Breath",
+      "categoria": "area",
+      "recarga": "5-6",
+      "area": {
+        "forma": "cone",
+        "comprimento_ft": 30
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 14,
+        "falha": "6d6 fire",
+        "sucesso": "metade"
+      },
+      "dados_dano": [
+        {
+          "dados": "6d6",
+          "modificador": 0,
+          "tipo": "fire"
+        }
+      ],
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": "CONFLITO DO CHECKPOINT: reprodução 5eSRD antiga contamina a seção de ações com outra Bite (+5 e veneno). Escolhida exclusivamente a transcrição KPOGL rotulada Tome of Beasts 1 para este registro preliminar.; Revisão Tome of Beasts 1 (edição 2023) não confrontada com a transcrição KPOGL; não combinar.",
+  "pendencias": [
+    "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+    "CONFLITO DO CHECKPOINT: reprodução 5eSRD antiga contamina a seção de ações com outra Bite (+5 e veneno). Escolhida exclusivamente a transcrição KPOGL rotulada Tome of Beasts 1 para este registro preliminar.",
+    "Revisão Tome of Beasts 1 (edição 2023) não confrontada com a transcrição KPOGL; não combinar.",
+    "Verificar exemplar editorial/erratas antes de usar."
+  ],
+  "integrada": false
+}

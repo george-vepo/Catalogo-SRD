@@ -1,0 +1,478 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-085",
+  "nome": "Animated Instrument, Animated Symphony",
+  "estado": "MECANICA_INDIVIDUALIZADA_REPRODUCAO_IDENTIFICADA_SEM_REVISAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 3",
+    "editora": "Kobold Press/Open Design",
+    "identificacao_de_pagina": "pp. 34–38, quadro Animated Symphony p.37",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://anyflip.com/myubd/nuoj/basic",
+      "natureza": "reproducao_volume_identificada_nao_oficial",
+      "escopo": "características, ações, lendárias, covil e efeitos regionais (pp.34–38)"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/animated-symphony/",
+      "natureza": "transcricao_secundaria",
+      "escopo": "conferência da identificação e estatísticas gerais"
+    }
+  ],
+  "estatisticas": {
+    "nd": "15",
+    "bonus_proficiencia": 5,
+    "ca": 15,
+    "origem_ca": "natural armor",
+    "pv": 201,
+    "dados_vida": "13d20+65",
+    "atributos": {
+      "FOR": 12,
+      "DES": 18,
+      "CON": 20,
+      "INT": 10,
+      "SAB": 8,
+      "CAR": 22
+    },
+    "modificadores": {
+      "FOR": 1,
+      "DES": 4,
+      "CON": 5,
+      "INT": 0,
+      "SAB": -1,
+      "CAR": 6
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": 30,
+      "nadar": null,
+      "escalar": null,
+      "escavar": null
+    },
+    "pairar": true,
+    "salvaguardas": {
+      "DES": 7,
+      "CON": 10,
+      "SAB": 4,
+      "CAR": 11
+    },
+    "pericias": {
+      "Performance": 16
+    },
+    "resistencias_dano": [
+      "bludgeoning",
+      "piercing",
+      "slashing"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "stunned"
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 120,
+        "limitacao": "cega além do alcance"
+      }
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [
+      "compreende Common, não fala"
+    ],
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "REPRODUCAO_VOLUME_PAGINADO_NAO_HOMOLOGADO_EDITORIALMENTE",
+  "habilidades_passivas": [
+    {
+      "nome": "Antimagic Susceptibility",
+      "gatilho": "terminar turno em antimagic field",
+      "efeito": "incapacitated",
+      "interacao_magia": "se dispel magic atingir a criatura, faz CON contra CD do conjurador ou fica unconscious por 1 minuto; tem vantagem nessa salvaguarda"
+    },
+    {
+      "nome": "Construct Nature",
+      "efeito": "não necessita ar, comida, bebida ou sono"
+    },
+    {
+      "nome": "False Appearance",
+      "gatilho": "imóvel e sem voar",
+      "efeito": "aparenta ser coleção de instrumentos inanimados"
+    },
+    {
+      "nome": "Grand Composition",
+      "gatilho": "outra criatura ocupa mesmo espaço",
+      "efeitos": [
+        "a criatura faz salvaguardas CON para concentração com desvantagem",
+        "não pode conjurar magias com componente verbal"
+      ]
+    },
+    {
+      "nome": "Legendary Resistance",
+      "limite": "3/dia",
+      "gatilho": "falha na salvaguarda",
+      "efeito": "pode escolher sucesso"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra magias e outros efeitos mágicos"
+    },
+    {
+      "nome": "Swarm",
+      "efeitos": [
+        "pode ocupar o espaço de outras criaturas e vice-versa",
+        "passa por aberturas suficientemente largas para um instrumento Small",
+        "não pode recuperar PV nem receber PV temporários exceto pela ação lendária Harmonize"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Hammer Note",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 9,
+      "alcance_ft": 5,
+      "alvos": "um no espaço do enxame",
+      "dano_normal": [
+        {
+          "dados": "8d8",
+          "modificador": 0,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "dano_a_metade_pv_ou_menos": [
+        {
+          "dados": "4d8",
+          "modificador": 0,
+          "tipo": "bludgeoning"
+        }
+      ]
+    },
+    {
+      "nome": "Pulsating Cacophony",
+      "tipo": "magico_a_distancia",
+      "bonus_acerto": 11,
+      "alcance_normal_ft": 60,
+      "alcance_maximo_ft": 60,
+      "alvos": 1,
+      "dano_normal": [
+        {
+          "dados": "4d10",
+          "modificador": 0,
+          "tipo": "thunder"
+        },
+        {
+          "dados": "2d12",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ],
+      "dano_a_metade_pv_ou_menos": [
+        {
+          "dados": "2d10",
+          "modificador": 0,
+          "tipo": "thunder"
+        },
+        {
+          "dados": "1d12",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "precondicao": "usa Musical Arrangement antes dos ataques",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Musical Arrangement",
+        "Hammer Note ou Pulsating Cacophony",
+        "Hammer Note ou Pulsating Cacophony"
+      ],
+      "alternativas": [
+        "duas Hammer Note",
+        "duas Pulsating Cacophony",
+        "uma de cada"
+      ]
+    },
+    {
+      "nome": "Hammer Note",
+      "categoria": "ataque",
+      "referencia_ataque": "Hammer Note"
+    },
+    {
+      "nome": "Pulsating Cacophony",
+      "categoria": "ataque",
+      "referencia_ataque": "Pulsating Cacophony"
+    },
+    {
+      "nome": "Musical Arrangement",
+      "categoria": "escolha_de_musica",
+      "alternativas": [
+        {
+          "nome": "Ballet of Quickening Steps",
+          "efeitos": [
+            "deslocamento +10 pés",
+            "pode realizar Dodge como ação bônus em cada um de seus turnos"
+          ],
+          "duracao": "1 minuto ou até começar outra música"
+        },
+        {
+          "nome": "Harrowing Hymn",
+          "alcance_ft": 30,
+          "alvos": "criaturas que podem ouvir",
+          "salvaguarda": {
+            "atributo": "SAB",
+            "cd": 19
+          },
+          "falha": {
+            "condicao": "frightened",
+            "duracao": "1 minuto"
+          },
+          "repetir_salvaguarda": "fim de cada turno; sucesso encerra",
+          "imunidade": "24 horas após sucesso ou término do efeito"
+        },
+        {
+          "nome": "Concerto for the Luckless",
+          "alcance_ft": 60,
+          "alvos": "criaturas que podem ouvir",
+          "salvaguarda": {
+            "atributo": "CAR",
+            "cd": 19
+          },
+          "falha": {
+            "condicao": "cursed",
+            "duracao": "1 minuto",
+            "efeito": "não acrescenta bônus de proficiência a ataques ou testes de atributo"
+          },
+          "encerramento": [
+            "resultado natural 20 em ataque ou teste de habilidade",
+            "remove curse ou magia similar"
+          ]
+        },
+        {
+          "nome": "Four Winds Canon",
+          "area": {
+            "geometria": "cone",
+            "comprimento_ft": 90
+          },
+          "salvaguarda": {
+            "atributo": "FOR",
+            "cd": 19
+          },
+          "falha": "é empurrado até 30 pés e fica prone",
+          "sucesso": "fica prone, sem empurrão",
+          "ambiente": [
+            "dispersa gás ou vapor",
+            "apaga chamas desprotegidas",
+            "chamas protegidas têm 50% de chance de se apagar"
+          ]
+        }
+      ]
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Dodge",
+      "precondicao": "Ballet of Quickening Steps em execução",
+      "custo": "ação bônus",
+      "efeito": "Dodge enquanto efeito da música durar"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [
+    {
+      "nome": "Move",
+      "custo": 1,
+      "efeito": "desloca-se até seu deslocamento sem provocar ataques de oportunidade"
+    },
+    {
+      "nome": "Harmonize",
+      "custo": 2,
+      "efeito": "recupera 20 PV e encerra uma condição ativa sobre si",
+      "cura_pv": 20,
+      "condicoes_encerradas": 1
+    },
+    {
+      "nome": "Orchestral Flourish",
+      "custo": 2,
+      "area": {
+        "geometria": "raio",
+        "raio_ft": 10,
+        "inclui_criaturas_no_espaco": true
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 19
+      },
+      "dano": {
+        "dados": "3d6",
+        "tipo": "thunder"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade"
+    },
+    {
+      "nome": "Syncopated Melody",
+      "custo": 3,
+      "gatilho": "magia foi conjurada desde o fim de seu turno anterior",
+      "teste": {
+        "pericia": "Performance",
+        "bonus": 16,
+        "cd": "CD da magia do conjurador original + nível da magia copiada"
+      },
+      "sucesso": "conjura cópia da magia com CD de salvaguarda e bônus de ataque mágico do conjurador original",
+      "falha": "não conjura a magia",
+      "restricao": "precisa de magia que foi realmente conjurada no intervalo temporal indicado"
+    }
+  ],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "Conferir contra edição editorial e erratas; reprodução não é a própria editora.",
+    "Validar de forma independente a escala e efeitos de magia copiada; nenhum bônus de ataque inventado.",
+    "Sem validação independente, testes de combate nem promoção canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Animated Symphony",
+    "tipo": "swarm of Small constructs",
+    "tamanho": "Gargantuan",
+    "alinhamento": "neutral",
+    "nd": "15",
+    "nd_no_covil": "16",
+    "bonus_proficiencia": 5
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "primeiro": "Musical Arrangement",
+      "quantidade_ataques": 2,
+      "alternativas": [
+        [
+          "Hammer Note",
+          "Hammer Note"
+        ],
+        [
+          "Pulsating Cacophony",
+          "Pulsating Cacophony"
+        ],
+        [
+          "Hammer Note",
+          "Pulsating Cacophony"
+        ]
+      ]
+    }
+  ],
+  "acoes_lendarias_por_rodada": 3,
+  "recuperacao_acoes_lendarias": "início do próprio turno",
+  "limites_acoes_lendarias": "apenas uma opção por vez após o fim do turno de outra criatura",
+  "acoes_de_covil": [
+    {
+      "nome": "Backup Music",
+      "momento": "iniciativa 20 sem ganhar desempate",
+      "efeito": "invoca 2d4 animated instruments ou 1 animated quartet",
+      "alcance_ft": 120,
+      "alvos": "espaços desocupados visíveis",
+      "iniciativa_invocados": "agem imediatamente e em iniciativa 20 das rodadas seguintes",
+      "duracao": "1 hora, morte da Symphony ou nova utilização desta ação de covil"
+    },
+    {
+      "nome": "Horn Blast",
+      "momento": "iniciativa 20",
+      "ponto_alvo": "visível a até 120 pés",
+      "raio_ft": 5,
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 19
+      },
+      "dano": {
+        "dados": "6d6",
+        "tipo": "thunder"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade"
+    },
+    {
+      "nome": "Timekeeper",
+      "momento": "iniciativa 20",
+      "alcance_ft": 120,
+      "alvo": "criatura visível",
+      "alternativas": [
+        {
+          "alvo": "aliado",
+          "efeitos": [
+            "CA +2",
+            "vantagem em salvaguardas DES",
+            "pode fazer um ataque com ação bônus"
+          ]
+        },
+        {
+          "alvo": "inimigo",
+          "salvaguarda": {
+            "atributo": "SAB",
+            "cd": 19
+          },
+          "falha": [
+            "CA -2",
+            "desvantagem em salvaguardas DES",
+            "só pode usar ação OU ação bônus no turno (não ambas)"
+          ],
+          "sucesso": "sem efeito"
+        }
+      ],
+      "duracao": "até a iniciativa 20 da próxima rodada"
+    }
+  ],
+  "restricao_acoes_de_covil": "não repetir o mesmo efeito de covil em rodadas consecutivas",
+  "efeitos_regionais": [
+    {
+      "nome": "Life-Giving Music",
+      "alcance_milhas": 1,
+      "efeito": "objetos inanimados ocasionalmente ganham vida temporariamente para cantar ou dançar"
+    },
+    {
+      "nome": "Pervasive Stings",
+      "alcance_milhas": 5,
+      "efeito": "música contextual acompanha feitos marcantes, capaz de favorecer ou atrapalhar esforços narrativamente"
+    }
+  ],
+  "duracao_efeitos_regionais_apos_morte": "1d10 dias",
+  "mecanicas_especiais": [
+    {
+      "nome": "Dano proporcional ao tamanho do enxame",
+      "efeito": "Hammer Note e Pulsating Cacophony causam metade de dados quando a Symphony tem metade ou menos dos PV máximos"
+    },
+    {
+      "nome": "Regras de covil",
+      "efeito": "no covil, ND 16 em lugar de 15"
+    },
+    {
+      "nome": "Conjuração por imitação",
+      "acao": "Syncopated Melody",
+      "efeito": "copia magia conjurada na janela válida apenas após Performance bem-sucedido"
+    }
+  ]
+}

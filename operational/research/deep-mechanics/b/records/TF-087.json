@@ -1,0 +1,211 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-087",
+  "nome": "Clockwork Tactician",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 p.90",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:clockwork-tactician",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "ficha individual com estatísticas e inventário de ações"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao"
+    }
+  ],
+  "estatisticas": {
+    "nd": "11",
+    "ca": 16,
+    "pv": 150,
+    "dados_vida": "20d8+60",
+    "atributos": {
+      "FOR": 20,
+      "DES": 14,
+      "CON": 17,
+      "INT": 20,
+      "SAB": 15,
+      "CAR": 11
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Perception": 6
+    },
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "unconscious"
+    ],
+    "sentidos": [
+      "darkvision 120 ft."
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "até duas línguas do criador"
+    ],
+    "tamanho": "Medium",
+    "proficiencia": 4
+  },
+  "qualidade_estatisticas": "DADOS_DA_WIKI_KPOGL_AGUARDAM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, alimento, bebida e sono."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos de alteração de forma não explicitamente permitidos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia ou outros efeitos mágicos."
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "Ataques com arma contam como mágicos."
+    },
+    {
+      "nome": "Pack Tactics",
+      "efeito": "Vantagem em ataques contra alvo se aliado não incapacitado estiver dentro de 5 pés do alvo."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Multiweapon",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 9,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "bludgeoning ou piercing ou slashing"
+        }
+      ],
+      "efeitos": [
+        {
+          "escolhe_tipo_de_dano_a_cada_ataque": [
+            "bludgeoning",
+            "piercing",
+            "slashing"
+          ]
+        }
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Heavy Crossbow",
+      "tipo": "ataque_a_distancia",
+      "bonus_acerto": 6,
+      "alcance_normal_ft": 100,
+      "alcance_max_ft": 400,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d10",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Multiweapon",
+        "Multiweapon",
+        "Multiweapon",
+        "Multiweapon"
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Multiweapon",
+      "categoria": "ataque",
+      "referencia_ataque": "Multiweapon",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Heavy Crossbow",
+      "categoria": "ataque_distancia",
+      "referencia_ataque": "Heavy Crossbow",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Battlefield Commands",
+      "categoria": "acao_bonus",
+      "alcance_ft": 60,
+      "alvos": "até 3 aliados visíveis que possam ouvir e entender",
+      "efeito": "vantagem no próximo teste de habilidade ou ataque",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Press the Attack",
+      "categoria": "acao_bonus",
+      "gatilho": "duas Multiweapon no mesmo alvo acertam OU um crítico com Multiweapon",
+      "efeito": "faz outro ataque Multiweapon",
+      "referencia_ataque": "Multiweapon",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "reacoes": [
+    {
+      "nome": "Quick Study",
+      "categoria": "reacao",
+      "gatilho": "inimigo acerta um ataque no Tactician",
+      "teste": {
+        "atributo": "INT",
+        "cd": 13
+      },
+      "quando_passa": {
+        "escolha_uma": [
+          "vantagem em ataques corpo a corpo contra atacante",
+          "atacante tem desvantagem ao atacar Tactician",
+          "resistência ao tipo de dano do ataque"
+        ]
+      },
+      "acumulacao": true,
+      "termina": "ao atacar outra criatura ou usar Quick Study contra outra criatura",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária."
+  ],
+  "integrada": false
+}

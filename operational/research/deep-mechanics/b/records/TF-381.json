@@ -1,0 +1,173 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-381",
+  "nome": "Aracnecore",
+  "estado": "DETALHADA_FONTE_EDITORIAL_SEM_REVISAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "Level Up Advanced 5th Edition (A5E)",
+    "publicacao": "Gate Pass Gazette",
+    "editora": "EN Publishing",
+    "confirmacao": "bloco individual no portal editorial; edição impressa/erratas não confrontadas"
+  },
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/2272",
+      "natureza": "editorial_direta",
+      "verificada": "2026-10-13"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "continuidade_checkpoint_secundario"
+    }
+  ],
+  "estatisticas": {
+    "nd": "5",
+    "ca": 16,
+    "pv": 85,
+    "dados_vida": "10d10+30",
+    "atributos": {
+      "FOR": 16,
+      "DES": 14,
+      "CON": 16,
+      "INT": 8,
+      "SAB": 12,
+      "CAR": 8
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {},
+    "pericias": {},
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "tamanho": "Large",
+    "tipo": "Monstrosity",
+    "bloodied_pv": 42,
+    "proficiencia": 3,
+    "cd_manobra": 13
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Spider Climb",
+      "efeito": "Escala superfícies difíceis e tetos."
+    },
+    {
+      "nome": "Web Walker",
+      "efeito": "Ignora restrições de movimento impostas por teias."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 14
+          },
+          "falha": "paralyzed por 1 minuto",
+          "encerramento": "nova CON CD14 no fim de cada turno",
+          "duracao": "1 minuto, salvo sucesso em salvaguarda repetida",
+          "repeticao_salvaguarda": {
+            "atributo": "CON",
+            "cd": 14,
+            "instante": "fim de cada turno da criatura afetada",
+            "sucesso": "encerra paralyzed"
+          }
+        }
+      ]
+    },
+    {
+      "nome": "Claws",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "3d4",
+          "modificador": 3,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [
+        {
+          "precondicao": "moveu 20 pés em linha reta",
+          "salvaguarda": {
+            "atributo": "STR",
+            "cd": 13
+          },
+          "falha": "prone",
+          "movimento_minimo_ft": 20,
+          "direcao": "em linha reta na direção do alvo antes deste ataque",
+          "cd_propria_da_acao": 13
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "efeito": "Um Bite e dois Claws.",
+      "sequencia": [
+        "Bite",
+        "Claws",
+        "Claws"
+      ]
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": false,
+  "pendencias": [
+    "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
+    "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
+  ],
+  "integrada": false,
+  "auditoria_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/2272",
+    "publicacao": "Gate Pass Gazette",
+    "campos_verificados": [
+      "ND",
+      "CA",
+      "PV",
+      "atributos",
+      "deslocamento",
+      "tamanho",
+      "tipo",
+      "bloodied",
+      "proficiencia",
+      "CD manobra",
+      "Multiattack",
+      "Bite CON14",
+      "Claws STR13"
+    ],
+    "resultado": "Cotejo individual com o portal oficial A5E (sem exemplar impresso/erratas), preserva CDs distintas",
+    "imagem": "Ator do módulo oficial Foundry usa manticore.webp, visualmente incompatível com criatura de patas aracnídeas; não reutilizada.",
+    "homologacao_independente": false
+  }
+}

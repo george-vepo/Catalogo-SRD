@@ -1,0 +1,207 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-398",
+  "nome": "Falsifier Fog",
+  "estado": "MECANICAS_INDIVIDUALIZADAS_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2 (2020)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:falsifier-fog",
+      "natureza": "reproducao_integral_comunitaria_nao_endossada",
+      "data_consulta": "2026-10-14",
+      "publicacao_identificada": "Tome of Beasts 2 (2020)",
+      "escopo": "atributos, passivas, ataques e todas as ações da ficha"
+    }
+  ],
+  "estatisticas": {
+    "nd": "4",
+    "ca": 13,
+    "pv": 52,
+    "dados_vida": "8d12",
+    "atributos": {
+      "FOR": 1,
+      "DES": 17,
+      "CON": 10,
+      "INT": 14,
+      "SAB": 16,
+      "CAR": 15
+    },
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 60,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "deslocamentos_texto": "voar 60 (pairar) pés",
+    "salvaguardas": {},
+    "pericias": {},
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "observacao": "blind beyond this radius"
+      }
+    ],
+    "idiomas": [
+      "compreende Common, não fala"
+    ],
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "thunder",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "grappled",
+      "paralyzed",
+      "poisoned",
+      "prone",
+      "restrained",
+      "unconscious"
+    ],
+    "origem_ca": "CA base não detalhada",
+    "modificadores": {
+      "FOR": -5,
+      "DES": 3,
+      "CON": 0,
+      "INT": 2,
+      "SAB": 3,
+      "CAR": 2
+    },
+    "pairar": true,
+    "percepcao_passiva": 13,
+    "telepatia_ft": "somente criatura no seu espaço",
+    "bonus_proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Enveloping Fog",
+      "efeito": "Pode ocupar espaços de criaturas e atravessar fresta de 1 polegada sem se espremer. Seu espaço é lightly obscured; criatura dentro da névoa tem three-quarters cover contra ataques e efeitos fora da névoa.",
+      "cobertura": "three-quarters cover"
+    },
+    {
+      "nome": "False Appearance",
+      "gatilho": "paira imóvel",
+      "efeito": "indistinguível de nevoeiro comum"
+    },
+    {
+      "nome": "Horrific Illusions",
+      "gatilho": "criatura inicia turno no espaço da névoa",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 13
+      },
+      "falha": {
+        "condicao": "frightened",
+        "duracao": "até início do próximo turno do alvo",
+        "deslocamento_ft": 0
+      },
+      "falha_por_5_ou_mais": "short-term madness",
+      "sucesso": "não afetado"
+    },
+    {
+      "nome": "Limited Telepathy",
+      "efeito": "Comunicação telepática com criaturas dentro do próprio espaço."
+    },
+    {
+      "nome": "Undead Nature",
+      "efeito": "Dispensa ar, comida, bebida ou sono."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Chill",
+      "tipo": "ataque_magico_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "uma criatura no espaço da névoa",
+      "dano": [
+        {
+          "dados": "3d6",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Chill",
+        "Chill"
+      ]
+    },
+    {
+      "nome": "Chill",
+      "categoria": "ataque",
+      "referencia_ataque": "Chill"
+    },
+    {
+      "nome": "Reaching Phantasms",
+      "categoria": "dano_area",
+      "recarga": "5–6",
+      "alvos": "cada criatura a até 10 pés da névoa",
+      "alcance_ft": 10,
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 13
+      },
+      "dano": {
+        "dados": "4d8",
+        "tipo": "psychic"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade",
+      "desvantagem_salvaguarda": "criaturas ocupando o espaço da névoa"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Fontes comunitárias e 5eSRD consultadas; cotejo contra exemplar editorial e erratas ainda pendente.",
+    "Sem revisão independente e sem integração canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-398",
+    "nome_original": "Falsifier Fog",
+    "tipo": "Huge undead",
+    "alinhamento": "chaotic evil",
+    "nd": "4",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Chill",
+        "Chill"
+      ]
+    }
+  ],
+  "mecanicas_especiais": []
+}

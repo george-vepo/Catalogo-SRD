@@ -1,0 +1,173 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-117",
+  "nome": "Yumerai",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:yumerai",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Tome of Beasts 2"
+    }
+  ],
+  "estatisticas": {
+    "nd": "2",
+    "ca": 13,
+    "pv": 65,
+    "dados_vida": "10d8+20",
+    "atributos": {
+      "FOR": 13,
+      "DES": 17,
+      "CON": 14,
+      "INT": 13,
+      "SAB": 14,
+      "CAR": 16
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Insight": 4,
+      "Perception": 4,
+      "Stealth": 5
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "todos"
+    ],
+    "resistencias_dano": [
+      "psychic"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "unconscious"
+    ],
+    "proficiencia": 2,
+    "telepatia_ft": 60
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Dream Walker",
+      "efeito": "não precisa dormir"
+    },
+    {
+      "nome": "Dream Leap",
+      "frequencia": "uma vez por turno",
+      "custo": "metade do deslocamento",
+      "precondicao": "uma criatura dormindo a até 5 pés",
+      "destino": "outra criatura dormindo até 1 milha da primeira",
+      "aparecimento": "espaço livre a até 5 pés da segunda criatura",
+      "falha": "se não existir segunda criatura dormindo, Yumerai fica stunned até fim do seu próximo turno"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Psychic Lash",
+      "tipo": "magico_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Psychic Lash",
+        "Psychic Lash"
+      ]
+    },
+    {
+      "nome": "Psychic Lash",
+      "categoria": "ataque",
+      "referencia_ataque": "Psychic Lash"
+    },
+    {
+      "nome": "Somnambulism",
+      "alvo": "uma criatura dormindo visível a até 30 pés",
+      "efeito": "controla comandos simples enquanto estiver dormindo",
+      "interrupcoes": [
+        "sofre dano",
+        "recebe comando suicida",
+        "ordenado a passar por terreno danoso",
+        "é agarrado"
+      ],
+      "salvaguarda_ao_interromper": {
+        "atributo": "SAB",
+        "cd": 13
+      },
+      "sucesso": "desperta e encerra controle",
+      "limite": "controla uma criatura dormindo por vez; transferir controle termina o anterior"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 13,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "dancing lights",
+            "message",
+            "minor illusion"
+          ]
+        },
+        {
+          "usos": "3/dia cada",
+          "nomes": [
+            "detect thoughts",
+            "silent image",
+            "sleep"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "nomes": [
+            "confusion",
+            "major image"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "Ainda é necessário confronto independente com a publicação editorial, erratas e regras do jogo.",
+    "Sem revisão independente, não promover ao catálogo canônico."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Yumerai",
+    "tipo": "Medium fey",
+    "alinhamento": "neutral"
+  }
+}

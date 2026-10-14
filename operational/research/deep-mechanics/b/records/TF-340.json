@@ -1,0 +1,193 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-340",
+  "nome": "Wilderness Crone",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_PENDENTE_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 3",
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:wilderness-crone",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "escopo": "regras detalhadas da criatura individual"
+    }
+  ],
+  "estatisticas": {
+    "nd": "6",
+    "ca": 17,
+    "pv": 105,
+    "dados_vida": "14d8+42",
+    "atributos": {
+      "FOR": 16,
+      "DES": 10,
+      "CON": 17,
+      "INT": 15,
+      "SAB": 18,
+      "CAR": 8
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {
+      "CON": 6,
+      "SAB": 7
+    },
+    "pericias": {
+      "Medicine": 7,
+      "Nature": 8,
+      "Stealth": 3
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common",
+      "Sylvan"
+    ],
+    "resistencias_dano": [
+      "piercing"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "origem_ca": "natural armor",
+    "proficiencia": 3
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Beast Passivism",
+      "efeito": "Bestas com INT 3 ou menor não podem atacá-la voluntariamente, embora possam ser forçadas magicamente."
+    },
+    {
+      "nome": "Speak with Beasts and Plants",
+      "efeito": "Comunica-se com Beasts e Plants como se compartilhassem idioma."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Wild Staff",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "1d8",
+          "modificador": 0,
+          "tipo": "force"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Wild Staff",
+        "Wild Staff",
+        "Wild Staff"
+      ]
+    },
+    {
+      "nome": "Wild Staff",
+      "referencia_ataque": "Wild Staff"
+    },
+    {
+      "nome": "Needle Breath",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "cone",
+        "alcance_ft": 30
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 15
+      },
+      "dano": {
+        "dados": "8d6",
+        "tipo": "piercing"
+      },
+      "falha": "total",
+      "sucesso": "metade"
+    },
+    {
+      "nome": "Spellcasting",
+      "referencia_conjuracao": "Spellcasting"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Transmigratory Strike",
+      "gatilho": "crone mata um humanoide",
+      "efeito": "pode reviver imediatamente como Beast de ND não superior ao ND/nível do humanoide",
+      "regras": "funciona como reincarnate com a restrição indicada"
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Innate/Spellcasting",
+      "atributo": "SAB",
+      "cd": 15,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "minor illusion",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "tree stride",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "goodberry",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "hold person",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "locate animals or plants",
+          "usos": "3/dia cada"
+        },
+        {
+          "nome": "commune with nature",
+          "usos": "1/dia cada"
+        },
+        {
+          "nome": "remove curse",
+          "usos": "1/dia cada"
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Validar dados e erratas da edição editorial exata. Não homologada por fonte comunitária.",
+    "Sem revisão independente ou promoção canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Wilderness Crone",
+    "tipo": "fey",
+    "tamanho": "Medium",
+    "alinhamento": "neutral",
+    "publicacao": "Tome of Beasts 3"
+  }
+}

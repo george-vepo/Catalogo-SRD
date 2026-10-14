@@ -1,0 +1,195 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-342",
+  "nome": "Silenal",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2",
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:silenal",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "data": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "7",
+    "ca": 14,
+    "pv": 117,
+    "dados_vida": "18d6+54",
+    "atributos": {
+      "FOR": 10,
+      "DES": 18,
+      "CON": 16,
+      "INT": 10,
+      "SAB": 13,
+      "CAR": 19
+    },
+    "deslocamentos_ft": {
+      "andar": 25
+    },
+    "deslocamentos_texto": "caminhar 25 pés",
+    "salvaguardas": {
+      "CAR": 7
+    },
+    "pericias": {
+      "Perception": 4,
+      "Persuasion": 7,
+      "Stealth": 7
+    },
+    "sentidos": [],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": null,
+    "imunidades_condicao": [
+      "charmed",
+      "poisoned"
+    ]
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Drinking Buddy",
+      "gatilho": "alvo compartilha bebida com silenal",
+      "duracao": "1 hora",
+      "efeito": "Vantagem para resistir a charmed/poisoned; se atacar silenal, vira desvantagem pelo tempo restante."
+    },
+    {
+      "nome": "Drunken Clarity",
+      "precondicao": "até 5 pés de álcool",
+      "efeitos": [
+        "truesight 90 pés",
+        "detecta portas secretas mágicas até 30 pés"
+      ]
+    },
+    {
+      "nome": "Hide in the Fray",
+      "precondicao": "até 10 pés de duas criaturas lutando uma contra outra",
+      "efeito": "pode usar Hide como ação bônus"
+    },
+    {
+      "nome": "Liquid Courage",
+      "recarga": "4–6",
+      "custo": "ação bônus",
+      "gatilho": "consome álcool próximo",
+      "pv_temporarios": "3d6 (média 10)",
+      "duracao": "1 minuto"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Tankard",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "falha": {
+          "condicao": "poisoned",
+          "duracao": "1 minuto"
+        },
+        "repetir": "fim de cada turno"
+      }
+    },
+    {
+      "nome": "Darts",
+      "tipo": "distancia",
+      "bonus_acerto": 7,
+      "distancia_ft": {
+        "normal": 20,
+        "longo": 40
+      },
+      "dano": [
+        {
+          "dados": "4d4",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "quantidade": 3,
+      "alternativas": [
+        "Tankard",
+        "Darts"
+      ],
+      "observacao": "Pode escolher quaisquer três ataques; fonte não restringe combinação."
+    },
+    {
+      "nome": "Tankard",
+      "referencia_ataque": "Tankard"
+    },
+    {
+      "nome": "Darts",
+      "referencia_ataque": "Darts"
+    },
+    {
+      "nome": "Cause Row",
+      "usos": "1/dia",
+      "alcance_ft": 60,
+      "alvos": "humanoides vistos pelo silenal",
+      "efeito": "4d4 commoners ou uma unidade bar brawl entram em frenesi; não atacam silenal",
+      "duracao": "10 minutos ou até morte de silenal ou dispersão com ação bônus"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Hide in the Fray",
+      "precondicao": "até 10 pés de duas criaturas em combate",
+      "efeito": "Hide"
+    },
+    {
+      "nome": "Liquid Courage",
+      "recarga": "4–6",
+      "efeito": "3d6 PV temporários por um minuto"
+    },
+    {
+      "nome": "Calm and Disperse",
+      "precondicao": "Cause Row ativo",
+      "efeito": "encerra o frenesi dos envolvidos"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Verificação independente da edição editorial exata e erratas pendente.",
+    "Sem promoção canônica ou revisão independente."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Silenal",
+    "tipo": "fey",
+    "tamanho": "Small",
+    "alinhamento": "chaotic neutral"
+  }
+}

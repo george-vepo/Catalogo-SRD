@@ -1,0 +1,220 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-397",
+  "nome": "Fane Spirit",
+  "estado": "MECANICAS_INDIVIDUALIZADAS_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2 (2020)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:fane-spirit",
+      "natureza": "reproducao_integral_comunitaria_nao_endossada",
+      "data_consulta": "2026-10-14",
+      "publicacao_identificada": "Tome of Beasts 2 (2020)",
+      "escopo": "atributos, passivas, ataques e todas as ações da ficha"
+    }
+  ],
+  "estatisticas": {
+    "nd": "3",
+    "ca": 13,
+    "pv": 52,
+    "dados_vida": "7d8+21",
+    "atributos": {
+      "FOR": 7,
+      "DES": 16,
+      "CON": 16,
+      "INT": 10,
+      "SAB": 18,
+      "CAR": 17
+    },
+    "deslocamentos_ft": {
+      "andar": 20,
+      "voar": 40,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "deslocamentos_texto": "caminhar 20; voar 40 (pairar) pés",
+    "salvaguardas": {
+      "SAB": 6
+    },
+    "pericias": {
+      "Deception": 5,
+      "Religion": 4
+    },
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "idiomas": [
+      "idiomas conhecidos em vida"
+    ],
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "necrotic",
+      "thunder",
+      "bludgeoning/piercing/slashing de ataques não mágicos que não usam prata"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "origem_ca": "CA base não detalhada",
+    "modificadores": {
+      "FOR": -2,
+      "DES": 3,
+      "CON": 3,
+      "INT": 0,
+      "SAB": 4,
+      "CAR": 3
+    },
+    "pairar": true,
+    "percepcao_passiva": 14,
+    "telepatia_ft": null,
+    "bonus_proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Incorporeal Movement",
+      "efeito": "Pode atravessar criaturas e objetos como terreno difícil.",
+      "penalidade": {
+        "gatilho": "encerra turno dentro de objeto",
+        "dano": {
+          "dados": "1d10",
+          "tipo": "force"
+        }
+      }
+    },
+    {
+      "nome": "Veil of the Living",
+      "ativacao": "passiva, diurna; desfaz-se imediatamente ao receber qualquer dano ou ao pôr do sol",
+      "condicao": "durante dia aparece como em vida",
+      "modificacao_atributo": {
+        "FOR": 10
+      },
+      "efeitos": [
+        "perde Incorporeal Movement",
+        "não pode usar Touch of Forgetfulness",
+        "perde imunidades grappled e restrained",
+        "conserva outros atributos e magias",
+        "quem testemunha mudança para forma undead faz SAB CD13 ou frightened até fim do próximo turno"
+      ],
+      "retorno": "em cada manhã retoma forma viva sem exigir salvaguarda em testemunhas"
+    },
+    {
+      "nome": "Undead Nature",
+      "efeito": "Dispensa ar, alimento, água e sono."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Touch of Forgetfulness",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 3,
+          "tipo": "psychic"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 13
+        },
+        "falha": "esquece alguns ou todos eventos até cinco minutos anteriores ao ataque, como modify memory; mestre determina impacto",
+        "sucesso": "sem alteração de memória"
+      },
+      "restricao": "indisponível na forma diurna"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Touch of Forgetfulness",
+      "categoria": "ataque",
+      "referencia_ataque": "Touch of Forgetfulness",
+      "precondicao": "forma undead noturna ou após sofrer dano"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "SAB",
+      "cd": 14,
+      "bonus_ataque_magico": 6,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "uso": "à vontade",
+          "nomes": [
+            "chill touch",
+            "spare the dying"
+          ]
+        },
+        {
+          "uso": "3/dia cada",
+          "nomes": [
+            "cure wounds",
+            "inflict wounds",
+            "shield of faith"
+          ]
+        },
+        {
+          "uso": "1/dia cada",
+          "nomes": [
+            "augury",
+            "hold person",
+            "lesser restoration"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Fontes comunitárias e 5eSRD consultadas; cotejo contra exemplar editorial e erratas ainda pendente.",
+    "Sem revisão independente e sem integração canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-397",
+    "nome_original": "Fane Spirit",
+    "tipo": "Medium undead",
+    "alinhamento": "any lawful",
+    "nd": "3",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
+}

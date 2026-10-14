@@ -1,0 +1,149 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-075",
+  "nome": "Akaasit",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:akaasit",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "ficha individual com estatísticas e inventário de ações"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao"
+    }
+  ],
+  "estatisticas": {
+    "nd": "6",
+    "ca": 15,
+    "pv": 91,
+    "dados_vida": "14d8+28",
+    "atributos": {
+      "FOR": 13,
+      "DES": 18,
+      "CON": 14,
+      "INT": 3,
+      "SAB": 10,
+      "CAR": 5
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {},
+    "pericias": {},
+    "resistencias_dano": [
+      "piercing"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "sentidos": [
+      "truesight 60 ft."
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [],
+    "tamanho": "Medium"
+  },
+  "qualidade_estatisticas": "DADOS_DA_WIKI_KPOGL_AGUARDAM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, alimento, bebida e sono."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos de alteração de forma não explicitamente permitidos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia ou outros efeitos mágicos."
+    },
+    {
+      "nome": "Unfixed in Time",
+      "efeito": "Ataques recebidos têm desvantagem até o Akaasit ser acertado; após acerto, perde o efeito até início do turno seguinte.",
+      "desvantagem_ataques_contra": true,
+      "interrompe_ao_ser_atingido": true,
+      "duracao_interrupcao": "até início do próximo turno"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Arm Blade",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 4,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "1d6",
+          "modificador": 0,
+          "tipo": "force"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Arm Blade",
+        "Arm Blade"
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Arm Blade",
+      "categoria": "ataque",
+      "referencia_ataque": "Arm Blade",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Time-Assisted Counterattack",
+      "categoria": "reacao",
+      "gatilho": "criatura visível a 5 pés realiza ataque contra Akaasit",
+      "preempção": "antes de o ataque do inimigo acertar",
+      "referencia_ataque": "Arm Blade",
+      "condicao_para_negar_ataque_inimigo": "o contra-ataque reduz o atacante a 0 PV",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária."
+  ],
+  "integrada": false
+}

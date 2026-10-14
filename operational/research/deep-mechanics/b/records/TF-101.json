@@ -1,0 +1,171 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-101",
+  "nome": "Bilwis",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "Transcrição identificada em página individual, sem validação da impressão/errata oficial"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:bilwis",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "estatísticas, passivas, ataques, ações e habilidades especiais"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1",
+    "bonus_proficiencia": 2,
+    "ca": 13,
+    "origem_ca": "sem armadura indicada",
+    "pv": 49,
+    "dados_vida": "11d8",
+    "atributos": {
+      "FOR": 12,
+      "DES": 16,
+      "CON": 10,
+      "INT": 10,
+      "SAB": 13,
+      "CAR": 16
+    },
+    "modificadores": {
+      "FOR": 1,
+      "DES": 3,
+      "CON": 0,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": 3
+    },
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 40,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "pairar": true,
+    "salvaguardas": {},
+    "pericias": {},
+    "resistencias_dano": [
+      "lightning",
+      "thunder"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "unconscious"
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Auran"
+    ],
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "CONFIRMADA_EM_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Elemental Nature",
+      "efeito": "Não requer respirar, alimentar-se, beber nem dormir."
+    },
+    {
+      "nome": "Air Form",
+      "efeito": "Pode entrar e parar no espaço de criatura hostil, e passar por aberturas de uma polegada sem se espremer.",
+      "largura_minima_passagem_polegadas": 1
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam"
+    },
+    {
+      "nome": "Whirlwind",
+      "categoria": "efeito_area",
+      "recarga": "5–6",
+      "area": {
+        "geometria": "espaço ocupado pelo Bilwis e área a até 5 pés",
+        "raio_ft": 5
+      },
+      "alvos": "todas as criaturas nessa área",
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 12
+      },
+      "dano": {
+        "dados": "4d6",
+        "modificador": 0,
+        "tipo": "bludgeoning"
+      },
+      "falha": {
+        "dano": "4d6",
+        "condicao": "prone"
+      },
+      "sucesso": {
+        "dano": "metade",
+        "condicao": null
+      }
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "Confirmar publicação/edição original, erratas e todos os detalhes com fonte editorial para homologação independente.",
+    "Nenhuma aprovação canônica ou revisão independente. Quaisquer ações inexistentes no bloco têm listas verificadas por esta fonte secundária, mas não pelo editor."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-101",
+    "nome_original": "Bilwis",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "tipo": "Elemental",
+    "tamanho": "Medium",
+    "alinhamento": "chaotic evil",
+    "nd": "1",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
+}

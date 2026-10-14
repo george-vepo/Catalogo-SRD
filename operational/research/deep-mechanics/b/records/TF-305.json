@@ -1,0 +1,352 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-305",
+  "nome": "Angel, Zirnitran",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_REQUER_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 (p.30)",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao": "KPOGL identifica título e volume; exemplar editorial não conferido"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:zirnitran",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "escopo": "dados e ações individuais com parâmetros"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_identidade_publicacao_e_nd"
+    }
+  ],
+  "estatisticas": {
+    "nd": "20",
+    "ca": 19,
+    "pv": 325,
+    "dados_vida": "26d12+156",
+    "atributos": {
+      "FOR": 19,
+      "DES": 14,
+      "CON": 23,
+      "INT": 25,
+      "SAB": 25,
+      "CAR": 20
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": 80
+    },
+    "salvaguardas": {
+      "FOR": 10,
+      "DES": 8,
+      "SAB": 13,
+      "CAR": 11
+    },
+    "pericias": {
+      "Arcana": 13,
+      "History": 13,
+      "Insight": 13,
+      "Perception": 13,
+      "Religion": 13
+    },
+    "resistencias_dano": [
+      "radiant",
+      "bludgeoning/piercing/slashing nonmagical"
+    ],
+    "imunidades_dano": [
+      "necrotic",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "poisoned"
+    ],
+    "sentidos": [
+      "truesight 120 ft"
+    ],
+    "percepcao_passiva": 23,
+    "idiomas": [
+      "all",
+      "telepathy 120 ft"
+    ]
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Angelic Weapons",
+      "efeito": "Ataques com armas mágicos recebem 5d8 radiante extra, já incluído em Anointed Claws.",
+      "dano_extra": {
+        "dados": "5d8",
+        "modificador": 0,
+        "tipo": "radiant"
+      }
+    },
+    {
+      "nome": "Aura of Balance",
+      "efeito": "No início de cada turno escolhe ligar/desligar aura de 20 pés; ninguém dentro (inclusive o anjo) aplica vantagem/desvantagem em testes, ataques ou salvaguardas.",
+      "raio_ft": 20,
+      "estado_decidido_no_inicio_turno": true
+    },
+    {
+      "nome": "Divine Awareness",
+      "efeito": "Percebe mentiras que escuta."
+    },
+    {
+      "nome": "Dragon Watcher",
+      "efeito": "Salvaguarda contra sopro de dragão com vantagem; sofre zero dano no sucesso e metade na falha."
+    },
+    {
+      "nome": "Hardened Scales",
+      "efeito": "Críticos recebidos tratados como acerto normal."
+    },
+    {
+      "nome": "Immortal Nature",
+      "efeito": "Dispensa comer, beber ou dormir."
+    },
+    {
+      "nome": "Legendary Resistance",
+      "efeito": "3/dia transforma falha em salvaguarda em sucesso.",
+      "usos": "3/dia"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Anointed Claws",
+      "tipo": "melee",
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvo": "um",
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 4,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "5d8",
+          "modificador": 0,
+          "tipo": "radiant"
+        }
+      ]
+    },
+    {
+      "nome": "Draconic Blast",
+      "tipo": "spell_ranged",
+      "bonus_acerto": 13,
+      "alcance_ft": 120,
+      "alvo": "um",
+      "dano": [
+        {
+          "dados": "5d8",
+          "modificador": 7,
+          "tipo": "radiant | acid | cold | fire | lightning | poison"
+        }
+      ],
+      "selecao_tipo_dano": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Glimpse from the Heavens",
+        "3x Anointed Claws ou Draconic Blast"
+      ]
+    },
+    {
+      "nome": "Anointed Claws",
+      "categoria": "ataque",
+      "referencia_ataque": "Anointed Claws"
+    },
+    {
+      "nome": "Draconic Blast",
+      "categoria": "ataque",
+      "referencia_ataque": "Draconic Blast"
+    },
+    {
+      "nome": "Glimpse from the Heavens",
+      "categoria": "area",
+      "alcance_ft": 60,
+      "alvos": "criaturas escolhidas que veem o anjo",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 19,
+        "efeito_falha": "frightened até 1 min",
+        "efeito_sucesso": "imune 24h"
+      },
+      "repeticao": "SAB CD19 ao fim de cada turno",
+      "blindness_em_falha_por_5": "blind até greater restoration ou similar",
+      "imunidade_posterior": "24h se sucesso ou condição terminada"
+    },
+    {
+      "nome": "Sacred Flame Breath",
+      "categoria": "sopro",
+      "recarga": "5-6",
+      "area": {
+        "forma": "cone",
+        "comprimento_ft": 90
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 20,
+        "efeito_falha": "6d10 fogo e 6d10 radiante",
+        "efeito_sucesso": "metade de ambos"
+      },
+      "dano": [
+        {
+          "dados": "6d10",
+          "modificador": 0,
+          "tipo": "fire"
+        },
+        {
+          "dados": "6d10",
+          "modificador": 0,
+          "tipo": "radiant"
+        }
+      ],
+      "efeito_magia": "encerra magias de nível 7 ou menor dentro da área"
+    },
+    {
+      "nome": "Secrets of the Hidden Hoard",
+      "categoria": "conjuracao_extra",
+      "usos": "2/dia",
+      "magia": "qualquer magia da lista clérigo ou mago até nível 8",
+      "tempo_conjuracao": "1 ação mesmo que a magia normalmente tenha outro tempo"
+    },
+    {
+      "nome": "Spellcasting",
+      "categoria": "conjuracao",
+      "referencia_conjuracao": "Spellcasting"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Six-Scaled Aegis",
+      "categoria": "reacao",
+      "gatilho": "sofre dano",
+      "efeito": "resistência ao tipo de dano recebido, incluindo o ataque que ativou a reação",
+      "duracao": "1 min ou até usar esta reação outra vez"
+    }
+  ],
+  "acoes_lendarias": [
+    {
+      "nome": "Detect",
+      "categoria": "lendaria",
+      "custo": 1,
+      "efeito": "identifica posição de dragões e criaturas com ligação dracônica em 120 pés"
+    },
+    {
+      "nome": "Move",
+      "categoria": "lendaria",
+      "custo": 1,
+      "deslocamento": "voa até 40 pés sem ataques de oportunidade"
+    },
+    {
+      "nome": "Attack",
+      "categoria": "lendaria",
+      "custo": 2,
+      "escolhas": [
+        "Anointed Claws",
+        "Draconic Blast"
+      ]
+    },
+    {
+      "nome": "Cast a Spell",
+      "categoria": "lendaria",
+      "custo": 2,
+      "referencia_conjuracao": "Spellcasting"
+    },
+    {
+      "nome": "Under Black Wings",
+      "categoria": "lendaria",
+      "custo": 3,
+      "alcance_ft": 120,
+      "alvo": "si ou outra criatura visível",
+      "ca_bonus": 2,
+      "pv_temporarios": 20,
+      "duracao": "até o fim do próximo turno do zirnitran"
+    }
+  ],
+  "conjuracoes": [
+    {
+      "nome": "Spellcasting",
+      "atributo": "SAB",
+      "cd": 21,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "detect evil and good",
+          "usos": "à vontade",
+          "condicao": null
+        },
+        {
+          "nome": "invisibility",
+          "usos": "à vontade",
+          "condicao": "self only"
+        },
+        {
+          "nome": "legend lore",
+          "usos": "à vontade",
+          "condicao": null
+        },
+        {
+          "nome": "thaumaturgy",
+          "usos": "à vontade",
+          "condicao": null
+        },
+        {
+          "nome": "dispel evil and good",
+          "usos": "3/dia",
+          "condicao": null
+        },
+        {
+          "nome": "geas",
+          "usos": "3/dia",
+          "condicao": "conjura como uma ação"
+        },
+        {
+          "nome": "antimagic field",
+          "usos": "1/dia"
+        },
+        {
+          "nome": "plane shift",
+          "usos": "1/dia"
+        }
+      ]
+    }
+  ],
+  "imagem": {
+    "status": "VERIFICADA_BINARIO_PRESENTE",
+    "path": "operational/research/deep-mechanics/b/images/TF-305.webp",
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-305.webp",
+    "blob_sha": "b47bf1f6b6fe4d4bba84e699531590a14cffe35b",
+    "sha256": "a5d6328e90a68656715d4826f0e8f840de3838a6ccbb51cb245cc4fd83d382a6",
+    "bytes": 104226,
+    "dimensions": {
+      "width": 280,
+      "height": 280
+    },
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "source_commit": "c26a1213e77cf1bdbbca12a14e4b71b1cee99d9d",
+    "source_original_path": "operational/assets/creature-images/TF-305.webp",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/ToB3/bestiary/tokens/Zirnitran.webp"
+  },
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Dados estruturados de transcrição KPOGL; edição física/revisão editorial e erratas ainda precisam ser conferidas.",
+    "A ficha NÃO está homologada e não substitui testes e revisão independente."
+  ],
+  "integrada": false
+}

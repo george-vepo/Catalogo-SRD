@@ -1,0 +1,145 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-335",
+  "nome": "Woe Siphon",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_PENDENTE_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2",
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:woe-siphon",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "escopo": "regras detalhadas da criatura individual"
+    }
+  ],
+  "estatisticas": {
+    "nd": "3",
+    "ca": 14,
+    "pv": 45,
+    "dados_vida": "6d8+18",
+    "atributos": {
+      "FOR": 18,
+      "DES": 17,
+      "CON": 16,
+      "INT": 5,
+      "SAB": 12,
+      "CAR": 7
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {},
+    "pericias": {},
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Common",
+      "Sylvan"
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing from nonmagical non-silvered attacks"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "exhaustion"
+    ],
+    "origem_ca": "natural armor",
+    "proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Detect Sentience",
+      "alcance_milhas": 1,
+      "efeito": "Percebe a direção geral, mas não localização exata, de criaturas com INT pelo menos 5."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Siphoning Fist",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d4",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "CAR",
+          "cd": 13
+        },
+        "falha": "reduz PV máximos em dano psíquico sofrido; woe siphon cura mesmo valor",
+        "duracao": "até completar descanso longo",
+        "morte": "PV máximo reduzido a zero"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Siphoning Fist",
+      "referencia_ataque": "Siphoning Fist"
+    },
+    {
+      "nome": "Cause Despair",
+      "alcance_ft": 60,
+      "alvo": "criatura visível",
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 13
+      },
+      "falha": {
+        "duracao": "1 minuto",
+        "efeitos": [
+          "desvantagem em ataques",
+          "desvantagem em testes de habilidade"
+        ]
+      },
+      "repetir": "fim de cada turno",
+      "imunidade": "24 horas após sucesso/encerramento"
+    },
+    {
+      "nome": "Invisibility",
+      "efeito": "fica invisível com equipamentos portados",
+      "duracao": "até atacar ou perder concentração, como numa magia"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Validar dados e erratas da edição editorial exata. Não homologada por fonte comunitária.",
+    "Sem revisão independente ou promoção canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Woe Siphon",
+    "tipo": "fey",
+    "tamanho": "Medium",
+    "alinhamento": "chaotic neutral",
+    "publicacao": "Tome of Beasts 2"
+  }
+}

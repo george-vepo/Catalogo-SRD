@@ -1,0 +1,295 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-331",
+  "nome": "Liosalfar",
+  "estado": "ACOES_INDIVIDUALIZADAS_PENDENTE_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "bloco completo transcrito em KPOGL; publicação/revisão editorial ainda não confrontada"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:liosalfar",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultada_em": "2026-10-14",
+      "escopo": "bloco individual com características e ações"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_não_usado_como_validação_de_valores"
+    }
+  ],
+  "estatisticas": {
+    "nd": "10",
+    "bonus_proficiencia": 4,
+    "ca": 17,
+    "origem_ca": "não especificada",
+    "pv": 132,
+    "dados_vida": "24d10",
+    "atributos": {
+      "FOR": 10,
+      "DES": 25,
+      "CON": 10,
+      "INT": 18,
+      "SAB": 18,
+      "CAR": 12
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 7,
+      "CON": 0,
+      "INT": 4,
+      "SAB": 4,
+      "CAR": 1
+    },
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 60,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "pairar": true,
+    "salvaguardas": {
+      "CON": 4,
+      "INT": 8,
+      "SAB": 8,
+      "CAR": 5
+    },
+    "pericias": {
+      "Arcana": 8,
+      "Insight": 8,
+      "Perception": 8
+    },
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic",
+      "radiant"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "exhaustion",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "unconscious"
+    ],
+    "sentidos": [
+      {
+        "tipo": "truesight",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 18,
+    "idiomas": [
+      "Common",
+      "Celestial",
+      "Elvish",
+      "Giant"
+    ],
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "BLOCO_CONFERIDO_NA_FONTE_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Darkness Hypersensitivity",
+      "gatilho": "inicia turno em escuridão mágica",
+      "dano_automatico": {
+        "valor": 15,
+        "tipo": "necrotic"
+      },
+      "efeito_condicional": "desvantagem em ataques e testes de habilidade enquanto em escuridão mágica"
+    },
+    {
+      "nome": "Elemental Nature",
+      "efeito": "Dispensa ar, alimento, água e sono."
+    },
+    {
+      "nome": "Inscrutable",
+      "efeito": "imune a efeitos que detectem emoções ou leiam pensamentos, e a magias de adivinhação que recusar; testes SAB (Insight) para interpretar sua intenção ou sinceridade têm desvantagem"
+    },
+    {
+      "nome": "Light Form",
+      "efeitos": [
+        "pode entrar e permanecer no espaço de criatura hostil",
+        "passa em abertura de 1 polegada sem espremer-se",
+        "emite luz forte com raio escolhido de 10 a 30 pés e penumbra adicional por distância igual ao raio de luz forte"
+      ],
+      "acao_bonus": "altera raio de luz"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "alternativas": [
+        [
+          "Radiant Touch",
+          "Radiant Touch"
+        ],
+        [
+          "Ray of Light",
+          "Ray of Light"
+        ]
+      ],
+      "efeito_condicional": {
+        "gatilho": "dois Radiant Touch atingem a mesma criatura",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 16
+        },
+        "falha": "stunned até fim do próximo turno do alvo",
+        "sucesso": "sem stunned"
+      }
+    },
+    {
+      "nome": "Radiant Touch",
+      "categoria": "ataque",
+      "referencia_ataque": "Radiant Touch"
+    },
+    {
+      "nome": "Ray of Light",
+      "categoria": "ataque",
+      "referencia_ataque": "Ray of Light"
+    },
+    {
+      "nome": "Mesmerizing Radiance",
+      "categoria": "controle",
+      "area": {
+        "geometria": "raio",
+        "raio_ft": 60
+      },
+      "alvos": "cada criatura que possa ver o liosalfar",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 16
+      },
+      "falha": {
+        "condicoes": [
+          "charmed",
+          "incapacitated"
+        ],
+        "deslocamento_ft": 0
+      },
+      "sucesso": "não afetado",
+      "duracao": "enquanto mantém a exibição",
+      "manutencao": {
+        "custo": "ação bônus em cada turno subsequente"
+      },
+      "encerramento": [
+        "pode interromper à vontade",
+        "se ficar incapacitated",
+        "para alvo específico, sofre qualquer dano ou alguém gasta uma ação para despertá-lo"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Radiant Touch",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "4d10",
+          "modificador": 7,
+          "tipo": "radiant"
+        }
+      ]
+    },
+    {
+      "nome": "Ray of Light",
+      "tipo": "magico_a_distancia",
+      "bonus_acerto": 8,
+      "alcance_normal_ft": 60,
+      "alcance_maximo_ft": 60,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "6d8",
+          "modificador": 4,
+          "tipo": "radiant"
+        }
+      ],
+      "efeito_condicional": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 16
+        },
+        "falha": "blinded até fim do próximo turno",
+        "sucesso": "sem cegueira"
+      }
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Alterar raio luminoso",
+      "gatilho": "Light Form",
+      "custo": "ação bônus",
+      "efeito": "escolhe novo raio de luz forte entre 10 e 30 pés, com penumbra adicional igual ao raio"
+    },
+    {
+      "nome": "Sustentar Mesmerizing Radiance",
+      "custo": "ação bônus a partir do turno seguinte",
+      "efeito": "mantém a exibição e seus alvos afetados"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Cotejo independente com exemplar editorial exato e erratas ainda não executado.",
+    "Manter status não canônico até verificação de ataques, ações, estatísticas e ausência de habilidades adicionais."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-331",
+    "nome_original": "Liosalfar",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "tipo": "elemental",
+    "tamanho": "Large",
+    "alinhamento": "neutral",
+    "nd": "10",
+    "bonus_proficiencia": 4
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": 2,
+      "alternativas": [
+        [
+          "Radiant Touch",
+          "Radiant Touch"
+        ],
+        [
+          "Ray of Light",
+          "Ray of Light"
+        ]
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Leveza corporal",
+      "efeito": "pode ocupar espaço de hostis e atravessar frestas de 1 polegada"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-392",
+  "nome": "Malmbjorn",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_COTEJO_EDITORIAL",
+  "edicao": {
+    "publicacao": "Tome of Beasts 3",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:malmbjorn",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "15",
+    "ca": 18,
+    "pv": 218,
+    "dados_vida": "19d12+95",
+    "atributos": {
+      "FOR": 24,
+      "DES": 10,
+      "CON": 20,
+      "INT": 3,
+      "SAB": 12,
+      "CAR": 13
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "escavar": 10,
+      "nadar": 30
+    },
+    "deslocamentos_texto": "caminhar 40; escavar 10; nadar 30 pés",
+    "salvaguardas": {
+      "CON": 10,
+      "SAB": 6
+    },
+    "pericias": {
+      "Perception": 6
+    },
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "idiomas": [],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "cold"
+    ],
+    "vulnerabilidades_dano": [
+      "acid"
+    ],
+    "imunidades_condicao": [],
+    "percepcao_passiva": 16
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Keen Smell",
+      "efeito": "Vantagem em Perception dependente de olfato."
+    },
+    {
+      "nome": "Metal Sense",
+      "efeito": "Localiza metal ferroso Small ou maior precisamente por cheiro até 100 pés e direção geral até uma milha."
+    },
+    {
+      "nome": "Tunneler",
+      "efeito": "Escava rocha sólida a metade da velocidade de escavação e deixa túnel de 15 pés de diâmetro."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "bonus_acerto": 12,
+      "alcance_ft": 10,
+      "dano": [
+        {
+          "dados": "5d10",
+          "modificador": 7,
+          "tipo": "piercing"
+        }
+      ],
+      "efeito": {
+        "condicao": "grappled, restrained enquanto agarrado",
+        "escape_cd": 18,
+        "limite_alvos": 1
+      }
+    },
+    {
+      "nome": "Adamantine Claw",
+      "bonus_acerto": 12,
+      "alcance_ft": 10,
+      "dano": [
+        {
+          "dados": "5d8",
+          "modificador": 7,
+          "tipo": "slashing"
+        }
+      ],
+      "efeito": "Dano dobrado contra objetos e estruturas."
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Bite",
+        "Adamantine Claw",
+        "Adamantine Claw"
+      ]
+    },
+    {
+      "nome": "Bite",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Adamantine Claw",
+      "referencia_ataque": "Adamantine Claw"
+    },
+    {
+      "nome": "Metal Volley",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "raio",
+        "alcance_ft": 20
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 18
+      },
+      "dano": {
+        "dados": "13d6",
+        "tipo": "slashing"
+      },
+      "falha": "total",
+      "sucesso": "metade"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Metal Eater",
+      "alcance_ft": 5,
+      "alvo": "objeto metálico ferroso Medium ou menor",
+      "salvaguarda_para_objeto_portado": {
+        "atributo": "FOR",
+        "cd": 18,
+        "desvantagem": "se dono também está agarrado pelo Malmbjorn"
+      },
+      "efeito": "Engole e destrói objetos não mágicos no início do próximo turno; mágico em 8 horas; artefatos nunca."
+    }
+  ],
+  "reacoes": [
+    {
+      "nome": "Ironhide",
+      "gatilho": "atingido por arma metálica",
+      "duracao": "até fim do turno seguinte",
+      "efeito": "CA +2 e críticos sofridos tornam-se acertos comuns"
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Consultar edição editorial e erratas oficiais para homologar antes de uso canônico.",
+    "A fonte é transcrição independente; revisão independente e integração pendentes."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Malmbjorn",
+    "tipo": "monstrosity",
+    "tamanho": "Huge",
+    "alinhamento": "unaligned"
+  }
+}

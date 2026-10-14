@@ -1,0 +1,257 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-306",
+  "nome": "Simian, Monkey King",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_REQUER_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao": "KPOGL identifica título e volume; exemplar editorial não conferido"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:monkey-king",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "escopo": "dados e ações individuais com parâmetros"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_identidade_publicacao_e_nd"
+    }
+  ],
+  "estatisticas": {
+    "nd": "21",
+    "ca": 21,
+    "pv": 262,
+    "dados_vida": "25d8+150",
+    "atributos": {
+      "FOR": 19,
+      "DES": 24,
+      "CON": 22,
+      "INT": 16,
+      "SAB": 21,
+      "CAR": 17
+    },
+    "deslocamentos_ft": {
+      "andar": 60,
+      "voar": 60
+    },
+    "salvaguardas": {
+      "DES": 14,
+      "CON": 13,
+      "SAB": 12
+    },
+    "pericias": {
+      "Acrobatics": 14,
+      "Deception": 10,
+      "Insight": 12,
+      "Perception": 12,
+      "Stealth": 14
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "necrotic",
+      "poison",
+      "radiant"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "poisoned",
+      "stunned"
+    ],
+    "sentidos": [
+      "truesight 120 ft"
+    ],
+    "percepcao_passiva": 22,
+    "idiomas": [
+      "Celestial",
+      "Common",
+      "Simian"
+    ]
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Legendary Resistance",
+      "efeito": "3/dia converte falha em salvaguarda em sucesso.",
+      "usos": "3/dia"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias."
+    },
+    {
+      "nome": "Simian Affinity",
+      "efeito": "Comunica-se com primatas; controla primatas INT<=8 num raio de 120 pés.",
+      "raio_ft": 120,
+      "inteligencia_maxima_controlavel": 8
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Golden Staff",
+      "tipo": "melee",
+      "bonus_acerto": 14,
+      "alcance_ft": 10,
+      "alvo": "um",
+      "dano": [
+        {
+          "dados": "2d10",
+          "modificador": 7,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "radiant"
+        }
+      ]
+    },
+    {
+      "nome": "Enlightened Ray",
+      "tipo": "spell_ranged",
+      "bonus_acerto": 12,
+      "alcance_ft": 100,
+      "alvo": "um",
+      "dano": [
+        {
+          "dados": "4d8",
+          "modificador": 0,
+          "tipo": "radiant"
+        }
+      ],
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 18,
+        "efeito_falha": "stunned até fim do próximo turno",
+        "efeito_sucesso": "sem condição"
+      }
+    },
+    {
+      "nome": "Tail",
+      "tipo": "melee",
+      "bonus_acerto": 14,
+      "alcance_ft": 10,
+      "alvo": "um",
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 7,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 22,
+        "efeito_falha": "prone",
+        "efeito_sucesso": "sem prone"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        [
+          "Golden Staff",
+          "Golden Staff",
+          "Golden Staff"
+        ],
+        [
+          "Golden Staff",
+          "Golden Staff",
+          "Tail"
+        ]
+      ]
+    },
+    {
+      "nome": "Golden Staff",
+      "categoria": "ataque",
+      "referencia_ataque": "Golden Staff"
+    },
+    {
+      "nome": "Enlightened Ray",
+      "categoria": "ataque",
+      "referencia_ataque": "Enlightened Ray"
+    },
+    {
+      "nome": "Tail",
+      "categoria": "ataque",
+      "referencia_ataque": "Tail"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Drunken Dodge",
+      "categoria": "reacao",
+      "gatilho": "atingido por ataque de arma",
+      "efeito": "resistência a bludgeoning, piercing e slashing até fim do turno atual",
+      "duracao": "fim do turno"
+    }
+  ],
+  "acoes_lendarias": [
+    {
+      "nome": "Great Leap",
+      "categoria": "lendaria",
+      "custo": 1,
+      "deslocamento_ft": 60,
+      "ataques_oportunidade": false
+    },
+    {
+      "nome": "Quick Staff",
+      "categoria": "lendaria",
+      "custo": 1,
+      "referencia_ataque": "Golden Staff"
+    },
+    {
+      "nome": "Golden Burst",
+      "categoria": "lendaria",
+      "custo": 3,
+      "area": {
+        "raio_ft": 10
+      },
+      "alvos": "criaturas selecionadas",
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 18,
+        "efeito_falha": "8d8 radiant",
+        "efeito_sucesso": "metade"
+      },
+      "dano": {
+        "dados": "8d8",
+        "modificador": 0,
+        "tipo": "radiant"
+      }
+    }
+  ],
+  "conjuracoes": [],
+  "imagem": {
+    "status": "VERIFICADA_BINARIO_PRESENTE",
+    "path": "operational/research/deep-mechanics/b/images/TF-306.webp",
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-306.webp",
+    "blob_sha": "155ff3c076cf41105279df73d0900fe53b716e75",
+    "sha256": "549fc595ad52890b695fdfbade1b357873b9abfaba73e1cf5ee08394eb6fe892",
+    "bytes": 144864,
+    "dimensions": {
+      "width": 731,
+      "height": 1187
+    },
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "source_commit": "c26a1213e77cf1bdbbca12a14e4b71b1cee99d9d",
+    "source_original_path": "operational/assets/creature-images/TF-306.webp",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/Monkeyking.webp"
+  },
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Dados estruturados de transcrição KPOGL; edição física/revisão editorial e erratas ainda precisam ser conferidas.",
+    "A ficha NÃO está homologada e não substitui testes e revisão independente."
+  ],
+  "integrada": false
+}

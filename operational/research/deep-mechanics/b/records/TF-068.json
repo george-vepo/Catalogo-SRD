@@ -1,0 +1,200 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-068",
+  "nome": "Clockwork Pugilist",
+  "estado": "MECANICA_ESTATISTICAS_INDIVIDUAIS_EVIDENCIADAS_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 3 (2022)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://anyflip.com/lphgc/rjrj/basic/51-100",
+      "natureza": "reproducao_digital_paginas_87_88_tome_3",
+      "consulta": "2026-10-14"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/clockwork-pugilist/",
+      "natureza": "reproducao_estatisticas_secundaria",
+      "consulta": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1",
+    "ca": 15,
+    "pv": 32,
+    "dados_vida": "5d8+10",
+    "atributos": {
+      "FOR": 16,
+      "DES": 12,
+      "CON": 14,
+      "INT": 6,
+      "SAB": 13,
+      "CAR": 10
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "deslocamentos_texto": null,
+    "salvaguardas": {
+      "FOR": 5,
+      "CON": 4
+    },
+    "pericias": {
+      "Athletics": 5,
+      "Perception": 3,
+      "Performance": 4
+    },
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "modificadores": {
+      "FOR": 3,
+      "DES": 1,
+      "CON": 2,
+      "INT": -2,
+      "SAB": 1,
+      "CAR": 0
+    },
+    "origem_ca": "natural armor",
+    "pairar": false,
+    "bonus_proficiencia": 2,
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "dispensa ar, alimento, água e sono"
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "imune a magias e outros efeitos que modifiquem sua forma"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra magias e outros efeitos mágicos"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Fist",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Fist",
+        "Fist"
+      ]
+    },
+    {
+      "nome": "Fist",
+      "referencia_ataque": "Fist"
+    },
+    {
+      "nome": "Brass Onslaught",
+      "recarga": "6",
+      "deslocamento_ft": 10,
+      "evita_ataques_oportunidade": true,
+      "sequencia": [
+        "move até 10 pés",
+        "faz um Fist"
+      ],
+      "efeito_se_atinge": {
+        "dados": "3d6",
+        "tipo": "bludgeoning",
+        "adicional_ao_Fist": true
+      }
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Get Down, Sir!",
+      "custo": "reação",
+      "gatilho": "criatura a até 5 pés é alvo de ataque a distância ou magia",
+      "efeito": "Clockwork Pugilist intercepta o efeito, tornando-se o alvo no lugar da criatura protegida"
+    },
+    {
+      "nome": "Parry",
+      "custo": "reação",
+      "gatilho": "ataque corpo a corpo acertaria o pugilist",
+      "precondicoes": [
+        "enxerga atacante",
+        "tem uma mão livre"
+      ],
+      "bonus_ca": 2,
+      "efeito": "+2 CA contra somente esse ataque"
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "Cotejo independente com obra editorial e errata ainda pendente; sem integração canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-068",
+    "nome_original": "Clockwork Pugilist",
+    "tipo": "Medium construct",
+    "alinhamento": "unaligned",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Fist",
+        "Fist"
+      ]
+    }
+  ],
+  "mecanicas_especiais": []
+}

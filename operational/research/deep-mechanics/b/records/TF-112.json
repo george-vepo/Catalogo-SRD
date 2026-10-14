@@ -1,0 +1,135 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-112",
+  "nome": "Cikavak",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/cikavak-3pp/",
+      "natureza": "reproducao_secundaria_5esrd",
+      "edicao": "Tome of Beasts 1 (2023)",
+      "consultado_em": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1/8",
+    "ca": 12,
+    "pv": 17,
+    "dados_vida": "7d4",
+    "atributos": {
+      "FOR": 4,
+      "DES": 15,
+      "CON": 10,
+      "INT": 12,
+      "SAB": 12,
+      "CAR": 4
+    },
+    "deslocamentos_ft": {
+      "andar": 10,
+      "voar": 40
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Perception": 5,
+      "Stealth": 6
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "entende Common mas não fala"
+    ],
+    "resistencias_dano": [
+      "acid",
+      "fire",
+      "poison"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Limited Telepathy",
+      "gatilho": "criatura que compreende um idioma toca Cikavak",
+      "efeito": "comunica ideias, emoções e imagens simples telepaticamente por contato"
+    },
+    {
+      "nome": "Speak with Beasts",
+      "efeito": "comunica-se com Beasts como se compartilhassem idioma"
+    },
+    {
+      "nome": "Potion Pouch",
+      "fonte": "texto descritivo da edição de 2023",
+      "efeito": "bolsa ventral comporta até meio galão de líquidos, inclusive ácido, sem ingeri-los",
+      "capacidade_galoes": 0.5
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Beak",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Beak",
+      "referencia_ataque": "Beak"
+    },
+    {
+      "nome": "Silencing Squawk",
+      "recarga": "6",
+      "area": {
+        "tipo": "cone",
+        "comprimento_ft": 30
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 11
+      },
+      "falha": {
+        "efeitos": [
+          "deafened",
+          "incapaz de falar"
+        ],
+        "duracao": "1 minuto"
+      },
+      "repetir": "fim de cada turno; sucesso termina"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "Ainda sem confronto independente com livro e errata do editor.",
+    "Não promover canonicamente antes de revisão e testes."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Cikavak",
+    "tipo": "Tiny fey",
+    "alinhamento": "neutral"
+  }
+}

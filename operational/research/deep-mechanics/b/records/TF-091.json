@@ -1,0 +1,371 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-091",
+  "nome": "Zmey",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_AGUARDA_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 — edição de 2023",
+    "sistema": "D&D 5e",
+    "versao": "estatísticas reproduzidas e rotuladas com copyright 2023",
+    "edicao_exata_verificada": false,
+    "observacao": "Não confundir com a publicação de 2016 (ND14, Legendary Resistance 1/dia e ataques diferentes)."
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/zmey-3pp",
+      "natureza": "transcricao_secundaria_integral",
+      "escopo": "bloco e efeitos de covil edição 2023"
+    },
+    {
+      "url": "https://koboldpress.com/tome-of-beasts-1-what-changed/",
+      "natureza": "comunicado_editorial",
+      "escopo": "confirma mudanças substanciais entre edições 2016 e 2023"
+    },
+    {
+      "url": "https://anyflip.com/myubd/oeoe/basic/401-433",
+      "natureza": "reproducao_nao_editorial_de_edicao_anterior",
+      "escopo": "contraste 2016 com ND14, sem incorporação dos valores à principal"
+    }
+  ],
+  "estatisticas": {
+    "nd": "15",
+    "bonus_proficiencia": 5,
+    "ca": 18,
+    "origem_ca": "natural armor",
+    "pv": 189,
+    "dados_vida": "18d12+72",
+    "atributos": {
+      "FOR": 22,
+      "DES": 13,
+      "CON": 19,
+      "INT": 16,
+      "SAB": 16,
+      "CAR": 12
+    },
+    "modificadores": {
+      "FOR": 6,
+      "DES": 1,
+      "CON": 4,
+      "INT": 3,
+      "SAB": 3,
+      "CAR": 1
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": 50,
+      "nadar": 30,
+      "escalar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {
+      "CON": 9,
+      "SAB": 8,
+      "CAR": 6
+    },
+    "pericias": {
+      "Perception": 8
+    },
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60
+      },
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 90
+      }
+    ],
+    "percepcao_passiva": 18,
+    "idiomas": [
+      "Common",
+      "Draconic",
+      "Elvish",
+      "Sylvan"
+    ],
+    "telepatia_ft": null,
+    "resistencias_dano": [
+      "cold",
+      "fire"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "paralyzed",
+      "unconscious"
+    ]
+  },
+  "qualidade_estatisticas": "TRANSCRICAO_INTEGRAL_SECUNDARIA_2023_AINDA_SEM_COTEJO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Amphibious",
+      "efeito": "Respira tanto em água quanto no ar."
+    },
+    {
+      "nome": "Legendary Resistance",
+      "usos": "3/dia",
+      "gatilho": "falha na salvaguarda",
+      "efeito": "pode tratá-la como sucesso."
+    },
+    {
+      "nome": "Regeneration",
+      "gatilho": "início do turno",
+      "cura": {
+        "pv": 15
+      },
+      "interrupcao": "se recebeu dano ácido ou fogo, não regenera no início do turno seguinte",
+      "morte": "morre ao iniciar turno com 0 PV quando não consegue regenerar"
+    },
+    {
+      "nome": "Three Heads",
+      "cabecas_iniciais": 3,
+      "bonus": "se houver mais de uma cabeça, vantagem em salvaguardas contra blinded, charmed, deafened, frightened, stunned e knocked unconscious",
+      "gatilho_decepamento": "40 ou mais pontos de dano no mesmo turno",
+      "limite": "não remove a última cabeça",
+      "restauracao": "recupera todas as cabeças decepadas após descanso longo",
+      "efeito_da_cabeca_removida": "gera um Zmey Headling em 1d4 rodadas, autônomo; procura cooperar com o zmey"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d12",
+          "modificador": 6,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "4d6",
+          "modificador": 6,
+          "tipo": "slashing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": "2 + número de cabeças remanescentes",
+      "sequencia": [
+        "Claw",
+        "Claw"
+      ],
+      "ataques_adicionais_por_cabeca": "Bite",
+      "configuracao_3_cabecas": [
+        "Claw",
+        "Claw",
+        "Bite",
+        "Bite",
+        "Bite"
+      ]
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Claw"
+    },
+    {
+      "nome": "Fire Breath",
+      "categoria": "sopro",
+      "recarga": "5–6",
+      "area": {
+        "geometria": "cones simultâneos, um por cabeça",
+        "comprimento_ft": 30,
+        "quantidade": "cabeças remanescentes"
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 17
+      },
+      "dano": {
+        "dados": "14d6",
+        "tipo": "fire"
+      },
+      "falha": "dano total",
+      "sucesso": "metade",
+      "sobreposicao": "apenas uma salvaguarda com desvantagem e dano de um único cone",
+      "excecao": "pode escolher não danificar plantas nem Plant creatures"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [
+    {
+      "nome": "Move",
+      "custo": 1,
+      "momento": "fim de turno de outra criatura",
+      "efeito": "movimento terrestre até deslocamento ou voo até metade do deslocamento de voo",
+      "provoca_ataque_oportunidade": false
+    },
+    {
+      "nome": "Tail Whip",
+      "custo": 1,
+      "momento": "fim do turno de outra criatura",
+      "area": {
+        "geometria": "raio",
+        "raio_ft": 15
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 17
+      },
+      "falha": "prone",
+      "sucesso": "sem efeito"
+    },
+    {
+      "nome": "Tripartite Roar",
+      "custo": 2,
+      "momento": "fim do turno de outra criatura",
+      "area": {
+        "geometria": "cone",
+        "comprimento_ft": 30
+      },
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 17
+      },
+      "falha": {
+        "com_1_cabeca": [
+          "deafened"
+        ],
+        "com_2_cabecas": [
+          "deafened",
+          "frightened"
+        ],
+        "com_3_cabecas": [
+          "stunned"
+        ]
+      },
+      "sucesso": "sem efeito",
+      "duracao": "até o fim do próximo turno da criatura afetada"
+    }
+  ],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "PUBLICACAO_2016_DIVERGENTE_EVIDENCIA_SEPARADA",
+  "bloqueado": true,
+  "pendencias": [
+    "Conferir o texto integral e erratas oficiais da edição Tome of Beasts 1 (2023) antes da homologação.",
+    "Confirmar efeitos regionais e de covil com publicação editorial 2023; não misturar a edição original.",
+    "Revisão independente não executada."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Zmey",
+    "tipo": "dragon",
+    "tamanho": "Huge",
+    "alinhamento": "chaotic evil",
+    "nd": "15",
+    "bonus_proficiencia": 5
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": "2 + cabeças remanescentes",
+      "sequencia_fixa": [
+        "Claw",
+        "Claw"
+      ],
+      "sequencia_variavel": "um Bite por cabeça"
+    }
+  ],
+  "acoes_lendarias_por_rodada": 3,
+  "recuperacao_acoes_lendarias": "início do próprio turno",
+  "limite_acoes_lendarias": "somente uma opção por vez, após o turno de outra criatura",
+  "acoes_de_covil": [
+    {
+      "nome": "Hinder Movement",
+      "momento": "iniciativa 20, perdendo empates",
+      "alvos": "um inimigo visível em 120 pés",
+      "efeito": "velocidade reduzida pela metade",
+      "duracao": "até a iniciativa 20 da rodada seguinte"
+    },
+    {
+      "nome": "Invigorate Headlings",
+      "momento": "iniciativa 20",
+      "alvos": "cabeça decepada ou headling visível a 120 pés",
+      "efeito": "cabeça forma imediatamente headling, ou headling morto volta com 10 PV",
+      "bloqueio": "uma libra de sal sobre o alvo impede a habilidade"
+    },
+    {
+      "nome": "Spread Forest's Gloom",
+      "momento": "iniciativa 20",
+      "alcance_ft": 120,
+      "area": {
+        "geometria": "esfera",
+        "raio_ft": 30
+      },
+      "efeito": "luz intensa vira penumbra; penumbra vira escuridão; escuridão vira escuridão mágica",
+      "termino": [
+        "ação do zmey para dissipar",
+        "usar de novo esta ação de covil",
+        "morte do zmey"
+      ]
+    }
+  ],
+  "restricao_acoes_de_covil": "não pode selecionar o mesmo efeito em rodadas consecutivas",
+  "efeitos_regionais": [
+    {
+      "nome": "Fear and Rage",
+      "alcance_milhas": 1,
+      "efeito": "criaturas ficam tensas e dormem de modo inquieto"
+    },
+    {
+      "nome": "Unfriendly Forest",
+      "alcance_milhas": 6,
+      "efeito": "fogueiras desassistidas se apagam e alimento vegetal ou animal estraga depressa"
+    },
+    {
+      "nome": "Unnerving Presence",
+      "alcance_milhas": 3,
+      "efeito": "percepções perturbadoras e distrações",
+      "encerramento": "efeitos regionais desaparecem em 1d10 dias após a morte"
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Headlings",
+      "gatilho": "uma cabeça é decepada",
+      "intervalo": "1d4 rodadas",
+      "autonomia": "headling não está sob controle direto; age favoravelmente a pedidos"
+    },
+    {
+      "nome": "Múltiplos cones",
+      "observacao": "a sobreposição impõe desvantagem na salvaguarda, sem multiplicar o dano"
+    }
+  ],
+  "fontes_alternativas": [
+    {
+      "edicao": "Tome of Beasts 1 (2016)",
+      "url": "https://anyflip.com/myubd/oeoe/basic/401-433",
+      "dados_divergentes": [
+        "ND14",
+        "Legendary Resistance 1/dia",
+        "Lake Leap",
+        "Fire Breath com cones e valores diferentes"
+      ],
+      "usada_na_versao_principal": false
+    }
+  ]
+}
