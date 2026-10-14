@@ -1,3 +1,27 @@
+# SRD Card Game 607 — Grupo A — auditoria consolidada após checkpoint 38 (14/10/2026)
+
+**Escopo e integridade:** 132 IDs únicos (40+40+52), 132 arquivos JSON lidos individualmente, interpretados e conferidos contra seus IDs; 113 imagens binárias na árvore Git do grupo A, sendo 40 copiadas de blobs D/E nesta retomada e vinculadas aos JSONs com SHA-256 de origem, SHA Git, tamanho, dimensões e proveniência. Diff com a branch de referência restrito ao diretório A.
+
+**Estado mecânico:** 36 blocos individuais online com estrutura de mecânica, porém **0 fichas editorialmente homologadas**, 131 marcadas PARCIAL e 1 BLOQUEADA (KP-S011). Outras **96 não possuem estrutura mecânica integral no nível da fonte individual online**. Não confundir quantidade de JSONs com integralidade mecânica ou aprovação na engine.
+
+**Imagens:** 113/132 binários, 19 imagens fisicamente ausentes, 0 artes com aprovação visual/editorial/direitos. **31 imagens** possuem largura ou altura inferior a 500 pixels, incluindo TF-026 (160×160) e TF-031 (80×120); são potenciais substituições prioritárias para produção, não arte pronta. Não foi realizada inspeção visual independente individual nem revisão de licenças.
+
+**Sem imagem física:** TF-274, TF-276, TF-283, TF-284, TF-286, KP-S014, TF-013, TF-022, TF-023, TF-024, TF-025, TF-034, TF-041, TF-042, TF-045, TF-048, TF-049, TF-053, TF-057.
+
+**Conflitos mecânicos conhecidos:** KP-S011 (edição/traço contaminado por outro monstro), TF-039 (fórmula de dano de Bite), TF-041 (Multiattack ambíguo), TF-047 (4d8 vs 3d8) e TF-052 (CD não declarada). Preservados sem correções por suposição.
+
+**Checkpoints desta retomada (máximo de 10 criaturas por commit):**
+- #33 [32b6672f](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/32b6672f3b3cc63389f3bd5220872f1d42e017f9) — 10 binários D
+- #34 [dd10320b](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/dd10320bf12fd1e725a3aba94f596130fb0e0fd2) — 10 binários D
+- #35 [f00f426f](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/f00f426fe056177793ef7b2440c5bfe5332013b3) — 10 binários D
+- #36 [5005e939](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5005e939a0b12700a3af0d32b1df6d8b9270c433) — 5 binários D e 5 E
+- #37 [c32c3d60](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c32c3d60d295d697616d1e88a5bf7dc25b1b479e) — TF-221, TF-222 e TF-224 estruturadas com KPOGL
+- #38 [ac1a7dd5](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/ac1a7dd5868d807602f89f932846bceef60528a1) — TF-223, TF-225 e TF-230 estruturadas com KPOGL
+
+**Pendência final:** pesquisar 96 fichas ainda sem estrutura integral, homologar 132 contra impressão/errata e testes da engine, resolver ambiguidades, obter 19 imagens, revisar identidade/licença/resolução das 113 e substituir miniaturas. PR #8 permanece em rascunho, sem merge.
+
+---
+
 # Grupo A — checkpoint 38 (14/10/2026)
 
 **Total atualizado:** 132 JSONs, **36 fichas estruturadas segundo blocos individuais online**, **0 homologadas**, 131 parciais, 1 bloqueada, **113 imagens físicas**, 19 ausentes, nenhuma arte editorial aprovada.
