@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 31 / 195.**
+**Armazenadas e verificadas: 41 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -11,6 +11,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77 — 10/10 verificadas: TF-060, TF-061, TF-062, TF-063, TF-064, TF-065, TF-066, TF-067, TF-068, TF-070
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c54e40a955f62c7839f39f40f0361aade9c708c9 — 10/10 verificadas: TF-071, TF-072, TF-074, TF-075, TF-077, TF-078, TF-079, TF-080, TF-081, TF-082
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/b92a6fcc2467e2af54cf6f1db221022936042462 — 10/10 verificadas: TF-083, TF-084, TF-085, TF-087, TF-089, TF-090, TF-091, TF-100, TF-101, TF-102
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/264cc13c326def74e593723382600d4a0e54c0ff — 10/10 verificadas: TF-103, TF-104, TF-105, TF-106, TF-107, TF-108, TF-109, TF-110, TF-111, TF-112
 
 ## Binários publicados e conferidos
 
@@ -45,22 +46,22 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-100 / Befouled Weird: operational/assets/creature-images/TF-100.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Befouled%20Weird.webp; 202858 bytes; 699x978 px; SHA-256: e222c2efcf23a22a6357a3ed655eee8601fcc5c5d316b15e50e2739f25084709; commit: b92a6fcc2467e2af54cf6f1db221022936042462
 - TF-101 / Bilwis: operational/assets/creature-images/TF-101.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/bilwis.jpg; 48109 bytes; 472x700 px; SHA-256: 6c85b155debc5dc39e799e0fdfe83b6bdb5d451596a23cb316bd43cc3a3917ec; commit: b92a6fcc2467e2af54cf6f1db221022936042462
 - TF-102 / Alazai: operational/assets/creature-images/TF-102.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Alazai.webp; 93876 bytes; 1000x1258 px; SHA-256: b971653dbc5a42f78b1ad98a6713d0a2574f0ba9c0fcac0f06bd4b78899b772b; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-103 / Chronalmental: operational/assets/creature-images/TF-103.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Chronalmental.webp; 64532 bytes; 459x800 px; SHA-256: 20be274ae6da98b51aad86b647feaa6651ca91d505e47db135bad5a1d807cd81; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-104 / Cherufe: operational/assets/creature-images/TF-104.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Cherufe.webp; 225554 bytes; 773x866 px; SHA-256: dc507b9277daa715501c9fcea8f8748dbb39846b1b7f652f4ba87378bbbe5ae6; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-105 / Thuellai: operational/assets/creature-images/TF-105.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Thuellai.webp; 25076 bytes; 691x523 px; SHA-256: 90789ddc10503e8c304f7bdb09a7684d97333f6960cfe216507edb8aac8b890e; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-106 / Akanka: operational/assets/creature-images/TF-106.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Akanka.webp; 85334 bytes; 1000x774 px; SHA-256: 8bc87328c7326d05980ad7fea371a72896d0671254d2bc4f6aa34e9126f9943a; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-107 / Aridni: operational/assets/creature-images/TF-107.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Aridni.webp; 36492 bytes; 788x598 px; SHA-256: 7d8530ef51934cc919211e79887101c51dab112cb2d165f476a8ea6d1531908e; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-108 / Attercroppe: operational/assets/creature-images/TF-108.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Attercroppe.webp; 120238 bytes; 899x920 px; SHA-256: f0d4559cfec1ab903877df6897b5bc885b33dd81546a7522c7cef20482405c03; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-109 / Beli: operational/assets/creature-images/TF-109.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Beli.webp; 57066 bytes; 552x800 px; SHA-256: f405ad00f11c66989e77ac579bfe9c097ab10374f16e138b28ff5451ca7396f8; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-110 / Bereginyas: operational/assets/creature-images/TF-110.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Bereginyas.webp; 61242 bytes; 876x800 px; SHA-256: c5b35be37ffdbcb935ceec53789d48e4bb7e50ebfbe5546930cd90ba85ed7097; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-111 / Chernomoi: operational/assets/creature-images/TF-111.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Chernomoi.webp; 75726 bytes; 755x800 px; SHA-256: 49f370e5d1a684f806c483e902f77abd84088273a78318932d6a87726af4ed58; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-112 / Cikavak: operational/assets/creature-images/TF-112.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Cikavak.webp; 74098 bytes; 1000x518 px; SHA-256: ec180cb80edd5fb9e7a253aff9c5eaebc3d46b4b9b1bbcd6c17ce543db9fd8ab; commit: 264cc13c326def74e593723382600d4a0e54c0ff
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
-- TF-103 / Chronalmental: pending; 
-- TF-104 / Cherufe: pending; 
-- TF-105 / Thuellai: pending; 
-- TF-106 / Akanka: pending; 
-- TF-107 / Aridni: pending; 
-- TF-108 / Attercroppe: pending; 
-- TF-109 / Beli: pending; 
-- TF-110 / Bereginyas: pending; 
-- TF-111 / Chernomoi: pending; 
-- TF-112 / Cikavak: pending; 
 - TF-113 / Clurichaun: pending; 
 - TF-114 / Vila: pending; 
 - TF-115 / Vile Barber: pending; 
