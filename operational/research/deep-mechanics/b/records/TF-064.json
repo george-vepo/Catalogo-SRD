@@ -2,19 +2,25 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-064",
   "nome": "Clockwork Conductor",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 3",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 p.87",
+    "edicao_exata_verificada": false,
+    "edicao_editorial_nao_confrontada": true
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-conductor/",
-      "natureza": "fonte_secundaria_anterior_nao_reexaminada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-conductor",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "bloco individual completo publicado na wiki"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-064_TF-074/research.json",
-      "natureza": "registro_herdado"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade",
+      "escopo": "não substitui a ficha da edição impressa"
     }
   ],
   "estatisticas": {
@@ -33,27 +39,19 @@
     "deslocamentos_ft": {
       "andar": 30
     },
-    "deslocamentos_texto": null,
-    "salvaguardas": null,
+    "salvaguardas": {},
     "pericias": {
       "Perception": 3,
       "Performance": 7
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 13,
-    "idiomas": [
-      "entende idiomas do criador"
-    ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "lightning",
       "poison",
       "psychic",
       "thunder"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "blinded",
       "charmed",
@@ -63,98 +61,135 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "idiomas": [
+      "compreende idiomas do criador, não fala"
+    ],
+    "percepcao_passiva": 13,
+    "proficiencia": 2,
+    "tamanho": "Small"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "qualidade_estatisticas": "ESTRUTURADA_TRANSCRICAO_SECUNDARIA_NAO_HOMOLOGADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não necessita respirar, alimentar-se, beber nem dormir."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a alteração de forma provocada por efeitos e magias."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+    },
+    {
+      "nome": "Metronomic Aura",
+      "efeito": "Aliado até 20 pés pode substituir o resultado natural de d20 por 10 em ataque ou teste de Performance.",
+      "raio_ft": 20,
+      "tipo_rolagem": [
+        "attack",
+        "CHA(Performance)"
+      ],
+      "valor_substituto": 10
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Conductive Baton",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 3,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d4",
+          "modificador": 1,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "1d8",
+          "modificador": 0,
+          "tipo": "lightning"
+        }
+      ],
+      "efeitos": [
+        {
+          "efeito": "alvo não pode executar reações até o começo do próprio turno seguinte",
+          "condicao": "sem_reacoes",
+          "duracao": "até início do próximo turno do alvo"
+        }
+      ],
+      "confirmado_na_transcricao": true
+    }
+  ],
   "acoes": [
     {
       "nome": "Conductive Baton",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "+3, 5 pés, 1d4+1 contundente mais 1d8 elétrico; impede reações até início do próximo turno.",
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Conductive Baton",
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Overclocked Finale",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Recarga por descanso; aliados que o veem a 30 pés recebem +5 em ataques/dano/testes até fim do próximo turno do condutor; d6 define perda temporária de Concerted Effort e potencialmente da aura.",
-      "confirmado": false
+      "categoria": "buff_em_area",
+      "recarga": "descanso curto ou longo",
+      "area": {
+        "raio_ft": 30
+      },
+      "alvo": "cada aliado que vê o Conductor",
+      "duracao": "até final do próximo turno do Conductor",
+      "bonus_ataque": 5,
+      "bonus_dano": 5,
+      "bonus_testes_de_atributo": 5,
+      "rolagem_colateral": "1d6",
+      "consequencias": [
+        {
+          "valores": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "efeito": "Concerted Effort indisponível até descanso curto"
+        },
+        {
+          "valores": [
+            5,
+            6
+          ],
+          "efeito": "Concerted Effort e Metronomic Aura indisponíveis até descanso curto"
+        }
+      ],
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [
     {
       "nome": "Concerted Effort",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Concede d4 adicional a um ataque ou CON para concentração de aliado a 30 pés até início do próximo turno.",
-      "confirmado": false
+      "categoria": "acao_bonus",
+      "alcance_ft": 30,
+      "alvo": "a si mesmo ou aliado visível",
+      "duracao": "até início do próximo turno do Conductor",
+      "bonus_dados": "1d4",
+      "aplica_em": [
+        "jogada de ataque",
+        "salvaguarda de CON para manter concentração"
+      ],
+      "confirmado_na_transcricao": true
     }
   ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Construct Nature",
-      "resumo": "Não requer ar, alimento, líquidos ou sono."
-    },
-    {
-      "nome": "Immutable Form",
-      "resumo": "Imune à alteração de forma."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra magias."
-    },
-    {
-      "nome": "Metronomic Aura",
-      "resumo": "Aliado a 20 pés pode tratar d20 de ataque ou Performance como 10."
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Dados herdados de checkpoint anterior; exigir ficha individual integral, edição exata, confirmação de todos os campos e ações.",
-    "Campos nulos nas ações NÃO foram verificados nem podem ser presumidos.",
-    "Página possui segunda seção ACTIONS e REACTIONS de Clockwork Pugilist, claramente alheia; descartar e conferir fragmento da edição original.",
-    "ND catálogo 0.5 equivale ao 1/2 da fonte."
+    "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada."
   ],
   "integrada": false
 }

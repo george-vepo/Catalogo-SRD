@@ -2,26 +2,32 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-067",
   "nome": "Clockwork Leech",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
+    "sistema": "D&D 5ª edição",
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
-    "edicao_exata_verificada": false
+    "edicao_exata_verificada": false,
+    "edicao_editorial_nao_confrontada": true
   },
   "fontes": [
     {
-      "url": null,
-      "natureza": "fonte_secundaria_anterior_nao_reexaminada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-leech",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "bloco individual completo publicado na wiki"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-067_TF-071/research.json",
-      "natureza": "registro_herdado"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade",
+      "escopo": "não substitui a ficha da edição impressa"
     }
   ],
   "estatisticas": {
     "nd": "1",
     "ca": 13,
     "pv": 45,
-    "dados_vida": null,
+    "dados_vida": "6d8+18",
     "atributos": {
       "FOR": 14,
       "DES": 12,
@@ -30,98 +36,145 @@
       "SAB": 10,
       "CAR": 7
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": null,
+    "deslocamentos_ft": {
+      "andar": 30,
+      "nadar": 60
+    },
     "salvaguardas": {},
     "pericias": {
       "Perception": 2,
       "Stealth": 3
     },
-    "sentidos": [
-      "vis?o no escuro 60 ft."
-    ],
-    "percepcao_passiva": 12,
-    "idiomas": [],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
-      "veneno",
-      "ps?quico"
+      "poison",
+      "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
-      "enfeiti?ado",
-      "exausto",
-      "amedrontado",
-      "paralisado",
-      "petrificado",
-      "envenenado"
-    ]
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "idiomas": [],
+    "percepcao_passiva": 12,
+    "tamanho": "Medium"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "ESTRUTURADA_TRANSCRICAO_SECUNDARIA_NAO_HOMOLOGADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não necessita respirar, alimentar-se, beber nem dormir."
+    },
+    {
+      "nome": "Anesthetizing Bite",
+      "efeito": "Ao ser mordido, alvo detecta ferida por teste de SAB(Perception) CD13; enquanto anexada, repete no início de cada turno.",
+      "teste_deteccao": {
+        "atributo": "SAB",
+        "pericia": "Perception",
+        "cd": 13
+      },
+      "repeticao": "início de cada turno do alvo enquanto criatura anexada"
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a alteração de forma provocada por efeitos e magias."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+    }
+  ],
+  "ataques": [
     {
       "nome": "Bite",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Ataque corpo a corpo +4, alcance 5 ft.; 1d6+2 perfurante e fixa a sanguessuga no alvo. Enquanto presa n?o ataca; no in?cio de seus turnos drena 1d6+2 PV e exige salvaguarda de Constitui??o CD 13 ou o alvo fica envenenado at? o in?cio do pr?ximo turno da sanguessuga. Ela pode se soltar gastando 5 ft. de movimento; desprende-se ap?s drenar 10 PV ou na morte do alvo. Outra criatura pode remov?-la com uma a??o e teste de For?a CD 10.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d6",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "efeito": "anexa sanguessuga ao alvo e impede novos ataques enquanto anexada"
+        },
+        {
+          "gatilho": "início de cada turno da Leech enquanto anexada",
+          "perda_pv": {
+            "dados": "1d6",
+            "modificador": 2,
+            "observacao": "perda de pontos de vida, não ataque extra"
+          },
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 13,
+            "falha": "poisoned até começo do próximo turno da Leech",
+            "sucesso": "sem poisoned"
+          }
+        },
+        {
+          "desanexar_voluntario": "gastar 5 pés de movimento",
+          "desanexar_automatico": "após sugar 10 PV ou alvo morrer",
+          "remocao_por_terceiro": {
+            "acao": "uma ação",
+            "teste": "FOR",
+            "cd": 10
+          }
+        }
+      ],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Tail",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Ataque corpo a corpo +4, alcance 10 ft.; 1d10+2 contundente.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d10",
+          "modificador": 2,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Tail",
+      "categoria": "ataque",
+      "referencia_ataque": "Tail",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Anesthetizing Bite",
-      "resumo": "Quando a mordida acerta, o alvo precisa passar em Percep??o (Sabedoria) CD 13 para perceber o ferimento; enquanto a criatura permanecer presa, o teste pode ser repetido no in?cio de cada turno do alvo."
-    },
-    {
-      "nome": "Immutable Form",
-      "resumo": "Imune a efeitos que alterem sua forma."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra magias e efeitos m?gicos."
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Dados herdados de checkpoint anterior; exigir ficha individual integral, edição exata, confirmação de todos os campos e ações.",
-    "Campos nulos nas ações NÃO foram verificados nem podem ser presumidos."
+    "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada."
   ],
   "integrada": false
 }

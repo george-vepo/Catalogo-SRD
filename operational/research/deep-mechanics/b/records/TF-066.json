@@ -2,19 +2,25 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-066",
   "nome": "Clockwork Huntsman",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 1",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 p.62",
+    "edicao_exata_verificada": false,
+    "edicao_editorial_nao_confrontada": true
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-huntsman-3pp/",
-      "natureza": "fonte_secundaria_anterior_nao_reexaminada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-huntsman",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "bloco individual completo publicado na wiki"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-064_TF-074/research.json",
-      "natureza": "registro_herdado"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade",
+      "escopo": "não substitui a ficha da edição impressa"
     }
   ],
   "estatisticas": {
@@ -33,28 +39,20 @@
     "deslocamentos_ft": {
       "andar": 40
     },
-    "deslocamentos_texto": null,
     "salvaguardas": {
-      "STR": 5,
-      "DEX": 4
+      "FOR": 5,
+      "DES": 4
     },
     "pericias": {
       "Perception": 4,
       "Survival": 4
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 14,
-    "idiomas": [
-      "entende Common, não fala"
-    ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -62,132 +60,163 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "idiomas": [
+      "entende Common, não fala"
+    ],
+    "percepcao_passiva": 14,
+    "proficiencia": 2,
+    "tamanho": "Medium"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "ESTRUTURADA_TRANSCRICAO_SECUNDARIA_NAO_HOMOLOGADA",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Slam e dois Longsword, podendo substituir Slam por Net Cannon.",
-      "confirmado": false
+      "nome": "Construct Nature",
+      "efeito": "Não necessita respirar, alimentar-se, beber nem dormir."
     },
     {
+      "nome": "Explosive Core",
+      "efeito": "Destruído: área 5 pés; DES CD13; 3d6 fire na falha e metade no sucesso.",
+      "gatilho": "destruído",
+      "raio_ft": 5,
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 13,
+        "falha": "3d6 fire",
+        "sucesso": "metade"
+      },
+      "dano": {
+        "dados": "3d6",
+        "modificador": 0,
+        "tipo": "fire"
+      }
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a alteração de forma provocada por efeitos e magias."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Longsword",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "+5, 5 pés, 1d8+3 cortante.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d8",
+          "modificador": 3,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Slam",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "+5, 5 pés, 2d6+3 contundente.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d6",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Net Cannon",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "4/dia, +4 alcance 10/20 pés; contra Large ou menor restringe, preso a corda de 20 pés; libertação por FOR CD10 ou 5 dano cortante rede CA10.",
-      "confirmado": false
+      "tipo": "ataque_a_distancia",
+      "bonus_acerto": 4,
+      "alcance_normal_ft": 10,
+      "alcance_max_ft": 20,
+      "alvos": "um alvo",
+      "dados_dano": [],
+      "efeitos": [
+        {
+          "condicao": "restrained",
+          "alvos_validos": "Large ou menor",
+          "fio_ft": 20,
+          "escape": {
+            "acao": "uma ação",
+            "teste": "FOR",
+            "cd": 10
+          },
+          "destruicao_rede": {
+            "ca": 10,
+            "dano_cortante": 5
+          }
+        }
+      ],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Slam",
+        "Longsword",
+        "Longsword"
+      ],
+      "alternativa": [
+        "Net Cannon substitui Slam",
+        "Longsword",
+        "Longsword"
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Longsword",
+      "categoria": "ataque",
+      "referencia_ataque": "Longsword",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Net Cannon",
+      "categoria": "ataque_distancia",
+      "referencia_ataque": "Net Cannon",
+      "usos": "4/dia",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [
     {
       "nome": "Reel",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Puxa até 15 pés alvo agarrado/restrito pela rede.",
-      "confirmado": false
+      "categoria": "acao_bonus",
+      "precondicao": "alvo restrained pela rede do próprio Huntsman",
+      "efeito": "puxa alvo até 15 pés em linha reta para perto",
+      "distancia_ft": 15,
+      "confirmado_na_transcricao": true
     }
   ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa ar/comida/bebida/sono."
-    },
-    {
-      "nome": "Explosive Core",
-      "resumo": "Ao morrer explode a 5 pés, DES CD13 ou 3d6 fogo (metade no sucesso)."
-    },
-    {
-      "nome": "Immutable Form",
-      "resumo": "Imune a mudança de forma."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra magias."
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Dados herdados de checkpoint anterior; exigir ficha individual integral, edição exata, confirmação de todos os campos e ações.",
-    "Campos nulos nas ações NÃO foram verificados nem podem ser presumidos."
+    "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada."
   ],
   "integrada": false
 }

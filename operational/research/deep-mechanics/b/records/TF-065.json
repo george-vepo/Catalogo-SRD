@@ -2,19 +2,25 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-065",
   "nome": "Clockwork Hound",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 1",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 p.61 (versões Streets of Zobeck e Midgard Sagas divergentes)",
+    "edicao_exata_verificada": false,
+    "edicao_editorial_nao_confrontada": true
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-hound-3pp/",
-      "natureza": "fonte_secundaria_anterior_nao_reexaminada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-hound",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "bloco individual completo publicado na wiki"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-064_TF-074/research.json",
-      "natureza": "registro_herdado"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade",
+      "escopo": "não substitui a ficha da edição impressa"
     }
   ],
   "estatisticas": {
@@ -33,28 +39,20 @@
     "deslocamentos_ft": {
       "andar": 50
     },
-    "deslocamentos_texto": null,
     "salvaguardas": {
-      "DEX": 4,
+      "DES": 4,
       "CON": 4
     },
     "pericias": {
       "Athletics": 7,
       "Perception": 4
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 14,
-    "idiomas": [
-      "compreende Common, não fala"
-    ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -62,82 +60,120 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "idiomas": [
+      "entende Common, não fala"
+    ],
+    "percepcao_passiva": 14,
+    "proficiencia": 2,
+    "tamanho": "Medium"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "ESTRUTURADA_TRANSCRICAO_SECUNDARIA_NAO_HOMOLOGADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não necessita respirar, alimentar-se, beber nem dormir."
+    },
+    {
+      "nome": "Diligent Tracker",
+      "efeito": "Vantagem em Perception/Survival para farejar ou rastrear criatura."
+    },
+    {
+      "nome": "Explosive Core",
+      "efeito": "Destruído: todas as criaturas até 5 pés fazem DES CD12; 2d6 fogo na falha, metade no sucesso.",
+      "gatilho": "destruído",
+      "raio_ft": 5,
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 12,
+        "falha": "2d6 fire",
+        "sucesso": "metade"
+      },
+      "dano": {
+        "dados": "2d6",
+        "modificador": 0,
+        "tipo": "fire"
+      }
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a alteração de forma provocada por efeitos e magias."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+    }
+  ],
+  "ataques": [
     {
       "nome": "Bite",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "+5, 5 pés, 2d10+3 perfurante.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d10",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Tripping Tongue",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "+5, 15 pés, 2d8+3 cortante e FOR CD13 ou alvo cai.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 15,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 3,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "FOR",
+            "cd": 13,
+            "falha": "prone",
+            "sucesso": "sem queda"
+          }
+        }
+      ],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Tripping Tongue",
+      "categoria": "ataque",
+      "referencia_ataque": "Tripping Tongue",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa ar/alimento/bebida/sono."
-    },
-    {
-      "nome": "Diligent Tracker",
-      "resumo": "Vantagem em Percepção e Sobrevivência para rastrear criaturas e testes de faro."
-    },
-    {
-      "nome": "Explosive Core",
-      "resumo": "Destruído causa explosão em raio de 5 pés, DES CD12, 2d6 fogo ou metade."
-    },
-    {
-      "nome": "Immutable Form",
-      "resumo": "Imune à mudança de forma."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem contra magias."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "VERSÕES DIVERGENTES: Streets of Zobeck PV65 (10d8+20), Midgard Sagas altera PV/CA/dano. KPOGL fornece PV71; sem validação do exemplar escolhido.",
   "bloqueado": true,
   "pendencias": [
-    "Dados herdados de checkpoint anterior; exigir ficha individual integral, edição exata, confirmação de todos os campos e ações.",
-    "Campos nulos nas ações NÃO foram verificados nem podem ser presumidos.",
-    "A página homônima Clockwork Hound sem sufixo tem criatura Small ND5 com CA14/STR20; pertence a publicação diferente. Não integrar a variante errada."
+    "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada.",
+    "VERSÕES DIVERGENTES: Streets of Zobeck PV65 (10d8+20), Midgard Sagas altera PV/CA/dano. KPOGL fornece PV71; sem validação do exemplar escolhido."
   ],
   "integrada": false
 }
