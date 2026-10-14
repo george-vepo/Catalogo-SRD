@@ -6,6 +6,8 @@
 
 **Resultado:** 60/132 estruturas individuais online; 72 fichas ainda resumidas; 0 homologadas; 124/132 binários de imagens e 0 artes para produção aprovadas. Livro, erratas e engine pendentes. Fonte individual KPOGL de terceiro não endossada pela editora; sem V-Bridge ou merge.
 
+**Auditoria checkpoint #50:** [`bf15bb9c9be4`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/bf15bb9c9be4e36a1eeaba099b5cb171d4a02939). 3 JSONs relidos com IDs e blocos de ação válidos, 3 imagens existentes com SHA Git e bytes conferidos; 124 binários no diretório; comparação de commits confirmou cinco arquivos alterados somente em A. Inspeção visual, direitos, revisão de impressão/erratas e engine não realizados.
+
 ---
 
 # Grupo A — checkpoint 49: Black Crier, Corpse Mound e Asp Vine (14/10/2026)
