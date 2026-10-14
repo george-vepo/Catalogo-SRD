@@ -38,7 +38,11 @@ A partir da árvore Git `c44168574a62044056cf607e5bd652a010f52c15` no commit `f4
 
 **Auditoria do conteúdo do Git concluída para a situação atual, mas o objetivo de 194 imagens adequadas e com direito de uso assegurado continua NÃO CONCLUÍDO. Não fazer merge.**
 
-## Auditoria corrente — checkpoint 29 (2026-10-14)
+## Auditoria corrente — checkpoint 30 (2026-10-14)
+
+Situação mais recente: **124 binários**, **70 IDs sem arquivo**, 30 checkpoints, **13.320.241 bytes** e 4 `COMPLETE` / 190 `PARTIAL`. A auditoria específica de checkpoint 30 acrescentou um PNG com atribuição original CC BY 4.0. Os números antigos nas seções de checkpoints anteriores são históricos; a seção "Resultado mensurável" e o manifesto representam o estado atual.
+
+## Auditoria histórica — checkpoint 29 (2026-10-14)
 
 **Situação de entrega comprovada:** 194 registros atribuídos, **123 arquivos reais** armazenados e com Git blob SHA/tamanho rastreável, **71 ainda sem arquivo**. Os 3 PNG deste checkpoint (`TF-481`, `TF-405`, `TF-510`) foram enviados ao GitHub em `9afec073ed6536d61ac4d5d94c5ea140e143f3ae`, com validação PNG/SHA-256 antes do envio e recuperação byte a byte posterior. Os três são 32×32 pixels e ficam em **`PARTIAL`** até confirmação da estética de cada variante.
 
@@ -103,18 +107,24 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 - **TF-510 Infernal Mammoth:** `elephant_demonic.png`, elefante de coloração demoníaca; falta pelagem característica de mamute. `PARTIAL`.
 - **Verificação**: 3 novos PNGs 32×32, 1.844 bytes ao todo, hash SHA-256 individual no manifesto e cópia reaberta do GitHub idêntica à origem. Nenhum link ou metadado contabilizado como arquivo binário.
 
+## Checkpoint 30 — TF-478 Gourdling
+
+**Imagem real persistida:** `TF-478.png`, spritesheet de monstro com cabeça de abóbora e braços/pernas de cipó, 96×256, 5.155 bytes. A origem artística foi localizada em [Pumpkin monster — OpenGameArt](https://opengameart.org/content/pumpkin-monster), autor **Tuomo Untinen (Reemax)**. A página oferece **CC BY 4.0**, entre outras licenças; **atribuição obrigatória** para uso sob essa licença. Arte foi obtida do [repositório GitHub que contém a cópia visual correspondente](https://github.com/lpereira504/DarkTrail_PAP/blob/main/characters/enemies/pumpkin_monster.png), e não do binário direto do OpenGameArt. O Git blob da cópia conferiu byte a byte com a imagem persistida no repositório do SRD; não foi possível comparar SHA-256 diretamente ao servidor OpenGameArt.
+
+**Estado PARTIAL:** folha com 12 frames, não ilustração de carta individual; requer seleção/crop autorizado e revisão de direção artística. Nenhuma modificação foi feita em grupos D/E ou no catálogo global.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **123** |
-| Imagens com validação pós-upload registrada | **123** |
-| IDs ainda ausentes | **71** |
-| Tamanho total dos binários | **13.315.086 bytes** |
-| Checkpoints (máximo 10 arquivos) | **29** |
+| Imagens físicas persistidas no GitHub | **124** |
+| Imagens com validação pós-upload registrada | **124** |
+| IDs ainda ausentes | **70** |
+| Tamanho total dos binários | **13.320.241 bytes** |
+| Checkpoints (máximo 10 arquivos) | **30** |
 
-## Binários confirmados (123)
+## Binários confirmados (124)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -241,8 +251,9 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-481 | Spell Shrieker | `operational/assets/creature-images/TF-481.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/deathcap.png) | .png / image/png | 32×32 | 472 | `4ef67cd2cca0c7bd172909f0d28f434163cd8dbbd9ab7efb31249036a412d1e1` | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | PASS binário; PARTIAL (arte/atribuição histórica) |
 | TF-405 | Lich, Virtuoso | `operational/assets/creature-images/TF-405.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/ancient_lich.png) | .png / image/png | 32×32 | 476 | `59aa7f3e3d86c1c50d3616106f6c3d17d2fee1fb95ed1d215735112ed5accfcd` | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | PASS binário; PARTIAL (arte/atribuição histórica) |
 | TF-510 | Infernal Mammoth | `operational/assets/creature-images/TF-510.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/elephant_demonic.png) | .png / image/png | 32×32 | 896 | `9aacfe4824a78db0536e5cc0d0f693ce8ce90e011cb6d13b08468556f5f5f855` | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | PASS binário; PARTIAL (arte/atribuição histórica) |
+| TF-478 | Gourdling | `operational/assets/creature-images/TF-478.png` | [OpenGameArt](https://opengameart.org/content/pumpkin-monster) e [espelho GitHub](https://github.com/lpereira504/DarkTrail_PAP/blob/main/characters/enemies/pumpkin_monster.png) | .png / image/png | 96×256 | 5155 | `6716b48b1f321926d9a89e279abf3de2a215321ff110402ebb7688d7c2c62f3c` | `53d65954ef72fa63085986531b0c1d07f504fb21` | PASS binário; PARTIAL como spritesheet; CC BY 4.0 (crédito obrigatório) |
 
-## IDs bloqueados / pendentes (71)
+## IDs bloqueados / pendentes (70)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -294,7 +305,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-470 | Fiendish Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-473 | Flying Lion | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-475 | Giant Lanternfish | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-478 | Gourdling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-480 | Sewer Walker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-482 | Spore Thrall | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-483 | Squashling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -373,5 +383,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | 27 | TF-467, TF-477, TF-503, TF-469 | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | GitHub post-upload byte and SHA-1 blob identity; PNG, 32×32, size/SHA256 validated before push; artistic specificity and license provenance PARTIAL |
 | 28 | TF-351, TF-463 | `54cbf17c2c686170edc86d1ff09961021866448b` | Two PNG images refetched after GitHub push with matching complete binary source content / Git blob SHA; CC0 ogre illustration and CC BY-SA 4.0 maggot sprite atlas; both visually PARTIAL |
 | 29 | TF-481, TF-405, TF-510 | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | Three source PNGs, GitHub binary byte identity + Git blob SHA confirmed, PNG 32×32, SHA-256 recorded; all PARTIAL visually and historic tile rights not independently proven |
+| 30 | TF-478 | `53d65954ef72fa63085986531b0c1d07f504fb21` | 96×256 animated PNG, source mirror/destination Git blob SHA and full binary identity verified; original OGA source visible/CC BY 4.0 credit; animation sheet PARTIAL |
 
-**Estado: parcial (123/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (124/194). Manter PR em rascunho e não executar merge.**
