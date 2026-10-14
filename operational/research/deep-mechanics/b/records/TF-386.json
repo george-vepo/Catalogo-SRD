@@ -60,7 +60,12 @@
       "charmed",
       "frightened",
       "poisoned"
-    ]
+    ],
+    "tamanho": "Gargantuan",
+    "tipo": "Monstrosity",
+    "bloodied_pv": 72,
+    "proficiencia": 4,
+    "cd_manobra": 19
   },
   "habilidades_passivas": [
     {
@@ -151,6 +156,24 @@
       "salvaguarda_regurgitar": {
         "atributo": "CON",
         "cd": 19
+      },
+      "resultado_regurgitacao": {
+        "condicao": "30 ou mais dano recebido no mesmo turno de uma criatura engolida",
+        "save": {
+          "atributo": "CON",
+          "cd": 19,
+          "instante": "fim do turno"
+        },
+        "falha": "regurgita todas criaturas engolidas",
+        "local": "espaço em ate 10 pés de Grootslang",
+        "condicao_criaturas": "prone",
+        "origem": "https://a5e.tools/node/2444"
+      },
+      "resultado_morte": {
+        "restrained_encerrado": true,
+        "saida": "escapa do cadaver gastando 5 pés de movimento por cada rodada em que esteve engolido",
+        "condicao_saida": "prone",
+        "origem": "https://a5e.tools/node/2444"
       }
     }
   ],
@@ -177,5 +200,21 @@
     "fonte": "https://a5e.tools/node/2444",
     "comparacao": "Serpentine Charge: bônus Constrict se o alvo está prone, não somente se a carga o derrubou.",
     "limites": "Sem revisão impressa, erratas, testes ou homologação independente."
+  },
+  "resolucao_identidade_variantes_20261014": {
+    "status": "VARIANTE_A5E_IDENTIFICADA_PELO_PORTAL_EDITORIAL; CONFLITO_HISTORICO_NAO_HOMOLOGADO",
+    "edicao_pesquisada": {
+      "editora": "EN Publishing",
+      "sistema": "Level Up Advanced 5th Edition (A5E)",
+      "publicacao": "Mythological Figures & Maleficent Monsters",
+      "fonte_editorial": "https://a5e.tools/node/2444",
+      "nd": "11",
+      "ca": 15,
+      "pv": 145
+    },
+    "variante_alternativa_pr4": "Outras versoes/homonimos ND8 e ND12; nao compor blocos entre sistemas.",
+    "decisao": "Nao combinar estatisticas ou ataques de outros sistemas/publicacoes. Publicacao impressa e erratas nao cotejadas.",
+    "homologacao_independente": false,
+    "conflito_pr4_preservado": true
   }
 }

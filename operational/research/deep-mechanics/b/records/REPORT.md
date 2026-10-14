@@ -1,3 +1,11 @@
+## Continuação Grupo B — evidência editorial para três conflitos herdados (14/10/2026)
+
+As fichas **TF-356 Grendel** ([A5E](https://a5e.tools/node/2443)), **TF-361 Elder Black Pudding** ([A5E](https://a5e.tools/node/1755)) e **TF-386 Grootslang** ([A5E](https://a5e.tools/node/2444)) tiveram conferência **pontual de identidade, publicação, ND, CA, PV, tamanho, tipo, proficiência, CD de manobra e limiar bloodied** com portal do editor. Valores registrados: TF-356 Large Giant ND9/PV114/bloodied57/prof+4/DC18; TF-361 Huge Ooze ND8/PV171/bloodied85/prof+2/DC13; TF-386 Gargantuan Monstrosity ND11/PV145/bloodied72/prof+4/DC19. Para TF-386, foram detalhadas as consequências de regurgitação e saída do cadáver para alvos engolidos, incluindo alcance e condição prone.
+
+**Conflitos:** as três identidades A5E ficaram melhor discriminadas de versões/homônimos da PR #4; são versões próprias das publicações indicadas, sem mesclar estatísticas. Esta discriminação **não conta como conflito integralmente resolvido**: ainda é necessário cotejar livro/erratas e conduzir revisão independente. Mantidos 13 conflitos herdados em aberto, zero homologações, zero integração e zero alteração de ledger. Checkpoint de 3 criaturas.
+
+---
+
 ## Checkpoint B — cotejo pontual de quatro fichas no portal editorial A5E (14/10/2026)
 
 Reabertas as fontes primárias e confirmados **tamanho, tipo, limiar bloodied, bônus de proficiência e DC de manobra** em TF-351 ([Half-Demon Ogre](https://a5e.tools/node/3297), Large Giant, bloodied 34, prof +2, DC14), TF-384 ([Mutant Rust Monster](https://a5e.tools/node/2870), Large Monstrosity, bloodied 63, prof +3, DC16), TF-389 ([Supermutant Rust Monster](https://a5e.tools/node/2871), Huge Monstrosity, bloodied 97, prof +3, DC16) e TF-393 ([Minotaur Conqueror](https://a5e.tools/node/2966), Huge Monstrosity, bloodied 131, prof +5, DC19).
