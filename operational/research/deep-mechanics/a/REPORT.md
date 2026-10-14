@@ -1,3 +1,17 @@
+# Grupo A — auditoria de integridade e situação atual (14/10/2026)
+
+**HEAD inspecionado:** `251cc4342cfce782cfd9361950a1cc61fb777918`. Releitura remota individual de **132/132 JSONs** com parsing JSON sem erro e ID correto; árvore Git contém **132 arquivos de registros** e **115 imagens binárias**, todas as 115 com caminho, SHA de blob e tamanho concordantes com o manifesto. Diff contra a referência permanece restrito ao diretório do grupo A.
+
+**Mecânicas:** 43/132 estruturas de statblock com fontes individuais digitais (42 secundárias + 1 oficial A5E no novo lote), **0 homologadas** contra impressão/errata e engine, 131 `PARCIAL`, 1 `BLOQUEADA` (KP-S011), 89 sem estrutura mecânica integral na fonte individual. A presença de arrays de ações nos JSONs não é homologação.
+
+**Imagens:** 115/132 binários fisicamente no GitHub; 17 criaturas ainda sem binário: TF-274, TF-276, TF-283, TF-284, TF-286, KP-S014, TF-013, TF-022, TF-023, TF-024, TF-025, TF-034, TF-041, TF-048, TF-049, TF-053, TF-057. Aprovação de identidade visual independente/licença/produção: **0**. 31 imagens previamente identificadas como pequenas ainda exigem inspeção e substituição, especialmente TF-026 (160×160) e TF-031 (80×120). Não incluir arquivos órfãos não verificados do grupo D só porque aparecem em uma árvore histórica.
+
+**Checkpoints recentes:** [#41](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/4616239800c1144e43d2cfafe764f6a5ca79766e) (TF-231/232/233/234 mecânicas estruturadas); [#42](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/251cc4342cfce782cfd9361950a1cc61fb777918) (TF-042/045 binários SHA original). Conservado o estado draft da PR #8, sem merge.
+
+**Pendente:** investigar os 89 registros ainda resumidos, homologar os 132 contra fontes editoriais e motor A5E/5e, resolver KP-S011/TF-039/TF-041/TF-047/TF-052, obter as 17 imagens ausentes, verificar qualidade visual e direitos de todas as 115, substituir miniaturas.
+
+---
+
 # Grupo A — checkpoint 42: dois binários persistidos da branch D (14/10/2026)
 
 - **TF-042 Akhlut:** `images/TF-042.webp`, **640×516**, 216.744 bytes, origem `image-assets-d` e manifesto de verificação; SHA Git `e641b3b71d29c42476c7fff7c1e691d3101c603f`.
