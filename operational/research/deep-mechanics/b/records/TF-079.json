@@ -2,19 +2,23 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-079",
   "nome": "Clockwork Myrmidon",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 1 (2023)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1, referência original; catálogo menciona revisão 2023",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-myrmidon-3pp/",
-      "natureza": "secundaria_previamente_indicada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-myrmidon",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "ficha individual com estatísticas e inventário de ações"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-075_TF-080/research.json",
-      "natureza": "checkpoint_original"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao"
     }
   ],
   "estatisticas": {
@@ -33,28 +37,20 @@
     "deslocamentos_ft": {
       "andar": 30
     },
-    "deslocamentos_texto": null,
     "salvaguardas": {
-      "STR": 8,
-      "DEX": 5
+      "FOR": 8,
+      "DES": 5
     },
     "pericias": {
       "Athletics": 8,
       "Perception": 6
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 16,
-    "idiomas": [
-      "entende Common, mas não fala"
-    ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -62,129 +58,173 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "entende Common, não fala"
+    ],
+    "tamanho": "Large",
+    "proficiencia": 3
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "DADOS_DA_WIKI_KPOGL_AGUARDAM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "Um Slam e dois golpes nomeados Heavy Pick na descrição; pode substituir os dois golpes de picareta por Alchemical Flame Jet.",
-      "confirmado": false
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, alimento, bebida e sono."
     },
     {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos de alteração de forma não explicitamente permitidos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia ou outros efeitos mágicos."
+    },
+    {
+      "nome": "Alchemical Fireball",
+      "efeito": "Destruído: explosão em raio 10 pés com DES CD16, 4d6 fire, metade em sucesso; efeito NÃO ocorre se já disparou Alchemical Flame Jet quatro vezes.",
+      "gatilho": "destruído",
+      "raio_ft": 10,
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 16,
+        "falha": "4d6 fire",
+        "sucesso": "metade"
+      },
+      "dano": {
+        "dados": "4d6",
+        "modificador": 0,
+        "tipo": "fire"
+      },
+      "nao_ativa_se": "4 usos de Alchemical Flame Jet já consumidos"
+    }
+  ],
+  "ataques": [
+    {
       "nome": "War Pick",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "+8, alcance 10 pés, 2d8+5 perfurante; nome não coincide com Heavy Pick acima.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Slam",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "+8, alcance 10 pés, 1d12+5 contundente.",
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d12",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "texto_editorial_sem_correcao": "um Slam e dois Heavy Pick, OU um Slam e uma Alchemical Flame Jet",
+      "sequencia": [
+        "Slam",
+        "Heavy Pick (NÃO DEFINIDO)",
+        "Heavy Pick (NÃO DEFINIDO)"
+      ],
+      "substituicao": [
+        "Slam",
+        "Alchemical Flame Jet"
+      ],
+      "referencia_conflitante": "Heavy Pick não existe na tabela de ações; há War Pick +8.",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "War Pick",
+      "categoria": "ataque",
+      "referencia_ataque": "War Pick",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam",
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Alchemical Flame Jet",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "4/dia, linha de 30 por 5 pés, DES CD16, 4d6 fogo ou metade.",
-      "confirmado": false
+      "categoria": "area",
+      "usos": "4/dia",
+      "area": {
+        "forma": "linha",
+        "comprimento_ft": 30,
+        "largura_ft": 5
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 16,
+        "falha": "4d6 fire",
+        "sucesso": "metade"
+      },
+      "dano": [
+        {
+          "dados": "4d6",
+          "modificador": 0,
+          "tipo": "fire"
+        }
+      ],
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [
     {
       "nome": "Grease Spray",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "4/dia, quadrado de 10 pés a até 30 pés torna-se terreno difícil; DES CD16 para evitar queda de criaturas presentes ou que entrarem/encerrarem turno.",
-      "confirmado": false
+      "categoria": "acao_bonus",
+      "usos": "4/dia",
+      "alcance_ft": 30,
+      "area": {
+        "forma": "quadrado",
+        "lado_ft": 10
+      },
+      "efeito": "terreno difícil",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 16,
+        "falha": "prone",
+        "sucesso": "sem efeito"
+      },
+      "gatilhos": [
+        "criatura presente quando disparar",
+        "criatura entra",
+        "criatura encerra turno na área"
+      ],
+      "confirmado_na_transcricao": true
     }
   ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Alchemical Fireball",
-      "resumo": "Destruído, explode em raio de 10 pés: DES CD16, 4d6 fogo ou metade; não explode se já usou quatro jatos."
-    },
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa necessidades biológicas básicas."
-    },
-    {
-      "nome": "Immutable Form",
-      "resumo": "Imune a alterações de forma."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem nas salvaguardas contra magia."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "PARCIAL_NOME_ARMA_CONFLITANTE",
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": "INCONSISTÊNCIA NO PRÓPRIO KPOGL: Multiattack menciona Heavy Pick (indefinido), mas ataque recebe o nome War Pick. Não converter em sinônimos sem cotejo editorial.; Verificar revisão de Tome of Beasts 1 (2023) antes de consolidar identidade e efeitos.",
   "pendencias": [
-    "Ficha individual não revisada; registro mecânico PRELIMINAR sem ações integralmente comprovadas.",
-    "Verificar edição, campos faltantes, dados de dano, CD, alcance, gatilhos, durações, usos e recargas.",
-    "Inconsistência textual na própria fonte: Multiattack cita Heavy Pick, ação individual chama-se War Pick; não normalizar sem consultar fonte editorial original.",
-    "Identidade da edição ToB1 (2023) deve permanecer vinculada à fonte, sem substituí-la automaticamente por versão de 2016."
+    "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária.",
+    "INCONSISTÊNCIA NO PRÓPRIO KPOGL: Multiattack menciona Heavy Pick (indefinido), mas ataque recebe o nome War Pick. Não converter em sinônimos sem cotejo editorial.",
+    "Verificar revisão de Tome of Beasts 1 (2023) antes de consolidar identidade e efeitos."
   ],
   "integrada": false
 }

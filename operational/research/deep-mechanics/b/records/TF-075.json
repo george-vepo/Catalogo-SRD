@@ -2,19 +2,23 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-075",
   "nome": "Akaasit",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/akaasit/",
-      "natureza": "secundaria_previamente_indicada"
+      "url": "https://kpogl.wikidot.com/monster:akaasit",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "ficha individual com estatísticas e inventário de ações"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-075_TF-080/research.json",
-      "natureza": "checkpoint_original"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao"
     }
   ],
   "estatisticas": {
@@ -33,14 +37,8 @@
     "deslocamentos_ft": {
       "andar": 30
     },
-    "deslocamentos_texto": null,
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": [
-      "truesight 60 ft."
-    ],
-    "percepcao_passiva": 10,
-    "idiomas": [],
+    "salvaguardas": {},
+    "pericias": {},
     "resistencias_dano": [
       "piercing"
     ],
@@ -48,7 +46,7 @@
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "blinded",
       "charmed",
@@ -57,94 +55,95 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "truesight 60 ft."
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [],
+    "tamanho": "Medium"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "qualidade_estatisticas": "DADOS_DA_WIKI_KPOGL_AGUARDAM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, alimento, bebida e sono."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos de alteração de forma não explicitamente permitidos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia ou outros efeitos mágicos."
+    },
+    {
+      "nome": "Unfixed in Time",
+      "efeito": "Ataques recebidos têm desvantagem até o Akaasit ser acertado; após acerto, perde o efeito até início do turno seguinte.",
+      "desvantagem_ataques_contra": true,
+      "interrompe_ao_ser_atingido": true,
+      "duracao_interrupcao": "até início do próximo turno"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Arm Blade",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 4,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "1d6",
+          "modificador": 0,
+          "tipo": "force"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "Realiza dois ataques com lâminas dos braços.",
-      "confirmado": false
+      "categoria": "multiataque",
+      "sequencia": [
+        "Arm Blade",
+        "Arm Blade"
+      ],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Arm Blade",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "+7 para atingir, alcance 5 pés; 2d8+4 cortante e 1d6 de força.",
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Arm Blade",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [],
   "reacoes": [
     {
       "nome": "Time-Assisted Counterattack",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "indicacao_herdada": "Quando um inimigo visto a até 5 pés o ataca, pode responder antes do golpe; se reduzir o atacante a 0 PV, cancela o ataque desencadeador.",
-      "confirmado": false
+      "categoria": "reacao",
+      "gatilho": "criatura visível a 5 pés realiza ataque contra Akaasit",
+      "preempção": "antes de o ataque do inimigo acertar",
+      "referencia_ataque": "Arm Blade",
+      "condicao_para_negar_ataque_inimigo": "o contra-ataque reduz o atacante a 0 PV",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Immutable Form",
-      "resumo": "Não pode sofrer transformação por magia ou efeito similar."
-    },
-    {
-      "nome": "Unfixed in Time",
-      "resumo": "Ataques contra o akaasit têm desvantagem; após ser atingido, essa proteção cessa até o início do turno seguinte."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra magia."
-    },
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa ar, alimento, água e sono."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": null,
   "pendencias": [
-    "Ficha individual não revisada; registro mecânico PRELIMINAR sem ações integralmente comprovadas.",
-    "Verificar edição, campos faltantes, dados de dano, CD, alcance, gatilhos, durações, usos e recargas.",
-    "ND do pacote canônico não conferido independentemente com o ZIP; fonte consultada indica ND 6."
+    "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária."
   ],
   "integrada": false
 }

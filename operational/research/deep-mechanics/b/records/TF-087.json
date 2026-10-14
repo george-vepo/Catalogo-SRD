@@ -2,19 +2,23 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-087",
   "nome": "Clockwork Tactician",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 3",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 p.90",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-tactician/",
-      "natureza": "referencia_secundaria_herdada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-tactician",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "ficha individual com estatísticas e inventário de ações"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-087_TF-097/research.json",
-      "natureza": "checkpoint"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao"
     }
   ],
   "estatisticas": {
@@ -33,25 +37,18 @@
     "deslocamentos_ft": {
       "andar": 30
     },
-    "salvaguardas": null,
+    "salvaguardas": {},
     "pericias": {
       "Perception": 6
     },
-    "sentidos": [
-      "darkvision 120 ft."
-    ],
-    "idiomas": [
-      "Common",
-      "até dois idiomas de seu criador"
-    ],
     "resistencias_dano": [
-      "bludgeoning/piercing/slashing não mágicos"
+      "bludgeoning/piercing/slashing de ataques não mágicos"
     ],
     "imunidades_dano": [
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -60,143 +57,155 @@
       "petrified",
       "poisoned",
       "unconscious"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 120 ft."
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "até duas línguas do criador"
+    ],
+    "tamanho": "Medium",
+    "proficiencia": 4
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "DADOS_DA_WIKI_KPOGL_AGUARDAM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "indicacao_herdada": "Quatro ataques Multiweapon.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, alimento, bebida e sono."
     },
     {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos de alteração de forma não explicitamente permitidos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia ou outros efeitos mágicos."
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "Ataques com arma contam como mágicos."
+    },
+    {
+      "nome": "Pack Tactics",
+      "efeito": "Vantagem em ataques contra alvo se aliado não incapacitado estiver dentro de 5 pés do alvo."
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Multiweapon",
-      "indicacao_herdada": "+9, 5 pés, 2d8+5; escolhe contundente, perfurante ou cortante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 9,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "bludgeoning ou piercing ou slashing"
+        }
+      ],
+      "efeitos": [
+        {
+          "escolhe_tipo_de_dano_a_cada_ataque": [
+            "bludgeoning",
+            "piercing",
+            "slashing"
+          ]
+        }
+      ],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Heavy Crossbow",
-      "indicacao_herdada": "+6, 100/400 pés, 1d10+2 perfurante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "ataque_a_distancia",
+      "bonus_acerto": 6,
+      "alcance_normal_ft": 100,
+      "alcance_max_ft": 400,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d10",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Multiweapon",
+        "Multiweapon",
+        "Multiweapon",
+        "Multiweapon"
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Multiweapon",
+      "categoria": "ataque",
+      "referencia_ataque": "Multiweapon",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Heavy Crossbow",
+      "categoria": "ataque_distancia",
+      "referencia_ataque": "Heavy Crossbow",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [
     {
       "nome": "Battlefield Commands",
-      "indicacao_herdada": "Até três aliados visíveis em 60 pés recebem vantagem no próximo ataque ou teste se entenderem a ordem.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "acao_bonus",
+      "alcance_ft": 60,
+      "alvos": "até 3 aliados visíveis que possam ouvir e entender",
+      "efeito": "vantagem no próximo teste de habilidade ou ataque",
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Press the Attack",
-      "indicacao_herdada": "Dois ataques Multiweapon certeiros no mesmo alvo, ou um crítico, permitem uma Multiweapon adicional.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "acao_bonus",
+      "gatilho": "duas Multiweapon no mesmo alvo acertam OU um crítico com Multiweapon",
+      "efeito": "faz outro ataque Multiweapon",
+      "referencia_ataque": "Multiweapon",
+      "confirmado_na_transcricao": true
     }
   ],
   "reacoes": [
     {
       "nome": "Quick Study",
-      "indicacao_herdada": "Se atingido, teste INT CD13 concede benefício contra atacante, podendo obter vantagem em corpo a corpo, penalizá-lo ou resistir ao dano.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "reacao",
+      "gatilho": "inimigo acerta um ataque no Tactician",
+      "teste": {
+        "atributo": "INT",
+        "cd": 13
+      },
+      "quando_passa": {
+        "escolha_uma": [
+          "vantagem em ataques corpo a corpo contra atacante",
+          "atacante tem desvantagem ao atacar Tactician",
+          "resistência ao tipo de dano do ataque"
+        ]
+      },
+      "acumulacao": true,
+      "termina": "ao atacar outra criatura ou usar Quick Study contra outra criatura",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Pack Tactics",
-      "resumo": "Vantagem para atingir alvos junto de aliados ativos."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra magia."
-    },
-    {
-      "nome": "Immutable Form",
-      "resumo": "Imune a alterações de forma."
-    },
-    {
-      "nome": "Magic Weapons",
-      "resumo": "Ataques de arma são mágicos."
-    },
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa necessidades biológicas."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": null,
   "pendencias": [
-    "Revisão de bloco integral não executada; dados herdados do checkpoint, sem confirmação independente.",
-    "Dados ausentes e ações somente indicativas; completar separadamente bônus, alvo, dano, duração, CD, recarga e efeitos."
+    "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária."
   ],
   "integrada": false
 }

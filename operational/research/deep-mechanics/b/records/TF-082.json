@@ -2,19 +2,23 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-082",
   "nome": "Onyx Magistrate",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/onyx-magistrate/",
-      "natureza": "referencia_secundaria_herdada"
+      "url": "https://kpogl.wikidot.com/monster:onyx-magistrate",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "ficha individual com estatísticas e inventário de ações"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-081_TF-085/research.json",
-      "natureza": "checkpoint"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao"
     }
   ],
   "estatisticas": {
@@ -32,10 +36,9 @@
     },
     "deslocamentos_ft": {
       "andar": 0,
-      "voar": 30,
-      "hover": true
+      "voar": 30
     },
-    "salvaguardas": null,
+    "salvaguardas": {},
     "pericias": {
       "Insight": 8,
       "Intimidation": 8,
@@ -43,13 +46,6 @@
       "Persuasion": 8,
       "Religion": 6
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "idiomas": [
-      "Common",
-      "Infernal"
-    ],
     "resistencias_dano": [
       "cold",
       "fire",
@@ -58,9 +54,9 @@
     "imunidades_dano": [
       "necrotic",
       "poison",
-      "bludgeoning/piercing/slashing não mágicos, salvo adamantina"
+      "bludgeoning/piercing/slashing não mágico sem adamantina"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -68,123 +64,153 @@
       "paralyzed",
       "poisoned",
       "prone"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 18,
+    "idiomas": [
+      "Common",
+      "Infernal"
+    ],
+    "tamanho": "Large",
+    "pairar": true
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "DADOS_DA_WIKI_KPOGL_AGUARDAM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "indicacao_herdada": "Três golpes de cetro ou dois raios necróticos.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, alimento, bebida e sono."
     },
     {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos de alteração de forma não explicitamente permitidos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia ou outros efeitos mágicos."
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "Ataques com arma do Magistrate contam como mágicos."
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Scepter",
-      "indicacao_herdada": "+7, 5 pés, 2d10+4 contundente; FOR CD15 para evitar queda.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d10",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "FOR",
+            "cd": 15,
+            "falha": "prone",
+            "sucesso": "não cai"
+          }
+        }
+      ],
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Necrotic Ray",
-      "indicacao_herdada": "+8, alcance 30/120 pés, 3d8+4 necrótico.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "ataque_a_distancia",
+      "bonus_acerto": 8,
+      "alcance_normal_ft": 30,
+      "alcance_max_ft": 120,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "3d8",
+          "modificador": 4,
+          "tipo": "necrotic"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "opcoes": [
+        [
+          "Scepter",
+          "Scepter",
+          "Scepter"
+        ],
+        [
+          "Necrotic Ray",
+          "Necrotic Ray"
+        ]
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Scepter",
+      "categoria": "ataque",
+      "referencia_ataque": "Scepter",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Necrotic Ray",
+      "categoria": "ataque_distancia_magico",
+      "referencia_ataque": "Necrotic Ray",
+      "confirmado_na_transcricao": true
     },
     {
       "nome": "Dire Judgement",
-      "indicacao_herdada": "1/dia, alvos escolhidos que percebem o magistrado a 30 pés, SAB CD16; maldição impede cura mágica e aplica -1d4 em ataques e salvaguardas, até remoção por magia.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "maldicao_em_area",
+      "usos": "1/dia",
+      "alcance_ft": 30,
+      "alvos": "criaturas escolhidas que percebem o Magistrate",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 16,
+        "falha": "cursed com -1d4 em ataque ou salvaguarda, sem cura mágica",
+        "sucesso": "não amaldiçoado"
+      },
+      "efeitos": [
+        "não recebe cura mágica",
+        "cura por descanso/não mágica preservada",
+        "-1d4 em ataques",
+        "-1d4 em salvaguardas"
+      ],
+      "duracao": "até remove curse ou magia equivalente",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_bonus": [],
   "reacoes": [
     {
       "nome": "Tip the Scales",
-      "indicacao_herdada": "Recarga 5–6; +3 CA contra golpe que acertaria, ou converte falha de salvaguarda em sucesso.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "reacao",
+      "recarga": "5-6",
+      "alternativas": [
+        "recebe +3 CA contra ataque que iria acertá-lo",
+        "transforma uma salvaguarda falha em sucesso"
+      ],
+      "gatilho": "recebe ataque que acertaria OU falha em salvaguarda",
+      "confirmado_na_transcricao": true
     }
   ],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Immutable Form",
-      "resumo": "Imune a alterações de forma."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra efeitos mágicos."
-    },
-    {
-      "nome": "Magic Weapons",
-      "resumo": "Ataques com armas contam como mágicos."
-    },
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa ar, comida, água e sono."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": null,
   "pendencias": [
-    "Revisão de bloco integral não executada; dados herdados do checkpoint, sem confirmação independente.",
-    "Dados ausentes e ações somente indicativas; completar separadamente bônus, alvo, dano, duração, CD, recarga e efeitos.",
-    "ND fonte 8; comparar com pacote canônico antes de integração."
+    "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária."
   ],
   "integrada": false
 }
