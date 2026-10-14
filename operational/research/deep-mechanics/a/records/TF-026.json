@@ -5,9 +5,11 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press",
+    "publisher": "Kobold Press / Open Design LLC",
     "publication": "Tome of Beasts 2",
-    "edition_family": "5e",
+    "publication_year": 2020,
+    "edition_family": "D&D 5e",
+    "edition": "Tome of Beasts 2 for 5th Edition (2020)",
     "exact_printing": null,
     "challenge_rating": "0",
     "size": "Tiny",
@@ -27,61 +29,128 @@
       "CHA": 8
     },
     "speeds": {
-      "andar": 30,
-      "escavar": 5
+      "walk_ft": 30,
+      "burrow_ft": 5
     },
-    "senses": [
-      "darkvision 60 ft."
-    ],
-    "skills": null,
-    "saving_throws": null,
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": [],
     "languages": [],
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
   },
   "mechanics": {
     "traits": [
       {
         "name": "Shadow Camouflage",
-        "category": "action_or_trait",
-        "prior_summary_unverified": "Vantagem em testes de Furtividade em penumbra ou escuridão.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "to_hit": null,
-        "damage": null,
-        "range": null,
-        "save": null,
-        "duration": null,
-        "recharge": null
+        "category": "passive",
+        "activation": "automatic",
+        "trigger": "Sempre que realizar um teste de Destreza (Furtividade) em luz fraca ou escuridão",
+        "effect": {
+          "roll": "Dexterity (Stealth) check",
+          "advantage": true
+        },
+        "requirements": {
+          "light_condition": [
+            "dim_light",
+            "darkness"
+          ]
+        },
+        "duration": "Apenas para o teste desencadeador",
+        "recharge": null,
+        "uses_limit": null,
+        "save": null
       }
     ],
     "actions": [
       {
         "name": "Bite",
-        "category": "action_or_trait",
-        "prior_summary_unverified": "Ataque corpo a corpo +2; alcance 5 pés; causa 1 ponto de dano perfurante.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "to_hit": null,
-        "damage": null,
-        "range": null,
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_ability": "DEX",
+        "attack_bonus": 2,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": null,
+              "flat": 1,
+              "damage_type": "piercing"
+            }
+          ],
+          "other_effects": []
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
         "save": null,
-        "duration": null,
-        "recharge": null
+        "recharge": null,
+        "uses_limit": null
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Familiar eligibility (source narrative)",
+        "type": "non_statblock_note",
+        "description": "KPOGL describes bilbies as eligible familiars via find familiar; this is not a separate combat action.",
+        "conditions": "Depende da magia find familiar e das regras aplicáveis à mesa",
+        "source": "https://kpogl.wikidot.com/monster:bilby"
+      }
+    ]
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/bilby/",
       "type": "ficha_individual_secundaria",
-      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+      "edition": "Tome of Beasts 2 (2020), D&D 5e",
+      "verified_fields": [
+        "tamanho_tipo_alinhamento",
+        "CA_PV_dados",
+        "seis_atributos",
+        "deslocamento",
+        "sentidos",
+        "idiomas",
+        "ND",
+        "traco_Shadow_Camouflage",
+        "ataque_Bite",
+        "ausencia_outras_acoes_no_statblock"
+      ],
+      "reviewed": "2026-10-13"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:bilby",
+      "type": "ficha_individual_secundaria_independente",
+      "edition": "Tome of Beasts 2 (5e)",
+      "verification": "concorda com todos os parâmetros explícitos do statblock 5eSRD",
+      "reviewed": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial_oficial",
+      "verification": "confirma Bilby, tamanho Tiny, tipo Beast, ND 0, Tome of Beasts 2",
+      "reviewed": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tome-of-beasts-2/",
+      "type": "pagina_editorial_oficial",
+      "verification": "confirma publicação 5e e anúncio em 20/10/2020",
+      "reviewed": "2026-10-13"
     }
   ],
   "source_checkpoint": {
@@ -92,7 +161,32 @@
     "Validação de direitos de uso e imagem; não promover ao catálogo canônico sem gates."
   ],
   "outstanding": [
-    "Pesquisar todas as ações/traços e cada efeito especial em detalhe; resumos legados não são mecânicas completas.",
-    "Revisar publicação/errata exata e verificar todos os atributos, CDs, danos, resistências, recargas e condições."
-  ]
+    "Comparar a ficha de Bilby com a edição/errata original da Kobold Press e conferir a impressão exata antes de aprovação canônica.",
+    "Trocar a miniatura de 160×160 por arte de produção em alta resolução e revisar a direção visual do cartão.",
+    "Revisão independente antes de integração; nenhuma alteração no ledger global."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "two_individual_statblocks_agree": true,
+    "mechanics_covered_at_source_level": true,
+    "publisher_index_edition_family_confirmed": true,
+    "primary_book_full_text_compared": false,
+    "exact_printing_verified": false,
+    "editorial_final_approval": false,
+    "reason_for_partial": "Mecânicas da versão publicada online integralmente estruturadas e reconciliadas, mas não foi feita auditoria contra a página do livro físico/errata."
+  },
+  "image": {
+    "status": "BINARIO_PUBLICADO_THUMBNAIL",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-026_bilby.jpg",
+    "format": "image/jpeg",
+    "width": 160,
+    "height": 160,
+    "bytes": 4241,
+    "sha256": "649da02715e1931192dd16d9cb86add1560c19607d07e730fe4a870a50ebb36b",
+    "git_blob_sha": "dd6fe3b2665cef5b2b6f5b8b58ac25d1e15b632d",
+    "source_type": "original_ai_generated",
+    "source_note": "Arte original gerada nesta execução para o Bilby; não é uma ilustração oficial Kobold Press.",
+    "resolution_status": "THUMBNAIL_NAO_APROVADO_PARA_CARTA_FINAL",
+    "source_generation_id": "4f74ab03-d18b-42fa-bb77-0b61b1145109"
+  }
 }

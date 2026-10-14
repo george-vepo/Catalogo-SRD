@@ -76,3 +76,10 @@ Foram lidos remotamente os 132 arquivos JSON publicados no commit [`68d53861a4bf
 Arquivos alterados exclusivamente sob `operational/research/deep-mechanics/a/`. Não foram editados `campaign.json`, `catalog-status.csv`, `STATUS`, `main`, branch de referência, PR #1 ou PR #2; não houve merge.
 
 **Conclusão:** publicação do catálogo de investigação, não conclusão da pesquisa integral. **Fichas efetivamente completas: 0/132**.
+
+## Atualização — TF-026 (Bilby): fonte dupla + imagem binária
+
+- [Ficha TF-026](records/TF-026.json) revisada contra duas páginas individuais: [5eSRD](https://www.5esrd.com/database/creature/bilby/) e [KPOGL](https://kpogl.wikidot.com/monster:bilby). O [índice da Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/) confirma a identidade/ND e a [página editorial de 2020](https://koboldpress.com/tome-of-beasts-2/) confirma a edição 5e.
+- Estruturados integralmente todos os elementos do statblock disponível: CA 10, PV 2 (1d4), seis atributos, deslocamentos, darkvision, percepção passiva, Shadow Camouflage, Bite com +2, 5 pés, 1 perfurante, ação normal, sem ações bônus, reações, lendárias ou magias no statblock.
+- [Arquivo JPEG real](images/TF-026_bilby.jpg) de 4.241 bytes e 160×160 pixels, com SHA-256 `649da02715e1931192dd16d9cb86add1560c19607d07e730fe4a870a50ebb36b`. Arte gerada nesta execução, não oficial da editora. **É uma miniatura, não uma imagem aprovada para impressão.**
+- Sem acesso à página da edição física/errata, a ficha permanece `PARCIAL`, embora sua mecânica publicada nas duas fontes individuais tenha sido inteiramente estruturada. O total editorialmente validado permanece **0/132**, com **130 parciais / 2 bloqueadas** e **1/132 imagem binária real persistida**.
