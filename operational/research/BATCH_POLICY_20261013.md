@@ -1,27 +1,32 @@
-# Política operacional de lotes de pesquisa SRD — 13/10/2026
+# SRD Card Game 607 — Política de pesquisa em lotes de 40
 
-## Regra vigente
+**Vigência:** 13/10/2026. **Substitui a política anterior de 20** para os próximos checkpoints. A versão de 20 permanece preservada no histórico Git.
 
-A partir deste registro, pesquisar e publicar **20 criaturas por lote**. O checkpoint futuro deve conter até 20 registros em um arquivo `research.json` do novo lote, e o ledger deve avançar conforme os registros realmente pesquisados. Para a fila atual (280 IDs pendentes) há **14 lotes de 20**.
+## Regra vigente e controles
 
-- **Fonte de verdade para o agendamento:** `operational/research/catalog-ledger-20261011-v23/campaign.json`, campos `research_checkpoint_batch_size=20`, `research_queue_batches_of_twenty=14` e `next_batches[].ids`. 
-- **Índice de verdade:** `operational/research/catalog-ledger-20261011-v23/catalog-status.csv`, UTF-8, separador `;`; identificar registros pendentes pela coluna `Estado=PENDENTE_PESQUISA`.
-- Os **23 checkpoints históricos de cinco criaturas não são reescritos**, e nenhuma ficha ou imagem canônica é promovida como efeito da mudança de configuração.
-- Não aumentar `research_stage_count` nem escrever checkpoint de 20 até que as 20 fichas tenham sido efetivamente investigadas. Registrar pendências/ambiguidades com clareza, inclusive para fichas parciais.
-- A publicação de novos checkpoints deve ser feita na branch de pesquisa da PR #1, com SHA esperado e verificação de contagens/IDs únicos antes e após a gravação. Atualizar índice, ledger e descrição da PR com evidências da publicação.
-- Revisão independente, direitos de regras e imagens, e integração ao construtor permanecem gates separados e não aprovados pela simples conclusão de pesquisa. Sem merge por suposição.
-- Se um lote contiver fontes inacessíveis, registrar estado **PARCIAL** e pendências objetivas para os IDs afetados; não preencher atributos ou estatísticas por inferência.
+- Executar e contabilizar **40 criaturas por lote**, na ordem de `operational/research/catalog-ledger-20261011-v26/campaign.json`. Campos de controle: `research_checkpoint_batch_size=40`, `research_queue_batches_of_forty=6`, `next_batches[].ids`.
+- A fila de 240 IDs pendentes foi reagrupada em **seis lotes de 40**, sem reordenar, excluir nem adicionar registros.
+- Checkpoints parciais menores podem ser publicados para segurança de persistência, como já ocorreu em lotes antigos, **mas não devem ser contabilizados antecipadamente como um lote de 40 concluído**.
+- Há um checkpoint parcial **TF-166 a TF-170 (cinco criaturas)** já gravado em `checkpoints/20261013_TF-166_TF-170/research.json` e não reconciliado no ledger v25. **Reutilizá-lo**, não pesquisar novamente nem somar sua contagem duas vezes. A pesquisa restante do primeiro lote começa em TF-171.
+- Não substituir nem excluir os 28 checkpoints anteriores. Os cinco registros TF-166 a TF-170 também permanecem intactos como WIP.
+- Não elevar `research_stage_count` sem incluir os respectivos IDs e checkpoints no CSV de 607 entradas; não preencher estatísticas sem fonte confiável. Para conteúdos parcialmente pesquisados, registrar estado PARCIAL com limitações.
+- Confirmar SHA da branch e ausência de alterações concorrentes antes de escrever; atualizar por `expected_sha`, sem force push. Conferir depois os IDs únicos, contagens, PR e o próximo grupo.
+- Preservar `main`, ZIP canônico, imagens e fichas aprovadas. Nenhum gate de revisão, licença, teste ou homologação é satisfeito pela pesquisa.
 
-## Migração
+## Estado na migração
 
-| Item | Antes | Depois |
-|---|---:|---:|
-| Tamanho da próxima unidade de pesquisa | 5 | **20** |
-| Criaturas ainda sem pesquisa | 280 | 280 |
-| Grupos restantes | 56 | **14** |
-| Criaturas já pesquisadas | 115 | 115 |
-| Checkpoints históricos | 23 (de cinco) | 23 (preservados) |
-| Fichas canônicas completas | 212 | 212 |
-| Imagens verificadas | 23 | 23 |
+| Indicador | Confirmado |
+|---|---:|
+| Catálogo total | 607 |
+| Fichas canônicas completas | 212 |
+| Fichas canônicas incompletas | 395 |
+| Pesquisas reconciliadas no ledger | 155 |
+| Pesquisas pendentes no ledger | 240 |
+| Subcheckpoint iniciado, não reconciliado | TF-166 a TF-170 (5/40) |
+| Checkpoints anteriores no ledger | 28 |
+| Imagens verificadas | 23 |
+| Lotes futuros | 6 de 40 |
 
-O ledger `v22` é a última versão com a fila antiga e foi preservado. O ledger `v23` armazena a nova fila. O campo `legacy_research_queue_batches_of_five_at_migration` é **histórico**, não representa grupos ativos.
+**Próxima janela (40 IDs):** TF-166, TF-167, TF-168, TF-169, TF-170, TF-171, TF-172, TF-173, TF-174, TF-175, TF-176, TF-177, TF-178, TF-179, TF-180, TF-181, TF-182, TF-186, TF-187, TF-188, TF-189, TF-190, TF-191, TF-192, TF-193, TF-194, TF-195, TF-196, TF-197, TF-198, TF-199, TF-200, TF-201, TF-202, TF-203, TF-204, TF-205, TF-206, TF-208, TF-210.
+
+O arquivo `catalog-ledger-20261011-v25` continua sendo o registro histórico da pesquisa em grupos de 20; o novo `v26` altera somente a configuração do tamanho da fila, não aprova fichas.
