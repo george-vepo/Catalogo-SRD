@@ -24,6 +24,20 @@ Data da auditoria: 2026-10-14. Head inspecionado: `b1d3a7cdec6202fa215ddbc41f61b
 
 A análise de 76 ausências não provou impedimento irreversível individual: imagens apropriadas com autorização e atribuição documentadas precisam ser pesquisadas/produzidas. Nenhuma URL, nome de arquivo, miniatura textual ou metadado foi contabilizado como PNG/WebP/JPEG. Nenhuma operação de merge foi realizada.
 
+## Auditoria de continuidade — checkpoint 28 (2026-10-14)
+
+A partir da árvore Git `c44168574a62044056cf607e5bd652a010f52c15` no commit `f46d6dc8d5b3ac433295f59b38f58fc3a6742527`:
+
+- **CSV canônico**: 607 registros, 23 `VERIFICADA`, 584 não verificadas; recorte F de 194 IDs confirmado. Ordem, nomes e IDs coincidem integralmente com as 194 entradas do manifesto.
+- **GitHub**: 120 arquivos binários físicos (13.313.242 bytes). Cada um dos 120 blobs da árvore corresponde ao caminho, ao Git blob SHA e ao tamanho registrados individualmente no manifesto. Há 120 SHA-256 distintos registrados; não foram encontrados hashes repetidos.
+- **Novas imagens nesta continuação**: TF-351 e TF-463, persistidas no commit `54cbf17c2c686170edc86d1ff09961021866448b`, recuperadas da branch e comparadas byte por byte com a origem; SHA-256/assinatura/dimensões medidos antes do upload e persistidos no manifesto. **São imagens provisórias em estado PARTIAL, não arte definitiva.**
+- **Seleção e isolamento**: diff relativo ao commit-base tem 122 arquivos: 120 imagens do grupo F, `manifests/f.json` e `reports/f.md`. Nenhum arquivo fora do caminho autorizado. CSV global, verificadas anteriores e arquivos dos grupos D/E preservados.
+- **Resultado conservador**: 4 `COMPLETE`; 190 `PARTIAL`, dos quais 74 ainda não possuem arquivo. Nenhum bloqueio individual definitivo comprovado.
+- **Revisão legal**: 84 ilustrações `TheGiddyLimit/homebrew-img` sem licença de reutilização localizada; 8 `FoundryVTT-Level-Up-Official/public/assets/` sob declaração de uso não comercial. Esses arquivos continuam fisicamente presentes, porém não devem integrar lançamento comercial sem permissão/substituição. Arte TF-463 tem licença CC BY-SA 4.0 e exige atribuição e cumprimento ShareAlike em adaptações; TF-351 tem declaração CC0 na origem.
+- **Limitação de verificação**: os 118 binários dos checkpoints anteriores não tiveram cada SHA-256 recalculado nesta continuação; para eles, conferiu-se presença/tamanho/Git blob SHA na árvore e preservaram-se as verificações registradas anteriormente. Não houve leitura visual individual nova de todos os arquivos legados.
+
+**Auditoria do conteúdo do Git concluída para a situação atual, mas o objetivo de 194 imagens adequadas e com direito de uso assegurado continua NÃO CONCLUÍDO. Não fazer merge.**
+
 ## Escopo e execução
 
 - Repositório: `george-vepo/SRD-Card-Game-607-Supervisor`; branch: `chatgpt/srd607-image-assets-f`; PR draft https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/5.
