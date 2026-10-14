@@ -1,3 +1,19 @@
+## Atualização 14/10/2026 — 100/132 binários reais no grupo B
+
+**Cinco novas imagens foram gravadas e verificadas no GitHub; faltam 32 de 132.** Todas estas cinco foram copiadas como objetos Git binários reais da branch `chatgpt/srd607-image-assets-f` e relidas na branch B. Verificados: SHA do blob idêntico à fonte, quantidade de bytes e assinatura WebP. Metadados SHA-256 e links à ilustração original estão no [manifesto](manifest.json).
+
+| ID | Criatura | Arquivo binário | Bytes | Dimensões | Git blob SHA |
+|---|---|---|---:|---|---|
+| TF-373 | Kobold, Wizard | [WebP](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-373.webp) | 169364 | 705×1015 | `f9a1425c5a2a6efef01eea63969a46cc190a4c4d` |
+| TF-396 | Skeleton, Clacking | [WebP](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-396.webp) | 202888 | 833×1215 | `14fec1a4cb7ba2e76c8e24b530e49dab96be6e3b` |
+| TF-403 | Lich, Hierophant | [WebP](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-403.webp) | 191576 | 861×1188 | `435e829ce72cbfb4ad477766e6abf788d21c69e7` |
+| TF-407 | Lich, Pact | [WebP](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-407.webp) | 211940 | 920×1168 | `cbeb7fce6cb45fa770a387c5e9493f0e16ed9264` |
+| TF-410 | Fungi, Wirbeln | [WebP](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-410.webp) | 182470 | 871×972 | `24a662a994094e7f7195f4821e078f475fb960cc` |
+
+O registro das 32 imagens faltantes permanece explicitamente pendente, sem substituições artificiais, links disfarçados de arquivo ou imagens inventadas.
+
+---
+
 ## Atualização 14/10/2026 — três imagens físicas importadas
 
 **95/132 imagens binárias reais, 37 pendentes.** Nesta execução foram adicionadas e relidas: 
