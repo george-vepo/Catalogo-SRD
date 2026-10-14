@@ -153,3 +153,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 9 fichas completas em conteúdo e 1 com ressalva (**TF-231**, descrição Spit Poison de A5E como ataque melee com distância 20/60 ft, pendente cotejo). Dez imagens com vínculo direto aos JSONs A, presentes com SHA e tamanho conferidos. Nenhuma possui dimensão declarada inferior a 500 px. Publicação original, adequação visual e licença permanecem sem homologação.
 
 **Consolidado:** 210/395 (185 restantes); 140 completas, 41 com ressalvas, 28 incompletas, 1 não verificável; 153 imagens diretas, 54 via manifesto, 3 ausentes.
+
+## Lote 022 — TF-234–TF-243 (10 IDs na ordem do CSV)
+
+6 completas em conteúdo, 1 com ressalva (TF-237: reteste de Stinger versus cura por greater restoration) e 3 incompletas (**TF-238, TF-239 e TF-240**, sem ações/traços estruturados). Dez imagens presentes diretamente vinculadas aos JSONs A e SHA/tamanho conferidos. Sem dimensões declaradas inferiores a 500 px. Licenciamento, publicação e inspeção visual continuam pendentes.
+
+**Consolidado:** 220/395 (175 restantes); 146 completas, 42 com ressalvas, 31 incompletas, 1 não verificável; 163 imagens diretas, 54 por manifesto, 3 ausentes.
