@@ -16,11 +16,11 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 87,
-    "verified_after_upload": 87,
-    "pending": 107,
-    "stored_bytes": 11082024,
-    "checkpoint_count": 16
+    "persisted_binary_files": 88,
+    "verified_after_upload": 88,
+    "pending": 106,
+    "stored_bytes": 11166016,
+    "checkpoint_count": 17
   },
   "checkpoints": [
     {
@@ -221,6 +221,14 @@
       ],
       "commit": "6847194a39a6e9062b2faf5c7dd12672f1674555",
       "validation": "after upload: git blob identity and all base64 bytes equal source; pre-upload SHA-256 and dimensions recorded"
+    },
+    {
+      "sequence": 17,
+      "images_added": [
+        "TF-497"
+      ],
+      "commit": "3469d0d9b53f951da27fa9daa9e4a9018c777256",
+      "validation": "Git blob, WebP, bytes, SHA-256 measured before upload; full binary identity after upload"
     }
   ],
   "blocked_ids": [
@@ -309,7 +317,6 @@
     "TF-494",
     "TF-495",
     "TF-496",
-    "TF-497",
     "TF-499",
     "TF-500",
     "TF-501",
@@ -3829,19 +3836,27 @@
     {
       "id": "TF-497",
       "name": "Faun",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/BoBH/Faun.webp",
+      "repository_path": "operational/assets/creature-images/TF-497.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 280,
+        "height": 280
+      },
+      "size_bytes": 83992,
+      "sha256": "109f636c8053caa351ba2b813b7e5208581904dc8ca06e44539eb6fcca9e932f",
+      "persistence_commit": "3469d0d9b53f951da27fa9daa9e4a9018c777256",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "GitHub fetch_file base64: valid WebP header, dimensions 280x280 and sha256 before persist; refetched after commit and verified full base64 identity and same Git blob SHA.",
+        "git_blob_sha": "091548287dc18ef4753beb218d42ffc62266d7d2",
+        "quality_note": "Token 280x280. Avaliar substituição para impressão em alta definição."
+      },
+      "source_repo": "TheGiddyLimit/homebrew-img",
+      "source_path": "img/BoBH/Faun.webp",
+      "source_git_blob_sha": "091548287dc18ef4753beb218d42ffc62266d7d2"
     },
     {
       "id": "TF-499",
