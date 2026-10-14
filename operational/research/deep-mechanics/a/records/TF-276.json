@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "aberration",
+    "alignment": "chaotic_evil",
+    "experience_points": 1800,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "PB não declarado no bloco individual KPOGL"
   },
   "statistics": {
     "armor_class": 12,
     "hit_points": 136,
-    "hit_dice": null,
+    "hit_dice": "16d10+48",
     "ability_scores": {
       "STR": 18,
       "DEX": 8,
@@ -26,24 +29,227 @@
       "WIS": 15,
       "CHA": 10
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 30
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 12
+    },
+    "skills": [],
+    "saving_throws": {
+      "INT": 6,
+      "WIS": 5,
+      "CHA": 3
+    },
+    "languages": {
+      "spoken": "all_languages",
+      "telepathy_ft": 60
+    },
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "prone"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": -1,
+      "CON": 3,
+      "INT": 3,
+      "WIS": 2,
+      "CHA": 0
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Absorb Malleable",
+        "category": "absorb_smaller",
+        "trigger": "bonus_action",
+        "precondition": "one_minor_malleable_within_5ft",
+        "effect": {
+          "remove_absorbed_actor": true,
+          "heal_hp": "minor_remaining_hp",
+          "inherits_target_conditions_spells_magical_effects": true
+        }
+      },
+      {
+        "name": "Amorphous",
+        "category": "movement",
+        "minimum_gap_inches": 1,
+        "no_squeezing_required": true
+      },
+      {
+        "name": "Controlled Mutability",
+        "category": "shape_change",
+        "outside_change_reverts_at": "end_of_malleable_next_turn",
+        "self_action_shape_change": {
+          "cost": "action",
+          "shape": "any",
+          "visual_constraint": "inside_out_fleshy_creature",
+          "no_statistics_or_abilities_of_imitated_creature": true
+        }
+      },
+      {
+        "name": "Psychic Absorption",
+        "category": "damage_to_healing",
+        "trigger": "would_take_psychic_damage",
+        "psychic_damage_taken": 0,
+        "hp_restored": "amount_of_psychic_damage_would_have_been_taken"
+      },
+      {
+        "name": "Spider Climb",
+        "category": "movement",
+        "upside_down_and_difficult_surface_without_ability_check": true
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Flesh Tendril",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Flesh Tendril",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "3d6",
+              "flat": 4,
+              "average": 14,
+              "type": "bludgeoning"
+            }
+          ],
+          "if_target_max_size": "Large",
+          "condition": "grappled",
+          "escape_dc": 14
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Psychic Drain",
+        "category": "single_target_save",
+        "action_economy": "action",
+        "precondition": "target_currently_grappled_by_malleable",
+        "target_count": 1,
+        "save": {
+          "ability": "INT",
+          "dc": 14,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "5d8",
+                "flat": 0,
+                "average": 22,
+                "type": "psychic"
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "effect": {
+          "reduce_hp_maximum_by": "actual_psychic_damage_taken",
+          "until": "target_finishes_long_rest",
+          "if_max_hp_zero": {
+            "target_dies": true,
+            "target_becomes": "minor_malleable"
+          }
+        }
+      },
+      {
+        "name": "Join Malleables",
+        "category": "group_fusion",
+        "action_economy": "action",
+        "participants": "moderate_malleables_within_10ft_all_use_action_simultaneously",
+        "valid_choices": [
+          {
+            "count": 2,
+            "result": "major_malleable"
+          },
+          {
+            "count": 4,
+            "result": "massive_malleable"
+          }
+        ],
+        "effect": {
+          "new_hp": "sum_current_hp_of_participants",
+          "inherit_all": [
+            "conditions",
+            "spells",
+            "magical_effects"
+          ],
+          "initiative": "participant_initiative_count",
+          "position": "any_previously_occupied_space"
+        }
+      },
+      {
+        "name": "Separate Malleables",
+        "category": "split",
+        "action_economy": "action",
+        "result": {
+          "count": 4,
+          "creature": "minor_malleable",
+          "hp_each_formula": "floor(current_moderate_hp/4)",
+          "inherit": [
+            "conditions",
+            "spells",
+            "magical_effects"
+          ],
+          "initiative": "same_as_original_moderate",
+          "position": "unoccupied_space_formerly_occupied_by_moderate"
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Absorb Malleable",
+        "category": "absorb_smaller",
+        "action_economy": "bonus_action",
+        "target": "one_minor_malleable_within_5ft",
+        "effect": "heal_equal_to_absorbed_current_hp_and_inherit_effects"
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Sudden Separation",
+        "category": "split_reaction",
+        "action_economy": "reaction",
+        "trigger": "takes_10_or_more_damage_from_one_attack",
+        "effect": "use_Separate_Malleables_immediately",
+        "damage_distribution": "divide_triggering_attack_damage_evenly_among_four_resulting_minors",
+        "damage_rounding_rule": null
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Variante moderada amorfa que absorve formas menores para regenerar; drena poder psíquico, mantém forma controlada e pode dividir-se."
@@ -67,8 +273,8 @@
       "url": "https://kpogl.wikidot.com/monster:moderate-malleable",
       "type": "KPOGL reprodução não endossada por Kobold Press",
       "edition": "Tome of Beasts 2",
-      "scope": "traços e ações da ficha individual em resumo; revisão editorial integral pendente",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Bloco individual com estatísticas, traços, ações, reação/recursos e condicionais",
+      "verification": "Releitura da ficha individual KPOGL em 14/10/2026, homologação editorial/engine ainda pendentes."
     }
   ],
   "source_checkpoint": {
@@ -79,8 +285,23 @@
     "Malleable, Moderate é variante própria ND 5."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
-  ]
+    "TF-276 sem imagem binária; preservar como pendência independente das mecânicas.",
+    "Sudden Separation não indica como distribuir arredondamento de dano ímpar entre quatro criaturas; manter indeterminado.",
+    "Recursos de fusão/separação herdam efeitos, mas a engine não pode pressupor persistência de classes/poderes diferentes da fonte.",
+    "Confrontar versão editorial impressa e errata, avaliar licença, testar implementações na engine e revisar qualquer arte associada."
+  ],
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:moderate-malleable"
+    ],
+    "source_tier": "secondary_KPOGL",
+    "source_page_opened_and_read": true,
+    "spell_definitions_individually_cross_checked": false,
+    "notes": "O bloco de criatura foi lido; regras transcritas do site KPOGL não são homologação de versão, licença, errata ou engine."
+  }
 }

@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 56: Moderate Malleable, Oth e Snatch Bat (14/10/2026)
+
+- **TF-276 Moderate Malleable:** [fonte KPOGL](https://kpogl.wikidot.com/monster:moderate-malleable). Multiattack com dois Flesh Tendril, Psychic Drain 5d8, fusão de 2 ou 4 Moderates, separação em 4 Minors com divisão de PV e herança dos efeitos, reação Sudden Separation após ataque de pelo menos 10 pontos de dano, Absorb Malleable por bônus. Fonte não explica divisão de resto no dano da reação. **Sem binário de imagem.**
+- **TF-277 Shoth, Oth:** [fonte](https://kpogl.wikidot.com/monster:oth). Papéis mutuamente exclusivos Dripping Arcanist (magias com quantidades/dia e CD15) e Paladin of Shoth (CA17, cegueira condicionada, Greatsword), Multiattack e Spray recarga 6, Merge de aliado Shoth com limite por 24h. Definições de magias não foram conferidas individualmente, pendência explícita.
+- **TF-278 Snatch Bat:** [fonte](https://kpogl.wikidot.com/monster:snatch-bat). Flyby, Treasure Sense, Multiattack 3 Claw ou 2 Claw + Pilfering Bite; roubo em vez de dano, objeto ≤10 libras e restrições, regurgitação sem ação antes de novo ataque Pilfering Bite. Imagem existente só 280×280, não aprovada.
+
+**Contagem:** 78/132 estruturas individuais pesquisadas, 54 ainda resumidas, 0 homologadas; 124 binários de imagem, 8 ausentes, 0 aprovados para uso nas cartas. Fontes comunitárias individuais não são validação final de edição, licença nem engine; a PR permanece em rascunho, sem merge, mudanças em outros grupos ou V-Bridge.
+
+---
+
 # Grupo A — checkpoint 55: Light Eater, Sooze e Minor Malleable (14/10/2026)
 
 - **TF-272 Light Eater:** fonte digital individual KPOGL [Light Eater](https://kpogl.wikidot.com/monster:light-eater), *Tome of Beasts 3*, p.262; absorção de luz com distinção entre magia até nível 2 e chama comum, Light Sense, Tentacle +4 e reação Emergency Flare CD12 com cegueira e recarga ao descanso curto/longo. Miniatura 280×280 ainda não é arte final.

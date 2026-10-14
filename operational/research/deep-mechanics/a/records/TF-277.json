@@ -10,14 +10,18 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "aberration",
+    "alignment": "lawful_neutral",
+    "subtype": "shoth",
+    "experience_points": 1800,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "Não está explícito no Creature Codex statblock"
   },
   "statistics": {
     "armor_class": 15,
     "hit_points": 119,
-    "hit_dice": null,
+    "hit_dice": "14d10+42",
     "ability_scores": {
       "STR": 16,
       "DEX": 10,
@@ -26,24 +30,277 @@
       "WIS": 14,
       "CHA": 18
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 10
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "passive_perception": 15
+    },
+    "skills": {
+      "Arcana": 3,
+      "Perception": 5,
+      "Persuasion": 7,
+      "Religion": 3
+    },
+    "saving_throws": [],
+    "languages": {
+      "spoken": "all_languages",
+      "telepathy_ft": 100
+    },
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "armor_class_variants": {
+      "base_and_Dripping_Arcanist": 15,
+      "Paladin_of_Shoth": 17
+    },
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 0,
+      "CON": 3,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": 4
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Amorphous",
+        "category": "movement",
+        "minimum_gap_inches": 1,
+        "equipment_included": true,
+        "no_squeezing_required": true
+      },
+      {
+        "name": "Multiple Roles",
+        "category": "exclusive_variant",
+        "choose_exactly_one": [
+          "Dripping Arcanist",
+          "Paladin of Shoth"
+        ],
+        "options": [
+          {
+            "name": "Dripping Arcanist",
+            "spellcasting_ability": "CHA",
+            "spell_save_dc": 15,
+            "spell_attack_bonus": 7,
+            "components": [
+              "V"
+            ],
+            "spells": {
+              "at_will": [
+                "fire bolt (2d10)",
+                "light",
+                "thaumaturgy"
+              ],
+              "per_day_3_each": [
+                "command",
+                "mage armor",
+                "magic missile"
+              ],
+              "per_day_2_each": [
+                "augury",
+                "detect thoughts"
+              ],
+              "per_day_1_each": [
+                "fireball"
+              ]
+            }
+          },
+          {
+            "name": "Paladin of Shoth",
+            "armor_class_increase": 2,
+            "grants_attack": "Greatsword",
+            "trait": {
+              "name": "Shoth's Light",
+              "trigger": "non_shoth_creature_starts_turn_within_5ft",
+              "save": {
+                "ability": "CHA",
+                "dc": 15,
+                "on_failure": {
+                  "condition": "blinded",
+                  "ends": "end_of_target_current_turn"
+                },
+                "on_success": {
+                  "condition": null
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "choose_one_sequence": [
+          [
+            {
+              "attack": "Oozing Slam",
+              "count": 2
+            }
+          ],
+          [
+            {
+              "attack": "Oozing Slam",
+              "count": 1
+            },
+            {
+              "attack": "Greatsword",
+              "count": 1,
+              "requires_role": "Paladin of Shoth"
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Oozing Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "flat": 3,
+              "average": 14,
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "1d4",
+              "flat": 0,
+              "average": 2,
+              "type": "acid"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Greatsword",
+        "category": "attack",
+        "action_economy": "action",
+        "requires_role": "Paladin of Shoth",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "flat": 3,
+              "average": 17,
+              "type": "slashing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Merge",
+        "category": "conditional_fusion",
+        "action_economy": "action",
+        "precondition": {
+          "remaining_hit_points_less_than_half_own_max": true,
+          "other_shoth_within_ft": 10
+        },
+        "effect": {
+          "remove_this_shoth": true,
+          "other_shoth_gains_hit_points_equal_to_current_remaining_hp": true,
+          "may_exceed_ordinary_hp_max": true
+        },
+        "receiving_creature_limit": "1_received_merge_per_24_hours"
+      },
+      {
+        "name": "Spray",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "targets": "all_creatures_in_area",
+        "save": {
+          "ability": "DEX",
+          "dc": 15,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "5d8",
+                "flat": 0,
+                "average": 22,
+                "type": "acid"
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Dripping Arcanist",
+        "requires_role": "Dripping Arcanist",
+        "ability": "CHA",
+        "spell_save_dc": 15,
+        "spell_attack_bonus": 7,
+        "components": [
+          "V"
+        ],
+        "at_will": [
+          "fire bolt",
+          "light",
+          "thaumaturgy"
+        ],
+        "uses_per_day": {
+          "command": 3,
+          "mage armor": 3,
+          "magic missile": 3,
+          "augury": 2,
+          "detect thoughts": 2,
+          "fireball": 1
+        },
+        "spell_specific_definitions_verified": false
+      }
+    ],
+    "other": [
+      {
+        "name": "Role-based spells",
+        "category": "cross_rule_dependency",
+        "details": "Published creature block lists spells and resource limits but does not individually restate target/duration/material and effects of each spell; separate spell-definition verification required."
+      }
+    ]
   },
   "prior_research_summary_unverified_for_implementation": [
     "Shoth veterano com duas especializações exclusivas: arcanista com magia inata ou paladino com aura ofuscante; golpes ácidos e união com outros shoth."
@@ -67,8 +324,8 @@
       "url": "https://kpogl.wikidot.com/monster:oth",
       "type": "KPOGL reprodução não endossada por Kobold Press",
       "edition": "Creature Codex",
-      "scope": "traços e ações da ficha individual em resumo; revisão editorial integral pendente",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Bloco individual com estatísticas, traços, ações, reação/recursos e condicionais",
+      "verification": "Releitura da ficha individual KPOGL em 14/10/2026, homologação editorial/engine ainda pendentes."
     }
   ],
   "source_checkpoint": {
@@ -80,9 +337,10 @@
     "Oth 'Paladin of Shoth' tem +2 CA sobre base 15; forma 'Dripping Arcanist' tem magia própria. Não somar ambas."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Dripping Arcanist e Paladin of Shoth são versões mutuamente exclusivas, não adicionar Greatsword e lista de magias à mesma instância.",
+    "As definições individuais das magias não foram reabertas; continuar PARCIAL, sem alegar teste integral de economia de conjuração.",
+    "Oth não é Sooze (TF-273); manter separação de criatura e variante.",
+    "Confrontar versão editorial impressa e errata, avaliar licença, testar implementações na engine e revisar qualquer arte associada."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -106,5 +364,19 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:oth"
+    ],
+    "source_tier": "secondary_KPOGL",
+    "source_page_opened_and_read": true,
+    "spell_definitions_individually_cross_checked": false,
+    "notes": "O bloco de criatura foi lido; regras transcritas do site KPOGL não são homologação de versão, licença, errata ou engine."
   }
 }

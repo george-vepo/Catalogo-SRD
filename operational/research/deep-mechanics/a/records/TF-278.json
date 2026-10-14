@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "chaotic_neutral",
+    "source_page": 349,
+    "proficiency_bonus": 3,
+    "experience_points": 1800
   },
   "statistics": {
     "armor_class": 16,
     "hit_points": 97,
-    "hit_dice": null,
+    "hit_dice": "15d8+30",
     "ability_scores": {
       "STR": 16,
       "DEX": 20,
@@ -26,24 +29,174 @@
       "WIS": 12,
       "CHA": 5
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 20,
+      "fly_ft": 40
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4,
+      "Sleight_of_Hand": 8,
+      "Stealth": 8
+    },
+    "saving_throws": [],
+    "languages": {
+      "understands": [
+        "Deep Speech",
+        "Umbral"
+      ],
+      "can_speak": false
+    },
+    "damage_resistances": [
+      "force",
+      "psychic"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "charmed",
+      "exhaustion"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 5,
+      "CON": 2,
+      "INT": -2,
+      "WIS": 1,
+      "CHA": -3
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Flyby",
+        "category": "movement",
+        "effect": {
+          "opportunity_attack_triggered_by_flying_out_of_enemy_reach": false
+        }
+      },
+      {
+        "name": "Treasure Sense",
+        "category": "object_sense",
+        "targets": [
+          "precious_metals",
+          "gemstones",
+          "jewelry"
+        ],
+        "pinpoint_scent_within_ft": 60,
+        "direction_sensed_within_miles": 1
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "choose_one_sequence": [
+          [
+            {
+              "attack": "Claw",
+              "count": 3
+            }
+          ],
+          [
+            {
+              "attack": "Claw",
+              "count": 2
+            },
+            {
+              "attack": "Pilfering Bite",
+              "count": 1
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 5,
+              "average": 12,
+              "type": "slashing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Pilfering Bite",
+        "category": "attack_or_steal",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1
+        },
+        "on_hit_choose_one": [
+          {
+            "mode": "damage",
+            "damage": [
+              {
+                "dice": "2d4",
+                "flat": 5,
+                "average": 10,
+                "type": "piercing"
+              }
+            ]
+          },
+          {
+            "mode": "steal_instead_of_damage",
+            "item_requirements": {
+              "worn_or_carried_by_target": true,
+              "max_weight_lb": 10,
+              "must_not_be_weapon": true,
+              "must_not_be_wrapped_around_or_firmly_attached_to_target": true
+            },
+            "stores_item_in": "long_neck_arm",
+            "requires_regurgitating_held_item_before_next_pilfering_bite": true,
+            "regurgitation_action_cost": "none"
+          }
+        ],
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Pilfered Item Capacity",
+        "category": "inventory_state",
+        "maximum_items_carried_in_neck_arm_before_next_bite": 1,
+        "must_regurgitate_first": true,
+        "regurgitation_action_cost": "none",
+        "note": "Creature might carry elsewhere but source only explicitly establishes the long neck-arm held item."
+      }
+    ]
   },
   "prior_research_summary_unverified_for_implementation": [
     "Voa sem provocar ataques de oportunidade, percebe joias à distância e troca dano de mordida por furto de objetos pequenos."
@@ -67,8 +220,8 @@
       "url": "https://kpogl.wikidot.com/monster:snatch-bat",
       "type": "KPOGL reprodução não endossada por Kobold Press",
       "edition": "Tome of Beasts 3",
-      "scope": "traços e ações da ficha individual em resumo; revisão editorial integral pendente",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Bloco individual com estatísticas, traços, ações, reação/recursos e condicionais",
+      "verification": "Releitura da ficha individual KPOGL em 14/10/2026, homologação editorial/engine ainda pendentes."
     }
   ],
   "source_checkpoint": {
@@ -79,9 +232,10 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Pilfering Bite substitui dano pelo roubo; não causa dano e rouba simultaneamente.",
+    "Regurgitar item segurado é sem custo de ação, mas deve anteceder outro Pilfering Bite.",
+    "Imagem TF-278 mede 280×280 e não está aprovada como arte final.",
+    "Confrontar versão editorial impressa e errata, avaliar licença, testar implementações na engine e revisar qualquer arte associada."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -105,5 +259,19 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:snatch-bat"
+    ],
+    "source_tier": "secondary_KPOGL",
+    "source_page_opened_and_read": true,
+    "spell_definitions_individually_cross_checked": false,
+    "notes": "O bloco de criatura foi lido; regras transcritas do site KPOGL não são homologação de versão, licença, errata ou engine."
   }
 }
