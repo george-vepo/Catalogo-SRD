@@ -2,6 +2,14 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 17 — 14/10/2026
+
+- Commit: `4bb79b4994ca6529053ce0419279db889bc7d605`; read-back de `TF-424.json` e `TF-426.json`: **OK**.
+- **TF-424 Soul Eater:** todos atributos/defesas e sentidos; resistência mágica, Soul Sense, dois ataques Claw, Hasten Consumption, penalidade condicional e reação Soul Drain, incluindo gatilho, CD, tempo/alcance de liberação e exceções de ressurreição. **Revisão de Tome of Beasts 1 original vs revisão posterior permanece pendente**; fonte comunitária [KPOGL](https://kpogl.wikidot.com/monster:soul-eater).
+- **TF-426 Thorned Sulfurlord:** todas estatísticas e auras; Root como ação bônus 3/dia, Multiattack com alternativas exclusivas, Sulfur Slam, Fiery Spike e The World Shall Know Fire, inclusive pré-condição do dano de fogo anterior. Fonte [5eSRD](https://www.5esrd.com/database/creature/thorned-sulfurlord/), edição [Creature Codex](https://koboldpress.com/tools/kobold-press-monsters/).
+- **Ainda são fichas PARCIAIS**, sujeitas a confronto editorial e revisão visual. Nenhuma promoção para MECANICA_COMPLETA_VERIFICADA.
+- Auditoria cumulativa: **17** detalhadas e **114** sem revalidação integral; 96 imagens binárias, 35 pendentes.
+
 ## Checkpoint 16 — aprofundamento de 14/10/2026
 
 - Commit mecânico: `5dbcc3dea2004ecdb999b6f81bdbee6e3d088620`; read-back dos JSONs **TF-416, TF-421 e TF-423 confirmado**.
@@ -25,8 +33,8 @@
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **15 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **116 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **17 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **114 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
 - **0 criaturas declaradas mecanicamente completas**, **105 parciais**, **26 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
@@ -67,9 +75,9 @@
 | TF-420 | Mandriano, Ancient | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:ancient-mandriano) | Variante Ancient distinta de TF-417; KPOGL independente, confirmar edição. |
 | TF-421 | Planar Flora, Execrable Shrub | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/execrable-shrub/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-423 | Spawn of Chernobog | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/spawn-of-chernobog/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-424 | Soul Eater | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:soul-eater) | Revisar edição original vs revisão de Tome of Beasts 1 e condição precisa de Soul Drain; referência comunitária. |
+| TF-424 | Soul Eater | PARCIAL | sim | [individual](https://kpogl.wikidot.com/monster:soul-eater) | Revisar edição original vs revisão de Tome of Beasts 1 e condição precisa de Soul Drain; referência comunitária. |
 | TF-425 | Snow Terror | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/snow-terror/) | Conferir ações e CDs em detalhe na fonte e suplemento original. |
-| TF-426 | Planar Flora, Thorned Sulfurlord | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/thorned-sulfurlord/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-426 | Planar Flora, Thorned Sulfurlord | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/thorned-sulfurlord/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-428 | Cerberus Guardian | PARCIAL | sim | [individual](https://a5e.tools/node/2854) | A5E: limite de ações lendárias e Legendary Resistance mudam conforme cabeças ativas. |
 | TF-431 | Conjured Guardian | PARCIAL | sim | [individual](https://a5e.tools/node/5171) | Challenge — no bloco editorial; CD e ataque dependem do conjurador, não fixar ND 0. |
 | TF-448 | Imprisoned Celestial | PARCIAL | não | [individual](https://a5e.tools/node/5406) | Publicação associada a Gate Pass Gazette #31; confirmar número da edição editorial. |

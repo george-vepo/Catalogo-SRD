@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 15,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 17,
     "fichas_integralmente_concluidas": 0,
     "parciais": 105,
     "bloqueadas": 26,
-    "registros_aproveitados_sem_nova_verificacao_integral": 116,
+    "registros_aproveitados_sem_nova_verificacao_integral": 114,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -279,9 +279,21 @@
       "commit": "5dbcc3dea2004ecdb999b6f81bdbee6e3d088620",
       "leitura_persistencia": "CONFIRMADA — read-back de 3 JSONs",
       "tipo": "pesquisa mecanica detalhada"
+    },
+    {
+      "numero": 17,
+      "inicio": "TF-424",
+      "fim": "TF-426",
+      "ids": [
+        "TF-424",
+        "TF-426"
+      ],
+      "commit": "4bb79b4994ca6529053ce0419279db889bc7d605",
+      "leitura_persistencia": "CONFIRMADA, 2 fichas lidas via API",
+      "tipo": "aprofundamento mecânico"
     }
   ],
-  "atualizacao_detalhada_sha": "5dbcc3dea2004ecdb999b6f81bdbee6e3d088620",
+  "atualizacao_detalhada_sha": "4bb79b4994ca6529053ce0419279db889bc7d605",
   "criaturas": [
     {
       "id": "TF-412",
@@ -606,16 +618,19 @@
       "escopo": "next_batches[4]",
       "posicao": 11,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-424.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://kpogl.wikidot.com/monster:soul-eater",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Revisar edição original vs revisão de Tome of Beasts 1 e condição precisa de Soul Drain; referência comunitária."
+        "Fonte é arquivo comunitário KPOGL, não cópia editorial autenticada; comparar Tome of Beasts 1 original com revisões antes de aprovar.",
+        "Validar detalhadamente o gatilho de Soul Drain e efeito de ressuscitação com publicação e errata.",
+        "Revisão visual de imagem ainda pendente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "diferenças de edições/revisões Tome of Beasts 1",
+        "validação oficial de Soul Drain",
+        "revisão visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -625,7 +640,8 @@
         "bytes": 82292,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-425",
@@ -660,14 +676,19 @@
       "escopo": "next_batches[4]",
       "posicao": 13,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-426.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/thorned-sulfurlord/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Ficha individual integral estruturada, mas requer confirmação contra Creature Codex original/errata antes da aprovação.",
+        "Atenção: Root é ação bônus 3/dia, não característica passiva permanente; The World Shall Know Fire depende de dano de fogo prévio.",
+        "Imagem já armazenada; conferência visual pendente."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "conferência Creature Codex editorial e erratas",
+        "confirmação de pontos de variação de Root e dano condicionado",
+        "aprovação visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -677,7 +698,8 @@
         "bytes": 78839,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-428",
