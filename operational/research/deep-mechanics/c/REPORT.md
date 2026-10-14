@@ -5,9 +5,9 @@
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **7 fichas consultadas diretamente em detalhe nesta execução** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **124 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
-- **0 criaturas declaradas mecanicamente completas**, **109 parciais**, **22 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
+- **9 fichas consultadas diretamente em detalhe nesta execução** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **122 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **0 criaturas declaradas mecanicamente completas**, **108 parciais**, **23 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
 
@@ -184,3 +184,31 @@
 - O registro `checkpoint_anterior` preserva a evidência preexistente sem tratá-la como conferência integral nova.
 - Para concluir o escopo integral, é necessário conferir página/bloco integral de cada um dos 124 IDs restantes, resolver as divergências e preencher os campos ainda desconhecidos; sem isso, 0/131 está completo.
 - O manifesto lista cada arquivo e suas pendências individualmente. Nenhum merge autorizado.
+
+## Atualização: fichas acompanhadas de imagens binárias (13/10/2026)
+
+- **96/131** imagens binárias reais publicadas em `operational/research/deep-mechanics/c/images/`, com SHA Git conferido após publicação; não são placeholders ou referências remotas.
+- **82** reaproveitadas da branch isolada E, **1** da branch isolada F e **13** importadas do repositório público TheGiddyLimit/homebrew por igualdade exata do SHA de origem e destino.
+- **35 imagens ainda não existem** neste diretório: TF-414, TF-428, TF-431, TF-448, TF-449, TF-459, TF-462, TF-468, TF-470, TF-473, TF-476, TF-499, TF-500, TF-501, TF-503, TF-504, TF-505, TF-506, TF-507, TF-509, TF-510, TF-511, TF-516, TF-517, TF-518, TF-521, TF-522, TF-200, TF-201, TF-469, TF-483, TF-493, TF-494, TF-502, TF-512.
+- As **96 imagens ainda não passaram por revisão visual editorial**. TF-285 (64×80) é baixa resolução; TF-417 e TF-420 utilizam o mesmo blob de arte no acervo de origem. Nenhuma das 96 está aprovada como arte final.
+- Todos os 96 JSONs correspondentes contêm `imagem.arquivo` e hash do blob binário persistido. O manifesto documenta os 35 casos sem imagem.
+- **TF-413 Star Thrall**: estatísticas, ataques, gatilhos, salvaguardas, dano e recarga reconstruídos da ficha individual 5eSRD (2026-10-13), com imagem binária no repositório. Conferência independente com o volume/errata permanece pendente; não foi promovida a conclusão canônica.
+- **TF-415 Gloomflower**: traços, ações, multiataque e três variantes opcionais detalhadas; variante Soul Splice bloqueada por CD textual contraditória ('successful 20 DC 14') e dependência de magic jar. Imagem real já publicada.
+- **Situação atual verificável:** 131 JSONs; 96 imagens; 35 imagens faltantes; 9 aprofundamentos diretos na execução; 0 fichas integralmente aprovadas; 108 parciais e 23 bloqueadas. Nenhum merge.
+
+### Checkpoints das imagens (até 10 por commit)
+
+| N.º | Commit |
+|---:|---|
+| 1 | `d70f09d41eb4c1fbebc96d9f512d23125c7371bf` |
+| 2 | `9b976f2f8e6bdf14ba46de2e24b5457993567e51` |
+| 3 | `ea70ea62b56d6c181f0b395b7773bb58471f6b66` |
+| 4 | `67fa0bf1e8d2492ec9d89e6e4e1c8b796d27840b` |
+| 5 | `7687efd7fec0dbc3f3cc1d6fcaf3ab9ad2b68a34` |
+| 6 | `1c5318c7e0538cc807595dd8ec45c615aadb0485` |
+| 7 | `b63373cffe76fd8822d288b7cefc4da4353af3ac` |
+| 8 | `b467e0d10a5e758c7f264d7c231bfa0dd0074814` |
+| 9 | `45f9250340c874a7ce3fea7a90342781f36b35d2` |
+| 10 | `f9b15dfbcc0e3f456471667efea7dee1a8c2f45c` |
+| 11 | `b8d3f53441c5b895bb2f8cd5d31b83c9b795cce6` |
+| 12 | `605cb4550304f286e6b489e045045908b4afc05b` |

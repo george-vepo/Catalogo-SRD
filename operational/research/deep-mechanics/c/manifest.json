@@ -144,11 +144,16 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 7,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 9,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 109,
-    "bloqueadas": 22,
-    "registros_aproveitados_sem_nova_verificacao_integral": 124
+    "parciais": 108,
+    "bloqueadas": 23,
+    "registros_aproveitados_sem_nova_verificacao_integral": 122,
+    "imagens_binarias_publicadas": 96,
+    "imagens_pendentes_aquisicao": 35,
+    "imagens_com_aprovacao_visual_editorial": 0,
+    "imagens_de_resolucao_inadequada_identificadas": 1,
+    "arte_compartilhada_entre_variantes_identificada": 1
   },
   "checkpoint_commits": [
     {
@@ -267,7 +272,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-412.jpg",
+        "sha_git": "ff86c3e83078efbd213a9feef0f26dc8a3f62248",
+        "bytes": 59707,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-413",
@@ -275,18 +288,27 @@
       "escopo": "next_batches[4]",
       "posicao": 1,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-413.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/star-thrall/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
+        "Ficha individual 5eSRD mecanicamente reconstruída, aguardando conferência com livro/errata",
         "Não confundir com a criatura Sinstar principal, ND 17: a ficha do catálogo é Star Thrall."
       ],
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-413.webp",
+        "sha_git": "42919c24819e97df137f5587107b0c4087b5e262",
+        "bytes": 276424,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-414",
@@ -305,7 +327,12 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-415",
@@ -313,18 +340,27 @@
       "escopo": "next_batches[4]",
       "posicao": 3,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-415.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_VARIANTE_OPCIONAL_EDICAO_E_CD_AMBIGUA",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/gloomflower/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
+        "Soul Splice opcional: fonte individual contém 'successful 20 DC 14 Charisma saving throw', CD indeterminada; consultar errata.",
         "Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto."
       ],
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-415.jpg",
+        "sha_git": "4ba895d9edc641a6aab696782b81e1f1ae4337e9",
+        "bytes": 55622,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-416",
@@ -343,7 +379,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-416.webp",
+        "sha_git": "371ea01a3352e321d33b566d21beed545ba940b5",
+        "bytes": 376128,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-417",
@@ -362,7 +406,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-417.jpg",
+        "sha_git": "bdd6eaad0308ff5543ca20d329a9ef9aa7c2539b",
+        "bytes": 69026,
+        "validacao_visual": "PENDENTE",
+        "nota": "arte compartilhada entre variantes"
+      }
     },
     {
       "id": "TF-418",
@@ -379,7 +431,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-418.webp",
+        "sha_git": "d12a87b8de147c07d6a65eab936fc489eb53d149",
+        "bytes": 200968,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-419",
@@ -398,7 +458,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-419.webp",
+        "sha_git": "76f554f362f5583c082554574f118f233c4e6a7b",
+        "bytes": 263232,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-420",
@@ -417,7 +485,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-420.jpg",
+        "sha_git": "bdd6eaad0308ff5543ca20d329a9ef9aa7c2539b",
+        "bytes": 69026,
+        "validacao_visual": "PENDENTE",
+        "nota": "arte compartilhada entre variantes"
+      }
     },
     {
       "id": "TF-421",
@@ -434,7 +510,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-421.jpg",
+        "sha_git": "f943a8d11d68510afe56871923b164b74e19d7c8",
+        "bytes": 62564,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-423",
@@ -451,7 +535,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-423.jpg",
+        "sha_git": "34ddf5dfb447ed444bd41c5eaa80e076ca1c1c4f",
+        "bytes": 48450,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-424",
@@ -470,7 +562,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-424.webp",
+        "sha_git": "a927bb340d2078e1cbe235a5ee87fb179abd8e35",
+        "bytes": 82292,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-425",
@@ -489,7 +589,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-425.webp",
+        "sha_git": "dbb57a2bf722d8f0ad4ad174c95ebb601d2e7f7c",
+        "bytes": 97454,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-426",
@@ -506,7 +614,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-426.jpg",
+        "sha_git": "243828768cd354534a86d0fec0993b4c43677d2a",
+        "bytes": 78839,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-428",
@@ -525,7 +641,12 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-431",
@@ -545,7 +666,12 @@
         "dados de PV",
         "ND não é constante; depende da magia"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-448",
@@ -564,7 +690,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-449",
@@ -583,7 +714,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-459",
@@ -602,7 +738,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-462",
@@ -621,7 +762,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-468",
@@ -640,7 +786,12 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-470",
@@ -659,7 +810,12 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-473",
@@ -678,7 +834,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-476",
@@ -697,7 +858,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-499",
@@ -716,7 +882,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-500",
@@ -735,7 +906,12 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-501",
@@ -752,7 +928,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-503",
@@ -771,7 +952,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-504",
@@ -790,7 +976,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-505",
@@ -809,7 +1000,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-506",
@@ -828,7 +1024,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-507",
@@ -847,7 +1048,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-509",
@@ -866,7 +1072,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-510",
@@ -883,7 +1094,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-511",
@@ -900,7 +1116,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-516",
@@ -917,7 +1138,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-517",
@@ -934,7 +1160,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-518",
@@ -953,7 +1184,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-521",
@@ -970,7 +1206,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-522",
@@ -987,7 +1228,12 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-120",
@@ -1006,7 +1252,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-120.webp",
+        "sha_git": "1ea9a34f9b2491577fc1c7f65bb6fd5ef1982613",
+        "bytes": 208722,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-121",
@@ -1024,7 +1278,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-121.jpg",
+        "sha_git": "5728c0c49e9efe5352b3aa6ee2f78defe6681773",
+        "bytes": 83636,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-122",
@@ -1043,7 +1305,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-122.jpg",
+        "sha_git": "0fc0cf1066ad469ed02ea9ba4af21522d8764834",
+        "bytes": 58661,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-123",
@@ -1062,7 +1332,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-123.webp",
+        "sha_git": "d7bfa6d1222dca8b8d7efdfe94a07f66f3c094b0",
+        "bytes": 179042,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-124",
@@ -1081,7 +1359,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-124.jpg",
+        "sha_git": "6436ddccb41022220e529b5d360c0c51f58ab86a",
+        "bytes": 50800,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-125",
@@ -1100,7 +1386,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-125.webp",
+        "sha_git": "c566c3871ab7e884d281a3ecef0aa51dc5dc5ba6",
+        "bytes": 178404,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-126",
@@ -1118,7 +1412,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-126.webp",
+        "sha_git": "2c29fb2d10b7a852d7447cdb620ea084eef7b711",
+        "bytes": 163446,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-127",
@@ -1136,7 +1438,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-127.jpg",
+        "sha_git": "7382d1bc2348b63de8b30e5537aa5452bb2f32a7",
+        "bytes": 61179,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-128",
@@ -1155,7 +1465,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-128.webp",
+        "sha_git": "4a3c674fedc5c28752eb018502fbd08d3ba53de6",
+        "bytes": 188562,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-129",
@@ -1173,7 +1491,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-129.webp",
+        "sha_git": "3dfd88bbe757a83f8d3610168bbcd0d31bfcc90c",
+        "bytes": 227472,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-130",
@@ -1191,7 +1517,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-130.webp",
+        "sha_git": "5edec259818af8c85dd97583cc41bc71ff39b8a7",
+        "bytes": 193826,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-131",
@@ -1209,7 +1543,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-131.webp",
+        "sha_git": "dc139223d1a6f8aede62af5ee874871ec193110d",
+        "bytes": 201916,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-132",
@@ -1228,7 +1570,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-132.webp",
+        "sha_git": "5bddae30afafc7dd015a93fd42aa3ee0b4a09c81",
+        "bytes": 97704,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-133",
@@ -1247,7 +1597,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-133.jpg",
+        "sha_git": "7a9cd37da5e63f1c7cffba5546e5ce01ad2d6678",
+        "bytes": 81448,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-134",
@@ -1266,7 +1624,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-134.webp",
+        "sha_git": "da1bf5b8eedbf4738718f94277140b873f57beea",
+        "bytes": 82702,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-135",
@@ -1285,7 +1651,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-135.webp",
+        "sha_git": "a484c6cebc5bdbd69a7c6a74e60bd4f2ec5496d2",
+        "bytes": 92082,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-136",
@@ -1303,7 +1677,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-136.webp",
+        "sha_git": "88c70bcabe7d70850c2a5801ee417609fb408edc",
+        "bytes": 149038,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-137",
@@ -1323,7 +1705,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-137.webp",
+        "sha_git": "5ccb9103447cf016f863c7071e01ed66d001f52c",
+        "bytes": 170264,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-138",
@@ -1342,7 +1732,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-138.jpg",
+        "sha_git": "32677d92e41838443b610f640135ee40f6a0531f",
+        "bytes": 67807,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-139",
@@ -1361,7 +1759,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-139.jpg",
+        "sha_git": "b37a24475f1450c7aaf99a5a6557e1061553da35",
+        "bytes": 67887,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-140",
@@ -1380,7 +1786,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-140.jpg",
+        "sha_git": "26acc5e718008f41b2c7906e347d83f5d230dfae",
+        "bytes": 67041,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-141",
@@ -1399,7 +1813,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-141.webp",
+        "sha_git": "303b14562c0c1c312c7faa9d8715fa4af8de1402",
+        "bytes": 74934,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-142",
@@ -1418,7 +1840,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-142.webp",
+        "sha_git": "e87c4a3136d6136261d52195f11d5989a6521f41",
+        "bytes": 179390,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-143",
@@ -1437,7 +1867,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-143.jpg",
+        "sha_git": "f459c5cc3da096f9f3561c70680931470078917d",
+        "bytes": 67500,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-144",
@@ -1455,7 +1893,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-144.webp",
+        "sha_git": "407cf45d32a6bf6a64390e77d884a4dd78c6722a",
+        "bytes": 207688,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-147",
@@ -1474,7 +1920,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-147.webp",
+        "sha_git": "812c055ea4e2d6f12748e95b4d4bfbf3f26af59b",
+        "bytes": 125482,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-148",
@@ -1490,7 +1944,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-148.webp",
+        "sha_git": "93dda5cad35ab254e92e485a7716154edf719abf",
+        "bytes": 181748,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-149",
@@ -1508,7 +1970,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-149.webp",
+        "sha_git": "d5528c3745cd8b41438c720f3dc1bceae8e9f90c",
+        "bytes": 186548,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-150",
@@ -1526,7 +1996,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-150.webp",
+        "sha_git": "d3ce9bbb6711b577ac90466c24688d568bfebcfc",
+        "bytes": 125314,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-151",
@@ -1544,7 +2022,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-151.webp",
+        "sha_git": "0fc4a363cc2dd3ae687f8cf1ccf500f99e69e8aa",
+        "bytes": 69446,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-152",
@@ -1563,7 +2049,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-152.webp",
+        "sha_git": "2e6e6b46cd7638f4d142a9ec115ac7ffec39478f",
+        "bytes": 224536,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-153",
@@ -1581,7 +2075,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-153.webp",
+        "sha_git": "9f8bb457cbf856ce4634c429b083f359d871038b",
+        "bytes": 176992,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-154",
@@ -1601,7 +2103,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-154.webp",
+        "sha_git": "354066ac22edac1f2c07796f5dcdf0d470735149",
+        "bytes": 111788,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-155",
@@ -1617,7 +2127,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-155.webp",
+        "sha_git": "3d5ab12a1bd90bd58e98bbdff4ca31685f2bd0df",
+        "bytes": 173958,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-156",
@@ -1636,7 +2154,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-156.webp",
+        "sha_git": "dcee318faee6c159e8646816de6a99cf3c78b0ee",
+        "bytes": 71850,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-157",
@@ -1656,7 +2182,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-157.jpg",
+        "sha_git": "31a96f00317b82224e178703f9f705bcf92bef8b",
+        "bytes": 71621,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-158",
@@ -1672,7 +2206,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-158.jpg",
+        "sha_git": "c136c46d1d99563a2655b132e9ea14ef2625da3f",
+        "bytes": 48463,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-159",
@@ -1691,7 +2233,15 @@
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-159.webp",
+        "sha_git": "a7b32dfec7483c919a04c37a9cdf76c25317213e",
+        "bytes": 161690,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-160",
@@ -1709,7 +2259,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-160.webp",
+        "sha_git": "650f904c04d95bb431ad553c88d22f127fe685a6",
+        "bytes": 120352,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-161",
@@ -1725,7 +2283,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-161.webp",
+        "sha_git": "9edba1002c4ed80e755ef264c3ee46ac256f01b9",
+        "bytes": 227176,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-162",
@@ -1743,7 +2309,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-162.webp",
+        "sha_git": "46b3cc155a48e97caf3d7d097516d6ebc5af9bc4",
+        "bytes": 148076,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-163",
@@ -1761,7 +2335,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-163.jpg",
+        "sha_git": "b085e6a75b355ab09e5c2e4c02a32b6fe6f77097",
+        "bytes": 62453,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-164",
@@ -1777,7 +2359,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-164.webp",
+        "sha_git": "4858ad000e503b5559567938f033830e44703e62",
+        "bytes": 113514,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-165",
@@ -1795,7 +2385,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-165.webp",
+        "sha_git": "8ee88d5ec143ece014555a47a490c3d2f91a8e11",
+        "bytes": 100334,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-166",
@@ -1813,7 +2411,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-166.webp",
+        "sha_git": "96557c2cf0b838bc68f1c6cd439edaa3e144113d",
+        "bytes": 252480,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-167",
@@ -1831,7 +2437,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-167.jpg",
+        "sha_git": "17317cd612de085b3781f6030b145b1e233e29de",
+        "bytes": 65802,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-168",
@@ -1847,7 +2461,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-168.webp",
+        "sha_git": "bbcd1492727a12b6f34b137c8cb3f08b7d648efb",
+        "bytes": 202650,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-169",
@@ -1865,7 +2487,15 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-169.jpg",
+        "sha_git": "79157665d713a679e25777c5e035f4dc04d82478",
+        "bytes": 101565,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-170",
@@ -1886,7 +2516,15 @@
         "dados de PV",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-170.webp",
+        "sha_git": "94a8245182bb2019401a66c6ba903e60cb91ddd6",
+        "bytes": 149714,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-171",
@@ -1906,7 +2544,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-171.jpg",
+        "sha_git": "8c8fc5677a038fdb01c4b5c1dbc33ebab4c0d59a",
+        "bytes": 51532,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-172",
@@ -1926,7 +2572,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-172.webp",
+        "sha_git": "dbd31a78bbde7b706ab7e4aa61c509ea7237a730",
+        "bytes": 148230,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-173",
@@ -1946,7 +2600,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-173.webp",
+        "sha_git": "583f51274c6fc0d1a5da34a328d7e32a7d938a66",
+        "bytes": 147862,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-174",
@@ -1966,7 +2628,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-174.webp",
+        "sha_git": "99d54c47ec184d2178cab899b3e2bf84716ef161",
+        "bytes": 63082,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-175",
@@ -1986,7 +2656,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-175.jpg",
+        "sha_git": "7645c34ba6cf6f3fd7b072f4990566beb122c4b1",
+        "bytes": 73118,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-176",
@@ -2006,7 +2684,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-176.jpg",
+        "sha_git": "8e108c8fd5d34a0034cbac7bb0b43212ae89736d",
+        "bytes": 58419,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-177",
@@ -2026,7 +2712,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-177.jpg",
+        "sha_git": "60d3114d9ab303165f7ac0a9c3f0ff616e7defbc",
+        "bytes": 63728,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-178",
@@ -2046,7 +2740,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-178.jpg",
+        "sha_git": "02edc3a71a1f0840ba7be7643d93745a885705e8",
+        "bytes": 68278,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-179",
@@ -2066,7 +2768,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-179.webp",
+        "sha_git": "1be3d5930ee266429a0aecd47e6eb339530ee545",
+        "bytes": 234158,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-180",
@@ -2084,7 +2794,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-180.webp",
+        "sha_git": "ac3e1aae4010ca0018e051a3b75b2d8e13096f68",
+        "bytes": 177268,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-181",
@@ -2104,7 +2822,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-181.webp",
+        "sha_git": "47adf01cb038be1ccdd51bab3878928d43432bc0",
+        "bytes": 168646,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-182",
@@ -2124,7 +2850,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-182.webp",
+        "sha_git": "30fac7d0d2e9d693e1c3b2e65734b7a145297357",
+        "bytes": 149430,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-186",
@@ -2144,7 +2878,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-186.webp",
+        "sha_git": "8c4d9e65c5ce88287f5b7bba6c18d3b1c8ca9b06",
+        "bytes": 109426,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-187",
@@ -2164,7 +2906,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-187.webp",
+        "sha_git": "78eb4b2f368586b019c9f544d2dcb3cf27e3d6de",
+        "bytes": 96550,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-188",
@@ -2184,7 +2934,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-188.webp",
+        "sha_git": "67e075b2804b0c806a71bbd972ab0142b62d0cb4",
+        "bytes": 64192,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-189",
@@ -2204,7 +2962,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-189.webp",
+        "sha_git": "179ad36d63f31d033a1de16fc3edbc12d43e0728",
+        "bytes": 59770,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-190",
@@ -2224,7 +2990,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-190.webp",
+        "sha_git": "4678e7a66efd279dacbae9fbb0d7b510156d7c4f",
+        "bytes": 49984,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-191",
@@ -2242,7 +3016,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-191.jpg",
+        "sha_git": "fd94d8633e7c8901b6530ba15238e87428a45847",
+        "bytes": 55246,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-192",
@@ -2262,7 +3044,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-192.jpg",
+        "sha_git": "0a3f2a117ef74208fcf839468073ee79efaa7fb4",
+        "bytes": 49524,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-193",
@@ -2282,7 +3072,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-193.jpg",
+        "sha_git": "746f212cd6708438a0ba9651dae05048253c1c27",
+        "bytes": 54957,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-194",
@@ -2302,7 +3100,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-194.jpg",
+        "sha_git": "e17d73a851316fb265fe3cc8818d3d72cbbf93ba",
+        "bytes": 52763,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-195",
@@ -2322,7 +3128,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-195.webp",
+        "sha_git": "868d654bdc5d2baf4eebbd92ef85afd545d3a957",
+        "bytes": 62842,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-196",
@@ -2342,7 +3156,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-196.webp",
+        "sha_git": "a74598d6a1b87a0e788264ec53bd0348fe0e809b",
+        "bytes": 62060,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-197",
@@ -2362,7 +3184,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-197.jpg",
+        "sha_git": "95d0fce6f0f5ad05513de2a3ae5f870a682eaca2",
+        "bytes": 65411,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-198",
@@ -2382,7 +3212,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-198.jpg",
+        "sha_git": "46d5b55cc026aaadc093270edf6c5a4335ba01e8",
+        "bytes": 50795,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-199",
@@ -2402,7 +3240,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-199.jpg",
+        "sha_git": "0ecd40972c61863f864e92fba1b60c8f64429721",
+        "bytes": 58600,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-200",
@@ -2420,7 +3266,12 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-201",
@@ -2440,7 +3291,12 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-202",
@@ -2460,7 +3316,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-202.webp",
+        "sha_git": "873f88e927c04df017ed517cebf793a903d6707e",
+        "bytes": 99674,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-203",
@@ -2480,7 +3344,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-203.webp",
+        "sha_git": "a4bc6ec456952e0ab16cf9d9d0c514c04507f916",
+        "bytes": 160202,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-204",
@@ -2500,7 +3372,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-204.webp",
+        "sha_git": "cfb5dcc24b445ae3c388d6369d1afc5a762cc130",
+        "bytes": 243528,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-205",
@@ -2520,7 +3400,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-205.webp",
+        "sha_git": "c0eeb448b689601c36a27e803fc52d18be41c4dd",
+        "bytes": 184170,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-206",
@@ -2540,7 +3428,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-206.webp",
+        "sha_git": "3b722a76244674f84c351c12f7a9b89aa6a4b39a",
+        "bytes": 177342,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-208",
@@ -2560,7 +3456,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-208.jpg",
+        "sha_git": "27ba650656168fdc9688d8b39d4b4800c1b8c584",
+        "bytes": 56735,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-210",
@@ -2580,7 +3484,15 @@
         "seis atributos da fonte",
         "dados de PV"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-210.jpg",
+        "sha_git": "b106cc44de638d49e82e9b11310bd12be0710a1f",
+        "bytes": 50654,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem ainda não revisada visualmente"
+      }
     },
     {
       "id": "TF-285",
@@ -2601,7 +3513,15 @@
         "dados de PV",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "BINARIO_PERSISTIDO_REVISAO_VISUAL_PENDENTE",
+        "arquivo": "operational/research/deep-mechanics/c/images/TF-285.png",
+        "sha_git": "e5543ad5908e290029033a68d7f711e950f3c1bc",
+        "bytes": 3383,
+        "validacao_visual": "PENDENTE",
+        "nota": "imagem original 64x80: resolução inadequada para carta"
+      }
     },
     {
       "id": "TF-469",
@@ -2620,7 +3540,12 @@
         "dados de PV",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-483",
@@ -2641,7 +3566,12 @@
         "dados de PV",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-493",
@@ -2662,7 +3592,12 @@
         "dados de PV",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-494",
@@ -2683,7 +3618,12 @@
         "dados de PV",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-502",
@@ -2702,7 +3642,12 @@
       "lacunas": [
         "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     },
     {
       "id": "TF-512",
@@ -2723,8 +3668,89 @@
         "dados de PV",
         "lista integral de ações"
       ],
-      "validacao_integral": false
+      "validacao_integral": false,
+      "imagem": {
+        "estado": "PENDENTE_AQUISICAO",
+        "arquivo": null,
+        "validacao_visual": "NAO_INICIADA"
+      }
     }
   ],
-  "politica": "Campos e seções não encontrados ou não verificados permanecem null, em vez de representarem inexistência comprovada."
+  "politica": "Campos e seções não encontrados ou não verificados permanecem null, em vez de representarem inexistência comprovada.",
+  "imagens_auditoria": {
+    "diretorio": "operational/research/deep-mechanics/c/images/",
+    "binarios_presentes": 96,
+    "ausentes": [
+      "TF-414",
+      "TF-428",
+      "TF-431",
+      "TF-448",
+      "TF-449",
+      "TF-459",
+      "TF-462",
+      "TF-468",
+      "TF-470",
+      "TF-473",
+      "TF-476",
+      "TF-499",
+      "TF-500",
+      "TF-501",
+      "TF-503",
+      "TF-504",
+      "TF-505",
+      "TF-506",
+      "TF-507",
+      "TF-509",
+      "TF-510",
+      "TF-511",
+      "TF-516",
+      "TF-517",
+      "TF-518",
+      "TF-521",
+      "TF-522",
+      "TF-200",
+      "TF-201",
+      "TF-469",
+      "TF-483",
+      "TF-493",
+      "TF-494",
+      "TF-502",
+      "TF-512"
+    ],
+    "qualidade_identidade": "PENDENTE_REVISAO_INDIVIDUAL",
+    "fontes_brancheadas": {
+      "E": 82,
+      "F": 1,
+      "acervo_publico_thegiddylimit": 13
+    },
+    "nota": "Arquivos físicos GitHub com blob SHA, não meras URLs; reutilização de blobs E/F sem alteração dessas branches; arte pública importada por comparação exata do blob SHA entre repositórios."
+  },
+  "imagens_checkpoints": [
+    "d70f09d41eb4c1fbebc96d9f512d23125c7371bf",
+    "9b976f2f8e6bdf14ba46de2e24b5457993567e51",
+    "ea70ea62b56d6c181f0b395b7773bb58471f6b66",
+    "67fa0bf1e8d2492ec9d89e6e4e1c8b796d27840b",
+    "7687efd7fec0dbc3f3cc1d6fcaf3ab9ad2b68a34",
+    "1c5318c7e0538cc807595dd8ec45c615aadb0485",
+    "b63373cffe76fd8822d288b7cefc4da4353af3ac",
+    "b467e0d10a5e758c7f264d7c231bfa0dd0074814",
+    "45f9250340c874a7ce3fea7a90342781f36b35d2",
+    "f9b15dfbcc0e3f456471667efea7dee1a8c2f45c",
+    "b8d3f53441c5b895bb2f8cd5d31b83c9b795cce6",
+    "605cb4550304f286e6b489e045045908b4afc05b"
+  ],
+  "aprofundamento_adicional": [
+    {
+      "id": "TF-413",
+      "commit": "456e383b361efe51173561cfbb5ccd246d68194a",
+      "estado": "MECANICA_INTEGRAL_SEGUNDO_FONTE_5ESRD; REVISAO_EDITORIAL_PENDENTE",
+      "fonte": "https://www.5esrd.com/database/creature/star-thrall/"
+    },
+    {
+      "id": "TF-415",
+      "commit": "9f8d8a4d08fc164fc548c2a6c4a6999f5749c883",
+      "estado": "DETALHADO_COM_VARIANTES; BLOQUEIO_CD_SOURCE",
+      "fonte": "https://www.5esrd.com/database/creature/gloomflower/"
+    }
+  ]
 }
