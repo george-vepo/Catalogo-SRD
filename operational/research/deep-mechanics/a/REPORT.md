@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 58: Shukankor e Malleables maiores (14/10/2026)
+
+- **TF-283 Shukankor:** quatro réplicas 1/dia, cada qual usando estatísticas de axe beak com traços próprios; telepatia a 120 pés, dispensa por ação bônus, reação Sacrifice Replica que redireciona o ataque, autonomia da réplica sobrevivente em 24 h e crescimento após um mês. Dependência externa das estatísticas de axe beak documentada. [Fonte](https://kpogl.wikidot.com/monster:shukankor).
+- **TF-284 Major Malleable:** três Flesh Tendril, Psychic Drain CD16, Absorb Malleable como bônus, união de dois Majors num Massive, separação em oito Minors ou dois Moderates; reação a pelo menos 20 de dano de um ataque. [Fonte](https://kpogl.wikidot.com/monster:major-malleable).
+- **TF-286 Massive Malleable:** quatro Flesh Tendril, Psychic Drain CD18, absorção de Minor/Moderate/Major, separação em 16 Minors, quatro Moderates ou dois Majors e reação de separação após ataque de pelo menos 30 de dano; **não** foi inventada ação de fusão adicional. [Fonte](https://kpogl.wikidot.com/monster:massive-malleable).
+
+**Estatísticas online estruturadas:** 84/132, restam 48 resumidas; imagens físicas permanecem 124/132, todas estas três ainda sem imagem. Zero homologações editoriais/mecânicas de produção; fonte KPOGL é independente, com erratas, licença e engine pendentes. Sem V-Bridge, merge ou alterações externas ao grupo A.
+
+---
+
 # Grupo A — checkpoint 57: Fate Eater, Mamura e Swamp Adder (14/10/2026)
 
 - **TF-279 Fate Eater:** [fonte](https://kpogl.wikidot.com/monster:fate-eater), Multiattack duas mordidas, Alter Fate 5–6 e todos seis resultados com duração e frequência de salvaguarda registradas; Visionary Flesh depende da magia divination ainda não conferida individualmente.
