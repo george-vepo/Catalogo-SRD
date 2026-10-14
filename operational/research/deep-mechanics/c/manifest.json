@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 33,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 35,
     "fichas_integralmente_concluidas": 0,
     "parciais": 97,
     "bloqueadas": 34,
-    "registros_aproveitados_sem_nova_verificacao_integral": 98,
+    "registros_aproveitados_sem_nova_verificacao_integral": 96,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -372,6 +372,18 @@
       "commit": "86e088bb6e7d1e66982f927166813e6887d49e7a",
       "leitura_persistencia": "CONFIRMADA — 3 JSONs validos, IDs conferidos e branch HEAD verificado",
       "tipo": "três criaturas A5E"
+    },
+    {
+      "numero": 24,
+      "inicio": "TF-511",
+      "fim": "TF-522",
+      "ids": [
+        "TF-511",
+        "TF-522"
+      ],
+      "commit": null,
+      "leitura_persistencia": "AGUARDANDO_READ_BACK",
+      "tipo": "regras da doença e Crime Boss"
     }
   ],
   "atualizacao_detalhada_sha": "86e088bb6e7d1e66982f927166813e6887d49e7a",
@@ -1362,21 +1374,25 @@
       "escopo": "next_batches[4]",
       "posicao": 34,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-511.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_OFICIAL_COM_REGRA_ASSOCIADA",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3414",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Hellspore Blight é regra externa A5E; a ficha publica DC14, correspondente ao tier 2.",
+        "Ainda faltam imagem física e confirmação do livro/errata."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "confirmação editorial do tier em To Save A Kingdom",
+        "imagem física"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-516",
@@ -1474,21 +1490,25 @@
       "escopo": "next_batches[4]",
       "posicao": 39,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-522.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_OFICIAL_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/1895",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Tipo de dano adicional do Mark for Death não está declarado explicitamente.",
+        "Conferir a edição impressa Monstrous Menagerie, além de adquirir imagem real."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "tipo de dano do Mark for Death",
+        "imagem"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-120",

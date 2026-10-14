@@ -2,6 +2,12 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 24 — Fiendbloom e Crime Boss (14/10/2026)
+
+- TF-511 Fiendbloom Awakened Tree: False Appearance, Doubletyped Fiend+Plant, Dreaded Winter, Hellspore Seeding, Slam e referência estruturada à regra externa Hellspore Blight (tier 2 DC14). Fontes https://a5e.tools/node/3414 e https://a5e.tools/rules/disease-hellspore-blight-tier-2-3.
+- TF-522 Crime Boss: 3 Shortsword, Dagger, Mark for Death, Command Bodyguard e Offhand Dagger com bônus, alcance, duração e gatilhos. Dano adicional de Mark for Death sem tipo explícito mantido indeterminado. Fonte https://a5e.tools/node/1895.
+- Nenhuma imagem física adicional; permanecem parciais e aguardam revisão editorial. Acumulado: **35 detalhadas**, **96 sem nova revisão**, 97 parciais, 34 bloqueadas.
+
 ## Checkpoint 23 — Demilich, Mariner e Mammoth (14/10/2026)
 
 - Commit mecânico `86e088bb6e7d1e66982f927166813e6887d49e7a`; leitura de retorno de TF-505, TF-506 e TF-510: OK.
@@ -158,12 +164,12 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 | TF-507 | Fogborn Skeleton Horde | PARCIAL | não | [individual](https://a5e.tools/node/3460) | Tratar bloodied e manejo da horda segundo A5E, não converter sem revisão. |
 | TF-509 | Fogborn Zombie Horde | PARCIAL | não | [individual](https://a5e.tools/node/3462) | Regra de grupo e atributos podem coincidir com Gorger Zombie Horde, mas variantes são distintas. |
 | TF-510 | Infernal Mammoth | PARCIAL | sim | [individual](https://a5e.tools/node/3426) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-511 | Fiendbloom Awakened Tree | PARCIAL | não | [individual](https://a5e.tools/node/3414) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-511 | Fiendbloom Awakened Tree | PARCIAL | sim | [individual](https://a5e.tools/node/3414) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-516 | Kanos Spawn | PARCIAL | não | [individual](https://a5e.tools/node/2991) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-517 | Imp Flock | PARCIAL | não | [individual](https://a5e.tools/node/3394) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-518 | Infernal Dwarf | PARCIAL | não | [individual](https://a5e.tools/node/3425) | Confirmar seleção de magias preparada e gatilhos de United in Action. |
 | TF-521 | Bugbear Door Breaker | PARCIAL | não | [individual](https://a5e.tools/node/4185) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-522 | Crime Boss | PARCIAL | não | [individual](https://a5e.tools/node/1895) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-522 | Crime Boss | PARCIAL | sim | [individual](https://a5e.tools/node/1895) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-120 | Ashen Custodian | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/ashen-custodian/) | A página inclui 'Alternate Critical (Source: Monster Crits for 5e)' após Cleansing Strike. Esse texto é de outro suplemento, foi EXCLUÍDO da mecânica-base. |
 | TF-121 | Animal Lord, Queen of Birds | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-birds/) | Multiattack na página tem erro de digitação 'oOne' em descrição de ataques da forma verdadeira; tratado como leitura contextual, sem substituir fonte editorial original. |
 | TF-122 | Animal Lord, Queen of Cats | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-cats/) | As formas determinam ações disponíveis; não permitir bite/claw em forma humana. |
