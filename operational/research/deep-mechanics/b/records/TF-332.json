@@ -2,28 +2,33 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-332",
   "nome": "Slow Storm",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "ACOES_INDIVIDUALIZADAS_PENDENTE_VALIDACAO_EDITORIAL",
   "edicao": {
-    "sistema": "D&D 5e (publicação informada em checkpoint)",
-    "publicacao": "Tome of Beasts 1",
     "editora": "Kobold Press",
-    "edicao_exata_verificada": false
+    "publicacao": "Tome of Beasts 1",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "bloco completo transcrito em KPOGL; publicação/revisão editorial ainda não confrontada"
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/slow-storm-3pp/",
-      "natureza": "secundaria_ou_transcricao_nao_reverificada"
+      "url": "https://kpogl.wikidot.com/monster:slow-storm",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultada_em": "2026-10-14",
+      "escopo": "bloco individual com características e ações"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_preexistente"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_não_usado_como_validação_de_valores"
     }
   ],
   "estatisticas": {
     "nd": "15",
+    "bonus_proficiencia": 5,
     "ca": 19,
+    "origem_ca": "natural armor",
     "pv": 220,
-    "dados_vida": null,
+    "dados_vida": "21d8+126",
     "atributos": {
       "FOR": 20,
       "DES": 19,
@@ -32,46 +37,256 @@
       "SAB": 18,
       "CAR": 11
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "voar 60 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "modificadores": {
+      "FOR": 5,
+      "DES": 4,
+      "CON": 6,
+      "INT": 0,
+      "SAB": 4,
+      "CAR": 0
+    },
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 60,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "pairar": true,
+    "salvaguardas": {
+      "DES": 9,
+      "CON": 11
+    },
+    "pericias": {},
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "lightning"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "unconscious"
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 30
+      },
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Auran",
+      "Common"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "acoes": [],
-  "ataques": [],
+  "qualidade_estatisticas": "BLOCO_CONFERIDO_NA_FONTE_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Elemental Nature",
+      "efeito": "Não precisa respirar, alimentar-se, beber ou dormir."
+    },
+    {
+      "nome": "Eye of the Storm",
+      "area": {
+        "geometria": "raio",
+        "raio_ft": 15
+      },
+      "efeitos": [
+        "desvantagem em ataques com armas a distância e em SAB (Perception) por visão/audição na área",
+        "apaga chamas abertas e dispersa névoa",
+        "criatura voadora precisa pousar até o fim do próprio turno ou cai",
+        "terreno difícil para criaturas exceto Slow Storm"
+      ],
+      "gatilho_dano": "cada criatura inicia turno na área",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 18
+      },
+      "dano": {
+        "dados": "2d8",
+        "tipo": "lightning"
+      },
+      "falha": "dano integral",
+      "sucesso": "sem dano indicado na fonte"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        {
+          "quantidade_ataques": 3,
+          "sequencia": [
+            "Slam",
+            "Slam",
+            "Slam"
+          ]
+        },
+        {
+          "quantidade_ataques": 4,
+          "sequencia": [
+            "Lightning Bolt",
+            "Lightning Bolt",
+            "Lightning Bolt",
+            "Lightning Bolt"
+          ]
+        }
+      ],
+      "efeito_condicional": {
+        "gatilho": "dois ataques Slam atingem mesma criatura",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 18
+        },
+        "falha": {
+          "duracao": "1 minuto",
+          "dano_movimento": {
+            "dados": "1d8",
+            "tipo": "lightning",
+            "a_cada_ft": 5
+          }
+        },
+        "sucesso": "não afetado",
+        "repetir_teste": "final de cada turno; sucesso encerra"
+      }
+    },
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam"
+    },
+    {
+      "nome": "Lightning Bolt",
+      "categoria": "ataque",
+      "referencia_ataque": "Lightning Bolt"
+    },
+    {
+      "nome": "Static Shock",
+      "categoria": "sopro_area",
+      "recarga": "5–6",
+      "area": {
+        "geometria": "cone",
+        "comprimento_ft": 60
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 18
+      },
+      "dano": {
+        "dados": "12d8",
+        "modificador": 0,
+        "tipo": "lightning"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade",
+      "condicao_adicional": {
+        "gatilho": "falha por 5 pontos ou mais",
+        "condicao": "stunned",
+        "duracao": "1 minuto",
+        "repetir_teste": "CON CD18 ao final de cada turno; sucesso encerra"
+      }
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "3d10",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d8",
+          "modificador": 0,
+          "tipo": "lightning"
+        }
+      ]
+    },
+    {
+      "nome": "Lightning Bolt",
+      "tipo": "magico_a_distancia",
+      "bonus_acerto": 9,
+      "alcance_normal_ft": 120,
+      "alcance_maximo_ft": 120,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "4d8",
+          "modificador": 4,
+          "tipo": "lightning"
+        }
+      ]
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Tempestade elemental e aura perigosa"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Descargas e ataques de tempestade"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Confirmar bloco mecânico integral da edição correta contra ficha individual; resumos não constituem ações.",
-    "Registrar nominalmente TODOS os ataques, passivas, ações, ações bônus, reações, legendárias e regras de conjuração com dados/CD/duração/recarga/limites.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Cotejo independente com exemplar editorial exato e erratas ainda não executado.",
+    "Manter status não canônico até verificação de ataques, ações, estatísticas e ausência de habilidades adicionais."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-332",
+    "nome_original": "Slow Storm",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "tipo": "elemental",
+    "tamanho": "Medium",
+    "alinhamento": "chaotic neutral",
+    "nd": "15",
+    "bonus_proficiencia": 5
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "alternativas": [
+        [
+          "Slam",
+          "Slam",
+          "Slam"
+        ],
+        [
+          "Lightning Bolt",
+          "Lightning Bolt",
+          "Lightning Bolt",
+          "Lightning Bolt"
+        ]
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Choques por movimento",
+      "gatilho": "dois Slam acertaram mesmo alvo e CON CD18 falhou",
+      "dano": "1d8 lightning a cada 5 pés que o alvo se move, até passar CON CD18 no fim do turno"
+    }
+  ]
 }
