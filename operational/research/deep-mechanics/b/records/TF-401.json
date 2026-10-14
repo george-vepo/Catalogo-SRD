@@ -2,70 +2,241 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-401",
   "nome": "Mallqui",
-  "estado": "BLOQUEADO_CONFLITO_EDITORIAL",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
   "edicao": {
+    "sistema": "Dungeons & Dragons 5ª edição",
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 1",
-    "edicao_exata_verificada": false
+    "pagina_indicada_transcricao": 261,
+    "edicao_exata_verificada": false,
+    "variantes_nao_mescladas": true,
+    "ramo_de_fonte": "transcrição KPOGL — reproduz um statblock individual; versão e erratas ainda não foram validadas contra exemplar do editor"
   },
   "fontes": [
     {
-      "url": "https://www.robinloft.com/monsters/mallqui/tome-of-beasts",
-      "natureza": "terceiros_preexistente_nao_conferida"
+      "url": "https://kpogl.wikidot.com/monster:mallqui",
+      "natureza": "transcricao_comunitaria_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "estrutura do statblock desta versão individual"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade_e_nd",
+      "escopo": "identidade, não confronto integral"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_de_conflitos",
+      "escopo": "não substitui ficha da edição escolhida"
     }
   ],
   "estatisticas": {
     "nd": "8",
     "ca": 14,
     "pv": 120,
-    "dados_vida": null,
-    "atributos": null,
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": null,
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "dados_vida": "16d8+48",
+    "atributos": {
+      "FOR": 16,
+      "DES": 9,
+      "CON": 16,
+      "INT": 11,
+      "SAB": 18,
+      "CAR": 14
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {
+      "INT": 3,
+      "CAR": 5
+    },
+    "pericias": {
+      "History": 3,
+      "Insight": 7,
+      "Religion": 3
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "idiomas que conhecia em vida"
+    ],
+    "resistencias_dano": [
+      "cold",
+      "lightning",
+      "bludgeoning/piercing/slashing não mágico"
+    ],
+    "imunidades_dano": [
+      "necrotic",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "poisoned"
+    ],
+    "tamanho": "Medium",
+    "tipo": "Undead",
+    "proficiencia": 3
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "DADOS_DE_FONTE_SECUNDARIA_VERSAO_SEPARADA_NAO_HOMOLOGADOS",
+  "habilidades_passivas": [
+    {
+      "nome": "Regeneration",
+      "efeito": "Recupera 10 PV no início do turno; dano radiante impede regeneração no próximo começo de turno; só morre caso comece turno com 0 PV e não regenere.",
+      "cura_pv": 10,
+      "gatilho": "início do próprio turno",
+      "supressao_por": "radiant damage no turno anterior",
+      "condicao_morte": "início de turno com 0 PV sem regenerar"
+    },
+    {
+      "nome": "Undead Nature",
+      "efeito": "Não necessita ar, alimentação, bebida ou sono."
+    },
+    {
+      "nome": "Water Hypersusceptibility",
+      "efeito": "Toma 1d4 radiant a cada 5 ft movidos na água OU galão derramado e 10 radiant no começo do próprio turno se estiver ao menos parcialmente submerso.",
+      "dano_por_5ft_ou_galao": {
+        "dados": "1d4",
+        "modificador": 0,
+        "tipo": "radiant"
+      },
+      "dano_inicio_turno_parcialmente_submerso": 10
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Xeric Blast",
+      "tipo": "ataque_magico_corpo_a_corpo_ou_distancia",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alcance_normal_ft": 60,
+      "alcance_max_ft": 60,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "4d6",
+          "modificador": 4,
+          "tipo": "necrotic"
+        }
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Xeric Aura (opcional)",
+        "Xeric Blast",
+        "Xeric Blast",
+        "Xeric Blast"
+      ],
+      "substituicao": "pode substituir um ataque por Spellcasting",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Xeric Blast",
+      "categoria": "ataque_magico",
+      "referencia_ataque": "Xeric Blast",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Xeric Aura",
+      "categoria": "area_de_exaustao",
+      "area": {
+        "raio_ft": 20
+      },
+      "alvos": "cada criatura na área",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 15,
+        "falha": "um nível de exhaustion",
+        "sucesso": "imune a esta aura do Mallqui por 24 horas"
+      },
+      "condicao": "exhaustion +1",
+      "sucesso_imunidade_horas": 24,
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Spellcasting",
+      "categoria": "conjuracao",
+      "tipo": "Wisdom",
+      "cd": 15,
+      "material": false,
+      "magias": [
+        "druidcraft",
+        "create or destroy water",
+        "entangle",
+        "locate animals or plants",
+        "wind wall"
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Regenera e sofre efeitos especiais de água"
+      "tipo": "conjuracao",
+      "atributo": "SAB",
+      "cd": 15,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "druidcraft",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "create or destroy water",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "entangle",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "locate animals or plants",
+          "usos": "1/dia"
+        },
+        {
+          "nome": "wind wall",
+          "usos": "1/dia"
+        }
+      ]
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Conjuração inata e ataques; revisão apresenta SAB18 e velocidade30"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.; CONFLITO DE EDIÇÃO/HOMÔNIMO: Mallqui original usa DES9/SAB16 e deslocamento20; revisão mostra SAB18/deslocamento30 e imunidades distintas.; Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada.; Licença, direitos de reprodução e imagem pendentes; pesquisa não equivale a validação de integração.",
+  "inventario_acoes_completo": true,
   "campos_em_conflito": [
-    "atributos",
-    "deslocamentos"
+    "atributos.SAB",
+    "deslocamentos_ft",
+    "imunidades"
   ],
+  "variantes_editoriais": [
+    {
+      "nome": "original",
+      "campos": [
+        "atributos.SAB",
+        "deslocamentos_ft",
+        "imunidades"
+      ],
+      "SAB": 16,
+      "andar_ft": 20,
+      "fonte": "PR #4"
+    }
+  ],
+  "conflito_editorial": "Mallqui edição original apresenta SAB16 e deslocamento 20 ft; KPOGL revisado apresenta SAB18 e andar30 ft. Não mesclar versões; revisão/editorial ainda não homologada.",
   "bloqueado": true,
   "pendencias": [
-    "Faltam edição exata, ficha individual integral e ações detalhadas com CDs e limites.",
-    "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.",
-    "CONFLITO DE EDIÇÃO/HOMÔNIMO: Mallqui original usa DES9/SAB16 e deslocamento20; revisão mostra SAB18/deslocamento30 e imunidades distintas.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+    "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+    "Mallqui edição original apresenta SAB16 e deslocamento 20 ft; KPOGL revisado apresenta SAB18 e andar30 ft. Não mesclar versões; revisão/editorial ainda não homologada."
   ],
   "integrada": false
 }

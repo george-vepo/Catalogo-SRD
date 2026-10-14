@@ -2,73 +2,241 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-319",
   "nome": "Gearforged Templar",
-  "estado": "BLOQUEADO_CONFLITO_EDITORIAL",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
   "edicao": {
-    "sistema": "D&D 5e (publicação informada em checkpoint)",
-    "publicacao": "Tome of Beasts 1",
+    "sistema": "Dungeons & Dragons 5ª edição",
     "editora": "Kobold Press",
-    "edicao_exata_verificada": false
+    "publicacao": "Tome of Beasts 1",
+    "pagina_indicada_transcricao": 196,
+    "edicao_exata_verificada": false,
+    "variantes_nao_mescladas": true,
+    "ramo_de_fonte": "transcrição KPOGL — reproduz um statblock individual; versão e erratas ainda não foram validadas contra exemplar do editor"
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/gearforged-templar-3pp/",
-      "natureza": "secundaria_ou_transcricao_nao_reverificada"
+      "url": "https://kpogl.wikidot.com/monster:gearforged-templar",
+      "natureza": "transcricao_comunitaria_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "estrutura do statblock desta versão individual"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_preexistente"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade_e_nd",
+      "escopo": "identidade, não confronto integral"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_de_conflitos",
+      "escopo": "não substitui ficha da edição escolhida"
     }
   ],
   "estatisticas": {
     "nd": "6",
     "ca": 18,
     "pv": 71,
-    "dados_vida": null,
-    "atributos": null,
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "dados_vida": "11d8+22",
+    "atributos": {
+      "FOR": 19,
+      "DES": 9,
+      "CON": 15,
+      "INT": 12,
+      "SAB": 16,
+      "CAR": 10
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {
+      "DES": 2,
+      "CON": 5
+    },
+    "pericias": {},
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "tamanho": "Medium",
+    "tipo": "Construct",
+    "proficiencia": 3
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "acoes": [],
-  "ataques": [],
+  "qualidade_estatisticas": "DADOS_DE_FONTE_SECUNDARIA_VERSAO_SEPARADA_NAO_HOMOLOGADOS",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não necessita de ar, alimento, bebida nem sono."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Greatsword",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d6",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Javelin",
+      "tipo": "corpo_a_corpo_ou_distancia",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alcance_normal_ft": 30,
+      "alcance_max_ft": 120,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "total_ataques": 4,
+      "alternativas": [
+        [
+          "Greatsword",
+          "Greatsword",
+          "Greatsword",
+          "Greatsword"
+        ],
+        [
+          "Javelin",
+          "Javelin",
+          "Javelin",
+          "Javelin"
+        ]
+      ],
+      "gatilho_efeito": "dois acertos de Greatsword no mesmo alvo",
+      "salvaguarda_condicional": {
+        "atributo": "FOR",
+        "cd": 15,
+        "falha": "empurrado até 10 ft",
+        "sucesso": "não empurrado"
+      },
+      "empurrao_ft": 10,
+      "empurrao_opcional": true,
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Greatsword",
+      "categoria": "ataque",
+      "referencia_ataque": "Greatsword",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Javelin",
+      "categoria": "ataque_hibrido",
+      "referencia_ataque": "Javelin",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Whirlwind",
+      "categoria": "area",
+      "recarga": "5-6",
+      "area": {
+        "raio_ft": 10
+      },
+      "alvos": "cada criatura na área",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 15,
+        "falha": "5d10 slashing",
+        "sucesso": "metade"
+      },
+      "dano": [
+        {
+          "dados": "5d10",
+          "modificador": 0,
+          "tipo": "slashing"
+        }
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
   "acoes_bonus": [],
-  "reacoes": [],
+  "reacoes": [
+    {
+      "nome": "Defensive Zone",
+      "categoria": "reacao",
+      "gatilho": "criatura entra no alcance melee",
+      "referencia_ataque": "Greatsword",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Parry",
+      "categoria": "reacao",
+      "gatilho": "ataque corpo a corpo que acertaria",
+      "precondicoes": [
+        "enxerga o atacante",
+        "empunha arma corpo a corpo"
+      ],
+      "efeito": "CA +3 contra um ataque",
+      "bonus_ca": 3,
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Templário mecanizado; tipo da criatura varia na versão"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Revisão: espadão e quatro ataques; original: glaive e três"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "A revisão descreve quatro golpes com espadão, enquanto a ficha antiga usa glaive e três golpes. CONFLITO: versões ou homônimos possuem estatísticas e/ou ataques divergentes; não combinar nem fixar valores sem escolher edição. Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico. Licença/direitos e imagem não conferidos; sem homologação, integração ou aprovação.",
+  "inventario_acoes_completo": true,
   "campos_em_conflito": [
-    "atributos"
+    "multiattack",
+    "ataques",
+    "reacoes"
   ],
+  "variantes_editoriais": [
+    {
+      "nome": "Edição anterior",
+      "campos": [
+        "multiattack",
+        "ataques",
+        "reacoes"
+      ],
+      "armas": [
+        "glaive"
+      ],
+      "quantidade_multiattack": 3,
+      "fonte": "PR #4"
+    }
+  ],
+  "conflito_editorial": "Versão antiga contém três golpes com glaive; transcrição KPOGL quatro golpes com greatsword/javelin. NÃO combinar ataques nem substituir nomes.",
   "bloqueado": true,
   "pendencias": [
-    "Confirmar bloco mecânico integral da edição correta contra ficha individual; resumos não constituem ações.",
-    "Registrar nominalmente TODOS os ataques, passivas, ações, ações bônus, reações, legendárias e regras de conjuração com dados/CD/duração/recarga/limites.",
-    "A revisão descreve quatro golpes com espadão, enquanto a ficha antiga usa glaive e três golpes.",
-    "CONFLITO: versões ou homônimos possuem estatísticas e/ou ataques divergentes; não combinar nem fixar valores sem escolher edição.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+    "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+    "Versão antiga contém três golpes com glaive; transcrição KPOGL quatro golpes com greatsword/javelin. NÃO combinar ataques nem substituir nomes."
   ],
   "integrada": false
 }

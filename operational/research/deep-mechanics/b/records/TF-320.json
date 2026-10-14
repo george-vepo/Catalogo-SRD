@@ -2,21 +2,32 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-320",
   "nome": "Gnarljak",
-  "estado": "BLOQUEADO_CONFLITO_EDITORIAL",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
   "edicao": {
-    "sistema": "D&D 5e (publicação informada em checkpoint)",
-    "publicacao": "Tome of Beasts 1",
+    "sistema": "Dungeons & Dragons 5ª edição",
     "editora": "Kobold Press",
-    "edicao_exata_verificada": false
+    "publicacao": "Tome of Beasts 1",
+    "pagina_indicada_transcricao": 212,
+    "edicao_exata_verificada": false,
+    "variantes_nao_mescladas": true,
+    "ramo_de_fonte": "transcrição KPOGL — reproduz um statblock individual; versão e erratas ainda não foram validadas contra exemplar do editor"
   },
   "fontes": [
     {
-      "url": "https://5ecompendium.github.io/bestiary/creature/gnarljak",
-      "natureza": "secundaria_ou_transcricao_nao_reverificada"
+      "url": "https://kpogl.wikidot.com/monster:gnarljak",
+      "natureza": "transcricao_comunitaria_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "estrutura do statblock desta versão individual"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_preexistente"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade_e_nd",
+      "escopo": "identidade, não confronto integral"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_de_conflitos",
+      "escopo": "não substitui ficha da edição escolhida"
     }
   ],
   "estatisticas": {
@@ -24,53 +35,233 @@
     "ca": 16,
     "pv": null,
     "dados_vida": null,
-    "atributos": null,
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "atributos": {
+      "FOR": 13,
+      "DES": 21,
+      "CON": 15,
+      "INT": 2,
+      "SAB": 14,
+      "CAR": 1
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {
+      "FOR": 4
+    },
+    "pericias": {
+      "Perception": 5,
+      "Stealth": 8
+    },
+    "sentidos": [
+      "blindsight 60 ft (cego além disso)"
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing não mágico"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "tamanho": "Small",
+    "tipo": "Construct",
+    "proficiencia": 3,
+    "pv_da_transcricao_foco": 88,
+    "dados_vida_da_transcricao_foco": "16d6+32",
+    "pv_canonico_bloqueado": true
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "acoes": [],
-  "ataques": [],
-  "acoes_bonus": [],
+  "qualidade_estatisticas": "DADOS_DE_FONTE_SECUNDARIA_VERSAO_SEPARADA_NAO_HOMOLOGADOS",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não necessita de ar, alimento, bebida nem sono."
+    },
+    {
+      "nome": "False Appearance",
+      "efeito": "Enquanto imóvel, indistinguível de armadilha de urso comum."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Gnawing Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "efeito": "anexa ao alvo e impede novos Gnawing Bite enquanto anexado",
+          "dano_recorrente": {
+            "gatilho": "início de cada turno do Gnarljak",
+            "dados": [
+              {
+                "dados": "2d8",
+                "modificador": 5,
+                "tipo": "piercing"
+              }
+            ]
+          },
+          "movimento_anexado": "acompanha deslocamento do alvo sem gastar movimento próprio",
+          "soltar_voluntario": {
+            "custo_movimento_ft": 5
+          },
+          "remocao_forcada": {
+            "agente": "qualquer criatura, incluindo alvo",
+            "acao": "ação",
+            "teste": {
+              "atributo": "FOR",
+              "cd": 16
+            }
+          }
+        }
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Chain Tail",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d6",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        [
+          "Gnawing Bite",
+          "Chain Tail",
+          "Chain Tail"
+        ],
+        [
+          "Chain Tail",
+          "Chain Tail",
+          "Chain Tail"
+        ]
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Gnawing Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Gnawing Bite",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Chain Tail",
+      "categoria": "ataque",
+      "referencia_ataque": "Chain Tail",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Secure Tail",
+      "categoria": "ancoragem_bonus",
+      "precondicao": "até 10 ft de superfície sólida",
+      "alcance_fixacao_ft": 10,
+      "efeitos": [
+        "não pode ficar prone",
+        "deslocamento máximo 10 ft do ponto de fixação",
+        "alcance do Chain Tail reduz para 5 ft",
+        "alvo anexado por Bite fica restrained até Gnarljak se soltar"
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Fichas divergentes impedem escolha dos PV"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Verificar versões antes de fixar ações"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "Fonte mecânica é transcrição comunitária ou reprodução por terceiros, não validação direta da ficha no site da editora. PV conflitantes em fontes consultadas: 63 na transcrição original, 49 em Robinloft, 88 na wiki da revisão; PV deliberadamente nulos. CONFLITO: versões ou homônimos possuem estatísticas e/ou ataques divergentes; não combinar nem fixar valores sem escolher edição. Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico. Licença/direitos e imagem não conferidos; sem homologação, integração ou aprovação.",
+  "inventario_acoes_completo": true,
   "campos_em_conflito": [
     "pv",
-    "atributos"
+    "dados_vida",
+    "atributos",
+    "resistencias_dano",
+    "acoes",
+    "pv",
+    "dados_vida",
+    "atributos",
+    "acoes",
+    "pv"
   ],
+  "variantes_editoriais": [
+    {
+      "nome": "original Tome of Beasts 1",
+      "campos": [
+        "pv",
+        "dados_vida",
+        "atributos",
+        "resistencias_dano",
+        "acoes"
+      ],
+      "pv": 63,
+      "dados_vida": "14d6+14",
+      "atributos": {
+        "DES": 22
+      },
+      "url": "https://anyflip.com/myubd/oeoe/basic/201-250",
+      "qualidade": "reprodução da edição original não homologada"
+    },
+    {
+      "nome": "KPOGL edição revisada",
+      "campos": [
+        "pv",
+        "dados_vida",
+        "atributos",
+        "acoes"
+      ],
+      "pv": 88,
+      "dados_vida": "16d6+32",
+      "url": "https://kpogl.wikidot.com/monster:gnarljak",
+      "qualidade": "transcrição comunitária em revisão separada"
+    },
+    {
+      "nome": "outra reprodução pré-existente",
+      "campos": [
+        "pv"
+      ],
+      "pv": 49,
+      "qualidade": "não adotada",
+      "fonte": "PR #4"
+    }
+  ],
+  "conflito_editorial": "PV 63 (14d6+14) aparecem na edição original; 88 (16d6+32) em transcrição revisada; outra reprodução reporta 49. PV da ficha consolidada preservado como null até escolher edição e cotejar no editor.; Diferenças de atributos (DES22 vs21), salvaguardas, resistências e armas entre versões impedem mescla.",
   "bloqueado": true,
   "pendencias": [
-    "Confirmar bloco mecânico integral da edição correta contra ficha individual; resumos não constituem ações.",
-    "Registrar nominalmente TODOS os ataques, passivas, ações, ações bônus, reações, legendárias e regras de conjuração com dados/CD/duração/recarga/limites.",
-    "Fonte mecânica é transcrição comunitária ou reprodução por terceiros, não validação direta da ficha no site da editora.",
-    "PV conflitantes em fontes consultadas: 63 na transcrição original, 49 em Robinloft, 88 na wiki da revisão; PV deliberadamente nulos.",
-    "CONFLITO: versões ou homônimos possuem estatísticas e/ou ataques divergentes; não combinar nem fixar valores sem escolher edição.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+    "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+    "PV 63 (14d6+14) aparecem na edição original; 88 (16d6+32) em transcrição revisada; outra reprodução reporta 49. PV da ficha consolidada preservado como null até escolher edição e cotejar no editor.",
+    "Diferenças de atributos (DES22 vs21), salvaguardas, resistências e armas entre versões impedem mescla."
   ],
   "integrada": false
 }

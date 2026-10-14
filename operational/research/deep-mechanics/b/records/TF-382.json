@@ -2,71 +2,198 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-382",
   "nome": "Likho",
-  "estado": "BLOQUEADO_CONFLITO_EDITORIAL",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
   "edicao": {
+    "sistema": "Dungeons & Dragons 5ª edição",
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 1",
-    "edicao_exata_verificada": false
+    "pagina_indicada_transcricao": 254,
+    "edicao_exata_verificada": false,
+    "variantes_nao_mescladas": true,
+    "ramo_de_fonte": "transcrição KPOGL — reproduz um statblock individual; versão e erratas ainda não foram validadas contra exemplar do editor"
   },
   "fontes": [
     {
-      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/likho",
-      "natureza": "terceiros_preexistente_nao_conferida"
+      "url": "https://kpogl.wikidot.com/monster:likho",
+      "natureza": "transcricao_comunitaria_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "estrutura do statblock desta versão individual"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint"
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade_e_nd",
+      "escopo": "identidade, não confronto integral"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_de_conflitos",
+      "escopo": "não substitui ficha da edição escolhida"
     }
   ],
   "estatisticas": {
     "nd": null,
-    "ca": null,
-    "pv": null,
-    "dados_vida": null,
-    "atributos": null,
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": null,
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "ca": 15,
+    "pv": 105,
+    "dados_vida": "14d8+42",
+    "atributos": {
+      "FOR": 16,
+      "DES": 18,
+      "CON": 16,
+      "INT": 13,
+      "SAB": 16,
+      "CAR": 19
+    },
+    "deslocamentos_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {
+      "DES": 7,
+      "CAR": 7
+    },
+    "pericias": {
+      "Acrobatics": 7,
+      "Perception": 6,
+      "Stealth": 10
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "Goblin",
+      "Void Speech"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "tamanho": "Medium",
+    "tipo": "Monstrosity",
+    "proficiencia": 3,
+    "nd_fonte_selecionada": "5"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
-  "acoes_bonus": [],
+  "qualidade_estatisticas": "DADOS_DE_FONTE_SECUNDARIA_VERSAO_SEPARADA_NAO_HOMOLOGADOS",
+  "habilidades_passivas": [
+    {
+      "nome": "Limited Telepathy",
+      "efeito": "Pode transmitir mensagens e imagens simples para criaturas que entendem uma língua a até 120 ft; não recebe respostas.",
+      "alcance_ft": 120,
+      "comunicacao_bilateral": false
+    },
+    {
+      "nome": "Pounce",
+      "efeito": "Após mover 20 ft em linha reta em direção ao alvo e acertar Claw, FOR CD15 ou prone. Se alvo prone, pode usar uma ação bônus Claw.",
+      "movimento_minimo_ft": 20,
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 15,
+        "falha": "prone",
+        "sucesso": "não prone"
+      }
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias e efeitos mágicos."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d8",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia_opcional": [
+        "Disruptive Gaze"
+      ],
+      "sequencia_obrigatoria": [
+        "Claw",
+        "Claw",
+        "Claw",
+        "Claw"
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Claw",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Disruptive Gaze",
+      "categoria": "debuff_alvo",
+      "alcance_ft": 60,
+      "precondicao": "enxerga alvo",
+      "alvos": "uma criatura visível",
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 15,
+        "falha": "desvantagem em ataques, testes de atributo e salvaguardas até final do próximo turno do alvo",
+        "sucesso": "sem efeito"
+      },
+      "duracao": "até fim do próximo turno do alvo",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Claw (Pounce)",
+      "categoria": "acao_bonus",
+      "precondicao": "Pounce derrubou o alvo; alvo prone",
+      "referencia_ataque": "Claw",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Índice editorial ND5 não coincide com ficha secundária ND6"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Não consolidar ataques ou CA/PV sem conferir edição"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.; CONFLITO DE EDIÇÃO/HOMÔNIMO: ND5 no índice oficial Kobold Press ≠ ND6 na transcrição Here Be Taverns; números de uma versão não consolidados.; Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada.; Licença, direitos de reprodução e imagem pendentes; pesquisa não equivale a validação de integração.",
+  "inventario_acoes_completo": true,
   "campos_em_conflito": [
     "nd",
-    "pv",
-    "atributos"
+    "nd"
   ],
+  "variantes_editoriais": [
+    {
+      "nome": "KPOGL",
+      "campos": [
+        "nd"
+      ],
+      "nd": "5",
+      "url": "https://kpogl.wikidot.com/monster:likho"
+    },
+    {
+      "nome": "Here Be Taverns",
+      "campos": [
+        "nd"
+      ],
+      "nd": "6",
+      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/likho"
+    }
+  ],
+  "conflito_editorial": "KPOGL publica ND5 e o índice editorial também ND5, mas transcrição Here Be Taverns mostra ND6; ND consolidado mantido null até identificar edição exata e confirmar versão.; Ações foram extraídas somente do ramo ND5; não combinadas com ação da versão ND6.",
   "bloqueado": true,
   "pendencias": [
-    "Faltam edição exata, ficha individual integral e ações detalhadas com CDs e limites.",
-    "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.",
-    "CONFLITO DE EDIÇÃO/HOMÔNIMO: ND5 no índice oficial Kobold Press ≠ ND6 na transcrição Here Be Taverns; números de uma versão não consolidados.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+    "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+    "KPOGL publica ND5 e o índice editorial também ND5, mas transcrição Here Be Taverns mostra ND6; ND consolidado mantido null até identificar edição exata e confirmar versão.",
+    "Ações foram extraídas somente do ramo ND5; não combinadas com ação da versão ND6."
   ],
   "integrada": false
 }
