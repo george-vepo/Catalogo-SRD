@@ -1,0 +1,435 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-462",
+  "nome": "Behir Magus",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 19,
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_CONFERENCIA_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/1465"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "12",
+    "xp": null,
+    "motivo_xp_null": "não declarado no bloco A5E",
+    "bonus_proficiencia": 4,
+    "ca": 16,
+    "composicao_ca": "natural armor",
+    "pv": 168,
+    "dados_vida": "16d12+64",
+    "bloodied": 84,
+    "porte": "Huge",
+    "tipo": "Monstrosity",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 20,
+      "destreza": 14,
+      "constituicao": 18,
+      "inteligencia": 10,
+      "sabedoria": 16,
+      "carisma": 12
+    },
+    "modificadores": {
+      "forca": 5,
+      "destreza": 2,
+      "constituicao": 4,
+      "inteligencia": 0,
+      "sabedoria": 3,
+      "carisma": 1
+    },
+    "deslocamentos": {
+      "andar_ft": 60,
+      "escalar_ft": 40,
+      "nadar_ft": 40
+    },
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 6
+      },
+      {
+        "nome": "INT",
+        "bonus": 4
+      },
+      {
+        "nome": "WIS",
+        "bonus": 7
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 9
+      },
+      {
+        "nome": "Perception",
+        "bonus": 7
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 90
+      }
+    ],
+    "percepcao_passiva": 17,
+    "idiomas": [
+      "Common",
+      "Draconic"
+    ],
+    "vulnerabilidades": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "lightning"
+    ],
+    "imunidades_condicao": [],
+    "maneuver_dc": 17
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Spider Climb",
+        "tipo": "mobilidade",
+        "efeito": "climb speed em superfícies difíceis e invertidas, inclusive tetos"
+      },
+      {
+        "nome": "Serpentine",
+        "tipo": "mobilidade",
+        "efeito": "pode passar por espaços de 5 pés, verticais/horizontais, a velocidade normal, sem squeezing"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "multiataque",
+        "sequencia_ordenada": [
+          {
+            "acao": "Bite",
+            "quantidade": 1
+          },
+          {
+            "acao": "Constrict",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 10,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d12+5",
+            "media": 24,
+            "tipo": "piercing"
+          }
+        ],
+        "engolir": {
+          "pre_condicoes": [
+            "alvo Medium ou menor",
+            "alvo grappled pelo Behir",
+            "nenhum outro engolido"
+          ],
+          "efeito": "swallowed, blinded, restrained, total cover contra ataques externos",
+          "dano_continuo": {
+            "gatilho": "início de cada turno do Behir",
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "acid"
+          },
+          "regurgitacao": [
+            "alvo engolido causa 30 ou mais de dano ao Behir no mesmo turno",
+            "Behir morre"
+          ],
+          "limite_engolidos": 1
+        }
+      },
+      {
+        "nome": "Constrict",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito": {
+          "condicoes": [
+            "grappled",
+            "restrained enquanto grappled"
+          ],
+          "escape_cd": 17,
+          "limite_agarrados": 2
+        }
+      },
+      {
+        "nome": "Lightning Breath",
+        "tipo": "acao_area",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "forma": "linha",
+          "comprimento_ft": 20,
+          "largura_ft": 5
+        },
+        "teste_resistencia": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "efeito_falha": {
+          "dano": {
+            "dados": "16d6",
+            "media": 56,
+            "tipo": "lightning"
+          }
+        },
+        "efeito_sucesso": "metade de 16d6 lightning"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 10,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d12+5",
+            "media": 24,
+            "tipo": "piercing"
+          }
+        ],
+        "engolir": {
+          "pre_condicoes": [
+            "alvo Medium ou menor",
+            "alvo grappled pelo Behir",
+            "nenhum outro engolido"
+          ],
+          "efeito": "swallowed, blinded, restrained, total cover contra ataques externos",
+          "dano_continuo": {
+            "gatilho": "início de cada turno do Behir",
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "acid"
+          },
+          "regurgitacao": [
+            "alvo engolido causa 30 ou mais de dano ao Behir no mesmo turno",
+            "Behir morre"
+          ],
+          "limite_engolidos": 1
+        }
+      },
+      {
+        "nome": "Constrict",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito": {
+          "condicoes": [
+            "grappled",
+            "restrained enquanto grappled"
+          ],
+          "escape_cd": 17,
+          "limite_agarrados": 2
+        }
+      }
+    ],
+    "multiataque": {
+      "sequencia_ordenada": [
+        "Bite",
+        "Constrict"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Vengeful Breath",
+        "tipo": "reacao",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "pre_condicao": "Bloodied",
+        "gatilho": "sofre acerto de ataque melee",
+        "efeito": "recarrega imediatamente Lightning Breath e a utiliza, incluindo atacante na área"
+      },
+      {
+        "nome": "Blindness",
+        "tipo": "reacao",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "gatilho": "acerto de ataque ranged ou em área de atacante visto a até 60 pés",
+        "alcance_ft": 60,
+        "alvo": "atacante",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "efeito_falha": {
+          "condicao": "blinded",
+          "duracao": "1 minuto"
+        },
+        "repeticao_teste": "fim de cada turno do alvo",
+        "sucesso_repetido": "não detalhado expressamente na frase da fonte"
+      },
+      {
+        "nome": "Invisibility",
+        "tipo": "reacao",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "gatilho": "sofre dano de ataque",
+        "efeito": {
+          "condicao": "invisible",
+          "duracao": "até 1 minuto",
+          "encerra_se": "faz ataque"
+        }
+      },
+      {
+        "nome": "Drain Charge",
+        "tipo": "reacao",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "gatilho": "é submetido a dano lightning",
+        "efeito": "não recebe dano lightning; atacante ou conjurador recebe dano necrotic igual ao valor lightning da ocorrência"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_VERIFICADA",
+      "reacoes": "PRESENTES_4",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA",
+      "acoes_covil": "AUSENCIA_VERIFICADA",
+      "acoes_miticas": "AUSENCIA_VERIFICADA",
+      "conjuracao": "AUSENCIA_VERIFICADA"
+    }
+  },
+  "pendencias": [
+    "Quatro reações individuais com gatilho e uso 1/dia preservadas como variante Magus.",
+    "Blindness permite repetir salvaguarda no fim dos turnos mas a fonte não descreve explicitamente o resultado de sucesso repetido.",
+    "Fonte individual oficial A5E reestruturada; revisão do Monstrous Menagerie/errata ainda pendente.",
+    "Art oficial de behir encontrado, mas não demonstrado como Magus e não armazenado como binário."
+  ],
+  "campos_nao_confirmados": [
+    "semântica explícita do sucesso no teste repetido de Blindness",
+    "revisão editorial Monstrous Menagerie",
+    "imagem adequada à variante Magus"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1465",
+      "tipo": "bloco individual completo no site oficial A5E, verificado diretamente em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico, não fonte editorial",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-462",
+    "nome": "Behir Magus",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "12",
+    "ca": 16,
+    "pv": 168,
+    "atributos": {
+      "forca": 20,
+      "destreza": 14,
+      "constituicao": 18,
+      "inteligencia": 10,
+      "sabedoria": 16,
+      "carisma": 12
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Variante magus do behir; escalada, corpo serpentino e reações mágicas."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Mordida/constrição, engolir e sopro elétrico; reações Blindness, Drain Charge, Invisibility, Vengeful Breath."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/1465",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir quais reações são apenas da variante Magus e o texto de suas CDs.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": null,
+    "binario_presente": false,
+    "candidata_url": "https://a5e.tools/sites/default/files/monsters/behir%20-%20Gui%20Sommer%20copy_0.png",
+    "candidata_status": "REFERENCIA_DE_ESPECIE_SEM_VALIDACAO_DE_VARIANTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Advanced 5E",
+    "pagina_individual": "https://a5e.tools/node/1465",
+    "data": "2026-10-14",
+    "exemplar_editorial_errata": "PENDENTE"
+  }
+}

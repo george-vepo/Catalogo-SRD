@@ -1,0 +1,218 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-113",
+  "nome": "Clurichaun",
+  "estado": "MECANICA_ESTATISTICAS_INDIVIDUAIS_EVIDENCIADAS_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 1 (2023, revisão)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:clurichaun",
+      "natureza": "reproducao_comunitaria_bloqueio_individual_compatível_com_checkpoint",
+      "consulta": "2026-10-14"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/clurichaun-3pp/",
+      "natureza": "alternativa_homonima_com_nd_e_pv_divergentes_nao_mesclada",
+      "consulta": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1/4",
+    "ca": 14,
+    "pv": 22,
+    "dados_vida": "4d4+12",
+    "atributos": {
+      "FOR": 13,
+      "DES": 12,
+      "CON": 16,
+      "INT": 10,
+      "SAB": 8,
+      "CAR": 16
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "salvaguardas": {
+      "CON": 5
+    },
+    "pericias": {
+      "Perception": 1,
+      "Stealth": 3
+    },
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Common",
+      "Elvish",
+      "Sylvan"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "frightened",
+      "poisoned"
+    ],
+    "modificadores": {
+      "FOR": 1,
+      "DES": 1,
+      "CON": 3,
+      "INT": 0,
+      "SAB": -1,
+      "CAR": 3
+    },
+    "origem_ca": "Clurichaun’s Luck, sem armadura/escudo, CA 14",
+    "pairar": false,
+    "bonus_proficiencia": 2,
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Clurichaun’s Luck",
+      "gatilho": "consciente, sem armadura e sem escudo",
+      "efeito": "adiciona modificador CAR (+3) à CA; incluído na CA14",
+      "interrupcao": "se inconsciente, usando armadura ou escudo"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra magias e outros efeitos mágicos"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Improvised Weapon",
+      "tipo": "corpo_a_corpo_ou_distancia",
+      "bonus_acerto": 3,
+      "alcance_ft": 5,
+      "alcance_normal_ft": 20,
+      "alcance_maximo_ft": 60,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 1,
+          "tipo": "bludgeoning, piercing ou slashing conforme objeto"
+        }
+      ]
+    },
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 3,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 1,
+          "tipo": "bludgeoning"
+        }
+      ]
+    },
+    {
+      "nome": "Bawdy Remark",
+      "tipo": "magico_a_distancia",
+      "bonus_acerto": 5,
+      "alcance_normal_ft": 30,
+      "alcance_maximo_ft": 30,
+      "alvos": "uma criatura",
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 3,
+          "tipo": "psychic"
+        }
+      ],
+      "efeito_condicional": {
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 13
+        },
+        "falha": {
+          "condicao": "incapacitated",
+          "duracao": "até fim do próximo turno do alvo",
+          "escolha_alvo": "rir incontrolavelmente ou congelar de constrangimento"
+        },
+        "sucesso": "sem incapacitated"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Improvised Weapon",
+      "referencia_ataque": "Improvised Weapon"
+    },
+    {
+      "nome": "Slam",
+      "referencia_ataque": "Slam"
+    },
+    {
+      "nome": "Bawdy Remark",
+      "referencia_ataque": "Bawdy Remark"
+    },
+    {
+      "nome": "Spellcasting",
+      "referencia_conjuracao": "Spellcasting"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Spellcasting",
+      "atributo": "CAR",
+      "cd": 13,
+      "componentes_materiais": "álcool é o único material exigido",
+      "magias": [
+        {
+          "uso": "à vontade",
+          "nomes": [
+            "mending",
+            "purify food and drink"
+          ]
+        },
+        {
+          "uso": "1/dia cada",
+          "nomes": [
+            "blur",
+            "heroism",
+            "suggestion"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "No checkpoint antigo, Clurichaun tinha ND 1/4 e 22 PV, que correspondem à transcrição KPOGL do Tome 1 revisto; outra página 5eSRD listou homônimo ou revisão incompatível. Preservar edição escolhida e comparar diferenças editorialmente.",
+  "bloqueado": true,
+  "pendencias": [
+    "Cotejo independente com obra editorial e errata ainda pendente; sem integração canônica.",
+    "No checkpoint antigo, Clurichaun tinha ND 1/4 e 22 PV, que correspondem à transcrição KPOGL do Tome 1 revisto; outra página 5eSRD listou homônimo ou revisão incompatível. Preservar edição escolhida e comparar diferenças editorialmente."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-113",
+    "nome_original": "Clurichaun",
+    "tipo": "Tiny fey",
+    "alinhamento": "chaotic neutral",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
+}

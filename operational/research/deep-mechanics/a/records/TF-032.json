@@ -1,0 +1,316 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-032",
+  "name": "Daeodon",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Tome of Beasts 3",
+    "publication_year": 2022,
+    "edition_family": "D&D 5e",
+    "edition": "Tome of Beasts 3 for 5th Edition (2022)",
+    "exact_printing": null,
+    "challenge_rating": "3",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "proficiency_bonus": 2,
+    "experience_points": 700
+  },
+  "statistics": {
+    "armor_class": 13,
+    "armor_class_type": "natural armor",
+    "hit_points": 76,
+    "hit_dice": "9d10+27",
+    "ability_scores": {
+      "STR": 21,
+      "DEX": 8,
+      "CON": 16,
+      "INT": 2,
+      "WIS": 12,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 40
+    },
+    "senses": {
+      "passive_perception": 11
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": -1,
+      "CON": 3,
+      "INT": -4,
+      "WIS": 1,
+      "CHA": -2
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "category": "passive",
+        "activation": "automatic",
+        "check": "Wisdom (Perception)",
+        "conditional_advantage": "verificação depende de olfato",
+        "recharge": null
+      },
+      {
+        "name": "Relentless",
+        "category": "passive",
+        "activation": "automatic",
+        "trigger": "recebe até 15 pontos de dano de um único evento que o levariam a 0 PV",
+        "effect": "permanece com 1 PV",
+        "recharge": "short_or_long_rest",
+        "uses_per_rest": 1,
+        "threshold_damage_max": 15
+      },
+      {
+        "name": "Trampling Charge",
+        "category": "passive",
+        "activation": "conditional",
+        "prerequisites": [
+          {
+            "movement_straight_towards_target_ft_min": 20
+          },
+          {
+            "attack_hits": "Bite",
+            "timing": "same_turn"
+          }
+        ],
+        "on_trigger": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 13,
+            "on_failure": "Prone",
+            "on_success": "Permanece de pé"
+          }
+        },
+        "follow_up_bonus_action": {
+          "available_if": "alvo prone",
+          "attack": "Slam",
+          "target": "mesmo alvo"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Slam",
+            "count": 1
+          }
+        ],
+        "recharge": null
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 5,
+              "damage_type": "piercing"
+            }
+          ],
+          "other_effects": [
+            {
+              "condition": "grappled",
+              "application": "on_hit",
+              "escape_dc": 13,
+              "additional_condition": "restrained",
+              "end": "quando agarrão termina",
+              "restriction_while_active": "não pode realizar Bite contra outro alvo"
+            }
+          ],
+          "average_damage": 14
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "saving_throw": null,
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d4",
+              "flat": 5,
+              "damage_type": "bludgeoning"
+            }
+          ],
+          "other_effects": [],
+          "average_damage": 10
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "saving_throw": null,
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Fierce Call",
+        "category": "saving_throw_area_effect",
+        "action_economy": "action",
+        "recharge": "short_or_long_rest",
+        "uses_per_rest": 1,
+        "targeting": {
+          "creature_relation": "hostile",
+          "range_ft": 60,
+          "max_targets": null
+        },
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 13,
+          "on_failure": {
+            "drop_held_items": true,
+            "conditions": [
+              {
+                "name": "frightened",
+                "duration": "1_minute",
+                "repeat_save": "end_of_each_affected_creature_turn",
+                "end_on_save_success": true
+              }
+            ],
+            "forced_behavior": "Deve usar Dash e afastar-se pela rota mais segura em cada turno enquanto frightened, exceto se não houver para onde ir."
+          },
+          "on_success": "Nenhum efeito"
+        },
+        "initial_duration": "1_minute",
+        "damage": []
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Trampling Charge — Slam",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "Bite após investida de 20 pés faz alvo falhar FOR CD13 e ficar prone",
+        "action": "Slam",
+        "target": "alvo prone",
+        "uses_limit": null
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/daeodon/",
+      "kind": "individual_statblock_secondary",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "todos os atributos e habilidades do statblock"
+      ],
+      "reviewed": "2026-10-14"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:daeodon",
+      "kind": "independent_statblock_transcription",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "todos os atributos e habilidades do statblock"
+      ],
+      "reviewed": "2026-10-14"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "kind": "official_publisher_index",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "publicação",
+        "ND",
+        "tipo",
+        "tamanho"
+      ],
+      "reviewed": "2026-10-14"
+    }
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_actions_exhaustively_enumerated": true,
+    "independent_transcriptions_agree": true,
+    "official_publisher_index_publication_confirmed": true,
+    "primary_printing_or_errata_verified": false,
+    "editorial_final_approval": false,
+    "reason_for_partial": "Regras da ficha online foram estruturadas integralmente; edição impressa/errata e revisão independente de implementação continuam pendentes.",
+    "online_numeric_details_rechecked_on": "2026-10-14",
+    "online_numeric_details_sources": [
+      "https://kpogl.wikidot.com/monster:daeodon"
+    ]
+  },
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-031_TF-035/research.json",
+    "sha": "0c5bde59d111e07bb260ba5717982c5e055390e7"
+  },
+  "outstanding": [
+    "Conferir ficha contra páginas do livro e erratas editoriais da impressão exata.",
+    "Revisar estrutura contra engine de combate e aprovar imagem final.",
+    "Não atualizar ledger/CSV global até aprovação independente."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-032.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 74862,
+    "sha256": "ba7b7e2b7dbf315e79373d0017b4b8c6154ebb1bb4aae9c27fa5e282837c7891",
+    "git_blob_sha": "1ea68763ac8f7cbfa073deadabcf4d60fc214dd7",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Daeodon.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "4e94a81cff9ac288c10e63d45ebe21f4bc245ccf",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-348",
+  "nome": "Life Broker",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_COTEJO_EDITORIAL",
+  "edicao": {
+    "publicacao": "Tome of Beasts 3",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:life-broker",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "13",
+    "ca": 16,
+    "pv": 190,
+    "dados_vida": "20d8+100",
+    "atributos": {
+      "FOR": 15,
+      "DES": 19,
+      "CON": 20,
+      "INT": 19,
+      "SAB": 14,
+      "CAR": 20
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {
+      "CON": 10,
+      "SAB": 7,
+      "CAR": 10
+    },
+    "pericias": {
+      "Arcana": 9,
+      "Deception": 10,
+      "Perception": 7,
+      "Persuasion": 10
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "idiomas": [
+      "Common",
+      "Sylvan"
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing from nonmagical attacks not made with cold iron"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened"
+    ],
+    "percepcao_passiva": 17
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Draw Life Essence",
+      "duracao": "10 minutos",
+      "precondicao": "criatura voluntária oferece parte da vida",
+      "efeito": "Transfere tempo vital pactuado para frasco; consumidor do frasco recebe tempo somente com consentimento do Life Broker; retirar toda vida mata e só wish ressuscita."
+    },
+    {
+      "nome": "Life Reading",
+      "duracao": "1 minuto",
+      "alcance_ft": 30,
+      "efeito": "Após estudar mortal, conhece tempo de vida natural restante com precisão de segundos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia."
+    },
+    {
+      "nome": "Necrotic Weapons",
+      "efeito": "Ataques de arma mágicos com 4d8 necrotic adicionais, já incluídos em Rapier."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Rapier",
+      "bonus_acerto": 9,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 4,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "4d8",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Rapier",
+        "Rapier",
+        "Rapier"
+      ]
+    },
+    {
+      "nome": "Rapier",
+      "referencia_ataque": "Rapier"
+    },
+    {
+      "nome": "Life Feast",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "raio",
+        "alcance_ft": 30
+      },
+      "alvos": "criaturas hostis, exceto Constructs e Undead",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 18
+      },
+      "dano": {
+        "dados": "8d8",
+        "tipo": "necrotic"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade",
+      "efeito": "Recebe PV temporários iguais ao maior dano necrótico causado a um único alvo; vantagem em ataques até final do próximo turno."
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Quick-Footed",
+      "alternativas": [
+        "Dash",
+        "Disengage",
+        "Dodge"
+      ],
+      "efeito": "Usa uma dessas ações como bônus"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Consultar edição editorial e erratas oficiais para homologar antes de uso canônico.",
+    "A fonte é transcrição independente; revisão independente e integração pendentes."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Life Broker",
+    "tipo": "fey",
+    "tamanho": "Medium",
+    "alinhamento": "lawful neutral"
+  }
+}

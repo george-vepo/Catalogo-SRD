@@ -1,0 +1,268 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-194",
+  "nome": "Cueyatl Warrior",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 69,
+  "estado_auditoria": "BLOQUEADA_CA_SALVAGUARDA_DIVERGENCIA_PUBLICADA",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "Creature Codex 2018 com conflito CA/STR save entre reproduções",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/cueyatl-warrior/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "1",
+    "nd_fonte": "1",
+    "ca": 13,
+    "pv": 36,
+    "dados_vida": "8d6+8",
+    "porte": "Small",
+    "tipo": "humanoid",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 12,
+      "DES": 14,
+      "CON": 12,
+      "INT": 10,
+      "SAB": 11,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 1,
+      "DES": 2,
+      "CON": 1,
+      "INT": 0,
+      "SAB": 0,
+      "CAR": 0
+    },
+    "deslocamentos": {
+      "andar": 30,
+      "escalar": 20,
+      "nadar": 30
+    },
+    "pericias": [
+      {
+        "nome": "Acrobatics",
+        "bonus": 4
+      },
+      {
+        "nome": "Survival",
+        "bonus": 2
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 2,
+        "nota": "impresso 5eSRD; Robinloft STR +3, edição divergente"
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "Cueyatl"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 200,
+    "bonus_proficiencia": 2,
+    "ca_origem": "leather armor (5eSRD) - Robinloft CA12"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amphibious",
+        "efeito": "respira ar e água"
+      },
+      {
+        "nome": "Jungle Camouflage",
+        "beneficio": "advantage DEX(Stealth) ao se esconder em jungle"
+      },
+      {
+        "nome": "Slippery",
+        "beneficio": "advantage em saves/checks para escapar de grapple"
+      },
+      {
+        "nome": "Standing Leap",
+        "horizontal_ft": 20,
+        "vertical_ft": 10,
+        "precisa_corrida": false
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Battleaxe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "poison"
+          }
+        ],
+        "versatil_duas_maos": {
+          "base": {
+            "dados": "1d10+2",
+            "media": 7,
+            "tipo": "slashing"
+          },
+          "veneno": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "poison"
+          }
+        },
+        "alerta": "a impressão 5eSRD dá +2 no dano embora STR12 tenha mod +1; Robinloft imprime formula contraditória, não corrigir sem errata"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Battleaxe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "poison"
+          }
+        ],
+        "versatil_duas_maos": {
+          "base": {
+            "dados": "1d10+2",
+            "media": 7,
+            "tipo": "slashing"
+          },
+          "veneno": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "poison"
+          }
+        },
+        "alerta": "a impressão 5eSRD dá +2 no dano embora STR12 tenha mod +1; Robinloft imprime formula contraditória, não corrigir sem errata"
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "BLOQUEIO: 5eSRD CA13, STR save +2, ataque battleaxe +3/dano 1d8+2; Robinloft CA12 e STR save+3, além de fórmula de dano conflitante. Sem combinar fontes nem 'consertar' por inferência.",
+    "Edição/errata original e imagem/legal não verificados."
+  ],
+  "campos_nao_confirmados": [
+    "conferência de edição, licenças e erratas",
+    "autoria, identidade e inspeção visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/cueyatl-warrior/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/cueyatl-warrior/",
+      "tipo": "verificação mecânica individual CP44 com separação de edições",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.robinloft.com/monsters/cueyatl-warrior/creature-codex",
+      "tipo": "verificação mecânica individual CP44 com separação de edições",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_DIVERGENCIA_CA",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-194",
+    "nome": "Cueyatl Warrior",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "1",
+    "nd_fonte": "1",
+    "ca": 13,
+    "pv": 36,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Amphibious, Jungle Camouflage, Slippery, Standing Leap"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Battleaxe com dano adicional de veneno."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/cueyatl-warrior/",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "PARCIAL_DIVERGENCIA_CA",
+    "pendencias": [
+      "Robinloft apresenta CA12 e a ficha 5eSRD mostra CA13; reavaliar armor/stats e errata, sem mesclar dados.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-194.jpg",
+    "formato": "jpg",
+    "largura": 449,
+    "altura": 700,
+    "bytes": 52763,
+    "blob_sha": "e17d73a851316fb265fe3cc8818d3d72cbbf93ba",
+    "sha256": "e4c693018cca652d6bc5ac8573ac8c5bfedbbaa73d507038fada5163881eb32b",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cueyatlwarrior.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 44,
+    "publicacao": "Creature Codex 2018 com conflito CA/STR save entre reproduções",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/cueyatl-warrior/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

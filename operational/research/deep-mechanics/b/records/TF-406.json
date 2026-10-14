@@ -1,0 +1,280 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-406",
+  "nome": "Mask Wight",
+  "estado": "MECANICA_ESTATISTICAS_INDIVIDUAIS_EVIDENCIADAS_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 1 (versão KPOGL com CA19/PV207, publicação a confirmar)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:mask-wight",
+      "natureza": "reproducao_individual_comunitaria",
+      "consulta": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "13",
+    "ca": 19,
+    "pv": 207,
+    "dados_vida": "18d8+126",
+    "atributos": {
+      "FOR": 22,
+      "DES": 18,
+      "CON": 24,
+      "INT": 15,
+      "SAB": 16,
+      "CAR": 18
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "deslocamentos_texto": "caminhar 40 pés",
+    "salvaguardas": {
+      "FOR": 11,
+      "DES": 9,
+      "CON": 12,
+      "INT": 7,
+      "SAB": 8,
+      "CAR": 9
+    },
+    "pericias": {},
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      },
+      {
+        "tipo": "truesight",
+        "alcance_ft": 30
+      }
+    ],
+    "idiomas": [
+      "Abyssal",
+      "Common",
+      "Infernal"
+    ],
+    "resistencias_dano": [
+      "acid",
+      "fire",
+      "lightning",
+      "cold",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "necrotic",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [
+      "radiant"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "stunned",
+      "unconscious"
+    ],
+    "modificadores": {
+      "FOR": 6,
+      "DES": 4,
+      "CON": 7,
+      "INT": 2,
+      "SAB": 3,
+      "CAR": 4
+    },
+    "origem_ca": "natural armor",
+    "pairar": false,
+    "bonus_proficiencia": 5,
+    "percepcao_passiva": 13,
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Necrotic Weapons",
+      "efeito": "ataques de arma são mágicos; adicionam 3d8 necrotic já incluídos em Khopesh e Spiked Gauntlet",
+      "dano_adicional": {
+        "dados": "3d8",
+        "tipo": "necrotic"
+      }
+    },
+    {
+      "nome": "Single-Minded Purpose",
+      "efeito": "vantagem em ataques contra fiends e criaturas que usam poder infernal/fiendish (como determinados tieflings, sorcerers, warlocks)"
+    },
+    {
+      "nome": "Undead Nature",
+      "efeito": "dispensa ar, comida, água e sono"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Khopesh of Oblivion",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 6,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "3d8",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ]
+    },
+    {
+      "nome": "Spiked Gauntlet",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 6,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "3d8",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ],
+      "efeito": {
+        "alvo_tamanho_maximo": "Large",
+        "salvaguarda": {
+          "atributo": "FOR",
+          "cd": 17
+        },
+        "falha": {
+          "condicao": "prone"
+        }
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 3,
+      "sequencia": [
+        "Khopesh of Oblivion",
+        "Khopesh of Oblivion",
+        "Spiked Gauntlet"
+      ],
+      "efeito_condicional": {
+        "gatilho": "ambos Khopesh of Oblivion acertam uma mesma criatura",
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 17
+        },
+        "falha": "esquece memórias queridas de um objeto ou local até interagir de novo com ele",
+        "restricao": [
+          "objeto não pode estar sendo portado pelo alvo",
+          "local não pode estar no campo visual do alvo no instante do teste"
+        ]
+      }
+    },
+    {
+      "nome": "Khopesh of Oblivion",
+      "referencia_ataque": "Khopesh of Oblivion"
+    },
+    {
+      "nome": "Spiked Gauntlet",
+      "referencia_ataque": "Spiked Gauntlet"
+    },
+    {
+      "nome": "Wail of the Forgotten",
+      "recarga": "6",
+      "alcance_ft": 30,
+      "alvos": "todas criaturas na área",
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 17
+      },
+      "dano": [
+        {
+          "dados": "10d6",
+          "tipo": "thunder"
+        },
+        {
+          "dados": "6d8",
+          "tipo": "psychic"
+        }
+      ],
+      "falha": {
+        "dano": "integral",
+        "condicao": "deafened",
+        "duracao": "1 hora"
+      },
+      "sucesso": {
+        "dano": "metade",
+        "deafened": false
+      },
+      "efeito_na_morte": [
+        "apaga existência do alvo da memória de criaturas que o conheceram, exceto divindades/testemunhas da morte",
+        "referências escritas/visuais somem",
+        "corpo obliterado; ressuscita apenas com true resurrection ou wish"
+      ]
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Cotejo independente com obra editorial e errata ainda pendente; sem integração canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-406",
+    "nome_original": "Mask Wight",
+    "tipo": "Medium undead",
+    "alinhamento": "neutral evil",
+    "bonus_proficiencia": 5
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 3,
+      "sequencia": [
+        "Khopesh of Oblivion",
+        "Khopesh of Oblivion",
+        "Spiked Gauntlet"
+      ],
+      "efeito_condicional": {
+        "gatilho": "ambos Khopesh of Oblivion acertam uma mesma criatura",
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 17
+        },
+        "falha": "esquece memórias queridas de um objeto ou local até interagir de novo com ele",
+        "restricao": [
+          "objeto não pode estar sendo portado pelo alvo",
+          "local não pode estar no campo visual do alvo no instante do teste"
+        ]
+      }
+    }
+  ],
+  "mecanicas_especiais": []
+}

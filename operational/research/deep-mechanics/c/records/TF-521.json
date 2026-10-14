@@ -1,0 +1,346 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-521",
+  "nome": "Bugbear Door Breaker",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 38,
+  "estado_auditoria": "BLOQUEADA_PV_FONTE_E_GAUNTLETS_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/4185"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "3",
+    "ca": 14,
+    "pv": 60,
+    "dados_vida": "5d10+10",
+    "porte": "Medium",
+    "tipo": "Humanoid",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 17,
+      "destreza": 10,
+      "constituicao": 15,
+      "inteligencia": 11,
+      "sabedoria": 10,
+      "carisma": 8
+    },
+    "modificadores": {
+      "forca": 3,
+      "destreza": 0,
+      "constituicao": 2,
+      "inteligencia": 0,
+      "sabedoria": 0,
+      "carisma": -1
+    },
+    "deslocamentos": {
+      "andar_ft": 30
+    },
+    "pericias": [
+      {
+        "nome": "Engineering",
+        "bonus": 2
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "qualquer um"
+    ],
+    "resistencias": [
+      "fire",
+      "force"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": null,
+    "bonus_proficiencia": 2,
+    "maneuver_dc": 13,
+    "composicao_ca": "scale mail",
+    "bloodied": 30,
+    "divergencia_pv_formula": {
+      "pv_fonte": 60,
+      "dados_de_vida_fonte": "5d10+10",
+      "media_matematica": 37.5,
+      "observacao": "não coincide com 60 PV impressos; não corrigir"
+    }
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Loading Weapon",
+        "efeito": "cada gauntlet precisa ser recarregada; sem outra gauntlet carregada, no máximo um ataque com a mesma ao gastar ação, bônus ou reação",
+        "regra_multiattack": "dois ataques requerem duas gauntlets carregadas"
+      },
+      {
+        "nome": "Specialized Weaponry",
+        "efeitos": [
+          "arma gauntlet tem propriedade breaker e causa dano dobrado contra objetos/estruturas",
+          "vantagem em attack rolls contra objetos/estruturas"
+        ]
+      },
+      {
+        "nome": "Smoky Sight",
+        "efeito": "não sofre penalidades por fumaça que obscurece ao atacar, Perception ou testes de navegação"
+      },
+      {
+        "nome": "Long Arms",
+        "efeito": "alcance de explosive gauntlets aumenta para 10 ft",
+        "conflito": "entrada de ataque ainda imprime reach 5 ft"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "categoria": "ação",
+        "sequencia": [
+          {
+            "acao": "Explosive Gauntlets",
+            "quantidade": 2
+          }
+        ],
+        "precondicao": "duas gauntlets carregadas",
+        "caso_insuficiente": "Loading Weapon impede repetição da mesma gauntlet antes de Reload"
+      },
+      {
+        "nome": "Explosive Gauntlets",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft_ficha_de_acao": 5,
+        "alcance_ft_por_trait_Long_Arms": 10,
+        "alcance_ft_operacional": null,
+        "dano": [
+          {
+            "valor_fixo": 3,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "force"
+          }
+        ],
+        "media_total_publicada": 10,
+        "precondicao": "ao menos uma gauntlet carregada",
+        "consome_carga_de_uma_gauntlet_por_ataque": 1,
+        "conflito": "seção da ação imprime reach 5 ft, mas Long Arms declara 10 ft para Bugbear Door Breaker"
+      },
+      {
+        "nome": "Clear the Way",
+        "categoria": "acao_em_area",
+        "area": {
+          "tipo": "cone",
+          "comprimento_ft": 15
+        },
+        "teste": {
+          "atributo": "STR",
+          "cd": 13
+        },
+        "efeito_falha": {
+          "condicao": "prone",
+          "empurra_ft": 15,
+          "dano": [
+            {
+              "dados": "1d6",
+              "media": 3,
+              "tipo": "fire"
+            },
+            {
+              "dados": "1d6",
+              "media": 3,
+              "tipo": "force"
+            }
+          ]
+        },
+        "efeito_sucesso": {
+          "empurra_ft": 0,
+          "condicao": "não prone",
+          "dano": null
+        },
+        "motivo_dano_sucesso_null": "a frase da página termina em 'or' sem descrever dano nem efeitos de sucesso"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Explosive Gauntlets",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft_ficha_de_acao": 5,
+        "alcance_ft_por_trait_Long_Arms": 10,
+        "alcance_ft_operacional": null,
+        "dano": [
+          {
+            "valor_fixo": 3,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "force"
+          }
+        ],
+        "media_total_publicada": 10,
+        "precondicao": "ao menos uma gauntlet carregada",
+        "consome_carga_de_uma_gauntlet_por_ataque": 1,
+        "conflito": "seção da ação imprime reach 5 ft, mas Long Arms declara 10 ft para Bugbear Door Breaker"
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Explosive Gauntlets",
+          "quantidade": 2
+        }
+      ],
+      "requer_duas_gauntlets_carregadas": true
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Reload",
+        "categoria": "ação bônus",
+        "efeito": "recarrega ambas as explosive gauntlets",
+        "custo": "1 bonus action"
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Smoke Screen",
+        "categoria": "reação",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            4,
+            5,
+            6
+          ]
+        },
+        "gatilho": "atingido por ranged attack",
+        "efeito": {
+          "tipo": "three-quarters cover",
+          "bonus_CA": 5,
+          "bonus_save_destreza": 5,
+          "bonus_checks_esconder": 5,
+          "duracao": "até início do próximo turno"
+        }
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_NA_FONTE_INDIVIDUAL"
+    }
+  },
+  "pendencias": [
+    "Bloco oficial imprime 60 PV (5d10+10), fórmula incompatível com a média matemática 37,5.",
+    "Long Arms indica alcance 10 ft, ação Explosive Gauntlets imprime reach 5 ft; preservar conflito.",
+    "Clear the Way termina com 'or' sem explicitar efeitos/dano no sucesso; não inferir.",
+    "Requer confirmar original Gate Pass Gazette/errata e imagem física."
+  ],
+  "campos_nao_confirmados": [
+    "60 PV versus 5d10+10",
+    "reach 5 versus 10 ft",
+    "efeito de sucesso de Clear the Way ausente",
+    "imagem binária"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/4185",
+      "tipo": "Ficha mecânica original no site oficial de consulta A5E, lida e estruturada em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "pesquisa prévia, não substitui bloco individual",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-521",
+    "nome": "Bugbear Door Breaker",
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "3",
+    "ca": 14,
+    "pv": 60,
+    "atributos": {
+      "forca": 17,
+      "destreza": 10,
+      "constituicao": 15,
+      "inteligencia": 11,
+      "sabedoria": 10,
+      "carisma": 8
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Bugbear equipado com manoplas explosivas e alcance aumentado."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Explosões das manoplas, Clear the Way, Reload como bônus e Smoke Screen como reação."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/4185",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_oficial": "https://a5e.tools/node/4185",
+    "livro_original_e_erratas": "PENDENTE"
+  }
+}

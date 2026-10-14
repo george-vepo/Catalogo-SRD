@@ -1,0 +1,416 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-407",
+  "nome": "Lich, Pact",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Creature Codex (2018)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:pact-lich",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "escopo": "ficha, lair, região, magias e lendárias"
+    }
+  ],
+  "estatisticas": {
+    "nd": "15",
+    "ca": 17,
+    "pv": 195,
+    "dados_vida": "26d8+78",
+    "atributos": {
+      "FOR": 11,
+      "DES": 16,
+      "CON": 16,
+      "INT": 16,
+      "SAB": 14,
+      "CAR": 20
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {
+      "DES": 8,
+      "INT": 8
+    },
+    "pericias": {
+      "Deception": 10,
+      "Persuasion": 10
+    },
+    "sentidos": [
+      {
+        "tipo": "truesight",
+        "alcance_ft": 120
+      }
+    ],
+    "idiomas": [
+      "todos idiomas que conhecia em vida"
+    ],
+    "resistencias_dano": [
+      "cold",
+      "fire",
+      "necrotic"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "paralyzed",
+      "poisoned"
+    ],
+    "origem_ca": "natural armor",
+    "modificadores": {
+      "FOR": 0,
+      "DES": 3,
+      "CON": 3,
+      "INT": 3,
+      "SAB": 2,
+      "CAR": 5
+    },
+    "pairar": false,
+    "bonus_proficiencia": 5,
+    "percepcao_passiva": 12,
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Legendary Resistance",
+      "usos": "3/dia",
+      "gatilho": "falha em salvaguarda",
+      "efeito": "substitui a falha por um sucesso"
+    },
+    {
+      "nome": "One With Shadows",
+      "custo": "ação bônus",
+      "precondicao": "penumbra ou escuridão",
+      "efeito": "torna-se invisível até se movimentar, executar ação ou reação"
+    },
+    {
+      "nome": "Patron’s Blessing",
+      "gatilho": "reduz alvo a zero PV",
+      "efeito": "recebe 25 PV temporários"
+    },
+    {
+      "nome": "Pact Rejuvenation",
+      "precondicao": "existe diamante de tamanho mínimo de um punho em sua toca",
+      "gatilho": "corpo destruído",
+      "duracao": "normalmente 3d10 dias",
+      "efeito": "ganha novo corpo, mas o patrono determina o momento e se poderá retornar ao Plano Material",
+      "excecao": "sem retorno se patrono negar"
+    },
+    {
+      "nome": "Weekly Soul Tribute",
+      "origem": "texto descritivo da publicação",
+      "gatilho": "a cada semana",
+      "precondicao": "matar criatura a até 120 pés de diamante do tamanho de punho",
+      "efeito": "alma entregue ao patrono",
+      "penalidade": "sem oferendas, o corpo apodrece e sofre intensa dor; efeito mecânico quantitativo não publicado"
+    },
+    {
+      "nome": "Undead Nature",
+      "efeito": "não precisa respirar, alimentar-se, beber ou dormir"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Maddening Touch",
+      "tipo": "ataque_magico_corpo_a_corpo",
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "3d6",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "CAR",
+          "cd": 18
+        },
+        "falha": {
+          "condicoes": [
+            "blinded",
+            "stunned",
+            "deafened"
+          ],
+          "duracao": "1 minuto",
+          "efeito": "alvo percebe exclusivamente cenário alucinatório com seus medos mais profundos"
+        },
+        "repetir": "CAR CD18 ao fim de cada turno; sucesso encerra"
+      }
+    },
+    {
+      "nome": "Enhanced Eldritch Blast",
+      "tipo": "ataque_magico_distancia",
+      "bonus_acerto": 10,
+      "alcance_normal_ft": 300,
+      "alcance_maximo_ft": 300,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d10",
+          "modificador": 5,
+          "tipo": "force"
+        }
+      ],
+      "efeito_opcional": {
+        "gatilho": "acerto",
+        "efeito": "empurra alvo 10 pés em linha reta para longe do lich"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 4,
+      "sequencia": [
+        "Enhanced Eldritch Blast",
+        "Enhanced Eldritch Blast",
+        "Enhanced Eldritch Blast",
+        "Enhanced Eldritch Blast"
+      ]
+    },
+    {
+      "nome": "Maddening Touch",
+      "categoria": "ataque",
+      "referencia_ataque": "Maddening Touch"
+    },
+    {
+      "nome": "Enhanced Eldritch Blast",
+      "categoria": "ataque",
+      "referencia_ataque": "Enhanced Eldritch Blast"
+    },
+    {
+      "nome": "Hurl Through Hell",
+      "categoria": "deslocamento_planar_controle",
+      "usos": "1/dia",
+      "alcance_ft": 60,
+      "alvo": "uma criatura visível",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 18
+      },
+      "falha": {
+        "efeitos": [
+          "desaparece do plano atual",
+          "fica paralyzed enquanto atravessa os reinos infernais"
+        ],
+        "retorno": "fim do próximo turno do lich no mesmo espaço ou livre mais próximo",
+        "dano_ao_retorno": {
+          "condicao": "alvo não é fiend",
+          "dados": "10d10",
+          "tipo": "psychic"
+        },
+        "salvaguarda_adicional": {
+          "atributo": "SAB",
+          "cd": 18
+        },
+        "falha_adicional": "frightened até fim do próximo turno do lich"
+      },
+      "sucesso": "não é enviado ao inferno"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "One With Shadows",
+      "custo": "ação bônus",
+      "referencia_traco": "One With Shadows"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [
+    {
+      "nome": "At Will Spell",
+      "custo": 1,
+      "efeito": "conjura uma magia inata de uso à vontade"
+    },
+    {
+      "nome": "Fiendish Resilience",
+      "custo": 1,
+      "efeito": "escolhe tipo de dano e ganha resistência a ele até escolher outro com a mesma habilidade",
+      "excecao": "dano de armas mágicas ou prateadas ignora essa resistência"
+    },
+    {
+      "nome": "Maddening Touch",
+      "custo": 2,
+      "referencia_ataque": "Maddening Touch"
+    },
+    {
+      "nome": "Eldritch Master",
+      "custo": 3,
+      "usos": "1/dia",
+      "efeito": "pede ajuda ao patrono e recupera todos usos de magias gastas"
+    }
+  ],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 18,
+      "bonus_ataque_magico": 10,
+      "componentes_verbais": true,
+      "componentes_somaticos": false,
+      "componentes_materiais": false,
+      "lista": [
+        {
+          "usos": "à vontade",
+          "magias": [
+            "chill touch",
+            "detect magic",
+            "levitate",
+            "mage hand",
+            "prestidigitation",
+            "speak with dead",
+            "true strike"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "magias": [
+            "banishment",
+            "bestow curse",
+            "compulsion",
+            "confusion",
+            "conjure elemental",
+            "dominate monster",
+            "eyebite",
+            "finger of death",
+            "fly",
+            "hellish rebuke (5d10)",
+            "hold monster",
+            "slow"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Confronto editorial com Creature Codex e erratas não executado.",
+    "Revisão independente e testes de regras pendentes; não integrar canonicamente."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-407",
+    "nome_original": "Lich, Pact",
+    "tipo": "Medium undead",
+    "alinhamento": "any evil",
+    "nd": "15",
+    "bonus_proficiencia": 5
+  },
+  "acoes_toca": {
+    "iniciativa": 20,
+    "restricao": "não repetir mesma opção em duas rodadas consecutivas",
+    "opcoes": [
+      {
+        "nome": "Random Exchange",
+        "iniciativa": 20,
+        "area": {
+          "raio_ft": 30
+        },
+        "efeito": "todas criaturas na área trocam aleatoriamente de posições e todas parecem/soam como uma das criaturas afetadas",
+        "ilusao": "truesight reconhece o disfarce",
+        "duracao": "até iniciativa 20 seguinte",
+        "retorno": "posições não retornam após fim do disfarce"
+      },
+      {
+        "nome": "Patron Smite",
+        "iniciativa": 20,
+        "alcance_ft": 60,
+        "alvo": "uma criatura visível",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 18
+        },
+        "dano": [
+          {
+            "dados": "5d6",
+            "tipo": "necrotic"
+          },
+          {
+            "dados": "5d6",
+            "tipo": "force"
+          }
+        ],
+        "falha": {
+          "dano": "integral",
+          "condicao": "stunned",
+          "duracao": "até iniciativa 20 da rodada seguinte"
+        },
+        "sucesso": {
+          "dano": "metade",
+          "condicao": null
+        }
+      },
+      {
+        "nome": "Raise Dead Servants",
+        "iniciativa": 20,
+        "alvos": "até cinco cadáveres",
+        "efeito": "reergue como skeleton ou zombie usando regras de animate dead"
+      }
+    ]
+  },
+  "efeitos_regionais": [
+    {
+      "nome": "Labyrinth Roads",
+      "raio_milhas": 20,
+      "efeito": "estradas se tornam confusas",
+      "salvaguarda": {
+        "pericia": "SAB (Survival)",
+        "cd": 18
+      },
+      "falha": "perde orientação",
+      "repetir": "a cada hora até sucesso"
+    },
+    {
+      "nome": "Divination Interference",
+      "raio_milhas": 1,
+      "gatilho": "lançar magia de adivinhação/detecção",
+      "teste": {
+        "pericia": "INT (Arcana)",
+        "cd": 16
+      },
+      "falha": "magia gasta sem resultado útil"
+    },
+    {
+      "nome": "Resistant Undead",
+      "raio_milhas": 1,
+      "efeito": "pact lich e outros undead têm vantagem em salvaguardas contra expulsão",
+      "duracao_apos_morte": "1d10 dias para desaparecer"
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Legendary Actions",
+      "pontos_por_rodada": 3,
+      "recupera": "início do próprio turno",
+      "momento": "fim do turno de outra criatura",
+      "limite": "uma opção por janela"
+    },
+    {
+      "nome": "Pact Rejuvenation",
+      "dependencia": "diamante na toca, vontade do patrono"
+    }
+  ]
+}

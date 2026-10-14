@@ -1,0 +1,215 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-382",
+  "nome": "Likho",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
+  "edicao": {
+    "sistema": "Dungeons & Dragons 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "pagina_indicada_transcricao": 254,
+    "edicao_exata_verificada": false,
+    "variantes_nao_mescladas": true,
+    "ramo_de_fonte": "transcrição KPOGL — reproduz um statblock individual; versão e erratas ainda não foram validadas contra exemplar do editor"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:likho",
+      "natureza": "transcricao_comunitaria_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "estrutura do statblock desta versão individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade_e_nd",
+      "escopo": "identidade, não confronto integral"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_de_conflitos",
+      "escopo": "não substitui ficha da edição escolhida"
+    }
+  ],
+  "estatisticas": {
+    "nd": null,
+    "ca": 15,
+    "pv": 105,
+    "dados_vida": "14d8+42",
+    "atributos": {
+      "FOR": 16,
+      "DES": 18,
+      "CON": 16,
+      "INT": 13,
+      "SAB": 16,
+      "CAR": 19
+    },
+    "deslocamentos_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {
+      "DES": 7,
+      "CAR": 7
+    },
+    "pericias": {
+      "Acrobatics": 7,
+      "Perception": 6,
+      "Stealth": 10
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "Goblin",
+      "Void Speech"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "tamanho": "Medium",
+    "tipo": "Monstrosity",
+    "proficiencia": 3,
+    "nd_fonte_selecionada": "5"
+  },
+  "qualidade_estatisticas": "DADOS_DE_FONTE_SECUNDARIA_VERSAO_SEPARADA_NAO_HOMOLOGADOS",
+  "habilidades_passivas": [
+    {
+      "nome": "Limited Telepathy",
+      "efeito": "Pode transmitir mensagens e imagens simples para criaturas que entendem uma língua a até 120 ft; não recebe respostas.",
+      "alcance_ft": 120,
+      "comunicacao_bilateral": false
+    },
+    {
+      "nome": "Pounce",
+      "efeito": "Após mover 20 ft em linha reta em direção ao alvo e acertar Claw, FOR CD15 ou prone. Se alvo prone, pode usar uma ação bônus Claw.",
+      "movimento_minimo_ft": 20,
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 15,
+        "falha": "prone",
+        "sucesso": "não prone"
+      }
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias e efeitos mágicos."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d8",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia_opcional": [
+        "Disruptive Gaze"
+      ],
+      "sequencia_obrigatoria": [
+        "Claw",
+        "Claw",
+        "Claw",
+        "Claw"
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Claw",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Disruptive Gaze",
+      "categoria": "debuff_alvo",
+      "alcance_ft": 60,
+      "precondicao": "enxerga alvo",
+      "alvos": "uma criatura visível",
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 15,
+        "falha": "desvantagem em ataques, testes de atributo e salvaguardas até final do próximo turno do alvo",
+        "sucesso": "sem efeito"
+      },
+      "duracao": "até fim do próximo turno do alvo",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Claw (Pounce)",
+      "categoria": "acao_bonus",
+      "precondicao": "Pounce derrubou o alvo; alvo prone",
+      "referencia_ataque": "Claw",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "campos_em_conflito": [
+    "nd",
+    "nd"
+  ],
+  "variantes_editoriais": [
+    {
+      "nome": "KPOGL",
+      "campos": [
+        "nd"
+      ],
+      "nd": "5",
+      "url": "https://kpogl.wikidot.com/monster:likho"
+    },
+    {
+      "nome": "Here Be Taverns",
+      "campos": [
+        "nd"
+      ],
+      "nd": "6",
+      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/likho"
+    }
+  ],
+  "conflito_editorial": "KPOGL publica ND5 e o índice editorial também ND5, mas transcrição Here Be Taverns mostra ND6; ND consolidado mantido null até identificar edição exata e confirmar versão.; Ações foram extraídas somente do ramo ND5; não combinadas com ação da versão ND6.",
+  "bloqueado": true,
+  "pendencias": [
+    "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+    "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+    "KPOGL publica ND5 e o índice editorial também ND5, mas transcrição Here Be Taverns mostra ND6; ND consolidado mantido null até identificar edição exata e confirmar versão.",
+    "Ações foram extraídas somente do ramo ND5; não combinadas com ação da versão ND6."
+  ],
+  "integrada": false,
+  "verificacao_indice_editorial_kp_20261014": {
+    "fonte": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "natureza": "INDICE_DO_EDITOR_NAO_STATBLOCK",
+    "identidade": "Likho",
+    "nd_texto_indice": "5.0",
+    "tamanho": "Medium",
+    "tipo": "Monstrosity",
+    "terrenos": [
+      "Badlands",
+      "Hills"
+    ],
+    "publicacao": "Tome of Beasts 1",
+    "consultado": "2026-10-14",
+    "limite": "Não comprova edição de bloco completo ou errata; preservar ND/PV conflitantes e não misturar versões; ND 0.3 é representação decimal arredondada do índice.",
+    "conflito_pr4_permanece": true
+  }
+}

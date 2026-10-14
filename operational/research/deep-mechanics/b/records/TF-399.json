@@ -1,0 +1,213 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-399",
+  "nome": "Mari Lwyd",
+  "estado": "MECANICA_INDIVIDUALIZADA_COM_EDICAO_IDENTIFICADA_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2 (2020)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:mari-lwyd",
+      "natureza": "reproducao_integral_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Tome of Beasts 2 (2020)"
+    }
+  ],
+  "estatisticas": {
+    "nd": "4",
+    "ca": 15,
+    "pv": 66,
+    "dados_vida": "7d10+28",
+    "atributos": {
+      "FOR": 16,
+      "DES": 13,
+      "CON": 19,
+      "INT": 10,
+      "SAB": 14,
+      "CAR": 15
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "deslocamentos_texto": "caminhar 40 pés",
+    "salvaguardas": {
+      "CAR": 4
+    },
+    "pericias": {
+      "Intimidation": 4,
+      "Performance": 6
+    },
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "idiomas": [
+      "Common",
+      "Draconic",
+      "Elvish",
+      "Giant",
+      "Primordial"
+    ],
+    "resistencias_dano": [
+      "necrotic"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "frightened",
+      "poisoned",
+      "unconscious"
+    ],
+    "origem_ca": "natural armor",
+    "modificadores": {
+      "FOR": 3,
+      "DES": 1,
+      "CON": 4,
+      "INT": 0,
+      "SAB": 2,
+      "CAR": 2
+    },
+    "pairar": false,
+    "percepcao_passiva": 12,
+    "telepatia_ft": null,
+    "bonus_proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Turn Resistance",
+      "efeito": "vantagem em salvaguardas contra efeitos que expulsem mortos-vivos"
+    },
+    {
+      "nome": "Turned by Rhyme",
+      "custo": "ação do desafiante",
+      "gatilho": "outra criatura desafia formalmente a Mari Lwyd para duelo de rimas, e ninguém a ataca até começo do turno seguinte",
+      "efeito": "Mari Lwyd recita rima usando ação; desafiante responde e testa CAR (Performance) CD14",
+      "sucesso": "Mari Lwyd é tratada como expulsa (turned) por um minuto ou até receber dano",
+      "falha": "não consegue expulsar pela rima"
+    },
+    {
+      "nome": "Undead Nature",
+      "efeito": "não necessita respirar, comer, beber ou dormir"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "uma criatura",
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Hooves",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "uma criatura",
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Bite",
+        "Hooves"
+      ]
+    },
+    {
+      "nome": "Bite",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Hooves",
+      "referencia_ataque": "Hooves"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 12,
+      "bonus_ataque_magico": 4,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "chill touch",
+            "mage hand"
+          ]
+        },
+        {
+          "usos": "3/dia cada",
+          "nomes": [
+            "animate dead",
+            "hideous laughter",
+            "suggestion"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Conferência final com livro e erratas de edição ainda não executada.",
+    "Revisão independente da implementação mecânica e integração canônica pendentes."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-399",
+    "nome_original": "Mari Lwyd",
+    "tipo": "Large undead",
+    "alinhamento": "neutral",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Bite",
+        "Hooves"
+      ]
+    }
+  ],
+  "mecanicas_especiais": []
+}

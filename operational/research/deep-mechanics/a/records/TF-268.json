@@ -1,0 +1,257 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-268",
+  "name": "Chatterlome",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "7",
+    "size": "Medium",
+    "type": "fiend",
+    "alignment": "lawful_evil",
+    "experience_points": 2900,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "não explicitado no bloco; ataque +7 e DEX +4 sugerem +3 mas não homologar como impresso"
+  },
+  "statistics": {
+    "armor_class": 16,
+    "hit_points": 93,
+    "hit_dice": "11d8+44",
+    "ability_scores": {
+      "STR": 15,
+      "DEX": 18,
+      "CON": 18,
+      "INT": 11,
+      "WIS": 14,
+      "CHA": 10
+    },
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 15
+    },
+    "skills": {
+      "Perception": 5,
+      "Stealth": 7
+    },
+    "saving_throws": {
+      "WIS": 5,
+      "CHA": 3
+    },
+    "languages": {
+      "spoken": [
+        "Abyssal",
+        "Common",
+        "Infernal"
+      ],
+      "telepathy_ft": 60
+    },
+    "damage_resistances": [
+      "cold",
+      "fire",
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "from": "nonmagical_attacks"
+      }
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 4,
+      "CON": 4,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": 0
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Magic Resistance",
+        "category": "saving_throw_advantage",
+        "advantage_against": [
+          "spells",
+          "other_magical_effects"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Chisel",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "Chisel",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 4,
+              "average": 11,
+              "type": "slashing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Box Teleport",
+        "category": "teleport",
+        "action_economy": "action",
+        "range_ft": 120,
+        "target_container": {
+          "material": "wood",
+          "has_lid_or_door": true,
+          "examples": [
+            "box",
+            "chest",
+            "wardrobe"
+          ]
+        },
+        "destination": "inside_target_container",
+        "followup_bonus_action": "Hide",
+        "if_currently_inside_container": {
+          "options": [
+            "teleport_into_another_qualifying_container_within_120ft",
+            "teleport_back_to_the_Hells"
+          ]
+        },
+        "return_to_material_plane_if_to_hells": "only_when_summoned"
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Hide after Box Teleport",
+        "category": "hide",
+        "action_economy": "bonus_action",
+        "precondition": "teleported_into_box_or_equivalent_container_with_Box_Teleport"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Original Box destruction",
+        "category": "source_lore_mechanical_effect",
+        "source_section": "introductory_narrative_not_statblock",
+        "trigger": "original_chatterlome_box_destroyed",
+        "effect": "returns_to_Hells",
+        "return_condition": "when_summoned_again",
+        "validation_note": "presented in lore prose; whether it consumes an action or overrides all constraints not specified"
+      }
+    ]
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Diabo do baú com resistência à magia; usa quatro golpes de cinzel e teleporta-se entre baús e armários fechados."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/chatterlome/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:chatterlome",
+      "type": "KPOGL reprodução não endossada por Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "Estatísticas, traços, ações normais e bônus, economia de ações e condicionais",
+      "verification": "Transcrição individual lida diretamente em 14/10/2026; impressão, direitos e engine pendentes"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confirmar edição impressa e erratas corretas (não presumir equivalência entre revisões).",
+    "Validar detalhes de ações, condições e recursos na engine e verificar direitos de adaptação e arte.",
+    "Verificar ligação mecânica da original box destruída; está em prosa de ambientação, não no bloco de regras.",
+    "Conferir intervalo de uso da ação bônus Hide imediatamente após Box Teleport sem inventar nova ação livre."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-268.webp",
+    "format": "image/webp",
+    "width": 788,
+    "height": 875,
+    "bytes": 150754,
+    "sha256": "39da3119e91b224edcf81eda520df6c59c179a95c791fd4f2893fed3158b4f57",
+    "git_blob_sha": "f18a7bb54566997a673883e23c860fa14f6edb4c",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chatterlome.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "356a9426a14d9d9b2adbb433e92e0b3ef33364e2",
+    "identity_provenance": "Nome/id verificados com manifesto E e SHA idêntico ao blob existente",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual independente",
+      "direitos",
+      "arte para produção"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:chatterlome"
+    ],
+    "source_tier": "secondary_kpogl",
+    "statblock_url_read_online": true,
+    "copyright_license_qa_completed": false,
+    "notes": "Dados da transcrição individual comunitária KPOGL, ainda sem homologação de livro, erratas e engine."
+  }
+}

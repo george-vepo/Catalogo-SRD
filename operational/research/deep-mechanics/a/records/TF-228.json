@@ -1,0 +1,344 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-228",
+  "name": "Colláis",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "10",
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "neutral"
+  },
+  "statistics": {
+    "armor_class": 16,
+    "hit_points": 150,
+    "hit_dice": "20d10+40",
+    "ability_scores": {
+      "STR": 19,
+      "DEX": 15,
+      "CON": 14,
+      "INT": 10,
+      "WIS": 17,
+      "CHA": 13
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "swim_ft": 0,
+      "fly_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 17
+    },
+    "skills": {
+      "Intimidation": 9,
+      "Perception": 7
+    },
+    "saving_throws": {
+      "CHA": 5
+    },
+    "languages": {
+      "understands": [
+        "Common",
+        "Sylvan"
+      ],
+      "speaks": []
+    },
+    "damage_resistances": [
+      "bludgeoning_from_nonmagical_attacks",
+      "piercing_from_nonmagical_attacks",
+      "slashing_from_nonmagical_attacks"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "frightened"
+    ],
+    "armor_class_note": "natural armor",
+    "hit_dice_count": 20,
+    "hit_die_size": 10,
+    "hit_points_modifier": 40,
+    "challenge_rating": 10,
+    "experience_points": 5900,
+    "proficiency_bonus": null,
+    "proficiency_bonus_unknown_reason": "Não definido no bloco de 5eSRC/KPOGL.",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 2,
+      "CON": 2,
+      "INT": 0,
+      "WIS": 3,
+      "CHA": 1
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Impale and Toss",
+        "category": "conditional_bonus_action",
+        "activation": "optional",
+        "trigger": "gore attack hits a Medium-or-smaller creature",
+        "targets": {
+          "count": 1,
+          "max_target_size": "Medium"
+        },
+        "cost": "bonus_action",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 16,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "2d10",
+                "modifier": 0,
+                "type": "piercing",
+                "average": 11
+              }
+            ],
+            "push_ft_max": 10,
+            "push_direction": "random",
+            "condition": "prone"
+          },
+          "on_success": "no_extra_effect"
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "saving_throws_against_spells_and_other_magical_effects"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Gore",
+            "count": 1
+          },
+          {
+            "action": "Hooves",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Gore",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 15
+            }
+          ],
+          "average_damage": 15
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Hooves",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "modifier": 4,
+              "type": "bludgeoning",
+              "average": 13
+            }
+          ],
+          "average_damage": 13
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Cry of the Forest",
+        "category": "area_save",
+        "action_economy": "action",
+        "area": {
+          "shape": "radius",
+          "radius_ft": 100,
+          "origin": "self"
+        },
+        "targets": {
+          "condition": "each_creature_that_can_hear"
+        },
+        "saving_throw": {
+          "ability": "CHA",
+          "dc": 16,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "until_end_of_affected_creatures_next_turn",
+            "immunity_after_effect_ends_hours": 24
+          },
+          "on_success": {
+            "immunity_to_cry_hours": 24
+          }
+        },
+        "conditional_override": {
+          "target_types": [
+            "forest_dwelling_beast",
+            "forest_dwelling_monstrosity"
+          ],
+          "intelligence_at_most": 4,
+          "choice_by": "collais",
+          "effect": "automatic_success_or_failure"
+        },
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Impale and Toss",
+        "category": "conditional_bonus_action",
+        "source_trait": "Impale and Toss",
+        "cost": "bonus_action",
+        "prerequisite": "Gore acerta criatura até Medium",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 16,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "2d10",
+                "modifier": 0,
+                "type": "piercing",
+                "average": 11
+              }
+            ],
+            "push_ft_max": 10,
+            "push_direction": "random",
+            "condition": "prone"
+          },
+          "on_success": "sem efeito adicional"
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Chifrada pode arremessar alvo, resistência à magia e chamado da floresta induz medo."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/collais/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:collais",
+      "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
+      "edition": "Tome of Beasts 2",
+      "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:collais",
+      "type": "statblock_individual_online_verificado_2026_10_14",
+      "edition": "Tome of Beasts 2",
+      "scope": "estatísticas completas, traços, ações, recargas, salvaguardas, recursos e categorias ausentes",
+      "editorial_confirmation": false
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confrontar o bloco com impressão/errata original da edição correta.",
+    "Revisar interações da engine e ação/reação/conjuração independente.",
+    "Conferir imagens, proveniência, direitos e adequação para produção."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-228.webp",
+    "format": "image/webp",
+    "width": 874,
+    "height": 1249,
+    "bytes": 304172,
+    "sha256": "40b03ff86616f831ea44d48cee1b7a478a4750aacf7b91c6b17147196ff1610e",
+    "git_blob_sha": "3870ecae094c8c1b1c2c83179bfae79f29ec79e3",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Collais.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "fe22e5efef6af67a50cd68a58cdae797928e912d",
+    "identity_provenance": "ID e nome coincidem com registro e manifesto do lote E, binário conferido por readback",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença e direitos",
+      "aprovação para impressão"
+    ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "status": "PENDENTE_HOMOLOGACAO_EDITORIAL_E_ENGINE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "Transcrição KPOGL fonte OGL comunitária não homologada contra edição e errata oficiais.",
+      "Habilidades condicionais dependem de testes independentes na engine."
+    ]
+  }
+}

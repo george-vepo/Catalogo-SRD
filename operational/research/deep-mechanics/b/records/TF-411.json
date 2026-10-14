@@ -1,0 +1,240 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-411",
+  "nome": "Garlicle",
+  "estado": "MECANICAS_INDIVIDUALIZADAS_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2 (2020)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/garlicle/",
+      "natureza": "reproducao_integral_comunitaria_nao_endossada",
+      "data_consulta": "2026-10-14",
+      "publicacao_identificada": "Tome of Beasts 2 (2020)",
+      "escopo": "atributos, passivas, ataques e todas as ações da ficha"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1",
+    "ca": 12,
+    "pv": 31,
+    "dados_vida": "7d6+7",
+    "atributos": {
+      "FOR": 6,
+      "DES": 14,
+      "CON": 12,
+      "INT": 12,
+      "SAB": 18,
+      "CAR": 12
+    },
+    "deslocamentos_ft": {
+      "andar": 20,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": 20
+    },
+    "deslocamentos_texto": "caminhar 20; escavar 20 pés",
+    "salvaguardas": {},
+    "pericias": {
+      "Insight": 6,
+      "Perception": 6,
+      "Persuasion": 3,
+      "Stealth": 4
+    },
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "idiomas": [
+      "Sylvan"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "origem_ca": "CA 12, origem não detalhada",
+    "modificadores": {
+      "FOR": -2,
+      "DES": 2,
+      "CON": 1,
+      "INT": 1,
+      "SAB": 4,
+      "CAR": 1
+    },
+    "pairar": false,
+    "percepcao_passiva": 16,
+    "telepatia_ft": null,
+    "bonus_proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Plant Camouflage",
+      "efeito": "vantagem em DES (Stealth) em terreno com abundantes plantas encobrindo visão"
+    },
+    {
+      "nome": "Tearful Stench",
+      "gatilho": "garlicle sofre dano; outra criatura que não seja alliumite ou garlicle está até 5 pés",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 14
+      },
+      "falha": {
+        "condicao": "blinded",
+        "duracao": "até início do próximo turno da criatura"
+      },
+      "sucesso": "imune a Tearful Stench de todos alliumites e garlicles por um minuto"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Walking Staff",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 0,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": -2,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "alternativas": [
+        {
+          "condicao": "duas mãos",
+          "dados": "1d8",
+          "modificador": -2,
+          "tipo": "bludgeoning"
+        },
+        {
+          "condicao": "shillelagh ativo",
+          "bonus_acerto": 6,
+          "dados": "1d8",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Walking Staff",
+      "categoria": "ataque",
+      "referencia_ataque": "Walking Staff"
+    },
+    {
+      "nome": "Cloves of Fate",
+      "categoria": "efeitos_aleatorios",
+      "recarga": "4–6",
+      "alcance_ft": 30,
+      "maximo_alvos": 3,
+      "alvo": "até três criaturas visíveis",
+      "procedimento": "rola um d4 por criatura; aliados recebem +1 no resultado, inimigos −1",
+      "tabela": [
+        {
+          "resultado": 0,
+          "nome": "Worst Fortune",
+          "efeito": "solta o que segura a até 5 pés em posição aleatória e cai prone"
+        },
+        {
+          "resultado": 1,
+          "nome": "Bad Fortune",
+          "dano": {
+            "dados": "3d6",
+            "tipo": "poison"
+          },
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 14
+          },
+          "falha": "poisoned até fim do próximo turno"
+        },
+        {
+          "resultado": 2,
+          "nome": "Adverse Fortune",
+          "efeito": "desvantagem no próximo ataque"
+        },
+        {
+          "resultado": 3,
+          "nome": "Favorable Fortune",
+          "efeito": "vantagem no próximo ataque"
+        },
+        {
+          "resultado": 4,
+          "nome": "Good Fortune",
+          "cura": {
+            "dados": "2d4",
+            "tipo": "hit points"
+          }
+        },
+        {
+          "resultado": 5,
+          "nome": "Best Fortune",
+          "efeito": "próximo ataque que acertar é crítico"
+        }
+      ]
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "SAB",
+      "cd": 14,
+      "bonus_ataque_magico": null,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "uso": "à vontade",
+          "nomes": [
+            "guidance",
+            "shillelagh"
+          ]
+        },
+        {
+          "uso": "3/dia cada",
+          "nomes": [
+            "augury",
+            "comprehend languages"
+          ]
+        },
+        {
+          "uso": "1/dia cada",
+          "nomes": [
+            "divination",
+            "entangle"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Fontes comunitárias e 5eSRD consultadas; cotejo contra exemplar editorial e erratas ainda pendente.",
+    "Sem revisão independente e sem integração canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-411",
+    "nome_original": "Garlicle",
+    "tipo": "Small plant",
+    "alinhamento": "chaotic neutral",
+    "nd": "1",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
+}

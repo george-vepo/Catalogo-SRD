@@ -1,0 +1,347 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-133",
+  "nome": "Ogre, Tusked Crimson",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 13,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 14,
+    "pv": 93,
+    "dados_vida": "11d10+33",
+    "porte": "Large",
+    "tipo": "giant",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "FOR": 19,
+      "DES": 8,
+      "CON": 16,
+      "INT": 5,
+      "SAB": 7,
+      "CAR": 7
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": -1,
+      "CON": 3,
+      "INT": -3,
+      "SAB": -2,
+      "CAR": -2
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 7
+      },
+      {
+        "nome": "Intimidation",
+        "bonus": 4
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 6
+      },
+      {
+        "nome": "WIS",
+        "bonus": 1
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [
+      "poison"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "frightened"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "half plate armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Blood Frenzy",
+        "gatilho": "Alvo não está com todos seus HP",
+        "efeito": "Vantagem em melee attack rolls contra esse alvo"
+      },
+      {
+        "nome": "Rampage",
+        "gatilho": "Reduz uma criatura a 0 HP com melee attack no próprio turno",
+        "economia": "bonus action",
+        "efeito": "Move até metade da velocidade e faz um ataque Bite"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Morningstar",
+            "quantidade": 1
+          },
+          {
+            "acao": "Bite",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Morningstar",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Berserker's Blood",
+        "recarga": "5-6",
+        "pre_condicao": "O próprio ogro está abaixo de seus HP máximos",
+        "area": {
+          "raio_ft": 15,
+          "alvos": "cada criatura"
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": {
+          "dano": {
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "acid"
+          },
+          "condicao": "berserk"
+        },
+        "sucesso": {
+          "dano": "metade de 6d6 acid",
+          "condicao": "sem berserk"
+        },
+        "berserk": {
+          "comportamento": "Em cada turno ataca a criatura visível mais próxima usando ataques corpo a corpo; se inalcançável, ataca objeto, preferindo menor que si",
+          "termina_se": [
+            "unconscious",
+            "recupera todos os HP",
+            "lesser restoration ou magia similar"
+          ]
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Morningstar",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        "Morningstar",
+        "Bite"
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Rampage",
+        "gatilho": "Melee attack no próprio turno reduz alvo a 0 HP",
+        "movimento": "até metade do deslocamento",
+        "ataque": "Bite"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Conferida republicação completa identificada como Creature Codex p.279; ainda falta revisão editorial/licença da edição e errata originais.",
+    "Imagem física preexistente não inspecionada visualmente nem aprovada."
+  ],
+  "campos_nao_confirmados": [
+    "confronto independente com livro/errata da edição correspondente",
+    "identidade e direitos da arte",
+    "revisão mecânica/editorial independente"
+  ],
+  "fontes": [
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex",
+      "tipo": "ficha individual examinada no checkpoint 33",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_FONTES_SECUNDARIAS",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-133",
+    "nome": "Ogre, Tusked Crimson",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 14,
+    "pv": 93,
+    "pv_dados": "11d10+33",
+    "porte": "Large",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      19,
+      8,
+      16,
+      5,
+      7,
+      7
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [
+      {
+        "nome": "Blood Frenzy",
+        "resumo": "Vantagem em ataques corpo a corpo contra inimigo que tenha perdido PV."
+      },
+      {
+        "nome": "Rampage",
+        "resumo": "Ao reduzir inimigo a 0 PV, movimenta-se até metade da velocidade e morde como bônus."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Um Morningstar e um Bite."
+      },
+      {
+        "nome": "Morningstar",
+        "resumo": "+7, 2d8+4 perfurante."
+      },
+      {
+        "nome": "Bite",
+        "resumo": "+7, 2d6+4 perfurante."
+      },
+      {
+        "nome": "Berserker's Blood",
+        "resumo": "Recarga 5–6, se ferido, emite sangue num raio de 15 pés; CON CD14 contra 6d6 ácido e frenesi agressivo."
+      }
+    ],
+    "fonte": "https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "PARCIAL_FONTES_SECUNDARIAS",
+    "pendencias": [
+      "A ficha do Ogre Tusked Crimson não abriu como página individual do 5eSRD; mecânica corroborada por bestiário de terceiros e referência do Creature Codex.",
+      "O catálogo do 5eSRD cita também Tome of Beasts 2, mas a variante escolhida é a do Creature Codex (ND5), não uma adaptação.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "chaotic evil",
+    "fontes_secundarias": [
+      "https://www.5esrd.com/srd-content-source/opendesign-creaturecodex/"
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-133.jpg",
+    "formato": "jpg",
+    "largura": 616,
+    "altura": 700,
+    "bytes": 81448,
+    "blob_sha": "7a9cd37da5e63f1c7cffba5546e5ce01ad2d6678",
+    "sha256": "ec7cfb92ee6a73367d2c1a833dcdd245e809b88990b2526b7e334bd56fa40cb1",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Tuskedcrimsonogre.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 33,
+    "publicacao": "Creature Codex",
+    "aprovacao_editorial": "PENDENTE",
+    "fonte_mecanicas": "https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex",
+    "nota": "Não misturar possíveis republicações atribuídas a Tome of Beasts 2: identidade selecionada é Tusked Crimson Ogre do Creature Codex."
+  }
+}

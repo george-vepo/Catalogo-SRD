@@ -1,0 +1,459 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-234",
+  "name": "Chimera, Royal",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "15",
+    "size": "Huge",
+    "type": "monstrosity",
+    "alignment": "neutral_evil",
+    "proficiency_bonus": 5,
+    "experience_points": 13000,
+    "source_page": 83
+  },
+  "statistics": {
+    "armor_class": 17,
+    "hit_points": 189,
+    "hit_dice": "18d12+72",
+    "ability_scores": {
+      "STR": 21,
+      "DEX": 14,
+      "CON": 18,
+      "INT": 9,
+      "WIS": 13,
+      "CHA": 20
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "fly_ft": 80
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "darkvision_ft": 60,
+      "passive_perception": 16
+    },
+    "skills": {
+      "Arcana": 4,
+      "Deception": 10,
+      "Intimidation": 10,
+      "Insight": 6,
+      "Perception": 6
+    },
+    "saving_throws": [],
+    "languages": [
+      "Common",
+      "Draconic"
+    ],
+    "damage_resistances": [
+      "force",
+      "nonmagical_attack_bludgeoning",
+      "nonmagical_attack_piercing",
+      "nonmagical_attack_slashing"
+    ],
+    "damage_immunities": [
+      "fire",
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "frightened",
+      "poisoned"
+    ],
+    "armor_class_type": "Regal Bearing: Charisma modifier included",
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 2,
+      "CON": 4,
+      "INT": -1,
+      "WIS": 1,
+      "CHA": 5
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Legendary Resistance",
+        "category": "daily_resource",
+        "uses_per_day": 3,
+        "trigger": "fails_saving_throw",
+        "effect": "choose_success_instead"
+      },
+      {
+        "name": "Regal Bearing",
+        "category": "passive",
+        "effect": {
+          "armor_class_includes": "CHA_modifier"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "alternatives": [
+          [
+            {
+              "action": "Bite",
+              "count": 1
+            },
+            {
+              "action": "Claws",
+              "count": 1
+            },
+            {
+              "action": "Eldritch Horns",
+              "count": 1
+            }
+          ],
+          [
+            {
+              "action": "Arcane Blast",
+              "count": 2
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 10,
+        "reach_or_range": {
+          "reach_ft": 5
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "3d6",
+              "flat": 5,
+              "type": "piercing",
+              "average": 15
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 10,
+        "reach_or_range": {
+          "reach_ft": 10
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "3d6",
+              "flat": 5,
+              "type": "slashing",
+              "average": 15
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Eldritch Horns",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 10,
+        "reach_or_range": {
+          "reach_ft": 5
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d12",
+              "flat": 5,
+              "type": "force",
+              "average": 18
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Serpent Strike",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 10,
+        "reach_or_range": {
+          "reach_ft": 15
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "flat": 5,
+              "type": "piercing",
+              "average": 9
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "type": "poison",
+              "average": 7
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Arcane Blast",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 10,
+        "reach_or_range": {
+          "range_ft": 120
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "3d10",
+              "flat": 5,
+              "type": "force",
+              "average": 21
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Searing Breath",
+        "category": "area_action",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "10d8",
+                "flat": 0,
+                "type": "fire",
+                "average": 45
+              }
+            ],
+            "condition": "blinded",
+            "ends": "end_of_target_next_turn"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "condition": null
+          }
+        }
+      },
+      {
+        "name": "Spellcasting",
+        "category": "spell_action",
+        "casting_head": "goat",
+        "ability": "CHA",
+        "save_dc": 18,
+        "components": [
+          "V"
+        ],
+        "spells_by_frequency": {
+          "at_will": [
+            "charm person",
+            "dispel magic",
+            "mage hand"
+          ],
+          "3_per_day_each": [
+            "bestow curse",
+            "enthrall",
+            "haste"
+          ],
+          "1_per_day": [
+            "dominate person"
+          ]
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [
+      {
+        "name": "Prideful Prowl",
+        "cost": 1,
+        "effect": {
+          "move_up_to_walk_ft": 40,
+          "or_fly_ft": 40,
+          "provokes_opportunity_attacks": false
+        }
+      },
+      {
+        "name": "Serpent Strike",
+        "cost": 1,
+        "effect": {
+          "attack": "Serpent Strike",
+          "count": 1
+        }
+      },
+      {
+        "name": "Cast a Spell",
+        "cost": 2,
+        "effect": {
+          "action": "Spellcasting"
+        }
+      },
+      {
+        "name": "Roar of the King",
+        "cost": 2,
+        "area": {
+          "radius_ft": 30
+        },
+        "targets": "friendly_creatures_including_self_that_can_hear",
+        "effect": {
+          "temporary_hit_points": {
+            "dice": "2d10",
+            "average": 11
+          },
+          "immune_to_frightened_duration_minutes": 1
+        }
+      }
+    ],
+    "legendary_economy": {
+      "actions_per_round": 3,
+      "only_at_end_of_other_creatures_turn": true,
+      "one_option_per_trigger": true,
+      "recover_at_start_of_own_turn": true
+    },
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Innate Spellcasting",
+        "ability": "CHA",
+        "save_dc": 18,
+        "components": [
+          "V"
+        ],
+        "prepared": {
+          "at_will": [
+            "charm person",
+            "dispel magic",
+            "mage hand"
+          ],
+          "3_per_day_each": [
+            "bestow curse",
+            "enthrall",
+            "haste"
+          ],
+          "1_per_day": [
+            "dominate person"
+          ]
+        },
+        "casting_head": "goat"
+      }
+    ],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Resistência lendária, CA influenciada por Carisma e ataques mistos de garras, bico, chifres e projéteis arcanos."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 3",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:royal-chimera",
+      "type": "transcrição OGL secundária não endossada pela editora",
+      "edition": "Tome of Beasts 3",
+      "reviewed": "2026-10-14",
+      "scope": "ficha individual completa estruturada; cotejo com impressão e errata editorial ainda pendente"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confirmar transcrição contra Tome of Beasts 3 p.83 e erratas (Roar of the King/Legendary Resistance/Spellcasting).",
+    "Homologar motor de combate, recargas e recursos de magias; imagem e direitos pendentes."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-234.webp",
+    "format": "image/webp",
+    "width": 1000,
+    "height": 1208,
+    "bytes": 112540,
+    "sha256": "a406c1a30f4d70378691aac15940cd3e4dd31dd2e6f5b14df79aa6c5941941c4",
+    "git_blob_sha": "10a975fe8ca52a838f7858fb820e8d40749f114f",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Royal%20Chimera.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "fe22e5efef6af67a50cd68a58cdae797928e912d",
+    "identity_provenance": "ID e nome conferem com manifesto E, integridade/readback validada no lote de origem",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos de uso",
+      "aprovação para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:royal-chimera"
+    ]
+  }
+}

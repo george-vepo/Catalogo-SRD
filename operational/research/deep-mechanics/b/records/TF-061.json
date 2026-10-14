@@ -1,0 +1,176 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-061",
+  "nome": "Clockwork Armadillo",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e - publicação da Kobold Press indicada no KPOGL",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 (p.86)",
+    "edicao_exata_verificada": false,
+    "edicao_consultada": "Transcrição comunitária KPOGL, página individual com indicação do volume/página; não é comparação direta com exemplar do editor.",
+    "recortes_de_edicao_ou_revisao_pendentes": true
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:clockwork-armadillo",
+      "natureza": "secundaria_wiki_comunitaria_nao_endossada",
+      "consultada": "2026-10-13",
+      "escopo": "estatísticas, passivas e ações da transcrição individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_para_identidade",
+      "escopo": "confirmar publicação/identidade; não contém ficha detalhada"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-059_TF-063/research.json",
+      "natureza": "checkpoint_anterior",
+      "escopo": "continuidade; campos não validados nesta fonte"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1/4",
+    "ca": 14,
+    "pv": 22,
+    "dados_vida": "4d6+8",
+    "atributos": {
+      "FOR": 10,
+      "DES": 18,
+      "CON": 14,
+      "INT": 5,
+      "SAB": 10,
+      "CAR": 10
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {
+      "DES": 6
+    },
+    "pericias": {
+      "Acrobatics": 6,
+      "Perception": 2,
+      "Stealth": 6
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "entende idiomas do criador, mas não fala"
+    ],
+    "proficiencia": 2
+  },
+  "qualidade_estatisticas": "ESTRUTURADA_APARTIR_FONTE_SECUNDARIA_NAO_CONFERIDA_NA_EDICAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não necessita de ar, comida, água nem sono."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a alterações de forma por feitiço/efeito."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia."
+    },
+    {
+      "nome": "Overclocked",
+      "efeito": "Vantagem em jogadas de iniciativa."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Scissor Claws",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d4",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 11
+          },
+          "falha": "alvo solta o item que segura",
+          "sucesso": "mantém item"
+        }
+      ],
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Scissor Claws",
+      "categoria": "ataque",
+      "referencia_ataque": "Scissor Claws",
+      "confirmado_na_fonte_secundaria": true
+    },
+    {
+      "nome": "Tuck In",
+      "categoria": "transformacao",
+      "efeito": "entra em estado de bola blindada. Rola para se mover, recebe resistência a contundente/perfurante/cortante e imunidade a prone, mas não pode usar Scissor Claws.",
+      "resistencias_enquanto_ativo": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "imunidade_condicao_enquanto_ativo": [
+        "prone"
+      ],
+      "restricao_ataques": [
+        "Scissor Claws"
+      ],
+      "objeto_guardavel": {
+        "tamanho": "igual ou menor que criatura",
+        "posicao": "até 5 pés",
+        "condicao": "não vestido ou portado"
+      },
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Uncurl and Release",
+      "categoria": "acao_bonus",
+      "precondicao": "Tuck In ativo",
+      "efeito": "desenrola corpo e libera objeto guardado",
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": "ND fracionário 1/4 confirmado na transcrição KPOGL; arredondamento 0.3 de catálogo anterior não é estatística ND da ficha.",
+  "pendencias": [
+    "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+    "ND fracionário 1/4 confirmado na transcrição KPOGL; arredondamento 0.3 de catálogo anterior não é estatística ND da ficha.",
+    "Validar edição Tome of Beasts 3 por fonte editorial antes de integração."
+  ],
+  "integrada": false
+}

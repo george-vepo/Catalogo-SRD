@@ -1,0 +1,180 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-333",
+  "nome": "Living Shade",
+  "estado": "ACOES_INDIVIDUALIZADAS_PENDENTE_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "bloco completo transcrito em KPOGL; publicação/revisão editorial ainda não confrontada"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:living-shade",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultada_em": "2026-10-14",
+      "escopo": "bloco individual com características e ações"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_não_usado_como_validação_de_valores"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1/4",
+    "bonus_proficiencia": 2,
+    "ca": 12,
+    "origem_ca": "sem armadura natural indicada",
+    "pv": 18,
+    "dados_vida": "4d8",
+    "atributos": {
+      "FOR": 6,
+      "DES": 14,
+      "CON": 10,
+      "INT": 9,
+      "SAB": 10,
+      "CAR": 12
+    },
+    "modificadores": {
+      "FOR": -2,
+      "DES": 2,
+      "CON": 0,
+      "INT": -1,
+      "SAB": 0,
+      "CAR": 1
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {},
+    "pericias": {
+      "Stealth": 6
+    },
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "thunder",
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "necrotic",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [
+      "radiant"
+    ],
+    "imunidades_condicao": [
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "entende Common, não fala"
+    ],
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "BLOCO_CONFERIDO_NA_FONTE_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Amorphous",
+      "efeito": "Atravessa passagem de apenas 1 polegada de largura sem precisar se espremer."
+    },
+    {
+      "nome": "Shadow Stealth",
+      "gatilho": "estar sob penumbra ou escuridão",
+      "efeito": "pode executar Hide como ação bônus",
+      "restricao": "somente nas condições de iluminação indicadas"
+    },
+    {
+      "nome": "Sunlight Sensitivity",
+      "gatilho": "estar sob luz solar",
+      "efeito": "desvantagem nos ataques e testes de SAB (Perception) dependentes de visão"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Shadow Touch",
+      "categoria": "ataque",
+      "referencia_ataque": "Shadow Touch"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Shadow Touch",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ],
+      "recarga": null
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Hide",
+      "custo": "ação bônus",
+      "gatilho": "Shadow Stealth",
+      "precondicao": "penumbra ou escuridão",
+      "efeito": "executa Hide"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "KPOGL descreve ND 1/4 (100 XP), experiência incompatível com valor usual 5e; verificar edição/editorial.",
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Cotejo independente com exemplar editorial exato e erratas ainda não executado.",
+    "Manter status não canônico até verificação de ataques, ações, estatísticas e ausência de habilidades adicionais."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-333",
+    "nome_original": "Living Shade",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "tipo": "fey",
+    "tamanho": "Medium",
+    "alinhamento": "neutral",
+    "nd": "1/4",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": [
+    {
+      "nome": "Inconsistência na experiência indicada",
+      "efeito": "KPOGL imprime ND 1/4 (100 XP), embora a tabela 5e usual associe 1/4 a 50 XP; não corrigir nem homologar sem edição",
+      "valor_literal_fonte": "100 XP",
+      "valor_padrao_5e": "50 XP"
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-035",
+  "name": "Giant Moth",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Creature Codex",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "1/8",
+    "size": "Small",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2018,
+    "edition": "Creature Codex (2018, D&D 5e)",
+    "experience_points": 25,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 11,
+    "hit_points": 7,
+    "hit_dice": "2d6",
+    "ability_scores": {
+      "STR": 10,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 3,
+      "WIS": 10,
+      "CHA": 7
+    },
+    "speeds": {
+      "walk_ft": 25,
+      "fly_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 12
+    },
+    "skills": {
+      "Perception": 2,
+      "Stealth": 3
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 0,
+      "DEX": 1,
+      "CON": 0,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -2
+    },
+    "armor_class_type": "unarmored"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Antennae",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "WIS (Perception)",
+          "only_if": "relies_on_smell"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Proboscis",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 3,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 1,
+              "type": "piercing",
+              "average": 4
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Powdery Wings",
+        "category": "area_save",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 1
+        },
+        "area": {
+          "shape": "sphere",
+          "radius_ft": 10,
+          "origin": "moth"
+        },
+        "targets": "each_creature_in_area",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 10,
+          "on_failure": {
+            "condition": "blinded",
+            "duration": "until_end_of_affected_creature_next_turn"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/moth-giant/",
+      "type": "transcricao_ogl_individual_nao_editorial",
+      "edition": "Creature Codex",
+      "reviewed_on": "2026-10-14",
+      "verification": "all traits, actions, stats and absence of other action categories",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_oficial_editora",
+      "verification": "identity, CR and publication"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-031_TF-035/research.json",
+    "sha": "0c5bde59d111e07bb260ba5717982c5e055390e7"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Preservar catálogo ND 0.1 e fonte 1/8.",
+    "Imagem/licença pendentes."
+  ],
+  "outstanding": [
+    "Confrontar livro/errata da edição específica; ficha online estruturada não homologada editorialmente.",
+    "Testes e revisão independente da engine de combate.",
+    "Aprovação da arte e direitos de uso separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_compared": false,
+    "independent_engine_review": false,
+    "source_numeric_discrepancy": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-035.webp",
+    "format": "image/webp",
+    "width": 624,
+    "height": 556,
+    "bytes": 89334,
+    "sha256": "08e8a73d71d6e22cfdcf6eeff5e50598e2d7b77f9d2c1ec62919189cfa76f9a9",
+    "git_blob_sha": "785568dfb4ed294048ed690bb4f2a7c2f53ed0f2",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/CCodex/giantmoth.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "a058c30527568184ec72b3fb358744cdef43ad83",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-361",
+  "nome": "Elder Black Pudding",
+  "estado": "DETALHADA_FONTE_EDITORIAL_SEM_REVISAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "Level Up Advanced 5th Edition (A5E)",
+    "publicacao": "Monstrous Menagerie",
+    "editora": "EN Publishing",
+    "confirmacao": "bloco individual no portal editorial; edição impressa/erratas não confrontadas"
+  },
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1755",
+      "natureza": "editorial_direta",
+      "verificada": "2026-10-13"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "continuidade_checkpoint_secundario"
+    }
+  ],
+  "estatisticas": {
+    "nd": "8",
+    "ca": 7,
+    "pv": 171,
+    "dados_vida": "18d12+54",
+    "atributos": {
+      "FOR": 16,
+      "DES": 4,
+      "CON": 16,
+      "INT": 1,
+      "SAB": 6,
+      "CAR": 1
+    },
+    "deslocamentos_ft": {
+      "andar": 20,
+      "escalar": 20,
+      "nadar": 20
+    },
+    "salvaguardas": {},
+    "pericias": {},
+    "sentidos": [
+      "blindsight 60 ft (cego além)"
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "acid",
+      "cold",
+      "lightning",
+      "slashing"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "fatigue",
+      "frightened",
+      "prone"
+    ],
+    "tamanho": "Huge",
+    "tipo": "Ooze",
+    "bloodied_pv": 85,
+    "proficiencia": 2,
+    "cd_manobra": 13
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Amorphous",
+      "efeito": "Passa por abertura de até 1 polegada sem squeezing."
+    },
+    {
+      "nome": "Corrosive Body",
+      "efeito": "Contatos ou golpes melee em até 5 pés causam 2d8 ácido; armas não mágicas madeira/metal sofrem -1 permanente dano por acerto e são destruídas a -5; munição é destruída. Qualquer outro objeto metálico ou orgânico que toque o lodo sofre 2d8 de dano ácido.",
+      "dano": {
+        "dados": "2d8",
+        "modificador": 0,
+        "tipo": "acid"
+      },
+      "gatilho": "contato ou ataque corpo a corpo a até 5 pés",
+      "objetos_em_contato": {
+        "dano": {
+          "dados": "2d8",
+          "modificador": 0,
+          "tipo": "acid"
+        },
+        "alvos": "outros objetos metálicos ou orgânicos",
+        "fonte": "https://a5e.tools/node/1755"
+      }
+    },
+    {
+      "nome": "Spider Climb",
+      "efeito": "Usa escalada em superfícies difíceis e tetos."
+    },
+    {
+      "nome": "Sunlight Sensitivity",
+      "efeito": "Desvantagem em ataques sob luz solar."
+    },
+    {
+      "nome": "Ooze Nature",
+      "efeito": "Não necessita ar nem sono."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Pseudopod",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d8",
+          "modificador": 0,
+          "tipo": "acid"
+        }
+      ],
+      "efeitos": [
+        {
+          "regra": "Armadura não mágica sofre -1 permanente na proteção CA por acerto; destruída quando cair a 10."
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "efeito": "Dois ataques Pseudopod; deixa de funcionar após primeira divisão.",
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ],
+      "restricao": "indisponível após primeiro Split"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Split",
+      "efeito": "Se Médio ou maior e PV >=10, ao sofrer dano lightning ou slashing divide-se em dois lodos de tamanho menor, cada um com metade dos PV arredondada para baixo.",
+      "gatilho": "dano lightning ou slashing",
+      "precondicao": "tamanho Médio+ e pelo menos 10 PV"
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "Outro Elder Black Pudding 5e ND4/PV130; só bloco editorial A5E ND8/PV171 adotado.",
+  "bloqueado": true,
+  "pendencias": [
+    "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
+    "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
+  ],
+  "integrada": false,
+  "validacao_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/1755",
+    "comparacao": "Comparado bloco de ações e passivas no portal editorial A5E; incluído dano de contato contra demais objetos metálicos ou orgânicos.",
+    "limites": "Sem revisão impressa, erratas, testes ou homologação independente."
+  },
+  "resolucao_identidade_variantes_20261014": {
+    "status": "VARIANTE_A5E_IDENTIFICADA_PELO_PORTAL_EDITORIAL; CONFLITO_HISTORICO_NAO_HOMOLOGADO",
+    "edicao_pesquisada": {
+      "editora": "EN Publishing",
+      "sistema": "Level Up Advanced 5th Edition (A5E)",
+      "publicacao": "Monstrous Menagerie",
+      "fonte_editorial": "https://a5e.tools/node/1755",
+      "nd": "8",
+      "ca": 7,
+      "pv": 171
+    },
+    "variante_alternativa_pr4": "Elder Black Pudding 5e ND4/PV130 citado na PR #4; publicacao diferente.",
+    "decisao": "Nao combinar estatisticas ou ataques de outros sistemas/publicacoes. Publicacao impressa e erratas nao cotejadas.",
+    "homologacao_independente": false,
+    "conflito_pr4_preservado": true
+  }
+}

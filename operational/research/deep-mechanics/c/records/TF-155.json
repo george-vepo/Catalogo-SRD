@@ -1,0 +1,401 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-155",
+  "nome": "Xing Tian",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 33,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "11",
+    "nd_fonte": "11",
+    "ca": 16,
+    "pv": 168,
+    "dados_vida": "16d12+64",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 23,
+      "DES": 12,
+      "CON": 18,
+      "INT": 10,
+      "SAB": 15,
+      "CAR": 14
+    },
+    "modificadores": {
+      "FOR": 6,
+      "DES": 1,
+      "CON": 4,
+      "INT": 0,
+      "SAB": 2,
+      "CAR": 2
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Intimidation",
+        "bonus": 6
+      },
+      {
+        "nome": "Perception",
+        "bonus": 6
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "frightened"
+    ],
+    "vulnerabilidades": [],
+    "xp": 7200,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor + shield"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Indomitable",
+        "gatilho": "spell/efeito que cause paralyzed, restrained ou stunned",
+        "efeito": "termina no fim do próximo turno do xing tian, independentemente duração normal"
+      },
+      {
+        "nome": "Sure-Footed",
+        "efeito": "vantagem STR e DEX saving throws contra efeitos que deixariam prone"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Shield Slam",
+            "quantidade": 1
+          },
+          {
+            "acao": "Battleaxe",
+            "quantidade": 2
+          }
+        ],
+        "gatilho": "ambos os Battleaxe acertam mesmo alvo",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "falha": {
+          "dano_extra": {
+            "dados": "2d10",
+            "media": 11,
+            "tipo": "piercing",
+            "origem": "bite"
+          }
+        }
+      },
+      {
+        "nome": "Battleaxe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "slashing",
+            "modalidade": "uma mão"
+          },
+          {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "slashing",
+            "modalidade": "duas mãos"
+          }
+        ]
+      },
+      {
+        "nome": "Shield Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d6+6",
+            "media": 16,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "prone"
+        }
+      },
+      {
+        "nome": "Dance of the Unyielding",
+        "ao_ativar": {
+          "cura_hp": 10
+        },
+        "enquanto_ativa": [
+          "ganha 10 HP no início de cada turno",
+          "melee attacks contra giant desvantagem"
+        ],
+        "custo_para_continuar": "bonus action em turnos SUBSEQUENTES",
+        "termina": [
+          "giant escolhe encerrar",
+          "incapacitated"
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Battleaxe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "slashing",
+            "modalidade": "uma mão"
+          },
+          {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "slashing",
+            "modalidade": "duas mãos"
+          }
+        ]
+      },
+      {
+        "nome": "Shield Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d6+6",
+            "media": 16,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "prone"
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        {
+          "acao": "Shield Slam",
+          "quantidade": 1
+        },
+        {
+          "acao": "Battleaxe",
+          "quantidade": 2
+        }
+      ],
+      "gatilho": "ambos os Battleaxe acertam mesmo alvo",
+      "teste": {
+        "atributo": "DEX",
+        "cd": 16
+      },
+      "falha": {
+        "dano_extra": {
+          "dados": "2d10",
+          "media": 11,
+          "tipo": "piercing",
+          "origem": "bite"
+        }
+      }
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Continuar Dance of the Unyielding",
+        "economia": "bonus action",
+        "gatilho": "turnos posteriores ao início",
+        "efeito": "mantém dança por mais um turno"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Indomitable faz efeitos de paralyzed/restrained/stunned terminarem no fim do próximo turno; não torna a criatura imune ao efeito inicialmente.",
+    "Dance exige ação bônus em turnos subsequentes e cura 10 HP na ativação + 10 por início de turno; confronto editorial do livro e arte pendente."
+  ],
+  "campos_nao_confirmados": [
+    "revisão de livro/errata e permissões",
+    "aprovação visual de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/xing-tian/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/xing-tian/",
+      "tipo": "fonte individual consultada no checkpoint 36",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-155",
+    "nome": "Xing Tian",
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "11",
+    "nd_fonte": "11",
+    "ca": 16,
+    "pv": 168,
+    "pv_dados": "16d12+64",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral",
+    "atributos": [
+      23,
+      12,
+      18,
+      10,
+      15,
+      14
+    ],
+    "deslocamento_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {
+      "CON": 8,
+      "WIS": 6
+    },
+    "pericias": {
+      "Intimidation": 6,
+      "Perception": 6
+    },
+    "imunidades_condicao": [
+      "frightened"
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "tracos": [
+      {
+        "nome": "Indomitable",
+        "resumo": "Efeitos que o deixariam paralisado, restringido ou atordoado terminam ao fim do próximo turno da criatura, independentemente da duração normal."
+      },
+      {
+        "nome": "Sure-Footed",
+        "resumo": "Vantagem em salvaguardas Força e Destreza contra efeitos que tentem derrubá-lo."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Um Shield Slam e dois Battleaxe. Se ambos os ataques com machado acertarem um mesmo alvo, ele testa Destreza CD16 ou sofre mais 2d10 perfurante de mordida."
+      },
+      {
+        "nome": "Battleaxe",
+        "resumo": "Ataque corpo a corpo +10, 5 pés, 3d8+6 cortante, ou 3d10+6 com duas mãos."
+      },
+      {
+        "nome": "Shield Slam",
+        "resumo": "Ataque corpo a corpo +10, 5 pés, 3d6+6 contundente; Força CD16 ou alvo cai."
+      },
+      {
+        "nome": "Dance of the Unyielding",
+        "resumo": "Recupera 10 PV ao começar a dança; enquanto mantida, recupera 10 PV no início de cada turno e ataques corpo a corpo contra ele têm desvantagem. Precisa de ação bônus nos turnos seguintes para manter; incapacitação encerra."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Continuar a dança",
+        "resumo": "Uma ação bônus por turno para sustentar Dance of the Unyielding após iniciada."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/xing-tian/",
+    "indice_oficial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisão, licença e imagem pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-155.webp",
+    "formato": "webp",
+    "largura": 866,
+    "altura": 991,
+    "bytes": 173958,
+    "blob_sha": "3d5ab12a1bd90bd58e98bbdff4ca31685f2bd0df",
+    "sha256": "d5f60151f54c699bb75ac898ed6d15c89c6d6db82b6aac0f2bfbe65f60ee1ff4",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Xing%20Tian.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 36,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/xing-tian/",
+    "publicacao": "Tome of Beasts 2",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

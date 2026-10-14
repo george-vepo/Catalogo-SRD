@@ -1,0 +1,271 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-242",
+  "name": "Ashwalker",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral_evil",
+    "proficiency_bonus": 2,
+    "experience_points": 200,
+    "source_page": 28
+  },
+  "statistics": {
+    "armor_class": 12,
+    "hit_points": 31,
+    "hit_dice": "7d8",
+    "ability_scores": {
+      "STR": 13,
+      "DEX": 15,
+      "CON": 10,
+      "INT": 7,
+      "WIS": 10,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": {
+      "understands": "languages_known_in_life",
+      "can_speak": false
+    },
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "dynamic_Breath_Born_damage_type"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 2,
+      "CON": 0,
+      "INT": -2,
+      "WIS": 0,
+      "CHA": -2
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Breath Born",
+        "category": "variant_damage_type",
+        "choose_by_killer_dragon_type": {
+          "black": "acid",
+          "copper": "acid",
+          "silver": "cold",
+          "white": "cold",
+          "brass": "fire",
+          "gold": "fire",
+          "red": "fire",
+          "blue": "lightning",
+          "bronze": "lightning",
+          "green": "poison"
+        },
+        "effect": {
+          "damage_immunity_to_selected_type": true,
+          "substitution_key": "breath_born_damage_type"
+        }
+      },
+      {
+        "name": "Burst of Breath",
+        "category": "reactive_passive",
+        "trigger": [
+          "other_creature_touches_ashwalker",
+          "other_creature_hits_with_melee_attack_within_5_ft"
+        ],
+        "effect": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 0,
+              "type": "breath_born_damage_type",
+              "average": 3
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Breath",
+        "category": "on_zero_hit_points",
+        "trigger": "first_time_reduced_to_0_HP",
+        "effect": {
+          "new_HP": 1,
+          "recharge_action": "Draconic Breath",
+          "transform_into_energy": true,
+          "energy_type": "breath_born_damage_type",
+          "all_damage_immunity_until": "end_of_next_turn",
+          "immune_to": [
+            "grappled",
+            "restrained"
+          ],
+          "destroyed_at": "end_of_next_turn"
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "effect": {
+          "needs_air": false,
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 2,
+              "type": "bludgeoning",
+              "average": 5
+            },
+            {
+              "dice": "1d6",
+              "flat": 0,
+              "type": "breath_born_damage_type",
+              "average": 3
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Draconic Breath",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 15
+        },
+        "save": {
+          "ability": "CON",
+          "dc": 12,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "4d6",
+                "flat": 0,
+                "type": "breath_born_damage_type",
+                "average": 14
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Energia elementar determinada pelo dragão que o matou, retalia em contato e tem última manifestação energética."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ashwalker/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:ashwalker",
+      "type": "KPOGL transcrição OGL individual secundária não oficial",
+      "edition": "Tome of Beasts 1",
+      "source_page": 28,
+      "scope": "estatísticas e mecânicas individuais presentes no statblock digital",
+      "reviewed": "2026-10-14"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Validar contra Tome of Beasts 1 p.28 e possíveis erratas.",
+    "Breath Born é um parâmetro de variante determinado pelo dragão que a matou; não fixar tipo único de dano sem seleção confirmada.",
+    "Testar Last Breath, dano dinâmico e recarga imediata em engine; revisar arte/licenças."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-242.jpg",
+    "format": "image/jpeg",
+    "width": 1022,
+    "height": 857,
+    "bytes": 74920,
+    "sha256": "3386caf779cc581b9cc9c74def54b74368b6f104fdcf73bf5eff0edc4a9f19ac",
+    "git_blob_sha": "ba48e8252528bb2e0e00075f5e750921940dee62",
+    "source_url": "https://mz4250.com/posts/tome-of-beasts-93739908",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2d0d20ab7c63f820940fd968cbfab00620e5d587",
+    "identity_provenance": "ID e nome conferem com manifesto E, integridade/readback validada no lote de origem",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos de uso",
+      "aprovação para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:ashwalker"
+    ]
+  }
+}

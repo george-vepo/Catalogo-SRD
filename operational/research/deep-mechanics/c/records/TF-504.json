@@ -1,0 +1,273 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-504",
+  "nome": "Warlord's Ghost",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 28,
+  "estado_auditoria": "BLOQUEADA_CONTRADICAO_OU_LACUNA_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/1464"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "xp": null,
+    "bonus_proficiencia": 2,
+    "ca": 13,
+    "pv": 58,
+    "dados_vida": "13d8",
+    "bloodied": 29,
+    "porte": "Medium",
+    "tipo": "Undead",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 8,
+      "destreza": 16,
+      "constituicao": 10,
+      "inteligencia": 12,
+      "sabedoria": 10,
+      "carisma": 18
+    },
+    "modificadores": {
+      "forca": -1,
+      "destreza": 3,
+      "constituicao": 0,
+      "inteligencia": 1,
+      "sabedoria": 0,
+      "carisma": 4
+    },
+    "deslocamentos": {
+      "andar_ft": 30,
+      "voo_ft": 40
+    },
+    "pericias": [],
+    "salvaguardas": [
+      {
+        "nome": "WIS",
+        "bonus": 2
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "languages it spoke in life"
+    ],
+    "resistencias": [
+      "acid",
+      "fire",
+      "lightning",
+      "thunder",
+      "damage from nonmagical weapons"
+    ],
+    "vulnerabilidades": [],
+    "imunidades_dano": [
+      "cold",
+      "necrotic",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "xp_estado": "nao publicado no bloco A5E",
+    "maneuver_dc": 13
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Death Howl",
+        "gatilho": "0 PV",
+        "efeito": "executa Baleful Wail"
+      },
+      {
+        "nome": "Detect Life",
+        "alcance_milhas": 5,
+        "efeito": "localiza direção geral de criaturas vivas"
+      },
+      {
+        "nome": "Incorporeal Movement",
+        "efeito": "atravessa criaturas e objetos",
+        "dano_se_termina_em_objeto": {
+          "dados": "1d10",
+          "media": 5,
+          "tipo": "force"
+        }
+      },
+      {
+        "nome": "Undead Nature",
+        "efeito": "não necessita de ar, alimentos nem sono"
+      },
+      {
+        "nome": "Unquiet Spirit",
+        "gatilho": "derrotado",
+        "retorno": "aniversário de sua morte",
+        "encerramento": "remove curse no túmulo ou reparar injustiça"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Presage Death",
+        "alcance_ft": 60,
+        "alvo": "uma criatura que possa ouvir",
+        "teste": {
+          "atributo": "WIS",
+          "cd": 14
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "psychic"
+          },
+          "maldicao": {
+            "duracao": "1 hora",
+            "efeito": "desvantagem em salvaguardas contra Baleful Wail"
+          }
+        },
+        "sucesso": "não explicitado",
+        "conflito": "fonte menciona banshee's Baleful Wail"
+      },
+      {
+        "nome": "Baleful Wail",
+        "alcance_ft": 30,
+        "alvos": "seres vivos que podem ouvir",
+        "teste": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": {
+          "nao_amaldicoado": {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "psychic"
+          },
+          "amaldicoado": "cai a 0 PV em vez do dano"
+        },
+        "sucesso": null,
+        "motivo_null": "não descrito na página"
+      }
+    ],
+    "ataques": [],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Wounded Warning",
+        "gatilho": "sofre dano de criatura até 60 ft",
+        "efeito": "executa Presage Death nessa criatura"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "conjuracao": "AUSENCIA_VERIFICADA_NA_FONTE"
+    }
+  },
+  "pendencias": [
+    "Banshee citado no texto de Presage Death e de Combat em ficha Warlord's Ghost; não substituído por suposição.",
+    "Resultado no sucesso de Baleful Wail não declarado.",
+    "Sem imagem física."
+  ],
+  "campos_nao_confirmados": [
+    "banshee versus warlord na referência Baleful Wail",
+    "efeito sucesso de Baleful Wail",
+    "imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1464",
+      "tipo": "bloco oficial A5E conferido em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-504",
+    "nome": "Warlord's Ghost",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 13,
+    "pv": 58,
+    "atributos": {
+      "forca": 8,
+      "destreza": 16,
+      "constituicao": 10,
+      "inteligencia": 12,
+      "sabedoria": 10,
+      "carisma": 18
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Variante de banshee com detecção de vivos, Unquiet Spirit e presença sobrenatural."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Death Howl/Baleful Wail, Presage Death e reação Wounded Warning."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/1464",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Ficha editorial mantém termos banshee: distinguir variante Warlord's Ghost do monstro-base.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "fonte": "https://a5e.tools/node/1464",
+    "livro_original_errata": "PENDENTE"
+  }
+}

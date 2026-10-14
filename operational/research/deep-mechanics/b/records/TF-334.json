@@ -1,0 +1,234 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-334",
+  "nome": "Far Darrig",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
+  "edicao": {
+    "sistema": "Dungeons & Dragons 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "pagina_indicada_transcricao": 167,
+    "edicao_exata_verificada": false,
+    "variantes_nao_mescladas": true,
+    "ramo_de_fonte": "transcrição KPOGL — reproduz um statblock individual; versão e erratas ainda não foram validadas contra exemplar do editor"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:far-darrig",
+      "natureza": "transcricao_comunitaria_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "estrutura do statblock desta versão individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade_e_nd",
+      "escopo": "identidade, não confronto integral"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_de_conflitos",
+      "escopo": "não substitui ficha da edição escolhida"
+    }
+  ],
+  "estatisticas": {
+    "nd": null,
+    "ca": 14,
+    "pv": null,
+    "dados_vida": null,
+    "atributos": {
+      "FOR": 17,
+      "DES": 16,
+      "CON": 17,
+      "INT": 11,
+      "SAB": 15,
+      "CAR": 17
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {
+      "CAR": 5
+    },
+    "pericias": {
+      "Nature": 4,
+      "AnimalHandling": 4,
+      "Perception": 4,
+      "Survival": 4
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common",
+      "Elvish",
+      "Sylvan"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "tamanho": "Small",
+    "tipo": "Fey",
+    "proficiencia": 2,
+    "nd_fonte_selecionada": "3",
+    "pv_fonte_selecionada": 84,
+    "dados_vida_fonte_selecionada": "13d6+39"
+  },
+  "qualidade_estatisticas": "DADOS_DE_FONTE_SECUNDARIA_VERSAO_SEPARADA_NAO_HOMOLOGADOS",
+  "habilidades_passivas": [
+    {
+      "nome": "Enchanted Antlers",
+      "efeito": "Ataques Antler Glaive são mágicos e incluem +1d6 force quando acertam.",
+      "arma": "Antler Glaive",
+      "dano_extra": {
+        "dados": "1d6",
+        "modificador": 0,
+        "tipo": "force"
+      },
+      "ja_incluso_nos_ataques": true
+    },
+    {
+      "nome": "Speak with Beasts",
+      "efeito": "Consegue se comunicar com Beast como se falassem o mesmo idioma."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Antler Glaive",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d10",
+          "modificador": 3,
+          "tipo": "piercing ou slashing (escolha por ataque)"
+        },
+        {
+          "dados": "1d6",
+          "modificador": 0,
+          "tipo": "force"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "FOR",
+            "cd": 13,
+            "falha": "prone",
+            "sucesso": "permanece em pé"
+          }
+        }
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Antler Glaive",
+        "Antler Glaive"
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Antler Glaive",
+      "categoria": "ataque",
+      "referencia_ataque": "Antler Glaive",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Woodland Friends",
+      "categoria": "convocacao",
+      "usos": "1/dia",
+      "criaturas": "1d4 elk ou giant weasels",
+      "atraso_rodadas": "1d4",
+      "duracao": "1 hora",
+      "encerramento": [
+        "morte do Far Darrig",
+        "dispensa como ação bônus",
+        "1 hora"
+      ],
+      "obediencia": "seguem comandos falados",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Dismiss Woodland Friends",
+      "categoria": "acao_bonus",
+      "precondicao": "aliados invocados por Woodland Friends",
+      "efeito": "dispensa imediatamente as Bestas invocadas",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "campos_em_conflito": [
+    "nd",
+    "pv",
+    "atributos",
+    "acoes",
+    "nd",
+    "pv",
+    "dados_vida",
+    "acoes"
+  ],
+  "variantes_editoriais": [
+    {
+      "nome": "versão de outra ficha/homônimo",
+      "campos": [
+        "nd",
+        "pv",
+        "atributos",
+        "acoes"
+      ],
+      "nd": "2",
+      "pv": 39,
+      "fonte": "PR #4"
+    },
+    {
+      "nome": "KPOGL Tome of Beasts 1 transcrito",
+      "campos": [
+        "nd",
+        "pv",
+        "dados_vida",
+        "acoes"
+      ],
+      "nd": "3",
+      "pv": 84,
+      "dados_vida": "13d6+39",
+      "url": "https://kpogl.wikidot.com/monster:far-darrig"
+    }
+  ],
+  "conflito_editorial": "PR #4 registra homônimo ND2/PV39 versus edição transcrita ND3/PV84. ND e PV consolidados mantidos null; números da transcrição armazenados como variante separada.; Não interpretar revisão KPOGL como prova de qual edição pertence ao catálogo sem cotejo editorial.",
+  "bloqueado": true,
+  "pendencias": [
+    "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+    "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+    "PR #4 registra homônimo ND2/PV39 versus edição transcrita ND3/PV84. ND e PV consolidados mantidos null; números da transcrição armazenados como variante separada.",
+    "Não interpretar revisão KPOGL como prova de qual edição pertence ao catálogo sem cotejo editorial."
+  ],
+  "integrada": false,
+  "verificacao_indice_editorial_kp_20261014": {
+    "fonte": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "natureza": "INDICE_DO_EDITOR_NAO_STATBLOCK",
+    "identidade": "Far Darrig",
+    "nd_texto_indice": "3.0",
+    "tamanho": "Small",
+    "tipo": "Fey",
+    "terrenos": [
+      "Forest"
+    ],
+    "publicacao": "Tome of Beasts 1",
+    "consultado": "2026-10-14",
+    "limite": "Não comprova edição de bloco completo ou errata; preservar ND/PV conflitantes e não misturar versões; ND 0.3 é representação decimal arredondada do índice.",
+    "conflito_pr4_permanece": true
+  }
+}

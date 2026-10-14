@@ -1,0 +1,599 @@
+{
+  "schema": "SRD_RESEARCH_CHECKPOINT_V1",
+  "date": "2026-10-11",
+  "batch": "TF-047_TF-051",
+  "records_count": 5,
+  "origin": "ChatGPT direct web research no agent: four 5eSRD creatures and A5E To Save A Kingdom toolset",
+  "canonical_promotions": 0,
+  "verified_images_added": 0,
+  "gates": {
+    "review": "PENDING",
+    "image": "PENDING",
+    "rights": "PENDING"
+  },
+  "records": [
+    {
+      "id": "TF-047",
+      "nome": "Archon, Ursan",
+      "nome_fonte": "Ursan Archon",
+      "publicacao": "Tome of Beasts 3",
+      "nd_catalogo": "9",
+      "nd_fonte": "9",
+      "ca": 16,
+      "pv": 142,
+      "pv_dados": "15d10+60",
+      "porte": "Large",
+      "tipo": "celestial",
+      "atributos": [
+        21,
+        14,
+        18,
+        13,
+        17,
+        16
+      ],
+      "movimento_ft": {
+        "andar": 30,
+        "voar": 60
+      },
+      "salvaguardas": {
+        "CON": 8,
+        "WIS": 7,
+        "CHA": 7
+      },
+      "pericias": {
+        "Athletics": 9,
+        "Intimidation": 7
+      },
+      "resistencias_dano": [
+        "radiant",
+        "bludgeoning, piercing, slashing não mágicos"
+      ],
+      "imunidades_dano": [
+        "cold"
+      ],
+      "imunidades_condicao": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "prone"
+      ],
+      "sentidos": [
+        "darkvision 120 ft."
+      ],
+      "percepcao_passiva": 13,
+      "idiomas": [
+        "todos",
+        "telepathy 120 ft."
+      ],
+      "tracos": [
+        {
+          "nome": "Celestial Weapons",
+          "resumo": "Armas mágicas e dano de força adicional; descrição geral e valor já incluído no Greataxe têm inconsistência numérica."
+        },
+        {
+          "nome": "Immortal Nature",
+          "resumo": "Não necessita comer, beber ou dormir."
+        },
+        {
+          "nome": "Magic Resistance",
+          "resumo": "Vantagem em salvaguardas contra magia."
+        },
+        {
+          "nome": "Reckless",
+          "resumo": "Escolhe vantagem em ataques corpo a corpo, concedendo vantagem contra si até próximo turno."
+        },
+        {
+          "nome": "Relentless",
+          "resumo": "Uma vez por descanso, golpe de no máximo 30 dano que o mataria deixa-o com 1 PV."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "resumo": "Duas Greataxe ou substitui uma pelo Thunderous Roar se disponível."
+        },
+        {
+          "nome": "Greataxe",
+          "resumo": "+9, 5 pés; 2d12+5 cortante mais 3d8 force segundo bloco de ataque."
+        },
+        {
+          "nome": "Thunderous Roar",
+          "resumo": "Recarga 5–6; cone 30 pés, CON CD16 contra 8d8 trovão; inimigos até 60 pés fazem SAB CD15 contra medo, com desvantagem no cone."
+        }
+      ],
+      "reacoes": [
+        {
+          "nome": "Rallying Roar",
+          "resumo": "Ao reduzir criatura a 0 PV, aliados a 60 pés recebem vantagem em próximo ataque ou salvaguarda contra condição prejudicial e 4d6 PV temporários se ouvirem rugido."
+        }
+      ],
+      "fonte": "https://www.5esrd.com/database/creature/ursan-archon/",
+      "estado": "PARCIAL_INCONSISTENCIA_DANO_FONTE",
+      "pendencias": [
+        "Trait Celestial Weapons aponta 4d8 força, mas Greataxe lista 3d8; confirmar errata e não somar duas vezes."
+      ],
+      "imagem": {
+        "estado": "PENDENTE",
+        "verificada": false
+      },
+      "integrada": false
+    },
+    {
+      "id": "TF-048",
+      "nome": "Astri",
+      "publicacao": "Tome of Beasts 2",
+      "nd_catalogo": "8",
+      "nd_fonte": "8",
+      "ca": 15,
+      "pv": 112,
+      "pv_dados": "15d6+60",
+      "porte": "Small",
+      "tipo": "celestial",
+      "atributos": [
+        12,
+        21,
+        18,
+        15,
+        16,
+        20
+      ],
+      "movimento_ft": {
+        "andar": 30,
+        "escavar": 30
+      },
+      "salvaguardas": {
+        "WIS": 6,
+        "CHA": 8
+      },
+      "pericias": {
+        "Perception": 6,
+        "Stealth": 8,
+        "Survival": 9
+      },
+      "resistencias_dano": [
+        "poison",
+        "bludgeoning/piercing/slashing não mágicos"
+      ],
+      "imunidades_condicao": [
+        "charmed",
+        "exhaustion"
+      ],
+      "sentidos": [
+        "darkvision 90 ft."
+      ],
+      "percepcao_passiva": 16,
+      "idiomas": [
+        "Common",
+        "telepathy 120 ft."
+      ],
+      "tracos": [
+        {
+          "nome": "Enforce Good Deeds",
+          "resumo": "Pessoas auxiliadas podem testar SAB CD16 ou ser obrigadas via geas por 30 dias a ajudar criaturas não hostis em perigo."
+        },
+        {
+          "nome": "Helping Hand",
+          "resumo": "Usa Help como bônus."
+        },
+        {
+          "nome": "Magic Resistance",
+          "resumo": "Vantagem em salvaguardas mágicas."
+        },
+        {
+          "nome": "Magic Weapons",
+          "resumo": "Ataques armados são mágicos."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "resumo": "Três mordidas."
+        },
+        {
+          "nome": "Bite",
+          "resumo": "+8, 5 pés, 1d8+5 perfurante mais 2d6 radiante."
+        },
+        {
+          "nome": "Healing Touch",
+          "resumo": "3/dia, cura 3d8+1 e remove doença, veneno, cegueira ou surdez."
+        }
+      ],
+      "reacoes": [
+        {
+          "nome": "Defensive Counter",
+          "resumo": "Se aliado a 5 pés for atacado, pode morder atacante visível."
+        }
+      ],
+      "conjuracao": {
+        "atributo": "CHA",
+        "cd": 16,
+        "at_will": [
+          "create or destroy water",
+          "detect poison and disease",
+          "produce flame",
+          "purify food and drink"
+        ],
+        "three_daily": [
+          "bless",
+          "create food and water",
+          "lesser restoration"
+        ],
+        "one_daily": [
+          "remove curse"
+        ]
+      },
+      "fonte": "https://www.5esrd.com/database/creature/astri/",
+      "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+      "pendencias": [
+        "Excluir Alternate Critical indicado como complemento Monster Crits for 5e, não parte do Creature Codex."
+      ],
+      "imagem": {
+        "estado": "PENDENTE",
+        "verificada": false
+      },
+      "integrada": false
+    },
+    {
+      "id": "TF-049",
+      "nome": "Agonized Khyphon",
+      "publicacao": "To Save A Kingdom",
+      "nd_catalogo": "14",
+      "nd_fonte": "14",
+      "ca": 19,
+      "pv": 195,
+      "pv_dados": "23d10+69",
+      "porte": "Large",
+      "tipo": "celestial",
+      "atributos": [
+        19,
+        14,
+        17,
+        16,
+        14,
+        17
+      ],
+      "movimento_ft": {
+        "andar": 40,
+        "voar": 40,
+        "hover": true
+      },
+      "salvaguardas": {
+        "WIS": 7
+      },
+      "pericias": {
+        "Arcana": 8,
+        "Intimidation": 8,
+        "Medicine": "7+1d8",
+        "Religion": 8
+      },
+      "vulnerabilidades_dano": [
+        "radiant"
+      ],
+      "resistencias_dano": [
+        "cold",
+        "fire",
+        "armas físicas não mágicas"
+      ],
+      "imunidades_dano": [
+        "necrotic",
+        "poison",
+        "psychic"
+      ],
+      "imunidades_condicao": [
+        "disease",
+        "fatigue",
+        "poisoned",
+        "petrified",
+        "prone",
+        "strife"
+      ],
+      "sentidos": [
+        "truesight 120 ft."
+      ],
+      "percepcao_passiva": 12,
+      "idiomas": [
+        "todos (tongues)"
+      ],
+      "tracos": [
+        {
+          "nome": "Chaotic",
+          "resumo": "Emite aura de Caos."
+        },
+        {
+          "nome": "Magic Resistance",
+          "resumo": "Vantagem em salvaguardas mágicas."
+        },
+        {
+          "nome": "Sickness Carrier",
+          "resumo": "Ao ser atingido corpo a corpo por arma sem alcance, atacante testa CON CD16 contra febre demoníaca, afetando descanso; magia poderosa cura."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "resumo": "Três ataques com bandagens."
+        },
+        {
+          "nome": "Bandages",
+          "resumo": "+8, 15 pés, 2d6+4 força e 2d6 psíquico; CAR CD16 contra envenenamento/medo."
+        },
+        {
+          "nome": "Control Bandages",
+          "resumo": "Recarga 6, até quatro bandagens animadas, cada uma podendo realizar ataques adicionais."
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Harm",
+          "resumo": "Recarga 6, ataque mágico +9 a 20 pés, 60 necrótico e CAR CD16 contra condição/doença temporária."
+        }
+      ],
+      "reacoes": [
+        {
+          "nome": "Quick Reaction",
+          "resumo": "Até duas reações por rodada, somente uma como oportunidade."
+        },
+        {
+          "nome": "Deflect Attack",
+          "resumo": "Reduz dano de ataque em 4d6+4, podendo anular efeito de magia mediante oposição de testes."
+        }
+      ],
+      "fonte": "https://www.a5e.tools/node/3400",
+      "estado": "PESQUISA_FONTE_NAO_ABERTA_GATE_LICENCA",
+      "pendencias": [
+        "Fonte A5E é toolset, não SRD; direitos de distribuição não demonstrados.",
+        "Pendente comparação com livro To Save A Kingdom e imagem."
+      ],
+      "imagem": {
+        "estado": "PENDENTE",
+        "verificada": false
+      },
+      "integrada": false
+    },
+    {
+      "id": "TF-050",
+      "nome": "Akkorokamui",
+      "publicacao": "Tome of Beasts 3",
+      "nd_catalogo": "12",
+      "nd_fonte": "12",
+      "ca": 17,
+      "pv": 189,
+      "pv_dados": "14d20+42",
+      "porte": "Gargantuan",
+      "tipo": "celestial titan",
+      "atributos": [
+        21,
+        16,
+        16,
+        19,
+        20,
+        15
+      ],
+      "movimento_ft": {
+        "andar": 15,
+        "nadar": 60
+      },
+      "pericias": {
+        "Perception": 9,
+        "Stealth": 7
+      },
+      "imunidades_dano": [
+        "poison"
+      ],
+      "imunidades_condicao": [
+        "poisoned"
+      ],
+      "sentidos": [
+        "blindsight 30 ft.",
+        "darkvision 120 ft."
+      ],
+      "percepcao_passiva": 19,
+      "idiomas": [
+        "compreende todos",
+        "telepathy 120 ft."
+      ],
+      "tracos": [
+        {
+          "nome": "Amphibious",
+          "resumo": "Respira ar e água."
+        },
+        {
+          "nome": "Legendary Resistance",
+          "resumo": "3 usos por dia."
+        },
+        {
+          "nome": "Magic Resistance",
+          "resumo": "Vantagem em salvaguardas mágicas."
+        },
+        {
+          "nome": "Offering of Flesh",
+          "resumo": "Pode doar parte de tentáculo para oferecer cura 50 PV, reverter cegueira/doença ou regenerar membro; voluntária."
+        },
+        {
+          "nome": "Regeneration",
+          "resumo": "Regenera 15 PV no início do turno se vivo."
+        },
+        {
+          "nome": "Siege Monster",
+          "resumo": "Dano dobrado contra objetos."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "resumo": "Três tentáculos, podendo substituir um por cura ou magia."
+        },
+        {
+          "nome": "Tentacle",
+          "resumo": "+9, 30 pés, 4d6+5 contundente e agarra/restringe, fuga CD17; oito tentáculos."
+        },
+        {
+          "nome": "Radiant Wave",
+          "resumo": "Recarga 6, inimigos até 30 pés testam CON CD17 contra 8d8 radiante; mortos-vivos com desvantagem."
+        },
+        {
+          "nome": "Healing Touch",
+          "resumo": "3/dia, 3d8+2 PV e alivia condições."
+        }
+      ],
+      "reacoes": [
+        {
+          "nome": "Guardian's Grasp",
+          "resumo": "Puxa aliado consentindo até 10 pés e recebe ataque em seu lugar."
+        }
+      ],
+      "acoes_lendarias": [
+        "Discern: teste de Percepção ou Intuição",
+        "Jet: nada metade da velocidade sem oportunidade",
+        "Cast a Spell (2 ações)",
+        "Tentacle Sweep (2 ações), Destreza CD17 em alvos a 20 pés"
+      ],
+      "acoes_covil": [
+        "Entangling Vegetation",
+        "Suppress Healing",
+        "Undertow"
+      ],
+      "efeitos_regionais": [
+        "Calm Weather",
+        "Detect Intruders",
+        "Promote Growth"
+      ],
+      "conjuracao": {
+        "atributo": "WIS",
+        "cd": 17,
+        "at_will": [
+          "detect evil and good",
+          "detect poison and disease"
+        ],
+        "three_daily": [
+          "control water",
+          "legend lore"
+        ],
+        "one_daily": [
+          "geas"
+        ]
+      },
+      "fonte": "https://www.5esrd.com/database/creature/akkorokamui/",
+      "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+      "pendencias": [
+        "Conferir licenças e imagens; covil/regiões registrados por nome e resumo, requer conferência de detalhamento antes de declarar integral."
+      ],
+      "imagem": {
+        "estado": "PENDENTE",
+        "verificada": false
+      },
+      "integrada": false
+    },
+    {
+      "id": "TF-051",
+      "nome": "Archon, Siege",
+      "nome_fonte": "Siege Archon",
+      "publicacao": "Tome of Beasts 3",
+      "nd_catalogo": "13",
+      "nd_fonte": "13",
+      "ca": 18,
+      "pv": 187,
+      "pv_dados": "15d12+90",
+      "porte": "Huge",
+      "tipo": "celestial",
+      "atributos": [
+        22,
+        14,
+        22,
+        10,
+        20,
+        17
+      ],
+      "movimento_ft": {
+        "andar": 40,
+        "voar": 60
+      },
+      "salvaguardas": {
+        "STR": 11,
+        "CON": 11,
+        "WIS": 10,
+        "CHA": 8
+      },
+      "pericias": {
+        "Perception": 10
+      },
+      "resistencias_dano": [
+        "radiant",
+        "bludgeoning/piercing/slashing não mágicos"
+      ],
+      "imunidades_condicao": [
+        "charmed",
+        "exhaustion",
+        "frightened"
+      ],
+      "sentidos": [
+        "truesight 120 ft."
+      ],
+      "percepcao_passiva": 20,
+      "idiomas": [
+        "todos",
+        "telepathy 120 ft."
+      ],
+      "tracos": [
+        {
+          "nome": "Celestial Weapons",
+          "resumo": "Ataques mágicos, com dano de força incluído no golpe."
+        },
+        {
+          "nome": "False Appearance",
+          "resumo": "Fica indistinguível de estátua quando imóvel."
+        },
+        {
+          "nome": "Immortal Nature",
+          "resumo": "Não precisa comer, beber ou dormir."
+        },
+        {
+          "nome": "Magic Resistance",
+          "resumo": "Vantagem em salvaguardas mágicas."
+        },
+        {
+          "nome": "Siege Monster",
+          "resumo": "Dano dobrado a objetos e estruturas."
+        },
+        {
+          "nome": "Trampling Charge",
+          "resumo": "Avança 20 pés, usa maça de tromba, FOR CD19 para evitar empurrão/queda; stomp bônus em alvo caído."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "resumo": "Duas Trunk Maul ou quatro Trumpeting Blast."
+        },
+        {
+          "nome": "Trunk Maul",
+          "resumo": "+11, 10 pés, 4d6+6 contundente mais 5d8 força."
+        },
+        {
+          "nome": "Stomp",
+          "resumo": "+11, 10 pés, 3d10+6 contundente em alvo caído."
+        },
+        {
+          "nome": "Trumpeting Blast",
+          "resumo": "+10, 120 pés, 4d6+5 trovão."
+        },
+        {
+          "nome": "Sundering Quake",
+          "resumo": "Recarga 5–6, chão num raio de 20 pés, DES CD19; 14d6 força contra criaturas e estruturas."
+        }
+      ],
+      "fonte": "https://www.5esrd.com/database/creature/siege-archon/",
+      "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+      "pendencias": [
+        "Página do 5eSRD também inclui Alternate Critical de Monster Crits for 5e, excluído como conteúdo alheio ao registro base.",
+        "Imagem/licenças pendentes."
+      ],
+      "imagem": {
+        "estado": "PENDENTE",
+        "verificada": false
+      },
+      "integrada": false
+    }
+  ]
+}

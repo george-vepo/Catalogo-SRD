@@ -1,0 +1,327 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-388",
+  "nome": "Son of Fenris",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
+  "edicao": {
+    "sistema": "Dungeons & Dragons 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "pagina_indicada_transcricao": 335,
+    "edicao_exata_verificada": false,
+    "variantes_nao_mescladas": true,
+    "ramo_de_fonte": "transcrição KPOGL — reproduz um statblock individual; versão e erratas ainda não foram validadas contra exemplar do editor"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:son-of-fenris",
+      "natureza": "transcricao_comunitaria_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "estrutura do statblock desta versão individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade_e_nd",
+      "escopo": "identidade, não confronto integral"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_de_conflitos",
+      "escopo": "não substitui ficha da edição escolhida"
+    }
+  ],
+  "estatisticas": {
+    "nd": "12",
+    "ca": 17,
+    "pv": 175,
+    "dados_vida": "14d12+84",
+    "atributos": {
+      "FOR": 26,
+      "DES": 16,
+      "CON": 23,
+      "INT": 16,
+      "SAB": 18,
+      "CAR": 14
+    },
+    "deslocamentos_ft": {
+      "andar": 60,
+      "escavar": 30
+    },
+    "salvaguardas": {
+      "DES": 7,
+      "CON": 10,
+      "SAB": 8
+    },
+    "pericias": {
+      "Arcana": 7,
+      "Intimidation": 6,
+      "Religion": 11
+    },
+    "sentidos": [
+      "truesight 60 ft",
+      "tremorsense 120 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common",
+      "Celestial",
+      "Giant",
+      "telepathy 60 ft"
+    ],
+    "resistencias_dano": [
+      "necrotic",
+      "radiant",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "cold",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "tamanho": "Huge",
+    "tipo": "Monstrosity",
+    "proficiencia": 4
+  },
+  "qualidade_estatisticas": "DADOS_DE_FONTE_SECUNDARIA_VERSAO_SEPARADA_NAO_HOMOLOGADOS",
+  "habilidades_passivas": [
+    {
+      "nome": "Keen Hearing and Smell",
+      "efeito": "Vantagem em Perception(SAB) baseada em audição ou olfato."
+    },
+    {
+      "nome": "Divine Weapons",
+      "efeito": "Ataques com armas são mágicos e acrescentam 3d6 necrotic OU radiant por acerto, escolhido a cada ataque. Dano já incluído em Bite/Slam.",
+      "bonus_dano": {
+        "dados": "3d6",
+        "modificador": 0,
+        "tipo": "necrotic ou radiant"
+      },
+      "escolha_por_acerto": true
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 12,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d10",
+          "modificador": 8,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "3d6",
+          "modificador": 0,
+          "tipo": "necrotic ou radiant"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda_condicional": {
+            "atributo": "DES",
+            "cd": 18,
+            "falha": "swallowed se criatura Large ou menor",
+            "sucesso": "não engolido"
+          },
+          "tamanho_alvo_max": "Large",
+          "engolido": {
+            "condicoes": [
+              "blinded",
+              "restrained"
+            ],
+            "cobertura": "total contra efeitos fora da criatura",
+            "dano_por_turno": {
+              "gatilho": "início do turno do Son of Fenris",
+              "dano": {
+                "dados": "6d6",
+                "modificador": 0,
+                "tipo": "acid"
+              }
+            },
+            "max_alvos_engolidos": 1,
+            "regurgitacao": {
+              "gatilho": "30+ dano causado por criatura engolida em um único turno",
+              "salvaguarda_filho": {
+                "atributo": "CON",
+                "cd": 20,
+                "falha": "regurgita alvo prone a até 10 ft",
+                "sucesso": "retém alvo"
+              },
+              "momento": "fim do turno"
+            },
+            "morte": {
+              "movimento_fuga_ft": 10,
+              "sai_prone": true
+            }
+          }
+        }
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 12,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d10",
+          "modificador": 8,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "3d6",
+          "modificador": 0,
+          "tipo": "necrotic ou radiant"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Divine Bolt",
+      "tipo": "ataque_magico_distancia",
+      "bonus_acerto": 8,
+      "alcance_ft": null,
+      "alcance_normal_ft": 60,
+      "alcance_max_ft": 60,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "4d6",
+          "modificador": 4,
+          "tipo": "necrotic ou radiant"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        [
+          "Bite",
+          "Slam",
+          "Slam"
+        ],
+        [
+          "Divine Bolt",
+          "Divine Bolt",
+          "Divine Bolt",
+          "Divine Bolt"
+        ]
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Divine Bolt",
+      "categoria": "ataque_magico_distancia",
+      "referencia_ataque": "Divine Bolt",
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Snake Breath",
+      "categoria": "sopro_duplo",
+      "recarga": "5-6",
+      "areas": [
+        {
+          "forma": "linha",
+          "comprimento_ft": 30,
+          "largura_ft": 5
+        },
+        {
+          "forma": "linha",
+          "comprimento_ft": 30,
+          "largura_ft": 5
+        }
+      ],
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 18,
+        "falha": "10d8 poison",
+        "sucesso": "metade"
+      },
+      "dano": [
+        {
+          "dados": "10d8",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ],
+      "sobreposicao": "alvo atingido pelas duas linhas faz UMA salvaguarda com desvantagem para UMA das linhas; não sofre dano duplicado",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "campos_em_conflito": [
+    "deslocamentos_ft",
+    "resistencias_dano",
+    "habilidades_passivas"
+  ],
+  "variantes_editoriais": [
+    {
+      "nome": "outra edição original",
+      "campos": [
+        "deslocamentos_ft",
+        "resistencias_dano",
+        "habilidades_passivas"
+      ],
+      "valores_confirmados": null,
+      "fonte": "PR #4"
+    }
+  ],
+  "conflito_editorial": "PR #4 registra diferenças de velocidade, resistências e habilidades entre edição original e revisão; este registro é APENAS transcrição KPOGL, sem fusão editorial.",
+  "bloqueado": true,
+  "pendencias": [
+    "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+    "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+    "PR #4 registra diferenças de velocidade, resistências e habilidades entre edição original e revisão; este registro é APENAS transcrição KPOGL, sem fusão editorial."
+  ],
+  "integrada": false,
+  "verificacao_indice_editorial_kp_20261014": {
+    "fonte": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "natureza": "INDICE_DO_EDITOR_NAO_STATBLOCK",
+    "identidade": "Son of Fenris",
+    "nd_texto_indice": "12.0",
+    "tamanho": "Huge",
+    "tipo": "Monstrosity",
+    "terrenos": [
+      "Arctic"
+    ],
+    "publicacao": "Tome of Beasts 1",
+    "consultado": "2026-10-14",
+    "limite": "Índice verifica identidade e ND de referência, não edição impressa, errata nem habilidades; preservar ramos conflitantes e não fundir variantes.",
+    "conflito_pr4_permanece": true
+  }
+}

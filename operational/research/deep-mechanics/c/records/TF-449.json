@@ -1,0 +1,339 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-449",
+  "nome": "Imprisoned Fiend",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 17,
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_CONFERENCIA_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/5407"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "9",
+    "ca": 14,
+    "pv": 133,
+    "dados_vida": "14d10+56",
+    "porte": "Large",
+    "tipo": "Construct",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 20,
+      "destreza": 10,
+      "constituicao": 18,
+      "inteligencia": 12,
+      "sabedoria": 10,
+      "carisma": 22
+    },
+    "modificadores": {
+      "forca": 5,
+      "destreza": 0,
+      "constituicao": 4,
+      "inteligencia": 1,
+      "sabedoria": 0,
+      "carisma": 6
+    },
+    "deslocamentos": {
+      "andar": 25
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "compreende Abyssal se caótico ou Infernal se leal; não fala"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "acid",
+      "poison",
+      "psychic",
+      "bludgeoning/piercing/slashing de armas não mágicas não adamantinas"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "fatigue",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "bloodied": 66,
+    "proficiencia": 4,
+    "cd_manobra": 17,
+    "xp": null,
+    "motivo_xp_null": "XP não informado no bloco oficial A5E",
+    "bonus_proficiencia": 4,
+    "maneuver_dc": 17
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Constructed Nature",
+        "gatilho": "Permanente",
+        "efeito": "Dispensa ar, comida e sono",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Acid Absorption",
+        "gatilho": "Dano ácido",
+        "efeito": "Recupera PV iguais ao dano ácido que receberia",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Berserk",
+        "gatilho": "Inicia turno com PV abaixo ou iguais ao limiar bloodied (66)",
+        "efeito": "Rola d6; com 6 passa a atacar a criatura visível mais próxima, ou objeto se nenhuma alcançável; encerra apenas quando destruído ou restaurado ao máximo",
+        "frequencia": "a cada início de turno bloodied",
+        "rolagem": "1d6 = 6",
+        "duracao": "até PV máximos ou destruição",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Bloodied Fury",
+        "gatilho": "Enquanto bloodied",
+        "efeito": "Torna-se Huge; sempre que sofre piercing/slashing, si próprio e cada criatura a 5 pés sofrem 2d6 acid",
+        "gatilho_secundario": "recebe piercing ou slashing",
+        "area": {
+          "raio_ft": 5
+        },
+        "dano": {
+          "dados": "2d6",
+          "tipo": "acid",
+          "media": 7
+        },
+        "fonte_verificada": true,
+        "interacao_regra": "fiend sofre dano ácido em área mas Acid Absorption substitui dano ácido por cura; preservar as duas regras, sem calcular dupla aplicação"
+      },
+      {
+        "nome": "False Appearance",
+        "gatilho": "Enquanto imóvel",
+        "efeito": "Indistinguível de estátua de argila",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Immutable Form",
+        "gatilho": "Ao sofrer alteração de forma",
+        "efeito": "Imune",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Magic Resistance",
+        "gatilho": "Teste de resistência contra magia/efeito mágico",
+        "efeito": "Vantagem",
+        "fonte_verificada": true
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "gatilho": "Ação",
+        "efeito": "Duas pancadas Slam",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Slam",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d10",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        },
+        "dano_medio": 16,
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 15,
+          "aplicacao": "se alvo é criatura"
+        },
+        "falha": "PV máximos reduzidos por quantidade de dano da pancada; morre se máximo chega a 0",
+        "sucesso": "não reduz máximo de PV",
+        "remocao": "greater restoration ou magia equivalente",
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Fiendfire Breath",
+        "gatilho": "Ação; 1/dia",
+        "efeito": "Cone de 30 pés; teste CON CD16; em falha 3d6 fire e 3d6 necrotic e 1 nível de strife A5E; em sucesso metade dos dois danos e sem strife",
+        "frequencia": "1/dia",
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 30
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 16
+        },
+        "danos": [
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "fire"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "necrotic"
+          }
+        ],
+        "falha": {
+          "dano": "inteiro",
+          "condicoes": [
+            "strife +1 (A5E)"
+          ]
+        },
+        "sucesso": {
+          "dano": "metade",
+          "condicoes": []
+        },
+        "fonte_verificada": true,
+        "condicao_sistema": "strife da A5E"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "2d10",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        },
+        "dano_medio": 16,
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 15,
+          "aplicacao": "se alvo é criatura"
+        },
+        "falha": "PV máximos reduzidos por quantidade de dano da pancada; morre se máximo chega a 0",
+        "sucesso": "não reduz máximo de PV",
+        "remocao": "greater restoration ou magia equivalente",
+        "fonte_verificada": true
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "gatilho": "Ação",
+      "efeito": "Duas pancadas Slam",
+      "fonte_verificada": true
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_VERIFICADA",
+      "reacoes": "AUSENCIA_VERIFICADA",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA",
+      "acoes_covil": "AUSENCIA_VERIFICADA",
+      "acoes_miticas": "AUSENCIA_VERIFICADA",
+      "conjuracao": "AUSENCIA_VERIFICADA"
+    },
+    "acoes_miticas": []
+  },
+  "pendencias": [
+    "Confirmar edição exata do Gate Pass Gazette na fonte editorial.",
+    "Strife 1 na falha de Fiendfire Breath é mecânica A5E, sem conversão automática.",
+    "Bloodied Fury e Acid Absorption interagem quando o Fiend é exposto ao ácido que ele próprio causa; motor deve respeitar as duas regras.",
+    "Imagem física pendente."
+  ],
+  "campos_nao_confirmados": [
+    "número exato da publicação",
+    "execução de efeitos interativos no motor A5E",
+    "imagem física"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/5407",
+      "tipo": "bloco individual completo no site oficial A5E, verificado diretamente em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico, não fonte editorial",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": false
+  },
+  "checkpoint_anterior": {
+    "id": "TF-449",
+    "nome": "Imprisoned Fiend",
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "9",
+    "ca": 14,
+    "pv": 133,
+    "atributos": {
+      "forca": 20,
+      "destreza": 10,
+      "constituicao": 18,
+      "inteligencia": 12,
+      "sabedoria": 10,
+      "carisma": 22
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Absorção ácida, Berserk/Bloodied Fury quando ferido e mudança de tamanho."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Duas Slam com redução de PV; Fiendfire Breath 1/dia e condição strife."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/5407",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Publicação ligada a Gate Pass Gazette #31; tratar strife como A5E.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "ficha_individual_estruturada_em_detalhe": true,
+  "ficha_origem_integral_verificada_na_pagina": true,
+  "verificacao_editorial": {
+    "data": "2026-10-14",
+    "sistema": "Level Up Advanced 5E",
+    "bloco_oficial_individual": "https://a5e.tools/node/5407",
+    "confronto_publicacao_impressa": "PENDENTE",
+    "estatisticas_ataques_gatilhos_acoes_verificados_no_site": true
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Advanced 5E",
+    "pagina_individual": "https://a5e.tools/node/5407",
+    "data": "2026-10-14",
+    "exemplar_editorial_errata": "PENDENTE"
+  }
+}

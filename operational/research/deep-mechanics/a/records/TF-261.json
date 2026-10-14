@@ -1,0 +1,293 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-261",
+  "name": "Vines of Nemthyr",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "8",
+    "size": "Large",
+    "type": "plant",
+    "alignment": "neutral_evil",
+    "experience_points": 3900,
+    "source_page": null,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "não declarado no statblock KPOGL; bônus +3 apenas inferível de valores publicados, sem marcar como verificado"
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 133,
+    "hit_dice": "14d10+56",
+    "ability_scores": {
+      "STR": 19,
+      "DEX": 12,
+      "CON": 19,
+      "INT": 5,
+      "WIS": 13,
+      "CHA": 5
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "burrow_ft": 30
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4,
+      "Survival": 4
+    },
+    "saving_throws": {
+      "STR": 7,
+      "CON": 7
+    },
+    "languages": [],
+    "damage_resistances": [
+      "cold",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "deafened",
+      "frightened",
+      "poisoned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 1,
+      "CON": 4,
+      "INT": -3,
+      "WIS": 1,
+      "CHA": -3
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "camouflage",
+        "trigger": "motionless",
+        "effect": "indistinguishable_from_regular_plant"
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "saving_throw_advantage",
+        "advantage_on_saving_throws_against": [
+          "spells",
+          "other_magical_effects"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Slam",
+            "count": 2
+          },
+          {
+            "attack": "Thorny Lash",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 4,
+              "average": 11,
+              "type": "bludgeoning"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Thorny Lash",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "flat": 4,
+              "average": 15,
+              "type": "slashing"
+            }
+          ],
+          "conditions": [
+            "grappled",
+            "restrained_while_grappled"
+          ],
+          "escape_dc": 15,
+          "appendage_limit": {
+            "total_thorny_lashes": 2,
+            "creatures_grappled_per_lash": 1
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Thorn Spray",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "save": {
+          "ability": "CON",
+          "dc": 15,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "10d6",
+                "average": 35,
+                "type": "poison"
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Dispersal",
+        "category": "alternate_body_state",
+        "action_economy": "bonus_action",
+        "state_change": "cohesive_to_distributed_vines",
+        "state_effects": {
+          "minimum_passable_gap_in": 3,
+          "cannot_attack": true
+        },
+        "movement": "retains_source_speeds"
+      },
+      {
+        "name": "Reform",
+        "category": "alternate_body_state",
+        "action_economy": "bonus_action",
+        "requires_state": "distributed_vines",
+        "state_change": "distributed_vines_to_cohesive"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Separa corpo em videiras para se mover; falso aspecto; chicote que agarra e chuva de espinhos."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Creature Codex",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/vines-of-nemthyr/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Creature Codex",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:vines-of-nemthyr",
+      "type": "KPOGL, transcrição independente (não endossada pela editora)",
+      "edition": "Creature Codex",
+      "scope": "Statblock individual: todas as estatísticas e categorias de ações visíveis na página",
+      "verification": "Leitura direta do bloco individual online realizada em 14/10/2026; comparação com impressão/errata e homologação da engine ainda não realizadas"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confirmar bloco contra Creature Codex impresso e eventuais erratas.",
+    "Conferir licenciamento e adequação do binário à arte de cartas.",
+    "Validar na engine as opções mutuamente exclusivas de dispersar/reformar e os dois chicotes (1 presa por chicote)."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-261.jpg",
+    "format": "image/jpeg",
+    "width": 551,
+    "height": 700,
+    "bytes": 75036,
+    "sha256": "12917479c6998554a79ac2934ebed273e79c5a63aabe738219dfa64682281838",
+    "git_blob_sha": "a67a82f4c6ebd683099f52d36f02ff789eea946b",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Vinesofnemthyr.jpg",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "356a9426a14d9d9b2adbb433e92e0b3ef33364e2",
+    "identity_provenance": "Nome/id verificados contra manifesto E, com hash e readback anterior",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:vines-of-nemthyr"
+    ],
+    "source_tier": "secondary_kpogl",
+    "statblock_url_read_online": true,
+    "edition_family_verified_from_page": true,
+    "copyright_license_qa_completed": false,
+    "source_discrepancies": [],
+    "notes": "Todos os ataques e dois estados da ação bônus extraídos da transcrição individual Creature Codex; PB não aparece no bloco."
+  }
+}

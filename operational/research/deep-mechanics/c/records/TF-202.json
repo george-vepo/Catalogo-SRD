@@ -1,0 +1,377 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-202",
+  "nome": "Bearfolk Thunderstomper",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 77,
+  "estado_auditoria": "BLOQUEADA_ORIGEM_BOOK_OF_EBON_TIDES_VS_TOB3",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "FONTE 5eSRD indica Book of Ebon Tides (2022), manifesto identifica Tome of Beasts 3; resolver",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/bearfolk-thunderstomper/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 15,
+    "pv": 105,
+    "dados_vida": "14d8+42",
+    "porte": "Medium",
+    "tipo": "humanoid (bearfolk)",
+    "alinhamento": "chaotic neutral",
+    "atributos": {
+      "FOR": 18,
+      "DES": 15,
+      "CON": 16,
+      "INT": 9,
+      "SAB": 14,
+      "CAR": 18
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 2,
+      "CON": 3,
+      "INT": -1,
+      "SAB": 2,
+      "CAR": 4
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Deception",
+        "bonus": 7
+      },
+      {
+        "nome": "Insight",
+        "bonus": 5
+      },
+      {
+        "nome": "Perception",
+        "bonus": 5
+      },
+      {
+        "nome": "Performance",
+        "bonus": 7
+      },
+      {
+        "nome": "Persuasion",
+        "bonus": 7
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 6
+      },
+      {
+        "nome": "DEX",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      },
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 30
+      }
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Common",
+      "Giant",
+      "Umbral"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 2300,
+    "bonus_proficiencia": 3,
+    "ca_origem": "chain shirt",
+    "system": "D&D 5e"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Deceptive Steps",
+        "gatilho": "viagem com dança que imita passos de gigante",
+        "alcance": "half mile",
+        "alvo": "criatura que ouve mas não vê bearfolk",
+        "teste": "Perception DC15",
+        "falha": "acredita que ouve gigante/Huge ou maior"
+      },
+      {
+        "nome": "Keen Smell",
+        "beneficio": "advantage WIS Perception checks baseados em smell"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Thunder Stomp OU Warsong",
+          "Bite",
+          "War Flute"
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "War Flute",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+4",
+            "media": 8,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "thunder"
+          }
+        ]
+      },
+      {
+        "nome": "Thunder Stomp",
+        "area": {
+          "forma": "cube",
+          "lado_ft": 15
+        },
+        "teste": {
+          "atributo": "STR",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "thunder"
+          },
+          "estado": "prone"
+        },
+        "sucesso": "efeito no sucesso NÃO definido no texto (não inferir)"
+      },
+      {
+        "nome": "Warsong",
+        "alvos": "aliados até 60ft",
+        "efeito": "advantage saves contra charmed/frightened até fim do próximo turno do bearfolk"
+      },
+      {
+        "nome": "Spellcasting",
+        "referencia": "mecanicas.conjuracao"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "War Flute",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+4",
+            "media": 8,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "thunder"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Thunder Stomp OU Warsong",
+        "Bite",
+        "War Flute"
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Frenzy",
+        "recarga": "1/rest",
+        "duracao": "1 minuto",
+        "beneficios": [
+          "resistance BPS de armas não mágicas",
+          "advantage attack rolls"
+        ],
+        "penalidade": "attack rolls contra bearfolk têm advantage"
+      },
+      {
+        "nome": "Taunt",
+        "usos": "2/rest",
+        "alvo": "uma criatura a até 30ft que pode ouvir",
+        "teste": {
+          "atributo": "CHA",
+          "cd": 15
+        },
+        "falha": "disadvantage ability checks, attack rolls e saving throws até início do próximo turno"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "atributo": "CHA",
+        "cd_salvaguarda": 15,
+        "magias": [
+          {
+            "frequencia": "at will",
+            "nomes": [
+              "dancing lights",
+              "prestidigitation",
+              "vicious mockery"
+            ]
+          },
+          {
+            "frequencia": "2/day each",
+            "nomes": [
+              "charm person",
+              "disguise self",
+              "mirror image",
+              "thunderwave"
+            ]
+          },
+          {
+            "frequencia": "1/day each",
+            "nomes": [
+              "compulsion",
+              "enthrall",
+              "freedom of movement",
+              "hypnotic pattern"
+            ]
+          }
+        ]
+      }
+    ],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "BLOQUEIO PROVENIÊNCIA: o 5eSRD atribui © Book of Ebon Tides (2022) mas CSV classifica Tome of Beasts 3; confirmar publicação/licença correta.",
+    "'Alternate Critical (Monster Crits for 5e)' na mesma página é regra externa opcional, EXCLUÍDA da mecânica-base.",
+    "Thunder Stomp não fornece efeito no sucesso; não inventar metade do dano. Imagem/edição ainda pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "verificação editorial da origem/erratas/condições de licença",
+    "direito de imagem, identidade e revisão visual"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/bearfolk-thunderstomper/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/bearfolk-thunderstomper/",
+      "tipo": "pesquisa individual CP45, não equivalente a autorização de publicação",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-202",
+    "nome": "Bearfolk Thunderstomper",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 15,
+    "pv": 105,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Deceptive Steps imita passos de gigantes; Keen Smell"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "War Flute, Bite, Thunder Stomp, Warsong e spellcasting; Frenzy e Taunt como ações bônus."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/bearfolk-thunderstomper/",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "A página apresenta regra externa Alternate Critical de Monster Crits for 5e; foi EXCLUÍDA do resumo mecânico-base.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-202.webp",
+    "formato": "webp",
+    "largura": 1000,
+    "altura": 1166,
+    "bytes": 99674,
+    "blob_sha": "873f88e927c04df017ed517cebf793a903d6707e",
+    "sha256": "80ab41b646990e4dbdc38659fb5e143e5834cfab657a69a9d59ff7b707a2ac2f",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Bearfolk%20Thunderstomper.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 45,
+    "publicacao": "FONTE 5eSRD indica Book of Ebon Tides (2022), manifesto identifica Tome of Beasts 3; resolver",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/bearfolk-thunderstomper/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

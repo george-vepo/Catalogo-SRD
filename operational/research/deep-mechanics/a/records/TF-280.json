@@ -1,0 +1,297 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-280",
+  "name": "Mamura",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "6",
+    "size": "Small",
+    "type": "aberration",
+    "alignment": "neutral_evil",
+    "source_page": 263,
+    "proficiency_bonus": 3,
+    "experience_points": 2300
+  },
+  "statistics": {
+    "armor_class": 16,
+    "hit_points": 112,
+    "hit_dice": "15d6+60",
+    "ability_scores": {
+      "STR": 8,
+      "DEX": 18,
+      "CON": 19,
+      "INT": 17,
+      "WIS": 11,
+      "CHA": 16
+    },
+    "speeds": {
+      "walk_ft": 20,
+      "fly_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 16
+    },
+    "skills": {
+      "Acrobatics": 7,
+      "Perception": 6,
+      "Stealth": 7
+    },
+    "saving_throws": {
+      "DEX": 7,
+      "CON": 7,
+      "CHA": 6
+    },
+    "languages": [
+      "Common",
+      "Goblin",
+      "Sylvan",
+      "Void Speech"
+    ],
+    "damage_resistances": [
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "from": "nonmagical_attacks"
+      }
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": -1,
+      "DEX": 4,
+      "CON": 4,
+      "INT": 3,
+      "WIS": 0,
+      "CHA": 3
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Distracting Babble",
+        "category": "anti_spell",
+        "radius_ft": 20,
+        "concentrating_spellcaster_starts_turn": {
+          "save": {
+            "ability": "CON",
+            "dc": 15
+          },
+          "on_failure": "lose_concentration"
+        },
+        "spellcaster_attempts_to_cast": {
+          "save": {
+            "ability": "CON",
+            "dc": 15
+          },
+          "on_failure": {
+            "cast_fails": true,
+            "spell_slot_spent": false,
+            "action_bonus_or_reaction_spent": true
+          }
+        }
+      },
+      {
+        "name": "Flyby",
+        "category": "movement",
+        "opportunity_attack_when_flying_out_of_reach": false
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "saving_throw_advantage",
+        "against": [
+          "spells",
+          "magical_effects"
+        ]
+      },
+      {
+        "name": "Radial Eyes",
+        "category": "defense",
+        "advantage_on_sight_perception_checks": true,
+        "advantage_on_saves_vs_blinded": true,
+        "if_not_blinded": {
+          "enemy_advantage_from_surrounding_or_ally_distraction_disabled": true,
+          "examples": [
+            "Pack Tactics",
+            "Sneak Attack"
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Claw",
+            "count": 3
+          },
+          {
+            "attack": "Whiptail Stinger",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "flat": 4,
+              "average": 8,
+              "type": "slashing"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whiptail Stinger",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 10,
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "flat": 4,
+              "average": 8,
+              "type": "piercing"
+            }
+          ]
+        },
+        "on_hit_save": {
+          "ability": "CON",
+          "dc": 15,
+          "on_failure": {
+            "extra_damage": [
+              {
+                "dice": "2d6",
+                "average": 7,
+                "type": "poison"
+              }
+            ],
+            "condition": "poisoned",
+            "duration": "1_minute",
+            "ongoing_damage": {
+              "dice": "1d6",
+              "average": 3,
+              "type": "poison",
+              "timing": "start_of_affected_turn"
+            },
+            "repeat_save": {
+              "ability": "CON",
+              "dc": 15,
+              "timing": "end_of_affected_turn",
+              "success_ends": true
+            }
+          },
+          "on_success": {
+            "extra_damage": 0,
+            "condition": null
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Shadow Stealth",
+        "category": "hide",
+        "action_economy": "bonus_action",
+        "precondition": "dim_light_or_darkness"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Balbucio impede conjuração e concentração próximas, voo evasivo, resistência mágica e visão radial que dificulta ataques coordenados."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:mamura",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "Bloco completo de estatísticas e ações individuais",
+      "verification": "Lido em 2026-10-14; transcrição secundária, não editora original"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Babble cancels failed casting without consuming spell slot, although casting action is spent.",
+    "Radial Eyes does not necessarily prohibit all Sneak Attack conditions; model the source's stated limitation.",
+    "Validar impressão/erratas, licença e mecânicas na engine antes de homologar."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-280.webp",
+    "format": "image/webp",
+    "width": 765,
+    "height": 1000,
+    "bytes": 123950,
+    "sha256": "69c36edd346ab62831505cb463e2d73d57ca3b47b77f5e196b94ef6d7c2d6e0d",
+    "git_blob_sha": "491a97a44a0028ab0a7a6899d9cbbcc9b0f4fe84",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/ToB1-2023/bestiary/Mamura.webp",
+    "source_type": "reuse_from_branch_image_assets_f",
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "original_asset_commit": "3592249f6fec9b0b1f670f4c0e19bf1d86d62881",
+    "identity_provenance": "ID e nome conferidos com manifesto F e blob SHA preservado",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:mamura"
+    ],
+    "source_tier": "secondary_KPOGL",
+    "individual_statblock_read_live": true,
+    "rights_reviewed": false
+  }
+}

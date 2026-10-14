@@ -1,0 +1,310 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-128",
+  "nome": "Giant, Phase",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 8,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 15,
+    "pv": 136,
+    "dados_vida": "13d12+52",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 21,
+      "DES": 11,
+      "CON": 18,
+      "INT": 8,
+      "SAB": 15,
+      "CAR": 8
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": 0,
+      "CON": 4,
+      "INT": -1,
+      "SAB": 2,
+      "CAR": -1
+    },
+    "deslocamentos": {
+      "andar": 40,
+      "escalar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Giant",
+      "Undercommon"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Ethereal Jaunt",
+        "economia": "bonus action",
+        "efeito": "Move-se magicamente entre Material e Etéreo com equipamentos vestidos/carregados; criatura agarrada não acompanha a mudança e o grapple termina.",
+        "limite": "O deslocamento entre planos não transporta criaturas agarradas"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Spiked Fist",
+            "quantidade": 2
+          }
+        ],
+        "gatilho": "Ambos os ataques acertam o mesmo alvo Large ou menor",
+        "teste": {
+          "atributo": "STR",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        },
+        "sucesso": "Sem dano adicional de impalamento"
+      },
+      {
+        "nome": "Spiked Fist",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "piercing"
+          }
+        ],
+        "condicao": "Se acertar Large ou menor: grappled, escape DC16",
+        "limite": "Duas mãos, cada uma agarra no máximo um alvo"
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "creature",
+          "atributo": "STR",
+          "cd": 15,
+          "em_falha": "prone"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Spiked Fist",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "piercing"
+          }
+        ],
+        "condicao": "Se acertar Large ou menor: grappled, escape DC16",
+        "limite": "Duas mãos, cada uma agarra no máximo um alvo"
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "creature",
+          "atributo": "STR",
+          "cd": 15,
+          "em_falha": "prone"
+        }
+      }
+    ],
+    "multiataque": {
+      "ataques": [
+        "Spiked Fist",
+        "Spiked Fist"
+      ],
+      "condicional": "Ambos atingem o mesmo alvo Large ou menor: STR DC15 ou 2d6 piercing"
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Ethereal Jaunt",
+        "regras_em": "tracos"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Ficha aprofundada em republicação Robinloft e índice oficial Kobold Press; falta confronto independente com edição autorizada Tome of Beasts 2/errata.",
+    "Imagem binária existente sem inspeção editorial de identidade e direitos."
+  ],
+  "campos_nao_confirmados": [
+    "confronto independente com livro/errata da edição correspondente",
+    "identidade e direitos da arte",
+    "revisão mecânica/editorial independente"
+  ],
+  "fontes": [
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2",
+      "tipo": "ficha individual examinada no checkpoint 33",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_FONTES_SECUNDARIAS",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-128",
+    "nome": "Giant, Phase",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 15,
+    "pv": 136,
+    "pv_dados": "13d12+52",
+    "porte": "Huge",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      21,
+      11,
+      18,
+      8,
+      15,
+      8
+    ],
+    "movimento_ft": {
+      "andar": 40,
+      "escalar": 20
+    },
+    "tracos": [
+      {
+        "nome": "Ethereal Jaunt",
+        "resumo": "Como ação bônus muda do Plano Material para Etéreo e vice-versa; não leva criatura agarrada."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Dois Spiked Fist; se ambos acertarem alvo até Large, FOR CD15 ou +2d6 perfurante."
+      },
+      {
+        "nome": "Spiked Fist",
+        "resumo": "+8, 2d8+5 perfurante, agarra alvos até Large com escape CD16."
+      },
+      {
+        "nome": "Rock",
+        "resumo": "+8, alcance 60/240, 3d10+5 contundente; FOR CD15 contra queda."
+      }
+    ],
+    "fonte": "https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "PARCIAL_FONTES_SECUNDARIAS",
+    "pendencias": [
+      "Página individual /giant-phase/ do 5eSRD indisponível; dados conferidos em resumo de terceiros e em reprodução de Tome of Beasts 2, não em publicação editorial oficial acessível.",
+      "A troca de plano encerra agarrões, conforme a habilidade.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "neutral",
+    "fontes_secundarias": [
+      "https://anyflip.com/usqxr/tzow/basic/151-200"
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-128.webp",
+    "formato": "webp",
+    "largura": 851,
+    "altura": 1148,
+    "bytes": 188562,
+    "blob_sha": "4a3c674fedc5c28752eb018502fbd08d3ba53de6",
+    "sha256": "bd7d6622248063039092f3a66060145fe35fae06ada774c7029a1d9e47544558",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Phase%20Giant.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 33,
+    "publicacao": "Tome of Beasts 2",
+    "aprovacao_editorial": "PENDENTE",
+    "fonte_mecanicas": "https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2",
+    "nota": "Robinloft informa estimativa própria CR6; não substituir ND5 oficial da ficha e do índice da Kobold Press."
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-177",
+  "nome": "Ooze, Giant Shark Bowl",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 55,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "Creature Codex (2018) p.284",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "8",
+    "nd_fonte": "8",
+    "ca": 6,
+    "pv": 172,
+    "dados_vida": "15d12+75",
+    "porte": "Huge",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 23,
+      "DES": 3,
+      "CON": 20,
+      "INT": 1,
+      "SAB": 10,
+      "CAR": 5
+    },
+    "modificadores": {
+      "FOR": 6,
+      "DES": -4,
+      "CON": 5,
+      "INT": -5,
+      "SAB": 0,
+      "CAR": -3
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "nadar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond radius"
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [],
+    "resistencias": [
+      "acid",
+      "fire",
+      "slashing"
+    ],
+    "imunidades_dano": [
+      "lightning"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 3900,
+    "bonus_proficiencia": 3
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amphibious",
+        "efeito": "respira ar e água"
+      },
+      {
+        "nome": "Blood Frenzy",
+        "condicao": "alvo não tem todos os PV",
+        "beneficio": "advantage melee attack rolls"
+      },
+      {
+        "nome": "Electrical Charge",
+        "gatilho": "sujeita a lightning damage",
+        "efeito": "não sofre esse dano, ativa charge por 1 minuto",
+        "duracao": "1 minuto",
+        "efeito_ativo": {
+          "dano_adicional_por_ataque": {
+            "dados": "1d4",
+            "media": 2,
+            "tipo": "lightning"
+          }
+        }
+      },
+      {
+        "nome": "Ooze Fish Bowl",
+        "espaco": "ocupa integralmente seu espaço",
+        "gatilho": "outra criatura entra no espaço",
+        "consequencia": "Engulf com desvantagem no DEX save",
+        "engolfados": "visíveis de fora, possuem total cover",
+        "extracao": {
+          "ator": "criatura a até 5ft",
+          "economia": "action",
+          "teste": "STR DC15",
+          "custo_do_resgatador": {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "piercing"
+          }
+        },
+        "capacidade": "1 Large OU até 6 Medium ou menores"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Symbiotically Bound",
+        "efeito": "tubarão + ooze são uma única criatura com a mesma ficha, não podem ser separados"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "quantidade": 2,
+        "sequencia": [
+          "Bite",
+          "Pseudopod"
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Engulf",
+        "movimento": "engolfados movem com bowl",
+        "gatilho": "entra no espaço da criatura",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "sucesso": "alvo pode escolher ser empurrado 5ft para trás ou lado; recusando movimento sofre consequências da falha",
+        "falha": {
+          "dano": {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "piercing"
+          },
+          "estado": [
+            "engulfed",
+            "restrained",
+            "não pode respirar"
+          ],
+          "dano_recorrente": {
+            "momento": "início de cada turno da bowl",
+            "dano": {
+              "dados": "3d10+6",
+              "media": 22,
+              "tipo": "piercing"
+            }
+          }
+        },
+        "escape": {
+          "economia": "action",
+          "teste": "STR check DC15",
+          "sucesso": "vai para espaço à escolha a até 5ft"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 2,
+      "sequencia": [
+        "Bite",
+        "Pseudopod"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "NÃO separar tubarão e ooze: Symbiotically Bound compartilha estatísticas; qualquer extrusão seria regra inventada.",
+    "Ooze Fish Bowl tem disadvantage no DEX ao entrar no espaço, capacidade 1 Large ou 6 Medium; separar escape interno e extração externa (resgatador sofre 3d10+6 piercing).",
+    "Conferir original Creature Codex p284 e autorização da imagem."
+  ],
+  "campos_nao_confirmados": [
+    "conferência editorial/erratas/escopo de licenciamento",
+    "verificação de direito de uso, identidade e qualidade da arte"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/",
+      "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/plzy/fzdt/basic/251-300",
+      "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-177",
+    "nome": "Ooze, Giant Shark Bowl",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "8",
+    "nd_fonte": "8",
+    "ca": 6,
+    "pv": 172,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Amphibious, Blood Frenzy, Electrical Charge e Ooze Fish Bowl"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Ataque de tubarão e pseudópodes/engolfamento, conforme mecânica da forma de aquário."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Estrutura representa criatura composta; não assumir que o tubarão separado seja uma ficha independente.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-177.jpg",
+    "formato": "jpg",
+    "largura": 775,
+    "altura": 700,
+    "bytes": 63728,
+    "blob_sha": "60d3114d9ab303165f7ac0a9c3f0ff616e7defbc",
+    "sha256": "6239ae7f1f42cea223f9b66182a2cf0fdc4dd88d19431b9ebf67537a3f6cd6d0",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Giantsharkbowl.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 41,
+    "publicacao": "Creature Codex (2018) p.284",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

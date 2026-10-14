@@ -1,0 +1,223 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-355",
+  "nome": "Giant, Hill Chief",
+  "estado": "DETALHADA_FONTE_EDITORIAL_SEM_REVISAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "Level Up Advanced 5th Edition (A5E)",
+    "publicacao": "Monstrous Menagerie",
+    "editora": "EN Publishing",
+    "confirmacao": "bloco individual no portal editorial; edição impressa/erratas não confrontadas"
+  },
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1640",
+      "natureza": "editorial_direta",
+      "verificada": "2026-10-13"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "continuidade_checkpoint_secundario"
+    }
+  ],
+  "estatisticas": {
+    "nd": "8",
+    "ca": 13,
+    "pv": 126,
+    "dados_vida": "12d12+48",
+    "atributos": {
+      "FOR": 20,
+      "DES": 8,
+      "CON": 18,
+      "INT": 6,
+      "SAB": 10,
+      "CAR": 6
+    },
+    "deslocamentos_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {
+      "STR": 8,
+      "CON": 7
+    },
+    "pericias": {},
+    "sentidos": [],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "Giant"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": []
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Gullible",
+      "efeito": "Desvantagem em testes de Insight."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Greatclub",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 10,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "3d8",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [
+        {
+          "alvos": "Médio ou menor",
+          "save": {
+            "atributo": "STR",
+            "cd": 16
+          },
+          "falha": "prone"
+        }
+      ]
+    },
+    {
+      "nome": "Rock",
+      "tipo": "distancia",
+      "bonus_acerto": 8,
+      "alcance_ft": {
+        "range_normal": 60,
+        "range_long": 240
+      },
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "6d6",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [
+        {
+          "alvos": "Médio ou menor",
+          "save": {
+            "atributo": "STR",
+            "cd": 16
+          },
+          "falha": "prone"
+        },
+        {
+          "opcao": "Arremessar criatura agarrada Médio ou menor até 30 pés; 3d6+5 dano no alvo e criatura arremessada se acertar; só criatura arremessada em erro; cai prone."
+        },
+        {
+          "gatilho": "após arremesso de criatura Medium ou menor, tenha o ataque acertado ou errado",
+          "efeito": "criatura arremessada cai prone num espaço desocupado até 5 pés do alvo",
+          "fonte": "https://a5e.tools/node/1640"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "efeito": "Dois ataques Greatclub.",
+      "sequencia": [
+        "Greatclub",
+        "Greatclub"
+      ]
+    },
+    {
+      "nome": "Greatclub Sweep",
+      "efeito": "Uma vez ao dia e apenas estando bloodied, DEX CD16 num raio de 10 pés; falha 3d8+5 contundente, empurrar 10 pés e prone.",
+      "usos": "1/dia",
+      "precondicao": "bloodied",
+      "area_ft": 10,
+      "salvaguarda": {
+        "atributo": "DEX",
+        "cd": 16
+      },
+      "dano": {
+        "dados": "3d8",
+        "modificador": 5,
+        "tipo": "bludgeoning"
+      }
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Grab",
+      "efeito": "Um alvo a 5 pés DEX CD10 ou agarrado (escape CD16); apenas um alvo e vantagem com greatclub contra ele.",
+      "salvaguarda": {
+        "atributo": "DEX",
+        "cd": 10
+      },
+      "escape_cd": 16,
+      "alcance_ft": 5,
+      "condicao": "grappled"
+    },
+    {
+      "nome": "Body Slam",
+      "efeito": "1/dia, salto de 15 pés sem ataques de oportunidade, cai prone; criaturas na posição DEX CD15; falha 3d8+6 e prone; sucesso metade e empurrão de 5 pés.",
+      "usos": "1/dia",
+      "salvaguarda": {
+        "atributo": "DEX",
+        "cd": 15
+      },
+      "dano": {
+        "dados": "3d8",
+        "modificador": 6,
+        "tipo": "bludgeoning"
+      },
+      "efeitos_sucesso": {
+        "dano": "metade do dano informado",
+        "movimento": "é empurrado 5 pés para espaço desocupado à escolha do alvo",
+        "se_espaco_ocupado": "alvo cai prone"
+      },
+      "fonte_complemento": "https://a5e.tools/node/1640"
+    },
+    {
+      "nome": "Muddy Ground",
+      "efeito": "1/dia, terra não trabalhada a 60 pés vira terreno difícil por 1 minuto ou morte do gigante. Alvos prone FOR CD15 ou deslocamento 0; ação com teste FOR CD15 libera.",
+      "usos": "1/dia",
+      "duracao": "1 minuto ou morte do gigante",
+      "save": {
+        "atributo": "STR",
+        "cd": 15
+      },
+      "encerramento": "ação + STR CD15",
+      "gatilhos_resistencia": [
+        "criaturas que já estejam prone no terreno afetado quando a lama surge",
+        "criaturas que caiam prone nessa área enquanto a lama persistir"
+      ],
+      "fonte_complemento": "https://a5e.tools/node/1640"
+    },
+    {
+      "nome": "Stomp",
+      "efeito": "1/dia, DEX CD15 em 60 pés; falha prone.",
+      "usos": "1/dia",
+      "area_ft": 60,
+      "save": {
+        "atributo": "DEX",
+        "cd": 15
+      }
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": false,
+  "pendencias": [
+    "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
+    "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
+  ],
+  "integrada": false,
+  "auditoria_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/1640",
+    "tipo": "conferência pontual de ações e efeitos em fonte editorial A5E acessível",
+    "conclusao": "Lacunas identificadas e estruturadas neste checkpoint; não prova integralidade frente ao exemplar impresso/erratas nem homologação independente.",
+    "nao_promovido": true
+  }
+}

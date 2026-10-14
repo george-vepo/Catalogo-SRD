@@ -1,0 +1,302 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-181",
+  "nome": "Ooze, Snow",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 59,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "Tome of Beasts 3 (2022)",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ooze-snow/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "7",
+    "nd_fonte": "7",
+    "ca": 6,
+    "ca_origem": null,
+    "pv": 171,
+    "dados_vida": "18d12+54",
+    "porte": "Huge",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 18,
+      "DES": 3,
+      "CON": 16,
+      "INT": 1,
+      "SAB": 12,
+      "CAR": 5
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": -4,
+      "CON": 3,
+      "INT": -5,
+      "SAB": 1,
+      "CAR": -3
+    },
+    "deslocamentos": {
+      "andar": 30,
+      "escavar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [],
+    "resistencias": [
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "cold"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 2900,
+    "bonus_proficiencia": 3
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "passagem_minima_ft": 1,
+        "nota": "fonte diz 1 foot, NÃO 1 inch"
+      },
+      {
+        "nome": "False Appearance",
+        "precondicao": "imóvel",
+        "efeito": "indistinguível de um campo de neve"
+      },
+      {
+        "nome": "Ice Walk",
+        "efeito": "não exige check em superfícies geladas, terreno difícil de gelo ou neve não consome deslocamento extra"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Snow Blindness",
+        "gatilho": "criatura que pode ver a ooze inicia turno até 30ft",
+        "precondicao": "NÃO funciona em dim light ou darkness",
+        "teste": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "falha": "blinded até o início do próximo turno do alvo"
+      },
+      {
+        "nome": "Snow Burrower",
+        "efeito": "escava neve e gelo não mágicos, além de areia/terra/lama"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "cold"
+          }
+        ]
+      },
+      {
+        "nome": "Avalanche",
+        "recarga": "4-6",
+        "movimento": "até 30ft em linha reta atravessando espaços de criaturas Large ou menores",
+        "gatilho": "primeira entrada em espaço da criatura neste movimento",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 15
+        },
+        "falha": {
+          "dano": [
+            {
+              "dados": "3d6",
+              "media": 10,
+              "tipo": "bludgeoning"
+            },
+            {
+              "dados": "4d8",
+              "media": 18,
+              "tipo": "cold"
+            }
+          ],
+          "estado": "buried na neve molhada"
+        },
+        "sucesso": "metade do dano; não fica buried",
+        "estado_buried": {
+          "condicoes": [
+            "restrained",
+            "não respira",
+            "não consegue levantar"
+          ],
+          "resgate": {
+            "economia": "action por vítima ou qualquer criatura",
+            "teste": "STR check DC15",
+            "vantagem": "vítima que possui swim speed tem advantage no check"
+          }
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "cold"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Amorphous é 1 FOOT, confirmado no bloco, distinto da maioria das oozes.",
+    "Snow Blindness falha quando há penumbra ou escuridão; Avalanche 4–6, apenas Large ou menor, resgate STR DC15 com vantagem quando criatura enterrada tem velocidade de natação.",
+    "Licença/edital/arte pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "conferência livro/editorial e erratas aplicáveis",
+    "direitos/adequação visual da arte e revisão independente"
+  ],
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:snow-ooze",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-snow/",
+      "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:snow-ooze",
+      "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_ACOES_NAO_CONFERIDAS",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-181",
+    "nome": "Ooze, Snow",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "7",
+    "nd_fonte": "7",
+    "ca": 6,
+    "pv": 171,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Amorphous e camuflagem no frio; imune a frio"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Ataques de ooze associados a neve, exigem bloco de ações completo."
+      }
+    ],
+    "fonte": "https://kpogl.wikidot.com/monster:snow-ooze",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "PARCIAL_ACOES_NAO_CONFERIDAS",
+    "pendencias": [
+      "Wiki não oficial; dados CA/PV/ND conferidos mas ações não transcritas integralmente.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-181.webp",
+    "formato": "webp",
+    "largura": 1200,
+    "altura": 1068,
+    "bytes": 168646,
+    "blob_sha": "47adf01cb038be1ccdd51bab3878928d43432bc0",
+    "sha256": "9a9f7e63a6a5a4ce177986dd1e6fdfb28f9c59ee194070a5e5c6ce69d33bd98f",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Snow%20Ooze.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 42,
+    "publicacao": "Tome of Beasts 3 (2022)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-snow/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

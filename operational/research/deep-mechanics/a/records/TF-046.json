@@ -1,0 +1,302 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-046",
+  "name": "Archon, Word",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Tiny",
+    "type": "celestial",
+    "alignment": "lawful good",
+    "edition": "Tome of Beasts 3 (5e), individual statblock p. 44",
+    "source_page": 44,
+    "experience_points": 200,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 28,
+    "hit_dice": "8d4+8",
+    "ability_scores": {
+      "STR": 10,
+      "DEX": 14,
+      "CON": 13,
+      "INT": 13,
+      "WIS": 17,
+      "CHA": 16
+    },
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 90,
+      "hover": true
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Persuasion": 5
+    },
+    "saving_throws": {
+      "WIS": 5,
+      "CHA": 5
+    },
+    "languages": [
+      "all languages",
+      "telepathy 60 ft"
+    ],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "poisoned",
+      "prone"
+    ],
+    "ability_modifiers": {
+      "STR": 0,
+      "DEX": 2,
+      "CON": 1,
+      "INT": 1,
+      "WIS": 3,
+      "CHA": 3
+    },
+    "armor_class_type": "natural armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Immortal Nature",
+        "category": "passive",
+        "effect": {
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      },
+      {
+        "name": "Keen Sight",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "Wisdom (Perception)",
+          "requires": "reliance on sight"
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d4",
+              "modifier": 2,
+              "type": "radiant",
+              "average": 7
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Forceful Words",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 5,
+        "range_ft": 90,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "modifier": 3,
+              "type": "radiant",
+              "average": 10
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Share Smite",
+        "category": "buff",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 3
+        },
+        "range_ft": 30,
+        "targets": {
+          "count": 1,
+          "kind": "other_creature",
+          "requirements": [
+            "can hear archon",
+            "can see archon"
+          ]
+        },
+        "effect": {
+          "empower_weapon": true,
+          "additional_radiant_damage": {
+            "ordinary": {
+              "dice": "2d8",
+              "modifier": 0,
+              "type": "radiant",
+              "average": 9
+            },
+            "if_target_type_in": [
+              "fiend",
+              "undead"
+            ],
+            "then": {
+              "dice": "3d8",
+              "modifier": 0,
+              "type": "radiant",
+              "average": 13
+            }
+          },
+          "max_triggers": "first hit with the weapon each turn"
+        },
+        "duration": "1 minute"
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Spellcasting",
+        "action_economy": "action",
+        "spellcasting_ability": "CHA",
+        "spell_save_dc": 13,
+        "spell_attack_bonus": null,
+        "components": {
+          "material": false,
+          "somatic": false,
+          "verbal": "not waived by source"
+        },
+        "at_will": [
+          "dancing lights",
+          "message",
+          "true strike"
+        ],
+        "per_day": {
+          "one_each": [
+            "faerie fire",
+            "heroism"
+          ]
+        },
+        "slots": null
+      }
+    ],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/word-archon/",
+      "type": "ficha_individual_localizada_em_checkpoint",
+      "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "OGL_structured_statblock_secondary",
+      "publication": "Tome of Beasts 3",
+      "source_page": 44,
+      "verified_fields": [
+        "identity",
+        "stats",
+        "traits",
+        "actions",
+        "spellcasting",
+        "bonus",
+        "reaction",
+        "legendary"
+      ],
+      "primary_editorial": false
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-041_TF-046/research.json",
+    "sha": "16ed0118731d24ca8447a293e670c952a7f6ea8f"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Imagem e direitos pendentes."
+  ],
+  "outstanding": [
+    "Confrontar edição e erratas primárias e revisão independente das regras da engine.",
+    "Inspeção visual, licenças e aprovação da imagem são gates separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "secondary_source_actions_structured": true,
+    "secondary_source_spellcasting_structured": true,
+    "primary_book_or_errata_compared": false,
+    "independent_implementation_review": false,
+    "final_approval": false,
+    "source_type_and_alignment_crosschecked_against_ToB3": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-046.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 87020,
+    "sha256": "cd9f128280c40c7d06cc5bf189e0ed9c28e42fbdd1e824e7f6a38a8357aed41c",
+    "git_blob_sha": "7b1e54d5fef80e8d2fe06f11c14694c55fc9a92e",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Word%20Archon.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "c8b22982b1d23611af5948b1faaf931c5a7a78b3",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

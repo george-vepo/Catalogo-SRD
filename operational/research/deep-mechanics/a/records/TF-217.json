@@ -1,0 +1,177 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-217",
+  "name": "Bearmit Crab",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "2",
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 59,
+    "hit_dice": "7d10+21",
+    "ability_scores": {
+      "STR": 18,
+      "DEX": 13,
+      "CON": 16,
+      "INT": 4,
+      "WIS": 13,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "swim_ft": 20
+    },
+    "senses": {
+      "passive_perception": 13
+    },
+    "skills": {
+      "Perception": 3
+    },
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [
+      "bludgeoning"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Viscid Shell",
+        "category": "passive",
+        "effect": "Quando arma corpo a corpo cortante/perfurante o atinge, o atacante testa FOR CD13; falha prende arma à carapaça. Arma não pode ser usada até criatura gastar ação e passar teste FOR CD13 para libertá-la.",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 13,
+          "on_failure": "Arma fica presa",
+          "on_success": "Arma permanece disponível"
+        }
+      },
+      {
+        "name": "Keen Smell",
+        "category": "passive",
+        "effect": "Vantagem em Perception (SAB) baseada em cheiro."
+      },
+      {
+        "name": "False Appearance",
+        "category": "passive",
+        "effect": "Enquanto imóvel, indistinguível de uma pilha normal de pedras."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "options": [
+          [
+            "Claw",
+            "Bite"
+          ],
+          [
+            "Claw",
+            "Claw"
+          ]
+        ]
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 6,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d6",
+            "modifier": 4,
+            "type": "bludgeoning"
+          }
+        ],
+        "on_hit": "Alvo Medium ou menor fica grappled (escape CD13) e restrained enquanto agarrado.",
+        "grapple_escape_dc": 13,
+        "limits": "Cada uma das duas garras sustenta um agarrão."
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 6,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d8",
+            "modifier": 4,
+            "type": "piercing"
+          }
+        ]
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:bearmit-crab",
+      "type": "ficha_individual_secundaria",
+      "edition": "Creature Codex",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-217.jpg",
+    "format": "image/jpeg",
+    "width": 727,
+    "height": 700,
+    "bytes": 91866,
+    "sha256": "bfd1dfe8dc8c8237bb2e3a39999a65349166561d83966ab9cbe0ce8d70655357",
+    "git_blob_sha": "93227bb3dac4c49a2c22dfb42078c58f9662930e",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/bearmitcrab.jpg",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "4381bc3d339a79d125a328df3eb12d3698c8806d",
+    "identity_provenance": "Nome/id coincidem com registro e manifesto E, que reporta download e readback verificados",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença/direitos da ilustração",
+      "aprovação para impressão"
+    ]
+  }
+}

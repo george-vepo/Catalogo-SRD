@@ -1,0 +1,681 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-124",
+  "nome": "Animal Lord, Queen of Serpents",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 4,
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_ESTRUTURADA_CUSTO_BESTOWAL_ABERTO",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": null,
+    "fonte_identidade": "https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "12",
+    "nd_fonte": "12",
+    "ca": 17,
+    "pv": 170,
+    "dados_vida": "20d8+80",
+    "porte": "Medium humanoid/true, Large constrictor snake",
+    "tipo": "fey (shapechanger)",
+    "alinhamento": "lawful neutral",
+    "atributos": {
+      "FOR": 22,
+      "DES": 20,
+      "CON": 18,
+      "INT": 18,
+      "SAB": 21,
+      "CAR": 22
+    },
+    "modificadores": {
+      "FOR": 6,
+      "DES": 5,
+      "CON": 4,
+      "INT": 4,
+      "SAB": 5,
+      "CAR": 6
+    },
+    "deslocamentos": {
+      "andar_ft": 30,
+      "escalar_ft": 30,
+      "nadar_ft": 30,
+      "restricao_escalar_nadar": [
+        "snake",
+        "true"
+      ]
+    },
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 8
+      },
+      {
+        "nome": "Athletics",
+        "bonus": 10
+      },
+      {
+        "nome": "Deception",
+        "bonus": 10
+      },
+      {
+        "nome": "Nature",
+        "bonus": 8
+      },
+      {
+        "nome": "Perception",
+        "bonus": 9
+      },
+      {
+        "nome": "Persuasion",
+        "bonus": 10
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 9
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 9
+      },
+      {
+        "nome": "CHA",
+        "bonus": 10
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 19,
+    "idiomas": [
+      "all",
+      "telepathy 120 ft"
+    ],
+    "resistencias": [
+      "lightning",
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "incapacitated",
+      "poisoned",
+      "stunned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 8400,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Bestowal of Trust",
+        "efeito": "concede +1 enhancement a Wisdom de uma criatura",
+        "limite": "somente uma criatura beneficiária por vez",
+        "duracao": "até o beneficiário ferir um réptil de qualquer tipo",
+        "custo_acao": null,
+        "nota": "fonte não define economia de ação nem alcance/ritual"
+      },
+      {
+        "nome": "Keen Smell",
+        "efeito": "vantagem em WIS(Perception) envolvendo olfato"
+      },
+      {
+        "nome": "Legendary Resistance",
+        "usos": {
+          "quantidade": 3,
+          "periodo": "dia"
+        },
+        "gatilho": "falha em saving throw",
+        "efeito": "pode optar por sucesso"
+      },
+      {
+        "nome": "Magic Resistance",
+        "efeito": "vantagem em saving throws contra spells/effects mágicos"
+      },
+      {
+        "nome": "Magic Weapons",
+        "efeito": "ataques com armas são mágicos"
+      },
+      {
+        "nome": "Rejuvenation",
+        "gatilho": "morte",
+        "efeito": "alma reforma no Astral Plane e ocupa outra serpente no Material em 1d6 dias com PV/habilidades integrais",
+        "impedir": "matar toda serpente no Material Plane"
+      },
+      {
+        "nome": "Serpent Passivism",
+        "efeito": "serpentes não podem voluntariamente atacar Queen, exceto por coerção mágica"
+      },
+      {
+        "nome": "Shapechanger",
+        "custo": "uma ação",
+        "formas": [
+          {
+            "nome": "constrictor snake",
+            "porte": "Large",
+            "escalar_ft": 30,
+            "nadar_ft": 30
+          },
+          {
+            "nome": "human woman",
+            "porte": "Medium",
+            "escalar_ft": 0,
+            "nadar_ft": 0
+          },
+          {
+            "nome": "true human-snake hybrid",
+            "porte": "Medium",
+            "escalar_ft": 30,
+            "nadar_ft": 30
+          }
+        ],
+        "estatisticas": "mesmas exceto porte e escalada/nado",
+        "equipamento": "transforma junto"
+      },
+      {
+        "nome": "Speak with Serpents",
+        "efeito": "comunica-se com serpentes independente de idioma"
+      },
+      {
+        "nome": "Innate Spellcasting",
+        "atributo": "CHA",
+        "cd_magia": 18,
+        "componentes_materiais": false,
+        "at_will": [
+          "pass without trace",
+          "purify food and drink",
+          "protection from poison"
+        ],
+        "tres_por_dia_cada": [
+          "darkness",
+          "scrying"
+        ],
+        "dois_por_dia_cada": [
+          "etherealness",
+          "freedom of movement"
+        ],
+        "um_por_dia_cada": [
+          "astral projection",
+          "teleport"
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "pre_condicao_formas": [
+          "human",
+          "true"
+        ],
+        "por_forma": [
+          {
+            "forma": "human",
+            "sequencia": [
+              {
+                "acao": "Shortsword",
+                "quantidade": 3
+              }
+            ]
+          },
+          {
+            "forma": "true",
+            "sequencia": [
+              {
+                "acao": "Bite",
+                "quantidade": 1
+              },
+              {
+                "acao": "Shortsword",
+                "quantidade": 1
+              }
+            ]
+          }
+        ],
+        "nota": "snake form não tem Multiattack"
+      },
+      {
+        "nome": "Bite",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "formas": [
+          "snake",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "6d6+6",
+            "media": 27,
+            "tipo": "piercing"
+          }
+        ],
+        "teste_pos_acerto": {
+          "atributo": "CON",
+          "cd": 16,
+          "efeito_falha": {
+            "dano": {
+              "dados": "10d6",
+              "media": 35,
+              "tipo": "poison"
+            }
+          },
+          "efeito_sucesso": "metade do poison damage"
+        }
+      },
+      {
+        "nome": "Shortsword",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "human",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "1d6+6",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Constrict",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "snake",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "6d6+6",
+            "media": 27,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_acerto": {
+          "pre_condicao": "alvo Large ou menor",
+          "condicoes": [
+            "grappled",
+            "restrained enquanto grappled"
+          ],
+          "escape_cd": 17,
+          "limite": "Queen não pode Constrict outro alvo enquanto mantém este grapple"
+        }
+      },
+      {
+        "nome": "Mesmerizing Gaze",
+        "categoria": "ação com recarga",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "alcance_ft": 60,
+        "alvos": "até seis criaturas visíveis",
+        "teste": {
+          "atributo": "CHA",
+          "cd": 18
+        },
+        "falha": {
+          "condicao": "stunned",
+          "duracao": "até 10 minutos",
+          "termino_antecipado": [
+            "sofre qualquer dano",
+            "outra criatura usa uma ação para sacudi-la"
+          ]
+        },
+        "sucesso": {
+          "imunidade": "Mesmerizing Gaze desta Queen",
+          "duracao": "24 horas"
+        }
+      },
+      {
+        "nome": "Shapechanger",
+        "categoria": "ação a partir de trait",
+        "referencia": "Shapechanger"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "formas": [
+          "snake",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "6d6+6",
+            "media": 27,
+            "tipo": "piercing"
+          }
+        ],
+        "teste_pos_acerto": {
+          "atributo": "CON",
+          "cd": 16,
+          "efeito_falha": {
+            "dano": {
+              "dados": "10d6",
+              "media": 35,
+              "tipo": "poison"
+            }
+          },
+          "efeito_sucesso": "metade do poison damage"
+        }
+      },
+      {
+        "nome": "Shortsword",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "human",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "1d6+6",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Constrict",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "snake",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "6d6+6",
+            "media": 27,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_acerto": {
+          "pre_condicao": "alvo Large ou menor",
+          "condicoes": [
+            "grappled",
+            "restrained enquanto grappled"
+          ],
+          "escape_cd": 17,
+          "limite": "Queen não pode Constrict outro alvo enquanto mantém este grapple"
+        }
+      }
+    ],
+    "multiataque": {
+      "human": [
+        "Shortsword",
+        "Shortsword",
+        "Shortsword"
+      ],
+      "true": [
+        "Bite",
+        "Shortsword"
+      ],
+      "snake": null
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome": "Detect",
+        "custo": 1,
+        "efeito": "WIS(Perception) check"
+      },
+      {
+        "nome": "Move",
+        "custo": 1,
+        "efeito": "move até speed sem provocar opportunity attacks"
+      },
+      {
+        "nome": "Precognition",
+        "custo": 2,
+        "efeito": "vantagem nos attack rolls e DEX-based saving throws",
+        "duracao": "até fim próximo turno"
+      }
+    ],
+    "custos_lendarios": {
+      "maximo": 3,
+      "limite_por_vez": 1,
+      "momento": "fim de turno de outra criatura",
+      "recuperacao": "início próprio turno"
+    },
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [
+      {
+        "nome": "Innate Spellcasting",
+        "atributo": "CHA",
+        "cd_magia": 18,
+        "componentes_materiais": false,
+        "at_will": [
+          "pass without trace",
+          "purify food and drink",
+          "protection from poison"
+        ],
+        "tres_por_dia_cada": [
+          "darkness",
+          "scrying"
+        ],
+        "dois_por_dia_cada": [
+          "etherealness",
+          "freedom of movement"
+        ],
+        "um_por_dia_cada": [
+          "astral projection",
+          "teleport"
+        ]
+      }
+    ],
+    "efeitos_regionais": [
+      {
+        "nome": "Snake Attraction",
+        "raio_milhas": 5,
+        "efeito": "atrai milhares de serpentes; Queen vê/ouve/fala através delas"
+      },
+      {
+        "nome": "Serpent Stealth",
+        "raio_milhas": 5,
+        "efeito": "serpentes e criaturas serpentiformes fazem DEX(Stealth) Hide com vantagem"
+      },
+      {
+        "nome": "No Tracks",
+        "raio_milhas": 1,
+        "efeito": "não deixa evidência de passagem, criaturas/plantas nativas não a prejudicam nem impedem movimento",
+        "termino": "1d10 dias após morte"
+      }
+    ],
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA",
+      "reacoes": "AUSENCIA_CONFERIDA",
+      "acoes_lendarias": "PRESENTES",
+      "acoes_covil": "AUSENCIA_NA_FICHA_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_NA_FICHA_INDIVIDUAL",
+      "conjuracao": "PRESENTE"
+    }
+  },
+  "pendencias": [
+    "Bestowal of Trust concede +1 Wisdom a um alvo até ferir réptil, mas a página não informa ação ou alcance do recurso. Não automatizar custo/deslocamento inventado.",
+    "Constrict e Bite são restritos às formas snake/true, shortsword human/true, e só human/true têm Multiattack.",
+    "Não há lair actions declaradas, mas há três regional effects. Livro original Creature Codex/errata e aprovação visual pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "custo e alcance de Bestowal of Trust não declarados",
+    "revisão livro Creature Codex e errata",
+    "aprovação visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/",
+      "tipo": "bloco publicado em 5eSRD, com crédito bibliográfico Kobold Press",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-124",
+    "nome": "Animal Lord, Queen of Serpents",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "12",
+    "nd_fonte": "12",
+    "ca": 17,
+    "pv": 170,
+    "pv_dados": "20d8+80",
+    "porte": "Medium",
+    "tipo": "fey (shapechanger)",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      22,
+      20,
+      18,
+      18,
+      21,
+      22
+    ],
+    "movimento_ft": {
+      "andar": 30,
+      "escalar": 30,
+      "nadar": 30
+    },
+    "tracos": [
+      {
+        "nome": "Bestowal of Trust",
+        "resumo": "Bônus de +1 em SAB a uma única criatura até que ataque réptil."
+      },
+      {
+        "nome": "Rejuvenation",
+        "resumo": "Em 1d6 dias renasce por meio de outra serpente."
+      },
+      {
+        "nome": "Magic Resistance",
+        "resumo": "Vantagem em salvaguardas contra magia."
+      },
+      {
+        "nome": "Shapechanger",
+        "resumo": "Alterna entre cobra Large, mulher humana e híbrido."
+      },
+      {
+        "nome": "Innate Spellcasting",
+        "resumo": "CAR CD18: magias de proteção, ilusão e deslocamento conforme usos registrados na fonte."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Forma humana: três shortswords; híbrida: bite e shortsword."
+      },
+      {
+        "nome": "Bite",
+        "resumo": "Ataque +10, 6d6+6 perfurante mais CON CD16 contra 10d6 veneno."
+      },
+      {
+        "nome": "Constrict",
+        "resumo": "6d6+6 contundente e agarrar/restringir alvo até Large."
+      },
+      {
+        "nome": "Mesmerizing Gaze",
+        "resumo": "Recarga 5–6, até seis criaturas a 60 pés, CAR CD18 contra atordoamento até 10 min."
+      },
+      {
+        "nome": "Legendary Actions",
+        "resumo": "Detect, Move e Precognition (custa duas)."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "As ações são restritas às formas humana/serpente/híbrida; ações lendárias não podem ser tratadas como ações comuns.",
+      "Conteúdo regional do covil não foi integrado à mecânica-base.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "lawful neutral",
+    "acoes_lendarias": [
+      {
+        "nome": "Detect",
+        "resumo": "Teste de Perception"
+      },
+      {
+        "nome": "Move",
+        "resumo": "Move sem provocar ataques de oportunidade"
+      },
+      {
+        "nome": "Precognition",
+        "resumo": "Duas ações: vantagem temporária nos ataques e salvaguardas de DES"
+      }
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-124.jpg",
+    "formato": "jpg",
+    "largura": 523,
+    "altura": 700,
+    "bytes": 50800,
+    "blob_sha": "6436ddccb41022220e529b5d360c0c51f58ab86a",
+    "sha256": "5c26c2972453ed97a2e3cc3c3dd0489a631f3fa7fecdb220980fe78f097834de",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/animallordqueenofserpents.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "D&D 5e",
+    "data": "2026-10-14",
+    "fonte_individual": "https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/",
+    "confronto_exemplar_editorial_original_errata": "PENDENTE"
+  }
+}

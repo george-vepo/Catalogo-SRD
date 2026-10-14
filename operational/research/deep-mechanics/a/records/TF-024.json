@@ -1,0 +1,198 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-024",
+  "name": "Beetle, Lantern",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Tome of Beasts 2",
+    "publication_year": 2020,
+    "edition": "Tome of Beasts 2 for 5th Edition (2020)",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "0",
+    "size": "Tiny",
+    "type": "beast",
+    "alignment": "unaligned",
+    "experience_points": 10,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 13,
+    "armor_class_type": "natural_armor",
+    "hit_points": 2,
+    "hit_dice": "1d4",
+    "ability_scores": {
+      "STR": 6,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 1,
+      "WIS": 7,
+      "CHA": 3
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 10,
+      "fly_ft": 10
+    },
+    "senses": {
+      "passive_perception": 8
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": -2,
+      "DEX": 1,
+      "CON": 0,
+      "INT": -5,
+      "WIS": -2,
+      "CHA": -4
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Illumination",
+        "category": "passive",
+        "effect": {
+          "bright_light_radius_ft": 10,
+          "additional_dim_light_radius_ft": 10
+        },
+        "trigger": "Permanente enquanto luminosidade normal; continua após morte",
+        "post_death": {
+          "glow_hours": 6
+        },
+        "recharge": null,
+        "save": null
+      }
+    ],
+    "actions": [
+      {
+        "name": "Horn",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 3,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": null,
+              "flat": 1,
+              "type": "piercing"
+            }
+          ],
+          "average_damage": 1
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "saving_throw": null,
+        "uses_limit": null,
+        "recharge": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Familiar eligibility",
+        "category": "non_statblock_lore",
+        "effect": "Descrito na KPOGL como opção de familiar via find familiar.",
+        "source": "https://kpogl.wikidot.com/monster:lantern-beetle"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:lantern-beetle",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2 (2020, 5e)",
+      "verification": "transcrição integral do statblock da página, incluindo passivo, ataque, dano e condições de luminosidade"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/beetle-lantern/",
+      "type": "ficha_individual_secundaria",
+      "verification": "histórico confirma CA 13, PV 2, ND0, porém acesso atual exibiu bloqueio de JavaScript; não afirmar conferência de todas as ações"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "verification": "confirma identidade, ND 0 e Tome of Beasts 2"
+    },
+    {
+      "url": "https://koboldpress.com/tome-of-beasts-2/",
+      "type": "publicacao_editorial",
+      "verification": "anúncio do livro em 2020"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-024_TF-469/recovery-index.json",
+    "sha": "fadd79f90456d5a5aa8aeb0e865f374fa4615ba2"
+  },
+  "catalog_legacy_state": "PESQUISA_RECUPERADA_PENDENTE_GATE",
+  "legacy_note": "Verificar fonte integral, direitos e imagem",
+  "outstanding": [
+    "Checar conteúdo primário do livro/errata e confirmar se Illumination muda sob dieta prolongada (nota narrativa descreve emissão reduzida após um mês sem fungos bioluminescentes).",
+    "Confirmar edição/impressão exata contra livro; a ficha mecânica integral é de fonte comunitária não endossada.",
+    "Obter e persistir ilustração própria e aprová-la para carta; imagem ausente.",
+    "Binário de imagem TF-024 armazenado via SHA verificado do lote D; inspeção visual independente, direitos e aprovação final ainda pendentes."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "mechanics_covered_at_source_level": true,
+    "primary_book_full_text_compared": false,
+    "edition_family_editorial_verified": true,
+    "two_complete_individual_sources_checked": false,
+    "final_approval": false,
+    "proficiency_inferred_from_attacks_and_standard_5e_cr0_to_1_8": true,
+    "online_numeric_details_rechecked_on": "2026-10-14",
+    "online_numeric_details_sources": [
+      "https://kpogl.wikidot.com/monster:lantern-beetle"
+    ]
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-024.webp",
+    "format": "image/webp",
+    "bytes": 94850,
+    "width": 638,
+    "height": 792,
+    "sha256": "8f9d4a8244e2f7cfd012ffbc65a960237d82d4d73ecc85d401a6ff50db7b0c43",
+    "git_blob_sha": "a1b767719ff0a69f73ba675ba204f03d7b6ff072",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Lantern%20Beetle.webp",
+    "source_type": "reused_verified_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_head_when_verified": "c6129862bfe2d6a175b86cb50a5f5b2eaecc398f",
+    "source_manifest": "operational/assets/creature-images/manifests/d.json",
+    "original_asset_commit": "6b558de9b5b36341e4484076724dab891df1cd9a",
+    "source_name_note": null,
+    "integrity_verification": {
+      "original_manifest_sha256_readback": true,
+      "original_manifest_github_blob_readback": true,
+      "original_manifest_source_bytes_equal": true,
+      "source_tree_sha_matches": true
+    },
+    "identity_visual_independently_verified": false,
+    "rights_cleared": false,
+    "production_approved": false,
+    "review_pending": [
+      "Avaliação visual independente da identidade da criatura",
+      "Revisão de licença/direitos",
+      "Resolução adequada e aprovação editorial final"
+    ]
+  }
+}

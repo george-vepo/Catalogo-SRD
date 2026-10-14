@@ -1,0 +1,397 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-251",
+  "name": "Corpse Mound",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "11",
+    "size": "Huge",
+    "type": "undead",
+    "alignment": "neutral_evil",
+    "experience_points": 7200,
+    "proficiency_bonus": 4,
+    "source_page": 68
+  },
+  "statistics": {
+    "armor_class": 16,
+    "hit_points": 207,
+    "hit_dice": "18d12+90",
+    "ability_scores": {
+      "STR": 24,
+      "DEX": 11,
+      "CON": 21,
+      "INT": 6,
+      "WIS": 10,
+      "CHA": 8
+    },
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": {
+      "CON": 9,
+      "INT": 2,
+      "WIS": 4
+    },
+    "languages": {
+      "understands": [
+        "Common"
+      ],
+      "can_speak": false
+    },
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "poisoned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 7,
+      "DEX": 0,
+      "CON": 5,
+      "INT": -2,
+      "WIS": 0,
+      "CHA": -1
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Absorb the Dead",
+        "category": "death_trigger_healing",
+        "trigger": "qualifying_creature_dies_within_10_ft",
+        "targets": {
+          "max_size": "Large",
+          "excludes_types": [
+            "construct",
+            "undead"
+          ]
+        },
+        "effect": {
+          "remains_become_part_of_mound": true,
+          "heal_hit_points": "2_times_absorbed_creature_CR_or_level",
+          "body_dependent_resurrection_blocked_until_retrieved": true
+        },
+        "fractional_cr_rounding_rule": null,
+        "ambiguity": "Source does not specify rounding when absorbed CR is fractional; do not infer."
+      },
+      {
+        "name": "Noxious Aura",
+        "category": "end_turn_aura",
+        "trigger": "end_of_each_mound_turn",
+        "radius_ft": 20,
+        "targets": "each_creature",
+        "save": {
+          "ability": "CON",
+          "dc": 17,
+          "on_failure": {
+            "condition": "poisoned",
+            "until": "end_of_target_next_turn"
+          },
+          "on_success": {
+            "immunity_to_this_aura_hours": 24
+          }
+        }
+      },
+      {
+        "name": "Zombie Drop",
+        "category": "begin_turn_summon",
+        "trigger": "start_of_each_mound_turn",
+        "optional": true,
+        "creates": {
+          "creature": "zombie",
+          "count": 1,
+          "source": "corpse_falls_from_mound",
+          "controlled_by": "corpse_mound"
+        },
+        "max_controlled_at_one_time": 10,
+        "zombies_turn_order": "immediately_after_corpse_mound_turn",
+        "uses_action_economy": false
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "requires_air": false,
+          "requires_food": false,
+          "requires_water": false,
+          "requires_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "total_attacks": 2,
+        "attack_options": [
+          "Slam",
+          "Bone Shard"
+        ],
+        "choice_per_attack": true,
+        "conditional_follow_up": {
+          "if": "both_attacks_were_Slam_and_both_hit_same_Large_or_smaller_target",
+          "may_use_immediately": "Envelop",
+          "extra_action_cost": false
+        }
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "flat": 7,
+              "average": 18,
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "3d6",
+              "flat": 0,
+              "average": 10,
+              "type": "necrotic"
+            }
+          ],
+          "condition": "grappled",
+          "escape_dc": 17,
+          "while_grappled": [
+            "restrained"
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Bone Shard",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_weapon",
+        "attack_bonus": 11,
+        "range_ft": {
+          "normal": 30,
+          "long": 120
+        },
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 7,
+              "average": 14,
+              "type": "piercing"
+            },
+            {
+              "dice": "3d6",
+              "flat": 0,
+              "average": 10,
+              "type": "necrotic"
+            }
+          ],
+          "save": {
+            "ability": "STR",
+            "dc": 17,
+            "on_failure": {
+              "conditions": [
+                "prone",
+                "restrained"
+              ],
+              "reason": "pinned_to_ground"
+            },
+            "on_success": {
+              "additional_effects": false
+            }
+          },
+          "release": {
+            "action_required": true,
+            "check": {
+              "ability": "STR",
+              "dc": 17
+            },
+            "eligible": "any_creature_including_target"
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Envelop",
+        "category": "restrain",
+        "action_economy": "action",
+        "targets": {
+          "count": 1,
+          "kind": "creature",
+          "max_size": "Large",
+          "range_ft": 5,
+          "requires_one_of": [
+            "grappled_by_corpse_mound",
+            "restrained_by_its_Bone_Shard"
+          ]
+        },
+        "max_enveloped_at_once": 4,
+        "on_envelop": {
+          "conditions": [
+            "blinded",
+            "restrained"
+          ],
+          "cannot_breathe": true,
+          "moves_with_mound": true
+        },
+        "at_start_of_each_mound_turn": {
+          "save": {
+            "ability": "STR",
+            "dc": 17,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "2d10",
+                  "flat": 7,
+                  "average": 18,
+                  "type": "bludgeoning"
+                }
+              ]
+            },
+            "on_success": {
+              "damage": 0
+            }
+          }
+        },
+        "release": {
+          "eligible": "creature_within_5ft_of_mound_including_target",
+          "check": {
+            "ability": "STR",
+            "dc": 17
+          },
+          "on_attempt_self_damage": [
+            {
+              "dice": "3d6",
+              "average": 10,
+              "type": "necrotic"
+            }
+          ]
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Assimila cadáveres e recupera PV, solta zumbis aliados, aura nociva e golpe que agarra/envolve."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/corpse-mound-3pp",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://5ecompendium.github.io/bestiary/creature/corpse-mound",
+      "type": "evidência histórica, fonte editorial ou transcrição alternativa",
+      "edition": "Tome of Beasts 1",
+      "scope": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:corpse-mound",
+      "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
+      "edition": "Tome of Beasts 1",
+      "scope": "Bloco individual lido integralmente: atributos, movimentação, defesas, sentidos, traços, ações e condicionais",
+      "verification": "Leitura individual em 14/10/2026, apenas nível de fonte online secundária; sem homologação da impressão ou engine."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada.",
+    "Tome of Beasts original apresenta INT 8; a revisão de 2023 usada na ficha individual apresenta INT 6 e detalhes diferentes de absorção de cadáveres."
+  ],
+  "outstanding": [
+    "Confrontar a transcrição KPOGL integral com a impressão e erratas editoriais da edição correspondente.",
+    "Verificar e homologar habilidades e economia de ações na engine; aprovação editorial continua pendente.",
+    "Conciliar explicitamente INT 6 no bloco da revisão versus INT 8 relatado na edição original, antes de homologar.",
+    "Decidir arredondamento de cura do traço Absorb the Dead para CR fracionário com referência primária; fonte secundária não especifica."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-251.webp",
+    "format": "image/webp",
+    "width": 851,
+    "height": 800,
+    "bytes": 78438,
+    "sha256": "1846161b459eaeb224ec7970c8890e1248d3bfbaf607f8cf463fcbaade2f4cd0",
+    "git_blob_sha": "4ae8cf452f026cba4fcdbb0abc9371c8578a05c0",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Corpse%20Mound.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2f4a256a44b692c61f5090b0eea669ecc9dad948",
+    "identity_provenance": "ID e nome coincidem com manifesto do lote E, cuja integridade do binário foi verificada",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença",
+      "qualidade para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:corpse-mound"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Estrutura mecânica fiel à transcrição KPOGL; fonte comunitária não endossada por Kobold Press. Impressão, errata e teste de engine não verificados."
+  }
+}

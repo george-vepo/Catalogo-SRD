@@ -1,0 +1,291 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-273",
+  "name": "Shoth, Sooze",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1/2",
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "lawful_neutral",
+    "subtype": "shoth",
+    "experience_points": 100,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "not declared in individual Creature Codex statblock"
+  },
+  "statistics": {
+    "armor_class": 12,
+    "hit_points": 49,
+    "hit_dice": "11d8",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 16
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 10
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4
+    },
+    "saving_throws": [],
+    "languages": {
+      "spoken": "all_languages",
+      "telepathy_ft": 100
+    },
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "armor_class_variants": {
+      "base_or_laborer": 12,
+      "warrior": 14
+    },
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 0,
+      "CON": 0,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": 3
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Amorphous",
+        "category": "movement",
+        "minimum_gap_inches": 1,
+        "equipment_included": true,
+        "no_squeezing_required": true
+      },
+      {
+        "name": "Multiple Roles",
+        "category": "mutually_exclusive_variant",
+        "choose_exactly_one": [
+          "Laborer",
+          "Warrior"
+        ],
+        "options": [
+          {
+            "name": "Laborer",
+            "condition_immunities_add": [
+              "exhaustion"
+            ],
+            "bonus_action_options": [
+              {
+                "name": "Dash",
+                "uses_per_day": 3
+              }
+            ]
+          },
+          {
+            "name": "Warrior",
+            "armor_class_increase": 2,
+            "grants_action": "Longsword",
+            "attack_advantage_if": {
+              "friendly_ally_within_ft_of_target": 5,
+              "ally_not_incapacitated": true
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Oozing Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 2,
+              "average": 4,
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "1d4",
+              "flat": 0,
+              "average": 2,
+              "type": "acid"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Longsword",
+        "category": "attack",
+        "action_economy": "action",
+        "precondition": "Multiple_Roles_selected_Warrior",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "one_handed": [
+            {
+              "dice": "1d8",
+              "flat": 2,
+              "average": 6,
+              "type": "slashing"
+            }
+          ],
+          "two_handed": [
+            {
+              "dice": "1d10",
+              "flat": 2,
+              "average": 7,
+              "type": "slashing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Merge",
+        "category": "conditional_fusion",
+        "action_economy": "action",
+        "precondition": {
+          "current_hp_below_half_max": true,
+          "ally_creature_type": "shoth",
+          "ally_within_ft": 10
+        },
+        "effect": {
+          "merge_actor_into_target": true,
+          "hit_points_added": "actor_current_remaining_hit_points",
+          "allows_ally_hp_above_its_normal_maximum": true
+        },
+        "receiving_creature_limit": {
+          "mergers_accepted_per_24h": 1
+        },
+        "actor_removal_from_battle": true
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Dash (Laborer)",
+        "category": "movement",
+        "action_economy": "bonus_action",
+        "precondition": "Multiple_Roles_selected_Laborer",
+        "uses_per_day": 3
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Shoth iniciante amorfo com ataque ácido; escolhe papel de trabalhador ou guerreiro, que muda CA/táticas; mescla-se a outros shoth feridos."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Creature Codex",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/sooze/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Creature Codex",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:sooze",
+      "type": "KPOGL reprodução não endossada por Kobold Press",
+      "edition": "Creature Codex",
+      "scope": "Todos os valores de estatísticas, traços e ações expostos na página individual",
+      "verification": "Statblock individual aberto e lido em 14/10/2026; fonte secundária KPOGL, não homologada pelo editor."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Shoth, Sooze e Shoth, Oth são entradas editoriais distintas.",
+    "Papel opcional 'Warrior' altera CA; CA base 12, opção Warrior +2 (14). Não fixar CA 14 para toda a espécie."
+  ],
+  "outstanding": [
+    "Escolher Laborer ou Warrior na instanciação; nunca aplicar CA14, espada e Dash 3/dia simultaneamente.",
+    "Merge requer Sooze abaixo de metade dos PV máximos e tem limite de um recebimento por 24h por criatura receptora.",
+    "O texto fala que o ator se funde ao receptor; retorno separado e detalhes de desfusão não aparecem na transcrição.",
+    "Confirmar impressão e eventuais erratas editoriais e testar economia de ações/condições na engine.",
+    "Verificar licença de uso e eventual arte apropriada para produção."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-273.webp",
+    "format": "image/webp",
+    "width": 373,
+    "height": 669,
+    "bytes": 58132,
+    "sha256": "2f5d9b3c140aaa4fffb83f2b12ae82db571e0de4d3b0faf0ed47167bd5dfd874",
+    "git_blob_sha": "ef984135092488a186a3e381eb7b79635fa8aaed",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/Sooze.webp",
+    "source_type": "reuse_from_branch_image_assets_f",
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "original_asset_commit": "f1f2c9a0dfae6b4d0582456d5a0e4f5bf0a7ae5d",
+    "identity_provenance": "ID e nome conferidos com manifesto F e blob SHA preservado",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:sooze"
+    ],
+    "source_tier": "secondary_kpogl",
+    "source_content_read_live": true,
+    "source_edition": "as_published_online",
+    "source_legal_status": "OGL 1.0a indicated on KPOGL; actual use/rights not cleared",
+    "notes": "Role variant and merger state modeled independently. Longsword only for Warrior; Laborer option changes condition immunities and grants bonus Dash."
+  }
+}

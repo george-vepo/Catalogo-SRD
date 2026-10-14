@@ -1,0 +1,320 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-247",
+  "name": "Ash Phoenix",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "9",
+    "size": "Large",
+    "type": "undead",
+    "alignment": "neutral_evil",
+    "experience_points": 5000,
+    "proficiency_bonus": 4
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 105,
+    "hit_dice": "14d10+28",
+    "ability_scores": {
+      "STR": 17,
+      "DEX": 20,
+      "CON": 15,
+      "INT": 8,
+      "WIS": 14,
+      "CHA": 9
+    },
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 90,
+      "hover": true
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 15
+    },
+    "skills": {
+      "Perception": 5,
+      "Stealth": 8
+    },
+    "saving_throws": {
+      "WIS": 5
+    },
+    "languages": [],
+    "damage_resistances": [
+      "nonmagical_attack_bludgeoning",
+      "nonmagical_attack_piercing",
+      "nonmagical_attack_slashing"
+    ],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "damage_vulnerabilities": [
+      "radiant"
+    ],
+    "condition_immunities": [
+      "exhaustion",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone"
+    ],
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 5,
+      "CON": 2,
+      "INT": -1,
+      "WIS": 2,
+      "CHA": -1
+    },
+    "armor_class_type": null
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "camouflage",
+        "preconditions": [
+          "hovering",
+          "motionless_except_for_air_current_drift"
+        ],
+        "effect": {
+          "indistinguishable_from": "normal_cloud_of_ash_and_smoke"
+        }
+      },
+      {
+        "name": "Rejuvenation",
+        "category": "post_death_respawn",
+        "trigger": "destroyed",
+        "precondition": "birth_site_not_purified_by_holy_rites",
+        "delay": "1d10_days",
+        "effect": {
+          "creates_new_body": true,
+          "hit_points": "full",
+          "distance_from_birth_site_ft": 5
+        }
+      },
+      {
+        "name": "Shadow Stealth",
+        "category": "bonus_action_permission",
+        "precondition": "dim_light_or_darkness",
+        "grants": {
+          "action": "Hide",
+          "economy": "bonus_action"
+        }
+      },
+      {
+        "name": "Wind Weakness",
+        "category": "environmental_debuff",
+        "precondition": {
+          "wind_speed_mph_min": 20
+        },
+        "effect": {
+          "attack_rolls": "disadvantage",
+          "ability_checks": "disadvantage"
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "requires_air": false,
+          "requires_food": false,
+          "requires_water": false,
+          "requires_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Ash Talons",
+            "count": 2
+          }
+        ],
+        "conditional_follow_up": {
+          "precondition": "both_ash_talons_hit_same_target",
+          "attack_type": "automatic_on_hit_save",
+          "save": {
+            "ability": "STR",
+            "dc": 16,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "2d6",
+                  "average": 7,
+                  "type": "necrotic"
+                }
+              ],
+              "healing": {
+                "amount": "half_of_actual_necrotic_damage_dealt"
+              }
+            },
+            "on_success": {
+              "damage": 0,
+              "healing": 0
+            }
+          }
+        }
+      },
+      {
+        "name": "Ash Talons",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 5,
+              "average": 14,
+              "type": "slashing"
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "average": 7,
+              "type": "fire"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Ash Storm",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "targets": "each_creature_in_area",
+        "save": {
+          "ability": "DEX",
+          "dc": 16,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "8d6",
+                "average": 28,
+                "type": "necrotic"
+              }
+            ],
+            "condition": "blinded",
+            "condition_ends": "end_of_target_next_turn"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "condition": null
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Hide (Shadow Stealth)",
+        "category": "hide",
+        "action_economy": "bonus_action",
+        "precondition": "dim_light_or_darkness"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Esconde-se como nuvem de cinzas, voa e retorna à vida caso o local de nascimento não seja purificado; furtividade nas sombras e fraqueza a ventos fortes."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ash-phoenix/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "Estatísticas, traços, ações e mecânicas condicionais consultados por inteiro na transcrição individual.",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14; fonte online secundária, impressão/editorial/engine pendentes."
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:ash-phoenix",
+      "type": "KPOGL — reprodução comunitária individual, não oficial",
+      "edition": "Tome of Beasts 2",
+      "scope": "Estatísticas, traços, ações e mecânicas condicionais consultados por inteiro na transcrição individual.",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14; fonte online secundária, impressão/editorial/engine pendentes."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confrontar cada dado e regra com exemplar editorial correto, impressão e erratas da Kobold Press.",
+    "Realizar revisão independente da transcrição, do modelo de ações/condições e teste da engine antes de MECANICA_COMPLETA_VERIFICADA."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-247.webp",
+    "format": "image/webp",
+    "width": 915,
+    "height": 1046,
+    "bytes": 200912,
+    "sha256": "7ab7dec3d6148ea82ee71f71690b85bf2d1c8e3a7860a9e694429f2b8802a9ad",
+    "git_blob_sha": "261b1614776fb5752cc328c2e14fb3ce8c10a95c",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Ash%20Phoenix.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "be688c5ccc441a45fffd0ec796554b323704fa90",
+    "identity_provenance": "ID e nome coincidem com manifesto do lote E, cuja integridade do binário foi verificada",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença",
+      "qualidade para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:ash-phoenix",
+      "https://www.5esrd.com/database/creature/ash-phoenix/"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Statblock de transcrição digital consultado; livro físico, erratas, motor e licenças ainda sem homologação."
+  }
+}

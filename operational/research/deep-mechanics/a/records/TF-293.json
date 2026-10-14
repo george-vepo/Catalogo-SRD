@@ -1,0 +1,207 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-293",
+  "name": "Planar Flora, Hallowed Reeds",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1/2",
+    "size": "Medium",
+    "type": "celestial",
+    "alignment": "neutral_good",
+    "experience_points": 100,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "not explicitly in Creature Codex online statblock"
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 22,
+    "hit_dice": "5d8",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 7,
+      "WIS": 14,
+      "CHA": 10
+    },
+    "speeds": {
+      "walk_ft": 10
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [
+      "bludgeoning",
+      "piercing"
+    ],
+    "damage_immunities": [
+      "radiant"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 0,
+      "CON": 0,
+      "INT": -2,
+      "WIS": 2,
+      "CHA": 0
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Like Calls to Like",
+        "category": "alignment_detection",
+        "detects_within_ft": 30,
+        "classification": "whether_creature_good_aligned"
+      },
+      {
+        "name": "Limited Telepathy",
+        "category": "communication",
+        "range_ft": 100,
+        "eligible_partner": "good_aligned_creatures",
+        "method": "images_and_emotions_not_spoken_words"
+      },
+      {
+        "name": "Rebirth",
+        "category": "environmental_respawn",
+        "on_death": {
+          "starts_regrowth_at_same_location_within": "1_week"
+        },
+        "permanent_prevention": [
+          "char_ground_where_slain",
+          "salt_ground_where_slain"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Searing Grasp",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "type": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 2,
+              "average": 4,
+              "type": "radiant"
+            }
+          ],
+          "condition": "grappled",
+          "escape_dc": 12
+        },
+        "while_grappled": {
+          "condition": "restrained",
+          "damage_at_start_of_target_turn": {
+            "dice": "1d4",
+            "average": 2,
+            "type": "radiant"
+          },
+          "single_grasp_target_limit": 1,
+          "disadvantage_to_escape_for_types": [
+            "undead",
+            "fiend"
+          ]
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Ser vegetal de TIPO CELESTIAL, detecta boa índole, comunica-se por telepatia limitada, imobiliza com alcance e renasce se o terreno não for destruído."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Creature Codex",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:hallowed-reed",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Creature Codex",
+      "scope": "Estatísticas, traços e economia de ações do statblock individual",
+      "verification": "Lido em 14/10/2026, transcrição comunitária, não edição primária homologada"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Planar Flora é uma família de formas distintas; Hallowed Reeds não deve herdar Ecstatic Bloom.",
+    "A classificação editorial é Celestial, não Plant; 'Planar Flora' indica família temática e não tipo de criatura."
+  ],
+  "outstanding": [
+    "The creature's published type is Celestial despite being categorized as planar flora. Do not overwrite with Plant.",
+    "Rebirth regrowth starts within one week unless ground charred or salted; its exact mature-ready time is not stated.",
+    "Verificar texto em impressão e erratas, licença/arte e engine antes de homologação editorial."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-293.webp",
+    "format": "image/webp",
+    "width": 678,
+    "height": 973,
+    "bytes": 170512,
+    "sha256": "07c1836e4765d205a37f44c3de6430b18e0017091be4aff4991f694097d01885",
+    "git_blob_sha": "c32dc47975bc6709aa20407a10f00051a46ae8ef",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/Hallowedreed.webp",
+    "source_type": "reuse_from_branch_image_assets_f",
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "original_asset_commit": "f1f2c9a0dfae6b4d0582456d5a0e4f5bf0a7ae5d",
+    "identity_provenance": "ID e nome conferidos com manifesto F e blob SHA preservado",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:hallowed-reed"
+    ],
+    "source_tier": "KPOGL_secondary_online_statblock",
+    "source_level_read": true,
+    "legal_or_prod_verification": false,
+    "notes": "Ações individuais estruturadas na medida declarada no statblock; conceitos de regras externas não foram homologados."
+  }
+}

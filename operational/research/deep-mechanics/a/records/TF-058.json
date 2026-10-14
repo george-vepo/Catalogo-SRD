@@ -1,0 +1,295 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-058",
+  "name": "Animated Instrument",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "1/4",
+    "size": "Tiny",
+    "type": "construct",
+    "alignment": "unaligned",
+    "edition": "Tome of Beasts 3 (D&D 5e)",
+    "experience_points": 50,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 12,
+    "hit_points": 17,
+    "hit_dice": "7d4",
+    "ability_scores": {
+      "STR": 1,
+      "DEX": 12,
+      "CON": 11,
+      "INT": 1,
+      "WIS": 5,
+      "CHA": 15
+    },
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 30,
+      "hover": true
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_ft": 60,
+      "passive_perception": 7
+    },
+    "skills": {
+      "Performance": 6
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "psychic"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "armor_class_type": "natural armor",
+    "ability_modifiers": {
+      "STR": -5,
+      "DEX": 1,
+      "CON": 0,
+      "INT": -5,
+      "WIS": -3,
+      "CHA": 2
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Antimagic Susceptibility",
+        "category": "passive",
+        "triggers": [
+          {
+            "condition": "inside antimagic field",
+            "effect": "incapacitated"
+          },
+          {
+            "condition": "targeted by dispel magic",
+            "saving_throw": {
+              "ability": "CON",
+              "dc": "caster_spell_save_dc",
+              "on_failure": {
+                "condition": "unconscious",
+                "duration": "1 minute"
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Construct Nature",
+        "category": "passive",
+        "effect": {
+          "requires_air": false,
+          "food": false,
+          "water": false,
+          "sleep": false
+        }
+      },
+      {
+        "name": "False Appearance",
+        "category": "passive",
+        "requirements": {
+          "motionless": true,
+          "not_flying": true
+        },
+        "effect": "indistinguishable from normal musical instrument(s)"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Trouble Clef",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 3,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "modifier": 1,
+              "type": "bludgeoning",
+              "average": 4
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Orchestra Hit",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 4,
+        "range_ft": 60,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "modifier": 2,
+              "type": "thunder",
+              "average": 5
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Spirited Solo",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "targets": {
+          "each_creature_within_ft": 30,
+          "requires": "can hear song"
+        },
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 12,
+          "on_failure": {
+            "condition": "incapacitated",
+            "duration": "until end of next turn"
+          },
+          "on_success": {
+            "advantage_on": "CHA (Performance)",
+            "duration": "1 day"
+          }
+        }
+      },
+      {
+        "name": "Courageous Anthem",
+        "category": "buff_song",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 1
+        },
+        "targets": {
+          "friendly_creatures_within_ft": 30,
+          "requires": "can hear song"
+        },
+        "effect": {
+          "attack_roll_bonus": 1,
+          "ability_check_bonus": 1,
+          "saving_throw_bonus": 1
+        },
+        "continuation": {
+          "every_subsequent_turn": "spend bonus action to keep playing",
+          "may_stop_at_any_time": true,
+          "ends_if": "instrument incapacitated",
+          "max_simultaneous_benefits_from_courageous_anthem": 1
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Continue Courageous Anthem",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "requires": {
+          "anthem_active": true
+        },
+        "effect": "continue active song"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:animated-instrument",
+      "type": "ficha_individual_segundo_checkpoint_anterior",
+      "verification": "incompleta para implementação"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "individual_creature_structured_OGL_transcription",
+      "source_creature": "Animated Instrument",
+      "verification": "all individual statblock fields, actions, bonus continuation, song choices, damage effects and conditional abilities",
+      "primary_editorial": false
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-052_TF-058/research.json",
+    "sha": "090aef0b3b7e1a6ffbb923cb4941229bb68ca563"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": null,
+  "outstanding": [
+    "Confront original printing and published errata; source-level reconstruction is not editorial homologation.",
+    "Verify artwork production resolution and image usage rights."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_full_source_structured": true,
+    "source_edition_primary_printing_checked": false,
+    "combat_engine_independently_reviewed": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-058.webp",
+    "format": "image/webp",
+    "width": 300,
+    "height": 434,
+    "bytes": 85254,
+    "sha256": "2f906ffc2efb0b934641c496787bae2fea1eae0cc1bc79359231b2ca41c66d68",
+    "git_blob_sha": "b8daea1595bcdb3dd72279dcb65bb6f19f927ac6",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Animated%20Instrument.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "27a97aa91dc6cdb73330cf88592a4ae119f14dc8",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

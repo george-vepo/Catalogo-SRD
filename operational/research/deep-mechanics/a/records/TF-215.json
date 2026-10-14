@@ -1,0 +1,234 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-215",
+  "name": "Aniwye",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "5",
+    "size": "Large",
+    "type": "monstrosity (shapechanger)",
+    "alignment": "neutral evil"
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 102,
+    "hit_dice": "12d10+36",
+    "ability_scores": {
+      "STR": 19,
+      "DEX": 14,
+      "CON": 16,
+      "INT": 8,
+      "WIS": 14,
+      "CHA": 9
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "burrow_ft_form_skunk": 20,
+      "climb_ft_form_skunk": 20
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 16
+    },
+    "skills": {
+      "Perception": 6,
+      "Stealth": 6
+    },
+    "saving_throws": {},
+    "languages": [
+      "Common",
+      "Giant"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Shapechanger",
+        "category": "passive",
+        "effect": "Gasta ação para alternar entre forma verdadeira, ogro Large e gigante da colina Huge. Mantém atributos e estatísticas exceto porte e escalar/escavar exclusivos da forma original; equipamento não se transforma; retorna à forma verdadeira ao morrer."
+      },
+      {
+        "name": "Unstable Form",
+        "category": "passive",
+        "effect": "Se receber 30 ou mais dano em um único turno nas formas humanoides, pode retornar imediatamente à forma verdadeira."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "by_form": {
+          "ogre_or_giant": [
+            {
+              "action": "Slam",
+              "count": 2
+            }
+          ],
+          "skunk": [
+            {
+              "action": "Bite",
+              "count": 1
+            },
+            {
+              "action": "Claw",
+              "count": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 7,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "3d6",
+            "modifier": 4,
+            "type": "bludgeoning"
+          }
+        ],
+        "requires_form": [
+          "ogre",
+          "giant"
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 7,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "2d8",
+            "modifier": 4,
+            "type": "piercing"
+          }
+        ],
+        "requires_form": [
+          "skunk"
+        ]
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 7,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d6",
+            "modifier": 4,
+            "type": "slashing"
+          }
+        ],
+        "requires_form": [
+          "skunk"
+        ]
+      },
+      {
+        "name": "Rock",
+        "category": "attack",
+        "requires_form": [
+          "giant"
+        ],
+        "attack_type": "ranged_weapon",
+        "to_hit": 7,
+        "range_ft": 60,
+        "long_range_ft": 240,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "3d10",
+            "modifier": 4,
+            "type": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "name": "Deadly Musk",
+        "category": "recharge_area",
+        "requires_form": [
+          "skunk"
+        ],
+        "recharge": "5-6",
+        "area": "cone de 15 pés",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 15,
+          "on_failure": "7d6 poison e stunned até fim do próximo turno",
+          "on_success": "Metade de 7d6 poison, sem stunned"
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:aniwye",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-215.webp",
+    "format": "image/webp",
+    "width": 968,
+    "height": 792,
+    "bytes": 170998,
+    "sha256": "0fe0ec7b44dc9da6c136ae6228773d1585e3c868bafe361528f432d0284d36de",
+    "git_blob_sha": "4a64f0ae3d00a2d063c416eaccdf24f146bab5d5",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Aniwye.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "4381bc3d339a79d125a328df3eb12d3698c8806d",
+    "identity_provenance": "Nome/id coincidem com registro e manifesto E, que reporta download e readback verificados",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença/direitos da ilustração",
+      "aprovação para impressão"
+    ]
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-522",
+  "nome": "Crime Boss",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 39,
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/1895"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "6",
+    "ca": 15,
+    "pv": 127,
+    "dados_vida": "15d8+60",
+    "porte": "Medium",
+    "tipo": "Humanoid",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 18,
+      "destreza": 14,
+      "constituicao": 18,
+      "inteligencia": 16,
+      "sabedoria": 16,
+      "carisma": 16
+    },
+    "modificadores": {
+      "forca": 4,
+      "destreza": 2,
+      "constituicao": 4,
+      "inteligencia": 3,
+      "sabedoria": 3,
+      "carisma": 3
+    },
+    "deslocamentos": {
+      "andar_ft": 30
+    },
+    "pericias": [
+      {
+        "nome": "Deception",
+        "bonus": 6,
+        "expertise": "1d4"
+      },
+      {
+        "nome": "Insight",
+        "bonus": 6
+      },
+      {
+        "nome": "Intimidation",
+        "bonus": 6,
+        "expertise": "1d6"
+      },
+      {
+        "nome": "Perception",
+        "bonus": 6
+      },
+      {
+        "nome": "Persuasion",
+        "bonus": 6
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "any two"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "composicao_ca": "chain shirt",
+    "bloodied": 63,
+    "bonus_proficiencia": 3,
+    "xp": null,
+    "maneuver_dc": 15
+  },
+  "mecanicas": {
+    "tracos": [],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Shortsword",
+            "quantidade": 3
+          }
+        ]
+      },
+      {
+        "nome": "Shortsword",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Dagger",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alcance_distancia_ft": {
+          "normal": 20,
+          "maximo": 60
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d4+4",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Mark for Death",
+        "alcance_ft": 30,
+        "alvo": "criatura que vê ou ouve o boss",
+        "duracao": "1 minuto ou marca outro alvo",
+        "dano_adicional_a_cada_ataque_com_arma": {
+          "dados": "2d6",
+          "media": 7,
+          "tipo": null
+        },
+        "nota": "tipo de dano adicional não explicitado; herdar tipo do ataque não confirmado"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Shortsword",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Dagger",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alcance_distancia_ft": {
+          "normal": 20,
+          "maximo": 60
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d4+4",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Shortsword",
+          "quantidade": 3
+        }
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Command Bodyguard",
+        "gatilho": "Boss seria atingido por um ataque",
+        "aliado": "a até 5 ft",
+        "custo_aliado": "reação",
+        "efeito": "aliado e Boss trocam de posição e aliado recebe ataque"
+      },
+      {
+        "nome": "Offhand Dagger",
+        "gatilho": "um ataque erra Boss",
+        "efeito": "Boss faz Dagger attack"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_VERIFICADA",
+      "reacoes": "PRESENTE",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA",
+      "acoes_covil": "AUSENCIA_VERIFICADA",
+      "acoes_miticas": "AUSENCIA_VERIFICADA",
+      "conjuracao": "AUSENCIA_VERIFICADA"
+    }
+  },
+  "pendencias": [
+    "Tipo de dano adicional do Mark for Death não está declarado explicitamente.",
+    "Conferir a edição impressa Monstrous Menagerie, além de adquirir imagem real."
+  ],
+  "campos_nao_confirmados": [
+    "tipo de dano do Mark for Death",
+    "imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1895",
+      "tipo": "bloco individual oficial Level Up A5E, conferido em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint prévio",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-522",
+    "nome": "Crime Boss",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "6",
+    "ca": 15,
+    "pv": 127,
+    "atributos": {
+      "forca": 18,
+      "destreza": 14,
+      "constituicao": 18,
+      "inteligencia": 16,
+      "sabedoria": 16,
+      "carisma": 16
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Chefe criminoso com comando tático de guarda-costas."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Multiattack de shortsword 3x, Mark for Death, reação Command Bodyguard e Offhand Dagger."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/1895",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "confronto_com_livro_errata": "PENDENTE"
+  }
+}

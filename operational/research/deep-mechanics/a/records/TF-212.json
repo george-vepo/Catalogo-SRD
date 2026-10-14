@@ -1,0 +1,161 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-212",
+  "name": "Alabroza",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Small",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 12,
+    "hit_points": 45,
+    "hit_dice": "10d6+10",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 15,
+      "CON": 13,
+      "INT": 4,
+      "WIS": 15,
+      "CHA": 7
+    },
+    "speeds": {
+      "walk_ft": 10,
+      "fly_ft": 50
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 12
+    },
+    "skills": {
+      "Stealth": 4
+    },
+    "saving_throws": {},
+    "languages": [
+      "Compreende Abyssal; não fala"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Bloodthirsty",
+        "category": "passive",
+        "effect": "Precisa beber 1 pinta de sangue fresco ou leite a cada 24 horas; caso contrário ganha 1 nível de exaustão; cada pinta consumida remove 1 nível."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "options": [
+          [
+            "Talons",
+            "Talons"
+          ],
+          [
+            "Talons",
+            "Draining Fangs"
+          ]
+        ]
+      },
+      {
+        "name": "Talons",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 4,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d6",
+            "modifier": 2,
+            "type": "slashing"
+          }
+        ]
+      },
+      {
+        "name": "Draining Fangs",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 4,
+        "reach_ft": 5,
+        "targets": "1 criatura",
+        "damage": [
+          {
+            "dice": "1d8",
+            "modifier": 2,
+            "type": "piercing"
+          }
+        ],
+        "on_hit": "Fixa-se à vítima. Enquanto presa não ataca; no início de cada turno dela a vítima perde 1d8+2 PV por perda de sangue, não descritos como dano tipado.",
+        "ending": "Liberta-se gastando 5 pés de deslocamento, automaticamente quando alvo chega a 0 PV; qualquer criatura pode usar sua ação para soltar a alabroza."
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:alabroza",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 3",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-212.webp",
+    "format": "image/webp",
+    "width": 1000,
+    "height": 1091,
+    "bytes": 159586,
+    "sha256": "f1b3ee905a7858b71bd37fbc99f1acf64e7c71884b573b905999db91bc86aafe",
+    "git_blob_sha": "c45bad4a57a8c6af0e4f0ae32364052a1544c05b",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Alabroza.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "bc1ee577f9b9e40721ccfc7b212a7b791c9b7380",
+    "identity_provenance": "Nome/id coincidem com registro e manifesto E, que reporta download e readback verificados",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença/direitos da ilustração",
+      "aprovação para impressão"
+    ]
+  }
+}

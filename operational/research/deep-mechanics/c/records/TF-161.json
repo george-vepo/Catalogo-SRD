@@ -1,0 +1,315 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-161",
+  "nome": "Ooze, Eldritch",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 39,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 8,
+    "pv": 153,
+    "dados_vida": "18d10+54",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 16,
+      "DES": 6,
+      "CON": 16,
+      "INT": 1,
+      "SAB": 6,
+      "CAR": 8
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": -2,
+      "CON": 3,
+      "INT": -5,
+      "SAB": -2,
+      "CAR": -1
+    },
+    "deslocamentos": {
+      "andar": 10,
+      "escalar": 10
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond this radius"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "acid",
+      "cold",
+      "lightning",
+      "slashing"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "sem armadura listada",
+    "conflito_fonte": {
+      "atributo": "CHA",
+      "valor": 8,
+      "modificador_impresso": -2,
+      "modificador_regra": -1,
+      "tratamento": "Não corrigido até errata"
+    }
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "efeito": "passa 1 inch opening sem squeezing"
+      },
+      {
+        "nome": "Maddening Form",
+        "gatilho": "criatura INT>=3 capaz de ver ooze inicia turno dentro de 30ft",
+        "precondicoes": [
+          "ooze não incapacitada",
+          "ooze pode ver criatura"
+        ],
+        "teste": {
+          "atributo": "WIS",
+          "cd": 14
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "psychic"
+          },
+          "condicao": "incapacitated até fim turno da própria criatura"
+        },
+        "evasao": "não surpreendida pode desviar olhos ao início de seu turno, até próximo início; se olhar novamente testa imediatamente"
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "escala paredes e tetos sem teste"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não requer sono"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Void-Infused Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "psychic"
+          }
+        ],
+        "teste": {
+          "atributo": "WIS",
+          "cd": 14
+        },
+        "falha": {
+          "reducao_INT": "1d4",
+          "duracao": "até terminar short ou long rest",
+          "morte": "se INT chega a 0"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Void-Infused Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "psychic"
+          }
+        ],
+        "teste": {
+          "atributo": "WIS",
+          "cd": 14
+        },
+        "falha": {
+          "reducao_INT": "1d4",
+          "duracao": "até terminar short ou long rest",
+          "morte": "se INT chega a 0"
+        }
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Split",
+        "gatilho": "sofre lightning ou slashing damage",
+        "precondicao": "Medium ou maior e HP>=10",
+        "efeito": "divide em dois oozes de tamanho um grau menor, com metade dos HP do original arredondada para baixo"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Efeito Split é REACTION omitido anteriormente; forte interação com imunidade lightning/slashing publicada, preservar simultaneamente (não supor que dano precisa ser efetivo).",
+    "A fonte imprime CHA 8 (-2), incompatível com modificador padrão -1; valor original e discrepância anotados, não consertar sem errata.",
+    "Revisão editorial livro/errata e aprovação de imagem ainda pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "conferência do livro autorizado e errata",
+    "verificação visual, direitos e adequação da arte",
+    "conflito CHA 8(-2) publicado"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-eldritch/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-eldritch/",
+      "tipo": "ficha individual analisada no CP38",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-161",
+    "nome": "Ooze, Eldritch",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 8,
+    "pv": 153,
+    "pv_dados": "18d10+54",
+    "porte": "Large",
+    "tipo": "ooze",
+    "atributos": [
+      16,
+      6,
+      16,
+      1,
+      6,
+      8
+    ],
+    "deslocamento_ft": {
+      "andar": 10,
+      "escalar": 10
+    },
+    "imunidades_dano": [
+      "acid",
+      "cold",
+      "lightning",
+      "slashing"
+    ],
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "resumo": "Passa por uma abertura de uma polegada."
+      },
+      {
+        "nome": "Maddening Form",
+        "resumo": "Criatura inteligente que enxergue a ooze a 30 pés faz Sabedoria CD14 ou sofre 2d6 psíquico e fica incapacitada até final do turno. É possível desviar o olhar."
+      },
+      {
+        "nome": "Spider Climb",
+        "resumo": "Escala paredes e tetos sem teste."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Void-Infused Pseudopod",
+        "resumo": "+6, 5 pés, 1d6+3 contundente +3d6 psíquico; Sabedoria CD14 ou perde 1d4 pontos de Inteligência temporariamente; redução a 0 mata."
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Split",
+        "resumo": "Quando atingida por lightning ou slashing, se Medium+ e com pelo menos 10 PV, divide-se em duas oozes menores com metade dos PV."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-eldritch/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisão independente, direitos de imagem e licenças de publicação pendentes."
+    ],
+    "editora": "Kobold Press / Open Design",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-161.webp",
+    "formato": "webp",
+    "largura": 753,
+    "altura": 1038,
+    "bytes": 227176,
+    "blob_sha": "9edba1002c4ed80e755ef264c3ee46ac256f01b9",
+    "sha256": "e1984fffe14cf59ff0f5666f47047689d40551c5ed724e4a3e2fe3ec616c0186",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Eldritch%20Ooze.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 38,
+    "publicacao": "Tome of Beasts 2",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-eldritch/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

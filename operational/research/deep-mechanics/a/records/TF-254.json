@@ -1,0 +1,294 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-254",
+  "name": "Child of the Briar",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Tiny",
+    "type": "plant",
+    "alignment": "neutral_evil",
+    "experience_points": 200,
+    "proficiency_bonus": 2,
+    "source_page": 55
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 50,
+    "hit_dice": "20d4",
+    "ability_scores": {
+      "STR": 6,
+      "DEX": 17,
+      "CON": 11,
+      "INT": 13,
+      "WIS": 10,
+      "CHA": 14
+    },
+    "speeds": {
+      "walk_ft": 20,
+      "climb_ft": 10
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4,
+      "Stealth": 7
+    },
+    "saving_throws": [],
+    "languages": [
+      "Briarclick",
+      "Common",
+      "Sylvan"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [
+      "fire"
+    ],
+    "condition_immunities": [],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": -2,
+      "DEX": 3,
+      "CON": 0,
+      "INT": 1,
+      "WIS": 0,
+      "CHA": 2
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Fey Ancestry",
+        "category": "saving_throw_advantage",
+        "advantage_against_condition": "charmed",
+        "cannot_be_put_to_sleep_by_magic": true
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Claw",
+            "count": 2
+          }
+        ],
+        "conditional_follow_up": {
+          "if": "both_claw_attacks_hit_same_Medium_or_smaller_creature",
+          "effect": {
+            "condition": "grappled",
+            "escape_dc": 13,
+            "start_of_each_grappled_target_turn": {
+              "damage": [
+                {
+                  "dice": "1d4",
+                  "average": 2,
+                  "type": "piercing"
+                }
+              ]
+            }
+          },
+          "maximum_targets_grappled_at_once": 1
+        }
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "average": 6,
+              "type": "piercing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Spitdart Tongue",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_weapon",
+        "attack_bonus": 5,
+        "range_ft": {
+          "normal": 20,
+          "long": 60
+        },
+        "recharge": "4-6",
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "average": 6,
+              "type": "piercing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Entangle",
+        "category": "cast_spell",
+        "action_economy": "action",
+        "precondition": {
+          "has_friendly_child_of_briar_within_ft": 10
+        },
+        "spell": "entangle",
+        "base_spell_save_dc": 13,
+        "allied_participation": {
+          "target": "each_friendly_child_within_30ft",
+          "cost": "reaction",
+          "max_save_dc": 17,
+          "save_dc_increase_per_additional_caster": 1,
+          "area_increase_ft_per_additional_caster": 5,
+          "max_square_side_ft": 40,
+          "source_spelling": "size increases by 5 feet"
+        },
+        "area_must_include_at_least_one_participant": true,
+        "participants_immune_to_spell_effects": true
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Join Entangle",
+        "category": "spell_support",
+        "action_economy": "reaction",
+        "trigger": "another_friendly_child_of_briar_casts_Entangle_within_30ft",
+        "effects": {
+          "increases_save_dc_by": 1,
+          "up_to_dc": 17,
+          "increases_area_square_side_ft_by": 5,
+          "up_to": 40,
+          "immune_to_own_group_Entangle": true
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Entangle cooperative casting",
+        "trigger": "uses_Entangle_action",
+        "spell": "entangle",
+        "save_ability": null,
+        "save_dc": 13,
+        "spell_slots": null,
+        "spell_level": "default_spell_level",
+        "notes": "Source supplies DC, group casting, and no slots; do not invent spellcasting attribute or slot pool."
+      }
+    ],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Planta diminuta com ancestralidade feérica: garras agarram, projétil de língua e conjuração em grupo."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/child-of-the-briar-3pp/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/child-of-the-briar/",
+      "type": "evidência histórica, fonte editorial ou transcrição alternativa",
+      "edition": "Tome of Beasts 1",
+      "scope": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:child-of-the-briar",
+      "type": "KPOGL, transcrição independente (não endossada pela editora)",
+      "edition": "Tome of Beasts 1",
+      "scope": "Bloco individual digital: atributos, ações, traços, reações e conjuração",
+      "verification": "Lido e transposto em 2026-10-14, ainda sem homologação editorial"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada.",
+    "Child of the Briar: primeira edição tinha traços e ações diferentes da versão 2023, apesar dos atributos equivalentes."
+  ],
+  "outstanding": [
+    "Confirmar contra impressão/edição e erratas corretas.",
+    "Revisar os parâmetros e interações na engine antes de homologar MECANICA_COMPLETA_VERIFICADA.",
+    "Confirmar edição: o original e a revisão 2023 têm regras e ações diferentes para Child of the Briar."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-254.webp",
+    "format": "image/webp",
+    "width": 650,
+    "height": 800,
+    "bytes": 69084,
+    "sha256": "b4ffa52c5fb08dce7f3c5e1b1faddd783e0bc19571494e107c7b815b14ca1a95",
+    "git_blob_sha": "126d0d03dbdca328e780f53f4152b9240f7c1c86",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Child%20of%20the%20Briar.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2f4a256a44b692c61f5090b0eea669ecc9dad948",
+    "identity_provenance": "Nome/id verificados contra manifesto E, com hash e readback anterior",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:child-of-the-briar"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Reprodução secundária KPOGL lida e estruturada; impressão oficial, erratas e validação da engine pendentes."
+  }
+}

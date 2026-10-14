@@ -1,0 +1,353 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-040",
+  "name": "Giant Walking Stick",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "4",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2022,
+    "edition": "Tome of Beasts 3 (2022, D&D 5e)",
+    "experience_points": 1100,
+    "proficiency_bonus": 2,
+    "source_page": 201
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 76,
+    "hit_dice": "9d10+27",
+    "ability_scores": {
+      "STR": 17,
+      "DEX": 14,
+      "CON": 16,
+      "INT": 1,
+      "WIS": 10,
+      "CHA": 4
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 40,
+      "fly_ft": 15
+    },
+    "senses": {
+      "tremorsense_ft": 30,
+      "passive_perception": 10
+    },
+    "skills": {
+      "Stealth": 4
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [
+      "bludgeoning",
+      "piercing"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 2,
+      "CON": 3,
+      "INT": -5,
+      "WIS": 0,
+      "CHA": -3
+    },
+    "armor_class_type": "natural_armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "passive",
+        "effect": {
+          "indistinguishable_from": "ordinary forest vegetation",
+          "condition": "while motionless"
+        }
+      },
+      {
+        "name": "Forest Camouflage",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "DEX (Stealth)",
+          "only_when": "hiding in forested terrain"
+        }
+      },
+      {
+        "name": "Trampling Charge",
+        "category": "passive",
+        "effect": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 13,
+            "on_failure": {
+              "condition": "prone"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          },
+          "bonus_attack_if_prone": "Spine"
+        },
+        "requirements": {
+          "movement_straight_toward_target_ft_min": 20,
+          "same_turn_attack_hit": "Ram"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "choices": [
+          [
+            {
+              "action": "Spine",
+              "count": 2
+            }
+          ],
+          [
+            {
+              "action": "Ram",
+              "count": 1
+            },
+            {
+              "action": "Spine",
+              "count": 1
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Ram",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "flat": 3,
+              "type": "bludgeoning",
+              "average": 14
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Spine",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "type": "piercing",
+              "average": 6
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "type": "poison",
+              "average": 7
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Deadfall",
+        "category": "aoe_save",
+        "action_economy": "action",
+        "recharge": {
+          "type": "d6",
+          "on": [
+            5,
+            6
+          ]
+        },
+        "requires": {
+          "height_ft_min": 15
+        },
+        "landing": {
+          "visible_space_within_ft": 20,
+          "space_contains_other_creatures": true,
+          "ends_on_feet": true
+        },
+        "primary_targets": "each_creature_in_landing_space",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 13,
+          "on_failure": {
+            "damage": {
+              "dice": "6d6",
+              "flat": 0,
+              "type": "bludgeoning",
+              "average": 21
+            },
+            "condition": "prone"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "condition": null,
+            "push_ft": 5,
+            "push_to": "unoccupied_space_target_chooses"
+          }
+        },
+        "secondary_targets": "each_creature_within_10_ft_when_lands",
+        "secondary_save": {
+          "ability": "DEX",
+          "dc": 13,
+          "on_failure": {
+            "damage": {
+              "dice": "3d6",
+              "flat": 0,
+              "type": "bludgeoning",
+              "average": 10
+            },
+            "condition": "prone"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Trampling Charge — Spine",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "Ram after qualifying 20 ft charge causes target to be prone",
+        "attack": "Spine",
+        "target": "that prone target"
+      },
+      {
+        "name": "Startling Display",
+        "category": "bonus_action",
+        "action_economy": "bonus_action",
+        "targets": "each_creature_within_5_ft",
+        "saving_throw": {
+          "ability": "INT",
+          "dc": 13,
+          "on_failure": {
+            "condition": "incapacitated",
+            "duration": "until_end_of_target_next_turn"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "follow_up": {
+          "fly_up_to_fly_speed_ft": 15,
+          "provokes_opportunity_attacks": false
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-walking-stick/",
+      "type": "ficha_identificada_em_checkpoint_histórico",
+      "verification": "mecânica integral ainda não revalidada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:giant-walking-stick",
+      "type": "individual_ogl_transcription_unofficial",
+      "edition": "Tome of Beasts 3",
+      "reviewed_on": "2026-10-14",
+      "verified_fields": [
+        "statistics",
+        "traits",
+        "actions",
+        "bonus_actions",
+        "reactions",
+        "legendary_actions",
+        "lair_actions",
+        "regional_effects"
+      ],
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "publisher_index",
+      "verification": "identidade, publicação e CR"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-036_TF-040/research.json",
+    "sha": "ed8297b911fa106d0202b1408c051c9b8898e703"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Página inclui frase deslocada sobre lava endurecida após Startling Display; não integrar trecho suspeito como regra válida.",
+    "Conferir a redação oficial da ação bônus antes de promover."
+  ],
+  "outstanding": [
+    "Confirmar regras contra impressão/errata editorial autorizada e revisão independente do motor de combate.",
+    "Verificação de arte visual/direitos permanece independente das mecânicas."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_verified": false,
+    "engine_review": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-040.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 88598,
+    "sha256": "8ad5fea584e03ac13cc2ecfed5f0c38d23f31b9f3f462d26239dd3a8472d7b50",
+    "git_blob_sha": "32b26f467cb950bbcc82bba738f94710d9c53892",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Giant%20Walking%20Stick.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "cd54bf305b1263729aff9c9fcf19074718b9eb13",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

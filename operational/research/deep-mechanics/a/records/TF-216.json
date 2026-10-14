@@ -1,0 +1,256 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-216",
+  "name": "Anophiloi",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Small",
+    "type": "monstrosity",
+    "alignment": "neutral",
+    "edition": "Creature Codex (D&D 5e), p.39",
+    "source_page": 39,
+    "experience_points": 200,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 12,
+    "hit_points": 33,
+    "hit_dice": "6d6+12",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 14,
+      "CON": 14,
+      "INT": 5,
+      "WIS": 12,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 20,
+      "fly_ft": 40
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 11
+    },
+    "skills": {
+      "Stealth": 4
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 2,
+      "CON": 2,
+      "INT": -3,
+      "WIS": 1,
+      "CHA": -2
+    },
+    "armor_class_type": "unarmored"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Blood Frenzy",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "melee attack rolls",
+          "when": "target has fewer than maximum hit points"
+        }
+      },
+      {
+        "name": "Blood Sense",
+        "category": "passive",
+        "effect": {
+          "pinpoint_location_of": "living creatures",
+          "range_ft": 30,
+          "sense": "smell"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Claws",
+            "count": 1
+          },
+          {
+            "action": "Bite",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "modifier": 2,
+              "type": "slashing",
+              "average": 4
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_creature"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "modifier": 2,
+              "type": "piercing",
+              "average": 5
+            }
+          ],
+          "if_target_size_at_most": "Large",
+          "attachment": {
+            "target_attached": true,
+            "no_attacks_while_attached": true,
+            "at_start_of_each_own_turn": {
+              "target_hit_point_loss": {
+                "dice": "1d6",
+                "modifier": 2,
+                "average": 5,
+                "type": "untyped_blood_loss"
+              }
+            },
+            "detach_self": {
+              "movement_cost_ft": 5,
+              "automatic_if": "20 hp blood drained or target dies"
+            },
+            "detach_by_creature": {
+              "action_economy": "action",
+              "check_ability": "STR",
+              "dc": 13
+            }
+          }
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": [],
+    "lair_actions": [],
+    "mythic_actions": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:anophiloi",
+      "type": "ficha_individual_secundaria",
+      "edition": "Creature Codex",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Creature%20Codex.json",
+      "type": "CCodex_single_monster_transcription",
+      "page": 39,
+      "verified_fields": [
+        "ability_scores",
+        "defenses",
+        "senses",
+        "traits",
+        "multiattack",
+        "bite_attachment",
+        "claws"
+      ],
+      "primary_editorial": false
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Confrontar ficha oficial de Creature Codex p.39 e eventuais erratas antes de homologar.",
+    "Vulnerabilidade a frio removida: não consta no bloco individual de CCodex consultado; verificar edição exata.",
+    "Testar efeitos de sangue e desprendimento na engine; arte e direitos ainda pendentes."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-216.jpg",
+    "format": "image/jpeg",
+    "width": 530,
+    "height": 700,
+    "bytes": 47130,
+    "sha256": "55dcebc5dd3c2bef546ae974efcc3f09106306dd18cb9191e54b42cc8f88b1cc",
+    "git_blob_sha": "9704f592c6c42fd86052dfff073288a5123ef99a",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/anophiloi.jpg",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "4381bc3d339a79d125a328df3eb12d3698c8806d",
+    "identity_provenance": "Nome/id coincidem com registro e manifesto E, que reporta download e readback verificados",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença/direitos da ilustração",
+      "aprovação para impressão"
+    ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_individually_rechecked": true,
+    "unverified_cold_vulnerability_removed": true,
+    "primary_printing_checked": false,
+    "independent_implementation_review": false,
+    "final_approval": false
+  }
+}

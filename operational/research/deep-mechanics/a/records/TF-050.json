@@ -1,0 +1,460 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-050",
+  "name": "Akkorokamui",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "12",
+    "size": "Gargantuan",
+    "type": "celestial (titan)",
+    "alignment": "chaotic good",
+    "edition": "Tome of Beasts 3 (5e), individual statblock p. 11",
+    "source_page": 11,
+    "experience_points": 8400,
+    "proficiency_bonus": 4
+  },
+  "statistics": {
+    "armor_class": 17,
+    "hit_points": 189,
+    "hit_dice": "14d20+42",
+    "ability_scores": {
+      "STR": 21,
+      "DEX": 16,
+      "CON": 16,
+      "INT": 19,
+      "WIS": 20,
+      "CHA": 15
+    },
+    "speeds": {
+      "walk_ft": 15,
+      "swim_ft": 60
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "darkvision_ft": 120,
+      "passive_perception": 19
+    },
+    "skills": {
+      "Perception": 9,
+      "Stealth": 7
+    },
+    "saving_throws": [],
+    "languages": [
+      "understands all but cannot speak",
+      "telepathy 120 ft"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 3,
+      "CON": 3,
+      "INT": 4,
+      "WIS": 5,
+      "CHA": 2
+    },
+    "armor_class_type": "natural armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Amphibious",
+        "category": "passive",
+        "effect": {
+          "breathes": [
+            "air",
+            "water"
+          ]
+        }
+      },
+      {
+        "name": "Legendary Resistance",
+        "category": "resource",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 3
+        },
+        "trigger": "fails a saving throw",
+        "effect": {
+          "can_choose_to_succeed_instead": true
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
+      },
+      {
+        "name": "Magic Weapons",
+        "category": "passive",
+        "effect": {
+          "weapon_attacks_magical": true
+        }
+      },
+      {
+        "name": "Offering of Flesh",
+        "category": "passive_ritual",
+        "activation_time": "1 minute",
+        "effect": {
+          "detaches_tentacle_part_without_damage_to_self": true,
+          "rations_from_part": 25,
+          "rations_from_whole": 50,
+          "hook_magic_duration_hours": 4,
+          "hook_expiry_if_eaten": true,
+          "only_if_voluntary_offering": true,
+          "hook_on_eaten": {
+            "healing_hp": 50,
+            "choose_one": [
+              "cure blindness, deafness, all diseases",
+              "restore all missing limbs as regenerate"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Regeneration",
+        "category": "passive",
+        "trigger": "start of own turn",
+        "requirements": {
+          "hit_points_at_least": 1
+        },
+        "effect": {
+          "restore_hit_points": 15
+        }
+      },
+      {
+        "name": "Siege Monster",
+        "category": "passive",
+        "effect": {
+          "damage_multiplier": 2,
+          "targets": [
+            "objects",
+            "structures"
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Tentacle",
+            "count": 3
+          }
+        ],
+        "allowed_substitutions": [
+          {
+            "replace_one": "Tentacle",
+            "with_one_of": [
+              "Spellcasting",
+              "Healing Touch"
+            ],
+            "max_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Tentacle",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 30,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "modifier": 5,
+              "type": "bludgeoning",
+              "average": 19
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "on_hit_additional": {
+          "condition": [
+            "grappled",
+            "restrained"
+          ],
+          "escape_dc": 17,
+          "max_grappled_targets": 8,
+          "one_target_per_tentacle": true
+        }
+      },
+      {
+        "name": "Radiant Wave",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            6
+          ]
+        },
+        "area": {
+          "shape": "sphere",
+          "radius_ft": 30
+        },
+        "targets": "hostile creatures within radius",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "8d8",
+                "modifier": 0,
+                "type": "radiant",
+                "average": 36
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "save_disadvantage_if": "target is undead"
+      },
+      {
+        "name": "Healing Touch",
+        "category": "healing",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 3
+        },
+        "target": "another creature touched",
+        "healing": {
+          "dice": "3d8",
+          "modifier": 2,
+          "type": "hit_points",
+          "average": 20
+        },
+        "removes": [
+          "curse",
+          "disease",
+          "poison",
+          "blindness",
+          "deafness"
+        ]
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Guardian's Grasp",
+        "category": "reaction",
+        "action_economy": "reaction",
+        "trigger": "a creature seen within 30ft is targeted by an attack",
+        "requires": {
+          "ally_willing": true
+        },
+        "effect": {
+          "pull_target_up_to_ft": 10,
+          "pull_toward": "Akkorokamui",
+          "new_attack_target": "Akkorokamui"
+        },
+        "on_unwilling_target": "fails"
+      }
+    ],
+    "legendary_actions": [
+      {
+        "name": "Discern",
+        "cost": 1,
+        "effect": {
+          "choose_one": [
+            "Wisdom (Perception) check",
+            "Wisdom (Insight) check"
+          ]
+        }
+      },
+      {
+        "name": "Jet",
+        "cost": 1,
+        "effect": {
+          "swim_up_to_ft": 30,
+          "provokes_opportunity_attacks": false
+        }
+      },
+      {
+        "name": "Cast a Spell",
+        "cost": 2,
+        "effect": {
+          "action": "Spellcasting"
+        }
+      },
+      {
+        "name": "Tentacle Sweep",
+        "cost": 2,
+        "area": {
+          "radius_ft": 20
+        },
+        "effect_on_not_grappled": {
+          "saving_throw": {
+            "ability": "DEX",
+            "dc": 17,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "4d6",
+                  "modifier": 5,
+                  "type": "bludgeoning",
+                  "average": 19
+                }
+              ],
+              "condition": "prone"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        },
+        "effect_on_grappled": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 17,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "2d6",
+                  "modifier": 5,
+                  "type": "bludgeoning",
+                  "average": 12
+                }
+              ]
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        }
+      }
+    ],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Spellcasting",
+        "action_economy": "action",
+        "spellcasting_ability": "WIS",
+        "spell_save_dc": 17,
+        "components": {
+          "material": false
+        },
+        "at_will": [
+          "detect evil and good",
+          "detect poison and disease"
+        ],
+        "per_day": {
+          "one_each": [
+            "geas (as action)"
+          ],
+          "three_each": [
+            "control water",
+            "legend lore (as action)"
+          ]
+        },
+        "slots": null
+      }
+    ],
+    "other": [],
+    "legendary_economy": {
+      "actions_per_round": "3 (standard 5e, confirm source legendary group)",
+      "recovers": "start of creature turn",
+      "spend_timing": "end of another creature turn"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/akkorokamui/",
+      "type": "ficha_individual_localizada_em_checkpoint",
+      "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "OGL_structured_statblock_secondary",
+      "publication": "Tome of Beasts 3",
+      "source_page": 11,
+      "verified_fields": [
+        "identity",
+        "stats",
+        "traits",
+        "actions",
+        "spellcasting",
+        "bonus",
+        "reaction",
+        "legendary"
+      ],
+      "primary_editorial": false
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-047_TF-051/research.json",
+    "sha": "8349c9c1e8865fceb9fa88b8d1cf5560687bd4be"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Conferir licenças e imagens; covil/regiões registrados por nome e resumo, requer conferência de detalhamento antes de declarar integral."
+  ],
+  "outstanding": [
+    "Confrontar edição e erratas primárias e revisão independente das regras da engine.",
+    "Inspeção visual, licenças e aprovação da imagem são gates separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "secondary_source_actions_structured": true,
+    "secondary_source_spellcasting_structured": true,
+    "primary_book_or_errata_compared": false,
+    "independent_implementation_review": false,
+    "final_approval": false,
+    "source_type_and_alignment_crosschecked_against_ToB3": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-050.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 80786,
+    "sha256": "242509ae6756965e60c8f626118277c9476bd02f29b7108c1bde45619cdbe117",
+    "git_blob_sha": "133d221bef4bc121fa53af50d1e1fb3a28bf675c",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Akkorokamui.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "c8b22982b1d23611af5948b1faaf931c5a7a78b3",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

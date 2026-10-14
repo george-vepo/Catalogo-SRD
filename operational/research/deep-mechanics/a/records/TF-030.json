@@ -1,0 +1,290 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-030",
+  "name": "Corpselight Moth",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "5",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2022,
+    "edition": "Tome of Beasts 3 (2022, 5e)",
+    "source_page": 95,
+    "experience_points": 1800,
+    "proficiency_bonus": 3
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 136,
+    "hit_dice": "16d10+48",
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 19,
+      "CON": 16,
+      "INT": 2,
+      "WIS": 12,
+      "CHA": 8
+    },
+    "speeds": {
+      "walk_ft": 15,
+      "climb_ft": 15,
+      "fly_ft": 60,
+      "hover": true
+    },
+    "senses": {
+      "tremorsense_ft": 30,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4,
+      "Stealth": 7
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [
+      "radiant"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 4,
+      "CON": 3,
+      "INT": -4,
+      "WIS": 1,
+      "CHA": -1
+    },
+    "armor_class_type": "natural_armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Downdraft",
+        "category": "passive",
+        "effect": {
+          "difficult_terrain_radius_ft": 10,
+          "while_flying": true
+        }
+      },
+      {
+        "name": "Glow",
+        "category": "passive",
+        "effect": {
+          "bright_light_radius_ft": 20,
+          "additional_dim_light_radius_ft": 20
+        }
+      },
+      {
+        "name": "Keen Smell",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "WIS (Perception)",
+          "only_when_relying_on": "smell"
+        }
+      },
+      {
+        "name": "Necrotic Dampening",
+        "category": "passive",
+        "effect": {
+          "targets": "each_friendly_creature_within_30_ft",
+          "grants_resistance": "necrotic",
+          "duration": "while within aura"
+        }
+      },
+      {
+        "name": "Spider Climb",
+        "category": "passive",
+        "effect": {
+          "climb_difficult_surfaces_and_ceilings": true,
+          "ability_check_required": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Proboscis",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Proboscis",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 4,
+              "type": "piercing",
+              "average": 11
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "type": "radiant",
+              "average": 7
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Radiant Wind",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "type": "d6",
+          "on": [
+            4,
+            5,
+            6
+          ]
+        },
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "targets": "all_creatures_in_area",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 15,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "6d6",
+                "flat": 0,
+                "type": "radiant",
+                "average": 21
+              }
+            ],
+            "pushed_ft": 15,
+            "direction": "along_cone",
+            "condition": "prone",
+            "collision_with_object": {
+              "damage_per_10_ft_thrown": {
+                "dice": "1d6",
+                "flat": 0,
+                "type": "bludgeoning",
+                "average": 3
+              }
+            },
+            "collision_with_creature": {
+              "secondary_save": {
+                "ability": "DEX",
+                "dc": 15,
+                "on_failure": {
+                  "collision_damage": "same_as_object_collision",
+                  "condition": "prone"
+                },
+                "on_success": {
+                  "damage": 0,
+                  "condition": null
+                }
+              }
+            }
+          },
+          "on_success": {
+            "radiant_damage_multiplier": 0.5,
+            "pushed_ft": 0,
+            "condition": null
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/corpselight-moth/",
+      "type": "ficha_individual_secundaria",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:corpselight-moth",
+      "type": "transcricao_individual_ogl_nao_oficial",
+      "edition": "Tome of Beasts 3",
+      "source_page": 95,
+      "reviewed_on": "2026-10-14",
+      "verification": "Todos os parâmetros do statblock individual transcritos (estatísticas, ataques, efeitos, economia de ações, ausências)",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial_oficial",
+      "verification": "publicação, tipo, porte e ND"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-026_TF-030/research.json",
+    "sha": "bf0fbfd0a6d1a44c6bde42f3039a3d0ecd252dbd"
+  },
+  "legacy_note": [
+    "Midden Moth é variante alternativa; não aplicar ao registro base.",
+    "Direitos de uso de texto e arte pendentes."
+  ],
+  "outstanding": [
+    "Confrontar mecanicamente com impressão e erratas editoriais (transcrição OGL comunitária não é homologação primária).",
+    "Revisão independente da implementação do combate e aprovação da edição exata.",
+    "Arte final e direitos de uso sujeitos a verificação própria; status de imagem controlado separadamente."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_compared": false,
+    "engine_independent_review": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-030.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 92434,
+    "sha256": "d2322339d1a4b5d5a47e75d2f8fdefddf49e0a9774cf29849e15a89a3c89b228",
+    "git_blob_sha": "1b1b49c3157f5b24fc1285b92c95c7a147e34ddf",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Corpselight%20Moth.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "4e94a81cff9ac288c10e63d45ebe21f4bc245ccf",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-304",
+  "nome": "Living Star",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_REQUER_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao": "KPOGL identifica título e volume; exemplar editorial não conferido"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:living-star",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "escopo": "dados e ações individuais com parâmetros"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_identidade_publicacao_e_nd"
+    }
+  ],
+  "estatisticas": {
+    "nd": "19",
+    "ca": 19,
+    "pv": 207,
+    "dados_vida": "18d12+90",
+    "atributos": {
+      "FOR": 24,
+      "DES": 22,
+      "CON": 21,
+      "INT": 21,
+      "SAB": 19,
+      "CAR": 22
+    },
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 60
+    },
+    "salvaguardas": {
+      "DES": 12,
+      "CON": 11,
+      "SAB": 10
+    },
+    "pericias": {
+      "Acrobatics": 12,
+      "Insight": 10,
+      "Perception": 10,
+      "Persuasion": 12
+    },
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing nonmagical"
+    ],
+    "imunidades_dano": [
+      "necrotic",
+      "poison",
+      "radiant"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "poisoned",
+      "stunned"
+    ],
+    "sentidos": [
+      "truesight 120 ft"
+    ],
+    "percepcao_passiva": 20,
+    "idiomas": [
+      "Celestial",
+      "Common"
+    ]
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Radiant Nature",
+      "efeito": "Dispensa ar, comida, bebida e sono."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia/efeitos mágicos."
+    },
+    {
+      "nome": "Starshine",
+      "efeito": "Alvo que começa turno a 30 pés testa INT CD19; falha cegueira por 1 minuto. Sucesso ou encerramento imuniza por 24 horas.",
+      "raio_ft": 30,
+      "salvaguarda": {
+        "atributo": "INT",
+        "cd": 19,
+        "efeito_falha": "blinded por 1 minuto",
+        "efeito_sucesso": "sem cegueira; imune por 24h"
+      },
+      "duracao": "1 minuto",
+      "imunidade_posterior": "24 horas"
+    },
+    {
+      "nome": "Supernova",
+      "efeito": "Na morte, criaturas a 30 pés fazem DES CD19; 16d6 radiante na falha e metade no sucesso; ser reduzido a zero por dano mata.",
+      "gatilho": "morte",
+      "raio_ft": 30,
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 19,
+        "efeito_falha": "16d6 radiant",
+        "efeito_sucesso": "metade"
+      },
+      "dano": {
+        "dados": "16d6",
+        "modificador": 0,
+        "tipo": "radiant"
+      }
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Starflare",
+      "tipo": "melee",
+      "bonus_acerto": 13,
+      "alcance_ft": 10,
+      "alvo": "um",
+      "dano": [
+        {
+          "dados": "3d8",
+          "modificador": 7,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "4d6",
+          "modificador": 0,
+          "tipo": "radiant"
+        }
+      ]
+    },
+    {
+      "nome": "Silvered Ray",
+      "tipo": "spell_ranged",
+      "bonus_acerto": 12,
+      "alcance_ft": 150,
+      "alvo": "um",
+      "dano": [
+        {
+          "dados": "4d10",
+          "modificador": 6,
+          "tipo": "radiant"
+        }
+      ],
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 19,
+        "efeito_falha": "stunned até fim próximo turno",
+        "efeito_sucesso": "sem stun"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia_padrao": [
+        "Starflare",
+        "Starflare",
+        "Starflare"
+      ],
+      "substituicao_permitida": "no máximo um Starflare pode ser substituído por Silvered Ray"
+    },
+    {
+      "nome": "Starflare",
+      "categoria": "ataque",
+      "referencia_ataque": "Starflare"
+    },
+    {
+      "nome": "Silvered Ray",
+      "categoria": "ataque",
+      "referencia_ataque": "Silvered Ray"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Resize",
+      "categoria": "acao_bonus",
+      "efeito": "Alterna tamanho por mecanismo equivalente a enlarge/reduce.",
+      "modificadores_ao_dano": {
+        "aumentado": {
+          "dados": "2d4",
+          "modificador": 0,
+          "tipo": "extra"
+        },
+        "reduzido": {
+          "dados": "2d4",
+          "modificador": 0,
+          "tipo": "redução"
+        }
+      },
+      "observacao": "A transcrição não informa duração própria; dependência das regras de enlarge/reduce"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "imagem": {
+    "status": "VERIFICADA_BINARIO_PRESENTE",
+    "path": "operational/research/deep-mechanics/b/images/TF-304.webp",
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-304.webp",
+    "blob_sha": "2646cac19fb5de1b368b69458058df7207612756",
+    "sha256": "014dd9ca244d939a92d00b11a078392e76b9479af01bacc529449e992350e9b7",
+    "bytes": 264428,
+    "dimensions": {
+      "width": 849,
+      "height": 1002
+    },
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "source_commit": "c26a1213e77cf1bdbbca12a14e4b71b1cee99d9d",
+    "source_original_path": "operational/assets/creature-images/TF-304.webp",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/Livingstar.webp"
+  },
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Dados estruturados de transcrição KPOGL; edição física/revisão editorial e erratas ainda precisam ser conferidas.",
+    "A ficha NÃO está homologada e não substitui testes e revisão independente."
+  ],
+  "integrada": false
+}

@@ -1,0 +1,309 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-027",
+  "name": "Chroma Lizard",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "4",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2022,
+    "edition": "Tome of Beasts 3 (5e, página 84)",
+    "experience_points": 1100,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 15,
+    "armor_class_type": "natural armor",
+    "hit_points": 90,
+    "hit_dice": "12d10+24",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 16,
+      "CON": 14,
+      "INT": 2,
+      "WIS": 10,
+      "CHA": 3
+    },
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 3,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -4
+    },
+    "speeds": {
+      "walk_ft": 40
+    },
+    "skills": {
+      "Perception": 2,
+      "Stealth": 5
+    },
+    "saving_throws": [],
+    "senses": {
+      "passive_perception": 12
+    },
+    "languages": [],
+    "damage_resistances": [
+      "radiant"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Mirror Scales",
+        "category": "passive",
+        "trigger": "Estar em área de luz intensa",
+        "requirements": {
+          "light": "bright"
+        },
+        "effect": {
+          "target": "criaturas que dependem da visão",
+          "attack_rolls_against_lizard": "disadvantage"
+        },
+        "duration": "Enquanto a condição de iluminação permanecer",
+        "save": null,
+        "recharge": null
+      },
+      {
+        "name": "Mirror Shy",
+        "category": "passive_conditional",
+        "trigger": "Ver a própria imagem refletida em uma superfície polida",
+        "requirements": {
+          "max_distance_ft": 30,
+          "light": "bright"
+        },
+        "effect": {
+          "eyes_closed": true,
+          "condition": "blinded",
+          "duration": "até o início do próximo turno do lagarto, quando pode verificar o reflexo novamente"
+        },
+        "save": null,
+        "recharge": null
+      },
+      {
+        "name": "Radiant Reflection",
+        "category": "passive_triggered",
+        "trigger": "Outra criatura causa dano radiante ao lagarto",
+        "effect": {
+          "target": "criatura causadora do dano",
+          "reflection": "metade do dano radiante efetivamente recebido pelo lagarto",
+          "additional_damage_type_specified_in_source": false
+        },
+        "save": null,
+        "recharge": null
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Dazzling Display",
+            "count": 1
+          },
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Claw",
+            "count": 1
+          }
+        ],
+        "restrictions": "Dazzling Display não pode ser utilizado na escuridão; a fonte não descreve combinação alternativa."
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "flat": 3,
+              "type": "piercing",
+              "average": 14
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "save": null,
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "flat": 3,
+              "type": "slashing",
+              "average": 8
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "save": null,
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Dazzling Display",
+        "category": "saving_throw_aoe",
+        "action_economy": "action",
+        "trigger": "O lagarto faz suas escamas refletirem a luz",
+        "targets": {
+          "all_creatures_that_can_see_lizard": true,
+          "range_limit_in_source": null
+        },
+        "prerequisites": {
+          "not_in_darkness": true
+        },
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 15,
+          "advantage_if": "creature in dim light",
+          "on_success": "Sem efeito",
+          "on_failure": {
+            "condition": "blinded",
+            "duration": "até o final do próximo turno da criatura afetada"
+          }
+        },
+        "damage": [],
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "índice_editorial_sem_ficha_individual",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    },
+    {
+      "url": "https://anyflip.com/plzy/jxhb/basic/51-100",
+      "type": "fonte_secundaria_de_reproducao",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    },
+    {
+      "url": "https://www.scribd.com/document/909348717/Pdfcoffee-com-Kobold-Press-Tome-of-Beasts-3-PDF-Free-Part-10",
+      "type": "fonte_secundaria_de_reproducao",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    },
+    {
+      "url": "https://runerollers.com/apps/platform/library/bestiary/chroma-lizard-tob3",
+      "type": "ficha_individual_transcricao_terceiros",
+      "edition": "Tome of Beasts 3, página 84",
+      "verified_fields": [
+        "seis atributos",
+        "CA/PV/ND",
+        "resistencia radiante",
+        "Mirror Scales",
+        "Mirror Shy",
+        "Radiant Reflection",
+        "Multiattack",
+        "Bite",
+        "Claw",
+        "Dazzling Display"
+      ]
+    },
+    {
+      "url": "https://anyflip.com/lphgc/rjrj/basic/51-100",
+      "type": "reproducao_secundaria_pagina_84",
+      "edition": "Tome of Beasts 3",
+      "verification": "parâmetros coincidentes com RuneRollers; não equivale a confirmação de impressão editorial"
+    },
+    {
+      "url": "https://koboldpress.com/errata/",
+      "type": "errata_oficial_editora",
+      "verification": "consultada versão publicada em 29/05/2025; não localizada entrada específica para Chroma Lizard"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-026_TF-030/research.json",
+    "sha": "bf0fbfd0a6d1a44c6bde42f3039a3d0ecd252dbd"
+  },
+  "legacy_note": [
+    "Fonte primária individual não encontrada; reprodução secundária sujeita a erros e direitos.",
+    "Recuperar íntegra dos efeitos Dazzling Display e verificar ataques e traços em edição correta."
+  ],
+  "outstanding": [
+    "Confrontar as transcrições com exemplar editorial autorizado de Tome of Beasts 3 p.84; confirmar impressão e eventuais alterações não listadas na errata.",
+    "Validar implementação das condições de Mirror Shy, retorno de dano e Multiattack na engine de combate.",
+    "Obter e verificar imagem binária representativa e direitos de utilização; aprovação final pendente."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "mechanics_structured_from_two_secondary_transcriptions": true,
+    "edition_family_and_page_identified": true,
+    "primary_printing_or_official_statblock_checked": false,
+    "official_errata_consulted": true,
+    "visual_independent_review": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-027.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 85792,
+    "sha256": "c63b18e7528f2d13ec62e349d739cf6f97ef7e0646d4382c3b69a9e858a37810",
+    "git_blob_sha": "b9659045ef7348e8ac0db868518fb14c28a4473e",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Chroma%20Lizard.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "726b807fee1314b374a06dc50f22784d984ae85a",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

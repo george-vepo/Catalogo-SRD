@@ -1,0 +1,317 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-257",
+  "name": "Viiret",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "3",
+    "size": "Large",
+    "type": "plant",
+    "alignment": "unaligned",
+    "experience_points": 700
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 85,
+    "hit_dice": "10d10+30",
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 6,
+      "CON": 17,
+      "INT": 1,
+      "WIS": 12,
+      "CHA": 5
+    },
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 11
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "necrotic",
+      "poison"
+    ],
+    "damage_vulnerabilities": [
+      "cold"
+    ],
+    "condition_immunities": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "frightened",
+      "poisoned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": -2,
+      "CON": 3,
+      "INT": -5,
+      "WIS": 1,
+      "CHA": -3
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Disease Eater",
+        "category": "affliction_conditional",
+        "immune_to_disease": true,
+        "attack_roll_advantage_if_target_any": [
+          "poisoned",
+          "suffering_from_disease"
+        ]
+      },
+      {
+        "name": "Disease Sense",
+        "category": "detection",
+        "range_ft": 60,
+        "sense_type": "scent",
+        "can_pinpoint_targets_if_any": [
+          "poisoned",
+          "suffering_from_disease"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "total_attacks": 2,
+        "allowed_attacks": [
+          "Vine",
+          "Bite"
+        ],
+        "bite_limit": 1
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 3,
+              "average": 12,
+              "type": "piercing"
+            }
+          ],
+          "if_target_medium_or_smaller": {
+            "save": {
+              "ability": "DEX",
+              "dc": 13,
+              "on_failure": {
+                "condition": "swallowed"
+              },
+              "on_success": {
+                "swallowed": false
+              }
+            }
+          }
+        },
+        "swallow": {
+          "max_swallowed_at_once": 1,
+          "conditions": [
+            "blinded",
+            "restrained"
+          ],
+          "total_cover_from": "outside_attacks_and_effects",
+          "at_start_of_viiret_turn": {
+            "if_target_poisoned_or_diseased": {
+              "damage": [
+                {
+                  "dice": "1d6",
+                  "average": 3,
+                  "type": "necrotic"
+                }
+              ],
+              "extra_repeat_affliction_save": {
+                "target": "condition_or_disease_save_as_if_finished_long_rest",
+                "advantage": true,
+                "on_failure_no_adverse_effects": true
+              }
+            },
+            "otherwise": {
+              "damage": [
+                {
+                  "dice": "2d6",
+                  "average": 7,
+                  "type": "acid"
+                }
+              ]
+            }
+          },
+          "forced_regurgitation": {
+            "trigger": "viiret_takes_at_least_10_damage_in_one_turn_from_swallowed_creature",
+            "save": {
+              "ability": "CON",
+              "dc": 13,
+              "on_failure": {
+                "regurgitate": true,
+                "landing": "prone_within_5_ft"
+              },
+              "on_success": {
+                "regurgitate": false
+              }
+            }
+          },
+          "voluntary_regurgitation": {
+            "action_economy": "bonus_action",
+            "effect": {
+              "regurgitate": true
+            },
+            "automatic_ai_preference_if": [
+              "swallowed_target_not_poisoned_or_diseased",
+              "poisoned_or_diseased_creature_within_60_ft"
+            ]
+          },
+          "on_viiret_death": {
+            "no_longer_restrained": true,
+            "escape_movement_ft": 10,
+            "exits_condition": "prone"
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Vine",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d4",
+              "flat": 3,
+              "average": 8,
+              "type": "bludgeoning"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Regurgitate Swallowed Creature",
+        "category": "conditional_released_target",
+        "action_economy": "bonus_action",
+        "precondition": "currently_has_swallowed_creature",
+        "effect": {
+          "regurgitate": true
+        },
+        "automatic_preference": "replace_healthy_meal_with_poisoned_or_diseased_creature_within_60_ft"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Detecta e devora doenças; engole infectados, que podem repetir defesas contra doenças."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/viiret/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:viiret",
+      "type": "KPOGL, transcrição independente (não endossada pela editora)",
+      "edition": "Tome of Beasts 2",
+      "scope": "Identidade, atributos, defesas, movimentos, características, ataques e regras condicionais",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14, homologação pendente"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confrontar integralmente edição impressa e erratas com fonte digital secundária.",
+    "Validar cálculos, áreas, duração e limites na engine antes de homologar.",
+    "Bônus de proficiência não é explicitamente impresso na fonte online consultada e permanece desconhecido no registro (não inferido do ND)."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-257.webp",
+    "format": "image/webp",
+    "width": 714,
+    "height": 985,
+    "bytes": 194372,
+    "sha256": "3feea425ddcd18efb1c23793fdf3faee2540d1881fc2108a2c6c6d18d811f2fa",
+    "git_blob_sha": "be08f75452e8399e10efb75135d7c110775179ee",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Viiret.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2f4a256a44b692c61f5090b0eea669ecc9dad948",
+    "identity_provenance": "Nome/id verificados contra manifesto E, com hash e readback anterior",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:viiret"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Lido statblock individual secundário KPOGL; não homologado editorialmente, sem impressão/errata ou engine."
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-048",
+  "name": "Astri",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "8",
+    "size": "Small",
+    "type": "celestial",
+    "alignment": "chaotic good",
+    "edition": "Tome of Beasts 2 (5e), individual statblock p. 31",
+    "source_page": 31,
+    "experience_points": 3900,
+    "proficiency_bonus": 3
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 112,
+    "hit_dice": "15d6+60",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 21,
+      "CON": 18,
+      "INT": 15,
+      "WIS": 16,
+      "CHA": 20
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "burrow_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 90,
+      "passive_perception": 16
+    },
+    "skills": {
+      "Perception": 6,
+      "Stealth": 8,
+      "Survival": 9
+    },
+    "saving_throws": {
+      "WIS": 6,
+      "CHA": 8
+    },
+    "languages": [
+      "Common",
+      "telepathy 120 ft"
+    ],
+    "damage_resistances": [
+      "poison",
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "condition": "nonmagical attacks"
+      }
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion"
+    ],
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 5,
+      "CON": 4,
+      "INT": 2,
+      "WIS": 3,
+      "CHA": 5
+    },
+    "armor_class_type": "unarmored"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Enforce Good Deeds",
+        "category": "passive_triggered",
+        "trigger": "creature receives assistance such as food or healing from astri",
+        "save": {
+          "ability": "WIS",
+          "dc": 16,
+          "on_failure": {
+            "affected_by": "geas",
+            "duration": "30 days",
+            "forced_task": "assist nonhostile creatures suffering injuries or exhaustion"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      },
+      {
+        "name": "Helping Hand",
+        "category": "bonus_action_trait",
+        "effect": {
+          "can_take": "Help action",
+          "action_economy": "bonus_action",
+          "max_per_turn": 1
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
+      },
+      {
+        "name": "Magic Weapons",
+        "category": "passive",
+        "effect": {
+          "weapon_attacks_magical": true
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "modifier": 5,
+              "type": "piercing",
+              "average": 9
+            },
+            {
+              "dice": "2d6",
+              "modifier": 0,
+              "type": "radiant",
+              "average": 7
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Healing Touch",
+        "category": "healing",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 3
+        },
+        "target": "another creature touched",
+        "healing": {
+          "dice": "3d8",
+          "modifier": 1,
+          "type": "hit_points",
+          "average": 14
+        },
+        "removes": [
+          "disease",
+          "poison",
+          "blinded",
+          "deafened"
+        ]
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Helping Hand",
+        "category": "bonus_action",
+        "action_economy": "bonus_action",
+        "effect": {
+          "perform_action": "Help"
+        }
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Defensive Counter",
+        "category": "reaction",
+        "action_economy": "reaction",
+        "trigger": "creature within 5ft of astri attacks creature other than astri",
+        "requires": {
+          "can_see_attacker": true
+        },
+        "effect": {
+          "attack": "Bite",
+          "target": "attacker"
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Innate Spellcasting",
+        "action_economy": "action",
+        "spellcasting_ability": "CHA",
+        "spell_save_dc": 16,
+        "spell_attack_bonus": 8,
+        "components": {
+          "material": false
+        },
+        "at_will": [
+          "create or destroy water",
+          "detect poison and disease",
+          "produce flame",
+          "purify food and drink"
+        ],
+        "per_day": {
+          "three_each": [
+            "bless",
+            "create food and water",
+            "lesser restoration"
+          ],
+          "one_each": [
+            "remove curse"
+          ]
+        },
+        "slots": null
+      }
+    ],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/astri/",
+      "type": "ficha_individual_localizada_em_checkpoint",
+      "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%202.json",
+      "type": "OGL_structured_statblock_secondary",
+      "publication": "Tome of Beasts 2",
+      "source_page": 31,
+      "verified_fields": [
+        "identity",
+        "stats",
+        "traits",
+        "actions",
+        "spellcasting",
+        "bonus",
+        "reaction",
+        "legendary"
+      ],
+      "primary_editorial": false
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-047_TF-051/research.json",
+    "sha": "8349c9c1e8865fceb9fa88b8d1cf5560687bd4be"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Excluir Alternate Critical indicado como complemento Monster Crits for 5e, não parte do Creature Codex."
+  ],
+  "outstanding": [
+    "Confrontar edição e erratas primárias e revisão independente das regras da engine.",
+    "Inspeção visual, licenças e aprovação da imagem são gates separados.",
+    "O registro fora classificado erroneamente como fey; corrigido para celestial conforme ToB2, alinhamento chaotic good.",
+    "Binário de imagem TF-048 armazenado via SHA verificado do lote D; inspeção visual independente, direitos e aprovação final ainda pendentes."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "secondary_source_actions_structured": true,
+    "secondary_source_spellcasting_structured": true,
+    "primary_book_or_errata_compared": false,
+    "independent_implementation_review": false,
+    "final_approval": false,
+    "source_identity_crosschecked_against_ToB2_JSON": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-048.webp",
+    "format": "image/webp",
+    "bytes": 140620,
+    "width": 647,
+    "height": 857,
+    "sha256": "3243cc46fe69b0bc76f10ab4a279a7d7bd1a8c16153caed4251d526a86f09b16",
+    "git_blob_sha": "4f2adbdb1ec4468d844e9ef1abb838c0000f2e6e",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Astri.webp",
+    "source_type": "reused_verified_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_head_when_verified": "c6129862bfe2d6a175b86cb50a5f5b2eaecc398f",
+    "source_manifest": "operational/assets/creature-images/manifests/d.json",
+    "original_asset_commit": "6b558de9b5b36341e4484076724dab891df1cd9a",
+    "source_name_note": null,
+    "integrity_verification": {
+      "original_manifest_sha256_readback": true,
+      "original_manifest_github_blob_readback": true,
+      "original_manifest_source_bytes_equal": true,
+      "source_tree_sha_matches": true
+    },
+    "identity_visual_independently_verified": false,
+    "rights_cleared": false,
+    "production_approved": false,
+    "review_pending": [
+      "Avaliação visual independente da identidade da criatura",
+      "Revisão de licença/direitos",
+      "Resolução adequada e aprovação editorial final"
+    ]
+  }
+}

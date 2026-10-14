@@ -1,0 +1,349 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-250",
+  "name": "Black Crier",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "11",
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral",
+    "experience_points": 7200,
+    "proficiency_bonus": 4
+  },
+  "statistics": {
+    "armor_class": 16,
+    "hit_points": 150,
+    "hit_dice": "20d8+60",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 19,
+      "CON": 16,
+      "INT": 11,
+      "WIS": 20,
+      "CHA": 12
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "fly_ft": 30,
+      "hover": true
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 15
+    },
+    "skills": {
+      "History": 4,
+      "Perception": 9,
+      "Performance": 9,
+      "Religion": 4
+    },
+    "saving_throws": {
+      "DEX": 8,
+      "INT": 4,
+      "WIS": 9
+    },
+    "languages": {
+      "understands": "all_languages",
+      "can_speak": false
+    },
+    "damage_resistances": [
+      "necrotic",
+      "psychic",
+      "nonmagical_attack_bludgeoning",
+      "nonmagical_attack_piercing",
+      "nonmagical_attack_slashing"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "poisoned",
+      "stunned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 4,
+      "CON": 3,
+      "INT": 0,
+      "WIS": 5,
+      "CHA": 1
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Bound by Calamity",
+        "category": "geographical_binding",
+        "location": "region_of_future_major_catastrophe",
+        "bound_region_minimum_area_square_miles": 1,
+        "trigger": "leaves_bound_region",
+        "lose": [
+          "Rejuvenation",
+          "Crier's Lament"
+        ],
+        "destroy_if_outside_region_for_hours": "more_than_24",
+        "destruction_permanent": true
+      },
+      {
+        "name": "Rejuvenation",
+        "category": "post_death_return",
+        "preconditions": [
+          "dies_in_bound_region",
+          "catastrophe_not_yet_occurred"
+        ],
+        "return_after_days": "1d6",
+        "restores_hp": "full",
+        "blocked_by": "wish_spell",
+        "permanent_death_after": "catastrophe_ends"
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "requires_air": false,
+          "requires_food": false,
+          "requires_water": false,
+          "requires_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bell Toll",
+            "count": 1
+          },
+          {
+            "attack": "Bell",
+            "count": 2
+          }
+        ],
+        "original_source_clause": "uses Bell Toll then makes two melee attacks"
+      },
+      {
+        "name": "Bell",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "flat": 4,
+              "average": 7,
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "4d6",
+              "flat": 0,
+              "average": 14,
+              "type": "necrotic"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Bell Toll",
+        "category": "single_target_save",
+        "action_economy": "action",
+        "targets": {
+          "count": 1,
+          "kind": "creature",
+          "must_see": true
+        },
+        "range_ft": 60,
+        "save": {
+          "ability": "WIS",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "4d6",
+                "average": 14,
+                "type": "necrotic"
+              }
+            ],
+            "condition": "frightened",
+            "condition_ends": "end_of_target_next_turn",
+            "extra_on_failure_by_5_or_more": {
+              "exhaustion_levels": 1
+            }
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "frightened": false,
+            "exhaustion_levels": 0
+          }
+        }
+      },
+      {
+        "name": "Crier's Lament",
+        "category": "area_save",
+        "action_economy": "action",
+        "uses_per_day": 1,
+        "precondition": "inside_bound_region",
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "targets": "each_creature_in_area",
+        "save": {
+          "ability": "CHA",
+          "dc": 16,
+          "on_failure": {
+            "set_hit_points_to": 0
+          },
+          "on_success": {
+            "damage": [
+              {
+                "dice": "6d6",
+                "average": 21,
+                "type": "psychic"
+              }
+            ],
+            "condition": "frightened",
+            "duration": "1_minute",
+            "repeat_save": {
+              "ability": "CHA",
+              "dc": 16,
+              "timing": "end_of_each_frightened_target_turn",
+              "success_ends": true
+            }
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Portents of Disaster",
+        "category": "uncontrolled_environmental_effects",
+        "control_by_creature": false,
+        "where": "inside_bound_region",
+        "examples": [
+          {
+            "effect": "minor_tremors",
+            "duration_minutes": "1d6"
+          },
+          {
+            "effect": "storms_blizzards_tornadoes",
+            "duration_hours": "1d6"
+          },
+          {
+            "effect": "natural_water_turns_blood_red",
+            "duration_hours": "1d4",
+            "drinkable": true
+          },
+          {
+            "effect": "rat_or_insect_swarms",
+            "duration": null
+          }
+        ],
+        "notes": "Narrative environmental effects with stated durations; not a chosen action or direct targetable attack."
+      }
+    ]
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Ligado ao local de uma catástrofe, rejuvenesce até o desastre ocorrer; badalo causa medo/exaustão e seu lamento é potencialmente fatal."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.robinloft.com/monsters/black-crier/tome-of-beasts-2",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:black-crier",
+      "type": "KPOGL — reprodução comunitária individual, não oficial",
+      "edition": "Tome of Beasts 2",
+      "scope": "Bloco individual lido integralmente: atributos, movimentação, defesas, sentidos, traços, ações e condicionais",
+      "verification": "Leitura individual em 14/10/2026, apenas nível de fonte online secundária; sem homologação da impressão ou engine."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confrontar a transcrição KPOGL integral com a impressão e erratas editoriais da edição correspondente.",
+    "Verificar e homologar habilidades e economia de ações na engine; aprovação editorial continua pendente."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-250.webp",
+    "format": "image/webp",
+    "width": 714,
+    "height": 938,
+    "bytes": 101804,
+    "sha256": "93b56e4e0140098d4e12c912b4a86c74fc52b85ae6f9c597de36c5655be36a5a",
+    "git_blob_sha": "540f52ee31019f6b67910728e198444fa1674609",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Black%20Crier.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2f4a256a44b692c61f5090b0eea669ecc9dad948",
+    "identity_provenance": "ID e nome coincidem com manifesto do lote E, cuja integridade do binário foi verificada",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença",
+      "qualidade para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:black-crier"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Estrutura mecânica fiel à transcrição KPOGL; fonte comunitária não endossada por Kobold Press. Impressão, errata e teste de engine não verificados."
+  }
+}

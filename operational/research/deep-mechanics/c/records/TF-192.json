@@ -1,0 +1,314 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-192",
+  "nome": "Cueyatl Moon Priest",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 67,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "Creature Codex (2018)",
+    "fonte_identidade": "https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest"
+  },
+  "estatisticas": {
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 13,
+    "pv": 81,
+    "dados_vida": "18d6+18",
+    "porte": "Small",
+    "tipo": "humanoid",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 10,
+      "DES": 12,
+      "CON": 12,
+      "INT": 10,
+      "SAB": 16,
+      "CAR": 12
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 1,
+      "CON": 1,
+      "INT": 0,
+      "SAB": 3,
+      "CAR": 1
+    },
+    "deslocamentos": {
+      "andar": 30,
+      "escalar": 20,
+      "nadar": 30
+    },
+    "pericias": [
+      {
+        "nome": "Medicine",
+        "bonus": 6
+      },
+      {
+        "nome": "Perception",
+        "bonus": 6
+      },
+      {
+        "nome": "Religion",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "Cueyatl"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "ca_origem": "studded leather"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amphibious",
+        "efeito": "respira ar e água"
+      },
+      {
+        "nome": "Jungle Camouflage",
+        "efeito": "advantage DEX(Stealth) para esconder em jungle"
+      },
+      {
+        "nome": "Slippery",
+        "efeito": "advantage saves e checks para escapar grapple"
+      },
+      {
+        "nome": "Standing Leap",
+        "salto_horizontal_ft": 20,
+        "salto_vertical_ft": 10,
+        "precisa_corrida": false
+      },
+      {
+        "nome": "Spellcasting",
+        "referencia": "mecanicas.conjuracao"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Morningstar",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "poison"
+          }
+        ]
+      },
+      {
+        "nome": "Night's Chill",
+        "recarga": "5-6",
+        "area": {
+          "raio_ft": 30
+        },
+        "ambiente": "dissipa luz mágica na área",
+        "alvos": "criaturas HOSTIS dentro 30ft e sem total cover",
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": {
+          "dados": "3d10",
+          "media": 16,
+          "tipo": "cold"
+        },
+        "sucesso": "metade"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Morningstar",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "poison"
+          }
+        ]
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "nivel_conjurador": 5,
+        "classe": "Cleric",
+        "atributo": "WIS",
+        "cd_salvaguarda": 14,
+        "bonus_ataque_magico": 6,
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 2
+        },
+        "magias": [
+          {
+            "nivel": 0,
+            "frequencia": "at will",
+            "nomes": [
+              "guidance",
+              "resistance",
+              "sacred flame",
+              "spare the dying"
+            ]
+          },
+          {
+            "nivel": 1,
+            "nomes": [
+              "bane",
+              "cure wounds",
+              "protection from evil and good"
+            ]
+          },
+          {
+            "nivel": 2,
+            "nomes": [
+              "hold person",
+              "silence",
+              "spiritual weapon"
+            ]
+          },
+          {
+            "nivel": 3,
+            "nomes": [
+              "bestow curse",
+              "spirit guardians"
+            ]
+          }
+        ]
+      }
+    ],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Magias Cleric 5º nível, slots 4/3/2, WIS DC14, +6 spell attack; não criar usos ilimitados ou níveis superiores.",
+    "Night's Chill ignora alvos com total cover, só hostis; dissipa luz mágica em 30ft.",
+    "Fonte Here Be Taverns e reprodução Creature Codex coincidentes, mas original e imagem sem revisão legal."
+  ],
+  "campos_nao_confirmados": [
+    "verificação de edição/erratas/uso legal",
+    "identidade e licença da imagem, revisão independente"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest",
+      "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_FONTE_SECUNDARIA",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-192",
+    "nome": "Cueyatl Moon Priest",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 13,
+    "pv": 81,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Amphibious, Jungle Camouflage, Slippery e magia clerical SAB CD14"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Morningstar envenenado; Night's Chill (recarga 5–6) causa frio e apaga luz mágica."
+      }
+    ],
+    "fonte": "https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "PARCIAL_FONTE_SECUNDARIA",
+    "pendencias": [
+      "Página 5eSRD individual não encontrada; reproduções com estatísticas consistentes.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-192.jpg",
+    "formato": "jpg",
+    "largura": 503,
+    "altura": 700,
+    "bytes": 49524,
+    "blob_sha": "0a3f2a117ef74208fcf839468073ee79efaa7fb4",
+    "sha256": "f5502d72e5af2d26122d920d201fe7ee1d99c6375def698f6b8c0052a4b6e8a8",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cueyatlmoonpriest.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 43,
+    "publicacao": "Creature Codex (2018)",
+    "fonte_mecanicas": "https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

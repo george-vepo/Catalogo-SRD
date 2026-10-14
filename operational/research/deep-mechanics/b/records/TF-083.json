@@ -1,0 +1,294 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-083",
+  "nome": "Void Knight",
+  "estado": "MECANICA_INDIVIDUALIZADA_REPRODUCAO_IDENTIFICADA_AGUARDA_HOMOLOGACAO",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "revisao": "texto reproduzido, p. 386",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:void-knight",
+      "natureza": "secundaria_comunitaria",
+      "escopo": "transcricao individual do bloco completo"
+    },
+    {
+      "url": "https://anyflip.com/tkzwp/hhez/basic/351-400",
+      "natureza": "reproducao_volume_nao_editorial",
+      "escopo": "cotejo do bloco p. 386"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial",
+      "escopo": "publicacao e desafio 10"
+    }
+  ],
+  "estatisticas": {
+    "nd": "10",
+    "bonus_proficiencia": 4,
+    "ca": 18,
+    "origem_ca": "natural armor",
+    "pv": 153,
+    "dados_vida": "18d8+72",
+    "atributos": {
+      "FOR": 22,
+      "DES": 7,
+      "CON": 18,
+      "INT": 12,
+      "SAB": 16,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 6,
+      "DES": -2,
+      "CON": 4,
+      "INT": 1,
+      "SAB": 3,
+      "CAR": 0
+    },
+    "deslocamentos_ft": {
+      "andar": 20,
+      "voar": null,
+      "nadar": null,
+      "escalar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {
+      "FOR": 10,
+      "CON": 8,
+      "SAB": 7
+    },
+    "pericias": {
+      "Athletics": 10,
+      "Perception": 7
+    },
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 120,
+        "restricao": "cego além desse raio"
+      }
+    ],
+    "percepcao_passiva": 17,
+    "idiomas": [
+      "Void Speech"
+    ],
+    "telepatia_ft": 120,
+    "resistencias_dano": [
+      "bludgeoning, piercing and slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "force",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhausted (grafia literal da fonte, conferir regra da edição)",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ]
+  },
+  "qualidade_estatisticas": "COTEJADA_EM_REPRODUCOES_NAO_EDITORIAIS",
+  "habilidades_passivas": [
+    {
+      "nome": "Call of the Void",
+      "gatilho": "criatura a até 5 pés tenta se afastar",
+      "alcance_ft": 5,
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 13
+      },
+      "falha": "não consegue se afastar",
+      "sucesso": "pode se afastar",
+      "excecao": "movimento por magia, como misty step ou freedom of movement, tem sucesso automático"
+    },
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não necessita respirar, alimentar-se, beber nem dormir."
+    },
+    {
+      "nome": "Immoveable",
+      "efeito": "Não pode ser movido contra sua vontade por meios não mágicos; tem desvantagem em testes de DES (Acrobatics) e DES (Stealth).",
+      "excecao": "magia pode deslocá-lo"
+    },
+    {
+      "nome": "Implosive End",
+      "gatilho": "morte",
+      "area": {
+        "geometria": "raio",
+        "raio_ft": 5
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 16
+      },
+      "dano": {
+        "dados": "4d8",
+        "modificador": 0,
+        "tipo": "force"
+      },
+      "falha": "4d8 force",
+      "sucesso": "metade",
+      "duracao": "instantâneo"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Void Gauntlet",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 6,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "4d8",
+          "modificador": 0,
+          "tipo": "force"
+        }
+      ],
+      "efeito_condicional": {
+        "tamanho_alvo": "Medium ou menor",
+        "salvaguarda": {
+          "atributo": "FOR",
+          "cd": 16
+        },
+        "falha": "prone",
+        "sucesso": "não fica prone"
+      }
+    },
+    {
+      "nome": "Void Bolt",
+      "tipo": "distancia_magico",
+      "bonus_acerto": 7,
+      "alcance_normal_ft": 120,
+      "alcance_maximo_ft": 120,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "4d8",
+          "modificador": 3,
+          "tipo": "force"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        {
+          "quantidade_ataques": 2,
+          "sequencia": [
+            "Void Gauntlet",
+            "Void Gauntlet"
+          ]
+        },
+        {
+          "quantidade_ataques": 3,
+          "sequencia": [
+            "Void Bolt",
+            "Void Bolt",
+            "Void Bolt"
+          ]
+        }
+      ],
+      "restricoes": []
+    },
+    {
+      "nome": "Void Gauntlet",
+      "categoria": "ataque",
+      "referencia_ataque": "Void Gauntlet"
+    },
+    {
+      "nome": "Void Bolt",
+      "categoria": "ataque",
+      "referencia_ataque": "Void Bolt"
+    },
+    {
+      "nome": "Pull of the Void",
+      "categoria": "efeito_especial",
+      "recarga": "5–6",
+      "alvos": {
+        "quantidade_maxima": 3,
+        "criterio": "criaturas visíveis não atrás de cobertura total"
+      },
+      "alcance_ft": 60,
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 16
+      },
+      "falha": "puxada até 30 pés em direção ao Void Knight",
+      "sucesso": "não é puxada",
+      "dano_subsequente": {
+        "gatilho": "após os testes de puxar, toda criatura a até 5 pés do Void Knight",
+        "dados": "8d8",
+        "tipo": "force",
+        "observacao": "este dano atinge criaturas na área, independentemente de terem sido puxadas ou do resultado do teste"
+      },
+      "duracao": "instantâneo"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "TERMO_EXHAUSTED_LITERAL_CONFERIR_GRAFIA_PUBLICACAO",
+  "bloqueado": true,
+  "pendencias": [
+    "Consultar edição editorial Kobold Press/errata independente; reproduções usadas não equivalem a homologação da editora.",
+    "Confirmar literal 'exhausted' na publicação e seu mapeamento à condição exhaustion, sem corrigir silenciosamente.",
+    "Sem revisão independente de regras e integração."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Void Knight",
+    "tipo": "Construct",
+    "tamanho": "Medium",
+    "alinhamento": "Lawful Evil",
+    "nd": "10",
+    "bonus_proficiencia": 4
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "alternativas": [
+        {
+          "sequencia": [
+            "Void Gauntlet",
+            "Void Gauntlet"
+          ]
+        },
+        {
+          "sequencia": [
+            "Void Bolt",
+            "Void Bolt",
+            "Void Bolt"
+          ]
+        }
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Implosive End",
+      "interacao": "efeito dispara na morte, não é ação nem reação"
+    }
+  ]
+}

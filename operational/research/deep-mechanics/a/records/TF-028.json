@@ -1,0 +1,252 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-028",
+  "name": "Cloudhoof Assassin",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Medium",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2022,
+    "edition": "Tome of Beasts 3 (2022, 5e)",
+    "source_page": 91,
+    "experience_points": 200,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 45,
+    "hit_dice": "7d8+14",
+    "ability_scores": {
+      "STR": 17,
+      "DEX": 17,
+      "CON": 14,
+      "INT": 2,
+      "WIS": 11,
+      "CHA": 7
+    },
+    "speeds": {
+      "walk_ft": 40
+    },
+    "senses": {
+      "passive_perception": 10
+    },
+    "skills": {
+      "Acrobatics": 5,
+      "Athletics": 5
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 3,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -2
+    },
+    "armor_class_type": "unarmored"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Shoving Charge",
+        "category": "passive",
+        "effect": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 13,
+            "on_failure": {
+              "pushed_ft": 10,
+              "pushed_ft_if_failed_by_at_least_5": 15
+            },
+            "on_success": {
+              "pushed_ft": 0
+            }
+          }
+        },
+        "trigger": "20 ft straight movement toward target, then Headbutt hit on same turn",
+        "requirements": {
+          "movement_straight_ft_min": 20,
+          "hit": "Headbutt",
+          "same_turn": true
+        }
+      },
+      {
+        "name": "Sure-Hooved",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saves_and_checks": {
+            "abilities": [
+              "STR",
+              "DEX"
+            ],
+            "against": "knocked prone"
+          },
+          "advantage_athletics": "climb rock",
+          "advantage_acrobatics": "maintain balance on rocky surface"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Headbutt",
+            "count": 1
+          },
+          {
+            "action": "Shoving Kick",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Headbutt",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "type": "bludgeoning",
+              "average": 6
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Shoving Kick",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 3,
+              "type": "bludgeoning",
+              "average": 5
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "hit_effect": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 13,
+            "on_failure": {
+              "pushed_ft": 5,
+              "pushed_ft_on_critical_hit": 10
+            },
+            "on_success": {
+              "pushed_ft": 0
+            }
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/cloudhoof-assassin/",
+      "type": "ficha_individual_secundaria",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:cloudhoof-assassin",
+      "type": "transcricao_individual_ogl_nao_oficial",
+      "edition": "Tome of Beasts 3",
+      "source_page": 91,
+      "reviewed_on": "2026-10-14",
+      "verification": "Todos os parâmetros do statblock individual transcritos (estatísticas, ataques, efeitos, economia de ações, ausências)",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial_oficial",
+      "verification": "publicação, tipo, porte e ND"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-026_TF-030/research.json",
+    "sha": "bf0fbfd0a6d1a44c6bde42f3039a3d0ecd252dbd"
+  },
+  "legacy_note": [
+    "Direitos e imagem pendentes."
+  ],
+  "outstanding": [
+    "Confrontar mecanicamente com impressão e erratas editoriais (transcrição OGL comunitária não é homologação primária).",
+    "Revisão independente da implementação do combate e aprovação da edição exata.",
+    "Arte final e direitos de uso sujeitos a verificação própria; status de imagem controlado separadamente."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_compared": false,
+    "engine_independent_review": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-028.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 79146,
+    "sha256": "c9540595d928178fd413fcb985a3d7478cee729d79513e12aa1954e54efe23af",
+    "git_blob_sha": "a18b769974f9b327687fa2a879f39616324e3db0",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Cloudhoof%20Assassin.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "726b807fee1314b374a06dc50f22784d984ae85a",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

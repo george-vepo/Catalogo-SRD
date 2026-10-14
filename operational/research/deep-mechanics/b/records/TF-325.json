@@ -1,0 +1,256 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-325",
+  "nome": "Lindwurm",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
+  "edicao": {
+    "sistema": "Dungeons & Dragons 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023) — revisão identificada em reprodução 5eSRD",
+    "edicao_exata_verificada": false,
+    "versao_de_pesquisa": "2023, não fundir com edição original"
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/lindwurm-3pp/",
+      "natureza": "transcricao_secundaria_com_identificacao_edicao_2023",
+      "consultada": "2026-10-14",
+      "escopo": "todos os atributos, duas passivas, quatro ações/ataques e doença"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial",
+      "escopo": "confirma identidade e ND 6; não bloco completo"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_conflito",
+      "escopo": "ND5 em edição anterior, não validar números juntos"
+    }
+  ],
+  "estatisticas": {
+    "nd": null,
+    "ca": 15,
+    "pv": 136,
+    "dados_vida": "16d10+48",
+    "atributos": {
+      "FOR": 18,
+      "DES": 20,
+      "CON": 16,
+      "INT": 6,
+      "SAB": 12,
+      "CAR": 8
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "nadar": 20
+    },
+    "salvaguardas": {
+      "FOR": 7,
+      "DES": 8,
+      "CON": 6
+    },
+    "pericias": {
+      "Acrobatics": 8,
+      "Athletics": 7,
+      "Perception": 4,
+      "Stealth": 8
+    },
+    "sentidos": [
+      "darkvision 60 ft",
+      "tremorsense 120 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Draconic"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "cold"
+    ],
+    "vulnerabilidades_dano": [
+      "fire"
+    ],
+    "imunidades_condicao": [
+      "paralyzed",
+      "unconscious"
+    ],
+    "nd_da_transcricao_2023": "6",
+    "proficiencia": 3
+  },
+  "qualidade_estatisticas": "VERIFICADO_NA_TRANSCRICAO_2023_MAS_NAO_NA_EDICAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Ice Walk",
+      "efeito": "Terreno difícil composto de neve ou gelo não impõe movimento adicional; anda em superfícies geladas sem teste de atributo."
+    },
+    {
+      "nome": "Sure-Footed Skater",
+      "efeito": "Em gelo ou neve, vantagem em salvaguardas de FOR e DES contra efeitos que deixem prone.",
+      "salvaguardas": [
+        "FOR",
+        "DES"
+      ],
+      "condicao": "prone",
+      "ambiente": [
+        "neve",
+        "gelo"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d10",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "aplicavel_a": "alvo criatura",
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 15,
+            "falha": "contrai doença e fica poisoned até cura",
+            "sucesso": "não contrai doença"
+          },
+          "doenca": {
+            "condicao": "poisoned até curada",
+            "repeticao": "ao fim de cada descanso longo",
+            "salvaguarda": {
+              "atributo": "CON",
+              "cd": 15,
+              "falha": "ganha 1 nível de exhaustion e não recupera Hit Dice gastos",
+              "sucesso": "reduz exhaustion em um nível e recupera Hit Dice gastos"
+            },
+            "cura": "se sucesso reduzir exhaustion abaixo de 1 nível, a doença termina"
+          }
+        }
+      ]
+    },
+    {
+      "nome": "Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d6",
+          "modificador": 5,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": []
+    },
+    {
+      "nome": "Constrict",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 10,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [
+        {
+          "condicoes": [
+            "grappled",
+            "restrained"
+          ],
+          "cd_escape": 15,
+          "limite": "não pode Constrict segundo alvo até soltar primeiro"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Bite",
+        "Claw",
+        "Claw"
+      ],
+      "alternativa": [
+        "Constrict substitui Bite",
+        "Claw",
+        "Claw"
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Claw",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Constrict",
+      "categoria": "ataque",
+      "referencia_ataque": "Constrict",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "ND 5 em edição original segundo PR #4, ND 6 no índice editorial atual e na reprodução 5eSRD do Tome of Beasts 1 (2023). ND principal fica null até o projeto escolher explicitamente a edição e validar no editor.",
+  "campos_em_conflito": [
+    "nd"
+  ],
+  "variantes_editoriais": [
+    {
+      "nome": "edição original",
+      "nd": "5",
+      "fonte": "PR #4"
+    },
+    {
+      "nome": "Tome of Beasts 1 (2023), transcrição",
+      "nd": "6",
+      "url": "https://www.5esrd.com/database/creature/lindwurm-3pp/"
+    }
+  ],
+  "bloqueado": true,
+  "pendencias": [
+    "Definir oficialmente a edição de catálogo antes de atribuir ND consolidado.",
+    "Cotejar 2023 com exemplar editorial/erratas; 5eSRD é reprodução secundária, não homologação."
+  ],
+  "integrada": false,
+  "verificacao_indice_editorial_kp_20261014": {
+    "fonte": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "natureza": "INDICE_DO_EDITOR_NAO_STATBLOCK",
+    "identidade": "Lindwurm",
+    "nd_texto_indice": "6.0",
+    "tamanho": "Large",
+    "tipo": "Dragon",
+    "terrenos": [
+      "Arctic",
+      "Underwater"
+    ],
+    "publicacao": "Tome of Beasts 1",
+    "consultado": "2026-10-14",
+    "limite": "Não comprova edição de bloco completo ou errata; preservar ND/PV conflitantes e não misturar versões; ND 0.3 é representação decimal arredondada do índice.",
+    "conflito_pr4_permanece": true
+  }
+}

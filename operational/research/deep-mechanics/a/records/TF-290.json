@@ -1,0 +1,268 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-290",
+  "name": "Glass Gator",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "experience_points": 200,
+    "proficiency_bonus": 2,
+    "source_page": 211
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 45,
+    "hit_dice": "7d10+7",
+    "ability_scores": {
+      "STR": 15,
+      "DEX": 14,
+      "CON": 12,
+      "INT": 4,
+      "WIS": 10,
+      "CHA": 5
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "swim_ft": 50
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 12
+    },
+    "skills": {
+      "Perception": 2,
+      "Stealth": 4
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 2,
+      "CON": 1,
+      "INT": -3,
+      "WIS": 0,
+      "CHA": -3
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Amphibious",
+        "category": "respiration",
+        "can_breathe": [
+          "air",
+          "water"
+        ]
+      },
+      {
+        "name": "Constricting Lunge",
+        "category": "conditional_prone_and_bonus_action",
+        "prerequisites": {
+          "jump_straight_towards_target_ft_at_least": 10,
+          "claw_hit_same_turn": true
+        },
+        "save": {
+          "ability": "STR",
+          "dc": 12,
+          "on_failure": {
+            "condition": "prone"
+          }
+        },
+        "if_target_prone": {
+          "unlocks_bonus_action": "Constrict"
+        }
+      },
+      {
+        "name": "Standing Leap",
+        "category": "movement",
+        "max_long_jump_ft": 15,
+        "max_high_jump_ft": 10,
+        "requires_running_start": false
+      },
+      {
+        "name": "Transparent",
+        "category": "stealth_advantage",
+        "preconditions_any": [
+          "underwater",
+          "dim_light"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 2,
+              "average": 9,
+              "type": "slashing"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Constrict",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 2,
+              "average": 5,
+              "type": "bludgeoning"
+            }
+          ],
+          "grapple": {
+            "escape_dc": 12,
+            "while_grappled": {
+              "condition": "restrained",
+              "damage_each_target_turn_start": {
+                "dice": "2d4",
+                "average": 5,
+                "type": "poison"
+              },
+              "prevents_grappling_new_target_with_Constrict": true
+            }
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Lunge Constrict",
+        "category": "conditional_action",
+        "action_economy": "bonus_action",
+        "requires": "Constricting_Lunge_trigger_and_prone_target",
+        "action_ref": "Constrict"
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Silt Cloud",
+        "category": "obscuring_reaction",
+        "action_economy": "reaction",
+        "recharge": "short_or_long_rest",
+        "trigger": {
+          "takes_damage": true,
+          "underwater": true,
+          "within_ft_of_bottom": 5
+        },
+        "creates": {
+          "sphere_radius_ft": 10,
+          "heavily_obscured": true,
+          "spreads_around_corners": true,
+          "lasts": "1_minute_or_until_strong_current",
+          "stays_at_origin": true
+        },
+        "after_effect": {
+          "swim_distance_ft_max": 25
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Predador aquático quase transparente; salto derruba e habilita constrição venenosa, reação cria nuvem de limo para fugir."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/glass-gator-3pp/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:glass-gator",
+      "type": "KPOGL reprodução não endossada por Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "Fonte individual para stats, traits, actions and reactions",
+      "verification": "Conferida online em 14/10/2026; não é fonte oficial da editora"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Lunge requires both straight jump and Claw hit; bonus Constrict unlocked on target prone.",
+    "While holding a Constrict grapple, cannot Constrict another target.",
+    "Silt Cloud is stationary and requires water plus proximity to bottom.",
+    "Requer checagem editorial de impressão/errata, QA da engine e licença/arte antes de homologação."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-290.webp",
+    "format": "image/webp",
+    "width": 1000,
+    "height": 793,
+    "bytes": 217936,
+    "sha256": "57dcc40e36ac9b5325bdf98bc87f09bbc79fbf19c15ab91b7c7a40dfb4ad2120",
+    "git_blob_sha": "b0c1d5caaafede2ce0ecad83be4a1cd695abdff7",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/ToB1-2023/bestiary/Glass%20Gator.webp",
+    "source_type": "reuse_from_branch_image_assets_f",
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "original_asset_commit": "3592249f6fec9b0b1f670f4c0e19bf1d86d62881",
+    "identity_provenance": "ID e nome conferidos com manifesto F e blob SHA preservado",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:glass-gator"
+    ],
+    "source_tier": "secondary_KPOGL",
+    "individual_statblock_read_live": true,
+    "rights_cleared": false
+  }
+}

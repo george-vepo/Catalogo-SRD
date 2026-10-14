@@ -1,0 +1,196 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-105",
+  "nome": "Thuellai",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/thuellai-3pp",
+      "natureza": "reproducao_secundaria_5esrd",
+      "edicao_identificada": "Tome of Beasts 1 (2023)",
+      "consulta": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "12",
+    "ca": 17,
+    "pv": 161,
+    "dados_vida": "14d12+70",
+    "atributos": {
+      "FOR": 22,
+      "DES": 24,
+      "CON": 20,
+      "INT": 10,
+      "SAB": 11,
+      "CAR": 14
+    },
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 100
+    },
+    "salvaguardas": {
+      "INT": 4,
+      "SAB": 4,
+      "CAR": 6
+    },
+    "pericias": {
+      "Perception": 4
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common",
+      "Dwarvish",
+      "Primordial"
+    ],
+    "resistencias_dano": [
+      "lightning",
+      "thunder",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [
+      "fire"
+    ],
+    "imunidades_condicao": [
+      "exhaustion",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "unconscious"
+    ],
+    "origem_ca": "não especificada",
+    "pairar": true,
+    "proficiencia": 4
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Chilling Presence",
+      "area": {
+        "raio_ft": 15
+      },
+      "gatilhos": [
+        {
+          "quando": "início de cada turno do thuellai",
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 17
+          },
+          "falha": {
+            "dados": "2d6",
+            "tipo": "cold"
+          }
+        },
+        {
+          "quando": "a cada minuto de exposição dentro de 15 pés",
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 17
+          },
+          "falha": "um nível de exhaustion por frio"
+        }
+      ],
+      "efeitos_adicionais": [
+        "apaga chamas comuns desprotegidas no raio",
+        "encerra magias de resistência a frio de nível 3 ou menor na área",
+        "congela água após permanecer um minuto na área"
+      ]
+    },
+    {
+      "nome": "Elemental Nature",
+      "efeito": "não necessita ar, alimento, bebida nem sono"
+    },
+    {
+      "nome": "Snowsight",
+      "efeito": "enxerga normalmente através de neve, granizo e precipitação invernal que obscurece visão"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Icy Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 10,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 6,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "3d6",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Icy Claw",
+        "Icy Claw",
+        "Icy Claw"
+      ]
+    },
+    {
+      "nome": "Icy Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Icy Claw"
+    },
+    {
+      "nome": "Freezing Breath",
+      "categoria": "sopro",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "cone",
+        "comprimento_ft": 60
+      },
+      "alvos": "criaturas na área",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 17
+      },
+      "dano": {
+        "dados": "14d6",
+        "tipo": "cold"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "A edição específica de 2023 da reprodução foi preservada isoladamente; não mesclar com Tome of Beasts 1 de 2016.",
+  "bloqueado": true,
+  "pendencias": [
+    "Cotejo com Tome of Beasts 1 (2023) e erratas oficiais; fonte secundária não constitui validação independente.",
+    "Sem testes de combate ou promoção canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Thuellai",
+    "tipo": "Huge elemental",
+    "alinhamento": "chaotic neutral"
+  }
+}

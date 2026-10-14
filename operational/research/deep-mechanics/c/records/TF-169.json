@@ -1,0 +1,302 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-169",
+  "nome": "Ooze, Suppurating",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 47,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Creature Codex",
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": "1",
+    "nd_fonte": "1",
+    "ca": 8,
+    "pv": 30,
+    "dados_vida": "4d8+12",
+    "porte": "Medium",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 16,
+      "DES": 6,
+      "CON": 16,
+      "INT": 1,
+      "SAB": 6,
+      "CAR": 2
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": -2,
+      "CON": 3,
+      "INT": -5,
+      "SAB": -2,
+      "CAR": -4
+    },
+    "deslocamentos": {
+      "andar": 10,
+      "escalar": 10
+    },
+    "pericias": [],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [
+      "cold",
+      "necrotic",
+      "slashing"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "poisoned",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 200,
+    "bonus_proficiencia": 2
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "efeito": "atravessa abertura de 1 inch"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Seeping Death",
+        "gatilho": "criatura viva toca ooze ou acerta com melee a até 5ft",
+        "dano": {
+          "dados": "1d8",
+          "media": 4,
+          "tipo": "necrotic"
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": "infected with Seeping Death",
+        "doenca": {
+          "intervalo": "fim de cada long rest",
+          "teste": "CON DC13",
+          "falha": "DEX score reduzido em 1d4",
+          "reversao": "long rest após doença curada",
+          "morte": "se DEX chegar a 0",
+          "transformacao": "cadáver vira suppurating ooze 1d4 horas depois",
+          "cura": "lesser restoration ou magia similar"
+        }
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "escalada tetos sem teste"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "necrotic"
+          }
+        ],
+        "teste_infeccao": {
+          "alvo": "creature",
+          "atributo": "CON",
+          "cd": 13,
+          "falha": "Seeping Death"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "necrotic"
+          }
+        ],
+        "teste_infeccao": {
+          "alvo": "creature",
+          "atributo": "CON",
+          "cd": 13,
+          "falha": "Seeping Death"
+        }
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Seeping Death causa perda DEX apenas se CON CD13 falha ao fim de cada long rest, morte quando DEX=0, reversão long rest depois de cura e transformação 1d4h após morte.",
+    "Seeping Death Skeleton é variante CR2 de entidade distinta; não integrar.",
+    "Revisão editorial de livro e autorização de imagem pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "conferir livro/errata",
+    "imagem legal e visual pendentes"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-suppurating/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-suppurating/",
+      "tipo": "ficha individual revisada no checkpoint 39",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-169",
+    "nome": "Ooze, Suppurating",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "1",
+    "nd_fonte": "1",
+    "ca": 8,
+    "pv": 30,
+    "pv_dados": "4d8+12",
+    "porte": "Medium",
+    "tipo": "ooze",
+    "atributos": [
+      16,
+      6,
+      16,
+      1,
+      6,
+      2
+    ],
+    "deslocamento_ft": {
+      "andar": 10,
+      "escalar": 10
+    },
+    "salvaguardas": {
+      "CON": 5
+    },
+    "resistencias_dano": [
+      "cold",
+      "necrotic",
+      "slashing"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "resumo": "Passa por uma polegada."
+      },
+      {
+        "nome": "Seeping Death",
+        "resumo": "Contato ou ataque corpo a corpo próximo causa 1d8 necrótico e Constituição CD13 contra doença; novas falhas após descanso longo reduzem Destreza em 1d4, podendo causar morte e transformação. Cura por magia apropriada."
+      },
+      {
+        "nome": "Spider Climb",
+        "resumo": "Escala paredes e tetos."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "resumo": "+5, 5 pés, 1d6+3 contundente e 2d8 necrótico; Constituição CD13 ou doença Seeping Death."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-suppurating/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Variante Seeping Death Skeleton é entidade distinta, não integrar à ficha de ooze.",
+      "Licença e arte pendentes."
+    ],
+    "editora": "Kobold Press / Open Design",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-169.jpg",
+    "formato": "jpg",
+    "largura": 1000,
+    "altura": 623,
+    "bytes": 101565,
+    "blob_sha": "79157665d713a679e25777c5e035f4dc04d82478",
+    "sha256": "1a840ee5c2ad28743094c04e302c47e55e70ab9bca6a21a2e0fe159c8c00437c",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Suppuratingooze.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 39,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-suppurating/",
+    "publicacao": "Creature Codex",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

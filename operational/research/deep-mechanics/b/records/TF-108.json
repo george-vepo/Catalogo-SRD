@@ -1,0 +1,176 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-108",
+  "nome": "Attercroppe",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2 (2020)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/attercroppe/",
+      "natureza": "reproducao_secundaria",
+      "edicao": "Tome of Beasts 2 (2020)",
+      "consulta": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1/2",
+    "ca": 14,
+    "pv": 21,
+    "dados_vida": "6d4+6",
+    "atributos": {
+      "FOR": 8,
+      "DES": 18,
+      "CON": 12,
+      "INT": 11,
+      "SAB": 13,
+      "CAR": 15
+    },
+    "deslocamentos_ft": {
+      "andar": 20,
+      "escalar": 20,
+      "nadar": 30
+    },
+    "salvaguardas": {
+      "DES": 6
+    },
+    "pericias": {
+      "Acrobatics": 6,
+      "Perception": 5,
+      "Stealth": 6
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Aquan",
+      "Common",
+      "Sylvan"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "poisoned"
+    ],
+    "proficiencia": 2
+  },
+  "qualidade_estatisticas": "REPRODUCAO_INDIVIDUAL_CONSULTADA_NAO_HOMOLOGADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Poisonous Aura",
+      "gatilho": "passa uma hora totalmente imerso em água",
+      "quantidade_contaminada_galoes": 10,
+      "efeito": "até dez galões da água tornam-se tóxicos",
+      "ingerir": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 12
+        },
+        "falha": {
+          "dano": {
+            "dados": "3d6",
+            "tipo": "poison"
+          },
+          "condicao": "poisoned",
+          "duracao": "1 hora"
+        }
+      }
+    },
+    {
+      "nome": "Water Invisibility",
+      "precondicao": "totalmente submerso",
+      "efeito": "invisible",
+      "interrupcao": "ao atacar fica visível até início do próximo turno",
+      "supressao": {
+        "custo": "ação bônus",
+        "duracao": "até início do próximo turno"
+      }
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Suppress Water Invisibility",
+      "custo": "ação bônus",
+      "efeito": "suprime invisibilidade aquática até início do próximo turno"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 12,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "poison spray"
+          ]
+        },
+        {
+          "usos": "3/dia cada",
+          "nomes": [
+            "create or destroy water",
+            "fog cloud"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "nomes": [
+            "misty step",
+            "suggestion"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "Revisão contra exemplar e erratas editoriais originais pendente; blocos secundários não são homologação.",
+    "Não executar integração canônica ou merge antes da revisão independente."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Attercroppe",
+    "tipo": "Tiny fey",
+    "alinhamento": "chaotic evil"
+  },
+  "acoes_toca": [],
+  "efeitos_regionais": [],
+  "mecanicas_especiais": []
+}

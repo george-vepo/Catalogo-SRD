@@ -1,0 +1,173 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-116",
+  "nome": "Xiphus",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex (2018)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/xiphus/",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Creature Codex (2018)"
+    }
+  ],
+  "estatisticas": {
+    "nd": "5",
+    "ca": 15,
+    "pv": 55,
+    "dados_vida": "10d6+20",
+    "atributos": {
+      "FOR": 14,
+      "DES": 21,
+      "CON": 15,
+      "INT": 10,
+      "SAB": 12,
+      "CAR": 14
+    },
+    "deslocamentos_ft": {
+      "andar": 50
+    },
+    "salvaguardas": {
+      "DES": 8
+    },
+    "pericias": {
+      "Acrobatics": 8,
+      "Perception": 4,
+      "Stealth": 8
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common",
+      "Elvish",
+      "Umbral"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "lightning"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "proficiencia": 3
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Evasion",
+      "efeito": "em efeito que permitiria metade de dano após salvaguarda DES, sofre zero em sucesso e metade na falha"
+    },
+    {
+      "nome": "Lightning Absorption",
+      "gatilho": "dano lightning recebido",
+      "efeito": "não recebe o dano e recupera PV equivalentes ao dano lightning que seria aplicado"
+    },
+    {
+      "nome": "Startling Speed",
+      "gatilho": "move-se pelo menos 10 pés durante próprio turno",
+      "efeito": "ataques contra o Xiphus têm desvantagem até início do próximo turno",
+      "exceto": [
+        "incapacitated",
+        "restrained"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Hidden Dagger",
+      "tipo": "corpo_a_corpo_ou_distancia",
+      "bonus_acerto": 8,
+      "alcance_ft": 5,
+      "alcance_normal_ft": 20,
+      "alcance_maximo_ft": 60,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 5,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "lightning"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Hidden Dagger",
+        "Hidden Dagger",
+        "Hidden Dagger"
+      ]
+    },
+    {
+      "nome": "Hidden Dagger",
+      "categoria": "ataque",
+      "referencia_ataque": "Hidden Dagger"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Siphon Time",
+      "custo": "ação bônus",
+      "recarga": "5–6",
+      "alvo": "criatura visível",
+      "alternativas": [
+        "vantagem nos ataques contra o alvo até início do próximo turno",
+        "vantagem nas salvaguardas contra magias conjuradas pelo alvo até início do próximo turno"
+      ]
+    }
+  ],
+  "reacoes": [
+    {
+      "nome": "Borrowed Time",
+      "custo": "reação",
+      "recuperacao": "descanso curto ou longo",
+      "gatilho": "dano que reduziria o Xiphus a 0 PV",
+      "alvo": "criatura visível a 30 pés",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 16
+      },
+      "falha": {
+        "dano": {
+          "dados": "3d6",
+          "tipo": "necrotic"
+        },
+        "efeito": "Xiphus recupera PV iguais ao dano efetivo recebido pelo alvo"
+      },
+      "consequencias": [
+        "se o alvo for reduzido a zero PV por essa habilidade, fica estabilizado",
+        "dois turnos após usar, Xiphus sofre dano necrótico igual a PV emprestados, e alvo recupera o mesmo"
+      ],
+      "sucesso": "não especificado além de evitar efeito de falha"
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "Ainda é necessário confronto independente com a publicação editorial, erratas e regras do jogo.",
+    "Sem revisão independente, não promover ao catálogo canônico."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Xiphus",
+    "tipo": "Small fey",
+    "alinhamento": "chaotic evil"
+  }
+}

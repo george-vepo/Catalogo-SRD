@@ -1,0 +1,432 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-045",
+  "name": "Aaxte",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "5",
+    "size": "Large",
+    "type": "celestial (shapechanger)",
+    "alignment": "lawful_good",
+    "publication_year": 2018,
+    "edition": "Creature Codex (2018, D&D 5e)",
+    "experience_points": 1800,
+    "proficiency_bonus": 3,
+    "source_page": null,
+    "official_name": "Aatxe",
+    "catalog_alias": "Aaxte",
+    "identity_alias_discrepancy": "catalog spells Aaxte; KPOGL and editor catalog spell Aatxe"
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 105,
+    "hit_dice": "10d10+50",
+    "ability_scores": {
+      "STR": 22,
+      "DEX": 12,
+      "CON": 20,
+      "INT": 10,
+      "WIS": 14,
+      "CHA": 14
+    },
+    "speeds": {
+      "walk_ft": 50
+    },
+    "senses": {
+      "passive_perception": 12
+    },
+    "skills": {
+      "Athletics": 9,
+      "Intimidation": 5
+    },
+    "saving_throws": [],
+    "languages": [
+      "understands_all",
+      "cannot_speak_in_true_form"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "frightened"
+    ],
+    "ability_modifiers": {
+      "STR": 6,
+      "DEX": 1,
+      "CON": 5,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": 2
+    },
+    "armor_class_type": "natural_armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Charge",
+        "category": "passive",
+        "effect": {
+          "extra_piercing_on_gore": {
+            "dice": "2d8",
+            "flat": 0,
+            "type": "piercing",
+            "average": 9
+          },
+          "target_save_if_creature": {
+            "ability": "STR",
+            "dc": 15,
+            "on_failure": {
+              "condition": "prone"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        },
+        "requirements": {
+          "move_straight_to_target_ft_min": 20,
+          "hit_with": "Gore",
+          "same_turn": true
+        }
+      },
+      {
+        "name": "Know Thoughts",
+        "category": "active_trait",
+        "activation": "action",
+        "targets": {
+          "count": 1,
+          "range_ft": 30,
+          "kind": "creature"
+        },
+        "effect": {
+          "read_surface_thoughts": true,
+          "rules_reference": "detect thoughts surface thoughts only",
+          "duration": "no_source_limit",
+          "change_target_cost": "action",
+          "end_cost": "bonus_action"
+        }
+      },
+      {
+        "name": "Limited Speech",
+        "category": "passive",
+        "effect": {
+          "can_use_simple_ideas_and_phrases": true,
+          "understands_complex_conversation": true
+        },
+        "condition": "humanoid_form_only"
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other_magical_effects"
+          ]
+        }
+      },
+      {
+        "name": "Shapechanger",
+        "category": "active_trait",
+        "activation": "action",
+        "forms": [
+          "true_form_large_celestial_bull",
+          "medium_male_humanoid_seen_previously"
+        ],
+        "effect": {
+          "statistics_unchanged_except_size": true,
+          "equipment_does_not_transform": true,
+          "revert_on_death": true
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "3d8",
+              "flat": 6,
+              "type": "piercing",
+              "average": 19
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Paw the Earth",
+        "category": "area_save",
+        "action_economy": "action",
+        "targets": "each_creature_within_30_ft",
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 15,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "up_to_1_minute",
+            "repeat_save": {
+              "when": "end_of_each_target_turn",
+              "on_success": "ends_condition"
+            }
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "immunity": {
+          "after_success_or_effect_ends_hours": 24
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "End Know Thoughts",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "Know Thoughts active",
+        "effect": "ends surface-thought reading"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [
+      {
+        "name": "Detect",
+        "cost": 1,
+        "effect": {
+          "check": "WIS (Perception)"
+        }
+      },
+      {
+        "name": "Gore",
+        "cost": 2,
+        "effect": {
+          "attack": "Gore",
+          "count": 1
+        }
+      },
+      {
+        "name": "Bulwark",
+        "cost": 3,
+        "effect": {
+          "trigger": "next_attack_would_hit_ally_within_5_ft",
+          "redirect_target": "Aatxe",
+          "duration": "until_next_trigger"
+        }
+      }
+    ],
+    "lair_actions": [
+      {
+        "name": "Sticky Muck",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "area": {
+          "shape": "sphere",
+          "radius_ft": 20,
+          "point_visible_within_ft": 120
+        },
+        "effect": {
+          "difficult_terrain": true,
+          "saving_throw": {
+            "ability": "DEX",
+            "dc": 15,
+            "on_failure": {
+              "condition": "restrained"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          },
+          "removal": {
+            "action": "action",
+            "check": "STR",
+            "dc": 15,
+            "target": "self_or_another_creature"
+          },
+          "duration": "until_reattributed_lair_action_or_aatxe_death"
+        }
+      },
+      {
+        "name": "Red Tether",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "targets": {
+          "count": 1,
+          "creature_visible_within_ft": 30
+        },
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 15,
+          "on_failure": {
+            "effect": "tether_applies_to_unwilling_target"
+          },
+          "on_success": {
+            "effect": "unwilling_target_resists_tether"
+          }
+        },
+        "effect": {
+          "split_damage_evenly_between_target_and_aatxe": true,
+          "aatxe_resistance": "all_damage_except_tether_transfer",
+          "duration": "target_death_or_this_lair_action_used_again_or_aatxe_death"
+        },
+        "willing_target": "tether_applies_without_save"
+      },
+      {
+        "name": "Celestial Motes",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "targets": {
+          "each": "hostile_creature_within_20_ft"
+        },
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 15,
+          "on_failure": {
+            "glowing": true,
+            "dim_light_radius_ft": 10,
+            "cannot_benefit_from_invisibility": true,
+            "visible_attackers_have_advantage": true,
+            "duration": "until_initiative_20_next_round"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      }
+    ],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Regional light",
+        "category": "regional_effect",
+        "radius_miles": 3,
+        "effect": "nonmagical_light_illuminates_additional_10ft"
+      },
+      {
+        "name": "Regional birds",
+        "category": "regional_effect",
+        "radius_miles": 5,
+        "time": "sunset_to_sunrise",
+        "effect": {
+          "birds_expose_ambushers": true,
+          "required_additional_check": "DEX (Stealth)",
+          "dc": 15,
+          "if_fiend_or_undead": "birds alert Aatxe"
+        }
+      },
+      {
+        "name": "Regional predator aversion",
+        "category": "regional_effect",
+        "radius_miles": 5,
+        "effect": "predatory_beasts_find_intelligent_beings_unpalatable"
+      }
+    ],
+    "legendary_economy": {
+      "actions_per_round": 3,
+      "spent_actions_recover": "start_of_aatxe_turn",
+      "trigger": "end_of_another_creatures_turn",
+      "only_one_option_per_trigger": true
+    }
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/aatxe/",
+      "type": "ficha_identificada_em_checkpoint_histórico",
+      "verification": "mecânica integral ainda não revalidada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:aatxe",
+      "type": "individual_ogl_transcription_unofficial",
+      "edition": "Creature Codex",
+      "reviewed_on": "2026-10-14",
+      "verified_fields": [
+        "statistics",
+        "traits",
+        "actions",
+        "bonus_actions",
+        "reactions",
+        "legendary_actions",
+        "lair_actions",
+        "regional_effects"
+      ],
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "publisher_index",
+      "verification": "identidade, publicação e CR"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-041_TF-046/research.json",
+    "sha": "16ed0118731d24ca8447a293e670c952a7f6ea8f"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Catálogo 'Aaxte' possivelmente erro tipográfico; fonte e Kobold Press usam 'Aatxe'. Não alterar ID nem nome histórico sem conciliação.",
+    "Variante Corrupted Aatxe tem habilidades próprias, não aplicar ao registro base.",
+    "Licença e imagem pendentes."
+  ],
+  "outstanding": [
+    "Conferir identidade: catálogo nomeia Aaxte; fonte OGL da Kobold e catálogo oficial nomeiam Aatxe.",
+    "Confirmar regras contra impressão/errata editorial autorizada e revisão independente do motor de combate.",
+    "Verificação de arte visual/direitos permanece independente das mecânicas.",
+    "Imagem TF-045 foi persistida como binário Git verificado, mas verificação visual independente e autorização de direitos ainda pendentes."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_verified": false,
+    "engine_review": false,
+    "final_approval": false,
+    "red_tether_wisdom_save_direction_reviewed_against_individual_source": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_GIT_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-045.webp",
+    "format": "image/webp",
+    "width": 1029,
+    "height": 1292,
+    "bytes": 130128,
+    "sha256": "6608b7405f0c36b7f62260093137c2fc8856e09f67f6bd466c1c9def39d9cb0d",
+    "git_blob_sha": "f9cd48d48d0ea3bf9a6d9c8b4430077fea54b658",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/CCodex/Aatxe.webp",
+    "source_type": "reuse_from_verified_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_manifest": "operational/assets/creature-images/manifests/d.json",
+    "source_commit": "d9c28d7befb03ed8de92035a972b070dc8a08f8d",
+    "source_name_note": "Catalog spells Aaxte; published Creature Codex illustration and creature spell Aatxe; alias confirmed against Kobold Press monster directory.",
+    "integrity": {
+      "source_manifest_sha256_readback": true,
+      "source_manifest_git_blob_readback": true,
+      "tree_blob_sha_reused": true
+    },
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "confirmação de licença e direitos",
+      "aprovação editorial de produção"
+    ]
+  }
+}

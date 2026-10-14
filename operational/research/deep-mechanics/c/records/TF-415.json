@@ -1,0 +1,323 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-415",
+  "nome": "Gloomflower",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 3,
+  "estado_auditoria": "BLOQUEADA_VARIANTE_OPCIONAL_EDICAO_E_CD_AMBIGUA",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "3",
+    "ca": 12,
+    "pv": 44,
+    "dados_vida": "8d4+24",
+    "porte": "Tiny",
+    "tipo": "plant",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "forca": 10,
+      "destreza": 6,
+      "constituicao": 16,
+      "inteligencia": 1,
+      "sabedoria": 6,
+      "carisma": 18
+    },
+    "modificadores": {
+      "forca": 0,
+      "destreza": -2,
+      "constituicao": 3,
+      "inteligencia": -5,
+      "sabedoria": -2,
+      "carisma": 4
+    },
+    "deslocamentos": {
+      "andar_ft": 10
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [
+      "entende idiomas conhecidos por criaturas a até 120 pés; não fala",
+      "telepathy 120 ft"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "deafened",
+      "frightened"
+    ],
+    "vulnerabilidades": [],
+    "xp": 700
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Blur",
+        "gatilho": "Ataque contra Gloomflower",
+        "efeito": "Atacante tem desvantagem salvo se independe da visão ou enxerga através de ilusões",
+        "excecoes": [
+          "blindsight",
+          "truesight"
+        ],
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Psychic Scream",
+        "gatilho": "Ao sofrer dano",
+        "alvo": "Cada criatura até 10 pés",
+        "teste_resistencia": {
+          "atributo": "WIS",
+          "cd": 14
+        },
+        "efeito_falha": {
+          "dano": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "psychic"
+          }
+        },
+        "efeito_sucesso": "nenhum dano",
+        "fonte_verificada": true
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Psychic Strike",
+            "quantidade": 2
+          }
+        ],
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Psychic Strike",
+        "tipo": "ranged_spell_attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 120,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "3d6",
+          "media": 10,
+          "tipo": "psychic"
+        },
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Corrupting Visions",
+        "recarga": "5–6",
+        "alvo": "criaturas à escolha a até 60 pés e cientes da Gloomflower",
+        "teste_resistencia": {
+          "atributo": "WIS",
+          "cd": 14
+        },
+        "duracao": "até 1 minuto; testes repetidos no fim do turno",
+        "efeito_falha": {
+          "condicao_narrativa": "vision bombarded",
+          "dano_no_inicio_turno": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "psychic"
+          },
+          "acao_obrigatoria": "ataque melee contra criatura a até 5 pés, exceto a Gloomflower ou a própria; se impossível, Dodge",
+          "repetir_teste": "fim de cada turno; sucesso encerra"
+        },
+        "efeito_sucesso": {
+          "condicao": "incapacitated",
+          "duracao": "até o fim do próximo turno"
+        },
+        "efeito_especial": "Se reduzido a 0 PV por esse dano: unconscious e stable; após despertar, hallucinations permanentes e desvantagem em testes de atributo até remove curse ou semelhante",
+        "fonte_verificada": true
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Psychic Strike",
+        "tipo": "ranged_spell_attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 120,
+        "alvo": "um alvo",
+        "dano": {
+          "dados": "3d6",
+          "media": 10,
+          "tipo": "psychic"
+        },
+        "fonte_verificada": true
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Psychic Strike",
+          "quantidade": 2
+        }
+      ],
+      "total": 2
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "variantes_opcionais": [
+      {
+        "nome": "Focused Scream",
+        "substitui": "Psychic Scream",
+        "gatilho": "Ao receber dano do alvo a até 120 pés de blindsight",
+        "teste_resistencia": {
+          "atributo": "WIS",
+          "cd": 14
+        },
+        "efeito_falha": {
+          "dados": "3d6",
+          "media": 10,
+          "tipo": "psychic"
+        },
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Howling Darkness",
+        "substitui": "Blur",
+        "recarga": "após descanso curto ou longo",
+        "alvo": "esfera de raio 15 pés centralizada até 60 pés",
+        "efeito": "escuridão mágica como magia darkness, dentro dela desvantagem em salvaguardas contra ações/traços da Gloomflower",
+        "dependencias": [
+          "magia darkness"
+        ],
+        "fonte_verificada": true
+      },
+      {
+        "nome": "Soul Splice",
+        "substitui": "Corrupting Visions",
+        "alcance_ft": 90,
+        "alvo": "uma criatura percebida",
+        "frequencia": "à vontade; apenas um hospedeiro por vez, bloqueia até descanso longo após salvamento/restauração",
+        "teste_resistencia": {
+          "atributo": "CHA",
+          "cd": null,
+          "conflito_textual": "successful 20 DC 14 Charisma saving throw"
+        },
+        "efeito_falha": "hospedeiro unconscious, 2d6 psychic início de turno; repetir save no fim do turno",
+        "efeito_sucesso": "unconscious até início do turno seguinte; imunidade ao mesmo Soul Splice por 24h",
+        "efeito_zero_pv": "death saving throws se dano levar a 0 PV; alma retorna ao cadáver ao estabilizar ou recuperar PV",
+        "dependencias": [
+          "efeito como magia magic jar"
+        ],
+        "fonte_verificada_parcial": true
+      }
+    ]
+  },
+  "pendencias": [
+    "A variante opcional Soul Splice apresenta teste de resistência textual incongruente ('successful 20 DC 14'); não preencher CD presumida.",
+    "Soul Splice depende do efeito da magia magic jar, cuja aplicação precisa ser conferida.",
+    "Imagens binárias persistidas, mas identidade visual ainda sem revisão editorial.",
+    "Conferir mecânicas contra Creature Codex e errata para completar ficha."
+  ],
+  "campos_nao_confirmados": [
+    "CD exata de Soul Splice opcional",
+    "Escopo da aplicação de magic jar à variante Soul Splice",
+    "Conferência editorial da edição e errata"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/gloomflower/",
+      "tipo": "ficha individual completa com variantes opcionais, consultada nesta execução",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/gloomflower/",
+      "tipo": "republicação terceirizada (5eSRD)",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-415",
+    "nome": "Gloomflower",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "nd_catalogo": null,
+    "nd_fonte": "3",
+    "ca": 12,
+    "pv": 44,
+    "atributos": {
+      "forca": 10,
+      "destreza": 6,
+      "constituicao": 16,
+      "inteligencia": 1,
+      "sabedoria": 6,
+      "carisma": 18
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Planta; grito psíquico, efeito de obscurecimento/blur."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Golpes psíquicos e Corrupting Visions com recarga 5–6."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://www.5esrd.com/database/creature/gloomflower/",
+    "fonte_tipo": "republicação terceirizada (5eSRD)",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir contra exemplar editorial, edição/errata e direitos/licenças antes da promoção.",
+      "Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "fonte_editorial": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-415.jpg",
+    "formato": "jpg",
+    "blob_sha": "4ba895d9edc641a6aab696782b81e1f1ae4337e9",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/gloomflower.jpg",
+    "origem_repositorio": "TheGiddyLimit/homebrew",
+    "origem_caminho": "_img/CCodex/gloomflower.jpg",
+    "binario_presente": true,
+    "integridade_binaria_confirmada": true,
+    "validacao_visual_editorial": "PENDENTE",
+    "largura": null,
+    "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": false
+}

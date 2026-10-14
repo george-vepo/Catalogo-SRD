@@ -1,0 +1,387 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-506",
+  "nome": "Mariner Ghost Swarm",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 30,
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_OFICIAL_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "To Save A Kingdom",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/3406"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "11",
+    "xp": null,
+    "bonus_proficiencia": 4,
+    "ca": 15,
+    "pv": 340,
+    "dados_vida": "40d12+80",
+    "bloodied": 170,
+    "porte": "Huge swarm",
+    "tipo": "Undead",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 9,
+      "destreza": 14,
+      "constituicao": 15,
+      "inteligencia": 15,
+      "sabedoria": 14,
+      "carisma": 20
+    },
+    "modificadores": {
+      "forca": -1,
+      "destreza": 2,
+      "constituicao": 2,
+      "inteligencia": 2,
+      "sabedoria": 2,
+      "carisma": 5
+    },
+    "deslocamentos": {
+      "andar_ft": 0,
+      "voo_ft": 50,
+      "nadar_ft": 50,
+      "hover": true
+    },
+    "pericias": [
+      {
+        "nome": "Insight",
+        "bonus": 6,
+        "bonus_extra": "1d8"
+      },
+      {
+        "nome": "Perception",
+        "bonus": 6,
+        "bonus_extra": "1d8"
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 6,
+        "bonus_extra": "1d8"
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 6
+      },
+      {
+        "nome": "CON",
+        "bonus": 6
+      },
+      {
+        "nome": "INT",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 20,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias": [
+      "acid",
+      "fire",
+      "lightning",
+      "thunder",
+      "bludgeoning",
+      "piercing",
+      "slashing"
+    ],
+    "vulnerabilidades": [],
+    "imunidades_dano": [
+      "cold",
+      "necrotic",
+      "poison",
+      "nonmagical bludgeoning/piercing/slashing"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "fatigue",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "strife",
+      "stunned"
+    ],
+    "composicao_ca": "natural armor",
+    "maneuver_dc": 13
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Elite Recovery",
+        "pre_condicao": "bloodied, 1 PV ou mais",
+        "custo": "uma ação",
+        "efeito": "encerra um efeito negativo sobre si",
+        "pode_usar_se": [
+          "unconscious",
+          "incapacitated"
+        ]
+      },
+      {
+        "nome": "Ethereal Sight",
+        "efeito": "vê 60 ft para o Ethereal a partir do Material e vice-versa"
+      },
+      {
+        "nome": "Incorporeal Movement",
+        "efeito": "passa por criaturas e objetos como terrain difícil",
+        "dano_se_termina_em_objeto": {
+          "dados": "1d10",
+          "media": 5,
+          "tipo": "force"
+        }
+      },
+      {
+        "nome": "Swarm of Ghosts",
+        "efeito": "compartilha espaço com inimigos; inimigos atravessam em terreno difícil; não cura PV ou recebe PV temporários"
+      },
+      {
+        "nome": "Turn Resistance",
+        "efeito": "vantagem em saves contra efeitos que turn undead"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Elite Recovery",
+        "tipo": "acao_condicional",
+        "pre_condicao": "bloodied e 1 PV ou mais",
+        "efeito": "termina um efeito negativo mesmo se incapacitated/unconscious"
+      },
+      {
+        "nome": "Withering Cutlasses",
+        "tipo": "melee spell attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "8d6+5",
+            "media": 33,
+            "tipo": "necrotic"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "psychic"
+          }
+        ],
+        "alvo": "uma criatura viva"
+      },
+      {
+        "nome": "Magic Blast",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 9,
+        "alcance_ft": {
+          "normal": 100,
+          "maximo": 300
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "6d10+5",
+            "media": 38,
+            "tipo": "force"
+          }
+        ]
+      },
+      {
+        "nome": "Etherealness",
+        "efeito": "move entre Material e Ethereal, visível de um para outro se Border Ethereal, mas não interage entre planos"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Withering Cutlasses",
+        "tipo": "melee spell attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "8d6+5",
+            "media": 33,
+            "tipo": "necrotic"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "psychic"
+          }
+        ],
+        "alvo": "uma criatura viva"
+      },
+      {
+        "nome": "Magic Blast",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 9,
+        "alcance_ft": {
+          "normal": 100,
+          "maximo": 300
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "6d10+5",
+            "media": 38,
+            "tipo": "force"
+          }
+        ]
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [
+      {
+        "nome": "Spirit Absorption",
+        "alvo": "uma criatura no mesmo espaço",
+        "teste": {
+          "atributo": "WIS",
+          "cd": 17
+        },
+        "falha": {
+          "dano": {
+            "dados": "12d6",
+            "media": 42,
+            "tipo": "necrotic"
+          }
+        },
+        "sucesso": "metade do dano",
+        "efeito_duracao": "por 1 hora alvo ignora damage resistances da swarm",
+        "se_mata": "alma absorvida",
+        "se_ressuscita_antes_de_uma_hora": "alvo libertado e swarm incapacitated por 1d4 rodadas",
+        "depois_de_uma_hora": "alma absorvida sem possibilidade de ressurreição"
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Painful Wail",
+        "pre_condicao": "bloodied",
+        "gatilho": "sofre dano",
+        "alcance_ft": 60,
+        "alvos": "criaturas capazes de ouvir",
+        "teste": {
+          "atributo": "WIS",
+          "cd": 17
+        },
+        "falha": {
+          "dano": {
+            "dados": "10d6",
+            "media": 35,
+            "tipo": "psychic"
+          },
+          "condicao": "frightened",
+          "duracao": "1 minuto",
+          "repetir": "fim de cada turno; sucesso encerra"
+        },
+        "sucesso": "metade do dano e sem frightened"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "AUSENCIA_CONFIRMADA",
+      "acoes_covil": "NAO HA LAIR ACTIONS; se houver lair features são separadas",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA",
+      "conjuracao": "AUSENCIA_CONFIRMADA"
+    }
+  },
+  "pendencias": [
+    "Fonte individual confere Elite Recovery apesar de estar na seção de traits; trata-se explicitamente de ação.",
+    "O efeito de ressurreição da Spirit Absorption depende de retorno em menos de uma hora.",
+    "Confrontar To Save A Kingdom/errata e obter imagem binária."
+  ],
+  "campos_nao_confirmados": [
+    "revisão da edição impressa",
+    "imagem física"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/3406",
+      "tipo": "bloco oficial individual A5E validado em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-506",
+    "nome": "Mariner Ghost Swarm",
+    "editora": "EN Publishing",
+    "publicacao": "To Save A Kingdom",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "11",
+    "ca": 15,
+    "pv": 340,
+    "atributos": {
+      "forca": 9,
+      "destreza": 14,
+      "constituicao": 15,
+      "inteligencia": 15,
+      "sabedoria": 14,
+      "carisma": 20
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Enxame elite de fantasmas marítimos com Etherealness e absorção espiritual."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Withering Cutlasses, Magic Blast, Painful Wail e bônus Spirit Absorption."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/3406",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir lacunas de formatação na descrição da ferramenta editorial.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "fonte": "https://a5e.tools/node/3406",
+    "livro_original_errata": "PENDENTE"
+  }
+}

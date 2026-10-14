@@ -1,0 +1,291 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-414",
+  "nome": "Wallflower",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 2,
+  "estado_auditoria": "BLOQUEADA_REFERENCIA_EDITORIAL_GRICK_NA_BEAK",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/1660"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "2",
+    "xp": null,
+    "bonus_proficiencia": 2,
+    "ca": 14,
+    "composicao_ca": "natural armor",
+    "pv": 33,
+    "dados_vida": "6d8+12",
+    "bloodied": 16,
+    "porte": "Medium",
+    "tipo": "Plant",
+    "alinhamento": null,
+    "nota_alinhamento": "A5E não informa alinhamento no bloco",
+    "atributos": {
+      "forca": 14,
+      "destreza": 14,
+      "constituicao": 14,
+      "inteligencia": 2,
+      "sabedoria": 14,
+      "carisma": 5
+    },
+    "modificadores": {
+      "forca": 2,
+      "destreza": 2,
+      "constituicao": 2,
+      "inteligencia": -4,
+      "sabedoria": 2,
+      "carisma": -3
+    },
+    "deslocamentos": {
+      "andar_ft": 20,
+      "escalar_ft": 20
+    },
+    "salvaguardas": [],
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [],
+    "vulnerabilidades": [],
+    "resistencias": [
+      "damage from nonmagical weapons"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "resistencias_condicao": [],
+    "maneuver_dc": 12,
+    "motivo_xp_null": "A fonte oficial da criatura em A5E não informa XP; não imputar a tabela D&D 5e"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Luring Scent",
+        "categoria": "gatilho no início do turno",
+        "gatilho": "beast, humanoid ou fey inicia turno até 30 pés da Wallflower",
+        "alvos": [
+          "beast",
+          "humanoid",
+          "fey"
+        ],
+        "alcance_ft": 30,
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 12
+        },
+        "imunidade_por_condicao": "criaturas imunes a charmed são imunes a este efeito",
+        "efeito_falha": {
+          "movimento": "aproxima-se da Wallflower tanto quanto conseguir",
+          "turno": "encerra turno após aproximação"
+        },
+        "efeito_sucesso": {
+          "imunidade": "imune a Luring Scent de todas as Wallflowers por 24 horas"
+        },
+        "frequencia": "por início de turno que preencha os requisitos"
+      },
+      {
+        "nome": "Spider Climb",
+        "categoria": "movimentação",
+        "efeito": "usa deslocamento de escalada em superfícies difíceis e teto"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Tentacles",
+        "categoria": "ataque corpo a corpo",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao": "grappled",
+          "escape_cd": 12,
+          "limite_alvo": "não pode atacar outra criatura com tentáculos enquanto durar este grapple"
+        },
+        "duracao_condicional": "enquanto grapple não terminar"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Tentacles",
+        "categoria": "ataque corpo a corpo",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao": "grappled",
+          "escape_cd": 12,
+          "limite_alvo": "não pode atacar outra criatura com tentáculos enquanto durar este grapple"
+        },
+        "duracao_condicional": "enquanto grapple não terminar"
+      },
+      {
+        "nome": "Beak",
+        "categoria": "bonus action / melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ],
+        "pre_condicao_literal_da_fonte": "one creature grappled by the grick",
+        "interpretação_alvo": null,
+        "pendencia": "texto fonte refere 'grick', criatura diferente; não substituir por 'Wallflower' sem confirmação",
+        "usos": "como bônus, se precondição editorial for esclarecida"
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [
+      {
+        "nome": "Beak",
+        "categoria": "bonus action / melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ],
+        "pre_condicao_literal_da_fonte": "one creature grappled by the grick",
+        "interpretação_alvo": null,
+        "pendencia": "texto fonte refere 'grick', criatura diferente; não substituir por 'Wallflower' sem confirmação",
+        "usos": "como bônus, se precondição editorial for esclarecida"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTE_BEAK",
+      "reacoes": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "conjuracao": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL"
+    }
+  },
+  "pendencias": [
+    "A página oficial escreve grick na precondição de Beak, não Wallflower; precondição literal preservada e alvo operacional desconhecido.",
+    "Não presumir que imunidade a charmed se aplique ao próprio grapple, apenas a Luring Scent.",
+    "Imagem inexistente no diretório C, precisa de binário representativo.",
+    "Confrontar Monstrous Menagerie/errata antes de resolver referência grick."
+  ],
+  "campos_nao_confirmados": [
+    "correção editorial do alvo exigido na ação bônus Beak",
+    "arquivo de imagem física da criatura",
+    "conferência do Monstrous Menagerie"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1660",
+      "tipo": "ficha mecânica individual na ferramenta oficial A5E; conferida 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "origem": "EN Publishing / A5E"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico; não tratado como validação editorial independente",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": false
+  },
+  "checkpoint_anterior": {
+    "id": "TF-414",
+    "nome": "Wallflower",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "2",
+    "ca": 14,
+    "pv": 33,
+    "atributos": {
+      "forca": 14,
+      "destreza": 14,
+      "constituicao": 14,
+      "inteligencia": 2,
+      "sabedoria": 14,
+      "carisma": 5
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Aroma que atrai presas (resistência CD 12); escalada em superfícies."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Tentáculos agarram a presa; ação bônus de bicada (Beak)."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/1660",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Texto editorial da bicada cita 'grick' em vez de 'wallflower'; tratar como possível erro editorial, não corrigir implicitamente.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_oficial_individual": "https://a5e.tools/node/1660",
+    "confronto_com_livro_ou_errata": "PENDENTE",
+    "interpretações_ambíguas_nao_resolvidas": true
+  }
+}

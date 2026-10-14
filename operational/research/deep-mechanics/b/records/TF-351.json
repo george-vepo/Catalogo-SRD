@@ -1,0 +1,186 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-351",
+  "nome": "Half-Demon Ogre",
+  "estado": "DETALHADA_FONTE_EDITORIAL_SEM_REVISAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "Level Up Advanced 5th Edition (A5E)",
+    "publicacao": "To Save A Kingdom",
+    "editora": "EN Publishing",
+    "confirmacao": "bloco individual no portal editorial; edição impressa/erratas não confrontadas"
+  },
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/3297",
+      "natureza": "editorial_direta",
+      "verificada": "2026-10-13"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "continuidade_checkpoint_secundario"
+    }
+  ],
+  "estatisticas": {
+    "nd": "3",
+    "ca": 13,
+    "pv": 68,
+    "dados_vida": "8d10+24",
+    "atributos": {
+      "FOR": 19,
+      "DES": 8,
+      "CON": 16,
+      "INT": 10,
+      "SAB": 10,
+      "CAR": 13
+    },
+    "deslocamentos_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Intimidation": "+3 (+1d6)",
+      "Stealth": "+1 (+1d4)"
+    },
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias_dano": [
+      "fire",
+      "bludgeoning/piercing/slashing from nonmagical weapons"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "tamanho": "Large",
+    "tipo": "Giant",
+    "bloodied_pv": 34,
+    "proficiencia": 2,
+    "cd_manobra": 14
+  },
+  "habilidades_passivas": [],
+  "ataques": [
+    {
+      "nome": "Mace",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [
+        {
+          "save": {
+            "atributo": "STR",
+            "cd": 14
+          },
+          "alvos": "Médio ou menor",
+          "falha": "prone"
+        }
+      ]
+    },
+    {
+      "nome": "Sweeping Strike",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvo": "todas as criaturas a até 5 pés",
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [
+        {
+          "save": {
+            "atributo": "STR",
+            "cd": 14
+          },
+          "alvos": "Médio ou menor",
+          "falha": "empurrado 10 pés"
+        }
+      ]
+    },
+    {
+      "nome": "Javelin",
+      "tipo": "corpo_a_corpo_ou_distancia",
+      "bonus_acerto": 6,
+      "alcance_ft": {
+        "melee": 5,
+        "range_normal": 30,
+        "range_long": 120
+      },
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": []
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Breath Weapon",
+      "efeito": "Cone de fogo de 20 pés: DEX CD14, 6d6 fogo em falha, metade no sucesso.",
+      "recarga": "4-6",
+      "area": {
+        "forma": "cone",
+        "comprimento_ft": 20
+      },
+      "salvaguarda": {
+        "atributo": "DEX",
+        "cd": 14,
+        "resultado_sucesso": "metade"
+      },
+      "dano": {
+        "dados": "6d6",
+        "modificador": 0,
+        "tipo": "fire"
+      }
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Fiendish Glare",
+      "efeito": "Criatura visível a até 60 pés capaz de ver o ogro: WIS CD16 ou frightened até início do próximo turno do ogro.",
+      "alcance_ft": 60,
+      "salvaguarda": {
+        "atributo": "WIS",
+        "cd": 16
+      },
+      "condicao": "frightened",
+      "duracao": "até início do próximo turno do ogro"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": false,
+  "pendencias": [
+    "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
+    "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
+  ],
+  "integrada": false,
+  "auditoria_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/3297",
+    "observacao": "Tamanho, tipo, limiar bloodied, proficiencia e DC de manobra confrontados com ficha individual A5E; para Rust Monsters, corrosao de antenas individualizada.",
+    "limites": "Nao constitui comparacao de exemplar impresso/errata nem autorizacao de uso de conteudo protegido, jogo ou ficha homologada",
+    "homologado": false
+  }
+}

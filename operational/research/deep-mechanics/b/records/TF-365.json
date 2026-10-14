@@ -1,0 +1,211 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-365",
+  "nome": "Erina, Defender",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_COMPROVACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 1",
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false,
+    "versao": "transcrição individual KPOGL; sem confronto com impresso/erratas"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:erina-defender",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data_pesquisa": "2026-10-14",
+      "escopo": "bloco integral individual de estatísticas e mecânicas"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1",
+    "bonus_proficiencia": 2,
+    "ca": 15,
+    "origem_ca": "chain shirt",
+    "pv": 44,
+    "dados_vida": "8d6+16",
+    "atributos": {
+      "FOR": 11,
+      "DES": 14,
+      "CON": 14,
+      "INT": 13,
+      "SAB": 12,
+      "CAR": 11
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 2,
+      "CON": 2,
+      "INT": 1,
+      "SAB": 1,
+      "CAR": 0
+    },
+    "deslocamentos_ft": {
+      "andar": 20,
+      "voar": null,
+      "nadar": null,
+      "escalar": null,
+      "escavar": 20
+    },
+    "pairar": false,
+    "salvaguardas": {},
+    "pericias": {
+      "Athletics": 4,
+      "Perception": 3
+    },
+    "resistencias_dano": [
+      "poison"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Common",
+      "Erina"
+    ],
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "CONFERIDO_NA_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Keen Smell",
+      "efeito": "vantagem nos testes de SAB (Perception) dependentes de olfato"
+    },
+    {
+      "nome": "Hardy",
+      "efeito": "vantagem nas salvaguardas contra veneno"
+    },
+    {
+      "nome": "Spines",
+      "gatilhos": [
+        "criatura toca Erina",
+        "criatura a até 5 pés acerta ataque corpo a corpo em Erina",
+        "criatura está agarrada por Erina ou agarrando Erina no começo do turno da Erina"
+      ],
+      "alcance_ft": 5,
+      "dano": {
+        "dados": "2d4",
+        "tipo": "piercing"
+      },
+      "efeito": "a criatura que satisfaz o gatilho sofre dano",
+      "gatilho_agarrada": "início de cada turno da Erina"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Shortsword",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Shortbow",
+      "tipo": "distancia",
+      "bonus_acerto": 4,
+      "alcance_normal_ft": 80,
+      "alcance_maximo_ft": 320,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "alternativas": [
+        [
+          "Shortsword",
+          "Shortsword"
+        ],
+        [
+          "Shortbow",
+          "Shortbow"
+        ]
+      ]
+    },
+    {
+      "nome": "Shortsword",
+      "categoria": "ataque",
+      "referencia_ataque": "Shortsword"
+    },
+    {
+      "nome": "Shortbow",
+      "categoria": "ataque",
+      "referencia_ataque": "Shortbow"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Protective Interference",
+      "custo": "reação",
+      "gatilho": "aliado visível a até 5 pés é escolhido como alvo de ataque",
+      "precondicoes": [
+        "Erina vê atacante",
+        "está empunhando arma corpo a corpo"
+      ],
+      "efeito": "impõe desvantagem na rolagem de ataque contra o aliado"
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Edição, revisão impressa e erratas ainda não verificadas independentemente no editor; não homologar.",
+    "Testes de combate e revisão independente permanecem pendentes."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-365",
+    "nome_original": "Erina Defender",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "tipo": "humanoid (erina)",
+    "tamanho": "Small",
+    "alinhamento": "neutral",
+    "nd": "1",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "alternativas": [
+        [
+          "Shortsword",
+          "Shortsword"
+        ],
+        [
+          "Shortbow",
+          "Shortbow"
+        ]
+      ]
+    }
+  ],
+  "mecanicas_especiais": []
+}

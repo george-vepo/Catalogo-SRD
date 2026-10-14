@@ -1,0 +1,315 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-054",
+  "name": "Titan, Ancient",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1 (2023 revised)",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "12",
+    "size": "Gargantuan",
+    "type": "celestial (titan)",
+    "alignment": "neutral good",
+    "edition": "Tome of Beasts 1 (2023 revised) (5e), p.361",
+    "source_page": 361,
+    "experience_points": 8400,
+    "proficiency_bonus": 4
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 198,
+    "hit_dice": "12d20+72",
+    "ability_scores": {
+      "STR": 27,
+      "DEX": 13,
+      "CON": 22,
+      "INT": 16,
+      "WIS": 16,
+      "CHA": 20
+    },
+    "speeds": {
+      "walk_ft": 50,
+      "swim_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 17
+    },
+    "skills": {
+      "Athletics": 12,
+      "Intimidation": 9,
+      "Perception": 7
+    },
+    "saving_throws": {
+      "CON": 10,
+      "WIS": 7,
+      "CHA": 9
+    },
+    "languages": [
+      "Common",
+      "Giant",
+      "Primordial",
+      "telepathy 120 ft"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 8,
+      "DEX": 1,
+      "CON": 6,
+      "INT": 3,
+      "WIS": 3,
+      "CHA": 5
+    },
+    "armor_class_type": "breastplate"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Amphibious",
+        "category": "passive",
+        "effect": {
+          "breathes": [
+            "air",
+            "water"
+          ]
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "optional_pre_action": "Reality-Altering Words",
+        "options": [
+          [
+            {
+              "action": "Greatsword",
+              "count": 2
+            }
+          ],
+          [
+            {
+              "action": "Word of Pain",
+              "count": 3
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Greatsword",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 12,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "8d6",
+              "modifier": 8,
+              "type": "slashing",
+              "average": 36
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Word of Pain",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 9,
+        "range_ft": 120,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d8",
+              "modifier": 5,
+              "type": "force",
+              "average": 23
+            }
+          ],
+          "saving_throw": {
+            "ability": "CON",
+            "dc": 17,
+            "on_failure": {
+              "disadvantage_on": [
+                "attack rolls",
+                "ability checks",
+                "saving throws"
+              ],
+              "duration": "until end of target next turn"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        }
+      },
+      {
+        "name": "Reality-Altering Words",
+        "category": "area_save",
+        "action_economy": "action",
+        "area": {
+          "radius_ft": 30,
+          "origin": "Titan"
+        },
+        "targets": "each creature within radius",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "choice": [
+              {
+                "push_or_pull_ft_up_to": 25,
+                "condition": "prone"
+              },
+              {
+                "end_one_magical_effect_on_target_max_spell_level": 4
+              }
+            ]
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "environment": {
+          "difficult_terrain_in_area": true,
+          "duration": "until start of titan next turn",
+          "titan_ignores_extra_movement": true
+        }
+      },
+      {
+        "name": "Stunning Word",
+        "category": "multi_target_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "targets": {
+          "up_to": 3,
+          "range_ft": 60,
+          "requires_visible": true
+        },
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "10d8",
+                "modifier": 0,
+                "type": "force",
+                "average": 45
+              }
+            ],
+            "condition": "stunned",
+            "duration": "1 minute",
+            "repeat_save": "end of each affected turn; success ends"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "condition": null
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/titan-ancient-3pp/",
+      "type": "ficha_individual_localizada_em_checkpoint",
+      "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/tree/master/creature",
+      "type": "Kobold Press OGL structured statblock transcription",
+      "source_book": "ToB1_2023",
+      "source_page": 361,
+      "source_creature": "Ancient Titan",
+      "official_book_verified": false,
+      "verification": "full individually named actions and traits transcribed from structured community JSON"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-052_TF-058/research.json",
+    "sha": "090aef0b3b7e1a6ffbb923cb4941229bb68ca563"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Direitos de uso e imagem pendentes."
+  ],
+  "outstanding": [
+    "Compare primary book printing, correct variant and errata; community OGL JSON is not canonical validation.",
+    "Independently verify mechanical behavior and artwork license/quality."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_individually_structured": true,
+    "official_printing_or_errata_compared": false,
+    "independent_engine_tested": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-054.webp",
+    "format": "image/webp",
+    "width": 694,
+    "height": 1000,
+    "bytes": 178180,
+    "sha256": "59badf72d7971874d70ddb18a323ce48d2b86d502fce14512fdc06d046d0c869",
+    "git_blob_sha": "232e0525c459f6f043b128995d35dd8e0d3c3fce",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB1-2023/bestiary/Ancient%20Titan.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "da64dd14364cd9700c829bc6cd9be1c406df9bef",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

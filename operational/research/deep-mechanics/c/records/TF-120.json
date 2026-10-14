@@ -1,0 +1,444 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-120",
+  "nome": "Ashen Custodian",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 0,
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_VERIFICADA_MATERIAL_EXTERNO_EXCLUIDO",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2 (©2020)",
+    "edicao": null,
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ashen-custodian/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 15,
+    "pv": 99,
+    "dados_vida": "18d8+18",
+    "porte": "Medium",
+    "tipo": "fey",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 10,
+      "DES": 21,
+      "CON": 12,
+      "INT": 14,
+      "SAB": 15,
+      "CAR": 18
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 5,
+      "CON": 1,
+      "INT": 2,
+      "SAB": 2,
+      "CAR": 4
+    },
+    "deslocamentos": {
+      "andar_ft": 30
+    },
+    "pericias": [
+      {
+        "nome": "Nature",
+        "bonus": 5
+      },
+      {
+        "nome": "Perception",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Elvish",
+      "Sylvan"
+    ],
+    "resistencias": [
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "fire"
+    ],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "bonus_proficiencia": 3,
+    "xp": 2300,
+    "composicao_ca": "não especificada"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Fire Controller",
+        "economia": "ação bônus",
+        "alcance_ft": 30,
+        "alternativas": [
+          {
+            "efeito": "cria ou extingue fogo não mágico",
+            "area": {
+              "tipo": "cubo",
+              "aresta_ft": 5
+            }
+          },
+          {
+            "efeito": "expande fogo existente em 5 ft em uma direção",
+            "pre_condicao": "há combustível combustível apropriado no local"
+          },
+          {
+            "efeito": "se o alvo é fire elemental: expandir fogo dá vantagem nos attack rolls até fim do próximo turno; extinguir fogo dá desvantagem no mesmo período"
+          }
+        ]
+      },
+      {
+        "nome": "Forest Cleanser",
+        "gatilho": "Cleansing Strike acerta plant ou plant creature",
+        "dano_adicional": {
+          "dados": "2d8",
+          "media": null,
+          "tipo": "fire"
+        }
+      },
+      {
+        "nome": "Magic Resistance",
+        "efeito": "vantagem em testes de resistência contra magias e efeitos mágicos"
+      },
+      {
+        "nome": "Warming Presence",
+        "alcance_ft": 10,
+        "efeito_hostil": {
+          "gatilho": "início turno de criatura hostil",
+          "teste": {
+            "atributo": "CON",
+            "cd": 15
+          },
+          "falha": {
+            "dano": {
+              "dados": "1d6",
+              "media": 3,
+              "tipo": "fire"
+            }
+          },
+          "sucesso": "sem dano"
+        },
+        "efeito_amigavel": {
+          "gatilho": "criatura aliada a até 10 pés recupera PV",
+          "cura_adicional": {
+            "dados": "1d6",
+            "media": 3
+          }
+        }
+      },
+      {
+        "nome": "Innate Spellcasting",
+        "atributo": "CHA",
+        "cd_salvaguarda": 15,
+        "componentes_materiais": false,
+        "at_will": [
+          "druidcraft",
+          "produce flame"
+        ],
+        "usos_tres_por_dia_cada": [
+          "burning hands",
+          "cure wounds",
+          "flame blade",
+          "fog cloud"
+        ],
+        "usos_um_por_dia_cada": [
+          "conjure elemental (fire elemental only)",
+          "wall of fire"
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Cleansing Strike",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Cleansing Strike",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d8+5",
+            "media": 9,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ],
+        "ao_acertar": {
+          "pre_condicao": "alvo é criatura ou objeto inflamável",
+          "efeito": "pega fogo",
+          "dano_continuo": {
+            "dados": "1d10",
+            "media": 5,
+            "tipo": "fire",
+            "gatilho": "início de cada turno enquanto pegar fogo"
+          },
+          "encerramento": "qualquer criatura gasta uma ação para apagar fogo"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Cleansing Strike",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d8+5",
+            "media": 9,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ],
+        "ao_acertar": {
+          "pre_condicao": "alvo é criatura ou objeto inflamável",
+          "efeito": "pega fogo",
+          "dano_continuo": {
+            "dados": "1d10",
+            "media": 5,
+            "tipo": "fire",
+            "gatilho": "início de cada turno enquanto pegar fogo"
+          },
+          "encerramento": "qualquer criatura gasta uma ação para apagar fogo"
+        }
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Cleansing Strike",
+          "quantidade": 2
+        }
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Fire Controller",
+        "referencia_trait": "Fire Controller",
+        "alternativas": [
+          "criar/extinguir fogo",
+          "expandir fogo",
+          "ajustar ataques de fire elemental"
+        ]
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [
+      {
+        "nome": "Innate Spellcasting",
+        "atributo": "CHA",
+        "cd_salvaguarda": 15,
+        "componentes_materiais": false,
+        "at_will": [
+          "druidcraft",
+          "produce flame"
+        ],
+        "usos_tres_por_dia_cada": [
+          "burning hands",
+          "cure wounds",
+          "flame blade",
+          "fog cloud"
+        ],
+        "usos_um_por_dia_cada": [
+          "conjure elemental (fire elemental only)",
+          "wall of fire"
+        ]
+      }
+    ],
+    "custos_lendarios": null,
+    "material_editorial_nao_pertencente_ao_monstro": [
+      {
+        "nome": "Alternate Critical",
+        "origem": "Monster Crits for 5e",
+        "status": "EXCLUIDO",
+        "justificativa": "a página 5eSRD injeta mecânica opcional de outro livro após o bloco da criatura; não é trait intrínseco do Tome of Beasts 2"
+      }
+    ],
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "AUSENCIA_CONFIRMADA_NO_BLOCO",
+      "acoes_lendarias": "AUSENCIA_CONFIRMADA_NO_BLOCO",
+      "acoes_covil": "AUSENCIA_CONFIRMADA_NO_BLOCO",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA_NO_BLOCO",
+      "conjuracao": "PRESENTE"
+    }
+  },
+  "pendencias": [
+    "Alternate Critical oferecida por Monster Crits for 5e após a ficha foi excluída da mecânica-base, porque pertence a suplemento alheio.",
+    "Fire Controller é ação bônus e foi representada também no traço sem duplicar uso por rodada.",
+    "Ainda falta confronto com Tome of Beasts 2 original/errata e aprovação visual da imagem binária existente."
+  ],
+  "campos_nao_confirmados": [
+    "revisão editorial original de Tome of Beasts 2",
+    "aprovação visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ashen-custodian/",
+      "tipo": "stat block integral republicado pela 5eSRD, com fonte e edição bibliográfica",
+      "conferida_nesta_execucao": true,
+      "edicao": "D&D 5e"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_PAGINA_CONTAMINADA_CONTEUDO_EXTERNO",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "editora": "Kobold Press",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Páginas mecânicas individuais do 5eSRD; publicação/ND confrontados com índice de monstros Kobold Press. Síntese em redação própria, sem promoção canônica.",
+    "id": "TF-120",
+    "nome": "Ashen Custodian",
+    "publicacao": "Tome of Beasts 2 (©2020)",
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 15,
+    "pv": 99,
+    "pv_dados": "18d8+18",
+    "porte": "Medium",
+    "tipo": "fey",
+    "alinhamento": "neutral",
+    "atributos": [
+      10,
+      21,
+      12,
+      14,
+      15,
+      18
+    ],
+    "movimento_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {
+      "CON": 4
+    },
+    "pericias": {
+      "Nature": 5,
+      "Perception": 5
+    },
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "fire"
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Elvish",
+      "Sylvan"
+    ],
+    "tracos": [
+      {
+        "nome": "Forest Cleanser",
+        "resumo": "Cleansing Strike provoca +2d8 fogo em plantas e criaturas-planta."
+      },
+      {
+        "nome": "Magic Resistance",
+        "resumo": "Vantagem nas salvaguardas contra magia."
+      },
+      {
+        "nome": "Warming Presence",
+        "resumo": "Hostil iniciando a 10 pés sofre CON CD15 ou 1d6 fogo; aliados curados a até 10 pés recebem +1d6 PV."
+      },
+      {
+        "nome": "Innate Spellcasting",
+        "resumo": "CAR CD15: druidcraft/produce flame livres; burning hands, cure wounds, flame blade, fog cloud 3/dia; conjure elemental (somente fogo) e wall of fire 1/dia."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Duas Cleansing Strike."
+      },
+      {
+        "nome": "Cleansing Strike",
+        "resumo": "+8, 5 pés; 1d8+5 contundente, 2d8 fogo; alvos inflamáveis atingidos sofrem 1d10 fogo por turno até gastar ação para apagar."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Fire Controller",
+        "resumo": "Cria, extingue ou expande fogo comum em até 30 pés; pode alterar vantagem de ataque de elemental do fogo."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ashen-custodian/",
+    "estado": "PARCIAL_PAGINA_CONTAMINADA_CONTEUDO_EXTERNO",
+    "pendencias": [
+      "A página inclui 'Alternate Critical (Source: Monster Crits for 5e)' após Cleansing Strike. Esse texto é de outro suplemento, foi EXCLUÍDO da mecânica-base.",
+      "As ações de Fire Controller são ação bônus apesar de constarem no grupo Special Traits; preservada a economia de ação na estrutura.",
+      "Imagem, licenciamento e revisão pendentes."
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-120.webp",
+    "formato": "webp",
+    "largura": 712,
+    "altura": 1077,
+    "bytes": 208722,
+    "blob_sha": "1ea9a34f9b2491577fc1c7f65bb6fd5ef1982613",
+    "sha256": "192287bb3dbf95e387951f7a8ff1a7c1cd257430bdb313d6fc309708133fdfc9",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Ashen%20Custodian.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "edicao": "D&D 5e",
+    "republicacao_integral": "https://www.5esrd.com/database/creature/ashen-custodian/",
+    "confronto_editorial_com_livro_ou_errata": "PENDENTE"
+  }
+}

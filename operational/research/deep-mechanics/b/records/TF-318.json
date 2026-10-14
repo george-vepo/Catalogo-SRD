@@ -1,0 +1,231 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-318",
+  "nome": "Fellforged",
+  "estado": "DETALHADA_COM_CONFLITO_EDITORIAL_PENDENTE",
+  "edicao": {
+    "sistema": "Dungeons & Dragons 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "pagina_indicada_transcricao": 170,
+    "edicao_exata_verificada": false,
+    "variantes_nao_mescladas": true,
+    "ramo_de_fonte": "transcrição KPOGL — reproduz um statblock individual; versão e erratas ainda não foram validadas contra exemplar do editor"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:fellforged",
+      "natureza": "transcricao_comunitaria_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "escopo": "estrutura do statblock desta versão individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_de_identidade_e_nd",
+      "escopo": "identidade, não confronto integral"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "checkpoint_de_conflitos",
+      "escopo": "não substitui ficha da edição escolhida"
+    }
+  ],
+  "estatisticas": {
+    "nd": "5",
+    "ca": 15,
+    "pv": 135,
+    "dados_vida": "18d8+54",
+    "atributos": {
+      "FOR": 14,
+      "DES": 12,
+      "CON": 17,
+      "INT": 12,
+      "SAB": 14,
+      "CAR": 15
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {
+      "FOR": 5,
+      "SAB": 5
+    },
+    "pericias": {},
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "idiomas que conhecia em vida"
+    ],
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning"
+    ],
+    "imunidades_dano": [
+      "necrotic",
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "tamanho": "Medium",
+    "tipo": "Construct",
+    "proficiencia": 3
+  },
+  "qualidade_estatisticas": "DADOS_DE_FONTE_SECUNDARIA_VERSAO_SEPARADA_NAO_HOMOLOGADOS",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não necessita de ar, alimento, bebida nem sono."
+    },
+    {
+      "nome": "Inhabiting Spirit",
+      "efeito": "Animado por espectro. Se falhar contra efeito que expulsa/afasta mortos-vivos, espectro é ejetado em espaço livre até 5 ft. Fellforged fica dormente por 1 min e se desfaz. Espectro pode reocupar com sua ação bônus a até 5 ft e Fellforged usa os PV atuais do espectro.",
+      "gatilho": "falha em salvaguarda vs. turn undead",
+      "ejetar_espectro_ate_ft": 5,
+      "desintegracao_apos": "1 minuto dormente",
+      "reentrada": {
+        "agente": "espectro",
+        "categoria": "ação bônus do espectro",
+        "alcance_ft": 5
+      },
+      "pv_apos_reentrada": "PV atuais do espectro",
+      "estatisticas_de_espectro": "statblock de specter externo"
+    },
+    {
+      "nome": "Sunlight Sensitivity",
+      "efeito": "Desvantagem em ataques enquanto sob sol e em Perception(SAB) dependente de visão."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Necrotic Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d6",
+          "modificador": 2,
+          "tipo": "bludgeoning"
+        },
+        {
+          "dados": "2d8",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 14,
+            "falha": "PV máximo reduzido em valor igual ao dano necrótico causado",
+            "sucesso": "não reduz máximo"
+          },
+          "duracao": "até fim de descanso longo",
+          "consequencia": "morte se PV máximo chega a 0"
+        }
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Necrotic Slam",
+        "Necrotic Slam"
+      ],
+      "confirmado_na_transcricao_comunitaria": true
+    },
+    {
+      "nome": "Necrotic Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Necrotic Slam",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Burst Gears",
+      "categoria": "area_bonus",
+      "area": {
+        "raio_ft": 5
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 14,
+        "falha": "2d6 piercing",
+        "sucesso": "metade"
+      },
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "piercing"
+        }
+      ],
+      "custo": "reduz deslocamento próprio em 5 pés cumulativamente",
+      "bloqueio": "não pode usar quando deslocamento chega a 0",
+      "recuperacao": "descanso longo",
+      "confirmado_na_transcricao_comunitaria": true
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "campos_em_conflito": [
+    "atributos",
+    "pv",
+    "acoes"
+  ],
+  "variantes_editoriais": [
+    {
+      "nome": "Outra edição",
+      "campos": [
+        "atributos",
+        "pv",
+        "acoes"
+      ],
+      "mecanicas": null,
+      "motivo": "versão não cotejada em bloco editorial"
+    }
+  ],
+  "conflito_editorial": "PR #4 aponta original e revisão divergentes; estrutura aqui deriva exclusivamente da transcrição KPOGL identificada. Edição impressa ainda não confirmada.",
+  "bloqueado": true,
+  "pendencias": [
+    "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+    "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+    "PR #4 aponta original e revisão divergentes; estrutura aqui deriva exclusivamente da transcrição KPOGL identificada. Edição impressa ainda não confirmada."
+  ],
+  "integrada": false,
+  "verificacao_indice_editorial_kp_20261014": {
+    "fonte": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "natureza": "INDICE_DO_EDITOR_NAO_STATBLOCK",
+    "identidade": "Fellforged",
+    "nd_texto_indice": "5.0",
+    "tamanho": "Medium",
+    "tipo": "Construct",
+    "terrenos": [
+      "Urban"
+    ],
+    "publicacao": "Tome of Beasts 1",
+    "consultado": "2026-10-14",
+    "limite": "Índice verifica identidade e ND de referência, não edição impressa, errata nem habilidades; preservar ramos conflitantes e não fundir variantes.",
+    "conflito_pr4_permanece": true
+  }
+}

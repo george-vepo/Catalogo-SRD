@@ -1,0 +1,311 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-158",
+  "nome": "Ooze, Alchemical Apprentice",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 36,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Creature Codex",
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": "1",
+    "nd_fonte": "1",
+    "ca": 11,
+    "pv": 63,
+    "dados_vida": "14d6+14",
+    "porte": "Small",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 13,
+      "DES": 6,
+      "CON": 13,
+      "INT": 16,
+      "SAB": 6,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 1,
+      "DES": -2,
+      "CON": 1,
+      "INT": 3,
+      "SAB": -2,
+      "CAR": 0
+    },
+    "deslocamentos": {
+      "andar_ft": 10,
+      "escalar_ft": 10
+    },
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond this radius"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [
+      "understands Common but can't speak",
+      "telepathy 10 ft."
+    ],
+    "resistencias": [
+      "acid",
+      "cold",
+      "fire",
+      "poison"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "frightened",
+      "poisoned",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 200,
+    "bonus_proficiencia": 2,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "efeito": "passa por espaço tão estreito quanto 1 in sem squeezing"
+      },
+      {
+        "nome": "Absorb Potion",
+        "efeito": "absorve potion/oil/tincture/alchemical draught em contato, escolhe sofrer efeito ou neutralizar"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não precisa dormir"
+      },
+      {
+        "nome": "Perishable",
+        "gatilhos": [
+          {
+            "exposicao": "sunlight direto por > 1 minute",
+            "efeito": "morre"
+          },
+          {
+            "exposicao": "mais de 1 mile do birth place",
+            "intervalo": "daily",
+            "teste": {
+              "atributo": "CON",
+              "cd": 12
+            },
+            "falha": "morre"
+          }
+        ]
+      },
+      {
+        "nome": "Produce Potion",
+        "frequencia": "1/day",
+        "efeito": "produz uma common potion/oil/tincture/alchemical draught",
+        "condicao": "criatura deve coletar ao produzir, ou líquido se perde"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+1",
+            "media": 10,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Magical Burble",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "acid/cold/fire/poison à escolha"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+1",
+            "media": 10,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Magical Burble",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "acid/cold/fire/poison à escolha"
+          }
+        ]
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "efeitos_regionais": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Produce Potion requer coletor presente imediatamente; Perishable mata por exposição direta a sol >1min ou salvaguarda diária fora 1milha.",
+    "Fonte individual Creature Codex; arte sem aprovação e revisão independente pendente."
+  ],
+  "campos_nao_confirmados": [
+    "conferir edição impressa e errata",
+    "aprovação legal e visual de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-alchemical-apprentice/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-alchemical-apprentice/",
+      "tipo": "fonte individual no CP37",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-158",
+    "nome": "Ooze, Alchemical Apprentice",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "1",
+    "nd_fonte": "1",
+    "ca": 11,
+    "pv": 63,
+    "pv_dados": "14d6+14",
+    "porte": "Small",
+    "tipo": "ooze",
+    "atributos": [
+      13,
+      6,
+      13,
+      16,
+      6,
+      10
+    ],
+    "movimento": {
+      "andar_ft": 10,
+      "escalar_ft": 10
+    },
+    "resistencias": [
+      "acid",
+      "cold",
+      "fire",
+      "poison"
+    ],
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "resumo": "Passa por uma abertura de 1 polegada."
+      },
+      {
+        "nome": "Absorb Potion",
+        "resumo": "Pode absorver líquido alquímico, escolher sofrer o efeito ou neutralizá-lo."
+      },
+      {
+        "nome": "Perishable",
+        "resumo": "Sol direto por mais de um minuto mata a criatura; a mais de uma milha do local de nascimento, Constituição CD12 diária contra morte."
+      },
+      {
+        "nome": "Produce Potion (1/dia)",
+        "resumo": "Produz uma substância alquímica comum, que precisa ser coletada."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "resumo": "+3, 5 ft., 2d8+1 contundente."
+      },
+      {
+        "nome": "Magical Burble",
+        "resumo": "+5 à distância 60 ft.; 3d6 ácido, frio, fogo ou veneno."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-alchemical-apprentice/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisão, licença e imagem pendentes."
+    ],
+    "editora": "Kobold Press / Open Design",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-158.jpg",
+    "formato": "jpg",
+    "largura": 483,
+    "altura": 700,
+    "bytes": 48463,
+    "blob_sha": "c136c46d1d99563a2655b132e9ea14ef2625da3f",
+    "sha256": "1d30ef76372c8fbf0467b72ee29880b2dcad8756bdbb347a065e6ce2bc20081c",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Alchemicalapprentice.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 37,
+    "publicacao": "Creature Codex",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-alchemical-apprentice/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

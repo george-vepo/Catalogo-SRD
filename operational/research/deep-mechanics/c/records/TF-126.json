@@ -1,0 +1,286 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-126",
+  "nome": "Giant, Abbanith",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 6,
+  "estado_auditoria": "PARCIAL_BLOCO_INDIVIDUAL_ESTRUTURADO_PENDENTE_CONFRONTO_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": "https://www.5esrd.com/database/creature/giant-abbanith/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "3",
+    "nd_fonte": "3",
+    "ca": 13,
+    "pv": 76,
+    "dados_vida": "9d10+27",
+    "porte": "Large",
+    "tipo": "giant",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 20,
+      "DES": 9,
+      "CON": 17,
+      "INT": 10,
+      "SAB": 13,
+      "CAR": 11
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": -1,
+      "CON": 3,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": 0
+    },
+    "deslocamentos": {
+      "andar_ft": 40,
+      "escavacao_ft": 30
+    },
+    "pericias": [],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 7
+      },
+      {
+        "nome": "CON",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Giant",
+      "Terran"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "One with the Earth",
+        "efeito_sensorial": "detecta fluxos da terra, tremores, terremotos e anomalias mágicas",
+        "imune_a_surpresa_por": "oponente tocando solo",
+        "bonus_condicional": "vantagem em ataques contra constructs e elementals formados de terra ou pedra"
+      },
+      {
+        "nome": "Siege Monster",
+        "efeito": "dano dobrado contra objetos/estruturas em geral; triplo se de terra ou pedra"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Thumb Claw",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Thumb Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+5",
+            "media": 12,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Thumb Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+5",
+            "media": 12,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Thumb Claw",
+          "quantidade": 2
+        }
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Earth Counter",
+        "tipo": "reaction",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            6
+          ]
+        },
+        "gatilho": "criatura visível a até 30 ft conjura spell",
+        "pre_condicao": "spell afeta diretamente ou cria terra/pedra, exemplos stone shape, wall of stone, move earth",
+        "efeito": "anula a magia como counterspell, sem teste de spellcasting ability independentemente do nível",
+        "restricao": "não counterspell genérico contra quaisquer magias"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA",
+      "reacoes": "PRESENTE",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA",
+      "acoes_covil": "AUSENCIA_CONFERIDA",
+      "acoes_miticas": "AUSENCIA_CONFERIDA",
+      "conjuracao": "AUSENCIA_CONFERIDA"
+    }
+  },
+  "pendencias": [
+    "Todas as seções mecânicas listadas pela fonte individual foram estruturadas; pendente confrontar edição original/errata com a republicação 5eSRD.",
+    "Arquivo físico de imagem já existe, mas a identidade visual ainda não foi aprovada."
+  ],
+  "campos_nao_confirmados": [
+    "confronto independente com o livro original/erratas antes de aprovação mecânica total",
+    "aprovação visual editorial da imagem já armazenada"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-abbanith/",
+      "tipo": "bloco mecânico individual republicado por 5eSRD com referência bibliográfica ao livro e edição",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint anterior para comparação",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-126",
+    "nome": "Giant, Abbanith",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "3",
+    "nd_fonte": "3",
+    "ca": 13,
+    "pv": 76,
+    "pv_dados": "9d10+27",
+    "porte": "Large",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      20,
+      9,
+      17,
+      10,
+      13,
+      11
+    ],
+    "movimento_ft": {
+      "andar": 40,
+      "escavar": 30
+    },
+    "tracos": [
+      {
+        "nome": "One with the Earth",
+        "resumo": "Não pode ser surpreendido por inimigos tocando solo; vantagem contra constructos/elementais de pedra ou terra."
+      },
+      {
+        "nome": "Siege Monster",
+        "resumo": "Dano dobrado contra estruturas, triplicado quando de pedra/terra."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Dois ataques com garras dos polegares."
+      },
+      {
+        "nome": "Thumb Claw",
+        "resumo": "+7, alcance 5 pés, 2d6+5 perfurante."
+      },
+      {
+        "nome": "Earth Counter",
+        "resumo": "Reação, recarga 6, bloqueia magia que manipula terra/pedra a até 30 pés."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/giant-abbanith/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Earth Counter é reação com limitação temática, não counterspell genérico.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "neutral",
+    "reacoes": [
+      {
+        "nome": "Earth Counter",
+        "resumo": "Pode anular magia que altera terra ou pedra; recarga 6"
+      }
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-126.webp",
+    "formato": "webp",
+    "largura": 812,
+    "altura": 1118,
+    "bytes": 163446,
+    "blob_sha": "2c29fb2d10b7a852d7447cdb620ea084eef7b711",
+    "sha256": "aabf4cb79ad612a1d884b057d44bc6a6d9db749e31b7e68a125401572dc55ac4",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Abbanith%20Giant.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "D&D 5e",
+    "livro": "Tome of Beasts 2",
+    "fonte_individual_republicada": "https://www.5esrd.com/database/creature/giant-abbanith/",
+    "bloco_integral_estruturado": true,
+    "confronto_com_livro_editorial_errata": "PENDENTE"
+  }
+}

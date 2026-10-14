@@ -1,0 +1,269 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-243",
+  "name": "Chill Haunt",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "3",
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral_evil",
+    "experience_points": 700,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 39,
+    "hit_dice": "6d8+12",
+    "ability_scores": {
+      "STR": 7,
+      "DEX": 16,
+      "CON": 14,
+      "INT": 8,
+      "WIS": 16,
+      "CHA": 13
+    },
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Acrobatics": 5
+    },
+    "saving_throws": [],
+    "languages": {
+      "known": "languages_known_in_life"
+    },
+    "damage_resistances": [
+      "acid",
+      "lightning",
+      "thunder",
+      "nonmagical_attack_bludgeoning",
+      "nonmagical_attack_piercing",
+      "nonmagical_attack_slashing"
+    ],
+    "damage_immunities": [
+      "cold",
+      "fire",
+      "necrotic",
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "ability_modifiers": {
+      "STR": -2,
+      "DEX": 3,
+      "CON": 2,
+      "INT": -1,
+      "WIS": 3,
+      "CHA": 1
+    },
+    "armor_class_type": null
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Cryophobia",
+        "category": "conditional_save",
+        "trigger": "subjected_to_cold_damage",
+        "damage_received": 0,
+        "save": {
+          "ability": "WIS",
+          "dc": 13,
+          "on_failure": {
+            "condition": "frightened",
+            "source": "cold_damage_source",
+            "duration": "1_minute"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "overrides_condition_immunity": [
+          "frightened"
+        ]
+      },
+      {
+        "name": "Fire Absorption",
+        "category": "healing_from_element",
+        "trigger": "subjected_to_fire_damage",
+        "damage_received": 0,
+        "healing": {
+          "amount": "amount_of_fire_damage_that_would_be_dealt"
+        }
+      },
+      {
+        "name": "Incorporeal Movement",
+        "category": "movement",
+        "pass_through": [
+          "creatures",
+          "objects"
+        ],
+        "movement_cost": "difficult_terrain",
+        "trigger": "ends_turn_inside_object",
+        "self_damage": {
+          "dice": "1d10",
+          "average": 5,
+          "type": "force"
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "requires_air": false,
+          "requires_food": false,
+          "requires_water": false,
+          "requires_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Shivering Touch",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 3,
+              "type": "cold",
+              "average": 10
+            },
+            {
+              "dice": "1d6",
+              "flat": 0,
+              "type": "necrotic",
+              "average": 3
+            }
+          ],
+          "save": {
+            "ability": "CON",
+            "dc": 12,
+            "on_failure": {
+              "ongoing_damage": {
+                "dice": "1d6",
+                "average": 3,
+                "type": "cold",
+                "timing": "start_of_target_turn"
+              },
+              "repeat_save": {
+                "ability": "CON",
+                "dc": 12,
+                "timing": "end_of_each_target_turn",
+                "success_ends": true
+              },
+              "other_end_condition": "target_takes_fire_damage"
+            },
+            "on_success": {
+              "ongoing_effect": false
+            }
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Absorve calor e se cura com fogo; frio não causa dano mas pode assustá-lo apesar de imunidades."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:chill-haunt",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "Estatísticas, traços, ações e mecânicas condicionais consultados por inteiro na transcrição individual.",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14; fonte online secundária, impressão/editorial/engine pendentes."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confrontar cada dado e regra com exemplar editorial correto, impressão e erratas da Kobold Press.",
+    "Realizar revisão independente da transcrição, do modelo de ações/condições e teste da engine antes de MECANICA_COMPLETA_VERIFICADA."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-243.webp",
+    "format": "image/webp",
+    "width": 843,
+    "height": 1119,
+    "bytes": 278938,
+    "sha256": "3818d54438e924ebb461df7a7b8b0322ffe972295de1c1e128eacc4e0fa70920",
+    "git_blob_sha": "6bf24a185fdefb9f50f1e2c5a6df216da4954657",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chill%20Haunt.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "be688c5ccc441a45fffd0ec796554b323704fa90",
+    "identity_provenance": "ID e nome coincidem com manifesto do lote E, cuja integridade do binário foi verificada",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença",
+      "qualidade para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:chill-haunt"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Statblock de transcrição digital consultado; livro físico, erratas, motor e licenças ainda sem homologação."
+  }
+}

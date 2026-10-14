@@ -1,0 +1,367 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-154",
+  "nome": "Giant, Shadow",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 32,
+  "estado_auditoria": "BLOQUEADA_FORMULA_PV_EDICOES_DIVERGENTES",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "15",
+    "nd_fonte": "15",
+    "ca": 17,
+    "pv": 209,
+    "dados_vida": "22d20+66 (Tome of Beasts 2 impresso, conflitante)",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "FOR": 18,
+      "DES": 25,
+      "CON": 17,
+      "INT": 12,
+      "SAB": 13,
+      "CAR": 21
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 7,
+      "CON": 3,
+      "INT": 1,
+      "SAB": 1,
+      "CAR": 5
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 6
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "WIS",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "Elvish",
+      "Giant",
+      "Umbral"
+    ],
+    "resistencias": [
+      "cold",
+      "necrotic"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion"
+    ],
+    "vulnerabilidades": [],
+    "xp": 13000,
+    "bonus_proficiencia": 5,
+    "composicao_ca": "não especificada",
+    "dados_vida_alternativo_na_republicacao": "22d12+66 (KPOGL, média 209 conforme PV impresso)"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Blacklight Strobe",
+        "gatilho": "creature inicia turno a até 30 ft e consegue ver o giant",
+        "teste": {
+          "atributo": "WIS",
+          "cd": 18
+        },
+        "falha": {
+          "restricoes": [
+            "no máximo 1 melee ou ranged attack durante turno",
+            "sem bonus actions nem reactions até início do próximo turno"
+          ]
+        }
+      },
+      {
+        "nome": "Distracting Flicker",
+        "gatilho": "criatura concentrando em magia inicia turno a até 30 ft",
+        "teste": {
+          "atributo": "CON",
+          "cd": 18
+        },
+        "falha": "perde concentração"
+      },
+      {
+        "nome": "Shadow Sight",
+        "efeito": "darkvision enxerga em magical darkness"
+      },
+      {
+        "nome": "Umbral Glimmer",
+        "gatilho": "fim de cada turno do giant",
+        "rolagem": "d20>=11",
+        "efeito": "move para Plane of Shadow",
+        "retorno": {
+          "momento": "início próximo turno",
+          "local": "espaço desocupado visível até 40 ft origem; se nenhum, mais próximo desocupado"
+        },
+        "enquanto_ausente": [
+          "vê/ouve até 120 ft no Material Plane",
+          "não afeta nem pode ser afetado por Material Plane"
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Tenebrous Talons",
+            "quantidade": 3
+          }
+        ]
+      },
+      {
+        "nome": "Tenebrous Talons",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "2d6+7",
+            "media": 14,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "4d8",
+            "media": 18,
+            "tipo": "necrotic"
+          }
+        ]
+      },
+      {
+        "nome": "Cold Shadow",
+        "recarga": "5-6",
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 60
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 18
+        },
+        "falha": {
+          "dano": {
+            "dados": "15d6",
+            "media": 52,
+            "tipo": "cold"
+          },
+          "restricao": "desvantagem em attacks e saves até fim próximo turno"
+        },
+        "sucesso": "metade sem penalidade"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Tenebrous Talons",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "2d6+7",
+            "media": 14,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "4d8",
+            "media": 18,
+            "tipo": "necrotic"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        {
+          "acao": "Tenebrous Talons",
+          "quantidade": 3
+        }
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "BLOQUEIO EDITORIAL: livro Tome of Beasts 2 imprime HP209 (22d20+66); a republicação KPOGL altera fórmula para 22d12+66, correspondente à média 209. Preservar as duas versões sem resolver por inferência.",
+    "Tome Unbound: Shadow Giant apresenta traços OPCIONAIS não incorporados à ficha padrão.",
+    "Imagem existente, licença e inspeção visual ainda não aprovadas."
+  ],
+  "campos_nao_confirmados": [
+    "revisão de livro/errata e permissões",
+    "aprovação visual de imagem",
+    "fórmula de PV original x republicação"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-shadow/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:shadow-giant",
+      "tipo": "fonte individual consultada no checkpoint 36",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/dhfzu/umbm/basic/151-200",
+      "tipo": "reprodução Tome of Beasts 2 original; demonstra fórmula 22d20+66 conflitante",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_FORMULA_PV_INCONSISTENTE",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-154",
+    "nome": "Giant, Shadow",
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "15",
+    "nd_fonte": "15",
+    "ca": 17,
+    "pv": 209,
+    "pv_dados_publicados": "22d20+66",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "chaotic evil",
+    "atributos": [
+      18,
+      25,
+      17,
+      12,
+      13,
+      21
+    ],
+    "deslocamento_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {
+      "WIS": 6
+    },
+    "pericias": {
+      "Perception": 6
+    },
+    "resistencias_dano": [
+      "cold",
+      "necrotic"
+    ],
+    "imunidades_condicao": [
+      "exhaustion"
+    ],
+    "sentidos": [
+      "darkvision 120 ft."
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common",
+      "Elvish",
+      "Giant",
+      "Umbral"
+    ],
+    "tracos": [
+      {
+        "nome": "Blacklight Strobe",
+        "resumo": "Alvos que iniciam turno até 30 pés e enxergam o gigante fazem Sabedoria CD18 ou ficam limitados a um ataque e sem ações bônus/reações até o próximo turno."
+      },
+      {
+        "nome": "Distracting Flicker",
+        "resumo": "Alvo concentrando em magia inicia até 30 pés: Constituição CD18 contra perda de concentração."
+      },
+      {
+        "nome": "Shadow Sight",
+        "resumo": "Enxerga na escuridão mágica."
+      },
+      {
+        "nome": "Umbral Glimmer",
+        "resumo": "No fim de seus turnos, d20 de 11 a 20 o desloca temporariamente ao Plano das Sombras; volta no início do próximo turno em espaço visível apropriado perto da origem, sem interagir entre planos enquanto ausente."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Três ataques Tenebrous Talons."
+      },
+      {
+        "nome": "Tenebrous Talons",
+        "resumo": "Ataque corpo a corpo +12, alcance 10 pés, 2d6+7 cortante e 4d8 necrótico."
+      },
+      {
+        "nome": "Cold Shadow (Recharge 5–6)",
+        "resumo": "Cone de 60 pés, Constituição CD18 contra 15d6 frio; falha também dá desvantagem em ataques/salvaguardas até fim do próximo turno; sucesso metade e sem penalidade."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/giant-shadow/",
+    "indice_oficial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "PARCIAL_FORMULA_PV_INCONSISTENTE",
+    "pendencias": [
+      "A página publica 209 PV (22d20+66); essa fórmula é incompatível com 209 PV e deve ser corrigida por errata/editor antes da integração, preservando ambos os valores originais.",
+      "A página pode exigir JavaScript em algumas aberturas; conferência com página indexada.",
+      "Revisão de mecânica e direitos de arte pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-154.webp",
+    "formato": "webp",
+    "largura": 706,
+    "altura": 1190,
+    "bytes": 111788,
+    "blob_sha": "354066ac22edac1f2c07796f5dcdf0d470735149",
+    "sha256": "7c0eed12d88a03ce1ae27a1d934efb821c48ee19ccd6f3bc402fcd63da1061a3",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Shadow%20Giant.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 36,
+    "fonte_mecanicas": "https://kpogl.wikidot.com/monster:shadow-giant",
+    "publicacao": "Tome of Beasts 2",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

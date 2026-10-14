@@ -1,0 +1,170 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-395",
+  "nome": "Skeleton, Cackling",
+  "estado": "MECANICAS_INDIVIDUALIZADAS_PENDENTE_HOMOLOGACAO",
+  "edicao": {
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2 (2020)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:cackling-skeleton",
+      "natureza": "reproducao_integral_comunitaria_nao_endossada",
+      "data_consulta": "2026-10-14",
+      "publicacao_identificada": "Tome of Beasts 2 (2020)",
+      "escopo": "atributos, passivas, ataques e todas as ações da ficha"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1/2",
+    "ca": 9,
+    "pv": 26,
+    "dados_vida": "4d8+8",
+    "atributos": {
+      "FOR": 12,
+      "DES": 9,
+      "CON": 15,
+      "INT": 8,
+      "SAB": 10,
+      "CAR": 14
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "deslocamentos_texto": "caminhar 30 pés",
+    "salvaguardas": {
+      "CAR": 4
+    },
+    "pericias": {},
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "idiomas": [
+      "idiomas conhecidos em vida"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "poisoned"
+    ],
+    "origem_ca": "sem armadura descrita",
+    "modificadores": {
+      "FOR": 1,
+      "DES": -1,
+      "CON": 2,
+      "INT": -1,
+      "SAB": 0,
+      "CAR": 2
+    },
+    "pairar": false,
+    "percepcao_passiva": 10,
+    "telepatia_ft": null,
+    "bonus_proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Undead Nature",
+      "ativacao": "passiva",
+      "efeito": "Dispensa ar, comida, água e sono."
+    },
+    {
+      "nome": "Cackle",
+      "ativacao": "passiva",
+      "gatilho": "criatura que não seja undead ou construct inicia turno a até 30 pés e pode ouvir o cackle",
+      "alcance_ft": 30,
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 10
+      },
+      "falha": "demoralized: desvantagem nas jogadas de ataque",
+      "duracao": "até o início do próximo turno do alvo",
+      "sucesso": "não fica demoralized"
+    },
+    {
+      "nome": "Turn Vulnerability",
+      "ativacao": "passiva",
+      "efeito": "Desvantagem em salvaguardas contra efeitos que expulsem mortos-vivos."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 3,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 1,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "condicao_para_vantagem": "alvo demoralized por Cackle"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam"
+    },
+    {
+      "nome": "Mock",
+      "categoria": "controle_e_dano",
+      "recarga": "5–6",
+      "alcance_ft": 30,
+      "numero_alvos_maximo": 3,
+      "alvos": "até três criaturas visíveis que não são undead ou construct",
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 12
+      },
+      "dano": {
+        "dados": "2d4",
+        "tipo": "psychic"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade",
+      "penalidade_salvaguarda": "alvo demoralized sofre desvantagem"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Fontes comunitárias e 5eSRD consultadas; cotejo contra exemplar editorial e erratas ainda pendente.",
+    "Sem revisão independente e sem integração canônica."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-395",
+    "nome_original": "Skeleton, Cackling",
+    "tipo": "Medium undead",
+    "alinhamento": "neutral evil",
+    "nd": "1/2",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
+}

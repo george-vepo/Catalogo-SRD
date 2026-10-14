@@ -1,0 +1,306 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-412",
+  "nome": "Mandrake, Great",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 0,
+  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_SAB11_MODIFICADOR",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "1",
+    "xp": 200,
+    "bonus_proficiencia": 2,
+    "bonus_proficiencia_origem": "deduzido da progressão por ND em D&D 5e; 5eSRD não o imprime explicitamente",
+    "ca": 11,
+    "composicao_ca": "armadura natural",
+    "pv": 44,
+    "dados_vida": "8d4+24",
+    "porte": "Tiny",
+    "tipo": "plant",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "forca": 14,
+      "destreza": 8,
+      "constituicao": 16,
+      "inteligencia": 4,
+      "sabedoria": 11,
+      "carisma": 12
+    },
+    "modificadores": {
+      "forca": 2,
+      "destreza": -1,
+      "constituicao": 3,
+      "inteligencia": -3,
+      "sabedoria": null,
+      "carisma": 1
+    },
+    "nota_sabedoria": "A fonte imprime SAB 11 (+1), enquanto D&D 5e calcula +0 para valor 11. Modificador pendente de confirmação editorial; nunca calcular ataques a partir do +1 sem resolver conflito.",
+    "modificador_sabedoria_impresso": 1,
+    "modificador_sabedoria_calculado": 0,
+    "deslocamentos": {
+      "andar_ft": 10
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 60,
+        "cego_alem_do_alcance": true
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Common"
+    ],
+    "vulnerabilidades": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "exhaustion",
+      "poisoned"
+    ],
+    "resistencias_condicao": []
+  },
+  "mecanicas": {
+    "tracos": [],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "multiataque",
+        "sequencia_base": [
+          {
+            "acao": "Bite",
+            "quantidade": 2
+          }
+        ],
+        "substituicao": {
+          "acao_substituivel": "Bite",
+          "quantidade_maxima": 1,
+          "acao_substituta": "Shriek",
+          "pre_condicao": "Shriek disponível após sua recarga"
+        },
+        "total_componentes": 2
+      },
+      {
+        "nome": "Bite",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "alvo_tipo": "uma criatura ou outro alvo válido para melee weapon attack",
+        "dano": [
+          {
+            "dados": "2d4+2",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ],
+        "gatilho": "acerto",
+        "efeitos_adicionais": [],
+        "usos": "sem limite específico",
+        "origem": "https://www.5esrd.com/database/creature/mandrake-great/"
+      },
+      {
+        "nome": "Shriek",
+        "tipo": "acao_area_auditiva",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        "alcance_ft": 60,
+        "alvos": "todas as criaturas que possam ouvi-la em raio de 60 pés",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "efeito_sucesso": "nenhum dano ou condição especificados",
+        "efeito_falha": {
+          "dano": [
+            {
+              "dados": "3d6",
+              "media": 11,
+              "tipo": "thunder"
+            }
+          ],
+          "escalonamento": [
+            {
+              "margem_de_falha_minima": 5,
+              "condicao": "stunned",
+              "duracao": "até fim do turno seguinte da vítima"
+            },
+            {
+              "margem_de_falha_minima": 10,
+              "condicao": "unconscious",
+              "duracao": "até sucesso em salvaguarda repetida; não há limite explícito no trecho",
+              "repetir_teste": "ao fim de cada turno enquanto inconsciente"
+            }
+          ]
+        },
+        "interacao_multiataque": "substitui no máximo um dos dois ataques de Bite enquanto disponível",
+        "origem": "https://www.5esrd.com/database/creature/mandrake-great/"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "alvo_tipo": "uma criatura ou outro alvo válido para melee weapon attack",
+        "dano": [
+          {
+            "dados": "2d4+2",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ],
+        "gatilho": "acerto",
+        "efeitos_adicionais": [],
+        "usos": "sem limite específico",
+        "origem": "https://www.5esrd.com/database/creature/mandrake-great/"
+      }
+    ],
+    "multiataque": {
+      "sequencia_base": [
+        {
+          "acao": "Bite",
+          "quantidade": 2
+        }
+      ],
+      "substituicao_por_shriek": "1 Bite por 1 Shriek se recarregada"
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "reacoes": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL"
+    },
+    "acoes_miticas": [],
+    "tracos_ausentes_verificados": true
+  },
+  "pendencias": [
+    "Conferir ficha e errata de Creature Codex; fonte de reprodução imprime SAB 11 (+1), fórmula incompatível com modificador padrão +0.",
+    "Conferir se condições do Shriek com margem 10+ são cumulativas no livro; preservar literal sem escolher mutuamente exclusivo.",
+    "Imagem física existente, mas revisão visual editorial pendente."
+  ],
+  "campos_nao_confirmados": [
+    "modificador SAB (texto impresso +1 x fórmula padrão +0)",
+    "conferência editorial e erratas de Creature Codex",
+    "revisão visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/mandrake-great/",
+      "tipo": "bloco mecânico individual — 5eSRD; confrontado campo a campo em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice editorial da Kobold Press, confirma identidade, ND e publicação",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico, apenas referência",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-412",
+    "nome": "Mandrake, Great",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "nd_catalogo": null,
+    "nd_fonte": "1",
+    "ca": 11,
+    "pv": 44,
+    "atributos": {
+      "forca": 14,
+      "destreza": 8,
+      "constituicao": 16,
+      "inteligencia": 4,
+      "sabedoria": 11,
+      "carisma": 12
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Planta pequena; imunidade a veneno e interação com grito estridente."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Mordida; grito estridente com recarga 3–6 e resistência de Constituição CD 13."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://www.5esrd.com/database/creature/mandrake-great/",
+    "fonte_tipo": "republicação terceirizada (5eSRD)",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir contra exemplar editorial, edição/errata e direitos/licenças antes da promoção."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-412.jpg",
+    "formato": "jpg",
+    "blob_sha": "ff86c3e83078efbd213a9feef0f26dc8a3f62248",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Mandrakegreat.jpg",
+    "origem_repositorio": "TheGiddyLimit/homebrew",
+    "origem_caminho": "_img/CCodex/Mandrakegreat.jpg",
+    "binario_presente": true,
+    "integridade_binaria_confirmada": true,
+    "validacao_visual_editorial": "PENDENTE",
+    "largura": null,
+    "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "fonte_publicada_individual": "https://www.5esrd.com/database/creature/mandrake-great/",
+    "indice_editorial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "comparacao_exemplar_editorial_ou_errata": "PENDENTE",
+    "ausencia_categoria_no_bloco_individual": "CONFERIDA",
+    "data_conferencia": "2026-10-14"
+  }
+}

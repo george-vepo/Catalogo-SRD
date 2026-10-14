@@ -1,0 +1,310 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-141",
+  "nome": "Giant, Desert",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 21,
+  "estado_auditoria": "BLOQUEADA_EDICAO_E_TEXTO_CONTAMINADO",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (5eSRD revisão ©2023)",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "9",
+    "nd_fonte": "9",
+    "ca": 17,
+    "pv": 175,
+    "dados_vida": "14d12+84",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 27,
+      "DES": 10,
+      "CON": 22,
+      "INT": 13,
+      "SAB": 18,
+      "CAR": 15
+    },
+    "modificadores": {
+      "FOR": 8,
+      "DES": 0,
+      "CON": 6,
+      "INT": 1,
+      "SAB": 4,
+      "CAR": 2
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 8
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 4
+      },
+      {
+        "nome": "Survival",
+        "bonus": 8
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 12
+      },
+      {
+        "nome": "CON",
+        "bonus": 10
+      },
+      {
+        "nome": "CHA",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 18,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "fire"
+    ],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 5000,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Desert Walk",
+        "terreno": "difficult terrain causado por sand/gravel",
+        "efeito": "Não paga movimento extra nesse terreno"
+      },
+      {
+        "nome": "Sand Camouflage",
+        "terreno": "sandy terrain",
+        "efeito": "Vantagem em DEX(Stealth) para Hide"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Falchion",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Falchion",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "6d4+8",
+            "media": 23,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d10+8",
+            "media": 30,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Falchion",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "6d4+8",
+            "media": 23,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d10+8",
+            "media": 30,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        "Falchion",
+        "Falchion"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "BLOQUEIO DE PROVENIÊNCIA: republicação 5eSRD injeta narrativa ao final do texto de Rock, removida da transcrição mecânica.",
+    "Aprovação requer conferir statblock original Tome of Beasts 1 revisado 2023, erratas e licença, sem substituir pela edição anterior.",
+    "Imagem física ainda não validada visualmente."
+  ],
+  "campos_nao_confirmados": [
+    "confronto com edição/erratas/condições de licença originais",
+    "validação visual e direito de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-desert-3pp/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-desert-3pp/",
+      "tipo": "fonte individual detalhada checkpoint 34",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_TEXTO_FONTE_CONTAMINADO",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-141",
+    "nome": "Giant, Desert",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (5eSRD revisão ©2023)",
+    "nd_catalogo": "9",
+    "nd_fonte": "9",
+    "ca": 17,
+    "pv": 175,
+    "pv_dados": "14d12+84",
+    "porte": "Huge",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      27,
+      10,
+      22,
+      13,
+      18,
+      15
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [
+      {
+        "nome": "Desert Walk",
+        "resumo": "Terreno difícil por areia e cascalho não custa movimento extra."
+      },
+      {
+        "nome": "Sand Camouflage",
+        "resumo": "Vantagem para furtividade em terrenos arenosos."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Duas Falchion."
+      },
+      {
+        "nome": "Falchion",
+        "resumo": "+12, alcance 10 pés, 6d4+8 cortante."
+      },
+      {
+        "nome": "Rock",
+        "resumo": "+12, 60/240, 4d10+8 contundente."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/giant-desert-3pp/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "PARCIAL_TEXTO_FONTE_CONTAMINADO",
+    "pendencias": [
+      "A página 5eSRD inclui trecho de descrição narrativa colado à ação Rock; removê-lo da mecânica.",
+      "Comparar edição ©2023 com Tome of Beasts 1 original antes de aprovação.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "neutral",
+    "imunidades_dano": [
+      "fire"
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-141.webp",
+    "formato": "webp",
+    "largura": 613,
+    "altura": 801,
+    "bytes": 74934,
+    "blob_sha": "303b14562c0c1c312c7faa9d8715fa4af8de1402",
+    "sha256": "2ada9766f292672e855f5df119ce051d358caf5508cd6e91cf528ebf65c49b96",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Desert%20Giant.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 34,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/giant-desert-3pp/",
+    "publicacao": "Tome of Beasts 1 (5eSRD revisão ©2023)",
+    "aprovacao_editorial": "PENDENTE",
+    "nota": "Texto 'The towering woman rises...' é descrição visual indevidamente colada em Rock, não regra de ação."
+  }
+}

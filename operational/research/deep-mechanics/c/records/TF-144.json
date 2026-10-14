@@ -1,0 +1,396 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-144",
+  "nome": "Giant, Hellfire",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 24,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "9",
+    "nd_fonte": "9",
+    "ca": 16,
+    "pv": 168,
+    "dados_vida": "16d12+64",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral good",
+    "atributos": {
+      "FOR": 23,
+      "DES": 15,
+      "CON": 19,
+      "INT": 10,
+      "SAB": 12,
+      "CAR": 17
+    },
+    "modificadores": {
+      "FOR": 6,
+      "DES": 2,
+      "CON": 4,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": 3
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 10
+      },
+      {
+        "nome": "Perception",
+        "bonus": 5
+      },
+      {
+        "nome": "Survival",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 5
+      },
+      {
+        "nome": "CON",
+        "bonus": 6
+      },
+      {
+        "nome": "WIS",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Giant",
+      "Infernal"
+    ],
+    "resistencias": [
+      "fire"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 5000,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "breastplate"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Death Malison",
+        "gatilho": "morte da criatura",
+        "raio_ft": 20,
+        "teste": {
+          "atributo": "CON",
+          "cd": 16,
+          "fiends": "desvantagem"
+        },
+        "falha": {
+          "condicao": "cursed",
+          "duracao": "7 days ou até remove curse/similar",
+          "efeitos": [
+            "desvantagem em saving throws",
+            "desvantagem no primeiro attack roll de cada turno"
+          ]
+        }
+      },
+      {
+        "nome": "Rune-Powered Weapons",
+        "efeitos": [
+          "weapon attacks magical",
+          "dano adicional 2d8 fire já incluído no ataque Greatclub"
+        ],
+        "sem_aplicar_a": "Runic Blast (spell attack)"
+      },
+      {
+        "nome": "Stone Camouflage",
+        "terreno": "rocky terrain",
+        "efeito": "vantagem em DEX (Stealth) Hide"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "quantidade": 2,
+        "opcoes": [
+          "Greatclub",
+          "Runic Blast"
+        ],
+        "nota": "redação não informa explicitamente se podem misturar opções na mesma sequência"
+      },
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "Runic Blast",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "4d10+3",
+            "media": 25,
+            "tipo": "force"
+          }
+        ],
+        "teste": {
+          "atributo": "CON",
+          "cd": 16,
+          "fiends": "desvantagem",
+          "falha": "speed reduzido pela metade até fim do próximo turno do alvo"
+        }
+      },
+      {
+        "nome": "Invisibility Rune",
+        "efeito": "self invisível com equipamentos",
+        "duracao": "até atacar ou perder concentração como magia"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "Runic Blast",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "4d10+3",
+            "media": 25,
+            "tipo": "force"
+          }
+        ],
+        "teste": {
+          "atributo": "CON",
+          "cd": 16,
+          "fiends": "desvantagem",
+          "falha": "speed reduzido pela metade até fim do próximo turno do alvo"
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 2,
+      "opcoes": [
+        "Greatclub",
+        "Runic Blast"
+      ],
+      "nota": "redação não informa explicitamente se podem misturar opções na mesma sequência"
+    },
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Runic Shield",
+        "gatilho": "ataque que acertaria o gigante",
+        "pre_condicoes": [
+          "enxerga o atacante",
+          "não está invisível"
+        ],
+        "efeito": "AC +4 exclusivamente contra o ataque acionador"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Runic Shield requer visão do atacante e criatura não invisível, além de competir por reação; confirmado na republicação.",
+    "Multiattack admite Greatclub ou Runic Blast; a possibilidade de combinar ambas não está explícita, aguardando livro/errata.",
+    "Imagem persistida mas identidade, qualidade e direitos não aprovados."
+  ],
+  "campos_nao_confirmados": [
+    "verificação independente do livro/errata e condições de licenciamento",
+    "inspeção visual e autorização da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster%3Ahellfire-giant",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/hellfire-giant/",
+      "tipo": "fonte individual detalhada checkpoint 35",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-144",
+    "nome": "Giant, Hellfire",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "9",
+    "nd_fonte": "9",
+    "ca": 16,
+    "pv": 168,
+    "pv_dados": "16d12+64",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral good",
+    "atributos": [
+      23,
+      15,
+      19,
+      10,
+      12,
+      17
+    ],
+    "deslocamento_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {
+      "DEX": 5,
+      "CON": 6,
+      "WIS": 4
+    },
+    "pericias": {
+      "Athletics": 10,
+      "Perception": 5,
+      "Survival": 5
+    },
+    "resistencias_dano": [
+      "fire"
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Giant",
+      "Infernal"
+    ],
+    "tracos": [
+      {
+        "nome": "Death Malison",
+        "resumo": "Ao morrer, criaturas até 20 pés testam Constituição CD16 ou ficam amaldiçoadas por até sete dias; penalidade em salvaguardas e primeiro ataque de cada turno."
+      },
+      {
+        "nome": "Rune-Powered Weapons",
+        "resumo": "Ataques com armas são mágicos e causam 2d8 fogo adicionais."
+      },
+      {
+        "nome": "Stone Camouflage",
+        "resumo": "Vantagem em Furtividade em terreno rochoso."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Dois ataques Greatclub ou Runic Blast."
+      },
+      {
+        "nome": "Greatclub",
+        "resumo": "+10, 15 pés, 3d8+6 contundente e 2d8 fogo."
+      },
+      {
+        "nome": "Runic Blast",
+        "resumo": "+7 magia à distância, 60 pés, 4d10+3 force; Constituição CD16 contra deslocamento reduzido pela metade."
+      },
+      {
+        "nome": "Invisibility Rune",
+        "resumo": "Fica invisível até atacar ou perder concentração."
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Runic Shield",
+        "resumo": "Adiciona 4 à CA contra ataque visível que acertaria, salvo enquanto invisível."
+      }
+    ],
+    "fonte": "https://kpogl.wikidot.com/monster%3Ahellfire-giant",
+    "indice_oficial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Verificação de licença e atribuição editorial.",
+      "Imagem final e revisão independente pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-144.webp",
+    "formato": "webp",
+    "largura": 1000,
+    "altura": 1400,
+    "bytes": 207688,
+    "blob_sha": "407cf45d32a6bf6a64390e77d884a4dd78c6722a",
+    "sha256": "8d424580bc0fcf1f8b3e3e0b6225bbe23c8ff40512b7bf0d16c0d5d76960a413",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Hellfire%20Giant.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 35,
+    "publicacao": "Tome of Beasts 3",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/hellfire-giant/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-312",
+  "nome": "Sigilian",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTE_SECUNDARIA_REQUER_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao": "KPOGL identifica título e volume; exemplar editorial não conferido"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:sigilian",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "escopo": "dados e ações individuais com parâmetros"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_identidade_publicacao_e_nd"
+    }
+  ],
+  "estatisticas": {
+    "nd": "2",
+    "ca": 14,
+    "pv": 65,
+    "dados_vida": "10d8+20",
+    "atributos": {
+      "FOR": 6,
+      "DES": 18,
+      "CON": 14,
+      "INT": 5,
+      "SAB": 10,
+      "CAR": 20
+    },
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 60
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Perception": 2,
+      "Stealth": 6
+    },
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing nonmagical"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [
+      "psychic"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "poisoned",
+      "unconscious"
+    ],
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "compreende Common sem fala"
+    ]
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não requer ar, alimento, bebida nem sono."
+    },
+    {
+      "nome": "Amorphous",
+      "efeito": "Atravessa abertura de 1 polegada sem squeezing."
+    },
+    {
+      "nome": "Cognivore",
+      "efeito": "Se iniciar turno dentro de um livro não mágico/de magias, apaga 1d6 páginas e recupera 2d6 PV.",
+      "gatilho": "início de turno dentro de livro que não é spellbook",
+      "paginas": "1d6",
+      "cura": {
+        "dados": "2d6",
+        "modificador": 0,
+        "tipo": "healing"
+      }
+    },
+    {
+      "nome": "Home Sweet Tome",
+      "efeito": "Move-se até metade do deslocamento para entrar em livro; portador realiza DES CD14 para evitar; ação de Investigação INT CD12 localiza. Pode arrancar páginas com ação bônus ou destruir livro num ataque, forçando saída.",
+      "salvaguarda_portador": {
+        "atributo": "DES",
+        "cd": 14,
+        "efeito_falha": "entra no livro",
+        "efeito_sucesso": "permanece fora"
+      },
+      "investigacao_cd": 12,
+      "tempo_busca": "ação",
+      "extração": "ação bônus se localizado ou ataque melee destrutivo; sigilian sofre metade do dano do ataque em livro"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Cut",
+      "tipo": "ranged_weapon",
+      "bonus_acerto": 6,
+      "alcance_ft": 60,
+      "alvo": "um",
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "efeito": "copia um dos ataques com arma do alvo por 1 minuto",
+      "duracao_copia": "1 min"
+    },
+    {
+      "nome": "Paste",
+      "tipo": "spell_melee_or_ranged",
+      "bonus_acerto": 7,
+      "alcance_ft": {
+        "melee": 5,
+        "range": 60
+      },
+      "alvo": "um",
+      "dano": null,
+      "formula_dependente": "dados e tipo de dano copiados do ataque de arma do alvo atingido por Cut",
+      "dependencia": "Cut bem-sucedido; não fixar dados inexistentes"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Cut",
+        "Paste",
+        "Paste"
+      ]
+    },
+    {
+      "nome": "Cut",
+      "categoria": "ataque",
+      "referencia_ataque": "Cut"
+    },
+    {
+      "nome": "Paste",
+      "categoria": "ataque",
+      "referencia_ataque": "Paste"
+    },
+    {
+      "nome": "Devour Spell",
+      "categoria": "acao_condicional",
+      "precondicao": "dentro de spellbook",
+      "efeito": "consome magia de nível máximo no livro e sai dele; próxima Paste recebe número de dados igual nível da magia OU cura 3 PV por nível",
+      "escolha": [
+        "dano na próxima Paste",
+        "cura 3 PV por nível"
+      ],
+      "limite": "até gastar energia da magia, não pode entrar em outro spellbook",
+      "recuperacao_magia": "escrita a metade do custo/tempo ou conjurador preparado pode restabelecer em descanso longo"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "imagem": {
+    "status": "VERIFICADA_BINARIO_PRESENTE",
+    "path": "operational/research/deep-mechanics/b/images/TF-312.webp",
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-312.webp",
+    "blob_sha": "67f4dc2ea103b68e8a52ca82d40eb2dd0771abb5",
+    "sha256": "32dea5f1015c1bdbddc7de8f245a5c830cd61a3a0a7bd0cf5cef2ee07f2899f5",
+    "bytes": 158582,
+    "dimensions": {
+      "width": 769,
+      "height": 938
+    },
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "source_commit": "c26a1213e77cf1bdbbca12a14e4b71b1cee99d9d",
+    "source_original_path": "operational/assets/creature-images/TF-312.webp",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/Sigilian.webp"
+  },
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Dados estruturados de transcrição KPOGL; edição física/revisão editorial e erratas ainda precisam ser conferidas.",
+    "A ficha NÃO está homologada e não substitui testes e revisão independente.",
+    "Paste permanece com dano numérico dinâmico, pois depende de ataque externo copiado; campo dano=null é mecânica condicional, não falta de pesquisa."
+  ],
+  "integrada": false
+}

@@ -1,0 +1,322 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-232",
+  "name": "Annelidast",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "12",
+    "size": "Huge",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "proficiency_bonus": 4,
+    "experience_points": 8400,
+    "source_page": 21
+  },
+  "statistics": {
+    "armor_class": 18,
+    "hit_points": 184,
+    "hit_dice": "16d12+80",
+    "ability_scores": {
+      "STR": 26,
+      "DEX": 10,
+      "CON": 20,
+      "INT": 1,
+      "WIS": 10,
+      "CHA": 4
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "burrow_ft": 30
+    },
+    "senses": {
+      "tremorsense_ft": 120,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": {
+      "CON": 9,
+      "WIS": 4
+    },
+    "languages": [],
+    "damage_resistances": [
+      "lightning"
+    ],
+    "damage_immunities": [
+      "poison",
+      "nonmagical_attack_bludgeoning"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "armor_class_type": "natural armor",
+    "ability_modifiers": {
+      "STR": 8,
+      "DEX": 0,
+      "CON": 5,
+      "INT": -5,
+      "WIS": 0,
+      "CHA": -3
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Deep Earth Dweller",
+        "category": "passive",
+        "effect": {
+          "requires_air": false
+        }
+      },
+      {
+        "name": "Primordial Aura",
+        "category": "aura",
+        "effects": [
+          {
+            "trigger": "creature_starts_turn_within_30_ft",
+            "save": {
+              "ability": "CON",
+              "dc": 17,
+              "on_failure": {
+                "damage": [
+                  {
+                    "dice": "2d6",
+                    "flat": 0,
+                    "type": "poison",
+                    "average": 7
+                  }
+                ]
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            }
+          },
+          {
+            "trigger": "creature_finishes_long_rest_within_1000_ft",
+            "save": {
+              "ability": "CON",
+              "dc": 17,
+              "on_failure": {
+                "condition": "poisoned",
+                "additional_effect": "tumors_appear",
+                "ends_when": "greater_restoration_or_similar_removes_tumors"
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Tunneler",
+        "category": "movement",
+        "effect": {
+          "can_burrow_solid_rock": true,
+          "speed_multiplier_in_solid_rock": 0.5,
+          "leave_tunnel_diameter_ft": 10
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Slam",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 12,
+        "reach_or_range": {
+          "reach_ft": 10
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d12",
+              "flat": 8,
+              "type": "bludgeoning",
+              "average": 21
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "on_hit": {
+          "if_target_creature": {
+            "save": {
+              "ability": "STR",
+              "dc": 17,
+              "on_failure": {
+                "push_up_to_ft": 15
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            },
+            "auto_success_if_target_restrained_by_annelidast": true
+          }
+        }
+      },
+      {
+        "name": "Crush",
+        "category": "area_action",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "area": {
+          "shape": "line",
+          "length_ft": 20,
+          "width_ft": 10
+        },
+        "positioning": {
+          "can_occupy_spaces_of_creatures_max_size": "Large",
+          "retract_into_any_space_along_line": true
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "7d12",
+                "flat": 0,
+                "type": "bludgeoning",
+                "average": 45
+              }
+            ],
+            "condition": [
+              "prone",
+              "restrained_while_sharing_space"
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "forced_relocation": "unoccupied_space_within_5_ft",
+            "conditions_applied": []
+          }
+        },
+        "escape": {
+          "action": "action",
+          "check": "STR",
+          "dc": 17,
+          "performer": "any_creature_including_restrained"
+        },
+        "conditional": {
+          "if_burrowed_along_surface_ft_min": 20,
+          "before_action": true,
+          "save_disadvantage": true
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Defensive Recoil",
+        "category": "reaction",
+        "trigger": "annelidast_takes_damage",
+        "target": {
+          "kind": "creature_restrained_by_annelidast"
+        },
+        "effect": {
+          "attack": "Slam",
+          "count": 1
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Monstrosidade escavadora que não requer respirar; aura primordial pode envenenar alvos próximos e repousando."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/annelidast/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:annelidast",
+      "type": "transcrição OGL secundária não endossada pela editora",
+      "edition": "Tome of Beasts 1",
+      "reviewed": "2026-10-14",
+      "scope": "ficha individual completa estruturada; cotejo com impressão e errata editorial ainda pendente"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confirmar edição e transcrição contra livro Tome of Beasts 1 p.21/erratas, inclusive condições de Crush e Primordial Aura.",
+    "Homologação e teste da engine ainda pendentes; imagem necessita aprovação visual e de direitos."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-232.jpg",
+    "format": "image/jpeg",
+    "width": 1122,
+    "height": 831,
+    "bytes": 88440,
+    "sha256": "e21b42f7e99c2f3a1d6791e30252225d3ca1f0c0dda448ea02ff4eb33d0e0431",
+    "git_blob_sha": "37304db88507738541101dd3be1749fab333ffd8",
+    "source_url": "https://mz4250.com/posts/tome-of-beasts-93739908",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2d0d20ab7c63f820940fd968cbfab00620e5d587",
+    "identity_provenance": "ID e nome conferem com manifesto E, integridade/readback validada no lote de origem",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos de uso",
+      "aprovação para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:annelidast"
+    ]
+  }
+}

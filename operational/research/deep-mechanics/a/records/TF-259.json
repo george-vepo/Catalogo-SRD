@@ -1,0 +1,373 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-259",
+  "name": "Chaos Creeper",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "9",
+    "size": "Medium",
+    "type": "plant",
+    "alignment": "chaotic_neutral",
+    "experience_points": 5000,
+    "proficiency_bonus": 4,
+    "source_page": 80
+  },
+  "statistics": {
+    "armor_class": 16,
+    "hit_points": 150,
+    "hit_dice": "20d8+60",
+    "ability_scores": {
+      "STR": 13,
+      "DEX": 18,
+      "CON": 16,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 17
+    },
+    "speeds": {
+      "walk_ft": 15,
+      "climb_ft": 10
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 10
+    },
+    "skills": {
+      "Deception": 7,
+      "Persuasion": 7
+    },
+    "saving_throws": [],
+    "languages": {
+      "spoken": [
+        "Sylvan"
+      ],
+      "telepathy_ft": 60
+    },
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "deafened",
+      "poisoned",
+      "prone"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 4,
+      "CON": 3,
+      "INT": 0,
+      "WIS": 1,
+      "CHA": 3
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Pandemonium Fruit",
+        "category": "picked_fruit",
+        "trigger": "fruit_picked",
+        "effect": "apply_Wondrous_Cornucopia_result",
+        "fruit_magic_expires_after_hours": 24,
+        "control_random_effect_instead_if_any": [
+          {
+            "spend_spell_slot_level_at_least": 3
+          },
+          {
+            "spend_hit_dice": 2,
+            "roll_and_lose_hp_equal_to_total": true
+          }
+        ]
+      },
+      {
+        "name": "Wondrous Cornucopia",
+        "category": "d8_random_table",
+        "trigger": [
+          "fruit_picked",
+          "Fruit_Bomb_alternative_to_damage"
+        ],
+        "die": "1d8",
+        "outcomes": [
+          {
+            "roll": 1,
+            "name": "Butterfly Cloud",
+            "area": {
+              "radius_ft": 30,
+              "center": "fruit",
+              "heavily_obscured": true
+            },
+            "duration_minutes": 1
+          },
+          {
+            "roll": 2,
+            "name": "Restoration",
+            "target": "creature_eating_fruit",
+            "effect_choice": [
+              "end_one_condition",
+              "end_one_disease",
+              "end_reduction_to_one_ability_score",
+              "decrease_exhaustion_by_1"
+            ]
+          },
+          {
+            "roll": 3,
+            "name": "Poison Gas",
+            "area": {
+              "radius_ft": 20,
+              "center": "fruit",
+              "heavily_obscured": true
+            },
+            "duration": "1_minute_or_until_strong_wind_dispels",
+            "trigger": [
+              "enters_cloud_first_time_per_turn",
+              "starts_turn_inside_cloud"
+            ],
+            "save": {
+              "ability": "CON",
+              "dc": 16,
+              "on_failure": {
+                "damage": [
+                  {
+                    "dice": "5d8",
+                    "average": 22,
+                    "type": "poison"
+                  }
+                ]
+              },
+              "on_success": {
+                "damage_multiplier": 0.5
+              }
+            }
+          },
+          {
+            "roll": 4,
+            "name": "Healing",
+            "target": "creature_eating_fruit",
+            "healing": {
+              "dice": "5d8",
+              "average": 22
+            }
+          },
+          {
+            "roll": 5,
+            "name": "Swarming Insects",
+            "effect": {
+              "summon": "swarms_of_insects",
+              "count": "2d4"
+            },
+            "control_of_swarms": null,
+            "duration": null
+          },
+          {
+            "roll": 6,
+            "name": "Protection",
+            "target": "creature_eating_fruit",
+            "resistance_type_random_one_of": [
+              "acid",
+              "cold",
+              "fire",
+              "lightning",
+              "poison",
+              "thunder"
+            ],
+            "duration_hours": 8
+          },
+          {
+            "roll": 7,
+            "name": "Squirrel Transformation",
+            "target": "creature_eating_fruit",
+            "save": {
+              "ability": "CON",
+              "dc": 16,
+              "on_failure": {
+                "transform_into": "squirrel",
+                "duration_minutes": 10
+              },
+              "on_success": {
+                "transformation": false
+              }
+            }
+          },
+          {
+            "roll": 8,
+            "name": "Cleansing",
+            "target": "creature_eating_fruit",
+            "effect": "end_all_curses_and_diseases"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "choose_one_sequence": [
+          [
+            {
+              "attack": "Vine Whip",
+              "count": 3
+            }
+          ],
+          [
+            {
+              "attack": "Fruit Bomb",
+              "count": 2
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Vine Whip",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "flat": 4,
+              "average": 18,
+              "type": "bludgeoning"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Fruit Bomb",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_weapon",
+        "attack_bonus": 8,
+        "range_ft": {
+          "normal": 30,
+          "long": 120
+        },
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "choose_effect": [
+            {
+              "mode": "damage",
+              "damage": [
+                {
+                  "dice": "5d10",
+                  "flat": 4,
+                  "average": 31,
+                  "type": "choose_acid_cold_fire_lightning_poison_or_thunder"
+                }
+              ]
+            },
+            {
+              "mode": "instead_of_damage",
+              "effect": "trigger_Wondrous_Cornucopia",
+              "target_interaction": "treat_as_if_ate_fruit_when_applicable"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Frutos geram efeitos mágicos aleatórios, com escolha possível mediante gasto mágico ou vital."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 3",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/chaos-creeper/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 3",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:chaos-creeper",
+      "type": "KPOGL, transcrição independente (não endossada pela editora)",
+      "edition": "Tome of Beasts 3",
+      "scope": "Identidade, atributos, defesas, movimentos, características, ataques e regras condicionais",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14, homologação pendente"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confrontar integralmente edição impressa e erratas com fonte digital secundária.",
+    "Validar cálculos, áreas, duração e limites na engine antes de homologar."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-259.webp",
+    "format": "image/webp",
+    "width": 1000,
+    "height": 1243,
+    "bytes": 180606,
+    "sha256": "5ce4ae776be0fd28a587dc622796daf74918e83f452d3d01cf1b998081f50411",
+    "git_blob_sha": "d3092b10aadc64b95b3b90a29cf90b33c4679076",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chaos%20Creeper.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2f4a256a44b692c61f5090b0eea669ecc9dad948",
+    "identity_provenance": "Nome/id verificados contra manifesto E, com hash e readback anterior",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:chaos-creeper"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Lido statblock individual secundário KPOGL; não homologado editorialmente, sem impressão/errata ou engine."
+  }
+}

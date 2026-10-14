@@ -1,0 +1,280 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-413",
+  "nome": "Sinstar, Star Thrall",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 1,
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 (2022)",
+    "edicao": "D&D 5e — Star Thrall, distinto de Sinstar",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/star-thrall/"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "2",
+    "ca": 13,
+    "pv": 58,
+    "dados_vida": "9d8+18",
+    "porte": "Medium",
+    "tipo": "plant",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "forca": 17,
+      "destreza": 10,
+      "constituicao": 15,
+      "inteligencia": 3,
+      "sabedoria": 10,
+      "carisma": 1
+    },
+    "modificadores": {
+      "forca": 3,
+      "destreza": 0,
+      "constituicao": 2,
+      "inteligencia": -4,
+      "sabedoria": 0,
+      "carisma": -5
+    },
+    "deslocamentos": {
+      "andar_ft": 30
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "cego_alem_do_alcance": true
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [],
+    "resistencias": [
+      "cold",
+      "fire"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "bonus_proficiencia": 2,
+    "xp": 450
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Spiny Defense",
+        "tipo": "caracteristica_passiva",
+        "gatilho": "Criatura toca o star thrall ou acerta ataque corpo a corpo a até 5 pés",
+        "alcance_ft": 5,
+        "dano": {
+          "dados": "1d6",
+          "media": 3,
+          "tipo": "piercing"
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "efeito_falha": {
+          "condicao": "paralyzed",
+          "duracao": "até o fim do próximo turno do alvo"
+        },
+        "efeito_sucesso": "Sofre apenas o dano perfurante; sem paralisia",
+        "frequencia": "por evento de gatilho",
+        "verificado_na_fonte_individual": true
+      },
+      {
+        "nome": "Telepathic Bond",
+        "tipo": "caracteristica_passiva",
+        "gatilho": "Existir no mesmo plano que o sinstar criador",
+        "efeito": "Transmite magicamente o que sente e comunica-se telepaticamente com o sinstar",
+        "limite": "mesmo plano de existência",
+        "verificado_na_fonte_individual": true
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Slam",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvo": "uma criatura",
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "piercing"
+          }
+        ],
+        "recarga": null,
+        "verificado_na_fonte_individual": true
+      },
+      {
+        "nome": "Shoot Spines",
+        "tipo": "acao_area",
+        "recarga": "5–6 (d6 no início dos turnos subsequentes)",
+        "alcance_ft": 15,
+        "area": "todas as criaturas a até 15 pés",
+        "teste_resistencia": {
+          "atributo": "DEX",
+          "cd": 13
+        },
+        "efeito_falha": {
+          "dano": {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "piercing"
+          },
+          "condicao": "paralyzed",
+          "duracao": "até o fim do próximo turno do alvo"
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 3d6 piercing",
+          "sem_condicao": true
+        },
+        "verificado_na_fonte_individual": true
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvo": "uma criatura",
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "piercing"
+          }
+        ],
+        "recarga": null,
+        "verificado_na_fonte_individual": true
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_acoes_adicionais_confirmadas_na_fonte_individual": true
+  },
+  "pendencias": [
+    "Ficha mecânica integral extraída de uma transcrição individual identificada; revisão independente contra Tome of Beasts 3 pendente.",
+    "A imagem binária foi persistida com SHA idêntico, mas sem aprovação visual editorial da identidade.",
+    "Não confundir com Sinstar principal (ND17)."
+  ],
+  "campos_nao_confirmados": [
+    "Conferência mecânica independente com livro/errata de Tome of Beasts 3",
+    "Revisão visual da identidade da imagem vinculada"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/star-thrall/",
+      "tipo": "ficha individual com bloco integral, acessada nesta execução",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/star-thrall/",
+      "tipo": "republicação terceirizada (5eSRD)",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-413",
+    "nome": "Sinstar, Star Thrall",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "nd_catalogo": null,
+    "nd_fonte": "2",
+    "ca": 13,
+    "pv": 58,
+    "atributos": {
+      "forca": 17,
+      "destreza": 10,
+      "constituicao": 15,
+      "inteligencia": 3,
+      "sabedoria": 10,
+      "carisma": 1
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Planta vinculada telepaticamente ao sinstar; espinhos defensivos podem paralisar."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Pancada e rajada de espinhos (recarga 5–6)."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://www.5esrd.com/database/creature/star-thrall/",
+    "fonte_tipo": "republicação terceirizada (5eSRD)",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Não confundir com a criatura Sinstar principal, ND 17: a ficha do catálogo é Star Thrall.",
+      "Conferir contra exemplar editorial, edição/errata e direitos/licenças antes da promoção."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-413.webp",
+    "formato": "webp",
+    "blob_sha": "42919c24819e97df137f5587107b0c4087b5e262",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Star%20Thrall.webp",
+    "origem_repositorio": "TheGiddyLimit/homebrew",
+    "origem_caminho": "_img/ToB3/creature/Star Thrall.webp",
+    "binario_presente": true,
+    "integridade_binaria_confirmada": true,
+    "validacao_visual_editorial": "PENDENTE",
+    "largura": null,
+    "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true
+}

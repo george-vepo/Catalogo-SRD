@@ -1,0 +1,190 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-072",
+  "nome": "Clockwork Weaving Spider",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5ª edição",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 p.65",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:clockwork-weaving-spider",
+      "natureza": "wiki_secundaria_nao_endossada",
+      "consultada": "2026-10-14",
+      "alcance": "statblock individual completo, ações e passivas"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_publicacao",
+      "alcance": "não valida números nem edição"
+    }
+  ],
+  "estatisticas": {
+    "nd": "1",
+    "ca": 15,
+    "pv": 30,
+    "dados_vida": "12d4",
+    "atributos": {
+      "FOR": 10,
+      "DES": 16,
+      "CON": 10,
+      "INT": 9,
+      "SAB": 8,
+      "CAR": 8
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "escalar": 40
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Acrobatics": 5,
+      "Perception": 3
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "entende Common, não fala"
+    ],
+    "proficiencia": 2,
+    "tamanho": "Tiny"
+  },
+  "qualidade_estatisticas": "ESTRUTURADA_DE_FONTE_SECUNDARIA_SEM_VERIFICACAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Dispensa ar, comida, bebida e sono."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a efeitos que alterem sua forma, exceto quando a própria característica específica permitir."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem nas salvaguardas contra magias e efeitos mágicos."
+    },
+    {
+      "nome": "Unmaking",
+      "efeito": "Quando Trimming Blade supera CA do alvo por 5 ou mais, DES CD13 ou objeto não mágico de papel, tecido ou couro fica inutilizado até conserto (não afeta armaduras).",
+      "condicao_acerto": "resultado da jogada >= CA+5",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 13,
+        "falha": "objeto não mágico de papel/couro/tecido danificado",
+        "sucesso": "objeto preservado"
+      },
+      "exclusoes": [
+        "armadura",
+        "objeto mágico"
+      ]
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Trimming Blade",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "2d4",
+          "modificador": 3,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Poisoned Needle Shuttle",
+      "tipo": "ataque_a_distancia",
+      "bonus_acerto": 5,
+      "alcance_normal_ft": 30,
+      "alcance_max_ft": 30,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d8",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 13,
+            "falha": "paralyzed por até 1 minuto",
+            "sucesso": "não paralisado"
+          },
+          "condicao": "paralyzed",
+          "duracao": "até 1 minuto",
+          "nova_salvaguarda": "CON CD13 no fim de cada turno do alvo, encerra no sucesso"
+        }
+      ],
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "opcoes": [
+        [
+          "Trimming Blade",
+          "Trimming Blade"
+        ],
+        [
+          "Poisoned Needle Shuttle",
+          "Poisoned Needle Shuttle"
+        ]
+      ],
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Trimming Blade",
+      "categoria": "ataque",
+      "referencia_ataque": "Trimming Blade",
+      "confirmado_na_transcricao": true
+    },
+    {
+      "nome": "Poisoned Needle Shuttle",
+      "categoria": "ataque_distancia",
+      "referencia_ataque": "Poisoned Needle Shuttle",
+      "confirmado_na_transcricao": true
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "bloqueado": true,
+  "conflito_editorial": null,
+  "pendencias": [
+    "Conferir exemplar do editor e erratas; descrição comunitária não é homologação mecânica."
+  ],
+  "integrada": false
+}

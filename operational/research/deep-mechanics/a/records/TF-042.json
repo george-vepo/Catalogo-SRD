@@ -1,0 +1,257 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-042",
+  "name": "Akhlut",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "6",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2020,
+    "edition": "Tome of Beasts 2 (2020, D&D 5e)",
+    "experience_points": 2300,
+    "proficiency_bonus": 3,
+    "source_page": null
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 120,
+    "hit_dice": "16d10+32",
+    "ability_scores": {
+      "STR": 19,
+      "DEX": 15,
+      "CON": 15,
+      "INT": 4,
+      "WIS": 12,
+      "CHA": 10
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "swim_ft": 60
+    },
+    "senses": {
+      "blindsight_ft": 120,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4,
+      "Stealth": 5
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [
+      "cold"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 2,
+      "CON": 2,
+      "INT": -3,
+      "WIS": 1,
+      "CHA": 0
+    },
+    "armor_class_type": "natural_armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Echolocation",
+        "category": "passive",
+        "effect": {
+          "blindsight_disabled_while": "deafened"
+        }
+      },
+      {
+        "name": "Hold Breath",
+        "category": "passive",
+        "effect": {
+          "duration_minutes": 30
+        }
+      },
+      {
+        "name": "Keen Hearing and Smell",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "WIS (Perception)",
+          "when_based_on": [
+            "hearing",
+            "smell"
+          ]
+        }
+      },
+      {
+        "name": "Pack Tactics",
+        "category": "passive",
+        "effect": {
+          "advantage_on_attacks": true,
+          "if": {
+            "ally_within_target_ft": 5,
+            "ally_not_incapacitated": true
+          }
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Tail Slam",
+            "count": 1
+          }
+        ],
+        "restriction": "Bite and Tail Slam cannot target same creature"
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "flat": 4,
+              "type": "piercing",
+              "average": 18
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Tail Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d8",
+              "flat": 4,
+              "type": "bludgeoning",
+              "average": 22
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/akhlut/",
+      "type": "ficha_identificada_em_checkpoint_histórico",
+      "verification": "mecânica integral ainda não revalidada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:akhlut",
+      "type": "individual_ogl_transcription_unofficial",
+      "edition": "Tome of Beasts 2",
+      "reviewed_on": "2026-10-14",
+      "verified_fields": [
+        "statistics",
+        "traits",
+        "actions",
+        "bonus_actions",
+        "reactions",
+        "legendary_actions",
+        "lair_actions",
+        "regional_effects"
+      ],
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "publisher_index",
+      "verification": "identidade, publicação e CR"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-041_TF-046/research.json",
+    "sha": "16ed0118731d24ca8447a293e670c952a7f6ea8f"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Pendente direitos e imagem."
+  ],
+  "outstanding": [
+    "Confirmar regras contra impressão/errata editorial autorizada e revisão independente do motor de combate.",
+    "Verificação de arte visual/direitos permanece independente das mecânicas.",
+    "Imagem TF-042 foi persistida como binário Git verificado, mas verificação visual independente e autorização de direitos ainda pendentes."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_verified": false,
+    "engine_review": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_GIT_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-042.webp",
+    "format": "image/webp",
+    "width": 640,
+    "height": 516,
+    "bytes": 216744,
+    "sha256": "c1bc393681f6d7655bc01403e946948af5a9ad335bfbaa7119b52e7d16831583",
+    "git_blob_sha": "e641b3b71d29c42476c7fff7c1e691d3101c603f",
+    "source_url": "https://raw.githubusercontent.com/chaidgpt/TheBardicLexicon/main/images/akhlut.webp",
+    "source_type": "reuse_from_verified_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_manifest": "operational/assets/creature-images/manifests/d.json",
+    "source_commit": "49b7f2e184838a934a243594f61ad581b08010fe",
+    "source_name_note": null,
+    "integrity": {
+      "source_manifest_sha256_readback": true,
+      "source_manifest_git_blob_readback": true,
+      "tree_blob_sha_reused": true
+    },
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "confirmação de licença e direitos",
+      "aprovação editorial de produção"
+    ]
+  }
+}

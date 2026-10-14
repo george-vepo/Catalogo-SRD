@@ -1,0 +1,344 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-166",
+  "nome": "Ooze, Mineral",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 44,
+  "estado_auditoria": "BLOQUEADA_MULTIATTACK_REFERENCIA_SLAM_SEM_DEFINICAO",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": "3",
+    "nd_fonte": "3",
+    "ca": 9,
+    "pv": 76,
+    "dados_vida": "8d10+32",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 14,
+      "DES": 8,
+      "CON": 18,
+      "INT": 1,
+      "SAB": 5,
+      "CAR": 3
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": -1,
+      "CON": 4,
+      "INT": -5,
+      "SAB": -3,
+      "CAR": -4
+    },
+    "deslocamentos": {
+      "andar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 7,
+    "idiomas": [],
+    "resistencias": [
+      "acid",
+      "cold",
+      "fire"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 700,
+    "bonus_proficiencia": 2
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "efeito": "atravessa abertura 1 inch sem squeeze"
+      },
+      {
+        "nome": "False Appearance",
+        "precondicao": "imóvel",
+        "efeito": "igual poça oleosa ou pedra molhada"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Mineralize",
+        "economia": "bonus action",
+        "precondicao": "vítima encased",
+        "efeitos": [
+          "walking speed 5ft",
+          "resistência bludgeoning/piercing/slashing"
+        ],
+        "termina": [
+          "vítima encased morre",
+          "ooze usa outra bonus action para encerrar"
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "quantidade": 2,
+        "acao_impressa": "slam",
+        "ataque_definido": "Pseudopod",
+        "ambiguidade_editorial": true,
+        "gatilho": "ambos attacks acertam mesmo alvo Medium ou menor",
+        "apos_hit": {
+          "condicao": "grappled escape DC12",
+          "efeito": "usa Encase nesse alvo"
+        }
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ]
+      },
+      {
+        "nome": "Encase",
+        "precondicao": "alvo Medium ou menor já grappled",
+        "efeitos": [
+          "blinded",
+          "restrained",
+          "unable to breathe",
+          "movimentação com ooze"
+        ],
+        "limite": "um alvo encased por vez",
+        "gatilho_dano": "início de cada turno da ooze",
+        "teste": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "acid"
+          }
+        },
+        "escapar": {
+          "economia": "action",
+          "teste": "STR DC12",
+          "desvantagem": "se ooze mineralized",
+          "sucesso": "sai espaço adjacente até 5ft"
+        },
+        "resgate": {
+          "economia": "action de outra criatura a até 5ft",
+          "teste": "STR DC12",
+          "desvantagem": "se ooze mineralized",
+          "custo": {
+            "dano": {
+              "dados": "2d6",
+              "media": 7,
+              "tipo": "acid"
+            }
+          }
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+2",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 2,
+      "acao_impressa": "slam",
+      "ataque_definido": "Pseudopod",
+      "ambiguidade_editorial": true,
+      "gatilho": "ambos attacks acertam mesmo alvo Medium ou menor",
+      "apos_hit": {
+        "condicao": "grappled escape DC12",
+        "efeito": "usa Encase nesse alvo"
+      }
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Mineralize",
+        "condicao": "tem criatura encased",
+        "efeito": "endurece, walking speed 5ft, resistência física B/P/S até desativar ou vítima morrer"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "BLOQUEIO: fonte diz 'two slam attacks', mas só publica definição de 'Pseudopod'; duas ações não são automaticamente equivalentes sem errata.",
+    "Encase tem CD14 para acid e CD12 para escape, assistência causa 2d6 acid e mineralized dificulta testes.",
+    "Arte física sem aprovação e publicação original ToB2 pendente."
+  ],
+  "campos_nao_confirmados": [
+    "conferir livro/errata",
+    "imagem legal e visual pendentes",
+    "identidade Slam versus Pseudopod"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-mineral/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-mineral/",
+      "tipo": "ficha individual revisada no checkpoint 39",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_MULTIATTACK_NOME_DIVERGENTE",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-166",
+    "nome": "Ooze, Mineral",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "3",
+    "nd_fonte": "3",
+    "ca": 9,
+    "pv": 76,
+    "pv_dados": "8d10+32",
+    "porte": "Large",
+    "tipo": "ooze",
+    "atributos": [
+      14,
+      8,
+      18,
+      1,
+      5,
+      3
+    ],
+    "deslocamento_ft": {
+      "andar": 20
+    },
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire"
+    ],
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "resumo": "Atravessa aberturas de 1 polegada."
+      },
+      {
+        "nome": "False Appearance",
+        "resumo": "Quando imóvel parece poça oleosa ou pedra molhada."
+      },
+      {
+        "nome": "Mineralize",
+        "resumo": "Após encapsular alvo, como ação bônus enrijece, reduz deslocamento a 5 pés e recebe resistência física até liberar o alvo ou desfazer por ação bônus."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "A fonte descreve dois ataques slam, embora só nomeie Pseudopod individual; dois acertos em alvo Medium ou menor acionam Encase."
+      },
+      {
+        "nome": "Pseudopod",
+        "resumo": "+4, 5 pés, 1d8+2 contundente e 1d6 ácido."
+      },
+      {
+        "nome": "Encase",
+        "resumo": "Envolve alvo agarrado Medium ou menor, cegando, restringindo e impedindo respiração; Constituição CD14 contra 2d6 ácido por turno; liberação com Força CD12, desvantagem se mineralizado."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-mineral/",
+    "estado": "PARCIAL_MULTIATTACK_NOME_DIVERGENTE",
+    "pendencias": [
+      "Multiattack cita Slam mas única opção de ataque impressa na página é Pseudopod; confirmar nome na publicação.",
+      "Revisão/licenciamento de imagem pendentes."
+    ],
+    "editora": "Kobold Press / Open Design",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-166.webp",
+    "formato": "webp",
+    "largura": 1280,
+    "altura": 1013,
+    "bytes": 252480,
+    "blob_sha": "96557c2cf0b838bc68f1c6cd439edaa3e144113d",
+    "sha256": "cb76cd43d6faf5aa7dd5fe38eb4f2a1caa7da3cff316613a2162cdc9e16d641d",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Mineral%20Ooze.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 39,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-mineral/",
+    "publicacao": "Tome of Beasts 2",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

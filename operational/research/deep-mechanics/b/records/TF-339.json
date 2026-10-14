@@ -1,0 +1,235 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-339",
+  "nome": "Malphas",
+  "estado": "ACOES_INDIVIDUALIZADAS_PENDENTE_VALIDACAO_EDITORIAL",
+  "edicao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "versao_mecanica": "bloco completo transcrito em KPOGL; publicação/revisão editorial ainda não confrontada"
+  },
+  "fontes": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:malphas",
+      "natureza": "fonte_secundaria_comunitaria_nao_endossada",
+      "consultada_em": "2026-10-14",
+      "escopo": "bloco individual com características e ações"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_não_usado_como_validação_de_valores"
+    }
+  ],
+  "estatisticas": {
+    "nd": "6",
+    "bonus_proficiencia": 3,
+    "ca": 16,
+    "origem_ca": "studded leather",
+    "pv": 135,
+    "dados_vida": "18d8+54",
+    "atributos": {
+      "FOR": 19,
+      "DES": 19,
+      "CON": 16,
+      "INT": 14,
+      "SAB": 13,
+      "CAR": 18
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 4,
+      "CON": 3,
+      "INT": 2,
+      "SAB": 1,
+      "CAR": 4
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "voar": 30,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {
+      "DES": 7,
+      "CON": 6,
+      "SAB": 4
+    },
+    "pericias": {
+      "Perception": 4
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common",
+      "Ravenfolk",
+      "Sylvan"
+    ],
+    "telepatia_ft": null
+  },
+  "qualidade_estatisticas": "BLOCO_CONFERIDO_NA_FONTE_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Shadow-Infused Weapons",
+      "efeito": "ataques com armas são mágicos; golpes com arma adicionam 3d6 necrotic, já incluídos no ataque Longsword",
+      "dano_adicional": {
+        "dados": "3d6",
+        "tipo": "necrotic"
+      },
+      "observacao": "Shadow Bolt é spell attack e possui seu próprio dano definido; não adicionar 3d6 duas vezes"
+    },
+    {
+      "nome": "Sunlight Sensitivity",
+      "gatilho": "estar à luz do sol",
+      "efeito": "desvantagem em ataques e SAB (Perception) baseado em visão"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Longsword",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 4,
+          "tipo": "slashing",
+          "condicao": "uma mão"
+        },
+        {
+          "dados": "3d6",
+          "modificador": 0,
+          "tipo": "necrotic",
+          "adicional": true
+        }
+      ],
+      "alternativa_dano_duas_maos": {
+        "dados": "1d10",
+        "modificador": 4,
+        "tipo": "slashing"
+      }
+    },
+    {
+      "nome": "Shadow Bolt",
+      "tipo": "magico_a_distancia",
+      "bonus_acerto": 7,
+      "alcance_normal_ft": 60,
+      "alcance_maximo_ft": 60,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "3d6",
+          "modificador": 4,
+          "tipo": "necrotic"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        [
+          "Longsword",
+          "Longsword"
+        ],
+        [
+          "Shadow Bolt",
+          "Shadow Bolt",
+          "Shadow Bolt"
+        ]
+      ],
+      "efeito_condicional": {
+        "gatilho": "dois Longsword acertam mesma criatura",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "falha": "blinded até fim do próximo turno do alvo",
+        "sucesso": "não fica blinded",
+        "excecao": "alvos que enxergam através de escuridão mágica têm vantagem nesta salvaguarda"
+      }
+    },
+    {
+      "nome": "Longsword",
+      "categoria": "ataque",
+      "referencia_ataque": "Longsword"
+    },
+    {
+      "nome": "Shadow Bolt",
+      "categoria": "ataque",
+      "referencia_ataque": "Shadow Bolt"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [
+    {
+      "nome": "Shadow Call",
+      "gatilho": "Malphas é atingido por ataque a distância",
+      "custo": "reação",
+      "referencia_ataque": "Shadow Bolt",
+      "alvo": "atacante que o atingiu",
+      "efeito": "faz um Shadow Bolt contra atacante",
+      "excecao": "não sofre desvantagem apenas por haver hostil a até 5 pés; demais causas de desvantagem permanecem"
+    }
+  ],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "campos_em_conflito": [],
+  "bloqueado": true,
+  "pendencias": [
+    "Cotejo independente com exemplar editorial exato e erratas ainda não executado.",
+    "Manter status não canônico até verificação de ataques, ações, estatísticas e ausência de habilidades adicionais."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-339",
+    "nome_original": "Malphas (Storm Crow)",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "tipo": "fey",
+    "tamanho": "Medium",
+    "alinhamento": "neutral evil",
+    "nd": "6",
+    "bonus_proficiencia": 3
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "alternativas": [
+        [
+          "Longsword",
+          "Longsword"
+        ],
+        [
+          "Shadow Bolt",
+          "Shadow Bolt",
+          "Shadow Bolt"
+        ]
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Sombra nos olhos",
+      "efeito": "cegueira condicional quando dois Longsword atingem mesmo alvo"
+    }
+  ]
+}

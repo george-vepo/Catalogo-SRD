@@ -1,0 +1,155 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-115",
+  "nome": "Vile Barber",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
+  "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023)",
+    "edicao_exata_verificada": false
+  },
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/vile-barber-siabhra-3pp/",
+      "natureza": "reproducao_secundaria_5esrd",
+      "edicao": "Tome of Beasts 1 (2023)",
+      "consultado_em": "2026-10-14"
+    }
+  ],
+  "estatisticas": {
+    "nd": "2",
+    "ca": 14,
+    "pv": 35,
+    "dados_vida": "10d6",
+    "atributos": {
+      "FOR": 12,
+      "DES": 18,
+      "CON": 10,
+      "INT": 10,
+      "SAB": 8,
+      "CAR": 10
+    },
+    "deslocamentos_ft": {
+      "andar": 30
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Acrobatics": 3,
+      "Stealth": 6
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [
+      "Common",
+      "Goblin",
+      "Sylvan",
+      "Umbral"
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing de ataques não mágicos que não usam armas de ferro frio"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "frightened"
+    ],
+    "proficiencia": 2
+  },
+  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Blood Frenzy",
+      "gatilho": "alvo abaixo do PV máximo",
+      "efeito": "vantagem nos ataques corpo a corpo contra esse alvo"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Straight Razor",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "alternativa": "em vez de dano, rouba objeto portado de até 10 libras; não pode ser arma nem estar fixo ao alvo"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Straight Razor",
+        "Straight Razor"
+      ],
+      "gatilho": "ambos acertam mesmo alvo",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 14
+      },
+      "falha": {
+        "perda_pv_no_inicio_turno": {
+          "dados": "1d6",
+          "tipo": "perda direta de PV"
+        },
+        "duracao": "até sucesso em DES CD14 no fim do turno, Medicine CD12 como ação ou cura mágica"
+      }
+    },
+    {
+      "nome": "Straight Razor",
+      "referencia_ataque": "Straight Razor"
+    },
+    {
+      "nome": "Frightening Cut",
+      "recarga": "5–6",
+      "precondicao": "criatura visível a até 5 pés",
+      "ataque": "Straight Razor",
+      "acerto": {
+        "dano_extra": {
+          "dados": "2d6",
+          "tipo": "necrotic"
+        },
+        "area_medos_ft": 15,
+        "alvo": "criaturas que testemunham",
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 14
+        },
+        "falha": "frightened por 1 minuto",
+        "repetir": "fim de cada turno"
+      }
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Hidden Step",
+      "custo": "ação bônus",
+      "alcance_ft": 30,
+      "efeito": "teleporta-se magicamente com equipamento para espaço vazio visível e realiza Hide"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": true,
+  "pendencias": [
+    "Ainda sem confronto independente com livro e errata do editor.",
+    "Não promover canonicamente antes de revisão e testes."
+  ],
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Vile Barber",
+    "tipo": "Small fey",
+    "alinhamento": "chaotic evil"
+  }
+}

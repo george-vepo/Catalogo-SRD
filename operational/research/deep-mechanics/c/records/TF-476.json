@@ -1,0 +1,555 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-476",
+  "nome": "Greater Sphinx",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 23,
+  "estado_auditoria": "BLOQUEADA_SECAO_ACOES_LENDARIAS_AUSENTE_EM_FONTE",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/1797"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "17",
+    "xp": null,
+    "bonus_proficiencia": 4,
+    "ca": 20,
+    "composicao_ca": "natural armor",
+    "pv": 220,
+    "dados_vida": "21d12+84",
+    "bloodied": 110,
+    "porte": "Huge",
+    "tipo": "Monstrosity",
+    "atributos": {
+      "forca": 22,
+      "destreza": 14,
+      "constituicao": 18,
+      "inteligencia": 18,
+      "sabedoria": 22,
+      "carisma": 20
+    },
+    "modificadores": {
+      "forca": 6,
+      "destreza": 2,
+      "constituicao": 4,
+      "inteligencia": 4,
+      "sabedoria": 6,
+      "carisma": 5
+    },
+    "deslocamentos": {
+      "andar_ft": 40,
+      "voo_ft": 60
+    },
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 6
+      },
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "INT",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 10
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 8
+      },
+      {
+        "nome": "History",
+        "bonus": 8,
+        "extra_dado": "1d6"
+      },
+      {
+        "nome": "Perception",
+        "bonus": 10
+      },
+      {
+        "nome": "Religion",
+        "bonus": 8
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "truesight",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 20,
+    "idiomas": [
+      "Celestial",
+      "Common",
+      "telepathy 120 ft"
+    ],
+    "vulnerabilidades": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "psychic",
+      "damage from nonmagical weapons"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "paralyzed",
+      "stunned"
+    ],
+    "maneuver_dc": 18,
+    "motivo_xp_null": "não impresso na ficha A5E",
+    "alinhamento": null,
+    "motivo_alinhamento_null": "não declarado na ficha"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Inscrutable",
+        "tipo": "passivo",
+        "imunidades": [
+          "efeitos de divination",
+          "detecção de emoção",
+          "leitura de pensamento"
+        ],
+        "efeito": "desvantagem em Insight checks para discernir intenções da sphinx"
+      },
+      {
+        "nome": "Legendary Resistance",
+        "tipo": "recurso",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "gatilho": "falha em saving throw",
+        "efeito": "pode converter falha em sucesso",
+        "custo": "a joia usada pela sphinx se estilhaça",
+        "recuperacao": "recria joia após long rest"
+      },
+      {
+        "nome": "Innate Spellcasting",
+        "tipo": "conjuracao inata",
+        "atributo": "WIS",
+        "cd_magias": 18,
+        "componentes_materiais": "nenhum",
+        "listas": {
+          "at_will": [
+            "detect evil and good",
+            "detect magic",
+            "minor illusion",
+            "spare the dying"
+          ],
+          "3_per_day_each": [
+            "dispel magic",
+            "identify",
+            "lesser restoration",
+            "remove curse",
+            "scrying",
+            "tongues",
+            "zone of truth"
+          ],
+          "1_per_day_each": [
+            "contact other plane",
+            "flame strike",
+            "freedom of movement",
+            "greater restoration",
+            "legend lore",
+            "heroes' feast"
+          ]
+        }
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "ação sequencial",
+        "sequencia_base": [
+          {
+            "acao": "Claw",
+            "quantidade": 2
+          }
+        ],
+        "variacao_condicional": {
+          "pre_condicao": "Speed Time ativa",
+          "sequencia": [
+            {
+              "acao": "Claw",
+              "quantidade": 3
+            }
+          ]
+        }
+      },
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d10+6",
+            "media": 17,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Dispel Magic",
+        "tipo": "conjuracao_por_acao",
+        "nivel_magia": 3,
+        "componentes": [
+          "V",
+          "S"
+        ],
+        "alcance_ft": 120,
+        "alvo": "criatura, objeto ou efeito mágico visto",
+        "encerra_magias_ate_nivel": 3,
+        "magias_maior_nivel": {
+          "teste_abilidade": "WIS",
+          "formula_cd": "10 + nível do espaço da magia",
+          "regra": "um teste por magia"
+        },
+        "disponibilidade": "3/day each, compartilhando usos com lista inata"
+      },
+      {
+        "nome": "Flame Strike",
+        "tipo": "conjuracao_por_acao",
+        "nivel_magia": 5,
+        "componentes": [
+          "V",
+          "S"
+        ],
+        "alcance_ft": 60,
+        "area": {
+          "forma": "cilindro",
+          "raio_ft": 10,
+          "altura_ft": 40
+        },
+        "teste_resistencia": {
+          "atributo": "DEX",
+          "cd": 18
+        },
+        "efeito_falha": {
+          "dano": [
+            {
+              "dados": "4d6",
+              "media": 14,
+              "tipo": "fire"
+            },
+            {
+              "dados": "4d6",
+              "media": 14,
+              "tipo": "radiant"
+            }
+          ]
+        },
+        "efeito_sucesso": {
+          "dano": "metade de ambos os componentes"
+        },
+        "disponibilidade": "1/day, listado em Innate Spellcasting"
+      },
+      {
+        "nome": "Roar",
+        "tipo": "ação de efeito progressivo",
+        "usos": {
+          "quantidade": 3,
+          "periodo": "dia",
+          "ordem": "primeiro, segundo e terceiro uso antes de descanso longo"
+        },
+        "alvos": "todas criaturas a até 300 ft capazes de ouvir",
+        "alcance_ft": 300,
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 18
+        },
+        "estagios": [
+          {
+            "ordem": 1,
+            "efeito_falha": {
+              "condicao": "frightened",
+              "duracao": "1 minuto",
+              "repetir_teste": "fim de cada turno, sucesso encerra"
+            },
+            "efeito_sucesso": "sem efeito informado"
+          },
+          {
+            "ordem": 2,
+            "efeito_falha": {
+              "dano": [
+                {
+                  "dados": "4d10",
+                  "media": 22,
+                  "tipo": "thunder"
+                }
+              ],
+              "condicoes": [
+                "frightened",
+                "paralyzed enquanto frightened"
+              ],
+              "duracao": "1 minuto",
+              "repetir_teste": "fim de turno, sucesso encerra"
+            },
+            "efeito_sucesso": {
+              "dano": "metade de 4d10 thunder"
+            }
+          },
+          {
+            "ordem": 3,
+            "efeito_falha": {
+              "dano": [
+                {
+                  "dados": "8d10",
+                  "media": 44,
+                  "tipo": "thunder"
+                }
+              ],
+              "condicao": "prone"
+            },
+            "efeito_sucesso": {
+              "dano": "metade de 8d10 thunder"
+            }
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d10+6",
+            "media": 17,
+            "tipo": "slashing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "base": [
+        {
+          "acao": "Claw",
+          "quantidade": 2
+        }
+      ],
+      "com_Speed_Time": [
+        {
+          "acao": "Claw",
+          "quantidade": 3
+        }
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Speed Time",
+        "tipo": "bonus_action",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "pre_condicao": "bloodied (PV <=110)",
+        "duracao": "1 minuto",
+        "efeitos": [
+          "dobrar deslocamento terrestre de 40 para 80 ft",
+          "dobrar voo de 60 para 120 ft",
+          "opportunity attacks contra sphinx em desvantagem",
+          "Multiattack usa 3 Claw em vez de 2"
+        ]
+      },
+      {
+        "nome": "Planar Jaunt",
+        "tipo": "bonus_action",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "alvos": "até 8 criaturas dispostas e visíveis",
+        "alcance_ft": 300,
+        "efeito": "transporta para local, plano, demiplano ou tempo",
+        "duracao": "24h ou encerramento antecipado pela sphinx com outra bonus action",
+        "encerramento": "criaturas retornam à localização original com itens adquiridos",
+        "comunicacao": "telepática enquanto dura",
+        "destinos": [
+          {
+            "tipo": "outro local/plano",
+            "opcoes": [
+              "qualquer lugar do Material Plane",
+              "outro plano"
+            ]
+          },
+          {
+            "tipo": "demiplano",
+            "tamanho_maximo": "1 square mile",
+            "conteudo": "terreno, objetos não mágicos e efeitos mágicos escolhidos pela sphinx",
+            "criaturas_perigos_CR_total_max": 17
+          },
+          {
+            "tipo": "tempo",
+            "intervalo_anos": {
+              "min": -1000,
+              "max": 1000
+            },
+            "lugar": "Material Plane",
+            "alteracao_historica": "a critério do Narrador"
+          }
+        ],
+        "inconsistencia_com_texto_narrativo": "Seção Combat sugere uso para banir foes, apesar de exigir willing targets. Requer conferência editorial."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": null,
+    "acoes_lendarias_pendentes": {
+      "tag_legends": true,
+      "bloco_regras_presente": false,
+      "nomes_apenas_em_texto_de_combate": [
+        "Claw",
+        "Teleport",
+        "Slow Time"
+      ],
+      "custo_e_quantidade": null,
+      "causa": "a fonte oficial não apresenta seção Legendary Actions, embora a narrativa mencione opções",
+      "nao_gerar_acoes_por_inferencia": true
+    },
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [
+      {
+        "atributo": "WIS",
+        "cd_magia": 18,
+        "sem_componentes_materiais": true,
+        "at_will": [
+          "detect evil and good",
+          "detect magic",
+          "minor illusion",
+          "spare the dying"
+        ],
+        "three_per_day_each": [
+          "dispel magic",
+          "identify",
+          "lesser restoration",
+          "remove curse",
+          "scrying",
+          "tongues",
+          "zone of truth"
+        ],
+        "one_per_day_each": [
+          "contact other plane",
+          "flame strike",
+          "freedom of movement",
+          "greater restoration",
+          "legend lore",
+          "heroes' feast"
+        ]
+      }
+    ],
+    "custos_lendarios": null,
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES_SPEED_TIME_PLANAR_JAUNT",
+      "reacoes": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_lendarias": "DESCONHECIDO_REFERENCIADO_SEM_BLOCO",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "conjuracao": "PRESENTES_MAGIAS_INATAS"
+    }
+  },
+  "pendencias": [
+    "Fonte oficial apresenta a tag Legendary e em Combat cita Claw, Teleport e Slow Time como legendary actions, mas nenhum bloco Legendary Actions ou custos/limites aparece na ficha; não inventar quantidades nem mecânica.",
+    "Planar Jaunt exige alvos dispostos, enquanto Combat recomenda usar para banir inimigos; preservar conflito sem trocar precondição.",
+    "Greater Sphinx é CR 17, não Sphinx CR 11; lista inata e Roar três fases detalhadas.",
+    "Imagem binária desta variante ainda não existe."
+  ],
+  "campos_nao_confirmados": [
+    "quantidade, custos, descrição e recarga das ações lendárias não publicadas no bloco oficial",
+    "contradição willing targets x banir foes em Planar Jaunt",
+    "arquivo de imagem real",
+    "revisão editorial Monstrous Menagerie"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1797",
+      "tipo": "bloco individual da ferramenta oficial EN Publishing A5E, verificado 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "sistema": "Level Up Advanced 5E"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico apenas para comparação",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-476",
+    "nome": "Greater Sphinx",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "17",
+    "ca": 20,
+    "pv": 220,
+    "atributos": {
+      "forca": 22,
+      "destreza": 14,
+      "constituicao": 18,
+      "inteligencia": 18,
+      "sabedoria": 22,
+      "carisma": 20
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Esfinge superior com resistência lendária vinculada a joia, magias e manipulação temporal."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Rugidos/efeitos crescentes, ações lendárias e Planar Jaunt."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/1797",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Não confundir com esfinge comum CR 11; diferenciar regras de covil opcionais.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_individual": "https://a5e.tools/node/1797",
+    "publicacao": "Monstrous Menagerie",
+    "revisao_livro_errata": "PENDENTE",
+    "status_completo": "NAO"
+  }
+}

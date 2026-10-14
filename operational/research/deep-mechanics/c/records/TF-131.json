@@ -1,0 +1,438 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-131",
+  "nome": "Ogre, Rainforest",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 11,
+  "estado_auditoria": "PARCIAL_BLOCO_INDIVIDUAL_ESTRUTURADO_PENDENTE_CONFRONTO_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": null,
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ogre-rainforest/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 12,
+    "pv": 90,
+    "dados_vida": "12d10+24",
+    "porte": "Large",
+    "tipo": "giant (shapechanger)",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "FOR": 19,
+      "DES": 12,
+      "CON": 14,
+      "INT": 7,
+      "SAB": 10,
+      "CAR": 7
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 1,
+      "CON": 2,
+      "INT": -2,
+      "SAB": 0,
+      "CAR": -2
+    },
+    "deslocamentos": {
+      "andar_ft": 40
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 2
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Common",
+      "Sylvan"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Devouring Charge",
+        "pre_condicoes": [
+          "forma boar",
+          "move pelo menos 20 ft em linha reta na direção do alvo",
+          "acerta Tusk neste turno"
+        ],
+        "teste": {
+          "atributo": "STR",
+          "cd": 14
+        },
+        "falha": {
+          "condicao": "prone"
+        },
+        "interacao": "se alvo prone, pode executar Bite como ação bônus"
+      },
+      {
+        "nome": "Fey Ancestry",
+        "efeitos": [
+          "vantagem em salvaguardas contra charmed",
+          "magia não pode colocá-lo em sleep"
+        ]
+      },
+      {
+        "nome": "Speak with Beasts",
+        "efeito": "comunica-se com Beasts como se compartilhasse idioma"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "variantes": [
+          {
+            "forma": "ogre",
+            "sequencia": [
+              {
+                "acao": "Spear",
+                "quantidade": 2
+              },
+              {
+                "acao": "Bite",
+                "quantidade": 1
+              }
+            ]
+          },
+          {
+            "forma": "boar",
+            "sequencia": [
+              {
+                "acao": "Tusk",
+                "quantidade": 2
+              },
+              {
+                "acao": "Bite",
+                "quantidade": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d10+4",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "pv_temporarios": {
+            "dados": "2d4",
+            "media": 5
+          }
+        }
+      },
+      {
+        "nome": "Spear",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 10,
+        "distancia_ft": {
+          "normal": 20,
+          "maximo": 60
+        },
+        "alvos": 1,
+        "disponivel_somente": "ogre form",
+        "dano_uma_mao": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_melee_duas_maos": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Tusk",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ],
+        "disponivel_somente": "boar form"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d10+4",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "pv_temporarios": {
+            "dados": "2d4",
+            "media": 5
+          }
+        }
+      },
+      {
+        "nome": "Spear",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 10,
+        "distancia_ft": {
+          "normal": 20,
+          "maximo": 60
+        },
+        "alvos": 1,
+        "disponivel_somente": "ogre form",
+        "dano_uma_mao": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_melee_duas_maos": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Tusk",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ],
+        "disponivel_somente": "boar form"
+      }
+    ],
+    "multiataque": {
+      "formas": [
+        {
+          "forma": "ogre",
+          "ataques": [
+            "Spear",
+            "Spear",
+            "Bite"
+          ]
+        },
+        {
+          "forma": "boar",
+          "ataques": [
+            "Tusk",
+            "Tusk",
+            "Bite"
+          ]
+        }
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Change Shape",
+        "pre_condicao": "forma ogre ou boar",
+        "efeito": "alterna entre forma de ogre e Large boar; mantém atributos",
+        "equipamento": "não se transforma",
+        "reversao": "morte retorna ogre"
+      },
+      {
+        "nome": "Devouring Charge Bonus Bite",
+        "pre_condicoes": [
+          "boar form",
+          "após carga e alvo prone"
+        ],
+        "efeito": "um ataque Bite no alvo prone"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTE",
+      "reacoes": "AUSENCIA_CONFERIDA",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA",
+      "acoes_covil": "AUSENCIA_CONFERIDA",
+      "acoes_miticas": "AUSENCIA_CONFERIDA",
+      "conjuracao": "AUSENCIA_CONFERIDA"
+    }
+  },
+  "pendencias": [
+    "Todas as seções mecânicas listadas pela fonte individual foram estruturadas; pendente confrontar edição original/errata com a republicação 5eSRD.",
+    "Arquivo físico de imagem já existe, mas a identidade visual ainda não foi aprovada."
+  ],
+  "campos_nao_confirmados": [
+    "confronto independente com o livro original/erratas antes de aprovação mecânica total",
+    "aprovação visual editorial da imagem já armazenada"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ogre-rainforest/",
+      "tipo": "bloco mecânico individual republicado por 5eSRD com referência bibliográfica ao livro e edição",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint anterior para comparação",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-131",
+    "nome": "Ogre, Rainforest",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 12,
+    "pv": 90,
+    "pv_dados": "12d10+24",
+    "porte": "Large",
+    "tipo": "giant (shapechanger)",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      19,
+      12,
+      14,
+      7,
+      10,
+      7
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [
+      {
+        "nome": "Devouring Charge",
+        "resumo": "Na forma de javali, investir 20 pés mais ataque Tusk permite derrubar com FOR CD14 e morder como bônus."
+      },
+      {
+        "nome": "Fey Ancestry",
+        "resumo": "Vantagem contra encanto e imunidade a sono mágico."
+      },
+      {
+        "nome": "Speak with Beasts",
+        "resumo": "Consegue se comunicar com feras."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Dois Spear ou Tusk e uma Bite conforme a forma."
+      },
+      {
+        "nome": "Bite",
+        "resumo": "+6, 1d10+4 perfurante e obtém 2d4 PV temporários."
+      },
+      {
+        "nome": "Spear",
+        "resumo": "+6, até 10 pés ou 20/60; dano depende de uma ou duas mãos."
+      },
+      {
+        "nome": "Tusk",
+        "resumo": "+6, 2d6+4 perfurante na forma de javali."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ogre-rainforest/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Change Shape não transforma equipamento; spear somente na forma ogre.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "chaotic evil",
+    "acoes_bonus": [
+      {
+        "nome": "Change Shape",
+        "resumo": "Transforma-se em javali Large ou volta a ogro"
+      }
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-131.webp",
+    "formato": "webp",
+    "largura": 1081,
+    "altura": 1200,
+    "bytes": 201916,
+    "blob_sha": "dc139223d1a6f8aede62af5ee874871ec193110d",
+    "sha256": "7af8723efec264ce172306b95043c98d61d3793950f649ce929517dc3a2f880e",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Rainforest%20Ogre.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "D&D 5e",
+    "livro": "Tome of Beasts 3",
+    "fonte_individual_republicada": "https://www.5esrd.com/database/creature/ogre-rainforest/",
+    "bloco_integral_estruturado": true,
+    "confronto_com_livro_editorial_errata": "PENDENTE"
+  }
+}
