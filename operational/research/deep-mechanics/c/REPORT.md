@@ -2,7 +2,7 @@
 
 ## Checkpoint 37 — Hraesvelgr, Mountain Giant e três oozes (14/10/2026)
 
-**[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c8da3de31c1c8845d6d88b5bb8a06a697eff3e53).**
+**[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c8da3de31c1c8845d6d88b5bb8a06a697eff3e53).** Read-back completo das cinco fichas: 131 IDs, 79 aprofundadas, 95 parciais e 36 bloqueadas. Revalidação física de 96 blobs realizada no CP33; sem imagens novas.
 
 - TF-156 Hraesvelgr: regras da revisão Tome of Beasts 1 (2023) com Giant/Roc, equipamentos sem transformação, Swallow/escape, três opções de ações lendárias, covil e efeitos regionais. Fonte https://www.5esrd.com/database/creature/giant-corpse-swallower-3pp/.
 - TF-157 Mountain Giant: reparado parsing que misturava Mountain Master e efeitos regionais; incluídas ações, três ações lendárias por turno, Roar/Grasping Soil/Spawn Elemental, covil/região. **Permanece bloqueado** porque outro compêndio indica quatro ações lendárias em contradição com Creature Codex p185–186. Fontes https://www.5esrd.com/database/creature/Giant-Mountain/, https://fliphtml5.com/qfukk/crsz/5e_Creature_Codex/.
