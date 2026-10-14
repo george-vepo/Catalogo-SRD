@@ -1,3 +1,11 @@
+## Checkpoint 14/10/2026 — 101/132 arquivos binários reais verificados
+
+A partir desta continuação, **101 imagens** estão fisicamente no diretório B, com **31 ainda faltantes**. Importada a ilustração [TF-338 Somberweave](TF-338.webp) do lote F, por cópia do objeto Git binário real SHA `7345296a5c5f285194a5072edbe99486e5ca9608`, WebP 63.466 bytes, dimensões 850×758 e SHA-256 no manifesto `c285a415677fcd7bfccaebbb6f2cc1776cc7f993f90f0b02ce4f846916fc32fc`. Foi conferido o readback do objeto Git e a assinatura WebP. A fonte gráfica está identificada em *Book of Ebon Tides* como Somberweave; a adequação à edição de *Tome of Beasts 2* ainda exige homologação de identidade da imagem. Não foi usada URL como substituto do arquivo, e os demais 31 IDs permanecem pendentes.
+
+[Manifesto com origem e hashes](manifest.json) · [Manifesto de fichas](../records/manifest.json) · [PR #6](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/6). Relatos anteriores abaixo são checkpoints históricos.
+
+---
+
 ## Atualização 14/10/2026 — 100/132 binários reais no grupo B
 
 **Cinco novas imagens foram gravadas e verificadas no GitHub; faltam 32 de 132.** Todas estas cinco foram copiadas como objetos Git binários reais da branch `chatgpt/srd607-image-assets-f` e relidas na branch B. Verificados: SHA do blob idêntico à fonte, quantidade de bytes e assinatura WebP. Metadados SHA-256 e links à ilustração original estão no [manifesto](manifest.json).
