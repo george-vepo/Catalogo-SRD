@@ -1,0 +1,1416 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-20261014",
+  "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+  "reference_date": "2026-10-14",
+  "batch_number": 9,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 7,
+    "completas_com_ressalvas": 3,
+    "incompletas": 0,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 10,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 2
+  },
+  "evidence_limitations": [
+    "SHAs e tamanho das 10 imagens conferidos contra árvore Git no mesmo commit; caminhos documentados nos manifestos B e E.",
+    "Não houve inspeção visual independente nem homologação de licença ou edições primárias.",
+    "TF-099 apresenta dois arquivos distintos nos manifestos B e E."
+  ],
+  "records": [
+    {
+      "id": "TF-094",
+      "criatura": "Adult River Dragon",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Conteúdo individualizado com ambiguidades mecânicas específicas.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": "17",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 18,
+        "pv": 252,
+        "dados_vida": "24d12+96",
+        "atributos": {
+          "FOR": 18,
+          "DES": 20,
+          "CON": 18,
+          "INT": 14,
+          "SAB": 20,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 60,
+          "voar": 80,
+          "nadar": 90
+        },
+        "sentidos": [
+          "darkvision 120 ft",
+          "tremorsense 200 ft (apenas vibrações na água)"
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Amphibious"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Flowing Grace"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Legendary Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Shimmering Scales"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Essence Link"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "ataques",
+            "name": "Claws"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Claws"
+          },
+          {
+            "section": "acoes",
+            "name": "Torrential Breath"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Whirlpool"
+          },
+          {
+            "section": "reacoes",
+            "name": "Snap Back"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Dart Away"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Lurk"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "River Surge"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Sudden Maelstrom"
+          },
+          {
+            "section": "conjuracoes",
+            "name": "conjuracao_inata"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [
+        "Whirlpool: ramo de sucesso da salvaguarda STR CD18 indefinido; o portal A5E repete On a failure."
+      ],
+      "conflitos": [
+        "Ambiguidade editorial entre falha e sucesso em Whirlpool."
+      ],
+      "pendencias_editoriais": [
+        "Pendente revisão independente e confronto com errata/publicação final; NÃO é ficha canônica.",
+        "Definir efeito do ramo de sucesso de Whirlpool: página editorial duplica 'On a failure' para falha e metade de dano.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/b/images/TF-094.webp",
+        "sha_git": "a5b66fbd0f45bc01d9343bc23acf8d148dfc5789",
+        "bytes": 398578,
+        "dimensoes_declaradas": [
+          600,
+          600
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/b/images/manifest.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "RESTRITA_USO_NAO_COMERCIAL",
+        "aprovacao_producao": false,
+        "restricao": "Uso não comercial, sem liberação comercial comprovada; imagem genérica da espécie em diferentes idades."
+      },
+      "acao_recomendada": "Resolver as divergências explicitadas; Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-094.json",
+        "sha": "2b5cf85e696eba418af63acdc2b20733fd6309cb",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://a5e.tools/node/1555",
+            "natureza": "fonte_editorial_ficha_individual"
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-024_TF-469/recovery-index.json",
+            "natureza": "checkpoint_historico_preexistente"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-095",
+      "criatura": "Adult Sapphire Dragon",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Conteúdo individualizado com ambiguidades mecânicas específicas.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": "19",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 19,
+        "pv": 304,
+        "dados_vida": "29d12+116",
+        "atributos": {
+          "FOR": 22,
+          "DES": 22,
+          "CON": 18,
+          "INT": 22,
+          "SAB": 20,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40,
+          "escavar": 30,
+          "voar": 80
+        },
+        "sentidos": [
+          "darkvision 120 ft"
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Legendary Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Predictive Harmonics"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Psionic Powers"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Far Thoughts"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Innate Spellcasting"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "ataques",
+            "name": "Claws"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Claws"
+          },
+          {
+            "section": "acoes",
+            "name": "Psionic Wave"
+          },
+          {
+            "section": "acoes",
+            "name": "Discognitive Breath"
+          },
+          {
+            "section": "acoes",
+            "name": "Prognosticate"
+          },
+          {
+            "section": "acoes",
+            "name": "Far Thoughts — Observe"
+          },
+          {
+            "section": "acoes",
+            "name": "Far Thoughts — End Observation"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Foretell"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Psionic Wave"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Shatter Mind"
+          },
+          {
+            "section": "conjuracoes",
+            "name": "conjuracao_inata"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [
+        "Legendary Resistance menciona Prophesy Doom ausente no conjunto de ações da própria página."
+      ],
+      "conflitos": [
+        "Referência Prophesy Doom não definida no bloco de ações publicado."
+      ],
+      "pendencias_editoriais": [
+        "Pendente revisão independente e confronto com errata/publicação final; NÃO é ficha canônica.",
+        "Resolver referência não definida 'Prophesy Doom' na Legendary Resistance: a página editorial não apresenta essa ação.",
+        "Revisar possível errata da lista de poderes legendários antes de implementar limitações provocadas por Legendary Resistance.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/b/images/TF-095.webp",
+        "sha_git": "ab25e51ad7b5ecd83cc0f7a3968639bf3c1aeda0",
+        "bytes": 393128,
+        "dimensoes_declaradas": [
+          600,
+          600
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/b/images/manifest.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "RESTRITA_USO_NAO_COMERCIAL",
+        "aprovacao_producao": false,
+        "restricao": "Uso não comercial, sem liberação comercial comprovada; imagem genérica da espécie em diferentes idades."
+      },
+      "acao_recomendada": "Resolver as divergências explicitadas; Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-095.json",
+        "sha": "abe5313e03def7414c870936a3a2582caaafa90f",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://a5e.tools/node/1571",
+            "natureza": "fonte_editorial_ficha_individual"
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-024_TF-469/recovery-index.json",
+            "natureza": "checkpoint_historico_preexistente"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-097",
+      "criatura": "Ancient Amethyst Dragon",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos, habilidades e ações aplicáveis estruturados no JSON, pendente cotejo editorial.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": "23",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 20,
+        "pv": 313,
+        "dados_vida": "19d20+114",
+        "atributos": {
+          "FOR": 22,
+          "DES": 24,
+          "CON": 22,
+          "INT": 26,
+          "SAB": 16,
+          "CAR": 24
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40,
+          "escavar": 40,
+          "voar": 60
+        },
+        "sentidos": [
+          "darkvision 120 ft"
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Legendary Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Psionic Powers"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Far Thoughts"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Innate Spellcasting"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "ataques",
+            "name": "Claws"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Claws"
+          },
+          {
+            "section": "acoes",
+            "name": "Psionic Wave"
+          },
+          {
+            "section": "acoes",
+            "name": "Concussive Breath"
+          },
+          {
+            "section": "acoes",
+            "name": "Far Thoughts — Observe"
+          },
+          {
+            "section": "acoes",
+            "name": "Far Thoughts — End Observation"
+          },
+          {
+            "section": "reacoes",
+            "name": "Assume Control"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Charm"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Stupefy"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Psionic Wave"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Captivating Harmonics"
+          },
+          {
+            "section": "conjuracoes",
+            "name": "conjuracao_inata"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Pendente revisão independente e confronto com errata/publicação final; NÃO é ficha canônica.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-097.webp",
+        "sha_git": "fdd354db111141dd2a960283775ed2006ef9905a",
+        "bytes": 365288,
+        "dimensoes_declaradas": [
+          1220,
+          1399
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-097.json",
+        "sha": "ce2b2ed97dd16250ea9b460b66d0dcfbb4238880",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://a5e.tools/node/1562",
+            "natureza": "fonte_editorial_ficha_individual"
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-087_TF-097/research.json",
+            "natureza": "checkpoint_historico_preexistente"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-099",
+      "criatura": "Ankou Soul Herald",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Conteúdo individualizado com ambiguidades mecânicas específicas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": "21",
+        "tamanho": "Gargantuan dragon (also celestial)"
+      },
+      "estatisticas": {
+        "ca": 18,
+        "pv": 407,
+        "dados_vida": "22d20+176",
+        "atributos": {
+          "FOR": 25,
+          "DES": 10,
+          "CON": 27,
+          "INT": 17,
+          "SAB": 18,
+          "CAR": 19
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40,
+          "voar": 80
+        },
+        "sentidos": [
+          "truesight 60 ft"
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Aura of Necromancy’s Bane"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Cloak of Ghostly Shadows"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Death’s Apotheosis"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Legendary Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Death God's Servant"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "ataques",
+            "name": "Claw"
+          },
+          {
+            "section": "ataques",
+            "name": "Tail"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Claw"
+          },
+          {
+            "section": "acoes",
+            "name": "Tail"
+          },
+          {
+            "section": "acoes",
+            "name": "Change Shape"
+          },
+          {
+            "section": "acoes",
+            "name": "Horrifying Presence"
+          },
+          {
+            "section": "acoes",
+            "name": "Reaper's Breath"
+          },
+          {
+            "section": "acoes",
+            "name": "Usher of Souls"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Cloak of Ghostly Shadows"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Detect"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Tail Attack"
+          },
+          {
+            "section": "acoes_lendarias",
+            "name": "Envelope in Shadow"
+          },
+          {
+            "section": "mecanicas_especiais",
+            "name": "Legendary Actions"
+          },
+          {
+            "section": "mecanicas_especiais",
+            "name": "Ankou's Lair"
+          },
+          {
+            "section": "acoes_toca",
+            "name": "Raise Skeletons"
+          },
+          {
+            "section": "acoes_toca",
+            "name": "Expel Spirit"
+          },
+          {
+            "section": "acoes_toca",
+            "name": "Skeletal Hands"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "INT 17 aparece com modificador +5, mas cálculo convencional indica +3; cotejar original/errata.",
+        "Atribuição das ações de toca e efeitos regionais do Ankou ao Soul Herald necessita confirmação.",
+        "Dois assets distintos: imagem B 300.594 bytes e imagem central E 83.272 bytes; decidir identidade visual."
+      ],
+      "pendencias_editoriais": [
+        "Revisão contra exemplar e erratas editoriais originais pendente; blocos secundários não são homologação.",
+        "Não executar integração canônica ou merge antes da revisão independente.",
+        "Creature Codex impresso mostra INT 17 (+5) enquanto aritmética usual indica +3 e Robinloft registra +3. Preservado atributo bruto e não homologado modificador sem cotejo.",
+        "Ações de toca e efeitos regionais extraídos da seção Ankou do Creature Codex e atribuídos ao Soul Herald nesta reprodução.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-099.webp",
+        "sha_git": "76b872294de9e044df6a4a27b516fb112bef2453",
+        "bytes": 83272,
+        "dimensoes_declaradas": [
+          512,
+          512
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alternativa_conflitante": {
+          "caminho": "operational/research/deep-mechanics/b/images/TF-099.webp",
+          "sha_git": "b8e866d5dc3160f0b60d6a856090433ef6658759",
+          "bytes": 300594,
+          "observacao": "Manifesto B e E vinculam binários divergentes; arte final não escolhida."
+        }
+      },
+      "acao_recomendada": "Resolver as divergências explicitadas; Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-099.json",
+        "sha": "7eff71c2d095150423e45851c6938b4bcfc8c9cd",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://www.robinloft.com/monsters/ankou-soul-herald/creature-codex",
+            "natureza": "reproducao_secundaria"
+          },
+          {
+            "url": "https://anyflip.com/zmhlb/lnwk/basic/",
+            "natureza": "reproducao_digital_do_creature_codex_para_toca_e_efeitos_regionais"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-100",
+      "criatura": "Befouled Weird",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos, habilidades e ações aplicáveis estruturados no JSON, pendente cotejo editorial.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "5",
+        "tamanho": "Elemental"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 75,
+        "dados_vida": "10d8+30",
+        "atributos": {
+          "FOR": 17,
+          "DES": 14,
+          "CON": 16,
+          "INT": 5,
+          "SAB": 12,
+          "CAR": 7
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30,
+          "voar": null,
+          "escalar": null,
+          "nadar": 60,
+          "escavar": null
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Elemental Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Freeze"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Parasitic Amoebas"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Unclean"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Water Form"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Drown in Filth"
+          },
+          {
+            "section": "mecanicas_especiais",
+            "name": "Doença propagável"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confirmar publicação/edição original, erratas e todos os detalhes com fonte editorial para homologação independente.",
+        "Nenhuma aprovação canônica ou revisão independente. Quaisquer ações inexistentes no bloco têm listas verificadas por esta fonte secundária, mas não pelo editor.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-100.webp",
+        "sha_git": "8f7111626846b69d7452056638fc9a7355d7de47",
+        "bytes": 202858,
+        "dimensoes_declaradas": [
+          699,
+          978
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-100.json",
+        "sha": "c64f3801401f2c0c4a69f19c3233529b37e60679",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://kpogl.wikidot.com/monster:befouled-weird",
+            "natureza": "fonte_secundaria_comunitaria_nao_endossada"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-101",
+      "criatura": "Bilwis",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos, habilidades e ações aplicáveis estruturados no JSON, pendente cotejo editorial.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "1",
+        "tamanho": "Elemental"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 49,
+        "dados_vida": "11d8",
+        "atributos": {
+          "FOR": 12,
+          "DES": 16,
+          "CON": 10,
+          "INT": 10,
+          "SAB": 13,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 0,
+          "voar": 40,
+          "escalar": null,
+          "nadar": null,
+          "escavar": null
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Elemental Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Air Form"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Whirlwind"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confirmar publicação/edição original, erratas e todos os detalhes com fonte editorial para homologação independente.",
+        "Nenhuma aprovação canônica ou revisão independente. Quaisquer ações inexistentes no bloco têm listas verificadas por esta fonte secundária, mas não pelo editor.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-101.jpg",
+        "sha_git": "0f2fb2d1036c971a6be443c9f232f022d484127a",
+        "bytes": 48109,
+        "dimensoes_declaradas": [
+          472,
+          700
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-101.json",
+        "sha": "2dd5c02a0f7778ffeb6c29dcf05b06180024dd26",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://kpogl.wikidot.com/monster:bilwis",
+            "natureza": "fonte_secundaria_comunitaria_nao_endossada"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-102",
+      "criatura": "Alazai",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos, habilidades e ações aplicáveis estruturados no JSON, pendente cotejo editorial.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "10",
+        "tamanho": "Large elemental, chaotic neutral"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 149,
+        "dados_vida": "13d10+78",
+        "atributos": {
+          "FOR": 21,
+          "DES": 15,
+          "CON": 22,
+          "INT": 10,
+          "SAB": 16,
+          "CAR": 20
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40
+        },
+        "sentidos": [
+          "darkvision 120 ft"
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Conditional Invisibility"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Elemental Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Fire Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Iron Disruption"
+          },
+          {
+            "section": "ataques",
+            "name": "Burning Slam"
+          },
+          {
+            "section": "ataques",
+            "name": "Hurl Flame"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Burning Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Hurl Flame"
+          },
+          {
+            "section": "acoes",
+            "name": "Scorching Aura"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "A transcrição KPOGL não constitui homologação oficial; confrontar com Tome of Beasts 3, erratas e revisão independente.",
+        "Sem promoção canônica nem merge.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-102.webp",
+        "sha_git": "a04f02c4abd111072a3a92153cde4ff5ce596c89",
+        "bytes": 93876,
+        "dimensoes_declaradas": [
+          1000,
+          1258
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-102.json",
+        "sha": "28bf38337faf2ed6be3e13253f00fc91910ebd1a",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://kpogl.wikidot.com/monster:alazai",
+            "natureza": "transcricao_comunitaria_nao_endossada"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-103",
+      "criatura": "Chronalmental",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos, habilidades e ações aplicáveis estruturados no JSON, pendente cotejo editorial.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 (2023)",
+        "cr": "8",
+        "tamanho": "Large elemental"
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 142,
+        "dados_vida": "15d10+60",
+        "atributos": {
+          "FOR": 14,
+          "DES": 20,
+          "CON": 19,
+          "INT": 9,
+          "SAB": 13,
+          "CAR": 6
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30
+        },
+        "sentidos": [
+          "darkvision 60 ft"
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Elemental Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Temporal Body"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Steal Time"
+          },
+          {
+            "section": "acoes",
+            "name": "Displace"
+          },
+          {
+            "section": "reacoes",
+            "name": "Step Between Seconds"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Cotejo com Tome of Beasts 1 (2023) e erratas oficiais; fonte secundária não constitui validação independente.",
+        "Sem testes de combate ou promoção canônica.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-103.webp",
+        "sha_git": "7fa518697762bfe0c6a7b16c968ffd787ed12ccc",
+        "bytes": 64532,
+        "dimensoes_declaradas": [
+          459,
+          800
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-103.json",
+        "sha": "19f5a46d6fad73cab7b6c8aca08fd0e89037f1ab",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/chronalmental-3pp/",
+            "natureza": "reproducao_secundaria_5esrd"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-104",
+      "criatura": "Cherufe",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos, habilidades e ações aplicáveis estruturados no JSON, pendente cotejo editorial.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "14",
+        "tamanho": "Elemental"
+      },
+      "estatisticas": {
+        "ca": 19,
+        "pv": 161,
+        "dados_vida": "14d12+70",
+        "atributos": {
+          "FOR": 22,
+          "DES": 10,
+          "CON": 21,
+          "INT": 8,
+          "SAB": 14,
+          "CAR": 6
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40,
+          "voar": null,
+          "escalar": null,
+          "nadar": null,
+          "escavar": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          },
+          {
+            "tipo": "tremorsense",
+            "alcance_ft": 120
+          }
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Elemental Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Firewalker"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Internal Flame"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "ataques",
+            "name": "Magma Ball"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Magma Ball"
+          },
+          {
+            "section": "acoes",
+            "name": "Fissure"
+          },
+          {
+            "section": "acoes",
+            "name": "Quake"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Dash ou Disengage (Firewalker)"
+          },
+          {
+            "section": "mecanicas_especiais",
+            "name": "Fissure"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confirmar publicação/edição original, erratas e todos os detalhes com fonte editorial para homologação independente.",
+        "Nenhuma aprovação canônica ou revisão independente. Quaisquer ações inexistentes no bloco têm listas verificadas por esta fonte secundária, mas não pelo editor.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-104.webp",
+        "sha_git": "ef9c5024f4ce68d2d4ae3e0d9603c59dae69adbb",
+        "bytes": 225554,
+        "dimensoes_declaradas": [
+          773,
+          866
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-104.json",
+        "sha": "a661d07e05d2602e66ac53baa9edc936f173abe3",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://kpogl.wikidot.com/monster:cherufe",
+            "natureza": "fonte_secundaria_comunitaria_nao_endossada"
+          }
+        ]
+      },
+      "lote": 9
+    },
+    {
+      "id": "TF-105",
+      "criatura": "Thuellai",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos, habilidades e ações aplicáveis estruturados no JSON, pendente cotejo editorial.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 (2023)",
+        "cr": "12",
+        "tamanho": "Huge elemental"
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 161,
+        "dados_vida": "14d12+70",
+        "atributos": {
+          "FOR": 22,
+          "DES": 24,
+          "CON": 20,
+          "INT": 10,
+          "SAB": 11,
+          "CAR": 14
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 0,
+          "voar": 100
+        },
+        "sentidos": [
+          "darkvision 60 ft"
+        ]
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Chilling Presence"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Elemental Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Snowsight"
+          },
+          {
+            "section": "ataques",
+            "name": "Icy Claw"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Icy Claw"
+          },
+          {
+            "section": "acoes",
+            "name": "Freezing Breath"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Cotejo com Tome of Beasts 1 (2023) e erratas oficiais; fonte secundária não constitui validação independente.",
+        "Sem testes de combate ou promoção canônica.",
+        "Conferir versão/errata e direitos antes de integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-105.webp",
+        "sha_git": "7307082c3b438de65d7a63414419a2fe96998fb5",
+        "bytes": 25076,
+        "dimensoes_declaradas": [
+          691,
+          523
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_HOMOLOGADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fontes, adaptar e testar card game; revisar arte e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-105.json",
+        "sha": "7b36dcbb531bd1740559072d19c0d3c3427d9600",
+        "source_commit": "ca0f0c28e3efedb8fa35eec6011fb970bfdd0db0",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/thuellai-3pp",
+            "natureza": "reproducao_secundaria_5esrd"
+          }
+        ]
+      },
+      "lote": 9
+    }
+  ]
+}

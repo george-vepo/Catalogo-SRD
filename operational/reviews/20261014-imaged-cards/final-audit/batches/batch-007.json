@@ -1,0 +1,1037 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-20261014",
+  "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233",
+  "reference_date": "2026-10-14",
+  "batch_number": 7,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 9,
+    "completas_com_ressalvas": 1,
+    "incompletas": 0,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 10,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 2
+  },
+  "evidence_limitations": [
+    "Registro de vínculos por manifesto E, não por campo image do JSON B.",
+    "Git SHA/tamanho do manifesto conferidos contra diretórios B e central em leitura anterior; inspeção visual ausente.",
+    "TF-069 possui duas artes binárias alternativas com SHA distintos; manifesto E refere-se à central JPG."
+  ],
+  "records": [
+    {
+      "id": "TF-068",
+      "criatura": "Clockwork Pugilist",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Tome of Beasts 3 (2022)",
+        "cr": "1",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 32,
+        "atributos": {
+          "FOR": 16,
+          "DES": 12,
+          "CON": 14,
+          "INT": 6,
+          "SAB": 13,
+          "CAR": 10
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "ataques",
+            "name": "Fist"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Fist"
+          },
+          {
+            "section": "acoes",
+            "name": "Brass Onslaught"
+          },
+          {
+            "section": "reacoes",
+            "name": "Get Down, Sir!"
+          },
+          {
+            "section": "reacoes",
+            "name": "Parry"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Cotejo independente com obra editorial e errata ainda pendente; sem integração canônica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-068.webp",
+        "sha_git": "4ed125bd5f85e407cf75982de368f707347de156",
+        "bytes": 133620,
+        "dimensoes_declaradas": [
+          1000,
+          1606
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição e errata, adaptar e testar motor de cartas, revisar identidade/licença e vincular imagem diretamente se exigido.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-068.json",
+        "sha": "16b0d00edb051655d4aefdb1d4e7527e32a83005",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-069",
+      "criatura": "Clockwork Servant",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Creature Codex",
+        "cr": "1/8",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 11,
+        "pv": 22,
+        "atributos": {
+          "FOR": 14,
+          "DES": 12,
+          "CON": 13,
+          "INT": 8,
+          "SAB": 12,
+          "CAR": 7
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Domestic Retainer"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "conjuracoes",
+            "name": null
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada.",
+        "Há binário alternativo TF-069.webp no grupo B com SHA diferente do TF-069.jpg central escolhido pelo manifesto E; identidade artística exige confronto visual."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-069.jpg",
+        "sha_git": "215806aeedd6fe089f166bb4dbc3882bd5cd43be",
+        "bytes": 59329,
+        "dimensoes_declaradas": [
+          1080,
+          1080
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Inspecionar arte alternativa do B versus central e aprovar vínculo no JSON; revisar licença e adaptar/testar mecânicas.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-069.json",
+        "sha": "54b4bc52af4d31b8accb8663419b3a222fa9bf83",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-070",
+      "criatura": "Clockwork Soldier",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Creature Codex",
+        "cr": "1",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 45,
+        "atributos": {
+          "FOR": 13,
+          "DES": 13,
+          "CON": 16,
+          "INT": 5,
+          "SAB": 10,
+          "CAR": 1
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Intimidating Legions"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "ataques",
+            "name": "Halberd"
+          },
+          {
+            "section": "acoes",
+            "name": "Halberd"
+          },
+          {
+            "section": "acoes",
+            "name": "Overdrive Flurry"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-070.jpg",
+        "sha_git": "5d7b3190ecb9ba81d15f1f7bf87540d34e3246af",
+        "bytes": 51722,
+        "dimensoes_declaradas": [
+          373,
+          700
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "RESOLUCAO_BAIXA_CONFORME_METADADOS",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição e errata, adaptar e testar motor de cartas, revisar identidade/licença e vincular imagem diretamente se exigido.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-070.json",
+        "sha": "e69cb3283d3d52cabf6147043ad2a13c29bc2e15",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-071",
+      "criatura": "Clockwork Watchman",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Tome of Beasts 1 p.64",
+        "cr": "1/2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 44,
+        "atributos": {
+          "FOR": 14,
+          "DES": 12,
+          "CON": 12,
+          "INT": 5,
+          "SAB": 10,
+          "CAR": 1
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "ataques",
+            "name": "Halberd"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "ataques",
+            "name": "Net Cannon"
+          },
+          {
+            "section": "acoes",
+            "name": "Halberd"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Net Cannon"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Reel"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Conferir exemplar do editor e erratas; descrição comunitária não é homologação mecânica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-071.webp",
+        "sha_git": "9e75b5dd84d6aa5bfdeb634655da36f2415dbfff",
+        "bytes": 43552,
+        "dimensoes_declaradas": [
+          475,
+          800
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "RESOLUCAO_BAIXA_CONFORME_METADADOS",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição e errata, adaptar e testar motor de cartas, revisar identidade/licença e vincular imagem diretamente se exigido.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-071.json",
+        "sha": "1c77644c1f91870cec785cd83084d311204774da",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-072",
+      "criatura": "Clockwork Weaving Spider",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Tome of Beasts 1 p.65",
+        "cr": "1",
+        "tamanho": "Tiny"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 30,
+        "atributos": {
+          "FOR": 10,
+          "DES": 16,
+          "CON": 10,
+          "INT": 9,
+          "SAB": 8,
+          "CAR": 8
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Unmaking"
+          },
+          {
+            "section": "ataques",
+            "name": "Trimming Blade"
+          },
+          {
+            "section": "ataques",
+            "name": "Poisoned Needle Shuttle"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Trimming Blade"
+          },
+          {
+            "section": "acoes",
+            "name": "Poisoned Needle Shuttle"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Conferir exemplar do editor e erratas; descrição comunitária não é homologação mecânica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-072.webp",
+        "sha_git": "35512e964d5806352433cebda77684333b3aae3f",
+        "bytes": 56986,
+        "dimensoes_declaradas": [
+          582,
+          800
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição e errata, adaptar e testar motor de cartas, revisar identidade/licença e vincular imagem diretamente se exigido.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-072.json",
+        "sha": "7d5e7c509edf97cf315fd646dbf978d8dd493a3e",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-074",
+      "criatura": "Yali",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Tome of Beasts 3 p.398",
+        "cr": "2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 51,
+        "atributos": {
+          "FOR": 20,
+          "DES": 14,
+          "CON": 18,
+          "INT": 7,
+          "SAB": 14,
+          "CAR": 12
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "False Appearance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Flinging Pounce"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Standing Leap"
+          },
+          {
+            "section": "ataques",
+            "name": "Tusk"
+          },
+          {
+            "section": "ataques",
+            "name": "Claw"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Tusk"
+          },
+          {
+            "section": "acoes",
+            "name": "Claw"
+          },
+          {
+            "section": "acoes",
+            "name": "Trumpeting Blast"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Conferir exemplar do editor e erratas; descrição comunitária não é homologação mecânica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-074.webp",
+        "sha_git": "66212510fe1913f2ec0746c051bb43223e320b32",
+        "bytes": 112080,
+        "dimensoes_declaradas": [
+          756,
+          1200
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição e errata, adaptar e testar motor de cartas, revisar identidade/licença e vincular imagem diretamente se exigido.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-074.json",
+        "sha": "10e70ee3cdc949caf952493e1de350fbad6d6fa3",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-075",
+      "criatura": "Akaasit",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Tome of Beasts 2",
+        "cr": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 91,
+        "atributos": {
+          "FOR": 13,
+          "DES": 18,
+          "CON": 14,
+          "INT": 3,
+          "SAB": 10,
+          "CAR": 5
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Unfixed in Time"
+          },
+          {
+            "section": "ataques",
+            "name": "Arm Blade"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Arm Blade"
+          },
+          {
+            "section": "reacoes",
+            "name": "Time-Assisted Counterattack"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-075.webp",
+        "sha_git": "b56c70dba060f5da8720ef00492c9efe47d7b330",
+        "bytes": 197980,
+        "dimensoes_declaradas": [
+          720,
+          903
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição e errata, adaptar e testar motor de cartas, revisar identidade/licença e vincular imagem diretamente se exigido.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-075.json",
+        "sha": "1fc2233f3953a189604c3130b309470fb5651d34",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-077",
+      "criatura": "Clockwork Assassin",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Creature Codex",
+        "cr": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 99,
+        "atributos": {
+          "FOR": 14,
+          "DES": 17,
+          "CON": 12,
+          "INT": 12,
+          "SAB": 12,
+          "CAR": 7
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Assassinate"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Explosive Core"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Psychic Susceptibility"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Sneak Attack"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Standing Leap"
+          },
+          {
+            "section": "ataques",
+            "name": "Rapier"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Rapier"
+          },
+          {
+            "section": "acoes",
+            "name": "Disassembly"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Conferir exemplar do editor e erratas; descrição comunitária não é homologação mecânica."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-077.jpg",
+        "sha_git": "9a5539b0e17a6fe6d4a33c3b53e87e30c3187500",
+        "bytes": 45935,
+        "dimensoes_declaradas": [
+          573,
+          700
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição e errata, adaptar e testar motor de cartas, revisar identidade/licença e vincular imagem diretamente se exigido.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-077.json",
+        "sha": "bb6fd342246a6a5c4843f5b0957b6ad81ec1002a",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-078",
+      "criatura": "Clockwork Mantis",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Inventário completo das habilidades estruturadas na ficha individual do grupo B, sem lacunas internas detectadas.",
+      "identidade": {
+        "edicao": "Tome of Beasts 2",
+        "cr": "6",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 68,
+        "atributos": {
+          "FOR": 13,
+          "DES": 19,
+          "CON": 16,
+          "INT": 3,
+          "SAB": 15,
+          "CAR": 1
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Hobbling Strike"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Standing Leap"
+          },
+          {
+            "section": "ataques",
+            "name": "Serrated Blade"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Serrated Blade"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Invisibility"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Bite (Multiattack)"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-078.webp",
+        "sha_git": "78e23a0d7a5c5690a2cbcf59f067e0b0d6072d87",
+        "bytes": 238608,
+        "dimensoes_declaradas": [
+          862,
+          1131
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição e errata, adaptar e testar motor de cartas, revisar identidade/licença e vincular imagem diretamente se exigido.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-078.json",
+        "sha": "c3d6ca5ded66b5d51fc9780fd0b766eb16618237",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    },
+    {
+      "id": "TF-079",
+      "criatura": "Clockwork Myrmidon",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Ataque referido como Heavy Pick sem definição, mas registrado como War Pick; requer verificação de edição.",
+      "identidade": {
+        "edicao": "Tome of Beasts 1, referência original; catálogo menciona revisão 2023",
+        "cr": "6",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 136,
+        "atributos": {
+          "FOR": 20,
+          "DES": 14,
+          "CON": 16,
+          "INT": 6,
+          "SAB": 10,
+          "CAR": 1
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "habilidades_passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "habilidades_passivas",
+            "name": "Alchemical Fireball"
+          },
+          {
+            "section": "ataques",
+            "name": "War Pick"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "War Pick"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Alchemical Flame Jet"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Grease Spray"
+          }
+        ],
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "INCONSISTÊNCIA NO PRÓPRIO KPOGL: Multiattack menciona Heavy Pick (indefinido), mas ataque recebe o nome War Pick. Não converter em sinônimos sem cotejo editorial.; Verificar revisão de Tome of Beasts 1 (2023) antes de consolidar identidade e efeitos."
+      ],
+      "pendencias_editoriais": [
+        "Conferir edição editorial exata, versão e errata antes de homologação. KPOGL é fonte secundária.",
+        "INCONSISTÊNCIA NO PRÓPRIO KPOGL: Multiattack menciona Heavy Pick (indefinido), mas ataque recebe o nome War Pick. Não converter em sinônimos sem cotejo editorial.",
+        "Verificar revisão de Tome of Beasts 1 (2023) antes de consolidar identidade e efeitos."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-079.webp",
+        "sha_git": "72a33451ed756b99de28755502c481f889f69b2d",
+        "bytes": 73812,
+        "dimensoes_declaradas": [
+          769,
+          800
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver divergência Heavy Pick/War Pick consultando original/errata antes de adaptar/testar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-079.json",
+        "sha": "7d6151382e2d2057a6022d786a3848fa5b6e0ce7",
+        "source_commit": "49f583151977513b9aea1ddaeab51b15c291f233"
+      },
+      "lote": 7
+    }
+  ]
+}

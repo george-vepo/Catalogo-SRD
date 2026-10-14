@@ -1,0 +1,1030 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-20261014",
+  "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1",
+  "reference_date": "2026-10-14",
+  "batch_number": 6,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 6,
+    "completas_com_ressalvas": 4,
+    "incompletas": 0,
+    "nao_verificaveis": 0,
+    "imagem_direta": 2,
+    "imagem_manifesto": 8,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 1
+  },
+  "evidence_limitations": [
+    "Consulta a esquema A e esquema B (distintos), sem cotejo da edição primária.",
+    "Manifesto E e árvores Git de imagens central e B foram comparados em preflight; imagens não examinadas visualmente.",
+    "Vínculo de manifesto não equivale a vínculo pelo próprio JSON B nem prova de uso no jogo."
+  ],
+  "records": [
+    {
+      "id": "TF-058",
+      "criatura": "Animated Instrument",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos e mecânicas presentes no JSON individual sem lacuna operacional interna detectada.",
+      "identidade": {
+        "tipo": "construct",
+        "tamanho": "Tiny",
+        "edicao": "Tome of Beasts 3 (D&D 5e)",
+        "origem": "Tome of Beasts 3",
+        "cr": "1/4"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 17,
+        "atributos": {
+          "STR": 1,
+          "DEX": 12,
+          "CON": 11,
+          "INT": 1,
+          "WIS": 5,
+          "CHA": 15
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "traits",
+            "name": "Antimagic Susceptibility"
+          },
+          {
+            "section": "traits",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "traits",
+            "name": "False Appearance"
+          },
+          {
+            "section": "actions",
+            "name": "Trouble Clef"
+          },
+          {
+            "section": "actions",
+            "name": "Orchestra Hit"
+          },
+          {
+            "section": "actions",
+            "name": "Spirited Solo"
+          },
+          {
+            "section": "actions",
+            "name": "Courageous Anthem"
+          },
+          {
+            "section": "bonus_actions",
+            "name": "Continue Courageous Anthem"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confront original printing and published errata; source-level reconstruction is not editorial homologation.",
+        "Verify artwork production resolution and image usage rights."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-058.webp",
+        "sha_git": "b8daea1595bcdb3dd72279dcb65bb6f19f927ac6",
+        "bytes": 85254,
+        "dimensoes_declaradas": [
+          300,
+          434
+        ],
+        "evidencia_vinculo": "operational/research/deep-mechanics/a/records/TF-058.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "RESOLUCAO_BAIXA_CONFORME_METADADOS",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição/errata, validar mecânicas na engine de cartas, avaliar direitos e imagem antes de homologar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-058.json",
+        "sha": "319bb0745b6225fb216a39983bf31bc9b14c545e",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-059",
+      "criatura": "Animated Instrument, Animated Quartet",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Inventário estruturado mas conflito de edição/regra registrado.",
+      "identidade": {
+        "tipo": "construct",
+        "tamanho": "Large",
+        "edicao": "Tome of Beasts 3 (D&D 5e)",
+        "origem": "Tome of Beasts 3",
+        "cr": "4"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 102,
+        "atributos": {
+          "STR": 10,
+          "DEX": 16,
+          "CON": 17,
+          "INT": 4,
+          "WIS": 5,
+          "CHA": 18
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "traits",
+            "name": "Antimagic Susceptibility"
+          },
+          {
+            "section": "traits",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "traits",
+            "name": "False Appearance"
+          },
+          {
+            "section": "traits",
+            "name": "Four-Part Harmony"
+          },
+          {
+            "section": "actions",
+            "name": "Multiattack"
+          },
+          {
+            "section": "actions",
+            "name": "Trouble Clef"
+          },
+          {
+            "section": "actions",
+            "name": "Orchestra Hit"
+          },
+          {
+            "section": "actions",
+            "name": "Musical Arrangement"
+          },
+          {
+            "section": "actions",
+            "name": "Dreadful Dirge"
+          },
+          {
+            "section": "actions",
+            "name": "Oppressive Overture"
+          },
+          {
+            "section": "actions",
+            "name": "Seditious Sonata"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Four-Part Harmony não especifica limite cumulativo de redução de dados nem se Multiattack mistura tipos de ataque."
+      ],
+      "pendencias_editoriais": [
+        "Confront original printing and published errata; source-level reconstruction is not editorial homologation.",
+        "Four-Part Harmony: source does not explicitly specify maximum stack size of die reductions, or whether mixed attacks are permitted; review engine behavior.",
+        "Verify artwork production resolution and image usage rights."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-059.webp",
+        "sha_git": "526daa8af03f462f4c8abd8ef3794c65744815b9",
+        "bytes": 176690,
+        "dimensoes_declaradas": [
+          1200,
+          1160
+        ],
+        "evidencia_vinculo": "operational/research/deep-mechanics/a/records/TF-059.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver exatamente a discrepância de regra/versão, cotejar fonte primária e depois testar adaptação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-059.json",
+        "sha": "13a8db9b437e18297bee780a8e3382a1171985d0",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-060",
+      "criatura": "Clockwork Abomination",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Inventário estruturado mas conflito de edição/regra registrado.",
+      "identidade": {
+        "edicao": "Tome of Beasts 1 (p.59; revisão 2023 ainda não confrontada)",
+        "cr": "5",
+        "origem": "Kobold Press",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 76,
+        "atributos": {
+          "FOR": 21,
+          "DES": 12,
+          "CON": 18,
+          "INT": 10,
+          "SAB": 10,
+          "CAR": 12
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "passivas",
+            "name": "Explosive Infernal Power Source"
+          },
+          {
+            "section": "passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "passivas",
+            "name": "Unstoppable"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Fire Breath"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Há Bite divergente entre reproduções 5eSRD e KPOGL; edição 2023 ainda não cotejada."
+      ],
+      "pendencias_editoriais": [
+        "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+        "CONFLITO DO CHECKPOINT: reprodução 5eSRD antiga contamina a seção de ações com outra Bite (+5 e veneno). Escolhida exclusivamente a transcrição KPOGL rotulada Tome of Beasts 1 para este registro preliminar.",
+        "Revisão Tome of Beasts 1 (edição 2023) não confrontada com a transcrição KPOGL; não combinar.",
+        "Verificar exemplar editorial/erratas antes de usar."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-060.webp",
+        "sha_git": "10ce8af6f47c17af0e10bd59df0e98bf2b0b9b6d",
+        "bytes": 74578,
+        "dimensoes_declaradas": [
+          634,
+          800
+        ],
+        "evidencia_vinculo": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver exatamente a discrepância de regra/versão, cotejar fonte primária e depois testar adaptação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-060.json",
+        "sha": "759538191351c49de488b2559f6f718ca2b28742",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-061",
+      "criatura": "Clockwork Armadillo",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos e mecânicas presentes no JSON individual sem lacuna operacional interna detectada.",
+      "identidade": {
+        "edicao": "Tome of Beasts 3 (p.86)",
+        "cr": "1/4",
+        "origem": "Kobold Press",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 22,
+        "atributos": {
+          "FOR": 10,
+          "DES": 18,
+          "CON": 14,
+          "INT": 5,
+          "SAB": 10,
+          "CAR": 10
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "passivas",
+            "name": "Overclocked"
+          },
+          {
+            "section": "ataques",
+            "name": "Scissor Claws"
+          },
+          {
+            "section": "acoes",
+            "name": "Scissor Claws"
+          },
+          {
+            "section": "acoes",
+            "name": "Tuck In"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Uncurl and Release"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+        "ND fracionário 1/4 confirmado na transcrição KPOGL; arredondamento 0.3 de catálogo anterior não é estatística ND da ficha.",
+        "Validar edição Tome of Beasts 3 por fonte editorial antes de integração."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-061.webp",
+        "sha_git": "9d58599214db2d37adc89ee18d7fad91ce4061a8",
+        "bytes": 65732,
+        "dimensoes_declaradas": [
+          1200,
+          620
+        ],
+        "evidencia_vinculo": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição/errata, validar mecânicas na engine de cartas, avaliar direitos e imagem antes de homologar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-061.json",
+        "sha": "36fe85161b847878c8a8ec5428caeb7681b77560",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-062",
+      "criatura": "Clockwork Beetle",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Inventário estruturado mas conflito de edição/regra registrado.",
+      "identidade": {
+        "edicao": "Tome of Beasts 1 (p.60)",
+        "cr": "1/2",
+        "origem": "Kobold Press",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 20,
+        "atributos": {
+          "FOR": 8,
+          "DES": 16,
+          "CON": 10,
+          "INT": 4,
+          "SAB": 12,
+          "CAR": 7
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "passivas",
+            "name": "Limited Telepathy"
+          },
+          {
+            "section": "passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "PV 15 (6d4) em 5ecompendium versus 20 (8d4) em KPOGL; edição exata pendente."
+      ],
+      "pendencias_editoriais": [
+        "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+        "CONFLITO DE FONTES: 5ecompendium reproduz 15 PV (6d4), KPOGL atribui 20 PV (8d4). Este registro escolhe KPOGL para transcrição de Tome of Beasts 1, mas a divergência não está resolvida editorialmente.",
+        "Anterior 5eSRD não apresentava seção de ações; KPOGL individual apresenta Bite com CON CD10.",
+        "Comparar exemplar original e revisado com erratas antes de qualquer homologação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-062.webp",
+        "sha_git": "1b6c6e3761347741fb8f84cf839018892278d56d",
+        "bytes": 70904,
+        "dimensoes_declaradas": [
+          1046,
+          800
+        ],
+        "evidencia_vinculo": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver exatamente a discrepância de regra/versão, cotejar fonte primária e depois testar adaptação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-062.json",
+        "sha": "488691fc3d32e3c9b22a8c0e966291266a450a58",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-063",
+      "criatura": "Clockwork Beetle Swarm",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos e mecânicas presentes no JSON individual sem lacuna operacional interna detectada.",
+      "identidade": {
+        "edicao": "Tome of Beasts 1 (p.60)",
+        "cr": "3",
+        "origem": "Kobold Press",
+        "tamanho": "Large Swarm of Tiny Constructs"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 52,
+        "atributos": {
+          "FOR": 8,
+          "DES": 16,
+          "CON": 12,
+          "INT": 1,
+          "SAB": 12,
+          "CAR": 7
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "passivas",
+            "name": "Swarm"
+          },
+          {
+            "section": "ataques",
+            "name": "Bites"
+          },
+          {
+            "section": "acoes",
+            "name": "Bites"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+        "Ataque tem mecânica de enxame (reduz 4d8 para 2d8 quando <=26 PV); não confundir com TF-062 singular.",
+        "Conferir edição Tome of Beasts 1 em exemplar editorial antes de integração."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-063.webp",
+        "sha_git": "c25c9d96b350eee0f0e5d3fa25e0bbda219febba",
+        "bytes": 103266,
+        "dimensoes_declaradas": [
+          835,
+          800
+        ],
+        "evidencia_vinculo": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição/errata, validar mecânicas na engine de cartas, avaliar direitos e imagem antes de homologar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-063.json",
+        "sha": "50b6edf6675a6393370f1f7284040a4ea11d524f",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-064",
+      "criatura": "Clockwork Conductor",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos e mecânicas presentes no JSON individual sem lacuna operacional interna detectada.",
+      "identidade": {
+        "edicao": "Tome of Beasts 3 p.87",
+        "cr": "1/2",
+        "origem": "Kobold Press",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 28,
+        "atributos": {
+          "FOR": 7,
+          "DES": 12,
+          "CON": 10,
+          "INT": 9,
+          "SAB": 12,
+          "CAR": 16
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "passivas",
+            "name": "Metronomic Aura"
+          },
+          {
+            "section": "ataques",
+            "name": "Conductive Baton"
+          },
+          {
+            "section": "acoes",
+            "name": "Conductive Baton"
+          },
+          {
+            "section": "acoes",
+            "name": "Overclocked Finale"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Concerted Effort"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-064.webp",
+        "sha_git": "f27d27ef234cae1132235328ae1c7b3c5eb029e6",
+        "bytes": 102796,
+        "dimensoes_declaradas": [
+          1000,
+          1251
+        ],
+        "evidencia_vinculo": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição/errata, validar mecânicas na engine de cartas, avaliar direitos e imagem antes de homologar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-064.json",
+        "sha": "b231114e496231878019c90c01f8ed98fb07ea11",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-065",
+      "criatura": "Clockwork Hound",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Inventário estruturado mas conflito de edição/regra registrado.",
+      "identidade": {
+        "edicao": "Tome of Beasts 1 p.61 (versões Streets of Zobeck e Midgard Sagas divergentes)",
+        "cr": "2",
+        "origem": "Kobold Press",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 71,
+        "atributos": {
+          "FOR": 16,
+          "DES": 15,
+          "CON": 14,
+          "INT": 1,
+          "SAB": 10,
+          "CAR": 1
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "passivas",
+            "name": "Diligent Tracker"
+          },
+          {
+            "section": "passivas",
+            "name": "Explosive Core"
+          },
+          {
+            "section": "passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "ataques",
+            "name": "Tripping Tongue"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Tripping Tongue"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "PV/CA/dano variam entre Streets of Zobeck, Midgard Sagas e KPOGL; fixar edição-alvo."
+      ],
+      "pendencias_editoriais": [
+        "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada.",
+        "VERSÕES DIVERGENTES: Streets of Zobeck PV65 (10d8+20), Midgard Sagas altera PV/CA/dano. KPOGL fornece PV71; sem validação do exemplar escolhido."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-065.webp",
+        "sha_git": "34da33e11041fd44852d1c46357c2bfcbf643d52",
+        "bytes": 78038,
+        "dimensoes_declaradas": [
+          843,
+          800
+        ],
+        "evidencia_vinculo": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver exatamente a discrepância de regra/versão, cotejar fonte primária e depois testar adaptação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-065.json",
+        "sha": "4d35dfc3da99b527a81e55a21c189d0233926ab4",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-066",
+      "criatura": "Clockwork Huntsman",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos e mecânicas presentes no JSON individual sem lacuna operacional interna detectada.",
+      "identidade": {
+        "edicao": "Tome of Beasts 1 p.62",
+        "cr": "3",
+        "origem": "Kobold Press",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 99,
+        "atributos": {
+          "FOR": 17,
+          "DES": 14,
+          "CON": 12,
+          "INT": 4,
+          "SAB": 10,
+          "CAR": 1
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "passivas",
+            "name": "Explosive Core"
+          },
+          {
+            "section": "passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "ataques",
+            "name": "Longsword"
+          },
+          {
+            "section": "ataques",
+            "name": "Slam"
+          },
+          {
+            "section": "ataques",
+            "name": "Net Cannon"
+          },
+          {
+            "section": "acoes",
+            "name": "Multiattack"
+          },
+          {
+            "section": "acoes",
+            "name": "Longsword"
+          },
+          {
+            "section": "acoes",
+            "name": "Slam"
+          },
+          {
+            "section": "acoes",
+            "name": "Net Cannon"
+          },
+          {
+            "section": "acoes_bonus",
+            "name": "Reel"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-066.webp",
+        "sha_git": "329450bfc90b5a0e94aa2a5534faa9104439aa80",
+        "bytes": 48670,
+        "dimensoes_declaradas": [
+          644,
+          800
+        ],
+        "evidencia_vinculo": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição/errata, validar mecânicas na engine de cartas, avaliar direitos e imagem antes de homologar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-066.json",
+        "sha": "8373f7f4d3ff7954d37f0ce327ec4766ce1394e5",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    },
+    {
+      "id": "TF-067",
+      "criatura": "Clockwork Leech",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos e mecânicas presentes no JSON individual sem lacuna operacional interna detectada.",
+      "identidade": {
+        "edicao": "Tome of Beasts 2",
+        "cr": "1",
+        "origem": "Kobold Press",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 45,
+        "atributos": {
+          "FOR": 14,
+          "DES": 12,
+          "CON": 17,
+          "INT": 3,
+          "SAB": 10,
+          "CAR": 7
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "habilidades": [
+          {
+            "section": "passivas",
+            "name": "Construct Nature"
+          },
+          {
+            "section": "passivas",
+            "name": "Anesthetizing Bite"
+          },
+          {
+            "section": "passivas",
+            "name": "Immutable Form"
+          },
+          {
+            "section": "passivas",
+            "name": "Magic Resistance"
+          },
+          {
+            "section": "ataques",
+            "name": "Bite"
+          },
+          {
+            "section": "ataques",
+            "name": "Tail"
+          },
+          {
+            "section": "acoes",
+            "name": "Bite"
+          },
+          {
+            "section": "acoes",
+            "name": "Tail"
+          }
+        ],
+        "inventario_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Falta confronto independente com exemplar editorial exato e eventuais erratas. Estrutura detalhada não equivale à ficha homologada."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-067.webp",
+        "sha_git": "a78267311884f8404fcd157c57a1615dedab2c4b",
+        "bytes": 117610,
+        "dimensoes_declaradas": [
+          891,
+          875
+        ],
+        "evidencia_vinculo": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir edição/errata, validar mecânicas na engine de cartas, avaliar direitos e imagem antes de homologar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-067.json",
+        "sha": "d89edb87ca3b98936d1fb61e2b58eff9c4bffa24",
+        "source_commit": "40176aa63bd36f665ace2f08ce4766d38ce75de1"
+      },
+      "lote": 6
+    }
+  ]
+}

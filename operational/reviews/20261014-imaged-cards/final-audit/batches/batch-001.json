@@ -1,0 +1,1609 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-20261014",
+  "source_commit": "c75c62c616e34af98593ecc0de895dd2f7dabeaf",
+  "source_csv_sha": "9b703f40bb33b778992d0ba06a20704b19b3c9eb",
+  "reference_date": "2026-10-14",
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "scope": "lote 1 de 40",
+  "batch_number": 1,
+  "expected_count": 10,
+  "actual_count": 10,
+  "evidence_limitations": [
+    "Binários confirmados por árvores Git, SHA e tamanho; inspeção visual não realizada.",
+    "Dimensões provêm do JSON, não foram recalculadas do binário.",
+    "Auditoria de conteúdo baseada nos JSONs individuais; fontes primárias/erratas não foram reconsultadas integralmente.",
+    "Proveniência do runtime Windows, ledger, processos e V-Bridge não verificada.",
+    "Nenhuma ficha promovida a status canônico."
+  ],
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 0,
+    "completas_com_ressalvas": 0,
+    "incompletas": 9,
+    "nao_verificaveis": 1,
+    "imagem_direta": 10,
+    "imagem_manifesto": 0,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 3
+  },
+  "records": [
+    {
+      "id": "KP-S011",
+      "name": "Abominable Beauty",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_NAO_VERIFICAVEL",
+      "motivo_classificacao": "Não é possível afirmar completude da edição canônica com as versões conflitantes.",
+      "identidade": {
+        "tipo": "fey",
+        "tamanho": "Medium",
+        "origem": "Tome of Beasts (2023 revision)",
+        "edicao": "Tome of Beasts: edição-alvo ainda não determinada (2016 original vs 2023 revista)",
+        "cr": "11"
+      },
+      "estatisticas": {
+        "ca": 18,
+        "pv": 187,
+        "dados_vida": "22d8+88",
+        "atributos": {
+          "STR": 17,
+          "DEX": 18,
+          "CON": 18,
+          "INT": 17,
+          "WIS": 16,
+          "CHA": 26
+        },
+        "atributos_seis": true,
+        "deslocamento": {
+          "walk_ft": 30
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 1,
+          "actions": 4,
+          "bonus_actions": 0,
+          "reactions": 0,
+          "legendary_actions": 0,
+          "lair_actions": 0,
+          "mythic_actions": 0,
+          "spellcasting": 0,
+          "other": 0
+        },
+        "placeholders": [],
+        "fonte_estatblock_integral": false
+      },
+      "lacunas": [
+        "Edição canônica não definida: a versão original de 2016 e a edição revisada de 2023 divergem em Multiattack, Slam, Burning Touch, Blinding Gaze e Deafening Voice.",
+        "O JSON estrutura o candidato 2023, mas registra mechanics_source_statblock_full=false e ainda não cotejou a publicação primária.",
+        "A transcrição secundária mistura Undead Nature de outra criatura; não incorporá-la sem confirmação."
+      ],
+      "conflitos": [
+        "Divergência mecânica explícita 2016 x 2023; seleção editorial pendente."
+      ],
+      "pendencias_origem": [
+        "CONFLITO CRÍTICO DE EDIÇÃO: versão 2016 e revisão 2023 têm mecânicas distintas; confirmar qual versão pertence ao registro KP-S011 antes de considerar a ficha canônica. Todos os números atualmente estruturados são somente do candidato 2023.",
+        "Bloqueio editorial específico: texto secundário contém Undead Nature de accursed defiler; não aplicar essa característica à Abominable Beauty sem confirmar página oficial.",
+        "Confrontar fichas e traços com tomo 2023 impresso/PDF autorizado e revisão independente.",
+        "Imagem binária de produção ainda não verificada."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/KP-S011.webp",
+        "sha_git": "58e0862d08b27fc9a82a2cfe339d5f7c30d73333",
+        "bytes": 84022,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          555,
+          1000
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Definir edição-alvo, cotejar livro/errata e reconstruir somente se necessário; depois revisar arte e licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/KP-S011.json",
+        "registro_sha": "d8e9dd04acd4ec4b3acc63028fd9b375e2942006",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "KP-S013",
+      "name": "Giant, Jotun",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "giant",
+        "tamanho": "Gargantuan",
+        "origem": "Tome of Beasts 1",
+        "edicao": "5e",
+        "cr": "22"
+      },
+      "estatisticas": {
+        "ca": 20,
+        "pv": 370,
+        "dados_vida": "20d20 + 160",
+        "atributos": {
+          "STR": 30,
+          "DEX": 8,
+          "CON": 26,
+          "INT": 18,
+          "WIS": 20,
+          "CHA": 14
+        },
+        "atributos_seis": true,
+        "deslocamento": {
+          "andar": 60
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 5,
+          "actions": 5,
+          "bonus_actions": null,
+          "reactions": 1,
+          "legendary_actions": null,
+          "lair_actions": null,
+          "spellcasting": null,
+          "other": null
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Vitalidade: redu??o de atributos/PV m?ximo s? por wish, conforme vers?o publicada; conferi",
+            "summary": "Vitalidade: redu??o de atributos/PV m?ximo s? por wish, conforme vers?o publicada; conferir errata de 2023 para texto exato.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Armas m?gicas com mais 6d8 de frio por acerto.",
+            "summary": "Armas m?gicas com mais 6d8 de frio por acerto.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Resist?ncia m?gica.",
+            "summary": "Resist?ncia m?gica.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "N?o pode ser banido do Plano Material contra a vontade; desvantagem ao tentar resistir a r",
+            "summary": "N?o pode ser banido do Plano Material contra a vontade; desvantagem ao tentar resistir a retorno para ele.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Vantagem em Furtividade quando im?vel em terreno natural.",
+            "summary": "Vantagem em Furtividade quando im?vel em terreno natural.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Multiattack: pode usar presen?a aterradora, ent?o faz tr?s ataques de porrete ou pedra.",
+            "summary": "Multiattack: pode usar presen?a aterradora, ent?o faz tr?s ataques de porrete ou pedra.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Greatclub: +17, 15 ft., 4d8+10 contundente e 6d8 frio.",
+            "summary": "Greatclub: +17, 15 ft., 4d8+10 contundente e 6d8 frio.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Rock: +17, 60/240 ft., 4d10+10 contundente e 6d8 frio.",
+            "summary": "Rock: +17, 60/240 ft., 4d10+10 contundente e 6d8 frio.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Frightful Presence: Sabedoria CD 20, criaturas escolhidas a 120 ft.; medo por 1 minuto com",
+            "summary": "Frightful Presence: Sabedoria CD 20, criaturas escolhidas a 120 ft.; medo por 1 minuto com novas tentativas e imunidade tempor?ria de 24 h.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Icy Sweep (recarga 5-6): Destreza CD 23, criaturas at? 20 ft.; falha 8d8 contundente +12d8",
+            "summary": "Icy Sweep (recarga 5-6): Destreza CD 23, criaturas at? 20 ft.; falha 8d8 contundente +12d8 frio, empurra 15 ft. e derruba, sucesso metade sem deslocamento.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "reactions",
+            "ability": "Rock Catching: Destreza CD 10 para agarrar pedra arremessada e evitar dano contundente.",
+            "summary": "Rock Catching: Destreza CD 10 para agarrar pedra arremessada e evitar dano contundente.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "11 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/KP-S013.webp",
+        "sha_git": "8f8337848293db07673e345a6dbf98913d07e870",
+        "bytes": 218786,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          905,
+          1000
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/KP-S013.json",
+        "registro_sha": "526fd1c706a8a637a679cfe5d91082e473278cd6",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "KP-S014",
+      "name": "Pustulent Shambler",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "ooze",
+        "tamanho": "Gargantuan",
+        "origem": "Tome of Beasts 2",
+        "edicao": "5e",
+        "cr": "13"
+      },
+      "estatisticas": {
+        "ca": 10,
+        "pv": 232,
+        "dados_vida": "15d20 + 75",
+        "atributos": {
+          "STR": 19,
+          "DEX": 5,
+          "CON": 20,
+          "INT": 3,
+          "WIS": 10,
+          "CHA": 1
+        },
+        "atributos_seis": true,
+        "deslocamento": {
+          "andar": 30,
+          "escalar": 30
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 5,
+          "actions": 3,
+          "bonus_actions": null,
+          "reactions": null,
+          "legendary_actions": null,
+          "lair_actions": null,
+          "spellcasting": null,
+          "other": null
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Amorfo: atravessa aberturas a partir de 1 polegada sem se espremer.",
+            "summary": "Amorfo: atravessa aberturas a partir de 1 polegada sem se espremer.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Bonerot: ap?s falha contra pseud?pode, doen?a com sintomas em 1 h; descanso longo exige Co",
+            "summary": "Bonerot: ap?s falha contra pseud?pode, doen?a com sintomas em 1 h; descanso longo exige Constitui??o CD 18 ou reduz FOR e DES em 1d4 e deslocamento em 5 ft., com cura ap?s duas salvaguardas ou magia equivalente.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Bonerot Sense: localiza infectados at? 60 ft. e percebe dire??o at? 1 milha.",
+            "summary": "Bonerot Sense: localiza infectados at? 60 ft. e percebe dire??o at? 1 milha.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Corrosive to Bone: contra ossos expostos causa 1d10 ?cido; armas e muni??es ?sseas n?o m?g",
+            "summary": "Corrosive to Bone: contra ossos expostos causa 1d10 ?cido; armas e muni??es ?sseas n?o m?gicas podem corroer conforme penalidade cumulativa.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Stench: criaturas at? 10 ft. no come?o do turno fazem Constitui??o CD 18 contra envenename",
+            "summary": "Stench: criaturas at? 10 ft. no come?o do turno fazem Constitui??o CD 18 contra envenenamento; sucesso evita novos efeitos por 24 h.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Multiattack: tr?s ataques de pseud?pode.",
+            "summary": "Multiattack: tr?s ataques de pseud?pode.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Pseudopod: +9, 10 ft., 2d10+4 contundente e 2d10 ?cido; Constitui??o CD 18 contra bonerot.",
+            "summary": "Pseudopod: +9, 10 ft., 2d10+4 contundente e 2d10 ?cido; Constitui??o CD 18 contra bonerot.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Absorb Flesh: consome cad?ver a at? 5 ft., recupera 1d8 PV por categoria de tamanho e perd",
+            "summary": "Absorb Flesh: consome cad?ver a at? 5 ft., recupera 1d8 PV por categoria de tamanho e perde forma amorfa por 1 min se houver ossos ?ntegros; cad?ver n?o pode ser reutilizado.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "8 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação.",
+        "Binário de imagem KP-S014 armazenado via SHA verificado do lote D; inspeção visual independente, direitos e aprovação final ainda pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/KP-S014.webp",
+        "sha_git": "525ee3c92c811e203dc0ad40edb903bd04149283",
+        "bytes": 173852,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          941,
+          813
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/KP-S014.json",
+        "registro_sha": "bb2911fd590cd02ef4c05fd7be6a82ecd927d575",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "KP-S015",
+      "name": "Ooze, Scintillating",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "ooze",
+        "tamanho": "Large",
+        "origem": "Tome of Beasts 3",
+        "edicao": "5e",
+        "cr": "12"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 165,
+        "dados_vida": "22d8 + 66",
+        "atributos": {
+          "STR": 20,
+          "DEX": 10,
+          "CON": 16,
+          "INT": 3,
+          "WIS": 7,
+          "CHA": 3
+        },
+        "atributos_seis": true,
+        "deslocamento": {
+          "andar": 30,
+          "escalar": 30
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 3,
+          "actions": 3,
+          "bonus_actions": null,
+          "reactions": 1,
+          "legendary_actions": 4,
+          "lair_actions": null,
+          "spellcasting": null,
+          "other": null
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Amorfo, permite passagem por 1 polegada.",
+            "summary": "Amorfo, permite passagem por 1 polegada.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Corrosive Form: contato ou ataque corpo a corpo de at? 5 ft. causa 3d6 ?cido.",
+            "summary": "Corrosive Form: contato ou ataque corpo a corpo de at? 5 ft. causa 3d6 ?cido.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "N?o precisa dormir; anda em paredes e tetos sem teste.",
+            "summary": "N?o precisa dormir; anda em paredes e tetos sem teste.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Multiattack: um pseud?pode e tr?s ataques com arma improvisada.",
+            "summary": "Multiattack: um pseud?pode e tr?s ataques com arma improvisada.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Weapon Thrash: +9, alcance 5 ft., 2d4+5 dano f?sico ? escolha.",
+            "summary": "Weapon Thrash: +9, alcance 5 ft., 2d4+5 dano f?sico ? escolha.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Pseudopod: +9, alcance 5 ft., 2d4+5 contundente e 4d8 ?cido.",
+            "summary": "Pseudopod: +9, alcance 5 ft., 2d4+5 contundente e 4d8 ?cido.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "reactions",
+            "ability": "Shed Oozling: ao receber ?cido, frio, el?trico ou cortante e ter mais que 10 PV, sacrifica",
+            "summary": "Shed Oozling: ao receber ?cido, frio, el?trico ou cortante e ter mais que 10 PV, sacrifica 10 PV para criar c?pia Pequena/Tiny de 10 PV, sem Weapon Thrash, sem rea??o de replica??o e sem a??es lend?rias.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "legendary_actions",
+            "ability": "Tr?s a??es lend?rias por rodada, uma op??o no fim do turno de outra criatura.",
+            "summary": "Tr?s a??es lend?rias por rodada, uma op??o no fim do turno de outra criatura.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "legendary_actions",
+            "ability": "Move: deslocamento sem ataques de oportunidade.",
+            "summary": "Move: deslocamento sem ataques de oportunidade.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "legendary_actions",
+            "ability": "Grasping Pseudopod: For?a CD 17 a at? 30 ft. ou atrai alvo at? 30 ft.",
+            "summary": "Grasping Pseudopod: For?a CD 17 a at? 30 ft. ou atrai alvo at? 30 ft.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "legendary_actions",
+            "ability": "Lunging Attack custa duas a??es; usa Weapon Thrash contra criatura vis?vel a 10 ft.",
+            "summary": "Lunging Attack custa duas a??es; usa Weapon Thrash contra criatura vis?vel a 10 ft.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "11 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais.",
+        "Quatro ações lendárias ainda em resumos; estruturar custo, gatilhos e efeitos."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/KP-S015.webp",
+        "sha_git": "a0ec46d8f1ee4615f15f957dd3f92c37e3f77999",
+        "bytes": 96216,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          280,
+          280
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "RESOLUCAO_BAIXA_CONFORME_METADADOS",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/KP-S015.json",
+        "registro_sha": "6baed792a69d4aa0d6c7a76ee2628196bcef0b5a",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "KP-S016",
+      "name": "First Servant",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "humanoid",
+        "tamanho": "Medium",
+        "origem": "Tome of Beasts 3",
+        "edicao": "5e",
+        "cr": "12"
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 162,
+        "dados_vida": "25d8 + 50",
+        "atributos": {
+          "STR": 12,
+          "DEX": 15,
+          "CON": 14,
+          "INT": 15,
+          "WIS": 20,
+          "CHA": 18
+        },
+        "atributos_seis": true,
+        "deslocamento": {
+          "andar": 30
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 3,
+          "actions": 3,
+          "bonus_actions": null,
+          "reactions": null,
+          "legendary_actions": null,
+          "lair_actions": null,
+          "spellcasting": null,
+          "other": null
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Armor of Foresight soma DES e SAB ? CA enquanto estiver sem armadura.",
+            "summary": "Armor of Foresight soma DES e SAB ? CA enquanto estiver sem armadura.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Healing Hands (recarga 5-6) cura 4d6 como a??o b?nus em alvo a 5 ft.",
+            "summary": "Healing Hands (recarga 5-6) cura 4d6 como a??o b?nus em alvo a 5 ft.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Conjurador de n?vel 18, SAB CD 17; repert?rio extenso exige confer?ncia de todos os c?rcul",
+            "summary": "Conjurador de n?vel 18, SAB CD 17; repert?rio extenso exige confer?ncia de todos os c?rculos.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Multiattack: Awe-inspiring Presence seguida de ataque com rod.",
+            "summary": "Multiattack: Awe-inspiring Presence seguida de ataque com rod.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Rod: +5, alcance 5 ft., 1d6+1 contundente, Constitui??o CD 17 contra cegueira e surdez at?",
+            "summary": "Rod: +5, alcance 5 ft., 1d6+1 contundente, Constitui??o CD 17 contra cegueira e surdez at? in?cio do pr?ximo turno.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Awe-inspiring Presence: Sabedoria CD 17 a at? 30 ft.; em falha sem a??es b?nus ou rea??es ",
+            "summary": "Awe-inspiring Presence: Sabedoria CD 17 a at? 30 ft.; em falha sem a??es b?nus ou rea??es at? o in?cio do pr?ximo turno.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "6 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais.",
+        "Conjuração de nível 18 sem repertório integral verificado, slots, magias e ações relevantes."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/KP-S016.webp",
+        "sha_git": "9e4437593bf84bd1fdc9fb8b5a11a9ecf82e3502",
+        "bytes": 83152,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          280,
+          280
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "RESOLUCAO_BAIXA_CONFORME_METADADOS",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/KP-S016.json",
+        "registro_sha": "65bd699995b3d3357baa0ce97510a774109eebaf",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "KP-S017",
+      "name": "Vesiculosa",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "plant",
+        "tamanho": "Gargantuan",
+        "origem": "Tome of Beasts 1",
+        "edicao": "5e",
+        "cr": "11"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 232,
+        "dados_vida": "16d20+64",
+        "atributos": {
+          "STR": 20,
+          "DEX": 15,
+          "CON": 19,
+          "INT": 2,
+          "WIS": 14,
+          "CHA": 2
+        },
+        "atributos_seis": true,
+        "deslocamento": "0 ft., escavar 20 ft."
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 1,
+          "actions": null,
+          "bonus_actions": null,
+          "reactions": null,
+          "legendary_actions": null,
+          "lair_actions": null,
+          "spellcasting": null,
+          "other": null
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Oasis Appearance",
+            "summary": "Enquanto im?vel e parcialmente sob areia/solo, parece um pequeno o?sis; ?gua sustentando vegeta??o que produz frutos afetados por Sweet Water.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "1 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais.",
+        "A ficha não apresenta ações estruturadas; confirmar ações e efeitos aplicáveis na fonte original."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/KP-S017.webp",
+        "sha_git": "94b3bc84a062787ac8f60fc3303ddbf769146e3e",
+        "bytes": 321388,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          1000,
+          812
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/KP-S017.json",
+        "registro_sha": "2a383692220c9f87cd4df02449f446dae03da72e",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "KP-S018",
+      "name": "Sinstar",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "plant",
+        "tamanho": "Tiny",
+        "origem": "Tome of Beasts 3",
+        "edicao": "5e",
+        "cr": "17"
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 275,
+        "dados_vida": "50d4+150",
+        "atributos": {
+          "STR": 5,
+          "DEX": 14,
+          "CON": 17,
+          "INT": 21,
+          "WIS": 18,
+          "CHA": 15
+        },
+        "atributos_seis": true,
+        "deslocamento": "5 ft."
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 3,
+          "actions": 4,
+          "bonus_actions": null,
+          "reactions": null,
+          "legendary_actions": 3,
+          "lair_actions": 4,
+          "spellcasting": null,
+          "other": 3
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Legendary Resistance",
+            "summary": "3 usos por dia para escolher sucesso em salvaguarda falha.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Spiny Defense",
+            "summary": "Contato ou ataque corpo a corpo a 5 ft. causa 3d6 perfurante; humanoides fazem Constitui??o CD 19 contra Thrall Sickness.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Thrall Sickness",
+            "summary": "Ap?s incuba??o de 1d4 dias, Constitui??o CD 19 a cada descanso longo; falha reduz Destreza e Intelig?ncia em 1d4, pode transformar v?tima morta em Star Thrall; greater restoration pode curar.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Multiattack",
+            "summary": "Usa Alluring Whispers e faz tr?s ataques com Spines ou Psychic Lash.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Spines",
+            "summary": "Ataque +8 corpo a corpo 5 ft. ou ? dist?ncia 20/60 ft.; 4d6+2 perfurante; humanoides expostos a doen?a em salvaguarda CON CD 19.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Psychic Lash",
+            "summary": "Ataque m?gico ? dist?ncia +11, 120 ft.; 3d8+5 ps?quico.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Alluring Whispers",
+            "summary": "Humanoides at? 120 ft. fazem Sabedoria CD 19 ou ficam enfeiti?ados e incapacitados, movendo-se para tocar a criatura; salvaguardas repetidas conforme gatilhos e imunidade de 24 h ap?s sucesso.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "legendary_actions",
+            "ability": "Spines",
+            "summary": "Faz um ataque Spines.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "legendary_actions",
+            "ability": "Teleport",
+            "summary": "Teleporta 120 ft. para espa?o desocupado vis?vel.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "legendary_actions",
+            "ability": "Detonate Thrall",
+            "summary": "Comanda Star Thrall para explodir; Destreza CD 19 em 10 ft.; 3d6 contundente +2d6 perfurante, metade em sucesso.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "lair_actions",
+            "ability": "Economia",
+            "summary": "Iniciativa 20, perde desempates; n?o repetir efeito em rodadas consecutivas.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "lair_actions",
+            "ability": "Bolster Thrall",
+            "summary": "Thrall visto a 60 ft. recupera 3d6 PV e recebe vantagem em ataques at? pr?ximo 20.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "lair_actions",
+            "ability": "Cactus Bloom",
+            "summary": "Zona dif?cil de 20 ft. de raio a at? 120 ft.; movimento de n?o-thrall causa 2d6 perfurante por 5 ft.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "lair_actions",
+            "ability": "Choking Cloud",
+            "summary": "At? tr?s criaturas vistas a 60 ft. Constitui??o CD 19 ou incapacitadas at? fim do pr?ximo turno, desvantagem se junto a thrall.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "other",
+            "ability": "Beasts atacam humanoides at? 1 milha",
+            "summary": "Beasts atacam humanoides at? 1 milha",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "other",
+            "ability": "Plantas comest?veis tornam-se amargas e sem nutri??o",
+            "summary": "Plantas comest?veis tornam-se amargas e sem nutri??o",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "other",
+            "ability": "Fontes de ?gua grandes s?o miragens at? 1 milha",
+            "summary": "Fontes de ?gua grandes s?o miragens at? 1 milha",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "17 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais.",
+        "Ações lendárias e ações de covil não estão operacionalmente estruturadas."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/KP-S018.webp",
+        "sha_git": "9f5075f59742a26cd6ce67a3a7a7bb953a90d774",
+        "bytes": 94272,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          280,
+          280
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "RESOLUCAO_BAIXA_CONFORME_METADADOS",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/KP-S018.json",
+        "registro_sha": "cc1c1bb845016e5cb66b1a231defafec28e27e84",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "TF-004",
+      "name": "Astral Snapper",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "aberration",
+        "tamanho": "Medium",
+        "origem": "Creature Codex",
+        "edicao": "5e",
+        "cr": "3"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 78,
+        "dados_vida": "12d8+24",
+        "atributos": {
+          "STR": 12,
+          "DEX": 15,
+          "CON": 14,
+          "INT": 12,
+          "WIS": 16,
+          "CHA": 8
+        },
+        "atributos_seis": true,
+        "deslocamento": "40 ft."
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 1,
+          "actions": 2,
+          "bonus_actions": null,
+          "reactions": null,
+          "legendary_actions": null,
+          "lair_actions": null,
+          "spellcasting": null,
+          "other": null
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Astral Devour",
+            "summary": "Hospedeiro submetido a Sabedoria CD 13 ap?s descansos longos: sucesso expulsa criatura ao Plano Material e deixa atordoada por 1 rodada; falha reduz Constitui??o em 1d4, levando ? morte se chegar a 0. Ao sair, redu??o dura at? descanso longo ap?s expuls?o.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Multiattack",
+            "summary": "Dois ataques com Claws; se ambos acertarem mesmo alvo, Sabedoria CD 13 ou ferida forma passagem astral e ativa Astral Devour.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Claws",
+            "summary": "Ataque corpo a corpo +4, alcance 5 ft.; 2d6+2 cortante.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "3 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-004.webp",
+        "sha_git": "ed8cc2e85cc7386866dd1a24bb325662c343b294",
+        "bytes": 193602,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          820,
+          961
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/TF-004.json",
+        "registro_sha": "a7f3128bfbb77c12042cbd4eb1c5904f2dd4222b",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "TF-010",
+      "name": "Chelicerae",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "aberration",
+        "tamanho": "Large",
+        "origem": "Tome of Beasts 1",
+        "edicao": "5e",
+        "cr": "7"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 153,
+        "dados_vida": "18d10+54",
+        "atributos": {
+          "STR": 22,
+          "DEX": 17,
+          "CON": 17,
+          "INT": 18,
+          "WIS": 15,
+          "CHA": 14
+        },
+        "atributos_seis": true,
+        "deslocamento": "andar 40 ft., escalar 30 ft."
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 2,
+          "actions": 5,
+          "bonus_actions": 2,
+          "reactions": null,
+          "legendary_actions": null,
+          "lair_actions": null,
+          "spellcasting": null,
+          "other": null
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Magic Resistance",
+            "summary": "Vantagem em salvaguardas contra magias e efeitos m?gicos.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Spider Climb",
+            "summary": "Escala superf?cies dif?ceis e tetos sem teste.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Multiattack",
+            "summary": "Um Bite e dois Claws; pode substituir Bite por Spellcasting.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Bite",
+            "summary": "Ataque +9, alcance 5 ft., 2d10+6 perfurante; Constitui??o CD 15 contra envenenamento e inconsci?ncia; pode agarrar alvo M?dio ou menor, escape CD 15.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Claw",
+            "summary": "Ataque +9, alcance 10 ft., 2d8+6 cortante.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Magical Discharge",
+            "summary": "Recarga especial: Destreza CD 15 em 15 ft., 8d8 force (metade no sucesso). Recarrega ao sifonar magia ou descansar.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Spellcasting",
+            "summary": "Intelig?ncia CD 15, ? vontade mage hand/minor illusion; 1/dia cada haste, hold person, invisibility e phantasmal killer.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "bonus_actions",
+            "ability": "Nimble Moves",
+            "summary": "Dash ou Disengage como a??o b?nus.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "bonus_actions",
+            "ability": "Siphon Magic",
+            "summary": "Conjurador agarrado faz INT CD 15 ou perde espa?o de magia de n?vel m?ximo dispon?vel; Chelicerae recupera uso de Spellcasting.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "9 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais.",
+        "Confirmar habilidades de conjuração, ação bônus Siphon Magic e divergência entre versões."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-010.webp",
+        "sha_git": "49ea4c0f1c8441f1ef2e65d03ba44f3bd516d23f",
+        "bytes": 402524,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          1000,
+          771
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/TF-010.json",
+        "registro_sha": "8439e95c0ec6af1996d13c7c09ee5f5e5b71df0a",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    },
+    {
+      "id": "TF-011",
+      "name": "Child of Yggdrasil",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "estado_catalogo": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ações/traços permanecem em resumos não integralmente estruturados.",
+      "identidade": {
+        "tipo": "aberration",
+        "tamanho": "Large",
+        "origem": "Creature Codex",
+        "edicao": "5e",
+        "cr": "6"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 112,
+        "dados_vida": "15d10+30",
+        "atributos": {
+          "STR": 16,
+          "DEX": 10,
+          "CON": 14,
+          "INT": 10,
+          "WIS": 18,
+          "CHA": 8
+        },
+        "atributos_seis": true,
+        "deslocamento": "andar 20 ft., escalar 20 ft."
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": 3,
+          "actions": 2,
+          "bonus_actions": null,
+          "reactions": null,
+          "legendary_actions": null,
+          "lair_actions": null,
+          "spellcasting": null,
+          "other": null
+        },
+        "placeholders": [
+          {
+            "section": "traits",
+            "ability": "Acid Touch",
+            "summary": "Como a??o, destr?i objeto n?o m?gico que n?o esteja vestido nem carregado.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Forest Camouflage",
+            "summary": "Vantagem em testes de furtividade em floresta.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "traits",
+            "ability": "Keen Smell",
+            "summary": "Vantagem em Percep??o dependente de olfato.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Multiattack",
+            "summary": "Tr?s ataques de Claw.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          },
+          {
+            "section": "actions",
+            "ability": "Claw",
+            "summary": "Ataque +6, alcance 10 ft., 1d8+3 cortante +2d6 ?cido.",
+            "missing": [
+              "regras executáveis completas",
+              "campos estruturados pertinentes (alvos, dano, CD, duração, usos, gatilhos)"
+            ],
+            "status": "PENDENTE_ESTRUTURACAO_INTEGRAL"
+          }
+        ],
+        "fonte_estatblock_integral": null
+      },
+      "lacunas": [
+        "5 habilidade(s) registrada(s) apenas como resumo com status PENDENTE_ESTRUTURACAO_INTEGRAL; completar campos e regras individuais."
+      ],
+      "conflitos": [],
+      "pendencias_origem": [
+        "Pesquisar todos os ataques e efeitos nos originais individualmente; resumos históricos não têm semântica completa.",
+        "Validar edição exata, fórmula dos PV, resistências, habilidades passivas e cada ação com CD, tipo de dano, recarga, duração e condições.",
+        "Reconciliar diferenças entre versões antes de qualquer uso na implementação."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-011.webp",
+        "sha_git": "952b6a2b15e7cfca11965a086b7a98203782775b",
+        "bytes": 225464,
+        "formato": "webp",
+        "dimensoes_declaradas_json": [
+          756,
+          1108
+        ],
+        "sha_conferido_com_json": true,
+        "tamanho_conferido_com_json": true,
+        "arquivo_git_confirmado": true,
+        "vinculo_json_confirmado": true,
+        "identidade_visual": "NAO_VERIFICADA",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar as mecânicas pendentes individualmente contra fonte autorizada, verificar versões, depois adaptar ao card game e revisar arte/licença.",
+      "evidencia": {
+        "registro": "operational/research/deep-mechanics/a/records/TF-011.json",
+        "registro_sha": "99fc98937ce318e9eff56b47498e2143aa9ba9ff",
+        "preliminar": "operational/reviews/20261014-imaged-cards/individual/records-000-013.json",
+        "commit_auditado": "c75c62c616e34af98593ecc0de895dd2f7dabeaf"
+      },
+      "lote": 1
+    }
+  ]
+}
