@@ -1,0 +1,141 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-218",
+  "name": "Chupacabra",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "0.5",
+    "size": "Small",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 36,
+    "hit_dice": "8d6+8",
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 15,
+      "CON": 12,
+      "INT": 3,
+      "WIS": 12,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Acrobatics": 4,
+      "Perception": 3,
+      "Stealth": 4
+    },
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ]
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "category": "passive",
+        "effect": "Vantagem em Perception (SAB) por audição ou olfato."
+      },
+      {
+        "name": "Running Leap",
+        "category": "passive",
+        "effect": "Após corrida inicial de 10 pés, salto horizontal de até 25 pés."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 5,
+        "reach_ft": 5,
+        "targets": "1 criatura",
+        "damage": [
+          {
+            "dice": "1d6",
+            "modifier": 3,
+            "type": "piercing"
+          }
+        ],
+        "on_hit": "Fixa-se à vítima. Enquanto presa não ataca e vítima perde 1d6+3 PV no início de cada turno do chupacabra.",
+        "ending": "Sair gastando 5 pés de deslocamento, automaticamente ao atingir 0 PV da vítima; qualquer criatura pode gastar ação para removê-lo."
+      },
+      {
+        "name": "Fearful Gaze",
+        "category": "save_effect",
+        "targets": "1 criatura vista a até 10 pés",
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 11,
+          "on_failure": "Paralyzed por 1 minuto",
+          "on_success": "Sem efeito",
+          "repeat": "Fim de cada turno; sucesso encerra"
+        },
+        "immunity_after": "Quando alvo resiste ou efeito termina, é imune ao Fearful Gaze desta criatura por 24 horas."
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Malodorous Stench",
+        "category": "reaction",
+        "trigger": "Quando PV cai para menos da metade do PV máximo",
+        "area": "Criaturas até 5 pés",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 11,
+          "on_failure": "Poisoned até fim do próximo turno",
+          "on_success": "Sem efeito"
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:chupacabra",
+      "type": "ficha_individual_secundaria",
+      "edition": "Creature Codex",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  }
+}

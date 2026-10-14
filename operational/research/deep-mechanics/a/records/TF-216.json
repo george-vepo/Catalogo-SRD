@@ -1,0 +1,148 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-216",
+  "name": "Anophiloi",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Small",
+    "type": "monstrosity",
+    "alignment": "neutral"
+  },
+  "statistics": {
+    "armor_class": 12,
+    "hit_points": 33,
+    "hit_dice": "6d6+12",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 14,
+      "CON": 14,
+      "INT": 5,
+      "WIS": 12,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 20,
+      "fly_ft": 40
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 11
+    },
+    "skills": {
+      "Stealth": 4
+    },
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [
+      "cold"
+    ],
+    "condition_immunities": [
+      "poisoned"
+    ]
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Blood Frenzy",
+        "category": "passive",
+        "effect": "Vantagem nos ataques corpo a corpo contra alvos com PV abaixo do máximo."
+      },
+      {
+        "name": "Blood Sense",
+        "category": "passive",
+        "effect": "Detecta localização de criaturas vivas a até 30 pés por cheiro."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "sequence": [
+          {
+            "action": "Claws",
+            "count": 1
+          },
+          {
+            "action": "Bite",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 4,
+        "reach_ft": 5,
+        "targets": "1 criatura",
+        "damage": [
+          {
+            "dice": "1d6",
+            "modifier": 2,
+            "type": "piercing"
+          }
+        ],
+        "on_hit": "Se alvo Large ou menor, fixa-se. Enquanto preso não ataca; início de cada turno retira 1d6+2 PV (perda de sangue).",
+        "ending": "Desprende-se gastando 5 pés de movimento; libera após drenar 20 PV ou morte da vítima. Qualquer criatura pode gastar ação e passar teste FOR CD13 para remover."
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 4,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d4",
+            "modifier": 2,
+            "type": "slashing"
+          }
+        ]
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:anophiloi",
+      "type": "ficha_individual_secundaria",
+      "edition": "Creature Codex",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  }
+}

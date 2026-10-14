@@ -1,0 +1,145 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-220",
+  "name": "Corpse Worm",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "3",
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 76,
+    "hit_dice": "8d10+32",
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 12,
+      "CON": 19,
+      "INT": 1,
+      "WIS": 12,
+      "CHA": 5
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Perception": 3
+    },
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ]
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "category": "passive",
+        "effect": "Vantagem em Perception (SAB) baseada em olfato."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 5,
+        "reach_ft": 10,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "2d6",
+            "modifier": 3,
+            "type": "piercing"
+          }
+        ],
+        "on_hit": "Alvo grappled, escape CD13; restrained enquanto agarrado; não pode morder outro alvo nem usar Regurgitate enquanto agarrar.",
+        "grapple_escape_dc": 13,
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 12,
+          "on_failure": "Doença: poisoned até cura; a cada 24 horas novo teste, falha reduz PV máximo em 1d10 até cura; morte se PV máximo atinge 0.",
+          "on_success": "Evita doença"
+        }
+      },
+      {
+        "name": "Swallow",
+        "category": "special_attack",
+        "targets": "Alvo Medium ou menor já agarrado",
+        "resolution": "Novo ataque Bite; acerto engole e encerra agarrão.",
+        "conditions": [
+          "blinded",
+          "restrained"
+        ],
+        "effect": "Vítima tem cobertura total contra efeitos externos e sofre 3d6 acid no início de cada turno do worm.",
+        "limits": "Só uma criatura engolida.",
+        "escape": "Se criatura engolida causar 20+ dano em um único turno, worm testa CON CD12 no fim do turno ou regurgita em até 10 pés, alvo prone. Ao morrer, alvo gasta 10 pés de movimento para sair prone."
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Regurgitate",
+        "category": "reaction",
+        "recharge": "5-6",
+        "trigger": "Alvo visível a até 10 pés acerta worm com ataque",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 14,
+          "on_failure": "Poisoned por 1 minuto",
+          "on_success": "Sem efeito"
+        },
+        "complication": "Se há criatura engolida, worm testa CON CD14 ou também a expele prone a até 5 pés do atacante; se expelida, ambos recebem 2d6 acid.",
+        "blocked_while": "Worm mantém vítima agarrada pelo Bite."
+      }
+    ],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:corpse-worm",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  }
+}

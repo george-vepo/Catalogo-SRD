@@ -1,0 +1,149 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-219",
+  "name": "Cobbleswarm",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "2",
+    "size": "Medium swarm of Tiny",
+    "type": "monstrosities",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 36,
+    "hit_dice": "8d8",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 11,
+      "CON": 11,
+      "INT": 5,
+      "WIS": 12,
+      "CHA": 5
+    },
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "passive_perception": 11
+    },
+    "skills": {},
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [
+      "bludgeoning",
+      "piercing",
+      "slashing"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "prone",
+      "restrained",
+      "stunned"
+    ]
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "passive",
+        "effect": "Quando imóvel, indistinguível de pedras comuns."
+      },
+      {
+        "name": "Shifting Floor",
+        "category": "passive",
+        "effect": "Quando entra no espaço de criatura ou inicia turno no espaço dela, a criatura deve passar DES CD13 ou ficar prone. Para levantar dentro do espaço, teste Acrobatics (DES) CD13.",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 13,
+          "on_failure": "Prone",
+          "on_success": "Sem efeito"
+        }
+      },
+      {
+        "name": "Swarm",
+        "category": "passive",
+        "effect": "Pode ocupar espaço de outras criaturas e atravessar aberturas suficientes para pedra Tiny; não recupera PV nem ganha PV temporários."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Stings",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 3,
+        "reach_ft": 0,
+        "targets": "1 alvo no espaço do enxame",
+        "damage": [
+          {
+            "dice": "6d4",
+            "modifier": 0,
+            "type": "piercing",
+            "condition": "PV acima da metade"
+          },
+          {
+            "dice": "3d4",
+            "modifier": 0,
+            "type": "piercing",
+            "condition": "PV na metade ou abaixo"
+          }
+        ]
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Shift and Tumble",
+        "category": "bonus_action",
+        "targets": "1 criatura prone no espaço do enxame",
+        "effect": "Empurra alvo até 5 pés para longe."
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:cobbleswarm",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 1",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    },
+    {
+      "url": "https://koboldpress.com/judges-commentary-low-cr-design/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  }
+}
