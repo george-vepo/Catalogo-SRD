@@ -1,0 +1,28 @@
+name: SRD607 E source mechanics coverage
+on:
+  push:
+    branches:
+      - chatgpt/srd607-complete-statblocks-e
+    paths:
+      - .github/workflows/srd607-mechanics-e-source.yml
+permissions:
+  contents: write
+concurrency:
+  group: srd607-mechanics-e-source
+  cancel-in-progress: false
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt/srd607-complete-statblocks-e
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Extract source data with strict review gates
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python operational/research/complete-reference-e/scripts/extract_kobold_source.py
