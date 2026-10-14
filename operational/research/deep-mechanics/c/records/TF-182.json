@@ -4,115 +4,240 @@
   "nome": "Ooze, Tar",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 60,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "BLOQUEADA_FIRE_HAZARD_IMUNIDADE_FIRE_INTERACAO",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Tome of Beasts 2",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ooze-tar/"
   },
   "estatisticas": {
     "nd_catalogo": "6",
     "nd_fonte": "6",
     "ca": 9,
+    "ca_origem": null,
     "pv": 120,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "15d10+45",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 18,
+      "DES": 8,
+      "CON": 16,
+      "INT": 1,
+      "SAB": 8,
+      "CAR": 2
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": -1,
+      "CON": 3,
+      "INT": -5,
+      "SAB": -1,
+      "CAR": -4
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "fire",
+      "necrotic",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 2300,
+    "bonus_proficiencia": 3
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Fire Hazard inflama contato e golpes; Sticky Situation reduz deslocamento de alvos cobertos em alcatrão",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Fire Hazard",
+        "gatilho": "sofre fire damage apesar de imunidade a fire",
+        "estado_ativado": "em chamas",
+        "termino": [
+          "sofrer cold damage",
+          "imersa em água"
+        ],
+        "duracao": "até terminar por uma dessas condições",
+        "toque_e_melee_perto": {
+          "gatilho": "criatura toca ooze ou acerta melee a até 5ft enquanto burning",
+          "dano": {
+            "dados": "1d10",
+            "media": 5,
+            "tipo": "fire"
+          }
+        },
+        "weapon_attacks": {
+          "dano_adicional": {
+            "dados": "1d10",
+            "media": 5,
+            "tipo": "fire"
+          }
+        }
+      },
+      {
+        "nome": "Sticky Situation",
+        "gatilho": "criatura covered with tar",
+        "duracao": "1 minuto",
+        "movimento": "speed metade",
+        "acender": "fonte de fogo toca tar ou criatura revestida sofre fire damage",
+        "terminar_queima": "alguém usa uma action para apagar",
+        "dano_recorrente": {
+          "momento": "início de turno revestida e burning",
+          "dano": {
+            "dados": "2d10",
+            "media": 10,
+            "tipo": "fire"
+          }
+        },
+        "transformacao": {
+          "condicao": "humanoide morre ainda revestido",
+          "efeito": "tar ghoul em 1 hora",
+          "excecoes": [
+            "ressuscitado",
+            "corpo destruído"
+          ]
+        }
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Dois pseudópodes podem cobrir mesmo alvo; Hurl Tar atinge à distância.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "quantidade": 2,
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ],
+        "condicao_especial": "se ambos atingirem o mesmo alvo, alvo coated with tar"
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "necrotic"
+          }
+        ],
+        "dano_condicional": {
+          "condicao": "Fire Hazard ativo",
+          "bonus": {
+            "dados": "1d10",
+            "media": 5,
+            "tipo": "fire"
+          }
+        }
+      },
+      {
+        "nome": "Hurl Tar",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 2,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "necrotic"
+          }
+        ],
+        "on_hit": {
+          "teste": {
+            "atributo": "DEX",
+            "cd": 14
+          },
+          "falha": "alvo coated with tar => Sticky Situation"
+        }
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "necrotic"
+          }
+        ],
+        "dano_condicional": {
+          "condicao": "Fire Hazard ativo",
+          "bonus": {
+            "dados": "1d10",
+            "media": 5,
+            "tipo": "fire"
+          }
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 2,
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ],
+      "condicao_especial": "se ambos atingirem o mesmo alvo, alvo coated with tar"
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "O fogo recebido não deve causar dano à gosma imune ao fogo, mas pode incendiá-la.",
-    "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição."
+    "Ooze imune a fire, MAS fonte diz que ao sofrer fire damage acende: preservar gatilho textual e imunidade sem concluir dano positivo.",
+    "Sticky Situation cobre o alvo após DOIS pseudopods no mesmo alvo ou Hurl Tar com falha DEX14, fogo em tar é estado distinto de Fire Hazard da ooze; tar ghoul só para humanoide morto não ressuscitado.",
+    "Fonte ToB2 reproduzida 5eSRD/KPOGL, licenciamento de imagem não confirmado."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com edição correta"
+    "conferência livro/editorial e erratas aplicáveis",
+    "direitos/adequação visual da arte e revisão independente"
   ],
   "fontes": [
     {
@@ -123,6 +248,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-tar/",
+      "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:tar-ooze",
+      "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +314,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 42,
+    "publicacao": "Tome of Beasts 2",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-tar/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

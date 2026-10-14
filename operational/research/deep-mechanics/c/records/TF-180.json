@@ -4,114 +4,204 @@
   "nome": "Ooze, Sinoper",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 58,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Tome of Beasts 3 (2022)",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ooze-sinoper/"
   },
   "estatisticas": {
     "nd_catalogo": "9",
     "nd_fonte": "9",
     "ca": 7,
+    "ca_origem": null,
     "pv": 170,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "20d8+80",
+    "porte": "Medium",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 21,
+      "DES": 5,
+      "CON": 19,
+      "INT": 3,
+      "SAB": 14,
+      "CAR": 4
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": -3,
+      "CON": 4,
+      "INT": -4,
+      "SAB": 2,
+      "CAR": -3
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [],
+    "resistencias": [
+      "bludgeoning/piercing/slashing de armas não mágicas"
+    ],
+    "imunidades_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 5000,
+    "bonus_proficiencia": 4
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Amorphous, False Appearance imita pintura/mural; Spider Climb",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Amorphous",
+        "passagem_minima_inch": 1
+      },
+      {
+        "nome": "False Appearance",
+        "gatilho": "imóvel em superfície plana como parede ou teto",
+        "limite": "apenas pintura/fresco que tenha tocado",
+        "efeito": "assume aparência indistinguível da obra"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "escala teto/parede sem check"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Três Paint Splash, revestindo alvos com pigmento quente/frio; Foment Pigment (recarga 4–6) explode pigmentos em frio/fogo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "quantidade": 3,
+        "sequencia": [
+          "Paint Splash",
+          "Paint Splash",
+          "Paint Splash"
+        ]
+      },
+      {
+        "nome": "Paint Splash",
+        "tipo": "melee OR ranged weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "distancia_curta_ft": 20,
+        "distancia_longa_ft": 60,
+        "alvo": "uma criatura",
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "acid"
+          }
+        ],
+        "on_hit": {
+          "efeito": "pinta o alvo",
+          "cor": "paridade de um die roll: par = warm (vermelho/laranja/amarelo); ímpar = cool (azul/verde/roxo)",
+          "retirar": {
+            "economia": "action",
+            "quem": "qualquer criatura inclusive alvo"
+          }
+        }
+      },
+      {
+        "nome": "Foment Pigment",
+        "recarga": "4-6",
+        "alvos": "cada criatura pintada por Paint Splash até 60ft",
+        "teste": {
+          "atributo": "CON",
+          "cd": 16
+        },
+        "falha": {
+          "dano": {
+            "dados": "10d6",
+            "media": 35,
+            "tipo": "cold se cool, fire se warm"
+          },
+          "estado": "poisoned por 1 minuto"
+        },
+        "sucesso": "metade do dano correspondente e sem poisoned",
+        "sempre": "remove paint de cada criatura afetada",
+        "nota": "não há salvaguarda recorrente publicada para poisoned"
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Paint Splash",
+        "tipo": "melee OR ranged weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "distancia_curta_ft": 20,
+        "distancia_longa_ft": 60,
+        "alvo": "uma criatura",
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "acid"
+          }
+        ],
+        "on_hit": {
+          "efeito": "pinta o alvo",
+          "cor": "paridade de um die roll: par = warm (vermelho/laranja/amarelo); ímpar = cool (azul/verde/roxo)",
+          "retirar": {
+            "economia": "action",
+            "quem": "qualquer criatura inclusive alvo"
+          }
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 3,
+      "sequencia": [
+        "Paint Splash",
+        "Paint Splash",
+        "Paint Splash"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Foment Pigment causa frio ou fogo CONFORME cor determinada pela paridade no Paint Splash, não escolher aleatoriamente na detonação.",
+    "Paint Splash é ataque melee OU ranged +9 (5ft ou 20/60ft); qualquer criatura pode gastar action para remover tinta. Poisoned 1 minuto sem reteste explícito no bloco.",
+    "Inspeção editorial da edição e direitos/identidade de imagem não confirmados."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferência livro/editorial e erratas aplicáveis",
+    "direitos/adequação visual da arte e revisão independente"
   ],
   "fontes": [
     {
@@ -122,6 +212,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-sinoper/",
+      "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/myubd/nuoj/basic/301-350",
+      "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
       "conferida_nesta_execucao": true
     }
   ],
@@ -178,5 +278,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 42,
+    "publicacao": "Tome of Beasts 3 (2022)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-sinoper/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
