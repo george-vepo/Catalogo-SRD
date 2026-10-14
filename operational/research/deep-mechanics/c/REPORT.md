@@ -2,6 +2,13 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 31 — Queen of Serpents e Queen of Mammoths (14/10/2026)
+
+- TF-124 Queen of Serpents: três formas, Bestowal of Trust com +1 Wisdom sem custo de ação especificado, 3 legendary resistances/dia, Innate Spellcasting CHA CD18, Bite/Shortsword/Constrict/Gaze com restrições por forma, Multiattack apenas human/true, 3 legendary actions (Detect, Move, Precognition), efeitos regionais, sem lair actions listadas. Fonte https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/.
+- TF-125 Queen of Mammoths: quatro formas com Change Shape como bônus, Trampling Charge e Stomp bônus condicional, três rotas de Multiattack com substituição por Trunk ou Trunk Slam, Tusk Sweep 5–6, reação Catch Weapon com redução 1d10+17 e disputa, quatro legendary actions com custos 1/1/2/3, incluindo regeneração, arremesso e trombeta. Recompensa Mammoth's Gift é descrição narrativa, não ação. Fonte https://www.5esrd.com/database/creature/queen-of-mammoths/.
+- **51 aprofundadas, 80 ainda não revalidadas, 0 integralmente aprovadas; 94 parciais, 37 bloqueadas.** Duas imagens preexistentes, ainda sem validação visual, nenhum novo arquivo binário importado.
+
+
 ## Checkpoint 30 — Queen of Cats e Queen of Scorpions (14/10/2026)
 
 - **TF-122 Queen of Cats:** three forms human/cat/true com claw e bite proibidos em human form, Moon Strike com alvo luminoso após falha DES CD18, Pounce CD19, Shapechanger, Safe Fall, Rejuvenation, Innate Spellcasting CHA DC19, três legendary actions (Leap, Swipe, Scurry), 3 lair actions (tigers/panthers, magical darkness, moonlight) e três regional effects. Fonte https://www.5esrd.com/database/creature/animal-lord-queen-of-cats/. Permanece parcial até livro/errata e aprovação visual.

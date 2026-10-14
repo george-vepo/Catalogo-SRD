@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 49,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 51,
     "fichas_integralmente_concluidas": 0,
     "parciais": 94,
     "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 82,
+    "registros_aproveitados_sem_nova_verificacao_integral": 80,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -460,6 +460,18 @@
       "commit": null,
       "leitura_persistencia": "PENDENTE",
       "tipo": "Queen Cats and Queen Scorpions — formas, legendary, lair e editorial"
+    },
+    {
+      "numero": 31,
+      "inicio": "TF-124",
+      "fim": "TF-125",
+      "ids": [
+        "TF-124",
+        "TF-125"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE_READ_BACK",
+      "tipo": "Serpent/Mammoth queens forma, acoes e legendary actions"
     }
   ],
   "atualizacao_detalhada_sha": "9d6386ea894bfbb62d4e72f68b2dfe140fc44508",
@@ -1746,16 +1758,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 4,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-124.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_ESTRUTURADA_CUSTO_BESTOWAL_ABERTO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "As ações são restritas às formas humana/serpente/híbrida; ações lendárias não podem ser tratadas como ações comuns.",
-        "Conteúdo regional do covil não foi integrado à mecânica-base."
+        "Bestowal of Trust concede +1 Wisdom a um alvo até ferir réptil, mas a página não informa ação ou alcance do recurso. Não automatizar custo/deslocamento inventado.",
+        "Constrict e Bite são restritos às formas snake/true, shortsword human/true, e só human/true têm Multiattack.",
+        "Não há lair actions declaradas, mas há três regional effects. Livro original Creature Codex/errata e aprovação visual pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "custo e alcance de Bestowal of Trust não declarados",
+        "revisão livro Creature Codex e errata",
+        "aprovação visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -1765,7 +1780,8 @@
         "bytes": 50800,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-125",
@@ -1773,16 +1789,20 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 5,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-125.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/queen-of-mammoths/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "A fonte intercala um parágrafo narrativo depois das ações lendárias; não registrar como mecânica.",
-        "Limites de forma humana/elefantídea devem ser mantidos."
+        "Multiattack permite sequências Battleaxe/Gore/Stomp e UMA substituição por Trunk ou Trunk Slam; respeitar forma de cada ataque.",
+        "Change Shape é bônus, Catch Weapon é reação; Trunk Slam tem ground slam com save CON e arremesso com colisão condicional.",
+        "Fonte intercala parágrafo de recompensa Mammoth's Gift logo após ações lendárias; separado de ações de combate.",
+        "Forma de Trunk Slam não explicitamente restringida no texto; verificar Tome of Beasts 3/errata e imagem antes de uso automático."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "uso de Trunk Slam sem forma explícita",
+        "confirmação editorial Tome of Beasts 3 e errata",
+        "validação visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -1792,7 +1812,8 @@
         "bytes": 178404,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-126",

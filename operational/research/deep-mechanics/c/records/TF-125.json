@@ -4,14 +4,14 @@
   "nome": "Animal Lord, Queen of Mammoths",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 5,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
     "edicao": null,
-    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+    "fonte_identidade": "https://www.5esrd.com/database/creature/queen-of-mammoths/"
   },
   "estatisticas": {
     "nd_catalogo": "18",
@@ -19,7 +19,7 @@
     "ca": 20,
     "pv": 250,
     "dados_vida": "20d12+120",
-    "porte": "Huge",
+    "porte": "Gargantuan oliphaunt, Huge mammoth/true, Medium human",
     "tipo": "fey (shapechanger)",
     "alinhamento": "chaotic good",
     "atributos": {
@@ -39,397 +39,607 @@
       "CAR": 4
     },
     "deslocamentos": {
-      "andar": 40
+      "andar_ft": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 13
+      },
+      {
+        "nome": "Insight",
+        "bonus": 10
+      },
+      {
+        "nome": "Intimidation",
+        "bonus": 10
+      },
+      {
+        "nome": "Perception",
+        "bonus": 10
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 6
+      },
+      {
+        "nome": "WIS",
+        "bonus": 10
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "truesight",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 20,
+    "idiomas": [
+      "all",
+      "telepathy 120 ft"
+    ],
+    "resistencias": [
+      "bludgeoning/piercing/slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "cold",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "incapacitated",
+      "poisoned",
+      "stunned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 20000,
+    "bonus_proficiencia": 6,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Elephantine Passivism",
-        "resumo_anterior": "Elefantes e mamutes não a atacam voluntariamente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "elephants/mammoths/elephantines não podem atacá-la voluntariamente; controle mágico pode compelir"
       },
       {
         "nome": "Legendary Resistance",
-        "resumo_anterior": "3/dia, transforma falha em sucesso.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Rejuvenation",
-        "resumo_anterior": "Após morrer retorna por meio de outro elefantídeo em 1d6 dias.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Trampling Charge",
-        "resumo_anterior": "Avanço de 20 pés mais gore impõe FOR CD20 contra queda, permitindo stomp bônus.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "usos": {
+          "quantidade": 3,
+          "periodo": "dia"
+        },
+        "gatilho": "falha em save",
+        "efeito": "pode converter em sucesso"
       },
       {
         "nome": "Magic Resistance",
-        "resumo_anterior": "Vantagem contra magia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem em salvaguardas vs magic spells/effects"
+      },
+      {
+        "nome": "Magic Weapons",
+        "efeito": "weapon attacks são mágicos"
+      },
+      {
+        "nome": "Rejuvenation",
+        "gatilho": "morre",
+        "efeito": "alma reforma no Astral Plane e ocupa elephantine no Material em 1d6 dias, como nova Queen com PV/abilities integrais",
+        "impedir": "matar toda criatura elephantine no Material Plane"
+      },
+      {
+        "nome": "Speak with Elephantines",
+        "efeito": "conversa com elephants, mammoths e elephantines como se compartilhassem idioma"
+      },
+      {
+        "nome": "Trampling Charge",
+        "pre_condicoes": [
+          "move >=20 ft em linha reta em direção ao alvo",
+          "acerta Gore no mesmo turno"
+        ],
+        "teste": {
+          "atributo": "STR",
+          "cd": 20
+        },
+        "falha": {
+          "condicao": "prone"
+        },
+        "efeito_adicional": {
+          "pre_condicao": "alvo prone",
+          "custo": "ação bônus",
+          "ataque": "Stomp"
+        }
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Três battleaxe, dois gore ou gore e stomp; possibilidade de substituir por ação de tromba.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "alternativas": [
+          {
+            "forma": "humanoid ou true",
+            "sequencia": [
+              {
+                "nome": "Battleaxe",
+                "quantidade": 3
+              }
+            ]
+          },
+          {
+            "forma": "elephantine ou true",
+            "sequencia": [
+              {
+                "nome": "Gore",
+                "quantidade": 2
+              }
+            ]
+          },
+          {
+            "forma": "elephantine ou true",
+            "sequencia": [
+              {
+                "nome": "Gore",
+                "quantidade": 1
+              },
+              {
+                "nome": "Stomp",
+                "quantidade": 1
+              }
+            ]
+          }
+        ],
+        "substituicao": "pode trocar UM ataque da sequência selecionada por Trunk ou Trunk Slam",
+        "nota": "fonte não restringe explicitamente forma de Trunk Slam, apesar de envolver tromba; manter pendência"
+      },
+      {
+        "nome": "Battleaxe",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "formas": [
+          "humanoid",
+          "true"
+        ],
+        "dano_uma_mao": [
+          {
+            "dados": "3d8+7",
+            "media": 20,
+            "tipo": "slashing"
+          }
+        ],
+        "dano_duas_maos": [
+          {
+            "dados": "3d10+7",
+            "media": 23,
+            "tipo": "slashing"
+          }
+        ]
       },
       {
         "nome": "Gore",
-        "resumo_anterior": "Ataque +13, 6d8+7 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "formas": [
+          "elephantine",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "6d8+7",
+            "media": 34,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Stomp",
-        "resumo_anterior": "Ataque +13, 5d10+7 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "elephantine",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "5d10+7",
+            "media": 34,
+            "tipo": "bludgeoning"
+          }
+        ]
       },
       {
         "nome": "Trunk",
-        "resumo_anterior": "Agarrar e restringir alvo; pode usar Trunk Slam.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 15,
+        "alvos": 1,
+        "formas": [
+          "elephantine",
+          "true"
+        ],
+        "dano": [],
+        "efeito_ao_acertar": {
+          "pre_condicao": "alvo Large ou menor",
+          "condicoes": [
+            "grappled",
+            "restrained enquanto grappled"
+          ],
+          "escape_cd": 19,
+          "limite": "não usa Trunk em outro alvo enquanto grappled"
+        }
+      },
+      {
+        "nome": "Trunk Slam",
+        "categoria": "ação",
+        "alvos": "objeto Large ou menor segurado OU criatura Large ou menor grappled",
+        "alternativas": [
+          {
+            "nome": "Ground Slam",
+            "alvo": "grappled creature",
+            "teste": {
+              "atributo": "CON",
+              "cd": 20
+            },
+            "falha": {
+              "dano": {
+                "dados": "5d10",
+                "media": 27,
+                "tipo": "bludgeoning"
+              }
+            },
+            "sucesso": "metade",
+            "mantem_grapple": true
+          },
+          {
+            "nome": "Throw",
+            "alvo": "Large ou menor segurado/grappled",
+            "distancia_ft": {
+              "maximo": 60,
+              "direcao": "aleatória"
+            },
+            "efeito": "lançado e prone",
+            "colisao_superficie": {
+              "dano": "1d6 bludgeoning para cada 10 ft arremessados"
+            },
+            "colisao_criatura": {
+              "teste_alvo_secundario": {
+                "atributo": "DEX",
+                "cd": 19
+              },
+              "efeito_falha": "sofre mesmo dano do arremesso e fica prone",
+              "efeito_sucesso": "não descrito na frase"
+            }
+          }
+        ]
       },
       {
         "nome": "Tusk Sweep",
-        "resumo_anterior": "Recarga 5–6, DES CD20 para 10d6 contundente e empurrão.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Legendary Actions",
-        "resumo_anterior": "Regenerative Hide, Trunk, Shoving Stampede e Queen's Trumpet.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "ação de área",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "formas": [
+          "elephantine",
+          "true"
+        ],
+        "area": {
+          "tipo": "cubo",
+          "aresta_ft": 15
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 20
+        },
+        "falha": {
+          "dano": {
+            "dados": "10d6",
+            "media": 35,
+            "tipo": "bludgeoning"
+          },
+          "empurra_ft": 15
+        },
+        "sucesso": {
+          "dano": "metade",
+          "empurra_ft": 0
+        }
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Três battleaxe, dois gore ou gore e stomp; possibilidade de substituir por ação de tromba.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Battleaxe",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "formas": [
+          "humanoid",
+          "true"
+        ],
+        "dano_uma_mao": [
+          {
+            "dados": "3d8+7",
+            "media": 20,
+            "tipo": "slashing"
+          }
+        ],
+        "dano_duas_maos": [
+          {
+            "dados": "3d10+7",
+            "media": 23,
+            "tipo": "slashing"
+          }
+        ]
       },
       {
         "nome": "Gore",
-        "resumo_anterior": "Ataque +13, 6d8+7 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "formas": [
+          "elephantine",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "6d8+7",
+            "media": 34,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Stomp",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "elephantine",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "5d10+7",
+            "media": 34,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Trunk",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 15,
+        "alvos": 1,
+        "formas": [
+          "elephantine",
+          "true"
+        ],
+        "dano": [],
+        "efeito_ao_acertar": {
+          "pre_condicao": "alvo Large ou menor",
+          "condicoes": [
+            "grappled",
+            "restrained enquanto grappled"
+          ],
+          "escape_cd": 19,
+          "limite": "não usa Trunk em outro alvo enquanto grappled"
+        }
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Três battleaxe, dois gore ou gore e stomp; possibilidade de substituir por ação de tromba.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "alternativas": [
+        {
+          "forma": "humanoid ou true",
+          "sequencia": [
+            {
+              "nome": "Battleaxe",
+              "quantidade": 3
+            }
+          ]
+        },
+        {
+          "forma": "elephantine ou true",
+          "sequencia": [
+            {
+              "nome": "Gore",
+              "quantidade": 2
+            }
+          ]
+        },
+        {
+          "forma": "elephantine ou true",
+          "sequencia": [
+            {
+              "nome": "Gore",
+              "quantidade": 1
+            },
+            {
+              "nome": "Stomp",
+              "quantidade": 1
+            }
+          ]
+        }
+      ],
+      "substituicao": "pode trocar UM ataque da sequência selecionada por Trunk ou Trunk Slam",
+      "nota": "fonte não restringe explicitamente forma de Trunk Slam, apesar de envolver tromba; manter pendência"
     },
     "acoes_bonus": [
       {
         "nome": "Change Shape",
-        "resumo_anterior": "Altera forma para olifante Gargantuan, mamute Huge, mulher humana Medium ou híbrida",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "ação bônus",
+        "formas": [
+          {
+            "nome": "oliphaunt",
+            "porte": "Gargantuan"
+          },
+          {
+            "nome": "mammoth",
+            "porte": "Huge"
+          },
+          {
+            "nome": "human woman",
+            "porte": "Medium"
+          },
+          {
+            "nome": "true elephant-headed humanoid",
+            "porte": "Huge"
+          }
+        ],
+        "estatisticas": "inalteradas exceto porte",
+        "equipamento": "transforma junto"
+      },
+      {
+        "nome": "Charge Stomp",
+        "pre_condicao": "depois de Gore em charge de >=20 ft e alvo prone",
+        "efeito": "executa um ataque Stomp"
       }
     ],
     "reacoes": [
       {
         "nome": "Catch Weapon",
-        "resumo_anterior": "Reduz dano de ataque corpo a corpo em 1d10+17, podendo desarmar adversário",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "reação",
+        "formas": [
+          "elephantine",
+          "true"
+        ],
+        "gatilho": "acertada por melee weapon attack",
+        "reducao_dano": {
+          "dados": "1d10+17",
+          "media": null
+        },
+        "se_reduz_a_zero": {
+          "pre_condicao": "tromba não está agarrando criatura",
+          "efeito": "pode apanhar arma com tromba",
+          "disputa": {
+            "teste_da_Queen": "STR(Athletics)",
+            "opcao_do_atacante": [
+              "STR(Athletics)",
+              "DEX(Acrobatics)"
+            ],
+            "ataque_em_duas_maos": "Queen faz a disputa com desvantagem"
+          },
+          "sucesso": "desarma e pode arremessar arma até 60 ft em direção aleatória como parte da mesma reação"
+        }
       }
     ],
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_lendarias": [
+      {
+        "nome": "Regenerative Hide",
+        "custo": 1,
+        "efeito": "recupera 15 PV",
+        "limite": "não pode usar novamente até fim do próximo turno"
+      },
+      {
+        "nome": "Trunk",
+        "custo": 1,
+        "efeito": "um ataque Trunk"
+      },
+      {
+        "nome": "Shoving Stampede",
+        "custo": 2,
+        "area": {
+          "tipo": "linha",
+          "comprimento_max_ft": 80,
+          "largura_ft": 15
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 20
+        },
+        "falha": {
+          "dano": {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          "empurra_ft": 15,
+          "condicao": "prone"
+        },
+        "sucesso": {
+          "dano": "metade",
+          "empurra_ft": 0,
+          "prone": false
+        },
+        "movimento": "não provoca opportunity attacks"
+      },
+      {
+        "nome": "Queen's Trumpet",
+        "custo": 3,
+        "alcance_audicao_ft": 300,
+        "alvos": "até 3 que possam ouvir",
+        "efeito_aliado": "vantagem na próxima jogada de ataque, ability check ou saving throw",
+        "efeito_inimigo": {
+          "teste": {
+            "atributo": "WIS",
+            "cd": 20
+          },
+          "falha": {
+            "condicao": "frightened",
+            "duracao": "até fim do próximo turno"
+          },
+          "sucesso": "sem frightened"
+        }
+      }
+    ],
+    "custos_lendarios": {
+      "maximo": 3,
+      "limite_por_vez": 1,
+      "momento": "fim do turno de outra criatura",
+      "recuperacao": "início do próprio turno"
+    },
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "recompensas_narrativas_nao_habilidades": [
+      {
+        "nome": "Mammoth's Gift",
+        "fonte": "trecho narrativo inserido após Legendary Actions",
+        "status": "NAO_IMPLEMENTAR_COMO_ACAO_LENDARIA"
+      }
+    ],
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "PRESENTES",
+      "acoes_covil": "AUSENCIA_NA_FICHA_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_NA_FICHA_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_NA_FICHA_INDIVIDUAL"
+    }
   },
   "pendencias": [
-    "A fonte intercala um parágrafo narrativo depois das ações lendárias; não registrar como mecânica.",
-    "Limites de forma humana/elefantídea devem ser mantidos.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Multiattack permite sequências Battleaxe/Gore/Stomp e UMA substituição por Trunk ou Trunk Slam; respeitar forma de cada ataque.",
+    "Change Shape é bônus, Catch Weapon é reação; Trunk Slam tem ground slam com save CON e arremesso com colisão condicional.",
+    "Fonte intercala parágrafo de recompensa Mammoth's Gift logo após ações lendárias; separado de ações de combate.",
+    "Forma de Trunk Slam não explicitamente restringida no texto; verificar Tome of Beasts 3/errata e imagem antes de uso automático."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "uso de Trunk Slam sem forma explícita",
+    "confirmação editorial Tome of Beasts 3 e errata",
+    "validação visual da imagem"
   ],
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/queen-of-mammoths/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco publicado em 5eSRD, com crédito bibliográfico Kobold Press",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
-      "tipo": "checkpoint original",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -550,5 +760,12 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "D&D 5e",
+    "data": "2026-10-14",
+    "fonte_individual": "https://www.5esrd.com/database/creature/queen-of-mammoths/",
+    "confronto_exemplar_editorial_original_errata": "PENDENTE"
   }
 }
