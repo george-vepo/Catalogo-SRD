@@ -1,0 +1,45 @@
+name: SRD607 E binary image acquisition
+on:
+  push:
+    branches:
+      - chatgpt/srd607-image-assets-e
+    paths:
+      - .github/workflows/srd607-image-assets-e.yml
+permissions:
+  contents: write
+concurrency:
+  group: srd607-image-assets-e
+  cancel-in-progress: false
+jobs:
+  acquire:
+    name: Persist and verify creature image binaries
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt/srd607-image-assets-e
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image validator
+        run: python -m pip install Pillow==11.3.0
+      - name: Acquire and persist only partition E
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python operational/assets/creature-images/scripts/acquire_e.py
+      - name: Research exact image candidates in archived Tome of Beasts miniatures
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python operational/assets/creature-images/scripts/discover_imgur_e.py
+
+# Resume only pending partition-E source candidates; verified assets are immutable.
+
+# Acquisition extension: named artwork sources TF-198, TF-209, TF-252.
+# Acquisition sources: named Annelidast, Ashwalker miniatures and Abrikandilu illustration; validate true binaries.
+# Image-only retry: TF-263 Abrikandilu from named public artwork mirror.
+
+# Re-run acquisition for verified named Imgur miniatures TF-255 Citrullus and TF-267 Arx.
+# Acquisition retry: TF-069 identified clockwork domestic miniature; TF-201 Alpha Werewolf named illustration.
+# Retry: TF-226 and TF-231 artwork linked from exact A5E accursed naga entries; base-species variant caveat recorded.
