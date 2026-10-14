@@ -5,14 +5,19 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
+    "publisher": "Kobold Press",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "3",
     "size": "Large",
     "type": "beast",
-    "alignment": null
+    "alignment": "unaligned",
+    "publication_year": 2022,
+    "edition": "Tome of Beasts 3 (2022, 5e)",
+    "source_page": 199,
+    "experience_points": 700,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 14,
@@ -27,135 +32,177 @@
       "CHA": 5
     },
     "speeds": {
-      "andar": 15,
-      "escavar": 20
+      "walk_ft": 15,
+      "burrow_ft": 20
     },
-    "senses": [
-      "blindsight 10 ft.",
-      "tremorsense 60 ft."
-    ],
+    "senses": {
+      "blindsight_ft": 10,
+      "tremorsense_ft": 60,
+      "passive_perception": 9
+    },
     "skills": {
       "Athletics": 8
     },
-    "saving_throws": null,
-    "languages": null,
+    "saving_throws": [],
+    "languages": [],
     "damage_resistances": [
       "acid"
     ],
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "prone"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": -3,
+      "CON": 2,
+      "INT": -5,
+      "WIS": -1,
+      "CHA": -3
+    },
+    "armor_class_type": "natural_armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Beast of Burden",
         "category": "passive",
-        "prior_summary_unverified": "Conta como Huge para capacidade de carga.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "effect": {
+          "counts_as_size": "Huge",
+          "purpose": "carrying_capacity"
+        }
       },
       {
         "name": "Sunlight Sensitivity",
         "category": "passive",
-        "prior_summary_unverified": "Desvantagem em ataques e Percepção visual sob luz solar.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "effect": {
+          "disadvantage_on_attack_rolls": true,
+          "disadvantage_on_sight_based_wisdom_perception": true
+        },
+        "trigger": "While in sunlight"
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "prior_summary_unverified": "Duas garras; pode substituir uma por Constricting Tail.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Claw",
+            "count": 2
+          }
+        ],
+        "allowed_substitution": {
+          "replace_one": "Claw",
+          "with": "Constricting Tail",
+          "limit": 1
+        }
       },
       {
         "name": "Claw",
-        "category": "action",
-        "prior_summary_unverified": "+6, 5 pés, 2d6+4 cortante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 4,
+              "type": "slashing",
+              "average": 11
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Constricting Tail",
-        "category": "action",
-        "prior_summary_unverified": "DES CD12 para evitar agarrão em alvo Large ou menor; fuga CD14, restrição e sufocamento até soltar.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "special_save",
+        "action_economy": "action",
+        "range_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature",
+          "size_at_most": "Large"
+        },
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 12,
+          "on_failure": {
+            "condition": [
+              "grappled",
+              "restrained"
+            ],
+            "escape_dc": 14,
+            "can_breathe": false,
+            "starts_suffocating": true
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "restriction": "Cannot use Constricting Tail on another target until grapple ends"
       }
     ],
     "bonus_actions": [
       {
         "name": "Mass Shove",
-        "category": "bonus_action",
-        "prior_summary_unverified": "Todos os alvos Large ou menores até 10 pés que não estejam agarrados testam FOR CD14 ou são empurrados até 15 pés e caem.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "area_save",
+        "action_economy": "bonus_action",
+        "targets": {
+          "range_ft": 10,
+          "size_at_most": "Large",
+          "excludes": "creatures grappled by lizard"
+        },
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 14,
+          "on_failure": {
+            "pushed_ft_up_to": 15,
+            "condition": "prone"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
       }
     ],
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/giant-mole-lizard/",
       "type": "referência_de_checkpoint_histórico",
       "verification": "detalhamento completo pendente"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:giant-mole-lizard",
+      "type": "transcricao_individual_ogl_nao_oficial",
+      "edition": "Tome of Beasts 3",
+      "source_page": 199,
+      "reviewed_on": "2026-10-14",
+      "verification": "Todos os parâmetros do statblock individual transcritos (estatísticas, ataques, efeitos, economia de ações, ausências)",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial_oficial",
+      "verification": "publicação, tipo, porte e ND"
     }
   ],
   "source_checkpoint": {
@@ -165,8 +212,15 @@
   "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
   "legacy_note": null,
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
-  ]
+    "Confrontar mecanicamente com impressão e erratas editoriais (transcrição OGL comunitária não é homologação primária).",
+    "Revisão independente da implementação do combate e aprovação da edição exata.",
+    "Arte final e direitos de uso sujeitos a verificação própria; status de imagem controlado separadamente."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_compared": false,
+    "engine_independent_review": false,
+    "final_approval": false
+  }
 }

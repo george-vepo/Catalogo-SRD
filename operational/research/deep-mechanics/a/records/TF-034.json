@@ -5,14 +5,19 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
+    "publisher": "Kobold Press",
     "publication": "Tome of Beasts 2",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "1/4",
     "size": "Medium",
     "type": "beast",
-    "alignment": null
+    "alignment": "unaligned",
+    "publication_year": 2020,
+    "edition": "Tome of Beasts 2 (2020, 5e)",
+    "source_page": null,
+    "experience_points": 50,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 13,
@@ -27,11 +32,12 @@
       "CHA": 7
     },
     "speeds": {
-      "andar": 30
+      "walk_ft": 30
     },
-    "senses": [
-      "darkvision 60 ft."
-    ],
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 10
+    },
     "skills": {
       "Athletics": 2,
       "Stealth": 5
@@ -40,79 +46,103 @@
       "CON": 4,
       "WIS": 4
     },
-    "languages": null,
+    "languages": [],
     "damage_resistances": [
       "poison"
     ],
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "poisoned"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 0,
+      "DEX": 3,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 2,
+      "CHA": -2
+    },
+    "armor_class_type": "unarmored"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Keen Hearing and Smell",
         "category": "passive",
-        "prior_summary_unverified": "Vantagem em Percepção auditiva e olfativa.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "effect": {
+          "advantage_on": "WIS (Perception)",
+          "depends_on": [
+            "hearing",
+            "smell"
+          ]
+        }
       }
     ],
     "actions": [
       {
         "name": "Bite",
-        "category": "action",
-        "prior_summary_unverified": "+5, alcance 5 pés, 1d6+3 perfurante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "type": "piercing",
+              "average": 6
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
       }
     ],
-    "bonus_actions": null,
+    "bonus_actions": [],
     "reactions": [
       {
         "name": "Defensive Roll",
         "category": "reaction",
-        "prior_summary_unverified": "Quando um ataque o acertaria e consegue ver atacante, acrescenta o bônus de Atletismo à CA contra o ataque.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "action_economy": "reaction",
+        "trigger": "An attack would hit mongoose",
+        "requires": {
+          "can_see_attacker": true
+        },
+        "effect": {
+          "armor_class_bonus": 2,
+          "bonus_source": "Athletics skill bonus",
+          "against": "one_triggering_attack"
+        }
       }
     ],
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://kpogl.wikidot.com/monster:giant-mongoose",
-      "type": "referência_de_checkpoint_histórico",
-      "verification": "detalhamento completo pendente"
+      "type": "transcricao_individual_ogl_nao_oficial",
+      "edition": "Tome of Beasts 2",
+      "source_page": null,
+      "reviewed_on": "2026-10-14",
+      "verification": "Todos os parâmetros do statblock individual transcritos (estatísticas, ataques, efeitos, economia de ações, ausências)",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial_oficial",
+      "verification": "publicação, tipo, porte e ND"
     }
   ],
   "source_checkpoint": {
@@ -122,8 +152,15 @@
   "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
   "legacy_note": null,
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
-  ]
+    "Confrontar mecanicamente com impressão e erratas editoriais (transcrição OGL comunitária não é homologação primária).",
+    "Revisão independente da implementação do combate e aprovação da edição exata.",
+    "Arte final e direitos de uso sujeitos a verificação própria; status de imagem controlado separadamente."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_compared": false,
+    "engine_independent_review": false,
+    "final_approval": false
+  }
 }
