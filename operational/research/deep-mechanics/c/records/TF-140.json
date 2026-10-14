@@ -170,7 +170,63 @@
         ]
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Handaxe",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "melee": 10,
+          "arremesso_normal": 20,
+          "arremesso_longo": 60
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+8",
+            "media": 18,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Tusks",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+8",
+            "media": 22,
+            "tipo": "slashing"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "Large ou menor",
+          "atributo": "STR",
+          "cd": 20,
+          "em_falha": "prone"
+        }
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d10+8",
+            "media": 30,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
     "multiataque": {
       "sequencia": [
         "Handaxe",

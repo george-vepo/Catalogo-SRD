@@ -91,7 +91,7 @@
           "Obsidian Axe",
           "Firestorm Bolt"
         ],
-        "nota": "Fonte permite duas attacks usando essas opções, sem impor exclusividade por nome"
+        "nota": "A frase 'makes two Obsidian Axe or Firestorm Bolt attacks' não especifica claramente se ambas devem ser do mesmo tipo; não presumir mistura."
       },
       {
         "nome": "Obsidian Axe",
@@ -168,7 +168,51 @@
         "remover_lava": "Uma criatura, inclusive a coberta, gasta sua ação para quebrar e remover a lava"
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Obsidian Axe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "cold"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "Firestorm Bolt",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 120,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+3",
+            "media": 13,
+            "tipo": "fire"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "cold"
+          }
+        ]
+      }
+    ],
     "multiataque": {
       "quantidade": 2,
       "opcoes": [

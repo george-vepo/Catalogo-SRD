@@ -79,7 +79,15 @@
     "vulnerabilidades": [],
     "xp": 2300,
     "bonus_proficiencia": 3,
-    "composicao_ca": "natural armor; +3 dos três espíritos incluído no valor? fonte diz reduzir AC 1 por espírito destruído, não discrimina valor base"
+    "composicao_ca": "natural armor; CA reduz 1 por espírito expulso; composição numérica do bônus não publicada",
+    "imunidades_condicao_condicionais": {
+      "origem": "Steadfast concedida por Ancestral Spirits",
+      "condicoes": [
+        "charmed",
+        "frightened"
+      ],
+      "duracao": "enquanto a trait Steadfast não for removida"
+    }
   },
   "mecanicas": {
     "tracos": [
@@ -163,7 +171,39 @@
         ]
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
     "multiataque": {
       "sequencia": [
         "Greatclub",

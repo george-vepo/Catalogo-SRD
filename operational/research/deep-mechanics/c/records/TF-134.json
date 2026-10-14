@@ -141,7 +141,38 @@
         "morte": "vítima não mais restrained, sai usando 5 ft de movimento e prone"
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Claws",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "slashing"
+          }
+        ],
+        "condicao": "Em criatura Medium ou menor: grappled, escape DC12",
+        "limite": "Duas garras, cada uma agarra um alvo"
+      }
+    ],
     "multiataque": {
       "sequencia": [
         "Claws",
