@@ -349,5 +349,68 @@
     "Pendente revisão independente e confronto com errata/publicação final; NÃO é ficha canônica.",
     "Definir efeito do ramo de sucesso de Whirlpool: página editorial duplica 'On a failure' para falha e metade de dano."
   ],
-  "integrada": false
+  "integrada": false,
+  "caracteristicas_toca": {
+    "origem": "https://a5e.tools/node/1555",
+    "natureza": "Opções de características de toca de River Dragon: escolher ou rolar uma ou mais; NÃO são ações de toca padrão em todos os encontros",
+    "opcoes": [
+      {
+        "numero": 1,
+        "nome": "Aliados aquáticos",
+        "ativacao": "ação bônus do dragão",
+        "condicao": "toca com criaturas aquáticas",
+        "invocacao": {
+          "alternativas": [
+            {
+              "criatura": "crocodile",
+              "quantidade": "1d6"
+            },
+            {
+              "criatura": "swarm of quippers",
+              "quantidade": "1d4"
+            }
+          ]
+        },
+        "duracao": "até aliados morrerem, dragão dispensá-los por ação bônus ou voltar a usar esta habilidade",
+        "dispensa": "ação bônus",
+        "observacao": "não adicionar a toda ficha se a característica opcional não for selecionada"
+      },
+      {
+        "numero": 2,
+        "nome": "Defensores ribeirinhos",
+        "gatilho": "início de cada rodada de combate na toca",
+        "teste": "1d6",
+        "ativa_em": "5–6",
+        "aliados": {
+          "criatura": "thug",
+          "quantidade": "1d4",
+          "iniciativa": "mesma do dragão"
+        },
+        "duracao": "até morrerem ou dragão ordená-los a parar"
+      },
+      {
+        "numero": 3,
+        "nome": "Rochas afiadas",
+        "gatilho": "uma ação ou ataque do dragão faz criatura colidir com objeto sólido",
+        "dano_adicional": {
+          "dados": "2d8",
+          "modificador": 0,
+          "tipo": "bludgeoning"
+        },
+        "valor_medio": 9
+      },
+      {
+        "numero": 4,
+        "nome": "Rio turvo",
+        "efeito": "Visibilidade subaquática reduzida a 20 pés",
+        "visibilidade_ft": 20
+      }
+    ]
+  },
+  "auditoria_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/1555",
+    "tipo": "conferência pontual de ações e efeitos em fonte editorial A5E acessível",
+    "conclusao": "Lacunas identificadas e estruturadas neste checkpoint; não prova integralidade frente ao exemplar impresso/erratas nem homologação independente.",
+    "nao_promovido": true
+  }
 }

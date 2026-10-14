@@ -1,3 +1,15 @@
+## Checkpoint B — 14/10/2026 — conferência pontual de três fichas A5E com fontes editoriais
+
+**TF-094 Adult River Dragon**: estruturadas separadamente as **quatro características opcionais de toca** — aliados aquáticos por ação bônus, aldeões que chegam no início da rodada, rochas que aumentam dano de colisão em 2d8 e limite de visão subaquática. Fonte: <https://a5e.tools/node/1555>. A fonte repete incorretamente `On a failure` no segundo ramo de Whirlpool; resultado de sucesso **permanece pendente**, sem inventar CD ou efeito.
+
+**TF-095 Adult Sapphire Dragon**: estruturadas as quatro características opcionais de toca — substituição de Shatter Mind por mage uma vez por dia, condição rattled de visitantes, desvantagem para navegação e intrusos surprised. Fonte: <https://a5e.tools/node/1571>. A fonte menciona `Prophesy Doom` em Legendary Resistance, mas essa ação não aparece no mesmo bloco; referência **permanece pendente**.
+
+**TF-355 Hill Giant Chief**: detalhado ponto de queda da criatura arremessada, resultado do Body Slam quando espaço escolhido está ocupado e gatilhos de Muddy Ground. Fonte: <https://a5e.tools/node/1640>. Não se alterou ND, atributos, edição ou variantes por suposição.
+
+**Classificação rigorosa:** estas são **7 conferências pontuais em fonte editorial A5E** nesta continuação, somadas às quatro previamente registradas, porém continuam **0 verificações editoriais integrais (livro impresso e erratas) concluídas, 0 homologações independentes e 13 conflitos herdados pendentes**. `caracteristicas_toca` preserva opções de cenário sem torná-las ações de toca automáticas. Os 132 JSONs permanecem no diretório B, imagens 108/132. Não integrar ao catálogo global. Checkpoint limitado a 3 criaturas.
+
+---
+
 ## Checkpoint B — 14/10/2026 — quatro imagens A5E de origem rastreável
 
 Foram preparados **4 binários WebP reais**, derivados de referências diretas dos atores do [sistema oficial A5E no Foundry](https://github.com/Pjb518/FoundryVTT-Level-Up-Official), com SHA de Git idêntico à fonte, SHA-256 calculado, dimensões, bytes, origem e nomes de atores conferidos. A entrada dos quatro arquivos na branch está vinculada a este checkpoint e deve ser reaberta do GitHub após a gravação.

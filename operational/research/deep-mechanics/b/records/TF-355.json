@@ -109,6 +109,11 @@
         },
         {
           "opcao": "Arremessar criatura agarrada Médio ou menor até 30 pés; 3d6+5 dano no alvo e criatura arremessada se acertar; só criatura arremessada em erro; cai prone."
+        },
+        {
+          "gatilho": "após arremesso de criatura Medium ou menor, tenha o ataque acertado ou errado",
+          "efeito": "criatura arremessada cai prone num espaço desocupado até 5 pés do alvo",
+          "fonte": "https://a5e.tools/node/1640"
         }
       ]
     }
@@ -163,7 +168,13 @@
         "dados": "3d8",
         "modificador": 6,
         "tipo": "bludgeoning"
-      }
+      },
+      "efeitos_sucesso": {
+        "dano": "metade do dano informado",
+        "movimento": "é empurrado 5 pés para espaço desocupado à escolha do alvo",
+        "se_espaco_ocupado": "alvo cai prone"
+      },
+      "fonte_complemento": "https://a5e.tools/node/1640"
     },
     {
       "nome": "Muddy Ground",
@@ -174,7 +185,12 @@
         "atributo": "STR",
         "cd": 15
       },
-      "encerramento": "ação + STR CD15"
+      "encerramento": "ação + STR CD15",
+      "gatilhos_resistencia": [
+        "criaturas que já estejam prone no terreno afetado quando a lama surge",
+        "criaturas que caiam prone nessa área enquanto a lama persistir"
+      ],
+      "fonte_complemento": "https://a5e.tools/node/1640"
     },
     {
       "nome": "Stomp",
@@ -197,5 +213,11 @@
     "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
     "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
   ],
-  "integrada": false
+  "integrada": false,
+  "auditoria_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/1640",
+    "tipo": "conferência pontual de ações e efeitos em fonte editorial A5E acessível",
+    "conclusao": "Lacunas identificadas e estruturadas neste checkpoint; não prova integralidade frente ao exemplar impresso/erratas nem homologação independente.",
+    "nao_promovido": true
+  }
 }
