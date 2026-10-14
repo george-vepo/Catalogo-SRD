@@ -4,9 +4,9 @@
   "nome": "Giant, Hraesvelgr",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 34,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 1 (2023)",
@@ -21,7 +21,7 @@
     "dados_vida": "21d12+105",
     "porte": "Huge",
     "tipo": "giant (shapechanger, titan)",
-    "alinhamento": null,
+    "alinhamento": "neutral",
     "atributos": {
       "FOR": 25,
       "DES": 10,
@@ -40,349 +40,449 @@
     },
     "deslocamentos": {
       "andar_ft": 50,
+      "roc_andar_ft": 20,
       "roc_voar_ft": 120
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 13
+      },
+      {
+        "nome": "Perception",
+        "bonus": 9
+      },
+      {
+        "nome": "Survival",
+        "bonus": 9
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 6
+      },
+      {
+        "nome": "INT",
+        "bonus": 9
+      },
+      {
+        "nome": "WIS",
+        "bonus": 9
+      },
+      {
+        "nome": "CHA",
+        "bonus": 11
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 19,
+    "idiomas": [
+      "Auran",
+      "Common",
+      "Giant (não fala em roc form)"
+    ],
     "resistencias": [
       "lightning",
       "thunder"
     ],
     "imunidades_dano": [
       "cold",
-      "armas físicas não mágicas"
+      "bludgeoning/piercing/slashing from nonmagical attacks"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "exhaustion"
+    ],
+    "vulnerabilidades": [],
+    "xp": 22000,
+    "bonus_proficiencia": 6,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
-    "tracos": null,
+    "tracos": [
+      {
+        "nome": "Keen Sight",
+        "forma": "roc only",
+        "efeito": "vantagem WIS Perception checks que dependam de sight"
+      },
+      {
+        "nome": "Influence Weather",
+        "intervalo": "início de cada minuto",
+        "raio_milhas": 3,
+        "efeito": "ajusta 1 estágio precipitation e wind acima/abaixo, não altera temperatura, efeito imediato, nenhuma ação"
+      },
+      {
+        "nome": "Legendary Resistance",
+        "frequencia": "3/day",
+        "efeito": "troca failed save por success"
+      }
+    ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Três ataques de punho ou combinações de bico e garras, ou três Gale Blast conforme forma.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "opcoes": [
+          {
+            "forma": "roc",
+            "sequencia": [
+              "Beak",
+              "Talons",
+              "Talons"
+            ]
+          },
+          {
+            "forma": "giant",
+            "sequencia": [
+              "Fist",
+              "Fist",
+              "Fist"
+            ]
+          },
+          {
+            "forma": "any",
+            "sequencia": [
+              "Gale Blast",
+              "Gale Blast",
+              "Gale Blast"
+            ]
+          }
+        ],
+        "condicao": "dois Fist acertam o mesmo alvo -> CON save DC19 ou stunned até fim do próximo turno da vítima"
+      },
+      {
+        "nome": "Beak",
+        "tipo": "melee weapon attack",
+        "forma": "roc only",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "4d8+7",
+            "media": 25,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Fist",
-        "resumo_anterior": "+13, 10 ft., 3d8+7 contundente; dois acertos permitem Constituição CD19 contra atordoamento.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "forma": "giant only",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "3d8+7",
+            "media": 20,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Talons",
+        "tipo": "melee weapon attack",
+        "forma": "roc only",
+        "bonus_acerto": 13,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d6+7",
+            "media": 17,
+            "tipo": "slashing"
+          }
+        ],
+        "alvo_atingido": "grappled escape DC17 e restrained enquanto grappled",
+        "limite": "uma vítima por talon; duas talons"
       },
       {
         "nome": "Gale Blast",
-        "resumo_anterior": "+11, 120 ft., 2d8+5 contundente e 2d6 frio.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 11,
+        "alcance_ft": 120,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "cold"
+          }
+        ]
       },
       {
-        "nome": "Swallow (roc)",
-        "resumo_anterior": "Engole criatura agarrada Large ou menor, 5d6 ácido por turno enquanto engolida e regras especiais de escape.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Swallow",
+        "forma": "roc only",
+        "pre_condicao": "Large ou menor grappled pelo roc",
+        "ataque": "Beak +13; se acertar engole e termina grapple",
+        "efeitos": [
+          "blinded, restrained e total cover",
+          "5d6 acid (média17) no início de cada turno"
+        ],
+        "max_alvos": 1,
+        "regurgitar": {
+          "gatilho": "40+ dmg em um turno da vítima",
+          "teste": {
+            "atributo": "CON",
+            "cd": 15,
+            "momento": "fim do turno",
+            "desvantagem": "se Hraesvelgr não estiver em roc form"
+          },
+          "falha": "vítima prone a até 10ft"
+        },
+        "morte": "vítima usa 15ft de movimento e sai prone"
       },
       {
         "nome": "Sudden Gust",
-        "resumo_anterior": "Recarga 5–6, linha 60x10 ft.; Força CD19 contra 18d6 contundente e empurrão.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "recarga": "5-6",
+        "area": {
+          "formato": "line",
+          "comprimento_ft": 60,
+          "largura_ft": 10
+        },
+        "teste": {
+          "atributo": "STR",
+          "cd": 19
+        },
+        "falha": {
+          "dano": {
+            "dados": "18d6",
+            "media": 63,
+            "tipo": "bludgeoning"
+          },
+          "push_ft": 15
+        },
+        "sucesso": "metade do dano sem empurrão"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Três ataques de punho ou combinações de bico e garras, ou três Gale Blast conforme forma.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Beak",
+        "tipo": "melee weapon attack",
+        "forma": "roc only",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "4d8+7",
+            "media": 25,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Fist",
+        "tipo": "melee weapon attack",
+        "forma": "giant only",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "3d8+7",
+            "media": 20,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Talons",
+        "tipo": "melee weapon attack",
+        "forma": "roc only",
+        "bonus_acerto": 13,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d6+7",
+            "media": 17,
+            "tipo": "slashing"
+          }
+        ],
+        "alvo_atingido": "grappled escape DC17 e restrained enquanto grappled",
+        "limite": "uma vítima por talon; duas talons"
+      },
+      {
+        "nome": "Gale Blast",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 11,
+        "alcance_ft": 120,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "cold"
+          }
+        ]
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Três ataques de punho ou combinações de bico e garras, ou três Gale Blast conforme forma.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "opcoes": [
+        {
+          "forma": "roc",
+          "sequencia": [
+            "Beak",
+            "Talons",
+            "Talons"
+          ]
+        },
+        {
+          "forma": "giant",
+          "sequencia": [
+            "Fist",
+            "Fist",
+            "Fist"
+          ]
+        },
+        {
+          "forma": "any",
+          "sequencia": [
+            "Gale Blast",
+            "Gale Blast",
+            "Gale Blast"
+          ]
+        }
+      ],
+      "condicao": "dois Fist acertam o mesmo alvo -> CON save DC19 ou stunned até fim do próximo turno da vítima"
     },
     "acoes_bonus": [
       {
         "nome": "Change Shape",
-        "resumo_anterior": "Forma gigante ou roc como ação bônus.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "formas": [
+          "roc",
+          "true giant"
+        ],
+        "stats": "somente velocidade muda",
+        "equipamento": "não se transforma",
+        "morte": "retorna giant"
       }
     ],
-    "reacoes": null,
-    "acoes_lendarias": [
+    "reacoes": [],
+    "acoes_lendarias": {
+      "por_turno": 3,
+      "recarrega": "início turno do Hraesvelgr",
+      "momento": "fim do turno de outra criatura",
+      "max_uma_opcao_por_vez": true,
+      "opcoes": [
+        {
+          "nome": "Attack",
+          "custo": 1,
+          "opcoes": [
+            "Fist",
+            "Talons"
+          ],
+          "respeitar_forma": true
+        },
+        {
+          "nome": "Move",
+          "custo": 1,
+          "efeito": "move até speed normal ou voa até metade do voo em roc form sem provocar opportunity attacks"
+        },
+        {
+          "nome": "Ear-Splitting Screech",
+          "custo": 2,
+          "forma": "roc only",
+          "raio_ft": 30,
+          "teste": {
+            "atributo": "CON",
+            "cd": 19
+          },
+          "falha": {
+            "dano": {
+              "dados": "4d6",
+              "media": 14,
+              "tipo": "thunder"
+            },
+            "condicao": "deafened até fim do próximo turno"
+          }
+        }
+      ]
+    },
+    "acoes_covil": {
+      "iniciativa": 20,
+      "empate": "perde",
+      "restricao": "não repete mesma opção 2 rounds seguidos",
+      "opcoes": [
+        {
+          "nome": "Pillar of Wind",
+          "alcance_ft": 60,
+          "teste": {
+            "atributo": "STR",
+            "cd": 19
+          },
+          "falha": "restrained suspenso a 15 ft",
+          "escape": "resgate por ação STR DC19 ou escape autônomo se consegue puxar; voadores repetem STR save fim dos turnos",
+          "duracao": "até nova Pillar of Wind ou morte de Hraesvelgr"
+        },
+        {
+          "nome": "Powerful Exhale",
+          "cone_ft": 60,
+          "teste": {
+            "atributo": "DEX",
+            "cd": 19,
+            "em_falha": "prone"
+          }
+        },
+        {
+          "nome": "Terrifying Utterance",
+          "raio_ft": 30,
+          "alvos": "capazes de ouvir",
+          "teste": {
+            "atributo": "CON",
+            "cd": 19
+          },
+          "falha": {
+            "condicao": "frightened",
+            "duracao": "1 minute",
+            "repetir": "fim dos turnos"
+          }
+        }
+      ]
+    },
+    "efeitos_regionais": [
       {
-        "nome": "Attack",
-        "resumo_anterior": "Fist ou Talons.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Active Weather",
+        "raio_milhas": 6,
+        "efeito": "strong windstorms common"
       },
       {
-        "nome": "Move",
-        "resumo_anterior": "Movimento sem ataques de oportunidade.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Roosting Rocs",
+        "raio_milhas": 3,
+        "efeito": "giant avian beasts numerosos, defendem"
       },
       {
-        "nome": "Ear-Splitting Screech (2 ações)",
-        "resumo_anterior": "Constituição CD19 ou 4d6 thunder e surdez temporária.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
-    "acoes_covil": [
-      {
-        "nome": null,
-        "resumo_anterior": null,
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": null,
-        "resumo_anterior": null,
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": null,
-        "resumo_anterior": null,
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Stench of Decay",
+        "raio_milhas": 10,
+        "efeito": "vento fétido; se Hraesvelgr morre dissolve em 1d10 days"
       }
     ],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": [
+      {
+        "nome": "Attack",
+        "custo": 1
+      },
+      {
+        "nome": "Move",
+        "custo": 1
+      },
+      {
+        "nome": "Ear-Splitting Screech",
+        "custo": 2
+      }
+    ]
   },
   "pendencias": [
-    "Publicação de 2023 difere mecanicamente da versão antiga; não misturar Shapechanger e conjuração de 2016.",
-    "Validar detalhes completos das ações lendárias e covil antes da integração.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Edição 2023 Hraesvelgr não converter a anterior; ações lendárias, covil e região estruturadas separadas e exclusividade de forma preservada.",
+    "Aprovação editorial independente, direito/identidade da imagem ainda pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferir edição impressa e errata",
+    "aprovação legal e visual de imagem"
   ],
   "fontes": [
     {
@@ -393,6 +493,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-corpse-swallower-3pp/",
+      "tipo": "fonte individual no CP37",
       "conferida_nesta_execucao": true
     }
   ],
@@ -507,5 +612,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 37,
+    "publicacao": "Tome of Beasts 1 (2023)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/giant-corpse-swallower-3pp/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

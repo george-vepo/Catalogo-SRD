@@ -4,9 +4,9 @@
   "nome": "Ooze, Corrupting",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 38,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 1",
@@ -21,7 +21,7 @@
     "dados_vida": "10d10+60",
     "porte": "Large",
     "tipo": "ooze",
-    "alinhamento": null,
+    "alinhamento": "neutral evil",
     "atributos": {
       "FOR": 16,
       "DES": 10,
@@ -42,135 +42,122 @@
       "andar_ft": 20,
       "nadar_ft": 30
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60
+      },
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 5,
+    "idiomas": [],
     "resistencias": [
       "slashing",
       "bludgeoning"
     ],
     "imunidades_dano": [
       "acid",
-      "fire"
+      "fire",
+      "poison"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Corrupting Touch",
-        "resumo_anterior": "Crítico ou início do turno com alvo agarrado dissolve item material do alvo; magia exige teste Destreza CD16 do dono.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilhos": [
+          "ooze tem critical hit",
+          "ooze inicia turno com inimigo grappled"
+        ],
+        "alvo": "1 item de leather/metal/wood do alvo",
+        "mundane": "destruído automaticamente",
+        "magic": "destruído se portador falha DEX save DC16"
       },
       {
         "nome": "Strong Swimmer",
-        "resumo_anterior": "Nadador que flutua na superfície.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "flutua naturalmente na superfície da água; swim speed 30ft"
       }
     ],
     "acoes": [
       {
         "nome": "Slam",
-        "resumo_anterior": "+6, 5 ft., 2d8+3 contundente mais 1d6 ácido; agarra, fuga CD13.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+3",
+            "media": 12,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ],
+        "acerto": "grappled escape DC13"
       }
     ],
     "ataques": [
       {
         "nome": "Slam",
-        "resumo_anterior": "+6, 5 ft., 2d8+3 contundente mais 1d6 ácido; agarra, fuga CD13.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+3",
+            "media": 12,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ],
+        "acerto": "grappled escape DC13"
       }
     ],
     "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "efeitos_regionais": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Confirmação editorial e imagem pendentes.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Fonte original Tome of Beasts CR5; Corrupting Touch somente em critical hit ou início do próprio turno mantendo grapple, destrói item por material/tipo.",
+    "Confrontar ©2016 e revisão 2023 separadamente e aprovar licenças de imagem.",
+    "Cautela: URL 5eSRD de corrupting ooze requer checagem (dados conferidos com reprodução da edição original)."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferir edição impressa e errata",
+    "aprovação legal e visual de imagem"
   ],
   "fontes": [
     {
@@ -181,6 +168,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-corrupting/",
+      "tipo": "fonte individual no CP37",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://anyflip.com/adow/gzzp/basic/301-350",
+      "tipo": "reprodução material Tome of Beasts original com estatísticas",
       "conferida_nesta_execucao": true
     }
   ],
@@ -265,5 +262,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 37,
+    "publicacao": "Tome of Beasts 1",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-corrupting/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

@@ -4,9 +4,9 @@
   "nome": "Giant, Mountain",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 35,
-  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "estado_auditoria": "BLOQUEADA_LENDARIAS_FONTE_DIVERGENTE",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Creature Codex",
@@ -21,7 +21,7 @@
     "dados_vida": "19d20+114",
     "porte": "Gargantuan",
     "tipo": "giant",
-    "alinhamento": null,
+    "alinhamento": "neutral evil",
     "atributos": {
       "FOR": 26,
       "DES": 10,
@@ -41,12 +41,47 @@
     "deslocamentos": {
       "andar_ft": 50
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 15
+      },
+      {
+        "nome": "Perception",
+        "bonus": 12
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 13
+      },
+      {
+        "nome": "INT",
+        "bonus": 9
+      },
+      {
+        "nome": "WIS",
+        "bonus": 12
+      },
+      {
+        "nome": "CHA",
+        "bonus": 7
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 22,
+    "idiomas": [
+      "Common",
+      "Giant",
+      "Terran"
+    ],
+    "resistencias": [],
     "imunidades_dano": [
       "cold",
       "fire",
@@ -54,165 +89,253 @@
       "thunder",
       "bludgeoning"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "stunned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 33000,
+    "bonus_proficiencia": 7,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Legendary Resistance",
-        "resumo_anterior": "2/dia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "frequencia": "2/day",
+        "efeito": "failed save vira success"
       },
       {
         "nome": "Magic Resistance",
-        "resumo_anterior": "Vantagem contra efeitos mágicos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem saves spells/magic effects"
       },
       {
         "nome": "Mountain Master",
-        "resumo_anterior": "Molda terreno; fonte mescla este traço com efeito regional.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "modela stone worked/unworked como move earth; sem limite de duração",
+        "restricao": "não confundir efeitos regionais com este traço"
+      },
+      {
+        "nome": "Siege Monster",
+        "efeito": "triple damage em objects e structures com melee/ranged weapon attacks"
       }
     ],
-    "acoes": null,
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": [
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Slam",
+          "Slam"
+        ]
+      },
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 15,
+        "alcance_ft": 20,
+        "dano": [
+          {
+            "dados": "2d12+8",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Boulder",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 15,
+        "alcance_ft": {
+          "normal": 100,
+          "longo": 400
+        },
+        "dano": [
+          {
+            "dados": "5d12+8",
+            "media": 40,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Boulder Spray",
+        "recarga": "5-6",
+        "area": {
+          "cone_ft": 60
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 22
+        },
+        "falha": {
+          "dano": {
+            "dados": "9d12",
+            "media": 58,
+            "tipo": "bludgeoning"
+          },
+          "condicoes": [
+            "prone",
+            "restrained"
+          ]
+        },
+        "sucesso": "metade sem prone ou restrained",
+        "escape": {
+          "economia": "action",
+          "teste": "STR Athletics DC20 ou DEX Acrobatics DC20",
+          "quem": "vítima ou outra criatura"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 15,
+        "alcance_ft": 20,
+        "dano": [
+          {
+            "dados": "2d12+8",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Boulder",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 15,
+        "alcance_ft": {
+          "normal": 100,
+          "longo": 400
+        },
+        "dano": [
+          {
+            "dados": "5d12+8",
+            "media": 40,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Slam",
+        "Slam"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": {
+      "por_turno": 3,
+      "recarrega": "início próximo turno do giant",
+      "momento": "fim turno de outra criatura",
+      "opcoes": [
+        {
+          "nome": "Grasping Soil",
+          "custo": 1,
+          "alvos": 3,
+          "alcance_ft": 60,
+          "teste": {
+            "atributo": "DEX",
+            "cd": 21
+          },
+          "falha": "restrained até início do próximo turno da vítima"
+        },
+        {
+          "nome": "Roar",
+          "custo": 2,
+          "raio_ft": 20,
+          "teste": {
+            "atributo": "CON",
+            "cd": 21
+          },
+          "falha": {
+            "dano": {
+              "dados": "6d6",
+              "media": 21,
+              "tipo": "thunder"
+            },
+            "condicao": "prone"
+          },
+          "sucesso": "metade sem prone"
+        },
+        {
+          "nome": "Spawn Elemental",
+          "custo": 3,
+          "efeito": "gera earth elemental de parte do corpo, atua na mesma iniciativa, obedece giant, permanece até destruído",
+          "limite": "até 5 earth elementals sob controle"
+        }
+      ]
+    },
+    "acoes_covil": {
+      "iniciativa": 20,
+      "empate": "perde",
+      "restricao": "não repetir mesma opção em rounds consecutivos",
+      "opcoes": [
+        {
+          "nome": "Dust Cloud",
+          "raio_ft": 20,
+          "alcance_ft": 60,
+          "terreno": "difficult",
+          "teste": {
+            "atributo": "CON",
+            "cd": 18
+          },
+          "falha": "blinded até fim do próximo turno"
+        },
+        {
+          "nome": "Ground Fliers",
+          "raio_ft": 120,
+          "alvos": "criaturas voando inclusive por magia",
+          "efeito": "puxa ao chão, 1d6 force por 10ft deslocado e speed 0 até fim próximo turno"
+        }
+      ]
+    },
+    "efeitos_regionais": [
+      {
+        "nome": "Avalanches",
+        "raio_milhas": 5,
+        "efeito": "avalanches aleatórias com aviso de tremor 1h antes"
+      },
+      {
+        "nome": "Disturbed Wildlife",
+        "raio_milhas": 1,
+        "efeito": "fauna ganha vantagem em WIS Perception"
+      },
+      {
+        "nome": "Impaired Mining",
+        "raio_milhas": 5,
+        "efeito": "minerar exige dobro do tempo e esforço"
+      }
+    ],
+    "conjuracao": [],
+    "custos_lendarios": [
       {
         "nome": "Grasping Soil",
-        "resumo_anterior": "Restringe três alvos a 60 pés, Destreza CD21.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": 1
       },
       {
-        "nome": "Roar (2 ações)",
-        "resumo_anterior": "Até 20 pés: Constituição CD21 contra 6d6 thunder e queda.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Roar",
+        "custo": 2
       },
       {
-        "nome": "Spawn Elemental (3 ações)",
-        "resumo_anterior": "Conjura elemental de terra; máximo cinco sob controle.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Spawn Elemental",
+        "custo": 3
       }
-    ],
-    "acoes_covil": null,
-    "conjuracao": [],
-    "custos_lendarios": null
+    ]
   },
   "pendencias": [
-    "Seção de ações comuns incompleta na resposta de busca; bloco de Mountain Master contaminado por efeitos regionais.",
-    "Não marcar mecanicamente completa.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Página 5eSRD mistura Mountain Master com Regional Effects por erro de parsing; reconstituído em seções separadas usando Creature Codex p185–186.",
+    "Livro concede 3 legendary actions; outra republicação mgroot mostra 4/turn em desacordo. Bloquear aprovação até confronto editorial final.",
+    "Imagem física existente sem inspeção de direitos/identidade."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferir edição impressa e errata",
+    "aprovação legal e visual de imagem",
+    "conflito 3 vs 4 ações lendárias entre fontes"
   ],
   "fontes": [
     {
@@ -223,6 +346,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/Giant-Mountain/",
+      "tipo": "fonte individual no CP37",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://fliphtml5.com/qfukk/crsz/5e_Creature_Codex/",
+      "tipo": "reprodução do Creature Codex para separar lair/regional e legendary",
       "conferida_nesta_execucao": true
     }
   ],
@@ -316,5 +449,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 37,
+    "publicacao": "Creature Codex",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/Giant-Mountain/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
