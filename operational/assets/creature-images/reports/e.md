@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 186 / 195.**
+**Armazenadas e verificadas: 188 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -31,6 +31,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2d0d20ab7c63f820940fd968cbfab00620e5d587 — 2/2 verificadas: TF-232, TF-242
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/db3055fa21bbd7999e93a7c2f9e04d0ce0069357 — 1/1 verificadas: TF-263
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/485bc8d67e88df5b72de23a769d5a34d0fe2eec9 — 2/2 verificadas: TF-255, TF-267
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/fe94880bdfd10f38cd0526d7cc258d62cc650173 — 2/2 verificadas: TF-069, TF-201
 
 ## Binários publicados e conferidos
 
@@ -44,6 +45,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-066 / Clockwork Huntsman: operational/assets/creature-images/TF-066.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Huntsman.webp; 48670 bytes; 644x800 px; SHA-256: e2d67dce0ed0cb7ae2c83d4962e9c88f0a4f798cba2557f1d6bd3374c5256ec8; commit: a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77
 - TF-067 / Clockwork Leech: operational/assets/creature-images/TF-067.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Clockwork%20Leech.webp; 117610 bytes; 891x875 px; SHA-256: 5f27eca2596dd558ea7eb55dc086b97ba4a98ff2a586005801d534987cabdee3; commit: a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77
 - TF-068 / Clockwork Pugilist: operational/assets/creature-images/TF-068.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Clockwork%20Pugilist.webp; 133620 bytes; 1000x1606 px; SHA-256: f97431ddf633ded9f655472dc9b6affaad1b7c4d2bd34d4865762df60fc5cf52; commit: a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77
+- TF-069 / Clockwork Servant: operational/assets/creature-images/TF-069.jpg; origem: https://cheddarminis.org/products/steam-clockwork-butler-bolts-and-brimstone-3d-printed-miniature-by-ec3d; 59329 bytes; 1080x1080 px; SHA-256: a28b80b971b8ebe9bc9abb133a53ef841dda950d4e2881b5b4ea4c811b562154; commit: fe94880bdfd10f38cd0526d7cc258d62cc650173
 - TF-070 / Clockwork Soldier: operational/assets/creature-images/TF-070.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/clockworksoldier.jpg; 51722 bytes; 373x700 px; SHA-256: 733a0915750d339336e6c759b859b657508e3a86630e71d182643c237ab86350; commit: a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77
 - TF-071 / Clockwork Watchman: operational/assets/creature-images/TF-071.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Watchman.webp; 43552 bytes; 475x800 px; SHA-256: 9a1588adae13fc10ffafac293e4a5b51d1cd11f369789dc709f49c67ab1f9d84; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
 - TF-072 / Clockwork Weaving Spider: operational/assets/creature-images/TF-072.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Weaving%20Spider.webp; 56986 bytes; 582x800 px; SHA-256: b840137ff535658bc5b66e2f8b674d95d5c75ea6291b148e41143a2e4c696ccf; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
@@ -158,6 +160,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-197 / Tosculi, Jeweled Drone: operational/assets/creature-images/TF-197.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Tosculijeweleddrone.jpg; 65411 bytes; 519x700 px; SHA-256: 9ad0c9559b907ed938c76f708087419db76752667e7b8422bba9c577605d1ef1; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
 - TF-198 / Tosculi, Warrior: operational/assets/creature-images/TF-198.jpg; origem: https://www.worldanvil.com/w/midgard-joeshow97/a/tosculi-article; 50795 bytes; 540x724 px; SHA-256: 24bdeda966fea7fb2406aeaddc3c24a2d16ae1df9b038ac6448994f66137adf2; commit: 22fc79040f6d595328fdc83ffa1c64cebbf7cb31
 - TF-199 / Yakirian: operational/assets/creature-images/TF-199.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Yakirian.jpg; 58600 bytes; 529x700 px; SHA-256: 9b0985c5607e27231c4fb14824c8d7b6f5948d5669ccc1241be51b1827781a76; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-201 / Alpha Werewolf: operational/assets/creature-images/TF-201.jpg; origem: https://www.pinterest.com/pin/299911656426011835/; 448110 bytes; 2500x1835 px; SHA-256: 3881008b455eb4faabd91888596aafee9c0d501f8bf241276447f8711f4e8b94; commit: fe94880bdfd10f38cd0526d7cc258d62cc650173
 - TF-202 / Bearfolk Thunderstomper: operational/assets/creature-images/TF-202.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Bearfolk%20Thunderstomper.webp; 99674 bytes; 1000x1166 px; SHA-256: 80ab41b646990e4dbdc38659fb5e143e5834cfab657a69a9d59ff7b707a2ac2f; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-203 / Cueyatl Warchief: operational/assets/creature-images/TF-203.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Cueyatl%20Warchief.webp; 160202 bytes; 1200x1029 px; SHA-256: 3c437c9484d0fd0518454bb5d14fc4443dbbe52828c4661c946b6ed4b5efdd62; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-204 / Thripper: operational/assets/creature-images/TF-204.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Thripper.webp; 243528 bytes; 1000x1467 px; SHA-256: 2939ac6e58a3e7df6fbe1d4d3d373048dcc37e0393810623b1acd23dbbc7e880; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
@@ -223,11 +226,9 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 
 ## Não obtidos
 
-- TF-069 / Clockwork Servant: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
 - TF-185 / Alleyway Strangler: source_not_found; 
 - TF-200 / Aboleth Champion: source_not_found; 
-- TF-201 / Alpha Werewolf: source_not_found; 
 - TF-226 / Accursed Spirit Naga: source_not_found; 
 - TF-231 / Accursed Guardian Naga: source_not_found; 
 - TF-239 / Aboleth, Nihileth, Nihilethic Dominator: source_not_found; 
