@@ -40,6 +40,10 @@ Fonte consultada: JSONs do acervo TheGiddyLimit/homebrew das publicações Kobol
 
 [Extração JSON com dados e conflitos por criatura](source-extractions/kobold_candidates_e.json) (aproximadamente 1,13 MB).
 
+[Resumo legível dos 195 IDs, com as 41 edições conflitantes e 11 sem correspondência](source-extractions/coverage_summary_e.json).
+
+**Auditoria de imagens restantes:** a consulta às páginas oficiais A5E identificou ilustrações gerais de Aboleth, Werewolf, Spirit Naga e Guardian Naga nas páginas de variantes, mas essas artes não são comprovadamente as criaturas específicas TF-200, TF-201, TF-226 e TF-231. Não foram promovidas nem copiadas para simular cobertura. Para os demais IDs buscados não surgiu arte específica verificável. Evidência: [execução de auditoria de imagens](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/actions/runs/38499323349).
+
 Execução: https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/actions/runs/38498936377
 
 ## Critério de conclusão
