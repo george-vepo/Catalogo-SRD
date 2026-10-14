@@ -1,0 +1,1368 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+  "reference_date": "2026-10-14",
+  "batch_number": 17,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 9,
+    "completas_com_ressalvas": 1,
+    "incompletas": 0,
+    "nao_verificaveis": 0,
+    "imagem_direta": 10,
+    "imagem_manifesto": 0,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 1
+  },
+  "evidence_limitations": [
+    "Mecânicas avaliadas conforme JSONs internos, sem nova conferência de publicação/errata original.",
+    "Arquivo físico, SHA Git e tamanho dos dez vínculos diretos verificados na árvore do GitHub.",
+    "Largura/altura declaradas pelos registros de imagem; não houve reabertura ou inspeção visual independente das artes.",
+    "Licença e adequação editorial das imagens não comprovadas."
+  ],
+  "records": [
+    {
+      "id": "TF-178",
+      "criatura": "Ooze, Ruby",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Acid Spray tem sequência de testes estruturada; a duração/remoção da petrificação não está especificada na referência e não foi inventada.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 9,
+        "pv": 93,
+        "dados_vida": "11d8+44",
+        "atributos": {
+          "FOR": 14,
+          "DES": 8,
+          "CON": 18,
+          "INT": 2,
+          "SAB": 6,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 20,
+          "escalar": 20
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond radius"
+          }
+        ],
+        "resistencias": [
+          "bludgeoning/piercing/slashing de ataques não mágicos"
+        ],
+        "imunidades_dano": [
+          "acid",
+          "fire"
+        ],
+        "imunidades_condicao": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "frightened",
+          "prone"
+        ],
+        "vulnerabilidades": [
+          "lightning"
+        ],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Ambusher",
+            "Amorphous",
+            "Corrosive Form",
+            "False Appearance",
+            "Ooze Nature",
+            "Spider Climb"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod",
+            "Acid Spray"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Corrosive Form reduz exclusivamente dano de arma metálica/madeira não mágica; munição se destrói após o acerto, teto destruição da arma em -5.",
+        "Acid Spray exige CON DC15 só ao FINAL do próximo turno do alvo restrained; petrificação na falha sem duração editorial especificada, não inferir.",
+        "Conferir Creature Codex e licença/identidade da imagem.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-178.jpg",
+        "sha_git": "02edc3a71a1f0840ba7be7643d93745a885705e8",
+        "bytes": 68278,
+        "dimensoes_declaradas": [
+          587,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-178.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-178.json",
+        "sha": "371603f0dd3e9974d34a83e8a29da03d81452dad",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-ruby",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-ruby/",
+            "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-179",
+      "criatura": "Ooze, Shoal",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mesmerizing Spiral, três Pseudopods e Engulf estruturados com ordem e pré-requisito grappled.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3 (2022) p308",
+        "cr": "10",
+        "tamanho": "Gargantuan"
+      },
+      "estatisticas": {
+        "ca": 9,
+        "pv": 232,
+        "dados_vida": "16d20+64",
+        "atributos": {
+          "FOR": 20,
+          "DES": 8,
+          "CON": 19,
+          "INT": 1,
+          "SAB": 10,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 10,
+          "nadar": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond radius"
+          }
+        ],
+        "resistencias": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "imunidades_dano": [
+          "acid"
+        ],
+        "imunidades_condicao": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "frightened",
+          "prone"
+        ],
+        "vulnerabilidades": [],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "False Appearance",
+            "Ooze Nature",
+            "Symbiotically Bound",
+            "Water Breathing"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod",
+            "Engulf",
+            "Mesmerizing Spiral"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Fonte individual 5eSRD e reprodução do Tome of Beasts 3 p308 localizadas: bloqueio anterior de fonte incompleta pode ser superado; conservação de revisão editorial/licença.",
+        "Mesmerizing Spiral incide em espectadores até 20ft, retestes no fim de cada turno, imunidade por 24h de todas shoal oozes; diferencia do Engulf.",
+        "Multiattack sequencia obrigatória espiral+3 pseudopods+Engulf e Engulf requer grapple prévio; fish e ooze compartilham um único bloco.",
+        "Licenciamento da imagem e aprovação visual pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-179.webp",
+        "sha_git": "1be3d5930ee266429a0aecd47e6eb339530ee545",
+        "bytes": 234158,
+        "dimensoes_declaradas": [
+          1200,
+          1241
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-179.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-179.json",
+        "sha": "5a5d1beb0fb5bc55fafa45b55e65f037d1bf734b",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://anyflip.com/myubd/nuoj/basic/301-350",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/shoal-ooze/",
+            "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://anyflip.com/myubd/nuoj/basic/301-350",
+            "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://kpogl.wikidot.com/monster:shoal-ooze",
+            "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-180",
+      "criatura": "Ooze, Sinoper",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Paint Splash e Foment Pigment vinculam cor/paridade aos danos; recargas e condições registradas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3 (2022)",
+        "cr": "9",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 7,
+        "pv": 170,
+        "dados_vida": "20d8+80",
+        "atributos": {
+          "FOR": 21,
+          "DES": 5,
+          "CON": 19,
+          "INT": 3,
+          "SAB": 14,
+          "CAR": 4
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 20,
+          "escalar": 20
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond"
+          }
+        ],
+        "resistencias": [
+          "bludgeoning/piercing/slashing de armas não mágicas"
+        ],
+        "imunidades_dano": [
+          "acid",
+          "cold",
+          "fire",
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "frightened",
+          "prone",
+          "poisoned"
+        ],
+        "vulnerabilidades": [],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amorphous",
+            "False Appearance",
+            "Ooze Nature",
+            "Spider Climb"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Paint Splash",
+            "Foment Pigment"
+          ],
+          "ataques": [
+            "Paint Splash"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Foment Pigment causa frio ou fogo CONFORME cor determinada pela paridade no Paint Splash, não escolher aleatoriamente na detonação.",
+        "Paint Splash é ataque melee OU ranged +9 (5ft ou 20/60ft); qualquer criatura pode gastar action para remover tinta. Poisoned 1 minuto sem reteste explícito no bloco.",
+        "Inspeção editorial da edição e direitos/identidade de imagem não confirmados.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-180.webp",
+        "sha_git": "ac3e1aae4010ca0018e051a3b75b2d8e13096f68",
+        "bytes": 177268,
+        "dimensoes_declaradas": [
+          1000,
+          1640
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-180.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-180.json",
+        "sha": "3cdb4326125ede4aef8f46597c236fd022c1af6e",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://anyflip.com/myubd/nuoj/basic/301-350",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-sinoper/",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://anyflip.com/myubd/nuoj/basic/301-350",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-181",
+      "criatura": "Ooze, Snow",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Avalanche e Snow Blindness estruturadas; Amorphous em 1 foot foi preservado literalmente.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3 (2022)",
+        "cr": "7",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 6,
+        "pv": 171,
+        "dados_vida": "18d12+54",
+        "atributos": {
+          "FOR": 18,
+          "DES": 3,
+          "CON": 16,
+          "INT": 1,
+          "SAB": 12,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30,
+          "escavar": 20
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond"
+          }
+        ],
+        "resistencias": [
+          "bludgeoning/piercing/slashing de ataques não mágicos"
+        ],
+        "imunidades_dano": [
+          "cold"
+        ],
+        "imunidades_condicao": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "frightened",
+          "prone"
+        ],
+        "vulnerabilidades": [],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amorphous",
+            "False Appearance",
+            "Ice Walk",
+            "Ooze Nature",
+            "Snow Blindness",
+            "Snow Burrower"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod",
+            "Avalanche"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Amorphous é 1 FOOT, confirmado no bloco, distinto da maioria das oozes.",
+        "Snow Blindness falha quando há penumbra ou escuridão; Avalanche 4–6, apenas Large ou menor, resgate STR DC15 com vantagem quando criatura enterrada tem velocidade de natação.",
+        "Licença/edital/arte pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-181.webp",
+        "sha_git": "47adf01cb038be1ccdd51bab3878928d43432bc0",
+        "bytes": 168646,
+        "dimensoes_declaradas": [
+          1200,
+          1068
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-181.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-181.json",
+        "sha": "bdbff1c6295d9f8b37e2354443b3f29743f79ca5",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://kpogl.wikidot.com/monster:snow-ooze",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-snow/",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://kpogl.wikidot.com/monster:snow-ooze",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-182",
+      "criatura": "Ooze, Tar",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Fire Hazard descreve ativação ao sofrer dano de fogo, embora a criatura seja imune a fogo. A ambiguidade bloqueia interpretação automática; demais campos estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "6",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 9,
+        "pv": 120,
+        "dados_vida": "15d10+45",
+        "atributos": {
+          "FOR": 18,
+          "DES": 8,
+          "CON": 16,
+          "INT": 1,
+          "SAB": 8,
+          "CAR": 2
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 20,
+          "escalar": 20
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond"
+          }
+        ],
+        "resistencias": [],
+        "imunidades_dano": [
+          "fire",
+          "necrotic",
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "frightened",
+          "prone",
+          "poisoned"
+        ],
+        "vulnerabilidades": [],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Fire Hazard",
+            "Sticky Situation",
+            "Ooze Nature"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod",
+            "Hurl Tar"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [
+        "Interpretação executável de Fire Hazard perante imunidade a fire ainda não definida."
+      ],
+      "conflitos": [
+        "Fire Hazard: gatilho 'sofre fire damage' versus imunidade a fire; não definir aplicação sem cotejo editorial."
+      ],
+      "pendencias_editoriais": [
+        "Ooze imune a fire, MAS fonte diz que ao sofrer fire damage acende: preservar gatilho textual e imunidade sem concluir dano positivo.",
+        "Sticky Situation cobre o alvo após DOIS pseudopods no mesmo alvo ou Hurl Tar com falha DEX14, fogo em tar é estado distinto de Fire Hazard da ooze; tar ghoul só para humanoide morto não ressuscitado.",
+        "Fonte ToB2 reproduzida 5eSRD/KPOGL, licenciamento de imagem não confirmado.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-182.webp",
+        "sha_git": "30fac7d0d2e9d693e1c3b2e65734b7a145297357",
+        "bytes": 149430,
+        "dimensoes_declaradas": [
+          1223,
+          797
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-182.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Esclarecer Fire Hazard versus imunidade a fogo; depois adaptar/testar e verificar licenças e arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-182.json",
+        "sha": "807eeb0fb863b0e7c4a8b25b66d8b177dd1f6a07",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-tar/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-tar/",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://kpogl.wikidot.com/monster:tar-ooze",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-186",
+      "criatura": "Atavist",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Malleable Physiology temporária e Multiattack/ataques estruturados com pré-condições.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3 (2022)",
+        "cr": "4",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 75,
+        "dados_vida": "10d8+30",
+        "atributos": {
+          "FOR": 18,
+          "DES": 14,
+          "CON": 17,
+          "INT": 13,
+          "SAB": 7,
+          "CAR": 9
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30
+        },
+        "sentidos": [],
+        "resistencias": [
+          "necrotic",
+          "poison"
+        ],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": [],
+        "idiomas": [
+          "any two languages (choice not specified)"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Malleable Physiology"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Keratin Blade",
+            "Bone Shard"
+          ],
+          "ataques": [
+            "Keratin Blade",
+            "Bone Shard"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "NPC humanoid Atavist CR4 ToB3 (não outro Atavist de homebrew). Malleable Physiology escolhe um ganho fisiológico por turno, termina no começo do turno seguinte; opção de speed deve ser singular.",
+        "Multiattack permite dois Keratin Blade OU Bone Shard, dano 2d6 piercing EXTRA apenas se ambos acertam MESMO alvo.",
+        "Livro/licença e arte ainda sem aprovação.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-186.webp",
+        "sha_git": "8c4d9e65c5ce88287f5b7bba6c18d3b1c8ca9b06",
+        "bytes": 109426,
+        "dimensoes_declaradas": [
+          1030,
+          1200
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-186.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-186.json",
+        "sha": "ef5c311076a2d960f70a0ea928b716dbef9692e9",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/npc-atavist/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/npc-atavist/",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-187",
+      "criatura": "Bearfolk",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Frenzy registrada como bonus action limitada; ficha seleciona explicitamente a revisão de 2023 sem mesclar edição anterior.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 (revisão 2023, NÃO mistura original)",
+        "cr": "3",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 45,
+        "dados_vida": "6d8+18",
+        "atributos": {
+          "FOR": 19,
+          "DES": 14,
+          "CON": 16,
+          "INT": 8,
+          "SAB": 12,
+          "CAR": 9
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": [],
+        "idiomas": [
+          "Common",
+          "Giant"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Keen Smell"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Battleaxe",
+            "Warhammer",
+            "Bite"
+          ],
+          "ataques": [
+            "Battleaxe",
+            "Warhammer",
+            "Bite"
+          ],
+          "acoes_bonus": [
+            "Frenzy"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Comparado com Tome of Beasts 1 anterior: 2023 publica resistências BPS sem qualificador nonmagical; não mesclar nem supor errata sem evidência.",
+        "Frenzy é bonus action, recarga após descanso curto ou longo, duração 1min e ataque contra usuário também ganha vantagem.",
+        "Verificação editorial da edição e licenças/identidade da imagem pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-187.webp",
+        "sha_git": "78eb4b2f368586b019c9f544d2dcb3cf27e3d6de",
+        "bytes": 96550,
+        "dimensoes_declaradas": [
+          709,
+          800
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-187.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-187.json",
+        "sha": "b4e4d76b12c7a5ca103a3a8a9d107f6ffa944710",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/bearfolk-3pp/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/bearfolk-3pp/",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://anyflip.com/myubd/oeoe/basic",
+            "tipo": "ficha individual verificada e parafraseada no checkpoint 42",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-188",
+      "criatura": "Behtu",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Ichorous Infusion possui doses limitadas e consequências distintas para behtu e não behtu.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 revisão 2023",
+        "cr": "2",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 52,
+        "dados_vida": "8d6+24",
+        "atributos": {
+          "FOR": 17,
+          "DES": 16,
+          "CON": 16,
+          "INT": 12,
+          "SAB": 11,
+          "CAR": 7
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 20,
+          "escalar": 20
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "resistencias": [
+          "cold",
+          "fire",
+          "lightning"
+        ],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": [],
+        "idiomas": [
+          "Behtu",
+          "Common",
+          "Infernal"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Spear",
+            "Fire Breath",
+            "Ichorous Infusion"
+          ],
+          "ataques": [
+            "Bite",
+            "Spear"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Ichorous Infusion é recurso finito 1d4+1, não uso ilimitado; efeitos distintos entre behtu e não behtu.",
+        "Não misturar edição ToB1 2023 com bloco anterior; imagem e direitos por aprovar.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-188.webp",
+        "sha_git": "67e075b2804b0c806a71bbd972ab0142b62d0cb4",
+        "bytes": 64192,
+        "dimensoes_declaradas": [
+          542,
+          800
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-188.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-188.json",
+        "sha": "f7470711a78370a6df6d8a5af3f7ee51d1ac6271",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/behtu-3pp",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/behtu-3pp/",
+            "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-189",
+      "criatura": "Black Knight Commander",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Ações montadas distinguem o ataque da montaria e o consumo de reação; requisitos e cargas registrados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 revisão 2023",
+        "cr": "5",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 18,
+        "pv": 91,
+        "dados_vida": "14d8+28",
+        "atributos": {
+          "FOR": 18,
+          "DES": 10,
+          "CON": 14,
+          "INT": 12,
+          "SAB": 13,
+          "CAR": 15
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30
+        },
+        "sentidos": [],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": [],
+        "idiomas": [
+          "any two languages"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Hateful Presence",
+            "Locked Saddle",
+            "Mounted Charge",
+            "Mounted Warrior"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Lance",
+            "Mace",
+            "Frightful Charge"
+          ],
+          "ataques": [
+            "Lance",
+            "Mace"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Ações e benefícios condicionados à presença física de montaria: Hooves não faz parte do atacante sozinho; Mounted Charge usa reação da montaria.",
+        "Hateful Presence dá dano +2 aos aliados mas impede Help; Frightful Charge exige montaria e reteste WIS no fim de turno.",
+        "Edição/autorização da arte pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-189.webp",
+        "sha_git": "179ad36d63f31d033a1de16fc3edbc12d43e0728",
+        "bytes": 59770,
+        "dimensoes_declaradas": [
+          504,
+          801
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-189.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-189.json",
+        "sha": "ddedb8230a3cfbfc3b2308fb5da17f969f61ad08",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/black-knight-commander-3pp/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/black-knight-commander-3pp/",
+            "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    },
+    {
+      "id": "TF-190",
+      "criatura": "City Watch Captain",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Issue Orders consome reações dos aliados; formas de Multiattack e Point Blank Fencer estruturadas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 revisão 2023",
+        "cr": "4",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 91,
+        "dados_vida": "14d8+28",
+        "atributos": {
+          "FOR": 13,
+          "DES": 16,
+          "CON": 14,
+          "INT": 10,
+          "SAB": 11,
+          "CAR": 13
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30
+        },
+        "sentidos": [],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": [],
+        "idiomas": [
+          "any one language, usually Common"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Point Blank Fencer",
+            "Tactical Insight"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Rapier",
+            "Light Crossbow",
+            "Issue Orders"
+          ],
+          "ataques": [
+            "Rapier",
+            "Light Crossbow"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Issue Orders gasta reaction de cada um dos dois aliados e pode preceder as ações do Multiattack.",
+        "Point Blank Fencer já incluído no dano Rapier e não elimina demais motivos de disadvantage do crossbow.",
+        "Licença/edição e imagem ainda sem aprovação.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-190.webp",
+        "sha_git": "4678e7a66efd279dacbae9fbb0d7b510156d7c4f",
+        "bytes": 49984,
+        "dimensoes_declaradas": [
+          469,
+          800
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-190.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": true
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar edição/errata, direitos e qualidade visual.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-190.json",
+        "sha": "2c8d16506c62e407708c2feebdbaea285831a21e",
+        "source_commit": "a2501e9eb90b747c512adf20550e2eed7aff67fd",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/city-watch-captain-3pp/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/city-watch-captain-3pp/",
+            "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 17
+    }
+  ]
+}

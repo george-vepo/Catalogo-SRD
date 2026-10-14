@@ -124,3 +124,8 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 
 **Consolidado:** 160/395 (235 restantes); 107 completas em conteúdo, 31 com ressalvas, 21 incompletas, 1 não verificável; 105 imagens diretas, 52 via manifesto, 3 ausentes.
 
+## Lote 017 — TF-178–TF-190 (10 IDs conforme ordem do CSV)
+
+9 fichas completas em conteúdo e 1 completa com ressalvas: **TF-182**, por interação não resolvida entre Fire Hazard (ativação ao sofrer dano de fogo) e imunidade da criatura a dano de fogo. A ficha de TF-178 não especifica a duração/remoção da petrificação de Acid Spray; o conteúdo disponível foi preservado sem inventar regra. As dez imagens estão vinculadas diretamente aos registros, com presença física, SHA e tamanho conferidos no GitHub. TF-190 possui largura declarada de 469 px, inferior a 500 px. Revisão visual, licença, edição original/erratas e adaptação ao card game permanecem pendentes.
+
+**Consolidado:** 170/395 (225 restantes); 116 completas em conteúdo, 32 com ressalvas, 21 incompletas, 1 não verificável; 115 imagens diretas, 52 por manifesto e 3 ausentes.
