@@ -307,3 +307,16 @@ TF-099: same SHA-256 as TF-090
 Validações: formato, assinatura, dimensões, decodificação integral, tamanho, SHA-256, blob e releitura real do GitHub.
 A correspondência da criatura usa o nome do arquivo da fonte, sem afirmar revisão visual humana.
 Nenhuma alteração no CSV, ledger global, main, PR #1 ou imagens D/F.
+
+## Candidatas de arte original geradas localmente — NÃO publicadas
+
+Foram criadas cinco artes originais não oficiais para as cinco criaturas restantes, a partir de descrições do SRD. Os arquivos WebP foram fisicamente gerados no ambiente desta conversa, decodificados integralmente e submetidos a SHA-256 local. **Os binários NÃO estão no GitHub: permanecem 190/195 imagens armazenadas e verificadas no repositório.** O GitHub connector aceita blobs base64, mas nesta execução não há transporte binário programático do arquivo local para a chamada do conector. Não converter estas candidatas em `status=verified` antes do upload e da releitura de bytes publicados.
+
+- `TF-099` (Ankou Soul Herald): candidato `TF-099.webp`, 83272 bytes, 512×512 px, SHA-256 `c68c453ff381a115dec3a92637558f95c399a6fe8f6db7fa4a342c88e6f69089`. Origem: ChatGPT ImageGen original non-official art, generated from creature description. Status: apenas validação local, não publicado.
+- `TF-185` (Alleyway Strangler): candidato `TF-185.webp`, 64184 bytes, 512×512 px, SHA-256 `1f1a5e5c56267b31cf5afeca3dac192fc57d303a621efabedf20ade5139901a0`. Origem: ChatGPT ImageGen original non-official art, generated from creature description. Status: apenas validação local, não publicado.
+- `TF-200` (Aboleth Champion): candidato `TF-200.webp`, 75628 bytes, 512×512 px, SHA-256 `48960b5e2e2c57697818f3223945cfd7b1027627a09f50dbc995b8a4f0c36c1f`. Origem: ChatGPT ImageGen original non-official art, generated from creature description. Status: apenas validação local, não publicado.
+- `TF-239` (Aboleth, Nihileth, Nihilethic Dominator): candidato `TF-239.webp`, 88114 bytes, 512×512 px, SHA-256 `63d7bacb3ae86f46648acd0b972dd83dd649688a7cb0b337bf5575dd2ec9458e`. Origem: ChatGPT ImageGen original non-official art, generated from creature description. Status: apenas validação local, não publicado.
+- `TF-264` (Abyssal Hordeling): candidato `TF-264.webp`, 54978 bytes, 512×512 px, SHA-256 `b84ba3782a9155ab3d3259f45aee7c1c276856c835624a68f1f9caa02adf82bd`. Origem: ChatGPT ImageGen original non-official art, generated from creature description. Status: apenas validação local, não publicado.
+
+Procedimento pendente: enviar os cinco arquivos WebP por operação binária Git base64 na branch exclusiva E, em checkpoint de até cinco imagens; reler cada arquivo publicado, conferir assinaturas, dimensões, tamanhos e SHA-256; só então atualizar manifesto, relatório e PR. Nenhum dado foi alterado em `main`, CSV, ledger ou grupos D/F.
+
