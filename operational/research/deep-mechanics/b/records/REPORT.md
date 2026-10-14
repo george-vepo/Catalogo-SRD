@@ -1,3 +1,13 @@
+## Checkpoint visual B — 14/10/2026 — TF-356 Grendel: imagem histórica em domínio público
+
+**TF-356 Grendel** recebeu um binário WebP real de **960×1234 pixels (296.630 bytes)**, Git blob `beda0c092ce58ce433e42825c14b692cf9d8d3dd`, SHA-256 `31e2b42366b8f4f8acb3ffa49b5afd0af4bdc399024d02f5771aceb5799dd279`. A origem é uma ilustração de **Joseph Ratcliffe Skelton (1908)** para *Stories of Beowulf*, disponibilizada como domínio público no [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Stories_of_beowulf_grendel.jpg) e espelhada com metadados de proveniência no [PantheonRepository](https://github.com/WeningerII/PantheonRepository/blob/6d2078105fd9bf7faf77d9810ed5b0e395935a48/assets/images/figures/_meta/anglosaxon_grendel.json).
+
+**Identidade:** obra explicitamente nomeada Grendel na fonte histórica, visualmente compatível com a criatura mítica. **Não é arte editorial A5E, não é uma adaptação oficial da criatura da editora e não garante uniformidade estética com o conjunto do jogo.** Direitos da obra original indicados como domínio público no Commons; autoria creditada para rastreabilidade. O arquivo é uma reprodução WebP, cujo conteúdo foi verificado por assinatura/bytes/sha antes da publicação; falta reabri-lo na branch B depois do commit.
+
+A cobertura de binários passa de 112 para **113/132**, com **19 ausentes**. Nenhum dado mecânico ou homologação foi promovido. PR #6 permanece em rascunho.
+
+---
+
 ## Auditoria complementar concluída na branch B — 14/10/2026
 
 **Checkpoints desta nova continuação, todos reabertos do GitHub:**

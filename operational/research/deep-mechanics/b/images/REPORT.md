@@ -1,3 +1,13 @@
+## Checkpoint de imagem TF-356 — ilustração histórica de Grendel (14/10/2026)
+
+**Arquivo:** [TF-356.webp](TF-356.webp), 960×1234, 296.630 bytes, image/webp, Git SHA `beda0c092ce58ce433e42825c14b692cf9d8d3dd`, SHA-256 `31e2b42366b8f4f8acb3ffa49b5afd0af4bdc399024d02f5771aceb5799dd279`.
+
+**Origem artística:** Joseph Ratcliffe Skelton, *Stories of Beowulf* (1908), [Commons/domínio público](https://commons.wikimedia.org/wiki/File:Stories_of_beowulf_grendel.jpg). **Origem binária:** [PantheonRepository](https://github.com/WeningerII/PantheonRepository/blob/6d2078105fd9bf7faf77d9810ed5b0e395935a48/assets/images/figures/anglosaxon_grendel.webp); [metadados de origem e direitos](https://github.com/WeningerII/PantheonRepository/blob/6d2078105fd9bf7faf77d9810ed5b0e395935a48/assets/images/figures/_meta/anglosaxon_grendel.json). É pintura histórica de Grendel, **não** arte oficial A5E. A imagem exige revisão de estilo e não implica aprovação de integração ou de outros recursos do catálogo.
+
+**Pós-commit:** confirmar a persistência efetiva com releitura do GitHub, SHA e bytes; total previsto 113/132, restando 19.
+
+---
+
 ## Evidência de persistência pós-checkpoint — 14/10/2026
 
 Na branch B, TF-351, TF-384, TF-389 e TF-393 foram individualmente reabertos após [`940cfbad52bf`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/940cfbad52bf82043be96ab660027c48325db321). O GitHub confirmou **4/4 assinaturas WebP, SHA Git e tamanhos**, com identidade de blob igual à fonte. A árvore contém **112 arquivos binários reais**, sem discrepância com os registros do manifesto; faltam 20 imagens. Os dois Rust Monsters usam a mesma imagem genérica como no módulo fonte, com revisão de identidade da variante pendente; licenças restritas a uso não comercial.
