@@ -106,6 +106,12 @@ def report(m):
             lines.append("  - Referência: "+x["source_reference"])
         if x.get("rejected_candidate"):
             lines.append("  - Candidato rejeitado: "+x["rejected_candidate"])
+        followup=x.get("research_followup_20261014")
+        if followup:
+            lines.append("  - Investigação complementar (2026-10-14): "+followup["latest_research"])
+            lines.append("  - Motivo da não publicação: "+followup["rejection_reason"])
+            for src in followup["sources_checked"]:
+                lines.append("  - Fonte conferida: "+src)
     lines.extend(["","## Duplicações e ressalvas",""])
     dup=[x for x in missing if x["status"]=="duplicate_suspected"]
     lines.extend([x["id"]+": "+x["error"] for x in dup] if dup else ["Nenhuma duplicação de SHA-256 encontrada entre os binários aprovados."])
