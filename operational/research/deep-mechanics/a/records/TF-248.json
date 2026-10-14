@@ -10,14 +10,16 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "6",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Huge",
+    "type": "undead",
+    "alignment": "chaotic_evil",
+    "experience_points": 2300,
+    "proficiency_bonus": 3
   },
   "statistics": {
     "armor_class": 13,
     "hit_points": 142,
-    "hit_dice": null,
+    "hit_dice": "15d12+45",
     "ability_scores": {
       "STR": 21,
       "DEX": 9,
@@ -26,24 +28,192 @@
       "WIS": 5,
       "CHA": 3
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40,
+      "climb_ft": 20
+    },
+    "senses": {
+      "darkvision_ft": 90,
+      "passive_perception": 7
+    },
+    "skills": [],
+    "saving_throws": {
+      "WIS": 0
+    },
+    "languages": {
+      "understands": "languages_known_in_life",
+      "can_speak": false
+    },
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "poisoned",
+      "prone"
+    ],
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": -1,
+      "CON": 3,
+      "INT": -3,
+      "WIS": -3,
+      "CHA": -4
+    },
+    "armor_class_type": "natural_armor"
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Haphazard Charge",
+        "category": "on_hit_conditional",
+        "precondition": {
+          "move_straight_toward_target_ft_min": 10,
+          "attack": "Slam",
+          "same_turn": true,
+          "slam_hits": true
+        },
+        "effect": {
+          "hit_is_critical": true,
+          "attacks_against_ogrepede_have_advantage_until": "start_of_ogrepede_next_turn"
+        }
+      },
+      {
+        "name": "Overwhelming Assault",
+        "category": "on_critical_area_fear",
+        "trigger": "ogrepede_scores_critical_hit",
+        "targets": {
+          "each_creature_within_ft_of_hit_target": 5
+        },
+        "save": {
+          "ability": "WIS",
+          "dc": 16,
+          "on_failure": {
+            "condition": "frightened",
+            "source": "ogrepede",
+            "duration": "1_minute",
+            "repeat_save": {
+              "timing": "end_of_each_affected_creature_turn",
+              "ability": "WIS",
+              "dc": 16,
+              "success_ends": true
+            }
+          },
+          "on_success": {
+            "condition": null
+          }
+        },
+        "post_effect_immunity": {
+          "duration_hours": 24,
+          "trigger": "initial_save_succeeds_or_frightened_effect_ends",
+          "to_trait": "Overwhelming Assault"
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "requires_air": false,
+          "requires_food": false,
+          "requires_water": false,
+          "requires_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Bite",
+            "count": 1
+          },
+          {
+            "attack": "Slam",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "flat": 5,
+              "average": 16,
+              "type": "piercing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "normal_hp_above_half": {
+            "damage": [
+              {
+                "dice": "2d6",
+                "flat": 5,
+                "average": 12,
+                "type": "bludgeoning"
+              }
+            ]
+          },
+          "hp_at_or_below_half": {
+            "damage": [
+              {
+                "dice": "1d6",
+                "flat": 5,
+                "average": 8,
+                "type": "bludgeoning"
+              }
+            ]
+          },
+          "critical_hit_rule": {
+            "roll_damage_dice_times": 3,
+            "instead_of_normal_times": 2
+          },
+          "charge_trait_interaction": "Haphazard Charge"
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Investida desordenada transforma o impacto em crítico, mas o expõe a contra-ataques; golpes críticos assustam criaturas próximas da vítima."
@@ -60,15 +230,15 @@
       "url": "https://www.5esrd.com/database/creature/ogrepede/",
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Tome of Beasts 2",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "Estatísticas, traços, ações e mecânicas condicionais consultados por inteiro na transcrição individual.",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14; fonte online secundária, impressão/editorial/engine pendentes."
     },
     {
       "url": "https://kpogl.wikidot.com/monster:ogrepede",
       "type": "KPOGL — reprodução comunitária individual, não oficial",
       "edition": "Tome of Beasts 2",
-      "scope": "traços e ações sintetizados; licença e revisão editorial pendentes",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "Estatísticas, traços, ações e mecânicas condicionais consultados por inteiro na transcrição individual.",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14; fonte online secundária, impressão/editorial/engine pendentes."
     }
   ],
   "source_checkpoint": {
@@ -80,9 +250,8 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Confrontar cada dado e regra com exemplar editorial correto, impressão e erratas da Kobold Press.",
+    "Realizar revisão independente da transcrição, do modelo de ações/condições e teste da engine antes de MECANICA_COMPLETA_VERIFICADA."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -106,5 +275,18 @@
       "licença",
       "qualidade para impressão"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:ogrepede",
+      "https://www.5esrd.com/database/creature/ogrepede/"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Statblock de transcrição digital consultado; livro físico, erratas, motor e licenças ainda sem homologação."
   }
 }

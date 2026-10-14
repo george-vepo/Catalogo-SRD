@@ -10,14 +10,16 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "3",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral_evil",
+    "experience_points": 700,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 13,
     "hit_points": 39,
-    "hit_dice": null,
+    "hit_dice": "6d8+12",
     "ability_scores": {
       "STR": 7,
       "DEX": 16,
@@ -26,24 +28,177 @@
       "WIS": 16,
       "CHA": 13
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Acrobatics": 5
+    },
+    "saving_throws": [],
+    "languages": {
+      "known": "languages_known_in_life"
+    },
+    "damage_resistances": [
+      "acid",
+      "lightning",
+      "thunder",
+      "nonmagical_attack_bludgeoning",
+      "nonmagical_attack_piercing",
+      "nonmagical_attack_slashing"
+    ],
+    "damage_immunities": [
+      "cold",
+      "fire",
+      "necrotic",
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "ability_modifiers": {
+      "STR": -2,
+      "DEX": 3,
+      "CON": 2,
+      "INT": -1,
+      "WIS": 3,
+      "CHA": 1
+    },
+    "armor_class_type": null
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Cryophobia",
+        "category": "conditional_save",
+        "trigger": "subjected_to_cold_damage",
+        "damage_received": 0,
+        "save": {
+          "ability": "WIS",
+          "dc": 13,
+          "on_failure": {
+            "condition": "frightened",
+            "source": "cold_damage_source",
+            "duration": "1_minute"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "overrides_condition_immunity": [
+          "frightened"
+        ]
+      },
+      {
+        "name": "Fire Absorption",
+        "category": "healing_from_element",
+        "trigger": "subjected_to_fire_damage",
+        "damage_received": 0,
+        "healing": {
+          "amount": "amount_of_fire_damage_that_would_be_dealt"
+        }
+      },
+      {
+        "name": "Incorporeal Movement",
+        "category": "movement",
+        "pass_through": [
+          "creatures",
+          "objects"
+        ],
+        "movement_cost": "difficult_terrain",
+        "trigger": "ends_turn_inside_object",
+        "self_damage": {
+          "dice": "1d10",
+          "average": 5,
+          "type": "force"
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "requires_air": false,
+          "requires_food": false,
+          "requires_water": false,
+          "requires_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Shivering Touch",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 3,
+              "type": "cold",
+              "average": 10
+            },
+            {
+              "dice": "1d6",
+              "flat": 0,
+              "type": "necrotic",
+              "average": 3
+            }
+          ],
+          "save": {
+            "ability": "CON",
+            "dc": 12,
+            "on_failure": {
+              "ongoing_damage": {
+                "dice": "1d6",
+                "average": 3,
+                "type": "cold",
+                "timing": "start_of_target_turn"
+              },
+              "repeat_save": {
+                "ability": "CON",
+                "dc": 12,
+                "timing": "end_of_each_target_turn",
+                "success_ends": true
+              },
+              "other_end_condition": "target_takes_fire_damage"
+            },
+            "on_success": {
+              "ongoing_effect": false
+            }
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Absorve calor e se cura com fogo; frio não causa dano mas pode assustá-lo apesar de imunidades."
@@ -60,8 +215,8 @@
       "url": "https://kpogl.wikidot.com/monster:chill-haunt",
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Tome of Beasts 2",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "scope": "Estatísticas, traços, ações e mecânicas condicionais consultados por inteiro na transcrição individual.",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14; fonte online secundária, impressão/editorial/engine pendentes."
     }
   ],
   "source_checkpoint": {
@@ -73,9 +228,8 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Confrontar cada dado e regra com exemplar editorial correto, impressão e erratas da Kobold Press.",
+    "Realizar revisão independente da transcrição, do modelo de ações/condições e teste da engine antes de MECANICA_COMPLETA_VERIFICADA."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -99,5 +253,17 @@
       "licença",
       "qualidade para impressão"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:chill-haunt"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Statblock de transcrição digital consultado; livro físico, erratas, motor e licenças ainda sem homologação."
   }
 }

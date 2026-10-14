@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 47: Chill Haunt, Ash Phoenix e Ogrepede (14/10/2026)
+
+- **TF-243 Chill Haunt:** Cryophobia suplanta a imunidade ao medo com CD 13; absorção de fogo; movimento incorpóreo; Shivering Touch (CD 12, dano contínuo e término por fogo) estruturados.
+- **TF-247 Ash Phoenix:** retorno condicional após 1d10 dias, Hide como ação bônus em pouca luz, vento forte, Multiattack com beak condicional, Ash Talons e Ash Storm (recarga 5–6) estruturados.
+- **TF-248 Ogrepede:** Haphazard Charge causa crítico automático e exposição; Overwhelming Assault com CD 16 e imunidade por 24h; Multiattack Bite + Slam, dano do Slam dependente dos PV e crítico com três rolagens de dados.
+
+**Fontes secundárias online:** KPOGL (3) e 5eSRD (TF-247/TF-248); livros/erratas oficiais, licença e engine não homologados. **51/132 estruturas individuais online, 81 ainda resumidas, 0/132 homologadas; 124/132 imagens binárias, 8 ausentes, 0 aprovadas para produção.** Checkpoint de três criaturas, sem modificação de outros grupos ou merge.
+
+---
+
 # Grupo A — auditoria final desta execução (14/10/2026)
 
 **HEAD inspecionado:** `9313862a82a2099c13aeff907c66bad95ec995da`. **132 JSONs** na árvore, 132/132 já parseados e conferidos em auditoria global anterior; **5 JSONs mecânicos** modificados nos checkpoints #44–#46 foram relidos individualmente por API sem erro. Nove JSONs com imagens importadas no checkpoint #43 também foram relidos após sua gravação. **124/124** imagens na árvore Git concordam com o manifesto nos campos caminho/hash Git/tamanho (SHA-256 histórico do manifesto D verificado). Nenhum arquivo fora de A foi alterado desde o commit de referência.
