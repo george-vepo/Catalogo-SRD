@@ -4,115 +4,219 @@
   "nome": "Ooze, Shoal",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 57,
-  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Tome of Beasts 3 (2022) p308",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/shoal-ooze/"
   },
   "estatisticas": {
     "nd_catalogo": "10",
     "nd_fonte": "10",
     "ca": 9,
     "pv": 232,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "16d20+64",
+    "porte": "Gargantuan",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 20,
+      "DES": 8,
+      "CON": 19,
+      "INT": 1,
+      "SAB": 10,
+      "CAR": 5
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": -1,
+      "CON": 4,
+      "INT": -5,
+      "SAB": 0,
+      "CAR": -3
+    },
+    "deslocamentos": {
+      "andar": 10,
+      "nadar": 40
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond radius"
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [],
+    "resistencias": [
+      "bludgeoning",
+      "piercing",
+      "slashing"
+    ],
+    "imunidades_dano": [
+      "acid"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 5900,
+    "bonus_proficiencia": 4
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "False Appearance e anatomia adaptada a fundo marinho",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "False Appearance",
+        "precondicao": "antes de atacar",
+        "efeito": "aparência indistinguível de grande cardume de peixes"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Symbiotically Bound",
+        "efeito": "a ooze e os peixes compartilham uma ficha/força vital, não podem ser separados"
+      },
+      {
+        "nome": "Water Breathing",
+        "restricao": "respira somente debaixo d'água"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Ataques e efeitos de maré/engolfamento devem ser extraídos do exemplar editorial.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "sequencia": [
+          "Mesmerizing Spiral",
+          "Pseudopod",
+          "Pseudopod",
+          "Pseudopod",
+          "Engulf"
+        ],
+        "ordem_obrigatoria": true,
+        "nota": "Engulf exige alvo grappled por Pseudopod; não pode ser usado sem vítima elegível"
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "2d10+5",
+            "media": 16,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "grapple": {
+          "escape_cd": 16
+        }
+      },
+      {
+        "nome": "Engulf",
+        "precondicao": "alvo Huge ou menor já grappled pela ooze",
+        "alvo": "uma criatura elegível",
+        "efeitos": [
+          "restrained",
+          "não consegue respirar, exceto se respira água",
+          "move com a ooze"
+        ],
+        "dano": {
+          "momento": "início de cada turno da ooze",
+          "teste": {
+            "atributo": "CON",
+            "cd": 16
+          },
+          "falha": {
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "acid"
+          },
+          "sucesso": "nenhum dano descrito"
+        },
+        "capacidade": "2 Huge ou até 8 Large e menores",
+        "escapar": {
+          "economia": "action da vítima OU de criatura dentro de 5ft da ooze",
+          "teste": "STR check DC16",
+          "sucesso": "alvo para espaço vazio escolhido a até 5ft"
+        }
+      },
+      {
+        "nome": "Mesmerizing Spiral",
+        "alvos": "cada criatura a até 20ft que consegue ver os peixes",
+        "teste": {
+          "atributo": "WIS",
+          "cd": 16
+        },
+        "falha": {
+          "condicao": "incapacitated",
+          "velocidade": 0,
+          "duracao": "1 minuto",
+          "repetir": {
+            "momento": "final de cada turno da criatura",
+            "teste": "WIS DC16",
+            "sucesso": "termina efeito"
+          }
+        },
+        "sucesso_ou_efeito_terminado": "imunidade a Mesmerizing Spiral de TODAS as shoal oozes por 24h"
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "2d10+5",
+            "media": 16,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "grapple": {
+          "escape_cd": 16
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Mesmerizing Spiral",
+        "Pseudopod",
+        "Pseudopod",
+        "Pseudopod",
+        "Engulf"
+      ],
+      "ordem_obrigatoria": true,
+      "nota": "Engulf exige alvo grappled por Pseudopod; não pode ser usado sem vítima elegível"
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Fonte secundária reproduzida; só dados básicos e identificação ND10/CA9/PV232 conferidos; bloco completo ainda pendente.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Fonte individual 5eSRD e reprodução do Tome of Beasts 3 p308 localizadas: bloqueio anterior de fonte incompleta pode ser superado; conservação de revisão editorial/licença.",
+    "Mesmerizing Spiral incide em espectadores até 20ft, retestes no fim de cada turno, imunidade por 24h de todas shoal oozes; diferencia do Engulf.",
+    "Multiattack sequencia obrigatória espiral+3 pseudopods+Engulf e Engulf requer grapple prévio; fish e ooze compartilham um único bloco.",
+    "Licenciamento da imagem e aprovação visual pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferência editorial/erratas/escopo de licenciamento",
+    "verificação de direito de uso, identidade e qualidade da arte"
   ],
   "fontes": [
     {
@@ -123,6 +227,21 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/shoal-ooze/",
+      "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/myubd/nuoj/basic/301-350",
+      "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:shoal-ooze",
+      "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +298,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 41,
+    "publicacao": "Tome of Beasts 3 (2022) p308",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/shoal-ooze/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

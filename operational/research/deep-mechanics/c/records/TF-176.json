@@ -4,115 +4,202 @@
   "nome": "Ooze, Foxfire",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 54,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Creature Codex (2018)",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ooze-foxfire/"
   },
   "estatisticas": {
     "nd_catalogo": "10",
     "nd_fonte": "10",
     "ca": 9,
     "pv": 126,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "12d10+60",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 19,
+      "DES": 8,
+      "CON": 20,
+      "INT": 2,
+      "SAB": 6,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": -1,
+      "CON": 5,
+      "INT": -4,
+      "SAB": -2,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20,
+      "nadar": 20,
+      "voar": 10,
+      "voo_modalidade": "hover"
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond radius"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "acid",
+      "fire",
+      "lightning"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [
+      "cold"
+    ],
+    "xp": 5900,
+    "bonus_proficiencia": 4
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Ambusher, Amorphous e Lightning Storm contra metal",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Ambusher",
+        "condicao": "contra criatura surpreendida pela ooze",
+        "efeito": "advantage on attack rolls"
+      },
+      {
+        "nome": "Amorphous",
+        "passagem_minima_inch": 1
+      },
+      {
+        "nome": "Lightning Storm",
+        "gatilho": "criatura usando metal toca ooze OU acerta melee com arma de metal",
+        "efeito_gatilho": {
+          "alvo": "criatura que ativou a tempestade",
+          "dano": {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "lightning"
+          }
+        },
+        "efeito_area": {
+          "raio_ft": 20,
+          "alvos": "todas as criaturas segurando ou vestindo metal (inclusive potencialmente a que acionou, conforme literal)",
+          "teste": {
+            "atributo": "DEX",
+            "cd": 16
+          },
+          "falha": {
+            "dano": {
+              "dados": "2d8",
+              "media": 9,
+              "tipo": "lightning"
+            }
+          },
+          "sucesso": "nenhum dano da área informado para sucesso; não inferir metade"
+        },
+        "nota": "tratamento de alvos sobrepostos requer revisão editorial, mas manter os dois efeitos impressos"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "escalada em paredes e tetos sem check"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Multiattack, três pseudópodes com dano elétrico.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "quantidade": 3,
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod",
+          "Pseudopod"
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d10+4",
+            "media": 20,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "lightning"
+          }
+        ]
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d10+4",
+            "media": 20,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "lightning"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 3,
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod",
+        "Pseudopod"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Espalhamento de dano elétrico a alvos que portam metal exige revisão.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Lightning Storm possui dano inicial na criatura gatilho e área separada 20ft contra criaturas com metal; conferir cumulatividade se a mesma criatura recebe ambos.",
+    "Resistência BPS só contra ataques não mágicos, não geral; voo 10ft hover preservado.",
+    "Conferir publicação, licenciamento e adequação visual da imagem."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferência editorial/erratas/escopo de licenciamento",
+    "verificação de direito de uso, identidade e qualidade da arte"
   ],
   "fontes": [
     {
@@ -123,6 +210,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-foxfire/",
+      "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +271,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 41,
+    "publicacao": "Creature Codex (2018)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-foxfire/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
