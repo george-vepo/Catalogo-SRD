@@ -1,3 +1,9 @@
+## Auditoria de integridade adicional — 14/10/2026
+
+Foi feita uma comparação entre os **132 registros do manifesto** e os **132 arquivos JSON reais no GitHub**, além das **100 imagens** no diretório B. Os cinco novos WebPs passaram nos testes de assinatura, bytes e Git blob SHA; os 100 arquivos binários correspondem ao manifesto. A auditoria encontrou nove registros antigos com SHA/tamanho obsoletos no manifesto (`TF-309`, `TF-318`, `TF-319`, `TF-320`, `TF-325`, `TF-334`, `TF-382`, `TF-388`, `TF-401`), corrigidos **somente no manifesto**, sem alterar nenhuma ficha. Uma releitura de cada um dos nove arquivos confirmou os novos hashes e tamanhos. Não implica validação editorial do conteúdo. Ver `integridade.auditoria_conciliacao_20261014` em [`manifest.json`](manifest.json).
+
+---
+
 ## Atualização de 14/10/2026 — 47/132 mecânicas individualizadas, 100 imagens reais
 
 **Estado ainda PARCIAL.** O manifesto agora registra **132 JSONs**, dos quais **47 têm inventário individual de mecânicas** (**14** baseados em fontes editoriais A5E, **33** aprofundados com transcrições/reproduções secundárias); **85 ainda não têm inventário integral**, **124 estão bloqueados**, **0 homologações editoriais independentes**, **0 promoções canônicas**. Para imagens: **100/132 binários reais** disponíveis e relidos, **32 ausentes**.
