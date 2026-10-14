@@ -16,16 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 129,
-    "verified_after_upload": 129,
-    "pending": 65,
-    "stored_bytes": 13324019,
-    "checkpoint_count": 32,
+    "persisted_binary_files": 130,
+    "verified_after_upload": 130,
+    "pending": 64,
+    "stored_bytes": 13336702,
+    "checkpoint_count": 33,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 65,
+    "partial_missing_files": 64,
     "blocked_confirmed": 0,
-    "partial_variant_art": 25,
+    "partial_variant_art": 26,
     "license_rights_review": {
       "foundry_noncommercial_restricted": 8,
       "homebrew_img_unlicensed_for_reuse": 84,
@@ -386,6 +386,14 @@
       ],
       "commit": "ed6d9aa01bf18cf099ccb3fc12b98af88636185d",
       "validation": "Three source/destination GitHub files compared byte-for-byte after push and Git blob SHA identical. PNG 32×32, bytes/SHA256 verified prior. Visual variance and historic artist rights PARTIAL."
+    },
+    {
+      "sequence": 33,
+      "images_added": [
+        "TF-475"
+      ],
+      "commit": "d0137f1018dc30a0d6a8c60a2017eb84e51df186",
+      "validation": "Anglerfish PNG 1254x1254 from Pelagico GitHub source commit, source/destination Git blob SHA and content byte-for-byte match after upload. SHA-256 pre-upload verified. License coverage and card art review PARTIAL."
     }
   ],
   "blocked_ids": [
@@ -434,7 +442,6 @@
     "TF-468",
     "TF-470",
     "TF-473",
-    "TF-475",
     "TF-480",
     "TF-483",
     "TF-489",
@@ -4541,25 +4548,41 @@
     {
       "id": "TF-475",
       "name": "Giant Lanternfish",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/vincentchen18/Pelagico/blob/8c87620b785f417c4c6a975ef7e6582218d5a5c5/Assets/anglerfish.png",
+      "repository_path": "operational/assets/creature-images/TF-475.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      },
+      "size_bytes": 12683,
+      "sha256": "f7183a039cf13f662688e5bdafc9077f1cb1834cf9cc25eb2395be61459dd2f8",
+      "persistence_commit": "d0137f1018dc30a0d6a8c60a2017eb84e51df186",
       "validation": {
-        "result": "not_run",
-        "reason": "License and image preview documented, but real original anglerfish.png not acquired: direct OpenGameArt binary download attempts returned 'download failed', while connected GitHub fetch only accepts GitHub-hosted resources. No file stored, no SHA-256 or dimensions validated; never count this as complete."
+        "result": "passed",
+        "method": "PNG signature/IHDR/IEND, 1254x1254 size, bytes and SHA-256 computed from GitHub source with tested SHA-256 implementation. Source and SRD destination fetched via GitHub at source commit/branch and compared byte-for-byte and Git blob SHA after upload.",
+        "git_blob_sha": "44e124373c2d3f7dab7abe3698050a57e1574966",
+        "quality_note": "Distinct anglerfish with illuminated fishing lure protruding from face and toothy mouth; matches Giant Lanternfish identity but not literally giant scale, source is low-detail flat pixel art occupying part of 1254x1254 transparent canvas. Style/scale review pending."
       },
       "state": "PARTIAL",
       "candidate_source_url": "https://opengameart.org/content/anglerfish-0",
       "candidate_binary_url": "https://opengameart.org/sites/default/files/anglerfish.png",
       "candidate_license": "CC0 1.0 Universal (declared on original OpenGameArt page)",
       "candidate_author": "m7600",
-      "candidate_relevance": "Illustrated large fanged deep-sea anglerfish with glowing lure; visually appropriate to Giant Lanternfish archetype, but giant size not established."
+      "candidate_relevance": "Illustrated large fanged deep-sea anglerfish with glowing lure; visually appropriate to Giant Lanternfish archetype, but giant size not established.",
+      "source_repo": "vincentchen18/Pelagico",
+      "source_ref": "8c87620b785f417c4c6a975ef7e6582218d5a5c5",
+      "source_path": "Assets/anglerfish.png",
+      "source_git_blob_sha": "44e124373c2d3f7dab7abe3698050a57e1574966",
+      "source_license": "MIT — project repository license; applicability to specific illustrated sprite requires reconfirmation with credited authors",
+      "license_evidence": [
+        "https://github.com/vincentchen18/Pelagico/blob/main/LICENSE.md",
+        "https://github.com/vincentchen18/Pelagico/blob/main/README.md"
+      ],
+      "attribution": "Pelagico by Vincent Chen, Justin Yeung, Lucas Liu, and Jeremy Jiang; README credits Jeremy Jiang for Sprite/Character Art. MIT copyright and license notices retained in attribution record.",
+      "rights_review": "Pelagico includes this PNG in the project's Assets directory, states project MIT License, and credits Jeremy Jiang as sprite/character artist. No separate individual sprite license statement identified: for commercial card redistribution confirm the project MIT license covers this asset, and carry the license/copyright notice as required."
     },
     {
       "id": "TF-476",
