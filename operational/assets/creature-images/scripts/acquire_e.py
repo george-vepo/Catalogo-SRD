@@ -151,7 +151,7 @@ def main():
             ext=rel.rsplit(".",1)[-1].lower()
             source_repo=e.get("source_repo","TheGiddyLimit/homebrew")
             source_ref=e.get("source_ref","master")
-            address="https://raw.githubusercontent.com/"+source_repo+"/"+source_ref+"/"+urllib.parse.quote(rel,safe="/")
+            address=e.get("source_url_direct") or "https://raw.githubusercontent.com/"+source_repo+"/"+source_ref+"/"+urllib.parse.quote(rel,safe="/")
             data=remote(address)
             dimensions=inspect(data,ext)
             digest=hashlib.sha256(data).hexdigest()
@@ -162,7 +162,7 @@ def main():
             sha=bin_blob(data)
             batch.append({"entry":e,"path":ROOT+"/"+e["id"]+"."+ext,"blob":sha,"size":len(data),
                           "dimensions":dimensions,"digest":digest,"ext":ext,
-                          "source":"https://github.com/"+source_repo+"/blob/"+source_ref+"/"+urllib.parse.quote(rel,safe="/")})
+                          "source":e.get("source_page") or "https://github.com/"+source_repo+"/blob/"+source_ref+"/"+urllib.parse.quote(rel,safe="/")})
             if len(batch)==10:flush()
         except Exception as error:
             e.update(status="blocked",error=str(error)[:500])
