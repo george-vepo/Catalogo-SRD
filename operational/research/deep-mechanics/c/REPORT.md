@@ -4,6 +4,8 @@
 
 ## Checkpoint 23 — Demilich, Mariner e Mammoth (14/10/2026)
 
+- Commit mecânico `86e088bb6e7d1e66982f927166813e6887d49e7a`; leitura de retorno de TF-505, TF-506 e TF-510: OK.
+
 - TF-505 Demilich Mastermind: 319 HP / CR18, cinco Legendary Resistance, quatro soul gems, Devour Soul, Reflection Arcane/Skull Shock bloodied, quatro ações lendárias com custos; optional lair features mantidas separadas de ações de covil. Fonte: https://a5e.tools/node/1478. Dust Storm omite resultado no sucesso; ainda parcial.
 - TF-506 Mariner Ghost Swarm: Elite Recovery, Ethereal Sight, Swarm, Turn Resistance, Withering Cutlasses, Magic Blast, Etherealness, Spirit Absorption e Painful Wail estruturadas com limites e efeitos. Fonte: https://a5e.tools/node/3406.
 - TF-510 Infernal Mammoth: Siege Platform, Trampling Charge, Gore, Stomp e Opportunity Step; **bloqueada** por 104 HP / 11d12+33 com CON20 (+5), que conflita com fórmula padrão. Fonte: https://a5e.tools/node/3426.
