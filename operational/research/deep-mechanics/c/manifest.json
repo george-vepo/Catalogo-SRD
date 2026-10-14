@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 64,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 69,
     "fichas_integralmente_concluidas": 0,
     "parciais": 94,
     "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 67,
+    "registros_aproveitados_sem_nova_verificacao_integral": 62,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -515,9 +515,24 @@
       "commit": "d2cfbcf643622cdfed26c5f8c224d81e877a001e",
       "leitura_persistencia": "CONFIRMADA — 5 registros relidos do GitHub, sintaxe/IDs conferidos e métricas 64/67/94/37 auditadas.",
       "tipo": "Zimwi 2023 e quatro gigantes: Cave Desert Firestorm Haunted"
+    },
+    {
+      "numero": 35,
+      "inicio": "TF-144",
+      "fim": "TF-150",
+      "ids": [
+        "TF-144",
+        "TF-147",
+        "TF-148",
+        "TF-149",
+        "TF-150"
+      ],
+      "commit": "77fd2403f2f351cf439580df9de9d59960d8a15e",
+      "leitura_persistencia": "PENDENTE_READ_BACK",
+      "tipo": "Hellfire Giant Shire Giant Thin Giant Thursir Armorer Void-Blessed Ogre"
     }
   ],
-  "atualizacao_detalhada_sha": "d2cfbcf643622cdfed26c5f8c224d81e877a001e",
+  "atualizacao_detalhada_sha": "77fd2403f2f351cf439580df9de9d59960d8a15e",
   "criaturas": [
     {
       "id": "TF-412",
@@ -2401,15 +2416,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 24,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-144.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://kpogl.wikidot.com/monster%3Ahellfire-giant",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/hellfire-giant/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
       "pendencias": [
-        "Imagem final e revisão independente pendentes."
+        "Runic Shield é reação que exige ver atacante e não estar invisível; fonte individual conferida.",
+        "Confirmar no livro/errata se duas opções de Multiattack podem ser combinadas no turno.",
+        "Direito e qualidade da imagem ainda não aprovados."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão de edição e licenças",
+        "revisão visual imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2419,7 +2437,8 @@
         "bytes": 207688,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-147",
@@ -2427,16 +2446,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 25,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-147.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://www.dndgrove.com/bestiary/8/giant-shire",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/shire-giant/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
       "pendencias": [
-        "Página individual 5eSRD não localizada; confirmar seção de habilidades e ações na publicação de origem.",
-        "A fonte Grove repete uma alternativa no Multiattack; confirmar texto editorial."
+        "A republicação 5eSRD repete por erro editorial a alternativa Pitchfork + Grab + Throw; confirmar com fonte impressa.",
+        "A sequência depende da manutenção do grapple, e o alvo secundário de Throw possui salvaguarda distinta.",
+        "Imagem física ainda não aprovada."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão de edição e licenças",
+        "revisão visual imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2446,7 +2467,8 @@
         "bytes": 125482,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-148",
@@ -2454,13 +2476,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 26,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-148.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/giant-thin/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Consuming Bite limita uso a 1 ataque por Multiattack; danos necrotic efetivamente sofridos reduzem max HP e curam o gigante.",
+        "Verificação independente de livro/erratas e licença da imagem pendentes."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão de edição e licenças",
+        "revisão visual imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2470,7 +2496,8 @@
         "bytes": 181748,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-149",
@@ -2478,15 +2505,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 27,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-149.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/thursir-armorer/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
       "pendencias": [
-        "Conferir regras de armadura quebrada e gatilhos dos acertos críticos na revisão."
+        "Forged Forgery requer smith's tools apenas para o primeiro crítico; o segundo crítico de qualquer criatura destrói a armadura.",
+        "Runic Armor afeta reação do atacante, Harness Dwarven Soul é bônus, 6 skulls não definem limite de usos.",
+        "Licença da imagem e revisão do livro pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão de edição e licenças",
+        "revisão visual imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2496,7 +2526,8 @@
         "bytes": 186548,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-150",
@@ -2504,15 +2535,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 28,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-150.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://kpogl.wikidot.com/monster%3Avoid-blessed-ogre",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://kpogl.wikidot.com/monster:void-blessed-ogre",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
       "pendencias": [
-        "Revisão de duração dos efeitos de Volatile Stomach."
+        "Volatile Stomach usa reação em dano físico específico; poça dura até próximo turno e dano é por entrada ou início do turno.",
+        "Tremorsense suspenso por grapple/restrained, blindsight separado; requer revisão editorial/imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão de edição e licenças",
+        "revisão visual imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2522,7 +2555,8 @@
         "bytes": 125314,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-151",
@@ -4273,11 +4307,11 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 34,
-    "sha_validado": "d2cfbcf643622cdfed26c5f8c224d81e877a001e",
+    "checkpoint": 35,
+    "sha_validado": null,
     "escopo_ids": 131,
-    "aprofundadas": 64,
-    "sem_revisao_individual": 67,
+    "aprofundadas": 69,
+    "sem_revisao_individual": 62,
     "integralmente_aprovadas": 0,
     "parciais": 94,
     "bloqueadas": 37,

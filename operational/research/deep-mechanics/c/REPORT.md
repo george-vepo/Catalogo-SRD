@@ -1,5 +1,16 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 35 — Hellfire Giant, Shire Giant, Thin Giant, Thursir Armorer, Void-Blessed Ogre (14/10/2026)
+
+**[Commit com 5 JSONs mecânicos](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/77fd2403f2f351cf439580df9de9d59960d8a15e).**
+
+- TF-144 Hellfire Giant: Rune-Powered Weapons, Death Malison ativado por morte (Con CD16 e desvantagem a fiends), Greatclub, Runic Blast, Invisibility Rune com concentração e Runic Shield como reação +4 CA somente quando visível. Fonte https://www.5esrd.com/database/creature/hellfire-giant/.
+- TF-147 Shire Giant: três Pitchfork ou Pitchfork+Grab+Throw, dependência de grapple, dano e queda do alvo e criatura que ocupa destino. Duplicação editorial original da opção de Multiattack preservada em pendência. Fonte https://www.5esrd.com/database/creature/shire-giant/.
+- TF-148 Thin Giant: Contortionist com exigência de espaço no destino, Multiattack de três golpes limitado a uma Consuming Bite e drenagem/cura de PV máximos pelo dano necrótico. Fonte https://www.5esrd.com/database/creature/giant-thin/.
+- TF-149 Thursir Armorer: Forged Forgery em dois críticos distintos, Flinging Smash precede armas no Multiattack quando disponível, Runic Armor e bônus Harness Dwarven Soul. Fonte https://www.5esrd.com/database/creature/thursir-armorer/.
+- TF-150 Void-Blessed Ogre: Multiattack melee e três magias à distância, Tentacle Senses condicionado por grapple, Volatile Stomach com reação e poça que dura só até início do turno seguinte. Fonte https://kpogl.wikidot.com/monster:void-blessed-ogre.
+- **69/131 aprofundadas, 62 pendentes, 94 parciais, 37 bloqueadas, 0 integralmente aprovadas.** Arte física: 96/131, 35 faltando, 0 aprovação visual. Nada de imagens obtidas no CP35. Revalidação editorial independente ainda necessária.
+
 ## Checkpoint 34 — Zimwi e quatro gigantes (14/10/2026)
 
 **Commit verificado:** [`d2cfbcf643622cdfed26c5f8c224d81e877a001e`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/d2cfbcf643622cdfed26c5f8c224d81e877a001e). Cinco JSONs relidos por ID e sintaxe diretamente da branch; manifesto com 131 IDs únicos, 64 aprofundados e 67 pendentes. PR #9 Draft, sem merge.
