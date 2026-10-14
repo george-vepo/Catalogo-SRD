@@ -16,11 +16,11 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 83,
-    "verified_after_upload": 83,
-    "pending": 111,
-    "stored_bytes": 10495614,
-    "checkpoint_count": 14
+    "persisted_binary_files": 87,
+    "verified_after_upload": 87,
+    "pending": 107,
+    "stored_bytes": 11082024,
+    "checkpoint_count": 16
   },
   "checkpoints": [
     {
@@ -203,6 +203,24 @@
         "TF-523"
       ],
       "validation": "post-upload bytes, SHA-256, dimensions, WebP and Git blob SHA verified"
+    },
+    {
+      "sequence": 15,
+      "images_added": [
+        "TF-485",
+        "TF-486",
+        "TF-490"
+      ],
+      "commit": "16c28cb923e13c977f396b53c7b261d1ed9f20ba",
+      "validation": "after upload: git blob identity and all base64 bytes equal source; pre-upload SHA-256 and dimensions recorded"
+    },
+    {
+      "sequence": 16,
+      "images_added": [
+        "TF-338"
+      ],
+      "commit": "6847194a39a6e9062b2faf5c7dd12672f1674555",
+      "validation": "after upload: git blob identity and all base64 bytes equal source; pre-upload SHA-256 and dimensions recorded"
     }
   ],
   "blocked_ids": [
@@ -222,7 +240,6 @@
     "TF-327",
     "TF-335",
     "TF-336",
-    "TF-338",
     "TF-341",
     "TF-342",
     "TF-344",
@@ -285,10 +302,7 @@
     "TF-481",
     "TF-482",
     "TF-483",
-    "TF-485",
-    "TF-486",
     "TF-489",
-    "TF-490",
     "TF-491",
     "TF-492",
     "TF-493",
@@ -1508,19 +1522,27 @@
     {
       "id": "TF-338",
       "name": "Somberweave",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/BookOfEbonTides/book/153-12-001.somberweave.webp",
+      "repository_path": "operational/assets/creature-images/TF-338.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 850,
+        "height": 758
+      },
+      "size_bytes": 63466,
+      "sha256": "c285a415677fcd7bfccaebbb6f2cc1776cc7f993f90f0b02ce4f846916fc32fc",
+      "persistence_commit": "6847194a39a6e9062b2faf5c7dd12672f1674555",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Original retrieved by GitHub fetch_file in base64, signature WebP, dimensions, length and SHA-256 determined before upload; recovered after persist and compared full decoded bytes (equivalent normalized base64) against original, matching Git blob SHA.",
+        "git_blob_sha": "7345296a5c5f285194a5072edbe99486e5ca9608",
+        "quality_note": "Ilustração identificada como somberweave na arte do Book of Ebon Tides."
+      },
+      "source_repo": "TheGiddyLimit/homebrew-img",
+      "source_path": "img/BookOfEbonTides/book/153-12-001.somberweave.webp",
+      "source_git_blob_sha": "7345296a5c5f285194a5072edbe99486e5ca9608"
     },
     {
       "id": "TF-339",
@@ -3613,36 +3635,52 @@
     {
       "id": "TF-485",
       "name": "Goblin Boss",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/AngryGolemGamesMonsterManual/Goblin_Boss_Avatar.webp",
+      "repository_path": "operational/assets/creature-images/TF-485.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1340
+      },
+      "size_bytes": 319776,
+      "sha256": "9c8a5afc9f773c6edfa416b39eb2e7c5fc66844c92fcd4bc18112e8184723129",
+      "persistence_commit": "16c28cb923e13c977f396b53c7b261d1ed9f20ba",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Original retrieved by GitHub fetch_file in base64, signature WebP, dimensions, length and SHA-256 determined before upload; recovered after persist and compared full decoded bytes (equivalent normalized base64) against original, matching Git blob SHA.",
+        "git_blob_sha": "39af2d4302d84b44b0684e55862e68c852808fe4",
+        "quality_note": "Artwork nomeada Goblin Boss na origem AngryGolemGamesMonsterManual; identidade genérica compatível, estilo sujeito a avaliação de arte final."
+      },
+      "source_repo": "TheGiddyLimit/homebrew-img",
+      "source_path": "img/AngryGolemGamesMonsterManual/Goblin_Boss_Avatar.webp",
+      "source_git_blob_sha": "39af2d4302d84b44b0684e55862e68c852808fe4"
     },
     {
       "id": "TF-486",
       "name": "Goblin Cursespitter",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/FleeMortals/Fluff/Goblin Cursespitter.webp",
+      "repository_path": "operational/assets/creature-images/TF-486.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 614,
+        "height": 631
+      },
+      "size_bytes": 66086,
+      "sha256": "41a4dcc0169c70d5f33fceb2eaec0abb2bfcd8dfc2cb6eade901ef6b074e3d6c",
+      "persistence_commit": "16c28cb923e13c977f396b53c7b261d1ed9f20ba",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Original retrieved by GitHub fetch_file in base64, signature WebP, dimensions, length and SHA-256 determined before upload; recovered after persist and compared full decoded bytes (equivalent normalized base64) against original, matching Git blob SHA.",
+        "git_blob_sha": "b2f6468c8fcb42db3a016dadc09eb7f4862ed419",
+        "quality_note": "Arte identificada explicitamente como Goblin Cursespitter em Flee Mortals."
+      },
+      "source_repo": "TheGiddyLimit/homebrew-img",
+      "source_path": "img/FleeMortals/Fluff/Goblin Cursespitter.webp",
+      "source_git_blob_sha": "b2f6468c8fcb42db3a016dadc09eb7f4862ed419"
     },
     {
       "id": "TF-489",
@@ -3664,19 +3702,27 @@
     {
       "id": "TF-490",
       "name": "Goblin Lackey",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/FleeMortals/Fluff/Goblin Lackey.webp",
+      "repository_path": "operational/assets/creature-images/TF-490.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 796,
+        "height": 786
+      },
+      "size_bytes": 137082,
+      "sha256": "8c44074a7d95453149c4e80a08b3203252b2c0b84f6374e81558a61653194dbd",
+      "persistence_commit": "16c28cb923e13c977f396b53c7b261d1ed9f20ba",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Original retrieved by GitHub fetch_file in base64, signature WebP, dimensions, length and SHA-256 determined before upload; recovered after persist and compared full decoded bytes (equivalent normalized base64) against original, matching Git blob SHA.",
+        "git_blob_sha": "eda74145d1f24f0bab9b7580858218ecf3a176fd",
+        "quality_note": "Arte identificada explicitamente como Goblin Lackey em Flee Mortals."
+      },
+      "source_repo": "TheGiddyLimit/homebrew-img",
+      "source_path": "img/FleeMortals/Fluff/Goblin Lackey.webp",
+      "source_git_blob_sha": "eda74145d1f24f0bab9b7580858218ecf3a176fd"
     },
     {
       "id": "TF-491",
