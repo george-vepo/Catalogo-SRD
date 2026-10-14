@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 24,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 26,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 103,
-    "bloqueadas": 28,
-    "registros_aproveitados_sem_nova_verificacao_integral": 107,
+    "parciais": 101,
+    "bloqueadas": 30,
+    "registros_aproveitados_sem_nova_verificacao_integral": 105,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -331,6 +331,20 @@
       "commit": "2c8b33b00f2b463f76bebe8ed4cf731e2d7ad906",
       "leitura_persistencia": "CONFIRMADA — quatro arquivos JSON reabertos, IDs e conteúdo sintático validados",
       "tipo": "A5E quatro fichas detalhadas"
+    },
+    {
+      "numero": 21,
+      "inicio": "TF-468",
+      "fim": "TF-476",
+      "ids": [
+        "TF-468",
+        "TF-470",
+        "TF-473",
+        "TF-476"
+      ],
+      "commit": null,
+      "leitura_persistencia": "AGUARDANDO_READBACK",
+      "tipo": "conflitos variantes A5E e Greater Sphinx"
     }
   ],
   "atualizacao_detalhada_sha": "2c8b33b00f2b463f76bebe8ed4cf731e2d7ad906",
@@ -939,23 +953,28 @@
       "escopo": "next_batches[4]",
       "posicao": 20,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-468.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+      "status": "BLOQUEADA_REFERENCIAS_ACOES_LENDARIAS_E_SOPRO",
       "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3239",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Breath Weapon descreve fire mas inflige cold; sem correção presumida.",
-        "A página apresenta contradição entre 'fire' no texto do sopro e dano cold; marcar divergência editorial."
+        "Breath Weapon diz respirar fire, mas registra dano cold e variante descreve cold; preservar conflito editorial sem converter automaticamente.",
+        "Ações lendárias Bite/Claw não coincidem literalmente com Black Wolf Bite/Silver Dragon Claw; confirmar errata.",
+        "Imagem binária da variante ainda não está armazenada."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "resolução editorial das referências de ações",
+        "tipo textual fire x cold em Breath Weapon",
+        "arquivo físico de imagem",
+        "revisão editorial independente"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-470",
@@ -963,23 +982,28 @@
       "escopo": "next_batches[4]",
       "posicao": 21,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-470.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+      "status": "BLOQUEADA_REFERENCIAS_ACOES_LENDARIAS_E_WINGED_CHARGE",
       "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3240",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Ações lendárias Bite/Claw e reação headbutt não correspondem aos nomes de ações da variante.",
-        "Página de ações lendárias menciona nomes genéricos Bite/Claw; conferir aplicação à variante."
+        "Winged Charge referencia headbutt que não consta do bloco de ataques Fiendish Chimera (há Nightmare Trample).",
+        "Ações lendárias Bite/Claw não coincidem exatamente com Bat Bite/Hellhound Claw; confirmar errata.",
+        "Não substituir nomes por suposição; imagem binária ainda falta."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "resolução editorial das referências de ações",
+        "referência headbutt de Winged Charge",
+        "arquivo físico de imagem",
+        "revisão editorial independente"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-473",
@@ -987,23 +1011,27 @@
       "escopo": "next_batches[4]",
       "posicao": 22,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-473.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_MULTIATTACK_REFERENCIA_BEAK_E_GRIFFON",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/1663",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico."
+        "Multiattack publicado declara griffon atacando com beak e talons; Flying Lion lista Bite e Talons, não Beak. Não transformar Beak em Bite por inferência.",
+        "Talons condiciona dano superior e grapple a começar 20 ft acima do alvo; registrar condições de alcance.",
+        "Imagem binária da variante Flying Lion não armazenada; revisão editorial pendente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "relação Beak x Bite na variante Flying Lion",
+        "texto reaproveitado de griffon e correção editorial",
+        "imagem física representativa"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-476",
@@ -1011,23 +1039,29 @@
       "escopo": "next_batches[4]",
       "posicao": 23,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-476.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_SECAO_ACOES_LENDARIAS_AUSENTE_EM_FONTE",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/1797",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Não confundir com esfinge comum CR 11; diferenciar regras de covil opcionais."
+        "Fonte oficial apresenta a tag Legendary e em Combat cita Claw, Teleport e Slow Time como legendary actions, mas nenhum bloco Legendary Actions ou custos/limites aparece na ficha; não inventar quantidades nem mecânica.",
+        "Planar Jaunt exige alvos dispostos, enquanto Combat recomenda usar para banir inimigos; preservar conflito sem trocar precondição.",
+        "Greater Sphinx é CR 17, não Sphinx CR 11; lista inata e Roar três fases detalhadas.",
+        "Imagem binária desta variante ainda não existe."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "quantidade, custos, descrição e recarga das ações lendárias não publicadas no bloco oficial",
+        "contradição willing targets x banir foes em Planar Jaunt",
+        "arquivo de imagem real",
+        "revisão editorial Monstrous Menagerie"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-499",

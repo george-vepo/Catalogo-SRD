@@ -4,24 +4,26 @@
   "nome": "Fiendish Chimera",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 21,
-  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "estado_auditoria": "BLOQUEADA_REFERENCIAS_ACOES_LENDARIAS_E_WINGED_CHARGE",
   "mecanica_completa": false,
   "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Monstrous Menagerie",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/3240"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "7",
+    "bonus_proficiencia": 3,
     "ca": 13,
+    "composicao_ca": "natural armor",
     "pv": 114,
     "dados_vida": "12d10+48",
+    "bloodied": 57,
     "porte": "Large",
     "tipo": "Monstrosity",
-    "alinhamento": null,
     "atributos": {
       "forca": 18,
       "destreza": 10,
@@ -39,269 +41,225 @@
       "carisma": 0
     },
     "deslocamentos": {
-      "andar": 30,
-      "voar": 60
+      "andar_ft": 30,
+      "voo_ft": 60
     },
-    "pericias": {
-      "Perception": 6
-    },
-    "salvaguardas": {
-      "CON": 7,
-      "INT": -1,
-      "WIS": 6
-    },
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 7
+      },
+      {
+        "nome": "INT",
+        "bonus": -1
+      },
+      {
+        "nome": "WIS",
+        "bonus": 6
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 6
+      }
+    ],
     "sentidos": [
-      "darkvision 60 ft"
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
     ],
     "percepcao_passiva": 21,
     "idiomas": [],
-    "resistencias": null,
+    "vulnerabilidades": [],
+    "resistencias": [],
     "imunidades_dano": [
       "fire"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [],
+    "resistencias_condicao": [],
+    "maneuver_dc": 15,
+    "xp": null,
+    "motivo_xp_null": "não impresso na ficha A5E",
+    "alinhamento": null,
+    "motivo_alinhamento_null": "não declarado na ficha"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Reactive Heads",
-        "descricao_funcional": "Até três reações por rodada, uma por turno",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "categoria": "passivo",
+        "limite": {
+          "reacoes_por_rodada": 3,
+          "reacoes_por_turno": 1
+        }
       },
       {
         "nome": "Three Heads",
-        "descricao_funcional": "Vantagem Perception e contra condições, não pode ser flanqueada",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "categoria": "passivo",
+        "efeitos": [
+          "vantagem em Perception checks",
+          "vantagem em salvaguardas contra blinded, charmed, deafened, frightened, stunned e unconscious",
+          "não pode ser flanked"
+        ],
+        "protecao_transformacao": "não especificada na ficha da variante"
       },
       {
         "nome": "Wakeful",
-        "descricao_funcional": "Uma cabeça dormindo não incapacita as outras",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "categoria": "passivo",
+        "efeito": "quando uma cabeça dorme, outras permanecem acordadas"
       }
     ],
     "acoes": [
       {
         "nome": "Nightmare Trample",
-        "descricao_funcional": "Atropelamento com teste STR CD15 contra prone",
-        "gatilho": null,
+        "tipo": "melee weapon attack",
         "bonus_acerto": 7,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 11,
-        "dados_dano": "2d6",
-        "modificador_dano": 4,
-        "tipo_dano": "bludgeoning",
-        "teste_resistencia": {
-          "atributo": "STR",
-          "cd": 15
-        },
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [
-          "prone"
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          }
         ],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "STR",
+            "cd": 15
+          },
+          "efeito_falha": {
+            "condicao": "prone"
+          },
+          "efeito_sucesso": "sem condição"
+        }
       },
       {
         "nome": "Bat Bite",
-        "descricao_funcional": "Mordida",
-        "gatilho": null,
+        "tipo": "melee weapon attack",
         "bonus_acerto": 7,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 11,
-        "dados_dano": "2d6",
-        "modificador_dano": 4,
-        "tipo_dano": "piercing",
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Hellhound Claw",
-        "descricao_funcional": "Garra",
-        "gatilho": null,
+        "tipo": "melee weapon attack",
         "bonus_acerto": 7,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 9,
-        "dados_dano": "2d4",
-        "modificador_dano": 4,
-        "tipo_dano": "slashing",
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true,
-        "dano_se_prone": "14 (4d4+4)"
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "slashing"
+          }
+        ],
+        "dano_alvo_prone": {
+          "dados": "4d4+4",
+          "media": 14,
+          "tipo": "slashing"
+        }
       },
       {
         "nome": "Hellhound Breath Weapon",
-        "descricao_funcional": "Cone 15 pés DEX CD15; 6d6 fire, metade no sucesso",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": "fire",
+        "tipo": "area cone",
+        "recarga": {
+          "dado": "d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 15
+        },
+        "alvos": "criaturas na área",
         "teste_resistencia": {
           "atributo": "DEX",
           "cd": 15
         },
-        "efeito_falha": "21 (6d6) fire",
-        "efeito_sucesso": "metade",
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": "5–6",
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "efeito_falha": {
+          "dano": [
+            {
+              "dados": "6d6",
+              "media": 21,
+              "tipo": "fire"
+            }
+          ]
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 6d6"
+        },
+        "descricao_elemento_fonte": "fire"
       }
     ],
     "ataques": [
       {
         "nome": "Nightmare Trample",
-        "descricao_funcional": "Atropelamento com teste STR CD15 contra prone",
-        "gatilho": null,
+        "tipo": "melee weapon attack",
         "bonus_acerto": 7,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 11,
-        "dados_dano": "2d6",
-        "modificador_dano": 4,
-        "tipo_dano": "bludgeoning",
-        "teste_resistencia": {
-          "atributo": "STR",
-          "cd": 15
-        },
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [
-          "prone"
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          }
         ],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "STR",
+            "cd": 15
+          },
+          "efeito_falha": {
+            "condicao": "prone"
+          },
+          "efeito_sucesso": "sem condição"
+        }
       },
       {
         "nome": "Bat Bite",
-        "descricao_funcional": "Mordida",
-        "gatilho": null,
+        "tipo": "melee weapon attack",
         "bonus_acerto": 7,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 11,
-        "dados_dano": "2d6",
-        "modificador_dano": 4,
-        "tipo_dano": "piercing",
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Hellhound Claw",
-        "descricao_funcional": "Garra",
-        "gatilho": null,
+        "tipo": "melee weapon attack",
         "bonus_acerto": 7,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 9,
-        "dados_dano": "2d4",
-        "modificador_dano": 4,
-        "tipo_dano": "slashing",
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true,
-        "dano_se_prone": "14 (4d4+4)"
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "slashing"
+          }
+        ],
+        "dano_alvo_prone": {
+          "dados": "4d4+4",
+          "media": 14,
+          "tipo": "slashing"
+        }
       }
     ],
     "multiataque": null,
@@ -309,130 +267,102 @@
     "reacoes": [
       {
         "nome": "Tail Swipe",
-        "descricao_funcional": "Sob acerto melee a 5 pés, STR CD15 contra dano e prone e empurrão",
-        "gatilho": "atingida melee",
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
+        "tipo": "reaction",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "gatilho": "criatura a até 5 ft acerta a chimera com melee attack",
         "teste_resistencia": {
           "atributo": "STR",
           "cd": 15
         },
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": "1/dia",
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "efeito_falha": {
+          "dano": {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "bludgeoning"
+          },
+          "movimento_forcado_ft": 10,
+          "condicao": "prone"
+        },
+        "efeito_sucesso": "não sofre efeitos listados"
       },
       {
         "nome": "Winged Charge",
-        "descricao_funcional": "Sob acerto à distância, voa até atacante e usa 'headbutt' que não aparece na variante",
-        "gatilho": "atingida ranged",
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": "1/dia",
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "tipo": "reaction",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "gatilho": "criatura visível acerta chimera com ranged attack",
+        "movimento": "até full fly speed (60 ft) em direção ao atacante",
+        "ataque_se_alcanca": "headbutt",
+        "referencia_acao_existente": null,
+        "conflito_se_sem_acao": "o texto solicita headbutt, mas variante tem Nightmare Trample, não ataque chamado headbutt"
       }
     ],
     "acoes_lendarias": [
       {
         "nome": "Bite",
-        "descricao_funcional": "Nome genérico, possivelmente Bat Bite mas sem atribuir",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
         "custo": 1,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "acao_referenciada_literal": "Bite",
+        "resolucao_referencia": null,
+        "observacao": "O bloco da variante possui Bat Bite, não um ataque exatamente chamado Bite."
       },
       {
         "nome": "Claw",
-        "descricao_funcional": "Nome genérico, possivelmente Hellhound Claw mas sem atribuir",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
         "custo": 1,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "acao_referenciada_literal": "Claw",
+        "resolucao_referencia": null,
+        "observacao": "O bloco da variante possui Hellhound Claw, não um ataque exatamente chamado Claw."
       }
     ],
+    "acoes_lendarias_regras": {
+      "maximo": 2,
+      "recuperacao": "início do turno",
+      "gatilho": "fim do turno de outra criatura",
+      "maximo_por_vez": 1
+    },
     "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
     "custos_lendarios": {
       "maximo": 2,
-      "recuperacao": "início do turno",
-      "uso": "fim do turno de outra criatura"
+      "recuperacao": "início do turno"
+    },
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "reacoes": "PRESENTES_DUAS",
+      "acoes_lendarias": "PRESENTES_DUAS",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "conjuracao": "AUSENCIA_CONFERIDA_NO_BLOCO"
     }
   },
   "pendencias": [
-    "Página de ações lendárias menciona nomes genéricos Bite/Claw; conferir aplicação à variante.",
-    "Ações lendárias Bite/Claw não possuem mesmo nome que ataques da variante.",
-    "Winged Charge usa 'headbutt' ausente; não converter para Nightmare Trample sem confirmação."
+    "Winged Charge referencia headbutt que não consta do bloco de ataques Fiendish Chimera (há Nightmare Trample).",
+    "Ações lendárias Bite/Claw não coincidem exatamente com Bat Bite/Hellhound Claw; confirmar errata.",
+    "Não substituir nomes por suposição; imagem binária ainda falta."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.alinhamento",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "Ações lendárias Bite/Claw não possuem mesmo nome que ataques da variante.",
-    "Winged Charge usa 'headbutt' ausente; não converter para Nightmare Trample sem confirmação."
+    "resolução editorial das referências de ações",
+    "referência headbutt de Winged Charge",
+    "arquivo físico de imagem",
+    "revisão editorial independente"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/3240",
-      "tipo": "ficha individual no portal editorial A5E, consultada diretamente em 2026-10-13",
-      "conferida_nesta_execucao": true
+      "tipo": "bloco individual da ferramenta oficial EN Publishing A5E, verificado 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "sistema": "Level Up Advanced 5E"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico apenas para comparação",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -487,5 +417,14 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_individual": "https://a5e.tools/node/3240",
+    "publicacao": "Monstrous Menagerie",
+    "revisao_livro_errata": "PENDENTE",
+    "status_completo": "NAO"
   }
 }

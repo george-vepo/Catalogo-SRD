@@ -2,6 +2,15 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 21 — variantes A5E e Greater Sphinx (14/10/2026)
+
+- TF-468 **Faerie Chimera**: White Stag Headbutt, Black Wolf Bite, Silver Dragon Claw, Breath Weapon cone 15 ft, Tail Swipe e Winged Charge. Fonte oficial descreve literalmente **fire** no sopro mas dano **cold**; ações lendárias genéricas Bite/Claw não correspondem literalmente aos nomes da variante; estado **BLOQUEADA**. [Ficha](https://a5e.tools/node/3239).
+- TF-470 **Fiendish Chimera**: Nightmare Trample, Bat Bite, Hellhound Claw, sopro fire; Winged Charge referencia headbutt não listado, e ações lendárias possuem nomes genéricos; **BLOQUEADA**. [Ficha](https://a5e.tools/node/3240).
+- TF-473 **Flying Lion**: Keen Smell, Bite, Talons com bônus de altura/agarre; fonte escreve Multiattack 'griffon attacks with beak and talons', mas variante não possui Beak. Não converter para Bite por suposição; **BLOQUEADA**. [Ficha](https://a5e.tools/node/1663).
+- TF-476 **Greater Sphinx CR 17**: 220 PV, 3 níveis progressivos de Roar, magia inata e CDs, Speed Time e Planar Jaunt estruturados. Site oficial tem tag Legendary e texto de Combat com Claw/Teleport/Slow Time, mas **não apresenta seção de ações lendárias**; marcar categoria desconhecida e bloquear validação, jamais considerar ausência confirmada. [Ficha](https://a5e.tools/node/1797).
+- Estado após checkpoint: **26** fichas aprofundadas (antes 24), **105** sem revalidação; **0** integrais, **101** parciais e **30** bloqueadas. Não foram adicionados binários de imagem; 35 continuam faltando.
+- Todos os 4 JSONs mantêm evidências individuais e pendências específicas para revisão de Monstrous Menagerie/errata; nenhuma alteração fora de `operational/research/deep-mechanics/c/`.
+
 ## Checkpoint 20 — A5E (14/10/2026)
 
 - Commit publicado e relido pela API: `2c8b33b00f2b463f76bebe8ed4cf731e2d7ad906`. 4 IDs confirmados, 4 JSONs válidos e branch mantida em rascunho.
@@ -11,7 +20,7 @@
 - TF-459 Ankheg Empress: Bite 10 ft; Claws 15 ft; Acid Glob 30/90 ft; Acid Spray linha 60×10 ft ou no agarrado sem salvaguarda; Burrowing Ambush, Grabby, Monarch's Command, Cinch. **Divergência bloodied 65 contra metade de 174 = 87 mantida bloqueada**. Fonte: https://a5e.tools/node/3424.
 - TF-462 Behir Magus: mordida, agarrar/engolir, Lightning Breath e **quatro reações individuais** (Vengeful Breath, Blindness, Invisibility, Drain Charge). Fonte: https://a5e.tools/node/1465.
 - Referências visuais da espécie encontradas em site A5E para Ankheg e Behir. Não comprovam variantes Empress/Magus e nenhum arquivo binário foi gravado a partir das URLs; permanecem como candidatos.
-- Acumulado: 24 fichas aprofundadas, 107 sem revalidação; 0 completas, 103 parciais, 28 bloqueadas; 96 imagens físicas e 35 faltantes.
+- Acumulado: 24 fichas aprofundadas, 107 sem revalidação; 0 completas, 101 parciais, 30 bloqueadas; 96 imagens físicas e 35 faltantes.
 
 ## Auditoria de read-back — 14/10/2026
 
@@ -46,7 +55,7 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 - **TF-423 Spawn of Chernobog:** testes de infecção, dois sucessos para cura, cinco estágios progressivos de Night's Blood, transformação ao morrer, sensibilidade solar, Bite e Claws.
 - TF-412 permanece bloqueada pela discrepância `SAB 11 (+1)` da fonte; TF-419 pela `Perception +6`/passiva `15` da fonte. Não aplicar reparos automáticos.
 - Fontes: [Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/), [Wind Witch](https://www.5esrd.com/database/creature/wind-witch/), [Execrable Shrub](https://www.5esrd.com/database/creature/execrable-shrub/), [Spawn of Chernobog](https://www.5esrd.com/database/creature/spawn-of-chernobog/).
-- Auditoria acumulada: **15 aprofundadas; 116 ainda sem revalidação detalhada; 0 mecanicamente integrais; 103 parciais; 28 bloqueadas; 96 imagens físicas e 35 faltantes**.
+- Auditoria acumulada: **15 aprofundadas; 116 ainda sem revalidação detalhada; 0 mecanicamente integrais; 101 parciais; 30 bloqueadas; 96 imagens físicas e 35 faltantes**.
 
 ## Checkpoint 15 — aprofundamento mecânico de 14/10/2026
 
@@ -61,8 +70,8 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **24 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **107 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **26 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **105 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
 - **0 criaturas declaradas mecanicamente completas**, **104 parciais**, **27 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
@@ -114,8 +123,8 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 | TF-462 | Behir Magus | PARCIAL | sim | [individual](https://a5e.tools/node/1465) | Conferir quais reações são apenas da variante Magus e o texto de suas CDs. |
 | TF-468 | Faerie Chimera | BLOQUEADA | sim | [individual](https://a5e.tools/node/3239) | Breath Weapon descreve fire mas inflige cold; sem correção presumida. |
 | TF-470 | Fiendish Chimera | BLOQUEADA | sim | [individual](https://a5e.tools/node/3240) | Ações lendárias Bite/Claw e reação headbutt não correspondem aos nomes de ações da variante. |
-| TF-473 | Flying Lion | PARCIAL | não | [individual](https://a5e.tools/node/1663) | Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico. |
-| TF-476 | Greater Sphinx | PARCIAL | não | [individual](https://a5e.tools/node/1797) | Não confundir com esfinge comum CR 11; diferenciar regras de covil opcionais. |
+| TF-473 | Flying Lion | PARCIAL | sim | [individual](https://a5e.tools/node/1663) | Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico. |
+| TF-476 | Greater Sphinx | PARCIAL | sim | [individual](https://a5e.tools/node/1797) | Não confundir com esfinge comum CR 11; diferenciar regras de covil opcionais. |
 | TF-499 | Cloud of Ghasthoppers | PARCIAL | não | [individual](https://a5e.tools/node/4002) | Revisar trechos editoriais truncados do teste de resistência da Despair Aura. |
 | TF-500 | Gorger Zombie Horde | BLOQUEADA | sim | [individual](https://a5e.tools/node/2522) | Página editorial individual Source Gate Pass Gazette, divergente da atribuição histórica. |
 | TF-501 | Lost Prospector | PARCIAL | não | [individual](https://a5e.tools/node/2965) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |

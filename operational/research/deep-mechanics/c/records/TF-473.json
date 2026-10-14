@@ -4,24 +4,27 @@
   "nome": "Flying Lion",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 22,
-  "estado_auditoria": "PARCIAL_FICHA_ORIGEM_ESTRUTURADA_COM_CONFLITO",
+  "estado_auditoria": "BLOQUEADA_MULTIATTACK_REFERENCIA_BEAK_E_GRIFFON",
   "mecanica_completa": false,
   "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Monstrous Menagerie",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/1663"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "3",
+    "xp": null,
+    "bonus_proficiencia": 2,
     "ca": 12,
+    "composicao_ca": "não especificada",
     "pv": 57,
     "dados_vida": "6d10+24",
+    "bloodied": 28,
     "porte": "Large",
     "tipo": "Monstrosity",
-    "alinhamento": null,
     "atributos": {
       "forca": 18,
       "destreza": 14,
@@ -39,139 +42,184 @@
       "carisma": -1
     },
     "deslocamentos": {
-      "andar": 30,
-      "voar": 80
-    },
-    "pericias": {
-      "Perception": 5
+      "andar_ft": 30,
+      "voo_ft": 80
     },
     "salvaguardas": [],
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 5
+      }
+    ],
     "sentidos": [],
     "percepcao_passiva": 15,
     "idiomas": [],
+    "vulnerabilidades": [],
     "resistencias": [],
     "imunidades_dano": [],
     "imunidades_condicao": [],
-    "vulnerabilidades": [],
-    "bloodied": 28,
-    "proficiencia": 2,
-    "cd_manobra": 14
+    "maneuver_dc": 14,
+    "motivo_xp_null": "não impresso na ficha A5E",
+    "alinhamento": null,
+    "motivo_alinhamento_null": "não declarado na ficha"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Keen Smell",
-        "gatilho": "Teste de percepção envolvendo olfato",
-        "efeito": "Vantagem",
-        "fonte_verificada": true
+        "tipo": "passivo",
+        "efeito": "vantagem em Perception checks que dependem de olfato"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "gatilho": "Ação",
-        "efeito": "Fonte diz literalmente 'griffon attacks once with its beak and once with its talons', mas Flying Lion apresenta Bite e Talons — referências não conciliadas",
-        "fonte_verificada": true
+        "tipo": "acao sequencial",
+        "referencias_literais_fonte": [
+          {
+            "acao": "Beak",
+            "quantidade": 1
+          },
+          {
+            "acao": "Talons",
+            "quantidade": 1
+          }
+        ],
+        "primeira_acao_referencia_resolvida": null,
+        "nota": "Página da variante chama criatura griffon e descreve Beak que não existe; não substituir por Bite sem revisão."
       },
       {
         "nome": "Bite",
+        "tipo": "melee weapon attack",
         "bonus_acerto": 6,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano": {
-          "dados": "2d4",
-          "modificador": 4,
-          "tipo": "piercing"
-        },
-        "dano_medio": 9,
-        "fonte_verificada": true
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Talons",
+        "tipo": "melee weapon attack",
         "bonus_acerto": 6,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano": {
-          "dados": "1d6",
-          "modificador": 4,
-          "tipo": "slashing"
-        },
-        "dano_medio": 7,
-        "alternativa": "2d6+4 (11) slashing se começou turno 20+ pés acima do alvo",
-        "condicoes": [
-          "grappled"
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          }
         ],
-        "fuga_cd": 14,
-        "limite": "não usa Talons contra outro alvo enquanto mantém agarrão",
-        "fonte_verificada": true
+        "efeito_condicional": {
+          "pre_condicao": "Flying Lion iniciou seu turno 20 ft ou mais acima do alvo",
+          "dano_alternativo": {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "slashing"
+          },
+          "condicao": "grappled",
+          "escape_cd": 14,
+          "limite": "até esse grapple acabar, não pode usar Talons contra outro alvo"
+        }
       }
     ],
     "ataques": [
       {
         "nome": "Bite",
+        "tipo": "melee weapon attack",
         "bonus_acerto": 6,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano": {
-          "dados": "2d4",
-          "modificador": 4,
-          "tipo": "piercing"
-        },
-        "dano_medio": 9,
-        "fonte_verificada": true
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Talons",
+        "tipo": "melee weapon attack",
         "bonus_acerto": 6,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano": {
-          "dados": "1d6",
-          "modificador": 4,
-          "tipo": "slashing"
-        },
-        "dano_medio": 7,
-        "alternativa": "2d6+4 (11) slashing se começou turno 20+ pés acima do alvo",
-        "condicoes": [
-          "grappled"
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          }
         ],
-        "fuga_cd": 14,
-        "limite": "não usa Talons contra outro alvo enquanto mantém agarrão",
-        "fonte_verificada": true
+        "efeito_condicional": {
+          "pre_condicao": "Flying Lion iniciou seu turno 20 ft ou mais acima do alvo",
+          "dano_alternativo": {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "slashing"
+          },
+          "condicao": "grappled",
+          "escape_cd": 14,
+          "limite": "até esse grapple acabar, não pode usar Talons contra outro alvo"
+        }
       }
     ],
     "multiataque": {
-      "nome": "Multiattack",
-      "gatilho": "Ação",
-      "efeito": "Fonte diz literalmente 'griffon attacks once with its beak and once with its talons', mas Flying Lion apresenta Bite e Talons — referências não conciliadas",
-      "fonte_verificada": true
+      "acoes_fonte": [
+        "Beak",
+        "Talons"
+      ],
+      "acoes_disponiveis": [
+        "Bite",
+        "Talons"
+      ],
+      "sequencia_valida": null,
+      "conflito": "Beak não definido nesta variante; Griffon citado no lugar de Flying Lion"
     },
     "acoes_bonus": [],
     "reacoes": [],
     "acoes_lendarias": [],
     "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "reacoes": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "conjuracao": "AUSENCIA_CONFERIDA_NO_BLOCO"
+    }
   },
   "pendencias": [
-    "Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico.",
-    "Multiattack da própria ficha Flying Lion usa 'griffon', 'beak' sem Beak nos ataques. Não substituir Beak por Bite automaticamente.",
-    "Ficha A5E da fonte estruturada; adequação de regras ao jogo e revisão independente ainda pendentes."
+    "Multiattack publicado declara griffon atacando com beak e talons; Flying Lion lista Bite e Talons, não Beak. Não transformar Beak em Bite por inferência.",
+    "Talons condiciona dano superior e grapple a começar 20 ft acima do alvo; registrar condições de alcance.",
+    "Imagem binária da variante Flying Lion não armazenada; revisão editorial pendente."
   ],
   "campos_nao_confirmados": [
-    "Integração das mecânicas A5E e revisão independente",
-    "Multiattack da própria ficha Flying Lion usa 'griffon', 'beak' sem Beak nos ataques. Não substituir Beak por Bite automaticamente."
+    "relação Beak x Bite na variante Flying Lion",
+    "texto reaproveitado de griffon e correção editorial",
+    "imagem física representativa"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/1663",
-      "tipo": "ficha individual na ferramenta editorial Level Up A5E (conferência direta 14/10/2026)",
-      "conferida_nesta_execucao": true
+      "tipo": "bloco individual da ferramenta oficial EN Publishing A5E, verificado 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "sistema": "Level Up Advanced 5E"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico apenas para comparação",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -228,5 +276,14 @@
     "integrada": false
   },
   "ficha_individual_estruturada_em_detalhe": true,
-  "ficha_origem_integral_verificada_na_pagina": true
+  "ficha_origem_integral_verificada_na_pagina": true,
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_individual": "https://a5e.tools/node/1663",
+    "publicacao": "Monstrous Menagerie",
+    "revisao_livro_errata": "PENDENTE",
+    "status_completo": "NAO"
+  }
 }
