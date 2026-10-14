@@ -1,3 +1,17 @@
+# Grupo A — checkpoint 38 (14/10/2026)
+
+**Total atualizado:** 132 JSONs, **36 fichas estruturadas segundo blocos individuais online**, **0 homologadas**, 131 parciais, 1 bloqueada, **113 imagens físicas**, 19 ausentes, nenhuma arte editorial aprovada.
+
+**TF-223 Three-Headed Cobra:** ataques Bite três vezes, veneno com CD 15 e metade no sucesso, duas reações extras exclusivas para ataque de oportunidade, bônus nas salvaguardas de condições. [Fonte individual](https://kpogl.wikidot.com/monster:three-headed-cobra).
+
+**TF-225 Aalpamac:** Aura de Distorção da Distância 60 pés, salvaguarda SAB CD 15, penalidades e imunidade 24h no sucesso, exceções por sentidos, Multiattack Bite + 2 Claws. [Fonte individual](https://kpogl.wikidot.com/monster:aalpamac).
+
+**TF-230 Cryoceros:** movimento de investida com derrubada e Stomp de bônus, dois componentes de dano em Gore, Shards of Ice em cone 15 pés com recarga 4–6 e danos mistos. [Fonte individual](https://kpogl.wikidot.com/monster:cryoceros).
+
+**Gate editorial:** todas permanecem PARCIAIS até confrontar edição/errata e revisar engine. Bônus de proficiência não explicitamente informado nas fichas individuais foi mantido desconhecido, sem inferência automática.
+
+---
+
 # SRD Card Game 607 — Grupo A — checkpoint 37 (14/10/2026)
 
 **Estado auditado após importação de imagens e pesquisa adicional:** 132 registros JSON, **33/132** fichas detalhadas no nível do statblock individual online, **0/132** homologadas editorialmente, **131 parciais**, **1 bloqueada (KP-S011)**. Imagens reais no diretório A: **113/132**; faltam **19**, e **0** artes possuem autorização/aprovação final. Totais de imagens verificados por inspeção de SHA de blob Git, não por avaliação visual independente.

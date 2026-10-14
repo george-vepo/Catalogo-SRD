@@ -10,14 +10,14 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "unaligned"
   },
   "statistics": {
     "armor_class": 16,
     "hit_points": 127,
-    "hit_dice": null,
+    "hit_dice": "15d10+45",
     "ability_scores": {
       "STR": 14,
       "DEX": 18,
@@ -26,24 +26,154 @@
       "WIS": 10,
       "CHA": 6
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40,
+      "swim_ft": 30,
+      "fly_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0
+    },
+    "senses": {
+      "blindsight_ft": 10,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Perception": 3
+    },
+    "saving_throws": {
+      "DEX": 7,
+      "WIS": 3
+    },
+    "languages": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_note": "natural armor",
+    "hit_dice_count": 15,
+    "hit_die_size": 10,
+    "hit_points_modifier": 45,
+    "challenge_rating": 5,
+    "experience_points": 1800,
+    "proficiency_bonus": null,
+    "proficiency_bonus_unknown_reason": "Não declarado explicitamente na reprodução online.",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 4,
+      "CON": 3,
+      "INT": -3,
+      "WIS": 0,
+      "CHA": -2
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Reactive Heads",
+        "category": "passive_reaction_economy",
+        "additional_reactions_per_round": 2,
+        "restriction": "somente para opportunity attacks"
+      },
+      {
+        "name": "Three-Headed",
+        "category": "passive",
+        "perception_advantage": true,
+        "advantage_on_saves_against_conditions": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "frightened",
+          "stunned",
+          "unconscious"
+        ]
+      },
+      {
+        "name": "Wakeful",
+        "category": "passive",
+        "trigger": "durante sono",
+        "effect": "uma ou mais cabeças continuam despertas"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 7
+            }
+          ],
+          "average_damage": 7,
+          "additional_effects": [
+            {
+              "saving_throw": {
+                "ability": "CON",
+                "dc": 15,
+                "on_failure": {
+                  "damage": [
+                    {
+                      "dice": "2d6",
+                      "modifier": 0,
+                      "type": "poison",
+                      "average": 7
+                    }
+                  ]
+                },
+                "on_success": {
+                  "damage": "half_of_2d6_poison"
+                }
+              }
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Opportunity Attack (Reactive Heads)",
+        "category": "reaction",
+        "trigger": "oportunidade de ataque normal",
+        "max_additional_reactions_per_round": 2,
+        "restriction": "as duas reações extras não podem ser usadas para outros fins",
+        "attack": "Bite"
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Três mordidas, cabeças vigilantes e duas reações extras para ataques de oportunidade."
@@ -69,6 +199,13 @@
       "edition": "Creature Codex",
       "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
       "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:three-headed-cobra",
+      "type": "statblock_individual_consultado_em_2026_10_14",
+      "edition": "Creature Codex",
+      "scope": "CA, PV, atributos, sentidos, traços, todos os ataques e economia de ações; ausências verificadas no bloco",
+      "editorial_confirmation": false
     }
   ],
   "source_checkpoint": {
@@ -80,9 +217,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Comparar integralmente com publicação/errata editorial da edição correta.",
+    "Realizar revisão independente de ações, gatilhos e implementação na engine.",
+    "Aprovação visual, direitos e resolução de imagem ainda pendentes."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -105,6 +242,17 @@
       "inspeção visual independente",
       "licença e direitos",
       "aprovação para impressão"
+    ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "status": "NAO_HOMOLOGADA_EDITORIALMENTE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "Transcrição de KPOGL não endossada pela editora, sem revisão da edição física e erratas."
     ]
   }
 }

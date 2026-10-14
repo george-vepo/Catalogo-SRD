@@ -10,14 +10,14 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "7",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Huge",
+    "type": "monstrosity",
+    "alignment": "unaligned"
   },
   "statistics": {
     "armor_class": 16,
     "hit_points": 136,
-    "hit_dice": null,
+    "hit_dice": "13d12+52",
     "ability_scores": {
       "STR": 21,
       "DEX": 10,
@@ -26,24 +26,159 @@
       "WIS": 16,
       "CHA": 10
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 15,
+      "swim_ft": 50,
+      "fly_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 16
+    },
+    "skills": {
+      "Perception": 6
+    },
+    "saving_throws": {
+      "CON": 7
+    },
+    "languages": [],
+    "damage_resistances": [
+      "cold"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_note": "natural armor",
+    "hit_dice_count": 13,
+    "hit_die_size": 12,
+    "hit_points_modifier": 52,
+    "challenge_rating": 7,
+    "experience_points": 2900,
+    "proficiency_bonus": null,
+    "proficiency_bonus_unknown_reason": "Não declarado na ficha consultada.",
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 0,
+      "CON": 4,
+      "INT": -4,
+      "WIS": 3,
+      "CHA": 0
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Amphibious",
+        "category": "passive",
+        "effect": "pode respirar em ar e água"
+      },
+      {
+        "name": "Distance Distortion Aura",
+        "category": "aura_passive",
+        "range_ft": 60,
+        "trigger": "início do turno de cada criatura na área",
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 15,
+          "on_failure": {
+            "duration": "até início do próximo turno do alvo",
+            "attack_rolls_disadvantage": true,
+            "perception_sight_checks_disadvantage": true,
+            "movement_max_fraction_of_speed": 0.5
+          },
+          "on_success": {
+            "immunity_to_this_aura_hours": 24
+          }
+        },
+        "unaffected_if_has_any_sense": [
+          "blindsight",
+          "tremorsense",
+          "truesight"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Claws",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "modifier": 5,
+              "type": "piercing",
+              "average": 16
+            }
+          ],
+          "average_damage": 16
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "modifier": 5,
+              "type": "slashing",
+              "average": 12
+            }
+          ],
+          "average_damage": 12
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Anfíbio, aura de distorção de distância que prejudica ataque e movimento, mordida e múltiplas garras."
@@ -69,6 +204,13 @@
       "edition": "Tome of Beasts 2",
       "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
       "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:aalpamac",
+      "type": "statblock_individual_consultado_em_2026_10_14",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, atributos, sentidos, traços, todos os ataques e economia de ações; ausências verificadas no bloco",
+      "editorial_confirmation": false
     }
   ],
   "source_checkpoint": {
@@ -80,9 +222,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Comparar integralmente com publicação/errata editorial da edição correta.",
+    "Realizar revisão independente de ações, gatilhos e implementação na engine.",
+    "Aprovação visual, direitos e resolução de imagem ainda pendentes."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -105,6 +247,17 @@
       "inspeção visual independente",
       "licença e direitos",
       "aprovação para impressão"
+    ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "status": "NAO_HOMOLOGADA_EDITORIALMENTE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "Transcrição de KPOGL não endossada pela editora, sem revisão da edição física e erratas."
     ]
   }
 }
