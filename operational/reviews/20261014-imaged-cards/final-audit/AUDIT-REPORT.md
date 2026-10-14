@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 15 lotes validados, 150/395 fichas (245 restantes).
+**Situação:** EM ANDAMENTO — 16 lotes validados, 160/395 fichas (235 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -116,4 +116,11 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 7 completas em conteúdo e 3 com ressalvas: TF-161 (CHA8 impresso como -2), TF-165 (Split causado por slashing ao qual figura imunidade) e TF-166 (Multiattack com nome Slam indefinido enquanto ataque listado é Pseudopod). As 10 imagens estão diretamente vinculadas; 2 com largura inferior a 500 px (TF-158 e TF-167). Identidade artística, licença e fontes impressas/erratas ainda aguardam validação.
 
 **Consolidado:** 150/395; 98 fichas completas, 30 com ressalvas, 21 incompletas e 1 não verificável; 95 imagens diretas, 52 por manifesto e 3 ausentes.
+
+
+## Lote 016 — TF-168–TF-177 (dez IDs)
+
+9 fichas completas em conteúdo e 1 completa com ressalvas: TF-176 (Lightning Storm: conferir se danos do alvo inicial e da área metálica são cumulativos no mesmo alvo). Dez imagens existem e estão diretamente vinculadas por JSON, com hashes e tamanhos conferidos na árvore Git. Nenhuma tem largura inferior a 500 px. Direitos, adequação visual, edição original e erratas não foram homologados.
+
+**Consolidado:** 160/395 (235 restantes); 107 completas em conteúdo, 31 com ressalvas, 21 incompletas, 1 não verificável; 105 imagens diretas, 52 via manifesto, 3 ausentes.
 
