@@ -1,3 +1,15 @@
+# SRD Card Game 607 — Grupo A — checkpoint 37 (14/10/2026)
+
+**Estado auditado após importação de imagens e pesquisa adicional:** 132 registros JSON, **33/132** fichas detalhadas no nível do statblock individual online, **0/132** homologadas editorialmente, **131 parciais**, **1 bloqueada (KP-S011)**. Imagens reais no diretório A: **113/132**; faltam **19**, e **0** artes possuem autorização/aprovação final. Totais de imagens verificados por inspeção de SHA de blob Git, não por avaliação visual independente.
+
+**Checkpoints de imagens #33 a #36:** 40 binários (35 da branch D, 5 da branch E) transferidos por referência aos blobs Git pré-existentes; 40 JSONs atualizados com SHA-256 da origem, blob SHA, resolução, caminho e proveniência. A maioria das imagens pequenas continua sendo miniatura não apta à impressão. Foram lidos os 10 JSONs de cada checkpoint e comparados os SHA dos blobs com a árvore Git; cada diff ficou restrito ao diretório A.
+
+**Checkpoint mecânico #37:** fichas TF-221 (Duffel Crab), TF-222 (Crocotta) e TF-224 (Torch Mimic) tiveram estatísticas e mecânicas individuais estruturadas, seguindo as páginas [Duffel Crab](https://kpogl.wikidot.com/monster:duffel-crab), [Crocotta](https://kpogl.wikidot.com/monster:crocotta) e [Torch Mimic](https://kpogl.wikidot.com/monster:torch-mimic). Há uma possível inconsistência impressa de PV no TF-221 (Large, 8d8+24); preservada a fórmula textual, sem correção arbitrária. A wiki não substitui publicação/errata editorial e revisão independente da engine.
+
+**Pendências prioritárias:** comparar fontes originais/erratas, validar 99 fichas ainda sem estrutura integral online, resolver divergências de TF-039, TF-041, TF-047, TF-052 e KP-S011, localizar 19 imagens ausentes, substituir miniaturas e obter análise de direitos/identidade visual.
+
+---
+
 # SRD Card Game 607 — Grupo A — checkpoint 32 (14/10/2026)
 
 **Resultado atualizado:** 132 registros JSON, **30/132** fichas com mecânicas estruturadas segundo blocos individuais online, **0/132 homologadas editorialmente**, **131 parciais**, **1 bloqueada**, **73/132 imagens binárias**, **59 imagens ausentes**, **0 imagens aprovadas para produção**. Esta contagem substitui os resumos anteriores preservados abaixo.

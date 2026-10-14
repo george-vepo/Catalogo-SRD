@@ -10,14 +10,15 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "0.5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Tiny",
+    "type": "monstrosity",
+    "alignment": "neutral",
+    "page": 370
   },
   "statistics": {
     "armor_class": 12,
     "hit_points": 21,
-    "hit_dice": null,
+    "hit_dice": "6d4+6",
     "ability_scores": {
       "STR": 7,
       "DEX": 15,
@@ -26,24 +27,179 @@
       "WIS": 12,
       "CHA": 8
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 30,
+      "fly_hover": true,
+      "swim_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0
+    },
+    "senses": {
+      "passive_perception": 11
+    },
+    "skills": {
+      "Stealth": 4
+    },
+    "saving_throws": {},
+    "languages": {
+      "understands": [
+        "Common"
+      ],
+      "speaks": []
+    },
+    "damage_resistances": [
+      "fire"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_note": "sem armadura especificada",
+    "hit_dice_count": 6,
+    "hit_die_size": 4,
+    "hit_points_modifier": 6,
+    "challenge_rating": "1/2",
+    "experience_points": 100,
+    "proficiency_bonus": 2,
+    "ability_modifiers": {
+      "STR": -2,
+      "DEX": 2,
+      "CON": 1,
+      "INT": -2,
+      "WIS": 1,
+      "CHA": -1
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "passive",
+        "trigger": "permanece imóvel",
+        "effect": "não se distingue de tocha comum"
+      },
+      {
+        "name": "Fiery Soul",
+        "category": "passive_and_bonus_action",
+        "bonus_action": {
+          "cost": "bonus_action",
+          "options": [
+            "ignite",
+            "extinguish"
+          ],
+          "target": "si mesmo"
+        },
+        "light_when_ignited": {
+          "bright_ft": 20,
+          "dim_additional_ft": 20
+        },
+        "forced_extinguish": {
+          "trigger": "efeito que apagaria as chamas contra a vontade",
+          "save": {
+            "ability": "CON",
+            "dc": 11,
+            "on_failure": {
+              "condition": "unconscious",
+              "ends": [
+                "ao sofrer dano",
+                "quando alguém usa ação para despertá-lo"
+              ]
+            },
+            "on_success": "chama não o incapacita"
+          },
+          "nonmagical_source": {
+            "advantage_on_save": true
+          }
+        }
+      },
+      {
+        "name": "Regeneration",
+        "category": "passive",
+        "trigger": "início do próprio turno",
+        "healing_hp": 2,
+        "suppressed_if": "recebeu dano de frio antes do próximo início de turno",
+        "death_condition": "morre somente se começar turno com 0 PV e não regenerar"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "modifier": 2,
+              "type": "piercing",
+              "average": 4
+            }
+          ],
+          "average_damage": 4
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Fire Blast",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_weapon",
+        "attack_bonus": 4,
+        "reach_ft": null,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d4",
+              "modifier": 2,
+              "type": "fire",
+              "average": 7
+            }
+          ],
+          "average_damage": 7
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null,
+        "range_ft": {
+          "normal": 20,
+          "long": 60
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Fiery Soul — ignite/extinguish",
+        "category": "bonus_action",
+        "choices": [
+          "ignite",
+          "extinguish"
+        ],
+        "effect": "altera emissão de luz e estado da chama; regra de extinção forçada tratada no traço"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Finge tocha, altera chama, regenera salvo após dano de frio, causa mordida e explosões de fogo."
@@ -69,6 +225,13 @@
       "edition": "Tome of Beasts 3",
       "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
       "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:torch-mimic",
+      "type": "statblock_individual_consultado_em_2026_10_14",
+      "edition": "Tome of Beasts 3 p.370",
+      "scope": "estatísticas, Fiery Soul, regeneração, ataques, ação bônus e categorias ausentes",
+      "editorial_confirmation": false
     }
   ],
   "source_checkpoint": {
@@ -80,9 +243,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Conferir exemplar e errata de Tome of Beasts 3, p.370; fonte comunitária não homologada.",
+    "Validar interação regeneração/morte, extinção forçada e condição unconscious na engine.",
+    "Aprovação de imagem em direitos e qualidade de impressão."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -106,5 +269,16 @@
       "licença e direitos",
       "aprovação para impressão"
     ]
-  }
+  },
+  "validation": {
+    "status": "NAO_HOMOLOGADA_EDITORIALMENTE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "KPOGL não é editado/endossado pela Kobold Press; falta revisão do original."
+    ]
+  },
+  "mechanics_source_statblock_full": true
 }

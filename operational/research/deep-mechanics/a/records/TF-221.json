@@ -10,14 +10,15 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "3",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "unaligned",
+    "page": 97
   },
   "statistics": {
     "armor_class": 15,
     "hit_points": 60,
-    "hit_dice": null,
+    "hit_dice": "8d8+24",
     "ability_scores": {
       "STR": 16,
       "DEX": 12,
@@ -26,24 +27,180 @@
       "WIS": 12,
       "CHA": 7
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 30,
+      "swim_ft": 30,
+      "fly_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "passive_perception": 11
+    },
+    "skills": {},
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_note": "natural armor",
+    "hit_dice_count": 8,
+    "hit_die_size": 8,
+    "hit_points_modifier": 24,
+    "challenge_rating": 3,
+    "experience_points": 700,
+    "proficiency_bonus": 2,
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 1,
+      "CON": 3,
+      "INT": -4,
+      "WIS": 1,
+      "CHA": -2
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Extradimensional Bag",
+        "category": "passive_container",
+        "storage": "espaço extradimensional usado como carapaça; capacidade depende da bolsa",
+        "breathing_limit": {
+          "formula_minutes": "max(1,10 / numero_de_criaturas)",
+          "starts_after": "criatura passa a respirar dentro da bolsa",
+          "consequence": "suffocation ao exceder limite"
+        },
+        "destruction": {
+          "trigger": [
+            "overloaded",
+            "pierced",
+            "torn"
+          ],
+          "effect": "bolsa é destruída e conteúdo cai na área; não é enviado para Astral Plane"
+        },
+        "death": {
+          "trigger": "morte do caranguejo",
+          "effects": [
+            "conteúdo derramado/permanece acessível",
+            "objeto vira uma bolsa extradimensional comum após 24 horas"
+          ]
+        },
+        "resource_limit": null
+      },
+      {
+        "name": "False Appearance",
+        "category": "passive",
+        "trigger": "parado e recolhido na bolsa",
+        "effect": "indistinguível de bolsa extradimensional aberta ou com tampa entreaberta"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "options": [
+          {
+            "sequence": [
+              {
+                "action": "Claw",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "sequence": [
+              {
+                "action": "Claw",
+                "count": 1
+              },
+              {
+                "action": "Collect",
+                "count": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_creature"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "modifier": 3,
+              "type": "bludgeoning",
+              "average": 10
+            }
+          ],
+          "average_damage": 10,
+          "other_effects": [
+            {
+              "condition": "grappled",
+              "escape_dc": 13,
+              "secondary_condition": "restrained",
+              "ends": "até fim do agarrão",
+              "max_targets_per_claw": 1,
+              "claws_available": 2,
+              "restriction": "não ataca outro alvo com a garra ocupada"
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Collect",
+        "category": "special_action",
+        "action_economy": "action",
+        "prerequisite": "uma criatura agarrada pela garra e espaço restante na bolsa",
+        "target": "uma criatura agarrada",
+        "effect": {
+          "move_target_into_extradimensional_space": true,
+          "end_grapple": true,
+          "conditions": [
+            "blinded",
+            "restrained"
+          ],
+          "total_cover_from_external_effects": true
+        },
+        "escape": {
+          "action_economy": "action",
+          "ability_options": [
+            "STR",
+            "DEX"
+          ],
+          "check_dc": 13,
+          "on_success": "sai da bolsa"
+        },
+        "on_crab_death": {
+          "restrained_ends": true,
+          "exit_movement_ft": 5,
+          "exit_condition": "prone"
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Seu invólucro é um espaço extradimensional capaz de aprisionar e asfixiar; imóvel, parece bolsa comum."
@@ -69,6 +226,13 @@
       "edition": "Tome of Beasts 3",
       "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
       "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:duffel-crab",
+      "type": "statblock_individual_consultado_em_2026_10_14",
+      "edition": "Tome of Beasts 3 p.97",
+      "scope": "estatísticas, traços, ações e ausências de categorias de ação",
+      "editorial_confirmation": false
     }
   ],
   "source_checkpoint": {
@@ -80,9 +244,10 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Revisar possível inconsistência de dados de vida da fonte (Large com 8d8+24), preservada literalmente sem inferir correção.",
+    "Validar impressão e erratas editoriais do Tome of Beasts 3, p.97.",
+    "Submeter economia de ações e sufocamento à revisão independente da engine.",
+    "Aprovação visual, direitos e impressão da imagem ainda pendentes."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -106,5 +271,16 @@
       "licença e direitos",
       "aprovação para impressão"
     ]
-  }
+  },
+  "validation": {
+    "status": "NAO_HOMOLOGADA_EDITORIALMENTE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "Bloco estruturado a partir de KPOGL, reprodução secundária não homologada pela Kobold Press."
+    ]
+  },
+  "mechanics_source_statblock_full": true
 }

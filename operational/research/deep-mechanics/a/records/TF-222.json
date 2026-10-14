@@ -10,14 +10,14 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "3",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "monstrosity",
+    "alignment": "neutral evil"
   },
   "statistics": {
     "armor_class": 14,
     "hit_points": 39,
-    "hit_dice": null,
+    "hit_dice": "6d8+12",
     "ability_scores": {
       "STR": 16,
       "DEX": 15,
@@ -26,24 +26,191 @@
       "WIS": 12,
       "CHA": 8
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 50,
+      "swim_ft": 0,
+      "fly_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0
+    },
+    "senses": {
+      "passive_perception": 15
+    },
+    "skills": {
+      "Perception": 5,
+      "Stealth": 4
+    },
+    "saving_throws": {},
+    "languages": [
+      "Common"
+    ],
+    "damage_resistances": [
+      "bludgeoning_from_metal_weapons",
+      "piercing_from_metal_weapons",
+      "slashing_from_metal_weapons"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "charmed"
+    ],
+    "armor_class_note": "natural armor",
+    "hit_dice_count": 6,
+    "hit_die_size": 8,
+    "hit_points_modifier": 12,
+    "challenge_rating": 3,
+    "experience_points": 700,
+    "proficiency_bonus": null,
+    "proficiency_bonus_unknown_reason": "KPOGL individual não especifica bônus de proficiência.",
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 2,
+      "CON": 2,
+      "INT": -1,
+      "WIS": 1,
+      "CHA": -1
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Mimicry",
+        "category": "passive",
+        "effect": "imita vozes, animais e ruídos ambientais",
+        "detection": {
+          "check": "WIS (Insight)",
+          "dc": 13,
+          "on_success": "percebe imitação"
+        }
+      },
+      {
+        "name": "Paralyzing Gaze",
+        "category": "triggered_trait",
+        "trigger": "início do turno de criatura que vê os olhos do crocotta e está a até 30 pés",
+        "restrictions": [
+          "crocotta não incapacitado",
+          "crocotta enxerga a criatura"
+        ],
+        "range_ft": 30,
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 13,
+          "on_failure": {
+            "condition": "paralyzed",
+            "duration": "até início do próximo turno do alvo"
+          },
+          "on_success": "nenhum efeito"
+        },
+        "avert_eyes": {
+          "allowed_when": "não está surpreso",
+          "timing": "início do turno do alvo",
+          "effect": "não vê crocotta até início do próximo turno",
+          "if_looks_early": "teste imediatamente"
+        },
+        "species_exception": {
+          "canines": "immune",
+          "canine_humanoids": "advantage_on_save"
+        }
+      },
+      {
+        "name": "Pounce",
+        "category": "conditional_trait",
+        "prerequisites": {
+          "straight_movement_toward_target_ft_min": 20,
+          "hit_attack": "Claw",
+          "same_turn": true
+        },
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 13,
+          "on_failure": {
+            "condition": "prone"
+          },
+          "on_success": "não cai"
+        },
+        "follow_up": {
+          "action_economy": "bonus_action",
+          "condition": "alvo prone após o ataque",
+          "attack": "Bite",
+          "target": "mesma criatura"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d10",
+              "modifier": 3,
+              "type": "piercing",
+              "average": 14
+            }
+          ],
+          "average_damage": 14
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "modifier": 3,
+              "type": "slashing",
+              "average": 7
+            }
+          ],
+          "average_damage": 7
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Pounce — Bite",
+        "category": "conditional_bonus_attack",
+        "trigger": "Pounce derruba alvo prone",
+        "action": "Bite",
+        "target": "mesmo alvo",
+        "cost": "bonus_action"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Imitação de vozes, olhar paralisante e bote que derruba inimigos e permite mordida adicional."
@@ -62,6 +229,13 @@
       "edition": "Tome of Beasts 2",
       "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
       "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:crocotta",
+      "type": "statblock_individual_consultado_em_2026_10_14",
+      "edition": "Tome of Beasts 2",
+      "scope": "estatísticas, resistências, imunidades, traços, ataques e ausência de outros tipos de ação",
+      "editorial_confirmation": false
     }
   ],
   "source_checkpoint": {
@@ -74,9 +248,10 @@
     "Crocotta Nord Games ND 2 é homônimo diferente do Crocotta Kobold Press ND 3."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Confirmar edição/impressão e erratas originais de Tome of Beasts 2.",
+    "Revisar gatilhos e exceções de Paralyzing Gaze em testes da engine.",
+    "Bônus de proficiência não expresso no bloco comunitário: não presumido.",
+    "Conferir revisão independente e imagem de produção."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -100,5 +275,16 @@
       "licença e direitos",
       "aprovação para impressão"
     ]
-  }
+  },
+  "validation": {
+    "status": "NAO_HOMOLOGADA_EDITORIALMENTE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "Reprodução OGL comunitária, sem confrontação com edição/errata editorial."
+    ]
+  },
+  "mechanics_source_statblock_full": true
 }
