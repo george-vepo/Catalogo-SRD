@@ -227,13 +227,34 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-268 / Chatterlome: operational/assets/creature-images/TF-268.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chatterlome.webp; 150754 bytes; 788x875 px; SHA-256: 39da3119e91b224edcf81eda520df6c59c179a95c791fd4f2893fed3158b4f57; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
 - TF-269 / Vexxeh: operational/assets/creature-images/TF-269.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Vexxeh.webp; 195652 bytes; 959x1081 px; SHA-256: 9032582050264bfdc8b789199c80c7b4a44ca969623b50c34ef92ffb73b4aad1; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
 
+
+## Ressalvas de identidade e adequação editorial
+
+- TF-069 / Clockwork Servant: Imagem específica de miniatura 'Steam Clockwork Butler', empregada como representação visual de clockwork doméstico servidor. Não é arte editorial Creature Codex; revisão editorial necessária.
+- TF-201 / Alpha Werewolf: Ilustração publicamente identificada como 'Alpha Werewolf' por Greg Staples. Mesma identidade genérica do monstro, mas não edição A5E Monstrous Menagerie; confirmar adequação editorial.
+- TF-226 / Accursed Spirit Naga: Fonte é a própria página editorial A5E de Accursed Spirit Naga, mas a arte (Spirit Naga — Erik Davis-Heim) ilustra a espécie-base, não distingue visualmente a variante amaldiçoada. Avaliação editorial pendente.
+- TF-231 / Accursed Guardian Naga: Fonte é a própria página editorial A5E de Accursed Guardian Naga, mas a arte (Guardian Naga — Erik Davis-Heim) ilustra a espécie-base, sem marca visual inequívoca de maldição. Avaliação editorial pendente.
+- TF-255 / Citrullus: Nome da criatura corresponde à fotografia de miniatura 3D no álbum; não é arte editorial oficial. Validação visual editorial pendente.
+- TF-267 / Arx: Nome da criatura corresponde à fotografia de miniatura 3D no álbum; não é arte editorial oficial. Validação visual editorial pendente.
+
 ## Não obtidos
 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
+  - Investigação: TheGiddyLimit/CCodex/ankousoulherald.jpg é binariamente idêntica à TF-090 (Ankou Soul Seeker); busca por imagem independente e fiel ao Ankou Soul Herald não produziu candidato verificável. Não reutilizar outro recorte do mesmo desenho apenas para aumentar a contagem.
+  - Referência: https://www.5esrd.com/database/creature/ankou-soul-herald/
 - TF-185 / Alleyway Strangler: source_not_found; 
+  - Investigação: Ficha A5E de Alleyway Strangler (Gate Pass Gazette) não disponibiliza link de arte da criatura; imagens semelhantes de agressores de becos não foram aceitas como identidade específica.
+  - Referência: https://a5e.tools/node/5497
 - TF-200 / Aboleth Champion: source_not_found; 
+  - Investigação: A imagem anexada à página A5E Aboleth Champion é a de um aboleth monstruoso, enquanto a ficha especifica um campeão humanoide armado. Candidato editorial rejeitado por erro de identidade; nenhum binário fiel confirmado.
+  - Referência: https://www.a5e.tools/node/2839
+  - Candidato rejeitado: https://www.a5e.tools/sites/default/files/monsters/Aboleth%20-%20Kim%20Van%20Deun%20copy_0.jpg
 - TF-239 / Aboleth, Nihileth, Nihilethic Dominator: source_not_found; 
+  - Investigação: Nihilethic Dominator integra Tome of Beasts 1 (2023) e é um grande servo morto-vivo com cabeça de peixe e poder do Vazio; fonte textual e menção em lista de pawns encontradas, mas nenhum arquivo de arte individual adequado foi obtido.
+  - Referência: https://www.5esrd.com/database/creature/nihilethic-dominator-2/
 - TF-264 / Abyssal Hordeling: source_not_found; 
+  - Investigação: Abyssal Hordeling é um demônio Pequeno de forma variável (armas naturais e características definidas por tabelas) e a ficha A5E não disponibiliza ilustração própria. Não atribuir a ele imagem genérica de outro demônio sem proveniência.
+  - Referência: https://www.a5e.tools/node/5383
 
 ## Duplicações e ressalvas
 
