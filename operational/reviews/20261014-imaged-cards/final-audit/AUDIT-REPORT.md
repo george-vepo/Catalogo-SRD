@@ -189,3 +189,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 3 completas em conteúdo, 3 com ressalvas (TF-293 Rebirth, TF-296 Spirit Usher/contratos, TF-297 conjuração sem revisão dos efeitos) e 4 incompletas (**TF-298–TF-301**, registros somente básicos). Dez imagens vinculadas diretamente em A/B com SHA/tamanho conferidos; TF-296 e TF-302 têm tokens 280×280. Edição, inspeção visual e licenças permanecem não homologadas.
 
 **Consolidado:** 270/395 (125 restantes); 166 completas, 63 com ressalvas, 40 incompletas e 1 não verificável; 208 imagens diretas, 54 por manifesto, 8 ausentes.
+
+## Lote 028 — TF-303–TF-319 (10 IDs na ordem do CSV)
+
+6 fichas completas em conteúdo e 4 com ressalvas (TF-309, 316, 318, 319: inconsistências matemáticas/editoriais e versões distintas). Imagens: 4 diretas, 5 vinculadas via manifesto F (SHA/tamanho no manifesto verificado) e **1 ausente (TF-303)**. Tokens 280×280 identificados: TF-305, TF-316, TF-317. Nenhuma arte/edição/licença homologada.
+
+**Consolidado:** 280/395 (115 restantes); 172 completas, 67 com ressalvas, 40 incompletas e 1 não verificável; 212 imagens diretas, 59 por manifesto, 9 ausentes.
