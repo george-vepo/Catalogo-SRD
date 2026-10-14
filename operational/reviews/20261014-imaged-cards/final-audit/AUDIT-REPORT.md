@@ -1,12 +1,12 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — lote 001/040, 10/395 fichas (385 restantes).
+**Situação:** EM ANDAMENTO — 3 lotes validados (001–003), 30/395 fichas (365 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
 **Execução:** leitura e persistência via conector GitHub no chat interativo. **V-Bridge Windows e computer-use: não executados/não verificados neste ambiente**. Sem modificações do catálogo canônico nem merge.
 
-## Resultado do primeiro lote
+## Resultado do primeiro lote (detalhe histórico)
 
 | ID | Criatura | Classificação da ficha | Imagem | Observação principal |
 |---|---|---|---|---|
@@ -36,3 +36,7 @@
 ## Lote 003 — 10 fichas (TF-025 a TF-034 conforme CSV)
 
 **10 fichas completas em conteúdo**, pendentes de edição/licença/adaptação; 9 imagens diretamente vinculadas, 1 ausente (TF-034); 8 imagens têm ao menos uma dimensão menor que 500 px conforme metadados. TF-026 referencia miniatura 160×160 e TF-031 referencia prova 80×120, embora haja alternativas no diretório central ainda não vinculadas diretamente às fichas. TF-025 tem arquivo físico apesar da anotação legado de ausência. Nenhuma ficha/arte foi homologada.
+
+## Consolidação validada após lote 003
+
+Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa com ressalvas, 18 incompletas e 1 não verificável. Imagens: 28 vínculos diretos confirmados e 2 ausentes. A matriz é: completas em conteúdo com imagem 9, completas sem imagem 1; com ressalvas e imagem 1; incompletas/não verificáveis com imagem 18 e sem imagem 1. A classificação de conteúdo não concede autorização de uso/produção. Corrigida soma da matriz provisória após o lote 002.
