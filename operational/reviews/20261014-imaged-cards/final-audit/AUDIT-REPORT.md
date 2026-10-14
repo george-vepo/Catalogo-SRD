@@ -129,3 +129,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 9 fichas completas em conteúdo e 1 completa com ressalvas: **TF-182**, por interação não resolvida entre Fire Hazard (ativação ao sofrer dano de fogo) e imunidade da criatura a dano de fogo. A ficha de TF-178 não especifica a duração/remoção da petrificação de Acid Spray; o conteúdo disponível foi preservado sem inventar regra. As dez imagens estão vinculadas diretamente aos registros, com presença física, SHA e tamanho conferidos no GitHub. TF-190 possui largura declarada de 469 px, inferior a 500 px. Revisão visual, licença, edição original/erratas e adaptação ao card game permanecem pendentes.
 
 **Consolidado:** 170/395 (225 restantes); 116 completas em conteúdo, 32 com ressalvas, 21 incompletas, 1 não verificável; 115 imagens diretas, 52 por manifesto e 3 ausentes.
+
+## Lote 018 — TF-191–TF-200 (10 IDs do CSV)
+
+5 completas em conteúdo, 4 com ressalvas (TF-194, TF-195, TF-196 por divergências entre fontes/edições; TF-200 por origem Level Up A5E não-SRD e restrições de licença) e 1 incompleta (**TF-199**: condição temporal de Consume Heart truncada, sem extrapolar). 9 imagens diretamente vinculadas com SHA/tamanho correspondentes; TF-200 vinculada via manifesto E, arte gerada por IA não oficial. Imagens declaradas de baixa largura (<500 px): TF-193, TF-194. Não houve homologação editorial, visual ou jurídica.
+
+**Consolidado:** 180/395 (215 restantes); 121 completas, 36 com ressalvas, 22 incompletas, 1 não verificável; 124 imagens diretas, 53 por manifesto e 3 ausentes.
