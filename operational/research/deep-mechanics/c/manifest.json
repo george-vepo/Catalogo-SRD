@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 12,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 15,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 108,
-    "bloqueadas": 23,
-    "registros_aproveitados_sem_nova_verificacao_integral": 119,
+    "parciais": 105,
+    "bloqueadas": 26,
+    "registros_aproveitados_sem_nova_verificacao_integral": 116,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -266,9 +266,22 @@
       "commit": "c87f47a474ed19561178eb8b117750588f59fc46",
       "leitura_persistencia": "CONFIRMADA — 3 JSONs lidos novamente",
       "tipo": "aprofundamento de mecânicas; imagens preexistentes preservadas"
+    },
+    {
+      "numero": 16,
+      "inicio": "TF-416",
+      "fim": "TF-423",
+      "ids": [
+        "TF-416",
+        "TF-421",
+        "TF-423"
+      ],
+      "commit": "5dbcc3dea2004ecdb999b6f81bdbee6e3d088620",
+      "leitura_persistencia": "CONFIRMADA — read-back de 3 JSONs",
+      "tipo": "pesquisa mecanica detalhada"
     }
   ],
-  "atualizacao_detalhada_sha": "c87f47a474ed19561178eb8b117750588f59fc46",
+  "atualizacao_detalhada_sha": "5dbcc3dea2004ecdb999b6f81bdbee6e3d088620",
   "criaturas": [
     {
       "id": "TF-412",
@@ -276,7 +289,7 @@
       "escopo": "next_batches[4]",
       "posicao": 0,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-412.json",
-      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "status": "BLOQUEADA_DIVERGENCIA_SAB11_MODIFICADOR",
       "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/mandrake-great/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
@@ -387,16 +400,19 @@
       "escopo": "next_batches[4]",
       "posicao": 4,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-416.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_DIVERGENCIA_DADOS_DE_VIDA_EDICAO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/wind-witch/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto."
+        "Confirmar em Tome of Beasts 3 se a fórmula de PV 12d8+12 da ficha (criatura Large) é errata ou exceção.",
+        "Conferir editoralmente duração da condição de captura e dano condicional de Flammable; fonte individual detalhada disponível.",
+        "Revisão visual da imagem pendente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "confirmação da fórmula 12d8 para Large",
+        "conferência de publicação/errata do Tome of Beasts 3",
+        "aprovação visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -406,7 +422,8 @@
         "bytes": 376128,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-417",
@@ -470,7 +487,7 @@
       "escopo": "next_batches[4]",
       "posicao": 7,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-419.json",
-      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "status": "BLOQUEADA_DIVERGENCIA_PERCEPCAO_PASSIVA",
       "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/witchalder/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
@@ -528,14 +545,18 @@
       "escopo": "next_batches[4]",
       "posicao": 9,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-421.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/execrable-shrub/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Conferir Creature Codex e errata antes de concluir; bloco individual totalmente reestruturado.",
+        "Diferenciar tipo fiend (ficha) da designação narrativa Planar Flora; não converter automaticamente em plant.",
+        "Imagem binária existente, sem revisão visual."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "conferência editorial Creature Codex/errata",
+        "verificação visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -545,7 +566,8 @@
         "bytes": 62564,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-423",
@@ -553,14 +575,19 @@
       "escopo": "next_batches[4]",
       "posicao": 10,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-423.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/spawn-of-chernobog/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Night’s Blood reconstruída com cinco estágios, gatilho inicial, CD, sucessos e transformações; conferir errata da progressão temporal.",
+        "A origem da doença depende de uma Bite acertar e de falha CON CD14; não transmitir em todo contato.",
+        "Aprovação visual e conferência editorial Creature Codex pendentes."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "se dois sucessos para cura precisam ser consecutivos (fonte não esclarece)",
+        "conferência editorial Creature Codex/errata",
+        "revisão visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -570,7 +597,8 @@
         "bytes": 48450,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-424",

@@ -2,6 +2,16 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 16 — aprofundamento de 14/10/2026
+
+- Commit mecânico: `5dbcc3dea2004ecdb999b6f81bdbee6e3d088620`; read-back dos JSONs **TF-416, TF-421 e TF-423 confirmado**.
+- **TF-416 Wind Witch:** PV e atributos, Cursed Plant (retorno após 0 PV), Flammable, Tumbleweed Form, combinações de Multiattack, Slam, captura e libertação, reação Bouncy Escape. Bloqueio: dado de vida `12d8` publicado para criatura Large; conferir material editorial.
+- **TF-421 Planar Flora / Execrable Shrub:** ficha como tipo **fiend** (não plant), bônus, HP, imunidades, ataques, curas por mortes próximas, telepatia seletiva e Smolder. Sem reação ou habilidade lendária na publicação individual.
+- **TF-423 Spawn of Chernobog:** testes de infecção, dois sucessos para cura, cinco estágios progressivos de Night's Blood, transformação ao morrer, sensibilidade solar, Bite e Claws.
+- TF-412 permanece bloqueada pela discrepância `SAB 11 (+1)` da fonte; TF-419 pela `Perception +6`/passiva `15` da fonte. Não aplicar reparos automáticos.
+- Fontes: [Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/), [Wind Witch](https://www.5esrd.com/database/creature/wind-witch/), [Execrable Shrub](https://www.5esrd.com/database/creature/execrable-shrub/), [Spawn of Chernobog](https://www.5esrd.com/database/creature/spawn-of-chernobog/).
+- Auditoria acumulada: **15 aprofundadas; 116 ainda sem revalidação detalhada; 0 mecanicamente integrais; 105 parciais; 26 bloqueadas; 96 imagens físicas e 35 faltantes**.
+
 ## Checkpoint 15 — aprofundamento mecânico de 14/10/2026
 
 - Commit de registros (3 criaturas): `c87f47a474ed19561178eb8b117750588f59fc46`; leitura de retorno: **OK**; exatamente os arquivos `records/TF-412.json`, `records/TF-418.json`, `records/TF-419.json`.
@@ -15,9 +25,9 @@
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **12 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **119 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
-- **0 criaturas declaradas mecanicamente completas**, **108 parciais**, **23 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
+- **15 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **116 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **0 criaturas declaradas mecanicamente completas**, **105 parciais**, **26 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
 
@@ -50,13 +60,13 @@
 | TF-413 | Sinstar, Star Thrall | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/star-thrall/) | Não confundir com a criatura Sinstar principal, ND 17: a ficha do catálogo é Star Thrall. |
 | TF-414 | Wallflower | BLOQUEADA | sim | [individual](https://a5e.tools/node/1660) | Texto editorial da ação Beak referencia grick, não Wallflower; falta determinar interpretação correta. |
 | TF-415 | Gloomflower | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/gloomflower/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
-| TF-416 | Wind Witch | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/wind-witch/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
+| TF-416 | Wind Witch | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/wind-witch/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
 | TF-417 | Mandriano | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:mandriano) | Fonte KPOGL independente; comparar uso e limite de mortos-vivos com Creature Codex original. |
 | TF-418 | Sodwose | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/sodwose/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-419 | Witchalder | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/witchalder/) | Confirmar termos/recargas da nuvem de pólen contra livro. |
 | TF-420 | Mandriano, Ancient | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:ancient-mandriano) | Variante Ancient distinta de TF-417; KPOGL independente, confirmar edição. |
-| TF-421 | Planar Flora, Execrable Shrub | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/execrable-shrub/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-423 | Spawn of Chernobog | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/spawn-of-chernobog/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-421 | Planar Flora, Execrable Shrub | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/execrable-shrub/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-423 | Spawn of Chernobog | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/spawn-of-chernobog/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-424 | Soul Eater | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:soul-eater) | Revisar edição original vs revisão de Tome of Beasts 1 e condição precisa de Soul Drain; referência comunitária. |
 | TF-425 | Snow Terror | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/snow-terror/) | Conferir ações e CDs em detalhe na fonte e suplemento original. |
 | TF-426 | Planar Flora, Thorned Sulfurlord | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/thorned-sulfurlord/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
