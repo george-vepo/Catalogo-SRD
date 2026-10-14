@@ -21,18 +21,22 @@ Four new 32×32 PNG binaries are published and refetched from GitHub: **TF-442 (
 
 Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, **TF-395 Cackling Skeleton**, **TF-361 Elder Black Pudding**, **TF-456 Scarecrow Harvester**. Species/archetype match, but each lacks visual evidence for the named **variant**. Accordingly these four files are **PARTIAL artistically** despite passing the GitHub binary audit. The first three originate in the [crawl/tiles curated CC0 set](https://github.com/crawl/tiles). TF-456 comes from the [OpenGameArt Scare Crow](https://opengameart.org/content/scare-crow), authored by **TanBoonHing / tanbh0009**, under **CC BY 3.0**, mandatory attribution recorded. The four files total 2,571 bytes. Low resolution limits card reproduction.
 
+## Checkpoint 26 — seis sprites binários adicionais com correspondência de arquétipo
+
+Adicionados e relidos no GitHub: **TF-393 Minotaur Conqueror; TF-514 Drainpipe Gargoyle; TF-446 Grave Guardian; TF-356 Grendel; TF-513 Improved Spirit Soldier; TF-511 Fiendbloom Awakened Tree**. Fontes: [crawl/tiles](https://github.com/crawl/tiles) (release curado com declaração CC0) e [Papyszoo CC0 sprites](https://github.com/Papyszoo/CC0-Public-Domain-Sprites) (pacote que declara licença CC0). Os seis PNG são 32×32 e têm 5.045 bytes somados; fontes, commits, tamanho e SHA-256 constam do manifesto. O binário da fonte e o do GitHub foram idênticos depois do push. **Estado PARTIAL**: imagens correspondem ao arquétipo, mas não aos detalhes das variantes, e os direitos de cada sprite histórico não foram confirmados independentemente. Nenhuma imagem foi marcada COMPLETE neste lote.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **108** |
-| Imagens com validação pós-upload registrada | **108** |
-| IDs ainda ausentes | **86** |
-| Tamanho total dos binários | **13.166.020 bytes** |
-| Checkpoints (máximo 10 arquivos) | **25** |
+| Imagens físicas persistidas no GitHub | **114** |
+| Imagens com validação pós-upload registrada | **114** |
+| IDs ainda ausentes | **80** |
+| Tamanho total dos binários | **13.171.065 bytes** |
+| Checkpoints (máximo 10 arquivos) | **26** |
 
-## Binários confirmados (108)
+## Binários confirmados (114)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -144,8 +148,14 @@ Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, 
 | TF-395 | Skeleton, Cackling | `operational/assets/creature-images/TF-395.png` | [origem](https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/undead/skeletons/skeleton_humanoid_small.png) | .png / image/png | 32×32 | 326 | `369575ae594eb690949047c6c651ca0c9f2c9049c10b994365dbf1076f374dc3` | `070f73d8ec70dcfbdaf1785de16d65ce2069e79a` | PASS; licença CC0; variante PARTIAL |
 | TF-361 | Elder Black Pudding | `operational/assets/creature-images/TF-361.png` | [origem](https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/amorphous/death_ooze.png) | .png / image/png | 32×32 | 1052 | `a4416e4eea0ff21baa3a5b5bf094586c916abb0ae3e76bd369c365b17089e4f2` | `070f73d8ec70dcfbdaf1785de16d65ce2069e79a` | PASS; licença CC0; variante PARTIAL |
 | TF-456 | Scarecrow Harvester | `operational/assets/creature-images/TF-456.png` | [origem](https://github.com/sharya2/valleyday-game/blob/main/assets/texture/ScareCrow0.png) | .png / image/png | 64×64 | 679 | `74d956f7a21719e894e39a99ff455f12771ce51bb5ccd5d1d07bfc0350e9e6ed` | `070f73d8ec70dcfbdaf1785de16d65ce2069e79a` | PASS; licença CC-BY 3.0; variante PARTIAL |
+| TF-393 | Minotaur Conqueror | `operational/assets/creature-images/TF-393.png` | [origem](https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/e27131731f89187b9842e9c6c95381a2e954aafd/packs/dcss-monsters-and-creatures/sprites/minotaur.png) | .png / image/png | 32×32 | 878 | `a4226d5296ab9f677d2ebff083f477caea6b8a6e6c14c1dab472bfc6525452c7` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
+| TF-514 | Drainpipe Gargoyle | `operational/assets/creature-images/TF-514.png` | [origem](https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/e27131731f89187b9842e9c6c95381a2e954aafd/packs/dcss-monsters-and-creatures/sprites/nonliving/gargoyle.png) | .png / image/png | 32×32 | 704 | `a5e6a72d555be0779d23f7ff9e0228c9e9f9bed85c62a685f2b96bccac421dd7` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
+| TF-446 | Grave Guardian | `operational/assets/creature-images/TF-446.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/nonliving/iron_golem.png) | .png / image/png | 32×32 | 858 | `6527899baff552ae87ff2fd5c504e676455c05415ad85dd9e5722c7aa2409ee8` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
+| TF-356 | Grendel | `operational/assets/creature-images/TF-356.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/ogre.png) | .png / image/png | 32×32 | 459 | `ca7bb3d39de4ee595258a5caa4718cfcff077970a0175024117e087449f3c34f` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
+| TF-513 | Improved Spirit Soldier | `operational/assets/creature-images/TF-513.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/holy/daeva.png) | .png / image/png | 32×32 | 686 | `c15a77d7f8d21fad3658cf93bb89f0b01e8a13ba81dbf27bb480680f4c751e85` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
+| TF-511 | Fiendbloom Awakened Tree | `operational/assets/creature-images/TF-511.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/treant.png) | .png / image/png | 32×32 | 1460 | `a2231517918397c63f389d7a522daa1e1f57fcb251d473b0cfb467a6026ff8ef` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
 
-## IDs bloqueados / pendentes (86)
+## IDs bloqueados / pendentes (80)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -168,7 +178,6 @@ Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, 
 | TF-342 | Silenal | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-351 | Half-Demon Ogre | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-353 | Manggus | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-356 | Grendel | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-358 | Giant, Void | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-360 | Gelatinous Wall | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-370 | Simian, Sulsha | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -179,7 +188,6 @@ Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, 
 | TF-384 | Mutant Rust Monster | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-386 | Grootslang | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-389 | Supermutant Rust Monster | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-393 | Minotaur Conqueror | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-397 | Fane Spirit | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-398 | Falsifier Fog | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-402 | Marsh Dire | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -190,7 +198,6 @@ Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, 
 | TF-420 | Mandriano, Ancient | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-425 | Snow Terror | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-434 | Crusher | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-446 | Grave Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-447 | Hound Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-448 | Imprisoned Celestial | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-449 | Imprisoned Fiend | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -227,16 +234,13 @@ Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, 
 | TF-508 | Fogborn Zombie | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-509 | Fogborn Zombie Horde | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-510 | Infernal Mammoth | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-511 | Fiendbloom Awakened Tree | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-513 | Improved Spirit Soldier | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-514 | Drainpipe Gargoyle | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-516 | Kanos Spawn | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-517 | Imp Flock | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-518 | Infernal Dwarf | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-521 | Bugbear Door Breaker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-522 | Crime Boss | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 
-## Auditoria final desta execução (2026-10-14)
+## Auditoria intermediária — checkpoint 25 (2026-10-14)
 
 **Reconciliação de escopo:** CSV v27 do commit-base lido integralmente: 607 linhas, 23 com prefixo `VERIFICADA`, 584 pendentes. O recorte exato [390,584) tem 194 IDs únicos entre TF-270 e TF-523; as 194 entradas do manifesto coincidem com ID, nome e ordem do CSV.
 
@@ -287,5 +291,6 @@ Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, 
 | 23 | TF-476, TF-474, TF-505 | `bdaaa36c2172f37d384ee6f7af99732b8ecbae23` | Verified GitHub-stored WebP signatures, dimensions, bytes, Git blob SHA and SHA-256 after upload, against individually preverified sources. |
 | 24 | TF-442, TF-471, TF-492, TF-431 | `7655c4f7554d03d53b5dfea6d53eadf1edd14768` | Official crawl/tiles CC0-excluded set; source PNG signatures/dimensions/hash; GitHub post-upload byte identity; 32x32 (needs design review) |
 | 25 | TF-355, TF-395, TF-361, TF-456 | `070f73d8ec70dcfbdaf1785de16d65ce2069e79a` | PNG 32×32 / 64×64; source and destination Git blob/bytes equal; SHA-256 recorded; CC0 or CC BY 3.0 attribution; visual variant specificity PARTIAL |
+| 26 | TF-393, TF-514, TF-446, TF-356, TF-513, TF-511 | `ad05a90834756241df8b4f42e6e29ff1086b567b` | Six source PNG sprites, GitHub-persisted byte identity and Git blob SHA checked; 32×32 low-res; visual variants and source rights require follow-up |
 
-**Estado: parcial (108/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (114/194). Manter PR em rascunho e não executar merge.**
