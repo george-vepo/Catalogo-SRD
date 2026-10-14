@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 130 / 195.**
+**Armazenadas e verificadas: 140 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -21,6 +21,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2b2c0e6880675869044734d993c82311e9d6a28a — 10/10 verificadas: TF-175, TF-176, TF-177, TF-178, TF-179, TF-180, TF-181, TF-182, TF-186, TF-187
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5 — 10/10 verificadas: TF-188, TF-189, TF-190, TF-191, TF-192, TF-193, TF-194, TF-195, TF-196, TF-197
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/bc1ee577f9b9e40721ccfc7b212a7b791c9b7380 — 10/10 verificadas: TF-199, TF-202, TF-203, TF-204, TF-205, TF-206, TF-208, TF-210, TF-211, TF-212
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/4381bc3d339a79d125a328df3eb12d3698c8806d — 10/10 verificadas: TF-213, TF-214, TF-215, TF-216, TF-217, TF-218, TF-219, TF-220, TF-221, TF-222
 
 ## Binários publicados e conferidos
 
@@ -154,6 +155,16 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-210 / Agnibarra: operational/assets/creature-images/TF-210.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Agnibarra.jpg; 50654 bytes; 452x700 px; SHA-256: 8b17019ad76784cc4224253a2a8461f20b6012eda34b115e88bbcd69c01eb91e; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-211 / Ahuizotl: operational/assets/creature-images/TF-211.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Ahuizotl.jpg; 78801 bytes; 980x700 px; SHA-256: c7e639446487d58880c89d52ffaf827f27f093d147c135815980ff7096683058; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-212 / Alabroza: operational/assets/creature-images/TF-212.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Alabroza.webp; 159586 bytes; 1000x1091 px; SHA-256: f1b3ee905a7858b71bd37fbc99f1acf64e7c71884b573b905999db91bc86aafe; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-213 / Alchemical Skunk: operational/assets/creature-images/TF-213.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Alchemical%20Skunk.webp; 192112 bytes; 796x933 px; SHA-256: 1400b535df1b1689f50e7dd55f6c7eb58060e55410bacbfafefd34570bf368f2; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-214 / Alke: operational/assets/creature-images/TF-214.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Alke.webp; 141222 bytes; 1200x945 px; SHA-256: 0b646e6839dee3a1612fbcb637b8f34b099d22a9cd8d765299d1b3e969f3e3f7; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-215 / Aniwye: operational/assets/creature-images/TF-215.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Aniwye.webp; 170998 bytes; 968x792 px; SHA-256: 0fe0ec7b44dc9da6c136ae6228773d1585e3c868bafe361528f432d0284d36de; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-216 / Anophiloi: operational/assets/creature-images/TF-216.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/anophiloi.jpg; 47130 bytes; 530x700 px; SHA-256: 55dcebc5dd3c2bef546ae974efcc3f09106306dd18cb9191e54b42cc8f88b1cc; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-217 / Bearmit Crab: operational/assets/creature-images/TF-217.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/bearmitcrab.jpg; 91866 bytes; 727x700 px; SHA-256: bfd1dfe8dc8c8237bb2e3a39999a65349166561d83966ab9cbe0ce8d70655357; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-218 / Chupacabra: operational/assets/creature-images/TF-218.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/chupacabra.jpg; 113181 bytes; 843x700 px; SHA-256: 985efb9f743910bbd0d8374f3576c42900a66a52b877057170f29907842c6796; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-219 / Cobbleswarm: operational/assets/creature-images/TF-219.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Cobbleswarm.webp; 119472 bytes; 970x800 px; SHA-256: e9cdb40073d84676251bf18d492f11789acf8a8e973eb56bdbd5b017bf61c059; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-220 / Corpse Worm: operational/assets/creature-images/TF-220.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Corpse%20Worm.webp; 237726 bytes; 982x857 px; SHA-256: cf5cb99188f15b13d8ee391525e66c6e3e744b1c358417654cb5f97b0fd4668a; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-221 / Crab, Duffel: operational/assets/creature-images/TF-221.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Duffel%20Crab.webp; 95836 bytes; 1200x1000 px; SHA-256: debbb837b06c93bb1a63244b47dd141fc946499357f3796162c465d8c7c33ede; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
+- TF-222 / Crocotta: operational/assets/creature-images/TF-222.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Crocotta.webp; 205668 bytes; 924x893 px; SHA-256: 3c00548e7a47f7a825e80d657524354c51987b45cb0fc50b833c8b561070a21b; commit: 4381bc3d339a79d125a328df3eb12d3698c8806d
 
 ## Não obtidos
 
@@ -166,16 +177,6 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-200 / Aboleth Champion: source_not_found; 
 - TF-201 / Alpha Werewolf: source_not_found; 
 - TF-209 / Adamanticore: source_not_found; 
-- TF-213 / Alchemical Skunk: pending; 
-- TF-214 / Alke: pending; 
-- TF-215 / Aniwye: pending; 
-- TF-216 / Anophiloi: pending; 
-- TF-217 / Bearmit Crab: pending; 
-- TF-218 / Chupacabra: pending; 
-- TF-219 / Cobbleswarm: pending; 
-- TF-220 / Corpse Worm: pending; 
-- TF-221 / Crab, Duffel: pending; 
-- TF-222 / Crocotta: pending; 
 - TF-223 / Three-Headed Cobra: pending; 
 - TF-224 / Torch Mimic: pending; 
 - TF-225 / Aalpamac: pending; 
