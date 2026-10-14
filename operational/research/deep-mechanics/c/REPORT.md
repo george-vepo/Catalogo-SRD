@@ -1,5 +1,16 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 37 — Hraesvelgr, Mountain Giant e três oozes (14/10/2026)
+
+**[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c8da3de31c1c8845d6d88b5bb8a06a697eff3e53).**
+
+- TF-156 Hraesvelgr: regras da revisão Tome of Beasts 1 (2023) com Giant/Roc, equipamentos sem transformação, Swallow/escape, três opções de ações lendárias, covil e efeitos regionais. Fonte https://www.5esrd.com/database/creature/giant-corpse-swallower-3pp/.
+- TF-157 Mountain Giant: reparado parsing que misturava Mountain Master e efeitos regionais; incluídas ações, três ações lendárias por turno, Roar/Grasping Soil/Spawn Elemental, covil/região. **Permanece bloqueado** porque outro compêndio indica quatro ações lendárias em contradição com Creature Codex p185–186. Fontes https://www.5esrd.com/database/creature/Giant-Mountain/, https://fliphtml5.com/qfukk/crsz/5e_Creature_Codex/.
+- TF-158 Alchemical Apprentice Ooze: Arcana, senses, immunity e Perishable/Produce Potion com intervalos e condições exatos; ação de Magical Burble. Fonte https://www.5esrd.com/database/creature/ooze-alchemical-apprentice/.
+- TF-159 Amber Ooze: bloco CR4 original Tome of Beasts 2, Spider Climb, Arboreal Movement, Engulf seguido de dois Pseudopod, petrificação após 1d4 rounds e persistência por 24h pós saída; **bloqueio do homônimo CR1/2 superado**, continua parcial por revisão/licença. Fonte https://anyflip.com/jfxvv/vjtj/basic/251-300.
+- TF-160 Corrupting Ooze: resistências/imunidades, Corrupting Touch em crítico ou turno com alvo grappled, dano/escape de Slam, características de natação. Conferido com reprodução do Tome of Beasts original. Fonte https://anyflip.com/adow/gzzp/basic/301-350.
+- **79/131 aprofundadas, 52 aguardando, 95 parciais, 36 bloqueadas, 0 integralmente aprovadas.** 96 imagens físicas, 35 faltantes, 0 aprovadas visualmente, sem novos blobs. Revisão de licenças e editorial permanece pendente.
+
 ## Checkpoint 36 — Titan, Cave Shaman, Lantern, Shadow e Xing Tian (14/10/2026)
 
 **[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9627492b8f32e85ea52e07db641a9b0dd17cc558).** Cinco JSONs conferidos por ID e sintaxe após persistência; 131 IDs únicos, 74 aprofundadas; 37 bloqueadas mantidas.

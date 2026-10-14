@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 74,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 79,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 94,
-    "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 57,
+    "parciais": 95,
+    "bloqueadas": 36,
+    "registros_aproveitados_sem_nova_verificacao_integral": 52,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -545,9 +545,24 @@
       "commit": "9627492b8f32e85ea52e07db641a9b0dd17cc558",
       "leitura_persistencia": "CONFIRMADA — cinco JSONs do CP36 relidos no GitHub, IDs, sintaxe e mecânicas presentes. Auditoria: 131 IDs, 74 aprofundadas, 94 parciais e 37 bloqueadas.",
       "tipo": "Titan Degenerate, Cave Shaman, Lantern Giant, Shadow Giant conflict, Xing Tian"
+    },
+    {
+      "numero": 37,
+      "inicio": "TF-156",
+      "fim": "TF-160",
+      "ids": [
+        "TF-156",
+        "TF-157",
+        "TF-158",
+        "TF-159",
+        "TF-160"
+      ],
+      "commit": "c8da3de31c1c8845d6d88b5bb8a06a697eff3e53",
+      "leitura_persistencia": "PENDENTE_READ_BACK",
+      "tipo": "Hraesvelgr Mountain Giant e oozes Alchemical Amber Corrupting; bloqueio Amber homônimo resolvido"
     }
   ],
-  "atualizacao_detalhada_sha": "9627492b8f32e85ea52e07db641a9b0dd17cc558",
+  "atualizacao_detalhada_sha": "c8da3de31c1c8845d6d88b5bb8a06a697eff3e53",
   "criaturas": [
     {
       "id": "TF-412",
@@ -2725,16 +2740,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 34,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-156.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/giant-corpse-swallower-3pp/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
       "pendencias": [
-        "Publicação de 2023 difere mecanicamente da versão antiga; não misturar Shapechanger e conjuração de 2016.",
-        "Validar detalhes completos das ações lendárias e covil antes da integração."
+        "Mecânicas individuais aprofundadas e especificidades condicionais estruturadas; conferir livro e erratas.",
+        "Imagem e condições de uso/identidade visual ainda não aprovadas."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão editorial/licenciamento",
+        "validação visual de arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2744,7 +2760,8 @@
         "bytes": 71850,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-157",
@@ -2752,17 +2769,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 35,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-157.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_LENDARIAS_FONTE_DIVERGENTE",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/Giant-Mountain/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
       "pendencias": [
-        "Seção de ações comuns incompleta na resposta de busca; bloco de Mountain Master contaminado por efeitos regionais.",
-        "Não marcar mecanicamente completa."
+        "Livro Creature Codex traz 3 legendary actions, mgroot lista 4; até errata/revisão editorial manter bloqueada.",
+        "Separadas actions, legendary, lair e regionais; verificação visual/arte pendente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "lista integral de ações"
+        "revisão editorial/licenciamento",
+        "validação visual de arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2772,7 +2789,8 @@
         "bytes": 71621,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-158",
@@ -2780,13 +2798,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 36,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-158.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-alchemical-apprentice/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Mecânicas individuais aprofundadas e especificidades condicionais estruturadas; conferir livro e erratas.",
+        "Imagem e condições de uso/identidade visual ainda não aprovadas."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão editorial/licenciamento",
+        "validação visual de arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2796,7 +2818,8 @@
         "bytes": 48463,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-159",
@@ -2804,16 +2827,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 37,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-159.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://anyflip.com/jfxvv/vjtj/basic/251-300",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
       "pendencias": [
-        "A criatura de CR 4 do Tome of Beasts 2 não é a versão homônima CR 1/2 do 5eSRD (AC8 PV13)."
+        "Homônimo Amber Ooze CR1/2 de outra fonte não corresponde à criatura do Tome of Beasts 2 CR4; bloco CR4 conferido com página 277.",
+        "Engulf petrifica depois de 1d4 rounds e persistência de 24h pós saída; edição e licença visual ainda pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "lista integral de ações"
+        "revisão editorial/licenciamento",
+        "validação visual de arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2823,7 +2847,8 @@
         "bytes": 161690,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-160",
@@ -2831,15 +2856,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 38,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-160.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://anyflip.com/usqxr/fcko/basic/301-350",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://anyflip.com/adow/gzzp/basic/301-350",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
       "pendencias": [
-        "Confirmação editorial e imagem pendentes."
+        "Mecânicas individuais aprofundadas e especificidades condicionais estruturadas; conferir livro e erratas.",
+        "Imagem e condições de uso/identidade visual ainda não aprovadas."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão editorial/licenciamento",
+        "validação visual de arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2849,7 +2876,8 @@
         "bytes": 120352,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-161",
@@ -4337,14 +4365,14 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 36,
-    "sha_validado": "54574f6df1af912252a45861553fdffd0171ff44",
+    "checkpoint": 37,
+    "sha_validado": null,
     "escopo_ids": 131,
-    "aprofundadas": 74,
-    "sem_revisao_individual": 57,
+    "aprofundadas": 79,
+    "sem_revisao_individual": 52,
     "integralmente_aprovadas": 0,
-    "parciais": 94,
-    "bloqueadas": 37,
+    "parciais": 95,
+    "bloqueadas": 36,
     "imagens_binarias_fisicas": 96,
     "hashes_corretos": 96,
     "imagens_faltantes": 35,
