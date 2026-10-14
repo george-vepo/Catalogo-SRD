@@ -13,10 +13,12 @@
     "size": "Medium",
     "type": "fey",
     "alignment": "neutral evil",
-    "publication_year": 2023,
-    "edition": "Tome of Beasts 1 (2023 revision for D&D 5e)",
+    "publication_year": null,
+    "edition": "Tome of Beasts: edição-alvo ainda não determinada (2016 original vs 2023 revista)",
     "experience_points": 7200,
-    "proficiency_bonus": 4
+    "proficiency_bonus": 4,
+    "edition_variant_target_unresolved": true,
+    "statblock_candidate_edition": "2023 revisada — conforme transcrição 5eSRD"
   },
   "statistics": {
     "armor_class": 18,
@@ -252,6 +254,12 @@
       "type": "errata_editorial_oficial",
       "edition": "Tome of Beasts (2023)",
       "verification": "Errata de 29/05/2025, página 11, acrescenta o tipo bludgeoning ao Slam"
+    },
+    {
+      "url": "https://anyflip.com/dhfzu/lcug/basic/",
+      "type": "reproducao_edicao_2016_nao_editorial",
+      "edition": "Tome of Beasts original (2016)",
+      "verification": "Divergências de Multiattack, Slam, Burning Touch, Blinding Gaze e Deafening Voice frente a 2023 demonstradas; não promovido a fonte canônica."
     }
   ],
   "source_checkpoint": {
@@ -261,6 +269,7 @@
   "catalog_legacy_state": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
   "legacy_note": "A p?gina classifica a criatura como fey, mas o tra?o Undead Nature chama outro monstro (accursed defiler). O registro atual j? ? parcial. Sem resolu??o editorial, n?o promover a completo nem alterar mec?nica de tra?os.",
   "outstanding": [
+    "CONFLITO CRÍTICO DE EDIÇÃO: versão 2016 e revisão 2023 têm mecânicas distintas; confirmar qual versão pertence ao registro KP-S011 antes de considerar a ficha canônica. Todos os números atualmente estruturados são somente do candidato 2023.",
     "Bloqueio editorial específico: texto secundário contém Undead Nature de accursed defiler; não aplicar essa característica à Abominable Beauty sem confirmar página oficial.",
     "Confrontar fichas e traços com tomo 2023 impresso/PDF autorizado e revisão independente.",
     "Imagem binária de produção ainda não verificada."
@@ -271,6 +280,48 @@
     "official_errata_blow_type_verified": true,
     "editorial_conflict_undead_nature_resolved": false,
     "primary_printing_or_book_page_compared": false,
-    "final_approval": false
+    "final_approval": false,
+    "edition_target_resolved": false,
+    "cross_edition_mechanical_discrepancy_documented": true
+  },
+  "edition_discrepancy": {
+    "status": "BLOQUEIO_MECANICO_VARIANTES",
+    "variants": [
+      {
+        "publication": "Tome of Beasts original (2016)",
+        "source": "https://anyflip.com/dhfzu/lcug/basic/",
+        "source_class": "reproducao_nao_editorial",
+        "mechanics_sample": {
+          "multiattack": "2 Slam; sem Blinding Gaze acoplado",
+          "slam": "1d8+3 e 8d6 fire",
+          "burning_touch": "8d6 fire tanto no Slam quanto por toque",
+          "blinding_gaze": "Recharge 5–6, CHA CD 17, cegueira em falha, imunidade permanente em sucesso",
+          "deafening_voice": "Recharge 5–6, até 90 pés, CON CD 16, surdez permanente em falha"
+        }
+      },
+      {
+        "publication": "Tome of Beasts revisão 2023",
+        "source": "https://www.5esrd.com/database/creature/abominable-beauty/",
+        "source_class": "transcricao_individual",
+        "mechanics_sample": {
+          "multiattack": "Blinding Gaze + 2 Slam",
+          "slam": "1d8+4 bludgeoning e 6d6 fire",
+          "burning_touch": "3d6 fire por contato",
+          "blinding_gaze": "CHA CD 16, dura até 1 minuto, repete save cada turno, imune 24h após sucesso",
+          "deafening_voice": "30 pés, CON CD 16, 9d6 thunder e deafened 1h em falha"
+        }
+      },
+      {
+        "publication": "Tome of Beasts revisão 2023 — errata 2025",
+        "source": "https://koboldpress.com/errata/",
+        "source_class": "primaria_oficial_apenas_errata",
+        "mechanics_sample": {
+          "slam": "Adiciona explicitamente tipo bludgeoning, página 11"
+        }
+      }
+    ],
+    "selected_candidate_for_structured_statistics": "2023 revista",
+    "canon_target_confirmed": false,
+    "instruction": "Não mesclar efeitos da versão original de 2016 com a edição revista de 2023. Após decisão editorial explícita sobre a edição-alvo, confrontar livro autorizado/errata e reconstruir a ficha da edição escolhida."
   }
 }

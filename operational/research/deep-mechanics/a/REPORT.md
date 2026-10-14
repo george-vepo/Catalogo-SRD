@@ -50,6 +50,10 @@
 - Auditoria da árvore do GitHub constatou **132 JSONs + 73 binários**, com os 71 blobs transferidos idênticos (SHA + tamanho) aos das branches de origem. Os 132 JSONs haviam sido parseados anteriormente; a rodada atual confirmou a árvore completa e validou pontos alterados, não constituiu nova releitura semântica independente de todos os JSONs.
 - Ainda precisam de pesquisa editorial integral até 132 fichas, verificação de discrepâncias de impressão, implementabilidade das regras, direitos e avaliação visual das artes e aquisição/produção de **59** arquivos de imagens faltantes, além de substituição das duas miniaturas.
 
+### Divergência editorial adicional — KP-S011: original vs revisão
+
+A investigação encontrou **variantes mecanicamente incompatíveis** de Abominable Beauty. A edição original (2016) descreve Multiattack como dois Slam, Blinding Gaze de recarga 5–6 com CD 17 e dano de fogo 8d6, enquanto a revisão de 2023 inclui Blinding Gaze no Multiattack, CD 16, duração e salvaguardas repetidas, Slam com 6d6 fire, além de Deafening Voice com alcance e duração distintos. A errata oficial de 2025 acrescenta o tipo *bludgeoning* ao Slam **da revisão de 2023**. Os números salvos em `records/KP-S011.json` são **candidatos 2023, não uma resolução do registro histórico**. Bloqueio permanece até escolher a edição-alvo com suporte editorial. Evidências: [transcrição 2023](https://www.5esrd.com/database/creature/abominable-beauty/), [reprodução original 2016](https://anyflip.com/dhfzu/lcug/basic/) e [errata oficial](https://koboldpress.com/errata/).
+
 ---
 
 ## Histórico anterior (reproduzido para rastreabilidade; as contagens a seguir são antigas)
