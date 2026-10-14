@@ -2,6 +2,14 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 32 — Thursir Hearth Priestess, Rockchewer Ogre e Abaasy (14/10/2026)
+
+- TF-130 **Thursir Hearth Priestess**: Multiattack sequenciado Hearth Blessing + 2 Runic Staff, três modos do mesmo Hearth Blessing (Burn/Comfort/Protection), Protect the Hearth consumindo reações de aliados, Magic Resistance, Magic Weapons e Spellcasting WIS CD13 com at-will/3-day/1-day. Fonte https://www.5esrd.com/database/creature/thursir-hearth-priestess/.
+- TF-132 **Rockchewer Ogre**: Stone Chomper dano dobrado vs pedra, Multiattack Slam/Slam ou Bite/Slam, Rock +8 e prone em falha STR CD15, Chew Rock, Gravel Spray 15 ft cone somente após Chew Rock no último minuto, Quick Chew bônus recarga 6 e Rock Catching reação CD10. Fonte https://www.5esrd.com/database/creature/ogre-rockchewer/.
+- TF-135 **Abaasy**: Armored Berserker ativado 1d6=6 se HP <=60, Dual Shields já computado, Poor Depth Perception, três ataques melee com máximo um Shield Shove e restrição Spear 2 mãos versus Iron Axe, Eyebeam recarga 5–6. Fonte https://www.5esrd.com/database/creature/abaasy/.
+- Todas com imagens físicas preexistentes, ainda não aprovadas visualmente. Sem promoção integral: **54 aprofundadas, 77 sem revalidação, 94 parciais, 37 bloqueadas**.
+
+
 ## Auditoria dos checkpoints 28 a 31 — 14/10/2026
 
 - TF-507/509/518/521 no commit `59c966efadd6ed32b2be2382b5f6f44981fc9555`, TF-120/121 no commit `9b63568a4d309e75847dbf9e45ffc7fb5def34e1`, TF-122/123 no commit `31c489977f51cd7716c2f82f38b99d0855fbd18f` e TF-124/125 no commit `6e1c1a38d053a6df634623791b2b3392a6a30a48`. **Todos os 10 JSONs reabertos e validados por ID e sintaxe via GitHub.**

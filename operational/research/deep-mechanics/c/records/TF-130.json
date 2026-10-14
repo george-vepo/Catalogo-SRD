@@ -4,14 +4,14 @@
   "nome": "Giant, Thursir Hearth Priestess",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 10,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
     "edicao": null,
-    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+    "fonte_identidade": "https://www.5esrd.com/database/creature/thursir-hearth-priestess/"
   },
   "estatisticas": {
     "nd_catalogo": "4",
@@ -39,247 +39,231 @@
       "CAR": 2
     },
     "deslocamentos": {
-      "andar": 40
+      "andar_ft": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 4
+      },
+      {
+        "nome": "Persuasion",
+        "bonus": 4
+      },
+      {
+        "nome": "Religion",
+        "bonus": 4
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "WIS",
+        "bonus": 5
+      },
+      {
+        "nome": "CHA",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Common",
+      "Dwarven",
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "bonus_proficiencia": 2,
+    "xp": 1100,
+    "composicao_ca": "hide armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Magic Resistance",
-        "resumo_anterior": "Vantagem contra magia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem em saves contra spells e magical effects"
       },
       {
         "nome": "Magic Weapons",
-        "resumo_anterior": "Ataques com arma são mágicos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "weapon attacks são mágicos"
       },
       {
         "nome": "Protect the Hearth",
-        "resumo_anterior": "Aliados a até 60 pés podem reagir movimentando-se até a sacerdotisa quando ela é atingida por arma.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "Priestess sofre acerto por weapon attack",
+        "efeito": "até 2 criaturas aliadas em 60 ft que a veem podem gastar suas reações para mover até speed em direção à Priestess",
+        "limite": 2,
+        "alcance_ft": 60,
+        "economia": "reação DOS ALIADOS, não da Priestess"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Usa Hearth Blessing e ataca duas vezes com Runic Staff.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Hearth Blessing",
+            "quantidade": 1
+          },
+          {
+            "acao": "Runic Staff",
+            "quantidade": 2
+          }
+        ],
+        "ordem": "primeiro bênção, depois ataques"
       },
       {
         "nome": "Runic Staff",
-        "resumo_anterior": "+5, alcance 10 pés, 2d6+3 contundente mais 1d8 fogo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "fire"
+          }
+        ]
       },
       {
         "nome": "Hearth Blessing",
-        "resumo_anterior": "Escolhe efeito temporário em aliado até 30 pés: +1d6 fogo, remove encanto/medo com PV temporários, ou +2 CA.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ação com três opções",
+        "alcance_ft": 30,
+        "pre_condicao": "aliado que a Priestess consegue ver",
+        "duracao": "até início do próximo turno da Priestess",
+        "opcoes": [
+          {
+            "nome": "Hearth's Burn",
+            "efeito": "arma do aliado se incendeia; a cada acerto com a arma, inflige +1d6 fire",
+            "dano_extra": {
+              "dados": "1d6",
+              "media": 3,
+              "tipo": "fire"
+            }
+          },
+          {
+            "nome": "Hearth's Comfort",
+            "efeitos": [
+              "termina charmed ou frightened imediatamente, se presente",
+              "ganha PV temporários"
+            ],
+            "pv_temporarios": {
+              "dados": "1d10",
+              "media": 5
+            }
+          },
+          {
+            "nome": "Hearth's Protection",
+            "efeitos": [
+              "CA do aliado +2",
+              "armadura imune a spells/effects que a afetam, por exemplo heat metal e rust monster antennae"
+            ]
+          }
+        ]
       },
       {
         "nome": "Spellcasting",
-        "resumo_anterior": "SAB CD13, mending/spare the dying/thaumaturgy livres, cure wounds e heat metal 3/dia, haste 1/dia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "lança uma magia da lista preparada",
+        "referencia": "Spellcasting trait"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Usa Hearth Blessing e ataca duas vezes com Runic Staff.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Runic Staff",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "fire"
+          }
+        ]
       }
     ],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Usa Hearth Blessing e ataca duas vezes com Runic Staff.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Hearth Blessing",
+        "Runic Staff",
+        "Runic Staff"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
-    "conjuracao": [],
-    "custos_lendarios": null
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "atributo": "WIS",
+        "cd_salvaguarda": 13,
+        "componentes": "não especificados na ficha; regras da magia aplicáveis",
+        "listas": {
+          "at_will": [
+            "mending",
+            "spare the dying",
+            "thaumaturgy"
+          ],
+          "tres_por_dia_cada": [
+            "cure wounds",
+            "heat metal"
+          ],
+          "um_por_dia": [
+            "haste"
+          ]
+        }
+      }
+    ],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_NA_FONTE",
+      "reacoes": "NAO_GASTA_REACAO_PROPRIA; Protect the Hearth requer reações de aliados",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_NA_FONTE",
+      "conjuracao": "PRESENTE"
+    }
   },
   "pendencias": [
-    "Três opções de Hearth Blessing são variantes da mesma ação, não três ações distintas.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Hearth Blessing tem três modos distintos da mesma ação, e Multiattack usa Blessing antes de Runic Staff duas vezes; Protect the Hearth gasta reação dos aliados.",
+    "A fonte da magia Spellcasting informa at will / 3/day / 1/day, mas não especifica componentes por linha, que dependem de magias.",
+    "Imagem física existente ainda sem aprovação visual; livro Tome of Beasts 3/errata pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "revisão editorial de edição e componentes específicos da magia",
+    "aprovação visual de imagem"
   ],
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/thursir-hearth-priestess/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco de criatura Kobold Press republicado no 5eSRD",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
-      "tipo": "checkpoint original",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -371,5 +355,12 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "D&D 5e",
+    "data": "2026-10-14",
+    "fonte_republicada": "https://www.5esrd.com/database/creature/thursir-hearth-priestess/",
+    "revisao_editorial_do_livro_e_errata": "PENDENTE"
   }
 }

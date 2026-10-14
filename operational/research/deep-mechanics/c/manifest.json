@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 51,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 54,
     "fichas_integralmente_concluidas": 0,
     "parciais": 94,
     "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 80,
+    "registros_aproveitados_sem_nova_verificacao_integral": 77,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -472,6 +472,19 @@
       "commit": "6e1c1a38d053a6df634623791b2b3392a6a30a48",
       "leitura_persistencia": "CONFIRMADA — todos os JSONs do checkpoint relidos no GitHub; sintaxe, ID e fonte individual válidos; sem aprovação integral",
       "tipo": "Serpent/Mammoth queens forma, acoes e legendary actions"
+    },
+    {
+      "numero": 32,
+      "inicio": "TF-130",
+      "fim": "TF-135",
+      "ids": [
+        "TF-130",
+        "TF-132",
+        "TF-135"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE",
+      "tipo": "Thursir priestess, Rockchewer, Abaasy"
     }
   ],
   "atualizacao_detalhada_sha": "6e1c1a38d053a6df634623791b2b3392a6a30a48",
@@ -1935,15 +1948,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 10,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-130.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/thursir-hearth-priestess/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Três opções de Hearth Blessing são variantes da mesma ação, não três ações distintas."
+        "Hearth Blessing tem três modos distintos da mesma ação, e Multiattack usa Blessing antes de Runic Staff duas vezes; Protect the Hearth gasta reação dos aliados.",
+        "A fonte da magia Spellcasting informa at will / 3/day / 1/day, mas não especifica componentes por linha, que dependem de magias.",
+        "Imagem física existente ainda sem aprovação visual; livro Tome of Beasts 3/errata pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão editorial de edição e componentes específicos da magia",
+        "aprovação visual de imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -1953,7 +1969,8 @@
         "bytes": 193826,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-131",
@@ -1990,16 +2007,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 12,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-132.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ogre-rockchewer/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Gravel Spray depende de Chew Rock prévio, não é ação livre independente.",
-        "A fonte mostra 'recarregar 6' para Quick Chew; evitar aplicar recarga indevida a Gravel Spray."
+        "Gravel Spray exige Chew Rock durante último minuto; Quick Chew recarrega em 6 e executa Chew Rock em bônus; não é recarga de Gravel Spray.",
+        "O bloco não explicita consumo de carga triturada a cada Gravel Spray; não inventar estado de munição.",
+        "Imagem física existente sem aprovação visual e errata Tome of Beasts 3 ainda não conferida."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "consumo de cascalho não declarado",
+        "revisão errata original",
+        "validação visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2009,7 +2029,8 @@
         "bytes": 97704,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-133",
@@ -2071,16 +2092,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 15,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-135.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/abaasy/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Há restrição de mãos quando usa Spear com ambas; não permitir Iron Axe simultâneo.",
-        "Como escrita na fonte, Dual Shields já está contabilizado na CA."
+        "Multiattack só permite um Shield Shove e proíbe Iron Axe quando usa Spear de duas mãos.",
+        "Dual Shields já contabilizado em CA18; não adicionar outro +3.",
+        "Livro Tome of Beasts 3/errata e imagem binária existente exigem revisão visual."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "conferência em livro original/errata",
+        "aprovação visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2090,7 +2113,8 @@
         "bytes": 92082,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-136",
