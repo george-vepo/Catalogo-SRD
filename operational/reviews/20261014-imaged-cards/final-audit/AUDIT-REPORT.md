@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 3 lotes validados (001–003), 30/395 fichas (365 restantes).
+**Situação:** EM ANDAMENTO — 5 lotes validados, 50/395 fichas (345 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -44,3 +44,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 ## Lote 004 — 10 fichas (TF-035–TF-045, ordem do CSV)
 
 8 completas em conteúdo e 2 completas com ressalvas: TF-039 possui divergência numérica Bite/Puff Up e TF-041 possui interpretação pendente do Multiattack/Proboscis. Todas as 10 têm arquivo de imagem diretamente vinculado com SHA/tamanho confirmado. 5 imagens têm dimensão declarada inferior a 500 px. TF-045 exige conciliar a nomenclatura Aaxte/Aatxe. Nenhuma foi homologada para publicação.
+
+## Lote 005 — 10 fichas (TF-046 a TF-057 conforme CSV)
+
+8 completas em conteúdo, 1 completa com ressalvas (TF-047, Celestial Weapons +4d8 vs Greataxe +3d8), e 1 incompleta (TF-052, CD ausente em Celestial Crescendo). 9 imagens vinculadas e 1 ausente (TF-049). 5 imagens de resolução baixa pelos metadados. TF-049 usa mecânicas A5E completas na fonte RPG, mas depende de adaptação explícita ao card game; não foi validada em engine nem aprovada para publicação.
+
+**Consolidado após lote 005:** 50/395 auditadas; 26 completas em conteúdo, 4 com ressalvas, 19 incompletas, 1 não verificável; 47 com vínculo direto e 3 sem imagem. Nenhuma licenciada/homologada nesta execução.
