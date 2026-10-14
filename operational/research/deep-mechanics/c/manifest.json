@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 54,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 59,
     "fichas_integralmente_concluidas": 0,
     "parciais": 94,
     "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 77,
+    "registros_aproveitados_sem_nova_verificacao_integral": 72,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -485,6 +485,21 @@
       "commit": "ac7db02b478e9310f4f195c1b8325e4744b1cfce",
       "leitura_persistencia": "CONFIRMADA: TF-130, TF-132 e TF-135 relidos, JSONs válidos, IDs e campos mecânicos confirmados",
       "tipo": "Thursir priestess, Rockchewer, Abaasy"
+    },
+    {
+      "numero": 33,
+      "inicio": "TF-128",
+      "fim": "TF-139",
+      "ids": [
+        "TF-128",
+        "TF-133",
+        "TF-136",
+        "TF-138",
+        "TF-139"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE_READ_BACK",
+      "tipo": "cinco fichas Kobold Press: Phase Giant, Crimson Ogre, Belu, Chuhaister e Cacus"
     }
   ],
   "atualizacao_detalhada_sha": "ac7db02b478e9310f4f195c1b8325e4744b1cfce",
@@ -1892,16 +1907,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 8,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-128.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Página individual /giant-phase/ do 5eSRD indisponível; dados conferidos em resumo de terceiros e em reprodução de Tome of Beasts 2, não em publicação editorial oficial acessível.",
-        "A troca de plano encerra agarrões, conforme a habilidade."
+        "Ficha aprofundada em republicação Robinloft e índice oficial Kobold Press; falta confronto independente com edição autorizada Tome of Beasts 2/errata.",
+        "Imagem binária existente sem inspeção editorial de identidade e direitos."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto independente com livro/errata da edição correspondente",
+        "identidade e direitos da arte",
+        "revisão mecânica/editorial independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -1911,7 +1928,8 @@
         "bytes": 188562,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-129",
@@ -2038,16 +2056,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 13,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-133.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "A ficha do Ogre Tusked Crimson não abriu como página individual do 5eSRD; mecânica corroborada por bestiário de terceiros e referência do Creature Codex.",
-        "O catálogo do 5eSRD cita também Tome of Beasts 2, mas a variante escolhida é a do Creature Codex (ND5), não uma adaptação."
+        "Conferida republicação completa identificada como Creature Codex p.279; ainda falta revisão editorial/licença da edição e errata originais.",
+        "Imagem física preexistente não inspecionada visualmente nem aprovada."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto independente com livro/errata da edição correspondente",
+        "identidade e direitos da arte",
+        "revisão mecânica/editorial independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2057,7 +2077,8 @@
         "bytes": 81448,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-134",
@@ -2122,15 +2143,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 16,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-136.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/belu/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Rever se 'cures any diseases or conditions' da pomada possui restrições editoriais; não presumir que remove qualquer estado sem exceção."
+        "Texto publicado de Healing Lotuscraft afirma cura de quaisquer doenças ou condições, sem enumeração de exceções; conferir limites com o livro/errata, não inferir.",
+        "Slam contém erro tipográfico 'succeed 10 a DC 16' na republicação; valor DC16 claro, mas preservar pendência editorial.",
+        "Arte física preexistente sem validação visual/licença; comparação com Tome of Beasts 3/errata pendente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto independente com livro/errata da edição correspondente",
+        "identidade e direitos da arte",
+        "revisão mecânica/editorial independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2140,7 +2165,8 @@
         "bytes": 149038,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-137",
@@ -2176,16 +2202,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 18,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-138.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/chuhaister/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Página do 5eSRD não identifica publicação no rodapé; a identidade Creature Codex e ND7 são confirmados pelo índice oficial Kobold Press.",
-        "Rock usa bônus +2 surpreendentemente baixo, preservar valor da fonte até revisão."
+        "Rock tem +2 hit apesar de STR22; preservar número literalmente publicado, dependente de confirmação com Creature Codex/errata.",
+        "A página 5eSRD apresenta copyright Creature Codex ©2018; conferir exemplar editorial antes de aprovação integral.",
+        "Imagem física preexistente ainda não inspecionada editorialmente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto independente com livro/errata da edição correspondente",
+        "identidade e direitos da arte",
+        "revisão mecânica/editorial independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2195,7 +2224,8 @@
         "bytes": 67807,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-139",
@@ -2203,16 +2233,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 19,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-139.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/giant-cacus/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Há homônimo em 5E RPG: Ancient Adventures ND14, CA14/PV162, na URL /giant-cacus-2/; descartado para o catálogo.",
-        "Final Breath está exibido sob 'Actions', porém é desencadeado por morte: não permitir ativação voluntária em combate."
+        "A página coloca Final Breath sob 'Actions', porém o gatilho de morte torna-o efeito passivo/reativo e não ação voluntária; conferir livro Creature Codex.",
+        "Há homônimo /giant-cacus-2/ de outro suplemento, ND14, excluído do escopo.",
+        "Imagem preexistente sem verificação editorial de identidade e licença."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto independente com livro/errata da edição correspondente",
+        "identidade e direitos da arte",
+        "revisão mecânica/editorial independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2222,7 +2255,8 @@
         "bytes": 67887,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-140",
@@ -4210,11 +4244,11 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 32,
-    "sha_validado": "ac7db02b478e9310f4f195c1b8325e4744b1cfce",
+    "checkpoint": 33,
+    "sha_validado": null,
     "escopo_ids": 131,
-    "aprofundadas": 54,
-    "sem_revisao_individual": 77,
+    "aprofundadas": 59,
+    "sem_revisao_individual": 72,
     "integralmente_aprovadas": 0,
     "parciais": 94,
     "bloqueadas": 37,

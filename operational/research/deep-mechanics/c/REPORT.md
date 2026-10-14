@@ -1,5 +1,15 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 33 — aprofundamento de cinco criaturas (14/10/2026)
+
+- **TF-128 Phase Giant**: Ethereal Jaunt com equipamento e fim de grapple; dois Spiked Fist com limite de uma captura por punho, impalamento condicional, ataque Rock e salvaguarda para prone. Fonte: https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2.
+- **TF-133 Tusked Crimson Ogre**: salvaguardas, perícias, imunidade frightened, duas rotas de bônus Rampage/Berserker's Blood, condições completas do berserk; edição Creature Codex p279. Fonte: https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex.
+- **TF-136 Belu**: Healing Lotuscraft com preparo e expiração, multiataque, empurrão/prone, Shatterstone, Change Shape e conjuração CHA. Texto ambíguo de cura permanece pendente. Fonte: https://www.5esrd.com/database/creature/belu/.
+- **TF-138 Chuhaister**: Feybane limitado a fey/níveis de spells, Light Sensitivity, Rock +2 conforme publicado e Deadfall Shield como reação recarga 5–6. Fonte: https://www.5esrd.com/database/creature/chuhaister/.
+- **TF-139 Cacus Giant**: Final Breath ativado por morte, two Greatclub, Rock e Fire Breath recarga 4–6; não confundido com homônimo CR14. Fonte: https://www.5esrd.com/database/creature/giant-cacus/.
+
+**Resultado provisório a auditar:** 59/131 revisadas individualmente, 72 aguardando, 0 fichas aprovadas integralmente, 94 parciais e 37 bloqueadas; 96 imagens físicas anteriores e 35 faltantes, todas sem aprovação visual. Revisão editorial da edição, erratas e licenças de arte pendente. Nenhuma nova imagem neste checkpoint.
+
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
 ## Checkpoint 32 — Thursir Hearth Priestess, Rockchewer Ogre e Abaasy (14/10/2026)

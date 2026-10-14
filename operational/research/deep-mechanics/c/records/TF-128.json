@@ -4,9 +4,9 @@
   "nome": "Giant, Phase",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 8,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
@@ -42,182 +42,136 @@
       "andar": 40,
       "escalar": 20
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Giant",
+      "Undercommon"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Ethereal Jaunt",
-        "resumo_anterior": "Como ação bônus muda do Plano Material para Etéreo e vice-versa; não leva criatura agarrada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "economia": "bonus action",
+        "efeito": "Move-se magicamente entre Material e Etéreo com equipamentos vestidos/carregados; criatura agarrada não acompanha a mudança e o grapple termina.",
+        "limite": "O deslocamento entre planos não transporta criaturas agarradas"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Dois Spiked Fist; se ambos acertarem alvo até Large, FOR CD15 ou +2d6 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Spiked Fist",
+            "quantidade": 2
+          }
+        ],
+        "gatilho": "Ambos os ataques acertam o mesmo alvo Large ou menor",
+        "teste": {
+          "atributo": "STR",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        },
+        "sucesso": "Sem dano adicional de impalamento"
       },
       {
         "nome": "Spiked Fist",
-        "resumo_anterior": "+8, 2d8+5 perfurante, agarra alvos até Large com escape CD16.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "piercing"
+          }
+        ],
+        "condicao": "Se acertar Large ou menor: grappled, escape DC16",
+        "limite": "Duas mãos, cada uma agarra no máximo um alvo"
       },
       {
         "nome": "Rock",
-        "resumo_anterior": "+8, alcance 60/240, 3d10+5 contundente; FOR CD15 contra queda.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "creature",
+          "atributo": "STR",
+          "cd": 15,
+          "em_falha": "prone"
+        }
       }
     ],
-    "ataques": [
-      {
-        "nome": "Multiattack",
-        "resumo_anterior": "Dois Spiked Fist; se ambos acertarem alvo até Large, FOR CD15 ou +2d6 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
+    "ataques": [],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Dois Spiked Fist; se ambos acertarem alvo até Large, FOR CD15 ou +2d6 perfurante.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "ataques": [
+        "Spiked Fist",
+        "Spiked Fist"
+      ],
+      "condicional": "Ambos atingem o mesmo alvo Large ou menor: STR DC15 ou 2d6 piercing"
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [
+      {
+        "nome": "Ethereal Jaunt",
+        "regras_em": "tracos"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Página individual /giant-phase/ do 5eSRD indisponível; dados conferidos em resumo de terceiros e em reprodução de Tome of Beasts 2, não em publicação editorial oficial acessível.",
-    "A troca de plano encerra agarrões, conforme a habilidade.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Ficha aprofundada em republicação Robinloft e índice oficial Kobold Press; falta confronto independente com edição autorizada Tome of Beasts 2/errata.",
+    "Imagem binária existente sem inspeção editorial de identidade e direitos."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto independente com livro/errata da edição correspondente",
+    "identidade e direitos da arte",
+    "revisão mecânica/editorial independente"
   ],
   "fontes": [
     {
-      "url": "https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
-    },
-    {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2",
+      "tipo": "ficha individual examinada no checkpoint 33",
       "conferida_nesta_execucao": true
     }
   ],
@@ -303,5 +257,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 33,
+    "publicacao": "Tome of Beasts 2",
+    "aprovacao_editorial": "PENDENTE",
+    "fonte_mecanicas": "https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2",
+    "nota": "Robinloft informa estimativa própria CR6; não substituir ND5 oficial da ficha e do índice da Kobold Press."
   }
 }

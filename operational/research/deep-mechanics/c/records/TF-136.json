@@ -4,9 +4,9 @@
   "nome": "Belu",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 16,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
@@ -41,245 +41,184 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 10
+      },
+      {
+        "nome": "Insight",
+        "bonus": 4
+      },
+      {
+        "nome": "Nature",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 5
+      },
+      {
+        "nome": "CON",
+        "bonus": 9
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [
+      "poison"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 5900,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Healing Lotuscraft",
-        "resumo_anterior": "1/dia, após um minuto de preparo, pomada duradoura restaura 4d8 PV e remove doenças/condições quando aplicada; redação original requer revisão do escopo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "frequencia": "1/day",
+        "preparacao": "1 minuto",
+        "duracao_pomada_h": 24,
+        "aplicacao": "Uma criatura gasta sua ação aplicando à pele/ferida do alvo",
+        "cura": {
+          "dados": "4d8",
+          "media": 18
+        },
+        "efeito_adicional": "Fonte diz curar todas as doenças ou condições presentes; escopo editorial a verificar; não extrapolar para condições não definidas"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Três Slam.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Slam",
+            "quantidade": 3
+          }
+        ]
       },
       {
         "nome": "Slam",
-        "resumo_anterior": "+10, 4d6+6 contundente; FOR CD16 para evitar empurrão e queda.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+6",
+            "media": 20,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste_adicional": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "pushed até 10 ft e prone"
+        }
       },
       {
         "nome": "Shatterstone",
-        "resumo_anterior": "Recarga 5–6; explosão de pedra a 60 pés, DES CD16 contra 8d10 cortante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "recarga": "5-6",
+        "alcance_ft": 60,
+        "alvo": "um ponto visível",
+        "raio_ft": 10,
+        "teste": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "falha": {
+          "dano": {
+            "dados": "8d10",
+            "media": 44,
+            "tipo": "slashing"
+          }
+        },
+        "sucesso": "metade do dano"
       },
       {
         "nome": "Spellcasting",
-        "resumo_anterior": "CAR CD14; entangle/speak with plants/stone shape livres e plant growth 2/dia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "conjuracao_ref": "conjuracao[0]"
       }
     ],
-    "ataques": [
-      {
-        "nome": "Multiattack",
-        "resumo_anterior": "Três Slam.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Slam",
-        "resumo_anterior": "+10, 4d6+6 contundente; FOR CD16 para evitar empurrão e queda.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
+    "ataques": [],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Três Slam.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Slam",
+        "Slam",
+        "Slam"
+      ]
     },
     "acoes_bonus": [
       {
         "nome": "Change Shape",
-        "resumo_anterior": "Alterna para humanoide Small ou Medium ou retorna à forma de gigante",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "formas": [
+          "Small humanoid",
+          "Medium humanoid",
+          "true form"
+        ],
+        "estatisticas_inalteradas": "exceto size",
+        "equipamento": "transforma com o belu",
+        "morte": "reverte à true form"
       }
     ],
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
-    "conjuracao": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "atributo": "CHA",
+        "cd_salvaguarda": 14,
+        "componentes": "sem componentes materiais",
+        "listas": {
+          "at_will": [
+            "entangle",
+            "speak with plants",
+            "stone shape"
+          ],
+          "duas_por_dia": [
+            "plant growth"
+          ]
+        }
+      }
+    ],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Rever se 'cures any diseases or conditions' da pomada possui restrições editoriais; não presumir que remove qualquer estado sem exceção.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Texto publicado de Healing Lotuscraft afirma cura de quaisquer doenças ou condições, sem enumeração de exceções; conferir limites com o livro/errata, não inferir.",
+    "Slam contém erro tipográfico 'succeed 10 a DC 16' na republicação; valor DC16 claro, mas preservar pendência editorial.",
+    "Arte física preexistente sem validação visual/licença; comparação com Tome of Beasts 3/errata pendente."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto independente com livro/errata da edição correspondente",
+    "identidade e direitos da arte",
+    "revisão mecânica/editorial independente"
   ],
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/belu/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
-    },
-    {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/belu/",
+      "tipo": "ficha individual examinada no checkpoint 33",
       "conferida_nesta_execucao": true
     }
   ],
@@ -370,5 +309,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 33,
+    "publicacao": "Tome of Beasts 3",
+    "aprovacao_editorial": "PENDENTE",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/belu/",
+    "nota": "5eSRD identifica copyright Tome of Beasts 3 Open Design 2022; versão/errata editorial pendente."
   }
 }

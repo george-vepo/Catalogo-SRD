@@ -4,9 +4,9 @@
   "nome": "Ogre, Tusked Crimson",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 13,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex",
@@ -41,245 +41,178 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 7
+      },
+      {
+        "nome": "Intimidation",
+        "bonus": 4
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 6
+      },
+      {
+        "nome": "WIS",
+        "bonus": 1
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [
+      "poison"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "frightened"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "half plate armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Blood Frenzy",
-        "resumo_anterior": "Vantagem em ataques corpo a corpo contra inimigo que tenha perdido PV.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "Alvo não está com todos seus HP",
+        "efeito": "Vantagem em melee attack rolls contra esse alvo"
       },
       {
         "nome": "Rampage",
-        "resumo_anterior": "Ao reduzir inimigo a 0 PV, movimenta-se até metade da velocidade e morde como bônus.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "Reduz uma criatura a 0 HP com melee attack no próprio turno",
+        "economia": "bonus action",
+        "efeito": "Move até metade da velocidade e faz um ataque Bite"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Um Morningstar e um Bite.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Morningstar",
+            "quantidade": 1
+          },
+          {
+            "acao": "Bite",
+            "quantidade": 1
+          }
+        ]
       },
       {
         "nome": "Morningstar",
-        "resumo_anterior": "+7, 2d8+4 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Bite",
-        "resumo_anterior": "+7, 2d6+4 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Berserker's Blood",
-        "resumo_anterior": "Recarga 5–6, se ferido, emite sangue num raio de 15 pés; CON CD14 contra 6d6 ácido e frenesi agressivo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "recarga": "5-6",
+        "pre_condicao": "O próprio ogro está abaixo de seus HP máximos",
+        "area": {
+          "raio_ft": 15,
+          "alvos": "cada criatura"
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": {
+          "dano": {
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "acid"
+          },
+          "condicao": "berserk"
+        },
+        "sucesso": {
+          "dano": "metade de 6d6 acid",
+          "condicao": "sem berserk"
+        },
+        "berserk": {
+          "comportamento": "Em cada turno ataca a criatura visível mais próxima usando ataques corpo a corpo; se inalcançável, ataca objeto, preferindo menor que si",
+          "termina_se": [
+            "unconscious",
+            "recupera todos os HP",
+            "lesser restoration ou magia similar"
+          ]
+        }
       }
     ],
-    "ataques": [
-      {
-        "nome": "Multiattack",
-        "resumo_anterior": "Um Morningstar e um Bite.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Bite",
-        "resumo_anterior": "+7, 2d6+4 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
+    "ataques": [],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Um Morningstar e um Bite.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Morningstar",
+        "Bite"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [
+      {
+        "nome": "Rampage",
+        "gatilho": "Melee attack no próprio turno reduz alvo a 0 HP",
+        "movimento": "até metade do deslocamento",
+        "ataque": "Bite"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "A ficha do Ogre Tusked Crimson não abriu como página individual do 5eSRD; mecânica corroborada por bestiário de terceiros e referência do Creature Codex.",
-    "O catálogo do 5eSRD cita também Tome of Beasts 2, mas a variante escolhida é a do Creature Codex (ND5), não uma adaptação.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Conferida republicação completa identificada como Creature Codex p.279; ainda falta revisão editorial/licença da edição e errata originais.",
+    "Imagem física preexistente não inspecionada visualmente nem aprovada."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto independente com livro/errata da edição correspondente",
+    "identidade e direitos da arte",
+    "revisão mecânica/editorial independente"
   ],
   "fontes": [
     {
-      "url": "https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
-    },
-    {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex",
+      "tipo": "ficha individual examinada no checkpoint 33",
       "conferida_nesta_execucao": true
     }
   ],
@@ -372,5 +305,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 33,
+    "publicacao": "Creature Codex",
+    "aprovacao_editorial": "PENDENTE",
+    "fonte_mecanicas": "https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex",
+    "nota": "Não misturar possíveis republicações atribuídas a Tome of Beasts 2: identidade selecionada é Tusked Crimson Ogre do Creature Codex."
   }
 }
