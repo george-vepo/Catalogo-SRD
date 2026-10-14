@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 170 / 195.**
+**Armazenadas e verificadas: 175 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -25,6 +25,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/fe22e5efef6af67a50cd68a58cdae797928e912d — 10/10 verificadas: TF-223, TF-224, TF-225, TF-227, TF-228, TF-229, TF-230, TF-233, TF-234, TF-235
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/be688c5ccc441a45fffd0ec796554b323704fa90 — 10/10 verificadas: TF-236, TF-237, TF-238, TF-241, TF-243, TF-244, TF-245, TF-246, TF-247, TF-248
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2f4a256a44b692c61f5090b0eea669ecc9dad948 — 10/10 verificadas: TF-249, TF-250, TF-251, TF-253, TF-254, TF-256, TF-257, TF-258, TF-259, TF-260
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/356a9426a14d9d9b2adbb433e92e0b3ef33364e2 — 5/5 verificadas: TF-261, TF-265, TF-266, TF-268, TF-269
 
 ## Binários publicados e conferidos
 
@@ -198,6 +199,11 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-258 / Vine Lord, Tendril Puppet: operational/assets/creature-images/TF-258.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tendril%20Puppet.webp; 56814 bytes; 635x800 px; SHA-256: 28f3e6ae579c1592d811a3467cc58a8e3bad5db1ffb7e716046c3c45ef4bf76d; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-259 / Chaos Creeper: operational/assets/creature-images/TF-259.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chaos%20Creeper.webp; 180606 bytes; 1000x1243 px; SHA-256: 5ce4ae776be0fd28a587dc622796daf74918e83f452d3d01cf1b998081f50411; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-260 / Vine Lord: operational/assets/creature-images/TF-260.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Vine%20Lord.webp; 74494 bytes; 607x800 px; SHA-256: 57f7fd154088cf56df1181be559601217b1675c7226657779ba1a779ed4960ac; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-261 / Vines of Nemthyr: operational/assets/creature-images/TF-261.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Vinesofnemthyr.jpg; 75036 bytes; 551x700 px; SHA-256: 12917479c6998554a79ac2934ebed273e79c5a63aabe738219dfa64682281838; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
+- TF-265 / Alabroza, Bloodfiend: operational/assets/creature-images/TF-265.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Bloodfiend%20Alabroza.webp; 179890 bytes; 1200x1461 px; SHA-256: f02df608f4369c07ec31a13fdafeb441ff56e6dd4b860a770b56499808f84487; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
+- TF-266 / Chemosit: operational/assets/creature-images/TF-266.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chemosit.webp; 92162 bytes; 1000x1200 px; SHA-256: 807dd9b503ee8147ff851a73d416bbd1438cab3c4f386216efb7e75e29f32f9d; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
+- TF-268 / Chatterlome: operational/assets/creature-images/TF-268.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chatterlome.webp; 150754 bytes; 788x875 px; SHA-256: 39da3119e91b224edcf81eda520df6c59c179a95c791fd4f2893fed3158b4f57; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
+- TF-269 / Vexxeh: operational/assets/creature-images/TF-269.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Vexxeh.webp; 195652 bytes; 959x1081 px; SHA-256: 9032582050264bfdc8b789199c80c7b4a44ca969623b50c34ef92ffb73b4aad1; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
 
 ## Não obtidos
 
@@ -218,14 +224,9 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-242 / Ashwalker: source_not_found; 
 - TF-252 / Adult Black Dragon Lich: source_not_found; 
 - TF-255 / Citrullus: source_not_found; 
-- TF-261 / Vines of Nemthyr: pending; 
 - TF-263 / Abrikandilu: source_not_found; 
 - TF-264 / Abyssal Hordeling: source_not_found; 
-- TF-265 / Alabroza, Bloodfiend: pending; 
-- TF-266 / Chemosit: pending; 
 - TF-267 / Arx: source_not_found; 
-- TF-268 / Chatterlome: pending; 
-- TF-269 / Vexxeh: pending; 
 
 ## Duplicações e ressalvas
 
