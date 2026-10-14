@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 50: Child of the Briar, Citrullus e Climbing Vine (14/10/2026)
+
+- **TF-254 Child of the Briar:** Fey Ancestry, Multiattack Claw 2× com grapple condicionado, Spitdart Tongue (recarga 4–6) e Entangle cooperativo com reações de aliados, CDs e área máximas. Diferenças entre versões original/revisada preservadas para revisão editorial.
+- **TF-255 Citrullus:** False Appearance, Gush ao sofrer dano contundente, Bite e Bile Spray com restrição, ação de libertação e Creeping Seedlings como bônus de atração de até 25 pés.
+- **TF-256 Climbing Vine:** CR exato **1/8** em vez do valor decimal arredondado 0,1 do índice, Digestive Dew, Flexible Form, Dewvine com limite de dois alvos, Squeeze e reação Grasping Retaliation.
+
+**Resultado:** 60/132 estruturas individuais online; 72 fichas ainda resumidas; 0 homologadas; 124/132 binários de imagens e 0 artes para produção aprovadas. Livro, erratas e engine pendentes. Fonte individual KPOGL de terceiro não endossada pela editora; sem V-Bridge ou merge.
+
+---
+
 # Grupo A — checkpoint 49: Black Crier, Corpse Mound e Asp Vine (14/10/2026)
 
 - **TF-250 Black Crier:** Bound by Calamity e limitação geográfica, Rejuvenation, ação diária Crier's Lament com resultados assimétricos de sucesso/falha, Bell Toll com exaustão na falha por cinco, Bell e Multiattack.

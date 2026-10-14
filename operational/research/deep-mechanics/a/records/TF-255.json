@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "3",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "plant",
+    "alignment": "unaligned",
+    "experience_points": 700,
+    "proficiency_bonus": 2,
+    "source_page": 58
   },
   "statistics": {
     "armor_class": 15,
     "hit_points": 85,
-    "hit_dice": null,
+    "hit_dice": "10d10+30",
     "ability_scores": {
       "STR": 18,
       "DEX": 8,
@@ -26,24 +29,155 @@
       "WIS": 10,
       "CHA": 1
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 15
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "acid"
+    ],
+    "damage_vulnerabilities": [
+      "bludgeoning"
+    ],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": -1,
+      "CON": 3,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -5
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "camouflage",
+        "precondition": "motionless",
+        "effect": {
+          "indistinguishable_from": "normal_melon_plant"
+        }
+      },
+      {
+        "name": "Gush",
+        "category": "on_damage_reactive_passive",
+        "trigger": "takes_bludgeoning_damage",
+        "targets": {
+          "attacker_within_ft": 30
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 13,
+          "on_failure": {
+            "condition": "restrained",
+            "duration": "1_minute",
+            "escape_via": "Bile Spray release action, DC13 Strength check"
+          },
+          "on_success": {
+            "restrained": false
+          }
+        },
+        "notes": "Applies as if failed Bile Spray save; no additional acid damage specified for Gush itself."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "flat": 4,
+              "average": 18,
+              "type": "piercing"
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "average": 7,
+              "type": "acid"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Bile Spray",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "targets": "each_creature_in_cone",
+        "save": {
+          "ability": "DEX",
+          "dc": 13,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "4d6",
+                "average": 14,
+                "type": "acid"
+              }
+            ],
+            "condition": "restrained",
+            "duration": "1_minute"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "restrained": false
+          }
+        },
+        "release": {
+          "eligible": "any_creature_including_restrained",
+          "cost": "action",
+          "check": {
+            "ability": "STR",
+            "dc": 13
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Creeping Seedlings",
+        "category": "forced_movement",
+        "action_economy": "bonus_action",
+        "targets": "each_creature_restrained_by_Bile_Spray_or_Gush",
+        "effect": {
+          "pull_distance_ft_max": 25,
+          "direction": "straight_toward_Citrullus"
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Imita melão; bile pegajosa prende alvos e sementes os arrastam; mordida causa dano ácido."
@@ -67,8 +201,8 @@
       "url": "https://kpogl.wikidot.com/monster:citrullus",
       "type": "KPOGL, transcrição independente (não endossada pela editora)",
       "edition": "Tome of Beasts 1",
-      "scope": "traços, ações e resumo; não valida direitos nem edição física",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Bloco individual digital: atributos, ações, traços, reações e conjuração",
+      "verification": "Lido e transposto em 2026-10-14, ainda sem homologação editorial"
     }
   ],
   "source_checkpoint": {
@@ -79,9 +213,8 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Confirmar contra impressão/edição e erratas corretas.",
+    "Revisar os parâmetros e interações na engine antes de homologar MECANICA_COMPLETA_VERIFICADA."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
@@ -105,5 +238,17 @@
       "conferência de licença e direitos",
       "avaliação de resolução e aprovação editorial"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:citrullus"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Reprodução secundária KPOGL lida e estruturada; impressão oficial, erratas e validação da engine pendentes."
   }
 }
