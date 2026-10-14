@@ -1,5 +1,16 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 45 — Tosculi Warrior, Yakirian, A5E e Thunderstomper (14/10/2026)
+
+**[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/7a10d9bdf380e7eba2c4176a9cbc021a5308fe92)**; cinco JSONs relidos e mecânicas reestruturadas. Todos aguardam revisão editorial e visual; fontes A5E NÃO estão comprovadas como conteúdo aberto para exportação.
+- **TF-198 Tosculi Warrior:** versão Tome of Beasts 1 revisada em 2023, CR3, distinta da edição original CR2; Crowd Tactics, Hive Sense, Multiattack Claw e Stinger, Prepare Host apenas com alvo paralyzed por Stinger de tosculi. https://www.5esrd.com/database/creature/tosculi-warrior-3pp/
+- **TF-199 Yakirian — BLOQUEADA:** Resilient Soul, velocidade 40ft, resistência cold, Gore+Ritual Knife e Consume Heart. Frase sobre duração da morte está truncada na reprodução da fonte, não se presume prazo. Schism Yakirian CR3 distinto. https://www.5esrd.com/database/creature/yakirian/
+- **TF-200 Aboleth Champion — BLOQUEADA LICENÇA A5E:** Dungeon Delver's Guide, Serrated Sword e wound/rattled, Abolethic Agent que depende da reação Self-Sacrifice de thrall, Strangling Grasp, Mental Blast e Vicious Taunt. Regras A5E não convertidas. XP não está no bloco A5E e foi deixado null, não inventado. https://a5e.tools/node/2839
+- **TF-201 Alpha Werewolf — BLOQUEADA LICENÇA A5E:** Monstrous Menagerie CR6 104 PV (não homônimo D&D 5e CR13 180 PV), Bloodied, Wolfsbane, Cursed Wounds, regras condicionais de Shapeshift e Frenzied Bite. XP da fonte não informado, explicitamente null. https://a5e.tools/node/1721
+- **TF-202 Bearfolk Thunderstomper — BLOQUEADA ORIGEM:** site 5eSRD declara Book of Ebon Tides (2022), mas o catálogo atribui Tome of Beasts 3; discrepância documentada. War Flute, Thunder Stomp, Warsong, conjuração e Frenzy/Taunt como bônus. Regra opcional Alternate Critical de suplemento externo foi excluída. https://www.5esrd.com/database/creature/bearfolk-thunderstomper/
+- **Auditoria:** 131 IDs/JSONs, 119 fichas aprofundadas e 12 restantes; 92 parciais, 39 bloqueadas, 0 aprovadas integralmente. 96 imagens físicas com 96 blobs SHA correspondentes, 35 ausentes e 0 aprovadas visualmente. Diff da branch tem 229 arquivos restritos ao diretório C. Sem novos binários.
+- **Pendências:** licença explícita A5E-SRD, conflito de origem Thunderstomper, errata Yakirian, revisão independente, proveniência e inspeção visual das artes. PR Draft, sem merge.
+
 ## Checkpoint 44 — Cueyatl Sea Priest, Warrior e três Tosculi (14/10/2026)
 
 **[Commit de fichas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/f5fed18ed595184af6a9850dbe5a1d8ac8ea9e3e)**. Cinco JSONs verificados após push, dados parafraseados e versões não mescladas. Status dos conflitos permanece BLOQUEADA enquanto sem errata editorial.

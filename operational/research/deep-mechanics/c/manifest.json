@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 114,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 119,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 95,
-    "bloqueadas": 36,
-    "registros_aproveitados_sem_nova_verificacao_integral": 17,
+    "parciais": 92,
+    "bloqueadas": 39,
+    "registros_aproveitados_sem_nova_verificacao_integral": 12,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -665,9 +665,24 @@
       "commit": "f5fed18ed595184af6a9850dbe5a1d8ac8ea9e3e",
       "leitura_persistencia": "CONFIRMADA — cinco JSONs e fontes 5eSRD/Robinloft/dr-eigenvalue confrontadas, distinção 2016/2023 Tosculi, 131 IDs e 96 hashes de imagens corretos.",
       "tipo": "Cueyatl Sea Priest, Warrior e Tosculi Drone Elite Bow Raider Jeweled Drone"
+    },
+    {
+      "numero": 45,
+      "inicio": "TF-198",
+      "fim": "TF-202",
+      "ids": [
+        "TF-198",
+        "TF-199",
+        "TF-200",
+        "TF-201",
+        "TF-202"
+      ],
+      "commit": "7a10d9bdf380e7eba2c4176a9cbc021a5308fe92",
+      "leitura_persistencia": "CONFIRMADA — cinco JSONs TF198-202 relidos, A5E mantém conceitos bloodied/rattled e licença bloqueada; XP A5E inferido indevidamente corrigido para null em documentos de auditoria; 131 registros e 96 imagens hash ok.",
+      "tipo": "Tosculi Warrior, Yakirian, A5E Aboleth Champion, Alpha Werewolf, Bearfolk Thunderstomper"
     }
   ],
-  "atualizacao_detalhada_sha": "f5fed18ed595184af6a9850dbe5a1d8ac8ea9e3e",
+  "atualizacao_detalhada_sha": "7a10d9bdf380e7eba2c4176a9cbc021a5308fe92",
   "criaturas": [
     {
       "id": "TF-412",
@@ -4001,17 +4016,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 73,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-198.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/tosculi-warrior-3pp/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Tome of Beasts original indexado como ND2 com três ataques; catálogo oficial revisado e arquivo local indicam ND3. Preservar revisão 2023 como referência e NÃO combinar duas edições."
+        "Tosculi Warrior do catálogo identifica explicitamente edição revisada 2023 CR3: Crowd Tactics/Hive Sense e Claw+Stinger; não mesclar original CR2.",
+        "Prepare Host só funciona em alvo já paralyzed por Stinger de tosculi e tem encerramento específico; livro/licença e imagem ainda pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação editorial da origem/erratas/condições de licença",
+        "direito de imagem, identidade e revisão visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -4021,7 +4036,8 @@
         "bytes": 50795,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-199",
@@ -4029,17 +4045,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 74,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-199.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_CONSUME_HEART_FRASE_FONTE_TRUNCADA",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/yakirian/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Resistência a frio e deslocamento 40 pés devem ser preservados."
+        "BLOQUEIO: edição online de Consume Heart contém frase truncada para prazo ('If the creature also less than 1 minute ago'); não assumir prazo como regra oficial até conferir livro original.",
+        "Não misturar variante Schism Yakirian CR3 com CR2 base; mantém resist cold, velocidade40ft e idiomas corretos.",
+        "Licença/imagem pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação editorial da origem/erratas/condições de licença",
+        "direito de imagem, identidade e revisão visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -4049,7 +4066,8 @@
         "bytes": 58600,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-200",
@@ -4057,22 +4075,28 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 75,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-200.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_LICENCA_FONTE_A5E_NAO_SRD",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/2839",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "A5E: Bloodied e rattled NÃO converter automaticamente para 5e; Abolethic Agent depende de reação Self-Sacrifice do thrall.",
+        "Licença de a5e.tools é explícita: site não é A5ESRD nem fonte de open content. DADOS PARA VERIFICAÇÃO; não aprovar reprodução ou exportação sem checar A5E SRD licenciado.",
+        "Imagem/edição editorial pendentes.",
+        "XP não informado no bloco A5E consultado; campo mantido null, sem inferir valores de tabela D&D 5e (valor anterior 2900 foi descartado)."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação editorial da origem/erratas/condições de licença",
+        "direito de imagem, identidade e revisão visual",
+        "XP ausente da fonte A5E; não estimar a partir do CR"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-201",
@@ -4080,24 +4104,28 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 76,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-201.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_LICENCA_FONTE_A5E_NAO_SRD",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/1721",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "A5E ND6 HP104 difere do 'Alpha Werewolf' 5eSRD ND13 HP180; não utilizar homônimo nem mesclar sistemas."
+        "Alpha Werewolf escolhido é A5E CR6 104 PV, NÃO nome homônimo 5e CR13 180 PV. Vulnerabilidade Wolfsbane é condição de forma/cheiro, não dano normal.",
+        "Cursed Wounds aplica dano necrotic extra somente Claw e Bite; Shapeshift / Frenzied Bite condicionais.",
+        "a5e.tools diz que NÃO constitui A5ESRD aberto; licença do material precisa ser conferida em edição licenciada antes de aprovação.",
+        "XP não informado no bloco A5E consultado; campo mantido null, sem inferir valores de tabela D&D 5e (valor anterior 2300 foi descartado)."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação editorial da origem/erratas/condições de licença",
+        "direito de imagem, identidade e revisão visual",
+        "XP ausente da fonte A5E; não estimar a partir do CR"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-202",
@@ -4105,17 +4133,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 77,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-202.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_ORIGEM_BOOK_OF_EBON_TIDES_VS_TOB3",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/bearfolk-thunderstomper/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "A página apresenta regra externa Alternate Critical de Monster Crits for 5e; foi EXCLUÍDA do resumo mecânico-base."
+        "BLOQUEIO PROVENIÊNCIA: o 5eSRD atribui © Book of Ebon Tides (2022) mas CSV classifica Tome of Beasts 3; confirmar publicação/licença correta.",
+        "'Alternate Critical (Monster Crits for 5e)' na mesma página é regra externa opcional, EXCLUÍDA da mecânica-base.",
+        "Thunder Stomp não fornece efeito no sucesso; não inventar metade do dano. Imagem/edição ainda pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação editorial da origem/erratas/condições de licença",
+        "direito de imagem, identidade e revisão visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -4125,7 +4154,8 @@
         "bytes": 99674,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-203",
@@ -4556,14 +4586,14 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 44,
-    "sha_validado": "f5fed18ed595184af6a9850dbe5a1d8ac8ea9e3e",
+    "checkpoint": 45,
+    "sha_validado": "7a10d9bdf380e7eba2c4176a9cbc021a5308fe92",
     "escopo_ids": 131,
-    "aprofundadas": 114,
-    "sem_revisao_individual": 17,
+    "aprofundadas": 119,
+    "sem_revisao_individual": 12,
     "integralmente_aprovadas": 0,
-    "parciais": 95,
-    "bloqueadas": 36,
+    "parciais": 92,
+    "bloqueadas": 39,
     "imagens_binarias_fisicas": 96,
     "hashes_corretos": 96,
     "imagens_faltantes": 35,
