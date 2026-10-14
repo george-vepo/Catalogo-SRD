@@ -25,18 +25,22 @@ Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, 
 
 Adicionados e relidos no GitHub: **TF-393 Minotaur Conqueror; TF-514 Drainpipe Gargoyle; TF-446 Grave Guardian; TF-356 Grendel; TF-513 Improved Spirit Soldier; TF-511 Fiendbloom Awakened Tree**. Fontes: [crawl/tiles](https://github.com/crawl/tiles) (release curado com declaração CC0) e [Papyszoo CC0 sprites](https://github.com/Papyszoo/CC0-Public-Domain-Sprites) (pacote que declara licença CC0). Os seis PNG são 32×32 e têm 5.045 bytes somados; fontes, commits, tamanho e SHA-256 constam do manifesto. O binário da fonte e o do GitHub foram idênticos depois do push. **Estado PARTIAL**: imagens correspondem ao arquétipo, mas não aos detalhes das variantes, e os direitos de cada sprite histórico não foram confirmados independentemente. Nenhuma imagem foi marcada COMPLETE neste lote.
 
+## Checkpoint 27 — quatro novos PNG de criaturas
+
+Foram publicados e recuperados **TF-467 Corpse Fly**, **TF-477 Grimalkin**, **TF-503 Stuffed Crab** e **TF-469 Fateholder**. Cada sprite apresenta o tipo visual básico correto (mosca, gato, caranguejo morto-vivo e aranha arcana, respectivamente), mas nenhum representa todas as características específicas da ficha — portanto, **estado PARTIAL**. Fontes declaradas CC0 (crawl/tiles e pack DCSS CC0). Quatro sprites 32×32 totalizam 4.792 bytes; assinaturas, dimensões e SHA-256 calculados na origem e identidade completa conferida no GitHub após o commit.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **114** |
-| Imagens com validação pós-upload registrada | **114** |
-| IDs ainda ausentes | **80** |
-| Tamanho total dos binários | **13.171.065 bytes** |
-| Checkpoints (máximo 10 arquivos) | **26** |
+| Imagens físicas persistidas no GitHub | **118** |
+| Imagens com validação pós-upload registrada | **118** |
+| IDs ainda ausentes | **76** |
+| Tamanho total dos binários | **13.175.857 bytes** |
+| Checkpoints (máximo 10 arquivos) | **27** |
 
-## Binários confirmados (114)
+## Binários confirmados (118)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -154,8 +158,12 @@ Adicionados e relidos no GitHub: **TF-393 Minotaur Conqueror; TF-514 Drainpipe G
 | TF-356 | Grendel | `operational/assets/creature-images/TF-356.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/ogre.png) | .png / image/png | 32×32 | 459 | `ca7bb3d39de4ee595258a5caa4718cfcff077970a0175024117e087449f3c34f` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
 | TF-513 | Improved Spirit Soldier | `operational/assets/creature-images/TF-513.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/holy/daeva.png) | .png / image/png | 32×32 | 686 | `c15a77d7f8d21fad3658cf93bb89f0b01e8a13ba81dbf27bb480680f4c751e85` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
 | TF-511 | Fiendbloom Awakened Tree | `operational/assets/creature-images/TF-511.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/treant.png) | .png / image/png | 32×32 | 1460 | `a2231517918397c63f389d7a522daa1e1f57fcb251d473b0cfb467a6026ff8ef` | `ad05a90834756241df8b4f42e6e29ff1086b567b` | PASS binário; estado PARTIAL — fonte/variante |
+| TF-467 | Corpse Fly | `operational/assets/creature-images/TF-467.png` | [origem](https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/e27131731f89187b9842e9c6c95381a2e954aafd/packs/dcss-monsters-and-creatures/sprites/animals/giant_blowfly.png) | .png / image/png | 32×32 | 940 | `f8efec9fe4a029636e0c41c0d52b03ecb9b4725aa3dc0f990b90acf582d367e1` | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | PASS binário; PARTIAL direitos/variante |
+| TF-477 | Grimalkin | `operational/assets/creature-images/TF-477.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/unique/natasha.png) | .png / image/png | 32×32 | 1280 | `f42d51ad25553b05c4cefe30f17c910f9c8e3a95fb224d064e678458ceb9ad02` | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | PASS binário; PARTIAL direitos/variante |
+| TF-503 | Stuffed Crab | `operational/assets/creature-images/TF-503.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/zombies/zombie_crab.png) | .png / image/png | 32×32 | 1490 | `1ab5e58d37e71c805f32b72d47471b272aea6447472f1e72a15e0ae9754e8e9f` | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | PASS binário; PARTIAL direitos/variante |
+| TF-469 | Fateholder | `operational/assets/creature-images/TF-469.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/orb_spider.png) | .png / image/png | 32×32 | 1082 | `215e0349a8a1435150395912851212103df52b481f97b824b4e46dbbea11d319` | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | PASS binário; PARTIAL direitos/variante |
 
-## IDs bloqueados / pendentes (80)
+## IDs bloqueados / pendentes (76)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -206,13 +214,10 @@ Adicionados e relidos no GitHub: **TF-393 Minotaur Conqueror; TF-514 Drainpipe G
 | TF-462 | Behir Magus | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-463 | Blood Maggot | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-465 | Canicore | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-467 | Corpse Fly | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-468 | Faerie Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-469 | Fateholder | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-470 | Fiendish Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-473 | Flying Lion | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-475 | Giant Lanternfish | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-477 | Grimalkin | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-478 | Gourdling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-480 | Sewer Walker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-481 | Spell Shrieker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -227,7 +232,6 @@ Adicionados e relidos no GitHub: **TF-393 Minotaur Conqueror; TF-514 Drainpipe G
 | TF-500 | Gorger Zombie Horde | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-501 | Lost Prospector | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-502 | Ghasthopper | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-503 | Stuffed Crab | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-504 | Warlord's Ghost | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-506 | Mariner Ghost Swarm | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-507 | Fogborn Skeleton Horde | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -292,5 +296,6 @@ Adicionados e relidos no GitHub: **TF-393 Minotaur Conqueror; TF-514 Drainpipe G
 | 24 | TF-442, TF-471, TF-492, TF-431 | `7655c4f7554d03d53b5dfea6d53eadf1edd14768` | Official crawl/tiles CC0-excluded set; source PNG signatures/dimensions/hash; GitHub post-upload byte identity; 32x32 (needs design review) |
 | 25 | TF-355, TF-395, TF-361, TF-456 | `070f73d8ec70dcfbdaf1785de16d65ce2069e79a` | PNG 32×32 / 64×64; source and destination Git blob/bytes equal; SHA-256 recorded; CC0 or CC BY 3.0 attribution; visual variant specificity PARTIAL |
 | 26 | TF-393, TF-514, TF-446, TF-356, TF-513, TF-511 | `ad05a90834756241df8b4f42e6e29ff1086b567b` | Six source PNG sprites, GitHub-persisted byte identity and Git blob SHA checked; 32×32 low-res; visual variants and source rights require follow-up |
+| 27 | TF-467, TF-477, TF-503, TF-469 | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | GitHub post-upload byte and SHA-1 blob identity; PNG, 32×32, size/SHA256 validated before push; artistic specificity and license provenance PARTIAL |
 
-**Estado: parcial (114/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (118/194). Manter PR em rascunho e não executar merge.**
