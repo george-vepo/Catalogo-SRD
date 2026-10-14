@@ -134,6 +134,10 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 
 **Estado PARTIAL:** folha com 12 frames, não ilustração de carta individual; requer seleção/crop autorizado e revisão de direção artística. Nenhuma modificação foi feita em grupos D/E ou no catálogo global.
 
+## Aquisição pendente documentada — TF-475
+
+Imagem candidata identificada para `TF-475 Giant Lanternfish`: [Anglerfish](https://opengameart.org/content/anglerfish-0), arte 2D de **m7600**, licenciada na origem em **CC0**. Mostra peixe-pescador de dentes grandes com isca luminosa, compatível com o arquétipo. A aquisição **não foi concluída**: tentativa de baixar o arquivo binário `anglerfish.png` diretamente do OpenGameArt falhou tecnicamente, e o conector GitHub disponível só aceita fontes GitHub. **Nenhuma imagem adicional foi contabilizada**, nem se inventaram hash, dimensões ou commit de arquivo. Buscar cópia legítima verificável ou outra forma de acesso ao binário antes de processar TF-475.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
@@ -325,7 +329,7 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-468 | Faerie Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-470 | Fiendish Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-473 | Flying Lion | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-475 | Giant Lanternfish | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
+| TF-475 | Giant Lanternfish | Fonte candidata [Anglerfish — OpenGameArt](https://opengameart.org/content/anglerfish-0), autor m7600, licença CC0 declarada; tentativa de baixar binário [anglerfish.png](https://opengameart.org/sites/default/files/anglerfish.png) falhou tecnicamente nesta execução. GitHub connector não busca URLs externas. **Nenhum arquivo obtido, sem SHA-256, segue PARTIAL.** |
 | TF-480 | Sewer Walker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-482 | Spore Thrall | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-483 | Squashling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
