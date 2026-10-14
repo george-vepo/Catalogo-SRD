@@ -29,6 +29,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python operational/assets/creature-images/scripts/acquire_e.py
+      - name: Research exact image candidates in archived Tome of Beasts miniatures
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python operational/assets/creature-images/scripts/discover_imgur_e.py
 
 # Resume only pending partition-E source candidates; verified assets are immutable.
 
