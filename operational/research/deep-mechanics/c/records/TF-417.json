@@ -4,24 +4,28 @@
   "nome": "Mandriano",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 5,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex",
     "edicao": "D&D 5e (publicação de Kobold Press)",
-    "fonte_identidade": null
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "5",
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "bonus_proficiencia_origem": "calculado a partir do ND pelo padrão D&D 5e; bloco KPOGL não explicita",
     "ca": 13,
+    "composicao_ca": "natural armor",
     "pv": 60,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
+    "dados_vida": "8d10+16",
+    "porte": "Large",
+    "tipo": "plant",
+    "alinhamento": "lawful evil",
     "atributos": {
       "forca": 15,
       "destreza": 6,
@@ -38,105 +42,225 @@
       "sabedoria": 0,
       "carisma": -2
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 40
+    },
+    "salvaguardas": [],
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 5
+      },
+      {
+        "nome": "Perception",
+        "bonus": 3
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 1
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "compreende Common",
+      "compreende Sylvan",
+      "não pode falar"
+    ],
+    "vulnerabilidades": [
+      "fire"
+    ],
+    "resistencias": [
+      "necrotic",
+      "bludgeoning from nonmagical attacks",
+      "piercing from nonmagical attacks",
+      "slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "exhaustion",
+      "poisoned"
+    ],
+    "resistencias_condicao": []
   },
   "mecanicas": {
-    "tracos": [
-      {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Resistências necróticas e a dano físico não mágico; vulnerabilidade a fogo; veneno imune.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
+    "tracos": [],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Ataques Swipe com agarrão; Consume the Spark reduz PV máximo e pode gerar mortos-vivos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "categoria": "ação",
+        "tipo": "multiattack",
+        "sequencia": [
+          {
+            "acao": "Swipe",
+            "quantidade": 2
+          }
+        ],
+        "total_ataques": 2,
+        "substituicoes": []
+      },
+      {
+        "nome": "Swipe",
+        "categoria": "melee weapon attack",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 5,
+        "alcance_ft": 10,
+        "quantidade_alvos": 1,
+        "alvo": "um alvo",
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "slashing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao_aplicada": [
+            "grappled",
+            "restrained enquanto durar o grapple"
+          ],
+          "pre_condicao": "alvo de tamanho Medium ou menor",
+          "acao_resistencia": "escape from grapple",
+          "cd_escape": 14,
+          "limite_agarrados_simultaneamente": 3,
+          "inicio_efeito": "imediatamente no acerto",
+          "encerramento": "quando termina grapple"
+        },
+        "frequencia": "como ação ou integrante do Multiattack",
+        "observacao": "Texto-fonte usa +5 to hit, mas modificador de dano +4; não substituir automaticamente por FOR +2"
+      },
+      {
+        "nome": "Consume the Spark",
+        "categoria": "ação",
+        "tipo": "drenagem_necrotica",
+        "pre_condicao": "alvo previamente agarrado pelo próprio mandriano",
+        "alvos": 1,
+        "alcance": "alvo grappled",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "efeito_falha": {
+          "dano": {
+            "dados": "4d6",
+            "media": 13,
+            "tipo": "necrotic"
+          }
+        },
+        "efeito_sucesso": {
+          "dano": "metade do dano necrótico rolado"
+        },
+        "efeito_comum": {
+          "reduzir_pv_maximo": "valor igual ao dano necrótico efetivamente sofrido",
+          "duracao_reducao_pv_maximo": "até o alvo completar long rest",
+          "curar_mandriano": "PV recuperados no mesmo valor da redução do PV máximo do alvo",
+          "morte": "se o PV máximo do alvo for reduzido a 0"
+        },
+        "conversao_em_morto_vivo": {
+          "gatilho": "humanoide morto por esta ação",
+          "tempo": "24 horas após morte",
+          "criatura_gerada": "zombie ou skeleton",
+          "excecoes": [
+            "humanoide é restaurado à vida",
+            "corpo é destruído"
+          ],
+          "controlador": "mandriano",
+          "maximo_controlados_pelo_consume": 12,
+          "criterio_escolha_variante": "não detalhado no bloco individual"
+        },
+        "uso": "sem limite diário na ficha; exige alvo grappled"
       }
     ],
-    "ataques": [],
-    "multiataque": null,
+    "ataques": [
+      {
+        "nome": "Swipe",
+        "categoria": "melee weapon attack",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 5,
+        "alcance_ft": 10,
+        "quantidade_alvos": 1,
+        "alvo": "um alvo",
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "slashing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao_aplicada": [
+            "grappled",
+            "restrained enquanto durar o grapple"
+          ],
+          "pre_condicao": "alvo de tamanho Medium ou menor",
+          "acao_resistencia": "escape from grapple",
+          "cd_escape": 14,
+          "limite_agarrados_simultaneamente": 3,
+          "inicio_efeito": "imediatamente no acerto",
+          "encerramento": "quando termina grapple"
+        },
+        "frequencia": "como ação ou integrante do Multiattack",
+        "observacao": "Texto-fonte usa +5 to hit, mas modificador de dano +4; não substituir automaticamente por FOR +2"
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Swipe",
+          "quantidade": 2
+        }
+      ],
+      "substituicoes": []
+    },
     "acoes_bonus": [],
     "reacoes": [],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "reacoes": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL"
+    }
   },
   "pendencias": [
-    "Fonte KPOGL independente; comparar uso e limite de mortos-vivos com Creature Codex original.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Comparar bloco KPOGL de Mandriano ao Creature Codex original e respectivas erratas.",
+    "Verificar valor de dano impresso 2d6+4 no Swipe com FOR +2; preservar o valor original.",
+    "Imagem existente é idêntica à da variante Ancient; requer arte distinta ou aprovação visual individual."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "conferência com edição Creature Codex e errata",
+    "interpretação editorial do modificador +4 de Swipe",
+    "aprovação visual da imagem compartilhada"
   ],
   "fontes": [
     {
       "url": "https://kpogl.wikidot.com/monster:mandriano",
-      "tipo": "compilação comunitária não editorial (KPOGL)",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco de estatísticas individual completo, consultado e confrontado em 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "edicao": "D&D 5e"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice da editora: identidade, ND, tipo e origem",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "pesquisa anterior somente como referência",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -204,5 +328,14 @@
     "validacao_visual_editorial": "PENDENTE",
     "largura": null,
     "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "D&D 5e",
+    "fonte_mecanica_individual": "https://kpogl.wikidot.com/monster:mandriano",
+    "indice_editora": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "comparacao_livro_editorial_errata": "PENDENTE",
+    "nota": "Bloco individual estruturado, sem validação final contra exemplar editorial"
   }
 }
