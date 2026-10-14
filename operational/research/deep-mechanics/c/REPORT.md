@@ -2,7 +2,7 @@
 
 ## Checkpoint 35 — Hellfire Giant, Shire Giant, Thin Giant, Thursir Armorer, Void-Blessed Ogre (14/10/2026)
 
-**[Commit com 5 JSONs mecânicos](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/77fd2403f2f351cf439580df9de9d59960d8a15e).**
+**[Commit com 5 JSONs mecânicos](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/77fd2403f2f351cf439580df9de9d59960d8a15e).** Read-back confirmado via GitHub: cinco JSONs com IDs e sintaxe corretos, 69/131 profundos, 94 parciais, 37 bloqueados. Nenhuma nova imagem. Auditoria 96/96 hashes válida do CP33.
 
 - TF-144 Hellfire Giant: Rune-Powered Weapons, Death Malison ativado por morte (Con CD16 e desvantagem a fiends), Greatclub, Runic Blast, Invisibility Rune com concentração e Runic Shield como reação +4 CA somente quando visível. Fonte https://www.5esrd.com/database/creature/hellfire-giant/.
 - TF-147 Shire Giant: três Pitchfork ou Pitchfork+Grab+Throw, dependência de grapple, dano e queda do alvo e criatura que ocupa destino. Duplicação editorial original da opção de Multiattack preservada em pendência. Fonte https://www.5esrd.com/database/creature/shire-giant/.
