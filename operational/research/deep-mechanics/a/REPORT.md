@@ -1,3 +1,11 @@
+# Grupo A — checkpoint 43: nove imagens verificadas disponíveis no lote D (14/10/2026)
+
+O lote D avançou de **173** para **190 arquivos classificados como `VERIFICADA_GITHUB`** em sua própria branch. Após nova checagem do manifesto e comparação dos hashes Git e tamanhos dos objetos na árvore de origem, foram associadas as seguintes **9 imagens reais** ao grupo A: **KP-S014, TF-013, TF-023, TF-024, TF-025, TF-041, TF-048, TF-053, TF-057**. Arquivos binários foram importados por referência direta aos SHA de blob já publicados; não foram inventadas imagens nem alterada a branch D.
+
+**Novo total:** 124/132 criaturas com arquivo de imagem no GitHub, 8 sem arquivo, 43 statblocks estruturados em fonte individual, 0 fichas editorialmente homologadas. Identidade visual e licenças continuam pendentes, e as miniaturas TF-026/TF-031 ainda não estão em resolução aprovada para produção.
+
+---
+
 # Grupo A — auditoria de integridade e situação atual (14/10/2026)
 
 **HEAD inspecionado:** `251cc4342cfce782cfd9361950a1cc61fb777918`. Releitura remota individual de **132/132 JSONs** com parsing JSON sem erro e ID correto; árvore Git contém **132 arquivos de registros** e **115 imagens binárias**, todas as 115 com caminho, SHA de blob e tamanho concordantes com o manifesto. Diff contra a referência permanece restrito ao diretório do grupo A.
