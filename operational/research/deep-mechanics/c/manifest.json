@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 45,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 47,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 92,
-    "bloqueadas": 39,
-    "registros_aproveitados_sem_nova_verificacao_integral": 86,
+    "parciais": 94,
+    "bloqueadas": 37,
+    "registros_aproveitados_sem_nova_verificacao_integral": 84,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -436,6 +436,18 @@
       "commit": null,
       "leitura_persistencia": "PENDENTE",
       "tipo": "A5E quatro fichas completas na fonte individual, dois conflitos editoriais"
+    },
+    {
+      "numero": 29,
+      "inicio": "TF-120",
+      "fim": "TF-121",
+      "ids": [
+        "TF-120",
+        "TF-121"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE",
+      "tipo": "Kobold Press Fey com magia/legendary/lair/regional"
     }
   ],
   "atualizacao_detalhada_sha": "9d6386ea894bfbb62d4e72f68b2dfe140fc44508",
@@ -1601,16 +1613,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 0,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-120.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_VERIFICADA_MATERIAL_EXTERNO_EXCLUIDO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ashen-custodian/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
       "pendencias": [
-        "A página inclui 'Alternate Critical (Source: Monster Crits for 5e)' após Cleansing Strike. Esse texto é de outro suplemento, foi EXCLUÍDO da mecânica-base.",
-        "As ações de Fire Controller são ação bônus apesar de constarem no grupo Special Traits; preservada a economia de ação na estrutura."
+        "Alternate Critical oferecida por Monster Crits for 5e após a ficha foi excluída da mecânica-base, porque pertence a suplemento alheio.",
+        "Fire Controller é ação bônus e foi representada também no traço sem duplicar uso por rodada.",
+        "Ainda falta confronto com Tome of Beasts 2 original/errata e aprovação visual da imagem binária existente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "revisão editorial original de Tome of Beasts 2",
+        "aprovação visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -1620,7 +1634,8 @@
         "bytes": 208722,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-121",
@@ -1628,15 +1643,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 1,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-121.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_COMPLETA_COM_TYPO_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/animal-lord-queen-of-birds/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
       "pendencias": [
-        "Multiattack na página tem erro de digitação 'oOne' em descrição de ataques da forma verdadeira; tratado como leitura contextual, sem substituir fonte editorial original."
+        "Fonte Creature Codex republicada usa 'oOne' no multiattack de true form; registrado sem alterar o original e sequenciado como 1 Talons + 2 Storm Spear em leitura inequívoca.",
+        "Em forma eagle/humanoid o Multiattack imprime dois ataques mas não especifica qual; opções condicionais derivadas dos únicos ataques disponíveis por forma.",
+        "Ações lendárias, lair actions, rejuvenation, magias inatas e efeitos regionais foram separados; falta confrontar Creature Codex original e confirmar imagem existente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confirmação editorial original de Multiattack/typo",
+        "discriminação formal de armas para formas eagle/humanoid",
+        "aprovação visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -1646,7 +1665,8 @@
         "bytes": 83636,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-122",

@@ -2,6 +2,13 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 29 — Ashen Custodian e Queen of Birds (14/10/2026)
+
+- TF-120 Ashen Custodian: Fire Controller em ação bônus (fogo não mágico e buff/debuff de fire elemental), Forest Cleanser +2d8 fire, Warming Presence cura/dano, Magic Resistance, Innate Spellcasting CHA DC15 com limites, duas Cleansing Strike +8 com alvo incendiado e dano 1d10 recorrente. Entrada 'Alternate Critical' pertence a **outro suplemento Monster Crits for 5e e foi excluída da ficha-base**, sem misturar edições. Fonte https://www.5esrd.com/database/creature/ashen-custodian/.
+- TF-121 Queen of Birds: três formas de Shapechanger com porte/voo e armas próprias, Storm Spear e Talons com grappling/auto-hit, Rejuvenation, Magic Resistance, 2 Legendary Resistance/dia, Innate Spellcasting CHA CD18, reação Parry, **3 legendary action points** Soar/Storm Spear/Swooping Death, **três lair actions** na iniciativa 20, efeitos regionais e 3/dia/1/dia casting. Fonte https://www.5esrd.com/database/creature/animal-lord-queen-of-birds/.
+- **Nenhuma ficha promovida como integralmente verificada:** 5eSRD é republicação, ainda falta confronto direto com o impresso/errata e revisão visual da arte binária existente. Totais: **47 aprofundadas, 84 sem revalidação; 94 parciais e 37 bloqueadas**.
+
+
 ## Checkpoint 28 — quatro blocos oficiais A5E (14/10/2026)
 
 - TF-507 **Fogborn Skeleton Horde**: HP 65 (10d8+20), AC13, resistência a terreno via Fogwalk com trajetória horizontal e névoa 1 turno, Water Walker, Area Vulnerability, Horde, Horde Dispersal em 1d4 skeletons com 6 PV cada, Shortsword e Shortbow +4 (5d6+10; metade se bloodied). Fonte https://a5e.tools/node/3460.

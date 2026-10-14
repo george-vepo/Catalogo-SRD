@@ -4,14 +4,14 @@
   "nome": "Animal Lord, Queen of Birds",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 1,
-  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_COMPLETA_COM_TYPO_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex (©2018)",
     "edicao": null,
-    "fonte_identidade": null
+    "fonte_identidade": "https://www.5esrd.com/database/creature/animal-lord-queen-of-birds/"
   },
   "estatisticas": {
     "nd_catalogo": "14",
@@ -19,7 +19,7 @@
     "ca": 17,
     "pv": 161,
     "dados_vida": "17d10+68",
-    "porte": "Large",
+    "porte": "Large em forma verdadeira/eagle, Medium em forma elven woman",
     "tipo": "fey (shapechanger)",
     "alinhamento": "chaotic neutral",
     "atributos": {
@@ -39,31 +39,56 @@
       "CAR": 5
     },
     "deslocamentos": {
-      "andar": 40,
-      "voar": 90
+      "andar_ft": 40,
+      "voo_ft": 90,
+      "condicao_voo": "apenas true e eagle form"
     },
-    "pericias": {
-      "Acrobatics": 11,
-      "Athletics": 8,
-      "History": 9,
-      "Perception": 11
-    },
-    "salvaguardas": {
-      "STR": 8,
-      "WIS": 11,
-      "CHA": 10
-    },
+    "pericias": [
+      {
+        "nome": "Acrobatics",
+        "bonus": 11
+      },
+      {
+        "nome": "Athletics",
+        "bonus": 8
+      },
+      {
+        "nome": "History",
+        "bonus": 9
+      },
+      {
+        "nome": "Perception",
+        "bonus": 11
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 11
+      },
+      {
+        "nome": "CHA",
+        "bonus": 10
+      }
+    ],
     "sentidos": [
-      "truesight 120 ft."
+      {
+        "tipo": "truesight",
+        "alcance_ft": 120
+      }
     ],
     "percepcao_passiva": 21,
     "idiomas": [
       "all",
-      "telepathy 120 ft."
+      "telepathy 120 ft"
     ],
     "resistencias": [
       "cold",
-      "bludgeoning/piercing/slashing de ataques não mágicos"
+      "bludgeoning/piercing/slashing from nonmagical attacks"
     ],
     "imunidades_dano": [
       "lightning",
@@ -77,506 +102,529 @@
       "restrained",
       "stunned"
     ],
-    "vulnerabilidades": null
+    "vulnerabilidades": [],
+    "bonus_proficiencia": 5,
+    "xp": 11500,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Bird Passivism",
-        "resumo_anterior": "Aves e ravenfolk não conseguem atacá-la voluntariamente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "birds e ravenfolk não podem atacar Queen voluntariamente; compulsão mágica pode permitir"
       },
       {
         "nome": "Flyby",
-        "resumo_anterior": "Não provoca reação ao voar para fora do alcance.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "voar para fora de alcance do inimigo não provoca ataque de oportunidade"
       },
       {
         "nome": "Legendary Resistance",
-        "resumo_anterior": "2/dia, converte falha em salvaguarda em sucesso.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "usos": {
+          "quantidade": 2,
+          "periodo": "dia"
+        },
+        "gatilho": "falha salvaguarda",
+        "efeito": "opta por sucesso"
       },
       {
         "nome": "Magic Resistance",
-        "resumo_anterior": "Vantagem contra magia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem em saves vs spells e magical effects"
       },
       {
         "nome": "Rejuvenation",
-        "resumo_anterior": "Se morrer, retorna após 1d6 dias no corpo de ave do Plano Material.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "morre",
+        "efeito": "alma se reforma no Astral Plane e em 1d6 dias ocupa outro bird no Material Plane",
+        "retorno": "novo bird vira Queen com todos PV/habilidades",
+        "impedir_definitivamente": "matar todas as aves no Material Plane"
       },
       {
         "nome": "Shapechanger",
-        "resumo_anterior": "Muda entre águia Large, mulher élfica Medium e forma alada verdadeira; somente águia/verdadeira voam.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "economia": "ação",
+        "formas": [
+          {
+            "nome": "eagle",
+            "porte": "Large",
+            "voo_ft": 90
+          },
+          {
+            "nome": "elven woman",
+            "porte": "Medium",
+            "voo_ft": 0
+          },
+          {
+            "nome": "true winged humanoid",
+            "porte": "Large",
+            "voo_ft": 90
+          }
+        ],
+        "atributos": "inalterados exceto porte e voo",
+        "equipamento": "transforma junto"
       },
       {
         "nome": "Speak with Birds",
-        "resumo_anterior": "Comunica-se com aves.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "comunica-se com aves mesmo sem idioma compartilhado"
       },
       {
         "nome": "Storm Strike Weapons",
-        "resumo_anterior": "Ataques de arma mágicos adicionam 2d8 trovão ou elétrico, já presentes no bloco de ataque.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "ataques com weapon são mágicos e infligem 2d8 lightning ou thunder extra, já incluído em Spear/Talons"
       },
       {
         "nome": "Innate Spellcasting",
-        "resumo_anterior": "CAR CD18/+10; à vontade dispel magic/gust of wind/spiritual weapon; 3/dia chain lightning/counterspell; 1/dia control weather.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "atributo": "CHA",
+        "cd_magia": 18,
+        "bonus_ataque_magia": 10,
+        "componentes": [
+          "V"
+        ],
+        "at_will": [
+          "dispel magic",
+          "gust of wind",
+          "spiritual weapon"
+        ],
+        "usos_tres_por_dia_cada": [
+          "chain lightning",
+          "counterspell"
+        ],
+        "usos_um_por_dia_cada": [
+          "control weather"
+        ]
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Na forma águia ou humanoide: 2 ataques; verdadeira: duas lanças e uma garra. A fonte contém typo 'oOne'.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "ação",
+        "sequencias": [
+          {
+            "forma": "eagle",
+            "quantidade": 2,
+            "arma": "Talons",
+            "derivacao": "apenas Talons disponível nessa forma"
+          },
+          {
+            "forma": "humanoid/elven woman",
+            "quantidade": 2,
+            "arma": "Storm Spear",
+            "derivacao": "apenas Storm Spear disponível nessa forma"
+          },
+          {
+            "forma": "true",
+            "sequencia": [
+              {
+                "acao": "Talons",
+                "quantidade": 1
+              },
+              {
+                "acao": "Storm Spear",
+                "quantidade": 2
+              }
+            ],
+            "aviso": "fonte usa typo oOne no lugar de one"
+          }
+        ]
       },
       {
         "nome": "Storm Spear",
-        "resumo_anterior": "+11, corpo a corpo 5 pés ou distância 100/300; 2d6+6 perfurante ou 2d8+6 com duas mãos, mais 2d8 trovão/elétrico.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "melee or ranged weapon attack",
+        "bonus_acerto": 11,
+        "pre_condicao_forma": [
+          "humanoid/elven woman",
+          "true form"
+        ],
+        "alcance_melee_ft": 5,
+        "alcance_distancia_ft": {
+          "normal": 100,
+          "maximo": 300
+        },
+        "alvos": 1,
+        "dano_uma_mao": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo_alternativo": [
+              "lightning",
+              "thunder"
+            ],
+            "escolha": "Queen"
+          }
+        ],
+        "dano_duas_maos": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo_alternativo": [
+              "lightning",
+              "thunder"
+            ],
+            "escolha": "Queen"
+          }
+        ],
+        "efeito_apos_arremesso": "spear reaparece magicamente na mão imediatamente depois do ataque"
       },
       {
         "nome": "Talons",
-        "resumo_anterior": "+11, 5 pés; 2d4+6 cortante e 2d8 trovão/elétrico; agarra alvo Medium ou menor (escape CD18), restringindo-o.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 11,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "pre_condicao_forma": [
+          "eagle",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "2d4+6",
+            "media": 11,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo_alternativo": [
+              "lightning",
+              "thunder"
+            ],
+            "escolha": "Queen"
+          }
+        ],
+        "efeito_condicional": {
+          "pre_condicao": "alvo Medium ou menor",
+          "condicoes": [
+            "grappled",
+            "restrained enquanto grappled"
+          ],
+          "escape_cd": 18,
+          "ataque_automatico": "talons acerta automaticamente alvo agarrado até fim de grapple",
+          "restricao": "não pode usar Talons contra outro alvo enquanto mantém grapple",
+          "alvo_ao_mover": "alvo Medium ou menor grappled move com a Queen"
+        }
+      },
+      {
+        "nome": "Shapechanger",
+        "categoria": "ação por trait",
+        "formas": [
+          "eagle",
+          "elven woman",
+          "true"
+        ],
+        "referencia_trait": "Shapechanger"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Na forma águia ou humanoide: 2 ataques; verdadeira: duas lanças e uma garra. A fonte contém typo 'oOne'.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Storm Spear",
+        "categoria": "melee or ranged weapon attack",
+        "bonus_acerto": 11,
+        "pre_condicao_forma": [
+          "humanoid/elven woman",
+          "true form"
+        ],
+        "alcance_melee_ft": 5,
+        "alcance_distancia_ft": {
+          "normal": 100,
+          "maximo": 300
+        },
+        "alvos": 1,
+        "dano_uma_mao": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo_alternativo": [
+              "lightning",
+              "thunder"
+            ],
+            "escolha": "Queen"
+          }
+        ],
+        "dano_duas_maos": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo_alternativo": [
+              "lightning",
+              "thunder"
+            ],
+            "escolha": "Queen"
+          }
+        ],
+        "efeito_apos_arremesso": "spear reaparece magicamente na mão imediatamente depois do ataque"
+      },
+      {
+        "nome": "Talons",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 11,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "pre_condicao_forma": [
+          "eagle",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "2d4+6",
+            "media": 11,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo_alternativo": [
+              "lightning",
+              "thunder"
+            ],
+            "escolha": "Queen"
+          }
+        ],
+        "efeito_condicional": {
+          "pre_condicao": "alvo Medium ou menor",
+          "condicoes": [
+            "grappled",
+            "restrained enquanto grappled"
+          ],
+          "escape_cd": 18,
+          "ataque_automatico": "talons acerta automaticamente alvo agarrado até fim de grapple",
+          "restricao": "não pode usar Talons contra outro alvo enquanto mantém grapple",
+          "alvo_ao_mover": "alvo Medium ou menor grappled move com a Queen"
+        }
       }
     ],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Na forma águia ou humanoide: 2 ataques; verdadeira: duas lanças e uma garra. A fonte contém typo 'oOne'.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "por_forma": [
+        {
+          "forma": "eagle",
+          "ataques": 2,
+          "arma": "Talons"
+        },
+        {
+          "forma": "humanoid",
+          "ataques": 2,
+          "arma": "Storm Spear"
+        },
+        {
+          "forma": "true",
+          "sequencia": [
+            "Talons",
+            "Storm Spear",
+            "Storm Spear"
+          ]
+        }
+      ],
+      "nota": "a quantidade para eagle/humanoid está impressa, mas arma específica é inferida das limitações de forma"
     },
-    "acoes_bonus": null,
+    "acoes_bonus": [],
     "reacoes": [
       {
         "nome": "Parry",
-        "resumo_anterior": "+5 CA contra ataque corpo a corpo com arma, visível e com arma empunhada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "um melee weapon attack acertaria Queen",
+        "pre_condicoes": [
+          "Queen vê atacante",
+          "está empunhando arma melee"
+        ],
+        "efeito": {
+          "bonus_CA": 5,
+          "somente_contra_gatilho": true
+        }
       }
     ],
     "acoes_lendarias": [
       {
         "nome": "Soar",
-        "resumo_anterior": "Voa até seu deslocamento (formas águia/verdadeira).",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": 1,
+        "pre_condicao_forma": [
+          "eagle",
+          "true"
+        ],
+        "efeito": "voa até voo speed"
       },
       {
         "nome": "Storm Spear",
-        "resumo_anterior": "Faz ataque de lança (humana/verdadeira).",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": 1,
+        "pre_condicao_forma": [
+          "humanoid",
+          "true"
+        ],
+        "efeito": "um ataque Storm Spear"
       },
       {
         "nome": "Swooping Death",
-        "resumo_anterior": "Custa duas ações, ataca com talons e voa metade do deslocamento se acertar.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": 2,
+        "pre_condicao_forma": [
+          "eagle",
+          "true"
+        ],
+        "efeito": "um Talons attack; se acertar, pode voar até metade de flying speed"
       }
     ],
+    "custos_lendarios": {
+      "maximo": 3,
+      "uso": "somente fim do turno de outra criatura",
+      "limite_por_vez": 1,
+      "recuperacao": "início do turno da Queen"
+    },
     "acoes_covil": [
       {
         "nome": "Summon Birds",
-        "resumo_anterior": "Invoca 4 águias gigantes ou 16 bloodhawks.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "momento": "initiative 20, losing ties",
+        "alcance_ft": 120,
+        "pre_condicao": "lair",
+        "alternativas": [
+          {
+            "criatura": "giant eagle",
+            "quantidade": 4
+          },
+          {
+            "criatura": "bloodhawk",
+            "quantidade": 16
+          }
+        ],
+        "posicionamento": "espaços desocupados que a Queen vê",
+        "iniciativa": "agem imediatamente e em iniciativa 20 nas rodadas seguintes",
+        "duracao": "1 hora ou até mesmo lair action ser usada de novo",
+        "controle": "obedecem"
       },
       {
         "nome": "Songbird Cloud",
-        "resumo_anterior": "Nuvem de aves a até 120 pés, CON CD15, distrai/interrompe concentração.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "momento": "initiative 20, losing ties",
+        "alcance_ft": 120,
+        "area": {
+          "tipo": "esfera",
+          "raio_ft": 20
+        },
+        "alvos": "criaturas exceto Queen quando aparece ou termina turno na área",
+        "teste": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "falha": {
+          "concentracao": "perde",
+          "custo": "gasta ação daquele turno afastando aves"
+        },
+        "efeito_sem_teste": "dentro da área fica deafened",
+        "duracao": "até iniciativa 20 rodada seguinte"
       },
       {
-        "nome": "Whirlwinds",
-        "resumo_anterior": "Dois redemoinhos de vento até 120 pés, FOR CD15, podem restringir.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Two Whirlwinds",
+        "momento": "initiative 20, losing ties",
+        "alcance_ft": 120,
+        "areas": {
+          "quantidade": 2,
+          "raio_ft": 5,
+          "altura_ft": 30
+        },
+        "alvos": "criaturas exceto Queen entrando/terminando turno",
+        "teste": {
+          "atributo": "STR",
+          "cd": 15
+        },
+        "falha": {
+          "condicao": "restrained"
+        },
+        "libertar": {
+          "custo": "ação da vítima ou aliado",
+          "teste": {
+            "atributo": "STR check",
+            "cd": 15
+          }
+        },
+        "duracao": "1 minuto ou até repetir esta lair action"
       }
     ],
+    "acoes_covil_regras": {
+      "momento": "initiative count 20, losing ties",
+      "limite": "não repetir mesmo efeito em rodadas consecutivas"
+    },
+    "efeitos_regionais": [
+      {
+        "nome": "Bird Attraction",
+        "alcance_milhas": 1,
+        "efeito": "atrai aves, Queen pode ver/ouvir e falar através de qualquer ave na área"
+      },
+      {
+        "nome": "Weather",
+        "alcance_milhas": 6,
+        "efeito": "céu limpo e ventos leves salvo vontade da Queen"
+      },
+      {
+        "nome": "Bird Mood",
+        "alcance_milhas": 1,
+        "efeito": "comportamento de aves reflete humor",
+        "apos_morte": "desaparece em 1d10 dias"
+      }
+    ],
+    "acoes_miticas": [],
     "conjuracao": [
       {
         "nome": "Innate Spellcasting",
-        "resumo_anterior": "CAR CD18/+10; à vontade dispel magic/gust of wind/spiritual weapon; 3/dia chain lightning/counterspell; 1/dia control weather.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "atributo": "CHA",
+        "cd_magia": 18,
+        "bonus_ataque_magia": 10,
+        "componentes": [
+          "V"
+        ],
+        "at_will": [
+          "dispel magic",
+          "gust of wind",
+          "spiritual weapon"
+        ],
+        "usos_tres_por_dia_cada": [
+          "chain lightning",
+          "counterspell"
+        ],
+        "usos_um_por_dia_cada": [
+          "control weather"
+        ]
       }
     ],
-    "custos_lendarios": null
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFIRMADA_NO_BLOCO",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "PRESENTES",
+      "acoes_covil": "PRESENTES",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA_NO_BLOCO",
+      "conjuracao": "PRESENTE"
+    }
   },
   "pendencias": [
-    "Multiattack na página tem erro de digitação 'oOne' em descrição de ataques da forma verdadeira; tratado como leitura contextual, sem substituir fonte editorial original.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Fonte Creature Codex republicada usa 'oOne' no multiattack de true form; registrado sem alterar o original e sequenciado como 1 Talons + 2 Storm Spear em leitura inequívoca.",
+    "Em forma eagle/humanoid o Multiattack imprime dois ataques mas não especifica qual; opções condicionais derivadas dos únicos ataques disponíveis por forma.",
+    "Ações lendárias, lair actions, rejuvenation, magias inatas e efeitos regionais foram separados; falta confrontar Creature Codex original e confirmar imagem existente."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confirmação editorial original de Multiattack/typo",
+    "discriminação formal de armas para formas eagle/humanoid",
+    "aprovação visual da imagem"
   ],
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/animal-lord-queen-of-birds/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
+      "tipo": "stat block integral republicado pela 5eSRD, com fonte e edição bibliográfica",
+      "conferida_nesta_execucao": true,
+      "edicao": "D&D 5e"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
-      "tipo": "checkpoint original",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -758,5 +806,12 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "edicao": "D&D 5e",
+    "republicacao_integral": "https://www.5esrd.com/database/creature/animal-lord-queen-of-birds/",
+    "confronto_editorial_com_livro_ou_errata": "PENDENTE"
   }
 }
