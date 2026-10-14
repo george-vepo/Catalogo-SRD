@@ -5,17 +5,20 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
+    "publisher": "Kobold Press / Open Design LLC",
     "publication": "Tome of Beasts 2",
-    "edition_family": "5e",
+    "publication_year": 2020,
+    "edition": "Tome of Beasts 2 for 5th Edition (2020)",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "1/8",
     "size": "Small",
     "type": "beast",
-    "alignment": null
+    "alignment": "unaligned"
   },
   "statistics": {
     "armor_class": 12,
+    "armor_class_type": "natural_armor",
     "hit_points": 5,
     "hit_dice": "1d6+2",
     "ability_scores": {
@@ -27,68 +30,107 @@
       "CHA": 7
     },
     "speeds": {
-      "andar_ft": 30,
-      "voar_ft": 10
+      "walk_ft": 30,
+      "fly_ft": 10
     },
-    "senses": [
-      "darkvision 30 ft."
-    ],
     "skills": {
       "Perception": 5
     },
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "senses": {
+      "darkvision_ft": 30,
+      "passive_perception": 15
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
   },
   "mechanics": {
-    "traits": null,
-    "actions": [
+    "traits": [
       {
         "name": "Keen Smell",
-        "category": "action",
-        "prior_summary_unverified": "Vantagem em Percepção que use o olfato.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
+        "category": "passive",
+        "activation": "automatic",
+        "trigger": "Teste de Sabedoria (Perception) que dependa de olfato",
+        "effect": {
+          "skill": "Perception",
+          "ability": "WIS",
+          "advantage": true
+        },
+        "duration": "Teste desencadeador",
+        "save": null,
         "recharge": null,
-        "uses": null
-      },
-      {
-        "name": "Bite",
-        "category": "action",
-        "prior_summary_unverified": "+3, 5 ft.; 1d4+1 perfurante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "uses_limit": null
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 3,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "modifier": 1,
+              "type": "piercing"
+            }
+          ],
+          "average_damage": 3
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "save": null,
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Familiar eligibility",
+        "category": "non_statblock_lore",
+        "effect": "Pode servir como familiar através da magia find familiar, segundo seção descritiva 5eSRD/KPOGL.",
+        "source": "https://www.5esrd.com/database/creature/beetle-sniffer/"
+      }
+    ]
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/beetle-sniffer/",
-      "type": "referência_de_checkpoint_histórico",
-      "verification": "detalhamento completo pendente"
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2 (2020, 5e)",
+      "verification": "conferidos todos os números, um traço passivo e um ataque"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:sniffer-beetle",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2 (2020, 5e)",
+      "verification": "concordância integral com 5eSRD na ficha de combate"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_oficial_editora",
+      "verification": "ND arredondado, tipo, porte e publicação"
+    },
+    {
+      "url": "https://koboldpress.com/tome-of-beasts-2/",
+      "type": "pagina_editorial",
+      "verification": "publicação 2020 de 5e"
     }
   ],
   "source_checkpoint": {
@@ -98,8 +140,21 @@
   "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
   "legacy_note": "ND fonte 1/8 (0,125) e catálogo 0.1; preservar arredondamento original e valor da fonte separados.",
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
-  ]
+    "Confrontar ficha da edição física/errata exata antes de validação canônica.",
+    "Persistir arquivo físico de arte própria do Sniffer Beetle; imagem ainda não disponível.",
+    "Fazer revisão independente antes de integração."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "two_individual_statblocks_agree": true,
+    "mechanics_covered_at_source_level": true,
+    "edition_family_editorial_verified": true,
+    "primary_book_full_text_compared": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "PENDENTE",
+    "file_path": null,
+    "source": null
+  }
 }

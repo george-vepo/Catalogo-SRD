@@ -5,45 +5,127 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (atribuição histórica)",
-    "publication": null,
-    "edition_family": "5e",
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Tome of Beasts 2",
+    "publication_year": 2020,
+    "edition": "Tome of Beasts 2 for 5th Edition (2020)",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "0",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Tiny",
+    "type": "beast",
+    "alignment": "unaligned"
   },
   "statistics": {
     "armor_class": 13,
+    "armor_class_type": "natural_armor",
     "hit_points": 2,
-    "hit_dice": null,
-    "ability_scores": null,
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "hit_dice": "1d4",
+    "ability_scores": {
+      "STR": 6,
+      "DEX": 12,
+      "CON": 10,
+      "INT": 1,
+      "WIS": 7,
+      "CHA": 3
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 10,
+      "fly_ft": 10
+    },
+    "senses": {
+      "passive_perception": 8
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Illumination",
+        "category": "passive",
+        "effect": {
+          "bright_light_radius_ft": 10,
+          "additional_dim_light_radius_ft": 10
+        },
+        "trigger": "Permanente enquanto luminosidade normal; continua após morte",
+        "post_death": {
+          "glow_hours": 6
+        },
+        "recharge": null,
+        "save": null
+      }
+    ],
+    "actions": [
+      {
+        "name": "Horn",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 3,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": null,
+              "flat": 1,
+              "type": "piercing"
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "saving_throw": null,
+        "uses_limit": null,
+        "recharge": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Familiar eligibility",
+        "category": "non_statblock_lore",
+        "effect": "Descrito na KPOGL como opção de familiar via find familiar.",
+        "source": "https://kpogl.wikidot.com/monster:lantern-beetle"
+      }
+    ]
   },
   "sources": [
     {
+      "url": "https://kpogl.wikidot.com/monster:lantern-beetle",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2 (2020, 5e)",
+      "verification": "transcrição integral do statblock da página, incluindo passivo, ataque, dano e condições de luminosidade"
+    },
+    {
       "url": "https://www.5esrd.com/database/creature/beetle-lantern/",
-      "type": "fonte_registrada_checkpoint_anterior",
-      "verification": "transcrição mecânica integral pendente"
+      "type": "ficha_individual_secundaria",
+      "verification": "histórico confirma CA 13, PV 2, ND0, porém acesso atual exibiu bloqueio de JavaScript; não afirmar conferência de todas as ações"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "verification": "confirma identidade, ND 0 e Tome of Beasts 2"
+    },
+    {
+      "url": "https://koboldpress.com/tome-of-beasts-2/",
+      "type": "publicacao_editorial",
+      "verification": "anúncio do livro em 2020"
     }
   ],
   "source_checkpoint": {
@@ -53,8 +135,21 @@
   "catalog_legacy_state": "PESQUISA_RECUPERADA_PENDENTE_GATE",
   "legacy_note": "Verificar fonte integral, direitos e imagem",
   "outstanding": [
-    "Pesquisar cada ataque, traço, ação, reação, bônus e mecânica (dados, CDs, alcance, duração, gatilho e recarga) na ficha individual.",
-    "Confirmar publicação exata e confrontar divergências entre fontes e erratas.",
-    "Campos null e resumos legados não representam mecânicas inexistentes nem fichas completas."
-  ]
+    "Checar conteúdo primário do livro/errata e confirmar se Illumination muda sob dieta prolongada (nota narrativa descreve emissão reduzida após um mês sem fungos bioluminescentes).",
+    "Confirmar edição/impressão exata contra livro; a ficha mecânica integral é de fonte comunitária não endossada.",
+    "Obter e persistir ilustração própria e aprová-la para carta; imagem ausente."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "mechanics_covered_at_source_level": true,
+    "primary_book_full_text_compared": false,
+    "edition_family_editorial_verified": true,
+    "two_complete_individual_sources_checked": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "PENDENTE",
+    "file_path": null,
+    "source": null
+  }
 }
