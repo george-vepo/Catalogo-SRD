@@ -4,6 +4,8 @@
 
 ## Checkpoint 20 — A5E (14/10/2026)
 
+- Commit publicado e relido pela API: `2c8b33b00f2b463f76bebe8ed4cf731e2d7ad906`. 4 IDs confirmados, 4 JSONs válidos e branch mantida em rascunho.
+
 - TF-448 Imprisoned Celestial: Divine Absorption, forma imutável, resistência mágica, Slam, Radiant Blast (5–6) e bônus Slow (5–6). Fonte oficial: https://a5e.tools/node/5406.
 - TF-449 Imprisoned Fiend: Acid Absorption, Berserk, Bloodied Fury, Slam reduz PV máximo, Fiendfire Breath aplica strife A5E. Não converter conceitos A5E. Fonte: https://a5e.tools/node/5407.
 - TF-459 Ankheg Empress: Bite 10 ft; Claws 15 ft; Acid Glob 30/90 ft; Acid Spray linha 60×10 ft ou no agarrado sem salvaguarda; Burrowing Ambush, Grabby, Monarch's Command, Cinch. **Divergência bloodied 65 contra metade de 174 = 87 mantida bloqueada**. Fonte: https://a5e.tools/node/3424.
