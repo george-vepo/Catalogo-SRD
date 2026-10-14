@@ -1,12 +1,22 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
-**Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 13/10/2026.
+**Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
+
+## Checkpoint 15 — aprofundamento mecânico de 14/10/2026
+
+- Commit de registros (3 criaturas): `c87f47a474ed19561178eb8b117750588f59fc46`; leitura de retorno: **OK**; exatamente os arquivos `records/TF-412.json`, `records/TF-418.json`, `records/TF-419.json`.
+- **TF-412 Mandrake, Great**: estatísticas, mordida, Multiattack, Shriek, recarga 3–6, margens de falha e duração detalhados. **Divergência impressa**: SAB 11 (+1) não corresponde à fórmula usual (+0). Preservada com modificador não resolvido.
+- **TF-418 Sodwose**: estatísticas, camuflagem, Scarecrow, Multiattack, Grass Whip, Entangle, Grass Step e Set Snare incluindo alvos, CDs, frequências, gatilhos e encerramento.
+- **TF-419 Witchalder**: estatísticas, Deep Roots, False Appearance, Sunlight Regeneration, Speak with Plants, Slam, Shape Wood, Throttle e Pollen Cloud. **Divergência impressa**: Perception +6 x Perception passiva 15; valor original preservado.
+- Identidade, ND e origem editoriais confirmados no [índice Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/), com mecânicas individuais estruturadas a partir de [Mandrake Great](https://www.5esrd.com/database/creature/mandrake-great/), [Sodwose](https://www.5esrd.com/database/creature/sodwose/) e [Witchalder](https://www.5esrd.com/database/creature/witchalder/).
+- As três permanecem **parciais**, sem aprovação integral contra publicação editorial/errata; arquivos de imagem já existentes mantidos sem alteração e aguardam conferência visual.
+- Métrica acumulada: **12 aprofundadas em detalhe, 119 ainda sem revalidação detalhada, 0 integrais, 96 imagens persistidas, 35 imagens faltantes**.
 
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **9 fichas consultadas diretamente em detalhe nesta execução** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **122 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **12 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **119 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
 - **0 criaturas declaradas mecanicamente completas**, **108 parciais**, **23 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
@@ -36,14 +46,14 @@
 
 | ID | Criatura | Estado | Detalhe novo | Fonte | Pendência principal |
 |---|---|---|---|---|---|
-| TF-412 | Mandrake, Great | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/mandrake-great/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-412 | Mandrake, Great | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/mandrake-great/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-413 | Sinstar, Star Thrall | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/star-thrall/) | Não confundir com a criatura Sinstar principal, ND 17: a ficha do catálogo é Star Thrall. |
 | TF-414 | Wallflower | BLOQUEADA | sim | [individual](https://a5e.tools/node/1660) | Texto editorial da ação Beak referencia grick, não Wallflower; falta determinar interpretação correta. |
 | TF-415 | Gloomflower | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/gloomflower/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
 | TF-416 | Wind Witch | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/wind-witch/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
 | TF-417 | Mandriano | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:mandriano) | Fonte KPOGL independente; comparar uso e limite de mortos-vivos com Creature Codex original. |
-| TF-418 | Sodwose | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/sodwose/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-419 | Witchalder | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/witchalder/) | Confirmar termos/recargas da nuvem de pólen contra livro. |
+| TF-418 | Sodwose | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/sodwose/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-419 | Witchalder | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/witchalder/) | Confirmar termos/recargas da nuvem de pólen contra livro. |
 | TF-420 | Mandriano, Ancient | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:ancient-mandriano) | Variante Ancient distinta de TF-417; KPOGL independente, confirmar edição. |
 | TF-421 | Planar Flora, Execrable Shrub | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/execrable-shrub/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-423 | Spawn of Chernobog | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/spawn-of-chernobog/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |

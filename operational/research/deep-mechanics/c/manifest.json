@@ -1,6 +1,6 @@
 {
   "schema": "srd607-deep-mechanics-c-manifest-v1",
-  "data": "2026-10-13",
+  "data": "2026-10-14",
   "commit_base": "a962c48a1169c2ef2be8137715a095a596753b32",
   "branch": "chatgpt/srd607-deep-mechanics-c",
   "escopo": {
@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 9,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 12,
     "fichas_integralmente_concluidas": 0,
     "parciais": 108,
     "bloqueadas": 23,
-    "registros_aproveitados_sem_nova_verificacao_integral": 122,
+    "registros_aproveitados_sem_nova_verificacao_integral": 119,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -253,9 +253,22 @@
       "fim": "TF-512",
       "commit": "4fd97b161de6b468b827b2eb014c547775d047c6",
       "leitura_persistencia": "CONFIRMADA"
+    },
+    {
+      "numero": 15,
+      "inicio": "TF-412",
+      "fim": "TF-419",
+      "ids": [
+        "TF-412",
+        "TF-418",
+        "TF-419"
+      ],
+      "commit": "c87f47a474ed19561178eb8b117750588f59fc46",
+      "leitura_persistencia": "CONFIRMADA — 3 JSONs lidos novamente",
+      "tipo": "aprofundamento de mecânicas; imagens preexistentes preservadas"
     }
   ],
-  "atualizacao_detalhada_sha": "29ba80ad47084ddb342d943beaddf65031400718",
+  "atualizacao_detalhada_sha": "c87f47a474ed19561178eb8b117750588f59fc46",
   "criaturas": [
     {
       "id": "TF-412",
@@ -263,14 +276,19 @@
       "escopo": "next_batches[4]",
       "posicao": 0,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-412.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/mandrake-great/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Conferir ficha e errata de Creature Codex; fonte de reprodução imprime SAB 11 (+1), fórmula incompatível com modificador padrão +0.",
+        "Conferir se condições do Shriek com margem 10+ são cumulativas no livro; preservar literal sem escolher mutuamente exclusivo.",
+        "Imagem física existente, mas revisão visual editorial pendente."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "modificador SAB (texto impresso +1 x fórmula padrão +0)",
+        "conferência editorial e erratas de Creature Codex",
+        "revisão visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -280,7 +298,8 @@
         "bytes": 59707,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-413",
@@ -422,14 +441,17 @@
       "escopo": "next_batches[4]",
       "posicao": 6,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-418.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/sodwose/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Bloco mecânico completo reconstruído a partir da ficha individual 5eSRD, conferido com transcrição secundária; ainda requer conferência com exemplar editorial/errata do Tome of Beasts 3.",
+        "Imagem binária existente, mas identidade visual não aprovada."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "conferência editorial do Tome of Beasts 3 e erratas",
+        "aprovação visual editorial da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -439,7 +461,8 @@
         "bytes": 200968,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-419",
@@ -447,16 +470,19 @@
       "escopo": "next_batches[4]",
       "posicao": 7,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-419.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/witchalder/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Confirmar termos/recargas da nuvem de pólen contra livro."
+        "Ficha individual detalhada conferida; revisão editorial contra Tome of Beasts 3 e errata pendente.",
+        "A ficha publica Perception +6, mas passive Perception 15; preservar valor impresso e esclarecer divergência com cálculo padrão.",
+        "Imagem binária existente, sem aprovação editorial da identidade."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "conferência editorial da Percepção passiva (15 publicado contra cálculo 16)",
+        "conferência do Tome of Beasts 3 e erratas",
+        "revisão visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -466,7 +492,8 @@
         "bytes": 263232,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-420",
