@@ -38,6 +38,16 @@ A partir da árvore Git `c44168574a62044056cf607e5bd652a010f52c15` no commit `f4
 
 **Auditoria do conteúdo do Git concluída para a situação atual, mas o objetivo de 194 imagens adequadas e com direito de uso assegurado continua NÃO CONCLUÍDO. Não fazer merge.**
 
+## Auditoria corrente — checkpoint 29 (2026-10-14)
+
+**Situação de entrega comprovada:** 194 registros atribuídos, **123 arquivos reais** armazenados e com Git blob SHA/tamanho rastreável, **71 ainda sem arquivo**. Os 3 PNG deste checkpoint (`TF-481`, `TF-405`, `TF-510`) foram enviados ao GitHub em `9afec073ed6536d61ac4d5d94c5ea140e143f3ae`, com validação PNG/SHA-256 antes do envio e recuperação byte a byte posterior. Os três são 32×32 pixels e ficam em **`PARTIAL`** até confirmação da estética de cada variante.
+
+**Fonte e licença:** [crawl/tiles](https://github.com/crawl/tiles), exportação curada de tiles de Dungeon Crawl Stone Soup que declara CC0 para imagens separadas da lista de autoria/licença incerta. Os três nomes de arquivo não constam na lista de exceções consultada. A validação histórica de cada artista não foi repetida — risco preservado.
+
+**Alterações fora do grupo F:** nenhuma intencional. Manifesto e relatório atualizados; CSV global e grupos D/E não modificados.
+
+**Riscos jurídicos previamente identificados continuam:** 84 imagens de `TheGiddyLimit/homebrew-img` sem licença de reutilização verificada, 8 arquivos de `FoundryVTT-Level-Up-Official/public/assets` explicitamente para uso não comercial. Os 100 arquivos de checkpoints legados não foram redownloaded/recomputados integralmente nesta rodada. Os 71 IDs sem arquivo estão listados individualmente abaixo. Não executar merge.
+
 ## Escopo e execução
 
 - Repositório: `george-vepo/SRD-Card-Game-607-Supervisor`; branch: `chatgpt/srd607-image-assets-f`; PR draft https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/5.
@@ -86,18 +96,25 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 - **TF-463 Blood Maggot:** spritesheet PNG 200×60, 8.632 bytes, do projeto [Source of Mana](https://github.com/sourceofmana/sourceofmana), listado no [LICENSE.md](https://github.com/sourceofmana/sourceofmana/blob/master/LICENSE.md) com autoria **Neorice** e licença **CC BY-SA 4.0**. Folha contém diversas poses, não uma composição pronta para uma carta; precisa adaptação (preservar atribuição e condições ShareAlike). `PARTIAL`.
 - Binários físicos gravados no GitHub em `54cbf17c2c686170edc86d1ff09961021866448b`, relidos byte a byte do repositório de destino. Os dois Git blob SHAs coincidem com as fontes e o SHA-256 pré-upload de cada PNG está no manifesto. **Nenhum dos dois foi considerado arte final aprovada.**
 
+## Checkpoint 29 — três novas imagens provisórias
+
+- **TF-481 Spell Shrieker:** imagem de fungo colorido `deathcap.png`, tipo fungo mágico reconhecível; o grito/feitiço não aparece. `PARTIAL`.
+- **TF-405 Lich, Virtuoso:** lich antigo de túnica escura `ancient_lich.png`, tipo correto; a especialização musical/mágica `virtuoso` não é demonstrada. `PARTIAL`.
+- **TF-510 Infernal Mammoth:** `elephant_demonic.png`, elefante de coloração demoníaca; falta pelagem característica de mamute. `PARTIAL`.
+- **Verificação**: 3 novos PNGs 32×32, 1.844 bytes ao todo, hash SHA-256 individual no manifesto e cópia reaberta do GitHub idêntica à origem. Nenhum link ou metadado contabilizado como arquivo binário.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **120** |
-| Imagens com validação pós-upload registrada | **120** |
-| IDs ainda ausentes | **74** |
-| Tamanho total dos binários | **13.313.242 bytes** |
-| Checkpoints (máximo 10 arquivos) | **28** |
+| Imagens físicas persistidas no GitHub | **123** |
+| Imagens com validação pós-upload registrada | **123** |
+| IDs ainda ausentes | **71** |
+| Tamanho total dos binários | **13.315.086 bytes** |
+| Checkpoints (máximo 10 arquivos) | **29** |
 
-## Binários confirmados (120)
+## Binários confirmados (123)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -221,8 +238,11 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-469 | Fateholder | `operational/assets/creature-images/TF-469.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/orb_spider.png) | .png / image/png | 32×32 | 1082 | `215e0349a8a1435150395912851212103df52b481f97b824b4e46dbbea11d319` | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | PASS binário; PARTIAL direitos/variante |
 | TF-351 | Half-Demon Ogre | `operational/assets/creature-images/TF-351.png` | [origem](https://github.com/Tiddybub/2d-assets/blob/main/fantasy/oga-ogre-concept-art/ogre_.png) | .png / image/png | 257×550 | 128753 | `3dece5bc228d77a6cdb3dd4047800b9c3530251d1828862226151d40e295b1a4` | `54cbf17c2c686170edc86d1ff09961021866448b` | PASS binário; PARTIAL para composição artística |
 | TF-463 | Blood Maggot | `operational/assets/creature-images/TF-463.png` | [origem](https://github.com/sourceofmana/sourceofmana/blob/master/data/graphics/sprites/monsters/maggot.png) | .png / image/png | 200×60 | 8632 | `2a23ae641550364ea956241713b609a3f060f083630c4bc28588bced536af170` | `54cbf17c2c686170edc86d1ff09961021866448b` | PASS binário; PARTIAL para composição artística |
+| TF-481 | Spell Shrieker | `operational/assets/creature-images/TF-481.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/deathcap.png) | .png / image/png | 32×32 | 472 | `4ef67cd2cca0c7bd172909f0d28f434163cd8dbbd9ab7efb31249036a412d1e1` | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | PASS binário; PARTIAL (arte/atribuição histórica) |
+| TF-405 | Lich, Virtuoso | `operational/assets/creature-images/TF-405.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/ancient_lich.png) | .png / image/png | 32×32 | 476 | `59aa7f3e3d86c1c50d3616106f6c3d17d2fee1fb95ed1d215735112ed5accfcd` | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | PASS binário; PARTIAL (arte/atribuição histórica) |
+| TF-510 | Infernal Mammoth | `operational/assets/creature-images/TF-510.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/elephant_demonic.png) | .png / image/png | 32×32 | 896 | `9aacfe4824a78db0536e5cc0d0f693ce8ce90e011cb6d13b08468556f5f5f855` | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | PASS binário; PARTIAL (arte/atribuição histórica) |
 
-## IDs bloqueados / pendentes (74)
+## IDs bloqueados / pendentes (71)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -257,7 +277,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-397 | Fane Spirit | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-398 | Falsifier Fog | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-402 | Marsh Dire | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-405 | Lich, Virtuoso | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-408 | Grove Swarm | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-411 | Garlicle | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-414 | Wallflower | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -277,7 +296,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-475 | Giant Lanternfish | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-478 | Gourdling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-480 | Sewer Walker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-481 | Spell Shrieker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-482 | Spore Thrall | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-483 | Squashling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-489 | Swarm of Skitterlings | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -294,7 +312,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-507 | Fogborn Skeleton Horde | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-508 | Fogborn Zombie | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-509 | Fogborn Zombie Horde | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-510 | Infernal Mammoth | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-516 | Kanos Spawn | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-517 | Imp Flock | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-518 | Infernal Dwarf | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -355,5 +372,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | 26 | TF-393, TF-514, TF-446, TF-356, TF-513, TF-511 | `ad05a90834756241df8b4f42e6e29ff1086b567b` | Six source PNG sprites, GitHub-persisted byte identity and Git blob SHA checked; 32×32 low-res; visual variants and source rights require follow-up |
 | 27 | TF-467, TF-477, TF-503, TF-469 | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | GitHub post-upload byte and SHA-1 blob identity; PNG, 32×32, size/SHA256 validated before push; artistic specificity and license provenance PARTIAL |
 | 28 | TF-351, TF-463 | `54cbf17c2c686170edc86d1ff09961021866448b` | Two PNG images refetched after GitHub push with matching complete binary source content / Git blob SHA; CC0 ogre illustration and CC BY-SA 4.0 maggot sprite atlas; both visually PARTIAL |
+| 29 | TF-481, TF-405, TF-510 | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | Three source PNGs, GitHub binary byte identity + Git blob SHA confirmed, PNG 32×32, SHA-256 recorded; all PARTIAL visually and historic tile rights not independently proven |
 
-**Estado: parcial (120/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (123/194). Manter PR em rascunho e não executar merge.**
