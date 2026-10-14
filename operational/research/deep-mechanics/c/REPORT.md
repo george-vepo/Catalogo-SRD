@@ -4,6 +4,8 @@
 
 ## Checkpoint 21 — variantes A5E e Greater Sphinx (14/10/2026)
 
+- Commit mecânico `456458a009be9af1972e54e7568a7f313f29c706` publicado com 4 fichas; leitura de retorno da API confirmou JSON sintático e ID exato para TF-468, TF-470, TF-473 e TF-476.
+
 - TF-468 **Faerie Chimera**: White Stag Headbutt, Black Wolf Bite, Silver Dragon Claw, Breath Weapon cone 15 ft, Tail Swipe e Winged Charge. Fonte oficial descreve literalmente **fire** no sopro mas dano **cold**; ações lendárias genéricas Bite/Claw não correspondem literalmente aos nomes da variante; estado **BLOQUEADA**. [Ficha](https://a5e.tools/node/3239).
 - TF-470 **Fiendish Chimera**: Nightmare Trample, Bat Bite, Hellhound Claw, sopro fire; Winged Charge referencia headbutt não listado, e ações lendárias possuem nomes genéricos; **BLOQUEADA**. [Ficha](https://a5e.tools/node/3240).
 - TF-473 **Flying Lion**: Keen Smell, Bite, Talons com bônus de altura/agarre; fonte escreve Multiattack 'griffon attacks with beak and talons', mas variante não possui Beak. Não converter para Bite por suposição; **BLOQUEADA**. [Ficha](https://a5e.tools/node/1663).
