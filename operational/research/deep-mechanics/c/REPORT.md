@@ -1,5 +1,16 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 38 — Berberoka e quatro oozes (14/10/2026)
+
+**[Commit de fichas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/78cc268e129bef7926a22d7fe4933ae5cf7afb71).**
+
+- TF-137 Berberoka: fonte Tome of Beasts 3 p56, Aqueous Regeneration 10 HP/turno condicionada à água, Saturated Expansion ação bônus, dimensão Huge e ataques alternativos Slam/Muck-Coated Slam/Water Jet com pós-efeito que consome Saturated; estatísticas salvaguardas, imunidades e sentidos. A fonte é reprodução, **aprovação editorial segue bloqueada**. https://anyflip.com/lphgc/rjrj/basic/51-100.
+- TF-161 Eldritch Ooze: Maddening Form condicionada a INT >=3 e visão, evitar olhar, morte por INT0, a **reação Split** sob raio/slashing mesmo havendo imunidades correspondentes. Discrepância impressa CHA8(-2) permanece anotada. https://www.5esrd.com/database/creature/ooze-eldritch/.
+- TF-162 Ichor Ooze: Life Drain condicionado a grapple, DC12 e metade do dano/cura/redução máxima ainda no sucesso, reset após long rest; Sense Destroyer por assassino do fiend. https://www.5esrd.com/database/creature/ooze-ichor/.
+- TF-163 Ink Guardian: garrafa CA20/HP10 e rejuvenation após 3d8h, evolução Tiny→Large, reação/traço Volatile com imunidade funcional contra thunder e ácido refletido, Multiattack só Medium/Large. https://www.5esrd.com/database/creature/ooze-ink-guardian/.
+- TF-164 Leavesrot Ooze: False Appearance, Rotting Leaves em todas criaturas a 5ft, auto-hit durante grapple, Release Spores choking com save fim do turno. https://www.5esrd.com/database/creature/ooze-leavesrot/.
+- Progresso esperado após read-back: **84/131 fichas aprofundadas, 47 aguardando, 95 parciais, 36 bloqueadas, 0 aprovadas integralmente**. Imagens: 96/131 blobs, 35 faltantes, 0 aprovadas visualmente. Nenhum binário novo nesta rodada.
+
 ## Checkpoint 37 — Hraesvelgr, Mountain Giant e três oozes (14/10/2026)
 
 **[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c8da3de31c1c8845d6d88b5bb8a06a697eff3e53).** Read-back completo das cinco fichas: 131 IDs, 79 aprofundadas, 95 parciais e 36 bloqueadas. Revalidação física de 96 blobs realizada no CP33; sem imagens novas.

@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 79,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 84,
     "fichas_integralmente_concluidas": 0,
     "parciais": 95,
     "bloqueadas": 36,
-    "registros_aproveitados_sem_nova_verificacao_integral": 52,
+    "registros_aproveitados_sem_nova_verificacao_integral": 47,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -560,9 +560,24 @@
       "commit": "c8da3de31c1c8845d6d88b5bb8a06a697eff3e53",
       "leitura_persistencia": "CONFIRMADA — cinco JSONs checkpoint 37 relidos no GitHub, 131 IDs únicos, 79 aprofundadas, 95 parciais, 36 bloqueadas; conflito CR4/CR0.5 de TF-159 resolvido",
       "tipo": "Hraesvelgr Mountain Giant e oozes Alchemical Amber Corrupting; bloqueio Amber homônimo resolvido"
+    },
+    {
+      "numero": 38,
+      "inicio": "TF-137",
+      "fim": "TF-164",
+      "ids": [
+        "TF-137",
+        "TF-161",
+        "TF-162",
+        "TF-163",
+        "TF-164"
+      ],
+      "commit": "78cc268e129bef7926a22d7fe4933ae5cf7afb71",
+      "leitura_persistencia": "PENDENTE_READ_BACK",
+      "tipo": "Berberoka Saturated Expansion; Split Eldritch; Ichor drain; Ink Guardian; Leavesrot"
     }
   ],
-  "atualizacao_detalhada_sha": "c8da3de31c1c8845d6d88b5bb8a06a697eff3e53",
+  "atualizacao_detalhada_sha": "78cc268e129bef7926a22d7fe4933ae5cf7afb71",
   "criaturas": [
     {
       "id": "TF-412",
@@ -2236,17 +2251,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 17,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-137.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_PROVENIENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://anyflip.com/lphgc/rjrj/basic/51-100",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Página individual /berberoka/ do 5eSRD não encontrada; mecânica verificada em reprodução não oficial de Tome of Beasts 3 e índice da Kobold Press.",
-        "Existe Berberoka de Tome of Horrors 2020, ND4, Huge, CA14/PV114; NÃO corresponde ao Berberoka Kobold ND7 Large CA16.",
-        "Faltam detalhes validados de como entra em estado Saturated; revisão editorial é obrigatória."
+        "Saturated Expansion (bonus action) documentada de ToB3 p56: absorve volume água até 10-ft cube em contato e fica Huge com STR adv; fonte de reprodução, conferência com livro autorizado ainda faltante.",
+        "Edição diferente da Berberoka CR4/Size Huge de Tome of Horrors; imagem sem validação legal/visual."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "verificação edição/licença",
+        "revisão visual e direito da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2256,7 +2271,8 @@
         "bytes": 170264,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-138",
@@ -2885,13 +2901,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 39,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-161.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-eldritch/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Split é reação lightning/slashing mesmo com imunidade publicada, sem inferir dano efetivo.",
+        "CHA 8 (-2) impresso diverge do modificador convencional -1; errata editorial necessária.",
+        "Arte preexistente sem inspeção."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "verificação edição/licença",
+        "revisão visual e direito da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2901,7 +2922,8 @@
         "bytes": 227176,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-162",
@@ -2909,15 +2931,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 40,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-162.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-ichor/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
       "pendencias": [
-        "Revisar limitações de Life Drain; arte pendente."
+        "Life Drain save bem-sucedido ainda causa metade do dano e redução máxima/cura no dano efetivo.",
+        "Imagem não aprovada e livro/errata pendente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "verificação edição/licença",
+        "revisão visual e direito da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2927,7 +2951,8 @@
         "bytes": 148076,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-163",
@@ -2935,15 +2960,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 41,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-163.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-ink-guardian/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
       "pendencias": [
-        "Revisar exceção ao dano de thunder e frasco de ressurgimento na publicação."
+        "Volatile thunder causa 0 dano e respinga ácido; distinto de resistência thunder.",
+        "Garrafa é objeto separado de AC20 HP10, reduzido a 0 impede rejuvenation.",
+        "Arte e edição pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "verificação edição/licença",
+        "revisão visual e direito da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2953,7 +2981,8 @@
         "bytes": 62453,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-164",
@@ -2961,13 +2990,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 42,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-164.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-leavesrot/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Pseudopod mantém grapple e auto-hit no alvo, sem poder atacar outro; Release Spores choking tem save no fim dos turnos.",
+        "Arte e revisão de edição pendentes."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "verificação edição/licença",
+        "revisão visual e direito da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2977,7 +3010,8 @@
         "bytes": 113514,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-165",
@@ -4365,11 +4399,11 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 37,
-    "sha_validado": "d29bec7bd4d6fced13ec32bb856c4fce76c3fb67",
+    "checkpoint": 38,
+    "sha_validado": null,
     "escopo_ids": 131,
-    "aprofundadas": 79,
-    "sem_revisao_individual": 52,
+    "aprofundadas": 84,
+    "sem_revisao_individual": 47,
     "integralmente_aprovadas": 0,
     "parciais": 95,
     "bloqueadas": 36,
