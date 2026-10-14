@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "2",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "plant",
+    "alignment": "lawful_neutral",
+    "experience_points": 450,
+    "proficiency_bonus": 2,
+    "source_page": 388
   },
   "statistics": {
     "armor_class": 13,
     "hit_points": 51,
-    "hit_dice": null,
+    "hit_dice": "6d8+24",
     "ability_scores": {
       "STR": 16,
       "DEX": 15,
@@ -26,24 +29,169 @@
       "WIS": 6,
       "CHA": 8
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 8
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": {
+      "understands": "languages_of_its_vine_lord",
+      "can_speak": false
+    },
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [
+      "fire"
+    ],
+    "condition_immunities": [
+      "blinded",
+      "deafened"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 2,
+      "CON": 4,
+      "INT": -2,
+      "WIS": -2,
+      "CHA": -1
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Green Regeneration",
+        "category": "conditional_regeneration",
+        "trigger": "start_of_each_puppet_turn",
+        "preconditions": [
+          "within_forest",
+          "hit_points_at_least_1"
+        ],
+        "heal_hit_points": 5
+      },
+      {
+        "name": "Root Mind",
+        "category": "hive_mind_telepathy",
+        "participants": [
+          "vine_lord",
+          "puppets_created_by_that_vine_lord"
+        ],
+        "max_distance_miles": 1,
+        "if_in_forest": {
+          "cannot_be_surprised": true
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "saving_throw_advantage",
+        "advantage_on_saves_against": [
+          "spells",
+          "other_magical_effects"
+        ]
+      },
+      {
+        "name": "Woodland Walk",
+        "category": "special_movement",
+        "terrain": "nonmagical_plants",
+        "ignore_extra_movement_cost": true,
+        "pass_without_slowing": true,
+        "immune_to_damage_from_nonmagical_plant_thorns_spines_or_similar": true
+      }
+    ],
+    "actions": [
+      {
+        "name": "Thorned Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 3,
+              "average": 12,
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "2d4",
+              "flat": 0,
+              "average": 5,
+              "type": "piercing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Ball of Thorns",
+        "category": "attack_with_area_burst",
+        "action_economy": "action",
+        "attack_type": "ranged_weapon",
+        "attack_bonus": 4,
+        "range_ft": {
+          "normal": 20,
+          "long": 60
+        },
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d4",
+              "flat": 2,
+              "average": 12,
+              "type": "piercing"
+            }
+          ],
+          "burst": {
+            "radius_ft": 5,
+            "center": "target",
+            "targets": "each_creature_within_5_ft_of_target",
+            "save": {
+              "ability": "DEX",
+              "dc": 13,
+              "on_failure": {
+                "damage": [
+                  {
+                    "dice": "2d4",
+                    "average": 5,
+                    "type": "piercing"
+                  }
+                ]
+              },
+              "on_success": {
+                "damage": 0
+              }
+            }
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Regeneração florestal, mente-raiz compartilhada e golpes corpo a corpo ou arremessos de espinhos."
@@ -67,8 +215,8 @@
       "url": "https://kpogl.wikidot.com/monster:tendril-puppet",
       "type": "KPOGL, transcrição independente (não endossada pela editora)",
       "edition": "Tome of Beasts 1",
-      "scope": "traços, ações e resumo; não valida direitos nem edição física",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Identidade, atributos, defesas, movimentos, características, ataques e regras condicionais",
+      "verification": "Statblock individual lido e estruturado em 2026-10-14, homologação pendente"
     }
   ],
   "source_checkpoint": {
@@ -80,9 +228,8 @@
     "Tendril Puppet original pode ter PV 34/DEX 12; revisão 2023 registra PV 51/DEX 15. Não confundir com Vine Lord."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Confrontar integralmente edição impressa e erratas com fonte digital secundária.",
+    "Validar cálculos, áreas, duração e limites na engine antes de homologar."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -106,5 +253,17 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:tendril-puppet"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Lido statblock individual secundário KPOGL; não homologado editorialmente, sem impressão/errata ou engine."
   }
 }

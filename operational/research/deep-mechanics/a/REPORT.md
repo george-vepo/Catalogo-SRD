@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 51: Viiret, Tendril Puppet e Chaos Creeper (14/10/2026)
+
+- **TF-257 Viiret:** Disease Eater, Disease Sense, Multiattack de dois golpes (no máximo um Bite), Bite com engolir/ácido-necrótico condicionado, salvaguardas de doenças, dano mínimo recebido para regurgitar, bônus para regurgitar e escape ao morrer.
+- **TF-258 Vine Lord, Tendril Puppet:** Green Regeneration na floresta com PV ≥1, Root Mind com alcance e imunidade a surpresa na floresta, Magic Resistance, Woodland Walk, dois ataques com explosão de espinhos e CD 13.
+- **TF-259 Chaos Creeper:** Pandemonium Fruit com opção de escolher efeito ao consumir slot de terceiro nível ou dois dados de vida, tabela separada de oito resultados Wondrous Cornucopia com CDs/durações, Multiattack 3× Vine Whip ou 2× Fruit Bomb e substituição do dano pela tabela de efeitos.
+
+Apenas estrutura mecânica da fonte individual comunitária KPOGL, **não homologação** de edição/impressão/errata ou engine. **63 statblocks estruturados online, 69 resumidos, 0 homologados**; **124 binários**, 8 imagens ausentes, nenhuma arte aprovada. Preservadas identidades de cada variante e limitações da fonte. Sem V-Bridge, merge ou outras branches.
+
+---
+
 # Grupo A — checkpoint 50: Child of the Briar, Citrullus e Climbing Vine (14/10/2026)
 
 - **TF-254 Child of the Briar:** Fey Ancestry, Multiattack Claw 2× com grapple condicionado, Spitdart Tongue (recarga 4–6) e Entangle cooperativo com reações de aliados, CDs e área máximas. Diferenças entre versões original/revisada preservadas para revisão editorial.
