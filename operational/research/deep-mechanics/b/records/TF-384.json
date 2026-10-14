@@ -1,0 +1,145 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-384",
+  "nome": "Mutant Rust Monster",
+  "estado": "DETALHADA_FONTE_EDITORIAL_SEM_REVISAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "Level Up Advanced 5th Edition (A5E)",
+    "publicacao": "Dungeon Delver's Guide",
+    "editora": "EN Publishing",
+    "confirmacao": "bloco individual no portal editorial; edição impressa/erratas não confrontadas"
+  },
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/2870",
+      "natureza": "editorial_direta",
+      "verificada": "2026-10-13"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "continuidade_checkpoint_secundario"
+    }
+  ],
+  "estatisticas": {
+    "nd": "8",
+    "ca": 16,
+    "pv": 126,
+    "dados_vida": "12d10+60",
+    "atributos": {
+      "FOR": 20,
+      "DES": 12,
+      "CON": 20,
+      "INT": 4,
+      "SAB": 12,
+      "CAR": 6
+    },
+    "deslocamentos_ft": {
+      "andar": 45
+    },
+    "salvaguardas": {
+      "DEX": 4,
+      "WIS": 4
+    },
+    "pericias": {},
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [],
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "poison",
+      "psychic",
+      "thunder"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened"
+    ]
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Draining Aura",
+      "efeito": "Ao entrar pela primeira vez no turno ou iniciar turno a 20 pés, criaturas vivas fazem CON CD16: falha 1d6 force; máximo de PV reduzido no dano e desvantagem em ataque/testes até próximo turno; redução termina por descanso longo ou greater restoration; morte se máximo PV chegar a zero.",
+      "area_ft": 20,
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 16
+      },
+      "dano": {
+        "dados": "1d6",
+        "modificador": 0,
+        "tipo": "force"
+      }
+    },
+    {
+      "nome": "Metal Detection",
+      "efeito": "Detecta cheiro de metal a 60 pés."
+    },
+    {
+      "nome": "Rust Metal",
+      "efeito": "Arma metálica que acerta sofre -1 permanente no dano a cada acerto, destruída a -5; arma mágica pode ser restaurada em 1 minuto de polimento/reparo; munição metálica destruída."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "3d8",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "alvos": "Large ou menor",
+          "falha": "grappled e restrained",
+          "escape_cd": 16,
+          "restricao": "não pode morder outro enquanto mantiver grapple"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "efeito": "Uma ação Antennae e dois ataques Bite.",
+      "sequencia": [
+        "Antennae",
+        "Bite",
+        "Bite"
+      ]
+    },
+    {
+      "nome": "Antennae",
+      "efeito": "Corroer metal a até 20 pés; objeto não carregado: até 1 pé quadrado; objeto carregado: DEX CD16 do portador evita; armaduras/escudos têm -1 proteção CA cumulativo; reparo mágico em 1 minuto.",
+      "alcance_ft": 20,
+      "salvaguarda": {
+        "atributo": "DEX",
+        "cd": 16
+      }
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": false,
+  "pendencias": [
+    "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
+    "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
+  ],
+  "integrada": false
+}

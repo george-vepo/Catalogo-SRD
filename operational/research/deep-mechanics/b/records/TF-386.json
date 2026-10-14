@@ -1,0 +1,175 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-386",
+  "nome": "Grootslang",
+  "estado": "DETALHADA_FONTE_EDITORIAL_SEM_REVISAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "Level Up Advanced 5th Edition (A5E)",
+    "publicacao": "Mythological Figures & Maleficent Monsters",
+    "editora": "EN Publishing",
+    "confirmacao": "bloco individual no portal editorial; edição impressa/erratas não confrontadas"
+  },
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/2444",
+      "natureza": "editorial_direta",
+      "verificada": "2026-10-13"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "continuidade_checkpoint_secundario"
+    }
+  ],
+  "estatisticas": {
+    "nd": "11",
+    "ca": 15,
+    "pv": 145,
+    "dados_vida": "10d20+40",
+    "atributos": {
+      "FOR": 24,
+      "DES": 13,
+      "CON": 18,
+      "INT": 19,
+      "SAB": 14,
+      "CAR": 9
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "nadar": 40
+    },
+    "salvaguardas": {},
+    "pericias": {
+      "Athletics": 11,
+      "Insight": 6,
+      "Perception": 6,
+      "Persuasion": "+3 (+1d8)",
+      "Stealth": "+5 (+1d8)"
+    },
+    "sentidos": [
+      "blindsight 30 ft",
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "poisoned"
+    ]
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Ageless",
+      "efeito": "Não sofre envelhecimento natural/mágico nem morre de idade."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia."
+    },
+    {
+      "nome": "Serpentine Charge",
+      "efeito": "Após mover 20 pés em linha reta e atingir com Bite ou Gore, STR CD19 ou prone; permite Constrict como ação bônus contra alvo prone.",
+      "movimento_minimo_ft": 20,
+      "salvaguarda": {
+        "atributo": "STR",
+        "cd": 19
+      }
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 15,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 7,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": []
+    },
+    {
+      "nome": "Gore",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 10,
+      "alvo": "um alvo prone",
+      "dano": [
+        {
+          "dados": "2d10",
+          "modificador": 7,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": []
+    },
+    {
+      "nome": "Constrict",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "2d10",
+          "modificador": 7,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeitos": [
+        {
+          "condicoes": [
+            "grappled",
+            "restrained"
+          ],
+          "escape_cd": 19,
+          "capacidade": 2
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Swallow",
+      "efeito": "Realiza Bite contra Médio ou menor agarrado; se acertar engole, encerrando grapple; alvo fica blinded e restrained, protegido por total cover externo, e recebe 2d8 contundente ao início do turno do Grootslang. Se sofrer 30+ dano interno no turno: CON CD19 no fim do turno ou regurgita todos prone. Morte encerra restraint; saída exige 5 pés movimento por rodada engolida.",
+      "precondicao": "alvo Médio ou menor grappled",
+      "ataque": "Bite",
+      "dano_turno": {
+        "dados": "2d8",
+        "modificador": 0,
+        "tipo": "bludgeoning"
+      },
+      "salvaguarda_regurgitar": {
+        "atributo": "CON",
+        "cd": 19
+      }
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Serpentine Charge — Constrict",
+      "efeito": "Constrict bônus contra alvo prone após ativar Serpentine Charge.",
+      "precondicao": "Serpentine Charge derrubou alvo"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "Outras edições/homônimos ND8 e ND12; esta ficha é somente A5E Mythological Figures & Maleficent Monsters ND11.",
+  "bloqueado": true,
+  "pendencias": [
+    "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
+    "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
+  ],
+  "integrada": false
+}

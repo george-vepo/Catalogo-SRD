@@ -1,0 +1,174 @@
+{
+  "schema": "SRD_DEEP_MECHANICS_B_V1",
+  "id": "TF-393",
+  "nome": "Minotaur Conqueror",
+  "estado": "DETALHADA_FONTE_EDITORIAL_SEM_REVISAO_INDEPENDENTE",
+  "edicao": {
+    "sistema": "Level Up Advanced 5th Edition (A5E)",
+    "publicacao": "Gate Pass Gazette",
+    "editora": "EN Publishing",
+    "confirmacao": "bloco individual no portal editorial; edição impressa/erratas não confrontadas"
+  },
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/2966",
+      "natureza": "editorial_direta",
+      "verificada": "2026-10-13"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4",
+      "natureza": "continuidade_checkpoint_secundario"
+    }
+  ],
+  "estatisticas": {
+    "nd": "16",
+    "ca": 19,
+    "pv": 262,
+    "dados_vida": "21d12+126",
+    "atributos": {
+      "FOR": 22,
+      "DES": 10,
+      "CON": 22,
+      "INT": 14,
+      "SAB": 16,
+      "CAR": 14
+    },
+    "deslocamentos_ft": {
+      "andar": 50
+    },
+    "salvaguardas": {
+      "STR": 11,
+      "DEX": 5,
+      "CON": 11,
+      "WIS": 8
+    },
+    "pericias": {
+      "History": 7,
+      "Insight": 8,
+      "Intimidation": "+11 (+1d4)",
+      "Perception": "+8 (+1d6)"
+    },
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "percepcao_passiva": 21,
+    "idiomas": [
+      "Abyssal",
+      "Undercommon"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": []
+  },
+  "habilidades_passivas": [
+    {
+      "nome": "Labyrinthine Recall",
+      "efeito": "Lembra perfeitamente todos os trajetos percorridos."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magias e efeitos mágicos."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Gore",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 5,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "3d8",
+          "modificador": 6,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "STR",
+            "cd": 19
+          },
+          "falha": "empurrado até 5 pés e prone"
+        },
+        {
+          "precondicao": "movimento em linha reta 10 pés",
+          "dano_extra": {
+            "dados": "3d8",
+            "modificador": 0,
+            "tipo": "piercing"
+          }
+        }
+      ]
+    },
+    {
+      "nome": "Greataxe",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 11,
+      "alcance_ft": 10,
+      "alvo": "um alvo",
+      "dano": [
+        {
+          "dados": "3d12",
+          "modificador": 6,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": []
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "efeito": "Um Gore e dois Greataxe.",
+      "sequencia": [
+        "Gore",
+        "Greataxe",
+        "Greataxe"
+      ]
+    },
+    {
+      "nome": "Intimidating Bellow",
+      "efeito": "Recarga 5-6, criaturas que escutam em 60 pés: WIS CD19 ou stunned até fim do próximo turno do minotauro ou sofrer dano.",
+      "recarga": "5-6",
+      "area_ft": 60,
+      "salvaguarda": {
+        "atributo": "WIS",
+        "cd": 19
+      },
+      "condicao": "stunned",
+      "encerramento": "fim do próximo turno do minotauro ou sofrer dano"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Roar of Triumph",
+      "efeito": "Se reduziu criatura viva a 0 PV desde fim do último turno, ganha 10d6 (média 35) PV temporários.",
+      "precondicao": "reduziu criatura viva a 0 PV no intervalo",
+      "pv_temporarios": "10d6"
+    },
+    {
+      "nome": "Stomp the Opposition",
+      "efeito": "Criaturas de pé em raio de 15 pés: STR CD19 ou prone.",
+      "area_ft": 15,
+      "salvaguarda": {
+        "atributo": "STR",
+        "cd": 19
+      },
+      "condicao": "prone"
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
+  "bloqueado": false,
+  "pendencias": [
+    "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
+    "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
+  ],
+  "integrada": false
+}
