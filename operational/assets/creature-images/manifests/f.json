@@ -16,15 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 104,
-    "verified_after_upload": 104,
-    "pending": 90,
-    "stored_bytes": 13163449,
-    "checkpoint_count": 24,
+    "persisted_binary_files": 108,
+    "verified_after_upload": 108,
+    "pending": 86,
+    "stored_bytes": 13166020,
+    "checkpoint_count": 25,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 90,
-    "blocked_confirmed": 0
+    "partial_missing_files": 86,
+    "blocked_confirmed": 0,
+    "partial_variant_art": 4
   },
   "checkpoints": [
     {
@@ -298,6 +299,17 @@
       ],
       "commit": "7655c4f7554d03d53b5dfea6d53eadf1edd14768",
       "validation": "post-upload GitHub binary refetch matched original base64 and Git blob SHA; source PNG 32x32, SHA-256 and file sizes validated, CC0 release checked"
+    },
+    {
+      "sequence": 25,
+      "images_added": [
+        "TF-355",
+        "TF-395",
+        "TF-361",
+        "TF-456"
+      ],
+      "commit": "070f73d8ec70dcfbdaf1785de16d65ce2069e79a",
+      "validation": "GitHub post-upload binary bytes equal sources, SHA-1 Git blob identities match; PNG integrity and SHA-256 pre-push; CC0/CC-BY3 provenance and art variant review documented"
     }
   ],
   "blocked_ids": [
@@ -320,11 +332,9 @@
     "TF-342",
     "TF-351",
     "TF-353",
-    "TF-355",
     "TF-356",
     "TF-358",
     "TF-360",
-    "TF-361",
     "TF-370",
     "TF-376",
     "TF-379",
@@ -334,7 +344,6 @@
     "TF-386",
     "TF-389",
     "TF-393",
-    "TF-395",
     "TF-397",
     "TF-398",
     "TF-402",
@@ -349,7 +358,6 @@
     "TF-447",
     "TF-448",
     "TF-449",
-    "TF-456",
     "TF-459",
     "TF-461",
     "TF-462",
@@ -2043,20 +2051,35 @@
     {
       "id": "TF-355",
       "name": "Giant, Hill Chief",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/hill_giant.png",
+      "repository_path": "operational/assets/creature-images/TF-355.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 514,
+      "sha256": "b5ff9e23e21b85a19638de659eb18944c0d579456b5deb593c89f1b127841926",
+      "persistence_commit": "070f73d8ec70dcfbdaf1785de16d65ce2069e79a",
+      "validation": {
+        "result": "passed",
+        "method": "Source/destination GitHub base64 content identical, Git blob SHA identical after upload; source PNG signature/IHDR/IEND, bytes, dimensions and SHA-256 verified",
+        "git_blob_sha": "737c02645188bc83574497858e47f0fc075ce254",
+        "quality_note": "Hill giant portrait, but not identified specifically as a chief."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_path": "releases/Nov-2015/mon/hill_giant.png",
+      "source_git_blob_sha": "737c02645188bc83574497858e47f0fc075ce254",
+      "source_license": "CC0 1.0 Universal (curated export; old per-tile provenance possible)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (credit optional under CC0)",
+      "rights_review": "Curated source excludes known unknown-license files; per-asset older provenance unverified"
     },
     {
       "id": "TF-356",
@@ -2115,20 +2138,35 @@
     {
       "id": "TF-361",
       "name": "Elder Black Pudding",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/amorphous/death_ooze.png",
+      "repository_path": "operational/assets/creature-images/TF-361.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 1052,
+      "sha256": "a4416e4eea0ff21baa3a5b5bf094586c916abb0ae3e76bd369c365b17089e4f2",
+      "persistence_commit": "070f73d8ec70dcfbdaf1785de16d65ce2069e79a",
+      "validation": {
+        "result": "passed",
+        "method": "Source/destination GitHub base64 content identical, Git blob SHA identical after upload; source PNG signature/IHDR/IEND, bytes, dimensions and SHA-256 verified",
+        "git_blob_sha": "5550a23094330a29dea976613bee08aa64f5314c",
+        "quality_note": "Dark ooze with embedded skull; a visual approximation, not an exclusive elder black pudding depiction."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_path": "releases/Nov-2015/mon/amorphous/death_ooze.png",
+      "source_git_blob_sha": "5550a23094330a29dea976613bee08aa64f5314c",
+      "source_license": "CC0 1.0 Universal (curated export; old per-tile provenance possible)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (credit optional under CC0)",
+      "rights_review": "Curated source excludes known unknown-license files; per-asset older provenance unverified"
     },
     {
       "id": "TF-363",
@@ -2685,20 +2723,35 @@
     {
       "id": "TF-395",
       "name": "Skeleton, Cackling",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/master/releases/Nov-2015/mon/undead/skeletons/skeleton_humanoid_small.png",
+      "repository_path": "operational/assets/creature-images/TF-395.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 326,
+      "sha256": "369575ae594eb690949047c6c651ca0c9f2c9049c10b994365dbf1076f374dc3",
+      "persistence_commit": "070f73d8ec70dcfbdaf1785de16d65ce2069e79a",
+      "validation": {
+        "result": "passed",
+        "method": "Source/destination GitHub base64 content identical, Git blob SHA identical after upload; source PNG signature/IHDR/IEND, bytes, dimensions and SHA-256 verified",
+        "git_blob_sha": "2c9811b1d1087f70759c5c404e81889201f7cf6c",
+        "quality_note": "Generic humanoid skeleton, does not visibly demonstrate cackling."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_path": "releases/Nov-2015/mon/undead/skeletons/skeleton_humanoid_small.png",
+      "source_git_blob_sha": "2c9811b1d1087f70759c5c404e81889201f7cf6c",
+      "source_license": "CC0 1.0 Universal (curated export; old per-tile provenance possible)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (credit optional under CC0)",
+      "rights_review": "Curated source excludes known unknown-license files; per-asset older provenance unverified"
     },
     {
       "id": "TF-396",
@@ -3655,20 +3708,35 @@
     {
       "id": "TF-456",
       "name": "Scarecrow Harvester",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/sharya2/valleyday-game/blob/main/assets/texture/ScareCrow0.png",
+      "repository_path": "operational/assets/creature-images/TF-456.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 64,
+        "height": 64
       },
-      "state": "PARTIAL"
+      "size_bytes": 679,
+      "sha256": "74d956f7a21719e894e39a99ff455f12771ce51bb5ccd5d1d07bfc0350e9e6ed",
+      "persistence_commit": "070f73d8ec70dcfbdaf1785de16d65ce2069e79a",
+      "validation": {
+        "result": "passed",
+        "method": "Source/destination GitHub base64 content identical, Git blob SHA identical after upload; source PNG signature/IHDR/IEND, bytes, dimensions and SHA-256 verified",
+        "git_blob_sha": "bff900faef380c1e41152973c8ac8ba0675f6156",
+        "quality_note": "Farm scarecrow pixel art; does not depict a supernatural harvester or harvesting weapon. Requires artwork replacement for variant specificity."
+      },
+      "state": "PARTIAL",
+      "source_repo": "sharya2/valleyday-game",
+      "source_path": "assets/texture/ScareCrow0.png",
+      "source_git_blob_sha": "bff900faef380c1e41152973c8ac8ba0675f6156",
+      "source_license": "CC BY 3.0",
+      "license_evidence": [
+        "https://opengameart.org/content/scare-crow",
+        "https://github.com/sharya2/valleyday-game/blob/main/README.md"
+      ],
+      "attribution": "TanBoonHing (required, CC BY 3.0); source published as Scare Crow by tanbh0009",
+      "rights_review": "Original OpenGameArt CC BY 3.0 listing inspected; GitHub copy named ScareCrow0.png has matching 679 byte size to original; attribution recorded."
     },
     {
       "id": "TF-459",
