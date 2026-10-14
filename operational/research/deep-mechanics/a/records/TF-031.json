@@ -15,7 +15,8 @@
     "size": "Medium",
     "type": "beast",
     "alignment": "unaligned",
-    "proficiency_bonus": 2
+    "proficiency_bonus": 2,
+    "experience_points": 450
   },
   "statistics": {
     "armor_class": 17,
@@ -44,7 +45,15 @@
     "damage_resistances": [],
     "damage_immunities": [],
     "damage_vulnerabilities": [],
-    "condition_immunities": []
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 0,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -4
+    }
   },
   "mechanics": {
     "traits": [
@@ -150,7 +159,8 @@
               "maximum_simultaneous_targets": 2,
               "limitation": "cada uma das duas garras pode agarrar um alvo"
             }
-          ]
+          ],
+          "average_damage": 6
         },
         "miss": {
           "damage": 0,
@@ -184,7 +194,12 @@
               "damage_type": "slashing"
             }
           ],
-          "other_effects": []
+          "other_effects": [],
+          "average_damage": {
+            "bludgeoning": 5,
+            "slashing": 3,
+            "total": 8
+          }
         },
         "miss": {
           "damage": 0,
@@ -251,7 +266,11 @@
     "official_publisher_index_publication_confirmed": true,
     "primary_printing_or_errata_verified": false,
     "editorial_final_approval": false,
-    "reason_for_partial": "Regras da ficha online foram estruturadas integralmente; edição impressa/errata e revisão independente de implementação continuam pendentes."
+    "reason_for_partial": "Regras da ficha online foram estruturadas integralmente; edição impressa/errata e revisão independente de implementação continuam pendentes.",
+    "online_numeric_details_rechecked_on": "2026-10-14",
+    "online_numeric_details_sources": [
+      "https://www.5esrd.com/database/creature/crab-razorback/"
+    ]
   },
   "source_checkpoint": {
     "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-031_TF-035/research.json",
