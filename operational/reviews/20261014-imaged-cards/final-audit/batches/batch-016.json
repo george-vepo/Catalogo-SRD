@@ -1,0 +1,1208 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-20261014",
+  "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+  "reference_date": "2026-10-14",
+  "batch_number": 16,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 9,
+    "completas_com_ressalvas": 1,
+    "incompletas": 0,
+    "nao_verificaveis": 0,
+    "imagem_direta": 10,
+    "imagem_manifesto": 0,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 0
+  },
+  "evidence_limitations": [
+    "Integridade física verificada nos dez arquivos e referências diretas JSON.",
+    "TF-176 necessita confronto literal do cálculo de dano; fontes editoriais primárias e arte não homologadas."
+  ],
+  "records": [
+    {
+      "id": "TF-168",
+      "criatura": "Ooze, Sinkhole",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press / Open Design",
+        "edicao": "Tome of Beasts 3",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 7,
+        "pv": 108,
+        "dados_vida": "8d20+24",
+        "atributos": {
+          "FOR": 18,
+          "DES": 5,
+          "CON": 16,
+          "INT": 3,
+          "SAB": 6,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 120,
+            "restricao": "blind beyond"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amorphous",
+            "Hollow Cylindrical Form",
+            "Seizing Pseudopods",
+            "Slimy Appearance",
+            "Ooze Nature",
+            "Spider Climb"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [
+            "Stretch Body"
+          ],
+          "reacoes": [
+            "Pluck"
+          ],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Stretch Body é bonus action indispensável para Hollow Cylindrical Form, Slimy Appearance e Pluck; Pluck registrada como reação condicionada a stretched.",
+        "Cada um dos até 6 pseudopods é entidade local atacável CA10/HP10, destruída não tira HP da ooze.",
+        "Imagem/edição/errata pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-168.webp",
+        "sha_git": "bbcd1492727a12b6f34b137c8cb3f08b7d648efb",
+        "bytes": 202650,
+        "dimensoes_declaradas": [
+          1056,
+          1200
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-168.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-168.json",
+        "sha": "2bbcbfa944fc78e2a0b1cd16ad8aff9e37a0323d",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/sinkhole-ooze/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/sinkhole-ooze/",
+            "tipo": "ficha individual revisada no checkpoint 39",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/sinkhole-ooze/",
+            "tipo": "conferência direta da reação Pluck no CP39 de consolidação",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-169",
+      "criatura": "Ooze, Suppurating",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press / Open Design",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 8,
+        "pv": 30,
+        "dados_vida": "4d8+12",
+        "atributos": {
+          "FOR": 16,
+          "DES": 6,
+          "CON": 16,
+          "INT": 1,
+          "SAB": 6,
+          "CAR": 2
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amorphous",
+            "Ooze Nature",
+            "Seeping Death",
+            "Spider Climb"
+          ],
+          "acoes": [
+            "Pseudopod"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Seeping Death causa perda DEX apenas se CON CD13 falha ao fim de cada long rest, morte quando DEX=0, reversão long rest depois de cura e transformação 1d4h após morte.",
+        "Seeping Death Skeleton é variante CR2 de entidade distinta; não integrar.",
+        "Revisão editorial de livro e autorização de imagem pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-169.jpg",
+        "sha_git": "79157665d713a679e25777c5e035f4dc04d82478",
+        "bytes": 101565,
+        "dimensoes_declaradas": [
+          1000,
+          623
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-169.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-169.json",
+        "sha": "865f453a2a11895c08662e287bab3c6c6e9ebb33",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-suppurating/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-suppurating/",
+            "tipo": "ficha individual revisada no checkpoint 39",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-170",
+      "criatura": "Voidpool",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press / Open Design",
+        "edicao": "Tome of Beasts 2",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 8,
+        "pv": 112,
+        "dados_vida": "15d10+30",
+        "atributos": {
+          "FOR": 15,
+          "DES": 6,
+          "CON": 14,
+          "INT": 2,
+          "SAB": 6,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amorphous",
+            "Grappler",
+            "Planar Portal",
+            "Spider Climb",
+            "Ooze Nature"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Fonte 5eSRD original 404 foi substituída por reprodução de Tome of Beasts 2 p.362 e ficha Robinloft concordante; autorização editorial ainda pendente.",
+        "Planar Portal: sucesso no teste causa 2d6 force mas não avança puxão; falha não causa dano e soma etapa para três falhas antes de escape.",
+        "Licença e identidade visual da imagem ainda sem aprovação.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-170.webp",
+        "sha_git": "94a8245182bb2019401a66c6ba903e60cb91ddd6",
+        "bytes": 149714,
+        "dimensoes_declaradas": [
+          1280,
+          816
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-170.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-170.json",
+        "sha": "f724996460b439c0eab985732f1dd933ca000700",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": null,
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://anyflip.com/myubd/cwps/basic/351-400",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.robinloft.com/monsters/voidpool/tome-of-beasts-2",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-171",
+      "criatura": "Yaga Goo",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 85,
+        "dados_vida": "10d6+50",
+        "atributos": {
+          "FOR": 11,
+          "DES": 18,
+          "CON": 20,
+          "INT": 14,
+          "SAB": 12,
+          "CAR": 11
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amorphous",
+            "Deadly to Fey",
+            "Spider Climb",
+            "Ooze Nature"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod",
+            "Foul Transit"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Puddle Splash"
+          ],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Fonte reproduz Creature Codex p.389; confirmar edição autorizada e erratas.",
+        "Puddle Splash só funciona com poça Foul Transit livre; a reação evita o dano do ataque que a acionou.",
+        "Direitos/adequação da imagem pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-171.jpg",
+        "sha_git": "8c8fc5677a038fdb01c4b5c1dbc33ebab4c0d59a",
+        "bytes": 51532,
+        "dimensoes_declaradas": [
+          500,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-171.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-171.json",
+        "sha": "63431edc44954e8943d8f91f6dc1bbbbdb4d9b1c",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/yaga-goo",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://fliphtml5.com/nvljc/hodl/KOBOLD_PRESS._CREATURE_CODEX/390/",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/yaga-goo",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-172",
+      "criatura": "Animated Offal",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 8,
+        "pv": 207,
+        "dados_vida": "18d12+90",
+        "atributos": {
+          "FOR": 18,
+          "DES": 6,
+          "CON": 20,
+          "INT": 1,
+          "SAB": 7,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 120,
+            "restricao": "blind beyond"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Flowing Flesh",
+            "Healing Sense",
+            "Ooze Nature"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [
+            "Pseudopod (Healing Sense)",
+            "Subsume"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Fonte KPOGL é republicação independente OGL; conferir Tome of Beasts 3 p.38 em edição licenciada.",
+        "A reprodução dos temporary HP de Subsume tem teto 48 e criação de nova ooze quando excede.",
+        "Imagem física sem aprovação de licença/identidade.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-172.webp",
+        "sha_git": "dbd31a78bbde7b706ab7e4aa61c509ea7237a730",
+        "bytes": 148230,
+        "dimensoes_declaradas": [
+          1200,
+          1296
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-172.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-172.json",
+        "sha": "6ee43ff8646bbe8121df404a67cbddccfe6c5348",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://kpogl.wikidot.com/monster:animated-offal",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://kpogl.wikidot.com/monster:animated-offal",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://kpogl.wikidot.com/publication:tome-of-beasts-3",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-173",
+      "criatura": "Black Patch",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 7,
+        "pv": 153,
+        "dados_vida": "18d10+54",
+        "atributos": {
+          "FOR": 18,
+          "DES": 5,
+          "CON": 16,
+          "INT": 4,
+          "SAB": 6,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 120,
+            "restricao": "blind beyond"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amphibious",
+            "Eldritch Luminance",
+            "Flowing Form",
+            "Ooze Nature"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod",
+            "Viscid Suffocation"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Mesmerized não deve ser automaticamente substituído por charmed; movimentação e salvaguardas repetidas são regras específicas.",
+        "A ooze tem velocidade terrestre 0 e depende de água; Viscid Suffocation tem condições de gatilho local.",
+        "Fonte 5eSRD/Tome of Beasts 3 p.58 usada como referência; revisão editorial e licença visual ainda pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-173.webp",
+        "sha_git": "583f51274c6fc0d1a5da34a328d7e32a7d938a66",
+        "bytes": 147862,
+        "dimensoes_declaradas": [
+          1200,
+          1229
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-173.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-173.json",
+        "sha": "ead200f50a903021ebe72137828be36bad5ba15f",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/black-patch/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/black-patch/",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://anyflip.com/lphgc/rjrj/basic/51-100",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-174",
+      "criatura": "Oozasis",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 7,
+        "pv": 217,
+        "dados_vida": "14d20+70",
+        "atributos": {
+          "FOR": 18,
+          "DES": 5,
+          "CON": 20,
+          "INT": 12,
+          "SAB": 22,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond"
+          },
+          {
+            "tipo": "tremorsense",
+            "alcance_ft": 120
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amorphous",
+            "Waters of Unfathomable Compulsion"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod",
+            "Engulf",
+            "Vapors of Tranquility or Turmoil"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [
+            "Mirage"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "EDIÇÃO ORIGINAL 2016: NÃO combinar com revisão 2023. Original: INT12 WIS22 CHA18, thunder vulnerability, climb, Mirage bônus, Engulf e Vapors descanso; revisão 2023 altera habilidades, salva e deslocamento.",
+        "As fontes de reprodução e Robinloft corroboram versão antiga, mas aprovação editorial/errata original continua bloqueada.",
+        "Licença e validação visual da imagem ainda pendentes.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-174.webp",
+        "sha_git": "99d54c47ec184d2178cab899b3e2bf84716ef161",
+        "bytes": 63082,
+        "dimensoes_declaradas": [
+          717,
+          800
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-174.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-174.json",
+        "sha": "49e9987f63a45c2d9d34941171bdf367ec8774b8",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/oozasis-3pp",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://robinloft.com/monsters/oozasis/tome-of-beasts",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://anyflip.com/ufijo/ddkh/basic/301-350",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/oozasis-3pp/",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://koboldpress.com/tome-of-beasts-1-what-changed/",
+            "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-175",
+      "criatura": "Ooze, Blood",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 8,
+        "pv": 76,
+        "dados_vida": "8d10+32",
+        "atributos": {
+          "FOR": 16,
+          "DES": 6,
+          "CON": 18,
+          "INT": 1,
+          "SAB": 8,
+          "CAR": 2
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond radius"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amorphous",
+            "Blood Drain",
+            "Ooze Nature",
+            "Spider Climb"
+          ],
+          "acoes": [
+            "Pseudopod"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Overflow"
+          ],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Homônimo ooze-blood-2 (Tiny beast CR0) NÃO corresponde à TF-175; bloco CR6 de Creature Codex mantido.",
+        "Blood Drain, Pseudopod e Overflow acumulam PV temporários como exceção publicada, com teto 38; dano radiant inibe apenas o traço no início do próximo turno, não remove PV temporários ganhos.",
+        "Conferir livro e erratas, autorização e identidade visual da arte antes de concluir.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-175.jpg",
+        "sha_git": "7645c34ba6cf6f3fd7b072f4990566beb122c4b1",
+        "bytes": 73118,
+        "dimensoes_declaradas": [
+          1000,
+          655
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-175.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-175.json",
+        "sha": "7fb524c7bfe6a18d0a2b1e76fd9dc9fcc3643e1c",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-blood/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-blood/",
+            "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-176",
+      "criatura": "Ooze, Foxfire",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Efeito estruturado mas sobreposição de danos requer cotejo para ação em alvo metálico.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 9,
+        "pv": 126,
+        "dados_vida": "12d10+60",
+        "atributos": {
+          "FOR": 19,
+          "DES": 8,
+          "CON": 20,
+          "INT": 2,
+          "SAB": 6,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond radius"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Ambusher",
+            "Amorphous",
+            "Lightning Storm",
+            "Ooze Nature",
+            "Spider Climb"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pseudopod"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Lightning Storm: verificar se dano inicial e dano adicional da área com metal são cumulativos sobre a mesma criatura."
+      ],
+      "pendencias_editoriais": [
+        "Lightning Storm possui dano inicial na criatura gatilho e área separada 20ft contra criaturas com metal; conferir cumulatividade se a mesma criatura recebe ambos.",
+        "Resistência BPS só contra ataques não mágicos, não geral; voo 10ft hover preservado.",
+        "Conferir publicação, licenciamento e adequação visual da imagem.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-176.jpg",
+        "sha_git": "8e108c8fd5d34a0034cbac7bb0b43212ae89736d",
+        "bytes": 58419,
+        "dimensoes_declaradas": [
+          809,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-176.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Esclarecer cumulatividade de Lightning Storm; Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-176.json",
+        "sha": "1c821d95094c559e7a65c873e7a450317b330d3e",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-foxfire/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-foxfire/",
+            "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    },
+    {
+      "id": "TF-177",
+      "criatura": "Ooze, Giant Shark Bowl",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas descritas integralmente na ficha individual, pendentes homologação.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 6,
+        "pv": 172,
+        "dados_vida": "15d12+75",
+        "atributos": {
+          "FOR": 23,
+          "DES": 3,
+          "CON": 20,
+          "INT": 1,
+          "SAB": 10,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {},
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "restricao": "blind beyond radius"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amphibious",
+            "Blood Frenzy",
+            "Electrical Charge",
+            "Ooze Fish Bowl",
+            "Ooze Nature",
+            "Symbiotically Bound"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Pseudopod",
+            "Engulf"
+          ],
+          "ataques": [
+            "Bite",
+            "Pseudopod"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "NÃO separar tubarão e ooze: Symbiotically Bound compartilha estatísticas; qualquer extrusão seria regra inventada.",
+        "Ooze Fish Bowl tem disadvantage no DEX ao entrar no espaço, capacidade 1 Large ou 6 Medium; separar escape interno e extração externa (resgatador sofre 3d10+6 piercing).",
+        "Conferir original Creature Codex p284 e autorização da imagem.",
+        "Edição final, errata, licença e arte não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-177.jpg",
+        "sha_git": "60d3114d9ab303165f7ac0a9c3f0ff616e7defbc",
+        "bytes": 63728,
+        "dimensoes_declaradas": [
+          775,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-177.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Adaptar/testar card game, revisar direitos e imagens.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-177.json",
+        "sha": "928a3b88ec1fdf1584753bb07c24727da0bdf7bb",
+        "source_commit": "4d020beac9f7dfae9b9d05aad5e87ea53d88a3c9",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/",
+            "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+            "conferida_nesta_execucao": true
+          },
+          {
+            "url": "https://anyflip.com/plzy/fzdt/basic/251-300",
+            "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+            "conferida_nesta_execucao": true
+          }
+        ]
+      },
+      "lote": 16
+    }
+  ]
+}
