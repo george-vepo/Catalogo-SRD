@@ -170,18 +170,28 @@ O commit `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` adicionou três PNG distinto
 
 Fonte: [crawl/tiles](https://github.com/crawl/tiles), uma exportação de tiles que declara CC0 para seu subconjunto curado, com [exclusões de autoria incerta](https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md). O recorte histórico não substitui revalidação individual dos titulares antes de distribuição comercial. **Não são cartas com arte final aprovada.** Origem, licença declarada, atribuição, risco, hashes, tamanho e commits constam no manifesto.
 
+## Checkpoint 33 — TF-475 Giant Lanternfish
+
+A imagem física `TF-475.png` foi obtida do repositório [Pelagico](https://github.com/vincentchen18/Pelagico) no commit fixado `8c87620b785f417c4c6a975ef7e6582218d5a5c5`. É uma arte em pixel de peixe-pescador com isca luminosa e dentes, PNG 1254×1254, 12.683 bytes, SHA-256 `f7183a039cf13f662688e5bdafc9077f1cb1834cf9cc25eb2395be61459dd2f8`. O arquivo foi persistido no commit `d0137f1018dc30a0d6a8c60a2017eb84e51df186` e recuperado da branch do SRD; os bytes e Git blob SHA foram idênticos aos da origem.
+
+**Licença e atribuição:** o [LICENSE.md](https://github.com/vincentchen18/Pelagico/blob/main/LICENSE.md) apresenta licença MIT para o projeto, copyright 2026 de Vincent Chen, Justin Yeung, Lucas Liu e Jeremy Jiang. O [README](https://github.com/vincentchen18/Pelagico/blob/main/README.md) atribui a Jeremy Jiang os sprites/artes dos personagens. Não há documento de licença separado para a imagem que comprove inequivocamente a inclusão deste asset no escopo da licença MIT; **condição de direitos PARTIAL** até confirmação. Manter avisos de copyright e licença.
+
+**Adequação:** a espécie e sua isca correspondem ao arquétipo Giant Lanternfish. A escala de gigante não é comunicada por objeto de referência e a estética pixel precisa ser aprovada para arte final. `PARTIAL`.
+
+A candidata alternativa prévia [Anglerfish, m7600, CC0 no OpenGameArt](https://opengameart.org/content/anglerfish-0) não havia tido seu binário obtido e portanto não foi gravada nem usada neste checkpoint.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **129** |
-| Imagens com validação pós-upload registrada | **129** |
-| IDs ainda ausentes | **65** |
-| Tamanho total dos binários | **13.324.019 bytes** |
-| Checkpoints (máximo 10 arquivos) | **32** |
+| Imagens físicas persistidas no GitHub | **130** |
+| Imagens com validação pós-upload registrada | **130** |
+| IDs ainda ausentes | **64** |
+| Tamanho total dos binários | **13.336.702 bytes** |
+| Checkpoints (máximo 10 arquivos) | **33** |
 
-## Binários confirmados (129)
+## Binários confirmados (130)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -314,8 +324,9 @@ Fonte: [crawl/tiles](https://github.com/crawl/tiles), uma exportação de tiles 
 | TF-459 | Ankheg Empress | `operational/assets/creature-images/TF-459.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/queen_ant.png) | .png / image/png | 32×32 | 1204 | `99c8a47ab1bdb8f78c5a52b062e47a82dabf63222d5004974b01e5b174d0fe87` | `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` | PASS binário; PARTIAL por diferenças da variante/licença histórica |
 | TF-461 | Ankheg Spawn | `operational/assets/creature-images/TF-461.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/soldier_ant.png) | .png / image/png | 32×32 | 465 | `0713954a327e823a6f183eb2e8ca03d4d0921ff3a17aec746cef0be35bd43bc5` | `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` | PASS binário; PARTIAL por diferenças da variante/licença histórica |
 | TF-482 | Spore Thrall | `operational/assets/creature-images/TF-482.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/vine_stalker.png) | .png / image/png | 32×32 | 1265 | `de65a85ee43e153519851e4268574309afed12a057dbc9b277c10a6dbd009132` | `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` | PASS binário; PARTIAL por diferenças da variante/licença histórica |
+| TF-475 | Giant Lanternfish | `operational/assets/creature-images/TF-475.png` | [origem](https://github.com/vincentchen18/Pelagico/blob/8c87620b785f417c4c6a975ef7e6582218d5a5c5/Assets/anglerfish.png) | .png / image/png | 1254×1254 | 12683 | `f7183a039cf13f662688e5bdafc9077f1cb1834cf9cc25eb2395be61459dd2f8` | `d0137f1018dc30a0d6a8c60a2017eb84e51df186` | PASS binário; PARTIAL (direitos de arte em MIT e escala/design) |
 
-## IDs bloqueados / pendentes (65)
+## IDs bloqueados / pendentes (64)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -364,7 +375,6 @@ Fonte: [crawl/tiles](https://github.com/crawl/tiles), uma exportação de tiles 
 | TF-468 | Faerie Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-470 | Fiendish Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-473 | Flying Lion | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-475 | Giant Lanternfish | Fonte candidata [Anglerfish — OpenGameArt](https://opengameart.org/content/anglerfish-0), autor m7600, licença CC0 declarada; tentativa de baixar binário [anglerfish.png](https://opengameart.org/sites/default/files/anglerfish.png) falhou tecnicamente nesta execução. GitHub connector não busca URLs externas. **Nenhum arquivo obtido, sem SHA-256, segue PARTIAL.** |
 | TF-480 | Sewer Walker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-483 | Squashling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-489 | Swarm of Skitterlings | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -443,5 +453,6 @@ Fonte: [crawl/tiles](https://github.com/crawl/tiles), uma exportação de tiles 
 | 30 | TF-478 | `53d65954ef72fa63085986531b0c1d07f504fb21` | 96×256 animated PNG, source mirror/destination Git blob SHA and full binary identity verified; original OGA source visible/CC BY 4.0 credit; animation sheet PARTIAL |
 | 31 | TF-504, TF-508 | `b35b04917c221a1f22663d91523ff5ba2b251a53` | Two 32x32 sprite binaries fetched and compared to public source after upload; different images, CC0 curated source claim; unique variant imagery and copyright audit PARTIAL |
 | 32 | TF-459, TF-461, TF-482 | `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` | 3 PNG from curated crawl/tiles export, same post-upload GitHub binary and source Git blob SHA; pre-upload PNG 32×32 and SHA-256 verified; partial artistic match |
+| 33 | TF-475 | `d0137f1018dc30a0d6a8c60a2017eb84e51df186` | Pelagico anglerfish 1254×1254 PNG; post-upload Git blob SHA and full binary identity with pinned source confirmed; MIT project license applies to repository, artwork coverage requires review |
 
-**Estado: parcial (129/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (130/194). Manter PR em rascunho e não executar merge.**
