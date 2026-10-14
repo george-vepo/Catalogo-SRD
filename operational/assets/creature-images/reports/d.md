@@ -74,3 +74,13 @@ Motivo: não foi localizada uma fonte de arte específica suficientemente inequ�
 ## Estado final
 
 **ENTREGA PARCIAL — PR #11 EM RASCUNHO.** 173 imagens verificadas no GitHub, 22 pendentes, 38.311.386 bytes. Nenhum merge executado; preservar os IDs não adquiridos.
+
+## Auditoria adicional de integridade — 2026-10-14
+
+- Retomada direta pelo GitHub, **sem V-Bridge**. A branch D e o PR draft #11 já existiam antes desta auditoria; nenhum binário novo foi publicado nesta retomada.
+- CSV integral do commit-base novamente lido: 607 linhas, 23 registros com `Imagem` iniciando por `VERIFICADA` e 584 não verificados; `pending_images.slice(0,195)` preservado de `AT-003` a `TF-058`.
+- Árvore Git completa do HEAD anterior à auditoria (`85a2968256735bc6cacd50f528057ce215fb8180`): 173 imagens no diretório do lote, sem arquivos extras, com correspondência exata para **todos os 173** registros marcados como armazenados no manifesto, incluindo caminho, Git blob SHA e tamanho. Somatório exato de **38.311.386 bytes**; nenhuma duplicação de SHA-256 registrada no manifesto; 22 IDs pendentes continuam sem arquivo.
+- Auditoria de releitura direta GitHub (`fetch_file` em Base64) sobre 10 arquivos distribuídos pelo lote: `AT-003`, `AT-033`, `AT-056`, `AT-083`, `AT-115`, `AT-138`, `KP-A012`, `KP-S017`, `TF-029`, `TF-058`. **10/10 passaram** na comparação SHA-256 recalculado do binário, tamanho em bytes, Git blob SHA, assinatura RIFF/WEBP, tamanho interno do contêiner e dimensões declaradas. O SHA-256 implementado para a leitura foi previamente testado com o vetor padrão `abc`.
+- Escopo da auditoria: verificação de estrutura, hashes e metadados em amostra; **não houve nova decodificação raster integral das 173 imagens nesta retomada**, nem revisão humana da identidade visual. Checkpoints e validações raster anteriores permanecem descritos acima.
+- Pesquisa adicional de correspondências nominais em fontes abertas e repositórios públicos não resultou em 22 novos arquivos de arte inequivocamente atribuíveis às criaturas. Preservadas as pendências e seus motivos em `d.json` e neste relatório, sem substituir variantes nem fabricar binários.
+- Nenhum merge, nenhuma alteração no CSV global, nas 23 imagens verificadas de origem, nem nos lotes E/F.
