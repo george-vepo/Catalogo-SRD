@@ -2,28 +2,29 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-343",
   "nome": "Fear Smith",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_NAO_HOMOLOGADA",
   "edicao": {
+    "editora": "Kobold Press",
     "sistema": "D&D 5e",
     "publicacao": "Tome of Beasts 1",
-    "editora": "Kobold Press",
+    "revisao": "fonte secundária individual KPOGL",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/fear-smith-3pp%29/",
-      "natureza": "secundaria_ou_reproducao_nao_reverificada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_anterior"
+      "url": "https://kpogl.wikidot.com/monster:fear-smith",
+      "natureza": "transcricao_integra_de_fonte_secundaria_comunitaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "atributos, ataques, passivas e ações"
     }
   ],
   "estatisticas": {
     "nd": "10",
+    "bonus_proficiencia": 4,
     "ca": 17,
+    "origem_ca": "natural armor",
     "pv": 149,
-    "dados_vida": null,
+    "dados_vida": "23d8+46",
     "atributos": {
       "FOR": 11,
       "DES": 17,
@@ -32,46 +33,229 @@
       "SAB": 15,
       "CAR": 18
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 40; escalar 15 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "modificadores": {
+      "FOR": 0,
+      "DES": 3,
+      "CON": 2,
+      "INT": 0,
+      "SAB": 2,
+      "CAR": 4
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "escalar": 15,
+      "voar": null,
+      "nadar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {
+      "SAB": 6
+    },
+    "pericias": {
+      "Intimidation": 8,
+      "Stealth": 7
+    },
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing de ataques não feitos com armas de ferro frio"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened"
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 30
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Common",
+      "Elvish",
+      "Sylvan"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "VERIFICADO_EM_TRANSCRICAO_SECUNDARIA_INDIVIDUAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Distortion Gaze",
+      "gatilho": "criatura que vê o olho do Fear Smith inicia turno a até 30 pés, enquanto Fear Smith pode vê-la e não está incapacitated",
+      "alcance_ft": 30,
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 16
+      },
+      "falha": {
+        "condicao": "disoriented",
+        "duracao": "até o início do turno seguinte do alvo",
+        "efeitos": [
+          "não pode usar Dash nem Disengage",
+          "primeiro movimento do turno exige DES CD16 ou fica prone"
+        ]
+      },
+      "sucesso": "sem desorientação",
+      "evasao": "salvo se surpreendido, pode desviar os olhos no início do turno e assim não ver o Fear Smith até o próximo turno; se voltar a olhá-lo antes, faz imediatamente o teste"
+    },
+    {
+      "nome": "Hidden Eye",
+      "efeito": "vantagem em salvaguardas contra blinded"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem nas salvaguardas contra magias e outros efeitos mágicos"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 7,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 3,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "2d8",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ],
+      "efeito_condicional": {
+        "gatilho": "alvo está disoriented por Distortion Gaze",
+        "efeito": "Fear Smith recupera PV iguais ao dano psychic efetivamente causado"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 3,
+      "sequencia": [
+        "Claw",
+        "Claw",
+        "Claw"
+      ],
+      "substituicao": {
+        "quantidade": 1,
+        "alternativa": "Heart-Stopping Stare"
+      }
+    },
+    {
+      "nome": "Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Claw"
+    },
+    {
+      "nome": "Heart-Stopping Stare",
+      "categoria": "controle",
+      "alcance_ft": 30,
+      "alvos": "uma criatura no alcance",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 16
+      },
+      "falha": {
+        "dano": {
+          "dados": "3d8",
+          "tipo": "psychic"
+        },
+        "condicao": "stunned",
+        "duracao": "até o final do próximo turno do alvo"
+      },
+      "sucesso": "não sofre efeitos",
+      "cura": {
+        "gatilho": "dano psychic efetivamente causado",
+        "pv": "mesmo valor"
+      }
+    },
+    {
+      "nome": "Spellcasting",
+      "categoria": "conjuracao",
+      "referencia_conjuracao": "Spellcasting"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Manipula temor de suas vítimas"
+      "nome": "Spellcasting",
+      "atributo": "CAR",
+      "cd": 16,
+      "bonus_ataque_magico": null,
+      "componentes_verbais": false,
+      "componentes_materiais": false,
+      "componentes_somaticos": "não especificados como dispensados",
+      "magias": [
+        {
+          "nome": "detect thoughts",
+          "usos": "à vontade",
+          "nivel": 2
+        },
+        {
+          "nome": "fear",
+          "usos": "à vontade",
+          "nivel": 3
+        },
+        {
+          "nome": "charm person",
+          "usos": "2/dia cada",
+          "nivel": 1
+        },
+        {
+          "nome": "command",
+          "usos": "2/dia cada",
+          "nivel": 1
+        }
+      ]
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Olhar aterrorizante e efeitos de perturbação"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Falta conferir todas as mecânicas e ações individuais contra edição exata.",
-    "Campos de ação ainda sem dados completos (acerto, dano, alvos, resistências, condição, CDs, duração, usos e recargas).",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Verificar publicação oficial e erratas específicas da edição escolhida.",
+    "Ações/atributos extraídos da fonte secundária; revisão editorial independente e integração permanecem pendentes."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Fear Smith (Fiarsídhe)",
+    "tipo": "fey",
+    "tamanho": "Medium",
+    "alinhamento": "chaotic neutral",
+    "nd": "10",
+    "bonus_proficiencia": 4
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": 3,
+      "sequencia": [
+        "Claw",
+        "Claw",
+        "Claw"
+      ],
+      "alternativas": [
+        {
+          "substituir_um_ataque_por": "Heart-Stopping Stare"
+        }
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Disorientation",
+      "efeito": "limita Dash e Disengage e exige salvaguarda DES na primeira movimentação do turno"
+    }
+  ]
 }
