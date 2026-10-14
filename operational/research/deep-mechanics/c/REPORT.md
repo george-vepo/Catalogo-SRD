@@ -4,11 +4,18 @@
 
 ## Checkpoint 25 — Kanos Spawn e Imp Flock (14/10/2026)
 
+- Commit `97b58fda82c41a311d7a3f149907600daadceea3` relido, JSONs TF-516 e TF-517 válidos por leitura sintática e ID.
+
+
 - TF-516 Kanos Spawn: Pack Tactics, Wall Walker, dois ataques Claw, Icy Breath com recarga 6, frio, restrição, obscurecimento e Hide em ação bônus. **Bloqueio editorial:** 'raptor' aparece em texto de Pack Tactics e Skills Stealth não informa bônus. Fonte: https://a5e.tools/node/2991.
 - TF-517 Imp Flock: Chaos of Combat CON CD(5 + nível da magia), Devil's Sight, Evil, Swarm com tamanho Large/Medium, Hellswarm + dano condicionado de poison, Innate Spellcasting shatter. **Bloqueio editorial:** usos de shatter não declarados. Fonte: https://a5e.tools/node/3394.
 - Sem novas imagens físicas; 0 fichas promovidas integrais. Total **37** detalhadas, **94** pendentes de revalidação, 95 parciais e 36 bloqueadas.
 
 ## Checkpoint 24 — Fiendbloom e Crime Boss (14/10/2026)
+
+- Commit `e6f46a3ac27d748e564076e7cf2d904f346fa619` relido; TF-511 e TF-522 válidos, IDs confirmados.
+- Bloqueio adicional TF-511: Hellspore Seeding afeta cada criatura, mas regra específica da doença se refere a humanoides; resolver antes de aplicar a outros tipos.
+
 
 - TF-511 Fiendbloom Awakened Tree: False Appearance, Doubletyped Fiend+Plant, Dreaded Winter, Hellspore Seeding, Slam e referência estruturada à regra externa Hellspore Blight (tier 2 DC14). Fontes https://a5e.tools/node/3414 e https://a5e.tools/rules/disease-hellspore-blight-tier-2-3.
 - TF-522 Crime Boss: 3 Shortsword, Dagger, Mark for Death, Command Bodyguard e Offhand Dagger com bônus, alcance, duração e gatilhos. Dano adicional de Mark for Death sem tipo explícito mantido indeterminado. Fonte https://a5e.tools/node/1895.

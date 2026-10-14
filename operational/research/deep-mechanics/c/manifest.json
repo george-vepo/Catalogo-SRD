@@ -146,8 +146,8 @@
     "ids_unicos": 131,
     "pesquisas_detalhadas_diretamente_nesta_execucao": 37,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 95,
-    "bloqueadas": 36,
+    "parciais": 94,
+    "bloqueadas": 37,
     "registros_aproveitados_sem_nova_verificacao_integral": 94,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
@@ -381,8 +381,8 @@
         "TF-511",
         "TF-522"
       ],
-      "commit": null,
-      "leitura_persistencia": "AGUARDANDO_READ_BACK",
+      "commit": "e6f46a3ac27d748e564076e7cf2d904f346fa619",
+      "leitura_persistencia": "CONFIRMADA: JSONs TF-511 e TF-522 reabertos, identidade conferida",
       "tipo": "regras da doença e Crime Boss"
     },
     {
@@ -393,12 +393,12 @@
         "TF-516",
         "TF-517"
       ],
-      "commit": null,
-      "leitura_persistencia": "PENDENTE",
+      "commit": "97b58fda82c41a311d7a3f149907600daadceea3",
+      "leitura_persistencia": "CONFIRMADA: JSONs TF-516 e TF-517 reabertos, identidade conferida",
       "tipo": "Kanos Spawn e Imp Flock"
     }
   ],
-  "atualizacao_detalhada_sha": "86e088bb6e7d1e66982f927166813e6887d49e7a",
+  "atualizacao_detalhada_sha": "97b58fda82c41a311d7a3f149907600daadceea3",
   "criaturas": [
     {
       "id": "TF-412",
@@ -1386,17 +1386,19 @@
       "escopo": "next_batches[4]",
       "posicao": 34,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-511.json",
-      "status": "PARCIAL_FONTE_OFICIAL_COM_REGRA_ASSOCIADA",
+      "status": "BLOQUEADA_ESCOPO_DOENCA_CRIATURAS_VS_HUMANOIDES",
       "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3414",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
         "Hellspore Blight é regra externa A5E; a ficha publica DC14, correspondente ao tier 2.",
-        "Ainda faltam imagem física e confirmação do livro/errata."
+        "Ainda faltam imagem física e confirmação do livro/errata.",
+        "Divergência de escopo: Hellspore Seeding afeta 'each creature', mas a regra da doença se refere a humanoids; confirmar alcance antes da implementação."
       ],
       "lacunas": [
         "confirmação editorial do tier em To Save A Kingdom",
-        "imagem física"
+        "imagem física",
+        "aplicação de Hellspore Blight a não-humanoides"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -4055,14 +4057,16 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 23,
-    "sha_validado": "86e088bb6e7d1e66982f927166813e6887d49e7a",
-    "aprofundadas": 33,
-    "sem_revalidacao_detalhada": 98,
+    "ultimo_checkpoint": 25,
+    "ultimo_commit_mecanico": "97b58fda82c41a311d7a3f149907600daadceea3",
+    "escopo_131": true,
+    "aprofundadas": 37,
     "completas": 0,
-    "parciais": 97,
-    "bloqueadas": 34,
+    "parciais": 94,
+    "bloqueadas": 37,
+    "sem_verificacao_detalhada": 94,
     "imagens_fisicas": 96,
-    "imagens_faltantes": 35
+    "imagens_pendentes": 35,
+    "imagens_aprovadas": 0
   }
 }
