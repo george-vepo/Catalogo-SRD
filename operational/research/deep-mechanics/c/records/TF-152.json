@@ -4,9 +4,9 @@
   "nome": "Giant, Cave Shaman",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 30,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 2",
@@ -41,245 +41,278 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": {
-      "Arcana": 5,
-      "Athletics": 13,
-      "Perception": 7,
-      "Survival": 7
-    },
-    "salvaguardas": {
-      "DEX": 5,
-      "CON": 10,
-      "WIS": 7
-    },
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 5
+      },
+      {
+        "nome": "Athletics",
+        "bonus": 13
+      },
+      {
+        "nome": "Perception",
+        "bonus": 7
+      },
+      {
+        "nome": "Survival",
+        "bonus": 7
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 5
+      },
+      {
+        "nome": "CON",
+        "bonus": 10
+      },
+      {
+        "nome": "WIS",
+        "bonus": 7
+      }
+    ],
     "sentidos": [
-      "darkvision 120 ft."
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
     ],
     "percepcao_passiva": 17,
     "idiomas": [
       "Common",
       "Giant"
     ],
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 11500,
+    "bonus_proficiencia": 5,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Sunlight Petrification",
-        "resumo_anterior": "Em luz solar no início do turno: sofre 20 radiant, tem movimento reduzido pela metade e desvantagem em ataques/testes; ao cair a zero PV sob luz solar, petrifica.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "inicia turno sob sunlight",
+        "dano": {
+          "valor": 20,
+          "tipo": "radiant"
+        },
+        "sob_sunlight": [
+          "speed metade",
+          "desvantagem attack rolls e ability checks"
+        ],
+        "morte": "se reduzido a zero HP sob sunlight, petrified"
       },
       {
         "nome": "Spellcasting",
-        "resumo_anterior": "Conjurador de nível 14, Carisma CD18 e +10 de ataque mágico. Truques: acid splash, mage hand, mending, prestidigitation, shocking grasp. Níveis 1 (4 espaços): burning hands, expeditious retreat, fog cloud, shield; 2 (3): enlarge/reduce, shatter, spider climb, web; 3 (3): gaseous form, haste, lightning bolt, water breathing; 4 (3): ice storm, polymorph, wall of fire; 5 (2): cloudkill, insect plague; 6 (1): disintegrate; 7 (1): reverse gravity.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "regra": "14th-level spellcaster CHA, wizard spells prepared; detalhes na conjuração"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Um club e um tusks.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          "Club",
+          "Tusks"
+        ]
       },
       {
         "nome": "Club",
-        "resumo_anterior": "Ataque corpo a corpo +13, alcance 10 pés, 3d4+8 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "3d4+8",
+            "media": 15,
+            "tipo": "bludgeoning"
+          }
+        ]
       },
       {
         "nome": "Tusks",
-        "resumo_anterior": "Ataque corpo a corpo +13, alcance 10 pés, 4d6+8 cortante; alvo Large ou menor faz Força CD20 ou cai.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "4d6+8",
+            "media": 22,
+            "tipo": "slashing"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "Large ou menor",
+          "atributo": "STR",
+          "cd": 20,
+          "em_falha": "prone"
+        }
       },
       {
         "nome": "Rock",
-        "resumo_anterior": "Ataque à distância +13, 60/240 pés, 4d10+8 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "dano": [
+          {
+            "dados": "4d10+8",
+            "media": 30,
+            "tipo": "bludgeoning"
+          }
+        ]
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Um club e um tusks.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Club",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "3d4+8",
+            "media": 15,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Tusks",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "4d6+8",
+            "media": 22,
+            "tipo": "slashing"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "Large ou menor",
+          "atributo": "STR",
+          "cd": 20,
+          "em_falha": "prone"
+        }
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 13,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "dano": [
+          {
+            "dados": "4d10+8",
+            "media": 30,
+            "tipo": "bludgeoning"
+          }
+        ]
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Um club e um tusks.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Club",
+        "Tusks"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [
       {
         "nome": "Spellcasting",
-        "resumo_anterior": "Conjurador de nível 14, Carisma CD18 e +10 de ataque mágico. Truques: acid splash, mage hand, mending, prestidigitation, shocking grasp. Níveis 1 (4 espaços): burning hands, expeditious retreat, fog cloud, shield; 2 (3): enlarge/reduce, shatter, spider climb, web; 3 (3): gaseous form, haste, lightning bolt, water breathing; 4 (3): ice storm, polymorph, wall of fire; 5 (2): cloudkill, insect plague; 6 (1): disintegrate; 7 (1): reverse gravity.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nivel_conjurador": 14,
+        "atributo": "CHA",
+        "cd_salvaguarda": 18,
+        "bonus_ataque_magico": 10,
+        "classe_lista": "wizard",
+        "componentes": "dependem da magia",
+        "listas": {
+          "cantrips": [
+            "acid splash",
+            "mage hand",
+            "mending",
+            "prestidigitation",
+            "shocking grasp"
+          ],
+          "nivel_1": {
+            "espacos": 4,
+            "magias": [
+              "burning hands",
+              "expeditious retreat",
+              "fog cloud",
+              "shield"
+            ]
+          },
+          "nivel_2": {
+            "espacos": 3,
+            "magias": [
+              "enlarge/reduce",
+              "shatter",
+              "spider climb",
+              "web"
+            ]
+          },
+          "nivel_3": {
+            "espacos": 3,
+            "magias": [
+              "gaseous form",
+              "haste",
+              "lightning bolt",
+              "water breathing"
+            ]
+          },
+          "nivel_4": {
+            "espacos": 3,
+            "magias": [
+              "ice storm",
+              "polymorph",
+              "wall of fire"
+            ]
+          },
+          "nivel_5": {
+            "espacos": 2,
+            "magias": [
+              "cloudkill",
+              "insect plague"
+            ]
+          },
+          "nivel_6": {
+            "espacos": 1,
+            "magias": [
+              "disintegrate"
+            ]
+          },
+          "nivel_7": {
+            "espacos": 1,
+            "magias": [
+              "reverse gravity"
+            ]
+          }
+        }
       }
     ],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Revisar lista de magias e atribuição do material antes de publicação.",
-    "Imagem não criada/verificada.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Spellcasting é 14th-level CHA com CD18 e ataque +10, mas lista prepared 'wizard spells', não mudar a classe por suposição.",
+    "Sunlight Petrification é condicionada ao sol; edição Tome of Beasts 2 e direitos de imagem ainda exigem aprovação."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "revisão de livro/errata e permissões",
+    "aprovação visual de imagem"
   ],
   "fontes": [
     {
@@ -290,6 +323,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-cave-giant-shaman/",
+      "tipo": "fonte individual consultada no checkpoint 36",
       "conferida_nesta_execucao": true
     }
   ],
@@ -397,5 +435,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 36,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/giant-cave-giant-shaman/",
+    "publicacao": "Tome of Beasts 2",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

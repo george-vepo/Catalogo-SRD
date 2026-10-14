@@ -4,9 +4,9 @@
   "nome": "Giant, Lantern",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 31,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 3",
@@ -42,19 +42,44 @@
       "andar": 40,
       "nadar": 60
     },
-    "pericias": {
-      "Investigation": 6,
-      "Nature": 6,
-      "Perception": 7,
-      "Survival": 7
-    },
-    "salvaguardas": {
-      "CON": 10,
-      "WIS": 7,
-      "CHA": 7
-    },
+    "pericias": [
+      {
+        "nome": "Investigation",
+        "bonus": 6
+      },
+      {
+        "nome": "Nature",
+        "bonus": 6
+      },
+      {
+        "nome": "Perception",
+        "bonus": 7
+      },
+      {
+        "nome": "Survival",
+        "bonus": 7
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 10
+      },
+      {
+        "nome": "WIS",
+        "bonus": 7
+      },
+      {
+        "nome": "CHA",
+        "bonus": 7
+      }
+    ],
     "sentidos": [
-      "blindsight 120 ft.; sem visão além"
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 120,
+        "restricao": "blind beyond this radius"
+      }
     ],
     "percepcao_passiva": 17,
     "idiomas": [
@@ -62,226 +87,184 @@
       "Giant",
       "Primordial"
     ],
-    "resistencias": null,
+    "resistencias": [],
     "imunidades_dano": [
       "cold"
     ],
     "imunidades_condicao": [
       "blinded"
     ],
-    "vulnerabilidades": null
+    "vulnerabilidades": [],
+    "xp": 8400,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Limited Amphibiousness",
-        "resumo_anterior": "Respira no ar e na água, mas precisa submergir ao menos uma vez a cada quatro horas para não sufocar.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "respira": [
+          "air",
+          "water"
+        ],
+        "pre_condicao": "submerge ao menos uma vez a cada 4 hours para não suffocate"
       },
       {
         "nome": "Hypnotic Luminescence",
-        "resumo_anterior": "Luz intensa 60 pés e penumbra adicional 60. Quem começa o turno dentro de 60 pés vendo a luz testa Carisma CD18 ou fica enfeitiçado até 24 h; o efeito termina se ferido pelo gigante/aliados. Sucesso e encerramento geram imunidade por 24 h. Pode alternar a luz no início do próprio turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "luz": {
+          "bright_ft": 60,
+          "dim_extra_ft": 60
+        },
+        "ativacao": "no início do turno do próprio giant escolhe ligar/desligar",
+        "gatilho": "criatura enxerga luz e começa turno a até 60 ft",
+        "teste": {
+          "atributo": "CHA",
+          "cd": 18
+        },
+        "falha": {
+          "condicao": "charmed",
+          "duracao": "24 hours",
+          "atitude": "considera giant friendly acquaintance"
+        },
+        "termina_se": "giant ou aliados causam dano à vítima",
+        "imunidade": "24 hours após sucesso no save ou término do efeito"
       },
       {
         "nome": "Speak with Aquatic Creatures",
-        "resumo_anterior": "Comunica-se com feras e monstruosidades que tenham deslocamento de natação.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "alvos": "Beasts/Monstrosities com swim speed",
+        "efeito": "pode conversar como se partilhassem língua"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Três tridentes, podendo substituir um por Spellcasting.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Trident",
+            "quantidade": 3
+          }
+        ],
+        "substituicao": "pode substituir um Trident por Spellcasting"
       },
       {
         "nome": "Trident",
-        "resumo_anterior": "Corpo a corpo/à distância +12, 10 pés ou 20/60 pés; 3d6+8 perfurante, ou 3d8+8 quando empunhado com duas mãos corpo a corpo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "melee": 10,
+          "ranged_normal": 20,
+          "ranged_longo": 60
+        },
+        "dano": [
+          {
+            "dados": "3d6+8",
+            "media": 18,
+            "tipo": "piercing",
+            "modalidade": "one-handed or ranged"
+          },
+          {
+            "dados": "3d8+8",
+            "media": 21,
+            "tipo": "piercing",
+            "modalidade": "two-handed melee"
+          }
+        ]
       },
       {
-        "nome": "Crush of the Deep (Recharge 5–6)",
-        "resumo_anterior": "Cubo de água de 40 pés centrado em ponto visível até 120 pés: Constituição CD17 contra 8d10 contundente (metade no sucesso).",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Crush of the Deep",
+        "recarga": "5-6",
+        "alvo": "ponto que pode ver a até 120 ft",
+        "area": {
+          "forma": "cube",
+          "lado_ft": 40
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 17
+        },
+        "falha": {
+          "dano": {
+            "dados": "8d10",
+            "media": 44,
+            "tipo": "bludgeoning"
+          }
+        },
+        "sucesso": "metade do dano"
       },
       {
         "nome": "Spellcasting",
-        "resumo_anterior": "Sem componentes materiais, Carisma CD15. Livres: detect magic, identify (uma ação); 3/dia cada: control water, freedom of movement, water breathing.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "referencia": "conjuracao[0]"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Três tridentes, podendo substituir um por Spellcasting.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Trident",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "melee": 10,
+          "ranged_normal": 20,
+          "ranged_longo": 60
+        },
+        "dano": [
+          {
+            "dados": "3d6+8",
+            "media": 18,
+            "tipo": "piercing",
+            "modalidade": "one-handed or ranged"
+          },
+          {
+            "dados": "3d8+8",
+            "media": 21,
+            "tipo": "piercing",
+            "modalidade": "two-handed melee"
+          }
+        ]
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Três tridentes, podendo substituir um por Spellcasting.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        {
+          "acao": "Trident",
+          "quantidade": 3
+        }
+      ],
+      "substituicao": "pode substituir um Trident por Spellcasting"
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
-    "conjuracao": [],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "atributo": "CHA",
+        "cd_salvaguarda": 15,
+        "componentes": "sem material components",
+        "listas": {
+          "at_will": [
+            "detect magic",
+            "identify (casting time 1 action)"
+          ],
+          "tres_por_dia_cada": [
+            "control water",
+            "freedom of movement",
+            "water breathing"
+          ]
+        }
+      }
+    ],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Verificar duração e raio luminoso na revisão independente.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Luz brilhante 60 ft + penumbra mais 60 ft; enfeitiçamento e imunidade de 24h terminam em condições distintas.",
+    "Identify pode ser cast como action apesar de seu casting-time habitual; preservar exceção explícita.",
+    "Imagens/edição/erratas pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.resistencias",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "revisão de livro/errata e permissões",
+    "aprovação visual de imagem"
   ],
   "fontes": [
     {
@@ -292,6 +275,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/lantern-giant/",
+      "tipo": "fonte individual consultada no checkpoint 36",
       "conferida_nesta_execucao": true
     }
   ],
@@ -411,5 +399,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 36,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/lantern-giant/",
+    "publicacao": "Tome of Beasts 3",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

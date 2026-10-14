@@ -4,9 +4,9 @@
   "nome": "Xing Tian",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 33,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 2",
@@ -41,262 +41,227 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": {
-      "Intimidation": 6,
-      "Perception": 6
-    },
-    "salvaguardas": {
-      "CON": 8,
-      "WIS": 6
-    },
+    "pericias": [
+      {
+        "nome": "Intimidation",
+        "bonus": 6
+      },
+      {
+        "nome": "Perception",
+        "bonus": 6
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 6
+      }
+    ],
     "sentidos": [
-      "darkvision 60 ft."
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
     ],
     "percepcao_passiva": 16,
     "idiomas": [
       "Common",
       "Giant"
     ],
-    "resistencias": null,
-    "imunidades_dano": null,
+    "resistencias": [],
+    "imunidades_dano": [],
     "imunidades_condicao": [
       "frightened"
     ],
-    "vulnerabilidades": null
+    "vulnerabilidades": [],
+    "xp": 7200,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor + shield"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Indomitable",
-        "resumo_anterior": "Efeitos que o deixariam paralisado, restringido ou atordoado terminam ao fim do próximo turno da criatura, independentemente da duração normal.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "spell/efeito que cause paralyzed, restrained ou stunned",
+        "efeito": "termina no fim do próximo turno do xing tian, independentemente duração normal"
       },
       {
         "nome": "Sure-Footed",
-        "resumo_anterior": "Vantagem em salvaguardas Força e Destreza contra efeitos que tentem derrubá-lo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem STR e DEX saving throws contra efeitos que deixariam prone"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Um Shield Slam e dois Battleaxe. Se ambos os ataques com machado acertarem um mesmo alvo, ele testa Destreza CD16 ou sofre mais 2d10 perfurante de mordida.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Shield Slam",
+            "quantidade": 1
+          },
+          {
+            "acao": "Battleaxe",
+            "quantidade": 2
+          }
+        ],
+        "gatilho": "ambos os Battleaxe acertam mesmo alvo",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "falha": {
+          "dano_extra": {
+            "dados": "2d10",
+            "media": 11,
+            "tipo": "piercing",
+            "origem": "bite"
+          }
+        }
       },
       {
         "nome": "Battleaxe",
-        "resumo_anterior": "Ataque corpo a corpo +10, 5 pés, 3d8+6 cortante, ou 3d10+6 com duas mãos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "slashing",
+            "modalidade": "uma mão"
+          },
+          {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "slashing",
+            "modalidade": "duas mãos"
+          }
+        ]
       },
       {
         "nome": "Shield Slam",
-        "resumo_anterior": "Ataque corpo a corpo +10, 5 pés, 3d6+6 contundente; Força CD16 ou alvo cai.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d6+6",
+            "media": 16,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "prone"
+        }
       },
       {
         "nome": "Dance of the Unyielding",
-        "resumo_anterior": "Recupera 10 PV ao começar a dança; enquanto mantida, recupera 10 PV no início de cada turno e ataques corpo a corpo contra ele têm desvantagem. Precisa de ação bônus nos turnos seguintes para manter; incapacitação encerra.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "ao_ativar": {
+          "cura_hp": 10
+        },
+        "enquanto_ativa": [
+          "ganha 10 HP no início de cada turno",
+          "melee attacks contra giant desvantagem"
+        ],
+        "custo_para_continuar": "bonus action em turnos SUBSEQUENTES",
+        "termina": [
+          "giant escolhe encerrar",
+          "incapacitated"
+        ]
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Um Shield Slam e dois Battleaxe. Se ambos os ataques com machado acertarem um mesmo alvo, ele testa Destreza CD16 ou sofre mais 2d10 perfurante de mordida.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Battleaxe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "slashing",
+            "modalidade": "uma mão"
+          },
+          {
+            "dados": "3d10+6",
+            "media": 22,
+            "tipo": "slashing",
+            "modalidade": "duas mãos"
+          }
+        ]
       },
       {
         "nome": "Shield Slam",
-        "resumo_anterior": "Ataque corpo a corpo +10, 5 pés, 3d6+6 contundente; Força CD16 ou alvo cai.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d6+6",
+            "media": 16,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "prone"
+        }
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Um Shield Slam e dois Battleaxe. Se ambos os ataques com machado acertarem um mesmo alvo, ele testa Destreza CD16 ou sofre mais 2d10 perfurante de mordida.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        {
+          "acao": "Shield Slam",
+          "quantidade": 1
+        },
+        {
+          "acao": "Battleaxe",
+          "quantidade": 2
+        }
+      ],
+      "gatilho": "ambos os Battleaxe acertam mesmo alvo",
+      "teste": {
+        "atributo": "DEX",
+        "cd": 16
+      },
+      "falha": {
+        "dano_extra": {
+          "dados": "2d10",
+          "media": 11,
+          "tipo": "piercing",
+          "origem": "bite"
+        }
+      }
     },
     "acoes_bonus": [
       {
-        "nome": "Continuar a dança",
-        "resumo_anterior": "Uma ação bônus por turno para sustentar Dance of the Unyielding após iniciada.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Continuar Dance of the Unyielding",
+        "economia": "bonus action",
+        "gatilho": "turnos posteriores ao início",
+        "efeito": "mantém dança por mais um turno"
       }
     ],
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Indomitable faz efeitos de paralyzed/restrained/stunned terminarem no fim do próximo turno; não torna a criatura imune ao efeito inicialmente.",
+    "Dance exige ação bônus em turnos subsequentes e cura 10 HP na ativação + 10 por início de turno; confronto editorial do livro e arte pendente."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "revisão de livro/errata e permissões",
+    "aprovação visual de imagem"
   ],
   "fontes": [
     {
@@ -307,6 +272,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/xing-tian/",
+      "tipo": "fonte individual consultada no checkpoint 36",
       "conferida_nesta_execucao": true
     }
   ],
@@ -419,5 +389,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 36,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/xing-tian/",
+    "publicacao": "Tome of Beasts 2",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
