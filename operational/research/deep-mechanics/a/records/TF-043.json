@@ -5,14 +5,19 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (atribuição histórica)",
+    "publisher": "Kobold Press",
     "publication": "Creature Codex",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "8",
     "size": "Gargantuan",
     "type": "beast",
-    "alignment": null
+    "alignment": "unaligned",
+    "publication_year": 2018,
+    "edition": "Creature Codex (2018, D&D 5e)",
+    "experience_points": 3900,
+    "proficiency_bonus": 3,
+    "source_page": null
   },
   "statistics": {
     "armor_class": 14,
@@ -27,141 +32,274 @@
       "CHA": 6
     },
     "speeds": {
-      "andar": 50
+      "walk_ft": 50
     },
-    "senses": null,
-    "skills": null,
+    "senses": {
+      "passive_perception": 10
+    },
+    "skills": [],
     "saving_throws": {
       "DEX": 2
     },
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 8,
+      "DEX": -1,
+      "CON": 6,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -2
+    },
+    "armor_class_type": "natural_armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Trampling Charge",
-        "kind": "passive",
-        "legacy_summary": "Avança 20 pés e acerta chifres, FOR CD16 ou derruba, permitindo stomp como ação bônus.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 16,
+            "on_failure": {
+              "condition": "prone"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          },
+          "bonus_attack_if_prone": "Stomp"
+        },
+        "requirements": {
+          "movement_straight_ft_min": 20,
+          "attack_hit": "Gore",
+          "same_turn": true
+        }
       },
       {
         "name": "Trunk Slam",
-        "kind": "passive",
-        "legacy_summary": "Se iniciar turno agarrando alvo, pode acertá-lo contra o chão como bônus, CON CD17 contra 2d10 contundente, metade no sucesso.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "bonus_action_after_starting_turn_with_target_grappled": true,
+          "save": {
+            "ability": "CON",
+            "dc": 17,
+            "on_failure": {
+              "damage": {
+                "dice": "2d10",
+                "flat": 0,
+                "type": "bludgeoning",
+                "average": 11
+              },
+              "grapple_ends": false
+            },
+            "on_success": {
+              "damage_multiplier": 0.5,
+              "grapple_ends": false
+            }
+          }
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "kind": "action",
-        "legacy_summary": "Usa tromba e depois um ataque de chifres ou pisoteio.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Trunk",
+            "count": 1
+          },
+          {
+            "one_of": [
+              "Gore",
+              "Stomp"
+            ],
+            "count": 1
+          }
+        ]
       },
       {
         "name": "Gore",
-        "kind": "action",
-        "legacy_summary": "+11, 10 pés, 5d8+8 perfurante.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "5d8",
+              "flat": 8,
+              "type": "piercing",
+              "average": 30
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Stomp",
-        "kind": "action",
-        "legacy_summary": "+11, 5 pés, 5d10+8 contundente.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "5d10",
+              "flat": 8,
+              "type": "bludgeoning",
+              "average": 35
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Trunk",
-        "kind": "action",
-        "legacy_summary": "+11, 15 pés, agarra e restringe alvo Large ou menor, fuga CD17; apenas um alvo simultâneo.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "kind": "one_creature"
+        },
+        "hit": {
+          "damage": []
+        },
+        "miss": {
+          "damage": 0
+        },
+        "hit_effect": {
+          "if_target_size_at_most": "Large",
+          "condition": [
+            "grappled",
+            "restrained"
+          ],
+          "escape_dc": 17,
+          "restriction": "trunk unavailable against others until grapple ends"
+        }
       },
       {
         "name": "Tusk Sweep",
-        "kind": "action",
-        "legacy_summary": "Recarga 5–6; área cúbica de 20 pés, DES CD17, 10d6 contundente ou metade.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "type": "d6",
+          "on": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "shape": "cube",
+          "side_ft": 20
+        },
+        "targets": "each_creature_in_cube",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "damage": {
+              "dice": "10d6",
+              "flat": 0,
+              "type": "bludgeoning",
+              "average": 35
+            }
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [
+      {
+        "name": "Trampling Charge — Stomp",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "target knocked prone by Trampling Charge",
+        "attack": "Stomp",
+        "target": "same_target"
+      },
+      {
+        "name": "Trunk Slam",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "starts turn with target grappled",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 17,
+          "on_failure": {
+            "damage": {
+              "dice": "2d10",
+              "flat": 0,
+              "type": "bludgeoning",
+              "average": 11
+            }
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "grapple_continues": true
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.dndgrove.com/bestiary/8/oliphaunt",
       "type": "ficha_identificada_em_checkpoint_histórico",
       "verification": "mecânica integral ainda não revalidada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:oliphaunt",
+      "type": "individual_ogl_transcription_unofficial",
+      "edition": "Creature Codex",
+      "reviewed_on": "2026-10-14",
+      "verified_fields": [
+        "statistics",
+        "traits",
+        "actions",
+        "bonus_actions",
+        "reactions",
+        "legendary_actions",
+        "lair_actions",
+        "regional_effects"
+      ],
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "publisher_index",
+      "verification": "identidade, publicação e CR"
     }
   ],
   "source_checkpoint": {
@@ -175,8 +313,14 @@
     "Imagem e direitos pendentes."
   ],
   "outstanding": [
-    "Detalhar cada habilidade individual com bônus, alvo, distância, dano, resistência, duração, gatilho e recarga.",
-    "Confirmar a versão editorial e errata com ficha original; não usar diferenças de edição de modo misturado.",
-    "Revisão mecânica ainda pendente; valores null representam dados não comprovados."
-  ]
+    "Confirmar regras contra impressão/errata editorial autorizada e revisão independente do motor de combate.",
+    "Verificação de arte visual/direitos permanece independente das mecânicas."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_verified": false,
+    "engine_review": false,
+    "final_approval": false
+  }
 }

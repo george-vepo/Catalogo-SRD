@@ -5,14 +5,22 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (atribuição histórica)",
+    "publisher": "Kobold Press",
     "publication": "Creature Codex",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "5",
     "size": "Large",
-    "type": "celestial shapechanger",
-    "alignment": "lawful good"
+    "type": "celestial (shapechanger)",
+    "alignment": "lawful_good",
+    "publication_year": 2018,
+    "edition": "Creature Codex (2018, D&D 5e)",
+    "experience_points": 1800,
+    "proficiency_bonus": 3,
+    "source_page": null,
+    "official_name": "Aatxe",
+    "catalog_alias": "Aaxte",
+    "identity_alias_discrepancy": "catalog spells Aaxte; KPOGL and editor catalog spell Aatxe"
   },
   "statistics": {
     "armor_class": 14,
@@ -27,285 +35,344 @@
       "CHA": 14
     },
     "speeds": {
-      "andar": 50
+      "walk_ft": 50
     },
-    "senses": null,
+    "senses": {
+      "passive_perception": 12
+    },
     "skills": {
       "Athletics": 9,
       "Intimidation": 5
     },
-    "saving_throws": null,
+    "saving_throws": [],
     "languages": [
-      "compreende todas; não fala na forma verdadeira"
+      "understands_all",
+      "cannot_speak_in_true_form"
     ],
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "charmed",
       "frightened"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 6,
+      "DEX": 1,
+      "CON": 5,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": 2
+    },
+    "armor_class_type": "natural_armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Charge",
-        "kind": "passive",
-        "legacy_summary": "Avança 20 pés e acerta Gore para 2d8 perfurante extra, FOR CD15 ou derruba.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "extra_piercing_on_gore": {
+            "dice": "2d8",
+            "flat": 0,
+            "type": "piercing",
+            "average": 9
+          },
+          "target_save_if_creature": {
+            "ability": "STR",
+            "dc": 15,
+            "on_failure": {
+              "condition": "prone"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        },
+        "requirements": {
+          "move_straight_to_target_ft_min": 20,
+          "hit_with": "Gore",
+          "same_turn": true
+        }
       },
       {
         "name": "Know Thoughts",
-        "kind": "passive",
-        "legacy_summary": "Lê pensamentos superficiais de criatura a 30 pés; pode encerrar como bônus ou mudar alvo como ação.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "active_trait",
+        "activation": "action",
+        "targets": {
+          "count": 1,
+          "range_ft": 30,
+          "kind": "creature"
+        },
+        "effect": {
+          "read_surface_thoughts": true,
+          "rules_reference": "detect thoughts surface thoughts only",
+          "duration": "no_source_limit",
+          "change_target_cost": "action",
+          "end_cost": "bonus_action"
+        }
       },
       {
         "name": "Limited Speech",
-        "kind": "passive",
-        "legacy_summary": "Forma humanoide somente: pode falar frases simples.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "can_use_simple_ideas_and_phrases": true,
+          "understands_complex_conversation": true
+        },
+        "condition": "humanoid_form_only"
       },
       {
         "name": "Magic Resistance",
-        "kind": "passive",
-        "legacy_summary": "Vantagem em salvaguardas contra magia.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other_magical_effects"
+          ]
+        }
       },
       {
         "name": "Shapechanger",
-        "kind": "passive",
-        "legacy_summary": "Ação para assumir forma de humanoide masculino Medium já visto ou reverter, conservando mecânicas exceto porte.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "active_trait",
+        "activation": "action",
+        "forms": [
+          "true_form_large_celestial_bull",
+          "medium_male_humanoid_seen_previously"
+        ],
+        "effect": {
+          "statistics_unchanged_except_size": true,
+          "equipment_does_not_transform": true,
+          "revert_on_death": true
+        }
       }
     ],
     "actions": [
       {
         "name": "Gore",
-        "kind": "action",
-        "legacy_summary": "+9, 5 pés, 3d8+6 perfurante.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "3d8",
+              "flat": 6,
+              "type": "piercing",
+              "average": 19
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Paw the Earth",
-        "kind": "action",
-        "legacy_summary": "Criaturas até 30 pés fazem SAB CD15 ou ficam com medo por 1 min; novo teste no fim do turno e imunidade de 24h após sucesso.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "area_save",
+        "action_economy": "action",
+        "targets": "each_creature_within_30_ft",
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 15,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "up_to_1_minute",
+            "repeat_save": {
+              "when": "end_of_each_target_turn",
+              "on_success": "ends_condition"
+            }
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "immunity": {
+          "after_success_or_effect_ends_hours": 24
+        }
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
+    "bonus_actions": [
+      {
+        "name": "End Know Thoughts",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "Know Thoughts active",
+        "effect": "ends surface-thought reading"
+      }
+    ],
+    "reactions": [],
     "legendary_actions": [
       {
         "name": "Detect",
-        "kind": "legendary_action",
-        "legacy_summary": "Faz teste de Percepção.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "cost": 1,
+        "effect": {
+          "check": "WIS (Perception)"
+        }
       },
       {
         "name": "Gore",
-        "kind": "legendary_action",
-        "legacy_summary": "Ataque de chifres.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "cost": 2,
+        "effect": {
+          "attack": "Gore",
+          "count": 1
+        }
       },
       {
         "name": "Bulwark",
-        "kind": "legendary_action",
-        "legacy_summary": "Próximo ataque contra aliado a até 5 pés passa a acertar o Aatxe.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "cost": 3,
+        "effect": {
+          "trigger": "next_attack_would_hit_ally_within_5_ft",
+          "redirect_target": "Aatxe",
+          "duration": "until_next_trigger"
+        }
       }
     ],
     "lair_actions": [
       {
-        "name": "Torna solo lama pegajosa num raio de 20 pés; DES CD15 contra restrição, FOR CD15 para escapar.",
-        "kind": "lair_action",
-        "legacy_summary": "Torna solo lama pegajosa num raio de 20 pés; DES CD15 contra restrição, FOR CD15 para escapar.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Sticky Muck",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "area": {
+          "shape": "sphere",
+          "radius_ft": 20,
+          "point_visible_within_ft": 120
+        },
+        "effect": {
+          "difficult_terrain": true,
+          "saving_throw": {
+            "ability": "DEX",
+            "dc": 15,
+            "on_failure": {
+              "condition": "restrained"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          },
+          "removal": {
+            "action": "action",
+            "check": "STR",
+            "dc": 15,
+            "target": "self_or_another_creature"
+          },
+          "duration": "until_reattributed_lair_action_or_aatxe_death"
+        }
       },
       {
-        "name": "Liga-se a alvo por feixe luminoso a até 30 pés, dividindo dano e ganhando resistência.",
-        "kind": "lair_action",
-        "legacy_summary": "Liga-se a alvo por feixe luminoso a até 30 pés, dividindo dano e ganhando resistência.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Red Tether",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "targets": {
+          "count": 1,
+          "creature_visible_within_ft": 30
+        },
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 15,
+          "on_failure": {
+            "effect": "no_tether"
+          },
+          "on_success": {
+            "effect": "tether_applies_to_willing_or_failed_target"
+          }
+        },
+        "effect": {
+          "split_damage_evenly_between_target_and_aatxe": true,
+          "aatxe_resistance": "all_damage_except_tether_transfer",
+          "duration": "target_death_or_this_lair_action_used_again_or_aatxe_death"
+        }
       },
       {
-        "name": "Alvos hostis a até 20 pés fazem DES CD15 ou são iluminados, revelados e sujeitos à vantagem de ataqu",
-        "kind": "lair_action",
-        "legacy_summary": "Alvos hostis a até 20 pés fazem DES CD15 ou são iluminados, revelados e sujeitos à vantagem de ataques.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Celestial Motes",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "targets": {
+          "each": "hostile_creature_within_20_ft"
+        },
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 15,
+          "on_failure": {
+            "glowing": true,
+            "dim_light_radius_ft": 10,
+            "cannot_benefit_from_invisibility": true,
+            "visible_attackers_have_advantage": true,
+            "duration": "until_initiative_20_next_round"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
       }
     ],
-    "spellcasting": null,
+    "mythic_actions": [],
+    "spellcasting": [],
     "other": [
       {
-        "name": "Luz não mágica alcança 10 pés extras dentro de 3 milhas.",
-        "kind": "regional_effect",
-        "legacy_summary": "Luz não mágica alcança 10 pés extras dentro de 3 milhas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Regional light",
+        "category": "regional_effect",
+        "radius_miles": 3,
+        "effect": "nonmagical_light_illuminates_additional_10ft"
       },
       {
-        "name": "Pássaros denunciam emboscadas num raio de 5 milhas.",
-        "kind": "regional_effect",
-        "legacy_summary": "Pássaros denunciam emboscadas num raio de 5 milhas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Regional birds",
+        "category": "regional_effect",
+        "radius_miles": 5,
+        "time": "sunset_to_sunrise",
+        "effect": {
+          "birds_expose_ambushers": true,
+          "required_additional_check": "DEX (Stealth)",
+          "dc": 15,
+          "if_fiend_or_undead": "birds alert Aatxe"
+        }
       },
       {
-        "name": "Predadores evitam comer seres inteligentes na região.",
-        "kind": "regional_effect",
-        "legacy_summary": "Predadores evitam comer seres inteligentes na região.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "name": "Regional predator aversion",
+        "category": "regional_effect",
+        "radius_miles": 5,
+        "effect": "predatory_beasts_find_intelligent_beings_unpalatable"
       }
-    ]
+    ],
+    "legendary_economy": {
+      "actions_per_round": 3,
+      "spent_actions_recover": "start_of_aatxe_turn",
+      "trigger": "end_of_another_creatures_turn",
+      "only_one_option_per_trigger": true
+    }
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/aatxe/",
       "type": "ficha_identificada_em_checkpoint_histórico",
       "verification": "mecânica integral ainda não revalidada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:aatxe",
+      "type": "individual_ogl_transcription_unofficial",
+      "edition": "Creature Codex",
+      "reviewed_on": "2026-10-14",
+      "verified_fields": [
+        "statistics",
+        "traits",
+        "actions",
+        "bonus_actions",
+        "reactions",
+        "legendary_actions",
+        "lair_actions",
+        "regional_effects"
+      ],
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "publisher_index",
+      "verification": "identidade, publicação e CR"
     }
   ],
   "source_checkpoint": {
@@ -319,8 +386,15 @@
     "Licença e imagem pendentes."
   ],
   "outstanding": [
-    "Detalhar cada habilidade individual com bônus, alvo, distância, dano, resistência, duração, gatilho e recarga.",
-    "Confirmar a versão editorial e errata com ficha original; não usar diferenças de edição de modo misturado.",
-    "Revisão mecânica ainda pendente; valores null representam dados não comprovados."
-  ]
+    "Conferir identidade: catálogo nomeia Aaxte; fonte OGL da Kobold e catálogo oficial nomeiam Aatxe.",
+    "Confirmar regras contra impressão/errata editorial autorizada e revisão independente do motor de combate.",
+    "Verificação de arte visual/direitos permanece independente das mecânicas."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_verified": false,
+    "engine_review": false,
+    "final_approval": false
+  }
 }
