@@ -2,26 +2,36 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-394",
   "nome": "Shroud",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_COM_EDICAO_IDENTIFICADA_PENDENTE_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Tome of Beasts 1",
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 1 (2016), bloco original",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.dndgrove.com/bestiary/1-8/shroud",
-      "natureza": "terceiros_preexistente_nao_conferida"
+      "natureza": "reproducao_integral_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Tome of Beasts 1 (2016), bloco original"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint"
+      "url": "https://anyflip.com/jfxvv/rsgh/basic/301-350",
+      "natureza": "reproducao_alternativa_da_versao_2016",
+      "consulta": "2026-10-14"
+    },
+    {
+      "url": "https://5ecompendium.github.io/bestiary/creature/shroud",
+      "natureza": "reproducao_alternativa_da_versao_2016",
+      "consulta": "2026-10-14"
     }
   ],
   "estatisticas": {
     "nd": "1/8",
     "ca": 13,
     "pv": 9,
-    "dados_vida": null,
+    "dados_vida": "2d8",
     "atributos": {
       "FOR": 4,
       "DES": 13,
@@ -30,45 +40,158 @@
       "SAB": 10,
       "CAR": 8
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 0,
+      "voar": 30,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
     "deslocamentos_texto": "voar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {},
+    "pericias": {
+      "Stealth": 3
+    },
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias_dano": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "thunder",
+      "bludgeoning/piercing/slashing de armas não mágicas que não usam prata"
+    ],
+    "imunidades_dano": [
+      "necrotic",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [
+      "radiant"
+    ],
+    "imunidades_condicao": [
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "origem_ca": "natural armor",
+    "modificadores": {
+      "FOR": -3,
+      "DES": 1,
+      "CON": 0,
+      "INT": -4,
+      "SAB": 0,
+      "CAR": -1
+    },
+    "pairar": true,
+    "percepcao_passiva": 10,
+    "telepatia_ft": null,
+    "bonus_proficiencia": 2
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
-  "acoes_bonus": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Amorphous",
+      "efeito": "passa por aberturas com largura mínima de 1 polegada sem se espremer"
+    },
+    {
+      "nome": "Shadow Evolution",
+      "ativacao": "passiva",
+      "gatilho": "acumula 12 pontos de dano causado por Strength Drain",
+      "efeito": "transforma-se imediatamente em Shadow",
+      "pv_transformado": "PV de um Shadow reduzido pelos danos sofridos como Shroud",
+      "edicao": "aplica-se à edição original 2016, não à mecânica 2023 de transformação no começo do turno seguinte"
+    },
+    {
+      "nome": "Shroud Stealth",
+      "efeito": "em penumbra ou escuridão, pode Hide como ação bônus"
+    },
+    {
+      "nome": "Sunlight Weakness",
+      "condicao": "enquanto exposto à luz solar",
+      "efeito": "desvantagem em ataques, testes de habilidade e salvaguardas"
+    },
+    {
+      "nome": "Undead Nature",
+      "efeito": "dispensa ar, alimento, água ou sono"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Strength Drain",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 3,
+      "alcance_ft": 5,
+      "alvos": "uma criatura",
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 1,
+          "tipo": "necrotic"
+        }
+      ],
+      "efeitos_condicionais": [
+        {
+          "alvo": "criatura viva",
+          "reducao_atributo": "FOR diminuída em metade do dano causado",
+          "duracao": "até fim de descanso curto ou longo",
+          "morte": "FOR reduzida a zero"
+        },
+        {
+          "gatilho": "humanoid não maligno morre pelo ataque",
+          "efeito": "corpo produz novo Shadow em 1d4 horas",
+          "observacao": "Grove registra Shadow na versão antiga, não Shroud; requer cotejo editorial"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Strength Drain",
+      "categoria": "ataque",
+      "referencia_ataque": "Strength Drain"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Shroud Stealth",
+      "custo": "ação bônus",
+      "precondicao": "penumbra ou escuridão",
+      "efeito": "Hide"
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Amorphous e evolução para Shadow ao causar dano"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Ataque sombrio com progressão"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "Versão de 2023 KPOGL: CA11/PV13 e Strength Drain com desvantagem em ataque baseado em FOR, sem redução do atributo. Catálogo CA13/PV9 é compatível com a edição original 2016; duas versões preservadas separadas.",
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Faltam edição exata, ficha individual integral e ações detalhadas com CDs e limites.",
-    "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Conferência final com livro e erratas de edição ainda não executada.",
+    "Revisão independente da implementação mecânica e integração canônica pendentes.",
+    "Versão de 2023 KPOGL: CA11/PV13 e Strength Drain com desvantagem em ataque baseado em FOR, sem redução do atributo. Catálogo CA13/PV9 é compatível com a edição original 2016; duas versões preservadas separadas."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-394",
+    "nome_original": "Shroud",
+    "tipo": "Medium undead",
+    "alinhamento": "neutral evil",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
 }

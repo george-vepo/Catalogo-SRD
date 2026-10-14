@@ -2,26 +2,26 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-409",
   "nome": "Mandrake",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_COM_EDICAO_IDENTIFICADA_PENDENTE_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Creature Codex",
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Creature Codex (2018)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://anyflip.com/myubd/zdka/basic/251-300",
-      "natureza": "terceiros_preexistente_nao_conferida"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint"
+      "url": "https://kpogl.wikidot.com/monster:mandrake",
+      "natureza": "reproducao_integral_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Creature Codex (2018)"
     }
   ],
   "estatisticas": {
     "nd": "1/2",
     "ca": 8,
     "pv": 22,
-    "dados_vida": null,
+    "dados_vida": "4d4+12",
     "atributos": {
       "FOR": 10,
       "DES": 6,
@@ -30,46 +30,124 @@
       "SAB": 9,
       "CAR": 12
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 5,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
     "deslocamentos_texto": "caminhar 5 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {},
+    "pericias": {},
+    "sentidos": [
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 60,
+        "observacao": "cego além do alcance"
+      }
+    ],
+    "idiomas": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "poisoned"
+    ],
+    "origem_ca": "CA base 8, sem origem publicada",
+    "modificadores": {
+      "FOR": 0,
+      "DES": -2,
+      "CON": 3,
+      "INT": -5,
+      "SAB": -1,
+      "CAR": 1
+    },
+    "pairar": false,
+    "percepcao_passiva": 9,
+    "telepatia_ft": null,
+    "bonus_proficiencia": 2
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Medicinal Root",
+      "origem": "descrição, não ação de combate",
+      "efeito": "raiz em pó e fermentada por um ano e um dia pode se tornar elixir de saúde que cura venenos e aflições",
+      "duracao_preparo": "um ano e um dia"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 2,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d4",
+          "modificador": 0,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Shriek",
+      "categoria": "area_controle",
+      "recarga": "4–6",
+      "alcance_ft": 60,
+      "alvos": "todas as criaturas no raio que consigam ouvir",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 13
+      },
+      "dano": {
+        "dados": "2d4",
+        "tipo": "thunder"
+      },
+      "falha": "dano integral",
+      "sucesso": "sem dano",
+      "falha_por_5_ou_mais": {
+        "condicao": "stunned",
+        "duracao": "até fim do próximo turno"
+      },
+      "falha_por_10_ou_mais": {
+        "condicao": "unconscious",
+        "repetir": "salvaguarda CON no fim de cada turno; sucesso recupera consciência"
+      }
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Raiz vegetal que grita; não confundir com Great Mandrake"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Mordida e Shriek sonoro com possibilidade de atordoar/desmaiar"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Faltam edição exata, ficha individual integral e ações detalhadas com CDs e limites.",
-    "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.",
-    "Não usar Great Mandrake, que é ficha independente ND1.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Conferência final com livro e erratas de edição ainda não executada.",
+    "Revisão independente da implementação mecânica e integração canônica pendentes."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-409",
+    "nome_original": "Mandrake",
+    "tipo": "Tiny plant",
+    "alinhamento": "unaligned",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": []
 }
