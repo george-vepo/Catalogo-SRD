@@ -4,9 +4,9 @@
   "nome": "Giant, Hellfire",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 24,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
@@ -41,18 +41,39 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": {
-      "Athletics": 10,
-      "Perception": 5,
-      "Survival": 5
-    },
-    "salvaguardas": {
-      "DEX": 5,
-      "CON": 6,
-      "WIS": 4
-    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 10
+      },
+      {
+        "nome": "Perception",
+        "bonus": 5
+      },
+      {
+        "nome": "Survival",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 5
+      },
+      {
+        "nome": "CON",
+        "bonus": 6
+      },
+      {
+        "nome": "WIS",
+        "bonus": 4
+      }
+    ],
     "sentidos": [
-      "darkvision 60 ft."
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
     ],
     "percepcao_passiva": 15,
     "idiomas": [
@@ -62,244 +83,173 @@
     "resistencias": [
       "fire"
     ],
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 5000,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "breastplate"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Death Malison",
-        "resumo_anterior": "Ao morrer, criaturas até 20 pés testam Constituição CD16 ou ficam amaldiçoadas por até sete dias; penalidade em salvaguardas e primeiro ataque de cada turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "morte da criatura",
+        "raio_ft": 20,
+        "teste": {
+          "atributo": "CON",
+          "cd": 16,
+          "fiends": "desvantagem"
+        },
+        "falha": {
+          "condicao": "cursed",
+          "duracao": "7 days ou até remove curse/similar",
+          "efeitos": [
+            "desvantagem em saving throws",
+            "desvantagem no primeiro attack roll de cada turno"
+          ]
+        }
       },
       {
         "nome": "Rune-Powered Weapons",
-        "resumo_anterior": "Ataques com armas são mágicos e causam 2d8 fogo adicionais.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeitos": [
+          "weapon attacks magical",
+          "dano adicional 2d8 fire já incluído no ataque Greatclub"
+        ],
+        "sem_aplicar_a": "Runic Blast (spell attack)"
       },
       {
         "nome": "Stone Camouflage",
-        "resumo_anterior": "Vantagem em Furtividade em terreno rochoso.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "terreno": "rocky terrain",
+        "efeito": "vantagem em DEX (Stealth) Hide"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Dois ataques Greatclub ou Runic Blast.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "quantidade": 2,
+        "opcoes": [
+          "Greatclub",
+          "Runic Blast"
+        ],
+        "nota": "redação não informa explicitamente se podem misturar opções na mesma sequência"
       },
       {
         "nome": "Greatclub",
-        "resumo_anterior": "+10, 15 pés, 3d8+6 contundente e 2d8 fogo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ]
       },
       {
         "nome": "Runic Blast",
-        "resumo_anterior": "+7 magia à distância, 60 pés, 4d10+3 force; Constituição CD16 contra deslocamento reduzido pela metade.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "4d10+3",
+            "media": 25,
+            "tipo": "force"
+          }
+        ],
+        "teste": {
+          "atributo": "CON",
+          "cd": 16,
+          "fiends": "desvantagem",
+          "falha": "speed reduzido pela metade até fim do próximo turno do alvo"
+        }
       },
       {
         "nome": "Invisibility Rune",
-        "resumo_anterior": "Fica invisível até atacar ou perder concentração.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "self invisível com equipamentos",
+        "duracao": "até atacar ou perder concentração como magia"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Dois ataques Greatclub ou Runic Blast.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "Runic Blast",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "4d10+3",
+            "media": 25,
+            "tipo": "force"
+          }
+        ],
+        "teste": {
+          "atributo": "CON",
+          "cd": 16,
+          "fiends": "desvantagem",
+          "falha": "speed reduzido pela metade até fim do próximo turno do alvo"
+        }
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Dois ataques Greatclub ou Runic Blast.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "quantidade": 2,
+      "opcoes": [
+        "Greatclub",
+        "Runic Blast"
+      ],
+      "nota": "redação não informa explicitamente se podem misturar opções na mesma sequência"
     },
-    "acoes_bonus": null,
+    "acoes_bonus": [],
     "reacoes": [
       {
         "nome": "Runic Shield",
-        "resumo_anterior": "Adiciona 4 à CA contra ataque visível que acertaria, salvo enquanto invisível.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "ataque que acertaria o gigante",
+        "pre_condicoes": [
+          "enxerga o atacante",
+          "não está invisível"
+        ],
+        "efeito": "AC +4 exclusivamente contra o ataque acionador"
       }
     ],
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Imagem final e revisão independente pendentes.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Runic Shield requer visão do atacante e criatura não invisível, além de competir por reação; confirmado na republicação.",
+    "Multiattack admite Greatclub ou Runic Blast; a possibilidade de combinar ambas não está explícita, aguardando livro/errata.",
+    "Imagem persistida mas identidade, qualidade e direitos não aprovados."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "verificação independente do livro/errata e condições de licenciamento",
+    "inspeção visual e autorização da imagem"
   ],
   "fontes": [
     {
@@ -310,6 +260,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/hellfire-giant/",
+      "tipo": "fonte individual detalhada checkpoint 35",
       "conferida_nesta_execucao": true
     }
   ],
@@ -429,5 +384,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 35,
+    "publicacao": "Tome of Beasts 3",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/hellfire-giant/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

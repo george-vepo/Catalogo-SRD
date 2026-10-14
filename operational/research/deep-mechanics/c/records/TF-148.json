@@ -4,9 +4,9 @@
   "nome": "Giant, Thin",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 26,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
@@ -41,17 +41,35 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": {
-      "Perception": 5,
-      "Stealth": 11
-    },
-    "salvaguardas": {
-      "DEX": 7,
-      "CON": 8,
-      "WIS": 5
-    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 5
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 11
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 7
+      },
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 5
+      }
+    ],
     "sentidos": [
-      "darkvision 60 ft."
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
     ],
     "percepcao_passiva": 15,
     "idiomas": [
@@ -63,201 +81,129 @@
       "bludgeoning",
       "necrotic"
     ],
-    "imunidades_dano": null,
+    "imunidades_dano": [],
     "imunidades_condicao": [
       "exhaustion"
     ],
-    "vulnerabilidades": null
+    "vulnerabilidades": [],
+    "xp": 5000,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Contortionist",
-        "resumo_anterior": "Atravessa aberturas de tamanho Medium e pode se espremer pelas destinadas a criaturas Small, desde que haja espaço de destino.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "passa por abertura large enough for Medium; squeeze em abertura para Small",
+        "pre_condicao": "destino tem espaço para volume completo do giant"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Três ataques corpo a corpo, mas no máximo uma mordida.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Consuming Bite",
-        "resumo_anterior": "+10, 5 pés, 2d8+6 perfurante e 2d6 necrótico; reduz PV máximos em valor do dano necrótico e cura o gigante no mesmo valor.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "quantidade": 3,
+        "limite": "Consuming Bite no máximo uma vez por multiataque",
+        "opcoes": [
+          "Claw",
+          "Consuming Bite"
+        ]
       },
       {
         "nome": "Claw",
-        "resumo_anterior": "+10, 20 pés, 2d6+6 cortante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 20,
+        "dano": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Consuming Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "necrotic"
+          }
+        ],
+        "reduz_max_hp": "valor efetivamente sofrido de necrotic",
+        "duracao_reducao": "até long rest do alvo",
+        "cura_giant": "mesmo valor do necrotic sofrido",
+        "morte_se": "reduz max HP a zero"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Três ataques corpo a corpo, mas no máximo uma mordida.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 20,
+        "dano": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "slashing"
+          }
+        ]
       },
       {
         "nome": "Consuming Bite",
-        "resumo_anterior": "+10, 5 pés, 2d8+6 perfurante e 2d6 necrótico; reduz PV máximos em valor do dano necrótico e cura o gigante no mesmo valor.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Claw",
-        "resumo_anterior": "+10, 20 pés, 2d6+6 cortante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "necrotic"
+          }
+        ],
+        "reduz_max_hp": "valor efetivamente sofrido de necrotic",
+        "duracao_reducao": "até long rest do alvo",
+        "cura_giant": "mesmo valor do necrotic sofrido",
+        "morte_se": "reduz max HP a zero"
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Três ataques corpo a corpo, mas no máximo uma mordida.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "quantidade": 3,
+      "limite": "Consuming Bite no máximo uma vez por multiataque",
+      "opcoes": [
+        "Claw",
+        "Consuming Bite"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Consuming Bite limita a um uso no Multiattack, reduz PV máximos apenas pelo dano necrótico sofrido e cura o gigante na mesma medida.",
+    "Confirmar texto editorial do Tome of Beasts 2 e licenças visuais antes de aprovação integral."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.imunidades_dano",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "verificação independente do livro/errata e condições de licenciamento",
+    "inspeção visual e autorização da imagem"
   ],
   "fontes": [
     {
@@ -268,6 +214,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-thin/",
+      "tipo": "fonte individual detalhada checkpoint 35",
       "conferida_nesta_execucao": true
     }
   ],
@@ -372,5 +323,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 35,
+    "publicacao": "Tome of Beasts 2",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/giant-thin/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

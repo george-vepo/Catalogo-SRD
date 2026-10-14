@@ -4,9 +4,9 @@
   "nome": "Giant, Shire",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 25,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
@@ -41,197 +41,206 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": {
-      "AnimalHandling": 3,
-      "Athletics": 7,
-      "Intimidation": 2,
-      "Survival": 3
-    },
-    "salvaguardas": null,
-    "sentidos": null,
+    "pericias": [
+      {
+        "nome": "Animal Handling",
+        "bonus": 3
+      },
+      {
+        "nome": "Athletics",
+        "bonus": 7
+      },
+      {
+        "nome": "Intimidation",
+        "bonus": 2
+      },
+      {
+        "nome": "Survival",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [],
     "percepcao_passiva": 10,
     "idiomas": [
       "Common",
       "Giant"
     ],
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 3900,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
-    "tracos": null,
+    "tracos": [],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Três ataques Pitchfork ou um ataque Pitchfork seguido de agarrão/arremesso.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "opcoes": [
+          {
+            "acoes": [
+              "Pitchfork",
+              "Pitchfork",
+              "Pitchfork"
+            ]
+          },
+          {
+            "acoes": [
+              "Pitchfork",
+              "Grab",
+              "Throw"
+            ],
+            "dependencias": [
+              "Grab deve estabelecer grapple antes de Throw"
+            ]
+          }
+        ],
+        "erro_publicado": "Repetição redundante da alternativa 1 Pitchfork+Grab+Throw na fonte republicada"
       },
       {
         "nome": "Pitchfork",
-        "resumo_anterior": "+7, 10 pés, 3d10+4 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+4",
+            "media": 20,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Rock",
-        "resumo_anterior": "+7, 60/240 pés, 3d10+4 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "dano": [
+          {
+            "dados": "3d10+4",
+            "media": 20,
+            "tipo": "bludgeoning"
+          }
+        ]
       },
       {
         "nome": "Grab",
-        "resumo_anterior": "Criatura Medium ou menor a 10 pés testa Destreza CD15 ou fica agarrada/restringida; fuga CD15.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "alcance_ft": 10,
+        "alvo": "visible Medium or smaller creature",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 15
+        },
+        "falha": {
+          "efeitos": [
+            "grappled",
+            "restrained"
+          ],
+          "escape_cd": 15
+        }
       },
       {
         "nome": "Throw",
-        "resumo_anterior": "Arremessa alvo agarrado até 30 pés; 4d6 contundente e salvaguarda Destreza CD15 para não cair; pode atingir segunda criatura.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "pre_condicao": "alvo já agarrado pelo gigante",
+        "alcance_ft": 30,
+        "alvo": "espaço que gigante enxerga",
+        "dano_ao_alvo": {
+          "dados": "4d6",
+          "media": 14,
+          "tipo": "bludgeoning"
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 15,
+          "em_falha": "prone"
+        },
+        "segundo_alvo": {
+          "pre_condicao": "espaço de destino ocupado",
+          "teste": {
+            "atributo": "DEX",
+            "cd": 15,
+            "em_falha": "4d6 bludgeoning e prone"
+          }
+        }
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Três ataques Pitchfork ou um ataque Pitchfork seguido de agarrão/arremesso.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Pitchfork",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+4",
+            "media": 20,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "dano": [
+          {
+            "dados": "3d10+4",
+            "media": 20,
+            "tipo": "bludgeoning"
+          }
+        ]
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Três ataques Pitchfork ou um ataque Pitchfork seguido de agarrão/arremesso.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "opcoes": [
+        {
+          "acoes": [
+            "Pitchfork",
+            "Pitchfork",
+            "Pitchfork"
+          ]
+        },
+        {
+          "acoes": [
+            "Pitchfork",
+            "Grab",
+            "Throw"
+          ],
+          "dependencias": [
+            "Grab deve estabelecer grapple antes de Throw"
+          ]
+        }
+      ],
+      "erro_publicado": "Repetição redundante da alternativa 1 Pitchfork+Grab+Throw na fonte republicada"
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Página individual 5eSRD não localizada; confirmar seção de habilidades e ações na publicação de origem.",
-    "A fonte Grove repete uma alternativa no Multiattack; confirmar texto editorial.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Multiattack apresenta alternativa Pitchfork+Grab+Throw duplicada literalmente na republicação, porém sua sequência é identificável; conferir no impresso/errata.",
+    "Grab exige alvo Medium ou menor visível, teste DEX CD15; Throw exige grapple mantido e pode atingir ocupante do destino.",
+    "Imagem binária existente sem aprovação visual/autorização documentada."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "verificação independente do livro/errata e condições de licenciamento",
+    "inspeção visual e autorização da imagem"
   ],
   "fontes": [
     {
@@ -242,6 +251,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/shire-giant/",
+      "tipo": "fonte individual detalhada checkpoint 35",
       "conferida_nesta_execucao": true
     }
   ],
@@ -337,5 +351,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 35,
+    "publicacao": "Tome of Beasts 3",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/shire-giant/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

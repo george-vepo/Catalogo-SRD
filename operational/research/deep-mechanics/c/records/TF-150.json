@@ -4,9 +4,9 @@
   "nome": "Ogre, Void-Blessed",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 28,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
@@ -41,17 +41,37 @@
     "deslocamentos": {
       "andar": 30
     },
-    "pericias": {
-      "Athletics": 8,
-      "Perception": 6
-    },
-    "salvaguardas": {
-      "CON": 7,
-      "WIS": 6
-    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 8
+      },
+      {
+        "nome": "Perception",
+        "bonus": 6
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 7
+      },
+      {
+        "nome": "WIS",
+        "bonus": 6
+      }
+    ],
     "sentidos": [
-      "blindsight 30 ft. (cego além)",
-      "tremorsense 120 ft."
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 30,
+        "restricao": "cego além do alcance"
+      },
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 120,
+        "restricao": "inativo se grappled ou restrained"
+      }
     ],
     "percepcao_passiva": 16,
     "idiomas": [
@@ -69,261 +89,216 @@
       "blinded",
       "poisoned"
     ],
-    "vulnerabilidades": null
+    "vulnerabilidades": [],
+    "xp": 2300,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Keen Hearing and Smell",
-        "resumo_anterior": "Vantagem em Percepção com audição/olfato.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem WIS Perception checks que dependam audição ou olfato"
       },
       {
         "nome": "Tentacle Senses",
-        "resumo_anterior": "Não usa tremorsense enquanto agarrado ou restringido.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "tremorsense 120 ft desativado enquanto grappled/restrained; blindsight continua 30 ft"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Faz um Tentacle Lash e um Void Bite ou três Void Spit.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "opcoes": [
+          {
+            "sequencia": [
+              "Tentacle Lash",
+              "Void Bite"
+            ]
+          },
+          {
+            "sequencia": [
+              "Void Spit",
+              "Void Spit",
+              "Void Spit"
+            ]
+          }
+        ]
       },
       {
         "nome": "Tentacle Lash",
-        "resumo_anterior": "+8, 15 pés, 2d6+5 contundente +2d6 psíquico; INT CD15 contra cegueira até fim do próximo turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "2d6+5",
+            "media": 12,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "psychic"
+          }
+        ],
+        "teste": {
+          "atributo": "INT",
+          "cd": 15,
+          "em_falha": "blinded até fim do próximo turno do alvo"
+        }
       },
       {
         "nome": "Void Bite",
-        "resumo_anterior": "+8, 5 pés, 1d10+5 perfurante +2d8 necrótico.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d10+5",
+            "media": 10,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "necrotic"
+          }
+        ]
       },
       {
         "nome": "Void Spit",
-        "resumo_anterior": "+6 magia à distância, 60 pés, 2d8+3 necrótico.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "2d8+3",
+            "media": 12,
+            "tipo": "necrotic"
+          }
+        ]
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Faz um Tentacle Lash e um Void Bite ou três Void Spit.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
         "nome": "Tentacle Lash",
-        "resumo_anterior": "+8, 15 pés, 2d6+5 contundente +2d6 psíquico; INT CD15 contra cegueira até fim do próximo turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "2d6+5",
+            "media": 12,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "psychic"
+          }
+        ],
+        "teste": {
+          "atributo": "INT",
+          "cd": 15,
+          "em_falha": "blinded até fim do próximo turno do alvo"
+        }
       },
       {
         "nome": "Void Bite",
-        "resumo_anterior": "+8, 5 pés, 1d10+5 perfurante +2d8 necrótico.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d10+5",
+            "media": 10,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "necrotic"
+          }
+        ]
+      },
+      {
+        "nome": "Void Spit",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 60,
+        "dano": [
+          {
+            "dados": "2d8+3",
+            "media": 12,
+            "tipo": "necrotic"
+          }
+        ]
       }
     ],
     "multiataque": {
       "nome": "Multiattack",
-      "resumo_anterior": "Faz um Tentacle Lash e um Void Bite ou três Void Spit.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "opcoes": [
+        {
+          "sequencia": [
+            "Tentacle Lash",
+            "Void Bite"
+          ]
+        },
+        {
+          "sequencia": [
+            "Void Spit",
+            "Void Spit",
+            "Void Spit"
+          ]
+        }
+      ]
     },
-    "acoes_bonus": null,
+    "acoes_bonus": [],
     "reacoes": [
       {
         "nome": "Volatile Stomach",
-        "resumo_anterior": "Após sofrer dano físico, pode regurgitar; CON CD15 a 5 pés contra 1d8 necrótico e envenenamento; cria poça que causa 1d8 necrótico ao contato por curto período.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "ogre sofre dano bludgeoning, piercing ou slashing",
+        "area": {
+          "raio_ft": 5,
+          "alvos": "each creature"
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "necrotic"
+          },
+          "condicao": "poisoned até fim do próximo turno do alvo"
+        },
+        "pool": {
+          "alvo": "espaço visível em até 5 ft",
+          "duracao": "até início do próximo turno do ogre",
+          "dano_entrada_ou_inicio_turno": {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "necrotic"
+          },
+          "limite": "primeira vez em um turno que entra ou se inicia turno lá"
+        }
       }
     ],
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Revisão de duração dos efeitos de Volatile Stomach.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Volatile Stomach reação exclusivamente após sofrer bludgeoning/piercing/slashing, efeito imediato e poça têm gatilhos e durações diferentes.",
+    "Tremorsense é suspenso por grapple/restrained, mas blindsight 30 ft continua listado; não confundir alcance.",
+    "Confirmação com impresso Tome of Beasts 3 e aprovação da arte ainda pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "verificação independente do livro/errata e condições de licenciamento",
+    "inspeção visual e autorização da imagem"
   ],
   "fontes": [
     {
@@ -334,6 +309,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:void-blessed-ogre",
+      "tipo": "fonte individual detalhada checkpoint 35",
       "conferida_nesta_execucao": true
     }
   ],
@@ -456,5 +436,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 35,
+    "publicacao": "Tome of Beasts 3",
+    "fonte_mecanicas": "https://kpogl.wikidot.com/monster:void-blessed-ogre",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
