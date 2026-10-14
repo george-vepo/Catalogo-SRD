@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 57: Fate Eater, Mamura e Swamp Adder (14/10/2026)
+
+- **TF-279 Fate Eater:** [fonte](https://kpogl.wikidot.com/monster:fate-eater), Multiattack duas mordidas, Alter Fate 5–6 e todos seis resultados com duração e frequência de salvaguarda registradas; Visionary Flesh depende da magia divination ainda não conferida individualmente.
+- **TF-280 Mamura:** [fonte](https://kpogl.wikidot.com/monster:mamura), Distracting Babble salvaguarda CON15 para conjuração/concentração, sem gastar slot em falha de conjuração; Flyby, Magic Resistance, Radial Eyes, 3 Claws + 1 Whiptail Stinger e Shadow Stealth por bônus.
+- **TF-288 Swamp Adder:** [fonte](https://kpogl.wikidot.com/monster:swamp-adder), **CR 1/4** explícito contra decimal arredondado **0.3** anterior, Bite +5, dano perfurante fixo 1, veneno 2d4 e paralisia CON CD11 com repetição no fim de turno.
+
+**Totais:** 81/132 estruturas individuais online, 51 ainda resumidas, 0 homologadas; 124/132 imagens em binário, oito ausentes e nenhuma aprovada para produção. Sem mudanças fora de A, V-Bridge ou merge; impressão, erratas, engine e licença pendentes.
+
+---
+
 # Grupo A — checkpoint 56: Moderate Malleable, Oth e Snatch Bat (14/10/2026)
 
 - **TF-276 Moderate Malleable:** [fonte KPOGL](https://kpogl.wikidot.com/monster:moderate-malleable). Multiattack com dois Flesh Tendril, Psychic Drain 5d8, fusão de 2 ou 4 Moderates, separação em 4 Minors com divisão de PV e herança dos efeitos, reação Sudden Separation após ataque de pelo menos 10 pontos de dano, Absorb Malleable por bônus. Fonte não explica divisão de resto no dano da reação. **Sem binário de imagem.**

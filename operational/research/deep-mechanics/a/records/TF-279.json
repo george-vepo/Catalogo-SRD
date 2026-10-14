@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "6",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "neutral",
+    "source_page": 168,
+    "proficiency_bonus": 3,
+    "experience_points": 2300
   },
   "statistics": {
     "armor_class": 16,
     "hit_points": 130,
-    "hit_dice": null,
+    "hit_dice": "20d8+40",
     "ability_scores": {
       "STR": 18,
       "DEX": 12,
@@ -26,24 +29,195 @@
       "WIS": 16,
       "CHA": 9
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40,
+      "climb_ft": 40
+    },
+    "senses": {
+      "truesight_ft": 60,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Arcana": 7,
+      "History": 7,
+      "Insight": 6,
+      "Religion": 7
+    },
+    "saving_throws": {
+      "CON": 5
+    },
+    "languages": {
+      "understands": "all_languages",
+      "can_speak": false,
+      "telepathy_ft": 100
+    },
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "frightened"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 1,
+      "CON": 2,
+      "INT": 4,
+      "WIS": 3,
+      "CHA": -1
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Visionary Flesh",
+        "category": "postmortem_consumption",
+        "trigger": "consumes_fate_eater_flesh",
+        "save": {
+          "ability": "CON",
+          "dc": 15
+        },
+        "failure": {
+          "condition": "poisoned",
+          "duration": "1_hour"
+        },
+        "success": {
+          "spell_effect": "divination",
+          "details": "spell reference not fully transcribed"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Bite",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 4,
+              "average": 13,
+              "type": "slashing"
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "average": 7,
+              "type": "necrotic"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Alter Fate",
+        "category": "save_random_effect",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "target": {
+          "count": 1,
+          "visible": true,
+          "range_ft": 30
+        },
+        "save": {
+          "ability": "CHA",
+          "dc": 15,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "8d8",
+                "average": 36,
+                "type": "psychic"
+              }
+            ],
+            "random_effect": "1d6"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "no_random_effect": true
+          }
+        },
+        "outcomes": [
+          {
+            "roll": 1,
+            "name": "Forgotten Training",
+            "duration": "1_minute",
+            "effect": "lose_one_random_class_feature"
+          },
+          {
+            "roll": 2,
+            "name": "Lost Potential",
+            "duration": null,
+            "effect": "reduce_one_random_ability_score_by_2"
+          },
+          {
+            "roll": 3,
+            "name": "Seeing the Alternates",
+            "duration": "1_minute",
+            "condition": "incapacitated"
+          },
+          {
+            "roll": 4,
+            "name": "Shifting Memories",
+            "duration": null,
+            "effect": "lose_one_random_skill_proficiency_gain_another_random_skill_proficiency"
+          },
+          {
+            "roll": 5,
+            "name": "Took the Lesser Path",
+            "duration": null,
+            "effect": "current_hp_becomes_current_maximum_hp"
+          },
+          {
+            "roll": 6,
+            "name": "Untied from the Loop",
+            "duration": "1_minute",
+            "effect": "movement_direction_random"
+          }
+        ],
+        "repeat_save": {
+          "short_effects": "end_of_each_affected_turn",
+          "other_effects": "end_of_each_long_rest",
+          "ability": "CHA",
+          "dc": 15,
+          "success_ends": true
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Divination spell",
+        "category": "external_rule_dependency",
+        "verified_spell_effects": false
+      }
+    ]
   },
   "prior_research_summary_unverified_for_implementation": [
     "Mordidas e manipulação da sorte/destino com efeitos sorteados e recarga."
@@ -74,8 +248,8 @@
       "url": "https://kpogl.wikidot.com/monster:fate-eater",
       "type": "KPOGL, transcrição independente (não endossada pela editora)",
       "edition": "Tome of Beasts 1",
-      "scope": "traços, ações e resumo; não valida direitos nem edição física",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Bloco completo de estatísticas e ações individuais",
+      "verification": "Lido em 2026-10-14; transcrição secundária, não editora original"
     }
   ],
   "source_checkpoint": {
@@ -87,9 +261,9 @@
     "Fate Eater revisado 2023 tem PV 130; outra transcrição da edição original registra PV 182."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Results 2/4/5 do not provide specific one-minute durations; do not invent.",
+    "Divination external spell reference not yet independently inspected.",
+    "Validar impressão/erratas, licença e mecânicas na engine antes de homologar."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -113,5 +287,18 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:fate-eater"
+    ],
+    "source_tier": "secondary_KPOGL",
+    "individual_statblock_read_live": true,
+    "rights_reviewed": false
   }
 }

@@ -9,15 +9,18 @@
     "publication": "Tome of Beasts 1",
     "edition_family": "5e",
     "exact_printing": null,
-    "challenge_rating": "0.3",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "challenge_rating": "1/4",
+    "size": "Small",
+    "type": "beast",
+    "alignment": "unaligned",
+    "source_page": 334,
+    "experience_points": 50,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 13,
     "hit_points": 18,
-    "hit_dice": null,
+    "hit_dice": "4d6+4",
     "ability_scores": {
       "STR": 4,
       "DEX": 16,
@@ -26,24 +29,95 @@
       "WIS": 10,
       "CHA": 4
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "blindsight_ft": 10,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": -3,
+      "DEX": 3,
+      "CON": 1,
+      "INT": -5,
+      "WIS": 0,
+      "CHA": -3
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Swamp Camouflage",
+        "category": "skill_advantage",
+        "ability": "DEX",
+        "skill": "Stealth",
+        "precondition": "hiding_in_swampy_terrain"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": null,
+              "flat": 1,
+              "average": 1,
+              "type": "piercing"
+            }
+          ]
+        },
+        "on_hit_save": {
+          "ability": "CON",
+          "dc": 11,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "2d4",
+                "average": 5,
+                "type": "poison"
+              }
+            ],
+            "condition": "paralyzed",
+            "duration": "1_minute",
+            "repeat_save": {
+              "ability": "CON",
+              "dc": 11,
+              "timing": "end_of_target_turn",
+              "success_ends": true
+            }
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "condition": null
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Víbora de pântano com camuflagem e mordida venenosa que pode paralisar por até um minuto; ND 1/4 na ficha."
@@ -60,8 +134,8 @@
       "url": "https://kpogl.wikidot.com/monster:swamp-adder",
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Tome of Beasts 1",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Bloco completo de estatísticas e ações individuais",
+      "verification": "Lido em 2026-10-14; transcrição secundária, não editora original"
     }
   ],
   "source_checkpoint": {
@@ -70,12 +144,13 @@
   },
   "edition_conflicts": [
     "O índice representa desafio fracionário pelo decimal 0.3; correspondência com fração e revisão de edição precisam ser confirmadas na ficha.",
-    "Desafio 0.3 no índice é aproximação decimal de ND 1/4 da ficha; não converter literalmente para 3/10."
+    "Desafio 0.3 no índice é aproximação decimal de ND 1/4 da ficha; não converter literalmente para 3/10.",
+    "CR 0.3 arredondado no ledger histórico; fonte individual apresenta 1/4 (0.25) exato."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Previous catalog CR 0.3 was rounded: source gives exact CR 1/4.",
+    "Base piercing damage is fixed one point, no roll.",
+    "Validar impressão/erratas, licença e mecânicas na engine antes de homologar."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -99,5 +174,18 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:swamp-adder"
+    ],
+    "source_tier": "secondary_KPOGL",
+    "individual_statblock_read_live": true,
+    "rights_reviewed": false
   }
 }
