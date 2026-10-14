@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 11 / 195.**
+**Armazenadas e verificadas: 21 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -9,6 +9,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/a90f1ba1db57873052c1b0b231c056acd523fa9b — 1/1 verificadas: TF-059
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77 — 10/10 verificadas: TF-060, TF-061, TF-062, TF-063, TF-064, TF-065, TF-066, TF-067, TF-068, TF-070
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c54e40a955f62c7839f39f40f0361aade9c708c9 — 10/10 verificadas: TF-071, TF-072, TF-074, TF-075, TF-077, TF-078, TF-079, TF-080, TF-081, TF-082
 
 ## Binários publicados e conferidos
 
@@ -23,20 +24,20 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-067 / Clockwork Leech: operational/assets/creature-images/TF-067.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Clockwork%20Leech.webp; 117610 bytes; 891x875 px; SHA-256: 5f27eca2596dd558ea7eb55dc086b97ba4a98ff2a586005801d534987cabdee3; commit: a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77
 - TF-068 / Clockwork Pugilist: operational/assets/creature-images/TF-068.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Clockwork%20Pugilist.webp; 133620 bytes; 1000x1606 px; SHA-256: f97431ddf633ded9f655472dc9b6affaad1b7c4d2bd34d4865762df60fc5cf52; commit: a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77
 - TF-070 / Clockwork Soldier: operational/assets/creature-images/TF-070.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/clockworksoldier.jpg; 51722 bytes; 373x700 px; SHA-256: 733a0915750d339336e6c759b859b657508e3a86630e71d182643c237ab86350; commit: a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77
+- TF-071 / Clockwork Watchman: operational/assets/creature-images/TF-071.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Watchman.webp; 43552 bytes; 475x800 px; SHA-256: 9a1588adae13fc10ffafac293e4a5b51d1cd11f369789dc709f49c67ab1f9d84; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-072 / Clockwork Weaving Spider: operational/assets/creature-images/TF-072.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Weaving%20Spider.webp; 56986 bytes; 582x800 px; SHA-256: b840137ff535658bc5b66e2f8b674d95d5c75ea6291b148e41143a2e4c696ccf; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-074 / Yali: operational/assets/creature-images/TF-074.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Yali.webp; 112080 bytes; 756x1200 px; SHA-256: a3b0ed8cb73b19b9a232448b8d828e73f869a6384aacb6644544415c7b3730b6; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-075 / Akaasit: operational/assets/creature-images/TF-075.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Akaasit.webp; 197980 bytes; 720x903 px; SHA-256: ae760ffb8397e446decf1e84d5a5eaf5c6b704463875cc3e3c91832bedba27ca; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-077 / Clockwork Assassin: operational/assets/creature-images/TF-077.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/clockworkassassin.jpg; 45935 bytes; 573x700 px; SHA-256: 5b352a10ffc3600aad56d4ed6f62d325d41490f6a9d7db555c4624259dc7d6e6; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-078 / Clockwork Mantis: operational/assets/creature-images/TF-078.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Clockwork%20Mantis.webp; 238608 bytes; 862x1131 px; SHA-256: a49aeea211ff38f4d0b52d9e871235b17c455930ec1af85d27a2333cc9cfb985; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-079 / Clockwork Myrmidon: operational/assets/creature-images/TF-079.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Myrmidon.webp; 73812 bytes; 769x800 px; SHA-256: 4bdbe666c4d3ac3badda625e8f2e8597b7f4bfc7ba23998e602b4ef8083b5fc7; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-080 / Clockwork Scorpion: operational/assets/creature-images/TF-080.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Clockwork%20Scorpion.webp; 107518 bytes; 1000x1123 px; SHA-256: dc2e7aae0227f9818563eeb70e8fbcd3dd5a1d3170da68802eccae2b21774113; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-081 / Clockwork Tiger: operational/assets/creature-images/TF-081.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Clockwork%20Tiger.webp; 149206 bytes; 1186x702 px; SHA-256: c5b2efae7d79d83301f2e38923183ee0e2840e36a8b2f6de3e5d14be1212a3c5; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-082 / Onyx Magistrate: operational/assets/creature-images/TF-082.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Onyx%20Magistrate.webp; 222186 bytes; 889x971 px; SHA-256: c6646682b860e4e7a78d9f7d9b40dcea8f9ffdcd020fea9dcdb820f99e8c8ea5; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
-- TF-071 / Clockwork Watchman: pending; 
-- TF-072 / Clockwork Weaving Spider: pending; 
-- TF-074 / Yali: pending; 
-- TF-075 / Akaasit: pending; 
-- TF-077 / Clockwork Assassin: pending; 
-- TF-078 / Clockwork Mantis: pending; 
-- TF-079 / Clockwork Myrmidon: pending; 
-- TF-080 / Clockwork Scorpion: pending; 
-- TF-081 / Clockwork Tiger: pending; 
-- TF-082 / Onyx Magistrate: pending; 
 - TF-083 / Void Knight: pending; 
 - TF-084 / Zalikum: pending; 
 - TF-085 / Animated Instrument, Animated Symphony: pending; 
