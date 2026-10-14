@@ -2,6 +2,15 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Auditoria dos checkpoints 28 a 31 — 14/10/2026
+
+- TF-507/509/518/521 no commit `59c966efadd6ed32b2be2382b5f6f44981fc9555`, TF-120/121 no commit `9b63568a4d309e75847dbf9e45ffc7fb5def34e1`, TF-122/123 no commit `31c489977f51cd7716c2f82f38b99d0855fbd18f` e TF-124/125 no commit `6e1c1a38d053a6df634623791b2b3392a6a30a48`. **Todos os 10 JSONs reabertos e validados por ID e sintaxe via GitHub.**
+- Diff: **229 arquivos alterados, todos sob `operational/research/deep-mechanics/c/`**; 131 IDs únicos no manifesto. Nenhum merge. PR continua em modo draft.
+- Imagens: **96 arquivos binários reais existentes, 96 caminhos e SHAs confirmados**, 35 sem binário no lote C. A validação visual editorial permanece em 0; imagens já armazenadas não equivalem à aprovação da identidade visual.
+- Resultado atualizado: **51 fichas aprofundadas individualmente, 80 sem revalidação detalhada, 0 mecanicamente concluídas**, 94 parciais e 37 bloqueadas. **Proibido promover todas a concluídas por contagem ou estrutura JSON; dependências editoriais persistem**.
+- Fronteiras: as fichas da linha Kobold Press conservam os recursos individuais, e as A5E não foram convertidas automaticamente para D&D 5e, preservando regras específicas e divergências editoriais.
+
+
 ## Checkpoint 31 — Queen of Serpents e Queen of Mammoths (14/10/2026)
 
 - TF-124 Queen of Serpents: três formas, Bestowal of Trust com +1 Wisdom sem custo de ação especificado, 3 legendary resistances/dia, Innate Spellcasting CHA CD18, Bite/Shortsword/Constrict/Gaze com restrições por forma, Multiattack apenas human/true, 3 legendary actions (Detect, Move, Precognition), efeitos regionais, sem lair actions listadas. Fonte https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/.
