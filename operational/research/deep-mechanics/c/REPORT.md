@@ -1,5 +1,16 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 44 — Cueyatl Sea Priest, Warrior e três Tosculi (14/10/2026)
+
+**[Commit de fichas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/f5fed18ed595184af6a9850dbe5a1d8ac8ea9e3e)**. Cinco JSONs verificados após push, dados parafraseados e versões não mescladas. Status dos conflitos permanece BLOQUEADA enquanto sem errata editorial.
+- **TF-193 Cueyatl Sea Priest:** Amphibious/Jungle Camouflage/Slippery/Standing Leap, Speak with Sea Life restrito a beasts/monstrosities amphibious ou water breathing, Druida 2º nível WIS CD12 +4, três slots de nível1, tridente +2 com poison. https://www.5esrd.com/database/creature/cueyatl-sea-priest/
+- **TF-194 Cueyatl Warrior — BLOQUEADA:** 5eSRD imprime CA13/STR save+2 e Battleaxe 1d8+2, enquanto Robinloft apresenta CA12/STR save+3 com discrepâncias adicionais na fórmula do dano. Fonte preservada sem reinterpretar. https://www.5esrd.com/database/creature/cueyatl-warrior/ e https://www.robinloft.com/monsters/cueyatl-warrior/creature-codex
+- **TF-195 Tosculi Drone — BLOQUEADA:** 2016 orig Small monstrosity, Gliding Wings, Skittering e Claws/Crossbow; 2023 humanoid com Glide/Crowd Tactics/Hive Sense e apenas Claw. Fonte 2016 https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone , versão 2023 https://www.5esrd.com/database/creature/tosculi-drone-3pp/
+- **TF-196 Tosculi Elite Bow Raider — BLOQUEADA:** edição original 2016 (CA16, DEX18, Evasive, Keen Smell, Deadly Precision já incluído em Longbow 3d8+4), diferindo radicalmente de edição 2023 (CA17, DEX24, Archer/Hive Sense/Point Blank Hunter). https://dr-eigenvalue.github.io/bestiary/creature/tosculi-elite-bow-raider e https://www.5esrd.com/database/creature/tosculi-elite-bow-raider-3pp/
+- **TF-197 Jeweled Drone:** Pheromones +1d6 não cumulativo, alvo precisa cheirar e começar turno até 15ft; Scintillating Carapace só bright light e pode ser evitado desviando olhar; 2 Claws e 1 Scimitar com veneno que estabiliza/paralisa se zerar HP; Protect the Queen reação com queen adjacente +2 CA. https://www.5esrd.com/database/creature/tosculi-jeweled-drone/
+- **Auditoria:** 131 IDs e JSONs, 114 aprofundadas, 17 faltando aprofundar, 95 parciais, 36 bloqueadas, 0 integralmente aprovadas. 96 blobs de imagem com SHA conferido, 35 faltantes, 0 aprovadas visualmente. Todos 229 arquivos de diff dentro de C; nenhuma imagem nova.
+- **Pendente:** comparar livro e erratas para divergências 2016/2023, licenças de regras/imagens, inspeção visual e revisão independente. PR Draft, sem merge.
+
 ## Checkpoint 43 — Behtu, Black Knight Commander, City Watch Captain, Corpse Thief e Cueyatl Moon Priest (14/10/2026)
 
 **[Commit de cinco fichas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/88fbe7484c690faf2b902d8f4edf38e1eae545fe)** relido no GitHub; fontes parafraseadas; edição e arte ainda aguardam aprovação.

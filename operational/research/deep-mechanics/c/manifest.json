@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 109,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 114,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 96,
-    "bloqueadas": 35,
-    "registros_aproveitados_sem_nova_verificacao_integral": 22,
+    "parciais": 95,
+    "bloqueadas": 36,
+    "registros_aproveitados_sem_nova_verificacao_integral": 17,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -650,9 +650,24 @@
       "commit": "88fbe7484c690faf2b902d8f4edf38e1eae545fe",
       "leitura_persistencia": "CONFIRMADA — cinco JSONs relidos após commit, IDs e sintaxe válidos, fontes 5eSRD/HereBeTaverns, 131 IDs, 96 blobs hash coincidentes e somente alterações C.",
       "tipo": "Behtu, Black Knight Commander, City Watch Captain, Corpse Thief, Cueyatl Moon Priest"
+    },
+    {
+      "numero": 44,
+      "inicio": "TF-193",
+      "fim": "TF-197",
+      "ids": [
+        "TF-193",
+        "TF-194",
+        "TF-195",
+        "TF-196",
+        "TF-197"
+      ],
+      "commit": "f5fed18ed595184af6a9850dbe5a1d8ac8ea9e3e",
+      "leitura_persistencia": "CONFIRMADA — cinco JSONs e fontes 5eSRD/Robinloft/dr-eigenvalue confrontadas, distinção 2016/2023 Tosculi, 131 IDs e 96 hashes de imagens corretos.",
+      "tipo": "Cueyatl Sea Priest, Warrior e Tosculi Drone Elite Bow Raider Jeweled Drone"
     }
   ],
-  "atualizacao_detalhada_sha": "88fbe7484c690faf2b902d8f4edf38e1eae545fe",
+  "atualizacao_detalhada_sha": "f5fed18ed595184af6a9850dbe5a1d8ac8ea9e3e",
   "criaturas": [
     {
       "id": "TF-412",
@@ -3839,17 +3854,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 68,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-193.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/cueyatl-sea-priest/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Referência a regras de comunicação com vida marinha requer classificação das espécies."
+        "Speak with Sea Life atinge somente beasts e monstrosities anfíbios ou aquáticos respiradores, não qualquer criatura marinha.",
+        "Druid level2 WIS CD12 +4, 3 slots 1º nível, duas cantrips; Trident +2 com dano poison sem salvação impressa.",
+        "Conferir edição original/legal e direitos/identidade da imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência de edição, licenças e erratas",
+        "autoria, identidade e inspeção visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3859,7 +3875,8 @@
         "bytes": 54957,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-194",
@@ -3867,17 +3884,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 69,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-194.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_CA_SALVAGUARDA_DIVERGENCIA_PUBLICADA",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/cueyatl-warrior/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Robinloft apresenta CA12 e a ficha 5eSRD mostra CA13; reavaliar armor/stats e errata, sem mesclar dados."
+        "BLOQUEIO: 5eSRD CA13, STR save +2, ataque battleaxe +3/dano 1d8+2; Robinloft CA12 e STR save+3, além de fórmula de dano conflitante. Sem combinar fontes nem 'consertar' por inferência.",
+        "Edição/errata original e imagem/legal não verificados."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência de edição, licenças e erratas",
+        "autoria, identidade e inspeção visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3887,7 +3904,8 @@
         "bytes": 52763,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-195",
@@ -3895,17 +3913,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 70,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-195.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_VERSOES_2016_2023_DIVERGENCIA_HUMANOID_MONSTROSITY",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Duas redações diferentes dos traços Skittering/Crowd Tactics entre edições; manter status parcial até comparação."
+        "BLOQUEIO EDIÇÃO: original 2016 trata como Small MONSTROSITY com Gliding Wings, Skittering e Crossbow, enquanto revisão 2023 trata como HUMANOID, Crowd Tactics/Glide/Hive Sense, remove crossbow. Manter fichas separadas e resolver autorização de edição.",
+        "Comparação da publicação original/errata e licença visual pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência de edição, licenças e erratas",
+        "autoria, identidade e inspeção visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3915,7 +3933,8 @@
         "bytes": 62842,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-196",
@@ -3923,17 +3942,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 71,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-196.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_VERSOES_ELITE_RAIDER_2016_2023",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-elite-bow-raider",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Fonte secundária, mas CR5/CA16/PV97 também constam da edição original; verificar alteração de 2023."
+        "BLOQUEIO EDIÇÕES: original 2016 CA16 DEX18 +4, Deadly Precision +2d8, Longbow +7 dano 3d8+4, Evasive, Keen Smell; revisão 2023 CA17 DEX24 +7, Archer, Hive Sense, Point Blank Hunter, +10 Claw/Longbow, Skirmisher Dash ou Disengage. Não mesclar.",
+        "Original 2016 de fonte dr-eigenvalue, necessita erratas/licença e validação de arte."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência de edição, licenças e erratas",
+        "autoria, identidade e inspeção visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3943,7 +3962,8 @@
         "bytes": 62060,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-197",
@@ -3951,17 +3971,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 72,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-197.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/tosculi-jeweled-drone/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Não acumular múltiplos dados de Pheromones."
+        "Pheromones concede APENAS um dado d6 por vez e exige cheirar; Scintillating Carapace ativo só em bright light e há opção evitar olhar.",
+        "Protect the Queen exige hive queen até 5ft e reação da jeweled drone, condição essencial.",
+        "Verificar publicação, licença e identidade da imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência de edição, licenças e erratas",
+        "autoria, identidade e inspeção visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3971,7 +3992,8 @@
         "bytes": 65411,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-198",
@@ -4534,14 +4556,14 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 43,
-    "sha_validado": "88fbe7484c690faf2b902d8f4edf38e1eae545fe",
+    "checkpoint": 44,
+    "sha_validado": "f5fed18ed595184af6a9850dbe5a1d8ac8ea9e3e",
     "escopo_ids": 131,
-    "aprofundadas": 109,
-    "sem_revisao_individual": 22,
+    "aprofundadas": 114,
+    "sem_revisao_individual": 17,
     "integralmente_aprovadas": 0,
-    "parciais": 96,
-    "bloqueadas": 35,
+    "parciais": 95,
+    "bloqueadas": 36,
     "imagens_binarias_fisicas": 96,
     "hashes_corretos": 96,
     "imagens_faltantes": 35,
