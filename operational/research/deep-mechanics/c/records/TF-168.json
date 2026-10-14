@@ -204,14 +204,33 @@
         "desfazer": "bonus action para encerrar e ocupar espaço desocupado mais próximo"
       }
     ],
-    "reacoes": [],
+    "reacoes": [
+      {
+        "nome": "Pluck",
+        "tipo": "reaction",
+        "estado_exigido": "Stretch Body ativo; stretched body only",
+        "gatilho": "ao menos uma criatura cai pelo centro do cilindro formado pela ooze",
+        "maximo_alvos": 2,
+        "alvos": "até duas criaturas em queda pelo centro do cilindro",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 14
+        },
+        "falha": {
+          "condicao": "grappled",
+          "recurso": "um dos Pseudopods da ooze",
+          "escape_cd": 14
+        },
+        "restricao": "indisponível fora da forma stretched"
+      }
+    ],
     "acoes_lendarias": [],
     "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Stretch Body é bonus action indispensável para Hollow Cylindrical Form, Slimy Appearance e Pluck; nunca disponibilizar Pluck sem estado stretched.",
+    "Stretch Body é bonus action indispensável para Hollow Cylindrical Form, Slimy Appearance e Pluck; Pluck registrada como reação condicionada a stretched.",
     "Cada um dos até 6 pseudopods é entidade local atacável CA10/HP10, destruída não tira HP da ooze.",
     "Imagem/edição/errata pendentes."
   ],
@@ -233,6 +252,11 @@
     {
       "url": "https://www.5esrd.com/database/creature/sinkhole-ooze/",
       "tipo": "ficha individual revisada no checkpoint 39",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/sinkhole-ooze/",
+      "tipo": "conferência direta da reação Pluck no CP39 de consolidação",
       "conferida_nesta_execucao": true
     }
   ],

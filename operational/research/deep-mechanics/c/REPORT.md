@@ -1,5 +1,17 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 39 — cinco oozes e reação Pluck (14/10/2026)
+
+**Mecânicas publicadas:** [commit 73d78e64c80f](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/73d78e64c80f1ab6f44843b55f9f8683457cb880). Cinco JSONs TF-165 a TF-169 existentes foram relidos por ID e sintaxe; fonte individual 5eSRD conferida, sem declarar aprovação editorial ou licença de imagens.
+
+- **TF-165 Manure Ooze:** Eye-Watering Stench CON CD13, Flammable até fim do próximo turno e +1d6 fire no Pseudopod, Digest Corpse por categoria de tamanho e Split reação. Imunidade slashing coexistindo com Split segue como ambiguidade publicada. https://www.5esrd.com/database/creature/ooze-manure/
+- **TF-166 Mineral Ooze — BLOQUEADA:** Mineralize ação bônus enquanto há criatura encasada, resistência física e velocidade 5ft; Encase com ácido CON CD14 e fuga/ajuda STR CD12. Multiattack descreve dois *Slam*, porém só existe ataque *Pseudopod* definido na ficha consultada. Sem substituição inferida. https://www.5esrd.com/database/creature/ooze-mineral/
+- **TF-167 Shadow Ooze:** Aura of Darkness raio 30ft, Frozen Defense +2d4 cold contra armas metálicas, ataque Pseudopod seguido de Snuff Out; variante Freezing Shadow excluída da ficha base. https://www.5esrd.com/database/creature/ooze-shadow/
+- **TF-168 Sinkhole Ooze:** seis pseudópodes independentes, Stretch Body em ação bônus, dois ataques e **correção de omissão Pluck como reação** exclusivamente no estado *stretched*: gatilho de queda pelo cilindro; até dois alvos, DEX CD14, grapple com fuga CD14. https://www.5esrd.com/database/creature/sinkhole-ooze/
+- **TF-169 Suppurating Ooze:** Seeping Death por contato e ataque, testes CON CD13, redução DES 1d4 após descanso e transformação 1d4h após morte. Seeping Death Skeleton é variante CR2 distinta. https://www.5esrd.com/database/creature/ooze-suppurating/
+- **Auditoria de consistência:** 131 IDs, 131 JSONs listados, 96 blobs de imagem listados com SHA igual ao manifesto (96/96), nenhum arquivo modificado fora de C. 89/131 aprofundadas; 42 pendentes; 94 parciais, 37 bloqueadas; 0 aprovadas integralmente; 35 imagens faltam, 0 aprovadas visualmente.
+- **Pendências:** livro original/erratas, verificação de licenças de imagem, revisão independente e ambiguidade Slam/Pseudopod da TF-166. Nenhuma imagem adquirida neste checkpoint. PR permanece Draft e não integrada.
+
 ## Checkpoint 38 — Berberoka e quatro oozes (14/10/2026)
 
 **[Commit de fichas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/78cc268e129bef7926a22d7fe4933ae5cf7afb71).** Cinco arquivos relidos, JSON IDs e mecânicas confirmados, manifesto 131 IDs, 84 profundas, 95 parciais, 36 bloqueadas.

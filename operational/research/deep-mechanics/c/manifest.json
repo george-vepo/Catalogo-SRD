@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 84,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 89,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 95,
-    "bloqueadas": 36,
-    "registros_aproveitados_sem_nova_verificacao_integral": 47,
+    "parciais": 94,
+    "bloqueadas": 37,
+    "registros_aproveitados_sem_nova_verificacao_integral": 42,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -575,9 +575,24 @@
       "commit": "78cc268e129bef7926a22d7fe4933ae5cf7afb71",
       "leitura_persistencia": "CONFIRMADA — cinco JSONs reabertos no GitHub, sintaxe, IDs, Split reação; 131 IDs, 84 aprofundadas, 95 parciais, 36 bloqueadas.",
       "tipo": "Berberoka Saturated Expansion; Split Eldritch; Ichor drain; Ink Guardian; Leavesrot"
+    },
+    {
+      "numero": 39,
+      "inicio": "TF-165",
+      "fim": "TF-169",
+      "ids": [
+        "TF-165",
+        "TF-166",
+        "TF-167",
+        "TF-168",
+        "TF-169"
+      ],
+      "commit": "73d78e64c80f1ab6f44843b55f9f8683457cb880",
+      "leitura_persistencia": "CONFIRMADA — 5 JSONs CP39 relidos e confrontados com fichas 5eSRD. Consolidação corrige reação Pluck em TF-168 e atualiza manifesto/relatório. 131 IDs, 89 aprofundadas, 94 parciais, 37 bloqueadas.",
+      "tipo": "Manure, Mineral, Shadow, Sinkhole, Suppurating ooze"
     }
   ],
-  "atualizacao_detalhada_sha": "78cc268e129bef7926a22d7fe4933ae5cf7afb71",
+  "atualizacao_detalhada_sha": "73d78e64c80f1ab6f44843b55f9f8683457cb880",
   "criaturas": [
     {
       "id": "TF-412",
@@ -3019,15 +3034,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 43,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-165.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-manure/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
       "pendencias": [
-        "Verificar interação entre imunidade a slashing e reação Split; a fonte lista ambos e não deve ser silenciosamente reinterpretada."
+        "Split com imunidade slashing simultâneas na fonte; interação permanece inconclusiva.",
+        "Revisão independente da publicação original, direitos e imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "conferência independente da edição/erratas aplicáveis",
+        "licença, adequação visual e aprovação da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3037,7 +3054,8 @@
         "bytes": 100334,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-166",
@@ -3045,15 +3063,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 44,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-166.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_MULTIATTACK_REFERENCIA_SLAM_SEM_DEFINICAO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-mineral/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
       "pendencias": [
-        "Multiattack cita Slam mas única opção de ataque impressa na página é Pseudopod; confirmar nome na publicação."
+        "BLOQUEIO: Multiattack menciona dois ataques Slam, mas a única definição listada na fonte é Pseudopod; depende de errata/publicação.",
+        "Aprovação editorial e legal da imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "conferência independente da edição/erratas aplicáveis",
+        "licença, adequação visual e aprovação da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3063,7 +3083,8 @@
         "bytes": 252480,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-167",
@@ -3071,15 +3092,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 45,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-167.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-shadow/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
       "pendencias": [
-        "Variante Freezing Shadow Ooze aparece na página; não misturar com ficha principal."
+        "Variante Freezing Shadow Ooze separada da ficha base.",
+        "Conferência do livro, licença e revisão visual."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "conferência independente da edição/erratas aplicáveis",
+        "licença, adequação visual e aprovação da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3089,7 +3112,8 @@
         "bytes": 65802,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-168",
@@ -3097,13 +3121,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 46,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-168.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/sinkhole-ooze/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Pluck só disponível com Stretch Body; salvaguarda DEX CD14, até dois alvos, grapple escape CD14.",
+        "Conferência do livro, licença e revisão visual."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "conferência independente da edição/erratas aplicáveis",
+        "licença, adequação visual e aprovação da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3113,7 +3141,8 @@
         "bytes": 202650,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-169",
@@ -3121,15 +3150,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 47,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-169.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-suppurating/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
       "pendencias": [
-        "Variante Seeping Death Skeleton é entidade distinta, não integrar à ficha de ooze."
+        "Não misturar a variante Seeping Death Skeleton CR2.",
+        "Conferência editorial da edição e autorização visual."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "conferência independente da edição/erratas aplicáveis",
+        "licença, adequação visual e aprovação da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3139,7 +3170,8 @@
         "bytes": 101565,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-170",
@@ -4399,14 +4431,14 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 38,
-    "sha_validado": "e1cc0dce8cec77898bbf9884dbf8f1e8c54251dc",
+    "checkpoint": 39,
+    "sha_validado": "73d78e64c80f1ab6f44843b55f9f8683457cb880",
     "escopo_ids": 131,
-    "aprofundadas": 84,
-    "sem_revisao_individual": 47,
+    "aprofundadas": 89,
+    "sem_revisao_individual": 42,
     "integralmente_aprovadas": 0,
-    "parciais": 95,
-    "bloqueadas": 36,
+    "parciais": 94,
+    "bloqueadas": 37,
     "imagens_binarias_fisicas": 96,
     "hashes_corretos": 96,
     "imagens_faltantes": 35,
