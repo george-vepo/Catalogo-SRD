@@ -160,18 +160,28 @@ O commit `b35b04917c221a1f22663d91523ff5ba2b251a53` adiciona **2 arquivos PNG re
 
 Origem dos arquivos: [crawl/tiles](https://github.com/crawl/tiles) (declaração CC0 para seleção curada, excluindo recursos de direitos desconhecidos). Cada PNG tem 32×32 pixels e exige revisão da arte de carta e confirmação individual de direitos históricos. Em ambos os casos, os arquivos no GitHub foram relidos e comparados integralmente com a fonte via base64 e Git blob SHA, além da verificação pré-upload de dimensões e SHA-256.
 
+## Checkpoint 32 — três arquivos binários reais
+
+O commit `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` adicionou três PNG distintos, com dimensão 32×32 pixels, somando **2.934 bytes**. Os arquivos foram recuperados da branch após o push, comparados integralmente com as fontes e tiveram seus Git blob SHAs confirmados.
+
+- **TF-459 Ankheg Empress:** `queen_ant.png`, rainha insetoide segmentada, com mandíbulas. Aproxima um grande monstro escavador e líder de colônia, mas não exibe tamanho gargantuesco ou acidez. `PARTIAL`.
+- **TF-461 Ankheg Spawn:** `soldier_ant.png`, inseto escuro com mandíbulas, próximo da anatomia do juvenil ankheg, mas sem evidenciar sua biologia e ataque ácido. `PARTIAL`.
+- **TF-482 Spore Thrall:** `vine_stalker.png`, humanoide recoberto por vegetação, próximo da vítima infectada, mas sem cogumelos ou esporos explícitos. `PARTIAL`.
+
+Fonte: [crawl/tiles](https://github.com/crawl/tiles), uma exportação de tiles que declara CC0 para seu subconjunto curado, com [exclusões de autoria incerta](https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md). O recorte histórico não substitui revalidação individual dos titulares antes de distribuição comercial. **Não são cartas com arte final aprovada.** Origem, licença declarada, atribuição, risco, hashes, tamanho e commits constam no manifesto.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **126** |
-| Imagens com validação pós-upload registrada | **126** |
-| IDs ainda ausentes | **68** |
-| Tamanho total dos binários | **13.321.085 bytes** |
-| Checkpoints (máximo 10 arquivos) | **31** |
+| Imagens físicas persistidas no GitHub | **129** |
+| Imagens com validação pós-upload registrada | **129** |
+| IDs ainda ausentes | **65** |
+| Tamanho total dos binários | **13.324.019 bytes** |
+| Checkpoints (máximo 10 arquivos) | **32** |
 
-## Binários confirmados (126)
+## Binários confirmados (129)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -301,8 +311,11 @@ Origem dos arquivos: [crawl/tiles](https://github.com/crawl/tiles) (declaração
 | TF-478 | Gourdling | `operational/assets/creature-images/TF-478.png` | [OpenGameArt](https://opengameart.org/content/pumpkin-monster) e [espelho GitHub](https://github.com/lpereira504/DarkTrail_PAP/blob/main/characters/enemies/pumpkin_monster.png) | .png / image/png | 96×256 | 5155 | `6716b48b1f321926d9a89e279abf3de2a215321ff110402ebb7688d7c2c62f3c` | `53d65954ef72fa63085986531b0c1d07f504fb21` | PASS binário; PARTIAL como spritesheet; CC BY 4.0 (crédito obrigatório) |
 | TF-504 | Warlord's Ghost | `operational/assets/creature-images/TF-504.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/phantasmal_warrior.png) | .png / image/png | 32×32 | 408 | `e6ee8938971103e735782c4a294b6940730d742b28602502e7051c4d1c432fd0` | `b35b04917c221a1f22663d91523ff5ba2b251a53` | PASS binário; PARTIAL tipologia/variante e revisão legal |
 | TF-508 | Fogborn Zombie | `operational/assets/creature-images/TF-508.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/necrophage.png) | .png / image/png | 32×32 | 436 | `eaa8d61fe1c639434797cbd61294959810ada5d85df489cd0ddfadfb23eb270b` | `b35b04917c221a1f22663d91523ff5ba2b251a53` | PASS binário; PARTIAL tipologia/variante e revisão legal |
+| TF-459 | Ankheg Empress | `operational/assets/creature-images/TF-459.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/queen_ant.png) | .png / image/png | 32×32 | 1204 | `99c8a47ab1bdb8f78c5a52b062e47a82dabf63222d5004974b01e5b174d0fe87` | `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` | PASS binário; PARTIAL por diferenças da variante/licença histórica |
+| TF-461 | Ankheg Spawn | `operational/assets/creature-images/TF-461.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/soldier_ant.png) | .png / image/png | 32×32 | 465 | `0713954a327e823a6f183eb2e8ca03d4d0921ff3a17aec746cef0be35bd43bc5` | `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` | PASS binário; PARTIAL por diferenças da variante/licença histórica |
+| TF-482 | Spore Thrall | `operational/assets/creature-images/TF-482.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/vine_stalker.png) | .png / image/png | 32×32 | 1265 | `de65a85ee43e153519851e4268574309afed12a057dbc9b277c10a6dbd009132` | `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` | PASS binário; PARTIAL por diferenças da variante/licença histórica |
 
-## IDs bloqueados / pendentes (68)
+## IDs bloqueados / pendentes (65)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -346,8 +359,6 @@ Origem dos arquivos: [crawl/tiles](https://github.com/crawl/tiles) (declaração
 | TF-447 | Hound Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-448 | Imprisoned Celestial | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-449 | Imprisoned Fiend | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-459 | Ankheg Empress | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-461 | Ankheg Spawn | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-462 | Behir Magus | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-465 | Canicore | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-468 | Faerie Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -355,7 +366,6 @@ Origem dos arquivos: [crawl/tiles](https://github.com/crawl/tiles) (declaração
 | TF-473 | Flying Lion | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-475 | Giant Lanternfish | Fonte candidata [Anglerfish — OpenGameArt](https://opengameart.org/content/anglerfish-0), autor m7600, licença CC0 declarada; tentativa de baixar binário [anglerfish.png](https://opengameart.org/sites/default/files/anglerfish.png) falhou tecnicamente nesta execução. GitHub connector não busca URLs externas. **Nenhum arquivo obtido, sem SHA-256, segue PARTIAL.** |
 | TF-480 | Sewer Walker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-482 | Spore Thrall | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-483 | Squashling | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-489 | Swarm of Skitterlings | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-491 | Blazing Black Pudding | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -432,5 +442,6 @@ Origem dos arquivos: [crawl/tiles](https://github.com/crawl/tiles) (declaração
 | 29 | TF-481, TF-405, TF-510 | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | Three source PNGs, GitHub binary byte identity + Git blob SHA confirmed, PNG 32×32, SHA-256 recorded; all PARTIAL visually and historic tile rights not independently proven |
 | 30 | TF-478 | `53d65954ef72fa63085986531b0c1d07f504fb21` | 96×256 animated PNG, source mirror/destination Git blob SHA and full binary identity verified; original OGA source visible/CC BY 4.0 credit; animation sheet PARTIAL |
 | 31 | TF-504, TF-508 | `b35b04917c221a1f22663d91523ff5ba2b251a53` | Two 32x32 sprite binaries fetched and compared to public source after upload; different images, CC0 curated source claim; unique variant imagery and copyright audit PARTIAL |
+| 32 | TF-459, TF-461, TF-482 | `ed6d9aa01bf18cf099ccb3fc12b98af88636185d` | 3 PNG from curated crawl/tiles export, same post-upload GitHub binary and source Git blob SHA; pre-upload PNG 32×32 and SHA-256 verified; partial artistic match |
 
-**Estado: parcial (126/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (129/194). Manter PR em rascunho e não executar merge.**
