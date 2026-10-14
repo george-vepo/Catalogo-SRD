@@ -2,26 +2,27 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-349",
   "nome": "Animal Lord, Brother Ox",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_SEM_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Creature Codex",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex (2018)",
+    "sistema": "D&D 5e",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/animal-lord-brother-ox/",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint"
+      "natureza": "reproducao_secundaria_5esrd",
+      "consulta": "2026-10-14",
+      "edicao_identificada": "Creature Codex ©2018",
+      "escopo": "bloco integral e ações de toca/efeitos regionais"
     }
   ],
   "estatisticas": {
     "nd": "16",
     "ca": 18,
     "pv": 187,
-    "dados_vida": null,
+    "dados_vida": "15d12+90",
     "atributos": {
       "FOR": 21,
       "DES": 18,
@@ -30,44 +31,328 @@
       "SAB": 24,
       "CAR": 19
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 60
+    },
     "deslocamentos_texto": "caminhar 60 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {
+      "FOR": 10,
+      "DES": 9,
+      "SAB": 12,
+      "CAR": 9
+    },
+    "pericias": {
+      "Acrobatics": 9,
+      "Athletics": 10,
+      "History": 8,
+      "Insight": 12,
+      "Perception": 12
+    },
+    "sentidos": [
+      "truesight 120 ft"
+    ],
+    "idiomas": [
+      "todos"
+    ],
+    "resistencias_dano": [
+      "cold",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "incapacitated",
+      "poisoned",
+      "stunned"
+    ],
+    "origem_ca": "natural armor",
+    "proficiencia": 5,
+    "percepcao_passiva": 22,
+    "telepatia_ft": 120
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "BLOCO_INDIVIDUAL_CONSULTADO_REQUER_HOMOLOGACAO",
+  "habilidades_passivas": [
+    {
+      "nome": "Bovine Passivism",
+      "efeito": "bovinos e wereboars não podem atacar voluntariamente, mas magia pode forçar"
+    },
+    {
+      "nome": "Charge",
+      "precondicao": "move 20 pés em linha reta antes de acertar Gore",
+      "dano_adicional": {
+        "dados": "2d10",
+        "tipo": "piercing"
+      },
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 18
+      },
+      "falha": "prone"
+    },
+    {
+      "nome": "Legendary Resistance",
+      "usos": "2/dia",
+      "efeito": "falha de salvaguarda convertida em sucesso"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem contra magias e efeitos mágicos"
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "ataques de arma são mágicos"
+    },
+    {
+      "nome": "Rejuvenation",
+      "efeito": "reencarna em 1d6 dias em um bovino do Plano Material após retorno ao Astral; impedir exige morte de todos os bovinos no Plano Material"
+    },
+    {
+      "nome": "Shapechanger",
+      "ativacao": "ação",
+      "formas": [
+        "Huge ox",
+        "Medium bald human",
+        "Huge ox-headed humanoid verdadeiro"
+      ],
+      "efeito": "atributos permanecem, só muda tamanho; equipamento se transforma"
+    },
+    {
+      "nome": "Speak with Bovines",
+      "efeito": "se comunica com quaisquer bovinos"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Gore",
+      "formas": [
+        "ox",
+        "true"
+      ],
+      "bonus_acerto": 10,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "3d10",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Unarmed Strike",
+      "formas": [
+        "humanoid",
+        "true"
+      ],
+      "bonus_acerto": 10,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "3d8",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ]
+    },
+    {
+      "nome": "Deflected Missile Throw",
+      "bonus_acerto": 10,
+      "alcance_normal_ft": 30,
+      "alcance_maximo_ft": 60,
+      "dano": [
+        {
+          "dados": "3d8",
+          "modificador": 5,
+          "tipo": "tipo apropriado ao projétil"
+        }
+      ],
+      "precondicao": "pegou projétil com Deflect Missiles"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "por_forma": {
+        "ox": "três ataques melee (Gore)",
+        "human": "três ataques melee (Unarmed Strike)",
+        "true": [
+          "Gore",
+          "Unarmed Strike",
+          "Unarmed Strike"
+        ]
+      }
+    },
+    {
+      "nome": "Gore",
+      "referencia_ataque": "Gore"
+    },
+    {
+      "nome": "Unarmed Strike",
+      "referencia_ataque": "Unarmed Strike"
+    },
+    {
+      "nome": "Ki Disruption",
+      "recarga": "6",
+      "etapa1": "faz um Unarmed Strike que implanta instabilidade por 2d8 dias",
+      "etapa2": {
+        "custo": "ação em qualquer turno posterior",
+        "precondicao": "mesmo plano de existência",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 19
+        },
+        "falha": "PV reduzidos a 0",
+        "sucesso": {
+          "dados": "10d10",
+          "tipo": "necrotic"
+        }
+      }
+    },
+    {
+      "nome": "Change Shape",
+      "custo": "ação",
+      "gatilho": "Shapechanger"
+    }
+  ],
   "acoes_bonus": [],
-  "reacoes": [],
-  "acoes_lendarias": [],
+  "reacoes": [
+    {
+      "nome": "Deflect Missiles",
+      "precondicao": "humanoid ou forma verdadeira",
+      "gatilho": "acerto de arma a distância",
+      "reducao_dano": {
+        "dados": "1d10",
+        "modificador": 20
+      },
+      "captura": "se reduz a 0 e projétil cabe numa mão livre, pode pegar",
+      "devolucao": "ataca imediatamente como parte da reação com +10 (30/60 pés) e 3d8+5 dano apropriado"
+    }
+  ],
+  "acoes_lendarias": [
+    {
+      "nome": "Move",
+      "custo": 1,
+      "efeito": "anda até a velocidade sem provocar ataques de oportunidade"
+    },
+    {
+      "nome": "Wholeness",
+      "custo": 1,
+      "cura_pv": 10,
+      "efeitos": [
+        "remove doenças",
+        "encerra um efeito que reduz atributo ou PV máximos"
+      ],
+      "recarga": "não pode repetir até fim do turno seguinte"
+    },
+    {
+      "nome": "Stunning Strike",
+      "custo": 2,
+      "referencia_ataque": "Unarmed Strike",
+      "salvaguarda_se_acerta": {
+        "atributo": "CON",
+        "cd": 19
+      },
+      "falha": "stunned até fim do próximo turno"
+    }
+  ],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Metamorfose e investida poderosa"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Ataques com chifres e carga"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Faltam confirmação de edição e inventário integral estruturado de ações e efeitos.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Cotejar com Creature Codex e errata editorial; 5eSRD é reprodução independente.",
+    "Revisão mecânica independente e testes não executados; não integrar."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_catalogo": "Animal Lord, Brother Ox",
+    "tipo": "Huge fey (shapechanger)",
+    "alinhamento": "lawful neutral",
+    "bonus_proficiencia": 5
+  },
+  "acoes_toca": {
+    "iniciativa": 20,
+    "limite": "não repetir mesma opção em turnos consecutivos",
+    "opcoes": [
+      {
+        "nome": "Stone Alteration",
+        "iniciativa": 20,
+        "efeito": "cria ou remove até três blocos de pedra 5x5 pés",
+        "segmento": {
+          "ca": 17,
+          "pv": 30,
+          "imunidades": [
+            "poison",
+            "psychic"
+          ]
+        },
+        "se_surge_no_alvo": {
+          "dano": {
+            "dados": "1d6",
+            "tipo": "bludgeoning"
+          },
+          "movimento": "empurrado ao espaço livre mais próximo"
+        }
+      },
+      {
+        "nome": "Be Unseen",
+        "iniciativa": 20,
+        "alcance_ft": 100,
+        "alvo": "uma criatura visível",
+        "efeito": "Brother Ox invisível para ela até iniciativa 20 seguinte"
+      },
+      {
+        "nome": "Spectral Bell",
+        "iniciativa": 20,
+        "area": {
+          "tipo": "cone",
+          "alcance_ft": 30
+        },
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "dano": {
+          "dados": "4d6",
+          "tipo": "thunder"
+        },
+        "falha": "empurrado 15 pés",
+        "sucesso": "metade, sem empurrão"
+      }
+    ]
+  },
+  "efeitos_regionais": [
+    {
+      "nome": "Blizzards and Lost Pathways",
+      "raio_milhas": 5,
+      "efeito": "nevascas e caminhos mutáveis; desvantagem para não se perder; magia de direção falha",
+      "excecao": "Brother Ox pode escolher imunes"
+    },
+    {
+      "nome": "Healthy Mountain",
+      "raio_milhas": 5,
+      "efeito": "criaturas ficam mais resistentes a doenças"
+    },
+    {
+      "nome": "Meditation",
+      "efeito": "descanso curto meditativo na toca maximiza PV recuperados com dados de vida e dá vantagem no próximo teste INT ou SAB antes de descanso longo; desaparece em 1d10 dias após a morte"
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Legendary Actions",
+      "pontos_por_rodada": 3,
+      "recarga": "início do turno",
+      "aplicacao": "apenas ao final do turno de outra criatura"
+    }
+  ]
 }

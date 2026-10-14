@@ -2,26 +2,27 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-345",
   "nome": "Animal Lord, Mouse King",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_SEM_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Creature Codex",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex (2018)",
+    "sistema": "D&D 5e",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/animal-lord-mouse-king/",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint"
+      "natureza": "reproducao_secundaria_5esrd",
+      "consulta": "2026-10-14",
+      "edicao_identificada": "Creature Codex ©2018",
+      "escopo": "bloco integral e ações de toca/efeitos regionais"
     }
   ],
   "estatisticas": {
     "nd": "11",
     "ca": 17,
     "pv": 150,
-    "dados_vida": null,
+    "dados_vida": "20d6+80",
     "atributos": {
       "FOR": 18,
       "DES": 23,
@@ -30,44 +31,356 @@
       "SAB": 18,
       "CAR": 18
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 40,
+      "escalar": 30
+    },
     "deslocamentos_texto": "caminhar 40; escalar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {
+      "DES": 10,
+      "CON": 8,
+      "SAB": 8,
+      "CAR": 8
+    },
+    "pericias": {
+      "Acrobatics": 14,
+      "Deception": 8,
+      "Nature": 9,
+      "Persuasion": 8,
+      "Sleight of Hand": 14,
+      "Stealth": 14,
+      "Survival": 8
+    },
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "idiomas": [
+      "todos"
+    ],
+    "resistencias_dano": [
+      "lightning",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "incapacitated",
+      "poisoned",
+      "stunned"
+    ],
+    "origem_ca": "natural armor",
+    "proficiencia": 4,
+    "percepcao_passiva": 14,
+    "telepatia_ft": 120
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
-  "acoes_bonus": [],
-  "reacoes": [],
-  "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "qualidade_estatisticas": "BLOCO_INDIVIDUAL_CONSULTADO_REQUER_HOMOLOGACAO",
+  "habilidades_passivas": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Metamorfose e rejuvenescimento"
+      "nome": "Keen Sight",
+      "efeito": "Vantagem nos testes SAB (Perception) baseados em visão."
+    },
+    {
+      "nome": "Legendary Resistance",
+      "usos": "3/dia",
+      "efeito": "transforma falha em salvaguarda em sucesso"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra efeitos mágicos"
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "armas são mágicas"
+    },
+    {
+      "nome": "Rejuvenation",
+      "gatilho": "morre",
+      "efeito": "alma retorna ao Plano Astral e em 1d6 dias habita outro rato/camundongo no Plano Material, restaurando toda a ficha",
+      "impedimento": "eliminar todos os ratos e camundongos do Plano Material"
+    },
+    {
+      "nome": "Rodent Passivism",
+      "efeito": "roedores, ratfolk e wererats não conseguem atacá-lo voluntariamente; magia pode forçá-los"
+    },
+    {
+      "nome": "Shapechanger",
+      "ativacao": "ação",
+      "formas": [
+        "Small mouse verdadeiro",
+        "Medium human woman",
+        "Small halfling man",
+        "Medium mouse-humanoid hybrid"
+      ],
+      "efeito": "mantém ficha, exceto tamanho; escalar apenas híbrido ou mouse; equipamento também se transforma"
+    },
+    {
+      "nome": "Speak with Rodents",
+      "efeito": "conversa com roedores sem barreira linguística"
+    },
+    {
+      "nome": "Special Equipment",
+      "item": "ring of spell turning"
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
+  "ataques": [
     {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Invoca roedores e faz ataques rápidos"
+      "nome": "King’s Blade",
+      "formas": [
+        "humanoid",
+        "hybrid"
+      ],
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 6,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Bite",
+      "formas": [
+        "mouse",
+        "hybrid"
+      ],
+      "bonus_acerto": 10,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 6,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ],
+      "efeito": {
+        "alvo": "creature",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 16
+        },
+        "falha": {
+          "condicao": "poisoned",
+          "duracao": "1 hora"
+        }
+      }
     }
   ],
-  "inventario_acoes_completo": false,
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "por_forma": {
+        "mouse": [
+          "Bite",
+          "Bite"
+        ],
+        "humanoid": [
+          "King’s Blade",
+          "King’s Blade",
+          "King’s Blade"
+        ],
+        "hybrid": [
+          "King’s Blade",
+          "King’s Blade",
+          "Bite"
+        ]
+      }
+    },
+    {
+      "nome": "King’s Blade",
+      "categoria": "ataque",
+      "referencia_ataque": "King’s Blade"
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Summon Rodents",
+      "usos": "2/dia",
+      "invoca": {
+        "padrao": "2d4 swarms of rats",
+        "urbano": "1d4 wererats"
+      },
+      "atraso": "1d4 rodadas",
+      "duracao": "1 hora",
+      "controle": "obedecem ordens faladas",
+      "termino": [
+        "1 hora",
+        "morte do Mouse King",
+        "dispensa por ação bônus"
+      ]
+    },
+    {
+      "nome": "Change Shape",
+      "categoria": "transformacao",
+      "gatilho": "Shapechanger",
+      "custo": "ação"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Dismiss Summoned Rodents",
+      "custo": "ação bônus",
+      "efeito": "dispensa os roedores que convocou"
+    }
+  ],
+  "acoes_lendarias": [
+    {
+      "nome": "King’s Blade",
+      "custo": 1,
+      "referencia_ataque": "King’s Blade",
+      "precondicao": "forma humanoid/hybrid"
+    },
+    {
+      "nome": "Move",
+      "custo": 1,
+      "efeito": "movimento até velocidade sem ataques de oportunidade"
+    },
+    {
+      "nome": "Quick Casting",
+      "custo": 3,
+      "efeito": "conjura uma magia inata da lista, consumindo uso aplicável"
+    }
+  ],
+  "conjuracoes": [
+    {
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 16,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "blur",
+            "confusion",
+            "detect evil and good"
+          ]
+        },
+        {
+          "usos": "2/dia",
+          "nomes": [
+            "etherealness"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "nomes": [
+            "astral projection",
+            "teleport"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Faltam confirmação de edição e inventário integral estruturado de ações e efeitos.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Cotejar com Creature Codex e errata editorial; 5eSRD é reprodução independente.",
+    "Revisão mecânica independente e testes não executados; não integrar."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_catalogo": "Animal Lord, Mouse King",
+    "tipo": "Small fey (shapechanger)",
+    "alinhamento": "neutral",
+    "bonus_proficiencia": 4
+  },
+  "acoes_toca": {
+    "iniciativa": 20,
+    "limite": "não repetir mesma opção em turnos consecutivos",
+    "opcoes": [
+      {
+        "nome": "Rodent Tripping",
+        "iniciativa": 20,
+        "area": {
+          "raio_ft": 60
+        },
+        "salvaguarda": {
+          "atributo": "DES",
+          "cd": 16
+        },
+        "falha": "prone"
+      },
+      {
+        "nome": "Spectral Rats",
+        "iniciativa": 20,
+        "alcance_ft": 120,
+        "area": {
+          "raio_ft": 30
+        },
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 16
+        },
+        "dano": {
+          "dados": "3d6",
+          "tipo": "poison"
+        },
+        "falha": {
+          "condicao": "poisoned",
+          "duracao": "1 minuto"
+        },
+        "nota": "fonte não indica dano no sucesso"
+      },
+      {
+        "nome": "Rodent Polymorph",
+        "iniciativa": 20,
+        "area": {
+          "raio_ft": 60
+        },
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 16
+        },
+        "falha": "polymorph em mouse; repetir salvaguarda ao fim de cada turno",
+        "imunidade": "24h após sucesso/encerramento"
+      }
+    ]
+  },
+  "efeitos_regionais": [
+    {
+      "nome": "Rodent Eyes",
+      "raio_milhas": 1,
+      "efeito": "roedores se congregam; pode ver/ouvir e falar pelos roedores da região"
+    },
+    {
+      "nome": "Rodent Disease Resistance",
+      "raio_milhas": 1,
+      "efeito": "ratos e camundongos não adquirem/transmitem doença, exceto se Mouse King permitir"
+    },
+    {
+      "nome": "Criminal Concealment",
+      "raio_milhas": 1,
+      "efeito": "vantagem em Sleight of Hand; desvantagem em Perception e Investigation para descobrir negócios ilícitos",
+      "fim": "efeitos diminuem em 1d10 dias após sua morte"
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Legendary Actions",
+      "pontos_por_rodada": 3,
+      "recarga": "início do turno",
+      "aplicacao": "apenas ao final do turno de outra criatura"
+    }
+  ]
 }
