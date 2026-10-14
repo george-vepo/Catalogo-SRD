@@ -2,30 +2,51 @@
   "schema": "SRD607_DEEP_MECHANICS_V1",
   "id": "TF-030",
   "name": "Corpselight Moth",
-  "status": "BLOQUEADA",
+  "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
-    "publication": null,
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
     "edition_family": "5e",
     "exact_printing": null,
-    "challenge_rating": null,
-    "size": null,
-    "type": null,
-    "alignment": null
+    "challenge_rating": "5",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned"
   },
   "statistics": {
-    "armor_class": null,
-    "hit_points": null,
-    "hit_dice": null,
-    "ability_scores": null,
-    "speeds": null,
-    "senses": null,
-    "skills": null,
+    "armor_class": 15,
+    "hit_points": 136,
+    "hit_dice": "16d10+48",
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 19,
+      "CON": 16,
+      "INT": 2,
+      "WIS": 12,
+      "CHA": 8
+    },
+    "speeds": {
+      "andar": 15,
+      "escalar": 15,
+      "voar": 60,
+      "hover": true
+    },
+    "senses": [
+      "tremorsense 30 ft."
+    ],
+    "skills": {
+      "Perception": 4,
+      "Stealth": 7
+    },
     "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
+    "languages": [],
+    "damage_resistances": [
+      "necrotic"
+    ],
+    "damage_immunities": [
+      "radiant"
+    ],
     "damage_vulnerabilities": null,
     "condition_immunities": null
   },
@@ -33,125 +54,101 @@
     "traits": [
       {
         "name": "Downdraft",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Enquanto voa, cria terreno difícil num raio de 10 pés.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Glow",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Luz intensa num raio de 20 pés e penumbra por mais 20 pés.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Keen Smell",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Vantagem em Percepção baseada em cheiro.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Necrotic Dampening",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Aliados a até 30 pés ganham resistência a dano necrótico.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Spider Climb",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Escala inclusive tetos sem testes.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Dois ataques de probóscide.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Proboscis",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "+7; 5 pés; 2d6+4 perfurante e 2d6 radiante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Radiant Wind",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Recarga 4–6; cone de 30 pés, FOR CD15; 6d6 radiante e arremesso de 15 pés com possível dano de colisão, ou metade do radiante no sucesso sem empurrão.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       }
     ],
     "bonus_actions": null,
@@ -161,16 +158,23 @@
     "spellcasting": null,
     "other": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/corpselight-moth/",
+      "type": "ficha_individual_secundaria",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    }
+  ],
   "source_checkpoint": {
     "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-026_TF-030/research.json",
     "sha": "bf0fbfd0a6d1a44c6bde42f3039a3d0ecd252dbd"
   },
-  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
-  "legacy_note": null,
+  "legacy_note": [
+    "Midden Moth é variante alternativa; não aplicar ao registro base.",
+    "Direitos de uso de texto e arte pendentes."
+  ],
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
+    "Pesquisar todas as ações/traços e cada efeito especial em detalhe; resumos legados não são mecânicas completas.",
+    "Revisar publicação/errata exata e verificar todos os atributos, CDs, danos, resistências, recargas e condições."
   ]
 }

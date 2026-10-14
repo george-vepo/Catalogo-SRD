@@ -5,21 +5,30 @@
   "status": "BLOQUEADA",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
-    "publication": null,
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
     "edition_family": "5e",
     "exact_printing": null,
-    "challenge_rating": null,
-    "size": null,
-    "type": null,
-    "alignment": null
+    "challenge_rating": "4",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned"
   },
   "statistics": {
-    "armor_class": null,
-    "hit_points": null,
-    "hit_dice": null,
-    "ability_scores": null,
-    "speeds": null,
+    "armor_class": 15,
+    "hit_points": 90,
+    "hit_dice": "12d10+24",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 16,
+      "CON": 14,
+      "INT": 2,
+      "WIS": 10,
+      "CHA": 3
+    },
+    "speeds": {
+      "andar": 40
+    },
     "senses": null,
     "skills": null,
     "saving_throws": null,
@@ -33,65 +42,53 @@
     "traits": [
       {
         "name": "Radiant Reflection",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Descrição secundária indica retorno de metade do dano radiante recebido ao agressor; exige confirmação do texto completo.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Indicado uso de Dazzling Display e dois ataques: Bite e Claws; detalhes de Dazzling Display não estão completos em fonte editorial.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Bite",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Ataque +5; 2d10+3 perfurante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Claws",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Ataque +5; 1d10+3 cortante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       }
     ],
     "bonus_actions": null,
@@ -101,16 +98,34 @@
     "spellcasting": null,
     "other": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "índice_editorial_sem_ficha_individual",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    },
+    {
+      "url": "https://anyflip.com/plzy/jxhb/basic/51-100",
+      "type": "fonte_secundaria_de_reproducao",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    },
+    {
+      "url": "https://www.scribd.com/document/909348717/Pdfcoffee-com-Kobold-Press-Tome-of-Beasts-3-PDF-Free-Part-10",
+      "type": "fonte_secundaria_de_reproducao",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    }
+  ],
   "source_checkpoint": {
     "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-026_TF-030/research.json",
     "sha": "bf0fbfd0a6d1a44c6bde42f3039a3d0ecd252dbd"
   },
-  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
-  "legacy_note": null,
+  "legacy_note": [
+    "Fonte primária individual não encontrada; reprodução secundária sujeita a erros e direitos.",
+    "Recuperar íntegra dos efeitos Dazzling Display e verificar ataques e traços em edição correta."
+  ],
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
+    "Bloqueio real: nenhum statblock individual confiável vinculado; índice e cópias indiretas não bastam.",
+    "Pesquisar todas as ações/traços e cada efeito especial em detalhe; resumos legados não são mecânicas completas.",
+    "Revisar publicação/errata exata e verificar todos os atributos, CDs, danos, resistências, recargas e condições."
   ]
 }

@@ -2,28 +2,40 @@
   "schema": "SRD607_DEEP_MECHANICS_V1",
   "id": "TF-028",
   "name": "Cloudhoof Assassin",
-  "status": "BLOQUEADA",
+  "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
-    "publication": null,
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
     "edition_family": "5e",
     "exact_printing": null,
-    "challenge_rating": null,
-    "size": null,
-    "type": null,
-    "alignment": null
+    "challenge_rating": "1",
+    "size": "Medium",
+    "type": "beast",
+    "alignment": "unaligned"
   },
   "statistics": {
-    "armor_class": null,
-    "hit_points": null,
-    "hit_dice": null,
-    "ability_scores": null,
-    "speeds": null,
+    "armor_class": 13,
+    "hit_points": 45,
+    "hit_dice": "7d8+14",
+    "ability_scores": {
+      "STR": 17,
+      "DEX": 17,
+      "CON": 14,
+      "INT": 2,
+      "WIS": 11,
+      "CHA": 7
+    },
+    "speeds": {
+      "andar": 40
+    },
     "senses": null,
-    "skills": null,
+    "skills": {
+      "Acrobatics": 5,
+      "Athletics": 5
+    },
     "saving_throws": null,
-    "languages": null,
+    "languages": [],
     "damage_resistances": null,
     "damage_immunities": null,
     "damage_vulnerabilities": null,
@@ -33,80 +45,65 @@
     "traits": [
       {
         "name": "Shoving Charge",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Avanço retilíneo de 20 pés antes de Headbutt exige salvaguarda FOR CD13; empurra 10 pés ou 15 pés se falhar por cinco ou mais.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Sure-Hooved",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Vantagem contra efeitos que o derrubariam e nos testes para subir/manter equilíbrio em rochas.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Realiza um Headbutt e um Shoving Kick.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Headbutt",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "+5 para acertar, alcance 5 pés, 1d6+3 contundente.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       },
       {
         "name": "Shoving Kick",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "+5 para acertar, 1d4+3 contundente e FOR CD13 para evitar empurrão; crítico pode aumentar a distância.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       }
     ],
     "bonus_actions": null,
@@ -116,16 +113,22 @@
     "spellcasting": null,
     "other": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/cloudhoof-assassin/",
+      "type": "ficha_individual_secundaria",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    }
+  ],
   "source_checkpoint": {
     "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-026_TF-030/research.json",
     "sha": "bf0fbfd0a6d1a44c6bde42f3039a3d0ecd252dbd"
   },
-  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
-  "legacy_note": null,
+  "legacy_note": [
+    "Direitos e imagem pendentes."
+  ],
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
+    "Pesquisar todas as ações/traços e cada efeito especial em detalhe; resumos legados não são mecânicas completas.",
+    "Revisar publicação/errata exata e verificar todos os atributos, CDs, danos, resistências, recargas e condições."
   ]
 }

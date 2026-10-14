@@ -2,28 +2,40 @@
   "schema": "SRD607_DEEP_MECHANICS_V1",
   "id": "TF-026",
   "name": "Bilby",
-  "status": "BLOQUEADA",
+  "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
-    "publication": null,
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
     "edition_family": "5e",
     "exact_printing": null,
-    "challenge_rating": null,
-    "size": null,
-    "type": null,
-    "alignment": null
+    "challenge_rating": "0",
+    "size": "Tiny",
+    "type": "beast",
+    "alignment": "unaligned"
   },
   "statistics": {
-    "armor_class": null,
-    "hit_points": null,
-    "hit_dice": null,
-    "ability_scores": null,
-    "speeds": null,
-    "senses": null,
+    "armor_class": 10,
+    "hit_points": 2,
+    "hit_dice": "1d4",
+    "ability_scores": {
+      "STR": 6,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 2,
+      "WIS": 10,
+      "CHA": 8
+    },
+    "speeds": {
+      "andar": 30,
+      "escavar": 5
+    },
+    "senses": [
+      "darkvision 60 ft."
+    ],
     "skills": null,
     "saving_throws": null,
-    "languages": null,
+    "languages": [],
     "damage_resistances": null,
     "damage_immunities": null,
     "damage_vulnerabilities": null,
@@ -33,35 +45,29 @@
     "traits": [
       {
         "name": "Shadow Camouflage",
-        "category": "passive",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Vantagem em testes de Furtividade em penumbra ou escuridão.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       }
     ],
     "actions": [
       {
         "name": "Bite",
-        "category": "action",
+        "category": "action_or_trait",
         "prior_summary_unverified": "Ataque corpo a corpo +2; alcance 5 pés; causa 1 ponto de dano perfurante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
+        "status": "PENDENTE_DETALHAMENTO",
+        "to_hit": null,
         "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "range": null,
+        "save": null,
+        "duration": null,
+        "recharge": null
       }
     ],
     "bonus_actions": null,
@@ -71,16 +77,22 @@
     "spellcasting": null,
     "other": null
   },
-  "sources": [],
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/bilby/",
+      "type": "ficha_individual_secundaria",
+      "verification": "pesquisa anterior parcial; aprofundamento requerido"
+    }
+  ],
   "source_checkpoint": {
     "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-026_TF-030/research.json",
     "sha": "bf0fbfd0a6d1a44c6bde42f3039a3d0ecd252dbd"
   },
-  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
-  "legacy_note": null,
+  "legacy_note": [
+    "Validação de direitos de uso e imagem; não promover ao catálogo canônico sem gates."
+  ],
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
+    "Pesquisar todas as ações/traços e cada efeito especial em detalhe; resumos legados não são mecânicas completas.",
+    "Revisar publicação/errata exata e verificar todos os atributos, CDs, danos, resistências, recargas e condições."
   ]
 }
