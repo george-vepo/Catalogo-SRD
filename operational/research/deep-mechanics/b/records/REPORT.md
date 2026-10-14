@@ -1,3 +1,21 @@
+## Checkpoint B — índice editorial Kobold Press, cinco conflitos (14/10/2026)
+
+O [índice oficial da Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/) fornece dados de **identidade, ND em exibição, tamanho, tipo e publicação**, mas não o statblock integral nem a errata. Cotejos preservados separadamente em cinco fichas:
+
+| ID | Criatura | ND exibido no índice | Tamanho | Tipo | Publicação |
+|---|---|---|---|---|---|
+| TF-309 | Living Wick | 0.3 | Small | Construct | Tome of Beasts 1 |
+| TF-320 | Gnarljak | 6.0 | Small | Construct | Tome of Beasts 1 |
+| TF-325 | Lindwurm | 6.0 | Large | Dragon | Tome of Beasts 1 |
+| TF-334 | Far Darrig | 3.0 | Small | Fey | Tome of Beasts 1 |
+| TF-382 | Likho | 5.0 | Medium | Monstrosity | Tome of Beasts 1 |
+
+**Bloqueios preservados:** TF-325 Lindwurm ND consolidado **null** (outra edição registra ND5; índice atual ND6); TF-334 Far Darrig ND/PV **null** (homônimo ND2/PV39 versus ND3/PV84 pesquisado); TF-382 Likho ND **null** (outra reprodução relata 6 enquanto editor indexa 5); TF-320 Gnarljak PV **null** (fontes reportam 49/63/88). Living Wick aparece como ND 0.3 por arredondamento de apresentação do índice e a ficha permanece `1/4`. Não harmonizar versões mecanicamente sem cotejo editorial.
+
+Nenhum conflito da PR #4 foi declarado resolvido, não houve homologação, integração nem merge. Checkpoint restrito a cinco criaturas.
+
+---
+
 ## Checkpoint mecânico — 14/10/2026 — TF-381 e TF-408 (cotejo primário pontual)
 
 **TF-381 Aracnecore:** [fonte editorial A5E](https://a5e.tools/node/2272), Large Monstrosity, ND5, CA16, PV85, bloodied42, prof+3, CD manobra13. Bite aplica paralisia com **CON CD14**, repetindo a salvaguarda ao fim de cada turno por até 1 minuto; Claws exige deslocamento em linha reta mínimo 20 pés e usa **STR CD13**, podendo derrubar. As CDs foram mantidas distintas. O ator do módulo Foundry usa imagem de *Manticore*: ela foi rejeitada por incompatibilidade visual com aracnecore.
