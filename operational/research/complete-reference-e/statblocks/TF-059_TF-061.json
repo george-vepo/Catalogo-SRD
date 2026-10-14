@@ -1,0 +1,439 @@
+{
+  "schema": "SRD607_COMPLETE_REFERENCE_STATBLOCK_V1",
+  "language": "pt-BR",
+  "scope": "pending_images.slice(195,390)",
+  "format": "DND5E_MECHANICAL_REFERENCE_UNADAPTED_TO_CARD_GAME",
+  "review": "PENDING_INDEPENDENT_REVIEW",
+  "records_count": 3,
+  "records": [
+    {
+      "id": "TF-059",
+      "name": "Animated Instrument, Animated Quartet",
+      "size": "Large",
+      "type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "4",
+      "xp": 1100,
+      "pb": 2,
+      "ac": 14,
+      "ac_note": "armadura natural",
+      "hp": 102,
+      "hp_dice": "12d10+36",
+      "speed_ft": {
+        "walk": 30,
+        "fly": 50,
+        "hover": true
+      },
+      "abilities": {
+        "STR": 10,
+        "DEX": 16,
+        "CON": 17,
+        "INT": 4,
+        "WIS": 5,
+        "CHA": 18
+      },
+      "saves": {},
+      "skills": {
+        "Performance": 8
+      },
+      "damage_resistances": [],
+      "damage_immunities": [
+        "poison",
+        "psychic"
+      ],
+      "condition_immunities": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ],
+      "senses": [
+        "blindsight 60 ft; cego além desse alcance"
+      ],
+      "passive_perception": 7,
+      "languages": [],
+      "traits": [
+        {
+          "name": "Susceptibilidade à antimagia",
+          "rules": "No interior de um campo antimagia, fica incapacitado. Se receber dissipar magia, deve passar num teste de resistência de Constituição contra a CD de magia do conjurador ou cai inconsciente por 1 minuto."
+        },
+        {
+          "name": "Natureza de construto",
+          "rules": "Dispensa ar, alimentos, líquidos e descanso por sono."
+        },
+        {
+          "name": "Aparência inofensiva",
+          "rules": "Enquanto está imóvel e no chão, parece um conjunto comum de instrumentos musicais."
+        },
+        {
+          "name": "Harmonia de quatro partes",
+          "rules": "Os quatro instrumentos agem como uma criatura. Sempre que um ataque causar ao menos 25 pontos de dano de uma só vez, um instrumento é desativado; cada ataque Trouble Clef ou Orchestra Hit passa a causar um dado de dano a menos."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Ataque múltiplo",
+          "rules": "Primeiro realiza Musical Arrangement; depois efetua dois ataques, escolhendo Trouble Clef e/ou Orchestra Hit."
+        },
+        {
+          "name": "Trouble Clef",
+          "kind": "melee_weapon",
+          "attack_bonus": 5,
+          "reach_ft": 5,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "4d4+3",
+              "type": "bludgeoning"
+            }
+          ],
+          "rules": "Um alvo ao alcance sofre dano contundente se atingido."
+        },
+        {
+          "name": "Orchestra Hit",
+          "kind": "ranged_spell",
+          "attack_bonus": 6,
+          "range_ft": 60,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "4d6+4",
+              "type": "thunder"
+            }
+          ],
+          "rules": "Uma criatura ao alcance recebe dano trovejante se atingida."
+        },
+        {
+          "name": "Musical Arrangement — Dreadful Dirge",
+          "kind": "special",
+          "range_ft": 30,
+          "save": {
+            "ability": "WIS",
+            "dc": 14
+          },
+          "rules": "Cada inimigo a até 30 pés testa Sabedoria; quem falha fica amedrontado até o final do próximo turno do quarteto."
+        },
+        {
+          "name": "Musical Arrangement — Oppressive Overture",
+          "kind": "special",
+          "range_ft": 30,
+          "save": {
+            "ability": "STR",
+            "dc": 14
+          },
+          "rules": "Cada inimigo a até 30 pés testa Força; falha deixa a criatura caída."
+        },
+        {
+          "name": "Musical Arrangement — Seditious Sonata",
+          "kind": "special",
+          "range_ft": 30,
+          "save": {
+            "ability": "CHA",
+            "dc": 14
+          },
+          "rules": "Cada inimigo a até 30 pés testa Carisma. Falha: fica enfeitiçado pelo quarteto por até 1 minuto e não realiza ataques, efeitos prejudiciais ou ajuda a aliados. Repete a resistência no fim de cada turno; tomar dano também encerra o efeito."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": [],
+      "legendary_actions": [],
+      "image": {
+        "path": "operational/assets/creature-images/TF-059.webp",
+        "sha256": "f83213468715872df722ecabc0cd6ceaa62a7f0eb2d761e5ac79e6d44efd3360",
+        "width": 1200,
+        "height": 1160,
+        "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Animated%20Quartet.webp",
+        "verified": true
+      },
+      "provenance": {
+        "mechanical_source": "https://kpogl.wikidot.com/monster:animated-quartet",
+        "editorial_edition": "Tome of Beasts 3",
+        "source_verified": "2026-10-13",
+        "status": "COMPLETE_SOURCE_TRANSCRIPTION_PENDING_INDEPENDENT_REVIEW",
+        "description": "Regras reescritas em português; estatísticas e detalhes conferidos individualmente na fonte. Não equivale à integração ou aprovação final no jogo."
+      }
+    },
+    {
+      "id": "TF-060",
+      "name": "Clockwork Abomination",
+      "size": "Large",
+      "type": "Construct",
+      "alignment": "Lawful Evil",
+      "cr": "5",
+      "xp": 1800,
+      "pb": 3,
+      "ac": 16,
+      "ac_note": "armadura natural",
+      "hp": 76,
+      "hp_dice": "8d10+32",
+      "speed_ft": {
+        "walk": 30,
+        "climb": 30
+      },
+      "abilities": {
+        "STR": 21,
+        "DEX": 12,
+        "CON": 18,
+        "INT": 10,
+        "WIS": 10,
+        "CHA": 12
+      },
+      "saves": {
+        "DEX": 4,
+        "CON": 7
+      },
+      "skills": {
+        "Athletics": 8,
+        "Perception": 3,
+        "Stealth": 4
+      },
+      "damage_resistances": [
+        "acid",
+        "cold",
+        "fire",
+        "bludgeoning/piercing/slashing de ataques não mágicos"
+      ],
+      "damage_immunities": [
+        "poison"
+      ],
+      "condition_immunities": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ],
+      "senses": [
+        "darkvision 60 ft"
+      ],
+      "passive_perception": 13,
+      "languages": [
+        "Common",
+        "Infernal"
+      ],
+      "traits": [
+        {
+          "name": "Natureza de construto",
+          "rules": "Não precisa de ar, comida, bebida ou sono."
+        },
+        {
+          "name": "Fonte infernal explosiva",
+          "rules": "Quando é destruído, cada criatura a até 10 pés deve passar numa resistência de Destreza CD 14 ou sofrer 4d6 de fogo (metade se passar). A explosão acende objetos inflamáveis que não estejam vestidos nem carregados."
+        },
+        {
+          "name": "Forma imutável",
+          "rules": "Não é afetado por efeitos que mudariam sua forma."
+        },
+        {
+          "name": "Resistência à magia",
+          "rules": "Tem vantagem em resistências contra magias e efeitos mágicos."
+        },
+        {
+          "name": "Avanço implacável",
+          "rules": "Terreno difícil não aumenta seus custos de deslocamento, e seu deslocamento não pode ser reduzido."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Ataque múltiplo",
+          "rules": "Efetua um ataque Bite e outro Slam."
+        },
+        {
+          "name": "Bite",
+          "kind": "melee_weapon",
+          "attack_bonus": 8,
+          "reach_ft": 10,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "2d8+5",
+              "type": "piercing"
+            },
+            {
+              "dice": "2d6",
+              "type": "fire"
+            }
+          ],
+          "rules": "Uma criatura ao alcance sofre os dois componentes de dano se atingida."
+        },
+        {
+          "name": "Slam",
+          "kind": "melee_weapon",
+          "attack_bonus": 8,
+          "reach_ft": 15,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "2d6+5",
+              "type": "bludgeoning"
+            }
+          ],
+          "rules": "Golpe mecânico a até 15 pés."
+        },
+        {
+          "name": "Fire Breath",
+          "kind": "area",
+          "recharge": "5-6",
+          "area": {
+            "shape": "cone",
+            "length_ft": 30
+          },
+          "save": {
+            "ability": "DEX",
+            "dc": 14,
+            "success": "half"
+          },
+          "damage": [
+            {
+              "dice": "6d6",
+              "type": "fire"
+            }
+          ],
+          "rules": "Todas as criaturas no cone fazem a resistência; sofrem dano de fogo integral na falha ou metade no sucesso."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": [],
+      "legendary_actions": [],
+      "image": {
+        "path": "operational/assets/creature-images/TF-060.webp",
+        "sha256": "1d5be21a605da8dbce1a8f86421b4cfe1a6db0006cdb69eb94c76792469af89c",
+        "width": 634,
+        "height": 800,
+        "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Abomination.webp",
+        "verified": true
+      },
+      "provenance": {
+        "mechanical_source": "https://kpogl.wikidot.com/monster:clockwork-abomination",
+        "editorial_edition": "Tome of Beasts 1",
+        "source_verified": "2026-10-13",
+        "status": "COMPLETE_SOURCE_TRANSCRIPTION_PENDING_INDEPENDENT_REVIEW",
+        "description": "Regras reescritas em português; estatísticas e detalhes conferidos individualmente na fonte. Não equivale à integração ou aprovação final no jogo."
+      }
+    },
+    {
+      "id": "TF-061",
+      "name": "Clockwork Armadillo",
+      "size": "Small",
+      "type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "1/4",
+      "xp": 50,
+      "pb": 2,
+      "ac": 14,
+      "ac_note": "armadura natural",
+      "hp": 22,
+      "hp_dice": "4d6+8",
+      "speed_ft": {
+        "walk": 30
+      },
+      "abilities": {
+        "STR": 10,
+        "DEX": 18,
+        "CON": 14,
+        "INT": 5,
+        "WIS": 10,
+        "CHA": 10
+      },
+      "saves": {
+        "DEX": 6
+      },
+      "skills": {
+        "Acrobatics": 6,
+        "Perception": 2,
+        "Stealth": 6
+      },
+      "damage_resistances": [],
+      "damage_immunities": [
+        "poison",
+        "psychic"
+      ],
+      "condition_immunities": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ],
+      "senses": [
+        "darkvision 60 ft"
+      ],
+      "passive_perception": 12,
+      "languages": [
+        "compreende os idiomas do criador; não fala"
+      ],
+      "traits": [
+        {
+          "name": "Natureza de construto",
+          "rules": "Não necessita respirar, beber, comer ou dormir."
+        },
+        {
+          "name": "Forma imutável",
+          "rules": "Imune a efeitos que mudariam sua forma."
+        },
+        {
+          "name": "Resistência à magia",
+          "rules": "Vantagem em resistências contra magias ou outros efeitos mágicos."
+        },
+        {
+          "name": "Engrenagens aceleradas",
+          "rules": "Vantagem nas jogadas de iniciativa."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Scissor Claws",
+          "kind": "melee_weapon",
+          "attack_bonus": 6,
+          "reach_ft": 5,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "1d4+4",
+              "type": "slashing"
+            }
+          ],
+          "save": {
+            "ability": "CON",
+            "dc": 11
+          },
+          "rules": "Ao acertar, além do dano cortante, o alvo realiza resistência de Constituição CD 11; se falhar, larga o objeto que estiver segurando."
+        },
+        {
+          "name": "Tuck In",
+          "kind": "special",
+          "rules": "Enrola-se numa esfera blindada e passa a rolar para mover-se. Enquanto enrolado, resiste a dano contundente, perfurante e cortante, fica imune à condição caída e não pode usar Scissor Claws. Como parte da ação, pode guardar sob o casco um objeto solto (não vestido ou carregado), de tamanho no máximo Small, a até 5 pés."
+        }
+      ],
+      "bonus_actions": [
+        {
+          "name": "Desenrolar",
+          "rules": "Sai da forma de bola e libera qualquer objeto guardado, usando uma ação bônus."
+        }
+      ],
+      "reactions": [],
+      "legendary_actions": [],
+      "image": {
+        "path": "operational/assets/creature-images/TF-061.webp",
+        "sha256": "294028acff7f7516abad8705bb33eb4ec934cfd59499baf214b276e303634edb",
+        "width": 1200,
+        "height": 620,
+        "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Clockwork%20Armadillo.webp",
+        "verified": true
+      },
+      "provenance": {
+        "mechanical_source": "https://kpogl.wikidot.com/monster:clockwork-armadillo",
+        "editorial_edition": "Tome of Beasts 3",
+        "source_verified": "2026-10-13",
+        "status": "COMPLETE_SOURCE_TRANSCRIPTION_PENDING_INDEPENDENT_REVIEW",
+        "description": "Regras reescritas em português; estatísticas e detalhes conferidos individualmente na fonte. Não equivale à integração ou aprovação final no jogo."
+      }
+    }
+  ]
+}

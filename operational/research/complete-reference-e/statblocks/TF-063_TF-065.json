@@ -1,0 +1,372 @@
+{
+  "schema": "SRD607_COMPLETE_REFERENCE_STATBLOCK_V1",
+  "language": "pt-BR",
+  "scope": "pending_images.slice(195,390)",
+  "format": "DND5E_MECHANICAL_REFERENCE_UNADAPTED_TO_CARD_GAME",
+  "review": "PENDING_INDEPENDENT_REVIEW",
+  "records_count": 3,
+  "records": [
+    {
+      "id": "TF-063",
+      "name": "Clockwork Beetle Swarm",
+      "size": "Large",
+      "type": "swarm of Tiny Constructs",
+      "alignment": "Unaligned",
+      "cr": "3",
+      "xp": 700,
+      "pb": 2,
+      "ac": 14,
+      "ac_note": "armadura natural",
+      "hp": 52,
+      "hp_dice": "8d10+8",
+      "speed_ft": {
+        "walk": 30,
+        "fly": 50
+      },
+      "abilities": {
+        "STR": 8,
+        "DEX": 16,
+        "CON": 12,
+        "INT": 1,
+        "WIS": 12,
+        "CHA": 7
+      },
+      "saves": {},
+      "skills": {},
+      "damage_resistances": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "damage_immunities": [
+        "poison",
+        "psychic"
+      ],
+      "condition_immunities": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "stunned"
+      ],
+      "senses": [
+        "darkvision 60 ft"
+      ],
+      "passive_perception": 11,
+      "languages": [],
+      "traits": [
+        {
+          "name": "Natureza de construto",
+          "rules": "Dispensa ar, alimentos, bebida e sono."
+        },
+        {
+          "name": "Resistência mágica",
+          "rules": "Vantagem em salvaguardas contra magias e efeitos mágicos."
+        },
+        {
+          "name": "Enxame",
+          "rules": "Divide o espaço com outras criaturas e atravessa aberturas suficientes para um construto Tiny. Não pode recuperar pontos de vida nem ganhar pontos de vida temporários."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Bites",
+          "kind": "melee_weapon",
+          "attack_bonus": 5,
+          "reach_ft": 0,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "4d8",
+              "type": "piercing"
+            },
+            {
+              "dice": "1d6",
+              "type": "poison"
+            }
+          ],
+          "damage_threshold": {
+            "when": "hp <= half_max",
+            "replace_piercing_dice": "2d8"
+          },
+          "rules": "Escolhe um alvo que esteja dentro do seu espaço; em um acerto, causa o dano perfurante e o veneno. Quando estiver com metade ou menos dos PV máximos, o dano perfurante diminui de 4d8 para 2d8."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": [],
+      "legendary_actions": [],
+      "image": {
+        "path": "operational/assets/creature-images/TF-063.webp",
+        "sha256": "ff4fba0df30b151e80ac06cbca33d188777bae47ab07b76b07538183ea7dc72d",
+        "width": 835,
+        "height": 800,
+        "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Beetle%20Swarm.webp",
+        "verified": true
+      },
+      "provenance": {
+        "mechanical_source": "https://kpogl.wikidot.com/monster:clockwork-beetle-swarm",
+        "editorial_edition": "Tome of Beasts 1",
+        "source_verified": "2026-10-13",
+        "status": "COMPLETE_SOURCE_TRANSCRIPTION_PENDING_INDEPENDENT_REVIEW",
+        "description": "Mecânicas reescritas em pt-BR e conferidas com a ficha da fonte, sem promoção ao CSV e sem integração às regras do jogo de cartas."
+      }
+    },
+    {
+      "id": "TF-064",
+      "name": "Clockwork Conductor",
+      "size": "Small",
+      "type": "Construct",
+      "alignment": "Lawful Neutral",
+      "cr": "1/2",
+      "xp": 100,
+      "pb": 2,
+      "ac": 13,
+      "ac_note": "armadura natural",
+      "hp": 28,
+      "hp_dice": "8d6",
+      "speed_ft": {
+        "walk": 30
+      },
+      "abilities": {
+        "STR": 7,
+        "DEX": 12,
+        "CON": 10,
+        "INT": 9,
+        "WIS": 12,
+        "CHA": 16
+      },
+      "saves": {},
+      "skills": {
+        "Perception": 3,
+        "Performance": 7
+      },
+      "damage_resistances": [],
+      "damage_immunities": [
+        "lightning",
+        "poison",
+        "psychic",
+        "thunder"
+      ],
+      "condition_immunities": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ],
+      "senses": [
+        "darkvision 60 ft"
+      ],
+      "passive_perception": 13,
+      "languages": [
+        "entende os idiomas de seu criador; não fala"
+      ],
+      "traits": [
+        {
+          "name": "Natureza de construto",
+          "rules": "Não precisa de ar, comida, bebida nem sono."
+        },
+        {
+          "name": "Forma imutável",
+          "rules": "Imune à alteração mágica da própria forma."
+        },
+        {
+          "name": "Resistência mágica",
+          "rules": "Vantagem em salvaguardas contra magias ou outros efeitos mágicos."
+        },
+        {
+          "name": "Metronomic Aura",
+          "radius_ft": 20,
+          "rules": "Uma criatura aliada a até 20 pés pode escolher tratar como 10 o resultado natural do d20 em uma jogada de ataque ou teste de Carisma (Atuação)."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Conductive Baton",
+          "kind": "melee_weapon",
+          "attack_bonus": 3,
+          "reach_ft": 5,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "1d4+1",
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "1d8",
+              "type": "lightning"
+            }
+          ],
+          "rules": "Se o ataque acertar, causa ambos os danos e impede reações do alvo até o início do próximo turno dele."
+        },
+        {
+          "name": "Overclocked Finale",
+          "kind": "special",
+          "recharge": "short_or_long_rest",
+          "radius_ft": 30,
+          "rules": "Todos os aliados a até 30 pés que consigam ver o maestro ganham +5 em ataques, rolagens de dano e testes de habilidade até o fim do próximo turno do maestro. Depois role 1d6: 1–4 impede Concerted Effort até o próximo descanso curto; 5–6 impede Concerted Effort e desativa Metronomic Aura até o próximo descanso curto."
+        }
+      ],
+      "bonus_actions": [
+        {
+          "name": "Concerted Effort",
+          "range_ft": 30,
+          "rules": "Escolhe a si mesmo ou aliado visível a até 30 pés. Até o começo do próximo turno do maestro, esse alvo soma 1d4 às suas jogadas de ataque e aos testes de resistência de Constituição para manter concentração."
+        }
+      ],
+      "reactions": [],
+      "legendary_actions": [],
+      "image": {
+        "path": "operational/assets/creature-images/TF-064.webp",
+        "sha256": "ae287ecf0a484b449e0e530abf9c4b11fe954035109ee8cc8bb4ce5ef6f87347",
+        "width": 1000,
+        "height": 1251,
+        "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Clockwork%20Conductor.webp",
+        "verified": true
+      },
+      "provenance": {
+        "mechanical_source": "https://kpogl.wikidot.com/monster:clockwork-conductor",
+        "editorial_edition": "Tome of Beasts 3",
+        "source_verified": "2026-10-13",
+        "status": "COMPLETE_SOURCE_TRANSCRIPTION_PENDING_INDEPENDENT_REVIEW",
+        "description": "Mecânicas reescritas em pt-BR e conferidas com a ficha da fonte, sem promoção ao CSV e sem integração às regras do jogo de cartas."
+      }
+    },
+    {
+      "id": "TF-065",
+      "name": "Clockwork Hound",
+      "size": "Medium",
+      "type": "Construct",
+      "alignment": "Unaligned",
+      "cr": "2",
+      "xp": 450,
+      "pb": 2,
+      "ac": 12,
+      "ac_note": "sem armadura indicada",
+      "hp": 71,
+      "hp_dice": "11d8+22",
+      "speed_ft": {
+        "walk": 50
+      },
+      "abilities": {
+        "STR": 16,
+        "DEX": 15,
+        "CON": 14,
+        "INT": 1,
+        "WIS": 10,
+        "CHA": 1
+      },
+      "saves": {
+        "DEX": 4,
+        "CON": 4
+      },
+      "skills": {
+        "Athletics": 7,
+        "Perception": 4
+      },
+      "damage_resistances": [],
+      "damage_immunities": [
+        "poison",
+        "psychic"
+      ],
+      "condition_immunities": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ],
+      "senses": [
+        "darkvision 60 ft"
+      ],
+      "passive_perception": 14,
+      "languages": [
+        "entende Common; não fala"
+      ],
+      "traits": [
+        {
+          "name": "Natureza de construto",
+          "rules": "Não depende de ar, alimento, bebida ou sono."
+        },
+        {
+          "name": "Rastreador obstinado",
+          "rules": "Vantagem em testes de Sabedoria (Percepção) e (Sobrevivência) que usem olfato ou sirvam para localizar uma criatura."
+        },
+        {
+          "name": "Núcleo explosivo",
+          "radius_ft": 5,
+          "rules": "Quando destruído, obriga todas as criaturas a até 5 pés a fazer resistência de Destreza CD 12; falha sofre 2d6 de fogo, sucesso metade."
+        },
+        {
+          "name": "Forma imutável",
+          "rules": "Imune a efeitos que alterem sua forma."
+        },
+        {
+          "name": "Resistência mágica",
+          "rules": "Vantagem nas resistências contra magias e efeitos mágicos."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Bite",
+          "kind": "melee_weapon",
+          "attack_bonus": 5,
+          "reach_ft": 5,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "2d10+3",
+              "type": "piercing"
+            }
+          ],
+          "rules": "Se atingir o alvo, causa dano perfurante."
+        },
+        {
+          "name": "Tripping Tongue",
+          "kind": "melee_weapon",
+          "attack_bonus": 5,
+          "reach_ft": 15,
+          "targets": 1,
+          "damage": [
+            {
+              "dice": "2d8+3",
+              "type": "slashing"
+            }
+          ],
+          "save": {
+            "ability": "STR",
+            "dc": 13
+          },
+          "rules": "Ao acertar com a língua laminada, o alvo sofre dano cortante e deve passar numa resistência de Força CD 13 ou fica caído."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": [],
+      "legendary_actions": [],
+      "image": {
+        "path": "operational/assets/creature-images/TF-065.webp",
+        "sha256": "beccb3e5441c44c21f773b777b7b44aab4df1147dc0969dc08fdf612af5070ac",
+        "width": 843,
+        "height": 800,
+        "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clockwork%20Hound.webp",
+        "verified": true
+      },
+      "provenance": {
+        "mechanical_source": "https://kpogl.wikidot.com/monster:clockwork-hound",
+        "editorial_edition": "Tome of Beasts 1",
+        "source_verified": "2026-10-13",
+        "status": "COMPLETE_SOURCE_TRANSCRIPTION_PENDING_INDEPENDENT_REVIEW",
+        "description": "Mecânicas reescritas em pt-BR e conferidas com a ficha da fonte, sem promoção ao CSV e sem integração às regras do jogo de cartas."
+      }
+    }
+  ]
+}
