@@ -1,5 +1,16 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 43 — Behtu, Black Knight Commander, City Watch Captain, Corpse Thief e Cueyatl Moon Priest (14/10/2026)
+
+**[Commit de cinco fichas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/88fbe7484c690faf2b902d8f4edf38e1eae545fe)** relido no GitHub; fontes parafraseadas; edição e arte ainda aguardam aprovação.
+- **TF-188 Behtu:** edição ToB1 2023, Bite+Spear, Fire Breath recarga6 DEX CD13, Ichorous Infusion 1d4+1 doses com benefícios STR/CON e desvantagem INT/WIS para behtu, toxicidade CON CD14 para não behtu. https://www.5esrd.com/database/creature/behtu-3pp/
+- **TF-189 Black Knight Commander:** Hateful Presence +2 dano aliados e Help proibida; Locked Saddle e Mounted Warrior dependem de montaria; Lance+2 Mace e Hooves só quando montado; Mounted Charge utiliza bonus action do cavaleiro e REACTION da montaria; Frightful Charge mounted-only DEX CD15 com medo até sucesso WIS DC15. https://www.5esrd.com/database/creature/black-knight-commander-3pp/
+- **TF-190 City Watch Captain:** Point Blank Fencer sem duplicar dano Rapier; Tactical Insight altera a iniciativa a pedido de aliados em 30ft; Multiattack pode Issue Orders antes de 2 Rapier/3 crossbow/Rapier+2 crossbow, com consumo de REACTION de até dois aliados em Issue Orders; Rapier pode forçar largar item não preso. https://www.5esrd.com/database/creature/city-watch-captain-3pp/
+- **TF-191 Corpse Thief:** Object Reading uma única vez por objeto, 10 minutos de concentração, diferencia dono vivo (vision 10min, WIS CD13) e morto (cinco informações sobre eventos observados pelo objeto); 2 Claw ou Steal DEX CD13 e exclusão de armas/armadura. https://www.5esrd.com/database/creature/corpse-thief/
+- **TF-192 Cueyatl Moon Priest:** Spellcasting cleric WIS lvl5, CD14/+6, slots 4/3/2, 4 cantrips e magias listadas, Morningstar piercing/poison, Night's Chill recarga 5–6 apaga luz mágica em 30ft e dano frio apenas a hostis sem total cover, CON CD13. https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest
+- **Auditoria:** 131 JSONs/IDs; 109 aprofundadas, 22 aguardando, 96 parciais, 35 bloqueadas, nenhuma aprovada integralmente. 96/131 imagens físicas, 96 hashes Git coincidentes com manifesto, 35 faltantes e 0 visualmente aprovadas. 229 arquivos alterados no diff da PR, nenhum fora de C; PR segue Draft e não integrada.
+- **Gates pendentes:** edição/erratas, publicação/licenças e direitos/imagens, revisão independente.
+
 ## Checkpoint 42 — Sinoper, Snow, Tar Oozes, Atavist e Bearfolk (14/10/2026)
 
 **[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/b12e0d1ff7f7b304aadaa90021cc4802a473a903)**; cinco JSONs relidos por ID na branch, 131 fichas listadas e imagens auditadas. Apenas o grupo C foi alterado. Fontes 5eSRD, KPOGL e reprodução de edições foram utilizadas com dados parafraseados, sem presumir licença de imagem.

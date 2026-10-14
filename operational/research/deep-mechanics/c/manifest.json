@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 104,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 109,
     "fichas_integralmente_concluidas": 0,
     "parciais": 96,
     "bloqueadas": 35,
-    "registros_aproveitados_sem_nova_verificacao_integral": 27,
+    "registros_aproveitados_sem_nova_verificacao_integral": 22,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -635,9 +635,24 @@
       "commit": "b12e0d1ff7f7b304aadaa90021cc4802a473a903",
       "leitura_persistencia": "CONFIRMADA — cinco JSONs TF180 TF181 TF182 TF186 TF187 relidos, fontes 5eSRD/KPOGL, Snow Amorphous 1 foot, Tar Fire Hazard vs immunity documentado como bloqueio; 131 IDs e 96 imagens com hashes correspondentes.",
       "tipo": "Sinoper, Snow, Tar oozes; Atavist NPC; Bearfolk 2023"
+    },
+    {
+      "numero": 43,
+      "inicio": "TF-188",
+      "fim": "TF-192",
+      "ids": [
+        "TF-188",
+        "TF-189",
+        "TF-190",
+        "TF-191",
+        "TF-192"
+      ],
+      "commit": "88fbe7484c690faf2b902d8f4edf38e1eae545fe",
+      "leitura_persistencia": "CONFIRMADA — cinco JSONs relidos após commit, IDs e sintaxe válidos, fontes 5eSRD/HereBeTaverns, 131 IDs, 96 blobs hash coincidentes e somente alterações C.",
+      "tipo": "Behtu, Black Knight Commander, City Watch Captain, Corpse Thief, Cueyatl Moon Priest"
     }
   ],
-  "atualizacao_detalhada_sha": "b12e0d1ff7f7b304aadaa90021cc4802a473a903",
+  "atualizacao_detalhada_sha": "88fbe7484c690faf2b902d8f4edf38e1eae545fe",
   "criaturas": [
     {
       "id": "TF-412",
@@ -3675,17 +3690,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 63,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-188.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://www.5esrd.com/database/creature/behtu-3pp",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/behtu-3pp/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Não tratar infusão carregada como suprimento ilimitado."
+        "Ichorous Infusion é recurso finito 1d4+1, não uso ilimitado; efeitos distintos entre behtu e não behtu.",
+        "Não misturar edição ToB1 2023 com bloco anterior; imagem e direitos por aprovar."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação de edição/erratas/uso legal",
+        "identidade e licença da imagem, revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3695,7 +3710,8 @@
         "bytes": 64192,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-189",
@@ -3703,17 +3719,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 64,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-189.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/black-knight-commander-3pp/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Não aplicar ataques da montaria sem tê-la presente."
+        "Ações e benefícios condicionados à presença física de montaria: Hooves não faz parte do atacante sozinho; Mounted Charge usa reação da montaria.",
+        "Hateful Presence dá dano +2 aos aliados mas impede Help; Frightful Charge exige montaria e reteste WIS no fim de turno.",
+        "Edição/autorização da arte pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação de edição/erratas/uso legal",
+        "identidade e licença da imagem, revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3723,7 +3740,8 @@
         "bytes": 59770,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-190",
@@ -3731,17 +3749,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 65,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-190.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/city-watch-captain-3pp/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "A edição 2023 usa iniciativa coletiva opcional; não misturar com mecânicas SRD padrão."
+        "Issue Orders gasta reaction de cada um dos dois aliados e pode preceder as ações do Multiattack.",
+        "Point Blank Fencer já incluído no dano Rapier e não elimina demais motivos de disadvantage do crossbow.",
+        "Licença/edição e imagem ainda sem aprovação."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação de edição/erratas/uso legal",
+        "identidade e licença da imagem, revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3751,7 +3770,8 @@
         "bytes": 49984,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-191",
@@ -3759,15 +3779,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 66,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-191.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://anyflip.com/myubd/zdka/basic/51-100",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/corpse-thief/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Object Reading uma vez por objeto, últimas memórias limitadas a eventos associados ao objeto (se dono morto).",
+        "Steal não afeta armas nem armaduras; requer ação própria não embutida no Multiattack.",
+        "Original Creature Codex e imagem exigem revisão/uso autorizado."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação de edição/erratas/uso legal",
+        "identidade e licença da imagem, revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3777,7 +3800,8 @@
         "bytes": 55246,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-192",
@@ -3785,17 +3809,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 67,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-192.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Página 5eSRD individual não encontrada; reproduções com estatísticas consistentes."
+        "Magias Cleric 5º nível, slots 4/3/2, WIS DC14, +6 spell attack; não criar usos ilimitados ou níveis superiores.",
+        "Night's Chill ignora alvos com total cover, só hostis; dissipa luz mágica em 30ft.",
+        "Fonte Here Be Taverns e reprodução Creature Codex coincidentes, mas original e imagem sem revisão legal."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "verificação de edição/erratas/uso legal",
+        "identidade e licença da imagem, revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3805,7 +3830,8 @@
         "bytes": 49524,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-193",
@@ -4508,11 +4534,11 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 42,
-    "sha_validado": "b12e0d1ff7f7b304aadaa90021cc4802a473a903",
+    "checkpoint": 43,
+    "sha_validado": "88fbe7484c690faf2b902d8f4edf38e1eae545fe",
     "escopo_ids": 131,
-    "aprofundadas": 104,
-    "sem_revisao_individual": 27,
+    "aprofundadas": 109,
+    "sem_revisao_individual": 22,
     "integralmente_aprovadas": 0,
     "parciais": 96,
     "bloqueadas": 35,
