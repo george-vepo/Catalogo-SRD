@@ -28,11 +28,12 @@ def request(url,headers=None,data=None,method="GET"):
 def gh(method,path,payload=None):
     data=json.dumps(payload,ensure_ascii=False).encode() if payload is not None else None
     return json.loads(request(API+"/"+path,headers={**HEADERS,"Content-Type":"application/json"},data=data,method=method).decode())
-def pub(data,label):
+def pub(data,summary,label):
     parent=gh("GET","branches/"+BRANCH)["commit"]["sha"]
     tree=gh("GET","git/commits/"+parent)["tree"]["sha"]
     blob=gh("POST","git/blobs",{"content":data,"encoding":"utf-8"})["sha"]
-    newtree=gh("POST","git/trees",{"base_tree":tree,"tree":[{"path":"operational/research/complete-reference-e/source-extractions/kobold_candidates_e.json","mode":"100644","type":"blob","sha":blob}]})["sha"]
+    sblob=gh("POST","git/blobs",{"content":summary,"encoding":"utf-8"})["sha"]
+    newtree=gh("POST","git/trees",{"base_tree":tree,"tree":[{"path":"operational/research/complete-reference-e/source-extractions/kobold_candidates_e.json","mode":"100644","type":"blob","sha":blob},{"path":"operational/research/complete-reference-e/source-extractions/coverage_summary_e.json","mode":"100644","type":"blob","sha":sblob}]})["sha"]
     commit=gh("POST","git/commits",{"message":label,"tree":newtree,"parents":[parent]})["sha"]
     if gh("GET","branches/"+BRANCH)["commit"]["sha"]!=parent:raise RuntimeError("Race: branch moved before update")
     gh("PATCH","git/refs/heads/"+BRANCH,{"sha":commit,"force":False})
@@ -123,5 +124,6 @@ payload={"schema":"SRD607_UNREVIEWED_KOBOLD_5ETOOLS_SOURCE_CANDIDATES_V1",
          "books":SOURCE_BOOKS,"book_errors":book_errors,"status_counts":counts,
          "records":output}
 text=json.dumps(payload,ensure_ascii=False,indent=2)+"\n"
-commit=pub(text,"research(srd607/e): unreviewed full-source Kobold mechanical candidates with image joins")
+summary={"schema":"SRD607_SOURCE_COVERAGE_SUMMARY_V1","counts":counts,"no_exact":[x["id"] for x in output if x["status"]=="NO_EXACT_SOURCE_MATCH"],"edition_conflicts":[{"id":x["id"],"name":x["name"],"books":[q["book"] for q in x["candidates"]]} for x in output if x["status"]=="EDITION_CONFLICT_REQUIRES_DISAMBIGUATION"],"records":[{"id":x["id"],"name":x["name"],"status":x["status"],"image":x["image"]["status"],"books":[q["book"] for q in x["candidates"]]} for x in output]}
+commit=pub(text,json.dumps(summary,ensure_ascii=False,indent=2)+"\n","research(srd607/e): unreviewed full-source Kobold mechanical candidates and coverage summary")
 print("SAVED",commit,"bytes",len(text.encode()),"status",json.dumps(counts),flush=True)
