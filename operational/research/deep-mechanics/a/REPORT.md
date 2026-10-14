@@ -6,6 +6,8 @@
 
 Apenas estrutura mecânica da fonte individual comunitária KPOGL, **não homologação** de edição/impressão/errata ou engine. **63 statblocks estruturados online, 69 resumidos, 0 homologados**; **124 binários**, 8 imagens ausentes, nenhuma arte aprovada. Preservadas identidades de cada variante e limitações da fonte. Sem V-Bridge, merge ou outras branches.
 
+**Auditoria #51:** [`806c71013fe6`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/806c71013fe6eccb6a4ecb089442cdcda9980820); 3 JSONs individualmente relidos e parseados, 3 imagens binárias já existentes confirmadas por SHA Git/bytes, 124 arquivos no diretório e apenas 5 arquivos do grupo A alterados pelo checkpoint. Ainda sem verificação independente das imagens/licenças e sem homologação mecânica editorial.
+
 ---
 
 # Grupo A — checkpoint 50: Child of the Briar, Citrullus e Climbing Vine (14/10/2026)
