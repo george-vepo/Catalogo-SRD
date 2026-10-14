@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 120 / 195.**
+**Armazenadas e verificadas: 130 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -20,6 +20,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c182357971d4d8a09d5fd6a7f531abee48d8db03 — 10/10 verificadas: TF-165, TF-166, TF-167, TF-168, TF-169, TF-170, TF-171, TF-172, TF-173, TF-174
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2b2c0e6880675869044734d993c82311e9d6a28a — 10/10 verificadas: TF-175, TF-176, TF-177, TF-178, TF-179, TF-180, TF-181, TF-182, TF-186, TF-187
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5 — 10/10 verificadas: TF-188, TF-189, TF-190, TF-191, TF-192, TF-193, TF-194, TF-195, TF-196, TF-197
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/bc1ee577f9b9e40721ccfc7b212a7b791c9b7380 — 10/10 verificadas: TF-199, TF-202, TF-203, TF-204, TF-205, TF-206, TF-208, TF-210, TF-211, TF-212
 
 ## Binários publicados e conferidos
 
@@ -143,6 +144,16 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-195 / Tosculi, Drone: operational/assets/creature-images/TF-195.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tosculi%20Drone.webp; 62842 bytes; 519x800 px; SHA-256: f7bea847ebc5e61644c325f1f9049872181274bf63d1ed1e85f4102cc24c9041; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
 - TF-196 / Tosculi, Elite Bow Raider: operational/assets/creature-images/TF-196.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tosculi%20Elite%20Bow%20Raider.webp; 62060 bytes; 747x800 px; SHA-256: a0e5923c08039e6de88a56a75505d160b96c56fc3e569a9def47c313ff421db8; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
 - TF-197 / Tosculi, Jeweled Drone: operational/assets/creature-images/TF-197.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Tosculijeweleddrone.jpg; 65411 bytes; 519x700 px; SHA-256: 9ad0c9559b907ed938c76f708087419db76752667e7b8422bba9c577605d1ef1; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-199 / Yakirian: operational/assets/creature-images/TF-199.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Yakirian.jpg; 58600 bytes; 529x700 px; SHA-256: 9b0985c5607e27231c4fb14824c8d7b6f5948d5669ccc1241be51b1827781a76; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-202 / Bearfolk Thunderstomper: operational/assets/creature-images/TF-202.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Bearfolk%20Thunderstomper.webp; 99674 bytes; 1000x1166 px; SHA-256: 80ab41b646990e4dbdc38659fb5e143e5834cfab657a69a9d59ff7b707a2ac2f; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-203 / Cueyatl Warchief: operational/assets/creature-images/TF-203.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Cueyatl%20Warchief.webp; 160202 bytes; 1200x1029 px; SHA-256: 3c437c9484d0fd0518454bb5d14fc4443dbbe52828c4661c946b6ed4b5efdd62; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-204 / Thripper: operational/assets/creature-images/TF-204.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Thripper.webp; 243528 bytes; 1000x1467 px; SHA-256: 2939ac6e58a3e7df6fbe1d4d3d373048dcc37e0393810623b1acd23dbbc7e880; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-205 / Yathon: operational/assets/creature-images/TF-205.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Yathon.webp; 184170 bytes; 751x1321 px; SHA-256: 97979d90b43654280f9e64db441c4f817511f8f95040ee004690ef6b7f9ea921; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-206 / Zeitgeist: operational/assets/creature-images/TF-206.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Zeitgeist.webp; 177342 bytes; 652x1022 px; SHA-256: 846236ed432c898d620661005c882477989568b6dd876bd11327ca0479406b26; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-208 / Acid Ant: operational/assets/creature-images/TF-208.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Acidant.jpg; 56735 bytes; 584x700 px; SHA-256: 23e7ce8ec1704aa8fdb2dfc4c6a89992bd5b3d2692fb2c39b959c31422004367; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-210 / Agnibarra: operational/assets/creature-images/TF-210.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Agnibarra.jpg; 50654 bytes; 452x700 px; SHA-256: 8b17019ad76784cc4224253a2a8461f20b6012eda34b115e88bbcd69c01eb91e; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-211 / Ahuizotl: operational/assets/creature-images/TF-211.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Ahuizotl.jpg; 78801 bytes; 980x700 px; SHA-256: c7e639446487d58880c89d52ffaf827f27f093d147c135815980ff7096683058; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-212 / Alabroza: operational/assets/creature-images/TF-212.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Alabroza.webp; 159586 bytes; 1000x1091 px; SHA-256: f1b3ee905a7858b71bd37fbc99f1acf64e7c71884b573b905999db91bc86aafe; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 
 ## Não obtidos
 
@@ -152,19 +163,9 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-185 / Alleyway Strangler: source_not_found; 
 - TF-187 / Bearfolk: blocked; RACE: new commit not branch HEAD
 - TF-198 / Tosculi, Warrior: source_not_found; 
-- TF-199 / Yakirian: pending; 
 - TF-200 / Aboleth Champion: source_not_found; 
 - TF-201 / Alpha Werewolf: source_not_found; 
-- TF-202 / Bearfolk Thunderstomper: pending; 
-- TF-203 / Cueyatl Warchief: pending; 
-- TF-204 / Thripper: pending; 
-- TF-205 / Yathon: pending; 
-- TF-206 / Zeitgeist: pending; 
-- TF-208 / Acid Ant: pending; 
 - TF-209 / Adamanticore: source_not_found; 
-- TF-210 / Agnibarra: pending; 
-- TF-211 / Ahuizotl: pending; 
-- TF-212 / Alabroza: pending; 
 - TF-213 / Alchemical Skunk: pending; 
 - TF-214 / Alke: pending; 
 - TF-215 / Aniwye: pending; 
