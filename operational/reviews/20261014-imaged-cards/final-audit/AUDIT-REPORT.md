@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 14 lotes validados, 140/395 fichas (255 restantes).
+**Situação:** EM ANDAMENTO — 15 lotes validados, 150/395 fichas (245 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -109,4 +109,11 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 8 fichas completas em conteúdo e 2 completas com ressalvas: TF-154 (fórmula de HP conflitante em livro/republicação), TF-157 (3 vs 4 ações lendárias entre fontes). Dez imagens diretamente vinculadas e hashes/tamanhos conferidos; TF-157 tem largura 490 px. Sem homologação de direito comercial ou identidade visual.
 
 **Consolidado:** 140/395; 91 completas em conteúdo, 27 com ressalvas, 21 incompletas e 1 não verificável. Imagens: 85 diretas, 52 por manifesto, 3 ausentes.
+
+
+## Lote 015 — TF-158–TF-167 (dez IDs)
+
+7 completas em conteúdo e 3 com ressalvas: TF-161 (CHA8 impresso como -2), TF-165 (Split causado por slashing ao qual figura imunidade) e TF-166 (Multiattack com nome Slam indefinido enquanto ataque listado é Pseudopod). As 10 imagens estão diretamente vinculadas; 2 com largura inferior a 500 px (TF-158 e TF-167). Identidade artística, licença e fontes impressas/erratas ainda aguardam validação.
+
+**Consolidado:** 150/395; 98 fichas completas, 30 com ressalvas, 21 incompletas e 1 não verificável; 95 imagens diretas, 52 por manifesto e 3 ausentes.
 
