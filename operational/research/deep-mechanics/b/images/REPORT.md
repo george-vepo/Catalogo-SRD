@@ -1,3 +1,13 @@
+## Auditoria visual B — 14/10/2026 — 104 imagens físicas, 28 pendentes
+
+**Conferência no GitHub após [commit 5dd0a6bccac2](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5dd0a6bccac2c057fe4365bdbf278e1cadfe97c1):** 104 arquivos binários foram encontrados fisicamente na árvore Git e seus SHAs/tamanhos coincidem com os campos do manifesto; TF-327, TF-344, TF-399 foram reabertos em Base64 e as assinaturas WebP/JPEG confirmadas. Mesmo Git SHA de origem na branch F garante identidade dos blobs (sem recodificação). Nenhuma imagem ficou substituída apenas por URL, texto Base64 ou placeholder.
+
+**28 imagens restantes (IDs reais):** TF-303, TF-326, TF-335, TF-336, TF-341, TF-342, TF-351, TF-353, TF-355, TF-356, TF-358, TF-361, TF-370, TF-379, TF-381, TF-384, TF-386, TF-389, TF-393, TF-395, TF-397, TF-398, TF-402, TF-405, TF-408, TF-411, TF-094, TF-095.
+
+**Investigação:** em snapshots das branches D (`c6129862bfe2`), E (`6c12c9153163`) e F (`6ff8218b9e9`), nenhum dos 28 IDs restantes possui arquivo correspondente em `operational/assets/creature-images/`. Será necessária nova fonte legitimamente reutilizável ou ilustração original, seguida de persistência binária, hashes, dimensões, licença e revisão de identidade. A adequação visual de TF-327/344/399 é preliminar, e direitos/atribuição dos recursos não foram homologados. Não copiar conteúdo incerto automaticamente.
+
+---
+
 ## Checkpoint de imagens B — 14/10/2026 — 104/132 binários, 28 pendentes
 
 Três imagens reais **reutilizadas por SHA Git idêntico da branch F**, sem gerar placeholders ou links em lugar do arquivo. Fontes, bytes, dimensões, formato, SHA-256 de origem e licença pendente constam no manifesto.

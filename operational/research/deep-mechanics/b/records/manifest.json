@@ -39,12 +39,12 @@
   },
   "integridade": {
     "controle": "Auditoria GitHub 14/10/2026: 132/132 JSONs físicos com SHA Git e bytes iguais ao manifesto na árvore da branch antes deste checkpoint; 101/101 imagens binárias físicas com SHA Git e bytes iguais; 3 blobs binários adicionais importados por identidade de SHA Git da branch F. Verificar os 104/104 após commit. Nenhuma homologação independente.",
-    "checkpoints": 21,
+    "checkpoints": 22,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
     "sem_duplicatas": true,
     "sem_ids_extras": true,
-    "total_bytes_json": 492156,
+    "total_bytes_json": 493967,
     "comparacao_pre_relatorio": "16 checkpoints de alterações de registros; nenhuma escrita de arquivo fora do diretório exclusivo B",
     "imagens_blobs_iguais_origem": 92,
     "imagens_sem_arquivo": 28,
@@ -159,8 +159,39 @@
         "imagens_fisicas": 101,
         "imagens_sha_tamanho_iguais": 101
       },
-      "status": "GRAVACAO_EM_CHECKPOINT; VALIDAR_READBACK_GITHUB",
+      "status": "READBACK_VERIFICADO_SHA_GIT_BYTES_ASSINATURAS",
       "licencas": "A análise de direitos e licenças não foi concluída"
+    },
+    "auditoria_documental_20261014": {
+      "escopo": "Todos os 132 JSONs reabertos individualmente via GitHub na branch B antes das três retificações",
+      "resultado": "PASSOU_INTEGRIDADE_E_ESTRUTURACAO_NAO_EQUIVALE_A_HOMOLOGACAO",
+      "json_lidos": 132,
+      "json_validos": 132,
+      "ids_corretos": 132,
+      "sha_git_igual_manifesto": 132,
+      "urls_fontes_presentes": 132,
+      "inventarios_flag_true": 132,
+      "campos_minimos_presentes": 132,
+      "bloqueados": 124,
+      "independentes_homologados": 0,
+      "origem_conflitos": "PR #4 / chatgpt/srd607-parallel-b; lidos ambos checkpoints e source-validation.json",
+      "conflitos_revistos": 13,
+      "conflitos_resolvidos_definitivamente": 0,
+      "conflitos_permanecem": 13,
+      "fontes_editoriais_consultadas_no_checkpoint": [
+        "https://a5e.tools/node/2443",
+        "https://a5e.tools/node/1755",
+        "https://a5e.tools/node/2444",
+        "https://a5e.tools/node/3542"
+      ],
+      "comparacoes_pontuais_portal": 4,
+      "correcoes_pontuais": [
+        "TF-356",
+        "TF-361",
+        "TF-386"
+      ],
+      "publicacoes_originais_impressas_e_erratas_conferidas": 0,
+      "ressalva": "Portais editoriais verificados parcialmente em quatro registros; isso não assegura cotejo editorial integral de 132 e nem libera licença, interoperabilidade ou homologação."
     }
   },
   "commits_checkpoint": [
@@ -247,6 +278,10 @@
     {
       "sha": "21e6217475683e2becbac59ebff639e935cbd454",
       "message": "research(srd607): B aprofundar mais 6 fichas KPOGL, incluindo gatilhos e variantes"
+    },
+    {
+      "sha": "5dd0a6bccac2c057fe4365bdbf278e1cadfe97c1",
+      "message": "research(srd607/b): importar 3 imagens reais da branch F e conciliar manifestos (checkpoint 3)"
     }
   ],
   "records": [
@@ -1253,8 +1288,8 @@
       "id": "TF-356",
       "grupo": "next_batches[3]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-356.json",
-      "git_blob_sha": "d0f2fcd8883c7fbcba4183e5058587c2cbaed7a7",
-      "bytes": 4894,
+      "git_blob_sha": "f2d179e054a525185d765c88137370fd1ed961c5",
+      "bytes": 5506,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-356.json",
       "nivel": "DETALHADA_EDITORIAL_PENDENTE_REVISAO",
       "conflito_pr4": true,
@@ -1285,8 +1320,8 @@
       "id": "TF-361",
       "grupo": "next_batches[3]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-361.json",
-      "git_blob_sha": "07475bef32d90553ee3d43ab0d2e53c1b8cd2690",
-      "bytes": 4014,
+      "git_blob_sha": "304285132d45d2874ef222cc88479ba9462dd6d6",
+      "bytes": 4694,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-361.json",
       "nivel": "DETALHADA_EDITORIAL_PENDENTE_REVISAO",
       "conflito_pr4": true,
@@ -1684,8 +1719,8 @@
       "id": "TF-386",
       "grupo": "next_batches[3]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-386.json",
-      "git_blob_sha": "b06e0e3cdda499c0556ff2a70107d8b7ab5c286d",
-      "bytes": 4647,
+      "git_blob_sha": "78a768d26ae6b65ad301c8874b891ddbcc02a47d",
+      "bytes": 5166,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-386.json",
       "nivel": "DETALHADA_EDITORIAL_PENDENTE_REVISAO",
       "conflito_pr4": true,

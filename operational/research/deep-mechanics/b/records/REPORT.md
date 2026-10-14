@@ -1,3 +1,35 @@
+## Auditoria documental B — 14/10/2026 — 132 JSONs relidos, três correções mecânicas pontuais
+
+**Escopo:** cada um dos **132 JSONs** foi individualmente recuperado do GitHub na branch B; **132/132** passaram na leitura JSON, ID, SHA do manifesto, presença de fontes, flag de inventário estruturado e campos mínimos. A árvore Git confirmou **132 JSONs físicos sem extras** e **104 imagens físicas** com SHA Git/tamanho equivalentes aos manifestos; há **28 imagens pendentes**. Dos registros, **124** mantêm `bloqueado:true`. A verificação de integridade não constitui homologação mecânica.
+
+**Cotejo pontual no portal editorial A5E (4 registros):** TF-356 Grendel (<https://a5e.tools/node/2443>), TF-361 Elder Black Pudding (<https://a5e.tools/node/1755>), TF-386 Grootslang (<https://a5e.tools/node/2444>) e TF-408 Grove Swarm (<https://a5e.tools/node/3542>). Os três primeiros tiveram correções de regras específicas confirmadas em fonte primária: dano reduzido para criatura lançada contra outra, corrosão de outros objetos em contato, e Constrict bônus condicionado a alvo prone (sem exigir que a carga o derrube). TF-408 mantém ND e CD de agarrão nulos, pois o portal relata ND 0 e uma referência sem identificação clara a spell save DC. **Não houve cotejo completo de exemplar impresso e erratas para nenhuma das 132 fichas.** A5E informa que o portal não é o documento de conteúdo aberto A5ESRD; licença exige avaliação.
+
+**Estado:** 132 inventários estruturados (14 inicialmente a partir de portal editorial e 118 de reproduções secundárias); 4 conferências pontuais diretas neste checkpoint; **0 verificações editoriais integrais concluídas**, **0 homologações independentes**, **0 promoções/integrações**, **0 conflitos definitivamente solucionados** de 13 herdados.
+
+### Matriz de 13 conflitos herdados da PR #4 — análise documental, todos pendentes
+
+| ID | Criatura | Divergência preservada | Decisão atual |
+|---|---|---|---|
+| [TF-309](TF-309.json) | Living Wick | Atributos, autonomia/consumo e controle telepático original × revisão | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-318](TF-318.json) | Fellforged | Diferenças de atributos, PV e ações original × revisão | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-319](TF-319.json) | Gearforged Templar | Glaive/três ataques × greatsword/quatro ataques | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-320](TF-320.json) | Gnarljak | PV 49/63/88, atributos, resistências e ações | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-325](TF-325.json) | Lindwurm | ND 5 (original) × ND 6 (revisão/índice) | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-334](TF-334.json) | Far Darrig | ND 2/PV 39 × ND 3/PV 84 | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-356](TF-356.json) | Grendel | A5E ND 9/CA 15/PV 114 × Viking Adventures ND 12/CA 19/PV 147 | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-361](TF-361.json) | Elder Black Pudding | A5E ND 8/PV 171 × outro 5e ND 4/PV 130 | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-382](TF-382.json) | Likho | ND 5 no índice Kobold/KPOGL × ND 6 em terceiro | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-386](TF-386.json) | Grootslang | A5E ND 11 × variantes ND 8/12 | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-388](TF-388.json) | Son of Fenris | Velocidade, resistências e passivas original × revisão | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-401](TF-401.json) | Mallqui | SAB 16/andar 20 pés original × SAB 18/andar 30 na revisão | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+| [TF-408](TF-408.json) | Grove Swarm | Fonte editorial reporta ND 0 e CD sem referente inequívoco | **Pendente**: preservar edição/variante identificada; cotejar publicação correta e erratas antes de consolidar |
+
+Fontes históricas dos conflitos: [PR #4](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/4), [checkpoint lote 3](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json), [checkpoint lote 4](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json), [validação suplementar](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_parallel_b_source_validation/source-validation.json). Registros não conciliados com livro impresso permanecem sem aprovação. Não importar mecanicamente valores de versões/homônimos distintos.
+
+**Checkpoint visual anterior:** [commit 5dd0a6bccac2](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5dd0a6bccac2c057fe4365bdbf278e1cadfe97c1) — TF-327, TF-344, TF-399, readback confirmado (SHA/bytes/assinatura); total 104/132. **Checkpoint mecânico atual:** três JSONs corrigidos e manifestos recalculados; readback do novo commit ainda deve ocorrer. PR #6 permanece em DRAFT, sem merge.
+
+---
+
 ## Checkpoint Grupo B — 14/10/2026 — três imagens reais recuperadas da F
 
 Importados **três objetos Git binários sem recodificação**: [TF-327 Azer Forgemaster](../images/TF-327.webp) (WebP, 300×300, 113.414 bytes), [TF-344 Pumpkin King](../images/TF-344.webp) (WebP, 360×279, 116.036 bytes), [TF-399 Mari Lwyd](../images/TF-399.jpg) (JPEG, 1024×1024, 188.641 bytes). Referência: [manifesto F](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-image-assets-f/operational/assets/creature-images/manifests/f.json). Hashes SHA-256, Git SHA, origem e notas de qualidade foram incorporados aos manifestos B. A validação pós-commit precisa confirmar a persistência na branch B.
