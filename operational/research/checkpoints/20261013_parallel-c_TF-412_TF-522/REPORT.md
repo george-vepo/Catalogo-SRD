@@ -23,8 +23,8 @@ Data da pesquisa: 13/10/2026.
 | TF-412 | Mandrake, Great | Creature Codex | 1 | 11 | 44 | [fonte](https://www.5esrd.com/database/creature/mandrake-great/) |
 | TF-413 | Sinstar, Star Thrall | Tome of Beasts 3 | 2 | 13 | 58 | [fonte](https://www.5esrd.com/database/creature/star-thrall/) |
 | TF-414 | Wallflower | Monstrous Menagerie | 2 | 14 | 33 | [fonte](https://a5e.tools/node/1660) |
-| TF-415 | Gloomflower | Volume pendente | 3 | 12 | 44 | [fonte](https://www.5esrd.com/database/creature/gloomflower/) |
-| TF-416 | Wind Witch | Volume pendente | 3 | 13 | 66 | [fonte](https://www.5esrd.com/database/creature/wind-witch/) |
+| TF-415 | Gloomflower | Creature Codex | 3 | 12 | 44 | [fonte](https://www.5esrd.com/database/creature/gloomflower/) |
+| TF-416 | Wind Witch | Tome of Beasts 3 | 3 | 13 | 66 | [fonte](https://www.5esrd.com/database/creature/wind-witch/) |
 | TF-417 | Mandriano | Creature Codex | 5 | 13 | 60 | [fonte](https://kpogl.wikidot.com/monster:mandriano) |
 | TF-418 | Sodwose | Tome of Beasts 3 | 6 | 15 | 127 | [fonte](https://www.5esrd.com/database/creature/sodwose/) |
 | TF-419 | Witchalder | Tome of Beasts 3 | 6 | 15 | 102 | [fonte](https://www.5esrd.com/database/creature/witchalder/) |
@@ -82,7 +82,7 @@ A coluna **ND da fonte** não é uma conversão para o sistema do card game; val
 - **Crítico:** validação de licenças, redação de mecânicas A5E que precisem ser adaptadas, confirmar ND variável TF-431 sem criar valor fictício.
 - **Alto:** conferir fontes comunitárias 5eSRD/KPOGL com cópias editoriais, edição original/revisada e diferenças de terminologia, fontes em divergência e versões homônimas.
 - **Alto:** ficha de trabalho registra ações e traços como *sínteses*, não necessariamente todas as CDs, distâncias, recargas, imunidades, resistências, conjurações, ações bônus, reações e ações lendárias em estrutura final. Completar detalhamento mecânico e realizar revisão independente antes da canonização.
-- **Médio:** completar referência bibliográfica dos volumes de Gloomflower (TF-415) e Wind Witch (TF-416), registrados como pendentes no JSON.
+- **Médio:** referências bibliográficas de Gloomflower (TF-415) e Wind Witch (TF-416) foram confirmadas no índice editorial; ainda conferir texto integral e erratas no volume.
 - **Médio:** imagens continuam pendentes, assim como integração ao construtor de cartas, testes, geração de PDF/DOCX e qualidade visual quando aplicáveis.
 
 ## Etapa 2 — plano para reconciliação dos três trabalhos
@@ -111,3 +111,7 @@ A coluna **ND da fonte** não é uma conversão para o sistema do card game; val
 | Fichas promovidas por este trabalho | 0 |
 
 **Decisão:** manter este lote em PR rascunho; interromper consolidação antes de qualquer escrita global até evidência das PRs restantes, validação cruzada e autorização.
+
+## Complemento da auditoria editorial
+
+- Em 13/10/2026, conferência direta no [índice editorial Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/) confirmou **TF-415 Gloomflower — Creature Codex (ND3)** e **TF-416 Wind Witch — Tome of Beasts 3 (ND3)**. As duas referências foram corrigidas no `research.json`. Permanecem pendentes a revisão integral de estatísticas/ações, autorização/licenças e aprovação independente.
