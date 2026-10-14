@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 51 / 195.**
+**Armazenadas e verificadas: 61 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -13,6 +13,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/b92a6fcc2467e2af54cf6f1db221022936042462 — 10/10 verificadas: TF-083, TF-084, TF-085, TF-087, TF-089, TF-090, TF-091, TF-100, TF-101, TF-102
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/264cc13c326def74e593723382600d4a0e54c0ff — 10/10 verificadas: TF-103, TF-104, TF-105, TF-106, TF-107, TF-108, TF-109, TF-110, TF-111, TF-112
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d — 10/10 verificadas: TF-113, TF-114, TF-115, TF-116, TF-117, TF-118, TF-119, TF-120, TF-121, TF-122
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9c6cee61e6a3cad23d40f6672a753993797c5d74 — 10/10 verificadas: TF-123, TF-124, TF-125, TF-126, TF-127, TF-128, TF-129, TF-130, TF-131, TF-132
 
 ## Binários publicados e conferidos
 
@@ -67,22 +68,22 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-120 / Ashen Custodian: operational/assets/creature-images/TF-120.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Ashen%20Custodian.webp; 208722 bytes; 712x1077 px; SHA-256: 192287bb3dbf95e387951f7a8ff1a7c1cd257430bdb313d6fc309708133fdfc9; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
 - TF-121 / Animal Lord, Queen of Birds: operational/assets/creature-images/TF-121.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/animallordqueenofbirds.jpg; 83636 bytes; 605x700 px; SHA-256: e86810f58338a429addb4fbb84154f54c7bd80c35276eec5ff0871202ccad951; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
 - TF-122 / Animal Lord, Queen of Cats: operational/assets/creature-images/TF-122.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/animallordqueenofcats.jpg; 58661 bytes; 437x700 px; SHA-256: 9f12092ba9508a0ab7a7d7b71ec4a4cd942fd833f0503ca24daaf5e2e0d2b3b4; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-123 / Animal Lord, Queen of Scorpions: operational/assets/creature-images/TF-123.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Queen%20of%20Scorpions.webp; 179042 bytes; 822x1282 px; SHA-256: 4b14c962c08b481b8ab365b84260b9fe1939386806b7292880550804b71eeca3; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-124 / Animal Lord, Queen of Serpents: operational/assets/creature-images/TF-124.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/animallordqueenofserpents.jpg; 50800 bytes; 523x700 px; SHA-256: 5c26c2972453ed97a2e3cc3c3dd0489a631f3fa7fecdb220980fe78f097834de; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-125 / Animal Lord, Queen of Mammoths: operational/assets/creature-images/TF-125.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Queen%20of%20Mammoths.webp; 178404 bytes; 1200x1617 px; SHA-256: 8452eb11b29d630d0c23aa4d1a80c72bccdaebaf951a89ca29a6616b9acb5c29; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-126 / Giant, Abbanith: operational/assets/creature-images/TF-126.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Abbanith%20Giant.webp; 163446 bytes; 812x1118 px; SHA-256: aabf4cb79ad612a1d884b057d44bc6a6d9db749e31b7e68a125401572dc55ac4; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-127 / Giant, Laestrigonian: operational/assets/creature-images/TF-127.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/laestrigoniangiant.jpg; 61179 bytes; 476x700 px; SHA-256: ea3420ee3e3d7a822772f8684f7d12679bc92187dc18043b4c80dc53b0562f15; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-128 / Giant, Phase: operational/assets/creature-images/TF-128.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Phase%20Giant.webp; 188562 bytes; 851x1148 px; SHA-256: bd7d6622248063039092f3a66060145fe35fae06ada774c7029a1d9e47544558; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-129 / Giant, Snow: operational/assets/creature-images/TF-129.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Snow%20Giant.webp; 227472 bytes; 814x1018 px; SHA-256: 420d28a77e09f6611e18345541e4e0bc97b5d3d1512e8a5fa766d41aadb2b623; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-130 / Giant, Thursir Hearth Priestess: operational/assets/creature-images/TF-130.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Thursir%20Hearth%20Priestess.webp; 193826 bytes; 1000x1591 px; SHA-256: c2f4ca510feb3d988fb5d8b452ea2de2e0f696b402d37f3e1e76659afbb5ef4f; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-131 / Ogre, Rainforest: operational/assets/creature-images/TF-131.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Rainforest%20Ogre.webp; 201916 bytes; 1081x1200 px; SHA-256: 7af8723efec264ce172306b95043c98d61d3793950f649ce929517dc3a2f880e; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
+- TF-132 / Ogre, Rockchewer: operational/assets/creature-images/TF-132.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Rockchewer%20Ogre.webp; 97704 bytes; 1200x1198 px; SHA-256: fac2e992817970c16203f120c19794429834e1bffe06d4852e09fa195bfa20d2; commit: 9c6cee61e6a3cad23d40f6672a753993797c5d74
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
-- TF-123 / Animal Lord, Queen of Scorpions: pending; 
-- TF-124 / Animal Lord, Queen of Serpents: pending; 
-- TF-125 / Animal Lord, Queen of Mammoths: pending; 
-- TF-126 / Giant, Abbanith: pending; 
-- TF-127 / Giant, Laestrigonian: pending; 
-- TF-128 / Giant, Phase: pending; 
-- TF-129 / Giant, Snow: pending; 
-- TF-130 / Giant, Thursir Hearth Priestess: pending; 
-- TF-131 / Ogre, Rainforest: pending; 
-- TF-132 / Ogre, Rockchewer: pending; 
 - TF-133 / Ogre, Tusked Crimson: pending; 
 - TF-134 / Zimwi: pending; 
 - TF-135 / Abaasy: pending; 
