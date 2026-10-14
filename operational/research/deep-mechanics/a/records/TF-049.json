@@ -5,14 +5,17 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "EN Publishing",
+    "publisher": "EN Publishing / Level Up: Advanced 5th Edition",
     "publication": "To Save A Kingdom",
-    "edition_family": "Level Up Advanced 5e",
+    "edition_family": "Advanced 5th Edition (A5E) — DO NOT CONVERT TO D&D 5e",
     "exact_printing": null,
     "challenge_rating": "14",
     "size": "Large",
     "type": "celestial",
-    "alignment": null
+    "alignment": "chaotic",
+    "edition": "Level Up Advanced 5E (A5E), publisher official digital statblock",
+    "experience_points": null,
+    "proficiency_bonus": 5
   },
   "statistics": {
     "armor_class": 19,
@@ -27,29 +30,41 @@
       "CHA": 17
     },
     "speeds": {
-      "andar": 40,
-      "voar": 40,
+      "walk_ft": 40,
+      "fly_ft": 40,
       "hover": true
     },
-    "senses": [
-      "truesight 120 ft."
-    ],
+    "senses": {
+      "truesight_ft": 120,
+      "passive_perception": 12
+    },
     "skills": {
       "Arcana": 8,
       "Intimidation": 8,
-      "Medicine": "7+1d8",
+      "Medicine": {
+        "base_bonus": 7,
+        "additional_expertise_die": "1d8",
+        "edition_specific": true
+      },
       "Religion": 8
     },
     "saving_throws": {
       "WIS": 7
     },
     "languages": [
-      "todos (tongues)"
+      "all languages via tongues"
     ],
     "damage_resistances": [
       "cold",
       "fire",
-      "armas físicas não mágicas"
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "condition": "nonmagical weapons"
+      }
     ],
     "damage_immunities": [
       "necrotic",
@@ -66,171 +81,280 @@
       "petrified",
       "prone",
       "strife"
-    ]
+    ],
+    "armor_class_type": "natural armor",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 2,
+      "CON": 3,
+      "INT": 3,
+      "WIS": 2,
+      "CHA": 3
+    }
   },
   "mechanics": {
     "traits": [
       {
         "name": "Chaotic",
         "category": "passive",
-        "legacy_summary": "Emite aura de Caos.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "aura_alignment": "Chaotic",
+          "edition_specific": "A5E"
+        }
       },
       {
         "name": "Magic Resistance",
         "category": "passive",
-        "legacy_summary": "Vantagem em salvaguardas mágicas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
       },
       {
         "name": "Sickness Carrier",
-        "category": "passive",
-        "legacy_summary": "Ao ser atingido corpo a corpo por arma sem alcance, atacante testa CON CD16 contra febre demoníaca, afetando descanso; magia poderosa cura.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "passive_triggered",
+        "trigger": "a creature hits khyphon with melee weapon attack whose weapon has no reach",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 16,
+          "on_failure": {
+            "infected_with": "demon fever"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "infection": {
+          "on_attempt_long_rest": {
+            "saving_throw": {
+              "ability": "WIS",
+              "dc": 16,
+              "on_failure": {
+                "benefit_from_long_rest": false
+              },
+              "on_success": {
+                "benefit_from_long_rest": true
+              }
+            }
+          },
+          "protection_for_24_hours_by_spells": [
+            "protection from evil and good",
+            "magic circle"
+          ],
+          "permanent_cures": [
+            "heal spell",
+            "more powerful magic"
+          ],
+          "khyphon_can_choose_to_end_infection": true
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "legacy_summary": "Três ataques com bandagens.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bandages",
+            "count": 3
+          }
+        ],
+        "extra_attacks_conditional": {
+          "when": "animated bandages exist",
+          "per_animated_bandage_count": 1,
+          "max_animated_bandages": 4
+        }
       },
       {
         "name": "Bandages",
-        "category": "action",
-        "legacy_summary": "+8, 15 pés, 2d6+4 força e 2d6 psíquico; CAR CD16 contra envenenamento/medo.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "modifier": 4,
+              "type": "force",
+              "average": 11
+            },
+            {
+              "dice": "2d6",
+              "modifier": 0,
+              "type": "psychic",
+              "average": 7
+            }
+          ],
+          "saving_throw": {
+            "ability": "CHA",
+            "dc": 16,
+            "on_failure": {
+              "condition": "poisoned",
+              "duration": "until end of target next turn",
+              "if_fail_by_5_or_more": {
+                "additional_condition": "frightened",
+                "same_duration": true
+              }
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        }
       },
       {
         "name": "Control Bandages",
-        "category": "action",
-        "legacy_summary": "Recarga 6, até quatro bandagens animadas, cada uma podendo realizar ataques adicionais.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "summon_objects",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            6
+          ]
+        },
+        "limits": {
+          "max_active_animated_bandages": 4
+        },
+        "targets": {
+          "own_bandages": true,
+          "alternative": "unworn uncarried bandages visible within 100ft"
+        },
+        "object_stats": {
+          "armor_class": 20,
+          "hit_points": 20,
+          "damage_resistances": [
+            "bludgeoning"
+          ],
+          "damage_immunities": [
+            "psychic",
+            "thunder"
+          ]
+        },
+        "actions": {
+          "when_khyphon_uses_multiattack": "each animated bandage makes one additional Bandages attack"
+        },
+        "end_conditions": [
+          "object at zero hit points",
+          "khyphon incapacitated",
+          "khyphon dies"
+        ]
       }
     ],
     "bonus_actions": [
       {
         "name": "Harm",
-        "category": "bonus_action",
-        "legacy_summary": "Recarga 6, ataque mágico +9 a 20 pés, 60 necrótico e CAR CD16 contra condição/doença temporária.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "bonus_attack",
+        "action_economy": "bonus_action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            6
+          ]
+        },
+        "attack_type": "melee_spell",
+        "attack_bonus": 9,
+        "reach_ft": 20,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": null,
+              "modifier": 60,
+              "type": "necrotic",
+              "average": 60
+            }
+          ],
+          "if_creature": {
+            "saving_throw": {
+              "ability": "CHA",
+              "dc": 16,
+              "on_failure": {
+                "choose_one_of": [
+                  "blinded",
+                  "deafened",
+                  "poisoned",
+                  "disease tier 2 or lower (A5E)"
+                ],
+                "repeat_save": "end of each target turn; success ends"
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            }
+          }
+        }
       }
     ],
     "reactions": [
       {
         "name": "Quick Reaction",
-        "category": "reaction",
-        "legacy_summary": "Até duas reações por rodada, somente uma como oportunidade.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "reaction_economy_modifier",
+        "reactions_per_round": 2,
+        "max_opportunity_attack_reactions_per_round": 1
       },
       {
         "name": "Deflect Attack",
         "category": "reaction",
-        "legacy_summary": "Reduz dano de ataque em 4d6+4, podendo anular efeito de magia mediante oposição de testes.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "action_economy": "reaction",
+        "trigger": "melee, ranged or spell attack would hit khyphon",
+        "effect": {
+          "reduce_damage": {
+            "dice": "4d6",
+            "modifier": 4,
+            "type": "damage_prevention",
+            "average": 18
+          },
+          "if_spell_attack_with_extra_effect": {
+            "opposed_rolls": {
+              "khyphon": "attack roll",
+              "spellcaster": "spellcasting ability check"
+            },
+            "on_khyphon_win": "spell additional effect is negated"
+          }
+        }
       }
     ],
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Bloodied",
+        "category": "A5E_edition_specific",
+        "hit_points_threshold": 97
+      },
+      {
+        "name": "Maneuver DC",
+        "category": "A5E_edition_specific",
+        "dc": 17
+      }
+    ]
   },
   "sources": [
     {
       "url": "https://www.a5e.tools/node/3400",
       "type": "ficha_individual_localizada_em_checkpoint",
       "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://www.a5e.tools/node/3400",
+      "type": "official_A5E_publisher_digital_statblock",
+      "publication": "To Save A Kingdom",
+      "edition": "Advanced 5E",
+      "verification": "all fields and named sections inspected; do not convert A5E disease tiers, maneuver DC, bloodied, expertise die"
     }
   ],
   "source_checkpoint": {
@@ -243,8 +367,17 @@
     "Pendente comparação com livro To Save A Kingdom e imagem."
   ],
   "outstanding": [
-    "Estruturar individualmente traços, ataques, bônus, reações, lendárias, CDs, efeitos, duração, alcance, dados, recargas e limites.",
-    "Checar edições originais, erratas e versões conflitantes antes da integração.",
-    "Dado não verificado permanece null, resumos legados servem apenas como índice de pesquisa."
-  ]
+    "Confirm edition/errata relative to To Save A Kingdom printed or licensed primary version.",
+    "Engine must support A5E-only concepts (bloodied, disease tier, strife, fatigue, expertise die) rather than silently translating them to 5e.",
+    "Independent review of summoned-object attacks, recharge and reactions; artwork verification pending."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_official_A5E_statblock_fully_structured": true,
+    "source_edition_confirmed": "Advanced 5E",
+    "primary_online_publisher_source_reviewed": true,
+    "primary_printed_book_and_errata_reviewed": false,
+    "independent_implementation_review": false,
+    "final_approval": false
+  }
 }
