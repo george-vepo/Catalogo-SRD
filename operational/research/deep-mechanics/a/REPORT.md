@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 59: Porcellina, Glass Gator, Zanskaran Viper (14/10/2026)
+
+- **TF-289 Porcellina:** mordida com CD11 escalável até 15 por acertos de outros membros da matilha, reação Squeal para amedrontar em raio de 10 pés, Poisonous Flesh por toque ou ingestão, Pack Tactics. Token 280×280 sem aprovação final. [Fonte individual](https://kpogl.wikidot.com/monster:porcellina).
+- **TF-290 Glass Gator:** salto direcionado + acerto de Claw para derrubar e habilitar Constrict bônus; agarrar/restringir alvo com veneno periódico, reação Silt Cloud no fundo de água com recarga por descanso. [Fonte](https://kpogl.wikidot.com/monster:glass-gator).
+- **TF-292 Zanskaran Viper:** Bite +4, 2d8+2 perfurante, CON CD13, envenenamento e cegueira por até um minuto, mais 2d6 veneno no início dos turnos com save repetido ao final. [Fonte](https://kpogl.wikidot.com/monster:zanskaran-viper).
+
+**Total após checkpoint:** 87 de 132 estruturas individuais online, 45 ainda resumidas, 0 homologadas; 124 binários de imagem, 8 ausentes e nenhuma arte final aprovada. Fontes comunitárias não substituem impressão, engine ou análise de licença. Sem V-Bridge, merge ou alterações fora de A.
+
+---
+
 # Grupo A — checkpoint 58: Shukankor e Malleables maiores (14/10/2026)
 
 - **TF-283 Shukankor:** quatro réplicas 1/dia, cada qual usando estatísticas de axe beak com traços próprios; telepatia a 120 pés, dispensa por ação bônus, reação Sacrifice Replica que redireciona o ataque, autonomia da réplica sobrevivente em 24 h e crescimento após um mês. Dependência externa das estatísticas de axe beak documentada. [Fonte](https://kpogl.wikidot.com/monster:shukankor).

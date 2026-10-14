@@ -9,15 +9,18 @@
     "publication": "Tome of Beasts 3",
     "edition_family": "5e",
     "exact_printing": null,
-    "challenge_rating": "0.5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "challenge_rating": "1/2",
+    "size": "Tiny",
+    "type": "beast",
+    "alignment": "unaligned",
+    "experience_points": 100,
+    "proficiency_bonus": 2,
+    "source_page": 317
   },
   "statistics": {
     "armor_class": 13,
     "hit_points": 28,
-    "hit_dice": null,
+    "hit_dice": "8d4+8",
     "ability_scores": {
       "STR": 8,
       "DEX": 16,
@@ -26,24 +29,122 @@
       "WIS": 10,
       "CHA": 6
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40
+    },
+    "senses": {
+      "passive_perception": 12
+    },
+    "skills": {
+      "Perception": 2,
+      "Stealth": 5
+    },
+    "saving_throws": {
+      "DEX": 5
+    },
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": -1,
+      "DEX": 3,
+      "CON": 1,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -2
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "category": "conditional_perception_advantage",
+        "advantage_on": "WIS_Perception_when_relying_on_hearing_or_smell"
+      },
+      {
+        "name": "Pack Tactics",
+        "category": "conditional_attack_advantage",
+        "requires": {
+          "ally_within_ft_of_target": 5,
+          "ally_not_incapacitated": true
+        }
+      },
+      {
+        "name": "Poisonous Flesh",
+        "category": "contact_or_ingestion_effect",
+        "triggers": [
+          "touch_porcellina",
+          "eat_meat"
+        ],
+        "save": {
+          "ability": "CON",
+          "dc": 11,
+          "on_failure": {
+            "condition": "poisoned",
+            "duration": "1_hour"
+          }
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d4",
+              "flat": 3,
+              "average": 8,
+              "type": "piercing"
+            }
+          ],
+          "save": {
+            "ability": "DEX",
+            "base_dc": 11,
+            "dc_increase_per_other_porcellina_hit": 1,
+            "tracking_window": "since_end_of_this_porcellina_previous_turn",
+            "max_dc": 15,
+            "on_failure": {
+              "condition": "prone"
+            }
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Squeal",
+        "category": "reaction_area_save",
+        "action_economy": "reaction",
+        "trigger": "hit_by_attack",
+        "radius_ft": 10,
+        "save": {
+          "ability": "WIS",
+          "dc": 11,
+          "on_failure": {
+            "condition": "frightened",
+            "ends": "end_of_target_next_turn"
+          }
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Animal de bando com carne venenosa; ataques de mordida coordenados derrubam a presa, com eficácia crescente entre aliados."
@@ -60,8 +161,8 @@
       "url": "https://kpogl.wikidot.com/monster:porcellina",
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Tome of Beasts 3",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Fonte individual para stats, traits, actions and reactions",
+      "verification": "Conferida online em 14/10/2026; não é fonte oficial da editora"
     }
   ],
   "source_checkpoint": {
@@ -72,9 +173,10 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Bite prone DC increases based on other porcellinas hitting target, with maximum 15.",
+    "Touch/consumption poison effects are not a normal attack rider.",
+    "Image 280x280 is a token and not cleared for production.",
+    "Requer checagem editorial de impressão/errata, QA da engine e licença/arte antes de homologação."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -98,5 +200,18 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:porcellina"
+    ],
+    "source_tier": "secondary_KPOGL",
+    "individual_statblock_read_live": true,
+    "rights_cleared": false
   }
 }
