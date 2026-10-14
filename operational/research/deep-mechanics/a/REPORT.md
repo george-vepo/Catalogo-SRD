@@ -1,3 +1,59 @@
+# SRD Card Game 607 — Grupo A — auditoria atualizada (2026-10-14)
+
+**Branch:** `chatgpt/srd607-deep-mechanics-a`  
+**PR:** [#8](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/8) — rascunho, sem merge.  
+**SHA auditado:** [`ade2f6873bc549ea1c5adcdc1db1567dd0f01b7e`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/ade2f6873bc549ea1c5adcdc1db1567dd0f01b7e).  
+**Fonte de escopo:** 40 + 40 + 52 IDs (132 únicos).
+
+## Situação efetiva (esta atualização prevalece sobre os números históricos abaixo)
+
+| Métrica | Quantidade |
+|---|---:|
+| IDs exclusivos / JSONs presentes na árvore | 132 / 132 |
+| Fichas com homologação mecânica editorial integral | **0** |
+| Fichas parciais | **131** |
+| Fichas bloqueadas | **1** (KP-S011) |
+| Fichas estruturadas integralmente a partir de fontes individuais online, ainda sem homologação editorial | **6** |
+| Imagens binárias fisicamente presentes na branch A | **73** |
+| Imagens binárias ausentes | **59** |
+| Imagens tecnicamente reaproveitadas de E/F nesta retomada | **71** (53 E + 18 F) |
+| Imagens aprovadas visualmente, juridicamente e para produção | **0** |
+
+**A meta de 132 fichas completas com 132 imagens validadas NÃO foi atingida.** Os 73 binários existem e seus blobs foram auditados, mas dois são miniaturas inadequadas; 71 reaproveitados exigem inspeção visual individual e análise dos direitos de uso. Nenhum desses status deve ser interpretado como arte editorial de produção aprovada.
+
+### Pesquisa mecânica adicional
+
+- **TF-027 — Chroma Lizard:** reconstituídas as características *Mirror Scales*, *Mirror Shy* e *Radiant Reflection*, além de *Dazzling Display*, *Multiattack*, *Bite*, *Claw*, CDs, alcance, dados e condições, com fontes por criatura. Mudança de **BLOQUEADA** para **PARCIAL**, pois falta comparação editorial primária e revisão da engine.
+- **KP-S011 — Abominable Beauty:** estatísticas, ataques, testes e recursos detalhados conforme transcrição 5eSRD; incorporada a errata oficial da Kobold Press de 29/05/2025 que corrige o tipo de dano do *Slam* na revisão de 2023. **Mantida BLOQUEADA:** a transcrição contém *Undead Nature* referente a *accursed defiler*, outro monstro; sem prova da edição primária não é válido incluí-la.
+- **TF-024, TF-025, TF-026, TF-031, TF-032:** incluídos XP da fonte, modificadores dos seis atributos e valores médios de ataques, conforme as fichas consultadas. Permanecem parciais aguardando a impressão/errata e revisão independente.
+- Para as demais fichas, os JSONs existentes mantêm lacunas de parâmetros mecânicos e não foram homologados.
+
+### Checkpoints novos, exclusivos do diretório A
+
+| Checkpoint | IDs exatos | Total | Commit |
+|---:|---|---:|---|
+| 15 | TF-027, KP-S011 | 2 | [a6d619df34](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/a6d619df349da1c890ca54435fcbf2083131b003) |
+| 16 | TF-211, TF-212, TF-213, TF-214, TF-215, TF-216, TF-217, TF-218, TF-219, TF-220 | 10 | [85a659169d](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/85a659169d8f9898d3537f838b1c79c27b01b5de) |
+| 17 | TF-059, TF-221, TF-222, TF-223, TF-224, TF-225, TF-227, TF-228, TF-229, TF-230 | 10 | [3852e0f202](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3852e0f202a3f9c3cc7f9203d279a7f9b2ca6be3) |
+| 18 | TF-232, TF-233, TF-234, TF-235, TF-236, TF-237, TF-238, TF-240, TF-241, TF-242 | 10 | [d261bcac91](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/d261bcac917f8d5ea059d5c95ed7356391e7eeeb) |
+| 19 | TF-243, TF-244, TF-245, TF-246, TF-247, TF-248, TF-249, TF-250, TF-251, TF-252 | 10 | [351f7dd7de](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/351f7dd7deb149f319e948b0997a6067b790c7bd) |
+| 20 | TF-253, TF-254, TF-256, TF-257, TF-258, TF-259, TF-260, TF-261, TF-263, TF-265 | 10 | [9ce19dda2c](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9ce19dda2c6e1b1a7faf8b101fc63ed7439e913c) |
+| 21 | TF-266, TF-268, TF-269 | 3 | [56d6dd8c74](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/56d6dd8c74126ce14dcc75ace459eced0ca9f99b) |
+| 22 | TF-270, TF-272, TF-273, TF-277, TF-278, TF-279, TF-280, TF-288, TF-289, TF-290 | 10 | [234df4c125](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/234df4c1250576acecb7682b1688c82380536a6b) |
+| 23 | TF-292, TF-293, TF-296, TF-297, TF-298, TF-299, TF-300, TF-301 | 8 | [210bb5f5b7](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/210bb5f5b7ebedac747d69809439ce03ceed2b72) |
+| 24 | TF-024, TF-025, TF-026, TF-031, TF-032 | 5 | [ade2f6873b](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/ade2f6873bc549ea1c5adcdc1db1567dd0f01b7e) |
+
+### Evidências e pendências
+
+- Registros em [records/](records/), imagens em [images/](images/) e índice de SHA-256, dimensões, origens e commits por imagem em [manifest.json](manifest.json), seção `image_assets`.
+- As imagens transferidas vieram de `chatgpt/srd607-image-assets-e` e `chatgpt/srd607-image-assets-f` por **reuso do mesmo Git blob SHA** sem alterar essas branches. Os registros de origem têm hashes SHA-256 e dimensões.
+- Auditoria da árvore do GitHub constatou **132 JSONs + 73 binários**, com os 71 blobs transferidos idênticos (SHA + tamanho) aos das branches de origem. Os 132 JSONs haviam sido parseados anteriormente; a rodada atual confirmou a árvore completa e validou pontos alterados, não constituiu nova releitura semântica independente de todos os JSONs.
+- Ainda precisam de pesquisa editorial integral até 132 fichas, verificação de discrepâncias de impressão, implementabilidade das regras, direitos e avaliação visual das artes e aquisição/produção de **59** arquivos de imagens faltantes, além de substituição das duas miniaturas.
+
+---
+
+## Histórico anterior (reproduzido para rastreabilidade; as contagens a seguir são antigas)
+
 # SRD Card Game 607 — Pesquisa mecânica integral A: relatório real
 
 **Data:** 2026-10-13  
