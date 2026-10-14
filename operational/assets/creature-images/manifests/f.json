@@ -16,11 +16,11 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 81,
-    "verified_after_upload": 81,
-    "pending": 113,
-    "stored_bytes": 10270130,
-    "checkpoint_count": 13
+    "persisted_binary_files": 83,
+    "verified_after_upload": 83,
+    "pending": 111,
+    "stored_bytes": 10495614,
+    "checkpoint_count": 14
   },
   "checkpoints": [
     {
@@ -194,6 +194,15 @@
         "TF-410"
       ],
       "validation": "verified after upload"
+    },
+    {
+      "sequence": 14,
+      "commit": "bc23a4631d08c4a308793a3b75bd6f66cb1ba106",
+      "images_added": [
+        "TF-400",
+        "TF-523"
+      ],
+      "validation": "post-upload bytes, SHA-256, dimensions, WebP and Git blob SHA verified"
     }
   ],
   "blocked_ids": [
@@ -237,7 +246,6 @@
     "TF-397",
     "TF-398",
     "TF-399",
-    "TF-400",
     "TF-402",
     "TF-405",
     "TF-408",
@@ -308,8 +316,7 @@
     "TF-517",
     "TF-518",
     "TF-521",
-    "TF-522",
-    "TF-523"
+    "TF-522"
   ],
   "images": [
     {
@@ -2509,19 +2516,27 @@
     {
       "id": "TF-400",
       "name": "Headless Horseman",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/MonsterManualExpanded2/bestiary/tokens/Headlesshorseman.webp",
+      "repository_path": "operational/assets/creature-images/TF-400.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "size_bytes": 66896,
+      "sha256": "696b6580ff65fd309ed0296f3a6286d9e72bf88f2d084ae5155751cbc01c4020",
+      "persistence_commit": "bc23a4631d08c4a308793a3b75bd6f66cb1ba106",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "GitHub fetch_file(ref=branch,encoding=base64) depois do commit; assinatura WebP, dimensoes, tamanho em bytes, SHA-256 e Git blob SHA conferidos novamente.",
+        "git_blob_sha": "d002a268970aefba5ff1fbcbac594040256c2e6e",
+        "quality_note": "Token 256x256: integridade comprovada; qualidade final de impressão deve ser avaliada."
+      },
+      "source_repo": "TheGiddyLimit/homebrew-img",
+      "source_path": "img/MonsterManualExpanded2/bestiary/tokens/Headlesshorseman.webp",
+      "source_git_blob_sha": "d002a268970aefba5ff1fbcbac594040256c2e6e"
     },
     {
       "id": "TF-401",
@@ -4167,19 +4182,27 @@
     {
       "id": "TF-523",
       "name": "Pugilist",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/Pugilist2024/Class/Pugilist.webp",
+      "repository_path": "operational/assets/creature-images/TF-523.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 1700,
+        "height": 2397
+      },
+      "size_bytes": 158588,
+      "sha256": "00d13e3fd97164282f6b614a042d77e526065786f500af9d1169e196b75fade6",
+      "persistence_commit": "bc23a4631d08c4a308793a3b75bd6f66cb1ba106",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "GitHub fetch_file(ref=branch,encoding=base64) depois do commit; assinatura WebP, dimensoes, tamanho em bytes, SHA-256 e Git blob SHA conferidos novamente.",
+        "git_blob_sha": "03c8e21edec52cffd0016f9051273edb40eec7d1",
+        "quality_note": "Arte do arquétipo Pugilist na obra Pugilist2024; representação temática, sem alegação de ilustração canônica do statblock."
+      },
+      "source_repo": "TheGiddyLimit/homebrew-img",
+      "source_path": "img/Pugilist2024/Class/Pugilist.webp",
+      "source_git_blob_sha": "03c8e21edec52cffd0016f9051273edb40eec7d1"
     }
   ]
 }
