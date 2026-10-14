@@ -4,8 +4,8 @@
   "branch": "chatgpt/srd607-image-assets-e",
   "scope": "pending_images.slice(195,390)",
   "total": 195,
-  "verified": 175,
-  "not_found": 18,
+  "verified": 176,
+  "not_found": 16,
   "last_commit": "a90f1ba1db57873052c1b0b231c056acd523fa9b",
   "checkpoints": [
     {
@@ -318,13 +318,7 @@
       "verified": 5
     }
   ],
-  "errors": [
-    {
-      "id": "TF-187",
-      "stage": "acquisition",
-      "error": "RACE: new commit not branch HEAD"
-    }
-  ],
+  "errors": [],
   "entries": [
     {
       "id": "TF-059",
@@ -898,9 +892,13 @@
       "id": "TF-097",
       "creature": "Ancient Amethyst Dragon",
       "position": 224,
-      "status": "source_not_found",
-      "source_candidate": null,
-      "source_candidates": []
+      "status": "pending",
+      "source_candidate": "bestiary/FTD/Ancient Amethyst Dragon.webp",
+      "source_candidates": [
+        "bestiary/FTD/Ancient Amethyst Dragon.webp"
+      ],
+      "source_repo": "5etools-mirror-2/5etools-img",
+      "source_ref": "main"
     },
     {
       "id": "TF-099",
@@ -2565,7 +2563,7 @@
       "id": "TF-187",
       "creature": "Bearfolk",
       "position": 309,
-      "status": "blocked",
+      "status": "verified",
       "source_candidate": "_img/ToB/Bearfolk.webp",
       "source_candidates": [
         "_img/ToB/Bearfolk.webp"
@@ -2579,8 +2577,7 @@
       "sha256": "0a5dc138e3fc53b35ee55c07162ccdac7b639b752b2bb680a79c5157f874e3ec",
       "blob_sha": "78eb4b2f368586b019c9f544d2dcb3cf27e3d6de",
       "commit": "2b2c0e6880675869044734d993c82311e9d6a28a",
-      "verified_readback": true,
-      "error": "RACE: new commit not branch HEAD"
+      "verified_readback": true
     },
     {
       "id": "TF-188",
@@ -3510,9 +3507,11 @@
       "id": "TF-240",
       "creature": "Aboleth, Nihileth, Nihilethic Zombie",
       "position": 361,
-      "status": "source_not_found",
-      "source_candidate": null,
-      "source_candidates": []
+      "status": "pending",
+      "source_candidate": "_img/ToB/Nihilethic Zombie.webp",
+      "source_candidates": [
+        "_img/ToB/Nihilethic Zombie.webp"
+      ]
     },
     {
       "id": "TF-241",
@@ -4004,5 +4003,5 @@
       "verified_readback": true
     }
   ],
-  "remaining": 20
+  "remaining": 19
 }
