@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 12 lotes validados, 120/395 fichas (275 restantes).
+**Situação:** EM ANDAMENTO — 13 lotes validados, 130/395 fichas (265 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -95,4 +95,11 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 9 fichas completas em conteúdo e 1 completa com ressalvas: TF-132 (Gravel Spray condicionado a Chew Rock; fonte não esclarece se a carga triturada é consumida por disparo). As dez imagens são vinculadas diretamente pelos JSONs no diretório C e seus SHAs/tamanhos foram conferidos. TF-127 tem largura de 476 pixels, inferior a 500 px. A comparação com obras originais e erratas, inspeção visual independente e licenças comerciais continuam pendentes.
 
 **Consolidado:** 120/395; 77 completas em conteúdo, 22 com ressalvas, 20 incompletas e 1 não verificável. Imagens: 65 diretas, 52 via manifesto e 3 ausentes.
+
+
+## Lote 013 — TF-136–TF-147 (10 IDs conforme ordem do CSV)
+
+6 completas em conteúdo, 3 com ressalvas: TF-136 (erro de digitação na DC), TF-138 (Rock +2 descompassado de FOR22) e TF-144 (combinação de ataques no Multiattack sem confirmação). **TF-143 é incompleta**: fonte não relaciona cada espírito a um traço perdido ao expulsá-lo. Dez imagens físicas diretamente vinculadas nos JSONs C, com SHA/tamanho conferidos; três imagens têm dimensão inferior a 500 px (TF-138, TF-139 e TF-143). Não houve homologação de arte, fonte editorial ou direitos.
+
+**Consolidado:** 130/395; 83 completas em conteúdo, 25 com ressalvas, 21 incompletas, 1 não verificável; 75 vínculos diretos, 52 via manifesto, 3 imagens ausentes.
 
