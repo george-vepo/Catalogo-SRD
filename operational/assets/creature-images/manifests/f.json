@@ -16,11 +16,11 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 88,
-    "verified_after_upload": 88,
-    "pending": 106,
-    "stored_bytes": 11166016,
-    "checkpoint_count": 17
+    "persisted_binary_files": 91,
+    "verified_after_upload": 91,
+    "pending": 103,
+    "stored_bytes": 11777398,
+    "checkpoint_count": 19
   },
   "checkpoints": [
     {
@@ -229,6 +229,23 @@
       ],
       "commit": "3469d0d9b53f951da27fa9daa9e4a9018c777256",
       "validation": "Git blob, WebP, bytes, SHA-256 measured before upload; full binary identity after upload"
+    },
+    {
+      "sequence": 18,
+      "images_added": [
+        "TF-444",
+        "TF-450"
+      ],
+      "commit": "5d18dbadc72b58578dfa5264f3a51e51e269216b",
+      "validation": "GitHub post-upload fetch: full binary bytes equal original, Git blob SHAs equal; SHA-256 and dimensions measured from source"
+    },
+    {
+      "sequence": 19,
+      "images_added": [
+        "TF-515"
+      ],
+      "commit": "e63b1f98355843db07fb02b5e5b04d553b7847b6",
+      "validation": "GitHub post-upload fetch: full binary bytes equal original, Git blob SHA equal; SHA-256 and dimensions measured from source"
     }
   ],
   "blocked_ids": [
@@ -283,12 +300,10 @@
     "TF-431",
     "TF-434",
     "TF-442",
-    "TF-444",
     "TF-446",
     "TF-447",
     "TF-448",
     "TF-449",
-    "TF-450",
     "TF-456",
     "TF-459",
     "TF-461",
@@ -332,7 +347,6 @@
     "TF-511",
     "TF-513",
     "TF-514",
-    "TF-515",
     "TF-516",
     "TF-517",
     "TF-518",
@@ -3183,19 +3197,27 @@
     {
       "id": "TF-444",
       "name": "Flesh Guardian",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/flesh-guardian.webp",
+      "repository_path": "operational/assets/creature-images/TF-444.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "size_bytes": 82606,
+      "sha256": "e9f552ac91a7f789c8e22f15f1860eed656b8ba0529ad35af6aa883a1f26e3ab",
+      "persistence_commit": "5d18dbadc72b58578dfa5264f3a51e51e269216b",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Source mapped by the creature's own packs/monsters JSON; pre-upload WebP signature, dimensions and SHA-256 checked; recovered full binary after upload with GitHub fetch_file(base64), exact identity to original source and Git blob SHA matched.",
+        "git_blob_sha": "1f6f67375b81e435a1aeeb2f4622404153ea22ea",
+        "quality_note": "Imagem de 300 px: integridade validada, resolução gráfica baixa para impressão de cartas."
+      },
+      "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+      "source_path": "public/assets/flesh-guardian.webp",
+      "source_git_blob_sha": "1f6f67375b81e435a1aeeb2f4622404153ea22ea"
     },
     {
       "id": "TF-446",
@@ -3268,19 +3290,27 @@
     {
       "id": "TF-450",
       "name": "Iron Guardian",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/iron-guardian.webp",
+      "repository_path": "operational/assets/creature-images/TF-450.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 600,
+        "height": 600
+      },
+      "size_bytes": 417540,
+      "sha256": "4a5f4e06cfe73d5700fc17753ef79f2e05ea8cb44440460ed1b6d759f7d1d0eb",
+      "persistence_commit": "5d18dbadc72b58578dfa5264f3a51e51e269216b",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Source mapped by the creature's own packs/monsters JSON; pre-upload WebP signature, dimensions and SHA-256 checked; recovered full binary after upload with GitHub fetch_file(base64), exact identity to original source and Git blob SHA matched.",
+        "git_blob_sha": "b71c45c55f49c19a6bee92d74e3275f715dce02d",
+        "quality_note": "Correspondência individual entre ficha e asset; revisão artística final pendente."
+      },
+      "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+      "source_path": "public/assets/iron-guardian.webp",
+      "source_git_blob_sha": "b71c45c55f49c19a6bee92d74e3275f715dce02d"
     },
     {
       "id": "TF-456",
@@ -4116,19 +4146,27 @@
     {
       "id": "TF-515",
       "name": "Malcubus",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/malcubus.webp",
+      "repository_path": "operational/assets/creature-images/TF-515.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "size_bytes": 111236,
+      "sha256": "9755c6c87dbde1cd141cdb32cfea7fb281dc1d65301136d490320a8e99c597ef",
+      "persistence_commit": "e63b1f98355843db07fb02b5e5b04d553b7847b6",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Source mapped by the creature's own packs/monsters JSON; pre-upload WebP signature, dimensions and SHA-256 checked; recovered full binary after upload with GitHub fetch_file(base64), exact identity to original source and Git blob SHA matched.",
+        "git_blob_sha": "762ec4c25dc93a66ab6993a67794b2e53303e21c",
+        "quality_note": "Imagem de 300 px: integridade validada, resolução gráfica baixa para impressão de cartas."
+      },
+      "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+      "source_path": "public/assets/malcubus.webp",
+      "source_git_blob_sha": "762ec4c25dc93a66ab6993a67794b2e53303e21c"
     },
     {
       "id": "TF-516",

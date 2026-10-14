@@ -1,31 +1,33 @@
-# SRD Card Game 607 — lote F: imagens binárias (parcial)
+# SRD Card Game 607 — imagens F (entrega parcial auditável)
 
-## Seleção e concorrência
+## Escopo e preflight
 
 - Repo: `george-vepo/SRD-Card-Game-607-Supervisor`.
-- Commit-base: `a962c48a1169c2ef2be8137715a095a596753b32`.
-- Branch: `chatgpt/srd607-image-assets-f`; destino da PR: `chatgpt/srd607-research-checkpoints-20261011`.
-- CSV: `operational/research/catalog-ledger-20261011-v27/catalog-status.csv`; blob SHA: `9b703f40bb33b778992d0ba06a20704b19b3c9eb`.
-- 584 registros com coluna Imagem não iniciando por VERIFICADA; `pending_images.slice(390,584)` = 194 IDs, começando TF-270 e terminando TF-523, sem assumir sequência contínua.
-- Exclusividade da branch e do escopo preservada: somente imagens TF do grupo F e `manifests/f.json`/`reports/f.md`; nenhuma alteração em imagens D/E, CSV canônico ou globais.
-- Checkpoints de até dez imagens, blob Git base64, commits de persistência, atualização do ref via SHA esperado; sem merge.
+- Base imutável: `a962c48a1169c2ef2be8137715a095a596753b32`.
+- CSV: `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (blob SHA `9b703f40bb33b778992d0ba06a20704b19b3c9eb`).
+- Seleção: `Imagem` não inicia por `VERIFICADA` = 584 entradas; `pending_images.slice(390,584)` = 194 IDs exclusivos, TF-270 a TF-523 (não são números consecutivos).
+- Branch de trabalho: `chatgpt/srd607-image-assets-f`; PR draft: https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/5; base da PR: `chatgpt/srd607-research-checkpoints-20261011`. Nenhum merge.
+- Concorrência: commit da branch confirmado antes da persistência, escritas por Git blobs base64 / trees / commits e atualização de ref com lease de SHA.
+- Arquivos modificados limitados a `operational/assets/creature-images/TF-*`, `manifests/f.json` e `reports/f.md`. CSV, arquivos globais e imagens D/E preservados.
+- Arte de Flesh Guardian, Iron Guardian e Malcubus tem correspondência explícita nos registros próprios de `packs/monsters` do FoundryVTT Level Up Official. Os outros arquivos genéricos ou placeholders desse sistema não foram usados.
+- Checkpoints de até 10. Para os novos arquivos, validação pós-upload por recuperação e igualdade binária completa com as fontes; MIME WebP, tamanho, dimensões e SHA-256 registrados. Checkpoints mais antigos conservam suas evidências, não revalidados integralmente nesta continuação.
 
-## Resumo validado
+## Resultado objetivo
 
-| Indicador | Quantidade |
+| Métrica | Valor |
 |---|---:|
-| Escopo exclusivo | 194 |
-| Arquivos binários no GitHub | **88** |
-| Registros com validação pós-upload | **88** |
-| Pendentes / bloqueados | **106** |
-| Bytes armazenados | **11.166.016** |
-| Checkpoints | **17** |
+| Total selecionado | **194** |
+| Arquivos físicos de imagem existentes na branch | **91** |
+| Imagens com validação pós-upload registrada | **91** |
+| Ausentes ou bloqueados | **103** |
+| Bytes de imagens | **11.777.398** |
+| Checkpoints de até 10 imagens | **19** |
 
-**Escopo ainda incompleto.** As verificações antigas constam dos checkpoints anteriores; os checkpoints 15, 16 e 17 incluíram recuperação individual, correspondência de Git blob SHA e igualdade binária integral à origem. Assinatura WebP, tamanho, dimensões e SHA-256 foram calculados antes do upload, e preservados integralmente pela verificação binária pós-upload.
+**Observação:** integridade dos bytes e nome coincidente com asset da ficha não comprovam qualidade estética ou resolução adequada para impressão. As imagens de 300 × 300 px demandam avaliação antes de produção final.
 
-## Arquivos físicos confirmados (88)
+## Binários confirmados (91)
 
-| ID | Nome | Caminho real | Fonte | Extensão / MIME | Dimensões | Bytes | SHA-256 | Commit | Validação |
+| ID | Criatura | Caminho no repo | Fonte | Extensão / MIME | Dimensões | Bytes | SHA-256 | Commit da persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
 | TF-270 | Black Shuck | `operational/assets/creature-images/TF-270.png` | [fonte](https://github.com/seanperkins/isekai-game/blob/HEAD/assets/sheets/anim_wolf_black_shuck.png) | .png / image/png | 512×809 | 80532 | `811ad2b19e7381185f49cbc043a8c754446a8dc7a3de5041723ee2141a3468cb` | `d5c3301e83107e2a994669536f992f2d54c0cc78` | PASS |
 | TF-272 | Light Eater | `operational/assets/creature-images/TF-272.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/ToB3/bestiary/tokens/Light%20Eater.webp) | .webp / image/webp | 280×280 | 84754 | `6c92a666b4d636da2f9cdeae6bae0d31be43576da2fa0db7c50def36c5a52eff` | `3592249f6fec9b0b1f670f4c0e19bf1d86d62881` | PASS |
@@ -109,16 +111,19 @@
 | TF-423 | Spawn of Chernobog | `operational/assets/creature-images/TF-423.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/Spawnofchernobog.webp) | .webp / image/webp | 587×1064 | 124690 | `0924f6b42405466c1ce589f48bf9b946ade2bb1198a422b7a6998e5101de23e1` | `dd89b865389ab6a379885ed5220ddf6bad85b3ab` | PASS |
 | TF-424 | Soul Eater | `operational/assets/creature-images/TF-424.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/ToB1-2023/bestiary/Soul%20Eater.webp) | .webp / image/webp | 781×1000 | 172536 | `1df39ab86f46bb32fabcf1989583b07faf1ee746e6c086a4c70c5b82682f8323` | `0a06d9a576370c8a8c27b61f39e8f95294d2f48d` | PASS |
 | TF-426 | Planar Flora, Thorned Sulfurlord | `operational/assets/creature-images/TF-426.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/CCodex/Thornedsulfurlord.webp) | .webp / image/webp | 964×887 | 180870 | `945c9482deb9636e68c8d004f8e915f599220a4e812db472eaad25d646e64742` | `0a06d9a576370c8a8c27b61f39e8f95294d2f48d` | PASS |
+| TF-444 | Flesh Guardian | `operational/assets/creature-images/TF-444.webp` | [fonte](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/flesh-guardian.webp) | .webp / image/webp | 300×300 | 82606 | `e9f552ac91a7f789c8e22f15f1860eed656b8ba0529ad35af6aa883a1f26e3ab` | `5d18dbadc72b58578dfa5264f3a51e51e269216b` | PASS |
+| TF-450 | Iron Guardian | `operational/assets/creature-images/TF-450.webp` | [fonte](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/iron-guardian.webp) | .webp / image/webp | 600×600 | 417540 | `4a5f4e06cfe73d5700fc17753ef79f2e05ea8cb44440460ed1b6d759f7d1d0eb` | `5d18dbadc72b58578dfa5264f3a51e51e269216b` | PASS |
 | TF-485 | Goblin Boss | `operational/assets/creature-images/TF-485.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/AngryGolemGamesMonsterManual/Goblin_Boss_Avatar.webp) | .webp / image/webp | 1536×1340 | 319776 | `9c8a5afc9f773c6edfa416b39eb2e7c5fc66844c92fcd4bc18112e8184723129` | `16c28cb923e13c977f396b53c7b261d1ed9f20ba` | PASS |
 | TF-486 | Goblin Cursespitter | `operational/assets/creature-images/TF-486.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/FleeMortals/Fluff/Goblin%20Cursespitter.webp) | .webp / image/webp | 614×631 | 66086 | `41a4dcc0169c70d5f33fceb2eaec0abb2bfcd8dfc2cb6eade901ef6b074e3d6c` | `16c28cb923e13c977f396b53c7b261d1ed9f20ba` | PASS |
 | TF-490 | Goblin Lackey | `operational/assets/creature-images/TF-490.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/FleeMortals/Fluff/Goblin%20Lackey.webp) | .webp / image/webp | 796×786 | 137082 | `8c44074a7d95453149c4e80a08b3203252b2c0b84f6374e81558a61653194dbd` | `16c28cb923e13c977f396b53c7b261d1ed9f20ba` | PASS |
 | TF-497 | Faun | `operational/assets/creature-images/TF-497.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/BoBH/Faun.webp) | .webp / image/webp | 280×280 | 83992 | `109f636c8053caa351ba2b813b7e5208581904dc8ca06e44539eb6fcca9e932f` | `3469d0d9b53f951da27fa9daa9e4a9018c777256` | PASS |
+| TF-515 | Malcubus | `operational/assets/creature-images/TF-515.webp` | [fonte](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/malcubus.webp) | .webp / image/webp | 300×300 | 111236 | `9755c6c87dbde1cd141cdb32cfea7fb281dc1d65301136d490320a8e99c597ef` | `e63b1f98355843db07fb02b5e5b04d553b7847b6` | PASS |
 | TF-519 | Frilled Lizard | `operational/assets/creature-images/TF-519.png` | [fonte](https://github.com/ANTALLIS/grahams-game/blob/HEAD/rltiles/mon/animals/frilled_lizard.png) | .png / image/png | 32×32 | 3417 | `cce2fa7f14e82fa99082e2bb0b0e0c45f5a58dd78b05d697abbfd89bcb2ebbb2` | `d5c3301e83107e2a994669536f992f2d54c0cc78` | PASS |
 | TF-523 | Pugilist | `operational/assets/creature-images/TF-523.webp` | [fonte](https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/Pugilist2024/Class/Pugilist.webp) | .webp / image/webp | 1700×2397 | 158588 | `00d13e3fd97164282f6b614a042d77e526065786f500af9d1169e196b75fade6` | `bc23a4631d08c4a308793a3b75bd6f66cb1ba106` | PASS |
 
-## Pendências (106)
+## Bloqueados e pendências (103)
 
-| ID | Nome | Razão |
+| ID | Criatura | Motivo |
 |---|---|---|
 | TF-274 | Malleable, Minor | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-275 | Maw Swarm | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -171,12 +176,10 @@
 | TF-431 | Conjured Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-434 | Crusher | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-442 | Flame-Spitting Statue | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-444 | Flesh Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-446 | Grave Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-447 | Hound Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-448 | Imprisoned Celestial | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-449 | Imprisoned Fiend | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-450 | Iron Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-456 | Scarecrow Harvester | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-459 | Ankheg Empress | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-461 | Ankheg Spawn | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -220,7 +223,6 @@
 | TF-511 | Fiendbloom Awakened Tree | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-513 | Improved Spirit Soldier | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-514 | Drainpipe Gargoyle | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-515 | Malcubus | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-516 | Kanos Spawn | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-517 | Imp Flock | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-518 | Infernal Dwarf | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -229,7 +231,7 @@
 
 ## Histórico de checkpoints
 
-| # | IDs | SHA do commit | Verificação |
+| # | IDs adicionados | Commit | Evidência |
 |---:|---|---|---|
 | 1 | TF-270, TF-285, TF-409, TF-519 | `d5c3301e83107e2a994669536f992f2d54c0cc78` | verified after upload |
 | 2 | TF-272, TF-278, TF-279, TF-280, TF-289, TF-290, TF-309 | `3592249f6fec9b0b1f670f4c0e19bf1d86d62881` | verified after upload |
@@ -248,5 +250,7 @@
 | 15 | TF-485, TF-486, TF-490 | `16c28cb923e13c977f396b53c7b261d1ed9f20ba` | after upload: git blob identity and all base64 bytes equal source; pre-upload SHA-256 and dimensions recorded |
 | 16 | TF-338 | `6847194a39a6e9062b2faf5c7dd12672f1674555` | after upload: git blob identity and all base64 bytes equal source; pre-upload SHA-256 and dimensions recorded |
 | 17 | TF-497 | `3469d0d9b53f951da27fa9daa9e4a9018c777256` | Git blob, WebP, bytes, SHA-256 measured before upload; full binary identity after upload |
+| 18 | TF-444, TF-450 | `5d18dbadc72b58578dfa5264f3a51e51e269216b` | GitHub post-upload fetch: full binary bytes equal original, Git blob SHAs equal; SHA-256 and dimensions measured from source |
+| 19 | TF-515 | `e63b1f98355843db07fb02b5e5b04d553b7847b6` | GitHub post-upload fetch: full binary bytes equal original, Git blob SHA equal; SHA-256 and dimensions measured from source |
 
-**Estado: parcial (88/194). PR deve permanecer em rascunho e não sofrer merge.**
+**Estado: PARCIAL. Não declarar 194/194 até existir e ser validado cada binário. Sem merge.**
