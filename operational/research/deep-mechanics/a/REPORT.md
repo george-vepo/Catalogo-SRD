@@ -6,6 +6,8 @@
 
 Fontes individuais: [Black Crier](https://kpogl.wikidot.com/monster:black-crier), [Corpse Mound](https://kpogl.wikidot.com/monster:corpse-mound), [Asp Vine](https://kpogl.wikidot.com/monster:asp-vine). Todas transcrições secundárias, ainda sem impressão/errata/engine homologadas. **57/132 fichas estruturadas no nível individual online, 75 ainda resumidas, 0 homologadas; 124/132 binários de imagem, 8 ausentes e 0 artes aprovadas.** Sem V-Bridge, merge ou mudança de outros grupos.
 
+**Auditoria remota #49:** [`9d0aca0cbdc4`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9d0aca0cbdc4713b85af6cca459b3d7d75437f24). Os 3 JSONs foram relidos via API, tiveram seus IDs e ações verificados; 3 imagens já existentes coincidem com Git blob SHA e bytes respectivos. Comparação entre commits: somente 5 arquivos de A modificados; diretório de imagem possui 124 binários. Isso **não** substitui inspeção visual, licença nem validação editorial.
+
 ---
 
 # Grupo A — checkpoint 48: Chimeric Phantom, Old Salt e Yowler (14/10/2026)
