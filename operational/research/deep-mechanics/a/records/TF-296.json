@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "4",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "celestial",
+    "alignment": "lawful_neutral",
+    "source_page": 28,
+    "experience_points": 1100,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 14,
     "hit_points": 68,
-    "hit_dice": null,
+    "hit_dice": "8d8+32",
     "ability_scores": {
       "STR": 17,
       "DEX": 14,
@@ -26,24 +29,223 @@
       "WIS": 16,
       "CHA": 18
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40,
+      "fly_ft": 60
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 15
+    },
+    "skills": {
+      "Deception": 6,
+      "History": 4,
+      "Intimidation": 6,
+      "Perception": 5
+    },
+    "saving_throws": {
+      "CON": 6,
+      "WIS": 5,
+      "CHA": 6
+    },
+    "languages": {
+      "spoken": "all_languages",
+      "telepathy_ft": 60
+    },
+    "damage_resistances": [
+      "necrotic",
+      "radiant",
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "from": "nonmagical_weapons"
+      }
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "poisoned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 2,
+      "CON": 4,
+      "INT": 2,
+      "WIS": 3,
+      "CHA": 4
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Death's Accomplice",
+        "category": "damage_type_choice",
+        "when_dealing": "radiant_damage",
+        "may_replace_with": "necrotic_damage"
+      },
+      {
+        "name": "Fiendish Countenance",
+        "category": "planar_disguise",
+        "precondition": "in_plane_native_to_fiends",
+        "appears_as": "fiend_native_to_plane",
+        "cannot_be_detected_as_celestial_until_any": [
+          "reveals_true_nature_without_action",
+          "uses_Divine_Dictum",
+          "uses_Spirit_Usher",
+          "uses_Unmake_Contract"
+        ]
+      },
+      {
+        "name": "Immortal Nature",
+        "category": "sustenance",
+        "does_not_require": [
+          "food",
+          "drink",
+          "sleep"
+        ]
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "save_advantage",
+        "against": [
+          "spells",
+          "other_magical_effects"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Lantern Flail",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Lantern Flail",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "flat": 3,
+              "average": 8,
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "1d8",
+              "flat": 0,
+              "average": 4,
+              "type": "radiant"
+            }
+          ],
+          "additional_if_target_type": [
+            "fiend",
+            "undead"
+          ],
+          "additional_damage": {
+            "dice": "3d6",
+            "average": 10,
+            "type": "radiant"
+          }
+        }
+      },
+      {
+        "name": "Divine Dictum",
+        "category": "area_save_and_ally_cleanse",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "damage_targets": "each_creature_of_psychopomp_choice_visible_within_30ft",
+        "save": {
+          "ability": "WIS",
+          "dc": 14,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "5d8",
+                "average": 22,
+                "type": "radiant"
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "condition_cleanse": {
+          "targets": "chosen_creatures_within_60ft",
+          "eligible_conditions": [
+            "charmed",
+            "frightened",
+            "possessed"
+          ],
+          "target_may_choose_to_end": true
+        }
+      },
+      {
+        "name": "Unmake Contract",
+        "category": "soul_contract_release",
+        "action_economy": "action",
+        "uses_per_day": 1,
+        "target": "one_creature_seen_or_heard_within_60ft",
+        "effect": "released_from_all_liens_on_soul",
+        "external_rule_dependency": "legal_metaphysical_contract_rules_not_defined_in_creature_statblock"
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Spirit Usher",
+        "category": "protective_buff",
+        "action_economy": "bonus_action",
+        "uses_per_day": 3,
+        "ward_duration": "1_hour",
+        "targets": {
+          "count": 1,
+          "range_ft": null,
+          "range_reason": "not specified in individual action"
+        },
+        "buff": {
+          "attacking_creature_types_with_disadvantage": [
+            "celestial",
+            "fiend",
+            "undead"
+          ],
+          "cannot_be_charmed_frightened_possessed_by": [
+            "celestial",
+            "fiend",
+            "undead"
+          ],
+          "temporary_hit_points": 11,
+          "if_warded_creature_dies": {
+            "cannot_be_raised_as_undead_for": "1_year"
+          }
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Anjo condutor de almas que se disfarça de demônio em planos inferiores, usa açoite radiante, libera espíritos de contratos e protege viajantes."
@@ -67,8 +269,8 @@
       "url": "https://kpogl.wikidot.com/monster:psychopomp",
       "type": "KPOGL reprodução não endossada por Kobold Press",
       "edition": "Tome of Beasts 3",
-      "scope": "traços e ações da ficha individual em resumo; revisão editorial integral pendente",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Estatísticas, traços e economia de ações do statblock individual",
+      "verification": "Lido em 14/10/2026, transcrição comunitária, não edição primária homologada"
     }
   ],
   "source_checkpoint": {
@@ -79,9 +281,10 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Spirit Usher text does not specify activation range: leave null instead of inventing.",
+    "Unmake Contract releases liens on souls without listing limitations for contract mechanics; engine needs external policy.",
+    "Image 280×280 is a token and remains unapproved.",
+    "Verificar texto em impressão e erratas, licença/arte e engine antes de homologação editorial."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -105,5 +308,19 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:psychopomp"
+    ],
+    "source_tier": "KPOGL_secondary_online_statblock",
+    "source_level_read": true,
+    "legal_or_prod_verification": false,
+    "notes": "Ações individuais estruturadas na medida declarada no statblock; conceitos de regras externas não foram homologados."
   }
 }

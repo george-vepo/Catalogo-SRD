@@ -9,15 +9,18 @@
     "publication": "Creature Codex",
     "edition_family": "5e",
     "exact_printing": null,
-    "challenge_rating": "0.5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "challenge_rating": "1/2",
+    "size": "Medium",
+    "type": "celestial",
+    "alignment": "neutral_good",
+    "experience_points": 100,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "not explicitly in Creature Codex online statblock"
   },
   "statistics": {
     "armor_class": 13,
     "hit_points": 22,
-    "hit_dice": null,
+    "hit_dice": "5d8",
     "ability_scores": {
       "STR": 14,
       "DEX": 10,
@@ -26,24 +29,111 @@
       "WIS": 14,
       "CHA": 10
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 10
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [
+      "bludgeoning",
+      "piercing"
+    ],
+    "damage_immunities": [
+      "radiant"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 0,
+      "CON": 0,
+      "INT": -2,
+      "WIS": 2,
+      "CHA": 0
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Like Calls to Like",
+        "category": "alignment_detection",
+        "detects_within_ft": 30,
+        "classification": "whether_creature_good_aligned"
+      },
+      {
+        "name": "Limited Telepathy",
+        "category": "communication",
+        "range_ft": 100,
+        "eligible_partner": "good_aligned_creatures",
+        "method": "images_and_emotions_not_spoken_words"
+      },
+      {
+        "name": "Rebirth",
+        "category": "environmental_respawn",
+        "on_death": {
+          "starts_regrowth_at_same_location_within": "1_week"
+        },
+        "permanent_prevention": [
+          "char_ground_where_slain",
+          "salt_ground_where_slain"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Searing Grasp",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "type": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 2,
+              "average": 4,
+              "type": "radiant"
+            }
+          ],
+          "condition": "grappled",
+          "escape_dc": 12
+        },
+        "while_grappled": {
+          "condition": "restrained",
+          "damage_at_start_of_target_turn": {
+            "dice": "1d4",
+            "average": 2,
+            "type": "radiant"
+          },
+          "single_grasp_target_limit": 1,
+          "disadvantage_to_escape_for_types": [
+            "undead",
+            "fiend"
+          ]
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Ser vegetal de TIPO CELESTIAL, detecta boa índole, comunica-se por telepatia limitada, imobiliza com alcance e renasce se o terreno não for destruído."
@@ -60,8 +150,8 @@
       "url": "https://kpogl.wikidot.com/monster:hallowed-reed",
       "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
       "edition": "Creature Codex",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Estatísticas, traços e economia de ações do statblock individual",
+      "verification": "Lido em 14/10/2026, transcrição comunitária, não edição primária homologada"
     }
   ],
   "source_checkpoint": {
@@ -73,9 +163,9 @@
     "A classificação editorial é Celestial, não Plant; 'Planar Flora' indica família temática e não tipo de criatura."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "The creature's published type is Celestial despite being categorized as planar flora. Do not overwrite with Plant.",
+    "Rebirth regrowth starts within one week unless ground charred or salted; its exact mature-ready time is not stated.",
+    "Verificar texto em impressão e erratas, licença/arte e engine antes de homologação editorial."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -99,5 +189,19 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:hallowed-reed"
+    ],
+    "source_tier": "KPOGL_secondary_online_statblock",
+    "source_level_read": true,
+    "legal_or_prod_verification": false,
+    "notes": "Ações individuais estruturadas na medida declarada no statblock; conceitos de regras externas não foram homologados."
   }
 }

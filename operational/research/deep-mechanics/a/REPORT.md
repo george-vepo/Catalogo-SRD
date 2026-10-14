@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 60: Hallowed Reed, Psychopomp, Simurg (14/10/2026)
+
+- **TF-293 Hallowed Reed:** [fonte](https://kpogl.wikidot.com/monster:hallowed-reed), identidade publicada como **Celestial**, embora agrupado como flora planar. Rebirth sobre terreno, detecção de alinhamento, telepatia limitada a boas criaturas e Searing Grasp com agarrar/restringir e dano radiante a cada início de turno; fiends e undead desfavorecidos ao escapar.
+- **TF-296 Psychopomp:** [fonte](https://kpogl.wikidot.com/monster:psychopomp), Lantern Flail duplo, troca opcional radiante/necrótico, Divine Dictum com escolha de alvos/limpeza de condição, Unmake Contract 1/dia sem regras externas de contratos definidas, Spirit Usher bônus 3/dia por 1 hora; alcance não publicado para Spirit Usher mantido desconhecido.
+- **TF-297 Simurg:** [fonte](https://kpogl.wikidot.com/monster:simurg), Flyby e Keen Sight, sete magias inatas com usos declarados mas efeitos ainda não homologados individualmente, Multiattack com Bite+2 Claws e Forceful Gale recarga 5–6. Ressurreição só consta em lore, sem gatilho/tempo de regra implementado.
+
+**Estado:** 90/132 estruturadas ao nível de fonte individual, 42 ainda resumidas, 0 homologadas; 124/132 imagens binárias, 8 ausentes e nenhuma aprovada editorialmente, visualmente e legalmente. Registro mantido em PARCIAL, sem V-Bridge, alterações em outros grupos ou merge.
+
+---
+
 # Grupo A — checkpoint 59: Porcellina, Glass Gator, Zanskaran Viper (14/10/2026)
 
 - **TF-289 Porcellina:** mordida com CD11 escalável até 15 por acertos de outros membros da matilha, reação Squeal para amedrontar em raio de 10 pés, Poisonous Flesh por toque ou ingestão, Pack Tactics. Token 280×280 sem aprovação final. [Fonte individual](https://kpogl.wikidot.com/monster:porcellina).
