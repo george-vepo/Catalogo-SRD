@@ -1,3 +1,9 @@
+## Evidência de persistência pós-checkpoint — 14/10/2026
+
+Na branch B, TF-351, TF-384, TF-389 e TF-393 foram individualmente reabertos após [`940cfbad52bf`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/940cfbad52bf82043be96ab660027c48325db321). O GitHub confirmou **4/4 assinaturas WebP, SHA Git e tamanhos**, com identidade de blob igual à fonte. A árvore contém **112 arquivos binários reais**, sem discrepância com os registros do manifesto; faltam 20 imagens. Os dois Rust Monsters usam a mesma imagem genérica como no módulo fonte, com revisão de identidade da variante pendente; licenças restritas a uso não comercial.
+
+---
+
 ## Quatro WebPs reais adicionais — 14/10/2026 — imagens 112/132
 
 Arquivos gravados: [TF-351](TF-351.webp), [TF-384](TF-384.webp), [TF-389](TF-389.webp), [TF-393](TF-393.webp). Fontes editoriais do módulo A5E confirmam que os atores das variantes apontam às imagens listadas; contudo **não são artes exclusivas da variante**. TF-384 e TF-389 compartilham o mesmo blob `327bdaa2d6b66ddae5701b064e32c276d0093056`, por decisão do próprio módulo A5E, e devem receber artes próprias se a diferenciação artística for requisito de publicação. TF-351 e TF-393 usam ogro/minotauro sem identificação exclusiva. Não foi importada a manticore de TF-381 por erro de identidade.

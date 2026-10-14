@@ -1,3 +1,17 @@
+## Auditoria complementar concluída na branch B — 14/10/2026
+
+**Checkpoints desta nova continuação, todos reabertos do GitHub:**
+
+- [`940cfbad52bf`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/940cfbad52bf82043be96ab660027c48325db321): importação física de TF-351, TF-384, TF-389, TF-393 (WebPs A5E). Todos conferidos por SHA Git, tamanho, formato e identidade documental do ator no módulo oficial. **112/132 imagens físicas**, 20 pendentes.
+- [`1caa3e2d43ff`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/1caa3e2d43ffb3e99d456abac617895a3b297df9): quatro fichas A5E com tamanho, tipo, bloodied, proficiência e DC de manobra confirmados; corrosão de metal detalhada nos rust monsters TF-384 e TF-389.
+- [`9c54b5dac83a`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9c54b5dac83a81d5a5b90d5bf6ae25c9c1656419): TF-356 Grendel, TF-361 Elder Black Pudding e TF-386 Grootslang confrontados com portais oficiais A5E; três variantes separadas de homônimos da PR #4 (sem marcar conflitos integralmente resolvidos) e ação Swallow do Grootslang detalhada.
+
+**Auditoria:** 132/132 JSONs presentes, IDs e SHA/tamanho coincidentes, total 752.645 bytes; 112/112 binários reais coincidentes. **11 criaturas distintas** tiveram cotejos editoriais **pontuais** ao longo destas continuações; três previamente avaliadas foram rechecadas. Essas conferências **não comprovam revisão integral contra livro/erratas** (0 integralmente verificadas), nem homologação independente (0). Persistem 13 conflitos herdados da PR #4 sem conclusão editorial definitiva.
+
+**Direitos:** módulo A5E disponibiliza arte de `public/assets` para uso não comercial. As últimas quatro artes são genéricas de espécie/variante, com necessidade de revisão visual, e TF-384/389 compartilham o mesmo blob. Estas observações não devem ser omitidas no lançamento nem significam autorização para comercialização. PR #6 permanece DRAFT, sem merge, integração ou autoaprovação.
+
+---
+
 ## Continuação Grupo B — evidência editorial para três conflitos herdados (14/10/2026)
 
 As fichas **TF-356 Grendel** ([A5E](https://a5e.tools/node/2443)), **TF-361 Elder Black Pudding** ([A5E](https://a5e.tools/node/1755)) e **TF-386 Grootslang** ([A5E](https://a5e.tools/node/2444)) tiveram conferência **pontual de identidade, publicação, ND, CA, PV, tamanho, tipo, proficiência, CD de manobra e limiar bloodied** com portal do editor. Valores registrados: TF-356 Large Giant ND9/PV114/bloodied57/prof+4/DC18; TF-361 Huge Ooze ND8/PV171/bloodied85/prof+2/DC13; TF-386 Gargantuan Monstrosity ND11/PV145/bloodied72/prof+4/DC19. Para TF-386, foram detalhadas as consequências de regurgitação e saída do cadáver para alvos engolidos, incluindo alcance e condição prone.

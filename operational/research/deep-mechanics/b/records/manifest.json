@@ -39,7 +39,7 @@
   },
   "integridade": {
     "controle": "Auditoria GitHub 14/10/2026: 132/132 JSONs físicos com SHA Git e bytes iguais ao manifesto na árvore da branch antes deste checkpoint; 101/101 imagens binárias físicas com SHA Git e bytes iguais; 3 blobs binários adicionais importados por identidade de SHA Git da branch F. Verificar os 104/104 após commit. Nenhuma homologação independente.",
-    "checkpoints": 29,
+    "checkpoints": 30,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
     "sem_duplicatas": true,
@@ -262,10 +262,10 @@
       "ids_esperados": 132,
       "ids_validos": 132,
       "hash_e_bytes_json_iguais": 132,
-      "bytes_json": 745152,
-      "binarios_persistidos": 108,
-      "binarios_hash_e_bytes_iguais": 108,
-      "imagens_faltantes": 24,
+      "bytes_json": 752645,
+      "binarios_persistidos": 112,
+      "binarios_hash_e_bytes_iguais": 112,
+      "imagens_faltantes": 20,
       "estruturadas": 132,
       "a5e_editorial_origem": 14,
       "estruturadas_secundarias": 118,
@@ -277,7 +277,12 @@
       "integracoes_canonicas": 0,
       "merge": 0,
       "direitos": "A5E fontes/imagens: módulos têm limitação expressa de uso não comercial; autorização para exploração comercial não verificada.",
-      "branch_draft": true
+      "branch_draft": true,
+      "imagens_binarias": 112,
+      "cotejos_editoriais_pontuais_unicos_ate_agora": 11,
+      "cotejos_de_tres_ja_conferidas_repetidos": 3,
+      "verificacoes_editoriais_integralmente_concluidas": 0,
+      "rights_review": "Novas imagens A5E: uso nao comercial; nao liberar comercialmente sem licenca especifica"
     },
     "checkpoint_cinco_4_imagens_a5e_20261014": {
       "ids": [
@@ -290,9 +295,10 @@
       "source_head": "d986361631f97f248f57b8c5b3c090ba770e0024",
       "sha256_calculados": 4,
       "shas_git_idênticos_fonte": 4,
-      "persistencia": "PENDENTE_READBACK_POS_COMMIT",
+      "persistencia": "PASSOU_READBACK_GITHUB_4_WEBP_SHA_BYTES_ASSINATURAS",
       "conclusao_visual": "Representações de espécie genérica; não aprovadas para diferenciação da variante e para arte final",
-      "licenciamento": "uso não comercial, sem direito comercial"
+      "licenciamento": "uso não comercial, sem direito comercial",
+      "commit": "940cfbad52bf82043be96ab660027c48325db321"
     },
     "auditoria_pontual_a5e_quatro_20261014": {
       "ids": [
@@ -307,7 +313,7 @@
         "https://a5e.tools/node/2871",
         "https://a5e.tools/node/2966"
       ],
-      "status": "CONFERENCIA_EDITORA_PORTAL_REGISTRADA; READBACK_PENDENTE",
+      "status": "PASSOU_READBACK_GITHUB_4_JSONS_SHA_E_BYTES; COMPARACAO_PONTUAL_EDITORIAL, SEM_HOMOLOGACAO",
       "metadados_enriquecidos": [
         "tamanho",
         "tipo",
@@ -318,7 +324,8 @@
       "mecanicas_especificas": "TF-384 e TF-389: corrosao individualizada para objetos, armadura e arma metalica",
       "verificacao_editorial_integral_concluida": 0,
       "homologacoes_independentes": 0,
-      "integrou_catalogo": false
+      "integrou_catalogo": false,
+      "commit": "1caa3e2d43ffb3e99d456abac617895a3b297df9"
     },
     "analise_3_variantes_a5e_20261014": {
       "ids": [
@@ -336,7 +343,8 @@
       "conflitos_considerados_integralmente_resolvidos": 0,
       "homologacoes_independentes": 0,
       "conferencia_documental": "Edição A5E pesquisada e alternativas de outras publicações mantidas separadas",
-      "readback": "PENDENTE"
+      "readback": "PASSOU_SHA_E_BYTES_GITHUB_3_JSONS",
+      "commit": "9c54b5dac83a81d5a5b90d5bf6ae25c9c1656419"
     }
   },
   "commits_checkpoint": [
@@ -447,6 +455,14 @@
     {
       "sha": "1caa3e2d43ffb3e99d456abac617895a3b297df9",
       "message": "research(srd607/b): cotejar 4 fichas editoriais A5E e detalhar corrosao dos Rust Monsters"
+    },
+    {
+      "sha": "1caa3e2d43ffb3e99d456abac617895a3b297df9",
+      "message": "research(srd607/b): cotejar 4 fichas editoriais A5E e detalhar corrosao dos Rust Monsters"
+    },
+    {
+      "sha": "9c54b5dac83a81d5a5b90d5bf6ae25c9c1656419",
+      "message": "research(srd607/b): distinguir 3 variantes A5E da PR4 com fontes editoriais"
     }
   ],
   "records": [
