@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 6 lotes validados, 60/395 fichas (335 restantes).
+**Situação:** EM ANDAMENTO — 7 lotes validados, 70/395 fichas (325 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -56,3 +56,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 10 fichas avaliadas: 6 completas em conteúdo e 4 completas com ressalvas (TF-059, TF-060, TF-062, TF-065). Duas imagens ligadas diretamente pelo JSON do grupo A; oito associadas explicitamente pelo manifesto de aquisição E no grupo B, com SHA/tamanho equivalentes aos binários Git consultados. TF-058 usa arte 300×434, baixa resolução. Divergências: Four-Part Harmony, Bite entre edições, PV TF-062 e versão Clockwork Hound. Não confundir o campo `bloqueado` editorial dos B com ausência de mecânicas no JSON.
 
 **Consolidado 6 lotes:** 60/395; 32 fichas completas em conteúdo, 8 com ressalvas, 19 incompletas, 1 não verificável; 49 imagens diretamente vinculadas, 8 por manifesto, 3 ausentes. Nenhuma conclusão/homologação de produção.
+
+## Lote 007 — TF-068 a TF-079 (dez IDs da ordem canônica)
+
+9 completas em conteúdo, 1 com ressalvas (TF-079: Heavy Pick citado mas ataque War Pick definido). Dez imagens existentes e vinculadas pelo manifesto E, não pelo JSON individual do grupo B; TF-070 (373×700) e TF-071 (475×800) abaixo de 500 px. **TF-069** tem imagens distintas no diretório B (WebP) e central (JPG) e o manifesto referencia a central; a identidade precisa de verificação visual. Todas pendentes de validação de edição/licença e adaptação ao card game.
+
+**Consolidado:** 70/395 auditadas; 41 completas em conteúdo, 9 com ressalvas, 19 incompletas, 1 não verificável; 49 vínculos diretos, 18 por manifesto, 3 imagens ausentes. A fase não é homologação final.
