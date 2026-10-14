@@ -159,3 +159,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 6 completas em conteúdo, 1 com ressalva (TF-237: reteste de Stinger versus cura por greater restoration) e 3 incompletas (**TF-238, TF-239 e TF-240**, sem ações/traços estruturados). Dez imagens presentes diretamente vinculadas aos JSONs A e SHA/tamanho conferidos. Sem dimensões declaradas inferiores a 500 px. Licenciamento, publicação e inspeção visual continuam pendentes.
 
 **Consolidado:** 220/395 (175 restantes); 146 completas, 42 com ressalvas, 31 incompletas, 1 não verificável; 163 imagens diretas, 54 por manifesto, 3 ausentes.
+
+## Lote 023 — TF-244–TF-253 (10 IDs da ordem do CSV)
+
+5 completas em conteúdo, 3 com ressalvas (**TF-245**: Seaside Rejuvenation/save de Wisdom; **TF-251**: INT 6/8 e arredondamento de Absorb the Dead; **TF-253**: novo teste sem atributo/CD inequívocos) e 2 incompletas (**TF-249, TF-252**, sem ações/traços). As dez imagens A estão vinculadas e o SHA/tamanho físico corresponde; TF-252 tem altura declarada de 460 px. Licenciamento, imagem e impressão primária não homologados.
+
+**Consolidado:** 230/395 (165 restantes); 151 completas, 45 com ressalvas, 33 incompletas, 1 não verificável; 173 imagens diretas, 54 por manifesto e 3 ausentes.
