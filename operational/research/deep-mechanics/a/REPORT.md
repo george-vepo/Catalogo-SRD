@@ -1,3 +1,24 @@
+# SRD Card Game 607 — continuação no Grupo A — 2026-10-14
+
+## Contagem confirmada após checkpoint 31
+
+| Indicador | Total |
+|---|---:|
+| IDs e registros JSON do grupo A | **132** |
+| Fichas online individualmente estruturadas no nível da fonte | **29** |
+| Fichas homologadas integralmente contra edição primária e testes | **0** |
+| Fichas parciais | **131** |
+| Fichas bloqueadas | **1 (KP-S011)** |
+| Binários de imagem fisicamente na branch A | **73** |
+| Imagens ausentes | **59** |
+| Imagens aprovadas para produção | **0** |
+
+**Checkpoint [`3d5697adc3`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3d5697adc3e76118b34cef2d314a437e0821debe): TF-058 Animated Instrument e TF-059 Animated Quartet.** Estruturados golpes, músicas, alcance, CDs, escolhas condicionais, recursos (1/dia, recarga 5–6), *Courageous Anthem* com ação bônus para continuação e *Four-Part Harmony*, incluindo sua redução de dados. Fonte individual: [dados comunitários OGL Tome of Beasts 3](https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json). Ainda aguardam validação editorial/errata e revisão independente de implementação.
+
+Permanecem divergências independentes nas fichas KP-S011, TF-039, TF-041, TF-047 e TF-052. TF-049 usa **Advanced 5E** e não deve ser convertido implicitamente para D&D 5e. O trabalho exige pesquisa continuada para os demais registros e aprovação de artes; os JSONs por si só não representam fichas homologadas.
+
+---
+
 # SRD Card Game 607 — Grupo A: checkpoint adicional de mecânicas completas online (2026-10-14)
 
 ## Estado atual — substitui métricas históricas deste relatório
