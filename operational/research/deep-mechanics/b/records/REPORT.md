@@ -1,3 +1,20 @@
+## Checkpoint de quatro imagens A5E (14/10/2026) — 112/132, 20 faltantes
+
+As seguintes imagens reais WebP foram copiadas por blob Git sem recodificar e vinculadas aos atores oficiais A5E:
+
+| ID | Nome da ficha | Imagem | Fonte de identidade | Dimensões | Bytes |
+|---|---|---|---|---:|---:|
+| TF-351 | Half-Demon Ogre | [TF-351.webp](../images/TF-351.webp) | [JSON do ator](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/half-demon-ogre.json) | 600×600 | 442900 |
+| TF-384 | Mutant Rust Monster | [TF-384.webp](../images/TF-384.webp) | [JSON do ator](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/mutant-rust-monster.json) | 300×300 | 137304 |
+| TF-389 | Supermutant Rust Monster | [TF-389.webp](../images/TF-389.webp) | [JSON do ator](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/supermutant-rust-monster.json) | 300×300 | 137304 |
+| TF-393 | Minotaur Conquerer | [TF-393.webp](../images/TF-393.webp) | [JSON do ator](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/minotaur-conquerer.json) | 600×600 | 338208 |
+
+**Revisão artística pendente, sem falsa homologação visual:** as quatro imagens são genéricas de ogro/minotauro/rust monster e os dois últimos rust monsters compartilham o mesmo binário. Sua correspondência documental com o ator é comprovada, mas **não representam obrigatoriamente as mutações ou o título especial da criatura**. A imagem de Aracnecore foi rejeitada porque o ator usa uma Manticore, incompatível com a identidade. Os hashes Git e SHA-256 e as observações estão nos manifestos. A licença dessas artes permite somente **uso não comercial**, conforme [README oficial da fonte](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/README.md), sem autorização comprovada para utilização comercial do card game.
+
+As 132 fichas estruturadas permanecem sem homologação independente (0) e sem verificação editorial integral (0); 13 conflitos de edição permanecem documentados. PR #6 permanece em DRAFT, sem merge ou integração. Os 4 objetos ainda devem ser reabertos da branch B para concluir este checkpoint.
+
+---
+
 ## Consolidação pós-readback B — 14/10/2026
 
 **Persistência certificada por releitura GitHub nesta rodada:** os 4 WebPs A5E [TF-094, TF-095, TF-355 e TF-361](../images/manifest.json) foram reabertos na branch B após o commit [`0e0ed70e2f66`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/0e0ed70e2f665f3afc61acca208ad4779161a362) e coincidem com fonte e manifestos em Git SHA e bytes; **108/108 imagens reais** na árvore permanecem indexadas sem divergências. O segundo checkpoint [`45b84cafcbdf`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/45b84cafcbdf3858347bbc16f7b1a8f81774098d) alterou só TF-094, TF-095 e TF-355 e seus controles: **3/3 JSONs** reabertos, sem divergência de SHA/tamanho, mantendo 132/132 JSONs físicos e válidos.

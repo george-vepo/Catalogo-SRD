@@ -1,3 +1,13 @@
+## Quatro WebPs reais adicionais — 14/10/2026 — imagens 112/132
+
+Arquivos gravados: [TF-351](TF-351.webp), [TF-384](TF-384.webp), [TF-389](TF-389.webp), [TF-393](TF-393.webp). Fontes editoriais do módulo A5E confirmam que os atores das variantes apontam às imagens listadas; contudo **não são artes exclusivas da variante**. TF-384 e TF-389 compartilham o mesmo blob `327bdaa2d6b66ddae5701b064e32c276d0093056`, por decisão do próprio módulo A5E, e devem receber artes próprias se a diferenciação artística for requisito de publicação. TF-351 e TF-393 usam ogro/minotauro sem identificação exclusiva. Não foi importada a manticore de TF-381 por erro de identidade.
+
+**Licença e saída comercial bloqueadas:** [README oficial do módulo A5E](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/README.md) concede uso das artes de `public/assets` apenas para fins não comerciais. Hashes, origem, dimensões e notas individuais foram registrados. Nenhum arquivo fictício, placeholder ou URL isolada foi aceito.
+
+**20 imagens ainda sem binário.** Confirmar SHA e tamanho após persistência GitHub.
+
+---
+
 ## Releitura física confirmada — 14/10/2026
 
 **108/132 imagens são arquivos binários efetivamente presentes**, com Git SHA e tamanho de cada arquivo da árvore Git iguais aos registros do manifesto. As quatro imagens A5E do checkpoint [`0e0ed70e2f66`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/0e0ed70e2f665f3afc61acca208ad4779161a362) foram individualmente reabertas em Base64, com assinatura RIFF/WEBP e bytes confirmados. Restam **24 arquivos sem binário correspondente** no diretório B.
