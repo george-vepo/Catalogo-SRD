@@ -1,3 +1,13 @@
+## Checkpoint mecânico — 14/10/2026 — TF-381 e TF-408 (cotejo primário pontual)
+
+**TF-381 Aracnecore:** [fonte editorial A5E](https://a5e.tools/node/2272), Large Monstrosity, ND5, CA16, PV85, bloodied42, prof+3, CD manobra13. Bite aplica paralisia com **CON CD14**, repetindo a salvaguarda ao fim de cada turno por até 1 minuto; Claws exige deslocamento em linha reta mínimo 20 pés e usa **STR CD13**, podendo derrubar. As CDs foram mantidas distintas. O ator do módulo Foundry usa imagem de *Manticore*: ela foi rejeitada por incompatibilidade visual com aracnecore.
+
+**TF-408 Grove Swarm:** [fonte editorial A5E](https://a5e.tools/node/3542), Gargantuan Plant; prof+2 e CD manobra12. A fonte mostra ND0 incompatível com CA16/PV217 e ataque +12; `nd` continua **null**. Thrash refere `your spell save DC` sem sujeito definido; **CD para agarrar permanece null**; o número 12 não é inserido nesse campo por inferência. Documentados os conflitos no próprio JSON e preservado vínculo à PR #4.
+
+**Não houve resolução definitiva de conflitos ou homologação:** esta conferência compara campos e ações acessíveis no portal editorial, sem certificar livro físico, erratas, licença ou revisão independente. Checkpoint de duas criaturas; 132 inventários estruturados continuam, 13 conflitos herdados abertos e 19 imagens ainda pendentes. A arte histórica de Grendel foi importada em checkpoint anterior e teve readback confirmado.
+
+---
+
 ## Checkpoint visual B — 14/10/2026 — TF-356 Grendel: imagem histórica em domínio público
 
 **TF-356 Grendel** recebeu um binário WebP real de **960×1234 pixels (296.630 bytes)**, Git blob `beda0c092ce58ce433e42825c14b692cf9d8d3dd`, SHA-256 `31e2b42366b8f4f8acb3ffa49b5afd0af4bdc399024d02f5771aceb5799dd279`. A origem é uma ilustração de **Joseph Ratcliffe Skelton (1908)** para *Stories of Beowulf*, disponibilizada como domínio público no [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Stories_of_beowulf_grendel.jpg) e espelhada com metadados de proveniência no [PantheonRepository](https://github.com/WeningerII/PantheonRepository/blob/6d2078105fd9bf7faf77d9810ed5b0e395935a48/assets/images/figures/_meta/anglosaxon_grendel.json).

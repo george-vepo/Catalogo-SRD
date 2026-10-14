@@ -69,7 +69,10 @@
     "proficiencia": 2,
     "cd_manobra_reportada": 12,
     "nd_exibido_na_pagina": "0",
-    "nd_pendente_motivo": "Publicação apresenta ND 0 embora PV217 e ataque +12; não assumir valor nem recalcular."
+    "nd_pendente_motivo": "A ficha editorial mostra ND 0 com PV217 e ataque +12; mantido ND=null para aguardar errata/decisão do projeto. O portal também informa CD de manobra 12, mas a ação Thrash contém referência desconexa a spell save DC.",
+    "tamanho": "Gargantuan",
+    "tipo": "Plant",
+    "cd_manobra": 12
   },
   "qualidade_estatisticas": "CONFERIDA_NA_FICHA_EDITORIAL_DO_PORTAL",
   "habilidades_passivas": [
@@ -115,7 +118,8 @@
           "condicao": "grappled",
           "cd_escape": null,
           "referencia_cd_na_fonte": "maneuver DC equal to your spell save DC",
-          "pendente": "Fonte não define quem é 'your' nem o spell save DC aplicável ao enxame, apesar de exibir Maneuver DC 12."
+          "pendente": "Fonte não define quem é 'your' nem o spell save DC aplicável ao enxame, apesar de exibir Maneuver DC 12.",
+          "status_cd": "INDETERMINADA_NA_FONTE_A5E; NUNCA SUBSTITUIR AUTOMATICAMENTE_POR_12"
         }
       ],
       "confirmado_na_fonte": true
@@ -139,7 +143,8 @@
       "condicao": "grappled",
       "cd_para_agarrar": null,
       "cd_especial_mencionada": "your spell save DC — sem referente inequívoco",
-      "confirmado_na_fonte": true
+      "confirmado_na_fonte": true,
+      "status_cd": "INDETERMINADA; CD de manobra publicada (12) nao comprova a CD para agarrar"
     }
   ],
   "acoes_bonus": [],
@@ -155,5 +160,25 @@
     "ND exibido 0 é mecanicamente discrepante: campo ND permanece null.",
     "CD de agarrão em Thrash usa expressão 'your spell save DC', sem fonte inequívoca nem CD numérica; não derivar a partir de manobra DC12 nem proficiência."
   ],
-  "integrada": false
+  "integrada": false,
+  "auditoria_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/3542",
+    "publicacao": "Adventurer's Guide",
+    "campos_confirmados": [
+      "Gargantuan",
+      "Plant",
+      "ND0 apresentado pelo site, nao homologado",
+      "CA16",
+      "PV217",
+      "proficiencia+2",
+      "CD manobra12",
+      "Thrash+12/5d6+7"
+    ],
+    "conflitos_ainda_abertos": [
+      "ND principal null por discrepancia no bloco publicado",
+      "CD de grapple em Thrash null por 'your spell save DC' sem referente"
+    ],
+    "resolucao": "Nao atribuir DC12 ao agarrar, nem calcular ND por PV/dano",
+    "homologacao_independente": false
+  }
 }

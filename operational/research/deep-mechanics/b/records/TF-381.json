@@ -48,7 +48,12 @@
     "resistencias_dano": [],
     "imunidades_dano": [],
     "vulnerabilidades_dano": [],
-    "imunidades_condicao": []
+    "imunidades_condicao": [],
+    "tamanho": "Large",
+    "tipo": "Monstrosity",
+    "bloodied_pv": 42,
+    "proficiencia": 3,
+    "cd_manobra": 13
   },
   "habilidades_passivas": [
     {
@@ -81,7 +86,14 @@
             "cd": 14
           },
           "falha": "paralyzed por 1 minuto",
-          "encerramento": "nova CON CD14 no fim de cada turno"
+          "encerramento": "nova CON CD14 no fim de cada turno",
+          "duracao": "1 minuto, salvo sucesso em salvaguarda repetida",
+          "repeticao_salvaguarda": {
+            "atributo": "CON",
+            "cd": 14,
+            "instante": "fim de cada turno da criatura afetada",
+            "sucesso": "encerra paralyzed"
+          }
         }
       ]
     },
@@ -105,7 +117,10 @@
             "atributo": "STR",
             "cd": 13
           },
-          "falha": "prone"
+          "falha": "prone",
+          "movimento_minimo_ft": 20,
+          "direcao": "em linha reta na direção do alvo antes deste ataque",
+          "cd_propria_da_acao": 13
         }
       ]
     }
@@ -132,5 +147,27 @@
     "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
     "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente."
   ],
-  "integrada": false
+  "integrada": false,
+  "auditoria_editorial_pontual_20261014": {
+    "fonte": "https://a5e.tools/node/2272",
+    "publicacao": "Gate Pass Gazette",
+    "campos_verificados": [
+      "ND",
+      "CA",
+      "PV",
+      "atributos",
+      "deslocamento",
+      "tamanho",
+      "tipo",
+      "bloodied",
+      "proficiencia",
+      "CD manobra",
+      "Multiattack",
+      "Bite CON14",
+      "Claws STR13"
+    ],
+    "resultado": "Cotejo individual com o portal oficial A5E (sem exemplar impresso/erratas), preserva CDs distintas",
+    "imagem": "Ator do módulo oficial Foundry usa manticore.webp, visualmente incompatível com criatura de patas aracnídeas; não reutilizada.",
+    "homologacao_independente": false
+  }
 }
