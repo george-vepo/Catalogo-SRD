@@ -1,4 +1,6 @@
-# SRD Card Game 607 — Imagens D (entrega parcial atualizada)
+# SRD Card Game 607 — Imagens D (entrega parcial, atualização 2026-10-14)
+
+> **Status vigente: 190/195 imagens validadas, 5 pendentes, 41.022.998 bytes.** O detalhamento histórico de 173/195 abaixo descreve checkpoints anteriores; consulte a consolidação mais recente no final.
 
 ## Preflight, lote e isolamento
 
@@ -84,3 +86,30 @@ Motivo: não foi localizada uma fonte de arte específica suficientemente inequ�
 - Escopo da auditoria: verificação de estrutura, hashes e metadados em amostra; **não houve nova decodificação raster integral das 173 imagens nesta retomada**, nem revisão humana da identidade visual. Checkpoints e validações raster anteriores permanecem descritos acima.
 - Pesquisa adicional de correspondências nominais em fontes abertas e repositórios públicos não resultou em 22 novos arquivos de arte inequivocamente atribuíveis às criaturas. Preservadas as pendências e seus motivos em `d.json` e neste relatório, sem substituir variantes nem fabricar binários.
 - Nenhum merge, nenhuma alteração no CSV global, nas 23 imagens verificadas de origem, nem nos lotes E/F.
+
+## Consolidação atualizada — lote D (2026-10-14)
+
+**Estado efetivo:** **190/195** imagens WebP persistidas e verificadas por leitura GitHub, **5 pendentes**, total **41.022.998 bytes**. O CSV do commit-base tem 607 criaturas, 23 verificadas e 584 inicialmente pendentes; seleção D preservada de AT-003 a TF-058. O manifesto contém 195 registros na ordem original, com a origem, MIME, dimensões, bytes, SHA-256, Git blob SHA, commit de origem e indicadores de leitura para cada imagem aceita.
+
+**Checkpoints novos (máximo 10 imagens):**
+
+| Checkpoint | Arquivos reais | Commit Git | Total |
+|---|---|---|---:|
+| 38 | KP-A019, KP-S002, KP-S005, KP-S006, KP-S014, TF-008, TF-009, TF-013 | `5a451230bfec3bafd5288fdd6253bc37408653ee` | 8 |
+| 39 | TF-023, TF-024, TF-025, TF-026, TF-041, TF-048, TF-053, TF-057 | `6b558de9b5b36341e4484076724dab891df1cd9a` | 8 |
+| 40 | KP-S007 (Animated Symphony, arte específica de orquestra de instrumentos animados) | `da260b52dc31a54599c13a3424f1eb8615b10f61` | 1 |
+
+As 16 imagens dos checkpoints 38–39 foram publicadas em processo concorrente na branch D; esta auditoria **não reivindica a autoria dessas 16**. Nesta execução, foi publicado exclusivamente o binário de KP-S007 via Git blob em Base64. As 17 imagens foram relidas do GitHub: **17/17** coincidiram com o Git blob SHA identificado nas imagens-fonte, e passaram pela verificação independente de assinatura RIFF/WEBP, comprimento interno, dimensões e SHA-256 recalculado (algoritmo SHA-256 validado com vetor conhecido). A arte KP-S007 foi adicionalmente renderizada. As fontes originais apontam para os arquivos nominativos WebP de `TheGiddyLimit/homebrew`, em `_img/ToB2/creature/` e `_img/ToB3/creature/`. A validação raster completa dos 173 arquivos anteriores não foi repetida nesta execução.
+
+Dois arquivos PNG brevemente publicados para TF-022 e TF-034 foram **excluídos em `4db82f917fd9678a3f1bae9f921e89e3f19ad609`** por serem imagens de placeholder sem ilustração da criatura, e não foram contabilizados.
+
+**Pendências efetivas (sem binário aceito):**
+
+- `TF-017` — Ancient Aboleth: não encontrada arte inequívoca com binário adequado e verificado para esta criatura.
+- `TF-022` — Beetle, Giant Bombardier: não encontrada arte inequívoca com binário adequado e verificado para esta criatura.
+- `TF-034` — Giant Mongoose: não encontrada arte inequívoca com binário adequado e verificado para esta criatura.
+- `TF-049` — Agonized Khyphon: não encontrada arte inequívoca com binário adequado e verificado para esta criatura.
+- `TF-055` — Aklea: não encontrada arte inequívoca com binário adequado e verificado para esta criatura.
+
+**Escopo:** nenhum arquivo de imagens E/F, nenhuma das 23 imagens originalmente verificadas e nenhuma linha do CSV global alterados; PR #11 permanece draft e sem merge.
+
