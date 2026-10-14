@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 55: Light Eater, Sooze e Minor Malleable (14/10/2026)
+
+- **TF-272 Light Eater:** fonte digital individual KPOGL [Light Eater](https://kpogl.wikidot.com/monster:light-eater), *Tome of Beasts 3*, p.262; absorção de luz com distinção entre magia até nível 2 e chama comum, Light Sense, Tentacle +4 e reação Emergency Flare CD12 com cegueira e recarga ao descanso curto/longo. Miniatura 280×280 ainda não é arte final.
+- **TF-273 Shoth, Sooze:** [fonte](https://kpogl.wikidot.com/monster:sooze), *Creature Codex*: variante **Laborer** (imunidade a exaustão, Dash bônus 3/dia) ou **Warrior** (CA+2, Longsword e vantagem de ataque com aliado), sem misturar ambos; Merge com limite de 1 fusão recebida/24h. Imagem presente mas sem aprovação.
+- **TF-274 Minor Malleable:** [fonte](https://kpogl.wikidot.com/monster:minor-malleable), *Tome of Beasts 2*: mutabilidade e retorno de forma, Spider Climb, cura por dano psíquico, Flesh Tendril, Psychic Drain com redução de PV máximo e transformação ao morrer, fusões exatas de 4/8/16 criaturas com herança de status/efeitos. **Sem imagem binária no GitHub**, portanto não é carta pronta.
+
+**Situação:** 75/132 estruturas individuais online; **57** fichas ainda resumidas; **0** homologadas em impressão/errata/engine; **124/132** imagens binárias (8 ausentes), **0** imagens visualmente aprovadas com direitos de uso. Fontes KPOGL são secundárias; conteúdo declara OGL 1.0a, mas análise jurídica/licença de produção não realizada. Sem V-Bridge, merge nem alteração de outras branches.
+
+---
+
 # Grupo A — checkpoint 54: Vexxeh e Black Shuck (14/10/2026)
 
 - **TF-269 Vexxeh:** divergência de edições examinada diretamente. [5eSRD legado](https://www.5esrd.com/database/creature/vexxeh/) corresponde a **105 PV (10d12+40)** do ledger, Multiattack de 2 garras e Rend 4d6 (tipo de dano não informado); [KPOGL](https://kpogl.wikidot.com/monster:vexxeh) e reprodução do livro apresentam **94 PV (9d12+36)**, mordida + 2 garras e medo quando ambas acertam. A variante 105 PV foi estruturada sem misturar com as outras; **qual edição é canônica ainda depende de confirmação editorial**.
