@@ -195,3 +195,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 6 fichas completas em conteúdo e 4 com ressalvas (TF-309, 316, 318, 319: inconsistências matemáticas/editoriais e versões distintas). Imagens: 4 diretas, 5 vinculadas via manifesto F (SHA/tamanho no manifesto verificado) e **1 ausente (TF-303)**. Tokens 280×280 identificados: TF-305, TF-316, TF-317. Nenhuma arte/edição/licença homologada.
 
 **Consolidado:** 280/395 (115 restantes); 172 completas, 67 com ressalvas, 40 incompletas e 1 não verificável; 212 imagens diretas, 59 por manifesto, 9 ausentes.
+
+## Lote 029 — TF-320–TF-333 (10 IDs conforme CSV)
+
+7 completas em conteúdo, 2 com ressalvas (**TF-325**, ND5/6 entre edições; **TF-333**, XP 100 para ND 1/4 na fonte), 1 incompleta (**TF-320**, PV consolidado nulo por conflito entre valores 63/88/49). Nove imagens vinculadas via manifesto F com SHA/bytes previamente validados e **TF-326 ausente**. Dimensões inferiores a 500 px: TF-327, TF-328, TF-329, TF-331. Edição/erratas e revisão visual/jurídica permanecem pendentes.
+
+**Consolidado:** 290/395 (105 restantes); 179 completas, 69 com ressalvas, 41 incompletas e 1 não verificável; 212 imagens diretas, 68 por manifesto, 10 ausentes.
