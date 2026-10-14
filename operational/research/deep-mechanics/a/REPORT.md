@@ -1,3 +1,13 @@
+# SRD Card Game 607 — Grupo A — checkpoint 32 (14/10/2026)
+
+**Resultado atualizado:** 132 registros JSON, **30/132** fichas com mecânicas estruturadas segundo blocos individuais online, **0/132 homologadas editorialmente**, **131 parciais**, **1 bloqueada**, **73/132 imagens binárias**, **59 imagens ausentes**, **0 imagens aprovadas para produção**. Esta contagem substitui os resumos anteriores preservados abaixo.
+
+**TF-216 (Anophiloi, Creature Codex p.39):** revisados ataques e anexação, com dados de dano e perda de PV, gatilhos, possibilidade de desprendimento e CDs. Foi eliminada do registro ativo a vulnerabilidade a frio antiga porque a ficha individual consultada em [CCodex](https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Creature%20Codex.json) não a declara. [Commit](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/fa02d2366a9d8be9c518e45b7a214f027d2dbc18). Não é uma homologação do livro físico ou errata; a confirmação editorial continua pendente.
+
+**Pendências de pesquisa explícitas:** KP-S011 (edições), TF-039 (dados de Bite), TF-041 (Multiattack), TF-047 (4d8 vs 3d8), TF-052 (CD não explicitada) e revisão de outras fichas parciais. Nenhum valor conflitante foi adotado por suposição.
+
+---
+
 # SRD Card Game 607 — continuação no Grupo A — 2026-10-14
 
 ## Contagem confirmada após checkpoint 31
