@@ -2,26 +2,30 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-068",
   "nome": "Clockwork Pugilist",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "MECANICA_ESTATISTICAS_INDIVIDUAIS_EVIDENCIADAS_PENDENTE_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Tome of Beasts 3",
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 3 (2022)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": null,
-      "natureza": "fonte_secundaria_anterior_nao_reexaminada"
+      "url": "https://anyflip.com/lphgc/rjrj/basic/51-100",
+      "natureza": "reproducao_digital_paginas_87_88_tome_3",
+      "consulta": "2026-10-14"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-067_TF-071/research.json",
-      "natureza": "registro_herdado"
+      "url": "https://www.5esrd.com/database/creature/clockwork-pugilist/",
+      "natureza": "reproducao_estatisticas_secundaria",
+      "consulta": "2026-10-14"
     }
   ],
   "estatisticas": {
     "nd": "1",
     "ca": 15,
     "pv": 32,
-    "dados_vida": null,
+    "dados_vida": "5d8+10",
     "atributos": {
       "FOR": 16,
       "DES": 12,
@@ -30,11 +34,17 @@
       "SAB": 13,
       "CAR": 10
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
     "deslocamentos_texto": null,
     "salvaguardas": {
-      "CON": 4,
-      "STR": 5
+      "FOR": 5,
+      "CON": 4
     },
     "pericias": {
       "Athletics": 5,
@@ -42,147 +52,149 @@
       "Performance": 4
     },
     "sentidos": [
-      "vis?o no escuro 60 ft."
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
     ],
     "percepcao_passiva": 13,
     "idiomas": [
       "Common"
     ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
-      "veneno",
-      "ps?quico"
+      "poison",
+      "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
-      "enfeiti?ado",
-      "exausto",
-      "amedrontado",
-      "paralisado",
-      "petrificado",
-      "envenenado"
-    ]
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "modificadores": {
+      "FOR": 3,
+      "DES": 1,
+      "CON": 2,
+      "INT": -2,
+      "SAB": 1,
+      "CAR": 0
+    },
+    "origem_ca": "natural armor",
+    "pairar": false,
+    "bonus_proficiencia": 2,
+    "telepatia_ft": null
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "dispensa ar, alimento, água e sono"
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "imune a magias e outros efeitos que modifiquem sua forma"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra magias e outros efeitos mágicos"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Fist",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Realiza dois ataques com os punhos.",
-      "confirmado": false
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Fist",
+        "Fist"
+      ]
     },
     {
       "nome": "Fist",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Ataque corpo a corpo +5, alcance 5 ft.; 1d6+3 contundente.",
-      "confirmado": false
+      "referencia_ataque": "Fist"
     },
     {
       "nome": "Brass Onslaught",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Recarga 6: desloca-se at? 10 ft. sem provocar ataques de oportunidade, depois faz um ataque com punho; se atingir, causa mais 3d6 de dano contundente.",
-      "confirmado": false
+      "recarga": "6",
+      "deslocamento_ft": 10,
+      "evita_ataques_oportunidade": true,
+      "sequencia": [
+        "move até 10 pés",
+        "faz um Fist"
+      ],
+      "efeito_se_atinge": {
+        "dados": "3d6",
+        "tipo": "bludgeoning",
+        "adicional_ao_Fist": true
+      }
     }
   ],
   "acoes_bonus": [],
   "reacoes": [
     {
       "nome": "Get Down, Sir!",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Quando um aliado a at? 5 ft. ? alvo de ataque ? dist?ncia ou magia, o pugilista intercepta e se torna o alvo.",
-      "confirmado": false
+      "custo": "reação",
+      "gatilho": "criatura a até 5 pés é alvo de ataque a distância ou magia",
+      "efeito": "Clockwork Pugilist intercepta o efeito, tornando-se o alvo no lugar da criatura protegida"
     },
     {
       "nome": "Parry",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Aumenta a pr?pria CA em 2 contra um ataque corpo a corpo que acertaria, desde que enxergue o atacante e tenha uma m?o livre.",
-      "confirmado": false
+      "custo": "reação",
+      "gatilho": "ataque corpo a corpo acertaria o pugilist",
+      "precondicoes": [
+        "enxerga atacante",
+        "tem uma mão livre"
+      ],
+      "bonus_ca": 2,
+      "efeito": "+2 CA contra somente esse ataque"
     }
   ],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa ar, alimento, bebida e sono."
-    },
-    {
-      "nome": "Immutable Form",
-      "resumo": "N?o pode ter sua forma alterada por magia ou efeito semelhante."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra efeitos m?gicos."
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Dados herdados de checkpoint anterior; exigir ficha individual integral, edição exata, confirmação de todos os campos e ações.",
-    "Campos nulos nas ações NÃO foram verificados nem podem ser presumidos."
+    "Cotejo independente com obra editorial e errata ainda pendente; sem integração canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-068",
+    "nome_original": "Clockwork Pugilist",
+    "tipo": "Medium construct",
+    "alinhamento": "unaligned",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Fist",
+        "Fist"
+      ]
+    }
+  ],
+  "mecanicas_especiais": []
 }
