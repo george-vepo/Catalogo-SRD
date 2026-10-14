@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 184 / 195.**
+**Armazenadas e verificadas: 186 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -30,6 +30,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/22fc79040f6d595328fdc83ffa1c64cebbf7cb31 — 3/3 verificadas: TF-198, TF-209, TF-252
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2d0d20ab7c63f820940fd968cbfab00620e5d587 — 2/2 verificadas: TF-232, TF-242
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/db3055fa21bbd7999e93a7c2f9e04d0ce0069357 — 1/1 verificadas: TF-263
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/485bc8d67e88df5b72de23a769d5a34d0fe2eec9 — 2/2 verificadas: TF-255, TF-267
 
 ## Binários publicados e conferidos
 
@@ -206,6 +207,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-252 / Adult Black Dragon Lich: operational/assets/creature-images/TF-252.png; origem: https://a5e.tools/node/1524; 452191 bytes; 650x460 px; SHA-256: 3cfaa3305f87f47d13a080d3fb2cec0b50878750d7517b1969dd081c963787c0; commit: 22fc79040f6d595328fdc83ffa1c64cebbf7cb31
 - TF-253 / Asp Vine: operational/assets/creature-images/TF-253.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Asp%20Vine.webp; 201920 bytes; 1000x1564 px; SHA-256: 82fee6e52749f13413a1986d1b27b59e6b7e71f72609690838338931f3a3f0a4; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-254 / Child of the Briar: operational/assets/creature-images/TF-254.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Child%20of%20the%20Briar.webp; 69084 bytes; 650x800 px; SHA-256: b4ffa52c5fb08dce7f3c5e1b1faddd783e0bc19571494e107c7b815b14ca1a95; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-255 / Citrullus: operational/assets/creature-images/TF-255.jpeg; origem: https://imgur.com/gallery/tome-of-beasts-ready-3d-printing-free-2iqzhTv; 84530 bytes; 1055x844 px; SHA-256: aec6187a57b3f233965654d3d2cca5343da5a3c3e03a658966696a68a6bd1788; commit: 485bc8d67e88df5b72de23a769d5a34d0fe2eec9
 - TF-256 / Climbing Vine: operational/assets/creature-images/TF-256.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Climbing%20Vine.webp; 258604 bytes; 1200x1324 px; SHA-256: 877d278a21e50c8260509fa98745bb7a05b5a8e612c319062d07ac34b922ad3c; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-257 / Viiret: operational/assets/creature-images/TF-257.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Viiret.webp; 194372 bytes; 714x985 px; SHA-256: 3feea425ddcd18efb1c23793fdf3faee2540d1881fc2108a2c6c6d18d811f2fa; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-258 / Vine Lord, Tendril Puppet: operational/assets/creature-images/TF-258.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tendril%20Puppet.webp; 56814 bytes; 635x800 px; SHA-256: 28f3e6ae579c1592d811a3467cc58a8e3bad5db1ffb7e716046c3c45ef4bf76d; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
@@ -215,6 +217,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-263 / Abrikandilu: operational/assets/creature-images/TF-263.png; origem: https://pf2.huijiwiki.com/wiki/%E6%96%87%E4%BB%B6%3AAbrikandilu.webp; 704995 bytes; 800x1035 px; SHA-256: 4266d4c1c21043f8bd97bab3c83f75ca2edcb2defdcf4032bb9b28caabce56d8; commit: db3055fa21bbd7999e93a7c2f9e04d0ce0069357
 - TF-265 / Alabroza, Bloodfiend: operational/assets/creature-images/TF-265.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Bloodfiend%20Alabroza.webp; 179890 bytes; 1200x1461 px; SHA-256: f02df608f4369c07ec31a13fdafeb441ff56e6dd4b860a770b56499808f84487; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
 - TF-266 / Chemosit: operational/assets/creature-images/TF-266.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chemosit.webp; 92162 bytes; 1000x1200 px; SHA-256: 807dd9b503ee8147ff851a73d416bbd1438cab3c4f386216efb7e75e29f32f9d; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
+- TF-267 / Arx: operational/assets/creature-images/TF-267.jpeg; origem: https://imgur.com/gallery/tome-of-beasts-ready-3d-printing-free-2iqzhTv; 91936 bytes; 1053x886 px; SHA-256: cf0699fac3f8079c48de46a148ae7908c8b80841bc5e6046c29b76f4fcc36d20; commit: 485bc8d67e88df5b72de23a769d5a34d0fe2eec9
 - TF-268 / Chatterlome: operational/assets/creature-images/TF-268.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chatterlome.webp; 150754 bytes; 788x875 px; SHA-256: 39da3119e91b224edcf81eda520df6c59c179a95c791fd4f2893fed3158b4f57; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
 - TF-269 / Vexxeh: operational/assets/creature-images/TF-269.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Vexxeh.webp; 195652 bytes; 959x1081 px; SHA-256: 9032582050264bfdc8b789199c80c7b4a44ca969623b50c34ef92ffb73b4aad1; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
 
@@ -228,9 +231,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-226 / Accursed Spirit Naga: source_not_found; 
 - TF-231 / Accursed Guardian Naga: source_not_found; 
 - TF-239 / Aboleth, Nihileth, Nihilethic Dominator: source_not_found; 
-- TF-255 / Citrullus: source_not_found; 
 - TF-264 / Abyssal Hordeling: source_not_found; 
-- TF-267 / Arx: source_not_found; 
 
 ## Duplicações e ressalvas
 
@@ -239,12 +240,3 @@ TF-099: same SHA-256 as TF-090
 Validações: formato, assinatura, dimensões, decodificação integral, tamanho, SHA-256, blob e releitura real do GitHub.
 A correspondência da criatura usa o nome do arquivo da fonte, sem afirmar revisão visual humana.
 Nenhuma alteração no CSV, ledger global, main, PR #1 ou imagens D/F.
-
-## Continuação em 2026-10-14 — imagens adicionais verificadas
-
-- Resultado consolidado: **184 / 195 binários publicados e relidos**, mais 3 imagens verificadas sobre o relatório inicial (181 / 195).
-- Checkpoint [2d0d20ab7c63](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2d0d20ab7c63f820940fd968cbfab00620e5d587): TF-232 `TF-232.jpg` (88.440 bytes, 1122×831, SHA-256 `e21b42f7e99c2f3a1d6791e30252225d3ca1f0c0dda448ea02ff4eb33d0e0431`) e TF-242 `TF-242.jpg` (74.920 bytes, 1022×857, SHA-256 `3386caf779cc581b9cc9c74def54b74368b6f104fdcf73bf5eff0edc4a9f19ac`). Fonte: [publicação de mz4250](https://mz4250.com/posts/tome-of-beasts-93739908) com arquivos **Annelidast.JPG** e **Ashwalker.JPG**. São fotografias/renderizações de miniaturas 3D identificadas pelo criador, **não** imagens editoriais oficiais do Tome of Beasts.
-- Checkpoint [db3055fa21bb](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/db3055fa21bbd7999e93a7c2f9e04d0ce0069357): TF-263 `TF-263.png` (704.995 bytes, 800×1035, SHA-256 `4266d4c1c21043f8bd97bab3c83f75ca2edcb2defdcf4032bb9b28caabce56d8`). Fonte: [imagem Abrikandilu, Pathfinder 2e](https://pf2.huijiwiki.com/wiki/%E6%96%87%E4%BB%B6%3AAbrikandilu.webp), **edição diferente** da referência do catálogo. É uma imagem especificamente identificada com o monstro, não uma confirmação de arte oficial para SRD 607.
-- Workflows realizados: [primeiro](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/actions/runs/38505150070), [segundo](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/actions/runs/38505658834), ambos concluídos com sucesso. A origem inicial de Abrikandilu (`2e.aonprd.com`) apresentou timeout; reprocessamento com espelho nomeado foi bem-sucedido. **Sem erros de aquisição ativos ao final.**
-- **11 imagens ainda não adquiridas**, sendo 10 sem fonte específica recuperável (TF-069, TF-185, TF-200, TF-201, TF-226, TF-231, TF-239, TF-255, TF-264, TF-267) e 1 duplicada rejeitada (TF-099 compartilha SHA-256 com TF-090).
-- Os novos arquivos passaram por assinatura/formato real, tamanho, dimensões, decodificação completa, SHA-256, publicação via blob base64 e releitura do GitHub. A **identidade visual editorial** de todo o conjunto permanece sujeita à revisão independente; nomes de origem e páginas de fonte não a substituem.
