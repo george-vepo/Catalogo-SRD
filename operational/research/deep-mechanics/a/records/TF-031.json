@@ -5,17 +5,21 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
+    "publisher": "Kobold Press / Open Design LLC",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "publication_year": 2022,
+    "edition_family": "D&D 5e",
+    "edition": "Tome of Beasts 3 for 5th Edition (2022)",
     "exact_printing": null,
     "challenge_rating": "2",
     "size": "Medium",
     "type": "beast",
-    "alignment": null
+    "alignment": "unaligned",
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 17,
+    "armor_class_type": "natural armor",
     "hit_points": 58,
     "hit_dice": "9d8+18",
     "ability_scores": {
@@ -27,123 +31,244 @@
       "CHA": 3
     },
     "speeds": {
-      "andar": 30,
-      "escavar": 15
+      "walk_ft": 30,
+      "burrow_ft": 15
     },
-    "senses": [
-      "tremorsense 30 ft."
-    ],
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "senses": {
+      "tremorsense_ft": 30,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
   },
   "mechanics": {
     "traits": [
       {
         "name": "Bladed Shell",
         "category": "passive",
-        "prior_summary_unverified": "Quem toca o caranguejo ou o acerta corpo a corpo a até 5 pés sofre 1d6 cortante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "activation": "automatic",
+        "triggers": [
+          {
+            "event": "touched",
+            "actor": "other_creature"
+          },
+          {
+            "event": "melee_attack_hits_this_creature",
+            "attacker_distance_ft_max": 5
+          }
+        ],
+        "effect": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 0,
+              "damage_type": "slashing",
+              "average": 3
+            }
+          ],
+          "target": "criatura que toca ou ataca"
+        },
+        "save": null,
+        "resource_limit": null
       },
       {
         "name": "Pounce",
         "category": "passive",
-        "prior_summary_unverified": "Avanço de 15 pés seguido de Shell Bash exige FOR CD13 para não cair; se alvo cair, pode atacar com garra como bônus.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "activation": "conditional",
+        "prerequisites": [
+          {
+            "movement_straight_towards_target_ft_min": 15
+          },
+          {
+            "attack_hits": "Shell Bash",
+            "timing": "same_turn"
+          }
+        ],
+        "on_trigger": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 13,
+            "on_failure": "Prone",
+            "on_success": "Permanece de pé"
+          }
+        },
+        "follow_up_bonus_action": {
+          "available_if": "alvo prone",
+          "attack": "Claw",
+          "target": "mesmo alvo"
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "prior_summary_unverified": "Uma garra e um ataque de casco.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Claw",
+            "count": 1
+          },
+          {
+            "action": "Shell Bash",
+            "count": 1
+          }
+        ],
+        "saving_throw": null,
+        "uses_limit": null
       },
       {
         "name": "Claw",
-        "category": "action",
-        "prior_summary_unverified": "+5, 5 pés, 1d6+3 contundente e agarrão CD13; cada uma de duas garras pode agarrar um alvo.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "damage_type": "bludgeoning"
+            }
+          ],
+          "other_effects": [
+            {
+              "condition": "grappled",
+              "application": "on_hit",
+              "escape_dc": 13,
+              "size_limit": null,
+              "maximum_simultaneous_targets": 2,
+              "limitation": "cada uma das duas garras pode agarrar um alvo"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "saving_throw": null,
         "recharge": null,
-        "uses": null
+        "uses_limit": null
       },
       {
         "name": "Shell Bash",
-        "category": "action",
-        "prior_summary_unverified": "+5, 5 pés, 1d4+3 contundente e 1d6 cortante.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 3,
+              "damage_type": "bludgeoning"
+            },
+            {
+              "dice": "1d6",
+              "flat": 0,
+              "damage_type": "slashing"
+            }
+          ],
+          "other_effects": []
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "saving_throw": null,
         "recharge": null,
-        "uses": null
+        "uses_limit": null
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [
+      {
+        "name": "Pounce — Claw",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "Pounce derruba a criatura alvo",
+        "condition": "alvo está prone após salvaguarda FOR CD13",
+        "resolution": "Uma ação de ataque Claw contra o alvo prone",
+        "uses_limit": null
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/crab-razorback/",
-      "type": "referência_de_checkpoint_histórico",
-      "verification": "detalhamento completo pendente"
+      "kind": "individual_statblock_secondary",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "CA",
+        "PV",
+        "atributos",
+        "deslocamento",
+        "sentidos",
+        "Bladed Shell",
+        "Pounce",
+        "Multiattack",
+        "Claw",
+        "Shell Bash"
+      ],
+      "reviewed": "2026-10-14"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "kind": "official_publisher_index",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "editora",
+        "publicação",
+        "tipo",
+        "ND"
+      ],
+      "reviewed": "2026-10-14"
     }
   ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_actions_exhaustively_enumerated": true,
+    "independent_transcriptions_agree": false,
+    "official_publisher_index_publication_confirmed": true,
+    "primary_printing_or_errata_verified": false,
+    "editorial_final_approval": false,
+    "reason_for_partial": "Regras da ficha online foram estruturadas integralmente; edição impressa/errata e revisão independente de implementação continuam pendentes."
+  },
   "source_checkpoint": {
     "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-031_TF-035/research.json",
     "sha": "0c5bde59d111e07bb260ba5717982c5e055390e7"
   },
-  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
-  "legacy_note": null,
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
-  ]
+    "Conferir ficha contra páginas do livro e erratas editoriais da impressão exata.",
+    "Revisar estrutura contra engine de combate e aprovar imagem final.",
+    "Não atualizar ledger/CSV global até aprovação independente."
+  ],
+  "image": {
+    "status": "GENERATED_LOCAL_NOT_YET_PERSISTED",
+    "file_path": null,
+    "origin": "original_ai_generated",
+    "generation_id": "960ac39c-8582-4f42-83e4-55f06781c4c1",
+    "local_full_resolution": "/mnt/data/wide_cinematic_fantasy_nature_scene_of_a_giant_arm.png",
+    "review_status": "PENDING",
+    "note": "Arte original, não oficial; a publicação binária no GitHub ainda será verificada."
+  }
 }

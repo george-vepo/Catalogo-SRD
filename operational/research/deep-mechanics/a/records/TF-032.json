@@ -5,17 +5,21 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (informação histórica não auditada)",
+    "publisher": "Kobold Press / Open Design LLC",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "publication_year": 2022,
+    "edition_family": "D&D 5e",
+    "edition": "Tome of Beasts 3 for 5th Edition (2022)",
     "exact_printing": null,
     "challenge_rating": "3",
     "size": "Large",
     "type": "beast",
-    "alignment": null
+    "alignment": "unaligned",
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 13,
+    "armor_class_type": "natural armor",
     "hit_points": 76,
     "hit_dice": "9d10+27",
     "ability_scores": {
@@ -27,150 +31,248 @@
       "CHA": 6
     },
     "speeds": {
-      "andar": 40
+      "walk_ft": 40
     },
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "senses": {
+      "passive_perception": 11
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
   },
   "mechanics": {
     "traits": [
       {
         "name": "Keen Smell",
         "category": "passive",
-        "prior_summary_unverified": "Vantagem em Percepção pelo olfato.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "activation": "automatic",
+        "check": "Wisdom (Perception)",
+        "conditional_advantage": "verificação depende de olfato",
+        "recharge": null
       },
       {
         "name": "Relentless",
         "category": "passive",
-        "prior_summary_unverified": "Após descanso curto ou longo, pode ficar com 1 PV quando até 15 de dano o reduziriam a zero.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "activation": "automatic",
+        "trigger": "recebe até 15 pontos de dano de um único evento que o levariam a 0 PV",
+        "effect": "permanece com 1 PV",
+        "recharge": "short_or_long_rest",
+        "uses_per_rest": 1,
+        "threshold_damage_max": 15
       },
       {
         "name": "Trampling Charge",
         "category": "passive",
-        "prior_summary_unverified": "Avanço de 20 pés seguido de mordida exige FOR CD13 contra queda; contra alvo caído, pode usar Slam como ação bônus.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "activation": "conditional",
+        "prerequisites": [
+          {
+            "movement_straight_towards_target_ft_min": 20
+          },
+          {
+            "attack_hits": "Bite",
+            "timing": "same_turn"
+          }
+        ],
+        "on_trigger": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 13,
+            "on_failure": "Prone",
+            "on_success": "Permanece de pé"
+          }
+        },
+        "follow_up_bonus_action": {
+          "available_if": "alvo prone",
+          "attack": "Slam",
+          "target": "mesmo alvo"
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "prior_summary_unverified": "Uma mordida e uma pancada.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Slam",
+            "count": 1
+          }
+        ],
+        "recharge": null
       },
       {
         "name": "Bite",
-        "category": "action",
-        "prior_summary_unverified": "+7, 5 pés, 2d8+5 perfurante, agarra CD13 e restringe; enquanto agarra, não pode morder outro alvo.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 5,
+              "damage_type": "piercing"
+            }
+          ],
+          "other_effects": [
+            {
+              "condition": "grappled",
+              "application": "on_hit",
+              "escape_dc": 13,
+              "additional_condition": "restrained",
+              "end": "quando agarrão termina",
+              "restriction_while_active": "não pode realizar Bite contra outro alvo"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "saving_throw": null,
         "recharge": null,
-        "uses": null
+        "uses_limit": null
       },
       {
         "name": "Slam",
-        "category": "action",
-        "prior_summary_unverified": "+7, 5 pés, 2d4+5 contundente.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d4",
+              "flat": 5,
+              "damage_type": "bludgeoning"
+            }
+          ],
+          "other_effects": []
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "saving_throw": null,
         "recharge": null,
-        "uses": null
+        "uses_limit": null
       },
       {
         "name": "Fierce Call",
-        "category": "action",
-        "prior_summary_unverified": "Recarga após descanso curto/longo; criaturas hostis até 60 pés fazem SAB CD13; se falham soltam o que seguram e fogem amedrontadas, com repetição da salvaguarda no fim do turno.",
-        "mechanics_status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "reach": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "effect_duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "saving_throw_area_effect",
+        "action_economy": "action",
+        "recharge": "short_or_long_rest",
+        "uses_per_rest": 1,
+        "targeting": {
+          "creature_relation": "hostile",
+          "range_ft": 60,
+          "max_targets": null
+        },
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 13,
+          "on_failure": {
+            "drop_held_items": true,
+            "conditions": [
+              {
+                "name": "frightened",
+                "duration": "1_minute",
+                "repeat_save": "end_of_each_affected_creature_turn",
+                "end_on_save_success": true
+              }
+            ],
+            "forced_behavior": "Deve usar Dash e afastar-se pela rota mais segura em cada turno enquanto frightened, exceto se não houver para onde ir."
+          },
+          "on_success": "Nenhum efeito"
+        },
+        "initial_duration": "1_minute",
+        "damage": []
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [
+      {
+        "name": "Trampling Charge — Slam",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "Bite após investida de 20 pés faz alvo falhar FOR CD13 e ficar prone",
+        "action": "Slam",
+        "target": "alvo prone",
+        "uses_limit": null
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/daeodon/",
-      "type": "referência_de_checkpoint_histórico",
-      "verification": "detalhamento completo pendente"
+      "kind": "individual_statblock_secondary",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "todos os atributos e habilidades do statblock"
+      ],
+      "reviewed": "2026-10-14"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:daeodon",
+      "kind": "independent_statblock_transcription",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "todos os atributos e habilidades do statblock"
+      ],
+      "reviewed": "2026-10-14"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "kind": "official_publisher_index",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "publicação",
+        "ND",
+        "tipo",
+        "tamanho"
+      ],
+      "reviewed": "2026-10-14"
     }
   ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_actions_exhaustively_enumerated": true,
+    "independent_transcriptions_agree": true,
+    "official_publisher_index_publication_confirmed": true,
+    "primary_printing_or_errata_verified": false,
+    "editorial_final_approval": false,
+    "reason_for_partial": "Regras da ficha online foram estruturadas integralmente; edição impressa/errata e revisão independente de implementação continuam pendentes."
+  },
   "source_checkpoint": {
     "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-031_TF-035/research.json",
     "sha": "0c5bde59d111e07bb260ba5717982c5e055390e7"
   },
-  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
-  "legacy_note": null,
   "outstanding": [
-    "Pesquisar integralmente cada habilidade e ação com parâmetros executáveis, não utilizar resumos prévios como substitutos.",
-    "Verificar a edição exata, possíveis erratas, ataques, salvaguardas, condições e usos.",
-    "Campos sem comprovação ficam null, não indicam ausência de habilidade."
+    "Conferir ficha contra páginas do livro e erratas editoriais da impressão exata.",
+    "Revisar estrutura contra engine de combate e aprovar imagem final.",
+    "Não atualizar ledger/CSV global até aprovação independente."
   ]
 }
