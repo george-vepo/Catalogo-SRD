@@ -4,24 +4,27 @@
   "nome": "Sodwose",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 6,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
     "edicao": "D&D 5e (publicação de Kobold Press)",
-    "fonte_identidade": null
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "6",
+    "xp": 2300,
+    "bonus_proficiencia": 3,
     "ca": 15,
+    "composicao_ca": "não indicada na fonte",
     "pv": 127,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
+    "dados_vida": "15d8+60",
+    "porte": "Medium",
+    "tipo": "plant",
+    "alinhamento": "neutral evil",
     "atributos": {
       "forca": 10,
       "destreza": 21,
@@ -38,104 +41,252 @@
       "sabedoria": 2,
       "carisma": -1
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 40,
+      "escalada_ft": 30
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 5
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 8
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 120,
+        "cego_alem_do_alcance": true
+      }
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Common",
+      "Sylvan"
+    ],
+    "vulnerabilidades": [
+      "fire"
+    ],
+    "resistencias": [
+      "bludgeoning",
+      "piercing"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "poisoned",
+      "restrained",
+      "unconscious"
+    ],
+    "resistencias_condicao": []
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Camuflagem em campos, efeito amedrontador de espantalho e armadilhas.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Grassland Camouflage",
+        "tipo": "passivo",
+        "gatilho": "tentativa de esconder-se em terreno de pradaria",
+        "efeito": "vantagem em testes de Destreza (Furtividade) para se ocultar nesse terreno"
+      },
+      {
+        "nome": "Scarecrow",
+        "tipo": "aura_passiva",
+        "gatilho": "qualquer criatura inicia seu turno em raio de 10 pés",
+        "alcance_ft": 10,
+        "teste_resistencia": {
+          "atributo": "WIS",
+          "cd": 15
+        },
+        "efeito_falha": {
+          "condicao": "frightened",
+          "duracao": "até o final do próximo turno da criatura"
+        },
+        "efeito_sucesso": "imune ao Scarecrow deste Sodwose por 24 horas",
+        "frequencia": "cada início de turno para criaturas ainda não imunes"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Três Grass Whips que podem puxar, Entangle 1/dia, Grass Step e Set Snare.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "tipo": "multiataque",
+        "sequencia": [
+          {
+            "acao": "Grass Whip",
+            "quantidade": 3
+          }
+        ],
+        "substituicoes": []
+      },
+      {
+        "nome": "Grass Whip",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 8,
+        "alcance_ft": 15,
+        "alvos": 1,
+        "alvo_tipo": "creature",
+        "dano": [
+          {
+            "dados": "2d6+5",
+            "media": 12,
+            "tipo": "slashing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "STR",
+            "cd": 15
+          },
+          "efeito_falha": "puxar a criatura até 10 pés em direção ao Sodwose",
+          "efeito_sucesso": "sem deslocamento imposto"
+        },
+        "origem": "https://www.5esrd.com/database/creature/sodwose/"
+      },
+      {
+        "nome": "Entangle",
+        "tipo": "acao_area",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "alcance_ft": 60,
+        "origem": "ponto no solo visto a até 60 pés",
+        "area": {
+          "raio_ft": 20,
+          "restricao": "plantas/raízes presentes no terreno"
+        },
+        "duracao": "1 minuto",
+        "gatilho_teste": "entrada na área pela primeira vez no turno ou início de turno na área",
+        "teste_resistencia": {
+          "atributo": "STR",
+          "cd": 15
+        },
+        "efeito_falha": {
+          "condicao": "restrained"
+        },
+        "efeito_sucesso": "não fica restrained nessa ocorrência",
+        "encerramento": "o próprio alvo ou outra criatura usa uma ação e tem sucesso em teste de Força CD 15 para soltá-lo",
+        "concentracao": "não descrita na ficha individual",
+        "origem_fonte": "https://www.5esrd.com/database/creature/sodwose/"
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": [],
+    "ataques": [
+      {
+        "nome": "Grass Whip",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 8,
+        "alcance_ft": 15,
+        "alvos": 1,
+        "alvo_tipo": "creature",
+        "dano": [
+          {
+            "dados": "2d6+5",
+            "media": 12,
+            "tipo": "slashing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "STR",
+            "cd": 15
+          },
+          "efeito_falha": "puxar a criatura até 10 pés em direção ao Sodwose",
+          "efeito_sucesso": "sem deslocamento imposto"
+        },
+        "origem": "https://www.5esrd.com/database/creature/sodwose/"
+      }
+    ],
+    "multiataque": {
+      "total": 3,
+      "sequencia": [
+        {
+          "acao": "Grass Whip",
+          "quantidade": 3
+        }
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Grass Step",
+        "tipo": "acao_bonus",
+        "efeito": "teletransporte do Sodwose e equipamentos até 30 pés para posição desocupada visível",
+        "distancia_maxima_ft": 30,
+        "pre_condicoes": [
+          "origem com grama",
+          "destino com grama",
+          "destino desocupado e visível"
+        ],
+        "recarga": "não indicada"
+      },
+      {
+        "nome": "Set Snare",
+        "tipo": "acao_bonus",
+        "alcance_ft": 30,
+        "area": {
+          "quadrado_lado_ft": 5,
+          "vegetacao_minima": "metade da área coberta por grama"
+        },
+        "duracao": "até 1 minuto",
+        "gatilho": "primeira criatura que entrar no quadrado",
+        "teste_resistencia": {
+          "atributo": "STR",
+          "cd": 15
+        },
+        "efeito_falha": {
+          "condicao": "restrained"
+        },
+        "efeito_sucesso": "não fica restrained",
+        "encerramento": "alvo ou outra criatura usa ação e tem sucesso em teste de Força CD 15",
+        "limite_traps_ativas": 3,
+        "substituicao": "ao montar a quarta armadilha, desaparece a mais antiga"
+      }
+    ],
     "reacoes": [],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES_2",
+      "reacoes": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL"
+    },
+    "acoes_miticas": []
   },
   "pendencias": [
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Bloco mecânico completo reconstruído a partir da ficha individual 5eSRD, conferido com transcrição secundária; ainda requer conferência com exemplar editorial/errata do Tome of Beasts 3.",
+    "Imagem binária existente, mas identidade visual não aprovada."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "conferência editorial do Tome of Beasts 3 e erratas",
+    "aprovação visual editorial da imagem"
   ],
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/sodwose/",
-      "tipo": "republicação terceirizada (5eSRD)",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco mecânico individual — 5eSRD; confrontado campo a campo em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice editorial da Kobold Press, confirma identidade, ND e publicação",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico, apenas referência",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -203,5 +354,13 @@
     "largura": null,
     "altura": null,
     "observacao": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "fonte_publicada_individual": "https://www.5esrd.com/database/creature/sodwose/",
+    "indice_editorial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "comparacao_exemplar_editorial_ou_errata": "PENDENTE",
+    "ausencia_categoria_no_bloco_individual": "CONFERIDA",
+    "data_conferencia": "2026-10-14"
   }
 }
