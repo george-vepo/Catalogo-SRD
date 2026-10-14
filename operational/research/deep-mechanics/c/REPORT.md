@@ -2,6 +2,14 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 23 — Demilich, Mariner e Mammoth (14/10/2026)
+
+- TF-505 Demilich Mastermind: 319 HP / CR18, cinco Legendary Resistance, quatro soul gems, Devour Soul, Reflection Arcane/Skull Shock bloodied, quatro ações lendárias com custos; optional lair features mantidas separadas de ações de covil. Fonte: https://a5e.tools/node/1478. Dust Storm omite resultado no sucesso; ainda parcial.
+- TF-506 Mariner Ghost Swarm: Elite Recovery, Ethereal Sight, Swarm, Turn Resistance, Withering Cutlasses, Magic Blast, Etherealness, Spirit Absorption e Painful Wail estruturadas com limites e efeitos. Fonte: https://a5e.tools/node/3406.
+- TF-510 Infernal Mammoth: Siege Platform, Trampling Charge, Gore, Stomp e Opportunity Step; **bloqueada** por 104 HP / 11d12+33 com CON20 (+5), que conflita com fórmula padrão. Fonte: https://a5e.tools/node/3426.
+- Nenhuma imagem nova persistida nem promoção mecânica completa. Acumulado: **33 detalhadas, 98 ainda sem revisão; 97 parciais, 34 bloqueadas**.
+
+
 ## Checkpoint 22 — fontes oficiais A5E (14/10/2026)
 
 - Commit mecânico `397757486790b6d31c911f95b18d821ceff018ff`; leitura confirmada de TF-499, TF-501, TF-503 e TF-504 pela API GitHub, IDs/JSON válidos.
@@ -83,8 +91,8 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **30 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **101 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **33 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **98 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
 - **0 criaturas declaradas mecanicamente completas**, **104 parciais**, **27 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
@@ -143,11 +151,11 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 | TF-501 | Lost Prospector | PARCIAL | sim | [individual](https://a5e.tools/node/2965) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-503 | Stuffed Crab | PARCIAL | sim | [individual](https://a5e.tools/node/2213) | Confirmar número de ghouls e procedimento de libertação dos presos. |
 | TF-504 | Warlord's Ghost | PARCIAL | sim | [individual](https://a5e.tools/node/1464) | Ficha editorial mantém termos banshee: distinguir variante Warlord's Ghost do monstro-base. |
-| TF-505 | Demilich Mastermind | PARCIAL | não | [individual](https://a5e.tools/node/1478) | Não confundir com demilich padrão (PV 159, outro bloco). |
-| TF-506 | Mariner Ghost Swarm | PARCIAL | não | [individual](https://a5e.tools/node/3406) | Conferir lacunas de formatação na descrição da ferramenta editorial. |
+| TF-505 | Demilich Mastermind | PARCIAL | sim | [individual](https://a5e.tools/node/1478) | Não confundir com demilich padrão (PV 159, outro bloco). |
+| TF-506 | Mariner Ghost Swarm | PARCIAL | sim | [individual](https://a5e.tools/node/3406) | Conferir lacunas de formatação na descrição da ferramenta editorial. |
 | TF-507 | Fogborn Skeleton Horde | PARCIAL | não | [individual](https://a5e.tools/node/3460) | Tratar bloodied e manejo da horda segundo A5E, não converter sem revisão. |
 | TF-509 | Fogborn Zombie Horde | PARCIAL | não | [individual](https://a5e.tools/node/3462) | Regra de grupo e atributos podem coincidir com Gorger Zombie Horde, mas variantes são distintas. |
-| TF-510 | Infernal Mammoth | PARCIAL | não | [individual](https://a5e.tools/node/3426) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-510 | Infernal Mammoth | PARCIAL | sim | [individual](https://a5e.tools/node/3426) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-511 | Fiendbloom Awakened Tree | PARCIAL | não | [individual](https://a5e.tools/node/3414) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-516 | Kanos Spawn | PARCIAL | não | [individual](https://a5e.tools/node/2991) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-517 | Imp Flock | PARCIAL | não | [individual](https://a5e.tools/node/3394) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |

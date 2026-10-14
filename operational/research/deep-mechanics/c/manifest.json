@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 30,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 33,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 98,
-    "bloqueadas": 33,
-    "registros_aproveitados_sem_nova_verificacao_integral": 101,
+    "parciais": 97,
+    "bloqueadas": 34,
+    "registros_aproveitados_sem_nova_verificacao_integral": 98,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -359,6 +359,19 @@
       "commit": "397757486790b6d31c911f95b18d821ceff018ff",
       "leitura_persistencia": "CONFIRMADA — quatro records lidos via GitHub API, JSONs sintaticamente válidos e IDs iguais ao esperado",
       "tipo": "quatro fontes oficiais A5E"
+    },
+    {
+      "numero": 23,
+      "inicio": "TF-505",
+      "fim": "TF-510",
+      "ids": [
+        "TF-505",
+        "TF-506",
+        "TF-510"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE",
+      "tipo": "três criaturas A5E"
     }
   ],
   "atualizacao_detalhada_sha": "397757486790b6d31c911f95b18d821ceff018ff",
@@ -1217,23 +1230,28 @@
       "escopo": "next_batches[4]",
       "posicao": 29,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-505.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_OFICIAL_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/1478",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Não confundir com demilich padrão (PV 159, outro bloco)."
+        "O efeito do sucesso em Dust Storm não está no bloco individual: não aplicar metade do dano por inferência.",
+        "Características de covil são sugestões opcionais, não Lair Actions do monstro.",
+        "Soul Vessel consta na descrição editorial e pode afetar retorno, mas precisa confronto com Monstrous Menagerie/errata.",
+        "Imagem física da variante ainda falta."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "resultado sucesso Dust Storm",
+        "quais features de covil são escolhidas",
+        "imagem física"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-506",
@@ -1241,23 +1259,26 @@
       "escopo": "next_batches[4]",
       "posicao": 30,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-506.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_OFICIAL_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3406",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Conferir lacunas de formatação na descrição da ferramenta editorial."
+        "Fonte individual confere Elite Recovery apesar de estar na seção de traits; trata-se explicitamente de ação.",
+        "O efeito de ressurreição da Spirit Absorption depende de retorno em menos de uma hora.",
+        "Confrontar To Save A Kingdom/errata e obter imagem binária."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "revisão da edição impressa",
+        "imagem física"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-507",
@@ -1313,21 +1334,27 @@
       "escopo": "next_batches[4]",
       "posicao": 33,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-510.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_CONTRADICAO_HD_E_CON",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3426",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Contradição editorial: imprime 104 (11d12+33) para CON20 (+5), que normalmente implicaria 11d12+55. Preservar ambos sem alterar.",
+        "Siege Platform funciona por comando de infernal dwarf; não atribuir comportamento sem ele.",
+        "Revisar To Save A Kingdom/errata e obter imagem física."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "fórmula de PV versus CON20",
+        "procedimento sem comandante",
+        "imagem"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-511",

@@ -4,23 +4,26 @@
   "nome": "Infernal Mammoth",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 33,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "BLOQUEADA_CONTRADICAO_HD_E_CON",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "To Save A Kingdom",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/3426"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "5",
+    "xp": null,
+    "bonus_proficiencia": 3,
     "ca": 15,
     "pv": 104,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "11d12+33",
+    "bloodied": 52,
+    "porte": "Huge",
+    "tipo": "Undead",
     "alinhamento": null,
     "atributos": {
       "forca": 24,
@@ -38,104 +41,185 @@
       "sabedoria": 0,
       "carisma": -2
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 40
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [],
+    "resistencias": [
+      "necrotic"
+    ],
+    "vulnerabilidades": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "fatigue",
+      "poisoned",
+      "strife"
+    ],
+    "composicao_ca": "natural armor",
+    "maneuver_dc": 17,
+    "divergencia_hd": {
+      "publicado": "11d12+33",
+      "CON": 20,
+      "mod_CON": 5,
+      "calculado_pela_regra_padrao": "11d12+55",
+      "situacao": "não resolvida"
+    }
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Mamute morto-vivo, Siege Platform proporciona cobertura à tripulação.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Siege Platform",
+        "efeito": "fortificação nas costas fornece three-quarters cover para até 4 criaturas Medium",
+        "controle": "age na própria iniciativa por comandos de infernal dwarf"
+      },
+      {
+        "nome": "Trampling Charge",
+        "pre_condicao": "anda pelo menos 20 ft em linha reta em direção a um alvo e acerta Gore no mesmo turno",
+        "teste": {
+          "atributo": "STR",
+          "cd": 17
+        },
+        "falha": {
+          "condicao": "prone"
+        }
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Gore, Stomp, Trampling Charge e movimento em oportunidades.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Gore",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "necrotic"
+          }
+        ]
+      },
+      {
+        "nome": "Stomp",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d10+6",
+            "media": 17,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "necrotic"
+          }
+        ],
+        "alvo": "criatura prone"
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Gore",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "necrotic"
+          }
+        ]
+      },
+      {
+        "nome": "Stomp",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d10+6",
+            "media": 17,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "necrotic"
+          }
+        ],
+        "alvo": "criatura prone"
+      }
+    ],
     "multiataque": null,
-    "acoes_bonus": [],
+    "acoes_bonus": [
+      {
+        "nome": "Opportunity Step",
+        "efeito": "executa Stomp em um alvo prone ao alcance"
+      }
+    ],
     "reacoes": [],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "AUSENCIA_CONFIRMADA",
+      "acoes_lendarias": "AUSENCIA_CONFIRMADA",
+      "acoes_covil": "NAO HA LAIR ACTIONS; se houver lair features são separadas",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA",
+      "conjuracao": "AUSENCIA_CONFIRMADA"
+    }
   },
   "pendencias": [
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Contradição editorial: imprime 104 (11d12+33) para CON20 (+5), que normalmente implicaria 11d12+55. Preservar ambos sem alterar.",
+    "Siege Platform funciona por comando de infernal dwarf; não atribuir comportamento sem ele.",
+    "Revisar To Save A Kingdom/errata e obter imagem física."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "fórmula de PV versus CON20",
+    "procedimento sem comandante",
+    "imagem"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/3426",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco oficial individual A5E validado em 2026-10-14",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -189,5 +273,12 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "fonte": "https://a5e.tools/node/3426",
+    "livro_original_errata": "PENDENTE"
   }
 }

@@ -4,23 +4,26 @@
   "nome": "Demilich Mastermind",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 29,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_OFICIAL_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Monstrous Menagerie",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/1478"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "18",
+    "xp": null,
+    "bonus_proficiencia": 6,
     "ca": 20,
     "pv": 319,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "58d4+174",
+    "bloodied": 159,
+    "porte": "Tiny",
+    "tipo": "Undead",
     "alinhamento": null,
     "atributos": {
       "forca": 10,
@@ -38,105 +41,294 @@
       "sabedoria": 6,
       "carisma": 5
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 0,
+      "voo_ft": 30,
+      "hover": true
+    },
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 13
+      },
+      {
+        "nome": "Perception",
+        "bonus": 12
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 13
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 6
+      },
+      {
+        "nome": "CON",
+        "bonus": 9
+      },
+      {
+        "nome": "INT",
+        "bonus": 13
+      },
+      {
+        "nome": "WIS",
+        "bonus": 12
+      },
+      {
+        "nome": "CHA",
+        "bonus": 11
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "truesight",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 22,
+    "idiomas": [
+      "compreende idiomas de sua vida, não fala"
+    ],
+    "resistencias": [],
+    "vulnerabilidades": [],
+    "imunidades_dano": [
+      "necrotic",
+      "poison",
+      "psychic",
+      "nonmagical weapons"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "deafened",
+      "fatigue",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "stunned"
+    ],
+    "composicao_ca": "natural armor",
+    "maneuver_dc": 21
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Versão elite e lendária do demilich; reflexos arcanos, Avoidance e Legendary Resistance.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Avoidance",
+        "gatilho": "save contra efeito que causa metade do dano em sucesso",
+        "resultado_sucesso": "zero dano",
+        "resultado_falha": "metade do dano"
+      },
+      {
+        "nome": "Legendary Resistance",
+        "usos": {
+          "quantidade": 5,
+          "periodo": "dia"
+        },
+        "gatilho": "falha em save",
+        "efeito": "escolhe sucesso e quebra uma gema de proteção",
+        "gemas_iniciais": 5
+      },
+      {
+        "nome": "Undead Nature",
+        "efeito": "não necessita ar, alimento, sono"
+      },
+      {
+        "nome": "Soul Vessel",
+        "categoria": "descrição com efeito mecânico",
+        "gatilho": "demilich destruído e receptáculo de alma sobrevive",
+        "efeito": "reforma em 1d10 dias",
+        "final": "destruir o receptáculo para morte permanente"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Devour Soul CD 17, Skull Shock, telecinese e ações lendárias.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Devour Soul",
+        "alcance_ft": 120,
+        "alvos": 1,
+        "teste": {
+          "atributo": "WIS",
+          "cd": 17
+        },
+        "alternativas": [
+          {
+            "condicao": "sucesso OU todas gemas cheias",
+            "dano": {
+              "dados": null,
+              "media": 40,
+              "tipo": "necrotic"
+            },
+            "cura_demilich": 40
+          },
+          {
+            "condicao": "falha E gema vazia",
+            "efeito": "alvo morre imediatamente e alma fica presa",
+            "cura_demilich": 40
+          }
+        ],
+        "gemas_almas_maximas": 4,
+        "sucesso_garante_imunidade_por_horas": 24,
+        "alma_presa": {
+          "ressuscitavel": false,
+          "destruicao_permanente_apos_dias": 30,
+          "libertacao": "demilich derrotado e gema correspondente quebrada; corpo a até 100 milhas"
+        }
       }
     ],
     "ataques": [],
     "multiataque": null,
     "acoes_bonus": [],
-    "reacoes": [],
-    "acoes_lendarias": [],
-    "acoes_covil": null,
+    "reacoes": [
+      {
+        "nome": "Reflection Arcane",
+        "pre_condicao": "bloodied",
+        "gatilho": "vence save contra magia que o tem como alvo",
+        "efeito": "magia também passa a visar outra criatura em 30 pés"
+      },
+      {
+        "nome": "Skull Shock",
+        "pre_condicao": "bloodied",
+        "gatilho": "recebe dano de ataque melee",
+        "alvo": "atacante",
+        "dano": {
+          "dados": "12d6",
+          "media": 42,
+          "tipo": "lightning"
+        }
+      }
+    ],
+    "acoes_lendarias": [
+      {
+        "nome": "Cranial Transposition",
+        "custo": 1,
+        "pre_condicao": "crânio não mágico desassistido até 30 pés",
+        "efeito": "troca teletransportando posições; disfarce de crânio até mover ou atacar"
+      },
+      {
+        "nome": "Dust Storm",
+        "custo": 2,
+        "area": {
+          "raio_ft": 30
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 17
+        },
+        "falha": {
+          "dano": {
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "necrotic"
+          },
+          "condicao": "blinded",
+          "duracao": "até fim próximo turno"
+        },
+        "sucesso": null,
+        "motivo_sucesso_null": "o bloco omite tratamento",
+        "movimento": "demilich move até o próprio deslocamento após efeito"
+      },
+      {
+        "nome": "Ringing Laugh",
+        "custo": 2,
+        "alcance_ft": 60,
+        "alvos": "todos que ouvem",
+        "teste": {
+          "atributo": "WIS",
+          "cd": 17
+        },
+        "falha": {
+          "condicao": "frightened",
+          "duracao": "até fim próximo turno"
+        }
+      },
+      {
+        "nome": "Telekinesis",
+        "custo": 1,
+        "alcance_ft": 60,
+        "alvos": "criatura Huge ou menor, ou objeto até 1000 lb",
+        "teste_criatura": {
+          "atributo": "STR",
+          "cd": 17
+        },
+        "falha": "move 30 ft em qualquer direção, inclusive para cima",
+        "colisao": {
+          "dano_a_ambos": {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "bludgeoning"
+          }
+        },
+        "fim": "se suspenso no ar, cai e sofre falling damage"
+      }
+    ],
+    "custos_lendarios": {
+      "maximo": 3,
+      "recuperacao": "início de turno",
+      "momento": "fim do turno de outra criatura",
+      "maximo_por_vez": 1
+    },
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "caracteristicas_opcionais_covil": [
+      {
+        "nome": "Yellow Mold",
+        "gatilho": "primeiro movimento por turno de 5 ft sem voar",
+        "efeito": "perturba yellow mold"
+      },
+      {
+        "nome": "Teleport Block",
+        "gatilho": "outro ser tenta teleporte/viagem planar",
+        "efeito": "falha e recebe 4d10 force"
+      },
+      {
+        "nome": "Lair Traps",
+        "gatilho": "outro ser termina turno sem mover",
+        "bonus_acerto": 10,
+        "dano": {
+          "dados": "3d6",
+          "media": 10,
+          "tipo": "variável pelo tipo da armadilha"
+        }
+      },
+      {
+        "nome": "Skull Terrain",
+        "efeito": "difficult terrain; demilich pode Hide entre crânios como bônus"
+      }
+    ],
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFIRMADA",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "PRESENTES",
+      "acoes_covil": "NAO HA LAIR ACTIONS; se houver lair features são separadas",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA",
+      "conjuracao": "AUSENCIA_CONFIRMADA"
+    }
   },
   "pendencias": [
-    "Não confundir com demilich padrão (PV 159, outro bloco).",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "O efeito do sucesso em Dust Storm não está no bloco individual: não aplicar metade do dano por inferência.",
+    "Características de covil são sugestões opcionais, não Lair Actions do monstro.",
+    "Soul Vessel consta na descrição editorial e pode afetar retorno, mas precisa confronto com Monstrous Menagerie/errata.",
+    "Imagem física da variante ainda falta."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "resultado sucesso Dust Storm",
+    "quais features de covil são escolhidas",
+    "imagem física"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/1478",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco oficial individual A5E validado em 2026-10-14",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -191,5 +383,12 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "fonte": "https://a5e.tools/node/1478",
+    "livro_original_errata": "PENDENTE"
   }
 }
