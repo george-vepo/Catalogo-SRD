@@ -92,8 +92,20 @@ def report(m):
                      "; origem: "+x["source_url"]+"; "+str(x["bytes"])+" bytes; "+
                      str(x["width"])+"x"+str(x["height"])+" px; SHA-256: "+x["sha256"]+
                      "; commit: "+x["commit"])
+    lines.extend(["","## Ressalvas de identidade e adequação editorial",""])
+    noted=[x for x in done if x.get("source_note")]
+    for x in noted:
+        lines.append("- "+x["id"]+" / "+x["creature"]+": "+x["source_note"])
+    if not noted: lines.append("Nenhuma ressalva adicional registrada.")
     lines.extend(["","## Não obtidos",""])
-    for x in missing:lines.append("- "+x["id"]+" / "+x["creature"]+": "+x["status"]+"; "+x.get("error",""))
+    for x in missing:
+        lines.append("- "+x["id"]+" / "+x["creature"]+": "+x["status"]+"; "+x.get("error",""))
+        if x.get("research_note"):
+            lines.append("  - Investigação: "+x["research_note"])
+        if x.get("source_reference"):
+            lines.append("  - Referência: "+x["source_reference"])
+        if x.get("rejected_candidate"):
+            lines.append("  - Candidato rejeitado: "+x["rejected_candidate"])
     lines.extend(["","## Duplicações e ressalvas",""])
     dup=[x for x in missing if x["status"]=="duplicate_suspected"]
     lines.extend([x["id"]+": "+x["error"] for x in dup] if dup else ["Nenhuma duplicação de SHA-256 encontrada entre os binários aprovados."])
