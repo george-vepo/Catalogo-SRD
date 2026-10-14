@@ -2,6 +2,15 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 28 — quatro blocos oficiais A5E (14/10/2026)
+
+- TF-507 **Fogborn Skeleton Horde**: HP 65 (10d8+20), AC13, resistência a terreno via Fogwalk com trajetória horizontal e névoa 1 turno, Water Walker, Area Vulnerability, Horde, Horde Dispersal em 1d4 skeletons com 6 PV cada, Shortsword e Shortbow +4 (5d6+10; metade se bloodied). Fonte https://a5e.tools/node/3460.
+- TF-509 **Fogborn Zombie Horde**: HP 75 (10d8+30), AC8, Fogwalk/Water Walker e regras de horda distintas, dispersão em 1d4 zombies com 7 PV, Grab +3 agarrando Medium ou menor (escape CD11), Bite +3 somente em grappled e cura igual ao dano. Fonte https://a5e.tools/node/3462.
+- TF-518 **Infernal Dwarf**: INT 15, armadura óssea, 5º nível de spellcasting 4/3/2 spell slots, cantrips, United in Action, Bone Warhammer +4, 5 magias de ação e Shield reação. **BLOQUEADA**: Ray of Frost remete erroneamente à duração do 'noble's next turn'. Fonte https://a5e.tools/node/3425.
+- TF-521 **Bugbear Door Breaker**: gauntlets com Loading Weapon/Reload, duas gauntlets para Multiattack, breaker, Smoke Screen reação (4–6), Clear the Way, Smoky Sight e Long Arms. **BLOQUEADA**: 60 PV impresso vs 5d10+10 (média 37,5), alcance 5 vs 10 ft e texto de sucesso de Clear the Way truncado. Fonte https://a5e.tools/node/4185.
+- Nenhuma correção especulativa nem imagem física nova. Contagens: **45 aprofundadas; 86 ainda sem revalidação; 92 parciais, 39 bloqueadas; 0 verificadas integralmente**.
+
+
 ## Checkpoint 27 — confronto com fonte editorial Gate Pass Gazette (14/10/2026)
 
 - Commit `9d6386ea894bfbb62d4e72f68b2dfe140fc44508` confirmado com read-back independente de TF-503 e TF-499; ambos JSONs válidos, IDs corretos e evidências no arquivo individual.
@@ -194,14 +203,14 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 | TF-504 | Warlord's Ghost | PARCIAL | sim | [individual](https://a5e.tools/node/1464) | Ficha editorial mantém termos banshee: distinguir variante Warlord's Ghost do monstro-base. |
 | TF-505 | Demilich Mastermind | PARCIAL | sim | [individual](https://a5e.tools/node/1478) | Não confundir com demilich padrão (PV 159, outro bloco). |
 | TF-506 | Mariner Ghost Swarm | PARCIAL | sim | [individual](https://a5e.tools/node/3406) | Conferir lacunas de formatação na descrição da ferramenta editorial. |
-| TF-507 | Fogborn Skeleton Horde | PARCIAL | não | [individual](https://a5e.tools/node/3460) | Tratar bloodied e manejo da horda segundo A5E, não converter sem revisão. |
-| TF-509 | Fogborn Zombie Horde | PARCIAL | não | [individual](https://a5e.tools/node/3462) | Regra de grupo e atributos podem coincidir com Gorger Zombie Horde, mas variantes são distintas. |
+| TF-507 | Fogborn Skeleton Horde | PARCIAL | sim | [individual](https://a5e.tools/node/3460) | Tratar bloodied e manejo da horda segundo A5E, não converter sem revisão. |
+| TF-509 | Fogborn Zombie Horde | PARCIAL | sim | [individual](https://a5e.tools/node/3462) | Regra de grupo e atributos podem coincidir com Gorger Zombie Horde, mas variantes são distintas. |
 | TF-510 | Infernal Mammoth | PARCIAL | sim | [individual](https://a5e.tools/node/3426) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-511 | Fiendbloom Awakened Tree | PARCIAL | sim | [individual](https://a5e.tools/node/3414) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-516 | Kanos Spawn | PARCIAL | sim | [individual](https://a5e.tools/node/2991) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-517 | Imp Flock | PARCIAL | sim | [individual](https://a5e.tools/node/3394) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-518 | Infernal Dwarf | PARCIAL | não | [individual](https://a5e.tools/node/3425) | Confirmar seleção de magias preparada e gatilhos de United in Action. |
-| TF-521 | Bugbear Door Breaker | PARCIAL | não | [individual](https://a5e.tools/node/4185) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-518 | Infernal Dwarf | PARCIAL | sim | [individual](https://a5e.tools/node/3425) | Confirmar seleção de magias preparada e gatilhos de United in Action. |
+| TF-521 | Bugbear Door Breaker | PARCIAL | sim | [individual](https://a5e.tools/node/4185) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-522 | Crime Boss | PARCIAL | sim | [individual](https://a5e.tools/node/1895) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-120 | Ashen Custodian | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/ashen-custodian/) | A página inclui 'Alternate Critical (Source: Monster Crits for 5e)' após Cleansing Strike. Esse texto é de outro suplemento, foi EXCLUÍDO da mecânica-base. |
 | TF-121 | Animal Lord, Queen of Birds | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-birds/) | Multiattack na página tem erro de digitação 'oOne' em descrição de ataques da forma verdadeira; tratado como leitura contextual, sem substituir fonte editorial original. |

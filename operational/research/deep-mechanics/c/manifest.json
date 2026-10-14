@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 41,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 45,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 94,
-    "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 90,
+    "parciais": 92,
+    "bloqueadas": 39,
+    "registros_aproveitados_sem_nova_verificacao_integral": 86,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -422,6 +422,20 @@
       "commit": "9d6386ea894bfbb62d4e72f68b2dfe140fc44508",
       "leitura_persistencia": "CONFIRMADA — TF-503 e TF-499 relidos, IDs, JSON e fontes editoriais preservados",
       "tipo": "rastreabilidade de edições Gate Pass Gazette e comparação PDF editorial original"
+    },
+    {
+      "numero": 28,
+      "inicio": "TF-507",
+      "fim": "TF-521",
+      "ids": [
+        "TF-507",
+        "TF-509",
+        "TF-518",
+        "TF-521"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE",
+      "tipo": "A5E quatro fichas completas na fonte individual, dois conflitos editoriais"
     }
   ],
   "atualizacao_detalhada_sha": "9d6386ea894bfbb62d4e72f68b2dfe140fc44508",
@@ -1337,23 +1351,25 @@
       "escopo": "next_batches[4]",
       "posicao": 31,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-507.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_LIVRO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3460",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Tratar bloodied e manejo da horda segundo A5E, não converter sem revisão."
+        "Fonte individual distingue essa variante da Skeleton Horde genérica; conserva 5+ esqueletos e dispersão 1d4 com 6 PV cada.",
+        "Faltam confronto com To Save A Kingdom/errata e arte física da variante."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "confronto com publicação e errata",
+        "imagem física e revisão editorial"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-509",
@@ -1361,23 +1377,26 @@
       "escopo": "next_batches[4]",
       "posicao": 32,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-509.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_LIVRO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3462",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Regra de grupo e atributos podem coincidir com Gorger Zombie Horde, mas variantes são distintas."
+        "Mantida distinção de Zombie Horde genérica: a forma Fogborn tem Fogwalk e Water Walker.",
+        "Recuperação por Bite depende de agarrão existente e dano efetivamente causado; não afirmar que supera PV máximos.",
+        "Faltam confronto com To Save A Kingdom/errata e arte física da variante."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "regras do livro/errata",
+        "imagem binária representativa"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-510",
@@ -1498,23 +1517,27 @@
       "escopo": "next_batches[4]",
       "posicao": 37,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-518.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_REFERENCIA_NOBLE_NO_RAY_OF_FROST",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3425",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Confirmar seleção de magias preparada e gatilhos de United in Action."
+        "A fonte oficial do Ray of Frost determina redução do deslocamento até 'the noble's next turn', entidade não existente na ficha Infernal Dwarf; preservar referência literal.",
+        "Conjuração de 5º nível, 4/3/2 spell slots e reação Shield estão estruturados; aguardam confronto com To Save A Kingdom e errata.",
+        "Falta arquivo binário de imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "alvo temporal de Ray of Frost: 'noble' vs Infernal Dwarf",
+        "edição To Save A Kingdom/errata",
+        "imagem física"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-521",
@@ -1522,21 +1545,29 @@
       "escopo": "next_batches[4]",
       "posicao": 38,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-521.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_PV_FONTE_E_GAUNTLETS_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/4185",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Bloco oficial imprime 60 PV (5d10+10), fórmula incompatível com a média matemática 37,5.",
+        "Long Arms indica alcance 10 ft, ação Explosive Gauntlets imprime reach 5 ft; preservar conflito.",
+        "Clear the Way termina com 'or' sem explicitar efeitos/dano no sucesso; não inferir.",
+        "Requer confirmar original Gate Pass Gazette/errata e imagem física."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "60 PV versus 5d10+10",
+        "reach 5 versus 10 ft",
+        "efeito de sucesso de Clear the Way ausente",
+        "imagem binária"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-522",

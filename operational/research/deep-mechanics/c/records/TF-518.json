@@ -4,23 +4,23 @@
   "nome": "Infernal Dwarf",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 37,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "BLOQUEADA_REFERENCIA_NOBLE_NO_RAY_OF_FROST",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "To Save A Kingdom",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/3425"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "3",
     "ca": 16,
     "pv": 65,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "10d8+20",
+    "porte": "Medium",
+    "tipo": "Fiend",
     "alinhamento": null,
     "atributos": {
       "forca": 14,
@@ -38,105 +38,427 @@
       "sabedoria": 1,
       "carisma": 1
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 25
+    },
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 4
+      },
+      {
+        "nome": "Intimidation",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "INT",
+        "bonus": 4
+      },
+      {
+        "nome": "WIS",
+        "bonus": 3
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Dwarvish",
+      "Infernal"
+    ],
+    "resistencias": [
+      "fire"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "necrotic"
+    ],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": null,
+    "bonus_proficiencia": 2,
+    "maneuver_dc": 12,
+    "composicao_ca": "bone hauberk",
+    "bloodied": 32,
+    "alinhamento_aura": "Lawful Evil aura A5E"
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Imunidade necrótica e a veneno, resistência a fogo; equipamentos ósseos, ação coordenada e magia de 5º nível.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Bone Armaments",
+        "efeito": "ignora propriedade flaw de qualquer bone armor que veste e bone weapon que usa"
+      },
+      {
+        "nome": "Lawful Evil",
+        "efeito": "emite aura Lawful Evil conforme A5E, não converter em alinhamento fixo"
+      },
+      {
+        "nome": "Spellcasting",
+        "nivel_conjurador": 5,
+        "atributo": "INT",
+        "cd_magia": 12,
+        "bonus_ataque_magia": 4,
+        "preparado": {
+          "cantrips": [
+            "mage hand",
+            "ray of frost"
+          ],
+          "nivel_1": {
+            "slots": 4,
+            "magias": [
+              "charm person",
+              "shield",
+              "thunderwave"
+            ]
+          },
+          "nivel_2": {
+            "slots": 3,
+            "magias": [
+              "darkness",
+              "ray of enfeeblement"
+            ]
+          },
+          "nivel_3": {
+            "slots": 2,
+            "magias": [
+              "vampiric touch"
+            ]
+          }
+        },
+        "economia_de_slots": "magias de mesmo nível compartilham os espaços preparados",
+        "nota": "descrição do bloco apresenta cantrips sem limite diário"
+      },
+      {
+        "nome": "United in Action",
+        "gatilho": "faz melee weapon attack quando adjacente a outro infernal dwarf",
+        "efeito": {
+          "dado_extra_expertise": "1 expertise die no attack roll",
+          "dano_adicional_ao_acertar": {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "necrotic"
+          }
+        }
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Bone Warhammer e reação Shield.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "attacks",
+            "quantidade": 2
+          }
+        ],
+        "limite": "duas tentativas de ataque, mas conjuração segue economia de ações da magia"
+      },
+      {
+        "nome": "Bone Warhammer",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d10+2",
+            "media": 7,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Ray of Frost",
+        "categoria": "cantrip",
+        "tipo_ataque": "ranged spell attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 60,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "cold"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "alvo": "reduz deslocamento em 10 ft",
+          "duracao_literal": "até o início do próximo turno do noble",
+          "entidade_noble_na_ficha": null
+        },
+        "conflito": "a fonte refere 'noble', não inferir 'infernal dwarf' sem errata"
+      },
+      {
+        "nome": "Thunderwave",
+        "categoria": "magia_de_nivel_1",
+        "componentes": [
+          "S"
+        ],
+        "area": {
+          "tipo": "cubo",
+          "aresta_ft": 15,
+          "origem": "infernal dwarf"
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 12
+        },
+        "efeito_falha": {
+          "dano": {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "thunder"
+          },
+          "empurra_ft": 10
+        },
+        "efeito_sucesso": {
+          "dano": "metade",
+          "empurra_ft": 0
+        }
+      },
+      {
+        "nome": "Darkness",
+        "categoria": "magia_de_nivel_2",
+        "componentes": [
+          "V",
+          "S"
+        ],
+        "concentracao": true,
+        "alcance_ft": 60,
+        "area": {
+          "tipo": "esfera",
+          "raio_ft": 15,
+          "contorna_esquinas": true
+        },
+        "duracao": "1 minuto",
+        "efeitos": [
+          "darkvision não atravessa escuridão mágica",
+          "luz não mágica não a ilumina"
+        ]
+      },
+      {
+        "nome": "Ray of Enfeeblement",
+        "categoria": "magia_de_nivel_2",
+        "componentes": [
+          "V",
+          "S"
+        ],
+        "concentracao": true,
+        "bonus_acerto": 4,
+        "alcance_ft": 60,
+        "alvo": "uma criatura",
+        "efeito_ao_acertar": {
+          "dano_de_weapon_attacks_baseados_em_forca": "reduz à metade",
+          "duracao": "até 1 minuto",
+          "salvaguarda_repetida": {
+            "atributo": "STR",
+            "cd": 12,
+            "gatilho": "fim de cada turno do alvo",
+            "sucesso": "encerra efeito"
+          }
+        }
+      },
+      {
+        "nome": "Vampiric Touch",
+        "categoria": "magia_de_nivel_3",
+        "componentes": [
+          "V",
+          "S"
+        ],
+        "concentracao": true,
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "primeira_execucao": "ação no turno de conjuração",
+        "execucao_subsequente": "uma ação em turnos seguintes enquanto a concentração durar",
+        "efeito_ao_acertar": {
+          "dano": {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "necrotic"
+          },
+          "cura_PV": "metade do dano necrótico efetivamente causado"
+        }
       }
     ],
-    "ataques": [],
-    "multiataque": null,
+    "ataques": [
+      {
+        "nome": "Bone Warhammer",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d10+2",
+            "media": 7,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Ray of Frost",
+        "categoria": "cantrip",
+        "tipo_ataque": "ranged spell attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 60,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "cold"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "alvo": "reduz deslocamento em 10 ft",
+          "duracao_literal": "até o início do próximo turno do noble",
+          "entidade_noble_na_ficha": null
+        },
+        "conflito": "a fonte refere 'noble', não inferir 'infernal dwarf' sem errata"
+      },
+      {
+        "nome": "Ray of Enfeeblement",
+        "categoria": "magia_de_nivel_2",
+        "componentes": [
+          "V",
+          "S"
+        ],
+        "concentracao": true,
+        "bonus_acerto": 4,
+        "alcance_ft": 60,
+        "alvo": "uma criatura",
+        "efeito_ao_acertar": {
+          "dano_de_weapon_attacks_baseados_em_forca": "reduz à metade",
+          "duracao": "até 1 minuto",
+          "salvaguarda_repetida": {
+            "atributo": "STR",
+            "cd": 12,
+            "gatilho": "fim de cada turno do alvo",
+            "sucesso": "encerra efeito"
+          }
+        }
+      },
+      {
+        "nome": "Vampiric Touch",
+        "categoria": "magia_de_nivel_3",
+        "componentes": [
+          "V",
+          "S"
+        ],
+        "concentracao": true,
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "primeira_execucao": "ação no turno de conjuração",
+        "execucao_subsequente": "uma ação em turnos seguintes enquanto a concentração durar",
+        "efeito_ao_acertar": {
+          "dano": {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "necrotic"
+          },
+          "cura_PV": "metade do dano necrótico efetivamente causado"
+        }
+      }
+    ],
+    "multiataque": {
+      "quantidade_ataques": 2,
+      "referencia_literal": "The infernal dwarf attacks twice",
+      "nao_converte_conjuracao_em_dois_casts": true
+    },
     "acoes_bonus": [],
-    "reacoes": [],
+    "reacoes": [
+      {
+        "nome": "Shield",
+        "categoria": "reação de magia nível 1",
+        "componentes": [
+          "V",
+          "S"
+        ],
+        "gatilho": "atingido por ataque ou alvo de magic missile",
+        "efeito": {
+          "bonus_CA": 5,
+          "inclui_gatilho": true,
+          "imunidade_a_magic_missile": true,
+          "duracao": "até início do próximo turno do dwarf"
+        }
+      }
+    ],
     "acoes_lendarias": [],
-    "acoes_covil": null,
-    "conjuracao": [],
-    "custos_lendarios": null
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "nivel_conjurador": 5,
+        "atributo": "INT",
+        "cd_magia": 12,
+        "bonus_ataque_magia": 4,
+        "preparado": {
+          "cantrips": [
+            "mage hand",
+            "ray of frost"
+          ],
+          "nivel_1": {
+            "slots": 4,
+            "magias": [
+              "charm person",
+              "shield",
+              "thunderwave"
+            ]
+          },
+          "nivel_2": {
+            "slots": 3,
+            "magias": [
+              "darkness",
+              "ray of enfeeblement"
+            ]
+          },
+          "nivel_3": {
+            "slots": 2,
+            "magias": [
+              "vampiric touch"
+            ]
+          }
+        },
+        "economia_de_slots": "magias de mesmo nível compartilham os espaços preparados",
+        "nota": "descrição do bloco apresenta cantrips sem limite diário"
+      }
+    ],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "conjuracao": "PRESENTE"
+    }
   },
   "pendencias": [
-    "Confirmar seleção de magias preparada e gatilhos de United in Action.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "A fonte oficial do Ray of Frost determina redução do deslocamento até 'the noble's next turn', entidade não existente na ficha Infernal Dwarf; preservar referência literal.",
+    "Conjuração de 5º nível, 4/3/2 spell slots e reação Shield estão estruturados; aguardam confronto com To Save A Kingdom e errata.",
+    "Falta arquivo binário de imagem."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "alvo temporal de Ray of Frost: 'noble' vs Infernal Dwarf",
+    "edição To Save A Kingdom/errata",
+    "imagem física"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/3425",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "Ficha mecânica original no site oficial de consulta A5E, lida e estruturada em 2026-10-14",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "pesquisa prévia, não substitui bloco individual",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -191,5 +513,12 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_oficial": "https://a5e.tools/node/3425",
+    "livro_original_e_erratas": "PENDENTE"
   }
 }

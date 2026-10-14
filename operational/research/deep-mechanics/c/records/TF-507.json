@@ -4,23 +4,23 @@
   "nome": "Fogborn Skeleton Horde",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 31,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_LIVRO",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "To Save A Kingdom",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/3460"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "4",
     "ca": 13,
     "pv": 65,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "10d8+20",
+    "porte": "Large group of Medium undead",
+    "tipo": "Undead",
     "alinhamento": null,
     "atributos": {
       "forca": 10,
@@ -38,105 +38,213 @@
       "sabedoria": -1,
       "carisma": -3
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 30,
+      "nadar_ft": 30
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [
+      "compreende os idiomas que sabia em vida",
+      "não fala"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "fatigue",
+      "poisoned"
+    ],
+    "vulnerabilidades": [
+      "bludgeoning"
+    ],
+    "xp": 1100,
+    "xp_fonte": "https://a5e.tools/node/3460",
+    "bonus_proficiencia": 2,
+    "maneuver_dc": 12,
+    "composicao_ca": "armor scraps",
+    "bloodied": 32
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Horda de esqueletos com Fogwalk, Water Walker, vulnerabilidade a dano de área e dispersão.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Undead Nature",
+        "categoria": "passivo",
+        "efeito": "não precisa de ar, alimento ou sono"
+      },
+      {
+        "nome": "Fogwalk",
+        "categoria": "movimento_passivo",
+        "precondicoes": [
+          "deslocamento exclusivamente em trajetória horizontal direta",
+          "termina o deslocamento em espaço vazio que possa sustentar a criatura"
+        ],
+        "efeito": "ignora terreno difícil e efeitos nocivos do terreno enquanto as precondições estão satisfeitas",
+        "efeito_secundario": {
+          "gatilho": "entra ou sai de um quadrado",
+          "condicao_terreno": "lightly obscured by fog",
+          "duracao": "até início do próximo turno do Fogborn"
+        }
+      },
+      {
+        "nome": "Water Walker",
+        "categoria": "movimento_passivo",
+        "efeito": "ganha nado igual ao deslocamento de andar e pode andar sobre água como terra firme"
+      },
+      {
+        "nome": "Area Vulnerability",
+        "categoria": "passivo",
+        "gatilho": "recebe dano de efeito que atinge uma área",
+        "efeito": "recebe o dobro do dano causado pelo efeito de área"
+      },
+      {
+        "nome": "Horde",
+        "categoria": "passivo_grupo",
+        "quantidade_de_integrantes": {
+          "minimo": 5,
+          "tipo": "skeletons"
+        },
+        "area": "pode compartilhar espaço com criatura/objeto Medium ou menor",
+        "regra_alvo_unico": "ao ser alvo de spell, ataque ou outro efeito que afeta apenas um alvo, sofre dano normalmente e ignora os demais efeitos",
+        "passagens": "passa por aberturas suficientes para uma criatura Medium sem squeezing"
+      },
+      {
+        "nome": "Horde Dispersal",
+        "categoria": "gatilho_zero_PV",
+        "gatilho": "horda atinge zero PV",
+        "resultado": {
+          "criatura": "skeleton",
+          "quantidade_dados": "1d4",
+          "quantidade_media_publicada": 2,
+          "pv_de_cada": 6
+        }
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Shortsword e Shortbow; dano reduzido quando bloodied.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Shortsword",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "5d6+10",
+            "media": 27,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_condicional": {
+          "pre_condicao": "a horda está bloodied",
+          "resultado": "metade do dano calculado do ataque (não metade dos dados base)"
+        }
+      },
+      {
+        "nome": "Shortbow",
+        "categoria": "ranged weapon attack",
+        "bonus_acerto": 4,
+        "distancia_ft": {
+          "normal": 80,
+          "maximo": 320
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "5d6+10",
+            "media": 27,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_condicional": {
+          "pre_condicao": "a horda está bloodied",
+          "resultado": "metade do dano calculado do ataque"
+        }
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Shortsword",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "5d6+10",
+            "media": 27,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_condicional": {
+          "pre_condicao": "a horda está bloodied",
+          "resultado": "metade do dano calculado do ataque (não metade dos dados base)"
+        }
+      },
+      {
+        "nome": "Shortbow",
+        "categoria": "ranged weapon attack",
+        "bonus_acerto": 4,
+        "distancia_ft": {
+          "normal": 80,
+          "maximo": 320
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "5d6+10",
+            "media": 27,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_condicional": {
+          "pre_condicao": "a horda está bloodied",
+          "resultado": "metade do dano calculado do ataque"
+        }
+      }
+    ],
     "multiataque": null,
     "acoes_bonus": [],
     "reacoes": [],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "reacoes": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_NA_FONTE_INDIVIDUAL"
+    }
   },
   "pendencias": [
-    "Tratar bloodied e manejo da horda segundo A5E, não converter sem revisão.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Fonte individual distingue essa variante da Skeleton Horde genérica; conserva 5+ esqueletos e dispersão 1d4 com 6 PV cada.",
+    "Faltam confronto com To Save A Kingdom/errata e arte física da variante."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "confronto com publicação e errata",
+    "imagem física e revisão editorial"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/3460",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "Ficha mecânica original no site oficial de consulta A5E, lida e estruturada em 2026-10-14",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "pesquisa prévia, não substitui bloco individual",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -191,5 +299,12 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_oficial": "https://a5e.tools/node/3460",
+    "livro_original_e_erratas": "PENDENTE"
   }
 }
