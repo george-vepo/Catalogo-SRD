@@ -7,8 +7,8 @@
   "branch": "chatgpt/srd607-parallel-a",
   "source_ledger": "operational/research/catalog-ledger-20261011-v27/campaign.json",
   "reference_commit": "a962c48a1169c2ef2be8137715a095a596753b32",
-  "method": "Confronto dos IDs exatos do ledger e CSV v27; consulta ao índice oficial Kobold Press e às fichas oficiais Level Up A5E; prévia oficial Tome of Beasts 3 e páginas individuais de terceiros. CA/PV/atributos pesquisados sempre com URL da ficha, sem validação integral de livro/erratas.",
-  "limits": "Todos os 40 têm CA/PV/atributos e mecânica resumida; fontes comunitárias KPOGL e editoriais A5E. Não equivale a ficha editorial integral revisada/licenciada nem aprovação.",
+  "method": "Os 39 monstros Kobold Press deste lote tiveram páginas individuais revisadas parcialmente na KPOGL; 1 ficha oficial A5E. Confronto editorial definitivo e licença permanecem pendentes.",
+  "limits": "Todas as 40 possuem CA/PV/atributos e sínteses com fontes individualizadas, mas nenhuma validação independente, licença ou aprovação canônica foi concluída. KPOGL não é publicação endossada.",
   "source_urls": [
     "https://koboldpress.com/tools/kobold-press-monsters/",
     "https://a5e.tools/monsters",
@@ -2098,7 +2098,7 @@
         "carisma": 9
       },
       "habilidades_e_acoes_resumidas": [
-        "Ave de cinzas com renascimento e mobilidade aérea."
+        "Esconde-se como nuvem de cinzas, voa e retorna à vida caso o local de nascimento não seja purificado; furtividade nas sombras e fraqueza a ventos fortes."
       ],
       "fontes": [
         {
@@ -2110,12 +2110,18 @@
           "url": "https://www.5esrd.com/database/creature/ash-phoenix/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:ash-phoenix",
+          "tipo": "KPOGL — reprodução comunitária individual, não oficial",
+          "escopo": "traços e ações sintetizados; licença e revisão editorial pendentes"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
         "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
-        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente.",
+        "Conferir parâmetros exatos de acionamento e efeitos com livro/errata antes de implementar."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -2128,7 +2134,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:ash-phoenix",
+        "escopo": "traços e ações consultados na fonte individual; não equivale a validação editorial integral",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-248",
@@ -2147,7 +2158,7 @@
         "carisma": 3
       },
       "habilidades_e_acoes_resumidas": [
-        "Monstro segmentado com investida e ataques em sequência."
+        "Investida desordenada transforma o impacto em crítico, mas o expõe a contra-ataques; golpes críticos assustam criaturas próximas da vítima."
       ],
       "fontes": [
         {
@@ -2159,12 +2170,18 @@
           "url": "https://www.5esrd.com/database/creature/ogrepede/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:ogrepede",
+          "tipo": "KPOGL — reprodução comunitária individual, não oficial",
+          "escopo": "traços e ações sintetizados; licença e revisão editorial pendentes"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
         "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
-        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente.",
+        "Conferir parâmetros exatos de acionamento e efeitos com livro/errata antes de implementar."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -2177,7 +2194,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:ogrepede",
+        "escopo": "traços e ações consultados na fonte individual; não equivale a validação editorial integral",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-249",
@@ -2262,7 +2284,7 @@
         "carisma": 12
       },
       "habilidades_e_acoes_resumidas": [
-        "Ser agourento que lamenta calamidades e utiliza magia/sinais de mau presságio."
+        "Ligado ao local de uma catástrofe, rejuvenesce até o desastre ocorrer; badalo causa medo/exaustão e seu lamento é potencialmente fatal."
       ],
       "fontes": [
         {
@@ -2274,12 +2296,18 @@
           "url": "https://www.robinloft.com/monsters/black-crier/tome-of-beasts-2",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:black-crier",
+          "tipo": "KPOGL — reprodução comunitária individual, não oficial",
+          "escopo": "traços e ações sintetizados; licença e revisão editorial pendentes"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
         "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
-        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente.",
+        "Conferir parâmetros exatos de acionamento e efeitos com livro/errata antes de implementar."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada."
@@ -2292,7 +2320,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:black-crier",
+        "escopo": "traços e ações consultados na fonte individual; não equivale a validação editorial integral",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-251",
@@ -2364,7 +2397,7 @@
   "statblock_summary_count": 40,
   "fully_verified_canonical_mechanics_count": 0,
   "unresolved_major_source_mismatch_ids": [],
-  "evidence_revision": "PARALLEL_A_INDIVIDUAL_SOURCES_V3",
-  "detailed_secondary_source_audit_count": 36,
+  "evidence_revision": "PARALLEL_A_INDIVIDUAL_SOURCES_V4",
+  "detailed_secondary_source_audit_count": 39,
   "detailed_primary_a5e_source_audit_count": 1
 }
