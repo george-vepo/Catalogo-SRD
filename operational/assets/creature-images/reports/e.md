@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 71 / 195.**
+**Armazenadas e verificadas: 81 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -15,6 +15,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d — 10/10 verificadas: TF-113, TF-114, TF-115, TF-116, TF-117, TF-118, TF-119, TF-120, TF-121, TF-122
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9c6cee61e6a3cad23d40f6672a753993797c5d74 — 10/10 verificadas: TF-123, TF-124, TF-125, TF-126, TF-127, TF-128, TF-129, TF-130, TF-131, TF-132
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/f78b0d30b81a74efabaa38f0f9dd737b7f96b329 — 10/10 verificadas: TF-133, TF-134, TF-135, TF-136, TF-137, TF-138, TF-139, TF-140, TF-141, TF-142
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/752ce010bef069a0daba724d3f0d97caad14db4e — 10/10 verificadas: TF-143, TF-144, TF-147, TF-148, TF-149, TF-150, TF-151, TF-152, TF-153, TF-154
 
 ## Binários publicados e conferidos
 
@@ -89,22 +90,22 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-140 / Giant, Cave: operational/assets/creature-images/TF-140.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cavegiant.jpg; 67041 bytes; 648x700 px; SHA-256: d3d6c7020616dfeca6d47dba7d5c3c5ff3806fda0015e28dd6c38aea01b96b2c; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
 - TF-141 / Giant, Desert: operational/assets/creature-images/TF-141.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Desert%20Giant.webp; 74934 bytes; 613x801 px; SHA-256: 2ada9766f292672e855f5df119ce051d358caf5508cd6e91cf528ebf65c49b96; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
 - TF-142 / Giant, Firestorm: operational/assets/creature-images/TF-142.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Firestorm%20Giant.webp; 179390 bytes; 1000x1247 px; SHA-256: 06e75ac3041253712654597244426da658ec3743e39a79bb0cb97db85e6f2a1f; commit: f78b0d30b81a74efabaa38f0f9dd737b7f96b329
+- TF-143 / Giant, Haunted: operational/assets/creature-images/TF-143.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/hauntedgiant.jpg; 67500 bytes; 493x700 px; SHA-256: 5d18d03bca6f2dbed7c6863263bda95e62efdbbbb36f88cd989ed5d9e67979e1; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-144 / Giant, Hellfire: operational/assets/creature-images/TF-144.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Hellfire%20Giant.webp; 207688 bytes; 1000x1400 px; SHA-256: 8d424580bc0fcf1f8b3e3e0b6225bbe23c8ff40512b7bf0d16c0d5d76960a413; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-147 / Giant, Shire: operational/assets/creature-images/TF-147.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Shire%20Giant.webp; 125482 bytes; 1000x1192 px; SHA-256: 1978786153f445b0232e55ac2af48bf42e57098cc1a1273ea14abdc89bbf404b; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-148 / Giant, Thin: operational/assets/creature-images/TF-148.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Thin%20Giant.webp; 181748 bytes; 812x1202 px; SHA-256: 2ca44f9357f697a89cd2d587150b1e013f0383e09ddd03431a0233b16e04f0f8; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-149 / Giant, Thursir Armorer: operational/assets/creature-images/TF-149.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Thursir%20Armorer.webp; 186548 bytes; 1000x1286 px; SHA-256: e7425b4ea6890d29fc032d200915d875a0b23d94d2f25f6cbead0b5c8d9b842d; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-150 / Ogre, Void-Blessed: operational/assets/creature-images/TF-150.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Void%20Blessed%20Ogre.webp; 125314 bytes; 1200x1056 px; SHA-256: 9bc8fea576772ddff8ebd34f138cb16cbed07fb90f5ba41a1417867429572206; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-151 / Titan, Degenerate: operational/assets/creature-images/TF-151.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Degenerate%20Titan.webp; 69446 bytes; 558x800 px; SHA-256: 17bf85c5a4aa82c05d6d9dab29d221ceb74ec4cd6758340a838f7e90032fe378; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-152 / Giant, Cave Shaman: operational/assets/creature-images/TF-152.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Cave%20Shaman%20Giant.webp; 224536 bytes; 1112x1046 px; SHA-256: 72a6504896ff373a13b898f6c127d6ff73bfd7e8b92d9d22a986f0c18a433f76; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-153 / Giant, Lantern: operational/assets/creature-images/TF-153.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Lantern%20Giant.webp; 176992 bytes; 1000x1220 px; SHA-256: a4017b9c591f052b77d6318fbd06c56ff70ade65b30e5c5bd10476922aa4ea5f; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-154 / Giant, Shadow: operational/assets/creature-images/TF-154.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Shadow%20Giant.webp; 111788 bytes; 706x1190 px; SHA-256: 7c0eed12d88a03ce1ae27a1d934efb821c48ee19ccd6f3bc402fcd63da1061a3; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
-- TF-143 / Giant, Haunted: pending; 
-- TF-144 / Giant, Hellfire: pending; 
-- TF-147 / Giant, Shire: pending; 
-- TF-148 / Giant, Thin: pending; 
-- TF-149 / Giant, Thursir Armorer: pending; 
-- TF-150 / Ogre, Void-Blessed: pending; 
-- TF-151 / Titan, Degenerate: pending; 
-- TF-152 / Giant, Cave Shaman: pending; 
-- TF-153 / Giant, Lantern: pending; 
-- TF-154 / Giant, Shadow: pending; 
 - TF-155 / Xing Tian: pending; 
 - TF-156 / Giant, Hraesvelgr: pending; 
 - TF-157 / Giant, Mountain: pending; 
