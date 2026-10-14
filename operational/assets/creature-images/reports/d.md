@@ -130,3 +130,24 @@ Dois arquivos PNG brevemente publicados para TF-022 e TF-034 foram **excluídos 
 As fontes de definição das criaturas foram confirmadas no catálogo Kobold Press (para besouro e mangusto) e no A5E (para Khyphon e Aklea), mas páginas descritivas e URLs externas isoladas **não foram contabilizadas como aquisição de binário**. Não houve substituição por sprites genéricos, placeholders ou criaturas diferentes.
 
 O PR continua em **DRAFT**, sem merge. Não houve modificação do CSV global, das 23 imagens previamente verificadas ou dos lotes E e F.
+
+## Checkpoint 42 — investigação de quatro pendências, sem publicar imagens inválidas (2026-10-14)
+
+**Situação comprovada: 191/195 WebP/PNG/JPEG persistidos, 4 pendentes, 41.375.642 bytes. Este checkpoint acrescenta 0 imagens; nenhuma foi contabilizada sem verificação de binário.**
+
+Foi examinada a origem das referências de arte (não apenas o nome de um arquivo). Em `YBraga35/modulo-yan-dmdave`, os dados da criatura apontam para arquivos reais de GitHub em `TheGiddyLimit/homebrew`, mas a renderização revelou dois **placeholders** de 280×280 que mostram apenas nome em letras douradas sobre padrão roxo — portanto, ainda **não são imagens da criatura**:
+
+| ID | Referência nominal apontada pelo módulo | Git SHA do token rejeitado | Decisão |
+|---|---|---|---|
+| `TF-022` | `_img/ToB2/creature/token/Giant Bombardier Beetle (Token).png` | `fb29e73596153509ed80ee4113c9fba352fdeccb` | Rejeitado: apenas texto “GIANT BOMBARDIER BEETLE” |
+| `TF-034` | `_img/ToB2/creature/token/Giant Mongoose (Token).png` | `d5b8839bdd213f64738d4be596ce75b269fd22fa` | Rejeitado: apenas texto “GIANT MONGOOSE” |
+
+Links de referência: [monstro besouro no módulo](https://github.com/YBraga35/modulo-yan-dmdave/blob/main/packs/criaturas-yan/_source/Giant_Bombardier_Beetle_X0UXOptsVqS6yC4J.json), [monstro mangusto no módulo](https://github.com/YBraga35/modulo-yan-dmdave/blob/main/packs/criaturas-yan/_source/Giant_Mongoose_Bw1gvdLj1xvoMPur.json), [diretório de tokens](https://github.com/TheGiddyLimit/homebrew/tree/master/_img/ToB2/creature/token).
+
+Para `TF-022`, a [Authentic D&D Wiki](https://wiki.alexissmolensk.com/index.php/Bombadier_Beetle_(giant)) possui uma ilustração explicitamente rotulada como besouro bombardeiro gigante, porém **não houve aquisição e persistência do binário dessa imagem**; tratá-la somente como candidato externo.
+
+Para `TF-049`, a [página A5E Agonized Khyphon](https://www.a5e.tools/node/3400) descreve a criatura, porém não oferece arquivo de imagem. O [registro Foundry de Khyphon](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/packs/monsters/agonized-khyphon.json) aponta para `icons/svg/mystery-man.svg`, que é um placeholder.
+
+Para `TF-055`, a [página A5E Aklea](https://a5e.tools/node/1801) associa um JPG intitulado `Ellis Goodson-Against Type-Tiefling_Woman_Warrior.jpg`, ilustrando uma tiefling guerreira, ao invés da empyrean feminina descrita. O [registro Foundry de Aklea](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/packs/monsters/aklea.json) usa `systems/a5e/assets/empyrean.webp`, que foi renderizado como homem; não reutilizar essas imagens sem adequada correspondência visual.
+
+**Resultado:** os quatro IDs continuam pendentes por impossibilidade de identificar e publicar uma ilustração adequada que passe pelo requisito de identidade visual. Nenhum placeholder, SVG, pseudoarquivo ou URL externo foi contabilizado. A integridade dos 191 arquivos anteriores permanece documentada no checkpoint 41, sem alterações nos binários existentes. CSV, imagens verificadas de origem e lotes E/F intactos; PR #11 mantido DRAFT, sem merge.
