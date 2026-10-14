@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 178 / 195.**
+**Armazenadas e verificadas: 181 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -27,6 +27,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2f4a256a44b692c61f5090b0eea669ecc9dad948 — 10/10 verificadas: TF-249, TF-250, TF-251, TF-253, TF-254, TF-256, TF-257, TF-258, TF-259, TF-260
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/356a9426a14d9d9b2adbb433e92e0b3ef33364e2 — 5/5 verificadas: TF-261, TF-265, TF-266, TF-268, TF-269
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/65c6230d26b47cd70ccbe22195b4bdebfd4aba88 — 2/2 verificadas: TF-097, TF-240
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/22fc79040f6d595328fdc83ffa1c64cebbf7cb31 — 3/3 verificadas: TF-198, TF-209, TF-252
 
 ## Binários publicados e conferidos
 
@@ -152,6 +153,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-195 / Tosculi, Drone: operational/assets/creature-images/TF-195.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tosculi%20Drone.webp; 62842 bytes; 519x800 px; SHA-256: f7bea847ebc5e61644c325f1f9049872181274bf63d1ed1e85f4102cc24c9041; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
 - TF-196 / Tosculi, Elite Bow Raider: operational/assets/creature-images/TF-196.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tosculi%20Elite%20Bow%20Raider.webp; 62060 bytes; 747x800 px; SHA-256: a0e5923c08039e6de88a56a75505d160b96c56fc3e569a9def47c313ff421db8; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
 - TF-197 / Tosculi, Jeweled Drone: operational/assets/creature-images/TF-197.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Tosculijeweleddrone.jpg; 65411 bytes; 519x700 px; SHA-256: 9ad0c9559b907ed938c76f708087419db76752667e7b8422bba9c577605d1ef1; commit: 3ffc7fac9a4aee1fc902e97cc4fc4cc1a2edebf5
+- TF-198 / Tosculi, Warrior: operational/assets/creature-images/TF-198.jpg; origem: https://www.worldanvil.com/w/midgard-joeshow97/a/tosculi-article; 50795 bytes; 540x724 px; SHA-256: 24bdeda966fea7fb2406aeaddc3c24a2d16ae1df9b038ac6448994f66137adf2; commit: 22fc79040f6d595328fdc83ffa1c64cebbf7cb31
 - TF-199 / Yakirian: operational/assets/creature-images/TF-199.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Yakirian.jpg; 58600 bytes; 529x700 px; SHA-256: 9b0985c5607e27231c4fb14824c8d7b6f5948d5669ccc1241be51b1827781a76; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-202 / Bearfolk Thunderstomper: operational/assets/creature-images/TF-202.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Bearfolk%20Thunderstomper.webp; 99674 bytes; 1000x1166 px; SHA-256: 80ab41b646990e4dbdc38659fb5e143e5834cfab657a69a9d59ff7b707a2ac2f; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-203 / Cueyatl Warchief: operational/assets/creature-images/TF-203.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Cueyatl%20Warchief.webp; 160202 bytes; 1200x1029 px; SHA-256: 3c437c9484d0fd0518454bb5d14fc4443dbbe52828c4661c946b6ed4b5efdd62; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
@@ -159,6 +161,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-205 / Yathon: operational/assets/creature-images/TF-205.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Yathon.webp; 184170 bytes; 751x1321 px; SHA-256: 97979d90b43654280f9e64db441c4f817511f8f95040ee004690ef6b7f9ea921; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-206 / Zeitgeist: operational/assets/creature-images/TF-206.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Zeitgeist.webp; 177342 bytes; 652x1022 px; SHA-256: 846236ed432c898d620661005c882477989568b6dd876bd11327ca0479406b26; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-208 / Acid Ant: operational/assets/creature-images/TF-208.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Acidant.jpg; 56735 bytes; 584x700 px; SHA-256: 23e7ce8ec1704aa8fdb2dfc4c6a89992bd5b3d2692fb2c39b959c31422004367; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
+- TF-209 / Adamanticore: operational/assets/creature-images/TF-209.png; origem: https://a5e.tools/node/2280; 593002 bytes; 650x460 px; SHA-256: 159353e7e9b3c700e439f6275fe369211c3943da0da9b0dedc9edc8e4d89d0fc; commit: 22fc79040f6d595328fdc83ffa1c64cebbf7cb31
 - TF-210 / Agnibarra: operational/assets/creature-images/TF-210.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Agnibarra.jpg; 50654 bytes; 452x700 px; SHA-256: 8b17019ad76784cc4224253a2a8461f20b6012eda34b115e88bbcd69c01eb91e; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-211 / Ahuizotl: operational/assets/creature-images/TF-211.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Ahuizotl.jpg; 78801 bytes; 980x700 px; SHA-256: c7e639446487d58880c89d52ffaf827f27f093d147c135815980ff7096683058; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
 - TF-212 / Alabroza: operational/assets/creature-images/TF-212.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Alabroza.webp; 159586 bytes; 1000x1091 px; SHA-256: f1b3ee905a7858b71bd37fbc99f1acf64e7c71884b573b905999db91bc86aafe; commit: bc1ee577f9b9e40721ccfc7b212a7b791c9b7380
@@ -196,6 +199,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-249 / Aboleth, Nihileth: operational/assets/creature-images/TF-249.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Nihileth.webp; 78758 bytes; 1006x600 px; SHA-256: f7c1bf5c5e62e48ecb4e3e86f473260ab110934efd29e8e9dca9cbe3422da981; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-250 / Black Crier: operational/assets/creature-images/TF-250.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Black%20Crier.webp; 101804 bytes; 714x938 px; SHA-256: 93b56e4e0140098d4e12c912b4a86c74fc52b85ae6f9c597de36c5655be36a5a; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-251 / Corpse Mound: operational/assets/creature-images/TF-251.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Corpse%20Mound.webp; 78438 bytes; 851x800 px; SHA-256: 1846161b459eaeb224ec7970c8890e1248d3bfbaf607f8cf463fcbaade2f4cd0; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-252 / Adult Black Dragon Lich: operational/assets/creature-images/TF-252.png; origem: https://a5e.tools/node/1524; 452191 bytes; 650x460 px; SHA-256: 3cfaa3305f87f47d13a080d3fb2cec0b50878750d7517b1969dd081c963787c0; commit: 22fc79040f6d595328fdc83ffa1c64cebbf7cb31
 - TF-253 / Asp Vine: operational/assets/creature-images/TF-253.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Asp%20Vine.webp; 201920 bytes; 1000x1564 px; SHA-256: 82fee6e52749f13413a1986d1b27b59e6b7e71f72609690838338931f3a3f0a4; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-254 / Child of the Briar: operational/assets/creature-images/TF-254.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Child%20of%20the%20Briar.webp; 69084 bytes; 650x800 px; SHA-256: b4ffa52c5fb08dce7f3c5e1b1faddd783e0bc19571494e107c7b815b14ca1a95; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-256 / Climbing Vine: operational/assets/creature-images/TF-256.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Climbing%20Vine.webp; 258604 bytes; 1200x1324 px; SHA-256: 877d278a21e50c8260509fa98745bb7a05b5a8e612c319062d07ac34b922ad3c; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
@@ -214,16 +218,13 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-069 / Clockwork Servant: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
 - TF-185 / Alleyway Strangler: source_not_found; 
-- TF-198 / Tosculi, Warrior: source_not_found; 
 - TF-200 / Aboleth Champion: source_not_found; 
 - TF-201 / Alpha Werewolf: source_not_found; 
-- TF-209 / Adamanticore: source_not_found; 
 - TF-226 / Accursed Spirit Naga: source_not_found; 
 - TF-231 / Accursed Guardian Naga: source_not_found; 
 - TF-232 / Annelidast: source_not_found; 
 - TF-239 / Aboleth, Nihileth, Nihilethic Dominator: source_not_found; 
 - TF-242 / Ashwalker: source_not_found; 
-- TF-252 / Adult Black Dragon Lich: source_not_found; 
 - TF-255 / Citrullus: source_not_found; 
 - TF-263 / Abrikandilu: source_not_found; 
 - TF-264 / Abyssal Hordeling: source_not_found; 
