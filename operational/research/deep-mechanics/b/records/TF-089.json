@@ -2,24 +2,31 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-089",
   "nome": "Zilaq",
-  "estado": "BLOQUEADO_CONFLITO_OU_AMBIGUIDADE",
+  "estado": "MECANICA_INDIVIDUALIZADA_COM_CONFLITO_EDITORIAL_LINGUAS",
   "edicao": {
-    "publicacao": "Tome of Beasts 3",
-    "edicao_exata_verificada": false
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 (publicação atribuída no catálogo)",
+    "sistema": "D&D 5e",
+    "edicao_exata_verificada": false,
+    "observacao": "A reprodução de 2023 contém cabeçalho 'Tome of Beasts 2' na página Zilaq e diverge quanto a um idioma do 5eSRD; bloquear homologação."
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/zilaq-2/",
-      "natureza": "referencia_secundaria_herdada"
+      "url": "https://anyflip.com/lphgc/rjrj/basic/351-400",
+      "natureza": "reproducao_volume_nao_editorial",
+      "escopo": "bloco Zilaq p.399, dois idiomas"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-087_TF-097/research.json",
-      "natureza": "checkpoint"
+      "url": "https://www.5esrd.com/database/creature/zilaq/",
+      "natureza": "transcricao_secundaria_de_outra_linhagem",
+      "escopo": "mesmos ataques e estatísticas, inclui Southern Tongue nos idiomas"
     }
   ],
   "estatisticas": {
     "nd": "4",
+    "bonus_proficiencia": 2,
     "ca": 15,
+    "origem_ca": "natural armor",
     "pv": 82,
     "dados_vida": "15d4+45",
     "atributos": {
@@ -30,138 +37,179 @@
       "SAB": 10,
       "CAR": 14
     },
+    "modificadores": {
+      "FOR": -1,
+      "DES": 2,
+      "CON": 3,
+      "INT": 2,
+      "SAB": 0,
+      "CAR": 2
+    },
     "deslocamentos_ft": {
       "andar": 30,
-      "voar": 60
+      "voar": 60,
+      "nadar": null,
+      "escalar": null,
+      "escavar": null
     },
+    "pairar": false,
     "salvaguardas": {
       "INT": 4,
-      "CHA": 4
+      "CAR": 4
     },
     "pericias": {
       "Arcana": 4,
       "History": 4,
       "Performance": 4
     },
-    "sentidos": null,
+    "sentidos": [],
+    "percepcao_passiva": 10,
     "idiomas": [
       "Common",
       "Draconic"
     ],
-    "resistencias_dano": null,
+    "telepatia_ft": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "thunder"
     ],
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": []
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "qualidade_estatisticas": "COTEJO_SECUNDARIO_COM_CONFLITO",
+  "habilidades_passivas": [
+    {
+      "nome": "Eidetic Memory",
+      "efeito": "Memoriza tudo o que ouve ou lê. Vantagem em testes INT (Arcana) e INT (History).",
+      "bonus": "vantagem nos dois testes"
+    },
+    {
+      "nome": "Two-Headed",
+      "efeito": "Vantagem em SAB (Perception) e salvaguardas contra efeitos que causariam blinded, charmed, deafened, frightened, stunned ou knocked unconscious.",
+      "bonus": "vantagem conforme efeitos listados"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 4,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d4",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "indicacao_herdada": "Duas mordidas.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Bite",
+        "Bite"
+      ]
     },
     {
       "nome": "Bite",
-      "indicacao_herdada": "+4, 5 pés, 2d4+2 perfurante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
     },
     {
       "nome": "Sonic Yelp",
-      "indicacao_herdada": "Recarga 5–6; 60 pés; CON CD13; 6d6 trovão ou metade.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "area",
+      "recarga": "5–6",
+      "alvos": "toda criatura até 60 pés que possa ouvi-lo",
+      "alcance_ft": 60,
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 13
+      },
+      "dano": {
+        "dados": "6d6",
+        "tipo": "thunder"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade do dano"
     },
     {
       "nome": "Enthralling Speech",
-      "indicacao_herdada": "2/dia; 60 pés, SAB CD13; encanto por 1 minuto com hostilidade induzida ou risco de perder ação.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "controle",
+      "usos": "2/dia",
+      "alvos": "cada criatura a 60 pés que possa ouvi-lo",
+      "alcance_ft": 60,
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 13
+      },
+      "falha": {
+        "condicao": "charmed",
+        "duracao": "1 minuto",
+        "alternativas": [
+          "torna-se hostil a outra criatura também enfeitiçada à escolha de Zilaq",
+          "no início de cada turno, 51–100 em d100 impede executar uma ação até o começo do turno seguinte"
+        ]
+      },
+      "sucesso": "não sofre charmed",
+      "observacao": "fonte consultada não estabelece nova salvaguarda antecipada para encerrar charm"
     },
     {
       "nome": "Phantasmal Oratory",
-      "indicacao_herdada": "1/dia; cria por 1 hora ilusão com estatísticas de fera, monstruosidade ou planta ND até 1, sem poderes que imponham salvaguarda.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dado_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "ilusao",
+      "usos": "1/dia",
+      "duracao": "1 hora",
+      "criatura_imitada": "beast, monstrosity ou plant ND 1 ou menor",
+      "efeito": "cria criatura ilusória que atua conforme instrução mental, agindo imediatamente após Zilaq; usa estatísticas da criatura copiada, exceto traços, ações ou magias que forcem salvaguardas"
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Eidetic Memory",
-      "resumo": "Memoriza informações lidas e ouvidas, com vantagem em Arcana e History."
-    },
-    {
-      "nome": "Two-Headed",
-      "resumo": "Vantagem em Perception e salvaguardas contra cegueira, encanto, surdez, medo, atordoamento e inconsciência."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "PARCIAL_HOMONIMO_FONTE",
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "IDIOMAS_E_ATRIBUICAO_DE_VOLUME_DIVERGENTES",
   "bloqueado": true,
   "pendencias": [
-    "Revisão de bloco integral não executada; dados herdados do checkpoint, sem confirmação independente.",
-    "Dados ausentes e ações somente indicativas; completar separadamente bônus, alvo, dano, duração, CD, recarga e efeitos.",
-    "A URL /zilaq/ tem atribuição Lasers & Liches e idioma Southern Tongue; a variante correta do catálogo Kobold Press é /zilaq-2/ sem esse idioma.",
-    "Opções alternativas do artigo Kobold Press não são parte do bloco-base."
+    "Confirmar volume editorial exato e idiomas perante publicação oficial/erratas.",
+    "Confirmar detalhes de encerramento de Enthralling Speech na fonte editorial.",
+    "Revisão independente e promoção canônica pendentes."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Zilaq",
+    "tipo": "dragon",
+    "tamanho": "Tiny",
+    "alinhamento": "neutral",
+    "nd": "4",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Bite",
+        "Bite"
+      ]
+    }
+  ],
+  "fontes_alternativas": [
+    {
+      "url": "https://www.5esrd.com/database/creature/zilaq/",
+      "natureza": "transcricao_secundaria",
+      "divergencia": {
+        "idiomas": [
+          "Common",
+          "Draconic",
+          "Southern Tongue"
+        ]
+      },
+      "usada_na_versao_principal": false
+    }
+  ]
 }
