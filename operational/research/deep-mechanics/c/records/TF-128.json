@@ -134,7 +134,47 @@
         }
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Spiked Fist",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "piercing"
+          }
+        ],
+        "condicao": "Se acertar Large ou menor: grappled, escape DC16",
+        "limite": "Duas mãos, cada uma agarra no máximo um alvo"
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "creature",
+          "atributo": "STR",
+          "cd": 15,
+          "em_falha": "prone"
+        }
+      }
+    ],
     "multiataque": {
       "ataques": [
         "Spiked Fist",

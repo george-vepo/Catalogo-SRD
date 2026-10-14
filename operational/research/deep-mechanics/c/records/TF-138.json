@@ -134,7 +134,39 @@
         ]
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "5d6+6",
+            "media": 23,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 2,
+        "alcance_ft": {
+          "normal": 30,
+          "longo": 120
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "5d10+6",
+            "media": 33,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
     "multiataque": {
       "sequencia": [
         "Greatclub",

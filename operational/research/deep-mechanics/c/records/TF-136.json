@@ -156,7 +156,27 @@
         "conjuracao_ref": "conjuracao[0]"
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+6",
+            "media": 20,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste_adicional": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "pushed até 10 ft e prone"
+        }
+      }
+    ],
     "multiataque": {
       "sequencia": [
         "Slam",

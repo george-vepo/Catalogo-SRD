@@ -163,7 +163,39 @@
         "sucesso": "metade do dano"
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 30,
+          "longo": 120
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d10+5",
+            "media": 27,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
     "multiataque": {
       "sequencia": [
         "Greatclub",
