@@ -6,23 +6,23 @@
 - Branch de trabalho exclusiva: `chatgpt/srd607-image-assets-d`.
 - CSV-base em `a962c48a1169c2ef2be8137715a095a596753b32`: 607 criaturas, 23 imagens originalmente verificadas e 584 ainda não verificadas.
 - Recorte autorizado: `pending_images.slice(0,195)`, iniciando em `AT-003` e terminando em `TF-058`.
-- Arquivos adicionados/editados exclusivamente em `operational/assets/creature-images/` (14 binários e atualizações nos documentos D nesta continuidade); CSV global, imagens já verificadas e lotes E/F não foram alterados.
+- Arquivos adicionados/editados exclusivamente em `operational/assets/creature-images/` (17 binários e atualizações nos documentos D nesta continuidade); CSV global, imagens já verificadas e lotes E/F não foram alterados.
 
 ## Totais efetivos auditados
 
 - **173 / 195** arquivos de imagem WebP reais registrados no GitHub; **22** IDs pendentes.
-- **38.311.386 bytes** persistidos nas 170 imagens.
+- **38.311.386 bytes** persistidos nas 173 imagens.
 - Esta continuidade encontrou 156 imagens na branch e acrescentou **17 binários** em quatro checkpoints (7, 7, 2 e 1 imagens). Não atribuir a esta execução a aquisição das 156 anteriores.
 - O manifesto contém todos os 195 IDs na ordem do CSV, com nome, fonte original, caminho, MIME, dimensões, bytes, SHA-256, Git blob SHA, commit e indicadores de verificação para imagens gravadas.
 
 ## Checagens executadas nesta continuidade
 
 1. A listagem de arquivos GitHub já existentes foi comparada ao manifesto: **156 arquivos**, todos em IDs autorizados, com tamanho idêntico ao manifesto; não havia IDs extras fora do lote D no diretório.
-2. Os 17 novos binários foram obtidos do repositório público `TheGiddyLimit/homebrew-img`, em arquivos de arte nomeados pela criatura, via `fetch_file(encoding=base64)` e gravados em Git blobs com `encoding=base64`, sem substituir URL por pseudoarquivo.
-3. Para cada binário novo, o SHA Git do blob no destino coincidiu com o SHA Git da fonte; após commit e atualização do ref, o arquivo foi relido do GitHub em Base64 e teve SHA-256 recalculado (algoritmo testado com vetor conhecido), tamanho, assinatura RIFF/WEBP, subtipo VP8L/VP8X, tamanho do contêiner e dimensões conferidos.
-4. Os **17 WebP novos foram efetivamente renderizados/decodificados a partir do Base64 persistido na branch**, incluindo as quatro mariposas com imagens e hashes diferentes.
+2. Dos 17 novos binários, 15 vieram de `TheGiddyLimit/homebrew-img` e 2 de `chaidgpt/TheBardicLexicon`, em arquivos de arte nomeados pela criatura, via `fetch_file(encoding=base64)` e gravados em Git blobs com `encoding=base64`, sem substituir URL por pseudoarquivo.
+3. Para cada binário novo, o SHA Git do blob no destino coincidiu com o SHA Git da fonte; após commit e atualização do ref, o arquivo foi relido do GitHub em Base64 e teve SHA-256 recalculado (algoritmo testado com vetor conhecido), tamanho, assinatura RIFF/WEBP, subtipo VP8/VP8L/VP8X, tamanho do contêiner e dimensões conferidos.
+4. Os **14 WebP dos checkpoints 34–35 foram renderizados a partir do Base64 persistido**, incluindo as quatro mariposas com imagens e hashes diferentes. Os outros 3 tiveram arquivo original renderizado e Git blob no destino idêntico ao da origem; a releitura persistida também passou nas verificações de contêiner, dimensões, tamanho e SHA-256.
 5. Para as 156 imagens anteriores, nesta continuidade houve comparação do inventário, tamanho e SHA de blob no GitHub com o manifesto, mas **não houve nova decodificação raster nem recálculo integral do SHA-256 de todas elas**. As flags históricas correspondem aos checkpoints anteriores.
-6. É recomendável revisão editorial humana de identidade visual, embora as 14 imagens tenham correspondência nominal explícita nas coleções de fonte. Não usamos imagens de outras criaturas para preencher lacunas.
+6. É recomendável revisão editorial humana de identidade visual, embora as 17 imagens tenham correspondência nominal explícita nas coleções de fonte. Não usamos imagens de outras criaturas para preencher lacunas.
 
 ## Checkpoints novos (limite: 10 imagens por checkpoint)
 
