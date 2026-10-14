@@ -2,19 +2,24 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-099",
   "nome": "Ankou Soul Herald",
-  "estado": "BLOQUEADO_CONFLITO_OU_EDICAO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
   "edicao": {
-    "publicacao": "Creature Codex",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex (2018)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/ankou-soul-herald/",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
+      "url": "https://www.robinloft.com/monsters/ankou-soul-herald/creature-codex",
+      "natureza": "reproducao_secundaria",
+      "edicao": "Creature Codex (2018)",
+      "consulta": "2026-10-14"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-099_TF-103/research.json",
-      "natureza": "checkpoint"
+      "url": "https://anyflip.com/zmhlb/lnwk/basic/",
+      "natureza": "reproducao_digital_do_creature_codex_para_toca_e_efeitos_regionais",
+      "consulta": "2026-10-14"
     }
   ],
   "estatisticas": {
@@ -35,10 +40,10 @@
       "voar": 80
     },
     "salvaguardas": {
-      "DEX": 7,
+      "DES": 7,
       "CON": 15,
-      "WIS": 11,
-      "CHA": 11
+      "SAB": 11,
+      "CAR": 11
     },
     "pericias": {
       "Perception": 18,
@@ -46,248 +51,319 @@
       "Stealth": 7
     },
     "sentidos": [
-      "truesight 60 ft."
+      "truesight 60 ft"
     ],
     "percepcao_passiva": 28,
     "idiomas": [
       "todos"
     ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "cold",
       "necrotic",
       "poison"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
       "frightened",
       "poisoned"
-    ]
+    ],
+    "proficiencia": 7
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "REPRODUCAO_INDIVIDUAL_CONSULTADA_NAO_HOMOLOGADA",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "indicacao_herdada": "Pode usar Horrifying Presence e depois uma mordida e duas garras.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Aura of Necromancy’s Bane",
+      "efeitos": [
+        "magias da escola Necromancy não podem ser conjuradas a 120 pés",
+        "undead que começa turno a 30 pés faz CON CD22 ou recebe 6d6 radiant; sucesso metade"
+      ]
     },
     {
+      "nome": "Cloak of Ghostly Shadows",
+      "ativacao": "ação bônus em penumbra/escuridão",
+      "efeitos": [
+        "invisible e vantagem em Stealth",
+        "resistência a acid,cold,fire,lightning,thunder e armas não mágicas",
+        "imunidade às condições grappled,paralyzed,petrified,prone,restrained",
+        "atravessa espaços de criaturas/objetos como terreno difícil; se termina turno em objeto sofre 1d10 force"
+      ],
+      "termino": [
+        "ação bônus voluntária",
+        "morte",
+        "termina turno em luz intensa"
+      ]
+    },
+    {
+      "nome": "Death’s Apotheosis",
+      "efeito": "possui tipos dragon e celestial; ataques de arma contam como mágicos"
+    },
+    {
+      "nome": "Legendary Resistance",
+      "usos": "3/dia",
+      "efeito": "converte falha em salvaguarda em sucesso"
+    },
+    {
+      "nome": "Death God's Servant",
+      "efeito": "não requer ar, alimento, água ou sono",
+      "fonte": "Creature Codex — seção descritiva da linhagem ankou"
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Bite",
-      "indicacao_herdada": "+14, 15 pés, 2d10+7 perfurante mais 2d10 frio.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 14,
+      "alcance_ft": 15,
+      "dano": [
+        {
+          "dados": "2d10",
+          "modificador": 7,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d10",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ]
     },
     {
       "nome": "Claw",
-      "indicacao_herdada": "+14, 10 pés, 2d6+7 cortante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 14,
+      "alcance_ft": 10,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 7,
+          "tipo": "slashing"
+        }
+      ]
     },
     {
       "nome": "Tail",
-      "indicacao_herdada": "+14, 20 pés, 2d8+7 contundente.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 14,
+      "alcance_ft": 20,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 7,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "opcional": "Horrifying Presence",
+      "sequencia": [
+        "Bite",
+        "Claw",
+        "Claw"
+      ]
     },
     {
-      "nome": "Horrifying Presence",
-      "indicacao_herdada": "Até 120 pés, SAB CD19: velocidade zero, ou paralisia se falha por cinco ou mais; testes subsequentes.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Bite",
+      "referencia_ataque": "Bite"
     },
     {
-      "nome": "Reaper’s Breath",
-      "indicacao_herdada": "Recarga 5–6, linha 120 por 10 pés, DES CD22, 12d10 frio; morto-vivo recebe radiante e falha automaticamente.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Claw",
+      "referencia_ataque": "Claw"
+    },
+    {
+      "nome": "Tail",
+      "referencia_ataque": "Tail"
     },
     {
       "nome": "Change Shape",
-      "indicacao_herdada": "Muda para forma vista anteriormente, mantendo estatísticas exceto tamanho.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "efeito": "polymorph em beast, humanoid ou undead já visto com ND <=21; estatísticas próprias preservadas exceto tamanho; não ganha ações lendárias/classes da nova forma; equipamento absorvido ou portado"
+    },
+    {
+      "nome": "Horrifying Presence",
+      "area": {
+        "raio_ft": 120
+      },
+      "alvos": "criaturas escolhidas pelo ankou",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 19
+      },
+      "falha": "deslocamento zero por 1 minuto",
+      "falha_por_5_ou_mais": "paralyzed por 1 minuto",
+      "repetir": "fim de cada turno; sucesso encerra",
+      "imunidade": "24h após sucesso/encerramento"
+    },
+    {
+      "nome": "Reaper's Breath",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "linha",
+        "comprimento_ft": 120,
+        "largura_ft": 10
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 22
+      },
+      "dano": {
+        "dados": "12d10",
+        "tipo": "cold"
+      },
+      "falha": "integral",
+      "sucesso": "metade",
+      "excecao": "undead falham automaticamente e recebem radiant em vez de cold"
     },
     {
       "nome": "Usher of Souls",
-      "indicacao_herdada": "Viaja entre planos com até oito criaturas em contato; não bane criatura viva contra vontade.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "efeito": "plane shift a si próprio e até oito criaturas em contato, inclusive mortos/incorpóreos não voluntários; não pode banir involuntários",
+      "limite_alvos_adicionais": 8
     }
   ],
-  "acoes_bonus": [],
+  "acoes_bonus": [
+    {
+      "nome": "Cloak of Ghostly Shadows",
+      "custo": "ação bônus",
+      "precondicao": "penumbra ou escuridão para ativar",
+      "efeito": "ativa ou desativa invisibilidade e resistências especiais"
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [
     {
       "nome": "Detect",
-      "indicacao_herdada": "Detecta vivos em 120 pés ou mortos-vivos/falecidos recentes a até uma milha.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "custo": 1,
+      "efeito": "detecta vivos em 120 pés, ou undead e mortos há menos de 1 hora em raio de uma milha"
     },
     {
       "nome": "Tail Attack",
-      "indicacao_herdada": "Executa ataque de cauda.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "custo": 1,
+      "referencia_ataque": "Tail"
     },
     {
       "nome": "Envelope in Shadow",
-      "indicacao_herdada": "Custa duas ações; move até metade da velocidade; DES CD22 para 6d6 necrótico aos atravessados.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "custo": 2,
+      "movimento": "até metade do deslocamento sem provocar ataques de oportunidade",
+      "gatilho_dano": "se atravessa espaço de criatura",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 22
+      },
+      "dano": {
+        "dados": "6d6",
+        "tipo": "necrotic"
+      },
+      "sucesso": "metade"
     }
   ],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Aura of Necromancy’s Bane",
-      "resumo": "Impede conjuração de necromancia a 120 pés; mortos-vivos começando a 30 pés testam CON CD22 ou sofrem 6d6 radiante."
-    },
-    {
-      "nome": "Cloak of Ghostly Shadows",
-      "resumo": "Em penumbra/escuridão, ação bônus de invisibilidade com resistências, imunidades e deslocamento através de corpos/objetos adicionais enquanto ativo."
-    },
-    {
-      "nome": "Death’s Apotheosis",
-      "resumo": "Também é celestial, com ataques mágicos."
-    },
-    {
-      "nome": "Legendary Resistance",
-      "resumo": "3/dia, converte falha em sucesso."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "A página exibe Death’s Apotheosis e Legendary Resistance recuados após Cloak of Ghostly Shadows; devem ser validados como traços independentes na fonte editorial.; Ações de covil estão agrupadas de forma potencialmente ambígua na página (texto anexa duas opções numa mesma linha).; Imagem/direitos pendentes.",
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "Creature Codex impresso mostra INT 17 (+5) enquanto aritmética usual indica +3 e Robinloft registra +3. Preservado atributo bruto e não homologado modificador sem cotejo. Ações de toca e efeitos regionais extraídos da seção Ankou do Creature Codex e atribuídos ao Soul Herald nesta reprodução.",
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "A página exibe Death’s Apotheosis e Legendary Resistance recuados após Cloak of Ghostly Shadows; devem ser validados como traços independentes na fonte editorial.",
-    "Ações de covil estão agrupadas de forma potencialmente ambígua na página (texto anexa duas opções numa mesma linha)."
+    "Revisão contra exemplar e erratas editoriais originais pendente; blocos secundários não são homologação.",
+    "Não executar integração canônica ou merge antes da revisão independente.",
+    "Creature Codex impresso mostra INT 17 (+5) enquanto aritmética usual indica +3 e Robinloft registra +3. Preservado atributo bruto e não homologado modificador sem cotejo.",
+    "Ações de toca e efeitos regionais extraídos da seção Ankou do Creature Codex e atribuídos ao Soul Herald nesta reprodução."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Ankou Soul Herald",
+    "tipo": "Gargantuan dragon (also celestial)",
+    "alinhamento": "neutral"
+  },
+  "acoes_toca": [
+    {
+      "nome": "Raise Skeletons",
+      "iniciativa": 20,
+      "criaturas": "2d4 skeletons",
+      "origem": "pilha de ossos da toca",
+      "efeito": "esqueletos imunes à Aura of Necromancy’s Bane",
+      "encerramento": "morte ankou ou repetir ação, destruindo os anteriores"
+    },
+    {
+      "nome": "Expel Spirit",
+      "iniciativa": 20,
+      "alcance_ft": 120,
+      "alvo": "criatura viva visível",
+      "salvaguarda": {
+        "atributo": "CAR",
+        "cd": 15
+      },
+      "falha": "espírito desloca-se para ponto aleatório até 60 pés; corpo fica unconscious sem iniciar morte a menos que sofra dano",
+      "espirito": {
+        "deslocamento_voo_ft": 40,
+        "ataques": false,
+        "magias": false,
+        "imunidade": "todos danos exceto force",
+        "atravessa_objetos": true,
+        "dano_se_termina_em_objeto": "1d10 force",
+        "morte": "zero PV"
+      },
+      "retorno": {
+        "custo": "ação do espírito",
+        "gatilho": "toca corpo"
+      }
+    },
+    {
+      "nome": "Skeletal Hands",
+      "iniciativa": 20,
+      "alcance_ft": 120,
+      "area": {
+        "raio_ft": 20,
+        "centro": "ponto no chão"
+      },
+      "gatilho": "entra ou começa turno na área",
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 15
+      },
+      "falha": {
+        "dano": {
+          "dados": "1d10",
+          "tipo": "necrotic"
+        },
+        "condicao": "restrained"
+      },
+      "liberar": {
+        "custo": "ação",
+        "teste": "FOR CD15"
+      },
+      "termino": "ao morrer o ankou ou repetir ação"
+    }
+  ],
+  "efeitos_regionais": [
+    {
+      "nome": "Haunting Visions",
+      "efeito": "aparições periféricas induzem dúvida e paranoia"
+    },
+    {
+      "nome": "Long Shadows",
+      "efeito": "sombras diurnas longas, estrelas parecem escurecer à noite"
+    },
+    {
+      "nome": "Undead Banishment Light",
+      "raio_milhas": 6,
+      "efeito": "undead sofrem 1d6 radiant no início de cada turno sob luz solar ou lunar",
+      "encerramento": "1d10 dias depois da morte do ankou"
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Legendary Actions",
+      "pontos_por_rodada": 3,
+      "recupera": "início de turno",
+      "uso": "ao fim do turno alheio"
+    },
+    {
+      "nome": "Ankou's Lair",
+      "iniciativa": 20,
+      "nao_repetir": "mesma ação em duas rodadas consecutivas"
+    }
+  ]
 }

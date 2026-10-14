@@ -2,19 +2,19 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-107",
   "nome": "Aridni",
-  "estado": "BLOQUEADO_CONFLITO_OU_EDICAO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 1 (fonte 5eSRD na revisão ©2023)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/aridni-3pp/",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-104_TF-108/research.json",
-      "natureza": "checkpoint"
+      "natureza": "reproducao_secundaria",
+      "edicao": "Tome of Beasts 1 (2023)",
+      "consulta": "2026-10-14"
     }
   ],
   "estatisticas": {
@@ -35,7 +35,7 @@
       "voar": 60
     },
     "salvaguardas": {
-      "DEX": 8
+      "DES": 8
     },
     "pericias": {
       "Acrobatics": 11,
@@ -43,7 +43,7 @@
       "Stealth": 11
     },
     "sentidos": [
-      "darkvision 60 ft."
+      "darkvision 60 ft"
     ],
     "percepcao_passiva": 13,
     "idiomas": [
@@ -52,123 +52,159 @@
       "Sylvan",
       "Void Speech"
     ],
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "proficiencia": 3
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "REPRODUCAO_INDIVIDUAL_CONSULTADA_NAO_HOMOLOGADA",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "indicacao_herdada": "Três ataques, escolhendo Shortsword ou Pixie Bow.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Flyby",
+      "efeito": "não provoca ataques de oportunidade ao sair voando do alcance inimigo"
     },
     {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra magias e efeitos mágicos"
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Shortsword",
-      "indicacao_herdada": "+8, 5 pés, 1d6+5 perfurante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "bonus_acerto": 8,
+      "tipo": "corpo_a_corpo",
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ]
     },
     {
       "nome": "Pixie Bow",
-      "indicacao_herdada": "+8, 40/160 pés, 2d4+5 perfurante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "bonus_acerto": 8,
+      "tipo": "distancia",
+      "alcance_normal_ft": 40,
+      "alcance_maximo_ft": 160,
+      "dano": [
+        {
+          "dados": "2d4",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade": 3,
+      "alternativas": [
+        [
+          "Shortsword",
+          "Shortsword",
+          "Shortsword"
+        ],
+        [
+          "Pixie Bow",
+          "Pixie Bow",
+          "Pixie Bow"
+        ]
+      ]
+    },
+    {
+      "nome": "Shortsword",
+      "referencia_ataque": "Shortsword"
+    },
+    {
+      "nome": "Pixie Bow",
+      "referencia_ataque": "Pixie Bow"
     },
     {
       "nome": "Spellcasting",
-      "indicacao_herdada": "CAR CD14; dancing lights, detect magic e invisibility à vontade; charm person e faerie fire 3/dia; spike growth 1/dia.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "referencia_conjuracao": "Spellcasting"
     }
   ],
   "acoes_bonus": [
     {
       "nome": "Enchanted Arrows",
-      "indicacao_herdada": "Encanta a próxima flecha Pixie Bow antes do próximo turno; SAB CD14 evita uma dentre quatro condições de curto prazo: confusão, medo, risadas incapacitantes ou sono.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "custo": "ação bônus",
+      "gatilho": "próxima flecha que acertar alvo antes do início do próximo turno",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 14
+      },
+      "efeitos_escolhidos": [
+        {
+          "nome": "Confusion",
+          "efeito": "sem reação; ações aleatórias até fim do próximo turno, como confusion"
+        },
+        {
+          "nome": "Fear",
+          "efeito": "frightened até fim do próximo turno e deve afastar-se pela rota mais segura"
+        },
+        {
+          "nome": "Laughter",
+          "efeito": "prone e incapacitated até fim do próximo turno"
+        },
+        {
+          "nome": "Sleep",
+          "efeito": "unconscious por 1 minuto, acorda após dano ou ação de outra criatura"
+        }
+      ]
     }
   ],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Flyby",
-      "resumo": "Sair voando do alcance inimigo não provoca ataque de oportunidade."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem nas salvaguardas contra magia."
+      "nome": "Spellcasting",
+      "atributo": "CAR",
+      "cd": 14,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "dancing lights",
+            "detect magic",
+            "invisibility"
+          ]
+        },
+        {
+          "usos": "3/dia cada",
+          "nomes": [
+            "charm person",
+            "faerie fire"
+          ]
+        },
+        {
+          "usos": "1/dia",
+          "nomes": [
+            "spike growth"
+          ]
+        }
+      ]
     }
   ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "Edição ©2023 da fonte pode divergir da versão inicial de Tome of Beasts 1; comparar antes de integrar.; A seção Enchanted Arrows é BONUS ACTION, não efeito automático em toda flecha.; Licença e imagem pendentes.",
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "Edição 2023: Pixie Bow 2d4+5 e Enchanted Arrows como ação bônus; não usar versão anterior com 1d4+5 e efeitos de duração em rodadas.",
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "Edição ©2023 da fonte pode divergir da versão inicial de Tome of Beasts 1; comparar antes de integrar.",
-    "A seção Enchanted Arrows é BONUS ACTION, não efeito automático em toda flecha."
+    "Revisão contra exemplar e erratas editoriais originais pendente; blocos secundários não são homologação.",
+    "Não executar integração canônica ou merge antes da revisão independente.",
+    "Edição 2023: Pixie Bow 2d4+5 e Enchanted Arrows como ação bônus; não usar versão anterior com 1d4+5 e efeitos de duração em rodadas."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Aridni",
+    "tipo": "Small fey",
+    "alinhamento": "neutral evil"
+  },
+  "acoes_toca": [],
+  "efeitos_regionais": [],
+  "mecanicas_especiais": []
 }
