@@ -107,3 +107,12 @@ Todos têm `inventario_acoes_completo:false` e dados previamente resumidos ou n�
 16. [`4b9d13b79999`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/4b9d13b7999914f1dce88ed3b242a1b49a1d390d) — research(srd607): B estruturar 4 clockworks com fonte secundária e bloqueio editorial
 
 **Gate de integração permanece fechado.** Cobertura de arquivo não equivale à pesquisa mecânica integral.
+
+
+## Continuação — imagens reais (2026-10-13)
+
+- **92 arquivos binários WebP/PNG** incorporados nesta branch de mecânicas B sob `operational/research/deep-mechanics/b/images/`, com o mesmo Git blob SHA e tamanho da imagem previamente verificada na branch E (48 arquivos) ou F (44 arquivos). Não são links vazios, imagens simuladas nem placeholders.
+- **40 imagens ainda pendentes:** TF-303, TF-326, TF-327, TF-335, TF-336, TF-338, TF-341, TF-342, TF-344, TF-351, TF-353, TF-355, TF-356, TF-358, TF-361, TF-364, TF-370, TF-373, TF-379, TF-381, TF-384, TF-386, TF-389, TF-393, TF-395, TF-396, TF-397, TF-398, TF-399, TF-402, TF-403, TF-405, TF-407, TF-408, TF-410, TF-411, TF-069, TF-094, TF-095, TF-099.
+- Os 132 objetos do `manifest.json` agora incluem `imagem.status` e referência a caminho/URL/binário verificado quando existente, ou `PENDENTE_IMAGEM` no caso contrário.
+- [Manifesto e inventário das imagens](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/manifest.json) e [relatório de imagens](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/REPORT.md).
+- A existência das imagens não altera o status de completude mecânica: 18 fichas com ações estruturadas e 114 ainda incompletas. Nenhuma promoção canônica ou merge.
