@@ -1,3 +1,20 @@
+## Checkpoint B — 14/10/2026 — quatro imagens A5E de origem rastreável
+
+Foram preparados **4 binários WebP reais**, derivados de referências diretas dos atores do [sistema oficial A5E no Foundry](https://github.com/Pjb518/FoundryVTT-Level-Up-Official), com SHA de Git idêntico à fonte, SHA-256 calculado, dimensões, bytes, origem e nomes de atores conferidos. A entrada dos quatro arquivos na branch está vinculada a este checkpoint e deve ser reaberta do GitHub após a gravação.
+
+| ID | Criatura | Imagem | Dimensões | Bytes | Git SHA |
+|---|---|---|---|---:|---|
+| TF-094 | Adult River Dragon | [WebP](../images/TF-094.webp) | 600×600 | 398578 | `a5b66fbd0f45…` |
+| TF-095 | Adult Sapphire Dragon | [WebP](../images/TF-095.webp) | 600×600 | 393128 | `ab25e51ad7b5…` |
+| TF-355 | Hill Giant Chief | [WebP](../images/TF-355.webp) | 900×900 | 708384 | `fe288881a004…` |
+| TF-361 | Elder Black Pudding | [WebP](../images/TF-361.webp) | 600×600 | 342354 | `7c0d128cd213…` |
+
+**Restrição de uso importante:** o README do repositório de origem informa que as imagens do diretório `public/assets/` (exceto categorias com outras licenças) são fornecidas por EN Publishing para **uso não comercial**. Isto **não** é autorização de exploração comercial, distribuição irrestrita ou incorporação em obra comercial; a liberação de direitos e eventual publicação ficam bloqueadas. As imagens dos dragões são compartilhadas entre idades e a de Hill Giant/Black Pudding entre variantes dos monstros; não foram apresentadas como arte exclusiva de uma idade/variante nem como conteúdo do A5ESRD.
+
+**Métricas após o checkpoint:** 132 JSONs estruturados; **108/132** binários físicos previstos e **24 faltantes**; nenhum registro promovido, zero homologações independentes; conflitos herdados continuam em 13. [Licenciamento informado no README oficial](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/README.md). PR #6 permanece em DRAFT.
+
+---
+
 ## Conciliação final da auditoria documental — 14/10/2026
 
 **Verificação direta no GitHub:** 132/132 JSONs lidos e válidos; 132 IDs e SHAs sem divergência; 132 registros com fonte e inventário individual; 104 binários reais existentes e coincidentes por SHA/tamanho com o manifesto; 28 imagens em aberto. Os três JSONs corrigidos em [`5664a57f7625`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5664a57f7625f21f528152e12a42383bd893a3ba) foram reabertos e validados na branch, com novos SHAs registrados e nenhuma regressão nos demais arquivos.

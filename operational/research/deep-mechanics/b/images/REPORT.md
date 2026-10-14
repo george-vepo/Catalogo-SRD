@@ -1,3 +1,20 @@
+## Checkpoint imagens B — 14/10/2026 — quatro assets oficiais A5E com uso não comercial
+
+**4 arquivos reais de origem** da [implementação oficial do A5E para Foundry](https://github.com/Pjb518/FoundryVTT-Level-Up-Official), associados por nome e `img` no JSON do ator correspondente. Copiados sem recodificar; verificação pré-gravação: 4 WebPs com assinatura RIFF/WEBP/VP8X, tamanhos internos iguais aos bytes, SHA-256, dimensões e Git SHA iguais aos de origem.
+
+| ID | Arquivo B | Imagem no repositório-fonte | Ator que usa a arte | Dimensões | Bytes | SHA-256 |
+|---|---|---|---|---:|---:|---|
+| TF-094 | [TF-094.webp](TF-094.webp) | [river-dragon.webp](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/public/assets/river-dragon.webp) | [Adult River Dragon](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/adult-river-dragon.json) | 600×600 | 398578 | `4d11aaea00b1ee3850acf74a422b5dbd76d5518ee322562f4822c99fa61db6b5` |
+| TF-095 | [TF-095.webp](TF-095.webp) | [sapphire-dragon.webp](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/public/assets/sapphire-dragon.webp) | [Adult Sapphire Dragon](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/adult-sapphire-dragon.json) | 600×600 | 393128 | `83dce3faaec07da48c5f6493f69c51f6ed76fced0a424986de2736c83f6e4aca` |
+| TF-355 | [TF-355.webp](TF-355.webp) | [hill-giant.webp](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/public/assets/hill-giant.webp) | [Hill Giant Chief](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/hill-giant-chief.json) | 900×900 | 708384 | `2dd2e9e79dd754467e38ca3f04232038c8dab161c0bf28d6eab8f1d3bce53793` |
+| TF-361 | [TF-361.webp](TF-361.webp) | [black-pudding.webp](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/public/assets/black-pudding.webp) | [Elder Black Pudding](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/elder-black-pudding.json) | 600×600 | 342354 | `4722cf84e9279715377ea95471b509d5088988ebab699f0fe56e6998a0f8f1f2` |
+
+**Direitos: restritos a uso não comercial**, conforme [README da fonte](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/README.md). Não autoriza aprovação automática de comercialização, licenciamento do produto final ou reprodução sem revisão jurídica. Não se confundem com obras oficialmente liberadas pelo A5ESRD. Imagens associadas a mais de uma idade/variante não comprovam desenho exclusivo daquela ficha. Finalização artística e legal pendentes.
+
+**Cobertura física prevista:** 108/132, ainda 24 arquivos ausentes. **Não foram importados sprites genéricos de 32×32 pixels** de TF-355, TF-361 e TF-395 encontrados em F por inadequação para card art final. A correspondência dos hashes no GitHub destino precisa de confirmação após publicação deste checkpoint.
+
+---
+
 ## Auditoria visual B — 14/10/2026 — 104 imagens físicas, 28 pendentes
 
 **Conferência no GitHub após [commit 5dd0a6bccac2](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5dd0a6bccac2c057fe4365bdbf278e1cadfe97c1):** 104 arquivos binários foram encontrados fisicamente na árvore Git e seus SHAs/tamanhos coincidem com os campos do manifesto; TF-327, TF-344, TF-399 foram reabertos em Base64 e as assinaturas WebP/JPEG confirmadas. Mesmo Git SHA de origem na branch F garante identidade dos blobs (sem recodificação). Nenhuma imagem ficou substituída apenas por URL, texto Base64 ou placeholder.
