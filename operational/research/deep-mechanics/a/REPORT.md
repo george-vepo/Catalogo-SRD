@@ -1,3 +1,15 @@
+# Grupo A — auditoria final desta execução (14/10/2026)
+
+**HEAD inspecionado:** `9313862a82a2099c13aeff907c66bad95ec995da`. **132 JSONs** na árvore, 132/132 já parseados e conferidos em auditoria global anterior; **5 JSONs mecânicos** modificados nos checkpoints #44–#46 foram relidos individualmente por API sem erro. Nove JSONs com imagens importadas no checkpoint #43 também foram relidos após sua gravação. **124/124** imagens na árvore Git concordam com o manifesto nos campos caminho/hash Git/tamanho (SHA-256 histórico do manifesto D verificado). Nenhum arquivo fora de A foi alterado desde o commit de referência.
+
+**Progresso mecânico:** 48 fichas estruturadas no nível individual de fonte online (47 secundárias + 1 oficial A5E), **0** homologadas; **84** registros ainda resumidos. Estados: 131 PARCIAL, 1 BLOQUEADA (KP-S011). Fontes secundárias KPOGL **não** equivalem à impressão/errata da editora, e a engine não foi testada. Contradição interna na fonte de TF-237/Stinger preservada e sinalizada.
+
+**Imagens:** 124/132 com binário persistido e integridade SHA Git confirmada, **8 ainda sem**: TF-274, TF-276, TF-283, TF-284, TF-286, TF-022, TF-034, TF-049. Zero produções aprovadas após análise independente de visual/licença; miniaturas de TF-026 e TF-031 continuam insuficientes para impressão. D/E/F não modificadas.
+
+**Checkpoints recentes:** [44](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/cde64ef69dbd4e73bbcca56683c2662f095d36c3) (Tigebra e Timingila); [45](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/415ead49743b13478476521486665e83ee989ccc) (Tosculi Hive Queen); [46](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9313862a82a2099c13aeff907c66bad95ec995da) (Accursed Defiler e Ashwalker). Sem merge e sem V-Bridge.
+
+---
+
 # Grupo A — checkpoint 46: Accursed Defiler e Ashwalker (14/10/2026)
 
 - **TF-241 Accursed Defiler:** [KPOGL](https://kpogl.wikidot.com/monster:accursed-defiler), Tome of Beasts 1 p.12. Resistências, Cursed Existence com critérios de bloqueio de ressurgimento no deserto, Sand Shroud, duas Slams e Sandslash recarga 5–6 com salvaguarda.
