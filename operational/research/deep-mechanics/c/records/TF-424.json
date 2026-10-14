@@ -4,24 +4,27 @@
   "nome": "Soul Eater",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 11,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 1",
     "edicao": "D&D 5e (publicação de Kobold Press)",
-    "fonte_identidade": null
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "7",
+    "xp": 2900,
+    "bonus_proficiencia": 3,
     "ca": 16,
+    "composicao_ca": "não informada na fonte individual",
     "pv": 105,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
+    "dados_vida": "14d8+42",
+    "porte": "Medium",
+    "tipo": "fiend",
+    "alinhamento": "neutral evil",
     "atributos": {
       "forca": 13,
       "destreza": 22,
@@ -38,105 +41,249 @@
       "sabedoria": 0,
       "carisma": 0
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 30,
+      "voo_ft": 60,
+      "hover": true
+    },
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 9
+      },
+      {
+        "nome": "CON",
+        "bonus": 5
+      },
+      {
+        "nome": "CHA",
+        "bonus": 3
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Intimidation",
+        "bonus": 3
+      },
+      {
+        "nome": "Perception",
+        "bonus": 3
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 9
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Abyssal",
+      "Infernal",
+      "telepathy 60 ft"
+    ],
+    "vulnerabilidades": [],
+    "resistencias": [
+      "cold",
+      "fire",
+      "lightning",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "paralyzed",
+      "poisoned",
+      "prone",
+      "stunned",
+      "unconscious"
+    ],
+    "resistencias_condicao": []
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Resistência à magia e sentidos ligados a almas.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Magic Resistance",
+        "tipo": "passivo",
+        "efeito": "vantagem nas salvaguardas contra magias e outros efeitos mágicos"
+      },
+      {
+        "nome": "Soul Sense",
+        "tipo": "passivo_sensorial",
+        "efeito": "identifica local preciso de criaturas com alma dentro de 60 pés e direção aproximada até 1 milha",
+        "alcances": {
+          "localizacao_precisa_ft": 60,
+          "direcao_geral_milha": 1
+        },
+        "alvos": "criaturas que possuam alma"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Garras e dano psíquico; Hasten Consumption e reação Soul Drain.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "tipo": "multiataque",
+        "sequencia": [
+          {
+            "acao": "Claw",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Claw",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "psychic"
+          }
+        ]
+      },
+      {
+        "nome": "Hasten Consumption",
+        "tipo": "acao_area",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "raio_ft": 20,
+          "centro": "Soul Eater"
+        },
+        "alvos": "todas as criaturas na área",
+        "teste_resistencia": {
+          "atributo": "CHA",
+          "cd": 14
+        },
+        "efeito_falha": {
+          "dano": [
+            {
+              "dados": "9d6",
+              "media": 31,
+              "tipo": "psychic"
+            }
+          ]
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 9d6 psychic"
+        },
+        "efeito_adicional_condicional": {
+          "gatilho": "PV do alvo ficam abaixo da metade do máximo por consequência desta ação",
+          "efeito": "desvantagem na salvaguarda contra Soul Drain do Soul Eater",
+          "duracao": "1 minuto"
+        }
       }
     ],
-    "ataques": [],
-    "multiataque": null,
+    "ataques": [
+      {
+        "nome": "Claw",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 9,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "psychic"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Claw",
+          "quantidade": 2
+        }
+      ]
+    },
     "acoes_bonus": [],
-    "reacoes": [],
+    "reacoes": [
+      {
+        "nome": "Soul Drain",
+        "tipo": "reacao_condicional",
+        "gatilho": "Soul Eater reduz uma criatura a 0 PV",
+        "alvo": "criatura reduzida a 0 PV",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 14,
+          "desvantagem_condicional": "alvo abaixo de metade dos PV devido ao Hasten Consumption nos últimos 1 minuto"
+        },
+        "efeito_falha": "morre imediatamente, alma consumida",
+        "efeito_sucesso": "alma não consumida e sem morte imediata adicional pela reação",
+        "ressurreicao_reservada": [
+          "true resurrection",
+          "wish"
+        ],
+        "retorno_se_soul_eater_morre": {
+          "distancia_maxima_ft_entre_soul_eater_e_corpo": 120,
+          "tempo_maximo_morte_min": 1,
+          "estado_ao_retornar": "vivo, inconsciente, estável, 0 PV"
+        }
+      }
+    ],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_NO_BLOCO_INDIVIDUAL",
+      "reacoes": "PRESENTE",
+      "acoes_lendarias": "AUSENCIA_NO_BLOCO_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_NO_BLOCO_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_NO_BLOCO_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_NO_BLOCO_INDIVIDUAL"
+    },
+    "acoes_miticas": []
   },
   "pendencias": [
-    "Revisar edição original vs revisão de Tome of Beasts 1 e condição precisa de Soul Drain; referência comunitária.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Fonte é arquivo comunitário KPOGL, não cópia editorial autenticada; comparar Tome of Beasts 1 original com revisões antes de aprovar.",
+    "Validar detalhadamente o gatilho de Soul Drain e efeito de ressuscitação com publicação e errata.",
+    "Revisão visual de imagem ainda pendente."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "diferenças de edições/revisões Tome of Beasts 1",
+    "validação oficial de Soul Drain",
+    "revisão visual da imagem"
   ],
   "fontes": [
     {
       "url": "https://kpogl.wikidot.com/monster:soul-eater",
-      "tipo": "compilação comunitária não editorial (KPOGL)",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco individual com todos os campos mecânicos, conferido 14/10/2026",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice da editora, origem e ND",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -204,5 +351,11 @@
     "validacao_visual_editorial": "PENDENTE",
     "largura": null,
     "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "bloco_individual": "ESTRUTURADO",
+    "livro_ou_errata": "PENDENTE"
   }
 }
