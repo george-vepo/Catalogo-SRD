@@ -2,6 +2,14 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 26 — gigantes e ogre Kobold Press (14/10/2026)
+
+- TF-126 Giant, Abbanith: One with the Earth, Siege Monster com multiplicadores distintos de objetos, dois Thumb Claw e Earth Counter (reação recarga 6 apenas earth/stone spells, sem check de spell level). https://www.5esrd.com/database/creature/giant-abbanith/
+- TF-127 Giant, Laestrigonian: Multiattack Greatclub+Bite, Rock melee/ranged e doença por Bite que impede cura não mágica e reduz PV máximos a cada 24h. https://www.5esrd.com/database/creature/giant-laestrigonian/
+- TF-129 Giant, Snow: imunidade cold, vulnerabilidade fire, regeneração condicional à neve, camuflagem, duas Club e Giant Snowball com cegueira após falha DES CD16. https://www.5esrd.com/database/creature/giant-snow/
+- TF-131 Ogre, Rainforest: Multiattack separado por forma ogre/boar; Spear apenas ogre, Tusk apenas boar, Bite em ambas, Devouring Charge com bônus condicional e Change Shape sem alteração de equipamento. https://www.5esrd.com/database/creature/ogre-rainforest/
+- As 4 imagens binárias já existiam no diretório C, sem aprovação visual; as quatro fichas permanecem parciais por pendência de confronto com publicação editorial original e erratas. Total: **41 aprofundadas, 90 sem revalidação**, 94 parciais e 37 bloqueadas.
+
 ## Checkpoint 25 — Kanos Spawn e Imp Flock (14/10/2026)
 
 - Commit `97b58fda82c41a311d7a3f149907600daadceea3` relido, JSONs TF-516 e TF-517 válidos por leitura sintática e ID.
@@ -189,12 +197,12 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 | TF-123 | Animal Lord, Queen of Scorpions | BLOQUEADA | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-scorpions/) | A página 5eSRD inclui parágrafo narrativo sobre a apresentação dos Animal Lords NO MEIO das linhas de REGIONAL EFFECTS. Esse trecho não é habilidade, foi descartado. |
 | TF-124 | Animal Lord, Queen of Serpents | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/animal-lord-queen-of-serpents/) | As ações são restritas às formas humana/serpente/híbrida; ações lendárias não podem ser tratadas como ações comuns. |
 | TF-125 | Animal Lord, Queen of Mammoths | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/queen-of-mammoths/) | A fonte intercala um parágrafo narrativo depois das ações lendárias; não registrar como mecânica. |
-| TF-126 | Giant, Abbanith | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-abbanith/) | Earth Counter é reação com limitação temática, não counterspell genérico. |
-| TF-127 | Giant, Laestrigonian | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-laestrigonian/) | A doença possui efeitos persistentes próprios; não transformar em veneno. |
+| TF-126 | Giant, Abbanith | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/giant-abbanith/) | Earth Counter é reação com limitação temática, não counterspell genérico. |
+| TF-127 | Giant, Laestrigonian | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/giant-laestrigonian/) | A doença possui efeitos persistentes próprios; não transformar em veneno. |
 | TF-128 | Giant, Phase | PARCIAL | não | [individual](https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2) | Página individual /giant-phase/ do 5eSRD indisponível; dados conferidos em resumo de terceiros e em reprodução de Tome of Beasts 2, não em publicação editorial oficial acessível. |
-| TF-129 | Giant, Snow | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/giant-snow/) | Imune a frio e vulnerável a fogo; regeneração depende de terreno nevado. |
+| TF-129 | Giant, Snow | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/giant-snow/) | Imune a frio e vulnerável a fogo; regeneração depende de terreno nevado. |
 | TF-130 | Giant, Thursir Hearth Priestess | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/thursir-hearth-priestess/) | Três opções de Hearth Blessing são variantes da mesma ação, não três ações distintas. |
-| TF-131 | Ogre, Rainforest | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ogre-rainforest/) | Change Shape não transforma equipamento; spear somente na forma ogre. |
+| TF-131 | Ogre, Rainforest | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/ogre-rainforest/) | Change Shape não transforma equipamento; spear somente na forma ogre. |
 | TF-132 | Ogre, Rockchewer | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/ogre-rockchewer/) | Gravel Spray depende de Chew Rock prévio, não é ação livre independente. |
 | TF-133 | Ogre, Tusked Crimson | PARCIAL | não | [individual](https://runerollers.com/apps/platform/library/bestiary/tusked-crimson-ogre-ccodex) | A ficha do Ogre Tusked Crimson não abriu como página individual do 5eSRD; mecânica corroborada por bestiário de terceiros e referência do Creature Codex. |
 | TF-134 | Zimwi | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/zimwi-3pp) | A página é rotulada como revisão de Tome of Beasts 1; comparar com versão original para aprovação. |

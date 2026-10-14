@@ -4,14 +4,14 @@
   "nome": "Giant, Abbanith",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 6,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_BLOCO_INDIVIDUAL_ESTRUTURADO_PENDENTE_CONFRONTO_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
     "edicao": null,
-    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+    "fonte_identidade": "https://www.5esrd.com/database/creature/giant-abbanith/"
   },
   "estatisticas": {
     "nd_catalogo": "3",
@@ -39,249 +39,150 @@
       "CAR": 0
     },
     "deslocamentos": {
-      "andar": 40,
-      "escavar": 30
+      "andar_ft": 40,
+      "escavacao_ft": 30
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 7
+      },
+      {
+        "nome": "CON",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Giant",
+      "Terran"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "One with the Earth",
-        "resumo_anterior": "Não pode ser surpreendido por inimigos tocando solo; vantagem contra constructos/elementais de pedra ou terra.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito_sensorial": "detecta fluxos da terra, tremores, terremotos e anomalias mágicas",
+        "imune_a_surpresa_por": "oponente tocando solo",
+        "bonus_condicional": "vantagem em ataques contra constructs e elementals formados de terra ou pedra"
       },
       {
         "nome": "Siege Monster",
-        "resumo_anterior": "Dano dobrado contra estruturas, triplicado quando de pedra/terra.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "dano dobrado contra objetos/estruturas em geral; triplo se de terra ou pedra"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Dois ataques com garras dos polegares.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Thumb Claw",
+            "quantidade": 2
+          }
+        ]
       },
       {
         "nome": "Thumb Claw",
-        "resumo_anterior": "+7, alcance 5 pés, 2d6+5 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Earth Counter",
-        "resumo_anterior": "Reação, recarga 6, bloqueia magia que manipula terra/pedra a até 30 pés.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+5",
+            "media": 12,
+            "tipo": "piercing"
+          }
+        ]
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Dois ataques com garras dos polegares.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
         "nome": "Thumb Claw",
-        "resumo_anterior": "+7, alcance 5 pés, 2d6+5 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+5",
+            "media": 12,
+            "tipo": "piercing"
+          }
+        ]
       }
     ],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Dois ataques com garras dos polegares.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        {
+          "acao": "Thumb Claw",
+          "quantidade": 2
+        }
+      ]
     },
-    "acoes_bonus": null,
+    "acoes_bonus": [],
     "reacoes": [
       {
         "nome": "Earth Counter",
-        "resumo_anterior": "Pode anular magia que altera terra ou pedra; recarga 6",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "reaction",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            6
+          ]
+        },
+        "gatilho": "criatura visível a até 30 ft conjura spell",
+        "pre_condicao": "spell afeta diretamente ou cria terra/pedra, exemplos stone shape, wall of stone, move earth",
+        "efeito": "anula a magia como counterspell, sem teste de spellcasting ability independentemente do nível",
+        "restricao": "não counterspell genérico contra quaisquer magias"
       }
     ],
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA",
+      "reacoes": "PRESENTE",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA",
+      "acoes_covil": "AUSENCIA_CONFERIDA",
+      "acoes_miticas": "AUSENCIA_CONFERIDA",
+      "conjuracao": "AUSENCIA_CONFERIDA"
+    }
   },
   "pendencias": [
-    "Earth Counter é reação com limitação temática, não counterspell genérico.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Todas as seções mecânicas listadas pela fonte individual foram estruturadas; pendente confrontar edição original/errata com a republicação 5eSRD.",
+    "Arquivo físico de imagem já existe, mas a identidade visual ainda não foi aprovada."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto independente com o livro original/erratas antes de aprovação mecânica total",
+    "aprovação visual editorial da imagem já armazenada"
   ],
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/giant-abbanith/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco mecânico individual republicado por 5eSRD com referência bibliográfica ao livro e edição",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
-      "tipo": "checkpoint original",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint anterior para comparação",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -372,5 +273,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "D&D 5e",
+    "livro": "Tome of Beasts 2",
+    "fonte_individual_republicada": "https://www.5esrd.com/database/creature/giant-abbanith/",
+    "bloco_integral_estruturado": true,
+    "confronto_com_livro_editorial_errata": "PENDENTE"
   }
 }

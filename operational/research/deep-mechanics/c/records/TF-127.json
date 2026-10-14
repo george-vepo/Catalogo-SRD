@@ -4,14 +4,14 @@
   "nome": "Giant, Laestrigonian",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 7,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_BLOCO_INDIVIDUAL_ESTRUTURADO_PENDENTE_CONFRONTO_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex",
     "edicao": null,
-    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+    "fonte_identidade": "https://www.5esrd.com/database/creature/giant-laestrigonian/"
   },
   "estatisticas": {
     "nd_catalogo": "4",
@@ -39,204 +39,217 @@
       "CAR": -1
     },
     "deslocamentos": {
-      "andar": 40
+      "andar_ft": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Um greatclub e uma bite.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Greatclub",
+            "quantidade": 1
+          },
+          {
+            "acao": "Bite",
+            "quantidade": 1
+          }
+        ]
       },
       {
         "nome": "Bite",
-        "resumo_anterior": "+7, 1d8+5 perfurante; CON CD14 contra doença que impede cura não mágica e reduz PV máximo por dia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d8+5",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ],
+        "efeito_condicional": {
+          "pre_condicao": "alvo é criatura",
+          "teste": {
+            "atributo": "CON",
+            "cd": 14
+          },
+          "falha": {
+            "condicao": "disease",
+            "cura_pv": "não pode recuperar PV por meios não mágicos até curar a doença",
+            "reduzir_pv_maximo": {
+              "dados": "1d6",
+              "media": 3,
+              "frequencia": "cada 24 horas enquanto doente"
+            },
+            "morte": "máximo de PV cai a 0 por causa da doença"
+          },
+          "sucesso": "não contrai disease"
+        }
       },
       {
         "nome": "Greatclub",
-        "resumo_anterior": "+7, 2d8+5 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "bludgeoning"
+          }
+        ]
       },
       {
         "nome": "Rock",
-        "resumo_anterior": "+7, alcance 60/240, 2d10+5 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 7,
+        "alvos": 1,
+        "alcance_ft": 5,
+        "distancia_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "dano": [
+          {
+            "dados": "2d10+5",
+            "media": 16,
+            "tipo": "bludgeoning"
+          }
+        ]
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Um greatclub e uma bite.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d8+5",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ],
+        "efeito_condicional": {
+          "pre_condicao": "alvo é criatura",
+          "teste": {
+            "atributo": "CON",
+            "cd": 14
+          },
+          "falha": {
+            "condicao": "disease",
+            "cura_pv": "não pode recuperar PV por meios não mágicos até curar a doença",
+            "reduzir_pv_maximo": {
+              "dados": "1d6",
+              "media": 3,
+              "frequencia": "cada 24 horas enquanto doente"
+            },
+            "morte": "máximo de PV cai a 0 por causa da doença"
+          },
+          "sucesso": "não contrai disease"
+        }
       },
       {
-        "nome": "Bite",
-        "resumo_anterior": "+7, 1d8+5 perfurante; CON CD14 contra doença que impede cura não mágica e reduz PV máximo por dia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 7,
+        "alvos": 1,
+        "alcance_ft": 5,
+        "distancia_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "dano": [
+          {
+            "dados": "2d10+5",
+            "media": 16,
+            "tipo": "bludgeoning"
+          }
+        ]
       }
     ],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Um greatclub e uma bite.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        {
+          "acao": "Greatclub",
+          "quantidade": 1
+        },
+        {
+          "acao": "Bite",
+          "quantidade": 1
+        }
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA",
+      "reacoes": "AUSENCIA_CONFERIDA",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA",
+      "acoes_covil": "AUSENCIA_CONFERIDA",
+      "acoes_miticas": "AUSENCIA_CONFERIDA",
+      "conjuracao": "AUSENCIA_CONFERIDA"
+    }
   },
   "pendencias": [
-    "A doença possui efeitos persistentes próprios; não transformar em veneno.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Todas as seções mecânicas listadas pela fonte individual foram estruturadas; pendente confrontar edição original/errata com a republicação 5eSRD.",
+    "Arquivo físico de imagem já existe, mas a identidade visual ainda não foi aprovada."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto independente com o livro original/erratas antes de aprovação mecânica total",
+    "aprovação visual editorial da imagem já armazenada"
   ],
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/giant-laestrigonian/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco mecânico individual republicado por 5eSRD com referência bibliográfica ao livro e edição",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
-      "tipo": "checkpoint original",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint anterior para comparação",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -315,5 +328,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "D&D 5e",
+    "livro": "Creature Codex",
+    "fonte_individual_republicada": "https://www.5esrd.com/database/creature/giant-laestrigonian/",
+    "bloco_integral_estruturado": true,
+    "confronto_com_livro_editorial_errata": "PENDENTE"
   }
 }

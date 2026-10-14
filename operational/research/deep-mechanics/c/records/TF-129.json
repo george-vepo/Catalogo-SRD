@@ -4,14 +4,14 @@
   "nome": "Giant, Snow",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 9,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_BLOCO_INDIVIDUAL_ESTRUTURADO_PENDENTE_CONFRONTO_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
     "edicao": null,
-    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+    "fonte_identidade": "https://www.5esrd.com/database/creature/giant-snow/"
   },
   "estatisticas": {
     "nd_catalogo": "5",
@@ -39,207 +39,212 @@
       "CAR": -2
     },
     "deslocamentos": {
-      "andar": 40
+      "andar_ft": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 7
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 4
+      },
+      {
+        "nome": "Survival",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [],
     "imunidades_dano": [
       "cold"
     ],
-    "imunidades_condicao": null,
+    "imunidades_condicao": [
+      "grappled",
+      "restrained"
+    ],
     "vulnerabilidades": [
       "fire"
-    ]
+    ],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "sem armadura especificada"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Snow Camouflage",
-        "resumo_anterior": "Vantagem para se esconder em paisagens nevadas.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "esconder-se em terreno com neve",
+        "efeito": "vantagem em DEX(Stealth)"
       },
       {
         "nome": "Snow Regeneration",
-        "resumo_anterior": "Recupera 5 PV por turno em terreno com neve desde que tenha ao menos 1 PV.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "início do próprio turno",
+        "pre_condicao": "ao menos 1 PV e está em terreno nevado",
+        "cura_pv": 5
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Duas pancadas de club.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Club",
+            "quantidade": 2
+          }
+        ]
       },
       {
         "nome": "Club",
-        "resumo_anterior": "+7, 3d4+4 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d4+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          }
+        ]
       },
       {
         "nome": "Giant Snowball",
-        "resumo_anterior": "+7, 60/240, 3d6+4 contundente e 1d8 frio; DES CD16 contra cegueira temporária.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 7,
+        "alvos": 1,
+        "distancia_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "cold"
+          }
+        ],
+        "teste_apos_acerto": {
+          "atributo": "DEX",
+          "cd": 16,
+          "falha": {
+            "condicao": "blinded",
+            "duracao": "até fim do próximo turno"
+          },
+          "sucesso": "sem blinded"
+        }
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Duas pancadas de club.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Club",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d4+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Giant Snowball",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 7,
+        "alvos": 1,
+        "distancia_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "cold"
+          }
+        ],
+        "teste_apos_acerto": {
+          "atributo": "DEX",
+          "cd": 16,
+          "falha": {
+            "condicao": "blinded",
+            "duracao": "até fim do próximo turno"
+          },
+          "sucesso": "sem blinded"
+        }
       }
     ],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Duas pancadas de club.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        {
+          "acao": "Club",
+          "quantidade": 2
+        }
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA",
+      "reacoes": "AUSENCIA_CONFERIDA",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA",
+      "acoes_covil": "AUSENCIA_CONFERIDA",
+      "acoes_miticas": "AUSENCIA_CONFERIDA",
+      "conjuracao": "AUSENCIA_CONFERIDA"
+    }
   },
   "pendencias": [
-    "Imune a frio e vulnerável a fogo; regeneração depende de terreno nevado.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Todas as seções mecânicas listadas pela fonte individual foram estruturadas; pendente confrontar edição original/errata com a republicação 5eSRD.",
+    "Arquivo físico de imagem já existe, mas a identidade visual ainda não foi aprovada."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto independente com o livro original/erratas antes de aprovação mecânica total",
+    "aprovação visual editorial da imagem já armazenada"
   ],
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/giant-snow/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco mecânico individual republicado por 5eSRD com referência bibliográfica ao livro e edição",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
-      "tipo": "checkpoint original",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint anterior para comparação",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -329,5 +334,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "D&D 5e",
+    "livro": "Tome of Beasts 2",
+    "fonte_individual_republicada": "https://www.5esrd.com/database/creature/giant-snow/",
+    "bloco_integral_estruturado": true,
+    "confronto_com_livro_editorial_errata": "PENDENTE"
   }
 }
