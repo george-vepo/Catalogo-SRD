@@ -8,7 +8,7 @@
 - **TF-138 Chuhaister**: Feybane limitado a fey/níveis de spells, Light Sensitivity, Rock +2 conforme publicado e Deadfall Shield como reação recarga 5–6. Fonte: https://www.5esrd.com/database/creature/chuhaister/.
 - **TF-139 Cacus Giant**: Final Breath ativado por morte, two Greatclub, Rock e Fire Breath recarga 4–6; não confundido com homônimo CR14. Fonte: https://www.5esrd.com/database/creature/giant-cacus/.
 
-**Resultado provisório a auditar:** 59/131 revisadas individualmente, 72 aguardando, 0 fichas aprovadas integralmente, 94 parciais e 37 bloqueadas; 96 imagens físicas anteriores e 35 faltantes, todas sem aprovação visual. Revisão editorial da edição, erratas e licenças de arte pendente. Nenhuma nova imagem neste checkpoint.
+**Commit mecânico: [`6c3f2b0e93d367615fa1b11b38341157182c4473`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/6c3f2b0e93d367615fa1b11b38341157182c4473).** Auditoria: cinco JSONs relidos por ID no GitHub, 131 arquivos em records, 96 blobs de imagem com SHAs iguais ao manifesto e 35 IDs faltantes; PR Draft. **Resultado auditado:** 59/131 revisadas individualmente, 72 aguardando, 0 fichas aprovadas integralmente, 94 parciais e 37 bloqueadas; 96 imagens físicas anteriores e 35 faltantes, todas sem aprovação visual. Revisão editorial da edição, erratas e licenças de arte pendente. Nenhuma nova imagem neste checkpoint.
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
