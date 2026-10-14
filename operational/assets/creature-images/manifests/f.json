@@ -16,16 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 118,
-    "verified_after_upload": 118,
-    "pending": 76,
-    "stored_bytes": 13175857,
-    "checkpoint_count": 27,
+    "persisted_binary_files": 120,
+    "verified_after_upload": 120,
+    "pending": 74,
+    "stored_bytes": 13313242,
+    "checkpoint_count": 28,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 76,
+    "partial_missing_files": 74,
     "blocked_confirmed": 0,
-    "partial_variant_art": 14,
+    "partial_variant_art": 16,
     "license_rights_review": {
       "foundry_noncommercial_restricted": 8,
       "homebrew_img_unlicensed_for_reuse": 84,
@@ -340,6 +340,15 @@
       ],
       "commit": "3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e",
       "validation": "GitHub-after-upload original bytes and destination identical, Git blob SHA identical; PNG 32×32 and SHA256 pre-validated; artwork exact features and license provenance PARTIAL."
+    },
+    {
+      "sequence": 28,
+      "images_added": [
+        "TF-351",
+        "TF-463"
+      ],
+      "commit": "54cbf17c2c686170edc86d1ff09961021866448b",
+      "validation": "Post-upload source/destination byte-for-byte identity, Git blob SHA checked. PNG dimensions/size and SHA-256 computed; licensing records CC0 and CC BY-SA 4.0; visual compatibility PARTIAL."
     }
   ],
   "blocked_ids": [
@@ -360,7 +369,6 @@
     "TF-336",
     "TF-341",
     "TF-342",
-    "TF-351",
     "TF-353",
     "TF-358",
     "TF-360",
@@ -388,7 +396,6 @@
     "TF-459",
     "TF-461",
     "TF-462",
-    "TF-463",
     "TF-465",
     "TF-468",
     "TF-470",
@@ -2223,20 +2230,36 @@
     {
       "id": "TF-351",
       "name": "Half-Demon Ogre",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Tiddybub/2d-assets/blob/main/fantasy/oga-ogre-concept-art/ogre_.png",
+      "repository_path": "operational/assets/creature-images/TF-351.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 257,
+        "height": 550
       },
-      "state": "PARTIAL"
+      "size_bytes": 128753,
+      "sha256": "3dece5bc228d77a6cdb3dd4047800b9c3530251d1828862226151d40e295b1a4",
+      "persistence_commit": "54cbf17c2c686170edc86d1ff09961021866448b",
+      "validation": {
+        "result": "passed",
+        "method": "GitHub source and destination fetched after publishing: all base64 bytes identical and Git blob SHA equal. PNG header/IHDR/IEND, dimensions and byte count checked before upload; SHA-256 calculated with SHA256 implementation cross-tested on standard abc vector.",
+        "git_blob_sha": "4884309c55d1bb3e90dc15ab52ae4afb65e87e16",
+        "quality_note": "Horned/tusked furry ogre, consistent with ogre monster identity; half-demon lineage and fire-breath not shown. Image has embedded credit/license text; replace/crop only with documented permission and design review."
+      },
+      "state": "PARTIAL",
+      "source_repo": "Tiddybub/2d-assets",
+      "source_ref": "main",
+      "source_path": "fantasy/oga-ogre-concept-art/ogre_.png",
+      "source_git_blob_sha": "4884309c55d1bb3e90dc15ab52ae4afb65e87e16",
+      "source_license": "CC0 1.0 Universal (OpenGameArt source and CC0 pack declaration)",
+      "license_evidence": [
+        "https://github.com/Tiddybub/2d-assets/blob/main/fantasy/oga-ogre-concept-art/SOURCE.md",
+        "https://opengameart.org/content/ogre-concept-art"
+      ],
+      "attribution": "Creator credited inside the original illustration; source is OpenGameArt 'Ogre concept art', author credit visible in the image; attribution optional under CC0.",
+      "rights_review": "CC0 is stated in original OGA metadata and mirror SOURCE.md; image remains PARTIAL because of subtype mismatch and embedded attribution panel."
     },
     {
       "id": "TF-353",
@@ -4195,20 +4218,36 @@
     {
       "id": "TF-463",
       "name": "Blood Maggot",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/sourceofmana/sourceofmana/blob/master/data/graphics/sprites/monsters/maggot.png",
+      "repository_path": "operational/assets/creature-images/TF-463.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 200,
+        "height": 60
       },
-      "state": "PARTIAL"
+      "size_bytes": 8632,
+      "sha256": "2a23ae641550364ea956241713b609a3f060f083630c4bc28588bced536af170",
+      "persistence_commit": "54cbf17c2c686170edc86d1ff09961021866448b",
+      "validation": {
+        "result": "passed",
+        "method": "GitHub source and destination fetched after publishing: all base64 bytes identical and Git blob SHA equal. PNG header/IHDR/IEND, dimensions and byte count checked before upload; SHA-256 calculated with SHA256 implementation cross-tested on standard abc vector.",
+        "git_blob_sha": "798f748a8ffd1358d3a9fae6cdfe80d647b98ae5",
+        "quality_note": "Recognizable maggot bodies in a repeated animation spritesheet; unlike production card artwork it contains multiple frames, and does not depict blood-specific details. Requires artist-reviewed composition before release."
+      },
+      "state": "PARTIAL",
+      "source_repo": "sourceofmana/sourceofmana",
+      "source_ref": "master",
+      "source_path": "data/graphics/sprites/monsters/maggot.png",
+      "source_git_blob_sha": "798f748a8ffd1358d3a9fae6cdfe80d647b98ae5",
+      "source_license": "CC BY-SA 4.0",
+      "license_evidence": [
+        "https://github.com/sourceofmana/sourceofmana/blob/master/LICENSE.md",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+      ],
+      "attribution": "Sprite credit: Neorice; Source of Mana contributors (https://github.com/sourceofmana/sourceofmana); licensed CC BY-SA 4.0 with attribution and ShareAlike conditions for adaptations.",
+      "rights_review": "CC BY-SA 4.0 permits commercial use subject to attribution and share-alike for adaptations. Preserve provenance and ensure the final adapted art complies."
     },
     {
       "id": "TF-465",
