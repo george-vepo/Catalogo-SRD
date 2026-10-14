@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 188 / 195.**
+**Armazenadas e verificadas: 190 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -32,6 +32,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/db3055fa21bbd7999e93a7c2f9e04d0ce0069357 — 1/1 verificadas: TF-263
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/485bc8d67e88df5b72de23a769d5a34d0fe2eec9 — 2/2 verificadas: TF-255, TF-267
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/fe94880bdfd10f38cd0526d7cc258d62cc650173 — 2/2 verificadas: TF-069, TF-201
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/a5559dc3f505a81219a8877c3175a8357fb40dd6 — 2/2 verificadas: TF-226, TF-231
 
 ## Binários publicados e conferidos
 
@@ -184,10 +185,12 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-223 / Three-Headed Cobra: operational/assets/creature-images/TF-223.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Threeheadedcobra.jpg; 92116 bytes; 960x599 px; SHA-256: c3cf4beeb36485a6f77987cbdbd23502815637ae8bbc8d4ec46b53bf7f63574b; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-224 / Torch Mimic: operational/assets/creature-images/TF-224.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Torch%20Mimic.webp; 188718 bytes; 1000x1527 px; SHA-256: c1d1a303fbccd0e9fb60e0585172aa5d25b45bd46c940689af260668200b0690; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-225 / Aalpamac: operational/assets/creature-images/TF-225.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Aalpamac.webp; 330442 bytes; 793x1175 px; SHA-256: 8092d981f98e5a53e743042e430c6c6e85d3dc68f088f14dfbb2f12d265a15d5; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-226 / Accursed Spirit Naga: operational/assets/creature-images/TF-226.jpg; origem: https://a5e.tools/node/1745; 71850 bytes; 650x841 px; SHA-256: 152bb9b0d015f499fc84827660aa74548cc0ce8e2a1b209f7ab6f5a2ee6afaaa; commit: a5559dc3f505a81219a8877c3175a8357fb40dd6
 - TF-227 / Coastline Reaper: operational/assets/creature-images/TF-227.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Coastline%20Reaper.webp; 192992 bytes; 1000x1122 px; SHA-256: d2004ef5d832fd765dd1c800972dc602c0baf83275015e857413b18c2b4533fb; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-228 / Colláis: operational/assets/creature-images/TF-228.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Collais.webp; 304172 bytes; 874x1249 px; SHA-256: 40b03ff86616f831ea44d48cee1b7a478a4750aacf7b91c6b17147196ff1610e; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-229 / Conjoined Queen: operational/assets/creature-images/TF-229.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Conjoined%20Queen.webp; 284564 bytes; 973x1020 px; SHA-256: a7f66f3d415cf29fe39fcbea22a2046bcfd2996e184f5d30e5b1a49fc2eb092d; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-230 / Cryoceros: operational/assets/creature-images/TF-230.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Cryoceros.webp; 317876 bytes; 1147x751 px; SHA-256: 722a9fd014f0e34e1eed6ebd27621a89799ea2839928713604c600349ce7de3d; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
+- TF-231 / Accursed Guardian Naga: operational/assets/creature-images/TF-231.jpg; origem: https://a5e.tools/node/1744; 61981 bytes; 650x841 px; SHA-256: 562d8f580af3c4a999aaf72eae67a50c2c564b36c0a07b883404186c044bc1f5; commit: a5559dc3f505a81219a8877c3175a8357fb40dd6
 - TF-232 / Annelidast: operational/assets/creature-images/TF-232.jpg; origem: https://mz4250.com/posts/tome-of-beasts-93739908; 88440 bytes; 1122x831 px; SHA-256: e21b42f7e99c2f3a1d6791e30252225d3ca1f0c0dda448ea02ff4eb33d0e0431; commit: 2d0d20ab7c63f820940fd968cbfab00620e5d587
 - TF-233 / Chaos Raptor: operational/assets/creature-images/TF-233.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chaos%20Raptor.webp; 246680 bytes; 1000x980 px; SHA-256: 56aafff061fa6111ed8cc76e77db7ba7006cb3ba12ea1b19638006eff1d81dae; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
 - TF-234 / Chimera, Royal: operational/assets/creature-images/TF-234.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Royal%20Chimera.webp; 112540 bytes; 1000x1208 px; SHA-256: a406c1a30f4d70378691aac15940cd3e4dd31dd2e6f5b14df79aa6c5941941c4; commit: fe22e5efef6af67a50cd68a58cdae797928e912d
@@ -229,8 +232,6 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
 - TF-185 / Alleyway Strangler: source_not_found; 
 - TF-200 / Aboleth Champion: source_not_found; 
-- TF-226 / Accursed Spirit Naga: source_not_found; 
-- TF-231 / Accursed Guardian Naga: source_not_found; 
 - TF-239 / Aboleth, Nihileth, Nihilethic Dominator: source_not_found; 
 - TF-264 / Abyssal Hordeling: source_not_found; 
 
