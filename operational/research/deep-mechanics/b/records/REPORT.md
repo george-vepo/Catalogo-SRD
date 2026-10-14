@@ -1,3 +1,15 @@
+## Conciliação final da auditoria documental — 14/10/2026
+
+**Verificação direta no GitHub:** 132/132 JSONs lidos e válidos; 132 IDs e SHAs sem divergência; 132 registros com fonte e inventário individual; 104 binários reais existentes e coincidentes por SHA/tamanho com o manifesto; 28 imagens em aberto. Os três JSONs corrigidos em [`5664a57f7625`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5664a57f7625f21f528152e12a42383bd893a3ba) foram reabertos e validados na branch, com novos SHAs registrados e nenhuma regressão nos demais arquivos.
+
+**Correção contábil:** `integridade.total_bytes_json` anterior de **493967** bytes estava desatualizado, embora os 132 registros individuais tivessem SHA e tamanho corretos. Reconciliado para **740186** bytes pela soma dos 132 campos `bytes`, que coincidiam com a árvore GitHub. Isso **não significa** verificação editorial independente.
+
+**Commits desta continuação:** [`5dd0a6bccac2`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5dd0a6bccac2c057fe4365bdbf278e1cadfe97c1) — três imagens reais, manifestos e relatórios; [`5664a57f7625`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5664a57f7625f21f528152e12a42383bd893a3ba) — três correções de mecânicas A5E com cotejo pontual, matriz dos 13 conflitos e validação individual dos 132 registros. Para ambos, o diff está **exclusivamente** em `operational/research/deep-mechanics/b/`; o cotejo da branch inteira contra o commit-base também não mostrou mudanças fora de B. PR #6 permanece aberta em DRAFT, sem merge, aprovação ou integração.
+
+**Separação de estados:** 132 inventários estruturados; 14 inicialmente baseados em A5E e 118 em fontes secundárias; quatro cotejos pontuais adicionais com portal A5E, mas **zero fichas integralmente certificadas contra publicação impressa/erratas e zero homologações independentes**. Todos os 13 conflitos da PR #4 permanecem editorialmente pendentes; 28 IDs aguardam imagens binárias adequadas/licenciáveis. Não promover fichas nem imagens com base nesta verificação.
+
+---
+
 ## Auditoria documental B — 14/10/2026 — 132 JSONs relidos, três correções mecânicas pontuais
 
 **Escopo:** cada um dos **132 JSONs** foi individualmente recuperado do GitHub na branch B; **132/132** passaram na leitura JSON, ID, SHA do manifesto, presença de fontes, flag de inventário estruturado e campos mínimos. A árvore Git confirmou **132 JSONs físicos sem extras** e **104 imagens físicas** com SHA Git/tamanho equivalentes aos manifestos; há **28 imagens pendentes**. Dos registros, **124** mantêm `bloqueado:true`. A verificação de integridade não constitui homologação mecânica.

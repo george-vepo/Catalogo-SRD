@@ -39,12 +39,12 @@
   },
   "integridade": {
     "controle": "Auditoria GitHub 14/10/2026: 132/132 JSONs físicos com SHA Git e bytes iguais ao manifesto na árvore da branch antes deste checkpoint; 101/101 imagens binárias físicas com SHA Git e bytes iguais; 3 blobs binários adicionais importados por identidade de SHA Git da branch F. Verificar os 104/104 após commit. Nenhuma homologação independente.",
-    "checkpoints": 22,
+    "checkpoints": 23,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
     "sem_duplicatas": true,
     "sem_ids_extras": true,
-    "total_bytes_json": 493967,
+    "total_bytes_json": 740186,
     "comparacao_pre_relatorio": "16 checkpoints de alterações de registros; nenhuma escrita de arquivo fora do diretório exclusivo B",
     "imagens_blobs_iguais_origem": 92,
     "imagens_sem_arquivo": 28,
@@ -192,6 +192,30 @@
       ],
       "publicacoes_originais_impressas_e_erratas_conferidas": 0,
       "ressalva": "Portais editoriais verificados parcialmente em quatro registros; isso não assegura cotejo editorial integral de 132 e nem libera licença, interoperabilidade ou homologação."
+    },
+    "reconciliacao_total_bytes_20261014": {
+      "anterior": 493967,
+      "atual": 740186,
+      "causa": "contador de bytes acumulados legado não refletia evolução dos JSONs; corrigido pela soma dos 132 bytes indexados, todos rechecados na árvore GitHub",
+      "jsons_fisicos_e_sha_conferidos": 132
+    },
+    "resultado_final_parcial_20261014": {
+      "jsons": 132,
+      "estruturados": 132,
+      "fonte_editorial_a5e_na_estrutura": 14,
+      "fonte_secundaria_na_estrutura": 118,
+      "cotejos_pontuais_portal_editorial": 4,
+      "editoriais_integralmente_homologados": 0,
+      "homologacoes_independentes": 0,
+      "imagens_binarias": 104,
+      "imagens_pendentes": 28,
+      "conflitos_resolvidos": 0,
+      "conflitos_restantes": 13,
+      "checkpoints_novos_confirmados": [
+        "5dd0a6bccac2c057fe4365bdbf278e1cadfe97c1",
+        "5664a57f7625f21f528152e12a42383bd893a3ba"
+      ],
+      "licencas_editoriais_e_imagens_pendentes": true
     }
   },
   "commits_checkpoint": [
@@ -282,6 +306,10 @@
     {
       "sha": "5dd0a6bccac2c057fe4365bdbf278e1cadfe97c1",
       "message": "research(srd607/b): importar 3 imagens reais da branch F e conciliar manifestos (checkpoint 3)"
+    },
+    {
+      "sha": "5664a57f7625f21f528152e12a42383bd893a3ba",
+      "message": "research(srd607/b): cotejar 4 A5E, corrigir 3 regras e auditar 132 fichas (checkpoint 3)"
     }
   ],
   "records": [
