@@ -4,6 +4,8 @@
 
 ## Checkpoint 27 — confronto com fonte editorial Gate Pass Gazette (14/10/2026)
 
+- Commit `9d6386ea894bfbb62d4e72f68b2dfe140fc44508` confirmado com read-back independente de TF-503 e TF-499; ambos JSONs válidos, IDs corretos e evidências no arquivo individual.
+
 - **TF-503 Stuffed Crab:** confrontado com o SRD editorial original [Gate Pass Gazette #2](https://static1.squarespace.com/static/63d11ec201a57a0efa51a168/t/65f3132a921c356dd0ee11ab/1710428970230/!GPG%2BIssue%2B%232%2BSRD.pdf), página PDF 15. Confirmados CR 6, **2.300 XP**, CA14 e PV104. O texto da saída dos ghouls após 0 PV já está truncado no material original; **mantém bloqueio até errata**, sem assumir como funciona. Dano de queda de ghoul no piso perfurado é regra situacional do encontro, separada das habilidades.
 - **TF-499 Cloud of Ghasthoppers:** publicação individual confirmada em [Gate Pass Gazette #24](https://a5e.tools/node/3976) na lista da editora. A fonte oficial continua omitindo o teste de salvaguarda da Despair Aura; **permanece bloqueada**.
 - **Checkpoint 26 confirmado por read-back:** TF-126, TF-127, TF-129, TF-131, commit `e24797b798bf94163a4efa80e2df4ba681e9e85b`.
