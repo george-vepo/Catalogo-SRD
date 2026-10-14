@@ -2,19 +2,26 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-097",
   "nome": "Ancient Amethyst Dragon",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_EDITORIAL_PENDENTE_REVISAO_INDEPENDENTE",
   "edicao": {
-    "publicacao": "Monstrous Menagerie (Level Up A5E)",
-    "edicao_exata_verificada": false
+    "sistema": "Level Up: Advanced 5th Edition (A5E)",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "versao": "Ficha individual do portal editorial A5E consultada em 2026-10-13; edição impressa/erratas não conferidas",
+    "edicao_exata_verificada": true,
+    "edicao_impressa_e_erratas_verificadas": false
   },
   "fontes": [
     {
       "url": "https://a5e.tools/node/1562",
-      "natureza": "portal_editorial_indicado_no_checkpoint"
+      "natureza": "fonte_editorial_ficha_individual",
+      "consultada": "2026-10-13",
+      "alcance": "Bloco completo de estatísticas, características e ações no portal do editor."
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-087_TF-097/research.json",
-      "natureza": "checkpoint"
+      "natureza": "checkpoint_historico_preexistente",
+      "alcance": "Continuidade, não homologação."
     }
   ],
   "estatisticas": {
@@ -38,8 +45,8 @@
     "salvaguardas": {
       "CON": 13,
       "INT": 15,
-      "WIS": 10,
-      "CHA": 14
+      "SAB": 10,
+      "CAR": 14
     },
     "pericias": {
       "Deception": "14 (+1d6)",
@@ -47,8 +54,17 @@
       "Perception": 10,
       "Persuasion": "14 (+1d6)"
     },
+    "resistencias_dano": [
+      "force",
+      "psychic"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "fatigue (A5E)"
+    ],
     "sentidos": [
-      "darkvision 120 ft."
+      "darkvision 120 ft"
     ],
     "percepcao_passiva": 20,
     "idiomas": [
@@ -56,220 +72,278 @@
       "Deep Speech",
       "Draconic",
       "Undercommon",
-      "telepathy 120 ft."
+      "telepathy 120 ft"
     ],
-    "resistencias_dano": [
-      "force",
-      "psychic"
-    ],
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": [
-      "fatigue (A5E)"
-    ]
+    "proficiencia": 7,
+    "cd_manobra": 22,
+    "bloodied_pv": 156
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "qualidade_estatisticas": "CONFERIDA_NA_FICHA_EDITORIAL_DO_PORTAL",
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "indicacao_herdada": "Uma mordida e duas garras; mordida pode ser substituída por Psionic Wave.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Legendary Resistance",
+      "efeito": "3/dia: converte uma falha em salvaguarda em sucesso e perde telepatia e poderes psiônicos até o fim de seu próximo turno.",
+      "usos": "3/dia"
     },
     {
+      "nome": "Psionic Powers",
+      "efeito": "Poderes psiônicos contam como mágicos e psiônicos."
+    },
+    {
+      "nome": "Far Thoughts",
+      "efeito": "Detecta manifestações psiônicas e telepatia até 100 milhas; usa uma ação para observar remotamente e outra para encerrar observação."
+    },
+    {
+      "nome": "Innate Spellcasting",
+      "efeito": "CAR CD22; magias sem componentes materiais.",
+      "cd": 22
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Bite",
-      "indicacao_herdada": "+13, 15 pés, 4d10+6 perfurante e 2d8 força.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 13,
+      "alcance_ft": 15,
+      "alvos": "uma criatura/alvo",
+      "dados_dano": [
+        {
+          "dados": "4d10",
+          "modificador": 6,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d8",
+          "modificador": 0,
+          "tipo": "force"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_fonte": true
     },
     {
       "nome": "Claws",
-      "indicacao_herdada": "+13, 10 pés, 3d8+6 cortante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 13,
+      "alcance_ft": 10,
+      "alvos": "uma criatura/alvo",
+      "dados_dano": [
+        {
+          "dados": "3d8",
+          "modificador": 6,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_fonte": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Bite ou Psionic Wave",
+        "Claws",
+        "Claws"
+      ],
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Claws",
+      "categoria": "ataque",
+      "referencia_ataque": "Claws",
+      "confirmado_na_fonte": true
     },
     {
       "nome": "Psionic Wave",
-      "indicacao_herdada": "Raio 20 pés; SAB CD22, 4d10 psíquico ou metade.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "area",
+      "area": {
+        "forma": "raio",
+        "raio_ft": 20
+      },
+      "salvaguarda": {
+        "atributo": "WIS",
+        "cd": 22,
+        "falha": "4d10 psychic",
+        "sucesso": "metade do dano"
+      },
+      "dano": [
+        {
+          "dados": "4d10",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ],
+      "desvantagem_salvaguarda": "alvos já charmed pelo dragão",
+      "confirmado_na_fonte": true
     },
     {
       "nome": "Concussive Breath",
-      "indicacao_herdada": "Recarga 5–6; cone 90 pés; CON CD21; 15d10 força ou metade.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "sopro_area",
+      "recarga": "5-6",
+      "area": {
+        "forma": "cone",
+        "comprimento_ft": 90
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 21,
+        "falha": "15d10 força",
+        "sucesso": "metade dano"
+      },
+      "dano": [
+        {
+          "dados": "15d10",
+          "modificador": 0,
+          "tipo": "force"
+        }
+      ],
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Far Thoughts — Observe",
+      "categoria": "observacao_remota",
+      "alcance_milhas": 100,
+      "alvo": "criatura, objeto ou local familiar",
+      "duracao": "indefinida",
+      "efeito": "pode enxergar, ouvir e se comunicar telepaticamente remotamente, enquanto perde visão e audição física; não precisa comer ou beber durante observação",
+      "encerramento": "ação para recuperar sentidos",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Far Thoughts — End Observation",
+      "categoria": "fim_observacao",
+      "efeito": "restaura sentidos físicos por uma ação",
+      "confirmado_na_fonte": true
     }
   ],
   "acoes_bonus": [],
   "reacoes": [
     {
       "nome": "Assume Control",
-      "indicacao_herdada": "Enquanto bloodied, pode controlar o turno de criatura enfeitiçada, com salvaguarda SAB CD22 em ordens autolesivas.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "reacao",
+      "precondicao": "bloodied, PV <=156",
+      "gatilho": "início do turno de criatura charmed pelo dragão",
+      "efeito": "controla telepaticamente ações do alvo até fim do turno",
+      "salvaguarda_condicional": {
+        "atributo": "WIS",
+        "cd": 22,
+        "falha": "segue comando nocivo a si ou aliado",
+        "sucesso": "o turno do alvo termina imediatamente"
+      },
+      "quando_ha_salvaguarda": "ordem de ação prejudicial ao alvo ou aliado",
+      "confirmado_na_fonte": true
     }
   ],
   "acoes_lendarias": [
     {
       "nome": "Charm",
-      "indicacao_herdada": "Enfeitiça criatura a 60 pés por até 24 horas, SAB CD18 e novas salvaguardas.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "lendaria",
+      "custo": 1,
+      "alcance_ft": 60,
+      "salvaguarda": {
+        "atributo": "WIS",
+        "cd": 18,
+        "falha": "charmed por 24h",
+        "sucesso": "sem encanto"
+      },
+      "duracao": "até 24 horas",
+      "condicao": "charmed",
+      "encerramento": "WIS CD18 no fim de cada turno e ao fim de qualquer turno em que dragão/companheiros prejudiquem alvo",
+      "confirmado_na_fonte": true
     },
     {
       "nome": "Stupefy",
-      "indicacao_herdada": "Dissipa concentração em 60 pés, CON CD22.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "lendaria",
+      "custo": 1,
+      "alcance_ft": 60,
+      "precondicao": "alvo concentrando em magia",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 22,
+        "falha": "perde concentração",
+        "sucesso": "mantém concentração"
+      },
+      "confirmado_na_fonte": true
     },
     {
       "nome": "Psionic Wave",
-      "indicacao_herdada": "Custa duas ações; reutiliza Psionic Wave.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "lendaria",
+      "custo": 2,
+      "referencia_acao": "Psionic Wave",
+      "confirmado_na_fonte": true
     },
     {
       "nome": "Captivating Harmonics",
-      "indicacao_herdada": "1/dia; 120 pés; SAB CD18 contra encanto por 1 min.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "lendaria",
+      "custo": 1,
+      "usos": "1/dia",
+      "alcance_ft": 120,
+      "alvo": "criaturas escolhidas",
+      "salvaguarda": {
+        "atributo": "WIS",
+        "cd": 18,
+        "falha": "charmed por 1 minuto",
+        "sucesso": "nenhum efeito"
+      },
+      "duracao": "até 1 minuto",
+      "encerramento": "repete WIS CD18 no fim de cada turno",
+      "confirmado_na_fonte": true
     }
   ],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Legendary Resistance",
-      "resumo": "3/dia, converte falha em sucesso; impede uso imediato de telepatia e psiônicos até próximo turno."
-    },
-    {
-      "nome": "Far Thoughts",
-      "resumo": "Sente poderes psiônicos/telepáticos e pode observar remotamente locais ou seres familiares até 100 milhas."
-    },
-    {
-      "nome": "Innate Spellcasting",
-      "resumo": "CAR CD22, 3/dia calm emotions/charm person/mass suggestion/modify memory e 1/dia plane shift/project image."
+      "tipo": "conjuracao_inata",
+      "atributo": "CAR",
+      "cd": 22,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "calm emotions",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "charm person",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "mass suggestion",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "modify memory",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "plane shift",
+          "usos": "1/dia"
+        },
+        {
+          "nome": "project image",
+          "usos": "1/dia"
+        }
+      ]
     }
   ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
+  "acoes_opcionais_de_ambiente": [
+    {
+      "tipo": "opcoes_de_covil_nao_intrinsecas",
+      "quantidade_opcoes": 4,
+      "descricao": "Possível convocação de 3 cult fanatics 1/dia em vez de Charm, ilusões que ocultam passagens, duplicação de alcance psiônico e desvantagem de Insight no covil; nenhum efeito de covil habilitado por padrão."
+    }
+  ],
   "conflito_editorial": null,
-  "bloqueado": true,
+  "bloqueado": false,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "É ficha EN Publishing/Monstrous Menagerie; o homônimo de Fizban (PV444) não corresponde ao catálogo.",
-    "A5E contém conceitos bloodied e fatigue; não converter automaticamente para 5E SRD."
+    "Pendente revisão independente e confronto com errata/publicação final; NÃO é ficha canônica."
   ],
   "integrada": false
 }

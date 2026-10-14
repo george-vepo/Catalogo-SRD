@@ -2,52 +2,338 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-095",
   "nome": "Adult Sapphire Dragon",
-  "estado": "BLOQUEADO_CONFLITO_OU_AMBIGUIDADE",
+  "estado": "DETALHADA_EDITORIAL_COM_CAMPOS_BLOQUEADOS",
   "edicao": {
-    "publicacao": null,
-    "edicao_exata_verificada": false
+    "sistema": "Level Up: Advanced 5th Edition (A5E)",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "versao": "Ficha individual do portal editorial A5E consultada em 2026-10-13; edição impressa/erratas não conferidas",
+    "edicao_exata_verificada": true,
+    "edicao_impressa_e_erratas_verificadas": false
   },
   "fontes": [
     {
       "url": "https://a5e.tools/node/1571",
-      "natureza": "referencia_editorial_herdada"
+      "natureza": "fonte_editorial_ficha_individual",
+      "consultada": "2026-10-13",
+      "alcance": "Bloco completo de estatísticas, características e ações no portal do editor."
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-024_TF-469/recovery-index.json",
-      "natureza": "checkpoint"
+      "natureza": "checkpoint_historico_preexistente",
+      "alcance": "Continuidade, não homologação."
     }
   ],
   "estatisticas": {
     "nd": "19",
     "ca": 19,
     "pv": 304,
-    "dados_vida": null,
-    "atributos": null,
-    "deslocamentos_ft": null,
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "dados_vida": "29d12+116",
+    "atributos": {
+      "FOR": 22,
+      "DES": 22,
+      "CON": 18,
+      "INT": 22,
+      "SAB": 20,
+      "CAR": 16
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "escavar": 30,
+      "voar": 80
+    },
+    "salvaguardas": {
+      "CON": 10,
+      "INT": 12,
+      "SAB": 11,
+      "CAR": 10
+    },
+    "pericias": {
+      "Arcana": 12,
+      "Deception": 10,
+      "History": 12,
+      "Insight": "11 (+1d6)",
+      "Perception": "11 (+1d6)",
+      "Persuasion": 10
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "fatigue (A5E)"
+    ],
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "percepcao_passiva": 24,
+    "idiomas": [
+      "Common",
+      "Deep Speech",
+      "Draconic",
+      "Undercommon",
+      "telepathy 120 ft"
+    ],
+    "proficiencia": 6,
+    "cd_manobra": 20,
+    "bloodied_pv": 152
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "CONFERIDA_NA_FICHA_EDITORIAL_DO_PORTAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Legendary Resistance",
+      "efeito": "3/dia, transforma falha em sucesso; até fim do próximo turno não pode usar Foretell, Prognosticate ou Prophesy Doom e perde Predictive Harmonics.",
+      "usos": "3/dia",
+      "referencia_nao_encontrada": "Prophesy Doom: não consta das ações da mesma página."
+    },
+    {
+      "nome": "Predictive Harmonics",
+      "efeito": "Não pode ser surpreendido, e desvantagens próprias em jogadas viram jogadas normais."
+    },
+    {
+      "nome": "Psionic Powers",
+      "efeito": "Poderes psiônicos contam simultaneamente como mágicos e psiônicos."
+    },
+    {
+      "nome": "Far Thoughts",
+      "efeito": "Detecta poderes psiônicos/comunicações telepáticas em até 100 milhas; observação remota é ativada e encerrada por ações."
+    },
+    {
+      "nome": "Innate Spellcasting",
+      "efeito": "Conjuração inata via Carisma CD18, sem componentes materiais.",
+      "atributo": "CAR",
+      "cd": 18
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 12,
+      "alcance_ft": 10,
+      "alvos": "uma criatura/alvo",
+      "dados_dano": [
+        {
+          "dados": "3d10",
+          "modificador": 6,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "1d8",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Claws",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 12,
+      "alcance_ft": 5,
+      "alvos": "uma criatura/alvo",
+      "dados_dano": [
+        {
+          "dados": "3d8",
+          "modificador": 6,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [],
+      "confirmado_na_fonte": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Bite ou Psionic Wave",
+        "Claws",
+        "Claws"
+      ],
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Claws",
+      "categoria": "ataque",
+      "referencia_ataque": "Claws",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Psionic Wave",
+      "categoria": "area",
+      "area": {
+        "forma": "raio",
+        "raio_ft": 20,
+        "centro": "dragon"
+      },
+      "alvos": "cada criatura na área",
+      "salvaguarda": {
+        "atributo": "WIS",
+        "cd": 18,
+        "falha": "3d10 psychic",
+        "sucesso": "metade dano"
+      },
+      "dano": [
+        {
+          "dados": "3d10",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ],
+      "desvantagem_salvaguarda": "quem estiver sofrendo dano psíquico contínuo",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Discognitive Breath",
+      "categoria": "sopro_area",
+      "recarga": "5-6",
+      "area": {
+        "forma": "cone",
+        "comprimento_ft": 60
+      },
+      "salvaguarda": {
+        "atributo": "INT",
+        "cd": 18,
+        "falha": "11d10 psychic + 2d10 ongoing psychic",
+        "sucesso": "metade 11d10 e nenhum dano contínuo"
+      },
+      "dano": [
+        {
+          "dados": "11d10",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ],
+      "dano_continuo": {
+        "dados": "2d10",
+        "modificador": 0,
+        "tipo": "psychic"
+      },
+      "duracao_dano_continuo": "até unconscious ou ação do alvo para se reancorar na realidade",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Prognosticate",
+      "categoria": "poder_psiônico",
+      "usos": "3/dia",
+      "efeitos": [
+        "prediz evento em até 100 anos: probabilidade 67% correto e 33% parcial/errado",
+        "alternativamente adquire truesight 90 pés por 1 minuto"
+      ],
+      "alcance_temporal_anos": 100,
+      "chance_acerto": 0.67,
+      "duracao_visao": "1 minuto",
+      "alcance_visao_ft": 90,
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Far Thoughts — Observe",
+      "categoria": "observacao_remota",
+      "distancia_milhas": 100,
+      "alvos": "local, objeto ou criatura familiar",
+      "efeito": "percebe e se comunica telepaticamente no local; fica cego e surdo fisicamente, não requer comida ou água; duração indefinida",
+      "duracao": "indefinida",
+      "encerramento": "outra ação para abandonar observação",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Far Thoughts — End Observation",
+      "categoria": "fim_observacao",
+      "efeito": "retorna sentidos físicos; uma ação",
+      "confirmado_na_fonte": true
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
-  "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "PARCIAL_AMBIGUIDADE_EDITORIAL",
+  "acoes_lendarias": [
+    {
+      "nome": "Foretell",
+      "categoria": "lendaria",
+      "custo": 1,
+      "alcance_ft": 120,
+      "duracao": "até fim do próximo turno do dragão",
+      "efeito": "rola d20 e guarda resultado, podendo substituí-lo uma vez em um d20 seu ou de outra criatura até 120 pés",
+      "usos_do_valor": 1,
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Psionic Wave",
+      "categoria": "lendaria",
+      "custo": 2,
+      "referencia_acao": "Psionic Wave",
+      "confirmado_na_fonte": true
+    },
+    {
+      "nome": "Shatter Mind",
+      "categoria": "lendaria",
+      "custo": 2,
+      "alcance_ft": 60,
+      "alvos": "uma criatura",
+      "salvaguarda": {
+        "atributo": "INT",
+        "cd": 23,
+        "falha": "4d10 ongoing psychic",
+        "sucesso": "nenhum efeito"
+      },
+      "dano_continuo": {
+        "dados": "4d10",
+        "modificador": 0,
+        "tipo": "psychic"
+      },
+      "encerramento": "INT CD23 no fim de cada turno ou ação para se ancorar na realidade",
+      "confirmado_na_fonte": true
+    }
+  ],
+  "conjuracoes": [
+    {
+      "tipo": "conjuracao_inata",
+      "atributo": "CAR",
+      "cd": 18,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "comprehend languages",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "detect thoughts",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "telekinesis",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "wall of force",
+          "usos": "3/dia"
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "acoes_opcionais_de_ambiente": [
+    {
+      "tipo": "opcoes_de_covil_nao_intrinsecas",
+      "quantidade_opcoes": 4,
+      "descricao": "Opções de covil: invocar mage 1/dia no lugar de Shatter Mind; retratos que provocam rattled; desvantagem Perception/Survival; surpreso para hostis no covil."
+    }
+  ],
+  "conflito_editorial": "Legendary Resistance inclui nome de poder ausente no próprio bloco publicado.",
   "bloqueado": true,
   "pendencias": [
-    "Revisão de bloco integral não executada; dados herdados do checkpoint, sem confirmação independente.",
-    "Dados ausentes e ações somente indicativas; completar separadamente bônus, alvo, dano, duração, CD, recarga e efeitos."
+    "Pendente revisão independente e confronto com errata/publicação final; NÃO é ficha canônica.",
+    "Resolver referência não definida 'Prophesy Doom' na Legendary Resistance: a página editorial não apresenta essa ação.",
+    "Revisar possível errata da lista de poderes legendários antes de implementar limitações provocadas por Legendary Resistance."
   ],
   "integrada": false
 }

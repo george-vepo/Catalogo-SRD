@@ -2,26 +2,33 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-408",
   "nome": "Grove Swarm",
-  "estado": "BLOQUEADO_CONFLITO_EDITORIAL",
+  "estado": "DETALHADA_EDITORIAL_COM_CAMPOS_BLOQUEADOS",
   "edicao": {
-    "publicacao": "Adventurer's Guide (A5E)",
-    "edicao_exata_verificada": false
+    "sistema": "Level Up: Advanced 5th Edition (A5E)",
+    "editora": "EN Publishing",
+    "publicacao": "Adventurer's Guide",
+    "versao": "Ficha individual do portal editorial A5E consultada em 2026-10-13; edição impressa/erratas não conferidas",
+    "edicao_exata_verificada": true,
+    "edicao_impressa_e_erratas_verificadas": false
   },
   "fontes": [
     {
-      "url": "https://www.a5e.tools/node/3542",
-      "natureza": "editorial_preexistente_nao_conferida"
+      "url": "https://a5e.tools/node/3542",
+      "natureza": "fonte_editorial_ficha_individual",
+      "consultada": "2026-10-13",
+      "alcance": "Bloco completo de estatísticas, características e ações no portal do editor."
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint"
+      "natureza": "checkpoint_historico_preexistente",
+      "alcance": "Continuidade, não homologação."
     }
   ],
   "estatisticas": {
     "nd": null,
     "ca": 16,
     "pv": 217,
-    "dados_vida": null,
+    "dados_vida": "15d20+60",
     "atributos": {
       "FOR": 25,
       "DES": 6,
@@ -30,48 +37,123 @@
       "SAB": 10,
       "CAR": 7
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 50; escalar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "deslocamentos_ft": {
+      "andar": 50,
+      "escalar": 30
+    },
+    "salvaguardas": {},
+    "pericias": {},
+    "resistencias_dano": [
+      "bludgeoning",
+      "piercing",
+      "slashing"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "prone",
+      "restrained",
+      "stunned",
+      "unconscious"
+    ],
+    "sentidos": [
+      "blindsight 60 ft"
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [],
+    "proficiencia": 2,
+    "cd_manobra_reportada": 12,
+    "nd_exibido_na_pagina": "0",
+    "nd_pendente_motivo": "Publicação apresenta ND 0 embora PV217 e ataque +12; não assumir valor nem recalcular."
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "CONFERIDA_NA_FICHA_EDITORIAL_DO_PORTAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia e efeitos mágicos."
+    },
+    {
+      "nome": "Regeneration",
+      "efeito": "Recupera 10 PV no início do turno, somente se tiver 1+ PV.",
+      "cura_por_turno": 10,
+      "condicao": "PV atual >=1"
+    },
+    {
+      "nome": "Swarm",
+      "efeito": "Ocupa mesmo espaço de outras criaturas; atravessa abertura grande o suficiente para planta Large; não recebe cura por magias/poções nem PV temporários.",
+      "cura_magias_pocoes": false,
+      "pv_temporarios": false
+    },
+    {
+      "nome": "Titanic",
+      "efeito": "Ocupa círculo de 100 pés de raio e ignora terreno difícil.",
+      "raio_ocupacao_ft": 100,
+      "terreno_dificil_ignorado": true
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Thrash",
+      "tipo": "ataque_corpo_a_corpo_em_area",
+      "bonus_acerto": 12,
+      "alcance_ft": 0,
+      "alvos": "todas as criaturas que estão no espaço do enxame",
+      "dados_dano": [
+        {
+          "dados": "5d6",
+          "modificador": 7,
+          "tipo": "magical slashing"
+        }
+      ],
+      "efeitos": [
+        {
+          "condicao": "grappled",
+          "cd_escape": null,
+          "referencia_cd_na_fonte": "maneuver DC equal to your spell save DC",
+          "pendente": "Fonte não define quem é 'your' nem o spell save DC aplicável ao enxame, apesar de exibir Maneuver DC 12."
+        }
+      ],
+      "confirmado_na_fonte": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Thrash",
+      "categoria": "ataque_area",
+      "referencia_ataque": "Thrash",
+      "bonus_acerto": 12,
+      "alcance_ft": 0,
+      "area": "todas criaturas no próprio espaço",
+      "dano": [
+        {
+          "dados": "5d6",
+          "modificador": 7,
+          "tipo": "magical slashing"
+        }
+      ],
+      "condicao": "grappled",
+      "cd_para_agarrar": null,
+      "cd_especial_mencionada": "your spell save DC — sem referente inequívoco",
+      "confirmado_na_fonte": true
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Regeneration, Swarm e Titanic; publicação aponta ND0 incompatível com PV217"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Thrash atinge criaturas dentro da massa, com agarrão"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "ND verificado como 0 na página editorial, mas mantido nulo devido a incongruência interna e outra reprodução com bloco incompleto.; CONFLITO DE EDIÇÃO/HOMÔNIMO: Fonte oficial A5E atribui ND0 a massa colossal com PV217; inconsistência editorial do ND impede homologação.; Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada.; Licença, direitos de reprodução e imagem pendentes; pesquisa não equivale a validação de integração.",
-  "campos_em_conflito": [
-    "nd"
-  ],
+  "inventario_acoes_completo": true,
+  "acoes_opcionais_de_ambiente": [],
+  "conflito_editorial": "A própria página editorial A5E informa ND 0 e a fórmula de CD de Thrash sem referente para 'your'; ambos bloqueados.",
   "bloqueado": true,
   "pendencias": [
-    "Faltam edição exata, ficha individual integral e ações detalhadas com CDs e limites.",
-    "ND verificado como 0 na página editorial, mas mantido nulo devido a incongruência interna e outra reprodução com bloco incompleto.",
-    "CONFLITO DE EDIÇÃO/HOMÔNIMO: Fonte oficial A5E atribui ND0 a massa colossal com PV217; inconsistência editorial do ND impede homologação.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Pendente revisão independente e confronto com errata/publicação final; NÃO é ficha canônica.",
+    "ND exibido 0 é mecanicamente discrepante: campo ND permanece null.",
+    "CD de agarrão em Thrash usa expressão 'your spell save DC', sem fonte inequívoca nem CD numérica; não derivar a partir de manobra DC12 nem proficiência."
   ],
   "integrada": false
 }
