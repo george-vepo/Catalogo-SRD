@@ -141,3 +141,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 2 fichas completas em conteúdo (TF-211, TF-212), 2 com ressalvas (TF-201 A5E não-SRD/licença e TF-202 Book of Ebon Tides vs Tome of Beasts 3) e 6 incompletas (**TF-203, TF-204, TF-205, TF-206, TF-208, TF-210**: registros C contêm apenas sínteses, não mecânicas nem atributos estruturados). Nove imagens diretamente vinculadas e uma (TF-201) via manifesto E, com SHA/tamanho conferidos; TF-210 tem largura declarada de 452 px. Edição, identidade visual e licenciamento não homologados.
 
 **Consolidado:** 190/395 (205 restantes); 123 completas, 38 com ressalvas, 28 incompletas, 1 não verificável; 133 imagens diretas, 54 por manifesto e 3 ausentes.
+
+## Lote 020 — TF-213–TF-222 (10 IDs da ordem do CSV)
+
+8 fichas completas em conteúdo e 2 com ressalvas: **TF-216**, divergência de vulnerabilidade a frio entre versões; **TF-221**, fórmula de dados de vida possivelmente incompatível com criatura Large. As dez imagens estão diretamente vinculadas ao grupo A, com SHA/tamanho correspondentes. Nenhuma imagem apresenta dimensão declarada inferior a 500 px. Sem homologação visual, editorial, de licença ou adaptação.
+
+**Consolidado:** 200/395 (195 restantes); 131 completas, 40 com ressalvas, 28 incompletas e 1 não verificável; 143 imagens diretas, 54 por manifesto, 3 ausentes.
