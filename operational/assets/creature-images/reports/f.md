@@ -236,6 +236,28 @@ Four sprite binaries were persisted and re-opened: **TF-355 Hill Giant Chief**, 
 | TF-521 | Bugbear Door Breaker | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-522 | Crime Boss | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 
+## Auditoria final desta execução (2026-10-14)
+
+**Reconciliação de escopo:** CSV v27 do commit-base lido integralmente: 607 linhas, 23 com prefixo `VERIFICADA`, 584 pendentes. O recorte exato [390,584) tem 194 IDs únicos entre TF-270 e TF-523; as 194 entradas do manifesto coincidem com ID, nome e ordem do CSV.
+
+**Evidência GitHub na branch:** no commit `823aa19ad7a1b323694a518f2a32357c561a8914`, a árvore `c67b0c1e632ecd13f1ce33dbe72aa5a91c274070` contém **108 blobs PNG/WebP/JPEG** correspondentes aos 108 caminhos do manifesto. Os 108 tamanhos e respectivos Git blob SHAs batem com os metadados, totalizando **13.166.020 bytes**. SHA-256 e dimensões têm registros anteriores por arquivo; **a presente auditoria não recalculou SHA-256/dimensões dos 100 arquivos legados**. Os oito arquivos dos checkpoints 24 e 25 foram integralmente recuperados e comparados byte a byte à fonte e tiveram SHA-256, assinatura de PNG e dimensões calculados antes da persistência. Nenhum hash SHA-256 se repete entre os 108 registros.
+
+**Escopo de alterações:** comparação com `a962c48a1169c2ef2be8137715a095a596753b32`: **110 arquivos** alterados, compostos por 108 imagens específicas de F, `manifests/f.json` e `reports/f.md`. Nenhum CSV de status, arquivo de controle D/E, imagem já verificada ou outro caminho alterado; destino do PR preservado.
+
+**Estados obrigatórios (avaliação conservadora, diferentes da mera presença de binário):**
+
+| Estado | Quantidade | Interpretação |
+|---|---:|---|
+| `COMPLETE` | **4** | Binário revalidado; fonte exportada sob licença CC0 declarada, iconografia suficientemente compatível, ressalva de resolução baixa |
+| `PARTIAL` | **190** | 100 binários de checkpoints anteriores cujo direito de uso ainda não foi revalidado; 4 binários novos com variante visual aproximada; 86 IDs ainda sem arquivo |
+| `BLOCKED` | **0** | Não se alegou bloqueio técnico/licença individual comprovado para os 86; são pendências reais de aquisição e de avaliação |
+| Arquivos reais no GitHub | **108** | Confirmados pela árvore Git |
+| Restantes sem arquivo | **86** | IDs identificados individualmente na tabela abaixo |
+
+**Direitos e qualidade:** as imagens obtidas da coleção `crawl/tiles` provêm de um release descrito pelo mantenedor como uma seleção CC0 que exclui desenhos com direitos desconhecidos; o próprio projeto reconhece possível complexidade de direitos nos tiles antigos. Os sete novos sprites dessa origem têm baixa resolução de 32×32 pixels. A imagem TF-456, 64×64, tem origem em [OpenGameArt — Scare Crow](https://opengameart.org/content/scare-crow), CC BY 3.0, exigindo o crédito **TanBoonHing**. Não foi estabelecida autorização de uso para os 100 arquivos históricos neste ciclo; não afirmar que todos estão liberados para lançamento comercial.
+
+**Riscos e trabalho pendente:** obter imagens individuais e documentar licenças dos 86 IDs sem arquivo; revisar visualmente cada variante com estado PARTIAL, elevar a resolução/arte final onde necessário; comprovar licença e atribuição dos 100 assets anteriores; repetir leitura binária/medição SHA-256 dos 100 legados antes de declarar auditoria de produção concluída. Não executar merge até esses riscos serem resolvidos.
+
 ## Checkpoints
 
 | # | IDs | Commit | Validação |
