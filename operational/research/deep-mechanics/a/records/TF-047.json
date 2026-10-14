@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (conferir edição)",
+    "publisher": "Kobold Press",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "9",
     "size": "Large",
     "type": "celestial",
-    "alignment": null
+    "alignment": null,
+    "edition": "Tome of Beasts 3 (5e), individual statblock p. 43",
+    "source_page": 43,
+    "experience_points": 5000,
+    "proficiency_bonus": 4
   },
   "statistics": {
     "armor_class": 16,
@@ -27,12 +31,13 @@
       "CHA": 16
     },
     "speeds": {
-      "andar": 30,
-      "voar": 60
+      "walk_ft": 30,
+      "fly_ft": 60
     },
-    "senses": [
-      "darkvision 120 ft."
-    ],
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 13
+    },
     "skills": {
       "Athletics": 9,
       "Intimidation": 7
@@ -43,186 +48,258 @@
       "CHA": 7
     },
     "languages": [
-      "todos",
-      "telepathy 120 ft."
+      "all languages",
+      "telepathy 120 ft"
     ],
     "damage_resistances": [
       "radiant",
-      "bludgeoning, piercing, slashing não mágicos"
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "condition": "nonmagical attacks"
+      }
     ],
     "damage_immunities": [
       "cold"
     ],
-    "damage_vulnerabilities": null,
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "charmed",
       "exhaustion",
       "frightened",
       "prone"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 2,
+      "CON": 4,
+      "INT": 1,
+      "WIS": 3,
+      "CHA": 3
+    },
+    "armor_class_type": "natural armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Celestial Weapons",
         "category": "passive",
-        "legacy_summary": "Armas mágicas e dano de força adicional; descrição geral e valor já incluído no Greataxe têm inconsistência numérica.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "weapon_attacks_magical": true,
+          "claimed_extra_force_dice": "4d8",
+          "attack_greataxe_printed_force_dice": "3d8",
+          "inconsistency": "Trait claims +4d8 included, but Greataxe prints 3d8; no correction inferred"
+        }
       },
       {
         "name": "Immortal Nature",
         "category": "passive",
-        "legacy_summary": "Não necessita comer, beber ou dormir.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
       },
       {
         "name": "Magic Resistance",
         "category": "passive",
-        "legacy_summary": "Vantagem em salvaguardas contra magia.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
       },
       {
         "name": "Reckless",
-        "category": "passive",
-        "legacy_summary": "Escolhe vantagem em ataques corpo a corpo, concedendo vantagem contra si até próximo turno.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "optional_start_turn",
+        "trigger": "start of turn",
+        "effect": {
+          "advantage_for": "all own melee weapon attacks during that turn",
+          "attack_rolls_against_self_have_advantage_until": "start of its next turn"
+        }
       },
       {
         "name": "Relentless",
-        "category": "passive",
-        "legacy_summary": "Uma vez por descanso, golpe de no máximo 30 dano que o mataria deixa-o com 1 PV.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "passive_triggered",
+        "recharge": "short_or_long_rest",
+        "trigger": {
+          "damage_that_would_reduce_to_zero_max": 30
+        },
+        "effect": {
+          "instead_hit_points": 1
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "legacy_summary": "Duas Greataxe ou substitui uma pelo Thunderous Roar se disponível.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Greataxe",
+            "count": 2
+          }
+        ],
+        "optional_substitutions": [
+          {
+            "replace_one": "Greataxe",
+            "with": "Thunderous Roar",
+            "when": "Thunderous Roar recharged"
+          }
+        ]
       },
       {
         "name": "Greataxe",
-        "category": "action",
-        "legacy_summary": "+9, 5 pés; 2d12+5 cortante mais 3d8 force segundo bloco de ataque.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d12",
+              "modifier": 5,
+              "type": "slashing",
+              "average": 18
+            },
+            {
+              "dice": "3d8",
+              "modifier": 0,
+              "type": "force",
+              "average": 13
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "source_discrepancy": "Celestial Weapons trait claims 4d8 force (included), action prints 3d8"
       },
       {
         "name": "Thunderous Roar",
-        "category": "action",
-        "legacy_summary": "Recarga 5–6; cone 30 pés, CON CD16 contra 8d8 trovão; inimigos até 60 pés fazem SAB CD15 contra medo, com desvantagem no cone.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "primary_area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "primary_save": {
+          "ability": "CON",
+          "dc": 16,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "8d8",
+                "modifier": 0,
+                "type": "thunder",
+                "average": 36
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "secondary_targets": {
+          "relation": "hostile",
+          "range_ft": 60,
+          "requirements": "can hear roar"
+        },
+        "secondary_save": {
+          "ability": "WIS",
+          "dc": 15,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "1 minute",
+            "repeat_save": "end of each turn; success ends"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "secondary_disadvantage_if": "inside primary 30ft cone"
       }
     ],
-    "bonus_actions": null,
+    "bonus_actions": [],
     "reactions": [
       {
         "name": "Rallying Roar",
         "category": "reaction",
-        "legacy_summary": "Ao reduzir criatura a 0 PV, aliados a 60 pés recebem vantagem em próximo ataque ou salvaguarda contra condição prejudicial e 4d6 PV temporários se ouvirem rugido.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "action_economy": "reaction",
+        "trigger": "archon reduces creature to 0 hit points",
+        "range_ft": 60,
+        "targets": "all friendly creatures within range",
+        "effect": [
+          {
+            "when_condition_one_of": [
+              "frightened",
+              "paralyzed",
+              "stunned",
+              "unconscious"
+            ],
+            "advantage_on": "next saving throw"
+          },
+          {
+            "otherwise": true,
+            "advantage_on": "next attack roll"
+          },
+          {
+            "if_can_hear_roar": true,
+            "temporary_hp": {
+              "dice": "4d6",
+              "modifier": 0,
+              "type": "temporary_hp",
+              "average": 14
+            }
+          }
+        ]
       }
     ],
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/ursan-archon/",
       "type": "ficha_individual_localizada_em_checkpoint",
       "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "OGL_structured_statblock_secondary",
+      "publication": "Tome of Beasts 3",
+      "source_page": 43,
+      "verified_fields": [
+        "identity",
+        "stats",
+        "traits",
+        "actions",
+        "spellcasting",
+        "bonus",
+        "reaction",
+        "legendary"
+      ],
+      "primary_editorial": false
     }
   ],
   "source_checkpoint": {
@@ -234,8 +311,16 @@
     "Trait Celestial Weapons aponta 4d8 força, mas Greataxe lista 3d8; confirmar errata e não somar duas vezes."
   ],
   "outstanding": [
-    "Estruturar individualmente traços, ataques, bônus, reações, lendárias, CDs, efeitos, duração, alcance, dados, recargas e limites.",
-    "Checar edições originais, erratas e versões conflitantes antes da integração.",
-    "Dado não verificado permanece null, resumos legados servem apenas como índice de pesquisa."
-  ]
+    "Conflito documentado: Celestial Weapons afirma +4d8 force, Greataxe registra +3d8. Conferir livro e errata antes de decidir a versão correta.",
+    "Confrontar edição e erratas primárias e revisão independente das regras da engine.",
+    "Inspeção visual, licenças e aprovação da imagem são gates separados."
+  ],
+  "mechanics_source_statblock_full": false,
+  "validation": {
+    "secondary_source_actions_structured": true,
+    "secondary_source_spellcasting_structured": false,
+    "primary_book_or_errata_compared": false,
+    "independent_implementation_review": false,
+    "final_approval": false
+  }
 }

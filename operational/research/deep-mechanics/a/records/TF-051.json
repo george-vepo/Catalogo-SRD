@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (conferir edição)",
+    "publisher": "Kobold Press",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "13",
     "size": "Huge",
     "type": "celestial",
-    "alignment": null
+    "alignment": null,
+    "edition": "Tome of Beasts 3 (5e), individual statblock p. 42",
+    "source_page": 42,
+    "experience_points": 10000,
+    "proficiency_bonus": 5
   },
   "statistics": {
     "armor_class": 18,
@@ -27,12 +31,13 @@
       "CHA": 17
     },
     "speeds": {
-      "andar": 40,
-      "voar": 60
+      "walk_ft": 40,
+      "fly_ft": 60
     },
-    "senses": [
-      "truesight 120 ft."
-    ],
+    "senses": {
+      "truesight_ft": 120,
+      "passive_perception": 20
+    },
     "skills": {
       "Perception": 10
     },
@@ -43,214 +48,297 @@
       "CHA": 8
     },
     "languages": [
-      "todos",
-      "telepathy 120 ft."
+      "all languages",
+      "telepathy 120 ft"
     ],
     "damage_resistances": [
       "radiant",
-      "bludgeoning/piercing/slashing não mágicos"
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "condition": "nonmagical attacks"
+      }
     ],
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "charmed",
       "exhaustion",
       "frightened"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 6,
+      "DEX": 2,
+      "CON": 6,
+      "INT": 0,
+      "WIS": 5,
+      "CHA": 3
+    },
+    "armor_class_type": "plate armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Celestial Weapons",
         "category": "passive",
-        "legacy_summary": "Ataques mágicos, com dano de força incluído no golpe.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "weapon_attacks_magical": true,
+          "extra_force_damage": {
+            "dice": "5d8",
+            "modifier": 0,
+            "type": "force",
+            "average": 22
+          },
+          "included_in": "Trunk Maul"
+        }
       },
       {
         "name": "False Appearance",
         "category": "passive",
-        "legacy_summary": "Fica indistinguível de estátua quando imóvel.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "if_motionless": "indistinguishable from inanimate statue"
+        }
       },
       {
         "name": "Immortal Nature",
         "category": "passive",
-        "legacy_summary": "Não precisa comer, beber ou dormir.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
       },
       {
         "name": "Magic Resistance",
         "category": "passive",
-        "legacy_summary": "Vantagem em salvaguardas mágicas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
       },
       {
         "name": "Siege Monster",
         "category": "passive",
-        "legacy_summary": "Dano dobrado a objetos e estruturas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "damage_multiplier": 2,
+          "target": [
+            "objects",
+            "structures"
+          ]
+        }
       },
       {
         "name": "Trampling Charge",
-        "category": "passive",
-        "legacy_summary": "Avança 20 pés, usa maça de tromba, FOR CD19 para evitar empurrão/queda; stomp bônus em alvo caído.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "passive_triggered",
+        "requires": {
+          "straight_movement_ft_min": 20,
+          "toward": "target",
+          "hits_with": "Trunk Maul",
+          "same_turn": true
+        },
+        "save": {
+          "ability": "STR",
+          "dc": 19,
+          "on_failure": {
+            "pushed_ft_up_to": 10,
+            "condition": "prone"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "followup_bonus_action": {
+          "if_target_prone": true,
+          "action": "Stomp",
+          "same_target": true
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "legacy_summary": "Duas Trunk Maul ou quatro Trumpeting Blast.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "choices": [
+          [
+            {
+              "action": "Trunk Maul",
+              "count": 2
+            }
+          ],
+          [
+            {
+              "action": "Trumpeting Blast",
+              "count": 4
+            }
+          ]
+        ]
       },
       {
         "name": "Trunk Maul",
-        "category": "action",
-        "legacy_summary": "+11, 10 pés, 4d6+6 contundente mais 5d8 força.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "modifier": 6,
+              "type": "bludgeoning",
+              "average": 20
+            },
+            {
+              "dice": "5d8",
+              "modifier": 0,
+              "type": "force",
+              "average": 22
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Stomp",
-        "category": "action",
-        "legacy_summary": "+11, 10 pés, 3d10+6 contundente em alvo caído.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_prone_creature"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "3d10",
+              "modifier": 6,
+              "type": "bludgeoning",
+              "average": 22
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Trumpeting Blast",
-        "category": "action",
-        "legacy_summary": "+10, 120 pés, 4d6+5 trovão.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 10,
+        "range_ft": 120,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "modifier": 5,
+              "type": "thunder",
+              "average": 19
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Sundering Quake",
-        "category": "action",
-        "legacy_summary": "Recarga 5–6, chão num raio de 20 pés, DES CD19; 14d6 força contra criaturas e estruturas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "radius_ft": 20,
+          "requires_target_in_contact_with_ground": true
+        },
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 19,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "14d6",
+                "modifier": 0,
+                "type": "force",
+                "average": 49
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "structures": {
+          "also_take_same_damage": true,
+          "collapse_if_reduced_to_zero_hp": true
+        }
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [
+      {
+        "name": "Trampling Charge — Stomp",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "target knocked prone by charge",
+        "effect": {
+          "attack": "Stomp",
+          "target": "same prone target"
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/siege-archon/",
       "type": "ficha_individual_localizada_em_checkpoint",
       "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "OGL_structured_statblock_secondary",
+      "publication": "Tome of Beasts 3",
+      "source_page": 42,
+      "verified_fields": [
+        "identity",
+        "stats",
+        "traits",
+        "actions",
+        "spellcasting",
+        "bonus",
+        "reaction",
+        "legendary"
+      ],
+      "primary_editorial": false
     }
   ],
   "source_checkpoint": {
@@ -263,8 +351,15 @@
     "Imagem/licenças pendentes."
   ],
   "outstanding": [
-    "Estruturar individualmente traços, ataques, bônus, reações, lendárias, CDs, efeitos, duração, alcance, dados, recargas e limites.",
-    "Checar edições originais, erratas e versões conflitantes antes da integração.",
-    "Dado não verificado permanece null, resumos legados servem apenas como índice de pesquisa."
-  ]
+    "Confrontar edição e erratas primárias e revisão independente das regras da engine.",
+    "Inspeção visual, licenças e aprovação da imagem são gates separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "secondary_source_actions_structured": true,
+    "secondary_source_spellcasting_structured": false,
+    "primary_book_or_errata_compared": false,
+    "independent_implementation_review": false,
+    "final_approval": false
+  }
 }

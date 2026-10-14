@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (conferir edição)",
+    "publisher": "Kobold Press",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "1",
     "size": "Tiny",
     "type": "celestial",
-    "alignment": "lawful good"
+    "alignment": "lawful good",
+    "edition": "Tome of Beasts 3 (5e), individual statblock p. 44",
+    "source_page": 44,
+    "experience_points": 200,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 13,
@@ -27,13 +31,14 @@
       "CHA": 16
     },
     "speeds": {
-      "andar": 0,
-      "voar": 90,
+      "walk_ft": 0,
+      "fly_ft": 90,
       "hover": true
     },
-    "senses": [
-      "darkvision 120 ft."
-    ],
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 13
+    },
     "skills": {
       "Persuasion": 5
     },
@@ -42,8 +47,8 @@
       "CHA": 5
     },
     "languages": [
-      "todos",
-      "telepathy 60 ft."
+      "all languages",
+      "telepathy 60 ft"
     ],
     "damage_resistances": [
       "radiant"
@@ -52,128 +57,202 @@
       "necrotic",
       "poison"
     ],
-    "damage_vulnerabilities": null,
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "charmed",
       "exhaustion",
       "frightened",
       "poisoned",
       "prone"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 0,
+      "DEX": 2,
+      "CON": 1,
+      "INT": 1,
+      "WIS": 3,
+      "CHA": 3
+    },
+    "armor_class_type": "natural armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Immortal Nature",
         "category": "passive",
-        "legacy_summary": "Dispensa alimentação, bebida e sono.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
       },
       {
         "name": "Keen Sight",
         "category": "passive",
-        "legacy_summary": "Vantagem em Percepção baseada na visão.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "advantage_on": "Wisdom (Perception)",
+          "requires": "reliance on sight"
+        }
       },
       {
         "name": "Magic Resistance",
         "category": "passive",
-        "legacy_summary": "Vantagem em salvaguardas contra magias.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
       }
     ],
     "actions": [
       {
         "name": "Slam",
-        "category": "action",
-        "legacy_summary": "+4, 5 pés, 2d4+2 radiante.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d4",
+              "modifier": 2,
+              "type": "radiant",
+              "average": 7
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Forceful Words",
-        "category": "action",
-        "legacy_summary": "+5, alcance 90 pés, 2d6+3 radiante.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 5,
+        "range_ft": 90,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "modifier": 3,
+              "type": "radiant",
+              "average": 10
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Share Smite",
-        "category": "action",
-        "legacy_summary": "3/dia, arma de aliado a até 30 pés causa 2d8 radiante extra no primeiro acerto de cada turno por 1 minuto; contra fiends ou mortos-vivos 3d8.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "buff",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 3
+        },
+        "range_ft": 30,
+        "targets": {
+          "count": 1,
+          "kind": "other_creature",
+          "requirements": [
+            "can hear archon",
+            "can see archon"
+          ]
+        },
+        "effect": {
+          "empower_weapon": true,
+          "additional_radiant_damage": {
+            "ordinary": {
+              "dice": "2d8",
+              "modifier": 0,
+              "type": "radiant",
+              "average": 9
+            },
+            "if_target_type_in": [
+              "fiend",
+              "undead"
+            ],
+            "then": {
+              "dice": "3d8",
+              "modifier": 0,
+              "type": "radiant",
+              "average": 13
+            }
+          },
+          "max_triggers": "first hit with the weapon each turn"
+        },
+        "duration": "1 minute"
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Spellcasting",
+        "action_economy": "action",
+        "spellcasting_ability": "CHA",
+        "spell_save_dc": 13,
+        "spell_attack_bonus": null,
+        "components": {
+          "material": false,
+          "somatic": false,
+          "verbal": "not waived by source"
+        },
+        "at_will": [
+          "dancing lights",
+          "message",
+          "true strike"
+        ],
+        "per_day": {
+          "one_each": [
+            "faerie fire",
+            "heroism"
+          ]
+        },
+        "slots": null
+      }
+    ],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/word-archon/",
       "type": "ficha_individual_localizada_em_checkpoint",
       "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "OGL_structured_statblock_secondary",
+      "publication": "Tome of Beasts 3",
+      "source_page": 44,
+      "verified_fields": [
+        "identity",
+        "stats",
+        "traits",
+        "actions",
+        "spellcasting",
+        "bonus",
+        "reaction",
+        "legendary"
+      ],
+      "primary_editorial": false
     }
   ],
   "source_checkpoint": {
@@ -185,8 +264,15 @@
     "Imagem e direitos pendentes."
   ],
   "outstanding": [
-    "Estruturar individualmente traços, ataques, bônus, reações, lendárias, CDs, efeitos, duração, alcance, dados, recargas e limites.",
-    "Checar edições originais, erratas e versões conflitantes antes da integração.",
-    "Dado não verificado permanece null, resumos legados servem apenas como índice de pesquisa."
-  ]
+    "Confrontar edição e erratas primárias e revisão independente das regras da engine.",
+    "Inspeção visual, licenças e aprovação da imagem são gates separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "secondary_source_actions_structured": true,
+    "secondary_source_spellcasting_structured": true,
+    "primary_book_or_errata_compared": false,
+    "independent_implementation_review": false,
+    "final_approval": false
+  }
 }

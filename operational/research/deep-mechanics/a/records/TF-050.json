@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (conferir edição)",
+    "publisher": "Kobold Press",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "12",
     "size": "Gargantuan",
-    "type": "celestial titan",
-    "alignment": null
+    "type": "celestial",
+    "alignment": null,
+    "edition": "Tome of Beasts 3 (5e), individual statblock p. 11",
+    "source_page": 11,
+    "experience_points": 8400,
+    "proficiency_bonus": 4
   },
   "statistics": {
     "armor_class": 17,
@@ -27,388 +31,386 @@
       "CHA": 15
     },
     "speeds": {
-      "andar": 15,
-      "nadar": 60
+      "walk_ft": 15,
+      "swim_ft": 60
     },
-    "senses": [
-      "blindsight 30 ft.",
-      "darkvision 120 ft."
-    ],
+    "senses": {
+      "blindsight_ft": 30,
+      "darkvision_ft": 120,
+      "passive_perception": 19
+    },
     "skills": {
       "Perception": 9,
       "Stealth": 7
     },
-    "saving_throws": null,
+    "saving_throws": [],
     "languages": [
-      "compreende todos",
-      "telepathy 120 ft."
+      "understands all languages",
+      "telepathy 120 ft"
     ],
-    "damage_resistances": null,
+    "damage_resistances": [],
     "damage_immunities": [
       "poison"
     ],
-    "damage_vulnerabilities": null,
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "poisoned"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 3,
+      "CON": 3,
+      "INT": 4,
+      "WIS": 5,
+      "CHA": 2
+    },
+    "armor_class_type": "natural armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Amphibious",
         "category": "passive",
-        "legacy_summary": "Respira ar e água.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "breathes": [
+            "air",
+            "water"
+          ]
+        }
       },
       {
         "name": "Legendary Resistance",
-        "category": "passive",
-        "legacy_summary": "3 usos por dia.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "resource",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 3
+        },
+        "trigger": "fails a saving throw",
+        "effect": {
+          "can_choose_to_succeed_instead": true
+        }
       },
       {
         "name": "Magic Resistance",
         "category": "passive",
-        "legacy_summary": "Vantagem em salvaguardas mágicas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
+      },
+      {
+        "name": "Magic Weapons",
+        "category": "passive",
+        "effect": {
+          "weapon_attacks_magical": true
+        }
       },
       {
         "name": "Offering of Flesh",
-        "category": "passive",
-        "legacy_summary": "Pode doar parte de tentáculo para oferecer cura 50 PV, reverter cegueira/doença ou regenerar membro; voluntária.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "passive_ritual",
+        "activation_time": "1 minute",
+        "effect": {
+          "detaches_tentacle_part_without_damage_to_self": true,
+          "rations_from_part": 25,
+          "rations_from_whole": 50,
+          "hook_magic_duration_hours": 4,
+          "hook_expiry_if_eaten": true,
+          "only_if_voluntary_offering": true,
+          "hook_on_eaten": {
+            "healing_hp": 50,
+            "choose_one": [
+              "cure blindness, deafness, all diseases",
+              "restore all missing limbs as regenerate"
+            ]
+          }
+        }
       },
       {
         "name": "Regeneration",
         "category": "passive",
-        "legacy_summary": "Regenera 15 PV no início do turno se vivo.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "trigger": "start of own turn",
+        "requirements": {
+          "hit_points_at_least": 1
+        },
+        "effect": {
+          "restore_hit_points": 15
+        }
       },
       {
         "name": "Siege Monster",
         "category": "passive",
-        "legacy_summary": "Dano dobrado contra objetos.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "effect": {
+          "damage_multiplier": 2,
+          "targets": [
+            "objects",
+            "structures"
+          ]
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "category": "action",
-        "legacy_summary": "Três tentáculos, podendo substituir um por cura ou magia.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Tentacle",
+            "count": 3
+          }
+        ],
+        "allowed_substitutions": [
+          {
+            "replace_one": "Tentacle",
+            "with_one_of": [
+              "Spellcasting",
+              "Healing Touch"
+            ],
+            "max_count": 1
+          }
+        ]
       },
       {
         "name": "Tentacle",
-        "category": "action",
-        "legacy_summary": "+9, 30 pés, 4d6+5 contundente e agarra/restringe, fuga CD17; oito tentáculos.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 30,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "modifier": 5,
+              "type": "bludgeoning",
+              "average": 19
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "on_hit_additional": {
+          "condition": [
+            "grappled",
+            "restrained"
+          ],
+          "escape_dc": 17,
+          "max_grappled_targets": 8,
+          "one_target_per_tentacle": true
+        }
       },
       {
         "name": "Radiant Wave",
-        "category": "action",
-        "legacy_summary": "Recarga 6, inimigos até 30 pés testam CON CD17 contra 8d8 radiante; mortos-vivos com desvantagem.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            6
+          ]
+        },
+        "area": {
+          "shape": "sphere",
+          "radius_ft": 30
+        },
+        "targets": "hostile creatures within radius",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "8d8",
+                "modifier": 0,
+                "type": "radiant",
+                "average": 36
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "save_disadvantage_if": "target is undead"
       },
       {
         "name": "Healing Touch",
-        "category": "action",
-        "legacy_summary": "3/dia, 3d8+2 PV e alivia condições.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "category": "healing",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 3
+        },
+        "target": "another creature touched",
+        "healing": {
+          "dice": "3d8",
+          "modifier": 2,
+          "type": "hit_points",
+          "average": 20
+        },
+        "removes": [
+          "curse",
+          "disease",
+          "poison",
+          "blindness",
+          "deafness"
+        ]
       }
     ],
-    "bonus_actions": null,
+    "bonus_actions": [],
     "reactions": [
       {
         "name": "Guardian's Grasp",
         "category": "reaction",
-        "legacy_summary": "Puxa aliado consentindo até 10 pés e recebe ataque em seu lugar.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "action_economy": "reaction",
+        "trigger": "a creature seen within 30ft is targeted by an attack",
+        "requires": {
+          "ally_willing": true
+        },
+        "effect": {
+          "pull_target_up_to_ft": 10,
+          "pull_toward": "Akkorokamui",
+          "new_attack_target": "Akkorokamui"
+        },
+        "on_unwilling_target": "fails"
       }
     ],
     "legendary_actions": [
       {
-        "name": "Discern: teste de Percepção ou Intuição",
-        "category": "legendary_action",
-        "legacy_summary": "Discern: teste de Percepção ou Intuição",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "name": "Discern",
+        "cost": 1,
+        "effect": {
+          "choose_one": [
+            "Wisdom (Perception) check",
+            "Wisdom (Insight) check"
+          ]
+        }
       },
       {
-        "name": "Jet: nada metade da velocidade sem oportunidade",
-        "category": "legendary_action",
-        "legacy_summary": "Jet: nada metade da velocidade sem oportunidade",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "name": "Jet",
+        "cost": 1,
+        "effect": {
+          "swim_up_to_ft": 30,
+          "provokes_opportunity_attacks": false
+        }
       },
       {
-        "name": "Cast a Spell (2 ações)",
-        "category": "legendary_action",
-        "legacy_summary": "Cast a Spell (2 ações)",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "name": "Cast a Spell",
+        "cost": 2,
+        "effect": {
+          "action": "Spellcasting"
+        }
       },
       {
-        "name": "Tentacle Sweep (2 ações), Destreza CD17 em alvos a 20 pés",
-        "category": "legendary_action",
-        "legacy_summary": "Tentacle Sweep (2 ações), Destreza CD17 em alvos a 20 pés",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "name": "Tentacle Sweep",
+        "cost": 2,
+        "area": {
+          "radius_ft": 20
+        },
+        "effect_on_not_grappled": {
+          "saving_throw": {
+            "ability": "DEX",
+            "dc": 17,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "4d6",
+                  "modifier": 5,
+                  "type": "bludgeoning",
+                  "average": 19
+                }
+              ],
+              "condition": "prone"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        },
+        "effect_on_grappled": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 17,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "2d6",
+                  "modifier": 5,
+                  "type": "bludgeoning",
+                  "average": 12
+                }
+              ]
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        }
       }
     ],
-    "lair_actions": [
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
       {
-        "name": "Entangling Vegetation",
-        "category": "lair_action",
-        "legacy_summary": "Entangling Vegetation",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
-      },
-      {
-        "name": "Suppress Healing",
-        "category": "lair_action",
-        "legacy_summary": "Suppress Healing",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
-      },
-      {
-        "name": "Undertow",
-        "category": "lair_action",
-        "legacy_summary": "Undertow",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
+        "name": "Spellcasting",
+        "action_economy": "action",
+        "spellcasting_ability": "WIS",
+        "spell_save_dc": 17,
+        "components": {
+          "material": false
+        },
+        "at_will": [
+          "detect evil and good",
+          "detect poison and disease"
+        ],
+        "per_day": {
+          "one_each": [
+            "geas (as action)"
+          ],
+          "three_each": [
+            "control water",
+            "legend lore (as action)"
+          ]
+        },
+        "slots": null
       }
     ],
-    "spellcasting": null,
-    "other": [
-      {
-        "name": "Calm Weather",
-        "category": "regional_effect",
-        "legacy_summary": "Calm Weather",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
-      },
-      {
-        "name": "Detect Intruders",
-        "category": "regional_effect",
-        "legacy_summary": "Detect Intruders",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
-      },
-      {
-        "name": "Promote Growth",
-        "category": "regional_effect",
-        "legacy_summary": "Promote Growth",
-        "status": "PENDENTE_DETALHAMENTO",
-        "bonus_to_hit": null,
-        "reach": null,
-        "targets": null,
-        "damage_dice": null,
-        "damage_type": null,
-        "dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "triggers": null
-      }
-    ]
+    "other": [],
+    "legendary_economy": {
+      "actions_per_round": "3 (standard 5e, confirm source legendary group)",
+      "recovers": "start of creature turn",
+      "spend_timing": "end of another creature turn"
+    }
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/akkorokamui/",
       "type": "ficha_individual_localizada_em_checkpoint",
       "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "OGL_structured_statblock_secondary",
+      "publication": "Tome of Beasts 3",
+      "source_page": 11,
+      "verified_fields": [
+        "identity",
+        "stats",
+        "traits",
+        "actions",
+        "spellcasting",
+        "bonus",
+        "reaction",
+        "legendary"
+      ],
+      "primary_editorial": false
     }
   ],
   "source_checkpoint": {
@@ -420,8 +422,15 @@
     "Conferir licenças e imagens; covil/regiões registrados por nome e resumo, requer conferência de detalhamento antes de declarar integral."
   ],
   "outstanding": [
-    "Estruturar individualmente traços, ataques, bônus, reações, lendárias, CDs, efeitos, duração, alcance, dados, recargas e limites.",
-    "Checar edições originais, erratas e versões conflitantes antes da integração.",
-    "Dado não verificado permanece null, resumos legados servem apenas como índice de pesquisa."
-  ]
+    "Confrontar edição e erratas primárias e revisão independente das regras da engine.",
+    "Inspeção visual, licenças e aprovação da imagem são gates separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "secondary_source_actions_structured": true,
+    "secondary_source_spellcasting_structured": true,
+    "primary_book_or_errata_compared": false,
+    "independent_implementation_review": false,
+    "final_approval": false
+  }
 }
