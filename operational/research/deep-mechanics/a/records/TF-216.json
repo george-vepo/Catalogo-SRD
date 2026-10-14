@@ -7,12 +7,16 @@
   "identity": {
     "publisher": "Kobold Press",
     "publication": "Creature Codex",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "1",
     "size": "Small",
     "type": "monstrosity",
-    "alignment": "neutral"
+    "alignment": "neutral",
+    "edition": "Creature Codex (D&D 5e), p.39",
+    "source_page": 39,
+    "experience_points": 200,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 12,
@@ -38,36 +42,51 @@
     "skills": {
       "Stealth": 4
     },
-    "saving_throws": {},
+    "saving_throws": [],
     "languages": [],
     "damage_resistances": [
       "poison"
     ],
     "damage_immunities": [],
-    "damage_vulnerabilities": [
-      "cold"
-    ],
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "poisoned"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 2,
+      "CON": 2,
+      "INT": -3,
+      "WIS": 1,
+      "CHA": -2
+    },
+    "armor_class_type": "unarmored"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Blood Frenzy",
         "category": "passive",
-        "effect": "Vantagem nos ataques corpo a corpo contra alvos com PV abaixo do máximo."
+        "effect": {
+          "advantage_on": "melee attack rolls",
+          "when": "target has fewer than maximum hit points"
+        }
       },
       {
         "name": "Blood Sense",
         "category": "passive",
-        "effect": "Detecta localização de criaturas vivas a até 30 pés por cheiro."
+        "effect": {
+          "pinpoint_location_of": "living creatures",
+          "range_ft": 30,
+          "sense": "smell"
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
         "category": "multiattack",
+        "action_economy": "action",
         "sequence": [
           {
             "action": "Claws",
@@ -80,43 +99,85 @@
         ]
       },
       {
-        "name": "Bite",
-        "category": "attack",
-        "attack_type": "melee_weapon",
-        "to_hit": 4,
-        "reach_ft": 5,
-        "targets": "1 criatura",
-        "damage": [
-          {
-            "dice": "1d6",
-            "modifier": 2,
-            "type": "piercing"
-          }
-        ],
-        "on_hit": "Se alvo Large ou menor, fixa-se. Enquanto preso não ataca; início de cada turno retira 1d6+2 PV (perda de sangue).",
-        "ending": "Desprende-se gastando 5 pés de movimento; libera após drenar 20 PV ou morte da vítima. Qualquer criatura pode gastar ação e passar teste FOR CD13 para remover."
-      },
-      {
         "name": "Claws",
         "category": "attack",
+        "action_economy": "action",
         "attack_type": "melee_weapon",
-        "to_hit": 4,
+        "attack_bonus": 4,
         "reach_ft": 5,
-        "targets": "1 alvo",
-        "damage": [
-          {
-            "dice": "1d4",
-            "modifier": 2,
-            "type": "slashing"
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "modifier": 2,
+              "type": "slashing",
+              "average": 4
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_creature"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "modifier": 2,
+              "type": "piercing",
+              "average": 5
+            }
+          ],
+          "if_target_size_at_most": "Large",
+          "attachment": {
+            "target_attached": true,
+            "no_attacks_while_attached": true,
+            "at_start_of_each_own_turn": {
+              "target_hit_point_loss": {
+                "dice": "1d6",
+                "modifier": 2,
+                "average": 5,
+                "type": "untyped_blood_loss"
+              }
+            },
+            "detach_self": {
+              "movement_cost_ft": 5,
+              "automatic_if": "20 hp blood drained or target dies"
+            },
+            "detach_by_creature": {
+              "action_economy": "action",
+              "check_ability": "STR",
+              "dc": 13
+            }
           }
-        ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
       }
     ],
     "bonus_actions": [],
     "reactions": [],
     "legendary_actions": [],
     "spellcasting": [],
-    "other": []
+    "other": [],
+    "lair_actions": [],
+    "mythic_actions": []
   },
   "sources": [
     {
@@ -130,6 +191,21 @@
       "url": "https://koboldpress.com/tools/kobold-press-monsters/",
       "type": "indice_editorial",
       "scope": "identidade e publicação"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Creature%20Codex.json",
+      "type": "CCodex_single_monster_transcription",
+      "page": 39,
+      "verified_fields": [
+        "ability_scores",
+        "defenses",
+        "senses",
+        "traits",
+        "multiattack",
+        "bite_attachment",
+        "claws"
+      ],
+      "primary_editorial": false
     }
   ],
   "source_checkpoint": {
@@ -137,8 +213,9 @@
     "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
   },
   "outstanding": [
-    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
-    "Revisão independente de todas as ações e condições ainda não realizada."
+    "Confrontar ficha oficial de Creature Codex p.39 e eventuais erratas antes de homologar.",
+    "Vulnerabilidade a frio removida: não consta no bloco individual de CCodex consultado; verificar edição exata.",
+    "Testar efeitos de sangue e desprendimento na engine; arte e direitos ainda pendentes."
   ],
   "audit": {
     "statblock_fully_structured_from_secondary": true,
@@ -167,5 +244,13 @@
       "licença/direitos da ilustração",
       "aprovação para impressão"
     ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_individually_rechecked": true,
+    "unverified_cold_vulnerability_removed": true,
+    "primary_printing_checked": false,
+    "independent_implementation_review": false,
+    "final_approval": false
   }
 }
