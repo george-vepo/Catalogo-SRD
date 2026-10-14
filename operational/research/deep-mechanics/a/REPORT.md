@@ -1,3 +1,14 @@
+# Grupo A — checkpoint 41: mais 4 statblocks estruturados (14/10/2026)
+
+- **TF-231 — Accursed Guardian Naga:** consulta à [ficha digital oficial Level Up A5E](https://a5e.tools/node/1744); registrada a distinção A5E, Forbiddance, magias por nível e espaços, Bite/Spit Poison, Multiattack/Vampiric Bite, Shapeshift. Mantida como conflito explícito a classificação "Melee Weapon Attack" de Spit Poison apesar do alcance 20/60 pés.
+- **TF-232 — Annelidast:** [KPOGL](https://kpogl.wikidot.com/monster:annelidast); Aura primordial com dois gatilhos, Crush com efeito por resultado, recarga e restrição, reação Defensive Recoil.
+- **TF-233 — Chaos Raptor:** [KPOGL](https://kpogl.wikidot.com/monster:chaos-raptor); Aura of Chaos com distribuição 1d8, supressão de regeneração por trovão, ataques, agarrar e regras de movimento.
+- **TF-234 — Royal Chimera:** [KPOGL](https://kpogl.wikidot.com/monster:royal-chimera); duas opções exatas de Multiattack, resistência lendária, Searing Breath, conjuração, quatro ações lendárias com custos.
+
+**Após o checkpoint:** 43/132 fichas estruturadas no nível de ficha digital (1 oficial A5E neste lote, 3 KPOGL), **0** homologadas editorialmente, 131 PARCIAIS, 1 BLOQUEADA. Imagens ainda 113/132; aprovação visual/direitos 0. Não houve validação de exemplar impresso, errata nem teste da engine. Nenhum dado foi promovido a `MECANICA_COMPLETA_VERIFICADA`.
+
+---
+
 # Grupo A — checkpoint 40: correções de precisão (14/10/2026)
 
 Três fichas previamente estruturadas foram confrontadas novamente com sua transcrição individual no KPOGL (fonte comunitária, não homologação da edição primária):

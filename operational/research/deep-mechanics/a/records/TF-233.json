@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "13",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Gargantuan",
+    "type": "monstrosity",
+    "alignment": "chaotic_neutral",
+    "proficiency_bonus": 5,
+    "experience_points": 10000,
+    "source_page": 81
   },
   "statistics": {
     "armor_class": 18,
     "hit_points": 248,
-    "hit_dice": null,
+    "hit_dice": "16d20+80",
     "ability_scores": {
       "STR": 28,
       "DEX": 10,
@@ -26,24 +29,204 @@
       "WIS": 10,
       "CHA": 10
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 20,
+      "burrow_ft": 80,
+      "fly_ft": 120
+    },
+    "senses": {
+      "tremorsense_ft": 60,
+      "passive_perception": 15
+    },
+    "skills": {
+      "Perception": 5
+    },
+    "saving_throws": {
+      "DEX": 5,
+      "CON": 10,
+      "WIS": 5,
+      "CHA": 5
+    },
+    "languages": {
+      "understands": [
+        "Common",
+        "Terran"
+      ],
+      "can_speak": false
+    },
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural armor",
+    "ability_modifiers": {
+      "STR": 9,
+      "DEX": 0,
+      "CON": 5,
+      "INT": -3,
+      "WIS": 0,
+      "CHA": 0
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Aura of Chaos",
+        "category": "toggleable_aura",
+        "radius_ft": 30,
+        "activation": "choose_on_or_off_at_start_of_raptor_turn",
+        "target_requirement": {
+          "minimum_INT": 4
+        },
+        "trigger": "creature_starts_its_turn_within_aura",
+        "save": {
+          "ability": "CHA",
+          "dc": 18,
+          "on_failure": {
+            "disable_reactions_until": "start_of_target_next_turn",
+            "roll": "1d8",
+            "outcomes": [
+              {
+                "range": [
+                  1,
+                  4
+                ],
+                "effect": "no_action_or_movement"
+              },
+              {
+                "range": [
+                  5,
+                  6
+                ],
+                "effect": "no_action; spend_all_movement_in_random_direction"
+              },
+              {
+                "range": [
+                  7,
+                  8
+                ],
+                "effect": "one_melee_attack_on_random_creature_in_reach_or_no_action_if_none"
+              }
+            ]
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      },
+      {
+        "name": "Earth Glide",
+        "category": "movement",
+        "effect": {
+          "can_pass_through": "nonmagical_unworked_earth_or_stone",
+          "disturbs_material": false
+        }
+      },
+      {
+        "name": "Keen Sight",
+        "category": "passive",
+        "effect": {
+          "advantage_on_checks": "WIS Perception",
+          "when_based_on": "sight"
+        }
+      },
+      {
+        "name": "Regeneration",
+        "category": "conditional",
+        "trigger": "start_of_turn",
+        "preconditions": {
+          "body_submerged_in_earth_or_stone_fraction_min": 0.5,
+          "no_thunder_damage_since_previous_turn": true
+        },
+        "restore_hp": 20,
+        "thunder_damage_suppresses": "start_of_next_turn",
+        "dies_when": "starts_turn_at_0_hp_and_does_not_regenerate"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Beak",
+            "count": 1
+          },
+          {
+            "action": "Talons",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Beak",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 14,
+        "reach_or_range": {
+          "reach_ft": 10
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d8",
+              "flat": 9,
+              "type": "piercing",
+              "average": 27
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Talons",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 14,
+        "reach_or_range": {
+          "reach_ft": 5
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "flat": 9,
+              "type": "slashing",
+              "average": 23
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "on_hit": {
+          "conditions": [
+            "grappled",
+            "restrained_while_grappled"
+          ],
+          "escape_dc": 18,
+          "restriction": "cannot_use_Talons_on_another_target_while_grapple_active"
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Aura caótica pode vedar reações e impor comportamento aleatório durante turnos dos adversários."
@@ -58,10 +241,10 @@
     },
     {
       "url": "https://kpogl.wikidot.com/monster:chaos-raptor",
-      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "type": "transcrição OGL secundária não endossada pela editora",
       "edition": "Tome of Beasts 3",
-      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "reviewed": "2026-10-14",
+      "scope": "ficha individual completa estruturada; cotejo com impressão e errata editorial ainda pendente"
     }
   ],
   "source_checkpoint": {
@@ -73,9 +256,8 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Verificar edição Tome of Beasts 3 p.81 e erratas, especialmente controle da Aura of Chaos e condição de regeneração.",
+    "Submeter à engine e homologação editorial; imagem não aprovada para publicação."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -98,6 +280,16 @@
       "inspeção visual independente",
       "direitos de uso",
       "aprovação para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:chaos-raptor"
     ]
   }
 }

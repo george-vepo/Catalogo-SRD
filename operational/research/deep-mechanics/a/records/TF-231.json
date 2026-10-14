@@ -10,14 +10,18 @@
     "edition_family": "Level Up Advanced 5e",
     "exact_printing": null,
     "challenge_rating": "12",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": null,
+    "proficiency_bonus": 4,
+    "source_page": null,
+    "edition": "Monstrous Menagerie — Level Up Advanced 5E",
+    "experience_points": null
   },
   "statistics": {
     "armor_class": 18,
     "hit_points": 136,
-    "hit_dice": null,
+    "hit_dice": "16d10+48",
     "ability_scores": {
       "STR": 16,
       "DEX": 18,
@@ -26,24 +30,391 @@
       "WIS": 18,
       "CHA": 18
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40,
+      "swim_ft": 40
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 14
+    },
+    "skills": [],
+    "saving_throws": {
+      "DEX": 8,
+      "CON": 7,
+      "INT": 7,
+      "WIS": 8,
+      "CHA": 8
+    },
+    "languages": [
+      "Abyssal",
+      "Celestial",
+      "Common"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "poisoned"
+    ],
+    "armor_class_type": "natural armor",
+    "bloodied_threshold": 68,
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 4,
+      "CON": 3,
+      "INT": 3,
+      "WIS": 4,
+      "CHA": 4
+    },
+    "maneuver_dc": 16
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Amphibious",
+        "category": "passive",
+        "effect": {
+          "can_breathe": [
+            "air",
+            "water"
+          ]
+        }
+      },
+      {
+        "name": "Forbiddance",
+        "category": "lair_effect",
+        "activation": "persistent_while_forbiddance_spell_active",
+        "effect": {
+          "teleportation_and_planar_travel_blocked": true,
+          "hostile_to_naga_fiends_and_undead": {
+            "trigger": [
+              "enter_lair",
+              "start_turn_in_lair"
+            ],
+            "damage": [
+              {
+                "dice": "5d10",
+                "flat": 0,
+                "type": "radiant",
+                "average": 27
+              }
+            ]
+          }
+        },
+        "ends_when": "forbiddance_is_dispelled",
+        "casting_note": "a lair magical effect; not an extra lair action"
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "magical_effects"
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_or_range": {
+          "reach_ft": 5
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 4,
+              "type": "piercing",
+              "average": 11
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "on_hit": {
+          "save": {
+            "ability": "CON",
+            "dc": 15,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "10d6",
+                  "flat": 0,
+                  "type": "poison",
+                  "average": 35
+                }
+              ]
+            },
+            "on_success": {
+              "damage_multiplier": 0.5
+            }
+          }
+        }
+      },
+      {
+        "name": "Spit Poison",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon_as_written",
+        "attack_bonus": 8,
+        "reach_or_range": {
+          "range_normal_ft": 20,
+          "range_long_ft": 60
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": []
+        },
+        "miss": {
+          "damage": 0
+        },
+        "on_hit": {
+          "save": {
+            "ability": "CON",
+            "dc": 15,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "10d6",
+                  "flat": 0,
+                  "type": "poison",
+                  "average": 35
+                }
+              ]
+            },
+            "on_success": {
+              "damage_multiplier": 0.5
+            }
+          }
+        },
+        "source_discrepancy": "Fonte diz Melee Weapon Attack, mas indica alcance 20/60 ft; preservar sem converter por inferência"
+      },
+      {
+        "name": "Command (1st-Level; V)",
+        "category": "spell_action",
+        "spell": "command",
+        "level": 1,
+        "components": [
+          "V"
+        ],
+        "slot_cost": 1,
+        "targets": {
+          "count": 1,
+          "kind": "living_creature",
+          "range_ft": 60,
+          "visible": true,
+          "hears_and_understands": true
+        },
+        "save": {
+          "ability": "WIS",
+          "dc": 16,
+          "on_failure": {
+            "timing": "next_target_turn",
+            "effect": "moves_as_far_from_naga_as_possible_avoiding_hazardous_terrain"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      },
+      {
+        "name": "Hold Person (2nd-Level; V)",
+        "category": "spell_action",
+        "spell": "hold person",
+        "level": 2,
+        "components": [
+          "V"
+        ],
+        "slot_cost": 1,
+        "concentration": true,
+        "targets": {
+          "count": 1,
+          "kind": "humanoid",
+          "range_ft": 60,
+          "visible": true
+        },
+        "save": {
+          "ability": "WIS",
+          "dc": 16,
+          "on_failure": {
+            "condition": "paralyzed",
+            "duration": "up_to_1_minute",
+            "repeat_save": {
+              "when": "end_of_each_target_turn",
+              "on_success": "end_effect"
+            }
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      },
+      {
+        "name": "Flame Strike (5th-Level; V)",
+        "category": "spell_action",
+        "spell": "flame strike",
+        "level": 5,
+        "components": [
+          "V"
+        ],
+        "slot_cost": 1,
+        "area": {
+          "shape": "cylinder",
+          "radius_ft": 10,
+          "height_ft": 40,
+          "range_ft": 60
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 16,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "4d6",
+                "flat": 0,
+                "type": "fire",
+                "average": 14
+              },
+              {
+                "dice": "4d6",
+                "flat": 0,
+                "type": "radiant",
+                "average": 14
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
+      },
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "cast_one_spell",
+            "count": 1
+          },
+          {
+            "action": "Vampiric Bite",
+            "count": 1
+          }
+        ],
+        "spell_consumes_standard_slot_if_leveled": true
+      },
+      {
+        "name": "Vampiric Bite",
+        "category": "conditional_attack",
+        "action_economy": "action_or_multiattack_component",
+        "attack_ref": "Bite",
+        "on_hit": {
+          "when": "target_fails_bite_poison_CON_DC15",
+          "temporary_hit_points": "equal_to_poison_damage_actually_dealt"
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Shapeshift",
+        "category": "transformation",
+        "action_economy": "bonus_action",
+        "forms": [
+          "specific_medium_humanoid",
+          "medium_snake_human_hybrid",
+          "true_form_large_snake"
+        ],
+        "statistics_unchanged_except": [
+          "size"
+        ],
+        "revert_to_true_form_on": "death"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Spellcasting",
+        "casting_level": 11,
+        "ability": "WIS",
+        "save_dc": 16,
+        "components": [
+          "V"
+        ],
+        "slots": {
+          "1": 4,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 2,
+          "6": 1
+        },
+        "prepared": {
+          "0": [
+            "mending",
+            "thaumaturgy"
+          ],
+          "1": [
+            "command",
+            "cure wounds",
+            "false life"
+          ],
+          "2": [
+            "calm emotions",
+            "hold person",
+            "locate object"
+          ],
+          "3": [
+            "clairvoyance",
+            "create food and water"
+          ],
+          "4": [
+            "divination",
+            "freedom of movement"
+          ],
+          "5": [
+            "flame strike",
+            "geas",
+            "scrying"
+          ],
+          "6": [
+            "forbiddance"
+          ]
+        }
+      }
+    ],
+    "other": [
+      {
+        "name": "Source-defined CR",
+        "category": "identity",
+        "value": 12,
+        "source": "official_a5e_tools"
+      },
+      {
+        "name": "Published attack typing ambiguity",
+        "category": "source_discrepancy",
+        "detail": "Spit Poison presented as melee weapon attack with ranged distance; independent printing verification required"
+      }
+    ]
   },
   "prior_research_summary_unverified_for_implementation": [
     "Naga A5E com covil sob proteção que impede teleporte e viagem planar; conjuração divina, resistência mágica, mordida vampírica e mudança de forma."
@@ -51,10 +422,10 @@
   "sources": [
     {
       "url": "https://a5e.tools/node/1744",
-      "type": "ficha individual oficial da editora (A5E)",
-      "edition": "Monstrous Menagerie",
-      "scope": "publicação, ND, CA, PV, atributos e resumo funcional",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "type": "ficha individual digital A5E oficial da editora",
+      "edition": "Monstrous Menagerie — Level Up Advanced 5E",
+      "reviewed": "2026-10-14",
+      "scope": "ficha individual completa estruturada; cotejo com impressão e errata editorial ainda pendente"
     }
   ],
   "source_checkpoint": {
@@ -66,9 +437,9 @@
     "Ficha Level Up A5E (EN Publishing), NÃO Kobold Press; condições e regras podem diferir do 5e básico."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Comparar mecânicas com impressão/errata exata de Monstrous Menagerie e testar na engine A5E sem converter para 5e convencional.",
+    "Conferir inconsistência de classificação de Spit Poison (Melee Weapon Attack com alcance 20/60 ft.).",
+    "Revisão de licença para dados e imagem; arte própria ainda sem homologação."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
@@ -91,6 +462,16 @@
       "verificação visual de identidade",
       "conferência de licença e direitos",
       "avaliação de resolução e aprovação editorial"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://a5e.tools/node/1744"
     ]
   }
 }
