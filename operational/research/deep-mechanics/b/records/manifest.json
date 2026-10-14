@@ -47,7 +47,77 @@
     "total_bytes_json": 492156,
     "comparacao_pre_relatorio": "16 checkpoints de alterações de registros; nenhuma escrita de arquivo fora do diretório exclusivo B",
     "imagens_blobs_iguais_origem": 92,
-    "imagens_sem_arquivo": 40
+    "imagens_sem_arquivo": 40,
+    "auditoria_conciliacao_20261014": {
+      "resultado": "9 hashes e bytes do manifesto ficaram antigos após edições existentes; corrigidos para valores lidos da API GitHub sem tocar JSON",
+      "detalhes": [
+        {
+          "id": "TF-309",
+          "from_sha": "97e304fb08b07983a2c6fc70681790442f4b2775",
+          "to_sha": "59874a75c9082188f1f17692775dd6ae0eb5cdaf",
+          "from_bytes": 3160,
+          "to_bytes": 5599
+        },
+        {
+          "id": "TF-318",
+          "from_sha": "eee378cb1f02e73ebed2476f9c44f6a68669e53a",
+          "to_sha": "100e6787856b561be35da9862d07fecb8a54ed94",
+          "from_bytes": 2878,
+          "to_bytes": 6179
+        },
+        {
+          "id": "TF-319",
+          "from_sha": "24851096af881b45eda47a35e386720992cc3c3e",
+          "to_sha": "161df11f29d98070bf9c57da249a3b642877616d",
+          "from_bytes": 3130,
+          "to_bytes": 6306
+        },
+        {
+          "id": "TF-320",
+          "from_sha": "dea541f7ff5be3d217703b8d744eca29e6da8a58",
+          "to_sha": "89eb3faa2ab4e8f16b9ba61973a6fc8ab0f5c831",
+          "from_bytes": 3432,
+          "to_bytes": 7466
+        },
+        {
+          "id": "TF-325",
+          "from_sha": "7a30df127268d2338066e0dbe11d45da84d15169",
+          "to_sha": "217863296518f31484556c0c2f018e0d26d11f36",
+          "from_bytes": 3191,
+          "to_bytes": 6198
+        },
+        {
+          "id": "TF-334",
+          "from_sha": "607f2f5860ea4a80b4e8742e431967950386ab27",
+          "to_sha": "509fb7555cc36606cb69773306d4d13edd14b712",
+          "from_bytes": 3042,
+          "to_bytes": 6091
+        },
+        {
+          "id": "TF-382",
+          "from_sha": "61d0d1f6d72b63c2ff2ddaed83227cb28bd4c3a1",
+          "to_sha": "99dc5d717f763bf78725ba77b1ee83ee02c7e551",
+          "from_bytes": 2749,
+          "to_bytes": 5825
+        },
+        {
+          "id": "TF-388",
+          "from_sha": "875c93eab197f7b6c61b5c426733507dfd48c0b6",
+          "to_sha": "2fc76ac31c9371d6b980e5b152a84a9053ecd83d",
+          "from_bytes": 2598,
+          "to_bytes": 8378
+        },
+        {
+          "id": "TF-401",
+          "from_sha": "b23012fda60df5db2884802ffa2ebdaf513ddc32",
+          "to_sha": "1d5906e1171d824eac170c592956c7e33cfa0984",
+          "from_bytes": 2727,
+          "to_bytes": 6685
+        }
+      ],
+      "imagens_verificadas": 100,
+      "imagens_divergentes": 0
+    }
   },
   "commits_checkpoint": [
     {
@@ -264,8 +334,8 @@
       "id": "TF-309",
       "grupo": "next_batches[2]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-309.json",
-      "git_blob_sha": "97e304fb08b07983a2c6fc70681790442f4b2775",
-      "bytes": 3160,
+      "git_blob_sha": "59874a75c9082188f1f17692775dd6ae0eb5cdaf",
+      "bytes": 5599,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-309.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
@@ -372,8 +442,8 @@
       "id": "TF-318",
       "grupo": "next_batches[2]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-318.json",
-      "git_blob_sha": "eee378cb1f02e73ebed2476f9c44f6a68669e53a",
-      "bytes": 2878,
+      "git_blob_sha": "100e6787856b561be35da9862d07fecb8a54ed94",
+      "bytes": 6179,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-318.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
@@ -399,8 +469,8 @@
       "id": "TF-319",
       "grupo": "next_batches[2]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-319.json",
-      "git_blob_sha": "24851096af881b45eda47a35e386720992cc3c3e",
-      "bytes": 3130,
+      "git_blob_sha": "161df11f29d98070bf9c57da249a3b642877616d",
+      "bytes": 6306,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-319.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
@@ -426,8 +496,8 @@
       "id": "TF-320",
       "grupo": "next_batches[2]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-320.json",
-      "git_blob_sha": "dea541f7ff5be3d217703b8d744eca29e6da8a58",
-      "bytes": 3432,
+      "git_blob_sha": "89eb3faa2ab4e8f16b9ba61973a6fc8ab0f5c831",
+      "bytes": 7466,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-320.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
@@ -453,8 +523,8 @@
       "id": "TF-325",
       "grupo": "next_batches[2]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-325.json",
-      "git_blob_sha": "7a30df127268d2338066e0dbe11d45da84d15169",
-      "bytes": 3191,
+      "git_blob_sha": "217863296518f31484556c0c2f018e0d26d11f36",
+      "bytes": 6198,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-325.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
@@ -675,8 +745,8 @@
       "id": "TF-334",
       "grupo": "next_batches[2]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-334.json",
-      "git_blob_sha": "607f2f5860ea4a80b4e8742e431967950386ab27",
-      "bytes": 3042,
+      "git_blob_sha": "509fb7555cc36606cb69773306d4d13edd14b712",
+      "bytes": 6091,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-334.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
@@ -1450,8 +1520,8 @@
       "id": "TF-382",
       "grupo": "next_batches[3]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-382.json",
-      "git_blob_sha": "61d0d1f6d72b63c2ff2ddaed83227cb28bd4c3a1",
-      "bytes": 2749,
+      "git_blob_sha": "99dc5d717f763bf78725ba77b1ee83ee02c7e551",
+      "bytes": 5825,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-382.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
@@ -1536,8 +1606,8 @@
       "id": "TF-388",
       "grupo": "next_batches[3]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-388.json",
-      "git_blob_sha": "875c93eab197f7b6c61b5c426733507dfd48c0b6",
-      "bytes": 2598,
+      "git_blob_sha": "2fc76ac31c9371d6b980e5b152a84a9053ecd83d",
+      "bytes": 8378,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-388.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
@@ -1740,8 +1810,8 @@
       "id": "TF-401",
       "grupo": "next_batches[3]",
       "arquivo": "operational/research/deep-mechanics/b/records/TF-401.json",
-      "git_blob_sha": "b23012fda60df5db2884802ffa2ebdaf513ddc32",
-      "bytes": 2727,
+      "git_blob_sha": "1d5906e1171d824eac170c592956c7e33cfa0984",
+      "bytes": 6685,
       "link": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/records/TF-401.json",
       "nivel": "INCOMPLETA_HERDADA",
       "conflito_pr4": true,
