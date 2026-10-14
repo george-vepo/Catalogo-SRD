@@ -16,16 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 126,
-    "verified_after_upload": 126,
-    "pending": 68,
-    "stored_bytes": 13321085,
-    "checkpoint_count": 31,
+    "persisted_binary_files": 129,
+    "verified_after_upload": 129,
+    "pending": 65,
+    "stored_bytes": 13324019,
+    "checkpoint_count": 32,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 68,
+    "partial_missing_files": 65,
     "blocked_confirmed": 0,
-    "partial_variant_art": 22,
+    "partial_variant_art": 25,
     "license_rights_review": {
       "foundry_noncommercial_restricted": 8,
       "homebrew_img_unlicensed_for_reuse": 84,
@@ -376,6 +376,16 @@
       ],
       "commit": "b35b04917c221a1f22663d91523ff5ba2b251a53",
       "validation": "GitHub fetched both source and target binary after push; Git blob SHA identical and base64 bytes equal. Source PNG header/end, 32x32 and SHA256 validated; both PARTIAL visually."
+    },
+    {
+      "sequence": 32,
+      "images_added": [
+        "TF-459",
+        "TF-461",
+        "TF-482"
+      ],
+      "commit": "ed6d9aa01bf18cf099ccb3fc12b98af88636185d",
+      "validation": "Three source/destination GitHub files compared byte-for-byte after push and Git blob SHA identical. PNG 32×32, bytes/SHA256 verified prior. Visual variance and historic artist rights PARTIAL."
     }
   ],
   "blocked_ids": [
@@ -419,8 +429,6 @@
     "TF-447",
     "TF-448",
     "TF-449",
-    "TF-459",
-    "TF-461",
     "TF-462",
     "TF-465",
     "TF-468",
@@ -428,7 +436,6 @@
     "TF-473",
     "TF-475",
     "TF-480",
-    "TF-482",
     "TF-483",
     "TF-489",
     "TF-491",
@@ -4208,38 +4215,72 @@
     {
       "id": "TF-459",
       "name": "Ankheg Empress",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/queen_ant.png",
+      "repository_path": "operational/assets/creature-images/TF-459.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 1204,
+      "sha256": "99c8a47ab1bdb8f78c5a52b062e47a82dabf63222d5004974b01e5b174d0fe87",
+      "persistence_commit": "ed6d9aa01bf18cf099ccb3fc12b98af88636185d",
+      "validation": {
+        "result": "passed",
+        "method": "Fetched source PNG bytes from pinned GitHub commit; pre-upload PNG signature/IHDR/IEND, dimensions, size, SHA-256 verified with independently tested implementation. After uploading destination, full base64 source/destination bytes and Git blob SHA matched.",
+        "git_blob_sha": "075faac8051dc3b99d6d035a542c7a991ddc8c64",
+        "quality_note": "Queen ant with articulated insect body and large mandibles. Visual analogue for ankheg empress, but acid attacks, huge stature and exact ankheg exoskeleton are not shown; must replace/adapt for final art."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/animals/queen_ant.png",
+      "source_git_blob_sha": "075faac8051dc3b99d6d035a542c7a991ddc8c64",
+      "source_license": "CC0 1.0 Universal (curated collection assertion; historical per-image copyright not independently proven)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup artist/developer community; attribution recommended, CC0 release declares optional.",
+      "rights_review": "The crawl/tiles release describes a curated selection with non-CC0/uncertain tiles excluded. This filename was not in the stated exclusion list. Historical original artist rights were not independently proven; confirm for commercial publication."
     },
     {
       "id": "TF-461",
       "name": "Ankheg Spawn",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/soldier_ant.png",
+      "repository_path": "operational/assets/creature-images/TF-461.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 465,
+      "sha256": "0713954a327e823a6f183eb2e8ca03d4d0921ff3a17aec746cef0be35bd43bc5",
+      "persistence_commit": "ed6d9aa01bf18cf099ccb3fc12b98af88636185d",
+      "validation": {
+        "result": "passed",
+        "method": "Fetched source PNG bytes from pinned GitHub commit; pre-upload PNG signature/IHDR/IEND, dimensions, size, SHA-256 verified with independently tested implementation. After uploading destination, full base64 source/destination bytes and Git blob SHA matched.",
+        "git_blob_sha": "8e1e9dde4822e17bba8c739f2d83c868f6b42362",
+        "quality_note": "Armored segmented insect with multiple legs and mandibles, approximation for ankheg spawn; source is soldier ant, not a direct depiction of acid-spitting burrower."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/animals/soldier_ant.png",
+      "source_git_blob_sha": "8e1e9dde4822e17bba8c739f2d83c868f6b42362",
+      "source_license": "CC0 1.0 Universal (curated collection assertion; historical per-image copyright not independently proven)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup artist/developer community; attribution recommended, CC0 release declares optional.",
+      "rights_review": "The crawl/tiles release describes a curated selection with non-CC0/uncertain tiles excluded. This filename was not in the stated exclusion list. Historical original artist rights were not independently proven; confirm for commercial publication."
     },
     {
       "id": "TF-462",
@@ -4676,20 +4717,37 @@
     {
       "id": "TF-482",
       "name": "Spore Thrall",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/vine_stalker.png",
+      "repository_path": "operational/assets/creature-images/TF-482.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 1265,
+      "sha256": "de65a85ee43e153519851e4268574309afed12a057dbc9b277c10a6dbd009132",
+      "persistence_commit": "ed6d9aa01bf18cf099ccb3fc12b98af88636185d",
+      "validation": {
+        "result": "passed",
+        "method": "Fetched source PNG bytes from pinned GitHub commit; pre-upload PNG signature/IHDR/IEND, dimensions, size, SHA-256 verified with independently tested implementation. After uploading destination, full base64 source/destination bytes and Git blob SHA matched.",
+        "git_blob_sha": "c8dbe09f3eddceaeb72365edac251307373a4817",
+        "quality_note": "Humanoid body covered in plant matter, approximating a fungal zombified thrall, but no distinct mushrooms/spore clouds; source is vine stalker not named fungus creature."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/fungi_plants/vine_stalker.png",
+      "source_git_blob_sha": "c8dbe09f3eddceaeb72365edac251307373a4817",
+      "source_license": "CC0 1.0 Universal (curated collection assertion; historical per-image copyright not independently proven)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md",
+        "https://creativecommons.org/publicdomain/zero/1.0/"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup artist/developer community; attribution recommended, CC0 release declares optional.",
+      "rights_review": "The crawl/tiles release describes a curated selection with non-CC0/uncertain tiles excluded. This filename was not in the stated exclusion list. Historical original artist rights were not independently proven; confirm for commercial publication."
     },
     {
       "id": "TF-483",
