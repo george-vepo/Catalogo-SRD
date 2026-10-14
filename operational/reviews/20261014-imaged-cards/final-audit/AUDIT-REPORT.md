@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 7 lotes validados, 70/395 fichas (325 restantes).
+**Situação:** EM ANDAMENTO — 8 lotes validados, 80/395 fichas (315 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -62,3 +62,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 9 completas em conteúdo, 1 com ressalvas (TF-079: Heavy Pick citado mas ataque War Pick definido). Dez imagens existentes e vinculadas pelo manifesto E, não pelo JSON individual do grupo B; TF-070 (373×700) e TF-071 (475×800) abaixo de 500 px. **TF-069** tem imagens distintas no diretório B (WebP) e central (JPG) e o manifesto referencia a central; a identidade precisa de verificação visual. Todas pendentes de validação de edição/licença e adaptação ao card game.
 
 **Consolidado:** 70/395 auditadas; 41 completas em conteúdo, 9 com ressalvas, 19 incompletas, 1 não verificável; 49 vínculos diretos, 18 por manifesto, 3 imagens ausentes. A fase não é homologação final.
+
+## Lote 008 — TF-080–TF-091 (10 IDs da ordem de CSV)
+
+7 fichas completas em conteúdo, 3 completas com ressalvas: TF-083 exige conferência literal de `exhausted`, TF-089 tem divergência de idiomas/volume e duração de Enthralling Speech, TF-091 apresenta variantes editoriais entre 2016/2023. Dez imagens vinculadas pelo manifesto E; SHA e tamanho conferidos. Nenhuma arte homologada nem licença aprovada.
+
+**Consolidado:** 80/395; 48 fichas completas em conteúdo, 12 completas com ressalvas, 19 incompletas, 1 não verificável; 49 imagens diretas, 28 por manifesto, 3 ausentes.
