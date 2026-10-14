@@ -28,3 +28,7 @@
 **Próxima etapa:** lote 002 a partir de `TF-012`; verificar cada JSON, arquivo/vínculo de imagem e regras, persistindo evidências por lote.
 
 **Limites da auditoria:** a existência de arquivo Git com SHA/tamanho compatíveis não prova que a imagem é adequada, licenciada ou utilizada pelo motor do jogo; a presença de atributos no JSON não prova fidelidade à fonte nem adaptação ao jogo de cartas. Evidências individuais estão em `batches/batch-001.json` e `audit-results.csv`.
+
+## Lote 002 — TF-012 a TF-024 (seleção exata por CSV)
+
+9 fichas incompletas, 1 completa com ressalvas (TF-024), 9 imagens vinculadas diretamente, 1 imagem ausente (TF-022). Três imagens de resolução baixa: TF-019 280×280, TF-020 190×190 e TF-021 280×280. TF-024 tem Illumination e Horn estruturadas, mas nota sobre dependência alimentar precisa de cotejo com a fonte editorial. Os outros nove registros têm habilidades com `status=INCOMPLETA` e `legacy_summary`, não mecânicas completas para execução. Não houve homologação nem verificação visual/licença.
