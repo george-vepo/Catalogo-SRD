@@ -2,7 +2,17 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 27 — confronto com fonte editorial Gate Pass Gazette (14/10/2026)
+
+- **TF-503 Stuffed Crab:** confrontado com o SRD editorial original [Gate Pass Gazette #2](https://static1.squarespace.com/static/63d11ec201a57a0efa51a168/t/65f3132a921c356dd0ee11ab/1710428970230/!GPG%2BIssue%2B%232%2BSRD.pdf), página PDF 15. Confirmados CR 6, **2.300 XP**, CA14 e PV104. O texto da saída dos ghouls após 0 PV já está truncado no material original; **mantém bloqueio até errata**, sem assumir como funciona. Dano de queda de ghoul no piso perfurado é regra situacional do encontro, separada das habilidades.
+- **TF-499 Cloud of Ghasthoppers:** publicação individual confirmada em [Gate Pass Gazette #24](https://a5e.tools/node/3976) na lista da editora. A fonte oficial continua omitindo o teste de salvaguarda da Despair Aura; **permanece bloqueada**.
+- **Checkpoint 26 confirmado por read-back:** TF-126, TF-127, TF-129, TF-131, commit `e24797b798bf94163a4efa80e2df4ba681e9e85b`.
+- Não cria imagens ou preenche campos por suposição; **41 fichas aprofundadas, 90 sem revisão detalhada, 94 parciais, 37 bloqueadas, 0 integralmente aprovadas**.
+
+
 ## Checkpoint 26 — gigantes e ogre Kobold Press (14/10/2026)
+
+- Commit mecânico `e24797b798bf94163a4efa80e2df4ba681e9e85b`, leitura de retorno confirmada para os quatro JSONs do checkpoint.
 
 - TF-126 Giant, Abbanith: One with the Earth, Siege Monster com multiplicadores distintos de objetos, dois Thumb Claw e Earth Counter (reação recarga 6 apenas earth/stone spells, sem check de spell level). https://www.5esrd.com/database/creature/giant-abbanith/
 - TF-127 Giant, Laestrigonian: Multiattack Greatclub+Bite, Rock melee/ranged e doença por Bite que impede cura não mágica e reduz PV máximos a cada 24h. https://www.5esrd.com/database/creature/giant-laestrigonian/

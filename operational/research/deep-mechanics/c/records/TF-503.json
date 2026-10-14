@@ -9,14 +9,14 @@
   "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
-    "publicacao": "Gate Pass Gazette",
+    "publicacao": "Gate Pass Gazette #2",
     "edicao": "Level Up: Advanced 5E",
     "fonte_identidade": "https://a5e.tools/node/2213"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "6",
-    "xp": null,
+    "xp": 2300,
     "bonus_proficiencia": 3,
     "ca": 14,
     "pv": 104,
@@ -72,9 +72,10 @@
       "fatigued",
       "poisoned"
     ],
-    "xp_estado": "nao publicado no bloco A5E",
+    "xp_estado": "CONFIRMADO_NO_SRD_EDITORIAL_GATE_PASS_GAZETTE_2",
     "composicao_ca": "natural armor",
-    "maneuver_dc": 16
+    "maneuver_dc": 16,
+    "xp_fonte": "https://static1.squarespace.com/static/63d11ec201a57a0efa51a168/t/65f3132a921c356dd0ee11ab/1710428970230/!GPG%2BIssue%2B%232%2BSRD.pdf"
   },
   "mecanicas": {
     "tracos": [
@@ -87,7 +88,13 @@
         "nome": "Ghouls on 0 HP",
         "gatilho": "caranguejo chega a 0 PV",
         "efeito": "ghouls ainda dentro saem em seus turnos",
-        "conflito": "texto publicado 'takes crawls out on its turn' não define procedimento"
+        "conflito": "texto publicado 'takes crawls out on its turn' não define procedimento",
+        "evidencia_original": {
+          "fonte": "https://static1.squarespace.com/static/63d11ec201a57a0efa51a168/t/65f3132a921c356dd0ee11ab/1710428970230/!GPG%2BIssue%2B%232%2BSRD.pdf",
+          "pagina_pdf": 15,
+          "correcao_editorial": null,
+          "estado": "texto original truncado; não deduzir custo ou procedimento"
+        }
       }
     ],
     "acoes": [
@@ -193,10 +200,26 @@
       "acoes_covil": "AUSENCIA_VERIFICADA_NA_FONTE",
       "acoes_miticas": "AUSENCIA_VERIFICADA_NA_FONTE",
       "conjuracao": "AUSENCIA_VERIFICADA_NA_FONTE"
-    }
+    },
+    "notas_de_encontro_separadas": [
+      {
+        "nome": "The Stuffed Crab — warehouse encounter",
+        "tipo": "regra da arena, não habilidade intrínseca",
+        "fonte": "https://static1.squarespace.com/static/63d11ec201a57a0efa51a168/t/65f3132a921c356dd0ee11ab/1710428970230/!GPG%2BIssue%2B%232%2BSRD.pdf",
+        "pagina_pdf": 14,
+        "condicao": "ghoul cai de quadrado do crab sobre um dos buracos no piso",
+        "efeito": {
+          "dano": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "não especificado na frase"
+          }
+        }
+      }
+    ]
   },
   "pendencias": [
-    "Texto oficial sobre saída dos ghouls após 0 PV gramaticalmente truncado.",
+    "CONFIRMADO NO SRD EDITORIAL ORIGINAL DE GATE PASS GAZETTE #2: texto da saída dos ghouls após 0 PV já contém 'takes crawls out' no PDF p.15; permanece sem correção por errata.",
     "Stuffing especifica escape CD16, mas não procedimento detalhado de fuga.",
     "Imagem física ausente."
   ],
@@ -210,6 +233,12 @@
       "url": "https://a5e.tools/node/2213",
       "tipo": "bloco oficial A5E conferido em 2026-10-14",
       "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://static1.squarespace.com/static/63d11ec201a57a0efa51a168/t/65f3132a921c356dd0ee11ab/1710428970230/!GPG%2BIssue%2B%232%2BSRD.pdf",
+      "tipo": "SRD editorial Gate Pass Gazette #2, página 15 (índice PDF 14); confirma ficha original, CR6, 2300 XP e falha textual original",
+      "conferida_nesta_execucao": true,
+      "trecho_localizacao": "PDF page 15/15"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
@@ -275,6 +304,19 @@
     "sistema": "Level Up Advanced 5E",
     "data": "2026-10-14",
     "fonte": "https://a5e.tools/node/2213",
-    "livro_original_errata": "PENDENTE"
+    "livro_original_errata": "PENDENTE",
+    "edicao_confirmada": "Gate Pass Gazette #2",
+    "fonte_editorial_original": "https://static1.squarespace.com/static/63d11ec201a57a0efa51a168/t/65f3132a921c356dd0ee11ab/1710428970230/!GPG%2BIssue%2B%232%2BSRD.pdf",
+    "bloco_original_consultado_em_pdf": true,
+    "conferencias": [
+      "Challenge 6",
+      "XP 2300",
+      "CA 14",
+      "PV 104",
+      "7 ghouls em descrição do encontro",
+      "fuga DC16",
+      "erro de texto original na saída após 0 PV"
+    ],
+    "estado_errata": "NAO_LOCALIZADA"
   }
 }
