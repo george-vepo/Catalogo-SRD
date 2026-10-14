@@ -2,19 +2,19 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-105",
   "nome": "Thuellai",
-  "estado": "BLOQUEADO_CONFLITO_OU_EDICAO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 1 (fonte 5eSRD na revisão ©2023)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/thuellai-3pp",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-104_TF-108/research.json",
-      "natureza": "checkpoint"
+      "natureza": "reproducao_secundaria_5esrd",
+      "edicao_identificada": "Tome of Beasts 1 (2023)",
+      "consulta": "2026-10-14"
     }
   ],
   "estatisticas": {
@@ -32,19 +32,18 @@
     },
     "deslocamentos_ft": {
       "andar": 0,
-      "voar": 100,
-      "hover": true
+      "voar": 100
     },
     "salvaguardas": {
       "INT": 4,
-      "WIS": 4,
-      "CHA": 6
+      "SAB": 4,
+      "CAR": 6
     },
     "pericias": {
       "Perception": 4
     },
     "sentidos": [
-      "darkvision 60 ft."
+      "darkvision 60 ft"
     ],
     "percepcao_passiva": 14,
     "idiomas": [
@@ -55,7 +54,7 @@
     "resistencias_dano": [
       "lightning",
       "thunder",
-      "bludgeoning/piercing/slashing não mágicos"
+      "bludgeoning/piercing/slashing de ataques não mágicos"
     ],
     "imunidades_dano": [
       "poison"
@@ -72,88 +71,126 @@
       "prone",
       "restrained",
       "unconscious"
-    ]
+    ],
+    "origem_ca": "não especificada",
+    "pairar": true,
+    "proficiencia": 4
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Chilling Presence",
+      "area": {
+        "raio_ft": 15
+      },
+      "gatilhos": [
+        {
+          "quando": "início de cada turno do thuellai",
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 17
+          },
+          "falha": {
+            "dados": "2d6",
+            "tipo": "cold"
+          }
+        },
+        {
+          "quando": "a cada minuto de exposição dentro de 15 pés",
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 17
+          },
+          "falha": "um nível de exhaustion por frio"
+        }
+      ],
+      "efeitos_adicionais": [
+        "apaga chamas comuns desprotegidas no raio",
+        "encerra magias de resistência a frio de nível 3 ou menor na área",
+        "congela água após permanecer um minuto na área"
+      ]
+    },
+    {
+      "nome": "Elemental Nature",
+      "efeito": "não necessita ar, alimento, bebida nem sono"
+    },
+    {
+      "nome": "Snowsight",
+      "efeito": "enxerga normalmente através de neve, granizo e precipitação invernal que obscurece visão"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Icy Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 10,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 6,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "3d6",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ]
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "indicacao_herdada": "Três ataques Icy Claw.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "multiataque",
+      "sequencia": [
+        "Icy Claw",
+        "Icy Claw",
+        "Icy Claw"
+      ]
     },
     {
       "nome": "Icy Claw",
-      "indicacao_herdada": "+10, 10 pés, 2d8+6 cortante e 3d6 frio.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Icy Claw"
     },
     {
       "nome": "Freezing Breath",
-      "indicacao_herdada": "Recarga 5–6; cone 60 pés; DES CD17, 14d6 frio ou metade.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "sopro",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "cone",
+        "comprimento_ft": 60
+      },
+      "alvos": "criaturas na área",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 17
+      },
+      "dano": {
+        "dados": "14d6",
+        "tipo": "cold"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade"
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Chilling Presence",
-      "resumo": "No início do turno, alvos até 15 pés fazem CON CD17 contra 2d6 frio. A cada minuto dentro da aura exige salvaguarda para evitar exaustão. Apaga chama comum, encerra efeitos de resistência a frio até nível 3 e congela água após um minuto."
-    },
-    {
-      "nome": "Elemental Nature",
-      "resumo": "Não precisa respirar, comer, beber ou dormir."
-    },
-    {
-      "nome": "Snowsight",
-      "resumo": "Enxerga normalmente através de chuva, neve, granizo ou precipitação invernal."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "O catálogo aponta Tome of Beasts 1, mas a página 5eSRD usa aviso ©2023; a equivalência da ficha com edição original ainda exige revisão.; Imagem e direito de uso pendentes.",
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "A edição específica de 2023 da reprodução foi preservada isoladamente; não mesclar com Tome of Beasts 1 de 2016.",
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "O catálogo aponta Tome of Beasts 1, mas a página 5eSRD usa aviso ©2023; a equivalência da ficha com edição original ainda exige revisão."
+    "Cotejo com Tome of Beasts 1 (2023) e erratas oficiais; fonte secundária não constitui validação independente.",
+    "Sem testes de combate ou promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Thuellai",
+    "tipo": "Huge elemental",
+    "alinhamento": "chaotic neutral"
+  }
 }
