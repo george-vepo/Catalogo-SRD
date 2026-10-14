@@ -16,11 +16,11 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 95,
-    "verified_after_upload": 95,
-    "pending": 99,
-    "stored_bytes": 12322699,
-    "checkpoint_count": 21
+    "persisted_binary_files": 100,
+    "verified_after_upload": 100,
+    "pending": 94,
+    "stored_bytes": 13160085,
+    "checkpoint_count": 23
   },
   "checkpoints": [
     {
@@ -264,6 +264,25 @@
       ],
       "commit": "beae4e8631a1fde3c09e0ab743374614b01dfdf5",
       "validation": "Source JPEG/WebP header, dimensions, bytes, SHA-256 checked before upload. Target images refetched with GitHub; complete binary base64 matched original; Git blob hashes equal."
+    },
+    {
+      "sequence": 22,
+      "images_added": [
+        "TF-327",
+        "TF-429"
+      ],
+      "commit": "282ca570a68d6f4576e3c6a96f66ff0b197ba3b0",
+      "validation": "Verified GitHub-stored WebP signatures, dimensions, bytes, Git blob SHA and SHA-256 after upload, against individually preverified sources."
+    },
+    {
+      "sequence": 23,
+      "images_added": [
+        "TF-476",
+        "TF-474",
+        "TF-505"
+      ],
+      "commit": "bdaaa36c2172f37d384ee6f7af99732b8ecbae23",
+      "validation": "Verified GitHub-stored WebP signatures, dimensions, bytes, Git blob SHA and SHA-256 after upload, against individually preverified sources."
     }
   ],
   "blocked_ids": [
@@ -280,7 +299,6 @@
     "TF-321",
     "TF-324",
     "TF-326",
-    "TF-327",
     "TF-335",
     "TF-336",
     "TF-341",
@@ -311,7 +329,6 @@
     "TF-414",
     "TF-420",
     "TF-425",
-    "TF-429",
     "TF-431",
     "TF-434",
     "TF-442",
@@ -331,9 +348,7 @@
     "TF-470",
     "TF-471",
     "TF-473",
-    "TF-474",
     "TF-475",
-    "TF-476",
     "TF-477",
     "TF-478",
     "TF-480",
@@ -352,7 +367,6 @@
     "TF-502",
     "TF-503",
     "TF-504",
-    "TF-505",
     "TF-506",
     "TF-507",
     "TF-508",
@@ -1338,19 +1352,27 @@
     {
       "id": "TF-327",
       "name": "Azer Forgemaster",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/azer.webp",
+      "repository_path": "operational/assets/creature-images/TF-327.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "size_bytes": 113414,
+      "sha256": "d24724d51633e7374603df89e6a72eee032291c2f4ac6c59e39bf0107539817a",
+      "persistence_commit": "282ca570a68d6f4576e3c6a96f66ff0b197ba3b0",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "The exact A5E packs/monsters/<actor>.json references systems/a5e/assets/<image>.webp. Binary WebP uploaded using Git blobs base64; dimensions, byte length, signature and SHA-256 independently recomputed after fetching saved binary from GitHub. All expected hashes and dimensions matched.",
+        "git_blob_sha": "a0a515c1cd74460e7f111b2213b7e65fd5230a8c",
+        "quality_note": "A ficha original A5E usa imagem de Azer com martelo; a designação de forgemaster é compatível com a ferramenta mostrada."
+      },
+      "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+      "source_path": "public/assets/azer.webp",
+      "source_git_blob_sha": "a0a515c1cd74460e7f111b2213b7e65fd5230a8c"
     },
     {
       "id": "TF-328",
@@ -3168,19 +3190,27 @@
     {
       "id": "TF-429",
       "name": "Clockwork Sentinel",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/clockwork.webp",
+      "repository_path": "operational/assets/creature-images/TF-429.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "size_bytes": 98886,
+      "sha256": "4404a1ffcdf77556da70bedb2b4f35c1aff15e9ebc37ab756b6ccd7e032c0c6b",
+      "persistence_commit": "282ca570a68d6f4576e3c6a96f66ff0b197ba3b0",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "The exact A5E packs/monsters/<actor>.json references systems/a5e/assets/<image>.webp. Binary WebP uploaded using Git blobs base64; dimensions, byte length, signature and SHA-256 independently recomputed after fetching saved binary from GitHub. All expected hashes and dimensions matched.",
+        "git_blob_sha": "a6a36300ad1518a40d54df5477ca461292d89766",
+        "quality_note": "A ficha A5E de Clockwork Sentinel associa essa ilustração de autômato clockwork; versão exata da variante não documentada na arte."
+      },
+      "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+      "source_path": "public/assets/clockwork.webp",
+      "source_git_blob_sha": "a6a36300ad1518a40d54df5477ca461292d89766"
     },
     {
       "id": "TF-431",
@@ -3558,19 +3588,27 @@
     {
       "id": "TF-474",
       "name": "Giant Grick",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/grick.webp",
+      "repository_path": "operational/assets/creature-images/TF-474.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "size_bytes": 124714,
+      "sha256": "a0f97e4a1115ddbdeb7c16184e25973e2d33e39d00089a3b822005e8727a25f6",
+      "persistence_commit": "bdaaa36c2172f37d384ee6f7af99732b8ecbae23",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "The exact A5E packs/monsters/<actor>.json references systems/a5e/assets/<image>.webp. Binary WebP uploaded using Git blobs base64; dimensions, byte length, signature and SHA-256 independently recomputed after fetching saved binary from GitHub. All expected hashes and dimensions matched.",
+        "git_blob_sha": "99f2f7d41d23b446001cec2420cff360ea783b6d",
+        "quality_note": "A ficha A5E de Giant Grick associa essa imagem de grick tentacular; tamanho gigante não mensurável visualmente no token."
+      },
+      "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+      "source_path": "public/assets/grick.webp",
+      "source_git_blob_sha": "99f2f7d41d23b446001cec2420cff360ea783b6d"
     },
     {
       "id": "TF-475",
@@ -3592,19 +3630,27 @@
     {
       "id": "TF-476",
       "name": "Greater Sphinx",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/sphinx.webp",
+      "repository_path": "operational/assets/creature-images/TF-476.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 600,
+        "height": 600
+      },
+      "size_bytes": 393594,
+      "sha256": "fa1e30a94ce3b52d3fcbf411fe8a920f958212a0569eab0209b013a69894185e",
+      "persistence_commit": "bdaaa36c2172f37d384ee6f7af99732b8ecbae23",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "The exact A5E packs/monsters/<actor>.json references systems/a5e/assets/<image>.webp. Binary WebP uploaded using Git blobs base64; dimensions, byte length, signature and SHA-256 independently recomputed after fetching saved binary from GitHub. All expected hashes and dimensions matched.",
+        "git_blob_sha": "6332c1dbb9329c56e6897088dd79f9671e7a1771",
+        "quality_note": "A ficha A5E de Greater Sphinx associa essa imagem de esfinge alada; a graduação Greater não é individualizada pela imagem."
+      },
+      "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+      "source_path": "public/assets/sphinx.webp",
+      "source_git_blob_sha": "6332c1dbb9329c56e6897088dd79f9671e7a1771"
     },
     {
       "id": "TF-477",
@@ -4041,19 +4087,27 @@
     {
       "id": "TF-505",
       "name": "Demilich Mastermind",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/demilich.webp",
+      "repository_path": "operational/assets/creature-images/TF-505.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 300,
+        "height": 300
+      },
+      "size_bytes": 106778,
+      "sha256": "03aa5457ddc7357f9d3337ff7af6fae3353905c4c707941ee941a7a7046156cd",
+      "persistence_commit": "bdaaa36c2172f37d384ee6f7af99732b8ecbae23",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "The exact A5E packs/monsters/<actor>.json references systems/a5e/assets/<image>.webp. Binary WebP uploaded using Git blobs base64; dimensions, byte length, signature and SHA-256 independently recomputed after fetching saved binary from GitHub. All expected hashes and dimensions matched.",
+        "git_blob_sha": "0c3460cac54b9acd0008d289b2594d7bd5215dfa",
+        "quality_note": "A ficha A5E de Demilich Mastermind associa essa imagem de crânio espectral de demilich; atributo mastermind não individualizado."
+      },
+      "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+      "source_path": "public/assets/demilich.webp",
+      "source_git_blob_sha": "0c3460cac54b9acd0008d289b2594d7bd5215dfa"
     },
     {
       "id": "TF-506",
