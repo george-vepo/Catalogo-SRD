@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 41 / 195.**
+**Armazenadas e verificadas: 51 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -12,6 +12,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c54e40a955f62c7839f39f40f0361aade9c708c9 — 10/10 verificadas: TF-071, TF-072, TF-074, TF-075, TF-077, TF-078, TF-079, TF-080, TF-081, TF-082
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/b92a6fcc2467e2af54cf6f1db221022936042462 — 10/10 verificadas: TF-083, TF-084, TF-085, TF-087, TF-089, TF-090, TF-091, TF-100, TF-101, TF-102
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/264cc13c326def74e593723382600d4a0e54c0ff — 10/10 verificadas: TF-103, TF-104, TF-105, TF-106, TF-107, TF-108, TF-109, TF-110, TF-111, TF-112
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d — 10/10 verificadas: TF-113, TF-114, TF-115, TF-116, TF-117, TF-118, TF-119, TF-120, TF-121, TF-122
 
 ## Binários publicados e conferidos
 
@@ -56,22 +57,22 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-110 / Bereginyas: operational/assets/creature-images/TF-110.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Bereginyas.webp; 61242 bytes; 876x800 px; SHA-256: c5b35be37ffdbcb935ceec53789d48e4bb7e50ebfbe5546930cd90ba85ed7097; commit: 264cc13c326def74e593723382600d4a0e54c0ff
 - TF-111 / Chernomoi: operational/assets/creature-images/TF-111.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Chernomoi.webp; 75726 bytes; 755x800 px; SHA-256: 49f370e5d1a684f806c483e902f77abd84088273a78318932d6a87726af4ed58; commit: 264cc13c326def74e593723382600d4a0e54c0ff
 - TF-112 / Cikavak: operational/assets/creature-images/TF-112.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Cikavak.webp; 74098 bytes; 1000x518 px; SHA-256: ec180cb80edd5fb9e7a253aff9c5eaebc3d46b4b9b1bbcd6c17ce543db9fd8ab; commit: 264cc13c326def74e593723382600d4a0e54c0ff
+- TF-113 / Clurichaun: operational/assets/creature-images/TF-113.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Clurichaun.webp; 70112 bytes; 691x800 px; SHA-256: 74a809000d7d7f5c43ddad3389debd56d035d1b78da69916287d24977b89d7e2; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-114 / Vila: operational/assets/creature-images/TF-114.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Vila.webp; 75940 bytes; 713x800 px; SHA-256: 8e6dedb407b2c6694b0c6cc04fd0e4e01a5f8f8b879ac8fbddc8b3e48faa1956; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-115 / Vile Barber: operational/assets/creature-images/TF-115.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Vile%20Barber.webp; 33706 bytes; 481x800 px; SHA-256: b21c08757573969a3cfbf30c9a266bd846bfda34681c0c97f6d7a62f33c7d970; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-116 / Xiphus: operational/assets/creature-images/TF-116.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Xiphus.jpg; 53166 bytes; 479x700 px; SHA-256: f6bb9ca670ddc7d2b9c20e065079e01db35c071d9936eac933e4ca7bb70a2d8d; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-117 / Yumerai: operational/assets/creature-images/TF-117.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Yumerai.webp; 148180 bytes; 658x1053 px; SHA-256: 63c980d96743a700d625ba4c2b1f32a317274e9f7d92158e91be0a48eaebca71; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-118 / Ala: operational/assets/creature-images/TF-118.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Ala.webp; 68188 bytes; 888x800 px; SHA-256: 0e146a2541e509212e3c83e1d4b083ff00fcfd234e897ad6a74d6eec3f8c81c9; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-119 / Animal Lord, Toad King: operational/assets/creature-images/TF-119.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Toad%20King.webp; 250012 bytes; 1086x1001 px; SHA-256: 87087ba7867fc677acbc3c4d6ad7c5b12669dd8aba429c4a0b8631c0c5998987; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-120 / Ashen Custodian: operational/assets/creature-images/TF-120.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Ashen%20Custodian.webp; 208722 bytes; 712x1077 px; SHA-256: 192287bb3dbf95e387951f7a8ff1a7c1cd257430bdb313d6fc309708133fdfc9; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-121 / Animal Lord, Queen of Birds: operational/assets/creature-images/TF-121.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/animallordqueenofbirds.jpg; 83636 bytes; 605x700 px; SHA-256: e86810f58338a429addb4fbb84154f54c7bd80c35276eec5ff0871202ccad951; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
+- TF-122 / Animal Lord, Queen of Cats: operational/assets/creature-images/TF-122.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/animallordqueenofcats.jpg; 58661 bytes; 437x700 px; SHA-256: 9f12092ba9508a0ab7a7d7b71ec4a4cd942fd833f0503ca24daaf5e2e0d2b3b4; commit: 3e12733d1e24381c71fc2ec21f04c0eec5aa4d4d
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
-- TF-113 / Clurichaun: pending; 
-- TF-114 / Vila: pending; 
-- TF-115 / Vile Barber: pending; 
-- TF-116 / Xiphus: pending; 
-- TF-117 / Yumerai: pending; 
-- TF-118 / Ala: pending; 
-- TF-119 / Animal Lord, Toad King: pending; 
-- TF-120 / Ashen Custodian: pending; 
-- TF-121 / Animal Lord, Queen of Birds: pending; 
-- TF-122 / Animal Lord, Queen of Cats: pending; 
 - TF-123 / Animal Lord, Queen of Scorpions: pending; 
 - TF-124 / Animal Lord, Queen of Serpents: pending; 
 - TF-125 / Animal Lord, Queen of Mammoths: pending; 
