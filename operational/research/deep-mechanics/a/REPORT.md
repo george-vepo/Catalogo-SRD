@@ -1,3 +1,11 @@
+# Grupo A — checkpoint 45: Tosculi Hive Queen (14/10/2026)
+
+**TF-237** ([KPOGL](https://kpogl.wikidot.com/monster:tosculi-hive-queen), Tome of Beasts 1 p.367): ficha da rainha tosculi aprofundada com Multiattack de quatro Scimitars, Stinger e salvaguarda, Implant Egg, Legendary Resistance 3/dia, três opções de ações lendárias com custos de 1–2, três ações de covil (Brood, Pheromones, Resin com transição para petrificação) e efeitos regionais. **Conflito preservado:** texto da fonte indica salvaguardas repetidas para o veneno de Stinger, mas também afirma que só `greater restoration` ou magia equivalente o remove. Sem errata/edição primária, não declarar resolvido.
+
+**Atual:** 46/132 statblocks estruturados na transcrição online; 86 sem estrutura completa, 0 homologados, 124/132 imagens em binário, 8 ausentes, nenhuma arte final aprovada. Sem merge.
+
+---
+
 # Grupo A — checkpoint 44: Tigebra e Timingila (14/10/2026)
 
 - **TF-235 Tigebra:** [ficha individual KPOGL](https://kpogl.wikidot.com/monster:tigebra), Tome of Beasts 3 p.369. Estatísticas, três ataques via Multiattack, Hypnotic Gaze de bônus, veneno que altera resistência/imunidade e Final Fury com cabeça separada por 1d4 rodadas estruturados.
