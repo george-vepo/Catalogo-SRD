@@ -66,18 +66,24 @@ Foram publicados e recuperados **TF-467 Corpse Fly**, **TF-477 Grimalkin**, **TF
 
 A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja licenças ou permissões individuais em documentos não localizados, as quais devem ser incorporadas quando comprovadas.
 
+## Checkpoint 28 — TF-351 e TF-463 (assets provisórios licenciados)
+
+- **TF-351 Half-Demon Ogre:** ilustração de ogro chifrudo, PNG 257×550, 128.753 bytes, proveniente de [Ogre concept art — OpenGameArt](https://opengameart.org/content/ogre-concept-art), espelhada em [Tiddybub/2d-assets](https://github.com/Tiddybub/2d-assets/blob/main/fantasy/oga-ogre-concept-art/SOURCE.md), que declara **CC0**. Demonização/fogo não demonstrados; fonte inclui créditos dentro da imagem. `PARTIAL`.
+- **TF-463 Blood Maggot:** spritesheet PNG 200×60, 8.632 bytes, do projeto [Source of Mana](https://github.com/sourceofmana/sourceofmana), listado no [LICENSE.md](https://github.com/sourceofmana/sourceofmana/blob/master/LICENSE.md) com autoria **Neorice** e licença **CC BY-SA 4.0**. Folha contém diversas poses, não uma composição pronta para uma carta; precisa adaptação (preservar atribuição e condições ShareAlike). `PARTIAL`.
+- Binários físicos gravados no GitHub em `54cbf17c2c686170edc86d1ff09961021866448b`, relidos byte a byte do repositório de destino. Os dois Git blob SHAs coincidem com as fontes e o SHA-256 pré-upload de cada PNG está no manifesto. **Nenhum dos dois foi considerado arte final aprovada.**
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **118** |
-| Imagens com validação pós-upload registrada | **118** |
-| IDs ainda ausentes | **76** |
-| Tamanho total dos binários | **13.175.857 bytes** |
-| Checkpoints (máximo 10 arquivos) | **27** |
+| Imagens físicas persistidas no GitHub | **120** |
+| Imagens com validação pós-upload registrada | **120** |
+| IDs ainda ausentes | **74** |
+| Tamanho total dos binários | **13.313.242 bytes** |
+| Checkpoints (máximo 10 arquivos) | **28** |
 
-## Binários confirmados (118)
+## Binários confirmados (120)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -199,8 +205,10 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-477 | Grimalkin | `operational/assets/creature-images/TF-477.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/unique/natasha.png) | .png / image/png | 32×32 | 1280 | `f42d51ad25553b05c4cefe30f17c910f9c8e3a95fb224d064e678458ceb9ad02` | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | PASS binário; PARTIAL direitos/variante |
 | TF-503 | Stuffed Crab | `operational/assets/creature-images/TF-503.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/zombies/zombie_crab.png) | .png / image/png | 32×32 | 1490 | `1ab5e58d37e71c805f32b72d47471b272aea6447472f1e72a15e0ae9754e8e9f` | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | PASS binário; PARTIAL direitos/variante |
 | TF-469 | Fateholder | `operational/assets/creature-images/TF-469.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/orb_spider.png) | .png / image/png | 32×32 | 1082 | `215e0349a8a1435150395912851212103df52b481f97b824b4e46dbbea11d319` | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | PASS binário; PARTIAL direitos/variante |
+| TF-351 | Half-Demon Ogre | `operational/assets/creature-images/TF-351.png` | [origem](https://github.com/Tiddybub/2d-assets/blob/main/fantasy/oga-ogre-concept-art/ogre_.png) | .png / image/png | 257×550 | 128753 | `3dece5bc228d77a6cdb3dd4047800b9c3530251d1828862226151d40e295b1a4` | `54cbf17c2c686170edc86d1ff09961021866448b` | PASS binário; PARTIAL para composição artística |
+| TF-463 | Blood Maggot | `operational/assets/creature-images/TF-463.png` | [origem](https://github.com/sourceofmana/sourceofmana/blob/master/data/graphics/sprites/monsters/maggot.png) | .png / image/png | 200×60 | 8632 | `2a23ae641550364ea956241713b609a3f060f083630c4bc28588bced536af170` | `54cbf17c2c686170edc86d1ff09961021866448b` | PASS binário; PARTIAL para composição artística |
 
-## IDs bloqueados / pendentes (76)
+## IDs bloqueados / pendentes (74)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -221,7 +229,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-336 | Far Dorocha | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-341 | Shurale | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-342 | Silenal | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-351 | Half-Demon Ogre | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-353 | Manggus | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-358 | Giant, Void | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-360 | Gelatinous Wall | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -249,7 +256,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | TF-459 | Ankheg Empress | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-461 | Ankheg Spawn | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-462 | Behir Magus | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-463 | Blood Maggot | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-465 | Canicore | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-468 | Faerie Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-470 | Fiendish Chimera | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -334,5 +340,6 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 | 25 | TF-355, TF-395, TF-361, TF-456 | `070f73d8ec70dcfbdaf1785de16d65ce2069e79a` | PNG 32×32 / 64×64; source and destination Git blob/bytes equal; SHA-256 recorded; CC0 or CC BY 3.0 attribution; visual variant specificity PARTIAL |
 | 26 | TF-393, TF-514, TF-446, TF-356, TF-513, TF-511 | `ad05a90834756241df8b4f42e6e29ff1086b567b` | Six source PNG sprites, GitHub-persisted byte identity and Git blob SHA checked; 32×32 low-res; visual variants and source rights require follow-up |
 | 27 | TF-467, TF-477, TF-503, TF-469 | `3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e` | GitHub post-upload byte and SHA-1 blob identity; PNG, 32×32, size/SHA256 validated before push; artistic specificity and license provenance PARTIAL |
+| 28 | TF-351, TF-463 | `54cbf17c2c686170edc86d1ff09961021866448b` | Two PNG images refetched after GitHub push with matching complete binary source content / Git blob SHA; CC0 ogre illustration and CC BY-SA 4.0 maggot sprite atlas; both visually PARTIAL |
 
-**Estado: parcial (118/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (120/194). Manter PR em rascunho e não executar merge.**
