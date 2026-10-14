@@ -40,3 +40,7 @@
 ## Consolidação validada após lote 003
 
 Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa com ressalvas, 18 incompletas e 1 não verificável. Imagens: 28 vínculos diretos confirmados e 2 ausentes. A matriz é: completas em conteúdo com imagem 9, completas sem imagem 1; com ressalvas e imagem 1; incompletas/não verificáveis com imagem 18 e sem imagem 1. A classificação de conteúdo não concede autorização de uso/produção. Corrigida soma da matriz provisória após o lote 002.
+
+## Lote 004 — 10 fichas (TF-035–TF-045, ordem do CSV)
+
+8 completas em conteúdo e 2 completas com ressalvas: TF-039 possui divergência numérica Bite/Puff Up e TF-041 possui interpretação pendente do Multiattack/Proboscis. Todas as 10 têm arquivo de imagem diretamente vinculado com SHA/tamanho confirmado. 5 imagens têm dimensão declarada inferior a 500 px. TF-045 exige conciliar a nomenclatura Aaxte/Aatxe. Nenhuma foi homologada para publicação.
