@@ -1,3 +1,18 @@
+## Segundo checkpoint de índice editorial Kobold Press — 14/10/2026
+
+Prosseguiu a conferência da [fonte editorial de identidade](https://koboldpress.com/tools/kobold-press-monsters/) de quatro criaturas adicionais, sem usar o índice como substituto de livro ou errata:
+
+| ID | Criatura | ND mostrado | Tamanho | Tipo | Publicação |
+|---|---|---|---|---|---|
+| [TF-318](TF-318.json) | Fellforged | 5.0 | Medium | Construct | Tome of Beasts 1 |
+| [TF-319](TF-319.json) | Gearforged Templar | 6.0 | Medium | Construct | Tome of Beasts 1 |
+| [TF-388](TF-388.json) | Son of Fenris | 12.0 | Huge | Monstrosity | Tome of Beasts 1 |
+| [TF-401](TF-401.json) | Mallqui | 8.0 | Medium | Undead | Tome of Beasts 1 |
+
+**TF-318 Fellforged, TF-319 Gearforged Templar, TF-388 Son of Fenris e TF-401 Mallqui** continuam exigindo cotejo das diferenças de edições e habilidades com o exemplar apropriado. O índice apenas confirma classificação do editor e ND de referência, não valida ataques ou atributos integralmente. Com os cinco registros do checkpoint anterior, **nove conflitos KP agora têm metadados editoriais de identidade documentados**, sem resolver os 13 conflitos herdados no conjunto e sem promover fichas. Fichas estruturadas: 132; imagens reais: 113; imagens faltantes: 19; homologações: 0. Checkpoint limitado a quatro criaturas.
+
+---
+
 ## Checkpoint B — índice editorial Kobold Press, cinco conflitos (14/10/2026)
 
 O [índice oficial da Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/) fornece dados de **identidade, ND em exibição, tamanho, tipo e publicação**, mas não o statblock integral nem a errata. Cotejos preservados separadamente em cinco fichas:
