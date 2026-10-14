@@ -187,7 +187,7 @@
 
 ### Ações
 
-**Bites.** Ataque corpo a corpo +5; alcance undefined pés. Dano: 4d8 piercing + 1d6 poison. Escolhe um alvo que esteja dentro do seu espaço; em um acerto, causa o dano perfurante e o veneno. Quando estiver com metade ou menos dos PV máximos, o dano perfurante diminui de 4d8 para 2d8.
+**Bites.** Ataque corpo a corpo +5; o alvo precisa estar no mesmo espaço do enxame. Dano: 4d8 piercing + 1d6 poison. Escolhe um alvo que esteja dentro do seu espaço; em um acerto, causa o dano perfurante e o veneno. Quando estiver com metade ou menos dos PV máximos, o dano perfurante diminui de 4d8 para 2d8.
 
 **Reações:** nenhuma descrita na ficha de referência. **Ações lendárias:** nenhuma descrita.
 
