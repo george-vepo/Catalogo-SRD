@@ -52,7 +52,7 @@ Situação mais recente: **124 binários**, **70 IDs sem arquivo**, 30 checkpoin
 
 **Riscos jurídicos previamente identificados continuam:** 84 imagens de `TheGiddyLimit/homebrew-img` sem licença de reutilização verificada, 8 arquivos de `FoundryVTT-Level-Up-Official/public/assets` explicitamente para uso não comercial. Os 100 arquivos de checkpoints legados não foram redownloaded/recomputados integralmente nesta rodada. Os 71 IDs sem arquivo estão listados individualmente abaixo. Não executar merge.
 
-## Reconciliação Git da continuidade — checkpoint 30
+## Reconciliação Git histórica — checkpoint 30
 
 No commit `8db779283dfec35501c174aeb62609b0d4064bc4`, árvore `c728d3c9c95a1c24e2a8719ca84081239754fa43`, foram auditados:
 
@@ -138,18 +138,26 @@ A auditoria foi feita sobre a versão atual dos READMEs; é possível que haja l
 
 Imagem candidata identificada para `TF-475 Giant Lanternfish`: [Anglerfish](https://opengameart.org/content/anglerfish-0), arte 2D de **m7600**, licenciada na origem em **CC0**. Mostra peixe-pescador de dentes grandes com isca luminosa, compatível com o arquétipo. A aquisição **não foi concluída**: tentativa de baixar o arquivo binário `anglerfish.png` diretamente do OpenGameArt falhou tecnicamente, e o conector GitHub disponível só aceita fontes GitHub. **Nenhuma imagem adicional foi contabilizada**, nem se inventaram hash, dimensões ou commit de arquivo. Buscar cópia legítima verificável ou outra forma de acesso ao binário antes de processar TF-475.
 
+## Checkpoint 31 — TF-504 e TF-508
+
+O commit `b35b04917c221a1f22663d91523ff5ba2b251a53` adiciona **2 arquivos PNG reais**, totalizando **844 bytes**:
+- **TF-504 Warlord's Ghost** — fantasma guerreiro armado `undead/phantasmal_warrior.png`; identidade de soldado espectral coerente, porém sem corneta e batalhão fantasmagórico previstos na ficha <https://a5e.tools/node/1464>. `PARTIAL`.
+- **TF-508 Fogborn Zombie** — cadáver humanoide em decomposição `undead/necrophage.png`, coerente com zumbi, porém sem os efeitos de névoa previstos na ficha <https://www.a5e.tools/node/3461>. `PARTIAL`.
+
+Origem dos arquivos: [crawl/tiles](https://github.com/crawl/tiles) (declaração CC0 para seleção curada, excluindo recursos de direitos desconhecidos). Cada PNG tem 32×32 pixels e exige revisão da arte de carta e confirmação individual de direitos históricos. Em ambos os casos, os arquivos no GitHub foram relidos e comparados integralmente com a fonte via base64 e Git blob SHA, além da verificação pré-upload de dimensões e SHA-256.
+
 ## Resultado mensurável
 
 | Indicador | Valor |
 |---|---:|
 | IDs exclusivos selecionados | 194 |
-| Imagens físicas persistidas no GitHub | **124** |
-| Imagens com validação pós-upload registrada | **124** |
-| IDs ainda ausentes | **70** |
-| Tamanho total dos binários | **13.320.241 bytes** |
-| Checkpoints (máximo 10 arquivos) | **30** |
+| Imagens físicas persistidas no GitHub | **126** |
+| Imagens com validação pós-upload registrada | **126** |
+| IDs ainda ausentes | **68** |
+| Tamanho total dos binários | **13.321.085 bytes** |
+| Checkpoints (máximo 10 arquivos) | **31** |
 
-## Binários confirmados (124)
+## Binários confirmados (126)
 
 | ID | Criatura | Arquivo no repositório | Fonte | Extensão e MIME | Dimensões | Bytes | SHA-256 | Commit de persistência | Validação |
 |---|---|---|---|---|---|---:|---|---|---|
@@ -277,8 +285,10 @@ Imagem candidata identificada para `TF-475 Giant Lanternfish`: [Anglerfish](http
 | TF-405 | Lich, Virtuoso | `operational/assets/creature-images/TF-405.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/ancient_lich.png) | .png / image/png | 32×32 | 476 | `59aa7f3e3d86c1c50d3616106f6c3d17d2fee1fb95ed1d215735112ed5accfcd` | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | PASS binário; PARTIAL (arte/atribuição histórica) |
 | TF-510 | Infernal Mammoth | `operational/assets/creature-images/TF-510.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/elephant_demonic.png) | .png / image/png | 32×32 | 896 | `9aacfe4824a78db0536e5cc0d0f693ce8ce90e011cb6d13b08468556f5f5f855` | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | PASS binário; PARTIAL (arte/atribuição histórica) |
 | TF-478 | Gourdling | `operational/assets/creature-images/TF-478.png` | [OpenGameArt](https://opengameart.org/content/pumpkin-monster) e [espelho GitHub](https://github.com/lpereira504/DarkTrail_PAP/blob/main/characters/enemies/pumpkin_monster.png) | .png / image/png | 96×256 | 5155 | `6716b48b1f321926d9a89e279abf3de2a215321ff110402ebb7688d7c2c62f3c` | `53d65954ef72fa63085986531b0c1d07f504fb21` | PASS binário; PARTIAL como spritesheet; CC BY 4.0 (crédito obrigatório) |
+| TF-504 | Warlord's Ghost | `operational/assets/creature-images/TF-504.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/phantasmal_warrior.png) | .png / image/png | 32×32 | 408 | `e6ee8938971103e735782c4a294b6940730d742b28602502e7051c4d1c432fd0` | `b35b04917c221a1f22663d91523ff5ba2b251a53` | PASS binário; PARTIAL tipologia/variante e revisão legal |
+| TF-508 | Fogborn Zombie | `operational/assets/creature-images/TF-508.png` | [origem](https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/necrophage.png) | .png / image/png | 32×32 | 436 | `eaa8d61fe1c639434797cbd61294959810ada5d85df489cd0ddfadfb23eb270b` | `b35b04917c221a1f22663d91523ff5ba2b251a53` | PASS binário; PARTIAL tipologia/variante e revisão legal |
 
-## IDs bloqueados / pendentes (70)
+## IDs bloqueados / pendentes (68)
 
 | ID | Criatura | Motivo |
 |---|---|---|
@@ -342,10 +352,8 @@ Imagem candidata identificada para `TF-475 Giant Lanternfish`: [Anglerfish](http
 | TF-500 | Gorger Zombie Horde | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-501 | Lost Prospector | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-502 | Ghasthopper | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-504 | Warlord's Ghost | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-506 | Mariner Ghost Swarm | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-507 | Fogborn Skeleton Horde | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-508 | Fogborn Zombie | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-509 | Fogborn Zombie Horde | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-516 | Kanos Spawn | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-517 | Imp Flock | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
@@ -409,5 +417,6 @@ Imagem candidata identificada para `TF-475 Giant Lanternfish`: [Anglerfish](http
 | 28 | TF-351, TF-463 | `54cbf17c2c686170edc86d1ff09961021866448b` | Two PNG images refetched after GitHub push with matching complete binary source content / Git blob SHA; CC0 ogre illustration and CC BY-SA 4.0 maggot sprite atlas; both visually PARTIAL |
 | 29 | TF-481, TF-405, TF-510 | `9afec073ed6536d61ac4d5d94c5ea140e143f3ae` | Three source PNGs, GitHub binary byte identity + Git blob SHA confirmed, PNG 32×32, SHA-256 recorded; all PARTIAL visually and historic tile rights not independently proven |
 | 30 | TF-478 | `53d65954ef72fa63085986531b0c1d07f504fb21` | 96×256 animated PNG, source mirror/destination Git blob SHA and full binary identity verified; original OGA source visible/CC BY 4.0 credit; animation sheet PARTIAL |
+| 31 | TF-504, TF-508 | `b35b04917c221a1f22663d91523ff5ba2b251a53` | Two 32x32 sprite binaries fetched and compared to public source after upload; different images, CC0 curated source claim; unique variant imagery and copyright audit PARTIAL |
 
-**Estado: parcial (124/194). Manter PR em rascunho e não executar merge.**
+**Estado: parcial (126/194). Manter PR em rascunho e não executar merge.**
