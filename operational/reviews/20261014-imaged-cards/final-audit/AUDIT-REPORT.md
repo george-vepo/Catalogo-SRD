@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 5 lotes validados, 50/395 fichas (345 restantes).
+**Situação:** EM ANDAMENTO — 6 lotes validados, 60/395 fichas (335 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -50,3 +50,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 8 completas em conteúdo, 1 completa com ressalvas (TF-047, Celestial Weapons +4d8 vs Greataxe +3d8), e 1 incompleta (TF-052, CD ausente em Celestial Crescendo). 9 imagens vinculadas e 1 ausente (TF-049). 5 imagens de resolução baixa pelos metadados. TF-049 usa mecânicas A5E completas na fonte RPG, mas depende de adaptação explícita ao card game; não foi validada em engine nem aprovada para publicação.
 
 **Consolidado após lote 005:** 50/395 auditadas; 26 completas em conteúdo, 4 com ressalvas, 19 incompletas, 1 não verificável; 47 com vínculo direto e 3 sem imagem. Nenhuma licenciada/homologada nesta execução.
+
+## Lote 006 — transição A/B
+
+10 fichas avaliadas: 6 completas em conteúdo e 4 completas com ressalvas (TF-059, TF-060, TF-062, TF-065). Duas imagens ligadas diretamente pelo JSON do grupo A; oito associadas explicitamente pelo manifesto de aquisição E no grupo B, com SHA/tamanho equivalentes aos binários Git consultados. TF-058 usa arte 300×434, baixa resolução. Divergências: Four-Part Harmony, Bite entre edições, PV TF-062 e versão Clockwork Hound. Não confundir o campo `bloqueado` editorial dos B com ausência de mecânicas no JSON.
+
+**Consolidado 6 lotes:** 60/395; 32 fichas completas em conteúdo, 8 com ressalvas, 19 incompletas, 1 não verificável; 49 imagens diretamente vinculadas, 8 por manifesto, 3 ausentes. Nenhuma conclusão/homologação de produção.
