@@ -28153,6 +28153,215 @@
       "status": "EDITION_CONFLICT_REQUIRES_DISAMBIGUATION",
       "candidates": [
         {
+          "book": "Tome of Beasts 1 (2023 Edition)",
+          "source_file": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%201%20%282023%20Edition%29.json",
+          "source_index": 250,
+          "source_label": "ToB1-2023",
+          "name": "Nihileth Aboleth",
+          "core_complete": true,
+          "missing_required_fields": [],
+          "sections": [
+            "trait",
+            "action",
+            "bonus",
+            "reaction",
+            "legendary",
+            "legendaryGroup"
+          ],
+          "mechanics": {
+            "name": "Nihileth Aboleth",
+            "size": [
+              "L"
+            ],
+            "type": "undead",
+            "ac": [
+              {
+                "ac": 17,
+                "from": [
+                  "natural armor"
+                ]
+              }
+            ],
+            "hp": {
+              "average": 157,
+              "formula": "21d10 + 42"
+            },
+            "speed": {
+              "walk": 10,
+              "swim": 40,
+              "fly": {
+                "number": 40,
+                "condition": "(hover) in void ghost form"
+              },
+              "canHover": true
+            },
+            "str": 21,
+            "dex": 9,
+            "con": 15,
+            "int": 18,
+            "wis": 15,
+            "cha": 18,
+            "cr": "13",
+            "alignment": [
+              "C",
+              "E"
+            ],
+            "save": {
+              "con": "+7",
+              "int": "+9",
+              "wis": "+7"
+            },
+            "skill": {
+              "history": "+12",
+              "perception": "+10"
+            },
+            "resist": [
+              {
+                "resist": [
+                  "bludgeoning",
+                  "piercing",
+                  "slashing"
+                ],
+                "note": "from nonmagical attacks",
+                "cond": true
+              }
+            ],
+            "immune": [
+              "cold",
+              "necrotic",
+              "poison"
+            ],
+            "conditionImmune": [
+              "charmed",
+              "exhaustion",
+              "frightened",
+              "grappled",
+              "paralyzed",
+              "petrified",
+              "poisoned",
+              "restrained"
+            ],
+            "senses": [
+              "darkvision 120 ft."
+            ],
+            "passive": 20,
+            "languages": [
+              "telepathy 120 ft.",
+              "Void Speech"
+            ],
+            "environment": [
+              "coastal",
+              "underdark",
+              "underwater"
+            ],
+            "trait": [
+              {
+                "name": "Ghostly Body (Void Ghost Form Only)",
+                "entries": [
+                  "The nihileth has resistance to acid, fire, lightning, and thunder damage, it has immunity to the {@condition prone} condition, and it has immunity to bludgeoning, piercing, and slashing damage from nonmagical attacks. In addition, the nihileth can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+                ]
+              },
+              {
+                "name": "Infecting Telepathy",
+                "entries": [
+                  "If a creature communicates telepathically with the nihileth, or deals psychic damage to it, the creature must succeed on a {@dc 15} Wisdom saving throw or become infected with the nihilethic rot disease."
+                ]
+              },
+              {
+                "name": "Nihilethic Rot",
+                "entries": [
+                  "This disease takes 1 minute to manifest in an infected creature, during which time the disease can be removed with the {@spell lesser restoration} spell. After 1 minute, the creature's flesh becomes slimy and translucent, and the disease can be cured only by the {@spell heal} spell or similar magic. Until this disease is cured, the creature can't regain hp unless it is submerged in water, and it can breathe air and water. The creature must be submerged in water at least once every 2 hours to avoid suffocating, and if it is outside a body of water, it takes 7 ({@damage 2d6}) acid damage every 10 minutes, unless moisture is applied to its skin before 10 minutes have passed. If a Humanoid dies while infected with this disease, it rises 1 minute later as a nihilethic zombie under the nihileth's control. If a Large giant or monstrosity dies while infected with this disease, it rises 1 minute later as a nihilethic dominator under the nihileth's control."
+                ]
+              },
+              {
+                "name": "Undead Fortitude",
+                "entries": [
+                  "If damage reduces the nihileth to 0 hp, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the nihileth drops to 1 hp instead."
+                ]
+              },
+              {
+                "name": "Undead Nature",
+                "entries": [
+                  "The nihileth doesn't require air, food, drink, or sleep."
+                ]
+              },
+              {
+                "name": "Void Aura",
+                "entries": [
+                  "The nihileth is surrounded by a chilling cloud. A creature that isn't a construct or undead and that starts its turn within 5 feet of the nihileth must succeed on a {@dc 15} Constitution saving throw or its speed is halved until the start of its next turn. In addition, a creature infected with nihilethic rot takes 7 ({@damage 2d6}) cold damage when it starts its turn within this aura."
+                ]
+              }
+            ],
+            "action": [
+              {
+                "name": "Multiattack",
+                "entries": [
+                  "The nihileth makes two Tentacle attacks and one Tail attack, or it makes three Withering Touch attacks."
+                ]
+              },
+              {
+                "name": "Tail (Undead Form Only)",
+                "entries": [
+                  "{@atk mw} {@hit 10} to hit, reach 10 ft. one target. {@h}15 ({@damage 3d6 + 5}) bludgeoning damage."
+                ]
+              },
+              {
+                "name": "Tentacle (Undead Form Only)",
+                "entries": [
+                  "{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}12 ({@damage 2d6 + 5}) bludgeoning damage, and the target must succeed on a {@dc 15} Constitution saving throw or contract the nihilethic rot disease (see the Nihilethic Rot trait)."
+                ]
+              },
+              {
+                "name": "Withering Touch (Void Ghost Form Only)",
+                "entries": [
+                  "{@atk ms} {@hit 9} to hit, reach 10 ft., one creature. {@h}14 ({@damage 3d6 + 4}) necrotic damage."
+                ]
+              }
+            ],
+            "bonus": [
+              {
+                "name": "Void Shape",
+                "entries": [
+                  "The nihileth magically transforms into a dark purple, Void ghost form or back into its Undead form. Its statistics, other than its speed, resistances, and immunities, are the same in each form. Any equipment it is wearing or carrying changes with it. It reverts to its Undead form if it dies."
+                ]
+              }
+            ],
+            "reaction": [
+              {
+                "name": "Void Body",
+                "entries": [
+                  "When the nihileth takes damage, it can reduce the damage to 0. Radiant damage can be reduced by only half."
+                ]
+              }
+            ],
+            "legendary": [
+              {
+                "name": "Detect",
+                "entries": [
+                  "The nihileth makes a Wisdom ({@skill Perception}) check."
+                ]
+              },
+              {
+                "name": "Tail Swipe",
+                "entries": [
+                  "The nihileth makes one Tail attack."
+                ]
+              },
+              {
+                "name": "Rotten Drain (Costs 2 Actions)",
+                "entries": [
+                  "One creature infected with the nihilethic rot disease within 30 feet of the nihileth takes 10 ({@damage 3d6}) psychic damage, and the nihileth regains hp equal to that amount."
+                ]
+              }
+            ],
+            "legendaryGroup": {
+              "name": "Nihileth Aboleth",
+              "source": "ToB1-2023"
+            }
+          },
+          "has_unresolved_copy": false
+        },
+        {
           "book": "Tome of Beasts",
           "source_file": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts.json",
           "source_index": 256,
@@ -28371,215 +28580,6 @@
             "legendaryGroup": {
               "name": "Nihileth",
               "source": "ToB"
-            }
-          },
-          "has_unresolved_copy": false
-        },
-        {
-          "book": "Tome of Beasts 1 (2023 Edition)",
-          "source_file": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%201%20%282023%20Edition%29.json",
-          "source_index": 250,
-          "source_label": "ToB1-2023",
-          "name": "Nihileth Aboleth",
-          "core_complete": true,
-          "missing_required_fields": [],
-          "sections": [
-            "trait",
-            "action",
-            "bonus",
-            "reaction",
-            "legendary",
-            "legendaryGroup"
-          ],
-          "mechanics": {
-            "name": "Nihileth Aboleth",
-            "size": [
-              "L"
-            ],
-            "type": "undead",
-            "ac": [
-              {
-                "ac": 17,
-                "from": [
-                  "natural armor"
-                ]
-              }
-            ],
-            "hp": {
-              "average": 157,
-              "formula": "21d10 + 42"
-            },
-            "speed": {
-              "walk": 10,
-              "swim": 40,
-              "fly": {
-                "number": 40,
-                "condition": "(hover) in void ghost form"
-              },
-              "canHover": true
-            },
-            "str": 21,
-            "dex": 9,
-            "con": 15,
-            "int": 18,
-            "wis": 15,
-            "cha": 18,
-            "cr": "13",
-            "alignment": [
-              "C",
-              "E"
-            ],
-            "save": {
-              "con": "+7",
-              "int": "+9",
-              "wis": "+7"
-            },
-            "skill": {
-              "history": "+12",
-              "perception": "+10"
-            },
-            "resist": [
-              {
-                "resist": [
-                  "bludgeoning",
-                  "piercing",
-                  "slashing"
-                ],
-                "note": "from nonmagical attacks",
-                "cond": true
-              }
-            ],
-            "immune": [
-              "cold",
-              "necrotic",
-              "poison"
-            ],
-            "conditionImmune": [
-              "charmed",
-              "exhaustion",
-              "frightened",
-              "grappled",
-              "paralyzed",
-              "petrified",
-              "poisoned",
-              "restrained"
-            ],
-            "senses": [
-              "darkvision 120 ft."
-            ],
-            "passive": 20,
-            "languages": [
-              "telepathy 120 ft.",
-              "Void Speech"
-            ],
-            "environment": [
-              "coastal",
-              "underdark",
-              "underwater"
-            ],
-            "trait": [
-              {
-                "name": "Ghostly Body (Void Ghost Form Only)",
-                "entries": [
-                  "The nihileth has resistance to acid, fire, lightning, and thunder damage, it has immunity to the {@condition prone} condition, and it has immunity to bludgeoning, piercing, and slashing damage from nonmagical attacks. In addition, the nihileth can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
-                ]
-              },
-              {
-                "name": "Infecting Telepathy",
-                "entries": [
-                  "If a creature communicates telepathically with the nihileth, or deals psychic damage to it, the creature must succeed on a {@dc 15} Wisdom saving throw or become infected with the nihilethic rot disease."
-                ]
-              },
-              {
-                "name": "Nihilethic Rot",
-                "entries": [
-                  "This disease takes 1 minute to manifest in an infected creature, during which time the disease can be removed with the {@spell lesser restoration} spell. After 1 minute, the creature's flesh becomes slimy and translucent, and the disease can be cured only by the {@spell heal} spell or similar magic. Until this disease is cured, the creature can't regain hp unless it is submerged in water, and it can breathe air and water. The creature must be submerged in water at least once every 2 hours to avoid suffocating, and if it is outside a body of water, it takes 7 ({@damage 2d6}) acid damage every 10 minutes, unless moisture is applied to its skin before 10 minutes have passed. If a Humanoid dies while infected with this disease, it rises 1 minute later as a nihilethic zombie under the nihileth's control. If a Large giant or monstrosity dies while infected with this disease, it rises 1 minute later as a nihilethic dominator under the nihileth's control."
-                ]
-              },
-              {
-                "name": "Undead Fortitude",
-                "entries": [
-                  "If damage reduces the nihileth to 0 hp, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the nihileth drops to 1 hp instead."
-                ]
-              },
-              {
-                "name": "Undead Nature",
-                "entries": [
-                  "The nihileth doesn't require air, food, drink, or sleep."
-                ]
-              },
-              {
-                "name": "Void Aura",
-                "entries": [
-                  "The nihileth is surrounded by a chilling cloud. A creature that isn't a construct or undead and that starts its turn within 5 feet of the nihileth must succeed on a {@dc 15} Constitution saving throw or its speed is halved until the start of its next turn. In addition, a creature infected with nihilethic rot takes 7 ({@damage 2d6}) cold damage when it starts its turn within this aura."
-                ]
-              }
-            ],
-            "action": [
-              {
-                "name": "Multiattack",
-                "entries": [
-                  "The nihileth makes two Tentacle attacks and one Tail attack, or it makes three Withering Touch attacks."
-                ]
-              },
-              {
-                "name": "Tail (Undead Form Only)",
-                "entries": [
-                  "{@atk mw} {@hit 10} to hit, reach 10 ft. one target. {@h}15 ({@damage 3d6 + 5}) bludgeoning damage."
-                ]
-              },
-              {
-                "name": "Tentacle (Undead Form Only)",
-                "entries": [
-                  "{@atk mw} {@hit 10} to hit, reach 10 ft., one target. {@h}12 ({@damage 2d6 + 5}) bludgeoning damage, and the target must succeed on a {@dc 15} Constitution saving throw or contract the nihilethic rot disease (see the Nihilethic Rot trait)."
-                ]
-              },
-              {
-                "name": "Withering Touch (Void Ghost Form Only)",
-                "entries": [
-                  "{@atk ms} {@hit 9} to hit, reach 10 ft., one creature. {@h}14 ({@damage 3d6 + 4}) necrotic damage."
-                ]
-              }
-            ],
-            "bonus": [
-              {
-                "name": "Void Shape",
-                "entries": [
-                  "The nihileth magically transforms into a dark purple, Void ghost form or back into its Undead form. Its statistics, other than its speed, resistances, and immunities, are the same in each form. Any equipment it is wearing or carrying changes with it. It reverts to its Undead form if it dies."
-                ]
-              }
-            ],
-            "reaction": [
-              {
-                "name": "Void Body",
-                "entries": [
-                  "When the nihileth takes damage, it can reduce the damage to 0. Radiant damage can be reduced by only half."
-                ]
-              }
-            ],
-            "legendary": [
-              {
-                "name": "Detect",
-                "entries": [
-                  "The nihileth makes a Wisdom ({@skill Perception}) check."
-                ]
-              },
-              {
-                "name": "Tail Swipe",
-                "entries": [
-                  "The nihileth makes one Tail attack."
-                ]
-              },
-              {
-                "name": "Rotten Drain (Costs 2 Actions)",
-                "entries": [
-                  "One creature infected with the nihilethic rot disease within 30 feet of the nihileth takes 10 ({@damage 3d6}) psychic damage, and the nihileth regains hp equal to that amount."
-                ]
-              }
-            ],
-            "legendaryGroup": {
-              "name": "Nihileth Aboleth",
-              "source": "ToB1-2023"
             }
           },
           "has_unresolved_copy": false
