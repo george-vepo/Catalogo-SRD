@@ -2,19 +2,19 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-117",
   "nome": "Yumerai",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_INDEPENDENTE",
   "edicao": {
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://kpogl.wikidot.com/monster:yumerai",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-114_TF-118/research.json",
-      "natureza": "checkpoint"
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Tome of Beasts 2"
     }
   ],
   "estatisticas": {
@@ -33,110 +33,141 @@
     "deslocamentos_ft": {
       "andar": 30
     },
-    "salvaguardas": null,
+    "salvaguardas": {},
     "pericias": {
       "Insight": 4,
       "Perception": 4,
       "Stealth": 5
     },
     "sentidos": [
-      "darkvision 60 ft."
+      "darkvision 60 ft"
     ],
     "percepcao_passiva": 14,
     "idiomas": [
-      "all",
-      "telepathy 60 ft."
+      "todos"
     ],
     "resistencias_dano": [
       "psychic"
     ],
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "unconscious"
-    ]
+    ],
+    "proficiencia": 2,
+    "telepatia_ft": 60
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Dream Walker",
+      "efeito": "não precisa dormir"
+    },
+    {
+      "nome": "Dream Leap",
+      "frequencia": "uma vez por turno",
+      "custo": "metade do deslocamento",
+      "precondicao": "uma criatura dormindo a até 5 pés",
+      "destino": "outra criatura dormindo até 1 milha da primeira",
+      "aparecimento": "espaço livre a até 5 pés da segunda criatura",
+      "falha": "se não existir segunda criatura dormindo, Yumerai fica stunned até fim do seu próximo turno"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Psychic Lash",
+      "tipo": "magico_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "psychic"
+        }
+      ]
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "indicacao_herdada": "Dois ataques Psychic Lash.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "multiataque",
+      "sequencia": [
+        "Psychic Lash",
+        "Psychic Lash"
+      ]
     },
     {
       "nome": "Psychic Lash",
-      "indicacao_herdada": "+5, 5 pés, 2d6 psíquico.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Psychic Lash"
     },
     {
       "nome": "Somnambulism",
-      "indicacao_herdada": "Controla uma criatura adormecida vista a 30 pés para dar ordens simples; se sofrer dano, enfrentar ordem autolesiva/terreno perigoso ou agarramento, SAB CD13 pode acordá-la e encerrar efeito; limite de uma vítima por vez.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "alvo": "uma criatura dormindo visível a até 30 pés",
+      "efeito": "controla comandos simples enquanto estiver dormindo",
+      "interrupcoes": [
+        "sofre dano",
+        "recebe comando suicida",
+        "ordenado a passar por terreno danoso",
+        "é agarrado"
+      ],
+      "salvaguarda_ao_interromper": {
+        "atributo": "SAB",
+        "cd": 13
+      },
+      "sucesso": "desperta e encerra controle",
+      "limite": "controla uma criatura dormindo por vez; transferir controle termina o anterior"
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Dream Leap",
-      "resumo": "Uma vez por turno, gasta metade do deslocamento para entrar no sonho de uma criatura adormecida a 5 pés e sair próximo de outra adormecida a até uma milha; sem segundo alvo, fica atordoado até fim do próximo turno."
-    },
+  "conjuracoes": [
     {
       "nome": "Innate Spellcasting",
-      "resumo": "CAR CD13. Livre: dancing lights, message e minor illusion; 3/dia: detect thoughts, silent image e sleep; 1/dia: confusion e major image."
-    },
-    {
-      "nome": "Dream Walker",
-      "resumo": "Dispensa sono; anotação narrativa da edição de origem."
+      "atributo": "CAR",
+      "cd": 13,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "dancing lights",
+            "message",
+            "minor illusion"
+          ]
+        },
+        {
+          "usos": "3/dia cada",
+          "nomes": [
+            "detect thoughts",
+            "silent image",
+            "sleep"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "nomes": [
+            "confusion",
+            "major image"
+          ]
+        }
+      ]
     }
   ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "A URL individual 5eSRD de Yumerai respondeu Page not found; valores comparados em KPOGL (wiki de fãs) e DnDGrove, sem confirmação editorial direta de statblock no site oficial.",
-    "Dream Walker aparece em seção descritiva, não diretamente na tabela de características; manter a origem explícita."
+    "Ainda é necessário confronto independente com a publicação editorial, erratas e regras do jogo.",
+    "Sem revisão independente, não promover ao catálogo canônico."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Yumerai",
+    "tipo": "Medium fey",
+    "alinhamento": "neutral"
+  }
 }

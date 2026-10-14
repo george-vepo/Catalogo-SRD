@@ -2,19 +2,19 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-118",
   "nome": "Ala",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_INDEPENDENTE",
   "edicao": {
-    "publicacao": "Tome of Beasts 1 (5eSRD revisão ©2023)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/ala-3pp-2/",
-      "natureza": "fonte_anterior_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-114_TF-118/research.json",
-      "natureza": "checkpoint"
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "edicao": "Tome of Beasts 1 (2023)"
     }
   ],
   "estatisticas": {
@@ -34,128 +34,143 @@
       "andar": 30,
       "voar": 40
     },
-    "salvaguardas": null,
+    "salvaguardas": {},
     "pericias": {
       "Athletics": 8,
       "Perception": 9,
       "Stealth": 6
     },
     "sentidos": [
-      "darkvision 60 ft."
+      "darkvision 60 ft"
     ],
     "idiomas": [
       "Common",
       "Draconic"
     ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "lightning",
       "poison",
       "thunder"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "poisoned"
-    ]
+    ],
+    "proficiencia": 3,
+    "percepcao_passiva": 19
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "indicacao_herdada": "Uma Bite e duas Claw.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Flyby",
+      "efeito": "não provoca ataque de oportunidade ao voar para fora de alcance inimigo"
     },
     {
+      "nome": "Poisonous Flesh",
+      "gatilho": "criatura a até 5 pés toca Ala ou a atinge com ataque corpo a corpo",
+      "dano": {
+        "dados": "2d6",
+        "tipo": "poison"
+      }
+    },
+    {
+      "nome": "Storm's Strength",
+      "precondicao": "tempestade elétrica ativa a menos de uma milha e Ala está ao ar livre",
+      "efeito": "alvos têm desvantagem na salvaguarda contra Lightning's Kiss"
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Bite",
-      "indicacao_herdada": "+8, 5 pés, 1d8+5 perfurante e 2d6 veneno.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 5,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ]
     },
     {
       "nome": "Claw",
-      "indicacao_herdada": "+8, 5 pés, 1d6+5 cortante e 2d6 veneno.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 5,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Bite",
+        "Claw",
+        "Claw"
+      ]
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Claw"
     },
     {
       "nome": "Lightning's Kiss",
-      "indicacao_herdada": "Recarga 5–6; até três alvos vistos a 30 pés, DES CD16, 8d6 elétrico ou metade.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "recarga": "5–6",
+      "alvos": "até três criaturas visíveis a até 30 pés",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 16
+      },
+      "dano": {
+        "dados": "8d6",
+        "tipo": "lightning"
+      },
+      "falha": "dano integral",
+      "sucesso": "metade"
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Flyby",
-      "resumo": "Não provoca ataque de oportunidade ao sair voando do alcance adversário."
-    },
-    {
-      "nome": "Poisonous Flesh",
-      "resumo": "Toque ou ataque corpo a corpo contra Ala a até 5 pés causa 2d6 veneno ao agressor."
-    },
-    {
-      "nome": "Storm's Strength",
-      "resumo": "Se houver tempestade elétrica a uma milha, inimigos têm desvantagem em salvaguardas contra Lightning's Kiss."
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Pesquisa herdada não comprova ação completa; verificar a edição e ficha individual.",
-    "O artigo Tome Unleashed: Ala propõe traços/ações ALTERNATIVOS. Não foram adicionados à ficha original.",
-    "A fonte corresponde à revisão ©2023; comparação com edição original não foi feita."
+    "Ainda é necessário confronto independente com a publicação editorial, erratas e regras do jogo.",
+    "Sem revisão independente, não promover ao catálogo canônico."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Ala",
+    "tipo": "Medium fey",
+    "alinhamento": "chaotic evil"
+  }
 }

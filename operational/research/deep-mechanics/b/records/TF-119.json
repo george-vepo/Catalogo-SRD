@@ -2,19 +2,19 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-119",
   "nome": "Animal Lord, Toad King",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_INDEPENDENTE",
   "edicao": {
-    "publicacao": "Tome of Beasts 2 (©2020)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2 (2020), páginas editoriais 22–23 em reprodução",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/animal-lord-toad-king/",
-      "natureza": "fonte_anterior_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
-      "natureza": "checkpoint"
+      "url": "https://fliphtml5.com/rboli/yddi/kobold-press-tome-of-beasts-2-5e2020pdf_compress/",
+      "natureza": "reproducao_digital_de_paginas_editoriais",
+      "consulta": "2026-10-14",
+      "edicao": "Tome of Beasts 2 (2020), páginas editoriais 22–23 em reprodução"
     }
   ],
   "estatisticas": {
@@ -35,9 +35,9 @@
       "nadar": 60
     },
     "salvaguardas": {
-      "DEX": 9,
+      "DES": 9,
       "CON": 7,
-      "CHA": 9
+      "CAR": 9
     },
     "pericias": {
       "Acrobatics": 9,
@@ -48,11 +48,10 @@
       "Survival": 5
     },
     "sentidos": [
-      "darkvision 120 ft."
+      "darkvision 120 ft"
     ],
     "idiomas": [
-      "all",
-      "telepathy 120 ft."
+      "todos"
     ],
     "resistencias_dano": [
       "bludgeoning/piercing/slashing de ataques não mágicos"
@@ -60,169 +59,245 @@
     "imunidades_dano": [
       "poison"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
       "frightened",
       "poisoned",
       "stunned"
-    ]
+    ],
+    "proficiencia": 4,
+    "percepcao_passiva": 11,
+    "telepatia_ft": 120
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "habilidades_passivas": [
     {
-      "nome": "Multiattack",
-      "indicacao_herdada": "Forma de sapo: 2 mordidas; humana: 3 floretes; verdadeira: 1 mordida e 2 floretes.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "nome": "Amphibious",
+      "efeito": "respira ar e água"
     },
     {
+      "nome": "Anuran Passivism",
+      "efeito": "rãs e sapos não podem atacá-lo voluntariamente, salvo compulsão mágica"
+    },
+    {
+      "nome": "Feint",
+      "custo": "ação bônus antes de um ataque",
+      "alvo": "criatura até 5 pés",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 17
+      },
+      "falha": "vantagem no próximo ataque do Toad King"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra magias e efeitos mágicos"
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "ataques de arma mágicos"
+    },
+    {
+      "nome": "Rejuvenation",
+      "gatilho": "morre",
+      "efeito": "alma retorna ao Astral e, em 1d6 dias, habita outro sapo ou rã no Material com PV e habilidades completos",
+      "bloqueio": "extinguir todos sapos e rãs do Plano Material"
+    },
+    {
+      "nome": "Royal Croak",
+      "custo": "ação bônus",
+      "alvo": "um sapo/rã a até 30 pés que possa ouvir",
+      "efeito": "aliado pode realizar ataque com arma como reação contra criatura que atacou Toad King desde fim do turno anterior"
+    },
+    {
+      "nome": "Shapechanger",
+      "ativacao": "ação",
+      "formas": [
+        "Large emerald frog",
+        "Medium male human",
+        "Medium bipedal toad (forma verdadeira)"
+      ],
+      "excecao": "velocidade de nado somente nas formas frog e true",
+      "equipamento": "transforma com a criatura",
+      "retorno": "forma verdadeira na morte"
+    },
+    {
+      "nome": "Speak with Frogs and Toads",
+      "efeito": "comunica-se com sapos e rãs como se compartilhassem idioma"
+    },
+    {
+      "nome": "Standing Leap",
+      "salto_horizontal_ft": 20,
+      "salto_vertical_ft": 10,
+      "efeito": "mesmo sem corrida"
+    }
+  ],
+  "ataques": [
+    {
       "nome": "Bite",
-      "indicacao_herdada": "+9, 5 pés, 2d6+5 perfurante e 2d6 veneno, com agarrão de alvo Medium ou menor (escape CD14).",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "corpo_a_corpo",
+      "formas": [
+        "frog",
+        "true"
+      ],
+      "bonus_acerto": 9,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 5,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ],
+      "efeito_condicional": {
+        "alvo_tamanho_maximo": "Medium",
+        "efeitos": [
+          "grappled (escape CD14)",
+          "restrained enquanto agarrado",
+          "Bite acerta automaticamente o alvo agarrado",
+          "não pode morder outros alvos enquanto agarrando"
+        ],
+        "movimento": "vítima acompanha deslocamento do Toad King"
+      }
     },
     {
       "nome": "Rapier",
-      "indicacao_herdada": "+9, 5 pés, 1d8+5 perfurante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "corpo_a_corpo",
+      "formas": [
+        "human",
+        "true"
+      ],
+      "bonus_acerto": 9,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "por_forma": {
+        "frog": [
+          "Bite",
+          "Bite"
+        ],
+        "human": [
+          "Rapier",
+          "Rapier",
+          "Rapier"
+        ],
+        "true": [
+          "Bite",
+          "Rapier",
+          "Rapier"
+        ]
+      }
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Rapier",
+      "categoria": "ataque",
+      "referencia_ataque": "Rapier"
+    },
+    {
+      "nome": "Change Shape",
+      "categoria": "transformacao",
+      "custo": "ação",
+      "referencia_traco": "Shapechanger"
     }
   ],
   "acoes_bonus": [
     {
       "nome": "Feint",
-      "indicacao_herdada": "Antes de atacar, inimigo a 5 pés testa SAB CD17; falha concede vantagem no próximo ataque.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "custo": "ação bônus",
+      "referencia_traco": "Feint"
     },
     {
       "nome": "Royal Croak",
-      "indicacao_herdada": "Concede a sapo/rã a 30 pés a reação para atacar quem agrediu o rei desde o último turno.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "custo": "ação bônus",
+      "referencia_traco": "Royal Croak"
     }
   ],
   "reacoes": [
     {
       "nome": "Parry",
-      "indicacao_herdada": "Em forma humana/verdadeira, +4 CA contra ataque corpo a corpo visível, se empunha arma.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "custo": "reação",
+      "formas": [
+        "human",
+        "true"
+      ],
+      "gatilho": "ataque corpo a corpo que acertaria",
+      "precondicoes": [
+        "vê atacante",
+        "empunha arma corpo a corpo"
+      ],
+      "bonus_ca": 4,
+      "efeito": "CA +4 contra esse ataque"
     }
   ],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Amphibious",
-      "resumo": "Respira em terra e na água."
-    },
-    {
-      "nome": "Anuran Passivism",
-      "resumo": "Sapos e rãs não o atacam voluntariamente."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas contra magia."
-    },
-    {
-      "nome": "Magic Weapons",
-      "resumo": "Armas consideradas mágicas."
-    },
-    {
-      "nome": "Rejuvenation",
-      "resumo": "Após morrer, retorna em 1d6 dias por meio de outro sapo ou rã."
-    },
-    {
-      "nome": "Shapechanger",
-      "resumo": "Transforma-se em sapo esmeralda Large, homem Medium ou forma natural de sapo bípede; estatísticas conservadas salvo tamanho/deslocamento aquático."
-    },
-    {
-      "nome": "Standing Leap",
-      "resumo": "Saltos de até 20 pés horizontais e 10 verticais sem corrida."
-    },
+  "conjuracoes": [
     {
       "nome": "Innate Spellcasting",
-      "resumo": "CAR CD17: heroism e suggestion à vontade; expeditious retreat e grease 3/dia; geas e water walk 1/dia."
+      "atributo": "CAR",
+      "cd": 17,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "heroism",
+            "suggestion"
+          ]
+        },
+        {
+          "usos": "3/dia cada",
+          "nomes": [
+            "expeditious retreat",
+            "grease"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "nomes": [
+            "geas",
+            "water walk"
+          ]
+        }
+      ]
     }
   ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Pesquisa herdada não comprova ação completa; verificar a edição e ficha individual.",
-    "A página contém recuo/formatação duplicada nas seções Special Traits e Actions; habilidades separadas por seus próprios títulos.",
-    "Quests de curar a suposta maldição integram a narrativa ABOUT, não são ações mecânicas do Toad King."
+    "Ainda é necessário confronto independente com a publicação editorial, erratas e regras do jogo.",
+    "Sem revisão independente, não promover ao catálogo canônico.",
+    "Publicação Tome of Beasts 2 2020, diferente de Animal Lords do Creature Codex; não importar ações lendárias ou toca de outros Animal Lords: bloco do Toad King não publica essas ações."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Animal Lord, Toad King",
+    "tipo": "Medium fey (shapechanger)",
+    "alinhamento": "neutral"
+  }
 }
