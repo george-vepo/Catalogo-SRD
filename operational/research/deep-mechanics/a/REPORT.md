@@ -1,3 +1,14 @@
+# Grupo A — checkpoint 52: quatro statblocks individuais verificados online (14/10/2026)
+
+- **TF-260 — Vine Lord (Tome of Beasts 1, revisão CR9):** estatísticas da transcrição individual, regeneração e Root Mind, infecção em estágios com dano ao PV máximo, Multiattack com Tendril + 2 Thorned Slam, Forest Protectors 1/dia e dispensa por ação bônus. Edição CR7 anterior é diferente e não foi mesclada.
+- **TF-261 — Vines of Nemthyr (Creature Codex):** blocos de CA/PV/atributos e defesas, deslocamento de escavação, Dispersal e recomposição por ação bônus, dois Slam + Thorny Lash com agarrar, Thorn Spray com recarga 6. Bônus de proficiência não publicado como número, mantido como desconhecido (inferência possível de +3, não homologada).
+- **TF-263 — Abrikandilu (A5E To Save A Kingdom):** fonte editorial digital A5E, resistência condicionada a ferro frio, aversão a espelhos, Siege Monster, Multiattack com 1 Bite/2 Claw, Fear/Shatter 5/dia, salvaguardas e áreas. O ataque impresso +7 difere de STR +3 e proficiência +3 (+6); traço de ausência de materiais contrasta com V,S,M no texto de cada magia — ambos preservados.
+- **TF-264 — Abyssal Hordeling (A5E Gate Pass Gazette):** duas tabelas independentes d4 para arma natural e d8 para traço especial, dano/alcance/condições variantes e bônus de ataque dependente do invocador. Sem inferir hit dice, XP, CD de escape do Sticky ou bônus de proficiência numérico.
+
+**Estado:** 67 fichas com estrutura de fonte individual (3 fontes digitais A5E oficiais no agregado, 64 secundárias), 65 registros ainda resumidos, 0 fichas editorialmente homologadas, 124/132 imagens fisicamente persistidas, 8 ausentes e 0 artes aprovadas. Fontes A5E oficiais informam expressamente que o site não é o A5ESRD; licença de uso do jogo continua pendente. Sem uso de V-Bridge, alteração em outros grupos ou merge.
+
+---
+
 # Grupo A — checkpoint 51: Viiret, Tendril Puppet e Chaos Creeper (14/10/2026)
 
 - **TF-257 Viiret:** Disease Eater, Disease Sense, Multiattack de dois golpes (no máximo um Bite), Bite com engolir/ácido-necrótico condicionado, salvaguardas de doenças, dano mínimo recebido para regurgitar, bônus para regurgitar e escape ao morrer.

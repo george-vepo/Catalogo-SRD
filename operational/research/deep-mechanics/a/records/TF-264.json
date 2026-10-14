@@ -10,9 +10,13 @@
     "edition_family": "Level Up Advanced 5e",
     "exact_printing": null,
     "challenge_rating": "0",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Small",
+    "type": "fiend",
+    "alignment": "chaotic_evil",
+    "proficiency_bonus": null,
+    "proficiency_bonus_formula": "summoner.proficiency_bonus",
+    "experience_points": null,
+    "experience_points_reason": "XP não publicado na ficha individual A5E"
   },
   "statistics": {
     "armor_class": 11,
@@ -26,24 +30,224 @@
       "WIS": 8,
       "CHA": 5
     },
-    "speeds": null,
-    "senses": null,
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 9
+    },
     "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "saving_throws": {
+      "STR": 2,
+      "DEX": 0,
+      "CON": 1,
+      "INT": -3,
+      "WIS": -1,
+      "CHA": -3
+    },
+    "languages": [
+      "Abyssal"
+    ],
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "hit_dice_reason": "Fonte não declara fórmula de dados para HP 20",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 0,
+      "CON": 1,
+      "INT": -3,
+      "WIS": -1,
+      "CHA": -3
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Special Trait",
+        "category": "randomized_on_summon",
+        "when": "summoned",
+        "roll": "1d8",
+        "exactly_one_option_selected": true,
+        "outcomes": [
+          {
+            "roll": 1,
+            "name": "Corrosive",
+            "applies_to": "all_attack_damage",
+            "extra_damage": {
+              "dice": "1d4",
+              "type": "acid"
+            }
+          },
+          {
+            "roll": 2,
+            "name": "Long-Limbed",
+            "applies_to": "all_attack_reach",
+            "increase_ft": 5
+          },
+          {
+            "roll": 3,
+            "name": "Quick",
+            "applies_to": "walk_speed",
+            "increase_ft": 10
+          },
+          {
+            "roll": 4,
+            "name": "Spiky",
+            "trigger": "hit_by_melee_attack",
+            "damages": "attacking_creature",
+            "damage": {
+              "dice": "1d4",
+              "type": "piercing"
+            }
+          },
+          {
+            "roll": 5,
+            "name": "Sticky",
+            "trigger": "natural_weapon_attack_hits",
+            "applies_condition": "grappled",
+            "escape_dc": null,
+            "escape_dc_reason": "not specified on source page"
+          },
+          {
+            "roll": 6,
+            "name": "Sturdy",
+            "armor_class_increase": 1
+          },
+          {
+            "roll": 7,
+            "name": "Venomous",
+            "applies_to": "all_attack_damage",
+            "extra_damage": {
+              "dice": "1d4",
+              "type": "poison"
+            }
+          },
+          {
+            "roll": 8,
+            "name": "Winged",
+            "grant_speed": {
+              "fly_ft": 20
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Natural Weapons",
+        "category": "randomized_melee_attack",
+        "action_economy": "action",
+        "selection_timing": "when_conjured",
+        "roll": "1d4",
+        "attack_type": "melee_weapon",
+        "attack_bonus_formula": "summoner.spell_attack_bonus",
+        "targets": {
+          "count": 1
+        },
+        "variants": [
+          {
+            "roll": 1,
+            "name": "Bite",
+            "reach_ft": 5,
+            "hit": {
+              "damage": [
+                {
+                  "dice": "1d6",
+                  "flat": 2,
+                  "average": 5,
+                  "type": "piercing"
+                }
+              ]
+            }
+          },
+          {
+            "roll": 2,
+            "name": "Claws",
+            "reach_ft": 5,
+            "hit": {
+              "damage": [
+                {
+                  "dice": "1d6",
+                  "flat": 2,
+                  "average": 5,
+                  "type": "slashing"
+                }
+              ]
+            }
+          },
+          {
+            "roll": 3,
+            "name": "Horns",
+            "reach_ft": 5,
+            "hit": {
+              "damage": [
+                {
+                  "dice": "1d6",
+                  "flat": 2,
+                  "average": 5,
+                  "type": "bludgeoning"
+                }
+              ]
+            }
+          },
+          {
+            "roll": 4,
+            "name": "Tentacles",
+            "reach_ft": 10,
+            "hit": {
+              "damage": [
+                {
+                  "dice": "1d4",
+                  "flat": 2,
+                  "average": 4,
+                  "type": "bludgeoning"
+                }
+              ]
+            }
+          }
+        ],
+        "special_trait_modifiers": "see_Special_Trait_selected_d8",
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "A5E Alignment Aura",
+        "category": "alignment_aura",
+        "auras": [
+          "chaotic",
+          "evil"
+        ]
+      },
+      {
+        "name": "Summoner Dependency",
+        "category": "variable_statistics",
+        "fields": [
+          "proficiency_bonus",
+          "melee_attack_bonus"
+        ],
+        "from": "summoner",
+        "source_level_restrictions": "No fixed numeric proficiency bonus or to-hit value"
+      }
+    ]
   },
   "prior_research_summary_unverified_for_implementation": [
     "Demônio A5E: tipo de arma natural e característica especial variam conforme dados; não fixar como padrão."
@@ -53,8 +257,8 @@
       "url": "https://a5e.tools/node/5383",
       "type": "ficha individual oficial da editora (A5E)",
       "edition": "Gate Pass Gazette",
-      "scope": "publicação, ND, CA, PV, atributos e resumo funcional",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Statblock individual: todas as estatísticas e categorias de ações visíveis na página",
+      "verification": "Leitura direta do bloco individual online realizada em 14/10/2026; comparação com impressão/errata e homologação da engine ainda não realizadas"
     }
   ],
   "source_checkpoint": {
@@ -65,9 +269,9 @@
     "Poderes de Abyssal Hordeling são determinados por tabelas e conjuração; não fixar opção aleatória como habilidade invariável."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Fonte A5E não explicita dados de PV, XP, bônus numérico de proficiência ou CD de escape para Sticky; manter null e dependência do invocador.",
+    "Confirmar edição específica de Gate Pass Gazette e erratas; fonte A5E não é o A5ESRD/licença de reutilização.",
+    "Implementar gerador de variantes d4 e d8 e validar com engine, além de licenciamento e verificação visual da arte."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
@@ -91,5 +295,21 @@
       "conferência de licença e direitos",
       "avaliação de resolução e aprovação editorial"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://a5e.tools/node/5383"
+    ],
+    "source_tier": "official_A5E_digital",
+    "statblock_url_read_online": true,
+    "edition_family_verified_from_page": true,
+    "copyright_license_qa_completed": false,
+    "source_discrepancies": [],
+    "notes": "Fonte oficial A5E Gate Pass Gazette; duas tabelas independentes e quatro variantes de armas preservadas, sem fixar resultados."
   }
 }

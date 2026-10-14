@@ -10,14 +10,18 @@
     "edition_family": "Level Up Advanced 5e",
     "exact_printing": null,
     "challenge_rating": "5",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "chaotic_evil",
+    "proficiency_bonus": 3,
+    "experience_points": null,
+    "experience_points_reason": "XP não aparece na ficha digital A5E",
+    "maneuver_dc": 14
   },
   "statistics": {
     "armor_class": 16,
     "hit_points": 65,
-    "hit_dice": null,
+    "hit_dice": "10d10+10",
     "ability_scores": {
       "STR": 17,
       "DEX": 11,
@@ -26,24 +30,284 @@
       "WIS": 10,
       "CHA": 13
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 40
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Athletics": 6,
+      "Perception": 3
+    },
+    "saving_throws": {
+      "STR": 6,
+      "DEX": 3,
+      "CON": 4,
+      "WIS": 3
+    },
+    "languages": {
+      "spoken": [
+        "Abyssal",
+        "Common"
+      ],
+      "telepathy_ft": 100
+    },
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "source": "weapons_that_are_not_cold_iron"
+      }
+    ],
+    "damage_immunities": [
+      "lightning",
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 0,
+      "CON": 1,
+      "INT": -2,
+      "WIS": 0,
+      "CHA": 1
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Hatred of Mirrors",
+        "category": "conditional_behavior",
+        "trigger": "start_of_turn",
+        "preconditions": [
+          "adjacent_to_mirror_or_creature_wielding_polished_metal_shield"
+        ],
+        "save": {
+          "ability": "WIS",
+          "dc": 15,
+          "on_failure": {
+            "focus": "destroy_mirror"
+          },
+          "on_success": {
+            "no_compulsion": true
+          }
+        },
+        "ambiguity": "A5E does not specify exact target selection/action cost if polished shield is nearby."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "category": "spellcasting_trait",
+        "casting_ability": "CHA",
+        "spell_save_dc": 12,
+        "spells": [
+          {
+            "name": "fear",
+            "uses_per_day": 5,
+            "level": 3
+          },
+          {
+            "name": "shatter",
+            "uses_per_day": 5,
+            "level": 2
+          }
+        ],
+        "material_components_required": false
+      },
+      {
+        "name": "Siege Monster",
+        "category": "damage_multiplier",
+        "targets": [
+          "objects",
+          "structures"
+        ],
+        "damage_multiplier": 2
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Bite",
+            "count": 1
+          },
+          {
+            "attack": "Claw",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "flat": 3,
+              "average": 7,
+              "type": "magical_piercing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "average": 6,
+              "type": "magical_slashing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Shatter (2nd-Level; V, S, M)",
+        "category": "spell_action",
+        "action_economy": "action",
+        "spell": "shatter",
+        "spell_level": 2,
+        "components_as_action_text": [
+          "V",
+          "S",
+          "M"
+        ],
+        "range_ft": 60,
+        "area": {
+          "shape": "sphere",
+          "radius_ft": 10,
+          "center": "visible_point"
+        },
+        "save": {
+          "ability": "CON",
+          "dc": 12,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "3d8",
+                "average": 13,
+                "type": "thunder"
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          },
+          "disadvantage_if_target_material_one_of": [
+            "stone",
+            "metal",
+            "other_inorganic"
+          ]
+        },
+        "unattended_objects_take_damage": true,
+        "uses_pool": "Innate Spellcasting shatter 5/day"
+      },
+      {
+        "name": "Fear (3rd-Level; V, S, M, Concentration)",
+        "category": "spell_action",
+        "action_economy": "action",
+        "spell": "fear",
+        "spell_level": 3,
+        "components_as_action_text": [
+          "V",
+          "S",
+          "M"
+        ],
+        "concentration": true,
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "save": {
+          "ability": "WIS",
+          "dc": 12,
+          "on_failure": {
+            "condition": "frightened",
+            "drops_held_objects": true,
+            "duration": "up_to_1_minute",
+            "turn_action": "Dash_away_from_abrikandilu_by_safest_available_route",
+            "no_escape_path": "remain_stationary",
+            "repeat_save": {
+              "trigger": "ends_turn_out_of_line_of_sight",
+              "ability": "WIS",
+              "dc": 12,
+              "success_ends": true
+            }
+          },
+          "on_success": {
+            "condition": null
+          }
+        },
+        "uses_pool": "Innate Spellcasting fear 5/day"
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [
+      {
+        "name": "Innate Spellcasting",
+        "ability": "CHA",
+        "save_dc": 12,
+        "per_day": {
+          "fear": 5,
+          "shatter": 5
+        },
+        "material_components_required": false,
+        "spell_slots": [],
+        "source_note": "Individual spell action text lists V,S,M despite trait saying no material components; retain both as a source-level inconsistency."
+      }
+    ],
+    "other": [
+      {
+        "name": "A5E Aura",
+        "category": "alignment_aura",
+        "auras": [
+          "chaotic",
+          "evil"
+        ]
+      }
+    ]
   },
   "prior_research_summary_unverified_for_implementation": [
     "Demônio A5E com repulsa a espelhos, medo e estilhaçar, ataques múltiplos e força contra estruturas."
@@ -53,8 +317,8 @@
       "url": "https://a5e.tools/node/3295",
       "type": "ficha individual oficial da editora (A5E)",
       "edition": "To Save A Kingdom",
-      "scope": "publicação, ND, CA, PV, atributos e resumo funcional",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Statblock individual: todas as estatísticas e categorias de ações visíveis na página",
+      "verification": "Leitura direta do bloco individual online realizada em 14/10/2026; comparação com impressão/errata e homologação da engine ainda não realizadas"
     }
   ],
   "source_checkpoint": {
@@ -65,9 +329,10 @@
     "Abrikandilu em To Save A Kingdom (EN Publishing, A5E), não confundir com demônios homônimos de outros sistemas."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Confrontar To Save A Kingdom na edição/impressão correta e suas erratas; versão digital A5E não equivale a autorização SRD.",
+    "Conciliar +7 de ataque com STR/proficiência no texto editorial; não corrigir por suposição.",
+    "Documentar precedência entre componente M nos textos de ações e ausência de materiais no traço de conjuração.",
+    "Executar teste da engine e revisão legal de licença e arte."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -91,5 +356,24 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://a5e.tools/node/3295"
+    ],
+    "source_tier": "official_A5E_digital",
+    "statblock_url_read_online": true,
+    "edition_family_verified_from_page": true,
+    "copyright_license_qa_completed": false,
+    "source_discrepancies": [
+      "Bite/Claw +7 no site apesar de STR+3 e proficiência+3 sugerirem +6 (não alterar números impressos).",
+      "Innate Spellcasting dispensa materiais, mas texto individual Fear/Shatter mostra V,S,M."
+    ],
+    "notes": "Leitura do bloco A5E oficial em 14/10/2026. Fonte não é o A5ESRD e direitos de adaptação exigem avaliação separada."
   }
 }
