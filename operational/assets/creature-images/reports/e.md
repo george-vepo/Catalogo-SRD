@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 160 / 195.**
+**Armazenadas e verificadas: 170 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -24,6 +24,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/4381bc3d339a79d125a328df3eb12d3698c8806d — 10/10 verificadas: TF-213, TF-214, TF-215, TF-216, TF-217, TF-218, TF-219, TF-220, TF-221, TF-222
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/fe22e5efef6af67a50cd68a58cdae797928e912d — 10/10 verificadas: TF-223, TF-224, TF-225, TF-227, TF-228, TF-229, TF-230, TF-233, TF-234, TF-235
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/be688c5ccc441a45fffd0ec796554b323704fa90 — 10/10 verificadas: TF-236, TF-237, TF-238, TF-241, TF-243, TF-244, TF-245, TF-246, TF-247, TF-248
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2f4a256a44b692c61f5090b0eea669ecc9dad948 — 10/10 verificadas: TF-249, TF-250, TF-251, TF-253, TF-254, TF-256, TF-257, TF-258, TF-259, TF-260
 
 ## Binários publicados e conferidos
 
@@ -187,6 +188,16 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-246 / Yowler: operational/assets/creature-images/TF-246.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Yowler.webp; 137572 bytes; 1191x706 px; SHA-256: bdfd2fb43ac68cf96ae0b0004dd095a599b4d7928b459653090b7a7965e4406e; commit: be688c5ccc441a45fffd0ec796554b323704fa90
 - TF-247 / Ash Phoenix: operational/assets/creature-images/TF-247.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Ash%20Phoenix.webp; 200912 bytes; 915x1046 px; SHA-256: 7ab7dec3d6148ea82ee71f71690b85bf2d1c8e3a7860a9e694429f2b8802a9ad; commit: be688c5ccc441a45fffd0ec796554b323704fa90
 - TF-248 / Ogrepede: operational/assets/creature-images/TF-248.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Ogrepede.webp; 191182 bytes; 1197x820 px; SHA-256: aa65e242a7e1aaf06f7891df2d731348c3256f5ece27914a08cd8858b7dfe198; commit: be688c5ccc441a45fffd0ec796554b323704fa90
+- TF-249 / Aboleth, Nihileth: operational/assets/creature-images/TF-249.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Nihileth.webp; 78758 bytes; 1006x600 px; SHA-256: f7c1bf5c5e62e48ecb4e3e86f473260ab110934efd29e8e9dca9cbe3422da981; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-250 / Black Crier: operational/assets/creature-images/TF-250.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Black%20Crier.webp; 101804 bytes; 714x938 px; SHA-256: 93b56e4e0140098d4e12c912b4a86c74fc52b85ae6f9c597de36c5655be36a5a; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-251 / Corpse Mound: operational/assets/creature-images/TF-251.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Corpse%20Mound.webp; 78438 bytes; 851x800 px; SHA-256: 1846161b459eaeb224ec7970c8890e1248d3bfbaf607f8cf463fcbaade2f4cd0; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-253 / Asp Vine: operational/assets/creature-images/TF-253.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Asp%20Vine.webp; 201920 bytes; 1000x1564 px; SHA-256: 82fee6e52749f13413a1986d1b27b59e6b7e71f72609690838338931f3a3f0a4; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-254 / Child of the Briar: operational/assets/creature-images/TF-254.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Child%20of%20the%20Briar.webp; 69084 bytes; 650x800 px; SHA-256: b4ffa52c5fb08dce7f3c5e1b1faddd783e0bc19571494e107c7b815b14ca1a95; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-256 / Climbing Vine: operational/assets/creature-images/TF-256.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Climbing%20Vine.webp; 258604 bytes; 1200x1324 px; SHA-256: 877d278a21e50c8260509fa98745bb7a05b5a8e612c319062d07ac34b922ad3c; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-257 / Viiret: operational/assets/creature-images/TF-257.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Viiret.webp; 194372 bytes; 714x985 px; SHA-256: 3feea425ddcd18efb1c23793fdf3faee2540d1881fc2108a2c6c6d18d811f2fa; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-258 / Vine Lord, Tendril Puppet: operational/assets/creature-images/TF-258.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tendril%20Puppet.webp; 56814 bytes; 635x800 px; SHA-256: 28f3e6ae579c1592d811a3467cc58a8e3bad5db1ffb7e716046c3c45ef4bf76d; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-259 / Chaos Creeper: operational/assets/creature-images/TF-259.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chaos%20Creeper.webp; 180606 bytes; 1000x1243 px; SHA-256: 5ce4ae776be0fd28a587dc622796daf74918e83f452d3d01cf1b998081f50411; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
+- TF-260 / Vine Lord: operational/assets/creature-images/TF-260.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Vine%20Lord.webp; 74494 bytes; 607x800 px; SHA-256: 57f7fd154088cf56df1181be559601217b1675c7226657779ba1a779ed4960ac; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 
 ## Não obtidos
 
@@ -205,18 +216,8 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-239 / Aboleth, Nihileth, Nihilethic Dominator: source_not_found; 
 - TF-240 / Aboleth, Nihileth, Nihilethic Zombie: source_not_found; 
 - TF-242 / Ashwalker: source_not_found; 
-- TF-249 / Aboleth, Nihileth: pending; 
-- TF-250 / Black Crier: pending; 
-- TF-251 / Corpse Mound: pending; 
 - TF-252 / Adult Black Dragon Lich: source_not_found; 
-- TF-253 / Asp Vine: pending; 
-- TF-254 / Child of the Briar: pending; 
 - TF-255 / Citrullus: source_not_found; 
-- TF-256 / Climbing Vine: pending; 
-- TF-257 / Viiret: pending; 
-- TF-258 / Vine Lord, Tendril Puppet: pending; 
-- TF-259 / Chaos Creeper: pending; 
-- TF-260 / Vine Lord: pending; 
 - TF-261 / Vines of Nemthyr: pending; 
 - TF-263 / Abrikandilu: source_not_found; 
 - TF-264 / Abyssal Hordeling: source_not_found; 
