@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 21 / 195.**
+**Armazenadas e verificadas: 31 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -10,6 +10,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/a90f1ba1db57873052c1b0b231c056acd523fa9b — 1/1 verificadas: TF-059
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/a2aa925b0e146b96f4c9b62aebd94b5ebb0f4f77 — 10/10 verificadas: TF-060, TF-061, TF-062, TF-063, TF-064, TF-065, TF-066, TF-067, TF-068, TF-070
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c54e40a955f62c7839f39f40f0361aade9c708c9 — 10/10 verificadas: TF-071, TF-072, TF-074, TF-075, TF-077, TF-078, TF-079, TF-080, TF-081, TF-082
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/b92a6fcc2467e2af54cf6f1db221022936042462 — 10/10 verificadas: TF-083, TF-084, TF-085, TF-087, TF-089, TF-090, TF-091, TF-100, TF-101, TF-102
 
 ## Binários publicados e conferidos
 
@@ -34,22 +35,22 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-080 / Clockwork Scorpion: operational/assets/creature-images/TF-080.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Clockwork%20Scorpion.webp; 107518 bytes; 1000x1123 px; SHA-256: dc2e7aae0227f9818563eeb70e8fbcd3dd5a1d3170da68802eccae2b21774113; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
 - TF-081 / Clockwork Tiger: operational/assets/creature-images/TF-081.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Clockwork%20Tiger.webp; 149206 bytes; 1186x702 px; SHA-256: c5b2efae7d79d83301f2e38923183ee0e2840e36a8b2f6de3e5d14be1212a3c5; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
 - TF-082 / Onyx Magistrate: operational/assets/creature-images/TF-082.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Onyx%20Magistrate.webp; 222186 bytes; 889x971 px; SHA-256: c6646682b860e4e7a78d9f7d9b40dcea8f9ffdcd020fea9dcdb820f99e8c8ea5; commit: c54e40a955f62c7839f39f40f0361aade9c708c9
+- TF-083 / Void Knight: operational/assets/creature-images/TF-083.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Void%20Knight.webp; 246980 bytes; 1000x1447 px; SHA-256: 82059a67235e1e3b2db4e5b627ab8f07f0ab62e21cce8cda47f9a021f6274f48; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-084 / Zalikum: operational/assets/creature-images/TF-084.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Zalikum.webp; 473666 bytes; 1104x900 px; SHA-256: 5887e4b8cebfd4859cf1e00970095c4e48c23448cfeb4d4be148669547443f12; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-085 / Animated Instrument, Animated Symphony: operational/assets/creature-images/TF-085.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Animated%20Symphony.webp; 162844 bytes; 1000x920 px; SHA-256: 3a5224df39b3a16a2a3a026949197fb8e2cccab2304fb5994d6e4ed795a0cd96; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-087 / Clockwork Tactician: operational/assets/creature-images/TF-087.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Clockwork%20Tactician.webp; 120004 bytes; 1000x1479 px; SHA-256: a6c2cc51b3a7974905012bdef3b9d6073186924b4c97a4797e6b238b34b10a8a; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-089 / Zilaq: operational/assets/creature-images/TF-089.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Zilaq.webp; 146844 bytes; 1000x1201 px; SHA-256: 0f263ba9e5f2c642896466c079b4a3a449123d34b43b72661f0147e7d5e7f0fd; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-090 / Ankou Soul Seeker: operational/assets/creature-images/TF-090.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/ankousoulseeker.jpg; 75629 bytes; 533x700 px; SHA-256: 1a794e00ecaff781fb92178571d9d545f6ae44e12f4274f8b32c0e1ea7d625d5; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-091 / Zmey: operational/assets/creature-images/TF-091.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Zmey.webp; 181394 bytes; 1000x777 px; SHA-256: 21e52aa95b6602aac420f9f9e5faff9bbbfd980c082568c61e498024d9e6ce9e; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-100 / Befouled Weird: operational/assets/creature-images/TF-100.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Befouled%20Weird.webp; 202858 bytes; 699x978 px; SHA-256: e222c2efcf23a22a6357a3ed655eee8601fcc5c5d316b15e50e2739f25084709; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-101 / Bilwis: operational/assets/creature-images/TF-101.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/bilwis.jpg; 48109 bytes; 472x700 px; SHA-256: 6c85b155debc5dc39e799e0fdfe83b6bdb5d451596a23cb316bd43cc3a3917ec; commit: b92a6fcc2467e2af54cf6f1db221022936042462
+- TF-102 / Alazai: operational/assets/creature-images/TF-102.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Alazai.webp; 93876 bytes; 1000x1258 px; SHA-256: b971653dbc5a42f78b1ad98a6713d0a2574f0ba9c0fcac0f06bd4b78899b772b; commit: b92a6fcc2467e2af54cf6f1db221022936042462
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
-- TF-083 / Void Knight: pending; 
-- TF-084 / Zalikum: pending; 
-- TF-085 / Animated Instrument, Animated Symphony: pending; 
-- TF-087 / Clockwork Tactician: pending; 
-- TF-089 / Zilaq: pending; 
-- TF-090 / Ankou Soul Seeker: pending; 
-- TF-091 / Zmey: pending; 
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
-- TF-099 / Ankou Soul Herald: pending; 
-- TF-100 / Befouled Weird: pending; 
-- TF-101 / Bilwis: pending; 
-- TF-102 / Alazai: pending; 
+- TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
 - TF-103 / Chronalmental: pending; 
 - TF-104 / Cherufe: pending; 
 - TF-105 / Thuellai: pending; 
@@ -214,7 +215,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 
 ## Duplicações e ressalvas
 
-Nenhuma duplicação de SHA-256 encontrada entre os binários aprovados.
+TF-099: same SHA-256 as TF-090
 
 Validações: formato, assinatura, dimensões, decodificação integral, tamanho, SHA-256, blob e releitura real do GitHub.
 A correspondência da criatura usa o nome do arquivo da fonte, sem afirmar revisão visual humana.
