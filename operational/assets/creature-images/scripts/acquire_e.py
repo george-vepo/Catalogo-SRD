@@ -47,7 +47,10 @@ def publish(entries,message):
     commit=send("POST","git/commits",{"message":message,"tree":obj["sha"],"parents":[parent]})["sha"]
     if head()!=parent: raise RuntimeError("RACE: branch moved while creating commit")
     send("PATCH","git/refs/heads/"+BRANCH,{"sha":commit,"force":False})
-    if head()!=commit:raise RuntimeError("RACE: new commit not branch HEAD")
+    for verification_attempt in range(12):
+        if head()==commit:break
+        time.sleep(1)
+    else:raise RuntimeError("RACE: new commit not branch HEAD after retries")
     return commit
 
 def readback(path):
@@ -146,7 +149,9 @@ def main():
         try:
             rel=e["source_candidate"]
             ext=rel.rsplit(".",1)[-1].lower()
-            address="https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/"+urllib.parse.quote(rel,safe="/")
+            source_repo=e.get("source_repo","TheGiddyLimit/homebrew")
+            source_ref=e.get("source_ref","master")
+            address="https://raw.githubusercontent.com/"+source_repo+"/"+source_ref+"/"+urllib.parse.quote(rel,safe="/")
             data=remote(address)
             dimensions=inspect(data,ext)
             digest=hashlib.sha256(data).hexdigest()
@@ -157,7 +162,7 @@ def main():
             sha=bin_blob(data)
             batch.append({"entry":e,"path":ROOT+"/"+e["id"]+"."+ext,"blob":sha,"size":len(data),
                           "dimensions":dimensions,"digest":digest,"ext":ext,
-                          "source":"https://github.com/TheGiddyLimit/homebrew/blob/master/"+urllib.parse.quote(rel,safe="/")})
+                          "source":"https://github.com/"+source_repo+"/blob/"+source_ref+"/"+urllib.parse.quote(rel,safe="/")})
             if len(batch)==10:flush()
         except Exception as error:
             e.update(status="blocked",error=str(error)[:500])
