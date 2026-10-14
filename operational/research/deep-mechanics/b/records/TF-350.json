@@ -2,26 +2,23 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-350",
   "nome": "Ettin, Kobold",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
   "edicao": {
     "publicacao": "Tome of Beasts 3",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/kobold-ettin/",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint"
+      "url": "https://kpogl.wikidot.com/monster:kobold-ettin",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data": "2026-10-14"
     }
   ],
   "estatisticas": {
     "nd": "1",
     "ca": 12,
     "pv": 34,
-    "dados_vida": null,
+    "dados_vida": "4d8+16",
     "atributos": {
       "FOR": 17,
       "DES": 11,
@@ -30,44 +27,118 @@
       "SAB": 8,
       "CAR": 7
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 30
+    },
     "deslocamentos_texto": "caminhar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
+    "salvaguardas": {},
+    "pericias": {},
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "idiomas": [
+      "Common",
+      "Draconic"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
     "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "imunidades_condicao": [],
+    "percepcao_passiva": 9
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Bickering Heads",
+      "efeito": "Desvantagem em Stealth para ficar em silêncio; vantagem em Perception e em resistir a blinded, charmed, deafened, frightened, stunned e unconscious."
+    },
+    {
+      "nome": "Might of Giants",
+      "efeito": "Conta como gigante Large para capacidade de carga."
+    },
+    {
+      "nome": "Pack Tactics",
+      "efeito": "Vantagem no ataque se aliado não incapacitado estiver a 5 pés do alvo."
+    },
+    {
+      "nome": "Sunlight Sensitivity",
+      "efeito": "Desvantagem em ataque e Perception por visão sob luz do sol."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Greatclub",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ]
+    },
+    {
+      "nome": "Spear",
+      "tipo": "corpo_a_corpo_ou_distancia",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "distancia_ft": {
+        "normal": 20,
+        "longo": 60
+      },
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "alternativa_duas_maos": "1d8+3 piercing se ataque corpo a corpo"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": 2,
+      "alternativas": [
+        [
+          "Greatclub",
+          "Greatclub"
+        ],
+        [
+          "Spear",
+          "Spear"
+        ]
+      ]
+    },
+    {
+      "nome": "Greatclub",
+      "referencia_ataque": "Greatclub"
+    },
+    {
+      "nome": "Spear",
+      "referencia_ataque": "Spear"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Duas cabeças em desacordo e táticas de bando"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Ataques corpo a corpo de ettin kobold"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Faltam confirmação de edição e inventário integral estruturado de ações e efeitos.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Confirmar a edição e erratas diretamente no editor; esta transcrição é secundária.",
+    "Sem revisão independente ou promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Ettin, Kobold",
+    "tipo": "Giant (kobold)",
+    "tamanho": "Medium",
+    "alinhamento": "lawful evil"
+  }
 }

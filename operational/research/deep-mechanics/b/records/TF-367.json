@@ -2,26 +2,23 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-367",
   "nome": "Erina, Tussler",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
   "edicao": {
     "publicacao": "Tome of Beasts 3",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://anyflip.com/lphgc/rjrj/basic/151-200",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint_anterior"
+      "url": "https://kpogl.wikidot.com/monster:erina-tussler",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data": "2026-10-14"
     }
   ],
   "estatisticas": {
     "nd": "3",
     "ca": 14,
     "pv": 66,
-    "dados_vida": null,
+    "dados_vida": "12d6+24",
     "atributos": {
       "FOR": 12,
       "DES": 16,
@@ -30,45 +27,140 @@
       "SAB": 12,
       "CAR": 11
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 20,
+      "escavar": 20
+    },
     "deslocamentos_texto": "caminhar 20; escavar 20 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
+    "salvaguardas": {},
+    "pericias": {
+      "Athletics": 5,
+      "Acrobatics": 5,
+      "Perception": 3
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "idiomas": [
+      "Sylvan"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
     "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "imunidades_condicao": [],
+    "percepcao_passiva": 13
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Arm Spine Regrowth",
+      "limite_espinhos": 24,
+      "efeito": "Recarrega espinhos usados após descanso longo."
+    },
+    {
+      "nome": "Expert Wrestler",
+      "efeitos": [
+        "agarra até duas categorias de tamanho maiores",
+        "arrasta criatura agarrada na velocidade integral",
+        "alvo Small ou menor tem desvantagem para escapar",
+        "vantagem em testes/salvaguardas para se livrar de agarrão ou restrained"
+      ]
+    },
+    {
+      "nome": "Keen Smell",
+      "efeito": "Vantagem em Perception baseada em olfato."
+    },
+    {
+      "nome": "Hardy",
+      "efeito": "Vantagem em salvaguardas contra veneno."
+    },
+    {
+      "nome": "Spines",
+      "gatilho": "toque, ataque corpo a corpo a 5 pés ou início do turno com criatura agarrada",
+      "dano": {
+        "dados": "2d4",
+        "tipo": "piercing"
+      }
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Punching Spines",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "2d4",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Throw Spine",
+      "tipo": "distancia",
+      "bonus_acerto": 5,
+      "distancia_ft": {
+        "normal": 20,
+        "longo": 60
+      },
+      "dano": [
+        {
+          "dados": "2d4",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "efeito": {
+        "gatilho": "acerto",
+        "condicao": "espinho preso até alguém usar ação para remover",
+        "penalidade": "desvantagem em ataques com armas que usam FOR"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": 2,
+      "alternativas": [
+        [
+          "Punching Spines",
+          "Punching Spines"
+        ],
+        [
+          "Throw Spine",
+          "Throw Spine"
+        ]
+      ],
+      "condicional": "se ambos Punching Spines atingirem o mesmo alvo, grappled escape CD13, no máximo um agarrado"
+    },
+    {
+      "nome": "Punching Spines",
+      "referencia_ataque": "Punching Spines"
+    },
+    {
+      "nome": "Throw Spine",
+      "referencia_ataque": "Throw Spine"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Regenera e lança espinhos no braço"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Soco e arremesso de espinhos que interrompe contra-ataques"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Inventário de ações, ataques, passivas e regras específicas ainda não conferido na edição exata.",
-    "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Confirmar a edição e erratas diretamente no editor; esta transcrição é secundária.",
+    "Sem revisão independente ou promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Erina, Tussler",
+    "tipo": "Humanoid (erina)",
+    "tamanho": "Small",
+    "alinhamento": "neutral"
+  }
 }

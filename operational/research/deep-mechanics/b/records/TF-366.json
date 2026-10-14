@@ -2,26 +2,23 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-366",
   "nome": "Simian, Vanara",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_EDITORIAL",
   "edicao": {
     "publicacao": "Creature Codex",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/simian-vanara/",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint_anterior"
+      "url": "https://kpogl.wikidot.com/monster:vanara",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data": "2026-10-14"
     }
   ],
   "estatisticas": {
     "nd": "2",
     "ca": 13,
     "pv": 55,
-    "dados_vida": null,
+    "dados_vida": "10d8+10",
     "atributos": {
       "FOR": 14,
       "DES": 16,
@@ -30,44 +27,118 @@
       "SAB": 15,
       "CAR": 12
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 30,
+      "escalar": 30
+    },
     "deslocamentos_texto": "caminhar 30; escalar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
+    "salvaguardas": {},
+    "pericias": {
+      "Acrobatics": 5,
+      "Perception": 4,
+      "Stealth": 5
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "idiomas": [
+      "Common",
+      "Simian"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
     "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "imunidades_condicao": [],
+    "percepcao_passiva": 14
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
-  "acoes_bonus": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Standing Leap",
+      "efeito": "Salto horizontal de 30 pés e vertical de até 15 pés, com ou sem corrida."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "DES",
+          "cd": 13
+        },
+        "falha": "derruba arma em espaço até 10 pés do alvo"
+      }
+    },
+    {
+      "nome": "Sling",
+      "tipo": "distancia",
+      "bonus_acerto": 5,
+      "distancia_ft": {
+        "normal": 30,
+        "longo": 120
+      },
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 3,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Slam",
+      "referencia_ataque": "Slam"
+    },
+    {
+      "nome": "Sling",
+      "referencia_ataque": "Sling"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Distract",
+      "alcance_ft": 5,
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 13
+      },
+      "falha": "alvo sofre desvantagem em ataques contra vanara até próximo turno"
+    },
+    {
+      "nome": "Quadrupedal Dash",
+      "movimento_ft": 80,
+      "efeito": "move até 80 pés sem ataques de oportunidade",
+      "restricao": "não pode usar empunhando arma ou segurando objeto acima de 10 libras"
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Símio ágil com habilidade para distração"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Golpes físicos e brado de intimidação"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Inventário de ações, ataques, passivas e regras específicas ainda não conferido na edição exata.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Confirmar a edição e erratas diretamente no editor; esta transcrição é secundária.",
+    "Sem revisão independente ou promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Simian, Vanara",
+    "tipo": "Humanoid (simian)",
+    "tamanho": "Medium",
+    "alinhamento": "neutral good"
+  }
 }
