@@ -2,26 +2,26 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-405",
   "nome": "Lich, Virtuoso",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 2",
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Tome of Beasts 2 (2020)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/lich-virtuoso/",
-      "natureza": "terceiros_preexistente_nao_conferida"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint"
+      "url": "https://kpogl.wikidot.com/monster:virtuoso-lich",
+      "natureza": "transcricao_comunitaria_nao_endossada",
+      "consulta": "2026-10-14",
+      "secao": "ficha, feitiços, lendárias e toca"
     }
   ],
   "estatisticas": {
     "nd": "12",
     "ca": 17,
     "pv": 123,
-    "dados_vida": null,
+    "dados_vida": "19d8+38",
     "atributos": {
       "FOR": 11,
       "DES": 16,
@@ -30,44 +30,385 @@
       "SAB": 12,
       "CAR": 20
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
     "deslocamentos_texto": "caminhar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {
+      "DES": 7,
+      "SAB": 6,
+      "CAR": 9
+    },
+    "pericias": {
+      "Deception": 9,
+      "Perception": 5,
+      "Persuasion": 9
+    },
+    "sentidos": [
+      {
+        "tipo": "truesight",
+        "alcance_ft": 60
+      }
+    ],
+    "idiomas": [
+      "Common",
+      "até dois outros idiomas"
+    ],
+    "resistencias_dano": [
+      "necrotic",
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "deafened",
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "poisoned"
+    ],
+    "origem_ca": "natural armor",
+    "modificadores": {
+      "FOR": 0,
+      "DES": 3,
+      "CON": 2,
+      "INT": 2,
+      "SAB": 1,
+      "CAR": 5
+    },
+    "pairar": false,
+    "bonus_proficiencia": 4,
+    "percepcao_passiva": 15,
+    "telepatia_ft": null
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Legendary Resistance",
+      "usos": "3/dia",
+      "gatilho": "falha em salvaguarda",
+      "efeito": "transforma falha em sucesso"
+    },
+    {
+      "nome": "Rejuvenation",
+      "precondicao": "phylactery intacto",
+      "gatilho": "corpo destruído",
+      "duracao": "1d10 dias",
+      "efeito": "ressurge em novo corpo a 5 pés do phylactery com todos PV"
+    },
+    {
+      "nome": "Turn Resistance",
+      "efeito": "vantagem em salvaguardas contra efeitos que expulsam undead"
+    },
+    {
+      "nome": "Versatile Artist",
+      "ativacao": "ao terminar descanso longo",
+      "efeito": "escolhe estilo artístico (música, poesia, dança, roupa, pintura etc.) e tipo de dano correspondente; recebe imunidade ao tipo até próximo descanso longo",
+      "exemplos": [
+        {
+          "arte": "música/poesia",
+          "tipo": "thunder"
+        },
+        {
+          "arte": "moda",
+          "tipo": "slashing"
+        },
+        {
+          "arte": "pintura",
+          "tipo": "acid"
+        }
+      ],
+      "restricoes": "não pode escolher force, psychic ou radiant; ataques e toca Artística usam o tipo escolhido"
+    },
+    {
+      "nome": "Undead Nature",
+      "efeito": "dispensa ar, comida, água e sono"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Artistic Flourish",
+      "tipo": "magico_corpo_a_corpo",
+      "bonus_acerto": 9,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 5,
+          "tipo": "tipo escolhido em Versatile Artist"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Corrupted Art",
+        "Artistic Flourish",
+        "Artistic Flourish"
+      ],
+      "numero_ataques": 2,
+      "acoes_especiais": 1
+    },
+    {
+      "nome": "Artistic Flourish",
+      "categoria": "ataque",
+      "referencia_ataque": "Artistic Flourish"
+    },
+    {
+      "nome": "Corrupted Art",
+      "categoria": "dano_ou_cura",
+      "alcance_ft": 60,
+      "alvo": "uma criatura visível",
+      "alternativas": [
+        {
+          "alvo": "não-undead",
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 16
+          },
+          "dano": {
+            "dados": "4d8",
+            "tipo": "necrotic"
+          },
+          "falha": "integral",
+          "sucesso": "metade"
+        },
+        {
+          "alvo": "undead",
+          "cura": {
+            "dados": "4d8",
+            "excedente": "PV temporários se passar do PV máximo"
+          }
+        }
+      ]
+    },
+    {
+      "nome": "Call Muse",
+      "categoria": "controle",
+      "alcance_ft": 30,
+      "alvo": "um humanoid ou beast visível",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 17
+      },
+      "falha": {
+        "condicao": "charmed",
+        "duracao": "1 minuto",
+        "efeitos": [
+          "deslocamento 0",
+          "incapacitated",
+          "observa/ouve expressão artística do lich"
+        ]
+      },
+      "repetir": "SAB no fim de cada turno; sucesso encerra",
+      "imunidade": "24h após sucesso ou término",
+      "termino": "se receber dano causado pelo lich",
+      "limite_simultaneo": 1,
+      "substituicao": "nova muse encerra a anterior",
+      "vantagem_para_lich": "se pode ver muse a até 30 pés, vantagem no primeiro Artistic Flourish de cada rodada contra criatura que não seja muse"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
-  "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "acoes_lendarias": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Rejuvenation e resistência lendária"
+      "nome": "Artistic Flourish",
+      "custo": 1,
+      "referencia_ataque": "Artistic Flourish"
+    },
+    {
+      "nome": "Move",
+      "custo": 1,
+      "efeito": "move até sua velocidade sem provocar ataques de oportunidade"
+    },
+    {
+      "nome": "Cast a Spell",
+      "custo": 3,
+      "efeito": "conjura uma magia preparada consumindo espaço de nível apropriado"
+    },
+    {
+      "nome": "Unrestrained Art",
+      "custo": 3,
+      "area": {
+        "raio_ft": 10
+      },
+      "alvos": "cada criatura na área",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 16
+      },
+      "dano": {
+        "dados": "4d8",
+        "tipo": "tipo escolhido em Versatile Artist"
+      },
+      "falha": {
+        "dano": "integral",
+        "condicao": "prone"
+      },
+      "sucesso": {
+        "dano": "metade",
+        "condicao": null
+      }
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Magias e poderes relacionados a atuação artística"
+      "nome": "Spellcasting",
+      "classe": "bard",
+      "nivel_conjurador": 12,
+      "atributo": "CAR",
+      "cd": 17,
+      "bonus_ataque_magico": 9,
+      "lista": [
+        {
+          "nivel": 0,
+          "usos": "à vontade",
+          "magias": [
+            "mage hand",
+            "message",
+            "true strike",
+            "vicious mockery"
+          ]
+        },
+        {
+          "nivel": 1,
+          "espacos": 4,
+          "magias": [
+            "bane",
+            "hideous laughter",
+            "thunderwave"
+          ]
+        },
+        {
+          "nivel": 2,
+          "espacos": 3,
+          "magias": [
+            "enthrall",
+            "hold person",
+            "invisibility",
+            "shatter"
+          ]
+        },
+        {
+          "nivel": 3,
+          "espacos": 3,
+          "magias": [
+            "dispel magic",
+            "fear",
+            "speak with dead"
+          ]
+        },
+        {
+          "nivel": 4,
+          "espacos": 3,
+          "magias": [
+            "compulsion",
+            "confusion",
+            "dimension door"
+          ]
+        },
+        {
+          "nivel": 5,
+          "espacos": 2,
+          "magias": [
+            "dominate person",
+            "mislead"
+          ]
+        },
+        {
+          "nivel": 6,
+          "espacos": 1,
+          "magias": [
+            "irresistible dance",
+            "programmed illusion"
+          ]
+        }
+      ]
     }
   ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Faltam edição exata, ficha individual integral e ações detalhadas com CDs e limites.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Cotejar volume/erratas e executar revisão independente antes da homologação.",
+    "Não houve testes e não realizar promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-405",
+    "nome_original": "Lich, Virtuoso",
+    "tipo": "Medium undead",
+    "alinhamento": "any evil",
+    "nd": "12",
+    "bonus_proficiencia": 4
+  },
+  "acoes_toca": {
+    "iniciativa": 20,
+    "restricao": "não repetir mesma opção duas rodadas seguidas",
+    "opcoes": [
+      {
+        "nome": "Artistic Assault",
+        "iniciativa": 20,
+        "precondicao": "expressão artística de tipo escolhido em Versatile Artist, mas originada de outra fonte além do lich",
+        "alvo": "criatura visível até 30 pés da expressão",
+        "salvaguarda": {
+          "atributo": "DES",
+          "cd": 15
+        },
+        "dano": {
+          "dados": "4d8",
+          "tipo": "tipo escolhido em Versatile Artist"
+        },
+        "sucesso": "metade"
+      },
+      {
+        "nome": "Aesthetic Distraction",
+        "iniciativa": 20,
+        "alcance_ft": 60,
+        "area": {
+          "raio_ft": 5
+        },
+        "salvaguarda": {
+          "atributo": "CAR",
+          "cd": 15
+        },
+        "falha": "desvantagem nas salvaguardas contra magias do lich e Corrupted Art até iniciativa 20 da rodada seguinte"
+      },
+      {
+        "nome": "Restore Spell Slot",
+        "iniciativa": 20,
+        "rolagem": "1d4",
+        "efeito": "restaura um espaço gasto de magia do nível rolado ou menor",
+        "excecao": "se nenhum nível apropriado foi gasto, nada acontece"
+      }
+    ]
+  },
+  "efeitos_regionais": [],
+  "mecanicas_especiais": [
+    {
+      "nome": "Legendary Actions",
+      "pontos_por_rodada": 3,
+      "recupera": "início do próprio turno",
+      "momento": "fim do turno de outra criatura",
+      "limite": "uma opção por momento"
+    },
+    {
+      "nome": "Muse",
+      "quantidade_maxima": 1,
+      "efeito": "nova muse cancela condição da anterior"
+    }
+  ]
 }
