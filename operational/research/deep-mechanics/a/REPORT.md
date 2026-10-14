@@ -1,3 +1,13 @@
+# Grupo A — auditoria pós-checkpoint 43 (14/10/2026)
+
+HEAD inspecionado `523bf7dab5a2f19a4814feed8de26e5be3eeb6ec`: manifestos e árvore Git concordam em **124/132 imagens físicas** (124 caminhos, 124 hashes Git blob e tamanhos correspondentes) e **132 registros JSON**. Os **nove JSONs modificados** em #43 foram relidos e interpretados na API do GitHub. A auditoria anterior já havia relido os 132 JSONs completos individualmente. O diff comparado ao commit-base permanece restrito ao grupo A.
+
+**Restam 8 imagens sem binário:** TF-274, TF-276, TF-283, TF-284, TF-286, TF-022, TF-034, TF-049. As branches E/F consultadas não possuem atualmente arquivo físico com esses IDs; novas fontes específicas ou ilustrações originais serão necessárias. Não converter miniaturas em arte final por presunção. Homologação mecânica editorial: **0/132**; estrutura individual online: **43/132**. Avaliação visual e direitos pendentes.
+
+**Checkpoint #43:** [commit `523bf7dab5a2`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/523bf7dab5a2f19a4814feed8de26e5be3eeb6ec). Sem merge, sem V-Bridge e sem alteração do catálogo global.
+
+---
+
 # Grupo A — checkpoint 43: nove imagens verificadas disponíveis no lote D (14/10/2026)
 
 O lote D avançou de **173** para **190 arquivos classificados como `VERIFICADA_GITHUB`** em sua própria branch. Após nova checagem do manifesto e comparação dos hashes Git e tamanhos dos objetos na árvore de origem, foram associadas as seguintes **9 imagens reais** ao grupo A: **KP-S014, TF-013, TF-023, TF-024, TF-025, TF-041, TF-048, TF-053, TF-057**. Arquivos binários foram importados por referência direta aos SHA de blob já publicados; não foram inventadas imagens nem alterada a branch D.
