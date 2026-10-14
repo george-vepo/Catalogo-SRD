@@ -2,26 +2,25 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-410",
   "nome": "Fungi, Wirbeln",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Creature Codex",
+    "editora": "Kobold Press",
+    "sistema": "D&D 5e",
+    "publicacao": "Creature Codex (2018)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/fungi-wirbeln/",
-      "natureza": "terceiros_preexistente_nao_conferida"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint"
+      "url": "https://kpogl.wikidot.com/monster:wirbeln-fungi",
+      "natureza": "reproducao_secundaria_nao_endossada",
+      "consulta": "2026-10-14"
     }
   ],
   "estatisticas": {
     "nd": "1",
     "ca": 13,
     "pv": 16,
-    "dados_vida": null,
+    "dados_vida": "3d8+3",
     "atributos": {
       "FOR": 8,
       "DES": 16,
@@ -30,44 +29,198 @@
       "SAB": 12,
       "CAR": 10
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 20,
+      "voar": 20,
+      "escalar": null,
+      "nadar": null,
+      "escavar": null
+    },
     "deslocamentos_texto": "caminhar 20; voar 20 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {},
+    "pericias": {
+      "Stealth": 5,
+      "Perception": 3
+    },
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "idiomas": [
+      "Common",
+      "Druidic",
+      "Elvish",
+      "Sylvan"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "deafened",
+      "frightened",
+      "poisoned"
+    ],
+    "origem_ca": "não informada no bloco",
+    "modificadores": {
+      "FOR": -1,
+      "DES": 3,
+      "CON": 1,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": 0
+    },
+    "pairar": false,
+    "bonus_proficiencia": 2,
+    "percepcao_passiva": 13,
+    "telepatia_ft": null
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Natural Appearance",
+      "gatilho": "permanece imóvel",
+      "efeito": "indistinguível de um fungo comum"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Poison Needle",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": {
+          "condicao": "poisoned",
+          "duracao": "1 minuto",
+          "repetir": "no fim de cada turno; sucesso encerra"
+        }
+      }
+    },
+    {
+      "nome": "Poison Dart",
+      "tipo": "distancia",
+      "bonus_acerto": 5,
+      "alcance_normal_ft": 20,
+      "alcance_maximo_ft": 60,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": {
+          "condicao": "poisoned",
+          "duracao": "1 minuto",
+          "repetir": "no fim de cada turno; sucesso encerra"
+        }
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Poison Needle",
+      "categoria": "ataque",
+      "referencia_ataque": "Poison Needle"
+    },
+    {
+      "nome": "Poison Dart",
+      "categoria": "ataque",
+      "referencia_ataque": "Poison Dart"
+    },
+    {
+      "nome": "Spore Cloud",
+      "categoria": "sopro_area",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "cone",
+        "comprimento_ft": 15
+      },
+      "alvos": "todas as criaturas exceto outros wirbeln fungi",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 13
+      },
+      "falha": {
+        "dano": {
+          "dados": "1d10",
+          "tipo": "poison"
+        },
+        "duracao": "1 minuto",
+        "efeitos_por_cor": [
+          {
+            "cor": "verde",
+            "condicao": "poisoned"
+          },
+          {
+            "cor": "vermelho",
+            "condicao": "blinded"
+          },
+          {
+            "cor": "amarelo",
+            "condicao": "incapacitated"
+          },
+          {
+            "cor": "azul",
+            "condicao": "paralyzed"
+          },
+          {
+            "cor": "roxo",
+            "condicao": "frightened"
+          },
+          {
+            "cor": "preto",
+            "dano_por_rodada": {
+              "dados": "2d4",
+              "tipo": "poison"
+            }
+          }
+        ]
+      },
+      "sucesso": "não recebe efeitos indicados",
+      "repetir": "CON CD13 no fim de cada turno, sucesso encerra"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Natural Appearance disfarça como fungo parado"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Agulha, dardo venenoso e nuvem de esporos"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Faltam edição exata, ficha individual integral e ações detalhadas com CDs e limites.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Cotejar edição Creature Codex e erratas; fonte KPOGL não constitui validação independente.",
+    "Sem testes nem promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-410",
+    "nome_original": "Fungi, Wirbeln",
+    "tipo": "Small plant",
+    "alinhamento": "lawful neutral",
+    "bonus_proficiencia": 2
+  },
+  "mecanicas_especiais": []
 }
