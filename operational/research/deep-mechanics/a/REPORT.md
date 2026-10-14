@@ -1,3 +1,12 @@
+# Grupo A — checkpoint 46: Accursed Defiler e Ashwalker (14/10/2026)
+
+- **TF-241 Accursed Defiler:** [KPOGL](https://kpogl.wikidot.com/monster:accursed-defiler), Tome of Beasts 1 p.12. Resistências, Cursed Existence com critérios de bloqueio de ressurgimento no deserto, Sand Shroud, duas Slams e Sandslash recarga 5–6 com salvaguarda.
+- **TF-242 Ashwalker:** [KPOGL](https://kpogl.wikidot.com/monster:ashwalker), Tome of Beasts 1 p.28. Tipo de dano variável conforme dragão de origem (cinco tipos), Burst of Breath, Last Breath (1 PV, recarga instantânea, invulnerabilidade até fim do turno seguinte), Slam e Draconic Breath recarga 6. Tipo de dano preservado como parâmetro de variante, não inventado.
+
+Total agora **48/132 fichas estruturadas na fonte digital individual**, 84 sem estrutura completa, **0 editorialmente homologadas**, 124 imagens binárias, 8 ausentes e 0 artes aprovadas para produção. Edição/impressão, licença e engine não verificadas.
+
+---
+
 # Grupo A — checkpoint 45: Tosculi Hive Queen (14/10/2026)
 
 **TF-237** ([KPOGL](https://kpogl.wikidot.com/monster:tosculi-hive-queen), Tome of Beasts 1 p.367): ficha da rainha tosculi aprofundada com Multiattack de quatro Scimitars, Stinger e salvaguarda, Implant Egg, Legendary Resistance 3/dia, três opções de ações lendárias com custos de 1–2, três ações de covil (Brood, Pheromones, Resin com transição para petrificação) e efeitos regionais. **Conflito preservado:** texto da fonte indica salvaguardas repetidas para o veneno de Stinger, mas também afirma que só `greater restoration` ou magia equivalente o remove. Sem errata/edição primária, não declarar resolvido.

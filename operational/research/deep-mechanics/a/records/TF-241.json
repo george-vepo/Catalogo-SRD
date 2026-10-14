@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "4",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "neutral_evil",
+    "proficiency_bonus": 2,
+    "experience_points": 1100,
+    "source_page": 12
   },
   "statistics": {
     "armor_class": 12,
     "hit_points": 75,
-    "hit_dice": null,
+    "hit_dice": "10d8+30",
     "ability_scores": {
       "STR": 19,
       "DEX": 14,
@@ -26,24 +29,164 @@
       "WIS": 15,
       "CHA": 14
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 14
+    },
+    "skills": {
+      "Perception": 4,
+      "Stealth": 4
+    },
+    "saving_throws": [],
+    "languages": {
+      "understands": [
+        "an_ancient_language"
+      ],
+      "can_speak": false
+    },
+    "damage_resistances": [
+      "necrotic",
+      "nonmagical_attack_bludgeoning",
+      "nonmagical_attack_piercing",
+      "nonmagical_attack_slashing"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "poisoned"
+    ],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 2,
+      "CON": 3,
+      "INT": -2,
+      "WIS": 2,
+      "CHA": 2
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "Cursed Existence",
+        "trigger": "first_reaches_0_HP",
+        "precondition": "desert_terrain",
+        "effect": {
+          "body_becomes_sand": true
+        },
+        "unless_killed_by_any_of": [
+          "in_a_hallowed_location",
+          "radiant_damage",
+          "creature_currently_affected_by_bless"
+        ],
+        "revives_when": "next_sundown",
+        "revives_distance_miles": "1d100",
+        "direction": "random"
+      },
+      {
+        "name": "Sand Shroud",
+        "radius_ft": 10,
+        "targets": "creatures_other_than_defiler",
+        "effect": {
+          "area_lightly_obscured": true,
+          "tracking_checks": "Wisdom Survival",
+          "tracking_disadvantage": true,
+          "tracked_targets": "defiler_and_others_traveling_in_shroud"
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "effect": {
+          "needs_air": false,
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Slam",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 4,
+              "type": "bludgeoning",
+              "average": 11
+            }
+          ],
+          "on_critical": {
+            "apply_exhaustion_levels": 1
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Sandslash",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "area": {
+          "radius_ft": 10,
+          "center": "defiler"
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 14,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "6d6",
+                "flat": 0,
+                "type": "slashing",
+                "average": 21
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "prior_research_summary_unverified_for_implementation": [
     "Em deserto pode retornar após destruição; véu de areia interfere na visão e rastreamento."
@@ -65,10 +208,11 @@
     },
     {
       "url": "https://kpogl.wikidot.com/monster:accursed-defiler",
-      "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
+      "type": "KPOGL transcrição OGL individual secundária não oficial",
       "edition": "Tome of Beasts 1",
-      "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
-      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+      "source_page": 12,
+      "scope": "estatísticas e mecânicas individuais presentes no statblock digital",
+      "reviewed": "2026-10-14"
     }
   ],
   "source_checkpoint": {
@@ -80,9 +224,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
-    "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
-    "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta."
+    "Comparar contra Tome of Beasts 1 p.12 e erratas, especialmente condições exatas de Cursed Existence.",
+    "Homologar aplicação de exaustão por crítico e recuperação ao pôr-do-sol em engine.",
+    "Verificar ilustração e direitos de uso antes de aprovar."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -105,6 +249,16 @@
       "inspeção visual independente",
       "direitos de uso",
       "aprovação para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:accursed-defiler"
     ]
   }
 }
