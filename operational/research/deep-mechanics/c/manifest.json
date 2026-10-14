@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 99,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 104,
     "fichas_integralmente_concluidas": 0,
     "parciais": 96,
     "bloqueadas": 35,
-    "registros_aproveitados_sem_nova_verificacao_integral": 32,
+    "registros_aproveitados_sem_nova_verificacao_integral": 27,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -620,9 +620,24 @@
       "commit": "5adedab01e2a3386290f3acec11f3450652d7e8d",
       "leitura_persistencia": "CONFIRMADA — cinco JSONs relidos via API GitHub com IDs e sintaxe válidos; TF-179 Shoal Ooze agora tem bloco completo 5eSRD/ToB3, e bloqueio de ausência de fonte superado, 96 imagens/hash intactos.",
       "tipo": "Blood Foxfire Giant Shark Bowl Ruby Shoal oozes"
+    },
+    {
+      "numero": 42,
+      "inicio": "TF-180",
+      "fim": "TF-187",
+      "ids": [
+        "TF-180",
+        "TF-181",
+        "TF-182",
+        "TF-186",
+        "TF-187"
+      ],
+      "commit": "b12e0d1ff7f7b304aadaa90021cc4802a473a903",
+      "leitura_persistencia": "CONFIRMADA — cinco JSONs TF180 TF181 TF182 TF186 TF187 relidos, fontes 5eSRD/KPOGL, Snow Amorphous 1 foot, Tar Fire Hazard vs immunity documentado como bloqueio; 131 IDs e 96 imagens com hashes correspondentes.",
+      "tipo": "Sinoper, Snow, Tar oozes; Atavist NPC; Bearfolk 2023"
     }
   ],
-  "atualizacao_detalhada_sha": "5adedab01e2a3386290f3acec11f3450652d7e8d",
+  "atualizacao_detalhada_sha": "b12e0d1ff7f7b304aadaa90021cc4802a473a903",
   "criaturas": [
     {
       "id": "TF-412",
@@ -3510,15 +3525,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 58,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-180.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://anyflip.com/myubd/nuoj/basic/301-350",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-sinoper/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Foment Pigment causa frio ou fogo CONFORME cor determinada pela paridade no Paint Splash, não escolher aleatoriamente na detonação.",
+        "Paint Splash é ataque melee OU ranged +9 (5ft ou 20/60ft); qualquer criatura pode gastar action para remover tinta. Poisoned 1 minuto sem reteste explícito no bloco.",
+        "Inspeção editorial da edição e direitos/identidade de imagem não confirmados."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência livro/editorial e erratas aplicáveis",
+        "direitos/adequação visual da arte e revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3528,7 +3546,8 @@
         "bytes": 177268,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-181",
@@ -3536,17 +3555,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 59,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-181.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://kpogl.wikidot.com/monster:snow-ooze",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-snow/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Wiki não oficial; dados CA/PV/ND conferidos mas ações não transcritas integralmente."
+        "Amorphous é 1 FOOT, confirmado no bloco, distinto da maioria das oozes.",
+        "Snow Blindness falha quando há penumbra ou escuridão; Avalanche 4–6, apenas Large ou menor, resgate STR DC15 com vantagem quando criatura enterrada tem velocidade de natação.",
+        "Licença/edital/arte pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência livro/editorial e erratas aplicáveis",
+        "direitos/adequação visual da arte e revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3556,7 +3576,8 @@
         "bytes": 168646,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-182",
@@ -3564,17 +3585,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 60,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-182.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_FIRE_HAZARD_IMUNIDADE_FIRE_INTERACAO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-tar/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "O fogo recebido não deve causar dano à gosma imune ao fogo, mas pode incendiá-la."
+        "Ooze imune a fire, MAS fonte diz que ao sofrer fire damage acende: preservar gatilho textual e imunidade sem concluir dano positivo.",
+        "Sticky Situation cobre o alvo após DOIS pseudopods no mesmo alvo ou Hurl Tar com falha DEX14, fogo em tar é estado distinto de Fire Hazard da ooze; tar ghoul só para humanoide morto não ressuscitado.",
+        "Fonte ToB2 reproduzida 5eSRD/KPOGL, licenciamento de imagem não confirmado."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência livro/editorial e erratas aplicáveis",
+        "direitos/adequação visual da arte e revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3584,7 +3606,8 @@
         "bytes": 149430,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-186",
@@ -3592,17 +3615,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 61,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-186.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/npc-atavist/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Identificado como NPC Atavist, evitar homônimo de outras fontes."
+        "NPC humanoid Atavist CR4 ToB3 (não outro Atavist de homebrew). Malleable Physiology escolhe um ganho fisiológico por turno, termina no começo do turno seguinte; opção de speed deve ser singular.",
+        "Multiattack permite dois Keratin Blade OU Bone Shard, dano 2d6 piercing EXTRA apenas se ambos acertam MESMO alvo.",
+        "Livro/licença e arte ainda sem aprovação."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência livro/editorial e erratas aplicáveis",
+        "direitos/adequação visual da arte e revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3612,7 +3636,8 @@
         "bytes": 109426,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-187",
@@ -3620,17 +3645,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 62,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-187.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/bearfolk-3pp/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Edição de 2023, possível diferença com Tome of Beasts original."
+        "Comparado com Tome of Beasts 1 anterior: 2023 publica resistências BPS sem qualificador nonmagical; não mesclar nem supor errata sem evidência.",
+        "Frenzy é bonus action, recarga após descanso curto ou longo, duração 1min e ataque contra usuário também ganha vantagem.",
+        "Verificação editorial da edição e licenças/identidade da imagem pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência livro/editorial e erratas aplicáveis",
+        "direitos/adequação visual da arte e revisão independente"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3640,7 +3666,8 @@
         "bytes": 96550,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-188",
@@ -4481,11 +4508,11 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 41,
-    "sha_validado": "5adedab01e2a3386290f3acec11f3450652d7e8d",
+    "checkpoint": 42,
+    "sha_validado": "b12e0d1ff7f7b304aadaa90021cc4802a473a903",
     "escopo_ids": 131,
-    "aprofundadas": 99,
-    "sem_revisao_individual": 32,
+    "aprofundadas": 104,
+    "sem_revisao_individual": 27,
     "integralmente_aprovadas": 0,
     "parciais": 96,
     "bloqueadas": 35,

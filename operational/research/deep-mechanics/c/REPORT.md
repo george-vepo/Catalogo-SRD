@@ -1,5 +1,17 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 42 — Sinoper, Snow, Tar Oozes, Atavist e Bearfolk (14/10/2026)
+
+**[Commit mecânico](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/b12e0d1ff7f7b304aadaa90021cc4802a473a903)**; cinco JSONs relidos por ID na branch, 131 fichas listadas e imagens auditadas. Apenas o grupo C foi alterado. Fontes 5eSRD, KPOGL e reprodução de edições foram utilizadas com dados parafraseados, sem presumir licença de imagem.
+
+- **TF-180 Sinoper Ooze:** Multiattack com 3 Paint Splash (+9 melee/ranged 20/60ft), cor quente/fria por paridade do dado, remoção por ação; Foment Pigment (4–6) somente em alvos pintados até 60ft, CON CD16, 10d6 fire se quente/cold se fria, poisoned 1 minuto na falha; tinta removida após efeito. https://www.5esrd.com/database/creature/ooze-sinoper/
+- **TF-181 Snow Ooze:** Amorphous de 1 FOOT, Ice Walk, Snow Burrower, Snow Blindness CON CD15 condicional à iluminação, 2 Pseudopods +7 e Avalanche (4–6) até 30ft em linha reta, DEX CD15, vítimas enterradas restrained sem respirar ou levantar; resgate STR CD15 com vantagem para nadadores. https://www.5esrd.com/database/creature/ooze-snow/
+- **TF-182 Tar Ooze — BLOQUEADA:** Fire Hazard imprime ativação ao sofrer fire damage mas também immunity fire, interação não resolvida sem errata. Sticky Situation reduz velocidade e causa queima por 2d10 no início do turno quando tar está aceso; dois Pseudopod no mesmo alvo ou Hurl Tar +2 DEX CD14; tar ghoul de humanoide morto após 1h. https://www.5esrd.com/database/creature/ooze-tar/ e https://kpogl.wikidot.com/monster:tar-ooze
+- **TF-186 Atavist (NPC humanoid):** Malleable Physiology escolhe UMA forma a cada turno até o início do próximo, darkvision/climb/fly/swim/senses/spikes; dois Keratin Blade ou Bone Shard e +2d6 piercing só se ambas acertam MESMO alvo. Source https://www.5esrd.com/database/creature/npc-atavist/
+- **TF-187 Bearfolk (2023):** Multiattack restrito a Battleaxe + Warhammer + Bite, Keen Smell e Frenzy bônus após descanso curto/longo por 1 minuto; versão 2023 de resistência BPS não mesclada com variante anterior que exige nonmagical weapons. Fonte https://www.5esrd.com/database/creature/bearfolk-3pp/
+- **Auditoria:** 131 IDs únicos, 131 JSONs, 104 fichas aprofundadas, 27 pendentes, 96 parciais, 35 bloqueadas e 0 integrais. 96 imagens físicas com 96 Git SHA válidos, 35 imagens faltam e nenhuma aprovação visual. Total 229 arquivos no diff, 0 fora de C. Nenhuma imagem adquirida neste lote.
+- **Pendências:** bloqueio Fire Hazard, publicação/erratas/licença, imagens e revisão independente. PR #9 preservada Draft sem merge.
+
 ## Checkpoint 41 — Blood, Foxfire, Giant Shark Bowl, Ruby e Shoal Oozes (14/10/2026)
 
 **[Commit mecânico verificado](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5adedab01e2a3386290f3acec11f3450652d7e8d)**. Cinco fichas lidas após o push, mantidas como parciais até confronto editorial e autorização da arte. A ficha da Shoal Ooze deixa o bloqueio de ausência de fonte ao recuperar o bloco completo em Tome of Beasts 3 p308 e 5eSRD.
