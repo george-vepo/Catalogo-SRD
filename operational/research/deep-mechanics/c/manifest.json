@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 26,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 30,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 101,
-    "bloqueadas": 30,
-    "registros_aproveitados_sem_nova_verificacao_integral": 105,
+    "parciais": 98,
+    "bloqueadas": 33,
+    "registros_aproveitados_sem_nova_verificacao_integral": 101,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -345,6 +345,20 @@
       "commit": "456458a009be9af1972e54e7568a7f313f29c706",
       "leitura_persistencia": "CONFIRMADA — quatro JSONs relidos, IDs conferidos e pendências validadas",
       "tipo": "conflitos variantes A5E e Greater Sphinx"
+    },
+    {
+      "numero": 22,
+      "inicio": "TF-499",
+      "fim": "TF-504",
+      "ids": [
+        "TF-499",
+        "TF-501",
+        "TF-503",
+        "TF-504"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE",
+      "tipo": "quatro fontes oficiais A5E"
     }
   ],
   "atualizacao_detalhada_sha": "456458a009be9af1972e54e7568a7f313f29c706",
@@ -1069,23 +1083,27 @@
       "escopo": "next_batches[4]",
       "posicao": 24,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-499.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_CONTRADICAO_OU_LACUNA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/4002",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Revisar trechos editoriais truncados do teste de resistência da Despair Aura."
+        "A fonte oficial de Despair Aura fala em successful saving throw mas não define CD, atributo nem quando o teste ocorre.",
+        "Texto de Behavior menciona Hungry Strike, que não integra lista de ações; não acrescentar por inferência.",
+        "Imagem binária ainda ausente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "atributo, CD e gatilho da salvaguarda de Despair Aura",
+        "confronto com livro/errata",
+        "imagem"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-500",
@@ -1117,21 +1135,25 @@
       "escopo": "next_batches[4]",
       "posicao": 26,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-501.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_OFICIAL_PENDENTE_GATES",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/2965",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "pendencias": [],
+      "pendencias": [
+        "Confronto com exemplar/errata de Gate Pass Gazette ainda pendente.",
+        "Falta imagem binária individual."
+      ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "edição original Gate Pass Gazette",
+        "imagem física"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-503",
@@ -1139,23 +1161,27 @@
       "escopo": "next_batches[4]",
       "posicao": 27,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-503.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_CONTRADICAO_OU_LACUNA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/2213",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Confirmar número de ghouls e procedimento de libertação dos presos."
+        "Texto oficial sobre saída dos ghouls após 0 PV gramaticalmente truncado.",
+        "Stuffing especifica escape CD16, mas não procedimento detalhado de fuga.",
+        "Imagem física ausente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "procedimento de saída dos ghouls",
+        "procedimento de fuga de Stuffing",
+        "imagem"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-504",
@@ -1163,23 +1189,27 @@
       "escopo": "next_batches[4]",
       "posicao": 28,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-504.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_CONTRADICAO_OU_LACUNA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/1464",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Ficha editorial mantém termos banshee: distinguir variante Warlord's Ghost do monstro-base."
+        "Banshee citado no texto de Presage Death e de Combat em ficha Warlord's Ghost; não substituído por suposição.",
+        "Resultado no sucesso de Baleful Wail não declarado.",
+        "Sem imagem física."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "banshee versus warlord na referência Baleful Wail",
+        "efeito sucesso de Baleful Wail",
+        "imagem"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-505",

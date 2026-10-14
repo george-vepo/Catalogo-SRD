@@ -2,6 +2,15 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 22 — fontes oficiais A5E (14/10/2026)
+
+- TF-499 Cloud of Ghasthoppers: Swarm, Incorporeal Movement, Smoky Signals, Bleak Vibrations e Drain Health estruturados, variantes bloodied. **BLOQUEADA**: Despair Aura menciona salvaguarda sem CD, atributo ou momento do teste. Fonte: https://a5e.tools/node/4002.
+- TF-501 Lost Prospector: estatísticas, seis traços, Withering Touch, Ethereal Jaunt, Horrifying Visage, Possession com condições, fim/repetição de salvaguardas, recurso bônus de encerrar e reação. Fonte: https://a5e.tools/node/2965.
+- TF-503 Stuffed Crab: sete ghouls, quadrados do alvo, Multiattack com duas Pincer, grapple CD16, ação bônus Stuffing. **BLOQUEADA** por texto de saída de ghouls truncado e fuga de Stuffing incompleta. Fonte: https://a5e.tools/node/2213.
+- TF-504 Warlord's Ghost: Death Howl, Unquiet Spirit, Presage Death, Baleful Wail e reação Wounded Warning estruturados. **BLOQUEADA**: fonte mistura 'banshee' com nome da variante e não informa efeito de teste bem-sucedido no Wail. Fonte: https://a5e.tools/node/1464.
+- Sem novo arquivo de imagem física, 0 fichas promovidas como mecanicamente completas. **30 aprofundadas, 101 ainda sem revalidação, 98 parciais, 33 bloqueadas**.
+
+
 ## Checkpoint 21 — variantes A5E e Greater Sphinx (14/10/2026)
 
 - Commit mecânico `456458a009be9af1972e54e7568a7f313f29c706` publicado com 4 fichas; leitura de retorno da API confirmou JSON sintático e ID exato para TF-468, TF-470, TF-473 e TF-476.
@@ -72,8 +81,8 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **26 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **105 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **30 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **101 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
 - **0 criaturas declaradas mecanicamente completas**, **104 parciais**, **27 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
@@ -127,11 +136,11 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 | TF-470 | Fiendish Chimera | BLOQUEADA | sim | [individual](https://a5e.tools/node/3240) | Ações lendárias Bite/Claw e reação headbutt não correspondem aos nomes de ações da variante. |
 | TF-473 | Flying Lion | PARCIAL | sim | [individual](https://a5e.tools/node/1663) | Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico. |
 | TF-476 | Greater Sphinx | PARCIAL | sim | [individual](https://a5e.tools/node/1797) | Não confundir com esfinge comum CR 11; diferenciar regras de covil opcionais. |
-| TF-499 | Cloud of Ghasthoppers | PARCIAL | não | [individual](https://a5e.tools/node/4002) | Revisar trechos editoriais truncados do teste de resistência da Despair Aura. |
+| TF-499 | Cloud of Ghasthoppers | PARCIAL | sim | [individual](https://a5e.tools/node/4002) | Revisar trechos editoriais truncados do teste de resistência da Despair Aura. |
 | TF-500 | Gorger Zombie Horde | BLOQUEADA | sim | [individual](https://a5e.tools/node/2522) | Página editorial individual Source Gate Pass Gazette, divergente da atribuição histórica. |
-| TF-501 | Lost Prospector | PARCIAL | não | [individual](https://a5e.tools/node/2965) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-503 | Stuffed Crab | PARCIAL | não | [individual](https://a5e.tools/node/2213) | Confirmar número de ghouls e procedimento de libertação dos presos. |
-| TF-504 | Warlord's Ghost | PARCIAL | não | [individual](https://a5e.tools/node/1464) | Ficha editorial mantém termos banshee: distinguir variante Warlord's Ghost do monstro-base. |
+| TF-501 | Lost Prospector | PARCIAL | sim | [individual](https://a5e.tools/node/2965) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-503 | Stuffed Crab | PARCIAL | sim | [individual](https://a5e.tools/node/2213) | Confirmar número de ghouls e procedimento de libertação dos presos. |
+| TF-504 | Warlord's Ghost | PARCIAL | sim | [individual](https://a5e.tools/node/1464) | Ficha editorial mantém termos banshee: distinguir variante Warlord's Ghost do monstro-base. |
 | TF-505 | Demilich Mastermind | PARCIAL | não | [individual](https://a5e.tools/node/1478) | Não confundir com demilich padrão (PV 159, outro bloco). |
 | TF-506 | Mariner Ghost Swarm | PARCIAL | não | [individual](https://a5e.tools/node/3406) | Conferir lacunas de formatação na descrição da ferramenta editorial. |
 | TF-507 | Fogborn Skeleton Horde | PARCIAL | não | [individual](https://a5e.tools/node/3460) | Tratar bloodied e manejo da horda segundo A5E, não converter sem revisão. |

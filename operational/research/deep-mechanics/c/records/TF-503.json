@@ -4,23 +4,26 @@
   "nome": "Stuffed Crab",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 27,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "BLOQUEADA_CONTRADICAO_OU_LACUNA_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Gate Pass Gazette",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/2213"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "6",
+    "xp": null,
+    "bonus_proficiencia": 3,
     "ca": 14,
     "pv": 104,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "16d12",
+    "bloodied": 52,
+    "porte": "Huge",
+    "tipo": "Undead",
     "alinhamento": null,
     "atributos": {
       "forca": 20,
@@ -38,105 +41,180 @@
       "sabedoria": -5,
       "carisma": -1
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 40,
+      "nadar_ft": 40
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 30
+      },
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [],
+    "resistencias": [
+      "necrotic"
+    ],
+    "vulnerabilidades": [
+      "bludgeoning"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "fatigued",
+      "poisoned"
+    ],
+    "xp_estado": "nao publicado no bloco A5E",
+    "composicao_ca": "natural armor",
+    "maneuver_dc": 16
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Caranguejo utilizado como receptáculo de ghouls; mantém criaturas no interior.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Ghouls",
+        "quantidade": 7,
+        "regra": "atacante escolhe quadrado do crab; ao acertar, um ghoul cai prone nesse quadrado"
+      },
+      {
+        "nome": "Ghouls on 0 HP",
+        "gatilho": "caranguejo chega a 0 PV",
+        "efeito": "ghouls ainda dentro saem em seus turnos",
+        "conflito": "texto publicado 'takes crawls out on its turn' não define procedimento"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Duas pinças que agarram e bônus Stuffing para prender vítimas.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "nome": "Pincer",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Pincer",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 17,
+            "tipo": "slashing"
+          }
+        ],
+        "ao_acertar": {
+          "teste": {
+            "atributo_opcoes": [
+              "STR",
+              "DEX"
+            ],
+            "cd": 16
+          },
+          "falha": {
+            "condicao": "grappled",
+            "escape_cd": 16
+          },
+          "maximo_agarrados": 2
+        }
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": [],
+    "ataques": [
+      {
+        "nome": "Pincer",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 17,
+            "tipo": "slashing"
+          }
+        ],
+        "ao_acertar": {
+          "teste": {
+            "atributo_opcoes": [
+              "STR",
+              "DEX"
+            ],
+            "cd": 16
+          },
+          "falha": {
+            "condicao": "grappled",
+            "escape_cd": 16
+          },
+          "maximo_agarrados": 2
+        }
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "nome": "Pincer",
+          "quantidade": 2
+        }
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Stuffing",
+        "pre_condicoes": [
+          "criatura agarrada Medium ou menor"
+        ],
+        "custo_pv": 5,
+        "efeito": "põe vítima dentro da carapaça, restrained e levada com crab",
+        "escape_cd": 16,
+        "ataques_ghouls": "cada ghoul dentro pode atacar vítima uma vez por turno com disadvantage",
+        "lacuna": "fonte não especifica como é realizado teste de fuga"
+      }
+    ],
     "reacoes": [],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "conjuracao": "AUSENCIA_VERIFICADA_NA_FONTE"
+    }
   },
   "pendencias": [
-    "Confirmar número de ghouls e procedimento de libertação dos presos.",
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Texto oficial sobre saída dos ghouls após 0 PV gramaticalmente truncado.",
+    "Stuffing especifica escape CD16, mas não procedimento detalhado de fuga.",
+    "Imagem física ausente."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "procedimento de saída dos ghouls",
+    "procedimento de fuga de Stuffing",
+    "imagem"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/2213",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco oficial A5E conferido em 2026-10-14",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -191,5 +269,12 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "fonte": "https://a5e.tools/node/2213",
+    "livro_original_errata": "PENDENTE"
   }
 }

@@ -4,23 +4,26 @@
   "nome": "Lost Prospector",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 26,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_OFICIAL_PENDENTE_GATES",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Gate Pass Gazette",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/2965"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "4",
+    "xp": null,
+    "bonus_proficiencia": 2,
     "ca": 11,
     "pv": 58,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
+    "dados_vida": "13d8",
+    "bloodied": 29,
+    "porte": "Medium",
+    "tipo": "Undead",
     "alinhamento": null,
     "atributos": {
       "forca": 8,
@@ -38,104 +41,239 @@
       "sabedoria": 1,
       "carisma": 3
     },
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "deslocamentos": {
+      "andar_ft": 0,
+      "voo_ft": 40
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "languages it spoke in life"
+    ],
+    "resistencias": [
+      "acid",
+      "fire",
+      "lightning",
+      "thunder",
+      "damage from nonmagical weapons"
+    ],
+    "vulnerabilidades": [],
+    "imunidades_dano": [
+      "cold",
+      "necrotic",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "fatigue",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "xp_estado": "nao publicado no bloco A5E",
+    "maneuver_dc": 11
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Traços e características verificáveis (síntese)",
-        "resumo_anterior": "Fantasma ligado a ouro, percepção etérea e natureza inquieta.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Ethereal Sight",
+        "efeito": "vê simultaneamente planos Material e Ethereal"
+      },
+      {
+        "nome": "Incorporeal",
+        "efeito": "passa por criaturas/objetos",
+        "dano_se_termina_em_objeto": {
+          "dados": "1d10",
+          "media": 5,
+          "tipo": "force"
+        }
+      },
+      {
+        "nome": "Undead Nature",
+        "efeito": "não precisa de ar, alimentos ou sono"
+      },
+      {
+        "nome": "Unquiet Spirit",
+        "efeito": "retorna 24h após derrota",
+        "encerramento": "remove curse nos restos mortais ou resolver negócio inacabado"
+      },
+      {
+        "nome": "Gold Sense",
+        "efeito": "vantagem em Perception contra criatura carregando pelo menos 1 gp"
+      },
+      {
+        "nome": "Touch of Greed",
+        "gatilho": "Withering Touch acerta",
+        "efeito": "corrói moedas de ouro em quantidade igual ao dano; nenhum efeito se alvo não tem ouro",
+        "restauracao": "colocar ghost para descansar em até 24h"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações verificáveis (síntese)",
-        "resumo_anterior": "Toque de ganância, Withering Touch, Horrifying Visage e Possession.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Withering Touch",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+3",
+            "media": 17,
+            "tipo": "necrotic"
+          }
+        ],
+        "efeito_condicional": {
+          "gatilho": "alvo frightened",
+          "envelhecimento": "1d4 * 10 anos",
+          "reversao": "greater restoration"
+        }
+      },
+      {
+        "nome": "Ethereal Jaunt",
+        "efeito": "alternar Material e Ethereal; pode ser visto em um plano enquanto ocupa outro"
+      },
+      {
+        "nome": "Horrifying Visage",
+        "alcance_ft": 60,
+        "alvos": "criaturas não-undead no mesmo plano que conseguem ver ghost",
+        "teste": {
+          "atributo": "WIS",
+          "cd": 13
+        },
+        "falha": {
+          "condicao": "frightened",
+          "duracao": "1 minuto",
+          "repeticao": "ao final de cada turno"
+        },
+        "sucesso": "imunidade por 24h",
+        "fim": "imunidade por 24h após cessar"
+      },
+      {
+        "nome": "Possession",
+        "recarga": "6",
+        "alcance_ft": 5,
+        "alvos": "humanoid",
+        "teste": {
+          "atributo": "CHA",
+          "cd": 13
+        },
+        "falha": {
+          "hospedeiro": "unconscious",
+          "ghost": "entra e controla corpo",
+          "alvo_ghost": "somente efeitos que turn undead",
+          "atributos_retidos": [
+            "INT",
+            "WIS",
+            "CHA"
+          ],
+          "imunidades_concedidas": [
+            "charmed",
+            "frightened"
+          ],
+          "habilidades_copiadas": "estatísticas, ações, proficiências e características não mágicas do hospedeiro",
+          "excecoes": [
+            "memórias do hospedeiro",
+            "habilidades com usos limitados",
+            "habilidades que gastam recursos"
+          ],
+          "limite": "24h",
+          "encerra_se": [
+            "hospedeiro a 0 PV",
+            "ghost voluntariamente como bônus",
+            "turn undead",
+            "dispel evil and good ou equivalente",
+            "hospedeiro vence novo save após sofrer dano"
+          ],
+          "teste_repetido": {
+            "gatilho": "hospedeiro sofre dano",
+            "atributo": "CHA",
+            "cd": 13
+          },
+          "desfecho": "ghost reaparece a até 5 pés do corpo"
+        },
+        "sucesso": "imunidade por 24h",
+        "imunidade_apos_encerrar": "24h"
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Withering Touch",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+3",
+            "media": 17,
+            "tipo": "necrotic"
+          }
+        ],
+        "efeito_condicional": {
+          "gatilho": "alvo frightened",
+          "envelhecimento": "1d4 * 10 anos",
+          "reversao": "greater restoration"
+        }
+      }
+    ],
     "multiataque": null,
-    "acoes_bonus": [],
-    "reacoes": [],
+    "acoes_bonus": [
+      {
+        "nome": "End Possession",
+        "pre_condicao": "posse ativa",
+        "efeito": "termina a posse como ação bônus"
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Horrifying Visage",
+        "gatilho": "recebe dano de ataque ou magia",
+        "efeito": "executa ação Horrifying Visage"
+      }
+    ],
     "acoes_lendarias": [],
-    "acoes_covil": null,
+    "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "conjuracao": "AUSENCIA_VERIFICADA_NA_FONTE"
+    }
   },
   "pendencias": [
-    "Reconstruir e conferir todos os efeitos e sequências da ficha individual antes de declarar mecânica completa."
+    "Confronto com exemplar/errata de Gate Pass Gazette ainda pendente.",
+    "Falta imagem binária individual."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "efeitos, gatilhos, testes, recargas, custos e duração da ficha completa não validados"
+    "edição original Gate Pass Gazette",
+    "imagem física"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/2965",
-      "tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
-      "conferida_nesta_execucao": false
+      "tipo": "bloco oficial A5E conferido em 2026-10-14",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -189,5 +327,12 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "fonte": "https://a5e.tools/node/2965",
+    "livro_original_errata": "PENDENTE"
   }
 }
