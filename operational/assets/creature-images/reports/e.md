@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 81 / 195.**
+**Armazenadas e verificadas: 91 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -16,6 +16,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/9c6cee61e6a3cad23d40f6672a753993797c5d74 — 10/10 verificadas: TF-123, TF-124, TF-125, TF-126, TF-127, TF-128, TF-129, TF-130, TF-131, TF-132
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/f78b0d30b81a74efabaa38f0f9dd737b7f96b329 — 10/10 verificadas: TF-133, TF-134, TF-135, TF-136, TF-137, TF-138, TF-139, TF-140, TF-141, TF-142
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/752ce010bef069a0daba724d3f0d97caad14db4e — 10/10 verificadas: TF-143, TF-144, TF-147, TF-148, TF-149, TF-150, TF-151, TF-152, TF-153, TF-154
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/819e16a6e0721d8b97bc1f0d93568d61054ef8c1 — 10/10 verificadas: TF-155, TF-156, TF-157, TF-158, TF-159, TF-160, TF-161, TF-162, TF-163, TF-164
 
 ## Binários publicados e conferidos
 
@@ -100,22 +101,22 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-152 / Giant, Cave Shaman: operational/assets/creature-images/TF-152.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Cave%20Shaman%20Giant.webp; 224536 bytes; 1112x1046 px; SHA-256: 72a6504896ff373a13b898f6c127d6ff73bfd7e8b92d9d22a986f0c18a433f76; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
 - TF-153 / Giant, Lantern: operational/assets/creature-images/TF-153.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Lantern%20Giant.webp; 176992 bytes; 1000x1220 px; SHA-256: a4017b9c591f052b77d6318fbd06c56ff70ade65b30e5c5bd10476922aa4ea5f; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
 - TF-154 / Giant, Shadow: operational/assets/creature-images/TF-154.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Shadow%20Giant.webp; 111788 bytes; 706x1190 px; SHA-256: 7c0eed12d88a03ce1ae27a1d934efb821c48ee19ccd6f3bc402fcd63da1061a3; commit: 752ce010bef069a0daba724d3f0d97caad14db4e
+- TF-155 / Xing Tian: operational/assets/creature-images/TF-155.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Xing%20Tian.webp; 173958 bytes; 866x991 px; SHA-256: d5f60151f54c699bb75ac898ed6d15c89c6d6db82b6aac0f2bfbe65f60ee1ff4; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-156 / Giant, Hraesvelgr: operational/assets/creature-images/TF-156.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Hraesvelgr.webp; 71850 bytes; 631x800 px; SHA-256: 8c9a0453ade9abacfd8ddae986c152be8538a20b624f29af4245535a3b198c42; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-157 / Giant, Mountain: operational/assets/creature-images/TF-157.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/mountaingiant.jpg; 71621 bytes; 490x700 px; SHA-256: 9532cb768cfc5c72c7b6b4bd0817cf25843dbf978692dbbd46746dc50b99d72b; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-158 / Ooze, Alchemical Apprentice: operational/assets/creature-images/TF-158.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Alchemicalapprentice.jpg; 48463 bytes; 483x700 px; SHA-256: 1d30ef76372c8fbf0467b72ee29880b2dcad8756bdbb347a065e6ce2bc20081c; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-159 / Ooze, Amber: operational/assets/creature-images/TF-159.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Amber%20Ooze.webp; 161690 bytes; 1208x735 px; SHA-256: 5309aad8c6c6e07041d497fa1b840f3db76afe582e33ecddbecd92ed142c1300; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-160 / Ooze, Corrupting: operational/assets/creature-images/TF-160.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Corrupting%20Ooze.webp; 120352 bytes; 862x800 px; SHA-256: bf706e1be55542f155fdef1b93c906e3895ca360bc285367269e1e5b920d3511; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-161 / Ooze, Eldritch: operational/assets/creature-images/TF-161.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Eldritch%20Ooze.webp; 227176 bytes; 753x1038 px; SHA-256: e1984fffe14cf59ff0f5666f47047689d40551c5ed724e4a3e2fe3ec616c0186; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-162 / Ooze, Ichor: operational/assets/creature-images/TF-162.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Ichor%20Ooze.webp; 148076 bytes; 885x1242 px; SHA-256: 398bbfd976ddc023bbf455cab7793a64136d3f5d574dc15ad8325dec56a86816; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-163 / Ooze, Ink Guardian: operational/assets/creature-images/TF-163.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Inkguardian.jpg; 62453 bytes; 676x700 px; SHA-256: 29ead1652de136372034cb718cbcfcf0961fdefaadc6f3350aab6803611d05d1; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
+- TF-164 / Ooze, Leavesrot: operational/assets/creature-images/TF-164.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Leavesrot%20Ooze.webp; 113514 bytes; 1000x1224 px; SHA-256: 2a4ee312be6152a08991ce4ddcfe7d39d507e198e8e2e89061c359a24cc34773; commit: 819e16a6e0721d8b97bc1f0d93568d61054ef8c1
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
-- TF-155 / Xing Tian: pending; 
-- TF-156 / Giant, Hraesvelgr: pending; 
-- TF-157 / Giant, Mountain: pending; 
-- TF-158 / Ooze, Alchemical Apprentice: pending; 
-- TF-159 / Ooze, Amber: pending; 
-- TF-160 / Ooze, Corrupting: pending; 
-- TF-161 / Ooze, Eldritch: pending; 
-- TF-162 / Ooze, Ichor: pending; 
-- TF-163 / Ooze, Ink Guardian: pending; 
-- TF-164 / Ooze, Leavesrot: pending; 
 - TF-165 / Ooze, Manure: pending; 
 - TF-166 / Ooze, Mineral: pending; 
 - TF-167 / Ooze, Shadow: pending; 
