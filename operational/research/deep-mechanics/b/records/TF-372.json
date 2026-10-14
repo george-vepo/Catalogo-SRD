@@ -2,26 +2,29 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-372",
   "nome": "Gnomish Knife Cultist",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_COMPROVACAO_EDITORIAL",
   "edicao": {
+    "sistema": "D&D 5e",
     "publicacao": "Creature Codex",
-    "edicao_exata_verificada": false
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false,
+    "versao": "transcrição individual KPOGL; sem confronto com impresso/erratas"
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/gamemastering/monsters-foes/npc/cultists/gnomish-knife-cultist/",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint_anterior"
+      "url": "https://kpogl.wikidot.com/monster:gnomish-knife-cultist",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data_pesquisa": "2026-10-14",
+      "escopo": "bloco integral individual de estatísticas e mecânicas"
     }
   ],
   "estatisticas": {
     "nd": "5",
+    "bonus_proficiencia": 3,
     "ca": 16,
+    "origem_ca": "breastplate",
     "pv": 97,
-    "dados_vida": null,
+    "dados_vida": "15d6+45",
     "atributos": {
       "FOR": 8,
       "DES": 14,
@@ -30,45 +33,234 @@
       "SAB": 12,
       "CAR": 20
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "modificadores": {
+      "FOR": -1,
+      "DES": 2,
+      "CON": 3,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": 5
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "nadar": null,
+      "escalar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {
+      "CON": 6,
+      "CAR": 8
+    },
+    "pericias": {
+      "Perception": 4
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common",
+      "Gnomish",
+      "Infernal"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
-  "acoes_bonus": [],
+  "qualidade_estatisticas": "CONFERIDO_NA_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Devil Wrangler",
+      "efeito": "diabos que conjura lhe obedecem sem questionar, são imunes a charmed e têm vantagem em salvaguardas contra efeitos que os enviem a outro plano, inclusive de origem"
+    },
+    {
+      "nome": "Innate Spellcasting",
+      "efeito": "conjura magias inatas conforme inventário de conjurações; usa CAR, CD16 e +8 para ataques mágicos, requer somente componentes verbais"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Ritual Knife",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 2,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "2d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Ritual Knife",
+        "Ritual Knife"
+      ]
+    },
+    {
+      "nome": "Ritual Knife",
+      "categoria": "ataque",
+      "referencia_ataque": "Ritual Knife"
+    },
+    {
+      "nome": "Devilish Summonings",
+      "categoria": "invocacao",
+      "usos": "1/dia",
+      "alternativas": [
+        {
+          "quantidade": 1,
+          "tipo": "devil",
+          "nd": "6"
+        },
+        {
+          "quantidade": 2,
+          "tipo": "devil",
+          "nd": "4 ou menos, cada"
+        }
+      ],
+      "alcance_ft": 50,
+      "alvos": "espaços livres até 50 pés",
+      "iniciativa": "agem imediatamente depois do cultista",
+      "comportamento": "obedecem ao cultista",
+      "duracao": "1 hora",
+      "encerramento": [
+        "1 hora",
+        "morte do cultista",
+        "cultista os dispensa com uma ação bônus"
+      ]
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Goad or Soothe",
+      "custo": "ação bônus",
+      "recarga": "5–6",
+      "alcance_ft": 50,
+      "alvo": "um devil que invocou",
+      "alternativas": [
+        {
+          "nome": "Goad",
+          "efeito": "vantagem no próximo ataque do devil"
+        },
+        {
+          "nome": "Soothe",
+          "cura": {
+            "dados": "3d10",
+            "pv_medio": 16
+          }
+        }
+      ]
+    },
+    {
+      "nome": "Dismiss Devils",
+      "custo": "ação bônus",
+      "precondicao": "diabos invocados por Devilish Summonings",
+      "efeito": "dispensa criaturas invocadas"
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Demon Wrangler fortalece demônios conjurados"
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 16,
+      "bonus_ataque_magico": 8,
+      "componentes_verbais": true,
+      "componentes_somaticos": false,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "nome": "enlarge/reduce",
+          "usos": "à vontade",
+          "nivel": 2
+        },
+        {
+          "nome": "spider climb",
+          "usos": "à vontade",
+          "nivel": 2
+        },
+        {
+          "nome": "bless",
+          "usos": "3/dia cada",
+          "nivel": 1
+        },
+        {
+          "nome": "magic missile",
+          "usos": "3/dia cada",
+          "nivel": 1
+        },
+        {
+          "nome": "protection from energy",
+          "usos": "3/dia cada",
+          "nivel": 3
+        },
+        {
+          "nome": "haste",
+          "usos": "1/dia cada",
+          "nivel": 3
+        },
+        {
+          "nome": "lightning bolt",
+          "usos": "1/dia cada",
+          "nivel": 3
+        }
+      ]
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Duas facadas, convocação demoníaca e bônus aos invocados"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Inventário de ações, ataques, passivas e regras específicas ainda não conferido na edição exata.",
-    "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Edição, revisão impressa e erratas ainda não verificadas independentemente no editor; não homologar.",
+    "Testes de combate e revisão independente permanecem pendentes."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-372",
+    "nome_original": "Gnomish Knife Cultist",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "tipo": "humanoid (gnome)",
+    "tamanho": "Small",
+    "alinhamento": "lawful evil",
+    "nd": "5",
+    "bonus_proficiencia": 3
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": 2,
+      "sequencia": [
+        "Ritual Knife",
+        "Ritual Knife"
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Controle de diabos",
+      "efeito": "devils invocados têm imunidade a charmed, vantagem contra expulsão planar e obedecem ordens"
+    }
+  ]
 }

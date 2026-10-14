@@ -2,26 +2,29 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-368",
   "nome": "Gnoll Slaver",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_COMPROVACAO_EDITORIAL",
   "edicao": {
+    "sistema": "D&D 5e",
     "publicacao": "Creature Codex",
-    "edicao_exata_verificada": false
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false,
+    "versao": "transcrição individual KPOGL; sem confronto com impresso/erratas"
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/gnoll-slaver/",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint_anterior"
+      "url": "https://kpogl.wikidot.com/monster:gnoll-slaver",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data_pesquisa": "2026-10-14",
+      "escopo": "bloco integral individual de estatísticas e mecânicas"
     }
   ],
   "estatisticas": {
     "nd": "3",
+    "bonus_proficiencia": 2,
     "ca": 15,
+    "origem_ca": "chain shirt",
     "pv": 71,
-    "dados_vida": null,
+    "dados_vida": "11d8+22",
     "atributos": {
       "FOR": 18,
       "DES": 15,
@@ -30,44 +33,199 @@
       "SAB": 11,
       "CAR": 12
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "modificadores": {
+      "FOR": 4,
+      "DES": 2,
+      "CON": 2,
+      "INT": 1,
+      "SAB": 0,
+      "CAR": 1
+    },
+    "deslocamentos_ft": {
+      "andar": 30,
+      "voar": null,
+      "nadar": null,
+      "escalar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {},
+    "pericias": {
+      "Athletics": 6,
+      "Intimidation": 5,
+      "Perception": 2,
+      "Stealth": 6
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Common",
+      "Gnoll"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
-  "acoes_bonus": [],
+  "qualidade_estatisticas": "CONFERIDO_NA_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Rampage",
+      "gatilho": "reduz criatura a zero PV com ataque corpo a corpo durante seu turno",
+      "custo": "ação bônus",
+      "efeito": "move até metade de sua velocidade e faz um ataque Bite"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Whip",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ]
+    },
+    {
+      "nome": "Longbow",
+      "tipo": "distancia",
+      "bonus_acerto": 4,
+      "alcance_normal_ft": 150,
+      "alcance_maximo_ft": 600,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ]
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 3,
+      "alternativas": [
+        [
+          "Bite",
+          "Whip",
+          "Whip"
+        ],
+        [
+          "Longbow",
+          "Longbow",
+          "Longbow"
+        ]
+      ]
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Whip",
+      "categoria": "ataque",
+      "referencia_ataque": "Whip"
+    },
+    {
+      "nome": "Longbow",
+      "categoria": "ataque",
+      "referencia_ataque": "Longbow"
+    },
+    {
+      "nome": "Menace Captives",
+      "categoria": "controle",
+      "recarga": "5–6",
+      "alcance_ft": 30,
+      "alvos": "até três criaturas que o gnoll mantém cativas",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 15
+      },
+      "falha": {
+        "duracao": "1 minuto",
+        "efeito": "desvantagem em ataques e testes de perícia para executar ações diferentes das ordenadas pelo gnoll"
+      },
+      "sucesso": "não recebe penalidade",
+      "observacao": "fonte não lista novo teste de encerramento"
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Rampage",
+      "custo": "ação bônus",
+      "precondicao": "zerou PV com ataque corpo a corpo neste turno",
+      "efeito": "move até 15 pés e realiza Bite",
+      "limite_movimento_ft": 15
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Comando intimidatório e Rampage"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Golpes de escravizador e controle de presas"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Inventário de ações, ataques, passivas e regras específicas ainda não conferido na edição exata.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Edição, revisão impressa e erratas ainda não verificadas independentemente no editor; não homologar.",
+    "Testes de combate e revisão independente permanecem pendentes."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-368",
+    "nome_original": "Gnoll Slaver",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "tipo": "humanoid (gnoll)",
+    "tamanho": "Medium",
+    "alinhamento": "chaotic evil",
+    "nd": "3",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "alternativas": [
+        [
+          "Bite",
+          "Whip",
+          "Whip"
+        ],
+        [
+          "Longbow",
+          "Longbow",
+          "Longbow"
+        ]
+      ]
+    }
+  ],
+  "mecanicas_especiais": []
 }

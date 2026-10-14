@@ -2,26 +2,29 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-370",
   "nome": "Simian, Sulsha",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_COMPROVACAO_EDITORIAL",
   "edicao": {
+    "sistema": "D&D 5e",
     "publicacao": "Tome of Beasts 2",
-    "edicao_exata_verificada": false
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false,
+    "versao": "transcrição individual KPOGL; sem confronto com impresso/erratas"
   },
   "fontes": [
     {
       "url": "https://kpogl.wikidot.com/monster:sulsha",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint_anterior"
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data_pesquisa": "2026-10-14",
+      "escopo": "bloco integral individual de estatísticas e mecânicas"
     }
   ],
   "estatisticas": {
     "nd": "4",
+    "bonus_proficiencia": 2,
     "ca": 16,
+    "origem_ca": "natural armor",
     "pv": 90,
-    "dados_vida": null,
+    "dados_vida": "12d10+24",
     "atributos": {
       "FOR": 18,
       "DES": 14,
@@ -30,45 +33,233 @@
       "SAB": 12,
       "CAR": 9
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 40; escalar 40 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "modificadores": {
+      "FOR": 4,
+      "DES": 2,
+      "CON": 2,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": -1
+    },
+    "deslocamentos_ft": {
+      "andar": 40,
+      "voar": null,
+      "nadar": null,
+      "escalar": 40,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {},
+    "pericias": {
+      "Acrobatics": 4,
+      "Athletics": 6,
+      "Perception": 3,
+      "Survival": 3
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Common",
+      "Simian"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "CONFERIDO_NA_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Arboreal Tactician",
+      "efeitos": [
+        "não provoca ataque de oportunidade quando escala para fora do alcance inimigo",
+        "vantagem em ataques contra criatura que está escalando"
+      ]
+    },
+    {
+      "nome": "Standing Leap",
+      "efeito": "salto horizontal até 30 pés e vertical até 15 pés, com ou sem corrida",
+      "salto_horizontal_ft": 30,
+      "salto_vertical_ft": 15
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Slam",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        }
+      ]
+    },
+    {
+      "nome": "Tail Spur",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Bomb",
+      "tipo": "distancia",
+      "bonus_acerto": 6,
+      "alcance_normal_ft": 20,
+      "alcance_maximo_ft": 60,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeito_adicional": {
+        "gatilho": "alvo atingido",
+        "area": {
+          "geometria": "raio",
+          "raio_ft": 10,
+          "centro": "alvo"
+        },
+        "alvos": "alvo atingido e cada criatura até 10 pés",
+        "salvaguarda": {
+          "atributo": "DES",
+          "cd": 14
+        },
+        "dano": {
+          "dados": "4d6",
+          "tipo": "fire"
+        },
+        "falha": "dano total",
+        "sucesso": "metade"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        [
+          "Bite",
+          "Slam",
+          "Tail Spur"
+        ],
+        [
+          "Bomb",
+          "Bomb"
+        ]
+      ]
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Slam",
+      "categoria": "ataque",
+      "referencia_ataque": "Slam"
+    },
+    {
+      "nome": "Tail Spur",
+      "categoria": "ataque",
+      "referencia_ataque": "Tail Spur"
+    },
+    {
+      "nome": "Bomb",
+      "categoria": "ataque",
+      "referencia_ataque": "Bomb"
+    },
+    {
+      "nome": "Terrifying Display",
+      "categoria": "medo_area",
+      "recarga": "5–6",
+      "alcance_ft": 30,
+      "alvos": "cada criatura que consegue ver ou ouvir o sulsha",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 14
+      },
+      "falha": {
+        "condicao": "frightened",
+        "duracao": "1 minuto",
+        "encerramento": "pode repetir SAB CD14 no fim de cada turno"
+      },
+      "sucesso": "não recebe a condição"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Arboreal Tactician e Standing Leap"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Mordida, pancada, ferrão e bomba incendiária"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Inventário de ações, ataques, passivas e regras específicas ainda não conferido na edição exata.",
-    "Dados de reprodução comunitária ou transcrição de terceiros; validar com exemplar editorial.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Edição, revisão impressa e erratas ainda não verificadas independentemente no editor; não homologar.",
+    "Testes de combate e revisão independente permanecem pendentes."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-370",
+    "nome_original": "Sulsha",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "tipo": "humanoid (simian)",
+    "tamanho": "Large",
+    "alinhamento": "lawful evil",
+    "nd": "4",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "alternativas": [
+        [
+          "Bite",
+          "Slam",
+          "Tail Spur"
+        ],
+        [
+          "Bomb",
+          "Bomb"
+        ]
+      ]
+    }
+  ],
+  "mecanicas_especiais": []
 }

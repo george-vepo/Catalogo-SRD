@@ -2,26 +2,29 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-378",
   "nome": "Mahoru",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_COMPROVACAO_EDITORIAL",
   "edicao": {
+    "sistema": "D&D 5e",
     "publicacao": "Tome of Beasts 1",
-    "edicao_exata_verificada": false
+    "editora": "Kobold Press",
+    "edicao_exata_verificada": false,
+    "versao": "transcrição individual KPOGL; sem confronto com impresso/erratas"
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/mahoru-3pp/",
-      "natureza": "secundaria_nao_revalidada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint_anterior"
+      "url": "https://kpogl.wikidot.com/monster:mahoru",
+      "natureza": "transcricao_secundaria_comunitaria_nao_endossada",
+      "data_pesquisa": "2026-10-14",
+      "escopo": "bloco integral individual de estatísticas e mecânicas"
     }
   ],
   "estatisticas": {
     "nd": "3",
+    "bonus_proficiencia": 2,
     "ca": 15,
+    "origem_ca": "natural armor",
     "pv": 105,
-    "dados_vida": null,
+    "dados_vida": "14d10+28",
     "atributos": {
       "FOR": 18,
       "DES": 19,
@@ -30,44 +33,150 @@
       "SAB": 12,
       "CAR": 7
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 10; nadar 60 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "modificadores": {
+      "FOR": 4,
+      "DES": 4,
+      "CON": 2,
+      "INT": -4,
+      "SAB": 1,
+      "CAR": -2
+    },
+    "deslocamentos_ft": {
+      "andar": 10,
+      "voar": null,
+      "nadar": 60,
+      "escalar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {},
+    "pericias": {
+      "Perception": 3,
+      "Stealth": 6
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "CONFERIDO_NA_TRANSCRICAO_SECUNDARIA",
+  "habilidades_passivas": [
+    {
+      "nome": "Amphibious",
+      "efeito": "respira ar e água"
+    },
+    {
+      "nome": "Blood Frenzy",
+      "gatilho": "ataca criatura abaixo do próprio máximo de PV",
+      "efeito": "vantagem em ataques corpo a corpo contra esse alvo"
+    },
+    {
+      "nome": "Keen Sight and Smell",
+      "efeito": "vantagem em testes SAB (Perception) dependentes de visão ou olfato"
+    },
+    {
+      "nome": "Pack Tactics",
+      "gatilho": "ao menos um aliado não incapacitado a até 5 pés do alvo",
+      "efeito": "vantagem na rolagem de ataque contra o alvo"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "3d10",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "efeito_condicional": {
+        "gatilho": "acerta golpe crítico",
+        "salvaguarda": {
+          "atributo": "FOR",
+          "cd": 14
+        },
+        "falha": "arranca um membro do alvo",
+        "sucesso": "mantém membro",
+        "excecao": "criaturas imunes a slashing são imunes ao efeito de amputação",
+        "duracao": "membro perdido; tratamento não detalhado no bloco"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Roar",
+      "categoria": "controle_area",
+      "area": {
+        "geometria": "raio",
+        "raio_ft": 30
+      },
+      "alvos": "criatura no alcance que pode ouvir o rugido (ar) ou vibração (água)",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 14
+      },
+      "falha": {
+        "condicao": "frightened",
+        "duracao": "1 minuto",
+        "repetir": "SAB CD14 ao fim de cada turno; sucesso encerra"
+      },
+      "sucesso": "sem medo",
+      "efeito_condicional": {
+        "gatilho": "falha por 5 ou mais",
+        "condicao": "paralyzed",
+        "duracao": "até fim do próximo turno do alvo"
+      },
+      "imunidade_apos_sucesso": "24 horas contra Roar de todos os mahoru"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Frenesi de sangue em ambiente aquático"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Mordidas e rugido"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Inventário de ações, ataques, passivas e regras específicas ainda não conferido na edição exata.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Edição, revisão impressa e erratas ainda não verificadas independentemente no editor; não homologar.",
+    "Testes de combate e revisão independente permanecem pendentes."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "id": "TF-378",
+    "nome_original": "Mahoru",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "tipo": "monstrosity",
+    "tamanho": "Large",
+    "alinhamento": "unaligned",
+    "nd": "3",
+    "bonus_proficiencia": 2
+  },
+  "multiataques": [],
+  "mecanicas_especiais": [
+    {
+      "nome": "Amputação em crítico",
+      "efeito": "crítico de Bite e falha FOR CD14 removem membro salvo imunidade a slashing"
+    }
+  ]
 }
