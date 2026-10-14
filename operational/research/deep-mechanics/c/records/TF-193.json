@@ -4,115 +4,211 @@
   "nome": "Cueyatl Sea Priest",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 68,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Creature Codex 2018",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/cueyatl-sea-priest/"
   },
   "estatisticas": {
     "nd_catalogo": "1",
     "nd_fonte": "1",
     "ca": 12,
     "pv": 45,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "10d6+10",
+    "porte": "Small",
+    "tipo": "humanoid",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 10,
+      "DES": 12,
+      "CON": 12,
+      "INT": 10,
+      "SAB": 14,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 1,
+      "CON": 1,
+      "INT": 0,
+      "SAB": 2,
+      "CAR": 0
+    },
+    "deslocamentos": {
+      "andar": 30,
+      "escalar": 20,
+      "nadar": 30
+    },
+    "pericias": [
+      {
+        "nome": "Medicine",
+        "bonus": 4
+      },
+      {
+        "nome": "Religion",
+        "bonus": 2
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 3
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Aquan",
+      "Cueyatl"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 200,
+    "bonus_proficiencia": 2,
+    "ca_origem": "leather armor"
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Amphibious, Speak with Sea Life e spellcasting druídico CD12",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Amphibious",
+        "efeito": "respira ar e água"
+      },
+      {
+        "nome": "Jungle Camouflage",
+        "beneficio": "advantage DEX(Stealth) ao se esconder em jungle"
+      },
+      {
+        "nome": "Slippery",
+        "beneficio": "advantage em saves/checks para escapar de grapple"
+      },
+      {
+        "nome": "Standing Leap",
+        "horizontal_ft": 20,
+        "vertical_ft": 10,
+        "precisa_corrida": false
+      },
+      {
+        "nome": "Speak with Sea Life",
+        "alvos": "beasts e monstrosities amphibious OU que respiram debaixo d'água",
+        "efeito": "comunica como se compartilhassem idioma"
+      },
+      {
+        "nome": "Spellcasting",
+        "referencia": "mecanicas.conjuracao"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Trident com dano extra de veneno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Trident",
+        "tipo": "melee OR ranged weapon attack",
+        "bonus_acerto": 2,
+        "alcance_ft": 5,
+        "distancia_curta_ft": 20,
+        "distancia_longa_ft": 60,
+        "dano": [
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "poison"
+          }
+        ],
+        "duas_maos_melee": {
+          "dados": "1d8",
+          "media": 4,
+          "tipo": "piercing"
+        }
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Trident",
+        "tipo": "melee OR ranged weapon attack",
+        "bonus_acerto": 2,
+        "alcance_ft": 5,
+        "distancia_curta_ft": 20,
+        "distancia_longa_ft": 60,
+        "dano": [
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "poison"
+          }
+        ],
+        "duas_maos_melee": {
+          "dados": "1d8",
+          "media": 4,
+          "tipo": "piercing"
+        }
+      }
+    ],
     "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
-    "conjuracao": [],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "classe": "Druid",
+        "nivel_conjurador": 2,
+        "atributo": "WIS",
+        "cd_salvaguarda": 12,
+        "bonus_ataque_magico": 4,
+        "slots": {
+          "1": 3
+        },
+        "magias": [
+          {
+            "nivel": 0,
+            "frequencia": "at will",
+            "nomes": [
+              "guidance",
+              "poison spray"
+            ]
+          },
+          {
+            "nivel": 1,
+            "nomes": [
+              "animal friendship",
+              "create or destroy water",
+              "fog cloud",
+              "speak with animals"
+            ]
+          }
+        ]
+      }
+    ],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Referência a regras de comunicação com vida marinha requer classificação das espécies.",
-    "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição."
+    "Speak with Sea Life atinge somente beasts e monstrosities anfíbios ou aquáticos respiradores, não qualquer criatura marinha.",
+    "Druid level2 WIS CD12 +4, 3 slots 1º nível, duas cantrips; Trident +2 com dano poison sem salvação impressa.",
+    "Conferir edição original/legal e direitos/identidade da imagem."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com edição correta"
+    "conferência de edição, licenças e erratas",
+    "autoria, identidade e inspeção visual da imagem"
   ],
   "fontes": [
     {
@@ -123,6 +219,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/cueyatl-sea-priest/",
+      "tipo": "verificação mecânica individual CP44 com separação de edições",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +280,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 44,
+    "publicacao": "Creature Codex 2018",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/cueyatl-sea-priest/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

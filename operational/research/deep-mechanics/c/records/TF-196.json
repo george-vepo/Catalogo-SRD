@@ -4,115 +4,200 @@
   "nome": "Tosculi, Elite Bow Raider",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 71,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "BLOQUEADA_VERSOES_ELITE_RAIDER_2016_2023",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 1",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Tome of Beasts 1 ORIGINAL 2016 (não revisão 2023)",
+    "fonte_identidade": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-elite-bow-raider"
   },
   "estatisticas": {
     "nd_catalogo": "5",
     "nd_fonte": "5",
     "ca": 16,
     "pv": 97,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "13d8+39",
+    "porte": "Medium",
+    "tipo": "humanoid",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 14,
+      "DES": 18,
+      "CON": 17,
+      "INT": 12,
+      "SAB": 14,
+      "CAR": 12
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": 4,
+      "CON": 3,
+      "INT": 1,
+      "SAB": 2,
+      "CAR": 1
+    },
+    "deslocamentos": {
+      "andar": 30,
+      "voar": 60
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 6
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 7
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Gnoll",
+      "Infernal",
+      "Tosculi"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "ca_origem": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Deadly Precision amplia flechas; Evasive dificulta tiros; Keen Smell e Skirmisher",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Deadly Precision",
+        "beneficio": "ranged attacks +2d8 damage (já embutido no Longbow 3d8+4)"
+      },
+      {
+        "nome": "Evasive",
+        "beneficio": "ranged weapon attacks contra ooze? NÃO; contra esta tosculi têm disadvantage"
+      },
+      {
+        "nome": "Keen Smell",
+        "beneficio": "advantage WIS(Perception) pelo cheiro"
+      },
+      {
+        "nome": "Skirmisher",
+        "beneficio": "Dash como bonus action"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Duas Longbow ou Claws, não multiplicar o dano Deadly Precision outra vez.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "opcoes": [
+          [
+            "Claws",
+            "Claws"
+          ],
+          [
+            "Longbow",
+            "Longbow"
+          ]
+        ]
+      },
+      {
+        "nome": "Claws",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Longbow",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 7,
+        "distancia_curta_ft": 150,
+        "distancia_longa_ft": 600,
+        "dano": [
+          {
+            "dados": "3d8+4",
+            "media": 17,
+            "tipo": "piercing"
+          }
+        ],
+        "nota": "Deadly Precision +2d8 já incluído nos 3d8; não adicionar novamente"
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Claws",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Longbow",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 7,
+        "distancia_curta_ft": 150,
+        "distancia_longa_ft": 600,
+        "dano": [
+          {
+            "dados": "3d8+4",
+            "media": 17,
+            "tipo": "piercing"
+          }
+        ],
+        "nota": "Deadly Precision +2d8 já incluído nos 3d8; não adicionar novamente"
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "opcoes": [
+        [
+          "Claws",
+          "Claws"
+        ],
+        [
+          "Longbow",
+          "Longbow"
+        ]
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Skirmisher",
+        "efeito": "Dash",
+        "economia": "bonus action"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Fonte secundária, mas CR5/CA16/PV97 também constam da edição original; verificar alteração de 2023.",
-    "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição."
+    "BLOQUEIO EDIÇÕES: original 2016 CA16 DEX18 +4, Deadly Precision +2d8, Longbow +7 dano 3d8+4, Evasive, Keen Smell; revisão 2023 CA17 DEX24 +7, Archer, Hive Sense, Point Blank Hunter, +10 Claw/Longbow, Skirmisher Dash ou Disengage. Não mesclar.",
+    "Original 2016 de fonte dr-eigenvalue, necessita erratas/licença e validação de arte."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com edição correta"
+    "conferência de edição, licenças e erratas",
+    "autoria, identidade e inspeção visual da imagem"
   ],
   "fontes": [
     {
@@ -123,6 +208,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-elite-bow-raider",
+      "tipo": "verificação mecânica individual CP44 com separação de edições",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/tosculi-elite-bow-raider-3pp/",
+      "tipo": "verificação mecânica individual CP44 com separação de edições",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +274,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 44,
+    "publicacao": "Tome of Beasts 1 ORIGINAL 2016 (não revisão 2023)",
+    "fonte_mecanicas": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-elite-bow-raider",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
