@@ -10,17 +10,17 @@
 
 ## Totais efetivos auditados
 
-- **170 / 195** arquivos de imagem WebP reais registrados no GitHub; **25** IDs pendentes.
-- **37.938.196 bytes** persistidos nas 170 imagens.
-- Esta continuidade encontrou 156 imagens na branch e acrescentou **14 binários** em dois checkpoints de 7 imagens. Não atribuir a esta execução a aquisição das 156 anteriores.
+- **173 / 195** arquivos de imagem WebP reais registrados no GitHub; **22** IDs pendentes.
+- **38.311.386 bytes** persistidos nas 170 imagens.
+- Esta continuidade encontrou 156 imagens na branch e acrescentou **17 binários** em quatro checkpoints (7, 7, 2 e 1 imagens). Não atribuir a esta execução a aquisição das 156 anteriores.
 - O manifesto contém todos os 195 IDs na ordem do CSV, com nome, fonte original, caminho, MIME, dimensões, bytes, SHA-256, Git blob SHA, commit e indicadores de verificação para imagens gravadas.
 
 ## Checagens executadas nesta continuidade
 
 1. A listagem de arquivos GitHub já existentes foi comparada ao manifesto: **156 arquivos**, todos em IDs autorizados, com tamanho idêntico ao manifesto; não havia IDs extras fora do lote D no diretório.
-2. Os 14 novos binários foram obtidos do repositório público `TheGiddyLimit/homebrew-img`, em arquivos de arte nomeados pela criatura, via `fetch_file(encoding=base64)` e gravados em Git blobs com `encoding=base64`, sem substituir URL por pseudoarquivo.
+2. Os 17 novos binários foram obtidos do repositório público `TheGiddyLimit/homebrew-img`, em arquivos de arte nomeados pela criatura, via `fetch_file(encoding=base64)` e gravados em Git blobs com `encoding=base64`, sem substituir URL por pseudoarquivo.
 3. Para cada binário novo, o SHA Git do blob no destino coincidiu com o SHA Git da fonte; após commit e atualização do ref, o arquivo foi relido do GitHub em Base64 e teve SHA-256 recalculado (algoritmo testado com vetor conhecido), tamanho, assinatura RIFF/WEBP, subtipo VP8L/VP8X, tamanho do contêiner e dimensões conferidos.
-4. Os **14 WebP novos foram efetivamente renderizados/decodificados a partir do Base64 persistido na branch**, incluindo as quatro mariposas com imagens e hashes diferentes.
+4. Os **17 WebP novos foram efetivamente renderizados/decodificados a partir do Base64 persistido na branch**, incluindo as quatro mariposas com imagens e hashes diferentes.
 5. Para as 156 imagens anteriores, nesta continuidade houve comparação do inventário, tamanho e SHA de blob no GitHub com o manifesto, mas **não houve nova decodificação raster nem recálculo integral do SHA-256 de todas elas**. As flags históricas correspondem aos checkpoints anteriores.
 6. É recomendável revisão editorial humana de identidade visual, embora as 14 imagens tenham correspondência nominal explícita nas coleções de fonte. Não usamos imagens de outras criaturas para preencher lacunas.
 
@@ -31,41 +31,46 @@
 | 34 | KP-A012, KP-A013, KP-A017, TF-001, TF-004, TF-006, TF-007 | 7 | 1.302.034 | `d77cfcfb0eccf3179fb8837596adb3bf75424b28` |
 | 35 | TF-011, TF-014, TF-035, TF-036, TF-037, TF-038, TF-043 | 7 | 816.622 | `a058c30527568184ec72b3fb358744cdef43ad83` |
 
+## Checkpoints desta retomada adicional
+
+| Checkpoint | IDs | Bytes | Commit da imagem |
+|---|---|---:|---|
+| 36 | TF-002, TF-042 | 243.062 | `49b7f2e184838a934a243594f61ad581b08010fe` |
+| 37 | TF-045 | 130.128 | `d9c28d7befb03ed8de92035a972b070dc8a08f8d` |
+
 ## Fontes identificadas
 
-- `https://github.com/TheGiddyLimit/homebrew-img` — `img/CCodex/`, `img/CCodex/tokens/` e `img/ToB3/bestiary/tokens/` para 14 novas imagens.
+- `https://github.com/TheGiddyLimit/homebrew-img` — `img/CCodex/`, `img/CCodex/tokens/` e `img/ToB3/bestiary/tokens/` para 15 novas imagens, incluindo `Aatxe.webp` (fonte do ID `TF-045`, grafado `Aaxte` no CSV).
+- `https://github.com/chaidgpt/TheBardicLexicon` — imagens próprias de `Ahu-Nixta Drudge` e `Akhlut` (2 novos arquivos).
 - Fontes das 156 imagens anteriores preservadas individualmente no manifesto, inclusive `5etools-mirror-3/5etools-img` e `TheGiddyLimit/homebrew-img`.
 
-## IDs pendentes (25, sem binário contabilizado)
+## IDs pendentes (22, sem binário contabilizado)
 
-Motivo: após conferir as coleções pesquisadas, não foi obtida uma imagem específica e distinta para estes IDs que pudesse ser armazenada e verificada no GitHub. Não reutilizar arte de variantes diferentes nem considerar como aquisição uma imagem apenas referenciada por URL.
+Motivo: não foi localizada uma fonte de arte específica suficientemente inequívoca com binário adquirido, salvo quando o nome da imagem correspondia inequivocamente à criatura. Não se consideraram arte de outra variante ou pseudoarquivos.
 
-- `KP-A019` — Crimson Shambler: **PENDENTE** (sem fonte binária própria verificada).
-- `KP-S002` — Forest Emperor: **PENDENTE** (sem fonte binária própria verificada).
-- `KP-S005` — Yaojing: **PENDENTE** (sem fonte binária própria verificada).
-- `KP-S006` — Clockwork Archon: **PENDENTE** (sem fonte binária própria verificada).
-- `KP-S007` — Animated Instruments (Animated Symphony): **PENDENTE** (sem fonte binária própria verificada).
-- `KP-S014` — Pustulent Shambler: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-002` — Ahu-Nixta, Drudge: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-008` — Ahu-Nixta, Cataphract: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-009` — Astral Devourer: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-013` — Yavalnoi: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-017` — Ancient Aboleth: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-022` — Beetle, Giant Bombardier: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-023` — Beetle, Giant Snow: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-024` — Beetle, Lantern: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-025` — Beetle, Sniffer: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-026` — Bilby: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-034` — Giant Mongoose: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-041` — Giant Water Scorpion: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-042` — Akhlut: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-045` — Aaxte: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-048` — Astri: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-049` — Agonized Khyphon: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-053` — Thrummren: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-055` — Aklea: **PENDENTE** (sem fonte binária própria verificada).
-- `TF-057` — Animated Bearskin Rug: **PENDENTE** (sem fonte binária própria verificada).
+- `KP-A019` — Crimson Shambler: **PENDENTE** (sem binário específico persistido).
+- `KP-S002` — Forest Emperor: **PENDENTE** (sem binário específico persistido).
+- `KP-S005` — Yaojing: **PENDENTE** (sem binário específico persistido).
+- `KP-S006` — Clockwork Archon: **PENDENTE** (sem binário específico persistido).
+- `KP-S007` — Animated Instruments (Animated Symphony): **PENDENTE** (sem binário específico persistido).
+- `KP-S014` — Pustulent Shambler: **PENDENTE** (sem binário específico persistido).
+- `TF-008` — Ahu-Nixta, Cataphract: **PENDENTE** (sem binário específico persistido).
+- `TF-009` — Astral Devourer: **PENDENTE** (sem binário específico persistido).
+- `TF-013` — Yavalnoi: **PENDENTE** (sem binário específico persistido).
+- `TF-017` — Ancient Aboleth: **PENDENTE** (sem binário específico persistido).
+- `TF-022` — Beetle, Giant Bombardier: **PENDENTE** (sem binário específico persistido).
+- `TF-023` — Beetle, Giant Snow: **PENDENTE** (sem binário específico persistido).
+- `TF-024` — Beetle, Lantern: **PENDENTE** (sem binário específico persistido).
+- `TF-025` — Beetle, Sniffer: **PENDENTE** (sem binário específico persistido).
+- `TF-026` — Bilby: **PENDENTE** (sem binário específico persistido).
+- `TF-034` — Giant Mongoose: **PENDENTE** (sem binário específico persistido).
+- `TF-041` — Giant Water Scorpion: **PENDENTE** (sem binário específico persistido).
+- `TF-048` — Astri: **PENDENTE** (sem binário específico persistido).
+- `TF-049` — Agonized Khyphon: **PENDENTE** (sem binário específico persistido).
+- `TF-053` — Thrummren: **PENDENTE** (sem binário específico persistido).
+- `TF-055` — Aklea: **PENDENTE** (sem binário específico persistido).
+- `TF-057` — Animated Bearskin Rug: **PENDENTE** (sem binário específico persistido).
 
 ## Estado final
 
-**ENTREGA PARCIAL, PR EM RASCUNHO.** Não houve merge. O manifesto `manifests/d.json` mantém as 25 pendências abertas sem inventar arquivos. Uma nova aquisição deve utilizar novo checkpoint de até dez imagens e repetir validação de leitura.
+**ENTREGA PARCIAL — PR #11 EM RASCUNHO.** 173 imagens verificadas no GitHub, 22 pendentes, 38.311.386 bytes. Nenhum merge executado; preservar os IDs não adquiridos.
