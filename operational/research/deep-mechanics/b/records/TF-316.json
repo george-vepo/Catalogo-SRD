@@ -2,7 +2,7 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-316",
   "nome": "Soil Snake",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_AGUARDA_COTEJO_EDITORIAL",
   "edicao": {
     "sistema": "D&D 5e (publicação informada em checkpoint)",
     "publicacao": "Tome of Beasts 3",
@@ -11,19 +11,17 @@
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/soil-snake/",
-      "natureza": "secundaria_ou_transcricao_nao_reverificada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_preexistente"
+      "url": "https://kpogl.wikidot.com/monster:soil-snake",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "bloco de regras e estatísticas individualizado"
     }
   ],
   "estatisticas": {
     "nd": "4",
     "ca": 14,
     "pv": 115,
-    "dados_vida": null,
+    "dados_vida": "11d12+44",
     "atributos": {
       "FOR": 21,
       "DES": 10,
@@ -32,46 +30,160 @@
       "SAB": 12,
       "CAR": 5
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 40,
+      "escavar": 40
+    },
     "deslocamentos_texto": "caminhar 40; escavar 40 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {},
+    "pericias": {
+      "Perception": 2,
+      "Stealth": 2
+    },
+    "sentidos": [
+      "darkvision 60 ft",
+      "tremorsense 60 ft"
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "entende idiomas do criador, não fala"
+    ],
+    "resistencias_dano": [
+      "fire"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone"
+    ],
+    "proficiencia": 2
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "acoes": [],
-  "ataques": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não precisa respirar, comer, beber ou dormir."
+    },
+    {
+      "nome": "Grassland Camouflage",
+      "efeito": "Vantagem em DES (Stealth) para esconder-se em pradarias."
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Bite",
+        "Tail Whip"
+      ]
+    },
+    {
+      "nome": "Bite",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Tail Whip",
+      "referencia_ataque": "Tail Whip"
+    },
+    {
+      "nome": "Charging Swallow",
+      "movimento_ft": 30,
+      "trajeto": "linha reta, atravessa espaços de criaturas Medium ou menores",
+      "gatilho": "primeira entrada no espaço da criatura",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 14
+      },
+      "dano": {
+        "dados": "4d6",
+        "tipo": "bludgeoning"
+      },
+      "falha": [
+        "dano integral",
+        "enterrada, restrained, sem respirar e sem levantar"
+      ],
+      "sucesso": "meio dano, não enterrada",
+      "liberar": {
+        "custo": "ação",
+        "teste": "FOR",
+        "cd": 14
+      }
+    },
+    {
+      "nome": "Soil Blast",
+      "recarga": "5–6",
+      "area": {
+        "tipo": "cone",
+        "alcance_ft": 30
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 14
+      },
+      "dano": {
+        "dados": "4d8",
+        "tipo": "bludgeoning"
+      },
+      "falha": [
+        "dano integral",
+        "prone"
+      ],
+      "sucesso": "metade, sem prone"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "bonus_acerto": 7,
+      "alcance_ft": 10,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 5,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Tail Whip",
+      "bonus_acerto": 7,
+      "alcance_ft": 10,
+      "dano": [
+        {
+          "dados": "2d10",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ]
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Camuflagem em solo e vegetação"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Ataques e cone de terra"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "DIVERGENCIA_MODIFICADOR_SAB_12_REPORTADO_COMO_0",
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Confirmar bloco mecânico integral da edição correta contra ficha individual; resumos não constituem ações.",
-    "Registrar nominalmente TODOS os ataques, passivas, ações, ações bônus, reações, legendárias e regras de conjuração com dados/CD/duração/recarga/limites.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Comparar com exemplar editorial e erratas do volume correto; fonte secundária não certifica revisão.",
+    "Ainda sem homologação independente, testes de combate ou promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Soil Snake",
+    "tipo": "Construct",
+    "tamanho": "Huge",
+    "alinhamento": "unaligned",
+    "publicacao": "Tome of Beasts 3"
+  }
 }

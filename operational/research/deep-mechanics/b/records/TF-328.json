@@ -2,7 +2,7 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-328",
   "nome": "Gnyan",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_AGUARDA_COTEJO_EDITORIAL",
   "edicao": {
     "sistema": "D&D 5e (publicação informada em checkpoint)",
     "publicacao": "Tome of Beasts 3",
@@ -11,19 +11,17 @@
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/gnyan/",
-      "natureza": "secundaria_ou_transcricao_nao_reverificada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_preexistente"
+      "url": "https://kpogl.wikidot.com/monster:gnyan",
+      "natureza": "transcricao_secundaria_nao_endossada",
+      "consultado_em": "2026-10-14",
+      "escopo": "bloco de regras e estatísticas individualizado"
     }
   ],
   "estatisticas": {
     "nd": "4",
     "ca": 14,
     "pv": 90,
-    "dados_vida": null,
+    "dados_vida": "12d10+24",
     "atributos": {
       "FOR": 17,
       "DES": 19,
@@ -32,46 +30,179 @@
       "SAB": 16,
       "CAR": 18
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 50
+    },
     "deslocamentos_texto": "caminhar 50 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {
+      "DES": 6,
+      "CON": 4
+    },
+    "pericias": {
+      "Perception": 5,
+      "Stealth": 6,
+      "Survival": 5
+    },
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "cold",
+      "poison"
+    ],
+    "vulnerabilidades_dano": [
+      "fire"
+    ],
+    "imunidades_condicao": [
+      "exhaustion",
+      "frightened",
+      "poisoned",
+      "prone"
+    ],
+    "proficiencia": 2
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "acoes": [],
-  "ataques": [],
-  "acoes_bonus": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Aura of Hope",
+      "alcance_ft": 30,
+      "efeito": "Aliados têm vantagem em salvaguardas contra frightened."
+    },
+    {
+      "nome": "Glorious Milk",
+      "ativacao": "1 minuto bebendo água de gelo derretido",
+      "efeito": "Leite criado restaura 2d6 PV e remove até dois níveis de exhaustion por pessoa.",
+      "limite": "20 PV curados ou quatro níveis removidos por descanso longo, no total"
+    },
+    {
+      "nome": "Pounce",
+      "gatilho": "move 20 pés em linha reta e acerta Claw",
+      "salvaguarda": {
+        "atributo": "FOR",
+        "cd": 13
+      },
+      "falha": "prone",
+      "bonus_condicional": "Bite como ação bônus se alvo ficou prone"
+    },
+    {
+      "nome": "Snow Camouflage",
+      "efeito": "Vantagem em Stealth na neve."
+    },
+    {
+      "nome": "Snow Strider",
+      "efeito": "Ignora terreno difícil por neve/gelo, caminha em gelo sem teste e não deixa rastros na neve."
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Bite",
+        "Claw"
+      ]
+    },
+    {
+      "nome": "Bite",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Claw",
+      "referencia_ataque": "Claw"
+    },
+    {
+      "nome": "Avalanche’s Roar",
+      "recarga": "6",
+      "area": {
+        "tipo": "cone",
+        "alcance_ft": 30
+      },
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 13
+      },
+      "dano": {
+        "dados": "6d6",
+        "tipo": "cold"
+      },
+      "falha": [
+        "dano total",
+        "restrained até fim do próximo turno"
+      ],
+      "sucesso": "metade, sem restrained"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 4,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "1d6",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ]
+    },
+    {
+      "nome": "Claw",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "2d4",
+          "modificador": 4,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "1d6",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ]
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Snow Step",
+      "custo": "ação bônus",
+      "efeito": "Teleporta até 30 pés para espaço livre visível; origem e destino devem ter neve.",
+      "alcance_ft": 30
+    },
+    {
+      "nome": "Bite (Pounce)",
+      "custo": "ação bônus",
+      "precondicao": "alvo fica prone após Pounce",
+      "referencia_ataque": "Bite"
+    }
+  ],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Aura de esperança e benefícios sobrenaturais"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Ações mágicas restauradoras"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Confirmar bloco mecânico integral da edição correta contra ficha individual; resumos não constituem ações.",
-    "Registrar nominalmente TODOS os ataques, passivas, ações, ações bônus, reações, legendárias e regras de conjuração com dados/CD/duração/recarga/limites.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Comparar com exemplar editorial e erratas do volume correto; fonte secundária não certifica revisão.",
+    "Ainda sem homologação independente, testes de combate ou promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Gnyan",
+    "tipo": "Elemental",
+    "tamanho": "Large",
+    "alinhamento": "neutral good",
+    "publicacao": "Tome of Beasts 3"
+  }
 }
