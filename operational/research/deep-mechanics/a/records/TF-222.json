@@ -87,7 +87,7 @@
       {
         "name": "Paralyzing Gaze",
         "category": "triggered_trait",
-        "trigger": "início do turno de criatura que vê os olhos do crocotta e está a até 30 pés",
+        "trigger": "quando criatura que vê os olhos do crocotta inicia turno a até 30 pés; crocotta pode exigir teste se não incapacitado e puder enxergar alvo",
         "restrictions": [
           "crocotta não incapacitado",
           "crocotta enxerga a criatura"
@@ -111,7 +111,9 @@
         "species_exception": {
           "canines": "immune",
           "canine_humanoids": "advantage_on_save"
-        }
+        },
+        "activation": "optional_by_crocotta",
+        "consent": false
       },
       {
         "name": "Pounce",

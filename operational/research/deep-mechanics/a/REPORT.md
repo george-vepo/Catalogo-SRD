@@ -1,3 +1,15 @@
+# Grupo A — checkpoint 40: correções de precisão (14/10/2026)
+
+Três fichas previamente estruturadas foram confrontadas novamente com sua transcrição individual no KPOGL (fonte comunitária, não homologação da edição primária):
+
+- **TF-222 Crocotta:** explicitado que Paralyzing Gaze é opcional: o monstro **pode** forçar o teste no início do turno do alvo, respeitadas visão e incapacidade; não é imposição automática.
+- **TF-223 Three-Headed Cobra:** preferência por `knocked_unconscious` ao registrar a vantagem em salvaguardas contra ser deixada inconsciente, preservando o texto original.
+- **TF-229 Conjoined Queen:** corrigida a pendência que citava 18 magias: o bloco contém **17 magias distintas**, inclusive quatro truques, com espaços de 1º a 5º níveis registrados.
+
+**Contagens inalteradas:** 39 estruturadas online, 0 homologadas, 113 binários, 19 faltantes. Sem alteração de outro grupo e sem merge.
+
+---
+
 # Grupo A — checkpoint 39 (14/10/2026)
 
 **Estado após checkpoint:** 132/132 JSONs; **39 fichas estruturadas segundo a fonte individual online**, 0 homologadas editorialmente, 131 PARCIAIS e 1 BLOQUEADA; 113 binários de imagem, 19 ausentes. Estatísticas da publicação e edição primária ainda exigem revisão de erratas e da engine.
