@@ -1,0 +1,306 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-286",
+  "name": "Malleable, Massive",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "16",
+    "size": "Gargantuan",
+    "type": "aberration",
+    "alignment": "chaotic_evil",
+    "experience_points": 15000,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "not explicitly published in individual block"
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 248,
+    "hit_dice": "16d20+80",
+    "ability_scores": {
+      "STR": 26,
+      "DEX": 8,
+      "CON": 20,
+      "INT": 21,
+      "WIS": 17,
+      "CHA": 10
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "climb_ft": 40
+    },
+    "senses": {
+      "blindsight_ft": 120,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 13
+    },
+    "skills": [],
+    "saving_throws": {
+      "INT": 10,
+      "WIS": 8,
+      "CHA": 5
+    },
+    "languages": {
+      "spoken": "all_languages",
+      "telepathy_ft": 120
+    },
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "prone"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 8,
+      "DEX": -1,
+      "CON": 5,
+      "INT": 5,
+      "WIS": 3,
+      "CHA": 0
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Absorb Malleable",
+        "category": "absorption",
+        "action_economy": "bonus_action",
+        "requires_target": {
+          "one_of": [
+            "minor_malleable",
+            "moderate_malleable",
+            "major_malleable"
+          ],
+          "within_ft": 5
+        },
+        "effect": {
+          "consume_target": true,
+          "heal_hit_points": "target_current_hit_points",
+          "inherit_targets_conditions_spells_and_magical_effects": true
+        }
+      },
+      {
+        "name": "Amorphous",
+        "category": "movement",
+        "minimum_passable_gap_inches": 1,
+        "no_squeezing": true
+      },
+      {
+        "name": "Controlled Mutability",
+        "category": "transformation",
+        "external_changes_end": "end_of_malleable_next_turn",
+        "self_change_action": "action",
+        "self_choose_any_shape": true,
+        "retains_flesh_inside_out": true,
+        "does_not_gain_other_creatures_statistics_or_abilities": true
+      },
+      {
+        "name": "Psychic Absorption",
+        "category": "psychic_damage_to_healing",
+        "trigger": "subjected_to_psychic_damage",
+        "damage_taken": 0,
+        "heal": "the_psychic_damage_value_that_would_be_taken"
+      },
+      {
+        "name": "Spider Climb",
+        "category": "movement",
+        "climb_difficult_surfaces_and_ceiling_without_check": true
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Flesh Tendril",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "Flesh Tendril",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 13,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "5d6",
+              "flat": 8,
+              "average": 25,
+              "type": "bludgeoning"
+            }
+          ],
+          "grapple": {
+            "target_max_size": null,
+            "escape_dc": 18
+          }
+        }
+      },
+      {
+        "name": "Psychic Drain",
+        "category": "target_save",
+        "action_economy": "action",
+        "precondition": "one_creature_grappled_by_malleable",
+        "save": {
+          "ability": "INT",
+          "dc": 18,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "16d8",
+                "type": "psychic",
+                "average": 72
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "secondary_effect": {
+          "reduce_max_hp_by": "actual_psychic_damage_taken",
+          "duration": "until_long_rest",
+          "if_hp_max_becomes_0": {
+            "dies": true,
+            "becomes": "minor_malleable"
+          }
+        }
+      },
+      {
+        "name": "Separate Malleables",
+        "category": "split",
+        "action_economy": "action",
+        "choose_exactly_one": [
+          {
+            "result_creature": "minor_malleable",
+            "count": 16,
+            "hp_each": "floor(current_hp/16)"
+          },
+          {
+            "result_creature": "moderate_malleable",
+            "count": 4,
+            "hp_each": "floor(current_hp/4)"
+          },
+          {
+            "result_creature": "major_malleable",
+            "count": 2,
+            "hp_each": "floor(current_hp/2)"
+          }
+        ],
+        "inherit": "all_conditions_spells_and_magical_effects",
+        "initiative": "original_creature",
+        "spawn_spaces": "unoccupied_spaces_previously_occupied_by_original_creature"
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Absorb Malleable",
+        "category": "absorption",
+        "action_economy": "bonus_action",
+        "targets": [
+          "minor_malleable",
+          "moderate_malleable",
+          "major_malleable"
+        ],
+        "range_ft": 5
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Sudden Separation",
+        "category": "split_reaction",
+        "action_economy": "reaction",
+        "trigger": "single_attack_causes_30_or_more_damage",
+        "may_use": "Separate Malleables",
+        "triggering_damage_distribution": "divide_evenly_among_resulting_creatures",
+        "odd_damage_rounding": null
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Cross-record dependency",
+        "category": "split_cards",
+        "ids": [
+          "TF-274",
+          "TF-276",
+          "TF-284"
+        ]
+      }
+    ]
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Malleable maciço absorve exemplares menores, regenera por dano psíquico e ataca com múltiplos tentáculos que imobilizam presas."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/malleable-massive/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:massive-malleable",
+      "type": "KPOGL reprodução não endossada por Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "Ficha individual online: características numéricas, traços, ataques e economia de ação/reação",
+      "verification": "Lida diretamente em 14/10/2026; fonte secundária independente sem homologação do livro/engine"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Malleable, Massive é variante própria ND 16."
+  ],
+  "outstanding": [
+    "No Join Malleables at massive tier in source; do not invent it.",
+    "Grapple on Flesh Tendril applies to any creature, unlike Major's Huge-or-smaller limit.",
+    "Reaction triggering damage splitting remainder unspecified.",
+    "Sem imagem binária persistida no diretório A: não marcar produção como pronta.",
+    "Confrontar impressão, errata e eventual divergência, testar regras de engine e avaliar licença/editorial."
+  ],
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:massive-malleable"
+    ],
+    "source_tier": "KPOGL_independent_secondary_transcription",
+    "individual_statblock_reviewed": true,
+    "production_license_cleared": false,
+    "verified_image_exists": false,
+    "notes": "Mecânica estruturada por fonte individual online, não por leitura da impressão oficial."
+  }
+}

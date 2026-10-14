@@ -1,0 +1,208 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-026",
+  "name": "Bilby",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Tome of Beasts 2",
+    "publication_year": 2020,
+    "edition_family": "D&D 5e",
+    "edition": "Tome of Beasts 2 for 5th Edition (2020)",
+    "exact_printing": null,
+    "challenge_rating": "0",
+    "size": "Tiny",
+    "type": "beast",
+    "alignment": "unaligned",
+    "experience_points": 10,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 10,
+    "hit_points": 2,
+    "hit_dice": "1d4",
+    "ability_scores": {
+      "STR": 6,
+      "DEX": 10,
+      "CON": 10,
+      "INT": 2,
+      "WIS": 10,
+      "CHA": 8
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "burrow_ft": 5
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": -2,
+      "DEX": 0,
+      "CON": 0,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -1
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Shadow Camouflage",
+        "category": "passive",
+        "activation": "automatic",
+        "trigger": "Sempre que realizar um teste de Destreza (Furtividade) em luz fraca ou escuridão",
+        "effect": {
+          "roll": "Dexterity (Stealth) check",
+          "advantage": true
+        },
+        "requirements": {
+          "light_condition": [
+            "dim_light",
+            "darkness"
+          ]
+        },
+        "duration": "Apenas para o teste desencadeador",
+        "recharge": null,
+        "uses_limit": null,
+        "save": null
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_ability": "DEX",
+        "attack_bonus": 2,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": null,
+              "flat": 1,
+              "damage_type": "piercing"
+            }
+          ],
+          "other_effects": [],
+          "average_damage": 1
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "save": null,
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Familiar eligibility (source narrative)",
+        "type": "non_statblock_note",
+        "description": "KPOGL describes bilbies as eligible familiars via find familiar; this is not a separate combat action.",
+        "conditions": "Depende da magia find familiar e das regras aplicáveis à mesa",
+        "source": "https://kpogl.wikidot.com/monster:bilby"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/bilby/",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2 (2020), D&D 5e",
+      "verified_fields": [
+        "tamanho_tipo_alinhamento",
+        "CA_PV_dados",
+        "seis_atributos",
+        "deslocamento",
+        "sentidos",
+        "idiomas",
+        "ND",
+        "traco_Shadow_Camouflage",
+        "ataque_Bite",
+        "ausencia_outras_acoes_no_statblock"
+      ],
+      "reviewed": "2026-10-13"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:bilby",
+      "type": "ficha_individual_secundaria_independente",
+      "edition": "Tome of Beasts 2 (5e)",
+      "verification": "concorda com todos os parâmetros explícitos do statblock 5eSRD",
+      "reviewed": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial_oficial",
+      "verification": "confirma Bilby, tamanho Tiny, tipo Beast, ND 0, Tome of Beasts 2",
+      "reviewed": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tome-of-beasts-2/",
+      "type": "pagina_editorial_oficial",
+      "verification": "confirma publicação 5e e anúncio em 20/10/2020",
+      "reviewed": "2026-10-13"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-026_TF-030/research.json",
+    "sha": "bf0fbfd0a6d1a44c6bde42f3039a3d0ecd252dbd"
+  },
+  "legacy_note": [
+    "Validação de direitos de uso e imagem; não promover ao catálogo canônico sem gates."
+  ],
+  "outstanding": [
+    "Comparar a ficha de Bilby com a edição/errata original da Kobold Press e conferir a impressão exata antes de aprovação canônica.",
+    "Trocar a miniatura de 160×160 por arte de produção em alta resolução e revisar a direção visual do cartão.",
+    "Revisão independente antes de integração; nenhuma alteração no ledger global."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "two_individual_statblocks_agree": true,
+    "mechanics_covered_at_source_level": true,
+    "publisher_index_edition_family_confirmed": true,
+    "primary_book_full_text_compared": false,
+    "exact_printing_verified": false,
+    "editorial_final_approval": false,
+    "reason_for_partial": "Mecânicas da versão publicada online integralmente estruturadas e reconciliadas, mas não foi feita auditoria contra a página do livro físico/errata.",
+    "proficiency_inferred_from_attacks_and_standard_5e_cr0_to_1_8": true,
+    "online_numeric_details_rechecked_on": "2026-10-14",
+    "online_numeric_details_sources": [
+      "https://kpogl.wikidot.com/monster:bilby"
+    ]
+  },
+  "image": {
+    "status": "BINARIO_PUBLICADO_THUMBNAIL",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-026_bilby.jpg",
+    "format": "image/jpeg",
+    "width": 160,
+    "height": 160,
+    "bytes": 4241,
+    "sha256": "649da02715e1931192dd16d9cb86add1560c19607d07e730fe4a870a50ebb36b",
+    "git_blob_sha": "dd6fe3b2665cef5b2b6f5b8b58ac25d1e15b632d",
+    "source_type": "original_ai_generated",
+    "source_note": "Arte original gerada nesta execução para o Bilby; não é uma ilustração oficial Kobold Press.",
+    "resolution_status": "THUMBNAIL_NAO_APROVADO_PARA_CARTA_FINAL",
+    "source_generation_id": "4f74ab03-d18b-42fa-bb77-0b61b1145109"
+  }
+}

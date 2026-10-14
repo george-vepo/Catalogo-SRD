@@ -1,0 +1,247 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-244",
+  "name": "Chimeric Phantom",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "2",
+    "size": "Medium",
+    "type": "undead",
+    "alignment": "chaotic_neutral",
+    "experience_points": 450,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 11,
+    "hit_points": 36,
+    "hit_dice": "8d8",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 13,
+      "CON": 10,
+      "INT": 13,
+      "WIS": 14,
+      "CHA": 5
+    },
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 40,
+      "hover": true
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 11
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": {
+      "known": "languages_known_by_any_constituent_soul_in_life"
+    },
+    "damage_resistances": [
+      "acid",
+      "cold",
+      "fire",
+      "lightning",
+      "thunder",
+      "nonmagical_attack_bludgeoning",
+      "nonmagical_attack_piercing",
+      "nonmagical_attack_slashing"
+    ],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained"
+    ],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 1,
+      "CON": 0,
+      "INT": 1,
+      "WIS": 2,
+      "CHA": -3
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Frightening Madness",
+        "category": "turn_start_aura_save",
+        "trigger": "another_creature_starts_turn_within_range",
+        "radius_ft": 10,
+        "targets": "any_creature",
+        "save": {
+          "ability": "WIS",
+          "dc": 12,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "until_start_of_affected_creature_next_turn"
+          },
+          "on_success": {
+            "immunity_to_trait_hours": 24
+          }
+        },
+        "post_success_immunity_applies_to": "Frightening Madness"
+      },
+      {
+        "name": "Incorporeal Movement",
+        "category": "movement",
+        "through": [
+          "creatures",
+          "objects"
+        ],
+        "terrain_cost": "difficult_terrain",
+        "trigger": "ends_turn_inside_object",
+        "self_damage": {
+          "dice": "1d10",
+          "average": 5,
+          "type": "force"
+        }
+      },
+      {
+        "name": "Undead Nature",
+        "category": "physiology",
+        "effect": {
+          "needs_air": false,
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Maddening Grasp",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Maddening Grasp",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 2,
+              "average": 9,
+              "type": "necrotic"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Fantasma formado por almas fragmentadas; aura de loucura gera medo nos próximos."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/chimeric-phantom/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "Leitura do bloco individual online com todos os valores, traços, ações e condicionais",
+      "verification": "Consultado 14/10/2026, edição impressa e testes pendentes"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:chimeric-phantom",
+      "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
+      "edition": "Tome of Beasts 2",
+      "scope": "Leitura do bloco individual online com todos os valores, traços, ações e condicionais",
+      "verification": "Consultado 14/10/2026, edição impressa e testes pendentes"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Comparar impressão editorial, erratas e eventuais versões divergentes com o modelo estruturado.",
+    "Executar revisão independente e testes de regras/condições no motor antes de homologar."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-244.webp",
+    "format": "image/webp",
+    "width": 817,
+    "height": 1222,
+    "bytes": 224644,
+    "sha256": "bbcf058ec5cf05b72bb84a58d419d1da361adb0bb4aab2613df1aa214c493e21",
+    "git_blob_sha": "0b2e79cf4319845799e610aa432c7c87665a8eb9",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chimeric%20Phantom.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "be688c5ccc441a45fffd0ec796554b323704fa90",
+    "identity_provenance": "ID e nome coincidem com manifesto do lote E, cuja integridade do binário foi verificada",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença",
+      "qualidade para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:chimeric-phantom",
+      "https://www.5esrd.com/database/creature/chimeric-phantom/"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Secundária online comparada quando disponível; publicação, erratas e engine não homologadas."
+  }
+}

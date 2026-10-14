@@ -1,0 +1,243 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-272",
+  "name": "Light Eater",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1/2",
+    "size": "Small",
+    "type": "aberration",
+    "alignment": "unaligned",
+    "proficiency_bonus": 2,
+    "experience_points": 100,
+    "source_page": 262
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 26,
+    "hit_dice": "4d6+12",
+    "ability_scores": {
+      "STR": 8,
+      "DEX": 14,
+      "CON": 16,
+      "INT": 4,
+      "WIS": 17,
+      "CHA": 8
+    },
+    "speeds": {
+      "walk_ft": 10,
+      "fly_ft": 40,
+      "hover": true
+    },
+    "senses": {
+      "blindsight_ft": 120,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 15
+    },
+    "skills": {
+      "Perception": 5,
+      "Stealth": 4
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "fire",
+      "radiant"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "prone"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": -1,
+      "DEX": 2,
+      "CON": 3,
+      "INT": -3,
+      "WIS": 3,
+      "CHA": -1
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "camouflage",
+        "preconditions": [
+          "motionless",
+          "in_dim_light_or_darkness"
+        ],
+        "effect": "indistinguishable_from_normal_rock"
+      },
+      {
+        "name": "Light Absorption",
+        "category": "automatic_light_conversion",
+        "trigger": "start_of_light_eater_turn_within_5_ft_of_any_light_source",
+        "reduced_source_area_requirement": {
+          "light_eater_within_ft": 100
+        },
+        "conversion": {
+          "bright_light": "dim_light",
+          "dim_light": "darkness"
+        },
+        "when_reduces_source_to_darkness": {
+          "light_eater_emits": {
+            "bright_radius_ft": 20,
+            "additional_dim_radius_ft": 20,
+            "duration_hours": 1
+          },
+          "source_extinguished_if": "nonmagical_flame",
+          "source_dispelled_if": {
+            "created_by_spell_level_lte": 2
+          }
+        },
+        "unsupported_source_type": "magical_light_created_by_spell_level_above_2_no_dispel_specified"
+      },
+      {
+        "name": "Light Sense",
+        "category": "light_sensing",
+        "pinpoint_light_sources_within_ft": 100,
+        "sense_general_direction_light_source_within_miles": 1
+      }
+    ],
+    "actions": [
+      {
+        "name": "Tentacle",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 2,
+              "average": 5,
+              "type": "bludgeoning"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Emergency Flare",
+        "category": "area_save",
+        "action_economy": "reaction",
+        "trigger": "takes_damage",
+        "recharge": "short_or_long_rest",
+        "area": {
+          "radius_ft": 30,
+          "center": "light_eater"
+        },
+        "targets": "each_creature_within_30ft",
+        "save": {
+          "ability": "CON",
+          "dc": 12,
+          "on_failure": {
+            "condition": "blinded",
+            "duration": "1_minute",
+            "repeat_save": {
+              "timing": "end_of_affected_creature_each_turn",
+              "ability": "CON",
+              "dc": 12,
+              "success_ends": true
+            }
+          },
+          "on_success": {
+            "condition": null
+          }
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Consome luz, percebe focos de iluminação e reage a danos com clarão cegante."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 3",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:light-eater",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 3",
+      "scope": "Todos os valores de estatísticas, traços e ações expostos na página individual",
+      "verification": "Statblock individual aberto e lido em 14/10/2026; fonte secundária KPOGL, não homologada pelo editor."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Fonte contém reação Emergency Flare uma vez por descanso curto/longo, não confundir com recarga por rodada.",
+    "Light Absorption não informa dispel de luzes originadas em magias de nível 3+; deixar comportamento não declarado sem presumir.",
+    "Confirmar impressão e eventuais erratas editoriais e testar economia de ações/condições na engine.",
+    "Verificar licença de uso e eventual arte apropriada para produção."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-272.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 84754,
+    "sha256": "6c92a666b4d636da2f9cdeae6bae0d31be43576da2fa0db7c50def36c5a52eff",
+    "git_blob_sha": "c21f4a3187d5afe345c934df2c00517c9cb33b89",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew-img/blob/main/img/ToB3/bestiary/tokens/Light%20Eater.webp",
+    "source_type": "reuse_from_branch_image_assets_f",
+    "source_branch": "chatgpt/srd607-image-assets-f",
+    "original_asset_commit": "3592249f6fec9b0b1f670f4c0e19bf1d86d62881",
+    "identity_provenance": "ID e nome conferidos com manifesto F e blob SHA preservado",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:light-eater"
+    ],
+    "source_tier": "secondary_kpogl",
+    "source_content_read_live": true,
+    "source_edition": "as_published_online",
+    "source_legal_status": "OGL 1.0a indicated on KPOGL; actual use/rights not cleared",
+    "notes": "Statblock KPOGL expõe uma ação, uma reação e três traços; ações bônus e demais economias ausentes na transcrição. Imagem atual é miniatura 280x280 não aprovada."
+  }
+}

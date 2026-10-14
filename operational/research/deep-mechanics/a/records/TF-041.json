@@ -1,0 +1,270 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-041",
+  "name": "Giant Water Scorpion",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "4",
+    "size": "Large",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2020,
+    "edition": "Tome of Beasts 2 (2020, D&D 5e)",
+    "experience_points": 1100,
+    "proficiency_bonus": 2,
+    "source_page": null
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 93,
+    "hit_dice": "11d10+33",
+    "ability_scores": {
+      "STR": 17,
+      "DEX": 12,
+      "CON": 16,
+      "INT": 1,
+      "WIS": 10,
+      "CHA": 3
+    },
+    "speeds": {
+      "walk_ft": 20,
+      "swim_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "blindsight_ft": 60,
+      "passive_perception": 10
+    },
+    "skills": {
+      "Stealth": 3
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 1,
+      "CON": 3,
+      "INT": -5,
+      "WIS": 0,
+      "CHA": -4
+    },
+    "armor_class_type": "natural_armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Hold Breath",
+        "category": "passive",
+        "effect": {
+          "duration_hours": 1,
+          "surface_breathing_tube": {
+            "max_depth_below_water_surface_ft": 15,
+            "need_hold_breath": false
+          }
+        }
+      },
+      {
+        "name": "Poison Injection",
+        "category": "passive",
+        "effect": {
+          "extra_damage": {
+            "dice": "3d6",
+            "flat": 0,
+            "type": "poison",
+            "average": 10
+          }
+        },
+        "trigger": "Proboscis attack hits a grappled, paralyzed, restrained, or stunned creature"
+      },
+      {
+        "name": "Underwater Camouflage",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "DEX (Stealth)",
+          "only_while": "underwater"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "default_sequence": [
+          {
+            "action": "Claws",
+            "count": 2
+          }
+        ],
+        "conditional_additional_action": {
+          "if": "scorpion is grappling a creature",
+          "action": "Proboscis",
+          "count": 1
+        },
+        "ambiguity_note": "The source says 'If it is grappling a creature, it can use its proboscis once' without explicitly saying whether it replaces either claw; preserve exact wording and flag engine interpretation."
+      },
+      {
+        "name": "Proboscis",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "flat": 3,
+              "type": "piercing",
+              "average": 8
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "hit_effect": {
+          "ability_score_reduction": {
+            "ability": "STR",
+            "dice": "1d4",
+            "duration": "until target finishes short or long rest",
+            "on_zero": "target dies"
+          }
+        }
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "type": "piercing",
+              "average": 6
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "hit_effect": {
+          "if_target_size_at_most": "Medium",
+          "requires_no_other_grappled_creature": true,
+          "condition": "grappled",
+          "escape_dc": 13
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/water-scorpion-giant/",
+      "type": "ficha_identificada_em_checkpoint_histórico",
+      "verification": "mecânica integral ainda não revalidada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:giant-water-scorpion",
+      "type": "individual_ogl_transcription_unofficial",
+      "edition": "Tome of Beasts 2",
+      "reviewed_on": "2026-10-14",
+      "verified_fields": [
+        "statistics",
+        "traits",
+        "actions",
+        "bonus_actions",
+        "reactions",
+        "legendary_actions",
+        "lair_actions",
+        "regional_effects"
+      ],
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "publisher_index",
+      "verification": "identidade, publicação e CR"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-041_TF-046/research.json",
+    "sha": "16ed0118731d24ca8447a293e670c952a7f6ea8f"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Pendente direitos e imagem."
+  ],
+  "outstanding": [
+    "Interpretar com edição editorial e exemplos se Proboscis é adicional ou substitui uma Claws no Multiattack condicional. Não inferir.",
+    "Confirmar regras contra impressão/errata editorial autorizada e revisão independente do motor de combate.",
+    "Verificação de arte visual/direitos permanece independente das mecânicas.",
+    "Binário de imagem TF-041 armazenado via SHA verificado do lote D; inspeção visual independente, direitos e aprovação final ainda pendentes."
+  ],
+  "mechanics_source_statblock_full": false,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_verified": false,
+    "engine_review": false,
+    "final_approval": false,
+    "multiattack_proboscis_extra_or_replacement_ambiguous_in_source": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-041.webp",
+    "format": "image/webp",
+    "bytes": 181988,
+    "width": 1206,
+    "height": 776,
+    "sha256": "44bd9bdfb6d11d2f23724d038c4012d2adc09190d5a0f95e19ba72f36eb50ea4",
+    "git_blob_sha": "d86db6d42f8112cd24eb5a0a6540506a476d2170",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Giant%20Water%20Scorpion.webp",
+    "source_type": "reused_verified_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_head_when_verified": "c6129862bfe2d6a175b86cb50a5f5b2eaecc398f",
+    "source_manifest": "operational/assets/creature-images/manifests/d.json",
+    "original_asset_commit": "6b558de9b5b36341e4484076724dab891df1cd9a",
+    "source_name_note": null,
+    "integrity_verification": {
+      "original_manifest_sha256_readback": true,
+      "original_manifest_github_blob_readback": true,
+      "original_manifest_source_bytes_equal": true,
+      "source_tree_sha_matches": true
+    },
+    "identity_visual_independently_verified": false,
+    "rights_cleared": false,
+    "production_approved": false,
+    "review_pending": [
+      "Avaliação visual independente da identidade da criatura",
+      "Revisão de licença/direitos",
+      "Resolução adequada e aprovação editorial final"
+    ]
+  }
+}

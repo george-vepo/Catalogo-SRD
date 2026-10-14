@@ -1,0 +1,234 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-256",
+  "name": "Climbing Vine",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1/8",
+    "size": "Medium",
+    "type": "plant",
+    "alignment": "unaligned",
+    "experience_points": 25,
+    "proficiency_bonus": 2,
+    "source_page": 85
+  },
+  "statistics": {
+    "armor_class": 11,
+    "hit_points": 13,
+    "hit_dice": "2d8+4",
+    "ability_scores": {
+      "STR": 13,
+      "DEX": 7,
+      "CON": 15,
+      "INT": 1,
+      "WIS": 7,
+      "CHA": 1
+    },
+    "speeds": {
+      "walk_ft": 10,
+      "climb_ft": 10
+    },
+    "senses": {
+      "blindsight_ft": 20,
+      "passive_perception": 8
+    },
+    "skills": {
+      "Athletics": 3,
+      "Stealth": 0
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": -2,
+      "CON": 2,
+      "INT": -5,
+      "WIS": -2,
+      "CHA": -5
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Digestive Dew",
+        "category": "periodic_damage",
+        "trigger": "creature_starts_its_turn_grappled_by_climbing_vine",
+        "damage": [
+          {
+            "dice": "1d4",
+            "average": 2,
+            "type": "acid"
+          }
+        ]
+      },
+      {
+        "name": "Flexible Form",
+        "category": "movement",
+        "minimum_passable_gap_inches": 6,
+        "no_squeezing_required": true
+      }
+    ],
+    "actions": [
+      {
+        "name": "Dewvine",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 3,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [],
+          "condition": "grappled",
+          "escape_dc": 11
+        },
+        "max_grappled_creatures_simultaneously": 2,
+        "grappling_vines_count": 2,
+        "each_grappling_vine_capacity": 1,
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Squeeze",
+        "category": "area_of_control_save",
+        "action_economy": "action",
+        "targets": "each_creature_currently_grappled_by_vine",
+        "save": {
+          "ability": "STR",
+          "dc": 11,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "2d4",
+                "average": 5,
+                "type": "bludgeoning"
+              }
+            ]
+          },
+          "on_success": {
+            "damage": 0
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Grasping Retaliation",
+        "category": "attack_as_reaction",
+        "action_economy": "reaction",
+        "trigger": "hit_by_melee_attack_by_creature_within_5_ft",
+        "targets": {
+          "count": 1,
+          "kind": "triggering_attacker"
+        },
+        "effect": {
+          "make_attack": "Dewvine",
+          "count": 1
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "ND fracionário 1/8; ácido residual, agarre, esmagamento e reação para agarrar agressores."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 3",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/climbing-vine/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 3",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:climbing-vine",
+      "type": "KPOGL, transcrição independente (não endossada pela editora)",
+      "edition": "Tome of Beasts 3",
+      "scope": "Bloco individual digital: atributos, ações, traços, reações e conjuração",
+      "verification": "Lido e transposto em 2026-10-14, ainda sem homologação editorial"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "ND 0.1 é valor decimal mostrado pelo índice; interpretar a fração de desafio apenas após conferir ficha original.",
+    "O índice arredonda 1/8 (0,125) para 0.1.",
+    "Challenge rating da transcrição individual KPOGL é 1/8 (0,125); índice histórico arredondou para 0,1. Normalização aplicada apenas como representação exata da fração."
+  ],
+  "outstanding": [
+    "Confirmar contra impressão/edição e erratas corretas.",
+    "Revisar os parâmetros e interações na engine antes de homologar MECANICA_COMPLETA_VERIFICADA."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-256.webp",
+    "format": "image/webp",
+    "width": 1200,
+    "height": 1324,
+    "bytes": 258604,
+    "sha256": "877d278a21e50c8260509fa98745bb7a05b5a8e612c319062d07ac34b922ad3c",
+    "git_blob_sha": "4e4a64d6fdbc41242113a1338caab1b4d8316ef2",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Climbing%20Vine.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2f4a256a44b692c61f5090b0eea669ecc9dad948",
+    "identity_provenance": "Nome/id verificados contra manifesto E, com hash e readback anterior",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:climbing-vine"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Reprodução secundária KPOGL lida e estruturada; impressão oficial, erratas e validação da engine pendentes."
+  }
+}

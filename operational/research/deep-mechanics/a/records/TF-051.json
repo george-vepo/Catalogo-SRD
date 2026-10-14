@@ -1,0 +1,389 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-051",
+  "name": "Archon, Siege",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "13",
+    "size": "Huge",
+    "type": "celestial",
+    "alignment": "lawful good",
+    "edition": "Tome of Beasts 3 (5e), individual statblock p. 42",
+    "source_page": 42,
+    "experience_points": 10000,
+    "proficiency_bonus": 5
+  },
+  "statistics": {
+    "armor_class": 18,
+    "hit_points": 187,
+    "hit_dice": "15d12+90",
+    "ability_scores": {
+      "STR": 22,
+      "DEX": 14,
+      "CON": 22,
+      "INT": 10,
+      "WIS": 20,
+      "CHA": 17
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "fly_ft": 60
+    },
+    "senses": {
+      "truesight_ft": 120,
+      "passive_perception": 20
+    },
+    "skills": {
+      "Perception": 10
+    },
+    "saving_throws": {
+      "STR": 11,
+      "CON": 11,
+      "WIS": 10,
+      "CHA": 8
+    },
+    "languages": [
+      "all languages",
+      "telepathy 120 ft"
+    ],
+    "damage_resistances": [
+      "radiant",
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "condition": "nonmagical attacks"
+      }
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "exhaustion",
+      "frightened"
+    ],
+    "ability_modifiers": {
+      "STR": 6,
+      "DEX": 2,
+      "CON": 6,
+      "INT": 0,
+      "WIS": 5,
+      "CHA": 3
+    },
+    "armor_class_type": "plate armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Celestial Weapons",
+        "category": "passive",
+        "effect": {
+          "weapon_attacks_magical": true,
+          "extra_force_damage": {
+            "dice": "5d8",
+            "modifier": 0,
+            "type": "force",
+            "average": 22
+          },
+          "included_in": "Trunk Maul"
+        }
+      },
+      {
+        "name": "False Appearance",
+        "category": "passive",
+        "effect": {
+          "if_motionless": "indistinguishable from inanimate statue"
+        }
+      },
+      {
+        "name": "Immortal Nature",
+        "category": "passive",
+        "effect": {
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
+      },
+      {
+        "name": "Siege Monster",
+        "category": "passive",
+        "effect": {
+          "damage_multiplier": 2,
+          "target": [
+            "objects",
+            "structures"
+          ]
+        }
+      },
+      {
+        "name": "Trampling Charge",
+        "category": "passive_triggered",
+        "requires": {
+          "straight_movement_ft_min": 20,
+          "toward": "target",
+          "hits_with": "Trunk Maul",
+          "same_turn": true
+        },
+        "save": {
+          "ability": "STR",
+          "dc": 19,
+          "on_failure": {
+            "pushed_ft_up_to": 10,
+            "condition": "prone"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "followup_bonus_action": {
+          "if_target_prone": true,
+          "action": "Stomp",
+          "same_target": true
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "choices": [
+          [
+            {
+              "action": "Trunk Maul",
+              "count": 2
+            }
+          ],
+          [
+            {
+              "action": "Trumpeting Blast",
+              "count": 4
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Trunk Maul",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "modifier": 6,
+              "type": "bludgeoning",
+              "average": 20
+            },
+            {
+              "dice": "5d8",
+              "modifier": 0,
+              "type": "force",
+              "average": 22
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Stomp",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_prone_creature"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "3d10",
+              "modifier": 6,
+              "type": "bludgeoning",
+              "average": 22
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Trumpeting Blast",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "ranged_spell",
+        "attack_bonus": 10,
+        "range_ft": 120,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "modifier": 5,
+              "type": "thunder",
+              "average": 19
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Sundering Quake",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "radius_ft": 20,
+          "requires_target_in_contact_with_ground": true
+        },
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 19,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "14d6",
+                "modifier": 0,
+                "type": "force",
+                "average": 49
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "structures": {
+          "also_take_same_damage": true,
+          "collapse_if_reduced_to_zero_hp": true
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Trampling Charge — Stomp",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "target knocked prone by charge",
+        "effect": {
+          "attack": "Stomp",
+          "target": "same prone target"
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/siege-archon/",
+      "type": "ficha_individual_localizada_em_checkpoint",
+      "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/blob/master/creature/Kobold%20Press%3B%20Tome%20of%20Beasts%203.json",
+      "type": "OGL_structured_statblock_secondary",
+      "publication": "Tome of Beasts 3",
+      "source_page": 42,
+      "verified_fields": [
+        "identity",
+        "stats",
+        "traits",
+        "actions",
+        "spellcasting",
+        "bonus",
+        "reaction",
+        "legendary"
+      ],
+      "primary_editorial": false
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-047_TF-051/research.json",
+    "sha": "8349c9c1e8865fceb9fa88b8d1cf5560687bd4be"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Página do 5eSRD também inclui Alternate Critical de Monster Crits for 5e, excluído como conteúdo alheio ao registro base.",
+    "Imagem/licenças pendentes."
+  ],
+  "outstanding": [
+    "Confrontar edição e erratas primárias e revisão independente das regras da engine.",
+    "Inspeção visual, licenças e aprovação da imagem são gates separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "secondary_source_actions_structured": true,
+    "secondary_source_spellcasting_structured": false,
+    "primary_book_or_errata_compared": false,
+    "independent_implementation_review": false,
+    "final_approval": false,
+    "source_type_and_alignment_crosschecked_against_ToB3": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-051.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 81730,
+    "sha256": "c4d02d22bd2ccb9bf7ee050a5f8dbafeffbb9fb9d91203b76deccc0368534f27",
+    "git_blob_sha": "05bc834c0766c02dad10217e2451e0d51d0f2a80",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Siege%20Archon.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "27a97aa91dc6cdb73330cf88592a4ae119f14dc8",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

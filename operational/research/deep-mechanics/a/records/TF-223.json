@@ -1,0 +1,259 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-223",
+  "name": "Three-Headed Cobra",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "5",
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 16,
+    "hit_points": 127,
+    "hit_dice": "15d10+45",
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 18,
+      "CON": 16,
+      "INT": 4,
+      "WIS": 10,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "swim_ft": 30,
+      "fly_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0
+    },
+    "senses": {
+      "blindsight_ft": 10,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Perception": 3
+    },
+    "saving_throws": {
+      "DEX": 7,
+      "WIS": 3
+    },
+    "languages": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_note": "natural armor",
+    "hit_dice_count": 15,
+    "hit_die_size": 10,
+    "hit_points_modifier": 45,
+    "challenge_rating": 5,
+    "experience_points": 1800,
+    "proficiency_bonus": null,
+    "proficiency_bonus_unknown_reason": "Não declarado explicitamente na reprodução online.",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 4,
+      "CON": 3,
+      "INT": -3,
+      "WIS": 0,
+      "CHA": -2
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Reactive Heads",
+        "category": "passive_reaction_economy",
+        "additional_reactions_per_round": 2,
+        "restriction": "somente para opportunity attacks"
+      },
+      {
+        "name": "Three-Headed",
+        "category": "passive",
+        "perception_advantage": true,
+        "advantage_on_saves_against_conditions": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "frightened",
+          "stunned",
+          "knocked_unconscious"
+        ],
+        "source_phrase_for_special_case": "saving throws against being knocked unconscious"
+      },
+      {
+        "name": "Wakeful",
+        "category": "passive",
+        "trigger": "durante sono",
+        "effect": "uma ou mais cabeças continuam despertas"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 7
+            }
+          ],
+          "average_damage": 7,
+          "additional_effects": [
+            {
+              "saving_throw": {
+                "ability": "CON",
+                "dc": 15,
+                "on_failure": {
+                  "damage": [
+                    {
+                      "dice": "2d6",
+                      "modifier": 0,
+                      "type": "poison",
+                      "average": 7
+                    }
+                  ]
+                },
+                "on_success": {
+                  "damage": "half_of_2d6_poison"
+                }
+              }
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Opportunity Attack (Reactive Heads)",
+        "category": "reaction",
+        "trigger": "oportunidade de ataque normal",
+        "max_additional_reactions_per_round": 2,
+        "restriction": "as duas reações extras não podem ser usadas para outros fins",
+        "attack": "Bite"
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Três mordidas, cabeças vigilantes e duas reações extras para ataques de oportunidade."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Creature Codex",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/three-headed-cobra",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Creature Codex",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:three-headed-cobra",
+      "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
+      "edition": "Creature Codex",
+      "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:three-headed-cobra",
+      "type": "statblock_individual_consultado_em_2026_10_14",
+      "edition": "Creature Codex",
+      "scope": "CA, PV, atributos, sentidos, traços, todos os ataques e economia de ações; ausências verificadas no bloco",
+      "editorial_confirmation": false
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Comparar integralmente com publicação/errata editorial da edição correta.",
+    "Realizar revisão independente de ações, gatilhos e implementação na engine.",
+    "Aprovação visual, direitos e resolução de imagem ainda pendentes."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-223.jpg",
+    "format": "image/jpeg",
+    "width": 960,
+    "height": 599,
+    "bytes": 92116,
+    "sha256": "c3cf4beeb36485a6f77987cbdbd23502815637ae8bbc8d4ec46b53bf7f63574b",
+    "git_blob_sha": "3ec6435a980a7e3d1fee8f7332a84e36c2dfec76",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Threeheadedcobra.jpg",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "fe22e5efef6af67a50cd68a58cdae797928e912d",
+    "identity_provenance": "ID e nome coincidem com registro e manifesto do lote E, binário conferido por readback",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença e direitos",
+      "aprovação para impressão"
+    ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "status": "NAO_HOMOLOGADA_EDITORIALMENTE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "Transcrição de KPOGL não endossada pela editora, sem revisão da edição física e erratas."
+    ]
+  }
+}

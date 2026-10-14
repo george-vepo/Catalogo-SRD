@@ -1,0 +1,193 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-211",
+  "name": "Ahuizotl",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "2",
+    "size": "Small",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 71,
+    "hit_dice": "13d6+26",
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 15,
+      "CON": 14,
+      "INT": 6,
+      "WIS": 12,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "swim_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Perception": 3
+    },
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Amphibious",
+        "category": "passive",
+        "effect": "Respira ar e água."
+      },
+      {
+        "name": "Spiky Coat",
+        "category": "passive",
+        "effect": "Contato ou ataque corpo a corpo a até 5 pés desencadeia resistência de Destreza CD 14; falha causa 1d8 perfurante.",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 14,
+          "on_failure": "1d8 perfurante",
+          "on_success": "Nenhum dano"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "sequence": [
+          {
+            "action": "Tail Grab",
+            "optional": true
+          },
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Claw",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 5,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d6",
+            "modifier": 3,
+            "type": "piercing"
+          }
+        ]
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 5,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d6",
+            "modifier": 3,
+            "type": "slashing"
+          }
+        ]
+      },
+      {
+        "name": "Tail Grab",
+        "category": "special",
+        "targets": "Criatura até Medium ou objeto/arma segurada",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 14,
+          "on_failure": "Agarrado, CD para escapar 14; alvo pode ser arrastado",
+          "on_success": "Evita agarrão ou desarme"
+        },
+        "grapple_escape_dc": 14,
+        "limits": "Até um alvo agarrado ou um objeto/arma na cauda.",
+        "secondary_resolution": "Com criatura agarrada pode mover até deslocamento como ação bônus; vítima testa FOR CD14 para não ser arrastada 5 pés atrás; enquanto arrastada recebe desvantagem em ataques e testes de resistência de Destreza. Objeto empunhado é arrancado se portador falhar no teste FOR CD14. Pode atacar com arma retida usando Tail Grab sem bônus de proficiência."
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Tail Grab — deslocamento",
+        "category": "conditional_bonus_action",
+        "trigger": "Após capturar criatura ou furtar objeto com Tail Grab",
+        "effect": "Mover até o deslocamento; alvo agarrado realiza teste FOR CD14 contra arrasto de 5 pés."
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:ahuizotl",
+      "type": "ficha_individual_secundaria",
+      "edition": "Creature Codex",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-211.jpg",
+    "format": "image/jpeg",
+    "width": 980,
+    "height": 700,
+    "bytes": 78801,
+    "sha256": "c7e639446487d58880c89d52ffaf827f27f093d147c135815980ff7096683058",
+    "git_blob_sha": "05be26e6db170f86a6cd623d1ebb7d1f79cae944",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Ahuizotl.jpg",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "bc1ee577f9b9e40721ccfc7b212a7b791c9b7380",
+    "identity_provenance": "Nome/id coincidem com registro e manifesto E, que reporta download e readback verificados",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença/direitos da ilustração",
+      "aprovação para impressão"
+    ]
+  }
+}

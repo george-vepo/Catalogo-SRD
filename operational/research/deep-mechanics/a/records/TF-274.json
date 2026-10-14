@@ -1,0 +1,273 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-274",
+  "name": "Malleable, Minor",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "1",
+    "size": "Medium",
+    "type": "aberration",
+    "alignment": "chaotic_evil",
+    "experience_points": 200,
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "not explicitly present in KPOGL Creature statblock"
+  },
+  "statistics": {
+    "armor_class": 11,
+    "hit_points": 32,
+    "hit_dice": "5d8+10",
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 8,
+      "CON": 14,
+      "INT": 15,
+      "WIS": 14,
+      "CHA": 10
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 30
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 12
+    },
+    "skills": [],
+    "saving_throws": {
+      "INT": 4,
+      "WIS": 4,
+      "CHA": 2
+    },
+    "languages": {
+      "spoken": "all_languages",
+      "telepathy_ft": 60
+    },
+    "damage_resistances": [],
+    "damage_immunities": [
+      "psychic"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "prone"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": -1,
+      "CON": 2,
+      "INT": 2,
+      "WIS": 2,
+      "CHA": 0
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Amorphous",
+        "category": "movement",
+        "minimum_gap_inches": 1,
+        "no_squeezing_required": true
+      },
+      {
+        "name": "Controlled Mutability",
+        "category": "shape_control",
+        "temporary_external_shape_change_ends": "end_of_malleable_next_turn",
+        "self_action_to_change_shape": {
+          "action_economy": "action",
+          "any_basic_shape": true,
+          "always_looks_like": "inside_out_fleshy_creature",
+          "does_not_gain": "target_creature_stats_or_abilities"
+        }
+      },
+      {
+        "name": "Psychic Absorption",
+        "category": "damage_replacement_healing",
+        "trigger": "subjected_to_psychic_damage",
+        "damage_received": 0,
+        "heal_hit_points": "amount_of_psychic_damage_would_be_dealt"
+      },
+      {
+        "name": "Spider Climb",
+        "category": "climbing",
+        "can_climb_difficult_surfaces_and_ceiling_without_check": true
+      }
+    ],
+    "actions": [
+      {
+        "name": "Flesh Tendril",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 3,
+              "average": 10,
+              "type": "bludgeoning"
+            }
+          ],
+          "target_medium_or_smaller": {
+            "condition": "grappled",
+            "escape_dc": 12
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Psychic Drain",
+        "category": "single_target_save",
+        "action_economy": "action",
+        "target": {
+          "count": 1,
+          "precondition": "grappled_by_malleable"
+        },
+        "save": {
+          "ability": "INT",
+          "dc": 12,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "1d8",
+                "flat": 0,
+                "average": 4,
+                "type": "psychic"
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "additional_effect": {
+          "reduce_maximum_hit_points_by": "actual_psychic_damage_taken",
+          "reduction_ends": "after_target_finishes_long_rest",
+          "if_maximum_hp_becomes_0": {
+            "death": true,
+            "transform_into": "minor_malleable"
+          }
+        }
+      },
+      {
+        "name": "Join Malleables",
+        "category": "group_fusion",
+        "action_economy": "action",
+        "required_other_minor_malleables_within_ft_10": 3,
+        "activation": "each_participant_uses_action_at_same_time",
+        "valid_total_participants_and_results": [
+          {
+            "count": 4,
+            "result": "moderate_malleable"
+          },
+          {
+            "count": 8,
+            "result": "major_malleable"
+          },
+          {
+            "count": 16,
+            "result": "massive_malleable"
+          }
+        ],
+        "new_creature": {
+          "hit_points": "sum_of_current_hit_points_of_joining_minors",
+          "inherits_all_conditions_spells_and_magical_effects": true,
+          "initiative": "same_as_joining_malleables",
+          "position": "one_unoccupied_space_previously_containing_a_component"
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Join Malleables sizes",
+        "category": "cross_card_dependency",
+        "source_ids": [
+          "TF-276",
+          "TF-284",
+          "TF-286"
+        ],
+        "source_names": [
+          "Moderate Malleable",
+          "Major Malleable",
+          "Massive Malleable"
+        ],
+        "variant_statblock_policy": "Do not derive those statblocks mechanically from this record; individual versions must be sourced and structured separately."
+      }
+    ]
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Massa maleável imune a dano psíquico e capaz de curar-se com esse dano; altera aparência, agarra por tentáculo e drena máximo de PV."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/malleable-minor/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:minor-malleable",
+      "type": "KPOGL reprodução não endossada por Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "Todos os valores de estatísticas, traços e ações expostos na página individual",
+      "verification": "Statblock individual aberto e lido em 14/10/2026; fonte secundária KPOGL, não homologada pelo editor."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Malleable, Minor é variante própria ND 1; não copiar estatísticas dos graus Moderate, Major e Massive."
+  ],
+  "outstanding": [
+    "Não existe imagem binária TF-274 na branch A; ficha mecânica e arte são aprovações independentes.",
+    "Join Malleables exige quatro/ouito/dezesseis menores simultâneos; condições e feitiços são herdados mesmo após a fusão.",
+    "A página não descreve resultados para quantidades intermediárias diferentes de 4,8,16. Não supor arredondamento ou escala.",
+    "Psíquico cura e reduz PV máximos somente na ação Psychic Drain conforme dano efetivamente sofrido.",
+    "Confirmar impressão e eventuais erratas editoriais e testar economia de ações/condições na engine.",
+    "Verificar licença de uso e eventual arte apropriada para produção."
+  ],
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:minor-malleable"
+    ],
+    "source_tier": "secondary_kpogl",
+    "source_content_read_live": true,
+    "source_edition": "as_published_online",
+    "source_legal_status": "OGL 1.0a indicated on KPOGL; actual use/rights not cleared",
+    "notes": "Mechanics structured from complete KPOGL Monster entry. No physical image available, status remains PARCIAL and production not approved."
+  }
+}

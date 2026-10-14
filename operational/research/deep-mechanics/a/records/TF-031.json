@@ -1,0 +1,299 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-031",
+  "name": "Crab, Razorback",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Tome of Beasts 3",
+    "publication_year": 2022,
+    "edition_family": "D&D 5e",
+    "edition": "Tome of Beasts 3 for 5th Edition (2022)",
+    "exact_printing": null,
+    "challenge_rating": "2",
+    "size": "Medium",
+    "type": "beast",
+    "alignment": "unaligned",
+    "proficiency_bonus": 2,
+    "experience_points": 450
+  },
+  "statistics": {
+    "armor_class": 17,
+    "armor_class_type": "natural armor",
+    "hit_points": 58,
+    "hit_dice": "9d8+18",
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 2,
+      "WIS": 10,
+      "CHA": 3
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "burrow_ft": 15
+    },
+    "senses": {
+      "tremorsense_ft": 30,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 0,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -4
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Bladed Shell",
+        "category": "passive",
+        "activation": "automatic",
+        "triggers": [
+          {
+            "event": "touched",
+            "actor": "other_creature"
+          },
+          {
+            "event": "melee_attack_hits_this_creature",
+            "attacker_distance_ft_max": 5
+          }
+        ],
+        "effect": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 0,
+              "damage_type": "slashing",
+              "average": 3
+            }
+          ],
+          "target": "criatura que toca ou ataca"
+        },
+        "save": null,
+        "resource_limit": null
+      },
+      {
+        "name": "Pounce",
+        "category": "passive",
+        "activation": "conditional",
+        "prerequisites": [
+          {
+            "movement_straight_towards_target_ft_min": 15
+          },
+          {
+            "attack_hits": "Shell Bash",
+            "timing": "same_turn"
+          }
+        ],
+        "on_trigger": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 13,
+            "on_failure": "Prone",
+            "on_success": "Permanece de pé"
+          }
+        },
+        "follow_up_bonus_action": {
+          "available_if": "alvo prone",
+          "attack": "Claw",
+          "target": "mesmo alvo"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Claw",
+            "count": 1
+          },
+          {
+            "action": "Shell Bash",
+            "count": 1
+          }
+        ],
+        "saving_throw": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "damage_type": "bludgeoning"
+            }
+          ],
+          "other_effects": [
+            {
+              "condition": "grappled",
+              "application": "on_hit",
+              "escape_dc": 13,
+              "size_limit": null,
+              "maximum_simultaneous_targets": 2,
+              "limitation": "cada uma das duas garras pode agarrar um alvo"
+            }
+          ],
+          "average_damage": 6
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "saving_throw": null,
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Shell Bash",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature_or_object"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 3,
+              "damage_type": "bludgeoning"
+            },
+            {
+              "dice": "1d6",
+              "flat": 0,
+              "damage_type": "slashing"
+            }
+          ],
+          "other_effects": [],
+          "average_damage": {
+            "bludgeoning": 5,
+            "slashing": 3,
+            "total": 8
+          }
+        },
+        "miss": {
+          "damage": 0,
+          "other_effects": []
+        },
+        "saving_throw": null,
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Pounce — Claw",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "Pounce derruba a criatura alvo",
+        "condition": "alvo está prone após salvaguarda FOR CD13",
+        "resolution": "Uma ação de ataque Claw contra o alvo prone",
+        "uses_limit": null
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/crab-razorback/",
+      "kind": "individual_statblock_secondary",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "CA",
+        "PV",
+        "atributos",
+        "deslocamento",
+        "sentidos",
+        "Bladed Shell",
+        "Pounce",
+        "Multiattack",
+        "Claw",
+        "Shell Bash"
+      ],
+      "reviewed": "2026-10-14"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "kind": "official_publisher_index",
+      "edition": "Tome of Beasts 3 (2022), 5e",
+      "verified_fields": [
+        "editora",
+        "publicação",
+        "tipo",
+        "ND"
+      ],
+      "reviewed": "2026-10-14"
+    }
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_actions_exhaustively_enumerated": true,
+    "independent_transcriptions_agree": false,
+    "official_publisher_index_publication_confirmed": true,
+    "primary_printing_or_errata_verified": false,
+    "editorial_final_approval": false,
+    "reason_for_partial": "Regras da ficha online foram estruturadas integralmente; edição impressa/errata e revisão independente de implementação continuam pendentes.",
+    "online_numeric_details_rechecked_on": "2026-10-14",
+    "online_numeric_details_sources": [
+      "https://www.5esrd.com/database/creature/crab-razorback/"
+    ]
+  },
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-031_TF-035/research.json",
+    "sha": "0c5bde59d111e07bb260ba5717982c5e055390e7"
+  },
+  "outstanding": [
+    "Conferir ficha contra páginas do livro e erratas editoriais da impressão exata.",
+    "Revisar estrutura contra engine de combate e aprovar imagem final.",
+    "Não atualizar ledger/CSV global até aprovação independente."
+  ],
+  "image": {
+    "status": "BINARIO_PUBLICADO_THUMBNAIL",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-031_razorback_crab_proof.jpg",
+    "format": "image/jpeg",
+    "width": 80,
+    "height": 120,
+    "bytes": 1539,
+    "git_blob_sha": "acc78f6862045e8006995bf7130137cb5d400fb5",
+    "sha256": null,
+    "origin": "original_ai_generated",
+    "generation_id": "960ac39c-8582-4f42-83e4-55f06781c4c1",
+    "review_status": "THUMBNAIL_NAO_APROVADO_PARA_CARTA_FINAL",
+    "full_resolution_generated_locally": "/mnt/data/wide_cinematic_fantasy_nature_scene_of_a_giant_arm.png",
+    "note": "Binário JPEG real de prova; imagem de produção de alta resolução ainda não está armazenada no GitHub."
+  }
+}

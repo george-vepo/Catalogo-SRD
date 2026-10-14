@@ -1,0 +1,254 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-255",
+  "name": "Citrullus",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "3",
+    "size": "Medium",
+    "type": "plant",
+    "alignment": "unaligned",
+    "experience_points": 700,
+    "proficiency_bonus": 2,
+    "source_page": 58
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 85,
+    "hit_dice": "10d10+30",
+    "ability_scores": {
+      "STR": 18,
+      "DEX": 8,
+      "CON": 16,
+      "INT": 3,
+      "WIS": 10,
+      "CHA": 1
+    },
+    "speeds": {
+      "walk_ft": 15
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "acid"
+    ],
+    "damage_vulnerabilities": [
+      "bludgeoning"
+    ],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": -1,
+      "CON": 3,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -5
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "camouflage",
+        "precondition": "motionless",
+        "effect": {
+          "indistinguishable_from": "normal_melon_plant"
+        }
+      },
+      {
+        "name": "Gush",
+        "category": "on_damage_reactive_passive",
+        "trigger": "takes_bludgeoning_damage",
+        "targets": {
+          "attacker_within_ft": 30
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 13,
+          "on_failure": {
+            "condition": "restrained",
+            "duration": "1_minute",
+            "escape_via": "Bile Spray release action, DC13 Strength check"
+          },
+          "on_success": {
+            "restrained": false
+          }
+        },
+        "notes": "Applies as if failed Bile Spray save; no additional acid damage specified for Gush itself."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "4d6",
+              "flat": 4,
+              "average": 18,
+              "type": "piercing"
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "average": 7,
+              "type": "acid"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Bile Spray",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": "5-6",
+        "area": {
+          "shape": "cone",
+          "length_ft": 30
+        },
+        "targets": "each_creature_in_cone",
+        "save": {
+          "ability": "DEX",
+          "dc": 13,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "4d6",
+                "average": 14,
+                "type": "acid"
+              }
+            ],
+            "condition": "restrained",
+            "duration": "1_minute"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "restrained": false
+          }
+        },
+        "release": {
+          "eligible": "any_creature_including_restrained",
+          "cost": "action",
+          "check": {
+            "ability": "STR",
+            "dc": 13
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Creeping Seedlings",
+        "category": "forced_movement",
+        "action_economy": "bonus_action",
+        "targets": "each_creature_restrained_by_Bile_Spray_or_Gush",
+        "effect": {
+          "pull_distance_ft_max": 25,
+          "direction": "straight_toward_Citrullus"
+        }
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Imita melão; bile pegajosa prende alvos e sementes os arrastam; mordida causa dano ácido."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/citrullus/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:citrullus",
+      "type": "KPOGL, transcrição independente (não endossada pela editora)",
+      "edition": "Tome of Beasts 1",
+      "scope": "Bloco individual digital: atributos, ações, traços, reações e conjuração",
+      "verification": "Lido e transposto em 2026-10-14, ainda sem homologação editorial"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confirmar contra impressão/edição e erratas corretas.",
+    "Revisar os parâmetros e interações na engine antes de homologar MECANICA_COMPLETA_VERIFICADA."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-255.jpeg",
+    "format": "image/jpeg",
+    "width": 1055,
+    "height": 844,
+    "bytes": 84530,
+    "sha256": "aec6187a57b3f233965654d3d2cca5343da5a3c3e03a658966696a68a6bd1788",
+    "git_blob_sha": "98765a365dabfd7c38e5cd0f2aa6b6991d356e66",
+    "source_url": "https://imgur.com/gallery/tome-of-beasts-ready-3d-printing-free-2iqzhTv",
+    "source_type": "reutilizado_de_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "source_commit": "485bc8d67e88df5b72de23a769d5a34d0fe2eec9",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:citrullus"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Reprodução secundária KPOGL lida e estruturada; impressão oficial, erratas e validação da engine pendentes."
+  }
+}

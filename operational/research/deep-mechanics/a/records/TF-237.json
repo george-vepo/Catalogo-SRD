@@ -1,0 +1,471 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-237",
+  "name": "Tosculi, Hive Queen",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "12",
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "lawful_evil",
+    "experience_points": 8400,
+    "proficiency_bonus": 4,
+    "source_page": 367,
+    "challenge_rating_in_lair": "13",
+    "experience_points_in_lair": 10000
+  },
+  "statistics": {
+    "armor_class": 17,
+    "hit_points": 189,
+    "hit_dice": "18d10+90",
+    "ability_scores": {
+      "STR": 17,
+      "DEX": 24,
+      "CON": 20,
+      "INT": 16,
+      "WIS": 16,
+      "CHA": 18
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "fly_ft": 60
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 17
+    },
+    "skills": {
+      "Perception": 7
+    },
+    "saving_throws": {
+      "DEX": 11,
+      "CON": 9,
+      "WIS": 7,
+      "CHA": 8
+    },
+    "languages": [
+      "Common",
+      "Deep Speech",
+      "Gnoll",
+      "Infernal",
+      "Tosculi"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "charmed",
+      "poisoned"
+    ],
+    "armor_class_type": null,
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 7,
+      "CON": 5,
+      "INT": 3,
+      "WIS": 3,
+      "CHA": 4
+    },
+    "telepathy_ft": 120
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Legendary Resistance",
+        "type": "resource",
+        "uses_per_day": 3,
+        "trigger": "failed_saving_throw",
+        "effect": "may_succeed_instead"
+      },
+      {
+        "name": "Hive's Heart",
+        "type": "passive",
+        "effect": {
+          "knows_direction_and_distance_to_hive_members": true,
+          "telepathy_to_hive_members_range_miles": 20
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Scimitar",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "Scimitar",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "flat": 7,
+              "type": "slashing",
+              "average": 14
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Stinger",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "creature"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "6d4",
+              "flat": 7,
+              "type": "piercing",
+              "average": 22
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "on_hit": {
+          "save": {
+            "ability": "CON",
+            "dc": 17,
+            "on_failure": {
+              "conditions": [
+                "poisoned",
+                "paralyzed"
+              ],
+              "duration_minutes": 1,
+              "repeat_save": {
+                "when": "end_of_each_target_turn",
+                "on_success": "ends_poison_and_paralysis"
+              }
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          }
+        },
+        "source_discrepancy": "A fonte afirma tanto salvaguarda repetida que encerra o efeito quanto remoção do veneno potente somente via greater restoration ou magia equivalente. Não reconciliar sem confirmação editorial."
+      },
+      {
+        "name": "Implant Egg",
+        "category": "non_attack_action",
+        "action_economy": "action",
+        "targets": {
+          "count": 1,
+          "kind": "creature",
+          "reach_ft": 5
+        },
+        "requirements": {
+          "incapacitated": true,
+          "excluded_types": [
+            "Construct",
+            "Undead"
+          ]
+        },
+        "effect": {
+          "conditions": [
+            "poisoned",
+            "paralyzed"
+          ],
+          "need_food_or_drink": false,
+          "egg_hatches_after_days": 30,
+          "host_dies_when_larva_emerges": true
+        },
+        "egg_removal": [
+          {
+            "actor": "any_creature",
+            "action_cost": "action",
+            "check": "WIS Medicine",
+            "dc": 20
+          },
+          {
+            "effect": "spell_or_magic_that_cures_disease",
+            "result": "egg_disintegrates"
+          }
+        ]
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [
+      {
+        "name": "Flight",
+        "cost": 1,
+        "effect": {
+          "fly_up_to_ft": 30,
+          "provokes_opportunity_attacks": false
+        }
+      },
+      {
+        "name": "Stinger",
+        "cost": 2,
+        "effect": {
+          "attack": "Stinger",
+          "count": 1
+        }
+      },
+      {
+        "name": "Glitter Dust",
+        "cost": 2,
+        "area": {
+          "radius_ft": 20,
+          "center": "hive_queen"
+        },
+        "targets": {
+          "kind": "each_non_tosculi_creature"
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "condition": "blinded",
+            "ends": "end_of_affected_creatures_next_turn"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      }
+    ],
+    "legendary_economy": {
+      "actions_per_round": 3,
+      "trigger": "end_of_another_creatures_turn",
+      "one_option_per_trigger": true,
+      "regains_at": "start_of_queens_turn"
+    },
+    "lair_actions": [
+      {
+        "name": "Biting Brood",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "targets": {
+          "point_on_ground_visible_within_ft": 120
+        },
+        "area": {
+          "radius_ft": 10
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "4d4",
+                "flat": 0,
+                "type": "piercing",
+                "average": 10
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
+      },
+      {
+        "name": "Healing Pheromones",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "targets": "all_tosculi_within_60ft_including_queen",
+        "healing": {
+          "dice": "3d6",
+          "average": 10
+        }
+      },
+      {
+        "name": "Restraining Resin",
+        "initiative_count": 20,
+        "loses_ties": true,
+        "targets": {
+          "count": 1,
+          "visible_within_ft": 120,
+          "ceiling_above": true
+        },
+        "save": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "condition": "restrained"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "escape": {
+          "action_cost": "action",
+          "check": "STR",
+          "dc": 17,
+          "can_be_performed_by": "any_creature_including_target"
+        },
+        "hardening": {
+          "trigger": "target_still_restrained_at_initiative_20_next_round",
+          "condition": "petrified_in_amber",
+          "ends_when": [
+            "resin_destroyed",
+            "queen_uses_this_lair_action_again"
+          ]
+        },
+        "resin_object": {
+          "armor_class": 15,
+          "hit_points": 20,
+          "damage_vulnerabilities": [
+            "bludgeoning"
+          ],
+          "damage_immunities": [
+            "piercing",
+            "poison",
+            "psychic"
+          ]
+        }
+      }
+    ],
+    "lair_economy": {
+      "initiative_count": 20,
+      "loses_ties": true,
+      "max_uses_per_round": 1,
+      "same_effect_consecutive_rounds_prohibited": true,
+      "challenge_rating_in_lair": 13,
+      "experience_points_in_lair": 10000
+    },
+    "regional_effects": [
+      {
+        "name": "Aggressive Wildlife",
+        "radius_miles": 6,
+        "effect": "beasts_may_become_more_aggressive"
+      },
+      {
+        "name": "Buzzing Migraine",
+        "radius_miles": 3,
+        "targets": "creatures_with_INT_5_or_higher",
+        "effect": "persistent_buzzing_and_headaches"
+      },
+      {
+        "name": "Eyes and Ears Everywhere",
+        "radius_miles": 10,
+        "effect": "queen_can_use_hive_members_senses"
+      },
+      {
+        "name": "Effects after the Queen Dies",
+        "trigger": "queen_death",
+        "effect": {
+          "buzzing_stops_immediately": true,
+          "other_effects_fade_in_days": "1d10"
+        }
+      }
+    ],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Resistência lendária e covil com feromônios restauradores e resina que restringe e pode petrificar."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/tosculi-hive-queen-3pp/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/tosculi-hive-queen",
+      "type": "evidência histórica, fonte editorial ou transcrição alternativa",
+      "edition": "Tome of Beasts 1",
+      "scope": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:tosculi-hive-queen",
+      "type": "KPOGL transcrição individual secundária não oficial",
+      "edition": "Tome of Beasts 1",
+      "source_page": 367,
+      "reviewed": "2026-10-14",
+      "scope": "estatísticas e economia de ações completas; origem primária e errata não confirmadas"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Tosculi possui variantes e revisões de edição; não aproveitar estatísticas da casta Warrior ou versões de livro distintas.",
+    "Tosculi Hive-Queen: revisão 2023 em 5eSRD apresenta PV 189; versão anterior em herebetaverns.com apresenta PV 157, com CA 17. Manter versões separadas."
+  ],
+  "outstanding": [
+    "Confirmar Tome of Beasts 1 p.367 e erratas, especialmente conflito textual entre teste repetido de Stinger e necessidade de greater restoration para remover veneno potente.",
+    "Validar 3 ações de covil, 3 opções lendárias, limites de usos e regras de petrificação na engine.",
+    "Revisão da licença e avaliação visual da arte ainda pendentes."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-237.webp",
+    "format": "image/webp",
+    "width": 880,
+    "height": 800,
+    "bytes": 74404,
+    "sha256": "0e64f800b6ba02072c2563049a601d0b81fd6051e797b50ec7d4a7af7d2b45b9",
+    "git_blob_sha": "1bb73c753d8468439bbed026c19a27965ae68e8e",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tosculi%20Hive-Queen.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "be688c5ccc441a45fffd0ec796554b323704fa90",
+    "identity_provenance": "ID e nome conferem com manifesto E, integridade/readback validada no lote de origem",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos de uso",
+      "aprovação para impressão"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "mechanically_homologated": false,
+    "engine_tested": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:tosculi-hive-queen"
+    ]
+  }
+}

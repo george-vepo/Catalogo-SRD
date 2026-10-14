@@ -1,0 +1,350 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "KP-S011",
+  "name": "Abominable Beauty",
+  "status": "BLOQUEADA",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Tome of Beasts (2023 revision)",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "11",
+    "size": "Medium",
+    "type": "fey",
+    "alignment": "neutral evil",
+    "publication_year": null,
+    "edition": "Tome of Beasts: edição-alvo ainda não determinada (2016 original vs 2023 revista)",
+    "experience_points": 7200,
+    "proficiency_bonus": 4,
+    "edition_variant_target_unresolved": true,
+    "statblock_candidate_edition": "2023 revisada — conforme transcrição 5eSRD"
+  },
+  "statistics": {
+    "armor_class": 18,
+    "armor_class_type": "natural armor",
+    "hit_points": 187,
+    "hit_dice": "22d8+88",
+    "ability_scores": {
+      "STR": 17,
+      "DEX": 18,
+      "CON": 18,
+      "INT": 17,
+      "WIS": 16,
+      "CHA": 26
+    },
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 4,
+      "CON": 4,
+      "INT": 3,
+      "WIS": 3,
+      "CHA": 8
+    },
+    "speeds": {
+      "walk_ft": 30
+    },
+    "saving_throws": {
+      "DEX": 8,
+      "CON": 8,
+      "CHA": 12
+    },
+    "skills": {
+      "Deception": 12,
+      "Perception": 7,
+      "Performance": 12,
+      "Persuasion": 12
+    },
+    "senses": {
+      "passive_perception": 17
+    },
+    "languages": [
+      "Common",
+      "Draconic",
+      "Elvish",
+      "Sylvan"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "fire"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Burning Touch",
+        "category": "passive_triggered",
+        "triggers": [
+          {
+            "event": "Slam_hit",
+            "effect": "Slam adiciona 21 (6d6) fogo, já incluído no dano registrado do ataque"
+          },
+          {
+            "event": "outra criatura toca a beleza ou a acerta com ataque de arma corpo a corpo",
+            "requirements": {
+              "distance_ft_max": 5
+            },
+            "effect": {
+              "damage": [
+                {
+                  "dice": "3d6",
+                  "average": 10,
+                  "type": "fire"
+                }
+              ]
+            }
+          }
+        ],
+        "save": null,
+        "recharge": null
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Blinding Gaze",
+            "count": 1
+          },
+          {
+            "action": "Slam",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d8",
+              "flat": 4,
+              "type": "bludgeoning",
+              "average": 8
+            },
+            {
+              "dice": "6d6",
+              "flat": 0,
+              "type": "fire",
+              "average": 21
+            }
+          ]
+        },
+        "damage_type_correction": "bludgeoning confirmado por errata oficial Kobold Press de 29/05/2025, Tome of Beasts (2023), p.11",
+        "miss": {
+          "damage": 0
+        },
+        "save": null,
+        "recharge": null
+      },
+      {
+        "name": "Blinding Gaze",
+        "category": "target_save",
+        "action_economy": "action",
+        "targets": {
+          "count": 1,
+          "kind": "creature",
+          "range_ft": 30,
+          "requirements": [
+            "criatura deve poder ver os olhos da beleza"
+          ]
+        },
+        "saving_throw": {
+          "ability": "CHA",
+          "dc": 16,
+          "on_failure": {
+            "condition": "blinded",
+            "duration": "1 minuto",
+            "repeat_save": {
+              "timing": "final de cada turno do alvo",
+              "success": "encerra efeito"
+            }
+          },
+          "on_success": "nenhum efeito e imunidade a Blinding Gaze por 24 horas"
+        },
+        "duration": "1 minuto ou até sucesso no teste repetido",
+        "uses_limit": null,
+        "recharge": null
+      },
+      {
+        "name": "Deafening Voice",
+        "category": "aoe_save",
+        "action_economy": "action",
+        "recharge": {
+          "dice": "1d6",
+          "recovers_on": [
+            5,
+            6
+          ]
+        },
+        "targets": {
+          "relation": "todas as criaturas capazes de ouvir sua voz",
+          "area": "30 pés ao redor da criatura"
+        },
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 16,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "9d6",
+                "average": 31,
+                "type": "thunder"
+              }
+            ],
+            "condition": "deafened",
+            "duration": "1 hora"
+          },
+          "on_success": {
+            "damage": "metade de 9d6 thunder",
+            "condition": null,
+            "immunity_to_this_ability_hours": 24
+          }
+        },
+        "resources_consumed": "uso recarrega em 5–6"
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/abominable-beauty/",
+      "type": "referencia_individual_de_checkpoint_anterior",
+      "verification": "dados parciais do checkpoint; não conferidos integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/abominable-beauty/",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts (2023), D&D 5e",
+      "verified_fields": [
+        "atributos",
+        "CA",
+        "PV",
+        "resistências",
+        "Burning Touch",
+        "Multiattack",
+        "Slam",
+        "Blinding Gaze",
+        "Deafening Voice"
+      ],
+      "source_issue": "O texto inclui Undead Nature sobre accursed defiler (outra criatura), aparentemente colado por engano; não importar para Abominable Beauty."
+    },
+    {
+      "url": "https://koboldpress.com/errata/",
+      "type": "errata_editorial_oficial",
+      "edition": "Tome of Beasts (2023)",
+      "verification": "Errata de 29/05/2025, página 11, acrescenta o tipo bludgeoning ao Slam"
+    },
+    {
+      "url": "https://anyflip.com/dhfzu/lcug/basic/",
+      "type": "reproducao_edicao_2016_nao_editorial",
+      "edition": "Tome of Beasts original (2016)",
+      "verification": "Divergências de Multiattack, Slam, Burning Touch, Blinding Gaze e Deafening Voice frente a 2023 demonstradas; não promovido a fonte canônica."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_KP-S011_KP-S016/research.json",
+    "sha": "2ae5fbd7b9cd6da5f47a5d18819d248731c25e86"
+  },
+  "catalog_legacy_state": "PESQUISA_PERSISTIDA_AGUARDA_GATE",
+  "legacy_note": "A p?gina classifica a criatura como fey, mas o tra?o Undead Nature chama outro monstro (accursed defiler). O registro atual j? ? parcial. Sem resolu??o editorial, n?o promover a completo nem alterar mec?nica de tra?os.",
+  "outstanding": [
+    "CONFLITO CRÍTICO DE EDIÇÃO: versão 2016 e revisão 2023 têm mecânicas distintas; confirmar qual versão pertence ao registro KP-S011 antes de considerar a ficha canônica. Todos os números atualmente estruturados são somente do candidato 2023.",
+    "Bloqueio editorial específico: texto secundário contém Undead Nature de accursed defiler; não aplicar essa característica à Abominable Beauty sem confirmar página oficial.",
+    "Confrontar fichas e traços com tomo 2023 impresso/PDF autorizado e revisão independente.",
+    "Imagem binária de produção ainda não verificada."
+  ],
+  "mechanics_source_statblock_full": false,
+  "validation": {
+    "main_combat_mechanics_structured_from_online_secondary": true,
+    "official_errata_blow_type_verified": true,
+    "editorial_conflict_undead_nature_resolved": false,
+    "primary_printing_or_book_page_compared": false,
+    "final_approval": false,
+    "edition_target_resolved": false,
+    "cross_edition_mechanical_discrepancy_documented": true
+  },
+  "edition_discrepancy": {
+    "status": "BLOQUEIO_MECANICO_VARIANTES",
+    "variants": [
+      {
+        "publication": "Tome of Beasts original (2016)",
+        "source": "https://anyflip.com/dhfzu/lcug/basic/",
+        "source_class": "reproducao_nao_editorial",
+        "mechanics_sample": {
+          "multiattack": "2 Slam; sem Blinding Gaze acoplado",
+          "slam": "1d8+3 e 8d6 fire",
+          "burning_touch": "8d6 fire tanto no Slam quanto por toque",
+          "blinding_gaze": "Recharge 5–6, CHA CD 17, cegueira em falha, imunidade permanente em sucesso",
+          "deafening_voice": "Recharge 5–6, até 90 pés, CON CD 16, surdez permanente em falha"
+        }
+      },
+      {
+        "publication": "Tome of Beasts revisão 2023",
+        "source": "https://www.5esrd.com/database/creature/abominable-beauty/",
+        "source_class": "transcricao_individual",
+        "mechanics_sample": {
+          "multiattack": "Blinding Gaze + 2 Slam",
+          "slam": "1d8+4 bludgeoning e 6d6 fire",
+          "burning_touch": "3d6 fire por contato",
+          "blinding_gaze": "CHA CD 16, dura até 1 minuto, repete save cada turno, imune 24h após sucesso",
+          "deafening_voice": "30 pés, CON CD 16, 9d6 thunder e deafened 1h em falha"
+        }
+      },
+      {
+        "publication": "Tome of Beasts revisão 2023 — errata 2025",
+        "source": "https://koboldpress.com/errata/",
+        "source_class": "primaria_oficial_apenas_errata",
+        "mechanics_sample": {
+          "slam": "Adiciona explicitamente tipo bludgeoning, página 11"
+        }
+      }
+    ],
+    "selected_candidate_for_structured_statistics": "2023 revista",
+    "canon_target_confirmed": false,
+    "instruction": "Não mesclar efeitos da versão original de 2016 com a edição revista de 2023. Após decisão editorial explícita sobre a edição-alvo, confrontar livro autorizado/errata e reconstruir a ficha da edição escolhida."
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/KP-S011.webp",
+    "format": "image/webp",
+    "width": 555,
+    "height": 1000,
+    "bytes": 84022,
+    "sha256": "900ff16796feb7197766c88ea7eb21d4151478a1db77dc1119ef67c7f9b75e03",
+    "git_blob_sha": "58e0862d08b27fc9a82a2cfe339d5f7c30d73333",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB1-2023/bestiary/Abominable%20Beauty.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "b81de819c06468f02c6c5028831ae0da44ad03e7",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-038",
+  "name": "Giant Moth, Sootwing",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Creature Codex",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "1/4",
+    "size": "Small",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2018,
+    "edition": "Creature Codex (2018, D&D 5e)",
+    "experience_points": 50,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 11,
+    "hit_points": 13,
+    "hit_dice": "3d6+3",
+    "ability_scores": {
+      "STR": 11,
+      "DEX": 12,
+      "CON": 12,
+      "INT": 3,
+      "WIS": 10,
+      "CHA": 7
+    },
+    "speeds": {
+      "walk_ft": 25,
+      "fly_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 12
+    },
+    "skills": {
+      "Perception": 2,
+      "Stealth": 3
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "fire"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 0,
+      "DEX": 1,
+      "CON": 1,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -2
+    },
+    "armor_class_type": "unarmored"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Antennae",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "WIS (Perception)",
+          "only_if": "relies_on_smell"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Proboscis",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 3,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 1,
+              "type": "piercing",
+              "average": 4
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Sooty Wings",
+        "category": "area_save",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 1
+        },
+        "area": {
+          "shape": "sphere",
+          "radius_ft": 20,
+          "origin": "sootwing"
+        },
+        "targets": "each_creature_in_area",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 11,
+          "on_failure": {
+            "damage": {
+              "dice": "1d8",
+              "flat": 0,
+              "type": "fire",
+              "average": 4
+            },
+            "condition": "blinded",
+            "duration": "until_end_of_affected_creature_next_turn"
+          },
+          "on_success": {
+            "damage": {
+              "formula": "half_of_1d8_fire",
+              "rounding": "5e_default"
+            },
+            "condition": null
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-moth-sootwing/",
+      "type": "transcricao_ogl_individual_nao_editorial",
+      "edition": "Creature Codex",
+      "reviewed_on": "2026-10-14",
+      "verification": "all traits, actions, stats and absence of other action categories",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_oficial_editora",
+      "verification": "identity, CR and publication"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-036_TF-040/research.json",
+    "sha": "ed8297b911fa106d0202b1408c051c9b8898e703"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Fonte ND 1/4 versus catalog 0.3; manter separados.",
+    "Imagem pendente."
+  ],
+  "outstanding": [
+    "Confrontar livro/errata da edição específica; ficha online estruturada não homologada editorialmente.",
+    "Testes e revisão independente da engine de combate.",
+    "Aprovação da arte e direitos de uso separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_compared": false,
+    "independent_engine_review": false,
+    "source_numeric_discrepancy": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-038.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 47332,
+    "sha256": "3fdea4aa9ef75143bc7e960f2f7f51ecc6d01e64f82e84669dd1f8f750b5553c",
+    "git_blob_sha": "062ee8f13be36f4149b853e8a6595fda783a7f22",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/CCodex/tokens/Sootwing.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "a058c30527568184ec72b3fb358744cdef43ad83",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

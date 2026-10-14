@@ -1,0 +1,349 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-043",
+  "name": "Oliphaunt",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Creature Codex",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "8",
+    "size": "Gargantuan",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2018,
+    "edition": "Creature Codex (2018, D&D 5e)",
+    "experience_points": 3900,
+    "proficiency_bonus": 3,
+    "source_page": null
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 148,
+    "hit_dice": "9d20+54",
+    "ability_scores": {
+      "STR": 27,
+      "DEX": 9,
+      "CON": 23,
+      "INT": 3,
+      "WIS": 11,
+      "CHA": 6
+    },
+    "speeds": {
+      "walk_ft": 50
+    },
+    "senses": {
+      "passive_perception": 10
+    },
+    "skills": [],
+    "saving_throws": {
+      "DEX": 2
+    },
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 8,
+      "DEX": -1,
+      "CON": 6,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -2
+    },
+    "armor_class_type": "natural_armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Trampling Charge",
+        "category": "passive",
+        "effect": {
+          "saving_throw": {
+            "ability": "STR",
+            "dc": 16,
+            "on_failure": {
+              "condition": "prone"
+            },
+            "on_success": {
+              "effect": "none"
+            }
+          },
+          "bonus_attack_if_prone": "Stomp"
+        },
+        "requirements": {
+          "movement_straight_ft_min": 20,
+          "attack_hit": "Gore",
+          "same_turn": true
+        }
+      },
+      {
+        "name": "Trunk Slam",
+        "category": "passive",
+        "effect": {
+          "bonus_action_after_starting_turn_with_target_grappled": true,
+          "save": {
+            "ability": "CON",
+            "dc": 17,
+            "on_failure": {
+              "damage": {
+                "dice": "2d10",
+                "flat": 0,
+                "type": "bludgeoning",
+                "average": 11
+              },
+              "grapple_ends": false
+            },
+            "on_success": {
+              "damage_multiplier": 0.5,
+              "grapple_ends": false
+            }
+          }
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Trunk",
+            "count": 1
+          },
+          {
+            "one_of": [
+              "Gore",
+              "Stomp"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Gore",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "5d8",
+              "flat": 8,
+              "type": "piercing",
+              "average": 30
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Stomp",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "5d10",
+              "flat": 8,
+              "type": "bludgeoning",
+              "average": 35
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Trunk",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 11,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "kind": "one_creature"
+        },
+        "hit": {
+          "damage": []
+        },
+        "miss": {
+          "damage": 0
+        },
+        "hit_effect": {
+          "if_target_size_at_most": "Large",
+          "condition": [
+            "grappled",
+            "restrained"
+          ],
+          "escape_dc": 17,
+          "restriction": "trunk unavailable against others until grapple ends"
+        }
+      },
+      {
+        "name": "Tusk Sweep",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "type": "d6",
+          "on": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "shape": "cube",
+          "side_ft": 20
+        },
+        "targets": "each_creature_in_cube",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 17,
+          "on_failure": {
+            "damage": {
+              "dice": "10d6",
+              "flat": 0,
+              "type": "bludgeoning",
+              "average": 35
+            }
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Trampling Charge — Stomp",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "target knocked prone by Trampling Charge",
+        "attack": "Stomp",
+        "target": "same_target"
+      },
+      {
+        "name": "Trunk Slam",
+        "category": "conditional_bonus_action",
+        "action_economy": "bonus_action",
+        "trigger": "starts turn with target grappled",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 17,
+          "on_failure": {
+            "damage": {
+              "dice": "2d10",
+              "flat": 0,
+              "type": "bludgeoning",
+              "average": 11
+            }
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "grapple_continues": true
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.dndgrove.com/bestiary/8/oliphaunt",
+      "type": "ficha_identificada_em_checkpoint_histórico",
+      "verification": "mecânica integral ainda não revalidada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:oliphaunt",
+      "type": "individual_ogl_transcription_unofficial",
+      "edition": "Creature Codex",
+      "reviewed_on": "2026-10-14",
+      "verified_fields": [
+        "statistics",
+        "traits",
+        "actions",
+        "bonus_actions",
+        "reactions",
+        "legendary_actions",
+        "lair_actions",
+        "regional_effects"
+      ],
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "publisher_index",
+      "verification": "identidade, publicação e CR"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-041_TF-046/research.json",
+    "sha": "16ed0118731d24ca8447a293e670c952a7f6ea8f"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Confirmar mecânica e proveniência na publicação Creature Codex.",
+    "5eSRD apresentou apenas solicitação de JavaScript.",
+    "Imagem e direitos pendentes."
+  ],
+  "outstanding": [
+    "Confirmar regras contra impressão/errata editorial autorizada e revisão independente do motor de combate.",
+    "Verificação de arte visual/direitos permanece independente das mecânicas."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_verified": false,
+    "engine_review": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-043.webp",
+    "format": "image/webp",
+    "width": 868,
+    "height": 961,
+    "bytes": 153064,
+    "sha256": "3b4b31c445c49dfe1040c349079e88041de39f772fb949b859c3243abb2062da",
+    "git_blob_sha": "1e3ddd581bb7711b93d1f1f3f7c82746d8e3c9a3",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/CCodex/Oliphaunt.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "a058c30527568184ec72b3fb358744cdef43ad83",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-052",
+  "name": "Cosmic Symphony",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "15",
+    "size": "Large",
+    "type": "celestial",
+    "alignment": "unaligned",
+    "edition": "Tome of Beasts 3 (5e), p.96",
+    "source_page": 96,
+    "experience_points": 13000,
+    "proficiency_bonus": 5
+  },
+  "statistics": {
+    "armor_class": 18,
+    "hit_points": 200,
+    "hit_dice": "16d10+112",
+    "ability_scores": {
+      "STR": 19,
+      "DEX": 26,
+      "CON": 25,
+      "INT": 2,
+      "WIS": 21,
+      "CHA": 18
+    },
+    "speeds": {
+      "walk_ft": 0,
+      "fly_ft": 60,
+      "hover": true
+    },
+    "senses": {
+      "truesight_ft": 120,
+      "passive_perception": 20
+    },
+    "skills": {
+      "Perception": 10
+    },
+    "saving_throws": {
+      "WIS": 10,
+      "CHA": 9
+    },
+    "languages": [
+      "understands all languages but cannot speak"
+    ],
+    "damage_resistances": [
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "condition": "nonmagical attacks"
+      }
+    ],
+    "damage_immunities": [
+      "radiant",
+      "thunder"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "deafened",
+      "exhaustion",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "stunned"
+    ],
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 8,
+      "CON": 7,
+      "INT": -4,
+      "WIS": 5,
+      "CHA": 4
+    },
+    "armor_class_type": "natural armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Invisible",
+        "category": "passive",
+        "effect": {
+          "condition": "invisible",
+          "always": true
+        }
+      },
+      {
+        "name": "Legendary Resistance",
+        "category": "resource",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 3
+        },
+        "trigger": "fails a saving throw",
+        "effect": "may choose to succeed"
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "optional_pre_action": "Universal Music",
+        "options": [
+          [
+            {
+              "action": "Discordant Wave",
+              "count": 1
+            },
+            {
+              "action": "Slam",
+              "count": 1
+            }
+          ],
+          [
+            {
+              "action": "Discordant Wave",
+              "count": 2
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Discordant Wave",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_or_ranged_spell",
+        "attack_bonus": 10,
+        "reach_ft": 5,
+        "range_ft": {
+          "normal": 60,
+          "long": 120
+        },
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "5d8",
+              "modifier": 5,
+              "type": "thunder",
+              "average": 27
+            }
+          ],
+          "secondary_area": {
+            "radius_ft": 10,
+            "origin": "target",
+            "includes_target": true,
+            "saving_throw": {
+              "ability": "CON",
+              "dc": 18,
+              "on_failure": {
+                "condition": "deafened",
+                "duration": "until end of next turn"
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 13,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "3d10",
+              "modifier": 8,
+              "type": "bludgeoning",
+              "average": 24
+            },
+            {
+              "dice": "5d8",
+              "modifier": 0,
+              "type": "thunder",
+              "average": 22
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Universal Music",
+        "category": "area_save",
+        "action_economy": "action",
+        "targets": {
+          "selection": "chosen_creatures",
+          "range_ft": 120
+        },
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 18,
+          "on_failure": {
+            "condition": "incapacitated",
+            "duration": "1 minute",
+            "if_fail_by_5_or_more": "stunned instead",
+            "repeat_save": "end of each affected creature turn; success ends"
+          },
+          "on_success": {
+            "immunity_hours": 24
+          }
+        },
+        "post_effect_immunity_hours": 24
+      },
+      {
+        "name": "Celestial Crescendo",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "targets": "each creature within 30ft",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": null,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "10d8",
+                "modifier": 0,
+                "type": "thunder",
+                "average": 45
+              }
+            ],
+            "condition": "deafened",
+            "duration": "1 minute",
+            "repeat_save": "end of each affected creature turn; success ends"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "condition": null
+          }
+        },
+        "unresolved_source_dc": true
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [
+      {
+        "name": "Fly",
+        "cost": 1,
+        "effect": {
+          "fly_up_to_ft": 30,
+          "provokes_opportunity_attacks": false
+        }
+      },
+      {
+        "name": "Major Chord",
+        "cost": 2,
+        "effect": {
+          "self_healing": {
+            "dice": "4d8",
+            "modifier": 0,
+            "type": "hp",
+            "average": 18
+          }
+        }
+      },
+      {
+        "name": "Minor Chord",
+        "cost": 2,
+        "targets": "each creature within 10ft",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 18,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "2d8",
+                "modifier": 0,
+                "type": "thunder",
+                "average": 9
+              }
+            ]
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      }
+    ],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [],
+    "legendary_economy": {
+      "actions_per_round": "standard 3 (requires confirmation in primary book)",
+      "recovered_at": "start of creature turn",
+      "spend_timing": "end of another creature turn"
+    }
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/cosmic-symphony/",
+      "type": "ficha_individual_localizada_em_checkpoint",
+      "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/tree/master/creature",
+      "type": "Kobold Press OGL structured statblock transcription",
+      "source_book": "ToB3",
+      "source_page": 96,
+      "source_creature": "Cosmic Symphony",
+      "official_book_verified": false,
+      "verification": "full individually named actions and traits transcribed from structured community JSON"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-052_TF-058/research.json",
+    "sha": "090aef0b3b7e1a6ffbb923cb4941229bb68ca563"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Celestial Crescendo manda fazer salvaguarda de CON mas não imprime CD nessa ação; não inferir CD18 de ações vizinhas.",
+    "Imagem e revisão de direitos pendentes."
+  ],
+  "outstanding": [
+    "Celestial Crescendo does not specify save DC in available source; do not infer 18 without official correction.",
+    "Compare primary book printing, correct variant and errata; community OGL JSON is not canonical validation.",
+    "Independently verify mechanical behavior and artwork license/quality."
+  ],
+  "mechanics_source_statblock_full": false,
+  "validation": {
+    "source_statblock_individually_structured": true,
+    "official_printing_or_errata_compared": false,
+    "independent_engine_tested": false,
+    "final_approval": false,
+    "celestial_crescendo_save_dc_missing_from_transcribed_action": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-052.webp",
+    "format": "image/webp",
+    "width": 280,
+    "height": 280,
+    "bytes": 96774,
+    "sha256": "e458c99714fbd86a54c54b856516f5c58d4aebceaee8841ac7ee3d5bce6fccfb",
+    "git_blob_sha": "c190449ff3114f83e7d469030a6bf90fe0ccbc47",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/ToB3/bestiary/tokens/Cosmic%20Symphony.webp",
+    "source_type": "reutilizado_de_branch_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_commit": "27a97aa91dc6cdb73330cf88592a4ae119f14dc8",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  }
+}

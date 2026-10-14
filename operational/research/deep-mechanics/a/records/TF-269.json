@@ -1,0 +1,273 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-269",
+  "name": "Vexxeh",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "6",
+    "size": "Huge",
+    "type": "fiend",
+    "alignment": "lawful_evil",
+    "experience_points": 2300,
+    "variant": "legacy_5esrd_HP105_not_confirmed_against_kobold_press_primary",
+    "proficiency_bonus": null,
+    "proficiency_bonus_reason": "não impresso explicitamente na fonte 5eSRD; +3 inferível de ataques/atributos"
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 105,
+    "hit_dice": "10d12+40",
+    "ability_scores": {
+      "STR": 20,
+      "DEX": 13,
+      "CON": 19,
+      "INT": 12,
+      "WIS": 10,
+      "CHA": 12
+    },
+    "speeds": {
+      "walk_ft": 40
+    },
+    "senses": {
+      "truesight_ft": 60,
+      "passive_perception": 10
+    },
+    "skills": {
+      "Intimidation": 4
+    },
+    "saving_throws": {
+      "STR": 8,
+      "WIS": 3
+    },
+    "languages": [
+      "Common",
+      "Infernal"
+    ],
+    "damage_resistances": [
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "from": "nonmagical_weapons"
+      }
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned",
+      "unconscious"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 1,
+      "CON": 4,
+      "INT": 1,
+      "WIS": 0,
+      "CHA": 1
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Four-Legged Lope",
+        "category": "dash_multiplier",
+        "trigger": "uses_action_to_Dash",
+        "effect": {
+          "total_movement_multiplier_of_speed": 3
+        }
+      },
+      {
+        "name": "Weak Willed",
+        "category": "saving_throw_disadvantage",
+        "save_context": "against_being_charmed"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Claw",
+            "count": 2
+          }
+        ],
+        "edition_variant": "legacy_5esrd_105hp"
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "flat": 5,
+              "average": 10,
+              "type": "slashing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 8,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 5,
+              "average": 14,
+              "type": "piercing"
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "average": 7,
+              "type": "poison"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Rend",
+        "category": "multiattack_followup",
+        "source_section": "ACTIONS",
+        "trigger": "two_claw_attacks_hit_same_creature_within_one_round",
+        "damage": [
+          {
+            "dice": "4d6",
+            "flat": 0,
+            "average": 14,
+            "type": null
+          }
+        ],
+        "damage_type_reason": "não publicado na fonte 5eSRD original",
+        "no_additional_action_cost_explicitly_stated": true
+      }
+    ]
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Acelera em corrida tríplice, é suscetível a encanto e morde/arranha; acertar com ambas as garras gera pânico entre vítimas próximas."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/vexxeh/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "Fonte individual legada lida em 2026-10-14; escolhida para correspondência histórica dos 105 PV; NÃO homologada como edição editorial final."
+    },
+    {
+      "url": "https://www.robinloft.com/monsters/vexxeh/tome-of-beasts-2",
+      "type": "evidência histórica, fonte editorial ou transcrição alternativa",
+      "edition": "Tome of Beasts 2",
+      "scope": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:vexxeh",
+      "type": "KPOGL reprodução não endossada por Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "traços e ações da ficha individual em resumo; revisão editorial integral pendente",
+      "verification": "Contraste individual realizado em 2026-10-14; alternativa com 94 PV e Multiattack diferente NÃO mesclada à versão de 105 PV."
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada.",
+    "Vexxeh: transcrição Robinloft registra 94 PV contra 105 PV em 5eSRD; revisão de edição pendente.",
+    "KPOGL Tome of Beasts 2 apresenta PV 94, enquanto registro prévio de 5eSRD apresentou PV 105; mantidos PV 105 historicamente, SEM homologação até confirmar versão e errata.",
+    "2026-10-14: variante legada explicitamente estruturada por correspondência com 105 PV do catálogo, usando 5eSRD. Fonte KPOGL e transcrição do livro de 2020 têm 94 PV, resistência a frio/fogo/raio, imunidade a veneno e Multiattack diferente; duas versões não foram misturadas."
+  ],
+  "outstanding": [
+    "**Conflito editorial não resolvido:** fonte 5eSRD antiga usa 105 PV, Multiattack 2 garras, Rend; KPOGL/Robinloft/Tome of Beasts 2 indicam 94 PV, Multiattack mordida+duas garras, medo em área ao acertar duas garras. Confirmar edição-alvo e erratas antes de homologar.",
+    "Dano do Rend (4d6) não especifica tipo na transcrição 5eSRD; manter null e não presumir corte.",
+    "Validar direitos de adaptação/licença, revisão independente do livro e regras na engine."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-269.webp",
+    "format": "image/webp",
+    "width": 959,
+    "height": 1081,
+    "bytes": 195652,
+    "sha256": "9032582050264bfdc8b789199c80c7b4a44ca969623b50c34ef92ffb73b4aad1",
+    "git_blob_sha": "0770c8bf50c3bd7ed77a3e2301a93c71a57a5935",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Vexxeh.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "356a9426a14d9d9b2adbb433e92e0b3ef33364e2",
+    "identity_provenance": "Nome/id verificados com manifesto E e SHA idêntico ao blob existente",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual independente",
+      "direitos",
+      "arte para produção"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://www.5esrd.com/database/creature/vexxeh/",
+      "https://kpogl.wikidot.com/monster:vexxeh"
+    ],
+    "source_tier": "secondary_5esrd_legacy_with_cross_version_conflict",
+    "statblock_url_read_online": true,
+    "variant_match_to_ledger_hit_points": true,
+    "printing_or_variant_unresolved": true,
+    "notes": "Estrutura da variante 105 PV capturada sem mesclar transcrição 94 PV; não usar como ficha pronta."
+  }
+}

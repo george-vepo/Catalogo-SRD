@@ -1,0 +1,317 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-053",
+  "name": "Thrummren",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "12",
+    "size": "Gargantuan",
+    "type": "celestial",
+    "alignment": "chaotic good",
+    "edition": "Tome of Beasts 2 (5e), p.347",
+    "source_page": 347,
+    "experience_points": 8400,
+    "proficiency_bonus": 4
+  },
+  "statistics": {
+    "armor_class": 17,
+    "hit_points": 198,
+    "hit_dice": "12d20+72",
+    "ability_scores": {
+      "STR": 21,
+      "DEX": 19,
+      "CON": 22,
+      "INT": 10,
+      "WIS": 15,
+      "CHA": 10
+    },
+    "speeds": {
+      "walk_ft": 60
+    },
+    "senses": {
+      "darkvision_ft": 120,
+      "passive_perception": 12
+    },
+    "skills": [],
+    "saving_throws": {
+      "DEX": 8,
+      "WIS": 6,
+      "CHA": 4
+    },
+    "languages": [
+      "Common",
+      "Giant",
+      "telepathy 60 ft"
+    ],
+    "damage_resistances": [
+      "cold",
+      "thunder"
+    ],
+    "damage_immunities": [
+      "lightning",
+      "poison"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": 4,
+      "CON": 6,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": 0
+    },
+    "armor_class_type": "natural armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Lightning Absorption",
+        "category": "passive_triggered",
+        "trigger": "would take lightning damage",
+        "effect": {
+          "prevent_damage": true,
+          "restore_hp_equal_to_prevented_damage": true
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": {
+          "advantage_on_saving_throws_against": [
+            "spells",
+            "other magical effects"
+          ]
+        }
+      },
+      {
+        "name": "Magic Weapons",
+        "category": "passive",
+        "effect": {
+          "weapon_attacks_magical": true
+        }
+      },
+      {
+        "name": "Storm Hide",
+        "category": "passive_triggered",
+        "trigger": "another creature touches it or hits with melee attack from within 5ft",
+        "effect": {
+          "damage": [
+            {
+              "dice": "2d6",
+              "modifier": 0,
+              "type": "lightning",
+              "average": 7
+            }
+          ],
+          "can_exclude_rider": true
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Gore",
+            "count": 1
+          },
+          {
+            "action": "Hooves",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Gore",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 15,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "3d12",
+              "modifier": 5,
+              "type": "piercing",
+              "average": 24
+            },
+            {
+              "dice": "3d6",
+              "modifier": 0,
+              "type": "lightning",
+              "average": 10
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Hooves",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "modifier": 5,
+              "type": "bludgeoning",
+              "average": 14
+            },
+            {
+              "dice": "3d6",
+              "modifier": 0,
+              "type": "thunder",
+              "average": 10
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Thunder Stomp",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            5,
+            6
+          ]
+        },
+        "targets": "each creature within 20ft",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 17,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "10d6",
+                "modifier": 0,
+                "type": "thunder",
+                "average": 35
+              }
+            ],
+            "pushed_ft_up_to": 10,
+            "condition": "deafened",
+            "duration": "until end of next turn"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "pushed_ft": 0,
+            "condition": null
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Protect Rider",
+        "category": "reaction",
+        "action_economy": "reaction",
+        "trigger": "rider is targeted by attack visible to Thrummren",
+        "effect": {
+          "redirect_target": "Thrummren"
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/thrummren/",
+      "type": "ficha_individual_localizada_em_checkpoint",
+      "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/tree/master/creature",
+      "type": "Kobold Press OGL structured statblock transcription",
+      "source_book": "ToB2",
+      "source_page": 347,
+      "source_creature": "Thrummren",
+      "official_book_verified": false,
+      "verification": "full individually named actions and traits transcribed from structured community JSON"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-052_TF-058/research.json",
+    "sha": "090aef0b3b7e1a6ffbb923cb4941229bb68ca563"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Imagem e direitos pendentes."
+  ],
+  "outstanding": [
+    "Compare primary book printing, correct variant and errata; community OGL JSON is not canonical validation.",
+    "Independently verify mechanical behavior and artwork license/quality.",
+    "Binário de imagem TF-053 armazenado via SHA verificado do lote D; inspeção visual independente, direitos e aprovação final ainda pendentes."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_individually_structured": true,
+    "official_printing_or_errata_compared": false,
+    "independent_engine_tested": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-053.webp",
+    "format": "image/webp",
+    "bytes": 162454,
+    "width": 680,
+    "height": 1069,
+    "sha256": "72be47f29f39a65b117f9b67cbc89015862d1396bf4b4cad8fb8bd4e9b7f31c4",
+    "git_blob_sha": "b079ce09de73a737de224f0ddffc1597e4f1faa8",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Thrummren.webp",
+    "source_type": "reused_verified_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_head_when_verified": "c6129862bfe2d6a175b86cb50a5f5b2eaecc398f",
+    "source_manifest": "operational/assets/creature-images/manifests/d.json",
+    "original_asset_commit": "6b558de9b5b36341e4484076724dab891df1cd9a",
+    "source_name_note": null,
+    "integrity_verification": {
+      "original_manifest_sha256_readback": true,
+      "original_manifest_github_blob_readback": true,
+      "original_manifest_source_bytes_equal": true,
+      "source_tree_sha_matches": true
+    },
+    "identity_visual_independently_verified": false,
+    "rights_cleared": false,
+    "production_approved": false,
+    "review_pending": [
+      "Avaliação visual independente da identidade da criatura",
+      "Revisão de licença/direitos",
+      "Resolução adequada e aprovação editorial final"
+    ]
+  }
+}

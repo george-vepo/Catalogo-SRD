@@ -1,0 +1,303 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-230",
+  "name": "Cryoceros",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "6",
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 133,
+    "hit_dice": "14d10+56",
+    "ability_scores": {
+      "STR": 19,
+      "DEX": 11,
+      "CON": 18,
+      "INT": 3,
+      "WIS": 13,
+      "CHA": 8
+    },
+    "speeds": {
+      "walk_ft": 40,
+      "swim_ft": 0,
+      "fly_ft": 0,
+      "climb_ft": 0,
+      "burrow_ft": 0
+    },
+    "senses": {
+      "passive_perception": 11
+    },
+    "skills": {
+      "Athletics": 7
+    },
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [
+      "bludgeoning",
+      "cold"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_note": "natural armor",
+    "hit_dice_count": 14,
+    "hit_die_size": 10,
+    "hit_points_modifier": 56,
+    "challenge_rating": 6,
+    "experience_points": 2300,
+    "proficiency_bonus": null,
+    "proficiency_bonus_unknown_reason": "Não declarado na ficha consultada.",
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 0,
+      "CON": 4,
+      "INT": -4,
+      "WIS": 1,
+      "CHA": -1
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Snow Camouflage",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "DEX (Stealth)",
+          "environment": "snowy terrain"
+        }
+      },
+      {
+        "name": "Trampling Charge",
+        "category": "conditional_trait",
+        "prerequisites": {
+          "straight_movement_toward_target_ft_min": 20,
+          "hit_attack": "Gore",
+          "same_turn": true
+        },
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 15,
+          "on_failure": {
+            "condition": "prone"
+          },
+          "on_success": "nenhum efeito adicional"
+        },
+        "follow_up": {
+          "action_economy": "bonus_action",
+          "attack": "Stomp",
+          "target": "alvo caído"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 13
+            },
+            {
+              "dice": "2d8",
+              "modifier": 0,
+              "type": "cold",
+              "average": 9
+            }
+          ],
+          "average_damage": 13,
+          "average_damage_total": 22
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Stomp",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 7,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_prone_creature"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "3d10",
+              "modifier": 4,
+              "type": "bludgeoning",
+              "average": 20
+            }
+          ],
+          "average_damage": 20
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "recharge": null,
+        "uses_limit": null
+      },
+      {
+        "name": "Shards of Ice",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "dice": "1d6",
+          "recovers_on": [
+            4,
+            5,
+            6
+          ]
+        },
+        "area": {
+          "shape": "cone",
+          "length_ft": 15
+        },
+        "targets": "each_creature_in_area",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 15,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "3d6",
+                "type": "cold",
+                "average": 10
+              },
+              {
+                "dice": "3d6",
+                "type": "piercing",
+                "average": 10
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        },
+        "duration": "instant"
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Trampling Charge — Stomp",
+        "category": "conditional_bonus_attack",
+        "trigger": "alvo de Gore falha FOR CD15 e fica prone",
+        "attack": "Stomp",
+        "target": "mesmo alvo",
+        "cost": "bonus_action"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Camuflagem na neve, investida que derruba e permite pisotear, ataque de chifre gélido."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 2",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/cryoceros/",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:cryoceros",
+      "type": "KPOGL, ficha de terceiro (não endossada pela editora)",
+      "edition": "Tome of Beasts 2",
+      "scope": "mecânica individual em síntese; verificação editorial integral e licença pendentes",
+      "verification": "citada em checkpoint anterior, ações não confirmadas integralmente nesta rodada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:cryoceros",
+      "type": "statblock_individual_consultado_em_2026_10_14",
+      "edition": "Tome of Beasts 2",
+      "scope": "CA, PV, atributos, sentidos, traços, todos os ataques e economia de ações; ausências verificadas no bloco",
+      "editorial_confirmation": false
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-211_TF-251/research.json",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79",
+    "reference_commit": null
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Comparar integralmente com publicação/errata editorial da edição correta.",
+    "Realizar revisão independente de ações, gatilhos e implementação na engine.",
+    "Aprovação visual, direitos e resolução de imagem ainda pendentes."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-230.webp",
+    "format": "image/webp",
+    "width": 1147,
+    "height": 751,
+    "bytes": 317876,
+    "sha256": "722a9fd014f0e34e1eed6ebd27621a89799ea2839928713604c600349ce7de3d",
+    "git_blob_sha": "cc468aea08ff5c69ba54b206350859dcf106bf7b",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Cryoceros.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "fe22e5efef6af67a50cd68a58cdae797928e912d",
+    "identity_provenance": "ID e nome coincidem com registro e manifesto do lote E, binário conferido por readback",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença e direitos",
+      "aprovação para impressão"
+    ]
+  },
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "status": "NAO_HOMOLOGADA_EDITORIALMENTE",
+    "individual_source_read": true,
+    "edition_printing_verified": false,
+    "errata_fully_checked": false,
+    "engine_independent_review": false,
+    "issues": [
+      "Transcrição de KPOGL não endossada pela editora, sem revisão da edição física e erratas."
+    ]
+  }
+}

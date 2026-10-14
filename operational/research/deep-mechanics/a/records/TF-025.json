@@ -1,0 +1,202 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-025",
+  "name": "Beetle, Sniffer",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press / Open Design LLC",
+    "publication": "Tome of Beasts 2",
+    "publication_year": 2020,
+    "edition": "Tome of Beasts 2 for 5th Edition (2020)",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "1/8",
+    "size": "Small",
+    "type": "beast",
+    "alignment": "unaligned",
+    "experience_points": 25,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 12,
+    "armor_class_type": "natural_armor",
+    "hit_points": 5,
+    "hit_dice": "1d6+2",
+    "ability_scores": {
+      "STR": 13,
+      "DEX": 10,
+      "CON": 14,
+      "INT": 3,
+      "WIS": 12,
+      "CHA": 7
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "fly_ft": 10
+    },
+    "skills": {
+      "Perception": 5
+    },
+    "senses": {
+      "darkvision_ft": 30,
+      "passive_perception": 15
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 0,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 1,
+      "CHA": -2
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "category": "passive",
+        "activation": "automatic",
+        "trigger": "Teste de Sabedoria (Perception) que dependa de olfato",
+        "effect": {
+          "skill": "Perception",
+          "ability": "WIS",
+          "advantage": true
+        },
+        "duration": "Teste desencadeador",
+        "save": null,
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 3,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "modifier": 1,
+              "type": "piercing"
+            }
+          ],
+          "average_damage": 3
+        },
+        "on_miss": {
+          "damage": 0
+        },
+        "save": null,
+        "recharge": null,
+        "uses_limit": null
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Familiar eligibility",
+        "category": "non_statblock_lore",
+        "effect": "Pode servir como familiar através da magia find familiar, segundo seção descritiva 5eSRD/KPOGL.",
+        "source": "https://www.5esrd.com/database/creature/beetle-sniffer/"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/beetle-sniffer/",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2 (2020, 5e)",
+      "verification": "conferidos todos os números, um traço passivo e um ataque"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:sniffer-beetle",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2 (2020, 5e)",
+      "verification": "concordância integral com 5eSRD na ficha de combate"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_oficial_editora",
+      "verification": "ND arredondado, tipo, porte e publicação"
+    },
+    {
+      "url": "https://koboldpress.com/tome-of-beasts-2/",
+      "type": "pagina_editorial",
+      "verification": "publicação 2020 de 5e"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-020_TF-025/research.json",
+    "sha": "6765cefa3bc1206732ac18c35020876b60a27f60"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": "ND fonte 1/8 (0,125) e catálogo 0.1; preservar arredondamento original e valor da fonte separados.",
+  "outstanding": [
+    "Confrontar ficha da edição física/errata exata antes de validação canônica.",
+    "Persistir arquivo físico de arte própria do Sniffer Beetle; imagem ainda não disponível.",
+    "Fazer revisão independente antes de integração.",
+    "Binário de imagem TF-025 armazenado via SHA verificado do lote D; inspeção visual independente, direitos e aprovação final ainda pendentes."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "two_individual_statblocks_agree": true,
+    "mechanics_covered_at_source_level": true,
+    "edition_family_editorial_verified": true,
+    "primary_book_full_text_compared": false,
+    "final_approval": false,
+    "proficiency_inferred_from_attacks_and_standard_5e_cr0_to_1_8": true,
+    "online_numeric_details_rechecked_on": "2026-10-14",
+    "online_numeric_details_sources": [
+      "https://kpogl.wikidot.com/monster:sniffer-beetle"
+    ]
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-025.webp",
+    "format": "image/webp",
+    "bytes": 121224,
+    "width": 612,
+    "height": 577,
+    "sha256": "75e73adf97854ea02ce48dfe8f68307ed454f36121a88a663e860e86c0800d13",
+    "git_blob_sha": "3ff0b998a0fc578955130c427c9d5277d78c1f5c",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Sniffer%20Beetle.webp",
+    "source_type": "reused_verified_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_head_when_verified": "c6129862bfe2d6a175b86cb50a5f5b2eaecc398f",
+    "source_manifest": "operational/assets/creature-images/manifests/d.json",
+    "original_asset_commit": "6b558de9b5b36341e4484076724dab891df1cd9a",
+    "source_name_note": null,
+    "integrity_verification": {
+      "original_manifest_sha256_readback": true,
+      "original_manifest_github_blob_readback": true,
+      "original_manifest_source_bytes_equal": true,
+      "source_tree_sha_matches": true
+    },
+    "identity_visual_independently_verified": false,
+    "rights_cleared": false,
+    "production_approved": false,
+    "review_pending": [
+      "Avaliação visual independente da identidade da criatura",
+      "Revisão de licença/direitos",
+      "Resolução adequada e aprovação editorial final"
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-214",
+  "name": "Alke",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 3",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "5",
+    "size": "Large",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 14,
+    "hit_points": 114,
+    "hit_dice": "12d10+48",
+    "ability_scores": {
+      "STR": 18,
+      "DEX": 15,
+      "CON": 18,
+      "INT": 4,
+      "WIS": 13,
+      "CHA": 12
+    },
+    "speeds": {
+      "walk_ft": 50,
+      "climb_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 16
+    },
+    "skills": {
+      "Acrobatics": 5,
+      "Perception": 7,
+      "Stealth": 5
+    },
+    "saving_throws": {
+      "DEX": 5,
+      "CHA": 4
+    },
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "petrified"
+    ]
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Back Spikes",
+        "category": "passive",
+        "effect": "Montador involuntário Small ou maior testa DES CD15 no começo do turno; recebe 4d6 perfurante na falha, metade no sucesso.",
+        "saving_throw": {
+          "ability": "DEX",
+          "dc": 15,
+          "on_failure": "4d6 piercing",
+          "on_success": "Metade do dano"
+        }
+      },
+      {
+        "name": "Keen Sight",
+        "category": "passive",
+        "effect": "Vantagem em Perception (SAB) baseada em visão."
+      },
+      {
+        "name": "Pounce",
+        "category": "passive",
+        "effect": "Desloca ao menos 30 pés em linha reta rumo ao alvo, acerta Claws no mesmo turno; alvo testa FOR CD15 ou cai prone. Se prone, pode atacar com Beak como ação bônus.",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 15,
+          "on_failure": "Prone",
+          "on_success": "Permanece de pé"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "sequence": [
+          {
+            "action": "Beak",
+            "count": 1
+          },
+          {
+            "action": "Claws",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Beak",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 7,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d8",
+            "modifier": 4,
+            "type": "piercing"
+          }
+        ]
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 7,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "2d6",
+            "modifier": 4,
+            "type": "slashing"
+          }
+        ]
+      },
+      {
+        "name": "Piercing Roll",
+        "category": "recharge_area",
+        "recharge": "4-6",
+        "movement": "Até 25 pés em linha reta, atravessando espaços de criaturas Medium ou menores.",
+        "trigger": "Primeira entrada no espaço de cada criatura",
+        "saving_throw": {
+          "ability": "STR",
+          "dc": 15,
+          "on_failure": "4d6 bludgeoning e 4d6 piercing; prone",
+          "on_success": "Metade de ambos os danos, sem prone"
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Pounce — Beak",
+        "category": "conditional_bonus_action",
+        "trigger": "Após derrubar alvo com Pounce",
+        "action": "Beak",
+        "targets": "Alvo prone da Pounce"
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Repelling Spikes",
+        "category": "reaction",
+        "trigger": "Ataque com arma corpo a corpo ou à distância que atingiria a criatura",
+        "condition": "Precisa ver o atacante e não estar prone.",
+        "effect": "+3 CA somente contra o ataque desencadeador"
+      }
+    ],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:alke",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 3",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-214.webp",
+    "format": "image/webp",
+    "width": 1200,
+    "height": 945,
+    "bytes": 141222,
+    "sha256": "0b646e6839dee3a1612fbcb637b8f34b099d22a9cd8d765299d1b3e969f3e3f7",
+    "git_blob_sha": "6defd83d345f8652717ff5e821b27b24ce61745e",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Alke.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "4381bc3d339a79d125a328df3eb12d3698c8806d",
+    "identity_provenance": "Nome/id coincidem com registro e manifesto E, que reporta download e readback verificados",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença/direitos da ilustração",
+      "aprovação para impressão"
+    ]
+  }
+}

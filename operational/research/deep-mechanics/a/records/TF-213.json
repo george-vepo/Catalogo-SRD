@@ -1,0 +1,245 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-213",
+  "name": "Alchemical Skunk",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "4",
+    "size": "Small",
+    "type": "monstrosity",
+    "alignment": "unaligned"
+  },
+  "statistics": {
+    "armor_class": 15,
+    "hit_points": 66,
+    "hit_dice": "12d6+24",
+    "ability_scores": {
+      "STR": 13,
+      "DEX": 17,
+      "CON": 14,
+      "INT": 2,
+      "WIS": 12,
+      "CHA": 7
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "burrow_ft": 10
+    },
+    "senses": {
+      "blindsight_ft": 10,
+      "passive_perception": 13
+    },
+    "skills": {
+      "Perception": 3,
+      "Stealth": 5
+    },
+    "saving_throws": {},
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": []
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "category": "passive",
+        "effect": "Vantagem em Perception (SAB) baseada em audição ou olfato."
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "passive",
+        "effect": "Vantagem nas salvaguardas contra magias e outros efeitos mágicos."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "sequence": [
+          {
+            "action": "Alchemical Spray",
+            "count": 1
+          },
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Claws",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 5,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "2d4",
+            "modifier": 3,
+            "type": "piercing"
+          }
+        ]
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "attack_type": "melee_weapon",
+        "to_hit": 5,
+        "reach_ft": 5,
+        "targets": "1 alvo",
+        "damage": [
+          {
+            "dice": "1d6",
+            "modifier": 3,
+            "type": "slashing"
+          }
+        ]
+      },
+      {
+        "name": "Alchemical Spray",
+        "category": "random_area_effect",
+        "random_table": "1d6 uniforme",
+        "self_immunity": "Imune ao próprio spray e ao spray de outras alchemical skunks.",
+        "outcomes": [
+          {
+            "roll": 1,
+            "name": "Pleasant Mist",
+            "area": "raio 10 pés",
+            "save": {
+              "ability": "CHA",
+              "dc": 13,
+              "on_failure": "Charmed até fim do próximo turno",
+              "on_success": "Sem efeito"
+            }
+          },
+          {
+            "roll": 2,
+            "name": "Shrinking Cloud",
+            "area": "cone de 15 pés",
+            "save": {
+              "ability": "CON",
+              "dc": 13,
+              "on_failure": "Redução como enlarge/reduce por 1 minuto",
+              "on_success": "Sem efeito",
+              "repeat": "Fim de cada turno, encerra em sucesso"
+            }
+          },
+          {
+            "roll": 3,
+            "name": "Laughing Gas",
+            "area": "cone de 15 pés",
+            "save": {
+              "ability": "WIS",
+              "dc": 13,
+              "on_failure": "Incapacitated por riso durante 1 minuto",
+              "on_success": "Sem efeito",
+              "repeat": "Fim de cada turno, encerra em sucesso"
+            }
+          },
+          {
+            "roll": 4,
+            "name": "Blinding Spray",
+            "area": "linha 30 por 5 pés",
+            "save": {
+              "ability": "DEX",
+              "dc": 13,
+              "on_failure": "Blinded por 1 minuto ou até gastar ação limpando olhos",
+              "on_success": "Sem efeito"
+            }
+          },
+          {
+            "roll": 5,
+            "name": "Sleeping Fog",
+            "area": "raio 10 pés",
+            "save": {
+              "ability": "CON",
+              "dc": 13,
+              "on_failure": "Unconscious por 1 minuto",
+              "on_success": "Sem efeito",
+              "end_condition": "Dano ou ação de outra criatura acordando o alvo"
+            }
+          },
+          {
+            "roll": 6,
+            "name": "Poison Fog",
+            "area": "raio 20 pés até início do próximo turno da criatura",
+            "save": {
+              "ability": "CON",
+              "dc": 13,
+              "on_failure": "Poisoned até início do turno seguinte do alvo",
+              "on_success": "Sem efeito"
+            },
+            "trigger": "Início do turno dentro da área"
+          }
+        ]
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:alchemical-skunk",
+      "type": "ficha_individual_secundaria",
+      "edition": "Tome of Beasts 2",
+      "scope": "estatísticas e ações em detalhe",
+      "individually_read_on": "2026-10-13"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial",
+      "scope": "identidade e publicação"
+    }
+  ],
+  "source_checkpoint": {
+    "branch": "chatgpt/srd607-parallel-a",
+    "blob_sha": "35355320e7c78c9a1fe815329290cb05e2230c79"
+  },
+  "outstanding": [
+    "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+    "Revisão independente de todas as ações e condições ainda não realizada."
+  ],
+  "audit": {
+    "statblock_fully_structured_from_secondary": true,
+    "official_edition_crosschecked": false,
+    "source_names_exhaustively_reviewed": true
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-213.webp",
+    "format": "image/webp",
+    "width": 796,
+    "height": 933,
+    "bytes": 192112,
+    "sha256": "1400b535df1b1689f50e7dd55f6c7eb58060e55410bacbfafefd34570bf368f2",
+    "git_blob_sha": "387467b0ae849ec4c69265e795ba5b9126ab896f",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Alchemical%20Skunk.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "4381bc3d339a79d125a328df3eb12d3698c8806d",
+    "identity_provenance": "Nome/id coincidem com registro e manifesto E, que reporta download e readback verificados",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "licença/direitos da ilustração",
+      "aprovação para impressão"
+    ]
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-057",
+  "name": "Animated Bearskin Rug",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "4",
+    "size": "Large",
+    "type": "construct",
+    "alignment": "unaligned",
+    "edition": "Tome of Beasts 2 (5e), p.24",
+    "source_page": 24,
+    "experience_points": 1100,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 65,
+    "hit_dice": "10d10+10",
+    "ability_scores": {
+      "STR": 18,
+      "DEX": 13,
+      "CON": 12,
+      "INT": 1,
+      "WIS": 3,
+      "CHA": 1
+    },
+    "speeds": {
+      "walk_ft": 20
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_ft": 60,
+      "passive_perception": 6
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
+    "damage_immunities": [
+      "poison",
+      "psychic"
+    ],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "ability_modifiers": {
+      "STR": 4,
+      "DEX": 1,
+      "CON": 1,
+      "INT": -5,
+      "WIS": -4,
+      "CHA": -5
+    },
+    "armor_class_type": "natural armor"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Antimagic Susceptibility",
+        "category": "passive_conditional",
+        "triggers": [
+          {
+            "while_in": "antimagic field",
+            "condition": "incapacitated"
+          },
+          {
+            "targeted_by": "dispel magic",
+            "saving_throw": {
+              "ability": "CON",
+              "dc": "caster_spell_save_dc",
+              "on_failure": {
+                "condition": "unconscious",
+                "duration": "1 minute"
+              },
+              "on_success": {
+                "effect": "none"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Damage Transfer",
+        "category": "passive_conditional",
+        "requires": {
+          "is_grappling_creature": true
+        },
+        "effect": {
+          "split_incoming_damage": {
+            "rug_fraction": 0.5,
+            "grappled_creature_fraction": 0.5
+          }
+        }
+      },
+      {
+        "name": "False Appearance",
+        "category": "passive",
+        "effect": {
+          "if_motionless": "indistinguishable from ordinary bearskin rug"
+        }
+      },
+      {
+        "name": "Construct Nature",
+        "category": "source_narrative_not_core_statblock",
+        "effect": {
+          "needs_air": false,
+          "needs_food": false,
+          "needs_water": false,
+          "needs_sleep": false
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Bite",
+            "count": 1
+          },
+          {
+            "action": "Claws",
+            "count": 1
+          }
+        ],
+        "allowed_substitutions": [
+          {
+            "replace_one": "Claws",
+            "with": "Envelop"
+          }
+        ]
+      },
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 9
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Claws",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target_not_grappled_by_rug"
+        },
+        "on_hit": {
+          "damage": [
+            {
+              "dice": "1d10",
+              "modifier": 4,
+              "type": "piercing",
+              "average": 9
+            }
+          ]
+        },
+        "on_miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Envelop",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_creature",
+          "max_size": "Medium"
+        },
+        "on_hit": {
+          "damage": [],
+          "conditions": [
+            "grappled",
+            "restrained"
+          ],
+          "escape_dc": 14,
+          "restriction": "cannot envelop another until grapple ends"
+        }
+      },
+      {
+        "name": "Menacing Roar",
+        "category": "area_save",
+        "action_economy": "action",
+        "recharge": {
+          "roll": "1d6",
+          "values": [
+            6
+          ]
+        },
+        "targets": {
+          "range_ft": 20,
+          "requirements": "can hear roar"
+        },
+        "saving_throw": {
+          "ability": "WIS",
+          "dc": 13,
+          "on_failure": {
+            "condition": "frightened",
+            "duration": "1 minute",
+            "forced_movement": "move as far away as possible",
+            "action_restrictions": [
+              "Dash",
+              "escape effect preventing movement",
+              "Dodge if nowhere to move"
+            ],
+            "repeat_save": "end of each turn and whenever takes damage; success ends"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://www.5esrd.com/database/creature/animated-bearskin-rug/",
+      "type": "ficha_individual_localizada_em_checkpoint",
+      "verification": "não integralmente conferida nesta rodada"
+    },
+    {
+      "url": "https://github.com/TheGiddyLimit/homebrew/tree/master/creature",
+      "type": "Kobold Press OGL structured statblock transcription",
+      "source_book": "ToB2",
+      "source_page": 24,
+      "source_creature": "Animated Bearskin Rug",
+      "official_book_verified": false,
+      "verification": "full individually named actions and traits transcribed from structured community JSON"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-052_TF-058/research.json",
+    "sha": "090aef0b3b7e1a6ffbb923cb4941229bb68ca563"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": [
+    "Excluir 'Alternate Critical' de Monster Crits for 5e por ser complemento de outra obra.",
+    "Verificar os detalhes de Damage Transfer/Envelop antes de promover.",
+    "Imagem/direitos pendentes."
+  ],
+  "outstanding": [
+    "Compare primary book printing, correct variant and errata; community OGL JSON is not canonical validation.",
+    "Independently verify mechanical behavior and artwork license/quality.",
+    "Binário de imagem TF-057 armazenado via SHA verificado do lote D; inspeção visual independente, direitos e aprovação final ainda pendentes."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "source_statblock_individually_structured": true,
+    "official_printing_or_errata_compared": false,
+    "independent_engine_tested": false,
+    "final_approval": false
+  },
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-057.webp",
+    "format": "image/webp",
+    "bytes": 113676,
+    "width": 893,
+    "height": 985,
+    "sha256": "de56964b878e4f5801c38ef877346515641115e0c6ea8af981999f48ffbed637",
+    "git_blob_sha": "225fc4a8eb1ff210103def5299f6181c2ca24f0c",
+    "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew/master/_img/ToB2/creature/Animated%20Bearskin%20Rug.webp",
+    "source_type": "reused_verified_image_assets_d",
+    "source_branch": "chatgpt/srd607-image-assets-d",
+    "source_head_when_verified": "c6129862bfe2d6a175b86cb50a5f5b2eaecc398f",
+    "source_manifest": "operational/assets/creature-images/manifests/d.json",
+    "original_asset_commit": "6b558de9b5b36341e4484076724dab891df1cd9a",
+    "source_name_note": null,
+    "integrity_verification": {
+      "original_manifest_sha256_readback": true,
+      "original_manifest_github_blob_readback": true,
+      "original_manifest_source_bytes_equal": true,
+      "source_tree_sha_matches": true
+    },
+    "identity_visual_independently_verified": false,
+    "rights_cleared": false,
+    "production_approved": false,
+    "review_pending": [
+      "Avaliação visual independente da identidade da criatura",
+      "Revisão de licença/direitos",
+      "Resolução adequada e aprovação editorial final"
+    ]
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-267",
+  "name": "Arx",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "9",
+    "size": "Large",
+    "type": "fiend",
+    "alignment": "lawful_evil",
+    "proficiency_bonus": 4,
+    "experience_points": 5000,
+    "source_page": 26
+  },
+  "statistics": {
+    "armor_class": 17,
+    "hit_points": 171,
+    "hit_dice": "18d10+72",
+    "ability_scores": {
+      "STR": 20,
+      "DEX": 8,
+      "CON": 19,
+      "INT": 11,
+      "WIS": 15,
+      "CHA": 8
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "fly_ft": 20
+    },
+    "senses": {
+      "darkvision_ft": 90,
+      "passive_perception": 16
+    },
+    "skills": {
+      "Athletics": 9,
+      "Perception": 6
+    },
+    "saving_throws": {
+      "STR": 9
+    },
+    "languages": {
+      "spoken": [
+        "Abyssal",
+        "Infernal"
+      ],
+      "telepathy_ft": 60
+    },
+    "damage_resistances": [
+      "cold",
+      "fire",
+      "lightning",
+      "poison"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 5,
+      "DEX": -1,
+      "CON": 4,
+      "INT": 0,
+      "WIS": 2,
+      "CHA": -1
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Immutable Form",
+        "category": "magic_condition_immunity",
+        "immune_to": "spells_or_effects_that_change_its_form"
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "saving_throw_advantage",
+        "advantage_against": [
+          "spells",
+          "other_magical_effects"
+        ]
+      },
+      {
+        "name": "Spiky Hide",
+        "category": "contact_damage",
+        "trigger": [
+          "another_creature_touches_arx",
+          "another_creature_hits_arx_with_melee_attack_within_5ft",
+          "another_creature_touches_wall_or_melee_hits_wall_within_5ft"
+        ],
+        "damage": {
+          "dice": "1d8",
+          "average": 4,
+          "type": "piercing"
+        },
+        "also_applies_to": "Emplace Wall panels"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Claw",
+            "count": 2
+          },
+          {
+            "attack": "Spear",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Claw",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "3d8",
+              "flat": 5,
+              "average": 18,
+              "type": "slashing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Spear",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_or_ranged_weapon",
+        "attack_bonus": 9,
+        "melee_reach_ft": 5,
+        "ranged_ft": {
+          "normal": 20,
+          "long": 60
+        },
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "default_damage": [
+            {
+              "dice": "2d6",
+              "flat": 5,
+              "average": 12,
+              "type": "piercing"
+            }
+          ],
+          "if_melee_two_handed_damage": [
+            {
+              "dice": "2d8",
+              "flat": 5,
+              "average": 14,
+              "type": "piercing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Wall Smash",
+        "category": "area_save",
+        "action_economy": "action",
+        "precondition": "has_an_emplaced_wall_with_corner_between_panels",
+        "area": {
+          "shape": "cone",
+          "length_ft": 10,
+          "origin": "corner_between_wall_panels"
+        },
+        "targets": "each_creature_except_arx_between_wall_panels",
+        "save": {
+          "ability": "DEX",
+          "dc": 16,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "8d6",
+                "average": 28,
+                "type": "bludgeoning"
+              }
+            ]
+          },
+          "on_success": {
+            "damage_multiplier": 0.5
+          }
+        }
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Emplace Wall",
+        "category": "terrain_creation",
+        "action_economy": "bonus_action",
+        "recharge": "3-6",
+        "creates": {
+          "material": "hardened_elytra",
+          "thickness_in": 3,
+          "panels": [
+            {
+              "height_ft": 10,
+              "width_ft": 10,
+              "armor_class": 17,
+              "hit_points": 50
+            },
+            {
+              "height_ft": 10,
+              "width_ft": 10,
+              "armor_class": 17,
+              "hit_points": 50
+            }
+          ],
+          "orientation": "perpendicular_corner_behind_arx"
+        },
+        "target_overlap_save": {
+          "trigger": "wall_panel_emplaced_in_creature_space",
+          "ability": "DEX",
+          "dc": 16,
+          "on_failure": {
+            "damage": [
+              {
+                "dice": "3d6",
+                "average": 10,
+                "type": "bludgeoning"
+              }
+            ],
+            "pushed_side_selected_by": "arx"
+          },
+          "on_success": {
+            "damage_multiplier": 0.5,
+            "pushed_side_selected_by": "target"
+          }
+        },
+        "after_panel_destruction": {
+          "one_destroyed": "can_emplace_only_one_panel",
+          "both_destroyed": "cannot_use_until_long_rest_or_regenerate_spell_or_similar_magic"
+        },
+        "while_wall_emplaced": {
+          "distance_to_at_least_one_wall_ft_max": 15
+        }
+      },
+      {
+        "name": "Retract Wall",
+        "category": "wall_state",
+        "action_economy": "bonus_action",
+        "precondition": "at_least_one_wall_emplaced",
+        "effect": "retract_panels_ending_emplacement"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Espinhos, resistência mágica e forma imutável; forma parede defensiva e esmaga alvos contra ela."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:arx",
+      "type": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
+      "edition": "Tome of Beasts 1",
+      "scope": "Estatísticas, traços, ações normais e bônus, economia de ações e condicionais",
+      "verification": "Transcrição individual lida diretamente em 14/10/2026; impressão, direitos e engine pendentes"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Não foi confirmada comparação integral de erratas/edições para esta entrada."
+  ],
+  "outstanding": [
+    "Confirmar edição impressa e erratas corretas (não presumir equivalência entre revisões).",
+    "Validar detalhes de ações, condições e recursos na engine e verificar direitos de adaptação e arte.",
+    "Verificar com impressão oficial se Wall Smash ainda é possível quando um dos painéis foi destruído; fonte descreve cone a partir do canto entre os dois."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_SHA_GIT_CONFIRMADO_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-267.jpeg",
+    "format": "image/jpeg",
+    "width": 1053,
+    "height": 886,
+    "bytes": 91936,
+    "sha256": "cf0699fac3f8079c48de46a148ae7908c8b80841bc5e6046c29b76f4fcc36d20",
+    "git_blob_sha": "7e97dfd6932fe76aee158f830d155c1b48aafa15",
+    "source_url": "https://imgur.com/gallery/tome-of-beasts-ready-3d-printing-free-2iqzhTv",
+    "source_type": "reutilizado_de_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "source_commit": "485bc8d67e88df5b72de23a769d5a34d0fe2eec9",
+    "origin_readback_reported": true,
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "verificação visual de identidade",
+      "conferência de licença e direitos",
+      "avaliação de resolução e aprovação editorial"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:arx"
+    ],
+    "source_tier": "secondary_kpogl",
+    "statblock_url_read_online": true,
+    "copyright_license_qa_completed": false,
+    "notes": "Dados da transcrição individual comunitária KPOGL, ainda sem homologação de livro, erratas e engine."
+  }
+}

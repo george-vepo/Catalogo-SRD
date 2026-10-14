@@ -1,0 +1,370 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-260",
+  "name": "Vine Lord",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 1",
+    "edition_family": "5e",
+    "exact_printing": null,
+    "challenge_rating": "9",
+    "size": "Medium",
+    "type": "plant",
+    "alignment": "lawful_neutral",
+    "experience_points": 5000,
+    "proficiency_bonus": 4,
+    "source_page": 388
+  },
+  "statistics": {
+    "armor_class": 16,
+    "hit_points": 105,
+    "hit_dice": "14d8+42",
+    "ability_scores": {
+      "STR": 12,
+      "DEX": 20,
+      "CON": 16,
+      "INT": 14,
+      "WIS": 16,
+      "CHA": 18
+    },
+    "speeds": {
+      "walk_ft": 30,
+      "climb_ft": 30
+    },
+    "senses": {
+      "blindsight_ft": 60,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 13
+    },
+    "skills": [],
+    "saving_throws": {
+      "CON": 7,
+      "WIS": 7,
+      "CHA": 8
+    },
+    "languages": [
+      "Common",
+      "Sylvan"
+    ],
+    "damage_resistances": [],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [
+      "fire"
+    ],
+    "condition_immunities": [
+      "blinded",
+      "deafened"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 1,
+      "DEX": 5,
+      "CON": 3,
+      "INT": 2,
+      "WIS": 3,
+      "CHA": 4
+    }
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Green Regeneration",
+        "category": "conditional_regeneration",
+        "trigger": "start_of_each_vine_lord_turn",
+        "conditions": [
+          "in_forest",
+          "hit_points_at_least_1"
+        ],
+        "heal_hit_points": 10
+      },
+      {
+        "name": "Magic Resistance",
+        "category": "saving_throw_advantage",
+        "advantage_on_saving_throws_against": [
+          "spells",
+          "other_magical_effects"
+        ]
+      },
+      {
+        "name": "Root Mind",
+        "category": "telepathic_hive_network",
+        "members": [
+          "vine_lord",
+          "tendril_puppets_created_by_vine_lord"
+        ],
+        "max_separation_miles": 1,
+        "communication": "telepathy",
+        "condition_for_cannot_be_surprised": "while_vine_lord_in_forest"
+      },
+      {
+        "name": "Vine Seed",
+        "category": "infectious_disease",
+        "trigger": "Tendril attack hits and target fails CON DC16",
+        "initial_stage": {
+          "duration_hours": 24,
+          "attack_roll_disadvantage": true,
+          "ability_check_disadvantage": true
+        },
+        "delayed_stage": {
+          "start_after_hours": 24,
+          "considered_disease": true,
+          "prevents_all_hit_point_recovery": true,
+          "maximum_hit_points_reduction": {
+            "dice": "2d6",
+            "average": 7,
+            "interval_hours": 24,
+            "ends_when": "disease_cured"
+          },
+          "dies_if_max_hp_reduced_to": 0
+        },
+        "cure_options": [
+          {
+            "spell": "greater restoration or similar magic"
+          },
+          {
+            "check": {
+              "skill": "Medicine",
+              "ability": "WIS",
+              "dc": 16
+            },
+            "procedure_minutes": 10,
+            "only_in_first_hours": 24
+          }
+        ],
+        "on_humanoid_killed_by_disease": {
+          "time_until_rises_hours": 24,
+          "result": "tendril_puppet",
+          "controller": "vine_lord"
+        }
+      },
+      {
+        "name": "Woodland Walk",
+        "category": "plant_terrain_movement",
+        "terrain": "plants",
+        "extra_movement_cost": false,
+        "can_pass_without_slowing": true,
+        "plant_thorn_spine_damage_avoided": true
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Tendril",
+            "count": 1
+          },
+          {
+            "attack": "Thorned Slam",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Tendril",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 10,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 5,
+              "average": 7,
+              "type": "slashing"
+            },
+            {
+              "dice": "2d6",
+              "flat": 0,
+              "average": 7,
+              "type": "poison"
+            }
+          ],
+          "save": {
+            "ability": "CON",
+            "dc": 16,
+            "on_failure": {
+              "applies_trait": "Vine Seed"
+            },
+            "on_success": {
+              "infection": false
+            }
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Thorned Slam",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 9,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "2d8",
+              "flat": 5,
+              "average": 14,
+              "type": "bludgeoning"
+            },
+            {
+              "dice": "4d4",
+              "flat": 0,
+              "average": 10,
+              "type": "piercing"
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      },
+      {
+        "name": "Forest Protectors",
+        "category": "summon_allies",
+        "action_economy": "action",
+        "uses_per_day": 1,
+        "summon_options": [
+          {
+            "count": "1d4",
+            "creature": "awakened_tree"
+          },
+          {
+            "count": "1d4",
+            "creature": "tendril_puppet"
+          },
+          {
+            "count": 1,
+            "type": "plant",
+            "challenge_rating_max": 4
+          }
+        ],
+        "arrive_after_rounds": "1d4",
+        "acting_as": "allies",
+        "obeys": "spoken_commands",
+        "ends_when_any": [
+          "1_hour_passes",
+          "vine_lord_dies",
+          "vine_lord_uses_bonus_action_to_dismiss"
+        ]
+      }
+    ],
+    "bonus_actions": [
+      {
+        "name": "Dismiss Forest Protectors",
+        "category": "dismiss_summons",
+        "action_economy": "bonus_action",
+        "requires": "Forest Protectors summoned and still active"
+      }
+    ],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "prior_research_summary_unverified_for_implementation": [
+    "Regenera na floresta, resiste à magia, partilha mente com servos, transmite sementes e convoca plantas."
+  ],
+  "sources": [
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice oficial da editora Kobold Press",
+      "edition": "Tome of Beasts 1",
+      "scope": "publicação de origem e ND; índice não oferece CA/PV/atributos/habilidades",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/vine-lord-3pp/",
+      "type": "evidência histórica, fonte editorial ou transcrição alternativa",
+      "edition": "Tome of Beasts 1",
+      "scope": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:vine-lord",
+      "type": "KPOGL, transcrição independente (não endossada pela editora)",
+      "edition": "Tome of Beasts 1",
+      "scope": "Statblock individual: todas as estatísticas e categorias de ações visíveis na página",
+      "verification": "Leitura direta do bloco individual online realizada em 14/10/2026; comparação com impressão/errata e homologação da engine ainda não realizadas"
+    },
+    {
+      "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/vine-lord",
+      "type": "fonte secundária edição anterior ND7",
+      "edition": "Tome of Beasts 1",
+      "scope": "comparação histórica, não fonte dos valores ND9",
+      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-a/operational/research/checkpoints/20261013_parallel-a_TF-252_TF-301/research.json",
+    "blob_sha": "28fcf51636f536710784265c6cdee0b26c858b74"
+  },
+  "edition_conflicts": [
+    "Vine Lord é diferente de Tendril Puppet (TF-258).",
+    "BLOQUEIO: o índice da Kobold Press atribui ND 9, mas 5eSRD o cataloga sob ND 7. CA/PV/atributos da versão ND 7 NÃO foram copiados por falta de correspondência segura.",
+    "Vine Lord original ND 7 (Here Be Taverns) difere da revisão ND 9 (KPOGL e índice Kobold Press): não mesclar ações."
+  ],
+  "outstanding": [
+    "Confirmar versão impressa de Tome of Beasts usada no catálogo: original CR7 difere da revisão CR9; não misturar.",
+    "Confirmar direitos/licença das regras e arte, impressão e erratas.",
+    "Testar cumulatividade da redução de PV máximo por dias e vinculação de puppet invocado na engine."
+  ],
+  "image": {
+    "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
+    "file_path": "operational/research/deep-mechanics/a/images/TF-260.webp",
+    "format": "image/webp",
+    "width": 607,
+    "height": 800,
+    "bytes": 74494,
+    "sha256": "57f7fd154088cf56df1181be559601217b1675c7226657779ba1a779ed4960ac",
+    "git_blob_sha": "89c6badcc1997528b408f1b773070af2a4345795",
+    "source_url": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Vine%20Lord.webp",
+    "source_type": "reuse_from_branch_image_assets_e",
+    "source_branch": "chatgpt/srd607-image-assets-e",
+    "original_asset_commit": "2f4a256a44b692c61f5090b0eea669ecc9dad948",
+    "identity_provenance": "Nome/id verificados contra manifesto E, com hash e readback anterior",
+    "identity_visual_independently_verified": false,
+    "production_approved": false,
+    "rights_cleared": false,
+    "review_pending": [
+      "inspeção visual independente",
+      "direitos",
+      "arte final"
+    ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:vine-lord"
+    ],
+    "source_tier": "secondary_kpogl",
+    "statblock_url_read_online": true,
+    "edition_family_verified_from_page": true,
+    "copyright_license_qa_completed": false,
+    "source_discrepancies": [
+      "revisão CR9 vs impressão original CR7 relatada em checkpoints prévios"
+    ],
+    "notes": "Bloco da revisão CR9 (não converter para original CR7); estatísticas e Vine Seed transpostos da página individual, com livro/errata/engine pendentes."
+  }
+}

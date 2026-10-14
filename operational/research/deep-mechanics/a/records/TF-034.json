@@ -1,0 +1,166 @@
+{
+  "schema": "SRD607_DEEP_MECHANICS_V1",
+  "id": "TF-034",
+  "name": "Giant Mongoose",
+  "status": "PARCIAL",
+  "mecanica_integral_validada": false,
+  "identity": {
+    "publisher": "Kobold Press",
+    "publication": "Tome of Beasts 2",
+    "edition_family": "D&D 5e",
+    "exact_printing": null,
+    "challenge_rating": "1/4",
+    "size": "Medium",
+    "type": "beast",
+    "alignment": "unaligned",
+    "publication_year": 2020,
+    "edition": "Tome of Beasts 2 (2020, 5e)",
+    "source_page": null,
+    "experience_points": 50,
+    "proficiency_bonus": 2
+  },
+  "statistics": {
+    "armor_class": 13,
+    "hit_points": 13,
+    "hit_dice": "2d8+4",
+    "ability_scores": {
+      "STR": 10,
+      "DEX": 16,
+      "CON": 14,
+      "INT": 3,
+      "WIS": 14,
+      "CHA": 7
+    },
+    "speeds": {
+      "walk_ft": 30
+    },
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 10
+    },
+    "skills": {
+      "Athletics": 2,
+      "Stealth": 5
+    },
+    "saving_throws": {
+      "CON": 4,
+      "WIS": 4
+    },
+    "languages": [],
+    "damage_resistances": [
+      "poison"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "poisoned"
+    ],
+    "ability_modifiers": {
+      "STR": 0,
+      "DEX": 3,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 2,
+      "CHA": -2
+    },
+    "armor_class_type": "unarmored"
+  },
+  "mechanics": {
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "category": "passive",
+        "effect": {
+          "advantage_on": "WIS (Perception)",
+          "depends_on": [
+            "hearing",
+            "smell"
+          ]
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 3,
+              "type": "piercing",
+              "average": 6
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [
+      {
+        "name": "Defensive Roll",
+        "category": "reaction",
+        "action_economy": "reaction",
+        "trigger": "An attack would hit mongoose",
+        "requires": {
+          "can_see_attacker": true
+        },
+        "effect": {
+          "armor_class_bonus": 2,
+          "bonus_source": "Athletics skill bonus",
+          "against": "one_triggering_attack"
+        }
+      }
+    ],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
+  },
+  "sources": [
+    {
+      "url": "https://kpogl.wikidot.com/monster:giant-mongoose",
+      "type": "transcricao_individual_ogl_nao_oficial",
+      "edition": "Tome of Beasts 2",
+      "source_page": null,
+      "reviewed_on": "2026-10-14",
+      "verification": "Todos os parâmetros do statblock individual transcritos (estatísticas, ataques, efeitos, economia de ações, ausências)",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_editorial_oficial",
+      "verification": "publicação, tipo, porte e ND"
+    }
+  ],
+  "source_checkpoint": {
+    "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-031_TF-035/research.json",
+    "sha": "0c5bde59d111e07bb260ba5717982c5e055390e7"
+  },
+  "catalog_legacy_state": "PESQUISA_NOVA_PENDENTE_GATE",
+  "legacy_note": null,
+  "outstanding": [
+    "Confrontar mecanicamente com impressão e erratas editoriais (transcrição OGL comunitária não é homologação primária).",
+    "Revisão independente da implementação do combate e aprovação da edição exata.",
+    "Arte final e direitos de uso sujeitos a verificação própria; status de imagem controlado separadamente."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_compared": false,
+    "engine_independent_review": false,
+    "final_approval": false
+  }
+}
