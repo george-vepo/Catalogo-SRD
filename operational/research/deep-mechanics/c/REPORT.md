@@ -2,6 +2,12 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 25 — Kanos Spawn e Imp Flock (14/10/2026)
+
+- TF-516 Kanos Spawn: Pack Tactics, Wall Walker, dois ataques Claw, Icy Breath com recarga 6, frio, restrição, obscurecimento e Hide em ação bônus. **Bloqueio editorial:** 'raptor' aparece em texto de Pack Tactics e Skills Stealth não informa bônus. Fonte: https://a5e.tools/node/2991.
+- TF-517 Imp Flock: Chaos of Combat CON CD(5 + nível da magia), Devil's Sight, Evil, Swarm com tamanho Large/Medium, Hellswarm + dano condicionado de poison, Innate Spellcasting shatter. **Bloqueio editorial:** usos de shatter não declarados. Fonte: https://a5e.tools/node/3394.
+- Sem novas imagens físicas; 0 fichas promovidas integrais. Total **37** detalhadas, **94** pendentes de revalidação, 95 parciais e 36 bloqueadas.
+
 ## Checkpoint 24 — Fiendbloom e Crime Boss (14/10/2026)
 
 - TF-511 Fiendbloom Awakened Tree: False Appearance, Doubletyped Fiend+Plant, Dreaded Winter, Hellspore Seeding, Slam e referência estruturada à regra externa Hellspore Blight (tier 2 DC14). Fontes https://a5e.tools/node/3414 e https://a5e.tools/rules/disease-hellspore-blight-tier-2-3.
@@ -165,8 +171,8 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 | TF-509 | Fogborn Zombie Horde | PARCIAL | não | [individual](https://a5e.tools/node/3462) | Regra de grupo e atributos podem coincidir com Gorger Zombie Horde, mas variantes são distintas. |
 | TF-510 | Infernal Mammoth | PARCIAL | sim | [individual](https://a5e.tools/node/3426) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-511 | Fiendbloom Awakened Tree | PARCIAL | sim | [individual](https://a5e.tools/node/3414) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-516 | Kanos Spawn | PARCIAL | não | [individual](https://a5e.tools/node/2991) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
-| TF-517 | Imp Flock | PARCIAL | não | [individual](https://a5e.tools/node/3394) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-516 | Kanos Spawn | PARCIAL | sim | [individual](https://a5e.tools/node/2991) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
+| TF-517 | Imp Flock | PARCIAL | sim | [individual](https://a5e.tools/node/3394) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-518 | Infernal Dwarf | PARCIAL | não | [individual](https://a5e.tools/node/3425) | Confirmar seleção de magias preparada e gatilhos de United in Action. |
 | TF-521 | Bugbear Door Breaker | PARCIAL | não | [individual](https://a5e.tools/node/4185) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-522 | Crime Boss | PARCIAL | sim | [individual](https://a5e.tools/node/1895) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
