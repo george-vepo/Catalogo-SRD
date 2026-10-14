@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (atribuição histórica)",
+    "publisher": "Kobold Press / Open Design LLC",
     "publication": "Tome of Beasts 3",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "2",
     "size": "Small",
     "type": "beast",
-    "alignment": null
+    "alignment": "unaligned",
+    "publication_year": 2022,
+    "edition": "Tome of Beasts 3 (2022, D&D 5e)",
+    "experience_points": 450,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 13,
@@ -27,126 +31,199 @@
       "CHA": 5
     },
     "speeds": {
-      "andar": 0,
-      "nadar": 40
+      "walk_ft": 0,
+      "swim_ft": 40
     },
-    "senses": [
-      "darkvision 60 ft."
-    ],
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 12
+    },
+    "skills": {
+      "Perception": 2
+    },
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
     "damage_immunities": [
       "poison"
     ],
-    "damage_vulnerabilities": null,
+    "damage_vulnerabilities": [],
     "condition_immunities": [
       "poisoned"
-    ]
+    ],
+    "ability_modifiers": {
+      "STR": 3,
+      "DEX": 1,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -3
+    },
+    "armor_class_type": "natural_armor"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Spiny Body",
-        "kind": "passive",
-        "legacy_summary": "Toque ou ataque corpo a corpo a 5 pés causa 1d4 perfurante, aumentando para 2d4 enquanto inflado.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "trigger": "Another creature touches pufferfish or hits with melee attack from at most 5 ft",
+          "on_trigger": {
+            "unpuffed": {
+              "dice": "1d4",
+              "flat": 0,
+              "type": "piercing",
+              "average": 2
+            },
+            "puffed": {
+              "dice": "2d4",
+              "flat": 0,
+              "type": "piercing",
+              "average": 5
+            }
+          }
+        }
       },
       {
         "name": "Water Breathing",
-        "kind": "passive",
-        "legacy_summary": "Respira somente debaixo d'água.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "can_breathe_only_underwater": true
+        }
       }
     ],
     "actions": [
       {
         "name": "Bite",
-        "kind": "action",
-        "legacy_summary": "+5, 5 pés, 2d8+3 perfurante; dados de dano aumentam enquanto inflado.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [],
+          "unresolved_source_formula": {
+            "printed_base_average": 7,
+            "printed_base_dice": "2d8+3",
+            "printed_puffed_average": 12,
+            "printed_puffed_dice": "2d8+3",
+            "calculated_base_if_as_printed": 12,
+            "conflict": "Base and puffed dice equal in source despite rule of doubling on Puff Up, and base reported mean is inconsistent with 2d8+3",
+            "status": "UNRESOLVED",
+            "candidate_correction_not_adopted": "Base may be 1d8+3; must confirm official errata or authoritative correction before using in engine"
+          }
+        },
+        "miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Spine",
-        "kind": "action",
-        "legacy_summary": "+5, 5 pés, 1d4+3 perfurante mais 2d4 veneno; CON CD13 por metade do veneno, e falha por cinco ou mais causa dano extra no turno seguinte.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 5,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 3,
+              "type": "piercing",
+              "average": 5
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        },
+        "hit_effect": {
+          "while_puffed_replace_initial_damage": {
+            "dice": "2d4",
+            "flat": 3,
+            "type": "piercing",
+            "average": 8
+          },
+          "saving_throw": {
+            "ability": "CON",
+            "dc": 13,
+            "on_failure": {
+              "poison_damage": {
+                "dice": "2d4",
+                "flat": 0,
+                "type": "poison",
+                "average": 5
+              },
+              "additional_if_failure_by_5_or_more": {
+                "timing": "end_of_target_next_turn",
+                "damage": {
+                  "dice": "1d4",
+                  "flat": 0,
+                  "type": "poison",
+                  "average": 2
+                }
+              }
+            },
+            "on_success": {
+              "poison_damage_multiplier": 0.5
+            }
+          }
+        }
       }
     ],
     "bonus_actions": [
       {
         "name": "Burst of Speed",
-        "kind": "bonus_action",
-        "legacy_summary": "Recarga 5–6; usa Dash.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "bonus_action",
+        "action_economy": "bonus_action",
+        "recharge": {
+          "type": "d6",
+          "on": [
+            5,
+            6
+          ]
+        },
+        "effect": {
+          "action": "Dash"
+        }
       },
       {
         "name": "Puff Up",
-        "kind": "bonus_action",
-        "legacy_summary": "Recarga após descanso curto/longo, duração 1 minuto; passa a tamanho Medium, dobra dados dos ataques de mordida/espinho e obtém vantagem em testes/salvaguardas de FOR.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "bonus_action",
+        "action_economy": "bonus_action",
+        "recharge": {
+          "type": "short_or_long_rest"
+        },
+        "duration": "1_minute",
+        "effect": {
+          "size": "Medium",
+          "if_insufficient_space": "maximum_size_possible",
+          "double_damage_dice_for": [
+            "Bite",
+            "Spine"
+          ],
+          "advantage_on": [
+            "STR_checks",
+            "STR_saving_throws"
+          ]
+        },
+        "interaction": "See unresolved Bite printed dice discrepancy"
       }
     ],
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
@@ -158,6 +235,19 @@
       "url": "https://anyflip.com/plzy/jxhb/basic/201-250",
       "type": "ficha_identificada_em_checkpoint_histórico",
       "verification": "mecânica integral ainda não revalidada"
+    },
+    {
+      "url": "https://kpogl.wikidot.com/monster:giant-pufferfish",
+      "type": "transcricao_ogl_individual_nao_editorial",
+      "edition": "Tome of Beasts 3",
+      "reviewed_on": "2026-10-14",
+      "verification": "all traits, actions, stats and absence of other action categories",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_oficial_editora",
+      "verification": "identity, CR and publication"
     }
   ],
   "source_checkpoint": {
@@ -170,8 +260,16 @@
     "Confirmar variação de ataque enquanto inflado e licença."
   ],
   "outstanding": [
-    "Detalhar cada habilidade individual com bônus, alvo, distância, dano, resistência, duração, gatilho e recarga.",
-    "Confirmar a versão editorial e errata com ficha original; não usar diferenças de edição de modo misturado.",
-    "Revisão mecânica ainda pendente; valores null representam dados não comprovados."
-  ]
+    "RESOLVER CONFLITO NUMÉRICO: Bite impresso como 7 (2d8+3) normal e 12 (2d8+3) inflado, embora Puff Up diga dobrar os dados. Não implementar dado base inventado.",
+    "Confrontar com errata ou edição editorial exata e revisar em engine.",
+    "Falta inspeção/arte de produção, status da imagem separado."
+  ],
+  "mechanics_source_statblock_full": false,
+  "validation": {
+    "online_statblock_exhaustively_structured": false,
+    "primary_printing_or_errata_compared": false,
+    "independent_engine_review": false,
+    "source_numeric_discrepancy": true,
+    "final_approval": false
+  }
 }

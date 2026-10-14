@@ -5,14 +5,18 @@
   "status": "PARCIAL",
   "mecanica_integral_validada": false,
   "identity": {
-    "publisher": "Kobold Press (atribuição histórica)",
+    "publisher": "Kobold Press / Open Design LLC",
     "publication": "Creature Codex",
-    "edition_family": "5e",
+    "edition_family": "D&D 5e",
     "exact_printing": null,
     "challenge_rating": "1",
     "size": "Small",
     "type": "beast",
-    "alignment": null
+    "alignment": "unaligned",
+    "publication_year": 2018,
+    "edition": "Creature Codex (2018, D&D 5e)",
+    "experience_points": 200,
+    "proficiency_bonus": 2
   },
   "statistics": {
     "armor_class": 12,
@@ -27,117 +31,168 @@
       "CHA": 7
     },
     "speeds": {
-      "andar": 25,
-      "voar": 30
+      "walk_ft": 25,
+      "fly_ft": 30
     },
-    "senses": [
-      "darkvision 60 ft."
-    ],
+    "senses": {
+      "darkvision_ft": 60,
+      "passive_perception": 12
+    },
     "skills": {
       "Perception": 2,
       "Stealth": 4
     },
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [],
     "damage_immunities": [
       "lightning"
     ],
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "damage_vulnerabilities": [],
+    "condition_immunities": [],
+    "ability_modifiers": {
+      "STR": 0,
+      "DEX": 2,
+      "CON": 2,
+      "INT": -4,
+      "WIS": 0,
+      "CHA": -2
+    },
+    "armor_class_type": "unarmored"
   },
   "mechanics": {
     "traits": [
       {
         "name": "Antennae",
-        "kind": "passive",
-        "legacy_summary": "Vantagem em Percepção dependente de olfato.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "advantage_on": "WIS (Perception)",
+          "only_if": "relies_on_smell"
+        }
       },
       {
         "name": "Charged",
-        "kind": "passive",
-        "legacy_summary": "Criaturas a 5 pés no início do turno da mariposa fazem CON CD12 ou 1d4 elétrico; esse efeito cessa após usar Fulminating Wings pelas próximas 24 horas.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "passive",
+        "effect": {
+          "target": "each_creature_within_5_ft",
+          "timing": "start_of_each_shockwing_turn",
+          "saving_throw": {
+            "ability": "CON",
+            "dc": 12,
+            "on_failure": {
+              "damage": {
+                "dice": "1d4",
+                "flat": 0,
+                "type": "lightning",
+                "average": 2
+              }
+            },
+            "on_success": {
+              "damage": 0
+            }
+          },
+          "disabled_for_hours_after_fulminating_wings": 24
+        }
       }
     ],
     "actions": [
       {
         "name": "Multiattack",
-        "kind": "action",
-        "legacy_summary": "Duas probóscides.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "action": "Proboscis",
+            "count": 2
+          }
+        ],
+        "substitutions": []
       },
       {
         "name": "Proboscis",
-        "kind": "action",
-        "legacy_summary": "+4, 5 pés, 1d6+2 perfurante mais 1d4 elétrico.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 4,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "one_target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d6",
+              "flat": 2,
+              "type": "piercing",
+              "average": 5
+            },
+            {
+              "dice": "1d4",
+              "flat": 0,
+              "type": "lightning",
+              "average": 2
+            }
+          ]
+        },
+        "miss": {
+          "damage": 0
+        }
       },
       {
         "name": "Fulminating Wings",
-        "kind": "action",
-        "legacy_summary": "1/dia; descarga de raio 20 pés, CON CD12 ou fica atordoado até fim do turno seguinte.",
-        "status": "PENDENTE_DETALHAMENTO",
-        "attack_bonus": null,
-        "range": null,
-        "targets": null,
-        "damage": null,
-        "save_dc": null,
-        "save_ability": null,
-        "duration": null,
-        "recharge": null,
-        "uses": null
+        "category": "area_save",
+        "action_economy": "action",
+        "uses_limit": {
+          "type": "per_day",
+          "count": 1
+        },
+        "area": {
+          "shape": "sphere",
+          "radius_ft": 20,
+          "origin": "shockwing"
+        },
+        "targets": "each_creature_in_area",
+        "saving_throw": {
+          "ability": "CON",
+          "dc": 12,
+          "on_failure": {
+            "condition": "stunned",
+            "duration": "until_end_of_affected_creature_next_turn"
+          },
+          "on_success": {
+            "effect": "none"
+          }
+        },
+        "interactions": [
+          {
+            "trait": "Charged",
+            "effect": "disables Charged for 24 hours after use"
+          }
+        ]
       }
     ],
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "lair_actions": null,
-    "spellcasting": null,
-    "other": null
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": []
   },
   "sources": [
     {
       "url": "https://www.5esrd.com/database/creature/giant-moth-shockwing/",
-      "type": "ficha_identificada_em_checkpoint_histórico",
-      "verification": "mecânica integral ainda não revalidada"
+      "type": "transcricao_ogl_individual_nao_editorial",
+      "edition": "Creature Codex",
+      "reviewed_on": "2026-10-14",
+      "verification": "all traits, actions, stats and absence of other action categories",
+      "primary_editorial": false
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "type": "indice_oficial_editora",
+      "verification": "identity, CR and publication"
     }
   ],
   "source_checkpoint": {
@@ -149,8 +204,16 @@
     "Imagem/direitos pendentes."
   ],
   "outstanding": [
-    "Detalhar cada habilidade individual com bônus, alvo, distância, dano, resistência, duração, gatilho e recarga.",
-    "Confirmar a versão editorial e errata com ficha original; não usar diferenças de edição de modo misturado.",
-    "Revisão mecânica ainda pendente; valores null representam dados não comprovados."
-  ]
+    "Confrontar livro/errata da edição específica; ficha online estruturada não homologada editorialmente.",
+    "Testes e revisão independente da engine de combate.",
+    "Aprovação da arte e direitos de uso separados."
+  ],
+  "mechanics_source_statblock_full": true,
+  "validation": {
+    "online_statblock_exhaustively_structured": true,
+    "primary_printing_or_errata_compared": false,
+    "independent_engine_review": false,
+    "source_numeric_discrepancy": false,
+    "final_approval": false
+  }
 }
