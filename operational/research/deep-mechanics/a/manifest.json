@@ -962,8 +962,8 @@
     "blocked_ids": [
       "KP-S011"
     ],
-    "image_assets_binary_persisted": 113,
-    "image_assets_missing": 19,
+    "image_assets_binary_persisted": 115,
+    "image_assets_missing": 17,
     "production_ready_images": 0,
     "statblocks_fully_structured_with_two_individual_sources_but_editorial_pending": 3,
     "statblocks_fully_structured_at_source_level": 43,
@@ -975,10 +975,10 @@
     "image_binary_preexisting_non_production": 2,
     "new_statblocks_online_mechanics_structured_this_run": 13,
     "new_statblocks_investigated_with_known_mechanical_conflict_this_run": 2,
-    "image_binary_assets_from_d": 35,
+    "image_binary_assets_from_d": 37,
     "records_legacy_mechanics_unstructured_at_source_level": 89,
     "source_level_structured_this_continuation": 13,
-    "image_assets_persisted_this_continuation": 40,
+    "image_assets_persisted_this_continuation": 42,
     "images_with_at_least_one_dimension_below_500px": 31,
     "image_assets_visually_verified_independently": 0,
     "image_assets_rights_cleared": 0,
@@ -1694,8 +1694,20 @@
         "https://kpogl.wikidot.com/monster:chaos-raptor",
         "https://kpogl.wikidot.com/monster:royal-chimera"
       ],
+      "sha": "4616239800c1144e43d2cfafe764f6a5ca79766e",
+      "verified_persisted": true
+    },
+    {
+      "number": 42,
+      "ids": [
+        "TF-042",
+        "TF-045"
+      ],
+      "count": 2,
+      "scope": "2 imagens da branch D verificadas por manifesto e SHA de Git: TF-042 Akhlut 640x516 e TF-045 Aatxe/Aaxte 1029x1292, direitos e avaliação visual ainda pendentes",
       "sha": null,
-      "verified_persisted": false
+      "verified_persisted": false,
+      "source_manifest": "operational/assets/creature-images/manifests/d.json"
     }
   ],
   "corrections": [
@@ -1768,7 +1780,7 @@
     "audit_20261014_final": {
       "date": "2026-10-14",
       "branch_ref": "chatgpt/srd607-deep-mechanics-a",
-      "source_head_commit": "3974630fd36a1e9762a697556fa723eda035a6d4",
+      "source_head_commit": "4616239800c1144e43d2cfafe764f6a5ca79766e",
       "reference_base": "a962c48a1169c2ef2be8137715a095a596753b32",
       "pr_number": 8,
       "scope_ids": 132,
@@ -1776,8 +1788,8 @@
       "records_json_parsed_individually": 132,
       "records_matching_expected_id": 132,
       "record_files_in_git_tree": 132,
-      "images_in_git_tree": 113,
-      "images_sha_git_tree_correspond_to_records": true,
+      "images_in_git_tree": 115,
+      "images_sha_git_tree_correspond_to_records": "checkpoint 42 pending remote readback; previous 113 matched",
       "images_approved_for_production": 0,
       "changed_paths_outside_A": 0,
       "head_verified_before_write": true,
@@ -1797,8 +1809,6 @@
         "TF-025",
         "TF-034",
         "TF-041",
-        "TF-042",
-        "TF-045",
         "TF-048",
         "TF-049",
         "TF-053",
@@ -3450,6 +3460,32 @@
       "source_branch": "chatgpt/srd607-image-assets-e",
       "review_status": "BINARY_VERIFIED_VISUAL_RIGHTS_PENDING",
       "production_approved": false
+    },
+    {
+      "id": "TF-042",
+      "path": "operational/research/deep-mechanics/a/images/TF-042.webp",
+      "sha256": "c1bc393681f6d7655bc01403e946948af5a9ad335bfbaa7119b52e7d16831583",
+      "git_blob_sha": "e641b3b71d29c42476c7fff7c1e691d3101c603f",
+      "bytes": 216744,
+      "width": 640,
+      "height": 516,
+      "source_url": "https://raw.githubusercontent.com/chaidgpt/TheBardicLexicon/main/images/akhlut.webp",
+      "source_branch": "chatgpt/srd607-image-assets-d",
+      "review_status": "BINARY_VERIFIED_VISUAL_RIGHTS_PENDING",
+      "production_approved": false
+    },
+    {
+      "id": "TF-045",
+      "path": "operational/research/deep-mechanics/a/images/TF-045.webp",
+      "sha256": "6608b7405f0c36b7f62260093137c2fc8856e09f67f6bd466c1c9def39d9cb0d",
+      "git_blob_sha": "f9cd48d48d0ea3bf9a6d9c8b4430077fea54b658",
+      "bytes": 130128,
+      "width": 1029,
+      "height": 1292,
+      "source_url": "https://raw.githubusercontent.com/TheGiddyLimit/homebrew-img/main/img/CCodex/Aatxe.webp",
+      "source_branch": "chatgpt/srd607-image-assets-d",
+      "review_status": "BINARY_VERIFIED_VISUAL_RIGHTS_PENDING",
+      "production_approved": false
     }
   ],
   "continued_research": [
@@ -3708,6 +3744,16 @@
         "TF-233",
         "TF-234"
       ]
+    },
+    {
+      "date": "2026-10-14",
+      "ids": [
+        "TF-042",
+        "TF-045"
+      ],
+      "scope": "2 blobs originais existentes e documentados como VERIFICADA_GITHUB na branch D, SHA-256, hash Git, dimensões e proveniência reaproveitados sem recompressão; identidade visual e direitos pendentes",
+      "image_binary_new": 2,
+      "image_visual_approved_new": 0
     }
   ]
 }

@@ -1,3 +1,12 @@
+# Grupo A — checkpoint 42: dois binários persistidos da branch D (14/10/2026)
+
+- **TF-042 Akhlut:** `images/TF-042.webp`, **640×516**, 216.744 bytes, origem `image-assets-d` e manifesto de verificação; SHA Git `e641b3b71d29c42476c7fff7c1e691d3101c603f`.
+- **TF-045 Aaxte / Aatxe:** `images/TF-045.webp`, **1029×1292**, 130.128 bytes, fonte da ilustração `Aatxe` (nome editorial), com divergência de grafia do catálogo preservada; SHA Git `f9cd48d48d0ea3bf9a6d9c8b4430077fea54b658`.
+
+**Resultado:** 115/132 criaturas com binário no grupo A; 17 imagens ausentes; 43 statblocks estruturados no nível de fonte individual; **0 homologados**, **0 artes de produção aprovadas**. A branch D contém outros arquivos órfãos não classificados `VERIFICADA_GITHUB` no manifesto, que **não foram tratados como verificados**. Miniaturas TF-026 e TF-031 ainda inadequadas. Nenhum merge ou alteração fora do grupo A.
+
+---
+
 # Grupo A — checkpoint 41: mais 4 statblocks estruturados (14/10/2026)
 
 - **TF-231 — Accursed Guardian Naga:** consulta à [ficha digital oficial Level Up A5E](https://a5e.tools/node/1744); registrada a distinção A5E, Forbiddance, magias por nível e espaços, Bite/Spit Poison, Multiattack/Vampiric Bite, Shapeshift. Mantida como conflito explícito a classificação "Melee Weapon Attack" de Spit Poison apesar do alcance 20/60 pés.
