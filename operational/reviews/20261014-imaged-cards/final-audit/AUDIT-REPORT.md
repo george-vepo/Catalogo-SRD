@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 11 lotes validados, 110/395 fichas (285 restantes).
+**Situação:** EM ANDAMENTO — 12 lotes validados, 120/395 fichas (275 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -88,4 +88,11 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 6 completas em conteúdo, 3 com ressalvas (TF-121: Multiattack por forma e typo original; TF-123: conflito de copyright/proveniência da fonte que contém ações lendárias; TF-125: Trunk Slam sem restrição inequívoca de forma) e 1 incompleta (**TF-124**: Bestowal of Trust sem custo/ação e alcance). A partir de TF-120 começa o grupo C, com referência direta a imagens no JSON; quatro primeiras imagens vinculadas via manifesto E. Dez imagens presentes com SHA e bytes verificados. Duas com dimensão inferior a 500 px. Não houve cotejo integral do original impresso, homologação de arte ou adaptação de card game.
 
 **Consolidado:** 110/395; 68 completas em conteúdo, 21 com ressalvas, 20 incompletas, 1 não verificável; 55 imagens diretas, 52 via manifesto, 3 ausentes.
+
+
+## Lote 012 — TF-126–TF-135 (dez IDs da ordem do CSV)
+
+9 fichas completas em conteúdo e 1 completa com ressalvas: TF-132 (Gravel Spray condicionado a Chew Rock; fonte não esclarece se a carga triturada é consumida por disparo). As dez imagens são vinculadas diretamente pelos JSONs no diretório C e seus SHAs/tamanhos foram conferidos. TF-127 tem largura de 476 pixels, inferior a 500 px. A comparação com obras originais e erratas, inspeção visual independente e licenças comerciais continuam pendentes.
+
+**Consolidado:** 120/395; 77 completas em conteúdo, 22 com ressalvas, 20 incompletas e 1 não verificável. Imagens: 65 diretas, 52 via manifesto e 3 ausentes.
 
