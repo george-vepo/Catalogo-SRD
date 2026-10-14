@@ -1810,8 +1810,8 @@
         "TF-246"
       ],
       "count": 3,
-      "sha": null,
-      "verified_persisted": false,
+      "sha": "d9e71649b77310591130e74591a7572e93face95",
+      "verified_persisted": true,
       "scope": "Chimeric Phantom (medo e incorporeidade); Old Salt (rejuvenescimento e choking, inconsistência salva); Yowler (Multiattack alternativo e três variantes oficiais separadas)",
       "sources": [
         "https://kpogl.wikidot.com/monster:chimeric-phantom",
@@ -1819,7 +1819,15 @@
         "https://kpogl.wikidot.com/monster:yowler",
         "https://koboldpress.com/tome-unbound-yowler/"
       ],
-      "remote_record_readback_confirmed": false
+      "remote_record_readback_confirmed": true,
+      "validation": {
+        "record_files_json_parsed": 3,
+        "ids_match": 3,
+        "image_blobs_found": 3,
+        "image_sha_and_bytes_match_records": 3,
+        "total_binary_files_in_group_image_directory": 124,
+        "changed_paths_outside_A": 0
+      }
     }
   ],
   "corrections": [
@@ -1866,7 +1874,7 @@
       "TF-045"
     ],
     "latest_structured_checkpoint_count": 15,
-    "latest_readback_validated_by_individual_file_json_parse": 0,
+    "latest_readback_validated_by_individual_file_json_parse": 3,
     "latest_editorial_book_or_errata_validation_count": 0,
     "latest_known_source_numeric_discrepancy_ids": [
       "TF-039"
@@ -1876,7 +1884,11 @@
       "TF-237"
     ],
     "latest_revision_date": "2026-10-14",
-    "latest_readback_parsed_ids": [],
+    "latest_readback_parsed_ids": [
+      "TF-244",
+      "TF-245",
+      "TF-246"
+    ],
     "latest_source_conflicts": [
       "TF-047",
       "TF-052"
@@ -2086,13 +2098,18 @@
       ],
       "notes": "132 JSONs validados individualmente no checkpoint de auditoria anterior e 14 JSONs posteriormente editados e relidos via API (9 imagens, 5 mecânicas). 124/124 blobs de imagem conciliados pela árvore Git e manifesto; SHA-256 proveniente de origem verificada. Revisão editorial, engine e arte/direitos não executada."
     },
-    "latest_checkpoint_commit_sha": "3a780984ff0720417d4ccd0c988611a3adc520cb",
+    "latest_checkpoint_commit_sha": "d9e71649b77310591130e74591a7572e93face95",
     "latest_checkpoint_changed_paths_verified": [
       "operational/research/deep-mechanics/a/REPORT.md",
       "operational/research/deep-mechanics/a/manifest.json",
       "operational/research/deep-mechanics/a/records/TF-243.json",
       "operational/research/deep-mechanics/a/records/TF-247.json",
       "operational/research/deep-mechanics/a/records/TF-248.json"
+    ],
+    "latest_checkpoint_image_blob_sha_and_bytes_checked": [
+      "TF-244",
+      "TF-245",
+      "TF-246"
     ]
   },
   "limits": [

@@ -6,6 +6,8 @@
 
 **Totais:** **54** statblocks estruturados no nível digital individual, **78** ainda resumidos, **0** fichas editorialmente homologadas; **124** imagens binárias e **8** ausentes, **0** aprovadas. Fichas continuam PARCIAIS até livro, erratas e motor. Sem V-Bridge, merge ou alterações fora de A.
 
+**Auditoria remota do checkpoint #48:** [`d9e71649b773`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/d9e71649b77310591130e74591a7572e93face95); 3 arquivos JSON reinterpretados com ID e ações corretos, 3 imagens existentes no GitHub com SHA de blob e tamanho em bytes iguais aos declarados nos JSONs; diretório contém 124 binários e comparação de commits mostra apenas 5 caminhos dentro de A. Verificação visual e licença **não** realizadas.
+
 ---
 
 # Grupo A — checkpoint 47: Chill Haunt, Ash Phoenix e Ogrepede (14/10/2026)
