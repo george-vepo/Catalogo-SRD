@@ -1,3 +1,13 @@
+## Checkpoint TF-395 — Cackling Skeleton (14/10/2026)
+
+**Binário real reaproveitado:** [TF-395.webp](../images/TF-395.webp), WebP de **300×300**, **85.292 bytes**, Git SHA `41b1f93d29745fdb8d6aec32ac10ebe749b25c3d`, SHA-256 `da84bdc40080bb7598d68d5b84572a8cb59e71c2e95aa7f5d19970dc0fada578`; origem [retrato Skeleton do módulo A5E](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/public/assets/skeleton.webp), referenciado pelo [ator Skeleton](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/skeleton.json). Foi obtido e copiado como objeto Git de conteúdo idêntico; verificar novamente pela árvore da branch após commit.
+
+**Limites obrigatórios:** não é arte da publicação Kobold Press *Tome of Beasts 2*, nem representa inequivocamente a característica de gargalhada (*cackling*). É retrato genérico provisório da espécie, **não aprovado visualmente como arte final**. O [README do módulo A5E](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/README.md) permite o uso dessas artes somente para fins **não comerciais**. Sem direito comercial ou aprovação para distribuição final. A classe de origem/edição mecânica TF-395 não foi alterada.
+
+**Estado estrutural:** 132 fichas; 114/132 imagens reais indexadas (18 pendentes). Homologação independente 0; conflitos herdados 13, sem reconciliação definitiva. PR #6 permanece DRAFT.
+
+---
+
 ## Auditoria consolidada B — 14/10/2026 — 113 imagens, 19 ausentes, 9 confrontos no índice KP
 
 **Persistência verificada por releitura da branch B:** 132 JSONs com ID, SHA Git, tamanho e total de **760.457 bytes** reconciliados; 113 imagens físicas, cada arquivo com SHA Git e bytes correspondentes ao manifesto; 19 imagens ainda ausentes. O checkpoint [`7236f577`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/7236f57729fa25dcfd2e1e2858ef0f1d89e62929) introduziu TF-356 Grendel como WebP real de ilustração histórica de 1908, em [domínio público conforme Commons](https://commons.wikimedia.org/wiki/File:Stories_of_beowulf_grendel.jpg), e sua assinatura/bytes e SHA foram reabertos com sucesso. É **arte histórica**, não arte A5E oficial e sua adequação estética final depende de revisão.

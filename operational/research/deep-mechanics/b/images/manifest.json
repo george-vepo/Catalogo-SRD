@@ -9,9 +9,9 @@
     "A5E_FOUNDARY_MAIN": "d986361631f97f248f57b8c5b3c090ba770e0024"
   },
   "total": 132,
-  "verified_binary": 113,
-  "pending": 19,
-  "quality": "113 arquivos binários presentes; Grendel tem ilustração histórica 1908 em domínio público via Wikimedia Commons, com atribuição e revisão de estilo pendentes. Demais artes genéricas e/ou não comerciais permanecem sujeitas a auditoria.",
+  "verified_binary": 114,
+  "pending": 18,
+  "quality": "114 binários de imagens reais indexados; TF-395 novo retrato de Skeleton genérico de 300px, licença A5E apenas não comercial, não retrata 'cackling' inequivocamente; revisão de variante/arte final pendente. Integridade de arquivo não equivale a homologação visual.",
   "images": [
     {
       "id": "TF-302",
@@ -1281,11 +1281,36 @@
     },
     {
       "id": "TF-395",
-      "nome": "TF-395",
+      "nome": "Skeleton, Cackling",
       "imagem": {
-        "status": "PENDENTE_IMAGEM",
-        "path": null,
-        "url": null
+        "status": "VERIFICADA_BINARIO_PRESENTE",
+        "path": "operational/research/deep-mechanics/b/images/TF-395.webp",
+        "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-395.webp",
+        "blob_sha": "41b1f93d29745fdb8d6aec32ac10ebe749b25c3d",
+        "sha256": "da84bdc40080bb7598d68d5b84572a8cb59e71c2e95aa7f5d19970dc0fada578",
+        "bytes": 85292,
+        "dimensions": {
+          "width": 300,
+          "height": 300
+        },
+        "mime_type": "image/webp",
+        "extension": ".webp",
+        "source_repo": "Pjb518/FoundryVTT-Level-Up-Official",
+        "source_branch": "main",
+        "source_commit": "d986361631f97f248f57b8c5b3c090ba770e0024",
+        "source_original_path": "public/assets/skeleton.webp",
+        "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/public/assets/skeleton.webp",
+        "source_actor_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/packs/monsters/skeleton.json",
+        "source_actor_name": "Skeleton",
+        "source_actor_blob_sha": "a03fe90edc37ae832917861bec22269d5c3cb5f1",
+        "source_git_blob_sha": "41b1f93d29745fdb8d6aec32ac10ebe749b25c3d",
+        "licenca": "EN Publishing disponibiliza o asset de public/assets apenas para uso não comercial, segundo README do módulo oficial A5E; não autoriza uso comercial do Card Game.",
+        "licenca_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/README.md",
+        "direitos_status": "USO_NAO_COMERCIAL_APENAS; REVISÃO_LEGAL_OBRIGATÓRIA",
+        "qualidade_observacao": "Retrato de esqueleto com 300×300, identidade da espécie skeleton compatível, mas NÃO evidencia o traço 'Cackling' nem é arte Kobold Press do Tome of Beasts 2. Arte de pesquisa PROVISÓRIA: revisão estética e substituição por imagem específica recomendadas.",
+        "validacao_visual": "REPRESENTACAO_GENÉRICA_COMPATIVEL_COM_ESQUELETO; IDENTIDADE_DA_VARIANTE_CACKLING_NAO_VERIFICADA; NAO_HOMOLOGADA",
+        "natureza": "Arte do módulo A5E de outra publicação; não classificar como arte editorial do Kobold Press nem imagem exclusiva de Cackling Skeleton.",
+        "validacao_integridade": "WebP RIFF/VP8X, tamanho interno RIFF, dimensões, SHA-256 calculado dos bytes e objeto Git SHA idêntico à fonte; solicitar readback no commit B."
       }
     },
     {
@@ -2566,12 +2591,13 @@
     }
   ],
   "ultimo_adição": {
-    "id": "TF-356",
+    "ids": [
+      "TF-395"
+    ],
     "data": "2026-10-14",
-    "origem": "Wikimedia Commons -> WeningerII/PantheonRepository",
-    "git_sha": "beda0c092ce58ce433e42825c14b692cf9d8d3dd",
-    "status": "READBACK_GITHUB_OK_SHA_BYTES_WEBP",
-    "licenca": "Público domínio ilustracao 1908, não arte A5E"
+    "origem": "Pjb518/FoundryVTT-Level-Up-Official, arquivo skeleton.webp",
+    "status": "AGUARDA_READBACK_GITHUB",
+    "licenca": "não comercial; sem liberação para uso comercial"
   },
   "auditoria_20261014": {
     "arquivos_fisicos": 113,
@@ -2596,7 +2622,6 @@
     "TF-379",
     "TF-381",
     "TF-386",
-    "TF-395",
     "TF-397",
     "TF-398",
     "TF-402",
@@ -2604,7 +2629,7 @@
     "TF-408",
     "TF-411"
   ],
-  "pendentes_justificativa": "19 imagens sem binário específico e com procedência aceitável: requer pesquisa adicional ou ilustração original; não importar arte editorial de fonte não licenciada.",
+  "pendentes_justificativa": "18 IDs não possuem binário no Grupo B; necessária obtenção com identidade adequada, licença compatível, ou ilustração original. TF-395 possui agora binário genérico, ainda exige revisão artística.",
   "releitura_checkpoint_a5e_20261014": {
     "commit": "0e0ed70e2f665f3afc61acca208ad4779161a362",
     "resultado": "4/4 SHAs originais coincidem com blobs da branch B, bytes, formato e manifestos; 108/108 existentes conciliadas na árvore Git",

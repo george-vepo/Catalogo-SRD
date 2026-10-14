@@ -1,3 +1,11 @@
+## TF-395 — recurso de pesquisa provisório (14/10/2026)
+
+[Imagem física TF-395.webp](TF-395.webp) persistida por referência de Git blob da [fonte A5E](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/d986361631f97f248f57b8c5b3c090ba770e0024/public/assets/skeleton.webp). **WebP 300×300**, **85.292 bytes**, SHA-256 `da84bdc40080bb7598d68d5b84572a8cb59e71c2e95aa7f5d19970dc0fada578`, SHA Git `41b1f93d29745fdb8d6aec32ac10ebe749b25c3d`. Fonte e hash registrados no manifesto. **Identidade visual apenas da espécie skeleton**, não do comportamento *cackling*; arte genérica de outra publicação, requer substituição/inspeção antes de uso final. **Licença NC: sem uso comercial autorizado.**
+
+As outras 18 criaturas permanecem sem binário. Nada foi substituído por URL, Base64 textual ou sprite de 32×32. Reabrir os arquivos GitHub após este checkpoint antes de registrar persistência aprovada.
+
+---
+
 ## Auditoria visual consolidada B — 14/10/2026: 113/132 imagens reais
 
 **TF-356** [WebP real](TF-356.webp) incorporado a partir de [reprodução de ilustração histórica de domínio público](https://commons.wikimedia.org/wiki/File:Stories_of_beowulf_grendel.jpg), artista Joseph Ratcliffe Skelton (1908). O arquivo foi reaberto no GitHub após [commit `7236f577`](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/7236f57729fa25dcfd2e1e2858ef0f1d89e62929): SHA Git, bytes e assinatura WebP coincidem com a fonte. Não é arte oficial EN Publishing. Dimensões: 960×1234; bytes: 296.630; SHA-256: `31e2b42366b8f4f8acb3ffa49b5afd0af4bdc399024d02f5771aceb5799dd279`.
