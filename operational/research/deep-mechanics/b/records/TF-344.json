@@ -2,28 +2,27 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-344",
   "nome": "Pumpkin King",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_SEM_HOMOLOGACAO",
   "edicao": {
     "sistema": "D&D 5e",
-    "publicacao": "Tome of Beasts 2",
+    "publicacao": "Tome of Beasts 2 (2020, reprodução identificada)",
     "editora": "Kobold Press",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/pumpkin-king/",
-      "natureza": "secundaria_ou_reproducao_nao_reverificada"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_anterior"
+      "natureza": "reproducao_secundaria_5esrd",
+      "consulta": "2026-10-14",
+      "publicacao_identificada": "Tome of Beasts 2 (2020, reprodução identificada)",
+      "escopo": "bloco mecânico integral, incluindo ações especiais e lendárias"
     }
   ],
   "estatisticas": {
     "nd": "10",
     "ca": 15,
     "pv": 138,
-    "dados_vida": null,
+    "dados_vida": "12d12+60",
     "atributos": {
       "FOR": 20,
       "DES": 8,
@@ -32,46 +31,207 @@
       "SAB": 14,
       "CAR": 18
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 30
+    },
     "deslocamentos_texto": "caminhar 30 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {
+      "DES": 3,
+      "SAB": 6
+    },
+    "pericias": {},
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Common",
+      "Elvish",
+      "Sylvan"
+    ],
+    "resistencias_dano": [
+      "bludgeoning/piercing/slashing de ataques não mágicos que não usam ferro frio"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [
+      "fire"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened"
+    ],
+    "origem_ca": "natural armor",
+    "proficiencia": 4
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "REPRODUCAO_INDIVIDUAL_CONSULTADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Legendary Resistance",
+      "usos": "3/dia",
+      "gatilho": "falha em salvaguarda",
+      "efeito": "pode tratar essa salvaguarda como sucesso"
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "vantagem em salvaguardas contra magias e outros efeitos mágicos"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Vine",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 9,
+      "alcance_ft": 15,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "3d6",
+          "modificador": 5,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeito": {
+        "condicao": "grappled",
+        "escape_cd": 16
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "sequencia": [
+        "Vine",
+        "Vine"
+      ],
+      "numero_ataques": 2
+    },
+    {
+      "nome": "Vine",
+      "categoria": "ataque",
+      "referencia_ataque": "Vine"
+    },
+    {
+      "nome": "Harvest Dance",
+      "categoria": "aura_movel",
+      "usos": "1/dia",
+      "duracao": "1 minuto",
+      "area": {
+        "raio_ft": 15,
+        "origem": "Pumpkin King",
+        "movel": true,
+        "contorna_cantos": true
+      },
+      "terreno": "difícil para outras criaturas",
+      "gatilho": "criatura entra pela primeira vez no turno ou começa turno na aura",
+      "salvaguarda": {
+        "atributo": "DES",
+        "cd": 16
+      },
+      "dano": {
+        "dados": "3d6",
+        "tipo": "bludgeoning"
+      },
+      "sucesso": "metade"
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
-  "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "acoes_lendarias": [
     {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Resistência e magia temática de colheita"
+      "nome": "Move",
+      "custo": 1,
+      "efeito": "move até seu deslocamento sem provocar ataques de oportunidade"
+    },
+    {
+      "nome": "Vine Attack",
+      "custo": 1,
+      "referencia_ataque": "Vine"
+    },
+    {
+      "nome": "Fire-Fallow",
+      "custo": 2,
+      "area": {
+        "raio_ft": 10
+      },
+      "alvo": "criatura na área que consegue vê-lo",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 16
+      },
+      "falha": "frightened até final do próximo turno",
+      "duracao_chamas": "até início de seu turno seguinte",
+      "retaliacao": {
+        "gatilho": "toque ou ataque corpo a corpo feito a até 5 pés",
+        "dano": {
+          "dados": "1d10",
+          "tipo": "fire"
+        }
+      }
+    },
+    {
+      "nome": "Cast a Spell",
+      "custo": 3,
+      "efeito": "conjura uma magia da lista inata e consome uso respectivo"
     }
   ],
-  "pistas_de_acoes_nao_validadas": [
+  "conjuracoes": [
     {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Combate mágico e medo"
+      "nome": "Innate Spellcasting",
+      "atributo": "CAR",
+      "cd": 16,
+      "bonus_ataque_magico": 8,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "entangle"
+          ]
+        },
+        {
+          "usos": "3/dia cada",
+          "nomes": [
+            "plant growth",
+            "spike growth"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "nomes": [
+            "blight",
+            "insect plague"
+          ]
+        }
+      ]
     }
   ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Falta conferir todas as mecânicas e ações individuais contra edição exata.",
-    "Campos de ação ainda sem dados completos (acerto, dano, alvos, resistências, condição, CDs, duração, usos e recargas).",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Confrontar edição impressa e erratas com fonte editorial oficial; reprodução 5eSRD é secundária.",
+    "Executar revisão mecânica independente, validação de balanceamento da identidade sem padronização e testes antes de promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_catalogo": "Pumpkin King",
+    "tipo": "fey",
+    "tamanho": "Huge",
+    "alinhamento": "chaotic neutral",
+    "bonus_proficiencia": 4
+  },
+  "mecanicas_especiais": [
+    {
+      "nome": "Legendary Actions",
+      "pontos_por_rodada": 3,
+      "recupera": "início do próprio turno",
+      "uso": "no final do turno de outra criatura",
+      "regra": "uma única opção por janela"
+    }
+  ]
 }

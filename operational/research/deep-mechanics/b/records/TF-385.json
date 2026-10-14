@@ -2,26 +2,25 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-385",
   "nome": "Mantik",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_SEM_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Creature Codex",
+    "publicacao": "Creature Codex (2018, reprodução identificada)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/mantik/",
-      "natureza": "terceiros_preexistente_nao_conferida"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-356_TF-411/research.json",
-      "natureza": "checkpoint"
+      "natureza": "reproducao_secundaria_5esrd",
+      "consulta": "2026-10-14",
+      "publicacao_identificada": "Creature Codex (2018, reprodução identificada)",
+      "escopo": "bloco mecânico integral, incluindo ações especiais e lendárias"
     }
   ],
   "estatisticas": {
     "nd": "9",
     "ca": 16,
     "pv": 168,
-    "dados_vida": null,
+    "dados_vida": "16d12+64",
     "atributos": {
       "FOR": 19,
       "DES": 14,
@@ -30,44 +29,240 @@
       "SAB": 14,
       "CAR": 16
     },
-    "deslocamentos_ft": null,
+    "deslocamentos_ft": {
+      "andar": 40
+    },
     "deslocamentos_texto": "caminhar 40 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "salvaguardas": {
+      "FOR": 8,
+      "CON": 8
+    },
+    "pericias": {
+      "Athletics": 8,
+      "Intimidation": 7,
+      "Perception": 6
+    },
+    "sentidos": [
+      "darkvision 120 ft"
+    ],
+    "idiomas": [
+      "Common",
+      "Draconic",
+      "Dwarvish"
+    ],
+    "resistencias_dano": [
+      "poison"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "poisoned"
+    ],
+    "origem_ca": "natural armor",
+    "proficiencia": 4,
+    "percepcao_passiva": 16
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "REPRODUCAO_INDIVIDUAL_CONSULTADA",
+  "habilidades_passivas": [
+    {
+      "nome": "Cursed",
+      "efeito": "não pode voar, levitar nem ser transformado com polymorph por nenhum efeito"
+    },
+    {
+      "nome": "Legendary Resistance",
+      "usos": "2/dia",
+      "efeito": "pode transformar falha de salvaguarda em sucesso"
+    },
+    {
+      "nome": "Magic Weapons",
+      "efeito": "ataques de arma são mágicos"
+    },
+    {
+      "nome": "Merciless Ferocity",
+      "efeitos": [
+        "vantagem em ataques de oportunidade",
+        "alvos reduzidos a zero PV por seus ataques têm desvantagem na primeira death saving throw"
+      ]
+    },
+    {
+      "nome": "Penetrating Volley",
+      "gatilho": "move pelo menos 20 pés em linha reta",
+      "efeitos": [
+        "ataques Tail Spike no turno têm vantagem",
+        "criatura acertada faz FOR CD16 ou fica prone"
+      ]
+    },
+    {
+      "nome": "Tail Spike Regrowth",
+      "quantidade_inicial": 36,
+      "recuperacao": "descanso longo"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 4,
+          "tipo": "piercing"
+        }
+      ]
+    },
+    {
+      "nome": "Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 8,
+      "alcance_ft": 5,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d6",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ]
+    },
+    {
+      "nome": "Tail Spike",
+      "tipo": "distancia",
+      "bonus_acerto": 6,
+      "alcance_normal_ft": 100,
+      "alcance_maximo_ft": 200,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 2,
+          "tipo": "piercing"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 16
+        },
+        "falha": {
+          "condicao": "poisoned",
+          "duracao": "até final do próximo turno",
+          "efeitos": [
+            "velocidade reduzida à metade",
+            "não pode Dash"
+          ]
+        }
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "alternativas": [
+        [
+          "Claw",
+          "Claw",
+          "Bite"
+        ],
+        [
+          "Tail Spike",
+          "Tail Spike",
+          "Tail Spike"
+        ]
+      ]
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Claw",
+      "categoria": "ataque",
+      "referencia_ataque": "Claw"
+    },
+    {
+      "nome": "Tail Spike",
+      "categoria": "ataque",
+      "referencia_ataque": "Tail Spike"
+    },
+    {
+      "nome": "Roar of the Barbed King",
+      "categoria": "controle_area",
+      "recarga": "5–6",
+      "alcance_ft": 60,
+      "alvo": "cada criatura na área que pode ouvi-lo",
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 14
+      },
+      "falha": {
+        "condicao": "incapacitated",
+        "duracao": "1d4 rodadas"
+      }
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
-  "acoes_lendarias": [],
+  "acoes_lendarias": [
+    {
+      "nome": "Move",
+      "custo": 1,
+      "efeito": "movimenta até velocidade sem provocar ataques de oportunidade"
+    },
+    {
+      "nome": "Growl",
+      "custo": 2,
+      "alcance_ft": 60,
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 14
+      },
+      "alvo": "criaturas que podem ouvir",
+      "falha": {
+        "condicao": "frightened",
+        "duracao": "até fim do próximo turno"
+      }
+    },
+    {
+      "nome": "Tail Spike",
+      "custo": 2,
+      "referencia_ataque": "Tail Spike"
+    }
+  ],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Variante denominada Manticore King na ficha"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Ataques de manticora dominante; revisar nomes de cada ação"
-    }
-  ],
-  "inventario_acoes_completo": false,
+  "inventario_acoes_completo": true,
   "conflito_editorial": null,
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Faltam edição exata, ficha individual integral e ações detalhadas com CDs e limites.",
-    "Revisar habilidades completas, bônus, imunidades, salvaguardas, recargas e reações na publicação/edição indicada."
+    "Confrontar edição impressa e erratas com fonte editorial oficial; reprodução 5eSRD é secundária.",
+    "Executar revisão mecânica independente, validação de balanceamento da identidade sem padronização e testes antes de promoção canônica.",
+    "A edição é Creature Codex (2018), não Tome of Beasts."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_catalogo": "Mantik",
+    "tipo": "monstrosity",
+    "tamanho": "Huge",
+    "alinhamento": "lawful evil",
+    "bonus_proficiencia": 4
+  },
+  "mecanicas_especiais": [
+    {
+      "nome": "Legendary Actions",
+      "pontos_por_rodada": 3,
+      "recupera": "início do próprio turno"
+    },
+    {
+      "nome": "Apelidos",
+      "nome_catálogo": "Mantik",
+      "nome_titulo_fonte": "Manticore King",
+      "evidencia": "A mesma fonte nomeia o monstro Manticore King e o multiataque Mantik; não separar em IDs."
+    }
+  ]
 }
