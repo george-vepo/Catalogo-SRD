@@ -1,0 +1,267 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-175",
+  "nome": "Ooze, Blood",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 53,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "Creature Codex (2018)",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ooze-blood/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 8,
+    "pv": 76,
+    "dados_vida": "8d10+32",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 16,
+      "DES": 6,
+      "CON": 18,
+      "INT": 1,
+      "SAB": 8,
+      "CAR": 2
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": -2,
+      "CON": 4,
+      "INT": -5,
+      "SAB": -1,
+      "CAR": -4
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond radius"
+      }
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "acid",
+      "fire",
+      "necrotic",
+      "slashing"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 2300,
+    "bonus_proficiencia": 3
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "passagem_minima_inch": 1
+      },
+      {
+        "nome": "Blood Drain",
+        "gatilho": "criatura toca ooze OU a acerta com ataque melee a até 5ft",
+        "dano": {
+          "dados": "1d10",
+          "media": 5,
+          "tipo": "necrotic"
+        },
+        "ganho_pv_temporarios": "igual ao dano necrotic sofrido",
+        "limite_pv_temporarios": 38,
+        "acumulo_especial": "soma temporários do traço, Pseudopod e Overflow até limite (exceção publicada)",
+        "radiant": {
+          "gatilho": "ooze sofre dano radiant",
+          "supressao": "este traço não funciona no início do próximo turno da ooze",
+          "retencao": "preserva HP temporários já obtidos"
+        }
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "escalada superfícies verticais e tetos sem teste"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d10",
+            "media": 16,
+            "tipo": "necrotic"
+          }
+        ],
+        "ganho_pv_temporarios": "igual ao dano necrotic efetivamente sofrido pelo alvo",
+        "compartilha_limite_pv_temporarios": 38
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d10",
+            "media": 16,
+            "tipo": "necrotic"
+          }
+        ],
+        "ganho_pv_temporarios": "igual ao dano necrotic efetivamente sofrido pelo alvo",
+        "compartilha_limite_pv_temporarios": 38
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Overflow",
+        "gatilho": "ooze é atingida por melee attack",
+        "alvo": "agressor",
+        "teste": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d10",
+            "media": 11,
+            "tipo": "necrotic"
+          }
+        },
+        "sucesso": "metade do dano necrotic",
+        "ganho_pv_temporarios": "igual ao dano necrotic efetivamente sofrido",
+        "limite_compartilhado": 38
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Homônimo ooze-blood-2 (Tiny beast CR0) NÃO corresponde à TF-175; bloco CR6 de Creature Codex mantido.",
+    "Blood Drain, Pseudopod e Overflow acumulam PV temporários como exceção publicada, com teto 38; dano radiant inibe apenas o traço no início do próximo turno, não remove PV temporários ganhos.",
+    "Conferir livro e erratas, autorização e identidade visual da arte antes de concluir."
+  ],
+  "campos_nao_confirmados": [
+    "conferência editorial/erratas/escopo de licenciamento",
+    "verificação de direito de uso, identidade e qualidade da arte"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-blood/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-blood/",
+      "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-175",
+    "nome": "Ooze, Blood",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 8,
+    "pv": 76,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Blood Drain causa dano necrótico por contato e PV temporários; Spider Climb"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Pseudopod drena vida; reação Overflow contra ataques corpo a corpo."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-blood/",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Não usar homônimo /ooze-blood-2/, que é uma besta Tiny CR0.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-175.jpg",
+    "formato": "jpg",
+    "largura": 1000,
+    "altura": 655,
+    "bytes": 73118,
+    "blob_sha": "7645c34ba6cf6f3fd7b072f4990566beb122c4b1",
+    "sha256": "5d0ff347d3c7cd2e8045c14e57d800a4120c697b6675a9faa8cc1ba8bfcae5a5",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Bloodooze.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 41,
+    "publicacao": "Creature Codex (2018)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-blood/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

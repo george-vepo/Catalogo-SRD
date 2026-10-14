@@ -1,0 +1,274 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-160",
+  "nome": "Ooze, Corrupting",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 38,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 1",
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 12,
+    "pv": 115,
+    "dados_vida": "10d10+60",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "neutral evil",
+    "atributos": {
+      "FOR": 16,
+      "DES": 10,
+      "CON": 22,
+      "INT": 4,
+      "SAB": 2,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 0,
+      "CON": 6,
+      "INT": -3,
+      "SAB": -4,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar_ft": 20,
+      "nadar_ft": 30
+    },
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60
+      },
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 5,
+    "idiomas": [],
+    "resistencias": [
+      "slashing",
+      "bludgeoning"
+    ],
+    "imunidades_dano": [
+      "acid",
+      "fire",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "exhaustion",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Corrupting Touch",
+        "gatilhos": [
+          "ooze tem critical hit",
+          "ooze inicia turno com inimigo grappled"
+        ],
+        "alvo": "1 item de leather/metal/wood do alvo",
+        "mundane": "destruído automaticamente",
+        "magic": "destruído se portador falha DEX save DC16"
+      },
+      {
+        "nome": "Strong Swimmer",
+        "efeito": "flutua naturalmente na superfície da água; swim speed 30ft"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+3",
+            "media": 12,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ],
+        "acerto": "grappled escape DC13"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+3",
+            "media": 12,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        ],
+        "acerto": "grappled escape DC13"
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "efeitos_regionais": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Fonte original Tome of Beasts CR5; Corrupting Touch somente em critical hit ou início do próprio turno mantendo grapple, destrói item por material/tipo.",
+    "Confrontar ©2016 e revisão 2023 separadamente e aprovar licenças de imagem.",
+    "Cautela: URL 5eSRD de corrupting ooze requer checagem (dados conferidos com reprodução da edição original)."
+  ],
+  "campos_nao_confirmados": [
+    "conferir edição impressa e errata",
+    "aprovação legal e visual de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://anyflip.com/usqxr/fcko/basic/301-350",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-corrupting/",
+      "tipo": "fonte individual no CP37",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://anyflip.com/adow/gzzp/basic/301-350",
+      "tipo": "reprodução material Tome of Beasts original com estatísticas",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_FONTE_SECUNDARIA_REQUER_LICENCA",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-160",
+    "nome": "Ooze, Corrupting",
+    "publicacao": "Tome of Beasts 1",
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 12,
+    "pv": 115,
+    "pv_dados": "10d10+60",
+    "porte": "Large",
+    "tipo": "ooze",
+    "atributos": [
+      16,
+      10,
+      22,
+      4,
+      2,
+      1
+    ],
+    "movimento": {
+      "andar_ft": 20,
+      "nadar_ft": 30
+    },
+    "resistencias": [
+      "slashing",
+      "bludgeoning"
+    ],
+    "imunidades_dano": [
+      "acid",
+      "fire"
+    ],
+    "tracos": [
+      {
+        "nome": "Corrupting Touch",
+        "resumo": "Crítico ou início do turno com alvo agarrado dissolve item material do alvo; magia exige teste Destreza CD16 do dono."
+      },
+      {
+        "nome": "Strong Swimmer",
+        "resumo": "Nadador que flutua na superfície."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Slam",
+        "resumo": "+6, 5 ft., 2d8+3 contundente mais 1d6 ácido; agarra, fuga CD13."
+      }
+    ],
+    "fonte": "https://anyflip.com/usqxr/fcko/basic/301-350",
+    "confirmacao": "https://www.fantasygrounds.com/library/dnd5e/npcs/corrupting-ooze/",
+    "estado": "PARCIAL_FONTE_SECUNDARIA_REQUER_LICENCA",
+    "pendencias": [
+      "Reprodução da obra não é fonte com licença comprovada para redistribuir texto completo.",
+      "Confirmação editorial e imagem pendentes."
+    ],
+    "editora": "Kobold Press / Open Design",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-160.webp",
+    "formato": "webp",
+    "largura": 862,
+    "altura": 800,
+    "bytes": 120352,
+    "blob_sha": "650f904c04d95bb431ad553c88d22f127fe685a6",
+    "sha256": "bf706e1be55542f155fdef1b93c906e3895ca360bc285367269e1e5b920d3511",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Corrupting%20Ooze.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 37,
+    "publicacao": "Tome of Beasts 1",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-corrupting/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

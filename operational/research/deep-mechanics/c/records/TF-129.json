@@ -1,0 +1,347 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-129",
+  "nome": "Giant, Snow",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 9,
+  "estado_auditoria": "PARCIAL_BLOCO_INDIVIDUAL_ESTRUTURADO_PENDENTE_CONFRONTO_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": "https://www.5esrd.com/database/creature/giant-snow/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 11,
+    "pv": 138,
+    "dados_vida": "12d12+60",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 19,
+      "DES": 12,
+      "CON": 20,
+      "INT": 9,
+      "SAB": 15,
+      "CAR": 6
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 1,
+      "CON": 5,
+      "INT": -1,
+      "SAB": 2,
+      "CAR": -2
+    },
+    "deslocamentos": {
+      "andar_ft": 40
+    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 7
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 4
+      },
+      {
+        "nome": "Survival",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "cold"
+    ],
+    "imunidades_condicao": [
+      "grappled",
+      "restrained"
+    ],
+    "vulnerabilidades": [
+      "fire"
+    ],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "sem armadura especificada"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Snow Camouflage",
+        "gatilho": "esconder-se em terreno com neve",
+        "efeito": "vantagem em DEX(Stealth)"
+      },
+      {
+        "nome": "Snow Regeneration",
+        "gatilho": "início do próprio turno",
+        "pre_condicao": "ao menos 1 PV e está em terreno nevado",
+        "cura_pv": 5
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Club",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Club",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d4+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Giant Snowball",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 7,
+        "alvos": 1,
+        "distancia_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "cold"
+          }
+        ],
+        "teste_apos_acerto": {
+          "atributo": "DEX",
+          "cd": 16,
+          "falha": {
+            "condicao": "blinded",
+            "duracao": "até fim do próximo turno"
+          },
+          "sucesso": "sem blinded"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Club",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d4+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Giant Snowball",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 7,
+        "alvos": 1,
+        "distancia_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "cold"
+          }
+        ],
+        "teste_apos_acerto": {
+          "atributo": "DEX",
+          "cd": 16,
+          "falha": {
+            "condicao": "blinded",
+            "duracao": "até fim do próximo turno"
+          },
+          "sucesso": "sem blinded"
+        }
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Club",
+          "quantidade": 2
+        }
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA",
+      "reacoes": "AUSENCIA_CONFERIDA",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA",
+      "acoes_covil": "AUSENCIA_CONFERIDA",
+      "acoes_miticas": "AUSENCIA_CONFERIDA",
+      "conjuracao": "AUSENCIA_CONFERIDA"
+    }
+  },
+  "pendencias": [
+    "Todas as seções mecânicas listadas pela fonte individual foram estruturadas; pendente confrontar edição original/errata com a republicação 5eSRD.",
+    "Arquivo físico de imagem já existe, mas a identidade visual ainda não foi aprovada."
+  ],
+  "campos_nao_confirmados": [
+    "confronto independente com o livro original/erratas antes de aprovação mecânica total",
+    "aprovação visual editorial da imagem já armazenada"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-snow/",
+      "tipo": "bloco mecânico individual republicado por 5eSRD com referência bibliográfica ao livro e edição",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint anterior para comparação",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-129",
+    "nome": "Giant, Snow",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 11,
+    "pv": 138,
+    "pv_dados": "12d12+60",
+    "porte": "Huge",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      19,
+      12,
+      20,
+      9,
+      15,
+      6
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [
+      {
+        "nome": "Snow Camouflage",
+        "resumo": "Vantagem para se esconder em paisagens nevadas."
+      },
+      {
+        "nome": "Snow Regeneration",
+        "resumo": "Recupera 5 PV por turno em terreno com neve desde que tenha ao menos 1 PV."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Duas pancadas de club."
+      },
+      {
+        "nome": "Club",
+        "resumo": "+7, 3d4+4 contundente."
+      },
+      {
+        "nome": "Giant Snowball",
+        "resumo": "+7, 60/240, 3d6+4 contundente e 1d8 frio; DES CD16 contra cegueira temporária."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/giant-snow/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Imune a frio e vulnerável a fogo; regeneração depende de terreno nevado.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "neutral",
+    "vulnerabilidades_dano": [
+      "fire"
+    ],
+    "imunidades_dano": [
+      "cold"
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-129.webp",
+    "formato": "webp",
+    "largura": 814,
+    "altura": 1018,
+    "bytes": 227472,
+    "blob_sha": "3dfd88bbe757a83f8d3610168bbcd0d31bfcc90c",
+    "sha256": "420d28a77e09f6611e18345541e4e0bc97b5d3d1512e8a5fa766d41aadb2b623",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Snow%20Giant.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "D&D 5e",
+    "livro": "Tome of Beasts 2",
+    "fonte_individual_republicada": "https://www.5esrd.com/database/creature/giant-snow/",
+    "bloco_integral_estruturado": true,
+    "confronto_com_livro_editorial_errata": "PENDENTE"
+  }
+}

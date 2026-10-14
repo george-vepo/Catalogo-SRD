@@ -1,0 +1,266 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-199",
+  "nome": "Yakirian",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 74,
+  "estado_auditoria": "BLOQUEADA_CONSUME_HEART_FRASE_FONTE_TRUNCADA",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "Creature Codex 2018, Yakirian base CR2 (Schism CR3 separado)",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/yakirian/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "2",
+    "nd_fonte": "2",
+    "ca": 13,
+    "pv": 67,
+    "dados_vida": "9d8+27",
+    "porte": "Medium",
+    "tipo": "humanoid (yakirian)",
+    "alinhamento": "lawful neutral",
+    "atributos": {
+      "FOR": 17,
+      "DES": 11,
+      "CON": 16,
+      "INT": 10,
+      "SAB": 12,
+      "CAR": 8
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 0,
+      "CON": 3,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": -1
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 4
+      },
+      {
+        "nome": "Survival",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "WIS",
+        "bonus": 3
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Common",
+      "Yakirian",
+      "entende Void Speech, não fala"
+    ],
+    "resistencias": [
+      "cold"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 450,
+    "bonus_proficiencia": 2,
+    "ca_origem": "chain shirt",
+    "system": "D&D 5e"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Resilient Soul",
+        "beneficio": "advantage saves contra charmed, frightened, confusion, effects that cause corruption or madness"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Gore",
+          "Ritual Knife"
+        ]
+      },
+      {
+        "nome": "Gore",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Ritual Knife",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Consume Heart",
+        "alvo": "coração de humanoid ou giant morto a até 5ft",
+        "condicao_tempo": "publicação online truncada ('If the creature also less than 1 minute ago'), provavelmente morte recente, a CONFIRMAR com original",
+        "efeitos": [
+          "aprende respostas a duas perguntas que a criatura conhecia em vida",
+          "aumenta HP máximo e atual em 10 por 1 hora",
+          "advantage STR attack rolls e ability checks, e em todos saves por 1 hora"
+        ],
+        "se_condicao_nao_atendida": "benefícios não comprovados, exige checagem"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Gore",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Ritual Knife",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Gore",
+        "Ritual Knife"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "BLOQUEIO: edição online de Consume Heart contém frase truncada para prazo ('If the creature also less than 1 minute ago'); não assumir prazo como regra oficial até conferir livro original.",
+    "Não misturar variante Schism Yakirian CR3 com CR2 base; mantém resist cold, velocidade40ft e idiomas corretos.",
+    "Licença/imagem pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "verificação editorial da origem/erratas/condições de licença",
+    "direito de imagem, identidade e revisão visual"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/yakirian/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/yakirian/",
+      "tipo": "pesquisa individual CP45, não equivalente a autorização de publicação",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-199",
+    "nome": "Yakirian",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "2",
+    "nd_fonte": "2",
+    "ca": 13,
+    "pv": 67,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Resilient Soul facilita salvar contra charme, medo, confusão, corrupção"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Gore e Ritual Knife em Multiattack."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/yakirian/",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Resistência a frio e deslocamento 40 pés devem ser preservados.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-199.jpg",
+    "formato": "jpg",
+    "largura": 529,
+    "altura": 700,
+    "bytes": 58600,
+    "blob_sha": "0ecd40972c61863f864e92fba1b60c8f64429721",
+    "sha256": "9b0985c5607e27231c4fb14824c8d7b6f5948d5669ccc1241be51b1827781a76",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Yakirian.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 45,
+    "publicacao": "Creature Codex 2018, Yakirian base CR2 (Schism CR3 separado)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/yakirian/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

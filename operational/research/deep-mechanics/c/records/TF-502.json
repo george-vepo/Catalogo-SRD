@@ -1,0 +1,296 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-502",
+  "nome": "Ghasthopper",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 89,
+  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": null,
+    "publicacao": null,
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "2",
+    "ca": 13,
+    "pv": 31,
+    "dados_vida": "7d4+14",
+    "porte": "Tiny",
+    "tipo": "Undead",
+    "alinhamento": null,
+    "atributos": {
+      "FOR": 2,
+      "DES": 16,
+      "CON": 14,
+      "INT": 6,
+      "SAB": 14,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": -4,
+      "DES": 3,
+      "CON": 2,
+      "INT": -2,
+      "SAB": 2,
+      "CAR": 0
+    },
+    "deslocamentos": {
+      "andar": 10,
+      "voar": 30
+    },
+    "pericias": {
+      "Stealth": 4
+    },
+    "salvaguardas": {
+      "CON": 4,
+      "WIS": 4
+    },
+    "sentidos": [
+      "darkvision 30 ft"
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [],
+    "resistencias": [
+      "necrotic"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "poisoned"
+    ],
+    "vulnerabilidades": null
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Despair Aura",
+        "descricao_funcional": "Ao agir com ação ou bônus a até 10 pés, alvo não-morto não é afetado; vivos perdem ações/reação até turno seguinte; página faz menção a save porém sem CD/atributo",
+        "gatilho": "ação ou bônus dentro de 10 pés",
+        "bonus_acerto": null,
+        "alcance_ft": null,
+        "alvo": null,
+        "dano_medio": null,
+        "dados_dano": null,
+        "modificador_dano": null,
+        "tipo_dano": null,
+        "teste_resistencia": {
+          "atributo": null,
+          "cd": null
+        },
+        "efeito_falha": null,
+        "efeito_sucesso": "imunidade a aura de ghasthoppers por 24h (texto incompleto)",
+        "condicoes_aplicadas": [],
+        "duracao": "até turno seguinte",
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      },
+      {
+        "nome": "Incorporeal Movement",
+        "descricao_funcional": "Move através de criaturas e objetos como terreno difícil; sofre 1d10 force se encerra turno dentro de objeto",
+        "gatilho": null,
+        "bonus_acerto": null,
+        "alcance_ft": null,
+        "alvo": null,
+        "dano_medio": null,
+        "dados_dano": null,
+        "modificador_dano": null,
+        "tipo_dano": null,
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      },
+      {
+        "nome": "Smoky Signals",
+        "descricao_funcional": "Invisível exceto quando voa, ataca ou se alimenta",
+        "gatilho": null,
+        "bonus_acerto": null,
+        "alcance_ft": null,
+        "alvo": null,
+        "dano_medio": null,
+        "dados_dano": null,
+        "modificador_dano": null,
+        "tipo_dano": null,
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Bleak Vibrations",
+        "descricao_funcional": "Ataque thunder + psychic",
+        "gatilho": null,
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano_medio": 4,
+        "dados_dano": "1d4",
+        "modificador_dano": 2,
+        "tipo_dano": "thunder",
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true,
+        "dano_adicional": [
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "psychic"
+          }
+        ]
+      },
+      {
+        "nome": "Drain Health",
+        "descricao_funcional": "Dano necrótico; ganha PV temporários iguais ao dano causado",
+        "gatilho": null,
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano_medio": 6,
+        "dados_dano": "3d4",
+        "modificador_dano": 0,
+        "tipo_dano": "necrotic",
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bleak Vibrations",
+        "descricao_funcional": "Ataque thunder + psychic",
+        "gatilho": null,
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano_medio": 4,
+        "dados_dano": "1d4",
+        "modificador_dano": 2,
+        "tipo_dano": "thunder",
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true,
+        "dano_adicional": [
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "psychic"
+          }
+        ]
+      },
+      {
+        "nome": "Drain Health",
+        "descricao_funcional": "Dano necrótico; ganha PV temporários iguais ao dano causado",
+        "gatilho": null,
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano_medio": 6,
+        "dados_dano": "3d4",
+        "modificador_dano": 0,
+        "tipo_dano": "necrotic",
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Página não legível; CA/PV e mecânicas não confirmados",
+    "Despair Aura menciona saving throw sem especificar quando ocorre, atributo e CD; não inventar.",
+    "Bloqueio anterior era falha de extração; ficha atual permite recuperar CA/PV/atributos/ações, mas aura segue incompleta."
+  ],
+  "campos_nao_confirmados": [
+    "estatisticas.nd_catalogo",
+    "estatisticas.alinhamento",
+    "estatisticas.vulnerabilidades",
+    "Despair Aura menciona saving throw sem especificar quando ocorre, atributo e CD; não inventar.",
+    "Bloqueio anterior era falha de extração; ficha atual permite recuperar CA/PV/atributos/ações, mas aura segue incompleta."
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/4001",
+      "tipo": "ficha individual no portal editorial A5E, consultada diretamente em 2026-10-13",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-483_TF-512/recovery-index.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PESQUISA_RECUPERADA_PENDENTE_GATE",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261011_TF-483_TF-512/recovery-index.json",
+    "dados_anteriores_sem_revalidacao": false
+  },
+  "checkpoint_anterior": {
+    "id": "TF-502",
+    "nome": "Ghasthopper",
+    "nd_fonte": "2",
+    "ca": null,
+    "pv": null,
+    "fonte": "https://a5e.tools/node/4001",
+    "status": "BLOQUEADA_EXTRAÇÃO",
+    "pendencias": "Página não legível; CA/PV e mecânicas não confirmados"
+  }
+}

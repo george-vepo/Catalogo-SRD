@@ -1,0 +1,289 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-473",
+  "nome": "Flying Lion",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 22,
+  "estado_auditoria": "BLOQUEADA_MULTIATTACK_REFERENCIA_BEAK_E_GRIFFON",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/1663"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "3",
+    "xp": null,
+    "bonus_proficiencia": 2,
+    "ca": 12,
+    "composicao_ca": "não especificada",
+    "pv": 57,
+    "dados_vida": "6d10+24",
+    "bloodied": 28,
+    "porte": "Large",
+    "tipo": "Monstrosity",
+    "atributos": {
+      "forca": 18,
+      "destreza": 14,
+      "constituicao": 18,
+      "inteligencia": 2,
+      "sabedoria": 16,
+      "carisma": 8
+    },
+    "modificadores": {
+      "forca": 4,
+      "destreza": 2,
+      "constituicao": 4,
+      "inteligencia": -4,
+      "sabedoria": 3,
+      "carisma": -1
+    },
+    "deslocamentos": {
+      "andar_ft": 30,
+      "voo_ft": 80
+    },
+    "salvaguardas": [],
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 15,
+    "idiomas": [],
+    "vulnerabilidades": [],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "maneuver_dc": 14,
+    "motivo_xp_null": "não impresso na ficha A5E",
+    "alinhamento": null,
+    "motivo_alinhamento_null": "não declarado na ficha"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Keen Smell",
+        "tipo": "passivo",
+        "efeito": "vantagem em Perception checks que dependem de olfato"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "acao sequencial",
+        "referencias_literais_fonte": [
+          {
+            "acao": "Beak",
+            "quantidade": 1
+          },
+          {
+            "acao": "Talons",
+            "quantidade": 1
+          }
+        ],
+        "primeira_acao_referencia_resolvida": null,
+        "nota": "Página da variante chama criatura griffon e descreve Beak que não existe; não substituir por Bite sem revisão."
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Talons",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          }
+        ],
+        "efeito_condicional": {
+          "pre_condicao": "Flying Lion iniciou seu turno 20 ft ou mais acima do alvo",
+          "dano_alternativo": {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "slashing"
+          },
+          "condicao": "grappled",
+          "escape_cd": 14,
+          "limite": "até esse grapple acabar, não pode usar Talons contra outro alvo"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Talons",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          }
+        ],
+        "efeito_condicional": {
+          "pre_condicao": "Flying Lion iniciou seu turno 20 ft ou mais acima do alvo",
+          "dano_alternativo": {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "slashing"
+          },
+          "condicao": "grappled",
+          "escape_cd": 14,
+          "limite": "até esse grapple acabar, não pode usar Talons contra outro alvo"
+        }
+      }
+    ],
+    "multiataque": {
+      "acoes_fonte": [
+        "Beak",
+        "Talons"
+      ],
+      "acoes_disponiveis": [
+        "Bite",
+        "Talons"
+      ],
+      "sequencia_valida": null,
+      "conflito": "Beak não definido nesta variante; Griffon citado no lugar de Flying Lion"
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "reacoes": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "conjuracao": "AUSENCIA_CONFERIDA_NO_BLOCO"
+    }
+  },
+  "pendencias": [
+    "Multiattack publicado declara griffon atacando com beak e talons; Flying Lion lista Bite e Talons, não Beak. Não transformar Beak em Bite por inferência.",
+    "Talons condiciona dano superior e grapple a começar 20 ft acima do alvo; registrar condições de alcance.",
+    "Imagem binária da variante Flying Lion não armazenada; revisão editorial pendente."
+  ],
+  "campos_nao_confirmados": [
+    "relação Beak x Bite na variante Flying Lion",
+    "texto reaproveitado de griffon e correção editorial",
+    "imagem física representativa"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/1663",
+      "tipo": "bloco individual da ferramenta oficial EN Publishing A5E, verificado 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "sistema": "Level Up Advanced 5E"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico apenas para comparação",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": false
+  },
+  "checkpoint_anterior": {
+    "id": "TF-473",
+    "nome": "Flying Lion",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "3",
+    "ca": 12,
+    "pv": 57,
+    "atributos": {
+      "forca": 18,
+      "destreza": 14,
+      "constituicao": 18,
+      "inteligencia": 2,
+      "sabedoria": 16,
+      "carisma": 8
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Predador alado com faro apurado e manobras de mergulho."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Mordida, garras e ações ligadas à queda/voo."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/1663",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "ficha_individual_estruturada_em_detalhe": true,
+  "ficha_origem_integral_verificada_na_pagina": true,
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_individual": "https://a5e.tools/node/1663",
+    "publicacao": "Monstrous Menagerie",
+    "revisao_livro_errata": "PENDENTE",
+    "status_completo": "NAO"
+  }
+}

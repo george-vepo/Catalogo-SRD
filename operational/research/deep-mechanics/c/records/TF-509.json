@@ -1,0 +1,308 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-509",
+  "nome": "Fogborn Zombie Horde",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 32,
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_LIVRO",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "To Save A Kingdom",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/3462"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 8,
+    "pv": 75,
+    "dados_vida": "10d8+30",
+    "porte": "Large group of Medium undead",
+    "tipo": "Undead",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 12,
+      "destreza": 6,
+      "constituicao": 16,
+      "inteligencia": 3,
+      "sabedoria": 6,
+      "carisma": 4
+    },
+    "modificadores": {
+      "forca": 1,
+      "destreza": -2,
+      "constituicao": 3,
+      "inteligencia": -4,
+      "sabedoria": -2,
+      "carisma": -3
+    },
+    "deslocamentos": {
+      "andar_ft": 20,
+      "nadar_ft": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [
+      "compreende os idiomas que sabia em vida",
+      "não fala"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "fatigue",
+      "poisoned"
+    ],
+    "vulnerabilidades": [
+      "bludgeoning"
+    ],
+    "xp": null,
+    "bonus_proficiencia": 2,
+    "maneuver_dc": 11,
+    "composicao_ca": "não especificada",
+    "bloodied": 37
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Area Vulnerability",
+        "categoria": "passivo",
+        "gatilho": "recebe dano de efeito que atinge uma área",
+        "efeito": "recebe o dobro do dano causado pelo efeito de área"
+      },
+      {
+        "nome": "Horde",
+        "categoria": "passivo_grupo",
+        "quantidade_de_integrantes": {
+          "minimo": 5,
+          "tipo": "zombies"
+        },
+        "area": "pode compartilhar espaço com criatura/objeto Medium ou menor",
+        "regra_alvo_unico": "ao ser alvo de spell, ataque ou outro efeito que afeta apenas um alvo, sofre dano normalmente e ignora os demais efeitos",
+        "passagens": "passa por aberturas suficientes para uma criatura Medium sem squeezing"
+      },
+      {
+        "nome": "Horde Dispersal",
+        "gatilho": "horda chega a 0 PV",
+        "resultado": {
+          "quantidade_dados": "1d4",
+          "quantidade_media_publicada": 2,
+          "criatura": "zombie",
+          "pv_de_cada": 7
+        },
+        "alerta_editorial": "publicação escreve 'it turn s', sem impacto adicional identificado"
+      },
+      {
+        "nome": "Undead Nature",
+        "categoria": "passivo",
+        "efeito": "não precisa de ar, alimento ou sono"
+      },
+      {
+        "nome": "Fogwalk",
+        "categoria": "movimento_passivo",
+        "precondicoes": [
+          "deslocamento exclusivamente em trajetória horizontal direta",
+          "termina o deslocamento em espaço vazio que possa sustentar a criatura"
+        ],
+        "efeito": "ignora terreno difícil e efeitos nocivos do terreno enquanto as precondições estão satisfeitas",
+        "efeito_secundario": {
+          "gatilho": "entra ou sai de um quadrado",
+          "condicao_terreno": "lightly obscured by fog",
+          "duracao": "até início do próximo turno do Fogborn"
+        }
+      },
+      {
+        "nome": "Water Walker",
+        "categoria": "movimento_passivo",
+        "efeito": "ganha nado igual ao deslocamento de andar e pode andar sobre água como terra firme"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Grab",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "5d6+5",
+            "media": 22,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "pre_condicao": "alvo Medium ou menor",
+          "condicao": "grappled",
+          "escape_cd": 11,
+          "efeito": "imediato sem saving throw adicional"
+        }
+      },
+      {
+        "nome": "Bite",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "alvo_requer": "um alvo grappled",
+        "dano": [
+          {
+            "dados": "5d10+5",
+            "media": 32,
+            "tipo": "piercing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "recupera_PV_igual": "quantidade de dano efetivamente causado pelo ataque"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Grab",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "5d6+5",
+            "media": 22,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "pre_condicao": "alvo Medium ou menor",
+          "condicao": "grappled",
+          "escape_cd": 11,
+          "efeito": "imediato sem saving throw adicional"
+        }
+      },
+      {
+        "nome": "Bite",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "alvo_requer": "um alvo grappled",
+        "dano": [
+          {
+            "dados": "5d10+5",
+            "media": 32,
+            "tipo": "piercing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "recupera_PV_igual": "quantidade de dano efetivamente causado pelo ataque"
+        }
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "reacoes": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_NA_FONTE_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_NA_FONTE_INDIVIDUAL"
+    }
+  },
+  "pendencias": [
+    "Mantida distinção de Zombie Horde genérica: a forma Fogborn tem Fogwalk e Water Walker.",
+    "Recuperação por Bite depende de agarrão existente e dano efetivamente causado; não afirmar que supera PV máximos.",
+    "Faltam confronto com To Save A Kingdom/errata e arte física da variante."
+  ],
+  "campos_nao_confirmados": [
+    "regras do livro/errata",
+    "imagem binária representativa"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/3462",
+      "tipo": "Ficha mecânica original no site oficial de consulta A5E, lida e estruturada em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "pesquisa prévia, não substitui bloco individual",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-509",
+    "nome": "Fogborn Zombie Horde",
+    "editora": "EN Publishing",
+    "publicacao": "To Save A Kingdom",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 8,
+    "pv": 75,
+    "atributos": {
+      "forca": 12,
+      "destreza": 6,
+      "constituicao": 16,
+      "inteligencia": 3,
+      "sabedoria": 6,
+      "carisma": 4
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Horda de zumbis com Fogwalk e Water Walker, vulnerabilidade a dano em área; dispersão."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Grab +3 que agarra (CD 11); Bite +3 contra alvo agarrado com recuperação de PV."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/3462",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Regra de grupo e atributos podem coincidir com Gorger Zombie Horde, mas variantes são distintas.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_oficial": "https://a5e.tools/node/3462",
+    "livro_original_e_erratas": "PENDENTE"
+  }
+}

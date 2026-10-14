@@ -1,0 +1,291 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-500",
+  "nome": "Gorger Zombie Horde",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 25,
+  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette (Source da ficha atual; edição histórica divergente)",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 8,
+    "pv": 75,
+    "dados_vida": "10d8+30",
+    "porte": "Large",
+    "tipo": "Undead",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 12,
+      "destreza": 6,
+      "constituicao": 16,
+      "inteligencia": 3,
+      "sabedoria": 6,
+      "carisma": 4
+    },
+    "modificadores": {
+      "forca": 1,
+      "destreza": -2,
+      "constituicao": 3,
+      "inteligencia": -4,
+      "sabedoria": -2,
+      "carisma": -3
+    },
+    "deslocamentos": {
+      "andar": 20
+    },
+    "pericias": null,
+    "salvaguardas": null,
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [
+      "compreende idiomas que sabia vivo, não fala"
+    ],
+    "resistencias": null,
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "fatigue",
+      "poisoned"
+    ],
+    "vulnerabilidades": [
+      "bludgeoning"
+    ]
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Area Vulnerability",
+        "descricao_funcional": "Toma dano dobrado de efeitos em área",
+        "gatilho": null,
+        "bonus_acerto": null,
+        "alcance_ft": null,
+        "alvo": null,
+        "dano_medio": null,
+        "dados_dano": null,
+        "modificador_dano": null,
+        "tipo_dano": null,
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      },
+      {
+        "nome": "Horde",
+        "descricao_funcional": "Cinco ou mais zumbis; ignora efeitos não danosos de ataques e magias de alvo único; compartilha espaço",
+        "gatilho": null,
+        "bonus_acerto": null,
+        "alcance_ft": null,
+        "alvo": null,
+        "dano_medio": null,
+        "dados_dano": null,
+        "modificador_dano": null,
+        "tipo_dano": null,
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      },
+      {
+        "nome": "Sickening Dispersal",
+        "descricao_funcional": "Ao cair a zero PV, deixa 1d4 gorger zombies com 7 PV cada; resultado 1d4 seleciona blood maggots ou corpse flies",
+        "gatilho": "redução a zero PV",
+        "bonus_acerto": null,
+        "alcance_ft": null,
+        "alvo": null,
+        "dano_medio": null,
+        "dados_dano": null,
+        "modificador_dano": null,
+        "tipo_dano": null,
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      },
+      {
+        "nome": "Undead Nature",
+        "descricao_funcional": "Não necessita ar, comida ou sono",
+        "gatilho": null,
+        "bonus_acerto": null,
+        "alcance_ft": null,
+        "alvo": null,
+        "dano_medio": null,
+        "dados_dano": null,
+        "modificador_dano": null,
+        "tipo_dano": null,
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": null,
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Infested Slam",
+        "descricao_funcional": "No acerto crítico pode substituir dano extra por gerar blood maggots 1/dia",
+        "gatilho": null,
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano_medio": 20,
+        "dados_dano": "5d6",
+        "modificador_dano": 5,
+        "tipo_dano": "bludgeoning",
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": "1/dia opção de crítico",
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Infested Slam",
+        "descricao_funcional": "No acerto crítico pode substituir dano extra por gerar blood maggots 1/dia",
+        "gatilho": null,
+        "bonus_acerto": 3,
+        "alcance_ft": 5,
+        "alvo": "um alvo",
+        "dano_medio": 20,
+        "dados_dano": "5d6",
+        "modificador_dano": 5,
+        "tipo_dano": "bludgeoning",
+        "teste_resistencia": null,
+        "efeito_falha": null,
+        "efeito_sucesso": null,
+        "condicoes_aplicadas": [],
+        "duracao": null,
+        "frequencia": "1/dia opção de crítico",
+        "recarga": null,
+        "custo": null,
+        "limite": null,
+        "verificado_integralmente_na_fonte": true
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Index de monstros indica Gate Pass Gazette, mas campo Source da ficha pode citar Monstrous Menagerie: divergência editorial de atribuição.",
+    "Página editorial consultada indica Source Gate Pass Gazette; levantamento anterior citava Monstrous Menagerie: preservar divergência histórica.",
+    "Regras de criaturas geradas dependem de outras fichas A5E não revisadas nesta rodada."
+  ],
+  "campos_nao_confirmados": [
+    "estatisticas.nd_catalogo",
+    "estatisticas.alinhamento",
+    "estatisticas.pericias",
+    "estatisticas.salvaguardas",
+    "estatisticas.resistencias",
+    "Página editorial consultada indica Source Gate Pass Gazette; levantamento anterior citava Monstrous Menagerie: preservar divergência histórica.",
+    "Regras de criaturas geradas dependem de outras fichas A5E não revisadas nesta rodada."
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/2522",
+      "tipo": "ficha individual no portal editorial A5E, consultada diretamente em 2026-10-13",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": false
+  },
+  "checkpoint_anterior": {
+    "id": "TF-500",
+    "nome": "Gorger Zombie Horde",
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 8,
+    "pv": 75,
+    "atributos": {
+      "forca": 12,
+      "destreza": 6,
+      "constituicao": 16,
+      "inteligencia": 3,
+      "sabedoria": 6,
+      "carisma": 4
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Horda de zumbis; vulnerável a dano de área, dispersa-se em unidades ao morrer."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Infested Slam e Sickening Dispersal cria zumbis/insetos."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/2522",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Index de monstros indica Gate Pass Gazette, mas campo Source da ficha pode citar Monstrous Menagerie: divergência editorial de atribuição.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  }
+}

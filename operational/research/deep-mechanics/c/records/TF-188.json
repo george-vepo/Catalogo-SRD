@@ -1,0 +1,310 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-188",
+  "nome": "Behtu",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 63,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (revisão ©2023)",
+    "edicao": "Tome of Beasts 1 revisão 2023",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/behtu-3pp/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "2",
+    "nd_fonte": "2",
+    "ca": 14,
+    "pv": 52,
+    "dados_vida": "8d6+24",
+    "porte": "Small",
+    "tipo": "humanoid",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "FOR": 17,
+      "DES": 16,
+      "CON": 16,
+      "INT": 12,
+      "SAB": 11,
+      "CAR": 7
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 3,
+      "CON": 3,
+      "INT": 1,
+      "SAB": 0,
+      "CAR": -2
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20
+    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 5
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "Behtu",
+      "Common",
+      "Infernal"
+    ],
+    "resistencias": [
+      "cold",
+      "fire",
+      "lightning"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 450,
+    "bonus_proficiencia": 2,
+    "ca_origem": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Bite",
+          "Spear"
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Spear",
+        "tipo": "melee/ranged weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "distancia_curta_ft": 20,
+        "distancia_longa_ft": 60,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ],
+        "duas_maos_melee": {
+          "dados": "1d8+3",
+          "media": 7,
+          "tipo": "piercing"
+        }
+      },
+      {
+        "nome": "Fire Breath",
+        "recarga": "6",
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 15
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 13
+        },
+        "falha": {
+          "dados": "6d6",
+          "media": 21,
+          "tipo": "fire"
+        },
+        "sucesso": "metade"
+      },
+      {
+        "nome": "Ichorous Infusion",
+        "recurso": "1d4+1 doses carregadas tipicamente",
+        "alvo_behtu": {
+          "duracao": "1 minuto",
+          "beneficios": [
+            "advantage checks e saves STR/CON",
+            "velocidade andar e escalar dobradas"
+          ],
+          "custos": "disadvantage checks e saves INT/WIS"
+        },
+        "alvo_nao_behtu": {
+          "teste": {
+            "atributo": "CON",
+            "cd": 14
+          },
+          "falha": {
+            "dano": {
+              "dados": "3d6",
+              "media": 10,
+              "tipo": "poison"
+            },
+            "estado": "poisoned por 1 minuto"
+          },
+          "sucesso": "metade e não poisoned"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Spear",
+        "tipo": "melee/ranged weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "distancia_curta_ft": 20,
+        "distancia_longa_ft": 60,
+        "dano": [
+          {
+            "dados": "1d6+3",
+            "media": 6,
+            "tipo": "piercing"
+          }
+        ],
+        "duas_maos_melee": {
+          "dados": "1d8+3",
+          "media": 7,
+          "tipo": "piercing"
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Bite",
+        "Spear"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Ichorous Infusion é recurso finito 1d4+1, não uso ilimitado; efeitos distintos entre behtu e não behtu.",
+    "Não misturar edição ToB1 2023 com bloco anterior; imagem e direitos por aprovar."
+  ],
+  "campos_nao_confirmados": [
+    "verificação de edição/erratas/uso legal",
+    "identidade e licença da imagem, revisão independente"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/behtu-3pp",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/behtu-3pp/",
+      "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-188",
+    "nome": "Behtu",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (revisão ©2023)",
+    "nd_catalogo": "2",
+    "nd_fonte": "2",
+    "ca": 14,
+    "pv": 52,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Resistência a frio/fogo/eletricidade; infusão de ichor altera testes e mobilidade temporariamente"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Bite, Spear, Fire Breath (recarga 6), Ichorous Infusion."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/behtu-3pp",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Não tratar infusão carregada como suprimento ilimitado.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-188.webp",
+    "formato": "webp",
+    "largura": 542,
+    "altura": 800,
+    "bytes": 64192,
+    "blob_sha": "67e075b2804b0c806a71bbd972ab0142b62d0cb4",
+    "sha256": "38d959ece7e7623eab45741aba7bdec08c47fea3dc54480a2c91b4f0d086be84",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Behtu.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 43,
+    "publicacao": "Tome of Beasts 1 revisão 2023",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/behtu-3pp/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

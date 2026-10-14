@@ -1,0 +1,430 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-132",
+  "nome": "Ogre, Rockchewer",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 12,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": null,
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ogre-rockchewer/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 14,
+    "pv": 126,
+    "dados_vida": "12d12+48",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "lawful neutral",
+    "atributos": {
+      "FOR": 21,
+      "DES": 7,
+      "CON": 18,
+      "INT": 6,
+      "SAB": 9,
+      "CAR": 7
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": -2,
+      "CON": 4,
+      "INT": -2,
+      "SAB": -1,
+      "CAR": -2
+    },
+    "deslocamentos": {
+      "andar_ft": 40
+    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 10
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [
+      "Giant"
+    ],
+    "resistencias": [
+      "bludgeoning from nonmagical attacks"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "bonus_proficiencia": 3,
+    "xp": 1800,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Stone Chomper",
+        "pre_condicao": "Bite acerta objeto ou estrutura feita de pedra",
+        "efeito": "dobra dano de Bite contra objetos e estruturas de pedra"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencias": [
+          [
+            {
+              "acao": "Slam",
+              "quantidade": 2
+            }
+          ],
+          [
+            {
+              "acao": "Bite",
+              "quantidade": 1
+            },
+            {
+              "acao": "Slam",
+              "quantidade": 1
+            }
+          ]
+        ],
+        "restricao": "nenhuma outra combinação é descrita"
+      },
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+5",
+            "media": 15,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "distancia_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_apos_acerto": {
+          "pre_condicao": "alvo é criatura",
+          "teste": {
+            "atributo": "STR",
+            "cd": 15
+          },
+          "falha": {
+            "condicao": "prone"
+          }
+        }
+      },
+      {
+        "nome": "Chew Rock",
+        "tipo": "ação",
+        "efeito": "tritura uma pedra, deixando-a como cascalho",
+        "estado": {
+          "nome": "rock_crushed",
+          "duracao": "Gravel Spray pode ser usado se Chew Rock ocorreu há menos de 1 minuto"
+        },
+        "alerta": "não consome necessariamente a única pedra triturada em cada uso de Gravel Spray: fonte só vincula tempo, sem esclarecer quantas pulverizações"
+      },
+      {
+        "nome": "Gravel Spray",
+        "tipo": "ação em área",
+        "pre_condicao": "usou Chew Rock nos últimos 60 segundos",
+        "area": {
+          "tipo": "cone",
+          "comprimento_ft": 15
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        },
+        "sucesso": {
+          "dano": "metade de 6d6"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+5",
+            "media": 15,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "distancia_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_apos_acerto": {
+          "pre_condicao": "alvo é criatura",
+          "teste": {
+            "atributo": "STR",
+            "cd": 15
+          },
+          "falha": {
+            "condicao": "prone"
+          }
+        }
+      }
+    ],
+    "multiataque": {
+      "opcoes": [
+        [
+          "Slam",
+          "Slam"
+        ],
+        [
+          "Bite",
+          "Slam"
+        ]
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Quick Chew",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            6
+          ]
+        },
+        "efeito": "executa Chew Rock como ação bônus"
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Rock Catching",
+        "gatilho": "rocha ou objeto semelhante arremessado atinge a criatura",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 10
+        },
+        "sucesso": "apanha projétil e evita dano bludgeoning",
+        "falha": "recebe dano normalmente"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTE",
+      "reacoes": "PRESENTE",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_NA_FONTE",
+      "conjuracao": "AUSENCIA_NA_FONTE"
+    }
+  },
+  "pendencias": [
+    "Gravel Spray exige Chew Rock durante último minuto; Quick Chew recarrega em 6 e executa Chew Rock em bônus; não é recarga de Gravel Spray.",
+    "O bloco não explicita consumo de carga triturada a cada Gravel Spray; não inventar estado de munição.",
+    "Imagem física existente sem aprovação visual e errata Tome of Beasts 3 ainda não conferida."
+  ],
+  "campos_nao_confirmados": [
+    "consumo de cascalho não declarado",
+    "revisão errata original",
+    "validação visual"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ogre-rockchewer/",
+      "tipo": "bloco de criatura Kobold Press republicado no 5eSRD",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-132",
+    "nome": "Ogre, Rockchewer",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "5",
+    "nd_fonte": "5",
+    "ca": 14,
+    "pv": 126,
+    "pv_dados": "12d12+48",
+    "porte": "Huge",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      21,
+      7,
+      18,
+      6,
+      9,
+      7
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [
+      {
+        "nome": "Stone Chomper",
+        "resumo": "Bite dobra dano contra objetos e estruturas de pedra."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Dois Slam, ou Bite e Slam."
+      },
+      {
+        "nome": "Bite",
+        "resumo": "+8, 3d8+5 contundente."
+      },
+      {
+        "nome": "Slam",
+        "resumo": "+8, 3d6+5 contundente."
+      },
+      {
+        "nome": "Rock",
+        "resumo": "+8, 60/240, 3d10+5 contundente e FOR CD15 contra queda."
+      },
+      {
+        "nome": "Chew Rock",
+        "resumo": "Prepara detritos de rocha para usar Gravel Spray."
+      },
+      {
+        "nome": "Gravel Spray",
+        "resumo": "Cone de 15 pés após Chew Rock na última minuto; DES CD15, 6d6 contundente ou metade."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ogre-rockchewer/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Gravel Spray depende de Chew Rock prévio, não é ação livre independente.",
+      "A fonte mostra 'recarregar 6' para Quick Chew; evitar aplicar recarga indevida a Gravel Spray.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "lawful neutral",
+    "acoes_bonus": [
+      {
+        "nome": "Quick Chew",
+        "resumo": "Recarga 6, usa Chew Rock"
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Rock Catching",
+        "resumo": "DES CD10 para capturar pedra arremessada e evitar dano"
+      }
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-132.webp",
+    "formato": "webp",
+    "largura": 1200,
+    "altura": 1198,
+    "bytes": 97704,
+    "blob_sha": "5bddae30afafc7dd015a93fd42aa3ee0b4a09c81",
+    "sha256": "fac2e992817970c16203f120c19794429834e1bffe06d4852e09fa195bfa20d2",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Rockchewer%20Ogre.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "D&D 5e",
+    "data": "2026-10-14",
+    "fonte_republicada": "https://www.5esrd.com/database/creature/ogre-rockchewer/",
+    "revisao_editorial_do_livro_e_errata": "PENDENTE"
+  }
+}

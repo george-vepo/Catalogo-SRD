@@ -1,0 +1,352 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-142",
+  "nome": "Giant, Firestorm",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 22,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "7",
+    "nd_fonte": "7",
+    "ca": 14,
+    "pv": 149,
+    "dados_vida": "13d12+65",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 23,
+      "DES": 15,
+      "CON": 20,
+      "INT": 12,
+      "SAB": 16,
+      "CAR": 9
+    },
+    "modificadores": {
+      "FOR": 6,
+      "DES": 2,
+      "CON": 5,
+      "INT": 1,
+      "SAB": 3,
+      "CAR": -1
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 6
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 5
+      },
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "cold",
+      "fire"
+    ],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 2900,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "hide armor"
+  },
+  "mecanicas": {
+    "tracos": [],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "quantidade": 2,
+        "alternativas": [
+          "Obsidian Axe",
+          "Firestorm Bolt"
+        ],
+        "nota": "A frase 'makes two Obsidian Axe or Firestorm Bolt attacks' não especifica claramente se ambas devem ser do mesmo tipo; não presumir mistura."
+      },
+      {
+        "nome": "Obsidian Axe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "cold"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "Firestorm Bolt",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 120,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+3",
+            "media": 13,
+            "tipo": "fire"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "cold"
+          }
+        ]
+      },
+      {
+        "nome": "Lava Geyser",
+        "recarga": "5-6",
+        "alvo": "ponto no solo visível em até 60 ft",
+        "area": {
+          "formato": "cylinder",
+          "raio_ft": 10,
+          "altura_ft": 40
+        },
+        "terreno": {
+          "tipo": "difficult terrain",
+          "duracao": "1 minute"
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "falha": {
+          "dano": {
+            "dados": "7d6",
+            "media": 24,
+            "tipo": "fire"
+          },
+          "condicao": "coated in hardened lava, speed pela metade até remover"
+        },
+        "sucesso": {
+          "dano": "metade de 7d6 fire",
+          "condicao": "não recebe hardened lava"
+        },
+        "remover_lava": "Uma criatura, inclusive a coberta, gasta sua ação para quebrar e remover a lava"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Obsidian Axe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "cold"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "Firestorm Bolt",
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 120,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+3",
+            "media": 13,
+            "tipo": "fire"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "cold"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "quantidade": 2,
+      "opcoes": [
+        "Obsidian Axe",
+        "Firestorm Bolt"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "5eSRD exibe Lava Geyser truncado após coated; regra de sucesso/metade, velocidade reduzida e remoção por ação confrontada com reprodução do Tome of Beasts 3 (p.202), exige confirmação de licença/edição original antes de aprovar.",
+    "Não confundir Giant, Firestorm no catálogo com variação homônima nem converter seu Firestorm Bolt (ranged spell attack) para weapon attack.",
+    "Arte física requer validação visual editorial."
+  ],
+  "campos_nao_confirmados": [
+    "confronto com edição/erratas/condições de licença originais",
+    "validação visual e direito de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/firestorm-giant/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/firestorm-giant/",
+      "tipo": "fonte individual detalhada checkpoint 34",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/tkzwp/dofg/basic/201-250",
+      "tipo": "reprodução de livro para trecho truncado da Lava Geyser; requer verificação editorial/licença",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-142",
+    "nome": "Giant, Firestorm",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "7",
+    "nd_fonte": "7",
+    "ca": 14,
+    "pv": 149,
+    "pv_dados": "13d12+65",
+    "porte": "Huge",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      23,
+      15,
+      20,
+      12,
+      16,
+      9
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Dois Obsidian Axe ou Firestorm Bolt."
+      },
+      {
+        "nome": "Obsidian Axe",
+        "resumo": "+9, alcance 10 pés, 3d8+6 cortante, 1d6 frio e 1d6 fogo."
+      },
+      {
+        "nome": "Firestorm Bolt",
+        "resumo": "+6, 120 pés, 3d6+3 fogo e 3d6 frio."
+      },
+      {
+        "nome": "Lava Geyser",
+        "resumo": "Recarga 5–6, coluna 10 pés de raio e 40 de altura; DES CD16 contra 7d6 fogo e cobertura por lava endurecida."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/firestorm-giant/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "A fonte chama a criatura Firestorm Giant, enquanto o catálogo ordena Giant, Firestorm; mesma identidade pelo índice Kobold Press.",
+      "Detalhes de efeitos prolongados da lava requerem verificação no trecho integral da ação antes de implementação.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "neutral",
+    "imunidades_dano": [
+      "cold",
+      "fire"
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-142.webp",
+    "formato": "webp",
+    "largura": 1000,
+    "altura": 1247,
+    "bytes": 179390,
+    "blob_sha": "e87c4a3136d6136261d52195f11d5989a6521f41",
+    "sha256": "06e75ac3041253712654597244426da658ec3743e39a79bb0cb97db85e6f2a1f",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Firestorm%20Giant.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 34,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/firestorm-giant/",
+    "publicacao": "Tome of Beasts 3",
+    "aprovacao_editorial": "PENDENTE",
+    "nota": "Ação de Lava Geyser reconstruída com livro reproduzido, sem reproduzir texto editorial protegido. Fonte adicional AnyFlip p.202."
+  }
+}

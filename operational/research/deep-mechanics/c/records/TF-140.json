@@ -1,0 +1,362 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-140",
+  "nome": "Giant, Cave",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 20,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "10",
+    "nd_fonte": "10",
+    "ca": 16,
+    "pv": 200,
+    "dados_vida": "16d12+96",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "FOR": 27,
+      "DES": 10,
+      "CON": 22,
+      "INT": 8,
+      "SAB": 13,
+      "CAR": 6
+    },
+    "modificadores": {
+      "FOR": 8,
+      "DES": 0,
+      "CON": 6,
+      "INT": -1,
+      "SAB": 1,
+      "CAR": -2
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 12
+      },
+      {
+        "nome": "Perception",
+        "bonus": 5
+      },
+      {
+        "nome": "Survival",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 4
+      },
+      {
+        "nome": "CON",
+        "bonus": 10
+      },
+      {
+        "nome": "WIS",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 5900,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Sunlight Petrification",
+        "gatilho": "Inicia turno em sunlight",
+        "efeito": "20 radiant damage",
+        "enquanto_luz_solar": [
+          "speed reduzida pela metade",
+          "desvantagem em attack rolls e ability checks"
+        ],
+        "ao_chegar_0_hp": "petrified somente se estiver em sunlight"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Handaxe",
+            "quantidade": 2
+          },
+          {
+            "acao": "Tusks",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Handaxe",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "melee": 10,
+          "arremesso_normal": 20,
+          "arremesso_longo": 60
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+8",
+            "media": 18,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Tusks",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+8",
+            "media": 22,
+            "tipo": "slashing"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "Large ou menor",
+          "atributo": "STR",
+          "cd": 20,
+          "em_falha": "prone"
+        }
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d10+8",
+            "media": 30,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Handaxe",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "melee": 10,
+          "arremesso_normal": 20,
+          "arremesso_longo": 60
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+8",
+            "media": 18,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Tusks",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+8",
+            "media": 22,
+            "tipo": "slashing"
+          }
+        ],
+        "teste_adicional": {
+          "alvo": "Large ou menor",
+          "atributo": "STR",
+          "cd": 20,
+          "em_falha": "prone"
+        }
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d10+8",
+            "media": 30,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        "Handaxe",
+        "Handaxe",
+        "Tusks"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "O homônimo /giant-cave-3/ de Tome of Horrors CR6 é criatura diferente.",
+    "Não misturar com Cave Giant Shaman; requer revisão original Creature Codex e imagem visual/autoria."
+  ],
+  "campos_nao_confirmados": [
+    "confronto com edição/erratas/condições de licença originais",
+    "validação visual e direito de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-cave/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-cave/",
+      "tipo": "fonte individual detalhada checkpoint 34",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-140",
+    "nome": "Giant, Cave",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "10",
+    "nd_fonte": "10",
+    "ca": 16,
+    "pv": 200,
+    "pv_dados": "16d12+96",
+    "porte": "Huge",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      27,
+      10,
+      22,
+      8,
+      13,
+      6
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [
+      {
+        "nome": "Sunlight Petrification",
+        "resumo": "No início do turno sob luz solar sofre 20 radiante, lentidão e desvantagem; chegar a 0 PV sob sol o petrifica."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Duas Handaxe e uma Tusks."
+      },
+      {
+        "nome": "Handaxe",
+        "resumo": "+12, alcance 10 pés ou 20/60, 3d6+8 cortante."
+      },
+      {
+        "nome": "Tusks",
+        "resumo": "+12, alcance 10 pés, 4d6+8 cortante, FOR CD20 contra queda."
+      },
+      {
+        "nome": "Rock",
+        "resumo": "+12, 60/240, 4d10+8 contundente."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/giant-cave/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Homônimo /giant-cave-3/ pertence a Tome of Horrors, ND6 e CA14/PV137, portanto descartado.",
+      "Cave Giant Shaman do Tome of Beasts 2 é outra ficha, não variante automática.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "chaotic evil",
+    "variante_descartada": "https://www.5esrd.com/database/creature/giant-cave-3/"
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-140.jpg",
+    "formato": "jpg",
+    "largura": 648,
+    "altura": 700,
+    "bytes": 67041,
+    "blob_sha": "26acc5e718008f41b2c7906e347d83f5d230dfae",
+    "sha256": "d3d6c7020616dfeca6d47dba7d5c3c5ff3806fda0015e28dd6c38aea01b96b2c",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/cavegiant.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 34,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/giant-cave/",
+    "publicacao": "Creature Codex",
+    "aprovacao_editorial": "PENDENTE",
+    "nota": "Fonte 5eSRD copyright Creature Codex; traço Sunlight Petrification não é petrificação ao mero entrar no sol."
+  }
+}

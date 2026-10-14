@@ -1,0 +1,333 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-517",
+  "nome": "Imp Flock",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 36,
+  "estado_auditoria": "BLOQUEADA_USOS_SHATTER_NAO_INFORMADOS",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "To Save A Kingdom",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/3394"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "5",
+    "ca": 19,
+    "pv": 49,
+    "dados_vida": "14d4+14",
+    "porte": "Large",
+    "tipo": "Fiend",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 6,
+      "destreza": 17,
+      "constituicao": 13,
+      "inteligencia": 11,
+      "sabedoria": 12,
+      "carisma": 14
+    },
+    "modificadores": {
+      "forca": -2,
+      "destreza": 3,
+      "constituicao": 1,
+      "inteligencia": 0,
+      "sabedoria": 1,
+      "carisma": 2
+    },
+    "deslocamentos": {
+      "andar_ft": 20,
+      "voo_ft": 40
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 4
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 6,
+        "dado_extra": "1d4"
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 6
+      },
+      {
+        "nome": "CON",
+        "bonus": 4
+      },
+      {
+        "nome": "WIS",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Common",
+      "Infernal"
+    ],
+    "resistencias": [
+      "cold",
+      "bludgeoning",
+      "piercing",
+      "slashing"
+    ],
+    "imunidades_dano": [
+      "fire",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "prone",
+      "restrained",
+      "stunned"
+    ],
+    "vulnerabilidades": null,
+    "xp": null,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "natural armor",
+    "bloodied": 24,
+    "porte_quando_bloodied": "Medium",
+    "maneuver_dc": 14
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Chaos of Combat",
+        "alvos": "criaturas entrando no espaço da swarm concentrando magia ou conjurando lá",
+        "gatilho": "entrada enquanto concentra OU conjuração no espaço",
+        "teste": {
+          "atributo": "CON",
+          "cd_formula": "5 + nível da magia"
+        },
+        "falha": "magia se perde",
+        "nota": "frase descritiva refere adjacency, mas gatilhos explícitos exigem espaço; fonte tem typo apce"
+      },
+      {
+        "nome": "Devil's Sight",
+        "efeito": "magical darkness não impede darkvision"
+      },
+      {
+        "nome": "Evil",
+        "efeito": "emite aura Evil segundo A5E"
+      },
+      {
+        "nome": "Innate Spellcasting",
+        "atributo": "CHA",
+        "cd_magia": 12,
+        "magias": [
+          {
+            "nome": "shatter",
+            "atributo_conjuracao": "CHA",
+            "cd_magia": 12,
+            "componentes_materiais": false,
+            "frequencia": null,
+            "nota": "Innate Spellcasting não define usos por dia ou descanso"
+          }
+        ]
+      },
+      {
+        "nome": "Swarm",
+        "efeito": "ocupa espaço alheio e aberturas Tiny; não recupera PV ou PV temporários",
+        "efeito_bloodied": "porte reduz de Large para Medium"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Hellswarm",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+3",
+            "media": 8,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ],
+        "efeito_acerto": {
+          "teste": {
+            "atributo": "CON",
+            "cd": 12
+          },
+          "falha": {
+            "dano": {
+              "dados": "3d6",
+              "media": 10,
+              "tipo": "poison"
+            }
+          },
+          "sucesso": "metade do dano de veneno"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Hellswarm",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+3",
+            "media": 8,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ],
+        "efeito_acerto": {
+          "teste": {
+            "atributo": "CON",
+            "cd": 12
+          },
+          "falha": {
+            "dano": {
+              "dados": "3d6",
+              "media": 10,
+              "tipo": "poison"
+            }
+          },
+          "sucesso": "metade do dano de veneno"
+        }
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [
+      {
+        "atributo": "CHA",
+        "cd_magia": 12,
+        "lista": [
+          {
+            "nome": "shatter",
+            "atributo_conjuracao": "CHA",
+            "cd_magia": 12,
+            "componentes_materiais": false,
+            "frequencia": null,
+            "nota": "Innate Spellcasting não define usos por dia ou descanso"
+          }
+        ]
+      }
+    ],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_NA_FONTE",
+      "reacoes": "AUSENCIA_NA_FONTE",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_NA_FONTE",
+      "conjuracao": "PRESENTE"
+    }
+  },
+  "pendencias": [
+    "Shatter consta de Innate Spellcasting, mas sem número de usos ou frequência.",
+    "Chaos of Combat tem redação inconsistente entre adjacent e ativação no espaço da swarm.",
+    "Imagem física ausente."
+  ],
+  "campos_nao_confirmados": [
+    "limite de uso de shatter não declarado",
+    "alcance efetivo de Chaos of Combat",
+    "imagem binária"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/3394",
+      "tipo": "bloco oficial A5E individual conferido em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint prévio",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-517",
+    "nome": "Imp Flock",
+    "editora": "EN Publishing",
+    "publicacao": "To Save A Kingdom",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "5",
+    "ca": 19,
+    "pv": 49,
+    "atributos": {
+      "forca": 6,
+      "destreza": 17,
+      "constituicao": 13,
+      "inteligencia": 11,
+      "sabedoria": 12,
+      "carisma": 14
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Bando de diabretes; deslocamento em enxame, visão em escuridão mágica e Chaos of Combat interferindo em magias."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Hellswarm inflige dano por fogo e veneno."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/3394",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "livro_e_errata": "PENDENTE"
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-130",
+  "nome": "Giant, Thursir Hearth Priestess",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 10,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": null,
+    "fonte_identidade": "https://www.5esrd.com/database/creature/thursir-hearth-priestess/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 14,
+    "pv": 85,
+    "dados_vida": "10d10+30",
+    "porte": "Large",
+    "tipo": "giant",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 17,
+      "DES": 14,
+      "CON": 17,
+      "INT": 11,
+      "SAB": 16,
+      "CAR": 14
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 2,
+      "CON": 3,
+      "INT": 0,
+      "SAB": 3,
+      "CAR": 2
+    },
+    "deslocamentos": {
+      "andar_ft": 40
+    },
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 4
+      },
+      {
+        "nome": "Persuasion",
+        "bonus": 4
+      },
+      {
+        "nome": "Religion",
+        "bonus": 4
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "WIS",
+        "bonus": 5
+      },
+      {
+        "nome": "CHA",
+        "bonus": 4
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 13,
+    "idiomas": [
+      "Common",
+      "Dwarven",
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "bonus_proficiencia": 2,
+    "xp": 1100,
+    "composicao_ca": "hide armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Magic Resistance",
+        "efeito": "vantagem em saves contra spells e magical effects"
+      },
+      {
+        "nome": "Magic Weapons",
+        "efeito": "weapon attacks são mágicos"
+      },
+      {
+        "nome": "Protect the Hearth",
+        "gatilho": "Priestess sofre acerto por weapon attack",
+        "efeito": "até 2 criaturas aliadas em 60 ft que a veem podem gastar suas reações para mover até speed em direção à Priestess",
+        "limite": 2,
+        "alcance_ft": 60,
+        "economia": "reação DOS ALIADOS, não da Priestess"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Hearth Blessing",
+            "quantidade": 1
+          },
+          {
+            "acao": "Runic Staff",
+            "quantidade": 2
+          }
+        ],
+        "ordem": "primeiro bênção, depois ataques"
+      },
+      {
+        "nome": "Runic Staff",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "Hearth Blessing",
+        "tipo": "ação com três opções",
+        "alcance_ft": 30,
+        "pre_condicao": "aliado que a Priestess consegue ver",
+        "duracao": "até início do próximo turno da Priestess",
+        "opcoes": [
+          {
+            "nome": "Hearth's Burn",
+            "efeito": "arma do aliado se incendeia; a cada acerto com a arma, inflige +1d6 fire",
+            "dano_extra": {
+              "dados": "1d6",
+              "media": 3,
+              "tipo": "fire"
+            }
+          },
+          {
+            "nome": "Hearth's Comfort",
+            "efeitos": [
+              "termina charmed ou frightened imediatamente, se presente",
+              "ganha PV temporários"
+            ],
+            "pv_temporarios": {
+              "dados": "1d10",
+              "media": 5
+            }
+          },
+          {
+            "nome": "Hearth's Protection",
+            "efeitos": [
+              "CA do aliado +2",
+              "armadura imune a spells/effects que a afetam, por exemplo heat metal e rust monster antennae"
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Spellcasting",
+        "efeito": "lança uma magia da lista preparada",
+        "referencia": "Spellcasting trait"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Runic Staff",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "fire"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        "Hearth Blessing",
+        "Runic Staff",
+        "Runic Staff"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "atributo": "WIS",
+        "cd_salvaguarda": 13,
+        "componentes": "não especificados na ficha; regras da magia aplicáveis",
+        "listas": {
+          "at_will": [
+            "mending",
+            "spare the dying",
+            "thaumaturgy"
+          ],
+          "tres_por_dia_cada": [
+            "cure wounds",
+            "heat metal"
+          ],
+          "um_por_dia": [
+            "haste"
+          ]
+        }
+      }
+    ],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_NA_FONTE",
+      "reacoes": "NAO_GASTA_REACAO_PROPRIA; Protect the Hearth requer reações de aliados",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_NA_FONTE",
+      "conjuracao": "PRESENTE"
+    }
+  },
+  "pendencias": [
+    "Hearth Blessing tem três modos distintos da mesma ação, e Multiattack usa Blessing antes de Runic Staff duas vezes; Protect the Hearth gasta reação dos aliados.",
+    "A fonte da magia Spellcasting informa at will / 3/day / 1/day, mas não especifica componentes por linha, que dependem de magias.",
+    "Imagem física existente ainda sem aprovação visual; livro Tome of Beasts 3/errata pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "revisão editorial de edição e componentes específicos da magia",
+    "aprovação visual de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/thursir-hearth-priestess/",
+      "tipo": "bloco de criatura Kobold Press republicado no 5eSRD",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-130",
+    "nome": "Giant, Thursir Hearth Priestess",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 14,
+    "pv": 85,
+    "pv_dados": "10d10+30",
+    "porte": "Large",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      17,
+      14,
+      17,
+      11,
+      16,
+      14
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [
+      {
+        "nome": "Magic Resistance",
+        "resumo": "Vantagem contra magia."
+      },
+      {
+        "nome": "Magic Weapons",
+        "resumo": "Ataques com arma são mágicos."
+      },
+      {
+        "nome": "Protect the Hearth",
+        "resumo": "Aliados a até 60 pés podem reagir movimentando-se até a sacerdotisa quando ela é atingida por arma."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Usa Hearth Blessing e ataca duas vezes com Runic Staff."
+      },
+      {
+        "nome": "Runic Staff",
+        "resumo": "+5, alcance 10 pés, 2d6+3 contundente mais 1d8 fogo."
+      },
+      {
+        "nome": "Hearth Blessing",
+        "resumo": "Escolhe efeito temporário em aliado até 30 pés: +1d6 fogo, remove encanto/medo com PV temporários, ou +2 CA."
+      },
+      {
+        "nome": "Spellcasting",
+        "resumo": "SAB CD13, mending/spare the dying/thaumaturgy livres, cure wounds e heat metal 3/dia, haste 1/dia."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/thursir-hearth-priestess/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Três opções de Hearth Blessing são variantes da mesma ação, não três ações distintas.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "lawful evil"
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-130.webp",
+    "formato": "webp",
+    "largura": 1000,
+    "altura": 1591,
+    "bytes": 193826,
+    "blob_sha": "5edec259818af8c85dd97583cc41bc71ff39b8a7",
+    "sha256": "c2f4ca510feb3d988fb5d8b452ea2de2e0f696b402d37f3e1e76659afbb5ef4f",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Thursir%20Hearth%20Priestess.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "D&D 5e",
+    "data": "2026-10-14",
+    "fonte_republicada": "https://www.5esrd.com/database/creature/thursir-hearth-priestess/",
+    "revisao_editorial_do_livro_e_errata": "PENDENTE"
+  }
+}

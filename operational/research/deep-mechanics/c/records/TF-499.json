@@ -1,0 +1,335 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-499",
+  "nome": "Cloud of Ghasthoppers",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 24,
+  "estado_auditoria": "BLOQUEADA_CONTRADICAO_OU_LACUNA_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette #24",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/4002",
+    "fonte_edicao": "https://a5e.tools/node/3976"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "xp": null,
+    "bonus_proficiencia": 2,
+    "ca": 14,
+    "pv": 78,
+    "dados_vida": "12d8+24",
+    "bloodied": 39,
+    "porte": "Medium swarm of Tiny",
+    "tipo": "Undead",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 2,
+      "destreza": 16,
+      "constituicao": 14,
+      "inteligencia": 6,
+      "sabedoria": 14,
+      "carisma": 10
+    },
+    "modificadores": {
+      "forca": -4,
+      "destreza": 3,
+      "constituicao": 2,
+      "inteligencia": -2,
+      "sabedoria": 2,
+      "carisma": 0
+    },
+    "deslocamentos": {
+      "andar_ft": 10,
+      "voo_ft": 30
+    },
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": 4
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 30
+      }
+    ],
+    "percepcao_passiva": 10,
+    "idiomas": [],
+    "resistencias": [
+      "necrotic"
+    ],
+    "vulnerabilidades": [],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "exhaustion",
+      "poisoned"
+    ],
+    "xp_estado": "nao publicado no bloco A5E",
+    "maneuver_dc": 12
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Despair Aura",
+        "tipo": "aura",
+        "raio_ft": 10,
+        "alvos": "não undead",
+        "gatilho": "executa ação ou ação bônus dentro da aura",
+        "efeito": "não pode executar outra ação, ação bônus ou reação até início do próximo turno",
+        "teste_resistencia": {
+          "atributo": null,
+          "cd": null,
+          "gatilho": null
+        },
+        "efeito_sucesso": "imune à aura de qualquer ghasthopper por 24 horas",
+        "pendencia": "fonte omite inteiramente a definição da salvaguarda citada"
+      },
+      {
+        "nome": "Incorporeal Movement",
+        "efeito": "atravessa criaturas/objetos como terreno difícil",
+        "penalidade": {
+          "gatilho": "termina turno dentro de objeto",
+          "dano": {
+            "dados": "1d10",
+            "media": 5,
+            "tipo": "force"
+          }
+        }
+      },
+      {
+        "nome": "Smoky Signals",
+        "efeito": "invisível exceto enquanto voa, ataca ou se alimenta; então parece fumaça em forma de inseto"
+      },
+      {
+        "nome": "Swarm",
+        "efeito": "entra em espaço alheio e aberturas Tiny; não recupera PV; pode ganhar PV temporários com Drain Health"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Bleak Vibrations",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 0,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d4+2",
+            "media": 8,
+            "tipo": "thunder"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "psychic"
+          }
+        ],
+        "alternativa_bloodied": [
+          {
+            "dados": "1d4+2",
+            "media": 4,
+            "tipo": "thunder"
+          },
+          {
+            "valor": 1,
+            "tipo": "psychic"
+          }
+        ],
+        "conflito_fonte": "em linha de dano usa blooded e resto da ficha bloodied"
+      },
+      {
+        "nome": "Drain Health",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 0,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6",
+            "media": 9,
+            "tipo": "necrotic"
+          }
+        ],
+        "alternativa_bloodied": [
+          {
+            "dados": "1d6",
+            "media": null,
+            "tipo": "necrotic"
+          }
+        ],
+        "efeito": "ganha PV temporários iguais ao dano causado"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bleak Vibrations",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 0,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d4+2",
+            "media": 8,
+            "tipo": "thunder"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "psychic"
+          }
+        ],
+        "alternativa_bloodied": [
+          {
+            "dados": "1d4+2",
+            "media": 4,
+            "tipo": "thunder"
+          },
+          {
+            "valor": 1,
+            "tipo": "psychic"
+          }
+        ],
+        "conflito_fonte": "em linha de dano usa blooded e resto da ficha bloodied"
+      },
+      {
+        "nome": "Drain Health",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 0,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6",
+            "media": 9,
+            "tipo": "necrotic"
+          }
+        ],
+        "alternativa_bloodied": [
+          {
+            "dados": "1d6",
+            "media": null,
+            "tipo": "necrotic"
+          }
+        ],
+        "efeito": "ganha PV temporários iguais ao dano causado"
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "reacoes": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_VERIFICADA_NA_FONTE",
+      "conjuracao": "AUSENCIA_VERIFICADA_NA_FONTE"
+    }
+  },
+  "pendencias": [
+    "Número da publicação confirmado no índice editorial oficial: Gate Pass Gazette #24; a lacuna em Despair Aura continua sem resposta no bloco individual.",
+    "A fonte oficial de Despair Aura fala em successful saving throw mas não define CD, atributo nem quando o teste ocorre.",
+    "Texto de Behavior menciona Hungry Strike, que não integra lista de ações; não acrescentar por inferência.",
+    "Imagem binária ainda ausente."
+  ],
+  "campos_nao_confirmados": [
+    "atributo, CD e gatilho da salvaguarda de Despair Aura",
+    "confronto com livro/errata",
+    "imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/4002",
+      "tipo": "bloco oficial A5E conferido em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://a5e.tools/node/3976",
+      "tipo": "índice editorial oficial de Gate Pass Gazette #24, lista Cloud of Ghasthoppers na seção Nature's Reflections",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-499",
+    "nome": "Cloud of Ghasthoppers",
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 14,
+    "pv": 78,
+    "atributos": {
+      "forca": 2,
+      "destreza": 16,
+      "constituicao": 14,
+      "inteligencia": 6,
+      "sabedoria": 14,
+      "carisma": 10
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Nuvem espectral, passagem incorpórea e aura de desespero; invisibilidade condicional."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Bleak Vibrations e Drain Health, que concede PV temporários."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/4002",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisar trechos editoriais truncados do teste de resistência da Despair Aura.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "fonte": "https://a5e.tools/node/4002",
+    "livro_original_errata": "PENDENTE",
+    "edicao_confirmada": "Gate Pass Gazette #24",
+    "indice_issues": "https://a5e.tools/node/3976",
+    "sem_solucao_a_Despair_Aura": true
+  }
+}

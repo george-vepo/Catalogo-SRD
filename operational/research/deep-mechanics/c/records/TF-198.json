@@ -1,0 +1,287 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-198",
+  "nome": "Tosculi, Warrior",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 73,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (revisão ©2023)",
+    "edicao": "Tome of Beasts 1 revisão 2023, distinto de original CR2",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/tosculi-warrior-3pp/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "3",
+    "nd_fonte": "3",
+    "ca": 15,
+    "pv": 58,
+    "dados_vida": "9d6+27",
+    "porte": "Small",
+    "tipo": "humanoid (tosculi)",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 12,
+      "DES": 20,
+      "CON": 16,
+      "INT": 10,
+      "SAB": 12,
+      "CAR": 12
+    },
+    "modificadores": {
+      "FOR": 1,
+      "DES": 5,
+      "CON": 3,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": 1
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "voar": 60
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Tosculi"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "ca_origem": null,
+    "system": "D&D 5e"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Crowd Tactics",
+        "ocupacao": "espaço com até uma outra tosculi",
+        "beneficio": "advantage attack rolls se outra tosculi no mesmo espaço não está incapacitated"
+      },
+      {
+        "nome": "Hive Sense",
+        "proximidade": "detecta queen a até 300ft",
+        "hive": "sentido de direção e distância do hive da queen"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Claw",
+          "Stinger"
+        ]
+      },
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d4+5",
+            "media": 10,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Stinger",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d4+5",
+            "media": 10,
+            "tipo": "piercing"
+          }
+        ],
+        "on_hit": {
+          "teste": {
+            "atributo": "CON",
+            "cd": 13
+          },
+          "falha": {
+            "estados": [
+              "poisoned",
+              "paralyzed enquanto poisoned"
+            ],
+            "duracao": "1 minuto",
+            "retestes": "CON CD13 no final de cada turno, sucesso encerra ambos"
+          }
+        }
+      },
+      {
+        "nome": "Prepare Host",
+        "alvo": "criatura a até 5ft paralyzed por Stinger de QUALQUER tosculi",
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": {
+          "estado": "paralyzed por 8 horas sem novos saves",
+          "cessa": [
+            "receber dano enquanto abaixo de metade do HP máximo",
+            "spell ou efeito que cura disease"
+          ]
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d4+5",
+            "media": 10,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Stinger",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d4+5",
+            "media": 10,
+            "tipo": "piercing"
+          }
+        ],
+        "on_hit": {
+          "teste": {
+            "atributo": "CON",
+            "cd": 13
+          },
+          "falha": {
+            "estados": [
+              "poisoned",
+              "paralyzed enquanto poisoned"
+            ],
+            "duracao": "1 minuto",
+            "retestes": "CON CD13 no final de cada turno, sucesso encerra ambos"
+          }
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Claw",
+        "Stinger"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Tosculi Warrior do catálogo identifica explicitamente edição revisada 2023 CR3: Crowd Tactics/Hive Sense e Claw+Stinger; não mesclar original CR2.",
+    "Prepare Host só funciona em alvo já paralyzed por Stinger de tosculi e tem encerramento específico; livro/licença e imagem ainda pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "verificação editorial da origem/erratas/condições de licença",
+    "direito de imagem, identidade e revisão visual"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/tosculi-warrior-3pp/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/tosculi-warrior-3pp/",
+      "tipo": "pesquisa individual CP45, não equivalente a autorização de publicação",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_EDICOES_DIVERGENTES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-198",
+    "nome": "Tosculi, Warrior",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (revisão ©2023)",
+    "nd_catalogo": "3",
+    "nd_fonte": "3",
+    "ca": 15,
+    "pv": 58,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Crowd Tactics e Hive Sense, distintos de Skittering da edição original"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Multiattack em edição de 2023 com Claw e Stinger."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/tosculi-warrior-3pp/",
+    "fonte_secundaria": "https://www.dndgrove.com/bestiary/2/tosculi-warrior",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "PARCIAL_EDICOES_DIVERGENTES",
+    "pendencias": [
+      "Tome of Beasts original indexado como ND2 com três ataques; catálogo oficial revisado e arquivo local indicam ND3. Preservar revisão 2023 como referência e NÃO combinar duas edições.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-198.jpg",
+    "formato": "jpg",
+    "largura": 540,
+    "altura": 724,
+    "bytes": 50795,
+    "blob_sha": "46d5b55cc026aaadc093270edf6c5a4335ba01e8",
+    "sha256": "24bdeda966fea7fb2406aeaddc3c24a2d16ae1df9b038ac6448994f66137adf2",
+    "fonte": "https://www.worldanvil.com/w/midgard-joeshow97/a/tosculi-article",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 45,
+    "publicacao": "Tome of Beasts 1 revisão 2023, distinto de original CR2",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/tosculi-warrior-3pp/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

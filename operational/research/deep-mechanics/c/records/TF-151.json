@@ -1,0 +1,345 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-151",
+  "nome": "Titan, Degenerate",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 29,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 1 (2023)",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "8",
+    "nd_fonte": "8",
+    "ca": 12,
+    "pv": 161,
+    "dados_vida": "14d12+70",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "FOR": 21,
+      "DES": 6,
+      "CON": 20,
+      "INT": 6,
+      "SAB": 12,
+      "CAR": 7
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": -2,
+      "CON": 5,
+      "INT": -2,
+      "SAB": 1,
+      "CAR": -2
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Intimidation",
+        "bonus": 4
+      },
+      {
+        "nome": "Perception",
+        "bonus": 4
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 3900,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "armor scraps"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Magic Resistance",
+        "efeito": "vantagem saves contra spells e magic effects"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "pre_ataques": "Reality-Bending Shout opcional",
+        "opcoes": [
+          {
+            "acao": "Greatclub",
+            "quantidade": 3
+          },
+          {
+            "acao": "Rock",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "dano": [
+          {
+            "dados": "4d10+5",
+            "media": 27,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Reality-Bending Shout",
+        "alvo": "uma criatura que vê em até 30 ft",
+        "efeito": "tentar encerrar magical effect de level até 3 sobre alvo",
+        "regra": "como dispel magic exceto sempre faz ability check, +4",
+        "nao_e": "dispel automático"
+      },
+      {
+        "nome": "Earthstrike",
+        "recarga": "5-6",
+        "area": {
+          "formato": "line",
+          "comprimento_ft": 60,
+          "largura_ft": 10
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "falha": {
+          "dano": {
+            "dados": "10d6",
+            "media": 35,
+            "tipo": "force"
+          },
+          "movimento": "20 ft para longe do titã",
+          "condicao": "prone"
+        },
+        "sucesso": "metade de 10d6 force, sem empurrão/queda",
+        "colisao_solid_surface": "1d6 bludgeoning por cada 10 ft lançado",
+        "colisao_segundo_alvo": {
+          "teste": {
+            "atributo": "DEX",
+            "cd": 16
+          },
+          "falha": "mesmo dano da colisão e prone"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Greatclub",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Rock",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "dano": [
+          {
+            "dados": "4d10+5",
+            "media": 27,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "pre_ataques": "Reality-Bending Shout opcional",
+      "opcoes": [
+        {
+          "acao": "Greatclub",
+          "quantidade": 3
+        },
+        {
+          "acao": "Rock",
+          "quantidade": 2
+        }
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Fonte 2023 Tome of Beasts 1, não misturar com entrada original; Reality-Bending Shout exige teste mesmo para level 3 ou inferior.",
+    "Earthstrike: colisões com superfície/segundo alvo estruturadas separadamente; revisão editorial e imagem pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "revisão de livro/errata e permissões",
+    "aprovação visual de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/titan-degenerate-3pp/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/titan-degenerate-3pp/",
+      "tipo": "fonte individual consultada no checkpoint 36",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-151_TF-155/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-151",
+    "nome": "Titan, Degenerate",
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 1 (2023)",
+    "nd_catalogo": "8",
+    "nd_fonte": "8",
+    "ca": 12,
+    "pv": 161,
+    "pv_dados": "14d12+70",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "chaotic evil",
+    "atributos": [
+      21,
+      6,
+      20,
+      6,
+      12,
+      7
+    ],
+    "deslocamento_ft": {
+      "andar": 40
+    },
+    "pericias": {
+      "Intimidation": 4,
+      "Perception": 4
+    },
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "Giant"
+    ],
+    "tracos": [
+      {
+        "nome": "Magic Resistance",
+        "resumo": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Pode utilizar Reality-Bending Shout, então faz três ataques de greatclub ou dois de rock."
+      },
+      {
+        "nome": "Greatclub",
+        "resumo": "Ataque corpo a corpo +8, alcance 5 pés, 3d8+5 contundente."
+      },
+      {
+        "nome": "Rock",
+        "resumo": "Ataque à distância +8, 60/240 pés, 4d10+5 contundente."
+      },
+      {
+        "nome": "Reality-Bending Shout",
+        "resumo": "Escolhe um alvo visível a 30 pés e pode dissipar um efeito mágico de nível 3 ou inferior; requer teste de atributo +4, sem sucesso automático."
+      },
+      {
+        "nome": "Earthstrike (Recharge 5–6)",
+        "resumo": "Linha de 60 por 10 pés; Destreza CD16. Falha: 10d6 force, desloca 20 pés e derruba. Sucesso: metade sem deslocamento nem queda. Colisão com objeto/outra criatura tem efeitos adicionais descritos na fonte."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/titan-degenerate-3pp/",
+    "indice_oficial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir versão 2023 do Tome of Beasts 1; não misturar com edição anterior.",
+      "Revisão independente, direitos de regras e arte pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-151.webp",
+    "formato": "webp",
+    "largura": 558,
+    "altura": 800,
+    "bytes": 69446,
+    "blob_sha": "0fc4a363cc2dd3ae687f8cf1ccf500f99e69e8aa",
+    "sha256": "17bf85c5a4aa82c05d6d9dab29d221ceb74ec4cd6758340a838f7e90032fe378",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Degenerate%20Titan.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 36,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/titan-degenerate-3pp/",
+    "publicacao": "Tome of Beasts 1 (2023)",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

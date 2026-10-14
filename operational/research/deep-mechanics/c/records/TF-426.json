@@ -1,0 +1,421 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-426",
+  "nome": "Planar Flora, Thorned Sulfurlord",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 13,
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "11",
+    "xp": 7200,
+    "bonus_proficiencia": 4,
+    "bonus_proficiencia_origem": "padrão por ND 11 de D&D 5e",
+    "ca": 17,
+    "composicao_ca": "natural armor",
+    "pv": 171,
+    "dados_vida": "18d12+54",
+    "porte": "Huge",
+    "tipo": "fiend",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "forca": 20,
+      "destreza": 14,
+      "constituicao": 16,
+      "inteligencia": 10,
+      "sabedoria": 9,
+      "carisma": 12
+    },
+    "modificadores": {
+      "forca": 5,
+      "destreza": 2,
+      "constituicao": 3,
+      "inteligencia": 0,
+      "sabedoria": -1,
+      "carisma": 1
+    },
+    "deslocamentos": {
+      "andar_ft": 20
+    },
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 9
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 9
+      },
+      {
+        "nome": "Perception",
+        "bonus": 7
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "truesight",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 17,
+    "idiomas": [
+      "Abyssal",
+      "Infernal",
+      "telepathy 120 ft"
+    ],
+    "vulnerabilidades": [
+      "cold"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [
+      "fire",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "poisoned"
+    ],
+    "resistencias_condicao": []
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Burning Tangle",
+        "tipo": "passivo_aura",
+        "alcance_ft": 10,
+        "efeito": "terreno difícil em raio de 10 pés ao redor do Thorned Sulfurlord"
+      },
+      {
+        "nome": "Hell Core",
+        "tipo": "passivo_aura",
+        "gatilho": "início de cada turno do Sulfurlord",
+        "alvos": "todas as criaturas em raio de 10 pés",
+        "dano": {
+          "dados": "2d6",
+          "media": 7,
+          "tipo": "fire"
+        },
+        "supressao": "se sofrer dano de frio, não ativa no começo de seu turno seguinte"
+      },
+      {
+        "nome": "Like Calls to Like",
+        "tipo": "passivo_sensorial",
+        "alcance_ft": 100,
+        "efeito": "identifica se criatura próxima possui alinhamento mau"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "multiataque",
+        "opcoes": [
+          [
+            {
+              "acao": "Sulfur Slam",
+              "quantidade": 2
+            }
+          ],
+          [
+            {
+              "acao": "Fiery Spike",
+              "quantidade": 2
+            }
+          ]
+        ],
+        "mistura": "não autorizada pela fonte"
+      },
+      {
+        "nome": "Sulfur Slam",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ],
+        "efeito_acerto": {
+          "teste_resistencia": {
+            "atributo": "CON",
+            "cd": 17
+          },
+          "efeito_falha": {
+            "condicao": "blinded",
+            "duracao": "até fim do próximo turno do alvo"
+          },
+          "efeito_sucesso": "não fica blinded"
+        }
+      },
+      {
+        "nome": "Fiery Spike",
+        "tipo": "ataque_a_distancia_com_arma",
+        "bonus_acerto": 6,
+        "alcance_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+2",
+            "media": 12,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "The World Shall Know Fire",
+        "tipo": "acao_area_condicional",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "alvo": "uma criatura que tenha recebido dano de fogo desse mesmo Sulfurlord no minuto anterior",
+        "pre_condicao_temporal": "até 1 minuto desde o dano de fogo",
+        "area": {
+          "raio_ft": 30,
+          "centro": "alvo escolhido"
+        },
+        "alvos_na_area": "todas as criaturas, inclusive alvo inicial",
+        "teste_resistencia": {
+          "atributo": "DEX",
+          "cd": 17
+        },
+        "efeito_falha": {
+          "dano": [
+            {
+              "dados": "10d6",
+              "media": 35,
+              "tipo": "fire"
+            }
+          ]
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 10d6 fire"
+        },
+        "efeito_ambiente": "objetos inflamáveis não vestidos nem carregados na área pegam fogo"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Sulfur Slam",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ],
+        "efeito_acerto": {
+          "teste_resistencia": {
+            "atributo": "CON",
+            "cd": 17
+          },
+          "efeito_falha": {
+            "condicao": "blinded",
+            "duracao": "até fim do próximo turno do alvo"
+          },
+          "efeito_sucesso": "não fica blinded"
+        }
+      },
+      {
+        "nome": "Fiery Spike",
+        "tipo": "ataque_a_distancia_com_arma",
+        "bonus_acerto": 6,
+        "alcance_ft": {
+          "normal": 60,
+          "maximo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+2",
+            "media": 12,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "fire"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "opcoes": [
+        [
+          "Sulfur Slam",
+          "Sulfur Slam"
+        ],
+        [
+          "Fiery Spike",
+          "Fiery Spike"
+        ]
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Root",
+        "tipo": "acao_bonus",
+        "usos": {
+          "quantidade": 3,
+          "periodo": "dia"
+        },
+        "duracao": "1 minuto",
+        "pre_condicao": "pode enraizar-se no solo",
+        "efeitos": [
+          "deslocamento reduzido à metade",
+          "imune a efeitos que o moveriam contra a vontade",
+          "não pode ficar prone"
+        ]
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTE",
+      "reacoes": "AUSENCIA_NO_BLOCO_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_NO_BLOCO_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_NO_BLOCO_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_NO_BLOCO_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_NO_BLOCO_INDIVIDUAL"
+    },
+    "acoes_miticas": []
+  },
+  "pendencias": [
+    "Ficha individual integral estruturada, mas requer confirmação contra Creature Codex original/errata antes da aprovação.",
+    "Atenção: Root é ação bônus 3/dia, não característica passiva permanente; The World Shall Know Fire depende de dano de fogo prévio.",
+    "Imagem já armazenada; conferência visual pendente."
+  ],
+  "campos_nao_confirmados": [
+    "conferência Creature Codex editorial e erratas",
+    "confirmação de pontos de variação de Root e dano condicionado",
+    "aprovação visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/thorned-sulfurlord/",
+      "tipo": "bloco individual com todos os campos mecânicos, conferido 14/10/2026",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice da editora, origem e ND",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-426",
+    "nome": "Planar Flora, Thorned Sulfurlord",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "nd_catalogo": null,
+    "nd_fonte": "11",
+    "ca": 17,
+    "pv": 171,
+    "atributos": {
+      "forca": 20,
+      "destreza": 14,
+      "constituicao": 16,
+      "inteligencia": 10,
+      "sabedoria": 9,
+      "carisma": 12
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Burning Tangle e Hell Core irradiam fogo; interações com frio."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Burning Slam, Fiery Spikes, Root 3/dia e World Shall Know Fire (recarga 5–6)."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://www.5esrd.com/database/creature/thorned-sulfurlord/",
+    "fonte_tipo": "republicação terceirizada (5eSRD)",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir contra exemplar editorial, edição/errata e direitos/licenças antes da promoção."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-426.jpg",
+    "formato": "jpg",
+    "blob_sha": "243828768cd354534a86d0fec0993b4c43677d2a",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Thornedsulfurlord.jpg",
+    "origem_repositorio": "TheGiddyLimit/homebrew",
+    "origem_caminho": "_img/CCodex/Thornedsulfurlord.jpg",
+    "binario_presente": true,
+    "integridade_binaria_confirmada": true,
+    "validacao_visual_editorial": "PENDENTE",
+    "largura": null,
+    "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "bloco_individual": "ESTRUTURADO",
+    "livro_ou_errata": "PENDENTE"
+  }
+}

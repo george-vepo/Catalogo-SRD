@@ -1,0 +1,299 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-516",
+  "nome": "Kanos Spawn",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 35,
+  "estado_auditoria": "BLOQUEADA_SKILL_STEALTH_SEM_BONUS_E_ERRO_RAPTOR",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/2991"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 14,
+    "pv": 78,
+    "dados_vida": "13d8+13",
+    "porte": "Medium",
+    "tipo": "Fiend",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 16,
+      "destreza": 14,
+      "constituicao": 12,
+      "inteligencia": 4,
+      "sabedoria": 12,
+      "carisma": 5
+    },
+    "modificadores": {
+      "forca": 3,
+      "destreza": 2,
+      "constituicao": 1,
+      "inteligencia": -3,
+      "sabedoria": 1,
+      "carisma": -3
+    },
+    "deslocamentos": {
+      "andar_ft": 60,
+      "escalar_ft": 30
+    },
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": null,
+        "nota": "fonte escreve somente Skills Stealth, sem bônus"
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "compreende Abyssal, não fala"
+    ],
+    "resistencias": [
+      "cold"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": null,
+    "bonus_proficiencia": 2,
+    "composicao_ca": "natural armor",
+    "bloodied": 39,
+    "maneuver_dc": 13
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Pack Tactics",
+        "pre_condicao": "pelo menos um aliado está até 5 pés do alvo e não incapacitated",
+        "efeito": "vantagem nos attack rolls",
+        "texto_problematico": "fonte chama Kanos Spawn de raptor; não alterar silenciosamente"
+      },
+      {
+        "nome": "Wall Walker",
+        "efeito": "usa escalada inclusive em superfícies difíceis e teto"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          {
+            "acao": "Claw",
+            "quantidade": 2
+          }
+        ]
+      },
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d10+3",
+            "media": 8,
+            "tipo": "slashing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "pre_condicao": "alvo Medium ou menor",
+          "teste": {
+            "atributo": "STR",
+            "cd": 13
+          },
+          "falha": {
+            "condicao": "prone"
+          },
+          "sucesso": "não fica prone"
+        }
+      },
+      {
+        "nome": "Icy Breath",
+        "tipo": "ação com recarga",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            6
+          ]
+        },
+        "area": {
+          "tipo": "cone",
+          "comprimento_ft": 20
+        },
+        "alvos": "todas criaturas na área",
+        "teste": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "cold"
+          },
+          "condicao": "restrained",
+          "duracao": "1 minuto ou até se libertar gastando ação"
+        },
+        "sucesso": {
+          "dano": "metade",
+          "condicao": null
+        },
+        "area_apos_efeito": {
+          "condicao_terreno": "lightly obscured",
+          "duracao": "até início do próximo turno da criatura"
+        },
+        "bonus_condicional": "pode tentar Hide com vantagem em Stealth enquanto a área da nuvem persiste"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d10+3",
+            "media": 8,
+            "tipo": "slashing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "pre_condicao": "alvo Medium ou menor",
+          "teste": {
+            "atributo": "STR",
+            "cd": 13
+          },
+          "falha": {
+            "condicao": "prone"
+          },
+          "sucesso": "não fica prone"
+        }
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Claw",
+          "quantidade": 2
+        }
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Hide In Icy Breath",
+        "pre_condicao": "usou Icy Breath e a névoa ainda está ativa",
+        "efeito": "tenta se esconder com vantagem no teste Stealth"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "AUSENCIA_NA_FONTE",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_NA_FONTE",
+      "conjuracao": "AUSENCIA_NA_FONTE"
+    }
+  },
+  "pendencias": [
+    "Fonte da criatura chama o Kanos Spawn de raptor em Pack Tactics.",
+    "Campo Skills só contém Stealth sem modificador ou bônus numérico.",
+    "Rever o tempo exato da Hide após Icy Breath em publicação original e obter imagem física."
+  ],
+  "campos_nao_confirmados": [
+    "bônus numérico de Stealth ausente",
+    "erro editorial em Pack Tactics",
+    "revisão de timing de ação bônus",
+    "imagem binária"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/2991",
+      "tipo": "bloco oficial A5E individual conferido em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint prévio",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-516",
+    "nome": "Kanos Spawn",
+    "editora": "EN Publishing",
+    "publicacao": "Gate Pass Gazette",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 14,
+    "pv": 78,
+    "atributos": {
+      "forca": 16,
+      "destreza": 14,
+      "constituicao": 12,
+      "inteligencia": 4,
+      "sabedoria": 12,
+      "carisma": 5
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Pack Tactics e Wall Walker."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Duas Claw que podem derrubar alvo (CD 13)."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/2991",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "livro_e_errata": "PENDENTE"
+  }
+}

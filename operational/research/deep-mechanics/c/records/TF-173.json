@@ -1,0 +1,302 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-173",
+  "nome": "Black Patch",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 51,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "Tome of Beasts 3 (p.58)",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/black-patch/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 7,
+    "pv": 153,
+    "dados_vida": "18d10+54",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 18,
+      "DES": 5,
+      "CON": 16,
+      "INT": 4,
+      "SAB": 6,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": -3,
+      "CON": 3,
+      "INT": -3,
+      "SAB": -2,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar": 0,
+      "nadar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 120,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [
+      "cold"
+    ],
+    "imunidades_dano": [
+      "acid",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone",
+      "poisoned"
+    ],
+    "vulnerabilidades": [],
+    "xp": 2300,
+    "bonus_proficiencia": 3
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amphibious",
+        "efeito": "respira ar e água"
+      },
+      {
+        "nome": "Eldritch Luminance",
+        "gatilho": "criatura que pode ver a ooze inicia turno até 90ft e ooze pode vê-la, não incapacitada",
+        "teste": {
+          "atributo": "WIS",
+          "cd": 15
+        },
+        "falha": {
+          "estado": "mesmerized",
+          "duracao": "até 1 minuto",
+          "movimento": "alvo mais distante de 5ft avança pela rota mais direta até se aproximar 5ft, sem evitar opportunity attacks"
+        },
+        "novos_testes": [
+          "antes de mover-se para terreno danoso",
+          "quando recebe dano de fonte que não seja a ooze",
+          "fim de cada turno"
+        ],
+        "encerramento": "sucesso termina efeito; criatura fica imune a esse Eldritch Luminance por 24h"
+      },
+      {
+        "nome": "Flowing Form",
+        "efeito": "pode entrar e terminar movimento em espaço hostil; atravessa abertura de 1 inch sem squeeze"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ],
+        "substituicao": "uma das duas por Viscid Suffocation"
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d8",
+            "media": 13,
+            "tipo": "acid"
+          }
+        ]
+      },
+      {
+        "nome": "Viscid Suffocation",
+        "alvo": "uma criatura no mesmo espaço da black patch",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "4d8",
+            "media": 18,
+            "tipo": "acid"
+          },
+          "estado": "ooze se prende à vítima e seu equipamento"
+        },
+        "enquanto_presa": {
+          "velocidade": "metade",
+          "respiracao": "impedida",
+          "dano_no_inicio_turno_vitima": {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "acid"
+          },
+          "agua": "desvantagem em testes para nadar ou manter flutuação"
+        },
+        "remocao": {
+          "pela_ooze": "gasta 5ft de movimento",
+          "por_criatura": "action, check STR DC15"
+        },
+        "restricao": "ácido dissolve carne, não madeira ou metal"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d8",
+            "media": 13,
+            "tipo": "acid"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ],
+      "substituicao": "uma das duas por Viscid Suffocation"
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Mesmerized não deve ser automaticamente substituído por charmed; movimentação e salvaguardas repetidas são regras específicas.",
+    "A ooze tem velocidade terrestre 0 e depende de água; Viscid Suffocation tem condições de gatilho local.",
+    "Fonte 5eSRD/Tome of Beasts 3 p.58 usada como referência; revisão editorial e licença visual ainda pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "erratas/validação final na edição editorial autorizada",
+    "imagem: licenciamento, identidade e aprovação visual"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/black-patch/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/black-patch/",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/lphgc/rjrj/basic/51-100",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-173",
+    "nome": "Black Patch",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 7,
+    "pv": 153,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Amphibious e Eldritch Luminance atraem vítimas mesmerizadas"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Ações para capturar/afogar alvo na massa aquática."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/black-patch/",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Regra de encantamento inclui salvaguardas repetidas: exigir verificação antes de implementar.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-173.webp",
+    "formato": "webp",
+    "largura": 1200,
+    "altura": 1229,
+    "bytes": 147862,
+    "blob_sha": "583f51274c6fc0d1a5da34a328d7e32a7d938a66",
+    "sha256": "bf4ee1dd29be0d63720f55fdc3cb04e3f2615986a02ddfdb184ebf2d46020a6a",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Black%20Patch.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 40,
+    "publicacao": "Tome of Beasts 3 (p.58)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/black-patch/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-428",
+  "nome": "Cerberus Guardian",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 14,
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_REVISAO_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Dungeon Delver's Guide",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/2854"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "23",
+    "xp": null,
+    "bonus_proficiencia": 7,
+    "ca": 20,
+    "composicao_ca": "natural armor",
+    "pv": 310,
+    "dados_vida": "20d12+180",
+    "bloodied": 155,
+    "porte": "Huge",
+    "tipo": "Construct",
+    "alinhamento": null,
+    "nota_alinhamento": "A5E não informa alinhamento",
+    "atributos": {
+      "forca": 26,
+      "destreza": 12,
+      "constituicao": 28,
+      "inteligencia": 6,
+      "sabedoria": 18,
+      "carisma": 14
+    },
+    "modificadores": {
+      "forca": 8,
+      "destreza": 1,
+      "constituicao": 9,
+      "inteligencia": -2,
+      "sabedoria": 4,
+      "carisma": 2
+    },
+    "deslocamentos": {
+      "andar_ft": 60
+    },
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 15
+      },
+      {
+        "nome": "CON",
+        "bonus": 16
+      },
+      {
+        "nome": "INT",
+        "bonus": 5
+      },
+      {
+        "nome": "WIS",
+        "bonus": 11
+      },
+      {
+        "nome": "CHA",
+        "bonus": 9
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 11
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "truesight",
+        "alcance_ft": 90
+      }
+    ],
+    "percepcao_passiva": 21,
+    "idiomas": [
+      "entende idiomas de seu criador; não fala"
+    ],
+    "vulnerabilidades": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "acid",
+      "fire",
+      "poison",
+      "psychic",
+      "damage from nonmagical, non-adamantine weapons"
+    ],
+    "imunidades_condicao": [
+      "charmed",
+      "fatigue",
+      "frightened",
+      "paralyzed",
+      "petrified",
+      "poisoned"
+    ],
+    "resistencias_condicao": [],
+    "maneuver_dc": 23,
+    "motivo_xp_null": "A fonte oficial da criatura em A5E não informa XP; não imputar a tabela D&D 5e"
+  },
+  "mecanicas": {
+    "estado_dinamico": {
+      "cabecas": [
+        {
+          "id": "bronze",
+          "habilidade": "Bronze Clangor"
+        },
+        {
+          "id": "iron",
+          "habilidade": "Iron Breath"
+        },
+        {
+          "id": "stone",
+          "habilidade": "Stone Howl"
+        }
+      ],
+      "cabecas_ativas_inicialmente": 3,
+      "maximo": 3,
+      "desativacao_pela_resistencia_lendaria": "uma cabeça escolhida se torna inativa até fim do próximo turno do guardian",
+      "numero_mordidas_por_multiattack": "3 - numero_de_cabecas_inativas",
+      "numero_acoes_lendarias": "3 - numero_de_cabecas_inativas",
+      "interacao_de_cabecas": "cada habilidade lendária específica exige sua respectiva cabeça ativa",
+      "restituicao": "cabeça desativada por Legendary Resistance reativa no fim do turno seguinte"
+    },
+    "tracos": [
+      {
+        "nome": "Immutable Form",
+        "categoria": "passiva",
+        "efeito": "imune a qualquer efeito que altere a própria forma"
+      },
+      {
+        "nome": "Legendary Resistance",
+        "categoria": "recurso diário",
+        "usos": {
+          "quantidade": 3,
+          "periodo": "dia"
+        },
+        "gatilho": "falha em salvaguarda enquanto ao menos duas cabeças ativas",
+        "efeito": "pode transformar falha em sucesso",
+        "custo_condicional": "uma das cabeças fica inativa até fim do próximo turno",
+        "pre_condicao": "cabecas_ativas >= 2"
+      },
+      {
+        "nome": "Multiple Heads",
+        "categoria": "passiva condicional",
+        "pre_condicao": "mais de uma cabeça ativa",
+        "efeitos": [
+          "vantagem em Perception checks",
+          "vantagem em salvaguardas contra blinded, deafened, stunned e ficar unconscious",
+          "não pode ser flanked"
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "categoria": "ação",
+        "calculo_quantidade": "3 - cabeças inativas",
+        "sequencia": [
+          {
+            "acao": "Bite",
+            "quantidade_formula": "3 - cabeças inativas"
+          }
+        ],
+        "limite": "cada Bite deve ser contra alvo diferente"
+      },
+      {
+        "nome": "Bite",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 15,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d12+8",
+            "media": 27,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Poison Tail",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 15,
+        "alcance_ft": 15,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+8",
+            "media": 18,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "poison"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 15,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d12+8",
+            "media": 27,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Poison Tail",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": 15,
+        "alcance_ft": 15,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+8",
+            "media": 18,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "poison"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "acao": "Bite",
+      "quantidade_formula": "3 - cabeças inativas",
+      "alvos_necessariamente_distintos": true,
+      "nao_usa_cabeca_duas_vezes_na_mesma_rodada": true
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome": "Bronze Clangor",
+        "custo": 1,
+        "frequencia": "1/rodada",
+        "pre_condicao": "cabeça bronze ativa",
+        "gatilho": "fim do turno de outra criatura",
+        "alvos": "criaturas que ouvem a até 60 pés",
+        "alcance_ft": 60,
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 24
+        },
+        "efeito_falha": {
+          "dano": {
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "thunder"
+          },
+          "condicao": "deafened",
+          "duracao": "1 minuto"
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 6d6 thunder",
+          "condicao": null
+        }
+      },
+      {
+        "nome": "Iron Breath",
+        "custo": 1,
+        "frequencia": "1/rodada",
+        "pre_condicao": "cabeça iron ativa",
+        "gatilho": "fim do turno de outra criatura",
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 60
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 24
+        },
+        "efeito_falha": {
+          "dano": {
+            "dados": "7d6",
+            "media": 24,
+            "tipo": "poison"
+          },
+          "condicao": "poisoned",
+          "duracao": "1 minuto"
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 7d6 poison",
+          "condicao": null
+        }
+      },
+      {
+        "nome": "Stone Howl",
+        "custo": 1,
+        "frequencia": "1/rodada",
+        "pre_condicao": "cabeça stone ativa",
+        "gatilho": "fim do turno de outra criatura",
+        "alcance_ft": 60,
+        "alvos": "criaturas que ouvem",
+        "teste_resistencia": {
+          "atributo": "WIS",
+          "cd": 21
+        },
+        "efeito_inicial_falha": {
+          "condicao": "frightened",
+          "duracao": "1 minuto"
+        },
+        "repetir_teste": "fim de cada turno",
+        "efeito_repeticao_sucesso": "encerra frightened",
+        "efeito_repeticao_falha": "petrified",
+        "aviso": "a redação da fonte associa petrificação a falha de teste repetido; conferir livro/errata antes de codificar"
+      },
+      {
+        "nome": "Tail",
+        "custo": 1,
+        "frequencia": "limitada apenas pelo custo e economia das ações lendárias",
+        "acao_referida": "Poison Tail",
+        "gatilho": "fim do turno de outra criatura"
+      }
+    ],
+    "acoes_lendarias_regras": {
+      "maximo_formula": "3 - numero de cabeças inativas",
+      "recuperacao": "início do turno do guardian",
+      "momento": "ao fim do turno de outra criatura",
+      "maximo_por_vez": 1
+    },
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": {
+      "maximo_inicial": 3,
+      "formula": "3 - numero de cabeças inativas",
+      "recuperacao": "início do seu turno"
+    },
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "reacoes": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_lendarias": "PRESENTES_QUATRO_OPCOES",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "conjuracao": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL"
+    }
+  },
+  "pendencias": [
+    "Bloco integral estruturado da ferramenta oficial A5E e ações lendárias relacionadas à contagem de cabeças.",
+    "Confirmar com Dungeon Delver's Guide/errata a transição frightened→petrified de Stone Howl antes de implementar automatização.",
+    "A fonte não especifica qual cabeça desativa ao gastar Legendary Resistance; não forçar escolha automática.",
+    "Arquivo binário de imagem ainda ausente."
+  ],
+  "campos_nao_confirmados": [
+    "semântica exata da falha repetida em Stone Howl",
+    "procedimento de escolha da cabeça desativada",
+    "arquivo de imagem representativa",
+    "conferência editorial"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/2854",
+      "tipo": "ficha mecânica individual na ferramenta oficial A5E; conferida 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "origem": "EN Publishing / A5E"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico; não tratado como validação editorial independente",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": false
+  },
+  "checkpoint_anterior": {
+    "id": "TF-428",
+    "nome": "Cerberus Guardian",
+    "editora": "EN Publishing",
+    "publicacao": "Dungeon Delver's Guide",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "23",
+    "ca": 20,
+    "pv": 310,
+    "atributos": {
+      "forca": 26,
+      "destreza": 12,
+      "constituicao": 28,
+      "inteligencia": 6,
+      "sabedoria": 18,
+      "carisma": 14
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Guardião construto de três cabeças; condições e gatilhos próprios de bronze/ferro/pedra."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Múltiplas mordidas; efeitos de clangor, sopro venenoso e uivo petrificante; ações lendárias."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/2854",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir recargas, testes de resistência e ações lendárias individualmente.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_oficial_individual": "https://a5e.tools/node/2854",
+    "confronto_com_livro_ou_errata": "PENDENTE",
+    "interpretações_ambíguas_nao_resolvidas": true
+  }
+}

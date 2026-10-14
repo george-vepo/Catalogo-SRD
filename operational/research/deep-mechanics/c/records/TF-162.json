@@ -1,0 +1,336 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-162",
+  "nome": "Ooze, Ichor",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 40,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": "2",
+    "nd_fonte": "2",
+    "ca": 8,
+    "pv": 39,
+    "dados_vida": "6d8+12",
+    "porte": "Medium",
+    "tipo": "ooze",
+    "alinhamento": "neutral evil",
+    "atributos": {
+      "FOR": 15,
+      "DES": 6,
+      "CON": 14,
+      "INT": 3,
+      "SAB": 7,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": -2,
+      "CON": 2,
+      "INT": -4,
+      "SAB": -2,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20,
+      "nadar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [
+      "necrotic",
+      "poison",
+      "bludgeoning, piercing and slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "fire"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 450,
+    "bonus_proficiencia": 2
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "efeito": "atravessa espaço de 1 inch sem squeezing"
+      },
+      {
+        "nome": "Magic Resistance",
+        "efeito": "vantagem em saving throws contra spells/magic effects"
+      },
+      {
+        "nome": "Sense Destroyer",
+        "efeito": "sabe direção e distância da criatura que deu killing blow no fiend criador, se ambos estiverem mesmo plano"
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "escalada tetos/vertical sem teste"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não requer sono"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ],
+        "condicao": "Large ou menor grappled, escape DC12"
+      },
+      {
+        "nome": "Hurl Mote",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": {
+          "normal": 10,
+          "longo": 30
+        },
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "fire"
+          }
+        ]
+      },
+      {
+        "nome": "Life Drain",
+        "precondicao": "alvo grappled pela ooze",
+        "teste": {
+          "atributo": "CON",
+          "cd": 12
+        },
+        "falha": {
+          "dano": {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "necrotic"
+          }
+        },
+        "sucesso": "metade de 3d6 necrotic",
+        "efeitos": [
+          {
+            "reduz_hp_maximo": "pelo dano realmente sofrido",
+            "restauracao_reducao": "long rest do alvo",
+            "ooze_cura": "dano realmente sofrido",
+            "morte": "HP máximo reduzido a zero"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ],
+        "condicao": "Large ou menor grappled, escape DC12"
+      },
+      {
+        "nome": "Hurl Mote",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": {
+          "normal": 10,
+          "longo": 30
+        },
+        "dano": [
+          {
+            "dados": "1d6+2",
+            "media": 5,
+            "tipo": "fire"
+          }
+        ]
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Life Drain reduz max HP e cura pelo dano necrótico efetivamente sofrido, MESMO em save bem sucedido pela metade; não limitar ao fracasso.",
+    "Fonte individual 5eSRD ToB2, confronto editorial/arte ainda pendente."
+  ],
+  "campos_nao_confirmados": [
+    "conferência do livro autorizado e errata",
+    "verificação visual, direitos e adequação da arte"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-ichor/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-ichor/",
+      "tipo": "ficha individual analisada no CP38",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-162",
+    "nome": "Ooze, Ichor",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "2",
+    "nd_fonte": "2",
+    "ca": 8,
+    "pv": 39,
+    "pv_dados": "6d8+12",
+    "porte": "Medium",
+    "tipo": "ooze",
+    "atributos": [
+      15,
+      6,
+      14,
+      3,
+      7,
+      1
+    ],
+    "deslocamento_ft": {
+      "andar": 20,
+      "escalar": 20,
+      "nadar": 20
+    },
+    "resistencias_dano": [
+      "necrotic",
+      "poison",
+      "físico não mágico"
+    ],
+    "imunidades_dano": [
+      "fire"
+    ],
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "resumo": "Passa por aberturas de uma polegada."
+      },
+      {
+        "nome": "Magic Resistance",
+        "resumo": "Vantagem em salvaguardas contra magia."
+      },
+      {
+        "nome": "Sense Destroyer",
+        "resumo": "Sente direção/distância de quem destruiu o fiend criador, no mesmo plano."
+      },
+      {
+        "nome": "Spider Climb",
+        "resumo": "Escala paredes e tetos sem teste."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "resumo": "+4, 5 pés, 1d6+2 contundente +1d6 fogo; agarra Large ou menor (fuga CD12)."
+      },
+      {
+        "nome": "Hurl Mote",
+        "resumo": "+4, 10/30 pés, 1d6+2 fogo."
+      },
+      {
+        "nome": "Life Drain",
+        "resumo": "Criatura agarrada faz Constituição CD12 ou 3d6 necrótico (metade no sucesso), máximo de PV reduzido e cura da ooze por esse dano."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-ichor/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisar limitações de Life Drain; arte pendente."
+    ],
+    "editora": "Kobold Press / Open Design",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-162.webp",
+    "formato": "webp",
+    "largura": 885,
+    "altura": 1242,
+    "bytes": 148076,
+    "blob_sha": "46b3cc155a48e97caf3d7d097516d6ebc5af9bc4",
+    "sha256": "398bbfd976ddc023bbf455cab7793a64136d3f5d574dc15ad8325dec56a86816",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Ichor%20Ooze.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 38,
+    "publicacao": "Tome of Beasts 2",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-ichor/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

@@ -1,0 +1,429 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-135",
+  "nome": "Abaasy",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 15,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": null,
+    "fonte_identidade": "https://www.5esrd.com/database/creature/abaasy/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "8",
+    "nd_fonte": "8",
+    "ca": 18,
+    "pv": 126,
+    "dados_vida": "11d12+55",
+    "porte": "Huge",
+    "tipo": "giant",
+    "alinhamento": "neutral evil",
+    "atributos": {
+      "FOR": 20,
+      "DES": 10,
+      "CON": 20,
+      "INT": 9,
+      "SAB": 14,
+      "CAR": 8
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": 0,
+      "CON": 5,
+      "INT": -1,
+      "SAB": 2,
+      "CAR": -1
+    },
+    "deslocamentos": {
+      "andar_ft": 40
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 5
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 3
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [
+      "cold"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "bonus_proficiencia": 3,
+    "xp": 3900,
+    "composicao_ca": "armor scraps plus dual shields (bônus dos escudos incluído)"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Armored Berserker",
+        "gatilho": "inicia turno com 60 PV ou menos",
+        "rolagem": {
+          "dado": "1d6",
+          "ativa_em": 6
+        },
+        "se_ativa": {
+          "resistencia": [
+            "bludgeoning",
+            "piercing",
+            "slashing"
+          ],
+          "comportamento": "ataca criatura visível mais próxima, ou objeto preferindo menor se nenhum alvo alcançável",
+          "duracao": "até ser destruído ou voltar a PV máximos"
+        }
+      },
+      {
+        "nome": "Dual Shields",
+        "efeito": "+3 de CA decorrente dos dois escudos (já embutido em CA18); não somar de novo"
+      },
+      {
+        "nome": "Poor Depth Perception",
+        "pre_condicao": "ataque contra alvo a mais de 30 ft",
+        "efeito": "desvantagem em attack roll"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": {
+          "quantidade": 3,
+          "acoes_permitidas": [
+            "Iron Axe",
+            "Shield Shove",
+            "Spear"
+          ]
+        },
+        "restricoes": [
+          "no máximo um Shield Shove por sequência",
+          "se usar Spear com as duas mãos, não pode Iron Axe no mesmo turno"
+        ]
+      },
+      {
+        "nome": "Iron Axe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Shield Shove",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d4+5",
+            "media": 15,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste_pos_acerto": {
+          "atributo": "STR",
+          "cd": 16,
+          "falha": {
+            "escolha_da_Abaasy": [
+              "alvo prone",
+              "alvo empurrado até 15 ft"
+            ]
+          },
+          "sucesso": "sem empurrão ou prone"
+        }
+      },
+      {
+        "nome": "Spear",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_melee_ft": 15,
+        "alcance_ranged_ft": {
+          "normal": 20,
+          "maximo": 60
+        },
+        "alvos": 1,
+        "dano_uma_mao": [
+          {
+            "dados": "3d6+5",
+            "media": 15,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_duas_maos_melee": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Eyebeam",
+        "tipo": "ação em área",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "tipo": "linha",
+          "comprimento_ft": 90,
+          "largura_ft": 5
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "falha": {
+          "dano": {
+            "dados": "5d10",
+            "media": 27,
+            "tipo": "radiant"
+          }
+        },
+        "sucesso": {
+          "dano": "metade"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Iron Axe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Shield Shove",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d4+5",
+            "media": 15,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste_pos_acerto": {
+          "atributo": "STR",
+          "cd": 16,
+          "falha": {
+            "escolha_da_Abaasy": [
+              "alvo prone",
+              "alvo empurrado até 15 ft"
+            ]
+          },
+          "sucesso": "sem empurrão ou prone"
+        }
+      },
+      {
+        "nome": "Spear",
+        "tipo": "melee or ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_melee_ft": 15,
+        "alcance_ranged_ft": {
+          "normal": 20,
+          "maximo": 60
+        },
+        "alvos": 1,
+        "dano_uma_mao": [
+          {
+            "dados": "3d6+5",
+            "media": 15,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_duas_maos_melee": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "quantidade": 3,
+      "max_Shield_Shove": 1,
+      "restringe_Iron_Axe_com_Spear_duas_maos": true
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_NA_FONTE",
+      "reacoes": "AUSENCIA_NA_FONTE",
+      "acoes_lendarias": "AUSENCIA_NA_FONTE",
+      "acoes_covil": "AUSENCIA_NA_FONTE",
+      "acoes_miticas": "AUSENCIA_NA_FONTE",
+      "conjuracao": "AUSENCIA_NA_FONTE"
+    }
+  },
+  "pendencias": [
+    "Multiattack só permite um Shield Shove e proíbe Iron Axe quando usa Spear de duas mãos.",
+    "Dual Shields já contabilizado em CA18; não adicionar outro +3.",
+    "Livro Tome of Beasts 3/errata e imagem binária existente exigem revisão visual."
+  ],
+  "campos_nao_confirmados": [
+    "conferência em livro original/errata",
+    "aprovação visual"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/abaasy/",
+      "tipo": "bloco de criatura Kobold Press republicado no 5eSRD",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+      "tipo": "checkpoint anterior",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-135",
+    "nome": "Abaasy",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "8",
+    "nd_fonte": "8",
+    "ca": 18,
+    "pv": 126,
+    "pv_dados": "11d12+55",
+    "porte": "Huge",
+    "tipo": "giant",
+    "atributos_FOR_DES_CON_INT_SAB_CAR": [
+      20,
+      10,
+      20,
+      9,
+      14,
+      8
+    ],
+    "movimento_ft": {
+      "andar": 40
+    },
+    "tracos": [
+      {
+        "nome": "Armored Berserker",
+        "resumo": "Começando turno com até 60 PV, 1/6 chance de enlouquecer e atacar o mais próximo, com resistência a dano físico."
+      },
+      {
+        "nome": "Dual Shields",
+        "resumo": "Dois escudos somam +3 à CA, já incorporados."
+      },
+      {
+        "nome": "Poor Depth Perception",
+        "resumo": "Desvantagem em ataques contra inimigos além de 30 pés."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Três ataques corpo a corpo; no máximo uma Shield Shove."
+      },
+      {
+        "nome": "Iron Axe",
+        "resumo": "+8, alcance 10 pés, 3d8+5 cortante."
+      },
+      {
+        "nome": "Shield Shove",
+        "resumo": "+8, 4d4+5 contundente, FOR CD16 contra queda ou empurrão."
+      },
+      {
+        "nome": "Spear",
+        "resumo": "+8, alcance 15 pés ou 20/60, 3d6+5 ou 3d8+5 perfurante."
+      },
+      {
+        "nome": "Eyebeam",
+        "resumo": "Recarga 5–6, linha 90 pés, DES CD16, 5d10 radiante ou metade."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/abaasy/",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Há restrição de mãos quando usa Spear com ambas; não permitir Iron Axe simultâneo.",
+      "Como escrita na fonte, Dual Shields já está contabilizado na CA.",
+      "Licença editorial, autorização de imagem e revisão independente ainda pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "origem_pesquisa": "Estatísticas de página pública ou referência identificada; síntese de habilidades em redação própria, sem promover para ficha canônica.",
+    "alinhamento": "neutral evil",
+    "resistencias_dano": [
+      "cold"
+    ]
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-135.webp",
+    "formato": "webp",
+    "largura": 1000,
+    "altura": 1252,
+    "bytes": 92082,
+    "blob_sha": "a484c6cebc5bdbd69a7c6a74e60bd4f2ec5496d2",
+    "sha256": "b125f78b0d372462668cde39f66f920c6ecbf7583269c4e7e0d1c4f837b23efc",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Abaasy.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "D&D 5e",
+    "data": "2026-10-14",
+    "fonte_republicada": "https://www.5esrd.com/database/creature/abaasy/",
+    "revisao_editorial_do_livro_e_errata": "PENDENTE"
+  }
+}

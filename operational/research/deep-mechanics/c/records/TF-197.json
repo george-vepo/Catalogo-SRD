@@ -1,0 +1,298 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-197",
+  "nome": "Tosculi, Jeweled Drone",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 72,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "Creature Codex 2018",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/tosculi-jeweled-drone/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 15,
+    "pv": 90,
+    "dados_vida": "12d6+48",
+    "porte": "Small",
+    "tipo": "humanoid (tosculi)",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 10,
+      "DES": 18,
+      "CON": 18,
+      "INT": 14,
+      "SAB": 14,
+      "CAR": 17
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 4,
+      "CON": 4,
+      "INT": 2,
+      "SAB": 2,
+      "CAR": 3
+    },
+    "deslocamentos": {
+      "andar": 30,
+      "voar": 60
+    },
+    "pericias": [
+      {
+        "nome": "Deception",
+        "bonus": 5
+      },
+      {
+        "nome": "Insight",
+        "bonus": 4
+      },
+      {
+        "nome": "Persuasion",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Common",
+      "Infernal",
+      "Tosculi"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "ca_origem": "natural armor"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Pheromones",
+        "raio_ft": 15,
+        "alvos": "outros tosculi que podem cheirar o odor e começam turno no raio",
+        "efeito": "+1d6 uma attack roll ou saving throw até início do próximo turno",
+        "limite": "somente UM dado de Pheromones por vez; não empilha",
+        "termino": "se jeweled drone morre"
+      },
+      {
+        "nome": "Scintillating Carapace",
+        "precondicoes": [
+          "bright light",
+          "drone não incapacitated",
+          "alvo NÃO é tosculi, pode vê-la, inicia turno até 30ft"
+        ],
+        "teste": {
+          "atributo": "WIS",
+          "cd": 12
+        },
+        "falha": "blinded até início do próximo turno do alvo",
+        "evitar_olhar": {
+          "condicao": "não surprised",
+          "efeito": "pode desviar olhos e não vê drone até próximo turno",
+          "olhar_novamente": "deve salvar imediatamente"
+        }
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Claws",
+          "Claws",
+          "Scimitar"
+        ]
+      },
+      {
+        "nome": "Claws",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Scimitar",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "poison"
+          }
+        ],
+        "poison_0hp": "se poison damage reduz alvo a 0 HP: estável mas poisoned 1h mesmo depois recuperar HP, paralyzed enquanto poisoned"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Claws",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Scimitar",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "poison"
+          }
+        ],
+        "poison_0hp": "se poison damage reduz alvo a 0 HP: estável mas poisoned 1h mesmo depois recuperar HP, paralyzed enquanto poisoned"
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Claws",
+        "Claws",
+        "Scimitar"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Protect the Queen",
+        "gatilho": "criatura ataca a tosculi hive queen",
+        "precondicao": "jeweled drone está a até 5ft da rainha",
+        "efeito": "+2 CA da rainha contra aquele ataque"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Pheromones concede APENAS um dado d6 por vez e exige cheirar; Scintillating Carapace ativo só em bright light e há opção evitar olhar.",
+    "Protect the Queen exige hive queen até 5ft e reação da jeweled drone, condição essencial.",
+    "Verificar publicação, licença e identidade da imagem."
+  ],
+  "campos_nao_confirmados": [
+    "conferência de edição, licenças e erratas",
+    "autoria, identidade e inspeção visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/tosculi-jeweled-drone/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/tosculi-jeweled-drone/",
+      "tipo": "verificação mecânica individual CP44 com separação de edições",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-197",
+    "nome": "Tosculi, Jeweled Drone",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 15,
+    "pv": 90,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Pheromones concede +1d6 a ataques/salvaguardas dos tosculi; carapaça brilha e cega"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Duas Claws e Scimitar com veneno na Multiattack."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/tosculi-jeweled-drone/",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Não acumular múltiplos dados de Pheromones.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-197.jpg",
+    "formato": "jpg",
+    "largura": 519,
+    "altura": 700,
+    "bytes": 65411,
+    "blob_sha": "95d0fce6f0f5ad05513de2a3ae5f870a682eaca2",
+    "sha256": "9ad0c9559b907ed938c76f708087419db76752667e7b8422bba9c577605d1ef1",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Tosculijeweleddrone.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 44,
+    "publicacao": "Creature Codex 2018",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/tosculi-jeweled-drone/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

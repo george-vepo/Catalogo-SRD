@@ -1,0 +1,309 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-178",
+  "nome": "Ooze, Ruby",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 56,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "Creature Codex (2018)",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/ooze-ruby/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 9,
+    "pv": 93,
+    "dados_vida": "11d8+44",
+    "porte": "Medium",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 14,
+      "DES": 8,
+      "CON": 18,
+      "INT": 2,
+      "SAB": 6,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": -1,
+      "CON": 4,
+      "INT": -4,
+      "SAB": -2,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond radius"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [
+      "bludgeoning/piercing/slashing de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "acid",
+      "fire"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [
+      "lightning"
+    ],
+    "xp": 2300,
+    "bonus_proficiencia": 3
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Ambusher",
+        "condicao": "criatura foi surpreendida pela ooze",
+        "beneficio": "advantage on attack rolls"
+      },
+      {
+        "nome": "Amorphous",
+        "passagem_minima_inch": 1
+      },
+      {
+        "nome": "Corrosive Form",
+        "gatilho": "criatura toca ooze OU a acerta melee dentro de 5ft",
+        "dano_contato": {
+          "dados": "2d6",
+          "media": 7,
+          "tipo": "acid"
+        },
+        "arma_atacante": {
+          "condicao": "não mágica de metal ou madeira que acerta a ooze",
+          "penalidade": "-1 permanente e cumulativo em damage rolls por acerto",
+          "destruir_em": "-5",
+          "municao": "munição não mágica de metal ou madeira é destruída após causar dano"
+        },
+        "dissolver": "2 inch metal ou madeira não mágicos em 1 round"
+      },
+      {
+        "nome": "False Appearance",
+        "condicao": "ooze imóvel",
+        "efeito": "aparenta monte de rubis"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "pode escalar tetos sem teste"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "quantidade": 2,
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "acid"
+          }
+        ]
+      },
+      {
+        "nome": "Acid Spray",
+        "recarga": "5-6",
+        "area": {
+          "forma": "linha",
+          "comprimento_ft": 20,
+          "largura_ft": 5
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "acid"
+          },
+          "condicao": "restrained"
+        },
+        "sucesso": "metade do dano, não fica restrained",
+        "seguimento": {
+          "precondicao": "restrained por Acid Spray",
+          "momento": "final do próximo turno do alvo",
+          "teste": {
+            "atributo": "CON",
+            "cd": 15
+          },
+          "falha": {
+            "dano": {
+              "dados": "6d6",
+              "media": 21,
+              "tipo": "acid"
+            },
+            "condicao": "petrified"
+          },
+          "sucesso": "termina o efeito"
+        },
+        "nota": "fonte não especifica duração ou dispel da petrificação"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "acid"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "quantidade": 2,
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Corrosive Form reduz exclusivamente dano de arma metálica/madeira não mágica; munição se destrói após o acerto, teto destruição da arma em -5.",
+    "Acid Spray exige CON DC15 só ao FINAL do próximo turno do alvo restrained; petrificação na falha sem duração editorial especificada, não inferir.",
+    "Conferir Creature Codex e licença/identidade da imagem."
+  ],
+  "campos_nao_confirmados": [
+    "conferência editorial/erratas/escopo de licenciamento",
+    "verificação de direito de uso, identidade e qualidade da arte"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-ruby",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-ruby/",
+      "tipo": "ficha individual verificada no CP41; mecânicas parafraseadas e estruturadas",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-178",
+    "nome": "Ooze, Ruby",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 9,
+    "pv": 93,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Ambusher, Amorphous, Corrosive Form degradam armas e armaduras"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Pseudopod ácido e efeitos corrosivos sobre equipamentos."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-ruby",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Corrosão permanente depende de material e regras de equipamento; revisar antes de implementar.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-178.jpg",
+    "formato": "jpg",
+    "largura": 587,
+    "altura": 700,
+    "bytes": 68278,
+    "blob_sha": "02edc3a71a1f0840ba7be7643d93745a885705e8",
+    "sha256": "c99c484fbdfe34cc66a0f2e45792782cbaedef71ad4f814bfe8e7c51de54069d",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Rubyooze.jpg",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 41,
+    "publicacao": "Creature Codex (2018)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-ruby/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-159",
+  "nome": "Ooze, Amber",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 37,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 7,
+    "pv": 76,
+    "dados_vida": "9d10+27",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 16,
+      "DES": 5,
+      "CON": 17,
+      "INT": 1,
+      "SAB": 6,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": -3,
+      "CON": 3,
+      "INT": -5,
+      "SAB": -2,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar_ft": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 8,
+    "idiomas": [],
+    "resistencias": [
+      "bludgeoning",
+      "piercing",
+      "slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "composicao_ca": "natural"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "efeito": "atravessa abertura 1 inch sem squeezing"
+      },
+      {
+        "nome": "Arboreal Movement",
+        "efeito": "move por dentro árvores como difficult terrain",
+        "efeitos_adicionais": [
+          "criaturas engolfadas expelidas para espaço livre até 5ft árvore ao usar este movimento",
+          "pode terminar turno dentro da árvore",
+          "se árvore for destruída é expelida para espaço livre 5ft"
+        ]
+      },
+      {
+        "nome": "Spider Climb",
+        "efeito": "anda em superfícies difíceis/verticais inclusive tetos de cabeça para baixo sem teste"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não precisa de sleep"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Engulf",
+          "Pseudopod",
+          "Pseudopod"
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "adicional": {
+          "alvo": "plant ou plant creature",
+          "dano": {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        }
+      },
+      {
+        "nome": "Engulf",
+        "movimento": "até walking speed, pode entrar espaço de criaturas Large ou menores",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 13
+        },
+        "sucesso": "criatura escolhe mover 5ft para trás/lado; se recusa sofre resultado de falha",
+        "falha": {
+          "efeitos": [
+            "engulfed e restrained",
+            "não pode respirar",
+            "petrified após 1d4 rounds"
+          ]
+        },
+        "petrificacao": "persiste por 24 horas após sair do ooze",
+        "movimento_engolfado": "move com ooze",
+        "escape": {
+          "economia": "action",
+          "teste": "STR (Athletics) DC13",
+          "sucesso": "sai espaço livre até 5ft"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "adicional": {
+          "alvo": "plant ou plant creature",
+          "dano": {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "acid"
+          }
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Engulf",
+        "Pseudopod",
+        "Pseudopod"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "efeitos_regionais": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Identidade exclusivamente Amber Ooze Large CR4 Tome of Beasts 2; homônimo CR1/2 do 5eSRD não pertence ao escopo.",
+    "A petrificação começa após 1d4 rounds dentro; persiste 24h após escapar; Escape é STR Athletics DC13 por ação.",
+    "Direitos e identidade de imagem ainda pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "conferir edição impressa e errata",
+    "aprovação legal e visual de imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://anyflip.com/jfxvv/vjtj/basic/251-300",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/jfxvv/vjtj/basic/251-300",
+      "tipo": "fonte individual no CP37",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_VARIANTE_HOMONIMA_FONTE_SECUNDARIA",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-156_TF-160/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-159",
+    "nome": "Ooze, Amber",
+    "publicacao": "Tome of Beasts 2",
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 7,
+    "pv": 76,
+    "pv_dados": "9d10+27",
+    "porte": "Large",
+    "tipo": "ooze",
+    "atributos": [
+      16,
+      5,
+      17,
+      1,
+      6,
+      1
+    ],
+    "movimento": {
+      "andar_ft": 20
+    },
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "resumo": "Passa por abertura de 1 polegada."
+      },
+      {
+        "nome": "Arboreal Movement",
+        "resumo": "Move-se dentro de árvores como terreno difícil."
+      }
+    ],
+    "fonte": "https://anyflip.com/jfxvv/vjtj/basic/251-300",
+    "fonte_confirmacao": "https://koboldpress.com/kpstore/product/tome-of-beasts-2-pawns/",
+    "variante_nao_usada": "https://www.5esrd.com/database/creature/amber-ooze/",
+    "estado": "PARCIAL_VARIANTE_HOMONIMA_FONTE_SECUNDARIA",
+    "pendencias": [
+      "A criatura de CR 4 do Tome of Beasts 2 não é a versão homônima CR 1/2 do 5eSRD (AC8 PV13).",
+      "Ações e licenças não comprovadas; não completar artificialmente."
+    ],
+    "editora": "Kobold Press / Open Design",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-159.webp",
+    "formato": "webp",
+    "largura": 1208,
+    "altura": 735,
+    "bytes": 161690,
+    "blob_sha": "a7b32dfec7483c919a04c37a9cdf76c25317213e",
+    "sha256": "5309aad8c6c6e07041d497fa1b840f3db76afe582e33ecddbecd92ed142c1300",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Amber%20Ooze.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 37,
+    "publicacao": "Tome of Beasts 2",
+    "fonte_mecanicas": "https://anyflip.com/jfxvv/vjtj/basic/251-300",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

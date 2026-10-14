@@ -1,0 +1,404 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-416",
+  "nome": "Wind Witch",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 4,
+  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_DADOS_DE_VIDA_EDICAO",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "3",
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "ca": 13,
+    "composicao_ca": "não indicada",
+    "pv": 66,
+    "dados_vida": "12d8+12",
+    "porte": "Large",
+    "tipo": "plant",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "forca": 6,
+      "destreza": 16,
+      "constituicao": 12,
+      "inteligencia": 6,
+      "sabedoria": 11,
+      "carisma": 8
+    },
+    "modificadores": {
+      "forca": -2,
+      "destreza": 3,
+      "constituicao": 1,
+      "inteligencia": -2,
+      "sabedoria": 0,
+      "carisma": -1
+    },
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 5
+      },
+      {
+        "nome": "CON",
+        "bonus": 5
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 2
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 5
+      }
+    ],
+    "deslocamentos": {
+      "andar_ft": 30,
+      "voo_ft": 60,
+      "voo_hover": true
+    },
+    "vulnerabilidades": [],
+    "resistencias": [
+      "bludgeoning",
+      "piercing"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "exhaustion",
+      "poisoned",
+      "prone"
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "cego_alem_do_alcance": true
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "entende Common; não fala"
+    ],
+    "resistencias_condicao": [],
+    "nota_dado_de_vida": "A transcrição associa criatura Large a 12d8+12; confirmar tamanho e dado com publicação de origem (em D&D 5e Large normalmente usa d10)."
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Cursed Plant",
+        "tipo": "passivo_persistente",
+        "gatilho": "chega a 0 PV devido a dano",
+        "transformacao": "vira planta rola-bosta (tumbleweed) inanimada carregada pelo vento",
+        "regeneracao": {
+          "cura_pv_por_hora": 5,
+          "retorna_consciencia": "após primeira hora"
+        },
+        "bloqueios": [
+          "sofreu dano de fogo na mesma rodada em que chegou a 0 PV",
+          "corpo destruído"
+        ]
+      },
+      {
+        "nome": "Flammable",
+        "tipo": "passivo_condicional",
+        "gatilho": "recebe dano de fogo",
+        "efeito": "fica ardendo",
+        "dano_no_inicio_do_turno": {
+          "dados": "1d6",
+          "media": 3,
+          "tipo": "fire"
+        },
+        "dano_por_toque_ou_ataque_melee_ate_5_ft": {
+          "dados": "1d6",
+          "media": 3,
+          "tipo": "fire"
+        },
+        "dano_extra_ataques_melee": {
+          "dados": "1d6",
+          "media": 3,
+          "tipo": "fire"
+        },
+        "dano_contra_capturado_inicio_turno": {
+          "dados": "2d6",
+          "media": 7,
+          "tipo": "fire"
+        },
+        "encerramento": [
+          "recebe dano de frio",
+          "fica submersa em água"
+        ]
+      },
+      {
+        "nome": "Tumbleweed Form",
+        "tipo": "passivo_movimento",
+        "efeito": "pode entrar no espaço ocupado por inimigo e parar nesse espaço"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "multiataque",
+        "opcoes": [
+          [
+            {
+              "acao": "Slam",
+              "quantidade": 2
+            }
+          ],
+          [
+            {
+              "acao": "Slam",
+              "quantidade": 1
+            },
+            {
+              "acao": "Capture",
+              "quantidade": 1
+            }
+          ]
+        ]
+      },
+      {
+        "nome": "Slam",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_condicional_extra_quando_ardendo": {
+          "dados": "1d6",
+          "media": 3,
+          "tipo": "fire"
+        }
+      },
+      {
+        "nome": "Capture",
+        "tipo": "acao_confinamento",
+        "pre_condicoes": [
+          "alvo Medium ou menor",
+          "alvo situado no espaço da Wind Witch",
+          "menos de 1 criatura atualmente capturada"
+        ],
+        "alvos": 1,
+        "teste_resistencia": {
+          "atributo": "DEX",
+          "cd": 13
+        },
+        "efeito_falha": {
+          "condicao": "restrained",
+          "posicao": "dentro da Wind Witch",
+          "movimento": "é levado junto com a Wind Witch",
+          "restricao_ataque": "Wind Witch não pode acertar Slam contra a criatura capturada",
+          "gatilho_dano": "capturado realiza uma ação que requer movimento, como atacar ou conjurar com componente somático",
+          "dano": [
+            {
+              "dados": "2d4",
+              "media": 5,
+              "tipo": "piercing"
+            }
+          ]
+        },
+        "efeito_sucesso": "não é capturado",
+        "limite_capturas": 1,
+        "libertacao": {
+          "agente": "criatura até 5 pés (inclui terceiros)",
+          "custo": "1 ação",
+          "teste_abilidade": {
+            "atributo": "STR",
+            "cd": 13
+          },
+          "dano_para_libertador": {
+            "dados": "2d4",
+            "media": 5,
+            "tipo": "piercing"
+          }
+        },
+        "interacoes": [
+          "Bouncy Escape solta o capturado"
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "1d8",
+            "media": 4,
+            "tipo": "piercing"
+          }
+        ],
+        "dano_condicional_extra_quando_ardendo": {
+          "dados": "1d6",
+          "media": 3,
+          "tipo": "fire"
+        }
+      }
+    ],
+    "multiataque": {
+      "opcoes": [
+        [
+          "Slam",
+          "Slam"
+        ],
+        [
+          "Slam",
+          "Capture"
+        ]
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Bouncy Escape",
+        "tipo": "reacao",
+        "gatilho": "Wind Witch sofre dano de um ataque corpo a corpo",
+        "movimento": "até metade do deslocamento de voo, i.e., até 30 pés no bloco-base",
+        "nao_provoca_ataques_oportunidade": true,
+        "efeito_adicional": "libera imediatamente a criatura capturada"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "reacoes": "PRESENTE",
+      "acoes_lendarias": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL"
+    },
+    "acoes_miticas": []
+  },
+  "pendencias": [
+    "Confirmar em Tome of Beasts 3 se a fórmula de PV 12d8+12 da ficha (criatura Large) é errata ou exceção.",
+    "Conferir editoralmente duração da condição de captura e dano condicional de Flammable; fonte individual detalhada disponível.",
+    "Revisão visual da imagem pendente."
+  ],
+  "campos_nao_confirmados": [
+    "confirmação da fórmula 12d8 para Large",
+    "conferência de publicação/errata do Tome of Beasts 3",
+    "aprovação visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/wind-witch/",
+      "tipo": "bloco individual de regras da 5eSRD confrontado campo a campo 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice da editora: identifica publicação, criatura, tipo e ND",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint anterior, apenas histórico",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-416",
+    "nome": "Wind Witch",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "nd_catalogo": null,
+    "nd_fonte": "3",
+    "ca": 13,
+    "pv": 66,
+    "atributos": {
+      "forca": 6,
+      "destreza": 16,
+      "constituicao": 12,
+      "inteligencia": 6,
+      "sabedoria": 11,
+      "carisma": 8
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Planta amaldiçoada, inflamável; certas condições permitem reanimação."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Captura/contensão e pancada; reação Bouncy Escape."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://www.5esrd.com/database/creature/wind-witch/",
+    "fonte_tipo": "republicação terceirizada (5eSRD)",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir contra exemplar editorial, edição/errata e direitos/licenças antes da promoção.",
+      "Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false,
+    "fonte_editorial": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-416.webp",
+    "formato": "webp",
+    "blob_sha": "371ea01a3352e321d33b566d21beed545ba940b5",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Wind%20Witch.webp",
+    "origem_repositorio": "TheGiddyLimit/homebrew",
+    "origem_caminho": "_img/ToB3/creature/Wind Witch.webp",
+    "binario_presente": true,
+    "integridade_binaria_confirmada": true,
+    "validacao_visual_editorial": "PENDENTE",
+    "largura": null,
+    "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "fonte_publicada_individual": "https://www.5esrd.com/database/creature/wind-witch/",
+    "indice_editorial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "comparacao_exemplar_editorial_ou_errata": "PENDENTE",
+    "data_conferencia": "2026-10-14"
+  }
+}

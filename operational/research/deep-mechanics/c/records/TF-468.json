@@ -1,0 +1,434 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-468",
+  "nome": "Faerie Chimera",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 20,
+  "estado_auditoria": "BLOQUEADA_REFERENCIAS_ACOES_LENDARIAS_E_SOPRO",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/3239"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "7",
+    "bonus_proficiencia": 3,
+    "ca": 13,
+    "composicao_ca": "natural armor",
+    "pv": 114,
+    "dados_vida": "12d10+48",
+    "bloodied": 57,
+    "porte": "Large",
+    "tipo": "Monstrosity",
+    "atributos": {
+      "forca": 18,
+      "destreza": 10,
+      "constituicao": 18,
+      "inteligencia": 3,
+      "sabedoria": 16,
+      "carisma": 10
+    },
+    "modificadores": {
+      "forca": 4,
+      "destreza": 0,
+      "constituicao": 4,
+      "inteligencia": -4,
+      "sabedoria": 3,
+      "carisma": 0
+    },
+    "deslocamentos": {
+      "andar_ft": 30,
+      "voo_ft": 60
+    },
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 7
+      },
+      {
+        "nome": "INT",
+        "bonus": -1
+      },
+      {
+        "nome": "WIS",
+        "bonus": 6
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 21,
+    "idiomas": [],
+    "vulnerabilidades": [],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "resistencias_condicao": [],
+    "maneuver_dc": 15,
+    "xp": null,
+    "motivo_xp_null": "não impresso na ficha A5E",
+    "alinhamento": null,
+    "motivo_alinhamento_null": "não declarado na ficha"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Reactive Heads",
+        "categoria": "passivo",
+        "limite": {
+          "reacoes_por_rodada": 3,
+          "reacoes_por_turno": 1
+        }
+      },
+      {
+        "nome": "Three Heads",
+        "categoria": "passivo",
+        "efeitos": [
+          "vantagem em Perception checks",
+          "vantagem em salvaguardas contra blinded, charmed, deafened, frightened, stunned e unconscious",
+          "não pode ser flanked"
+        ],
+        "protecao_transformacao": "imune a polymorph ou magia semelhante"
+      },
+      {
+        "nome": "Wakeful",
+        "categoria": "passivo",
+        "efeito": "quando uma cabeça dorme, outras permanecem acordadas"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "White Stag Headbutt",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "STR",
+            "cd": 15
+          },
+          "efeito_falha": {
+            "condicao": "prone"
+          },
+          "efeito_sucesso": "sem condição"
+        }
+      },
+      {
+        "nome": "Black Wolf Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Silver Dragon Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "slashing"
+          }
+        ],
+        "dano_alvo_prone": {
+          "dados": "4d4+4",
+          "media": 14,
+          "tipo": "slashing"
+        }
+      },
+      {
+        "nome": "Breath Weapon",
+        "tipo": "area cone",
+        "recarga": {
+          "dado": "d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 15
+        },
+        "alvos": "criaturas na área",
+        "teste_resistencia": {
+          "atributo": "DEX",
+          "cd": 15
+        },
+        "efeito_falha": {
+          "dano": [
+            {
+              "dados": "6d6",
+              "media": 21,
+              "tipo": "cold"
+            }
+          ]
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 6d6"
+        },
+        "descricao_elemento_fonte": "fire",
+        "conflito_editorial": {
+          "descricao_lanca": "fire",
+          "tipo_dano_do_bloco": "cold",
+          "variante_regional": "cold",
+          "resolucao": "NAO_CORRIGIDO, preservar ambos"
+        }
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "White Stag Headbutt",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "STR",
+            "cd": 15
+          },
+          "efeito_falha": {
+            "condicao": "prone"
+          },
+          "efeito_sucesso": "sem condição"
+        }
+      },
+      {
+        "nome": "Black Wolf Bite",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Silver Dragon Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "slashing"
+          }
+        ],
+        "dano_alvo_prone": {
+          "dados": "4d4+4",
+          "media": 14,
+          "tipo": "slashing"
+        }
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome": "Tail Swipe",
+        "tipo": "reaction",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "gatilho": "criatura a até 5 ft acerta a chimera com melee attack",
+        "teste_resistencia": {
+          "atributo": "STR",
+          "cd": 15
+        },
+        "efeito_falha": {
+          "dano": {
+            "dados": "2d4+4",
+            "media": 9,
+            "tipo": "bludgeoning"
+          },
+          "movimento_forcado_ft": 10,
+          "condicao": "prone"
+        },
+        "efeito_sucesso": "não sofre efeitos listados"
+      },
+      {
+        "nome": "Winged Charge",
+        "tipo": "reaction",
+        "usos": {
+          "quantidade": 1,
+          "periodo": "dia"
+        },
+        "gatilho": "criatura visível acerta chimera com ranged attack",
+        "movimento": "até full fly speed (60 ft) em direção ao atacante",
+        "ataque_se_alcanca": "headbutt",
+        "referencia_acao_existente": "White Stag Headbutt",
+        "conflito_se_sem_acao": null
+      }
+    ],
+    "acoes_lendarias": [
+      {
+        "nome": "Bite",
+        "custo": 1,
+        "acao_referenciada_literal": "Bite",
+        "resolucao_referencia": null,
+        "observacao": "O bloco da variante possui Black Wolf Bite, não um ataque exatamente chamado Bite."
+      },
+      {
+        "nome": "Claw",
+        "custo": 1,
+        "acao_referenciada_literal": "Claw",
+        "resolucao_referencia": null,
+        "observacao": "O bloco da variante possui Silver Dragon Claw, não um ataque exatamente chamado Claw."
+      }
+    ],
+    "acoes_lendarias_regras": {
+      "maximo": 2,
+      "recuperacao": "início do turno",
+      "gatilho": "fim do turno de outra criatura",
+      "maximo_por_vez": 1
+    },
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": {
+      "maximo": 2,
+      "recuperacao": "início do turno"
+    },
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "reacoes": "PRESENTES_DUAS",
+      "acoes_lendarias": "PRESENTES_DUAS",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "conjuracao": "AUSENCIA_CONFERIDA_NO_BLOCO"
+    }
+  },
+  "pendencias": [
+    "Breath Weapon diz respirar fire, mas registra dano cold e variante descreve cold; preservar conflito editorial sem converter automaticamente.",
+    "Ações lendárias Bite/Claw não coincidem literalmente com Black Wolf Bite/Silver Dragon Claw; confirmar errata.",
+    "Imagem binária da variante ainda não está armazenada."
+  ],
+  "campos_nao_confirmados": [
+    "resolução editorial das referências de ações",
+    "tipo textual fire x cold em Breath Weapon",
+    "arquivo físico de imagem",
+    "revisão editorial independente"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/3239",
+      "tipo": "bloco individual da ferramenta oficial EN Publishing A5E, verificado 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "sistema": "Level Up Advanced 5E"
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico apenas para comparação",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": false
+  },
+  "checkpoint_anterior": {
+    "id": "TF-468",
+    "nome": "Faerie Chimera",
+    "editora": "EN Publishing",
+    "publicacao": "Monstrous Menagerie",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "7",
+    "ca": 13,
+    "pv": 114,
+    "atributos": {
+      "forca": 18,
+      "destreza": 10,
+      "constituicao": 18,
+      "inteligencia": 3,
+      "sabedoria": 16,
+      "carisma": 10
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Quimera variante feérica de três cabeças com reações múltiplas; impossibilidade de transformação por polymorph."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "White Stag Headbutt, Black Wolf Bite, Silver Dragon Claw e sopro de frio; ações lendárias."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/3239",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "A página apresenta contradição entre 'fire' no texto do sopro e dano cold; marcar divergência editorial.",
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_individual": "https://a5e.tools/node/3239",
+    "publicacao": "Monstrous Menagerie",
+    "revisao_livro_errata": "PENDENTE",
+    "status_completo": "NAO"
+  }
+}

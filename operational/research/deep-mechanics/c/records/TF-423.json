@@ -1,0 +1,356 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-423",
+  "nome": "Spawn of Chernobog",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 10,
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "bonus_proficiencia_origem": "deduzido do ND padrão",
+    "ca": 14,
+    "composicao_ca": "natural armor",
+    "pv": 95,
+    "dados_vida": "10d10+40",
+    "porte": "Large",
+    "tipo": "fiend",
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "forca": 22,
+      "destreza": 12,
+      "constituicao": 18,
+      "inteligencia": 10,
+      "sabedoria": 12,
+      "carisma": 12
+    },
+    "modificadores": {
+      "forca": 6,
+      "destreza": 1,
+      "constituicao": 4,
+      "inteligencia": 0,
+      "sabedoria": 1,
+      "carisma": 1
+    },
+    "deslocamentos": {
+      "andar_ft": 40
+    },
+    "salvaguardas": [],
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 8
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 3
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "entende Common, Umbral e Undercommon; não fala"
+    ],
+    "vulnerabilidades": [
+      "radiant"
+    ],
+    "resistencias": [
+      "necrotic"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened"
+    ],
+    "resistencias_condicao": []
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Night’s Blood",
+        "tipo": "passivo_doenca_progressiva",
+        "gatilho": "falha em salvaguarda da mordida que transmite a doença",
+        "teste_periodico": "depois de cada descanso longo",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "cura": {
+          "condicao": "2 sucessos em testes periódicos",
+          "consecutivos": "não estabelecido na transcrição"
+        },
+        "efeito_falha": "avança exatamente um estágio",
+        "estagios": [
+          {
+            "numero": 1,
+            "efeito": "perde a capacidade de falar; língua escurece"
+          },
+          {
+            "numero": 2,
+            "efeitos": [
+              "olhos vermelhos",
+              "adquire darkvision 60 pés",
+              "adquire Sunlight Sensitivity"
+            ]
+          },
+          {
+            "numero": 3,
+            "efeitos": [
+              "exsuda óleo preto",
+              "vantagem em testes de atributo e salvaguardas para escapar de grapple"
+            ]
+          },
+          {
+            "numero": 4,
+            "efeito": "veias escurecem, progredindo das extremidades rumo à cabeça no decorrer de 24 horas"
+          },
+          {
+            "numero": 5,
+            "efeito": "após descanso longo final, dor intensa e morte ao pôr do sol; galhadas irrompem da cabeça; óleo do cadáver origina um novo Spawn of Chernobog à meia-noite"
+          }
+        ],
+        "detalhes_temporais": "2 sucessos curam; cada falha avança sequência; tempos relativos preservados conforme transcrição"
+      },
+      {
+        "nome": "Sunlight Sensitivity",
+        "tipo": "passivo_condicional",
+        "gatilho": "sob luz solar",
+        "efeitos": [
+          "desvantagem em rolagens de ataque",
+          "desvantagem em testes de Sabedoria (Perception) que dependem de visão"
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "multiataque",
+        "sequencia": [
+          {
+            "acao": "Bite",
+            "quantidade": 1
+          },
+          {
+            "acao": "Claws",
+            "quantidade": 1
+          }
+        ]
+      },
+      {
+        "nome": "Bite",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d8+6",
+            "media": 10,
+            "tipo": "piercing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "CON",
+            "cd": 14
+          },
+          "efeito_falha": "contrai doença Night's Blood",
+          "efeito_sucesso": "não contrai doença"
+        }
+      },
+      {
+        "nome": "Claws",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "slashing"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "1d8+6",
+            "media": 10,
+            "tipo": "piercing"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "CON",
+            "cd": 14
+          },
+          "efeito_falha": "contrai doença Night's Blood",
+          "efeito_sucesso": "não contrai doença"
+        }
+      },
+      {
+        "nome": "Claws",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 8,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "slashing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "sequencia": [
+        {
+          "acao": "Bite",
+          "quantidade": 1
+        },
+        {
+          "acao": "Claws",
+          "quantidade": 1
+        }
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "reacoes": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_CONFIRMADA_NA_FICHA_INDIVIDUAL"
+    },
+    "acoes_miticas": []
+  },
+  "pendencias": [
+    "Night’s Blood reconstruída com cinco estágios, gatilho inicial, CD, sucessos e transformações; conferir errata da progressão temporal.",
+    "A origem da doença depende de uma Bite acertar e de falha CON CD14; não transmitir em todo contato.",
+    "Aprovação visual e conferência editorial Creature Codex pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "se dois sucessos para cura precisam ser consecutivos (fonte não esclarece)",
+    "conferência editorial Creature Codex/errata",
+    "revisão visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/spawn-of-chernobog/",
+      "tipo": "bloco individual de regras da 5eSRD confrontado campo a campo 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice da editora: identifica publicação, criatura, tipo e ND",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint anterior, apenas histórico",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-423",
+    "nome": "Spawn of Chernobog",
+    "editora": "Kobold Press",
+    "publicacao": "Creature Codex",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "nd_catalogo": null,
+    "nd_fonte": "4",
+    "ca": 14,
+    "pv": 95,
+    "atributos": {
+      "forca": 22,
+      "destreza": 12,
+      "constituicao": 18,
+      "inteligencia": 10,
+      "sabedoria": 12,
+      "carisma": 12
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Fragilidade sob luz do sol; infecção por Night's Blood."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Garras e mordida capazes de transmitir doença, CD 14."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://www.5esrd.com/database/creature/spawn-of-chernobog/",
+    "fonte_tipo": "republicação terceirizada (5eSRD)",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir contra exemplar editorial, edição/errata e direitos/licenças antes da promoção."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-423.jpg",
+    "formato": "jpg",
+    "blob_sha": "34ddf5dfb447ed444bd41c5eaa80e076ca1c1c4f",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Spawnofchernobog.jpg",
+    "origem_repositorio": "TheGiddyLimit/homebrew",
+    "origem_caminho": "_img/CCodex/Spawnofchernobog.jpg",
+    "binario_presente": true,
+    "integridade_binaria_confirmada": true,
+    "validacao_visual_editorial": "PENDENTE",
+    "largura": null,
+    "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "fonte_publicada_individual": "https://www.5esrd.com/database/creature/spawn-of-chernobog/",
+    "indice_editorial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "comparacao_exemplar_editorial_ou_errata": "PENDENTE",
+    "data_conferencia": "2026-10-14"
+  }
+}

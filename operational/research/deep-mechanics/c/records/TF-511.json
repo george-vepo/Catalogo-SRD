@@ -1,0 +1,242 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-511",
+  "nome": "Fiendbloom Awakened Tree",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 34,
+  "estado_auditoria": "BLOQUEADA_ESCOPO_DOENCA_CRIATURAS_VS_HUMANOIDES",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "EN Publishing",
+    "publicacao": "To Save A Kingdom",
+    "edicao": "Level Up: Advanced 5E",
+    "fonte_identidade": "https://a5e.tools/node/3414"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "2",
+    "ca": 13,
+    "pv": 51,
+    "dados_vida": "6d12+12",
+    "porte": "Huge",
+    "tipo": "Plant",
+    "alinhamento": null,
+    "atributos": {
+      "forca": 18,
+      "destreza": 6,
+      "constituicao": 14,
+      "inteligencia": 10,
+      "sabedoria": 10,
+      "carisma": 10
+    },
+    "modificadores": {
+      "forca": 4,
+      "destreza": -2,
+      "constituicao": 2,
+      "inteligencia": 0,
+      "sabedoria": 0,
+      "carisma": 0
+    },
+    "deslocamentos": {
+      "andar_ft": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [],
+    "percepcao_passiva": 10,
+    "idiomas": [
+      "one language known by creator"
+    ],
+    "resistencias": [
+      "fire",
+      "bludgeoning",
+      "piercing"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "composicao_ca": "natural armor",
+    "bloodied": 25,
+    "subtipo_condicional": [
+      "Fiend",
+      "Plant"
+    ],
+    "bonus_proficiencia": 2,
+    "xp": null,
+    "maneuver_dc": 14
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "False Appearance",
+        "pre_condicao": "imóvel",
+        "efeito": "indistinguível de uma árvore normal"
+      },
+      {
+        "nome": "Doubletyped",
+        "efeito": "considerada Fiend e Plant para efeitos, spells e traits"
+      },
+      {
+        "nome": "Dreaded Winter",
+        "gatilho": "sofre dano de frio >= proficiency bonus 2",
+        "efeito": "speed -10 ft",
+        "duracao": "até fim próximo turno"
+      },
+      {
+        "nome": "Hellspore Seeding",
+        "gatilho": "morre",
+        "area": {
+          "raio_ft": 30
+        },
+        "alvos": "criaturas na área",
+        "teste": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": "infecta com Hellspore Blight",
+        "regra_externa": {
+          "fonte": "https://a5e.tools/rules/disease-hellspore-blight-tier-2-3",
+          "tier": "2 compatível com CD14",
+          "progressao": "save CON após cada semana e sempre que ganha fatigue por outra razão; falha adiciona 1 fatigue; após três falhas vira soultree",
+          "cura_pre_transformacao": "Medicine ou spellcasting check DC14 ou blueheart potion",
+          "limite": "depois de soultree não curável por métodos padrão",
+          "restricao_editorial": "A ficha do monstro impõe teste a cada criatura na explosão, enquanto a página da doença descreve humanoids expostos; efeito da doença sobre não-humanoides não foi esclarecido."
+        }
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_VERIFICADA",
+      "reacoes": "AUSENCIA_VERIFICADA",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA",
+      "acoes_covil": "AUSENCIA_VERIFICADA",
+      "acoes_miticas": "AUSENCIA_VERIFICADA",
+      "conjuracao": "AUSENCIA_VERIFICADA"
+    }
+  },
+  "pendencias": [
+    "Hellspore Blight é regra externa A5E; a ficha publica DC14, correspondente ao tier 2.",
+    "Ainda faltam imagem física e confirmação do livro/errata.",
+    "Divergência de escopo: Hellspore Seeding afeta 'each creature', mas a regra da doença se refere a humanoids; confirmar alcance antes da implementação."
+  ],
+  "campos_nao_confirmados": [
+    "confirmação editorial do tier em To Save A Kingdom",
+    "imagem física",
+    "aplicação de Hellspore Blight a não-humanoides"
+  ],
+  "fontes": [
+    {
+      "url": "https://a5e.tools/node/3414",
+      "tipo": "bloco individual oficial Level Up A5E, conferido em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://a5e.tools/rules/disease-hellspore-blight-tier-2-3",
+      "tipo": "mecânica oficial de doença ligada à criatura",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint prévio",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-511",
+    "nome": "Fiendbloom Awakened Tree",
+    "editora": "EN Publishing",
+    "publicacao": "To Save A Kingdom",
+    "edicao": "Level Up: Advanced 5E",
+    "nd_catalogo": null,
+    "nd_fonte": "2",
+    "ca": 13,
+    "pv": 51,
+    "atributos": {
+      "forca": 18,
+      "destreza": 6,
+      "constituicao": 14,
+      "inteligencia": 10,
+      "sabedoria": 10,
+      "carisma": 10
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Árvore desperta de dupla tipagem fiend/plant; Cold Dreaded Winter e Hellspore Seeding após morrer."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Pancada Slam; efeito de esporos na morte."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://a5e.tools/node/3414",
+    "fonte_tipo": "ficha individual em ferramenta do sistema/editor EN Publishing",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisar compatibilidade de mecânicas exclusivas de Level Up: A5E antes de converter para o jogo; conferir direitos/licenças."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Level Up Advanced 5E",
+    "data": "2026-10-14",
+    "confronto_com_livro_errata": "PENDENTE"
+  }
+}

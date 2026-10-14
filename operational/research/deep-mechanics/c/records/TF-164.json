@@ -1,0 +1,305 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-164",
+  "nome": "Ooze, Leavesrot",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 42,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press / Open Design",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": null,
+    "fonte_identidade": null
+  },
+  "estatisticas": {
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 8,
+    "pv": 105,
+    "dados_vida": "14d10+28",
+    "porte": "Large",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 17,
+      "DES": 7,
+      "CON": 15,
+      "INT": 1,
+      "SAB": 8,
+      "CAR": 1
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": -2,
+      "CON": 2,
+      "INT": -5,
+      "SAB": -1,
+      "CAR": -5
+    },
+    "deslocamentos": {
+      "andar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      }
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [],
+    "resistencias": [],
+    "imunidades_dano": [
+      "acid",
+      "bludgeoning",
+      "cold"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "efeito": "atravessa abertura 1 inch sem squeezing"
+      },
+      {
+        "nome": "False Appearance",
+        "precondicao": "imóvel",
+        "efeito": "indistinguível de amontoado de folhas"
+      },
+      {
+        "nome": "Ooze Nature",
+        "efeito": "não dorme"
+      },
+      {
+        "nome": "Rotting Leaves",
+        "gatilho": "sofre acerto melee de criatura a até 5ft",
+        "area": {
+          "raio_ft": 5,
+          "alvos": "each creature, including attacker"
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": "poisoned até fim do próximo turno da vítima"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d8",
+            "media": 13,
+            "tipo": "acid"
+          }
+        ],
+        "on_hit": {
+          "alvo": "grappled escape DC13",
+          "efeitos": [
+            "restrained enquanto grappled",
+            "auto-hit nesse alvo",
+            "não pode atacar outros alvos com Pseudopod até encerrar grapple"
+          ]
+        }
+      },
+      {
+        "nome": "Release Spores",
+        "recarga": "5-6",
+        "area": {
+          "raio_ft": 20
+        },
+        "teste": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": {
+          "dano": {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "poison"
+          },
+          "estado": "choking"
+        },
+        "sucesso": "metade sem choking",
+        "repetir": "end of each of choking creature's turns, save success termina"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d6+3",
+            "media": 10,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d8",
+            "media": 13,
+            "tipo": "acid"
+          }
+        ],
+        "on_hit": {
+          "alvo": "grappled escape DC13",
+          "efeitos": [
+            "restrained enquanto grappled",
+            "auto-hit nesse alvo",
+            "não pode atacar outros alvos com Pseudopod até encerrar grapple"
+          ]
+        }
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Rotting Leaves afeta cada criatura dentro de 5ft, não apenas atacante; efeito dura até fim do turno de cada vítima.",
+    "Release Spores choking pede save no fim de cada turno; estado não é sinônimo de poisoned.",
+    "Aprovação editor/licença de imagem ainda pendente."
+  ],
+  "campos_nao_confirmados": [
+    "conferência do livro autorizado e errata",
+    "verificação visual, direitos e adequação da arte"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-leavesrot/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/ooze-leavesrot/",
+      "tipo": "ficha individual analisada no CP38",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-161_TF-165/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-164",
+    "nome": "Ooze, Leavesrot",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "4",
+    "nd_fonte": "4",
+    "ca": 8,
+    "pv": 105,
+    "pv_dados": "14d10+28",
+    "porte": "Large",
+    "tipo": "ooze",
+    "atributos": [
+      17,
+      7,
+      15,
+      1,
+      8,
+      1
+    ],
+    "deslocamento_ft": {
+      "andar": 20
+    },
+    "imunidades_dano": [
+      "acid",
+      "bludgeoning",
+      "cold"
+    ],
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "resumo": "Passa por aberturas de uma polegada."
+      },
+      {
+        "nome": "False Appearance",
+        "resumo": "Imóvel parece pilha comum de folhas."
+      },
+      {
+        "nome": "Rotting Leaves",
+        "resumo": "Ao sofrer ataque corpo a corpo por agressor a 5 pés, criaturas próximas testam Constituição CD13 ou envenenadas até o final do próximo turno."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Pseudopod",
+        "resumo": "+5, 5 pés, 2d6+3 contundente e 3d8 ácido, agarra fuga CD13 e restringe; enquanto agarrado, acerta esse alvo automaticamente e não ataca outros."
+      },
+      {
+        "nome": "Release Spores (Recharge 5–6)",
+        "resumo": "Criaturas a 20 pés testam Constituição CD13 contra 4d6 veneno (metade em sucesso). Falha gera sufocamento até novo sucesso."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/ooze-leavesrot/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Revisar efeitos do sufocamento; arte e licenciamento pendentes."
+    ],
+    "editora": "Kobold Press / Open Design",
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-164.webp",
+    "formato": "webp",
+    "largura": 1000,
+    "altura": 1224,
+    "bytes": 113514,
+    "blob_sha": "4858ad000e503b5559567938f033830e44703e62",
+    "sha256": "2a4ee312be6152a08991ce4ddcfe7d39d507e198e8e2e89061c359a24cc34773",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Leavesrot%20Ooze.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 38,
+    "publicacao": "Tome of Beasts 3",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/ooze-leavesrot/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

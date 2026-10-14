@@ -1,0 +1,353 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-174",
+  "nome": "Oozasis",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 52,
+  "estado_auditoria": "BLOQUEADA_EDICOES_2016_2023_REQUER_REVISAO_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "edicao": "Tome of Beasts 1 ORIGINAL (2016), sem incorporar alterações de 2023",
+    "fonte_identidade": "https://robinloft.com/monsters/oozasis/tome-of-beasts"
+  },
+  "estatisticas": {
+    "nd_catalogo": "9",
+    "nd_fonte": "9",
+    "ca": 7,
+    "pv": 217,
+    "dados_vida": "14d20+70",
+    "porte": "Gargantuan",
+    "tipo": "ooze",
+    "alinhamento": "unaligned",
+    "atributos": {
+      "FOR": 18,
+      "DES": 5,
+      "CON": 20,
+      "INT": 12,
+      "SAB": 22,
+      "CAR": 18
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": -3,
+      "CON": 5,
+      "INT": 1,
+      "SAB": 6,
+      "CAR": 4
+    },
+    "deslocamentos": {
+      "andar": 20,
+      "escalar": 20,
+      "nadar": 20
+    },
+    "pericias": [
+      {
+        "nome": "Deception",
+        "bonus": 8
+      },
+      {
+        "nome": "History",
+        "bonus": 5
+      },
+      {
+        "nome": "Insight",
+        "bonus": 10
+      },
+      {
+        "nome": "Perception",
+        "bonus": 10
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "INT",
+        "bonus": 5
+      },
+      {
+        "nome": "WIS",
+        "bonus": 10
+      },
+      {
+        "nome": "CHA",
+        "bonus": 8
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60,
+        "restricao": "blind beyond"
+      },
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 20,
+    "idiomas": [
+      "compreende todos os idiomas, não fala",
+      "telepatia 120ft"
+    ],
+    "resistencias": [
+      "fire",
+      "lightning",
+      "bludgeoning/piercing/slashing de armas não mágicas"
+    ],
+    "imunidades_dano": [
+      "acid"
+    ],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "deafened",
+      "exhaustion",
+      "frightened",
+      "prone"
+    ],
+    "vulnerabilidades": [
+      "thunder"
+    ],
+    "xp": 5000,
+    "bonus_proficiencia": null
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Amorphous",
+        "passagem_minima_inch": 1
+      },
+      {
+        "nome": "Waters of Unfathomable Compulsion",
+        "gatilho": "criatura bebe água da ooze ou come fruto de planta crescida na água dela",
+        "no_proximo_sono": "dream, DC16 (edição 2016)",
+        "ao_acordar": "geas 7º nível, DC16 além de dream, orienta ação indicada pela ooze"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "sequencia": [
+          "Pseudopod",
+          "Pseudopod"
+        ]
+      },
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "acid"
+          }
+        ],
+        "grapple": {
+          "alvo": "Large ou menor",
+          "escape_cd": 16,
+          "estado": "restrained",
+          "limite": "2 Pseudopods, 1 alvo por Pseudopod"
+        }
+      },
+      {
+        "nome": "Engulf",
+        "alvos": "criaturas grappled pela própria ooze",
+        "efeitos": [
+          "não respira",
+          "restrained",
+          "cessa grapple e adquire total cover para efeitos externos",
+          "move-se com a ooze",
+          "sujeita a Waters of Unfathomable Compulsion"
+        ],
+        "dano_inicio_turno_ooze": {
+          "dados": "6d6",
+          "media": 21,
+          "tipo": "acid"
+        },
+        "dano_opcional": "a ooze pode escolher não causar dano",
+        "escape": {
+          "economia": "action",
+          "teste": "STR check DC16",
+          "destino": "espaço até 5ft da ooze"
+        }
+      },
+      {
+        "nome": "Vapors of Tranquility or Turmoil",
+        "recarga": "após descanso curto ou longo",
+        "area": {
+          "raio_ft": 60,
+          "espessura_ft": 10,
+          "forma": "disco centrado na ooze"
+        },
+        "modos": [
+          "calm emotions",
+          "confusion"
+        ],
+        "teste": {
+          "cd": 16
+        },
+        "restricao": "a ooze escolhe um efeito igual para todas as criaturas na área"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Pseudopod",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "acid"
+          }
+        ],
+        "grapple": {
+          "alvo": "Large ou menor",
+          "escape_cd": 16,
+          "estado": "restrained",
+          "limite": "2 Pseudopods, 1 alvo por Pseudopod"
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Pseudopod",
+        "Pseudopod"
+      ]
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Mirage",
+        "economia": "bonus action",
+        "efeito": "mirage arcane em torno da ooze como engodo",
+        "cd": 16,
+        "natureza": "não mágica, indetectável por detect magic e não pode ser dissipada"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "EDIÇÃO ORIGINAL 2016: NÃO combinar com revisão 2023. Original: INT12 WIS22 CHA18, thunder vulnerability, climb, Mirage bônus, Engulf e Vapors descanso; revisão 2023 altera habilidades, salva e deslocamento.",
+    "As fontes de reprodução e Robinloft corroboram versão antiga, mas aprovação editorial/errata original continua bloqueada.",
+    "Licença e validação visual da imagem ainda pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "erratas/validação final na edição editorial autorizada",
+    "imagem: licenciamento, identidade e aprovação visual"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/oozasis-3pp",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://robinloft.com/monsters/oozasis/tome-of-beasts",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/ufijo/ddkh/basic/301-350",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/oozasis-3pp/",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tome-of-beasts-1-what-changed/",
+      "tipo": "fonte consultada no checkpoint 40; dados estruturados e parafraseados",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_CONFLITO_EDICAO",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-174",
+    "nome": "Oozasis",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "nd_catalogo": "9",
+    "nd_fonte": "9",
+    "ca": 7,
+    "pv": 217,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Mirage disfarça criatura de oásis; engana e controla vítimas por sonhos"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Engulf e ações ácidas/ilusão dependentes da edição."
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/oozasis-3pp",
+    "fonte_secundaria": "https://www.robinloft.com/monsters/oozasis/tome-of-beasts",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "PARCIAL_CONFLITO_EDICAO",
+    "pendencias": [
+      "ATENÇÃO: página 5eSRD revisão 2023 diverge da versão original CR9, inclusive nos atributos/salvaguardas; CA/PV compatíveis, mas não combinar demais mecânicas das duas edições.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-174.webp",
+    "formato": "webp",
+    "largura": 717,
+    "altura": 800,
+    "bytes": 63082,
+    "blob_sha": "99d54c47ec184d2178cab899b3e2bf84716ef161",
+    "sha256": "814aa2e60a06ff82889fd77d9f12f1ae3e88064b6c5cb8fe90e01c218fc7f72b",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Oozasis.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 40,
+    "publicacao": "Tome of Beasts 1 ORIGINAL (2016), sem incorporar alterações de 2023",
+    "fonte_mecanicas": "https://robinloft.com/monsters/oozasis/tome-of-beasts",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

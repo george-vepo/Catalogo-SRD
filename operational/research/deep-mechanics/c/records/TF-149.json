@@ -1,0 +1,386 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-149",
+  "nome": "Giant, Thursir Armorer",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 27,
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": null,
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 19,
+    "pv": 138,
+    "dados_vida": "12d10+72",
+    "porte": "Large",
+    "tipo": "giant",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 20,
+      "DES": 9,
+      "CON": 23,
+      "INT": 12,
+      "SAB": 15,
+      "CAR": 9
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": -1,
+      "CON": 6,
+      "INT": 1,
+      "SAB": 2,
+      "CAR": -1
+    },
+    "deslocamentos": {
+      "andar": 40
+    },
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 8
+      },
+      {
+        "nome": "Perception",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 9
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Common",
+      "Dwarven",
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 2300,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "splint + shield (19 inicial)"
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Forged Forgery",
+        "gatilho": "critical hit de criatura proficiente com smith's tools",
+        "efeito": "quebra armadura, CA inicial 19 reduzida em 5 até reparar",
+        "sequencia": "se receber outro critical hit de qualquer criatura enquanto quebrada: armadura destruída, CA 12",
+        "nota": "segundo crítico não exige proficiência em smith's tools"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "primeiro": "Flinging Smash, se disponível",
+        "depois": [
+          {
+            "acoes": [
+              "Battleaxe",
+              "Battleaxe"
+            ]
+          },
+          {
+            "acoes": [
+              "Battleaxe",
+              "Shield Bash"
+            ]
+          }
+        ],
+        "nota": "Flinging Smash precede ambos ataques quando recarregado"
+      },
+      {
+        "nome": "Battleaxe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "slashing",
+            "modalidade": "uma mão"
+          },
+          {
+            "dados": "2d10+5",
+            "media": 16,
+            "tipo": "slashing",
+            "modalidade": "duas mãos"
+          }
+        ]
+      },
+      {
+        "nome": "Shield Bash",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "2d4+5",
+            "media": 10,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "prone"
+        }
+      },
+      {
+        "nome": "Flinging Smash",
+        "recarga": "5-6",
+        "area": {
+          "raio_ft": 10,
+          "alvos": "each creature"
+        },
+        "teste": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "pushed até 15 ft e prone"
+        }
+      },
+      {
+        "nome": "Runic Armor",
+        "frequencia": "3/day",
+        "duracao": "1 minute",
+        "gatilho": "creature hits armorer with melee weapon attack",
+        "efeito": "attacker sofre 1d8 lightning e perde reações até início do próximo turno",
+        "nota": "ação para ativar"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Battleaxe",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "2d8+5",
+            "media": 14,
+            "tipo": "slashing",
+            "modalidade": "uma mão"
+          },
+          {
+            "dados": "2d10+5",
+            "media": 16,
+            "tipo": "slashing",
+            "modalidade": "duas mãos"
+          }
+        ]
+      },
+      {
+        "nome": "Shield Bash",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "2d4+5",
+            "media": 10,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "teste": {
+          "atributo": "STR",
+          "cd": 16,
+          "em_falha": "prone"
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "primeiro": "Flinging Smash, se disponível",
+      "depois": [
+        {
+          "acoes": [
+            "Battleaxe",
+            "Battleaxe"
+          ]
+        },
+        {
+          "acoes": [
+            "Battleaxe",
+            "Shield Bash"
+          ]
+        }
+      ],
+      "nota": "Flinging Smash precede ambos ataques quando recarregado"
+    },
+    "acoes_bonus": [
+      {
+        "nome": "Harness Dwarven Soul",
+        "origem": "fragmento de alma em skull",
+        "efeito": "vantagem em smith's tools ability checks e em attacks battleaxe, handaxe, light hammer, warhammer",
+        "duracao": "até início próximo turno armorer",
+        "nota": "6 skulls transportados; não implicam limite de 6 usos"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "Forged Forgery: somente primeiro crítico exige proficiência com ferramentas; segundo crítico pode vir de qualquer criatura enquanto armadura quebrada.",
+    "Harness Dwarven Soul concede vantagens por bônus até próximo turno; seis skulls não são explicitamente limite de usos.",
+    "Imagem existente, licença e revisão editorial original pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "verificação independente do livro/errata e condições de licenciamento",
+    "inspeção visual e autorização da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/thursir-armorer/",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/thursir-armorer/",
+      "tipo": "fonte individual detalhada checkpoint 35",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-144_TF-150/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-149",
+    "nome": "Giant, Thursir Armorer",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "nd_catalogo": "6",
+    "nd_fonte": "6",
+    "ca": 19,
+    "pv": 138,
+    "pv_dados": "12d10+72",
+    "porte": "Large",
+    "tipo": "giant",
+    "alinhamento": "lawful evil",
+    "atributos": [
+      20,
+      9,
+      23,
+      12,
+      15,
+      9
+    ],
+    "deslocamento_ft": {
+      "andar": 40
+    },
+    "salvaguardas": {
+      "CON": 9
+    },
+    "pericias": {
+      "Athletics": 8,
+      "Perception": 5
+    },
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Common",
+      "Dwarven",
+      "Giant"
+    ],
+    "tracos": [
+      {
+        "nome": "Forged Forgery",
+        "resumo": "Crítico de criatura proficiente com ferramentas de ferreiro danifica armadura e reduz CA em 5; crítico posterior enquanto danificada destrói armadura e reduz CA a 12."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo": "Usa Flinging Smash se disponível e então dois Battleaxe ou um Battleaxe e um Shield Bash."
+      },
+      {
+        "nome": "Battleaxe",
+        "resumo": "+8, 10 pés, 2d8+5 cortante ou 2d10+5 com duas mãos."
+      },
+      {
+        "nome": "Shield Bash",
+        "resumo": "+8, 10 pés, 2d4+5 contundente; Força CD16 ou caído."
+      },
+      {
+        "nome": "Flinging Smash (Recharge 5–6)",
+        "resumo": "Criaturas a 10 pés fazem Força CD16 ou são empurradas 15 pés e caem."
+      },
+      {
+        "nome": "Runic Armor (3/day)",
+        "resumo": "Runa ativa por um minuto: atacante corpo a corpo que acerta sofre 1d8 elétrico e perde reações temporariamente."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Harness Dwarven Soul",
+        "resumo": "Vantagem temporária em testes com ferramentas de ferreiro e ataques com determinadas armas.)"
+      }
+    ],
+    "fonte": "https://www.5esrd.com/database/creature/thursir-armorer/",
+    "indice_oficial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir regras de armadura quebrada e gatilhos dos acertos críticos na revisão.",
+      "Direitos de imagem pendentes."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false,
+      "licenca_confirmada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-149.webp",
+    "formato": "webp",
+    "largura": 1000,
+    "altura": 1286,
+    "bytes": 186548,
+    "blob_sha": "d5528c3745cd8b41438c720f3dc1bceae8e9f90c",
+    "sha256": "e7425b4ea6890d29fc032d200915d875a0b23d94d2f25f6cbead0b5c8d9b842d",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Thursir%20Armorer.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 35,
+    "publicacao": "Tome of Beasts 3",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/thursir-armorer/",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

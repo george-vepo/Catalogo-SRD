@@ -1,0 +1,424 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-425",
+  "nome": "Snow Terror",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 12,
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_RECONSTRUIDA_PENDENTE_CONFERENCIA_EDITORIAL",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "8",
+    "xp": 3900,
+    "bonus_proficiencia": 3,
+    "bonus_proficiencia_origem": "calculado de ND padrão D&D 5e; fonte individual não imprime",
+    "ca": 16,
+    "composicao_ca": "não especificada na fonte",
+    "pv": 127,
+    "dados_vida": "15d10+45",
+    "porte": "Large",
+    "tipo": "fiend",
+    "subtipo": [
+      "shapechanger"
+    ],
+    "alinhamento": "chaotic evil",
+    "atributos": {
+      "forca": 19,
+      "destreza": 22,
+      "constituicao": 17,
+      "inteligencia": 12,
+      "sabedoria": 9,
+      "carisma": 16
+    },
+    "modificadores": {
+      "forca": 4,
+      "destreza": 6,
+      "constituicao": 3,
+      "inteligencia": 1,
+      "sabedoria": -1,
+      "carisma": 3
+    },
+    "deslocamentos": {
+      "andar_ft": 30
+    },
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 6
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Deception",
+        "bonus": 6
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 9
+      }
+    ],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 9,
+    "idiomas": [
+      "Abyssal",
+      "Common"
+    ],
+    "vulnerabilidades": [
+      "fire"
+    ],
+    "resistencias": [
+      "bludgeoning from nonmagical attacks",
+      "piercing from nonmagical attacks",
+      "slashing from nonmagical attacks"
+    ],
+    "imunidades_dano": [
+      "acid",
+      "cold",
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "frightened",
+      "poisoned"
+    ],
+    "resistencias_condicao": []
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "False Appearance",
+        "categoria": "passivo_por_forma",
+        "pre_condicoes": [
+          "forma de snow person",
+          "permanece imóvel"
+        ],
+        "efeito": "indistinguível de um boneco de neve comum"
+      },
+      {
+        "nome": "Shapechanger",
+        "categoria": "transformação_por_ação",
+        "custo": "uma ação",
+        "formas": [
+          {
+            "forma": "boneco de neve Large"
+          },
+          {
+            "forma": "aparência nevada da criatura morta mais recentemente"
+          },
+          {
+            "forma": "forma verdadeira"
+          }
+        ],
+        "efeitos": [
+          "estatísticas mecânicas não mudam entre formas",
+          "equipamento não se transforma",
+          "morte restaura forma verdadeira"
+        ],
+        "regra_social": {
+          "forma": "imitação nevada da última vítima",
+          "alvos": "criaturas que conheciam a vítima imitada",
+          "efeito": "desvantagem nos testes de resistência de Sabedoria contra Horrifying Visage"
+        }
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Shapechanger",
+        "categoria": "ação",
+        "tipo": "mudança_de_forma",
+        "gatilho": "escolha do Snow Terror",
+        "custo": "uma ação",
+        "formas_disponiveis": [
+          "snow person Large",
+          "imitação nevada da vítima morta mais recente",
+          "forma verdadeira"
+        ],
+        "estatisticas": "inalteradas",
+        "equipamento": "não transforma",
+        "reversao_na_morte": true
+      },
+      {
+        "nome": "Bite",
+        "categoria": "melee weapon attack",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "quantidade_alvos": 1,
+        "alvo": "uma criatura",
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "acid"
+          }
+        ],
+        "efeito_condicional": {
+          "pre_condicoes": [
+            "alvo de tamanho Medium ou menor",
+            "Bite acertou"
+          ],
+          "teste_resistencia": {
+            "atributo": "DEX",
+            "cd": 15
+          },
+          "efeito_falha": {
+            "estado": [
+              "swallowed",
+              "blinded",
+              "restrained"
+            ],
+            "defesa": "total cover contra efeitos externos",
+            "dano_continuo": {
+              "gatilho": "início de cada turno do Snow Terror",
+              "dados": "4d6",
+              "media": 14,
+              "tipo": "acid"
+            }
+          },
+          "efeito_sucesso": "não é engolido; dano da mordida continua",
+          "capacidade_maxima_engolidos": 1,
+          "regurgitacao": {
+            "gatilho": "Snow Terror sofre ao menos 15 pontos de dano em um mesmo turno causados pela criatura engolida",
+            "teste_resistencia": {
+              "atributo": "CON",
+              "cd": 16,
+              "executado": "final desse turno"
+            },
+            "falha": "regurgita criatura, que cai prone em espaço a até 10 ft",
+            "sucesso": "mantém criatura engolida"
+          },
+          "termino_por_morte": {
+            "gatilho": "Snow Terror morre",
+            "resultado": "engolido deixa de estar restrained",
+            "saida": "gasta 10 ft de movimento para sair do cadáver; termina prone"
+          }
+        }
+      },
+      {
+        "nome": "Horrifying Visage",
+        "categoria": "ação",
+        "tipo": "efeito_de_medo_visual",
+        "alvo": "cada criatura que não seja undead e que consiga ver o Snow Terror",
+        "alcance_ft": 60,
+        "teste_resistencia": {
+          "atributo": "WIS",
+          "cd": 13,
+          "desvantagem_condicional": "conhecia a criatura imitada enquanto Snow Terror está nessa forma"
+        },
+        "efeito_falha": {
+          "condicao": "frightened",
+          "duracao": "até 1 minuto",
+          "novo_teste": "fim de cada turno, sucesso encerra"
+        },
+        "efeito_sucesso": {
+          "condicao": "nenhuma",
+          "imunidade_temporaria": "não afetado por Horrifying Visage deste Snow Terror durante 24 horas"
+        },
+        "termino": "ao passar teste no fim do turno, também recebe imunidade por 24 horas"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Bite",
+        "categoria": "melee weapon attack",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "quantidade_alvos": 1,
+        "alvo": "uma criatura",
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "media": 14,
+            "tipo": "piercing"
+          },
+          {
+            "dados": "4d6",
+            "media": 14,
+            "tipo": "acid"
+          }
+        ],
+        "efeito_condicional": {
+          "pre_condicoes": [
+            "alvo de tamanho Medium ou menor",
+            "Bite acertou"
+          ],
+          "teste_resistencia": {
+            "atributo": "DEX",
+            "cd": 15
+          },
+          "efeito_falha": {
+            "estado": [
+              "swallowed",
+              "blinded",
+              "restrained"
+            ],
+            "defesa": "total cover contra efeitos externos",
+            "dano_continuo": {
+              "gatilho": "início de cada turno do Snow Terror",
+              "dados": "4d6",
+              "media": 14,
+              "tipo": "acid"
+            }
+          },
+          "efeito_sucesso": "não é engolido; dano da mordida continua",
+          "capacidade_maxima_engolidos": 1,
+          "regurgitacao": {
+            "gatilho": "Snow Terror sofre ao menos 15 pontos de dano em um mesmo turno causados pela criatura engolida",
+            "teste_resistencia": {
+              "atributo": "CON",
+              "cd": 16,
+              "executado": "final desse turno"
+            },
+            "falha": "regurgita criatura, que cai prone em espaço a até 10 ft",
+            "sucesso": "mantém criatura engolida"
+          },
+          "termino_por_morte": {
+            "gatilho": "Snow Terror morre",
+            "resultado": "engolido deixa de estar restrained",
+            "saida": "gasta 10 ft de movimento para sair do cadáver; termina prone"
+          }
+        }
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "reacoes": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_CONFERIDA_NO_BLOCO_INDIVIDUAL"
+    }
+  },
+  "pendencias": [
+    "Ficha individual Snow Terror e reprodução integral de Tome of Beasts 2 consultadas; ainda requer conferência editorial e errata diretamente em publicação oficial.",
+    "Não confundir o deslocamento para sair do cadáver do Snow Terror com teste para escapar da digestão enquanto vivo.",
+    "Conferir identidade visual da imagem binária já persistida."
+  ],
+  "campos_nao_confirmados": [
+    "conferência independente da edição e errata de Tome of Beasts 2",
+    "revisão visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/snow-terror/",
+      "tipo": "bloco de estatísticas individual completo, consultado e confrontado em 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "edicao": "D&D 5e"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice da editora: identidade, ND, tipo e origem",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/aqmdu/uasq/basic/301-350",
+      "tipo": "reprodução não oficial do stat block da edição Tome of Beasts 2 p. 334",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "pesquisa anterior somente como referência",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-425",
+    "nome": "Snow Terror",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "nd_catalogo": null,
+    "nd_fonte": "8",
+    "ca": 16,
+    "pv": 127,
+    "atributos": {
+      "forca": 19,
+      "destreza": 22,
+      "constituicao": 17,
+      "inteligencia": 12,
+      "sabedoria": 9,
+      "carisma": 16
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Metamorfo (boneco de neve e último alvo abatido), vulnerável a fogo, resistente/imune a energias especificadas."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Ataques de predador e efeitos de engolir/dissolver a presa; Horrifying Visage."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://www.5esrd.com/database/creature/snow-terror/",
+    "fonte_tipo": "republicação terceirizada (5eSRD)",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Conferir ações e CDs em detalhe na fonte e suplemento original.",
+      "Conferir contra exemplar editorial, edição/errata e direitos/licenças antes da promoção."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-425.webp",
+    "formato": "webp",
+    "blob_sha": "dbb57a2bf722d8f0ad4ad174c95ebb601d2e7f7c",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Snow%20Terror.webp",
+    "origem_repositorio": "TheGiddyLimit/homebrew",
+    "origem_caminho": "_img/ToB2/creature/Snow Terror.webp",
+    "binario_presente": true,
+    "integridade_binaria_confirmada": true,
+    "validacao_visual_editorial": "PENDENTE",
+    "largura": null,
+    "altura": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "D&D 5e",
+    "fonte_mecanica_individual": "https://www.5esrd.com/database/creature/snow-terror/",
+    "indice_editora": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "comparacao_livro_editorial_errata": "PENDENTE",
+    "nota": "Bloco individual estruturado, sem validação final contra exemplar editorial"
+  }
+}

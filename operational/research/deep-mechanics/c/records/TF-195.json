@@ -1,0 +1,236 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-195",
+  "nome": "Tosculi, Drone",
+  "escopo": "historical.slice(104,195)",
+  "indice_no_escopo": 70,
+  "estado_auditoria": "BLOQUEADA_VERSOES_2016_2023_DIVERGENCIA_HUMANOID_MONSTROSITY",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "edicao": "Tome of Beasts 1 ORIGINAL 2016 (não revisão 2023)",
+    "fonte_identidade": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone"
+  },
+  "estatisticas": {
+    "nd_catalogo": "1/2",
+    "nd_fonte": "1/2",
+    "ca": 13,
+    "pv": 22,
+    "dados_vida": "4d6+8",
+    "porte": "Small",
+    "tipo": "monstrosity",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 8,
+      "DES": 16,
+      "CON": 14,
+      "INT": 8,
+      "SAB": 12,
+      "CAR": 4
+    },
+    "modificadores": {
+      "FOR": -1,
+      "DES": 3,
+      "CON": 2,
+      "INT": -1,
+      "SAB": 1,
+      "CAR": -3
+    },
+    "deslocamentos": {
+      "andar": 20
+    },
+    "pericias": [],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Tosculi"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 100,
+    "bonus_proficiencia": 2,
+    "ca_origem": null
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Gliding Wings",
+        "condicao": "caindo",
+        "efeito": "desce lentamente como feather fall, plana 5ft na horizontal a cada 1ft de queda; não sobe só com asas",
+        "excecao": "correntes de ar aumentam alcance"
+      },
+      {
+        "nome": "Skittering",
+        "ocupacao": "máximo de dois tosculi no mesmo espaço",
+        "beneficio": "advantage em melee attacks quando há outro tosculi no espaço que não esteja incapacitated"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Claws",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d4+3",
+            "media": 8,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Light Crossbow",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 5,
+        "distancia_curta_ft": 80,
+        "distancia_longa_ft": 320,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Claws",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d4+3",
+            "media": 8,
+            "tipo": "slashing"
+          }
+        ]
+      },
+      {
+        "nome": "Light Crossbow",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 5,
+        "distancia_curta_ft": 80,
+        "distancia_longa_ft": 320,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "multiataque": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null
+  },
+  "pendencias": [
+    "BLOQUEIO EDIÇÃO: original 2016 trata como Small MONSTROSITY com Gliding Wings, Skittering e Crossbow, enquanto revisão 2023 trata como HUMANOID, Crowd Tactics/Glide/Hive Sense, remove crossbow. Manter fichas separadas e resolver autorização de edição.",
+    "Comparação da publicação original/errata e licença visual pendentes."
+  ],
+  "campos_nao_confirmados": [
+    "conferência de edição, licenças e erratas",
+    "autoria, identidade e inspeção visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone",
+      "tipo": "ficha individual referenciada no checkpoint anterior",
+      "conferida_nesta_execucao": false
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+      "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone",
+      "tipo": "verificação mecânica individual CP44 com separação de edições",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/tosculi-drone-3pp/",
+      "tipo": "verificação mecânica individual CP44 com separação de edições",
+      "conferida_nesta_execucao": true
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PARCIAL_EDICAO",
+    "commit": "a962c48a1169c2ef2be8137715a095a596753b32",
+    "arquivo": "operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-195",
+    "nome": "Tosculi, Drone",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1",
+    "nd_catalogo": "0.5",
+    "nd_fonte": "0.5",
+    "ca": 13,
+    "pv": 22,
+    "tracos": [
+      {
+        "nome": "Características verificadas (síntese)",
+        "resumo": "Gliding Wings permite descida planejada; Skittering facilita luta em dupla"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações pesquisadas (síntese)",
+        "resumo": "Claws e Light Crossbow."
+      }
+    ],
+    "fonte": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone",
+    "origem_pesquisa": "Pesquisa em fontes abertas e identificação de versão; estatísticas básicas observadas na fonte, descrições sintetizadas e sujeitas a revisão.",
+    "estado": "PARCIAL_EDICAO",
+    "pendencias": [
+      "Duas redações diferentes dos traços Skittering/Crowd Tactics entre edições; manter status parcial até comparação.",
+      "Revisão editorial, licença de regras e direitos de imagem pendentes; checkpoint não equivale a integração."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-195.webp",
+    "formato": "webp",
+    "largura": 519,
+    "altura": 800,
+    "bytes": 62842,
+    "blob_sha": "868d654bdc5d2baf4eebbd92ef85afd545d3a957",
+    "sha256": "f7bea847ebc5e61644c325f1f9049872181274bf63d1ed1e85f4102cc24c9041",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Tosculi%20Drone.webp",
+    "origem_branch": "chatgpt/srd607-image-assets-e",
+    "binario_presente": true,
+    "integridade_binaria_confirmada_na_origem": true,
+    "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 44,
+    "publicacao": "Tome of Beasts 1 ORIGINAL 2016 (não revisão 2023)",
+    "fonte_mecanicas": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone",
+    "aprovacao_editorial": "PENDENTE"
+  }
+}

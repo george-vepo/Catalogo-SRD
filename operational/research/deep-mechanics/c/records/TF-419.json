@@ -1,0 +1,421 @@
+{
+  "schema": "srd607-deep-mechanics-c-v1",
+  "id": "TF-419",
+  "nome": "Witchalder",
+  "escopo": "next_batches[4]",
+  "indice_no_escopo": 7,
+  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_PERCEPCAO_PASSIVA",
+  "mecanica_completa": false,
+  "verificacao_detalhada_nesta_execucao": true,
+  "identificacao": {
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "fonte_identidade": "https://koboldpress.com/tools/kobold-press-monsters/"
+  },
+  "estatisticas": {
+    "nd_catalogo": null,
+    "nd_fonte": "6",
+    "xp": 2300,
+    "bonus_proficiencia": 3,
+    "ca": 15,
+    "composicao_ca": "natural armor",
+    "pv": 102,
+    "dados_vida": "12d8+48",
+    "porte": "Medium",
+    "tipo": "plant",
+    "alinhamento": "neutral evil",
+    "atributos": {
+      "forca": 19,
+      "destreza": 9,
+      "constituicao": 18,
+      "inteligencia": 9,
+      "sabedoria": 16,
+      "carisma": 10
+    },
+    "modificadores": {
+      "forca": 4,
+      "destreza": -1,
+      "constituicao": 4,
+      "inteligencia": -1,
+      "sabedoria": 3,
+      "carisma": 0
+    },
+    "deslocamentos": {
+      "andar_ft": 30
+    },
+    "salvaguardas": [
+      {
+        "nome": "Dex",
+        "bonus": 2
+      },
+      {
+        "nome": "Wis",
+        "bonus": 6
+      }
+    ],
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 7
+      },
+      {
+        "nome": "Perception",
+        "bonus": 6
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 2
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "entende Sylvan; não fala"
+    ],
+    "vulnerabilidades": [
+      "fire"
+    ],
+    "resistencias": [
+      "bludgeoning"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "poisoned"
+    ],
+    "resistencias_condicao": [],
+    "nota_percepcao": "A ficha imprime Perception +6 e passive Perception 15; cálculo padrão sugeriria 16. Preservado 15 como impresso e requer conferência editorial."
+  },
+  "mecanicas": {
+    "tracos": [
+      {
+        "nome": "Deep Roots",
+        "tipo": "passivo",
+        "gatilho": "salvaguarda de FOR ou DES contra deslocamento forçado pela superfície terrestre",
+        "efeito": "vantagem na salvaguarda",
+        "restricao": "movimento involuntário ao longo do solo"
+      },
+      {
+        "nome": "False Appearance",
+        "tipo": "passivo",
+        "gatilho": "Witchalder está imóvel",
+        "efeito": "aparência indistinguível de um amieiro doente ou moribundo"
+      },
+      {
+        "nome": "Sunlight Regeneration",
+        "tipo": "passivo_condicional",
+        "gatilho": "início de seu turno",
+        "pre_condicoes": [
+          "estar em luz solar",
+          "possuir ao menos 1 PV"
+        ],
+        "efeito": {
+          "cura_pv": 5
+        },
+        "frequencia": "a cada turno que cumpra os requisitos"
+      },
+      {
+        "nome": "Speak with Plants",
+        "tipo": "passivo",
+        "efeito": "pode comunicar-se com plantas como se compartilhassem um idioma"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "multiataque",
+        "sequencia_base": [
+          {
+            "acao": "Slam",
+            "quantidade": 2
+          }
+        ],
+        "substituicao": {
+          "acao_substituivel": "Slam",
+          "quantidade": 1,
+          "acao_substituta": "Throttle",
+          "pre_condicao": "possuir ao menos uma criatura agarrada"
+        },
+        "limites": "duas ações componentes"
+      },
+      {
+        "nome": "Slam",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+4",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao": "grappled",
+          "escape_cd": 15,
+          "pre_condicoes": [
+            "alvo Medium ou menor",
+            "Witchalder possui menos de duas outras criaturas agarradas"
+          ],
+          "limite_agarradas_simultaneamente": 2
+        },
+        "origem": "https://www.5esrd.com/database/creature/witchalder/"
+      },
+      {
+        "nome": "Shape Wood",
+        "tipo": "acao_alteracao_de_objeto",
+        "alcance_ft": 30,
+        "pre_condicoes": [
+          "enxergar o objeto",
+          "objeto ou trecho de madeira Medium ou menor",
+          "nenhuma dimensão do trecho supera 5 pés"
+        ],
+        "alvo": "um objeto de madeira ou parte dele",
+        "efeito": "remodela madeira em formato simples escolhido; pode bloquear portas, danificar barcos, empenar ou restaurar armamento",
+        "efeitos_especiais": [
+          "armas e munições arremessáveis ou à distância empenadas tornam-se inutilizáveis",
+          "armas corpo a corpo empenadas impõem desvantagem em ataques"
+        ],
+        "restricoes": [
+          "não fabrica objetos de acabamento complexo"
+        ],
+        "quando_vestido_ou_carregado": {
+          "teste_resistencia": {
+            "atributo": "DEX",
+            "cd": 15
+          },
+          "efeito_sucesso": "evita alteração",
+          "efeito_falha": "objeto alterado"
+        },
+        "origem": "https://www.5esrd.com/database/creature/witchalder/"
+      },
+      {
+        "nome": "Throttle",
+        "tipo": "acao_contra_agarrado",
+        "alvo": "uma criatura já agarrada pelo Witchalder",
+        "teste_resistencia": {
+          "atributo": "STR",
+          "cd": 15
+        },
+        "efeito_falha": {
+          "dano": [
+            {
+              "dados": "4d6+4",
+              "media": 18,
+              "tipo": "bludgeoning"
+            }
+          ],
+          "restricoes": [
+            "não pode respirar",
+            "não pode falar",
+            "não pode conjurar magias que exijam componente verbal"
+          ],
+          "duracao": "até terminar a condição agarrado"
+        },
+        "efeito_sucesso": {
+          "dano": [
+            {
+              "dados": "metade de 4d6+4",
+              "tipo": "bludgeoning"
+            }
+          ],
+          "permanencia": "continua agarrado sem as restrições adicionais do Throttle"
+        }
+      },
+      {
+        "nome": "Pollen Cloud",
+        "tipo": "acao_area",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            6
+          ]
+        },
+        "area": {
+          "raio_ft": 15,
+          "centro": "Witchalder"
+        },
+        "alvos": "todas as criaturas na área",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "efeito_falha": {
+          "dano": [
+            {
+              "dados": "5d8",
+              "media": 22,
+              "tipo": "poison"
+            }
+          ],
+          "condicao": "incapacitated",
+          "duracao": "até 1 minuto",
+          "repetir_teste": "fim de cada turno, sucesso encerra incapacitated"
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 5d8 poison",
+          "condicao": null
+        },
+        "origem": "https://www.5esrd.com/database/creature/witchalder/"
+      }
+    ],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "tipo": "ataque_corpo_a_corpo_com_arma",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+4",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao": "grappled",
+          "escape_cd": 15,
+          "pre_condicoes": [
+            "alvo Medium ou menor",
+            "Witchalder possui menos de duas outras criaturas agarradas"
+          ],
+          "limite_agarradas_simultaneamente": 2
+        },
+        "origem": "https://www.5esrd.com/database/creature/witchalder/"
+      }
+    ],
+    "multiataque": {
+      "sequencia_base": [
+        {
+          "acao": "Slam",
+          "quantidade": 2
+        }
+      ],
+      "substituicao": {
+        "acao": "Throttle",
+        "substitui": "um Slam",
+        "requer_alvo_agarrado": true
+      }
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": [],
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "reacoes": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_lendarias": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_covil": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "acoes_miticas": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL",
+      "conjuracao": "AUSENCIA_CONFIRMADA_NO_BLOCO_INDIVIDUAL"
+    },
+    "acoes_miticas": []
+  },
+  "pendencias": [
+    "Ficha individual detalhada conferida; revisão editorial contra Tome of Beasts 3 e errata pendente.",
+    "A ficha publica Perception +6, mas passive Perception 15; preservar valor impresso e esclarecer divergência com cálculo padrão.",
+    "Imagem binária existente, sem aprovação editorial da identidade."
+  ],
+  "campos_nao_confirmados": [
+    "conferência editorial da Percepção passiva (15 publicado contra cálculo 16)",
+    "conferência do Tome of Beasts 3 e erratas",
+    "revisão visual da imagem"
+  ],
+  "fontes": [
+    {
+      "url": "https://www.5esrd.com/database/creature/witchalder/",
+      "tipo": "bloco mecânico individual — 5eSRD; confrontado campo a campo em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "tipo": "índice editorial da Kobold Press, confirma identidade, ND e publicação",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+      "tipo": "checkpoint histórico, apenas referência",
+      "conferida_nesta_execucao": false
+    }
+  ],
+  "proveniencia": {
+    "csv_estado": "PENDENTE_PESQUISA",
+    "commit": "7ddaff46037d08d96260843dbfab9eaf5b1c1c94",
+    "arquivo": "operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
+    "dados_anteriores_sem_revalidacao": true
+  },
+  "checkpoint_anterior": {
+    "id": "TF-419",
+    "nome": "Witchalder",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "D&D 5e (publicação de Kobold Press)",
+    "nd_catalogo": null,
+    "nd_fonte": "6",
+    "ca": 15,
+    "pv": 102,
+    "atributos": {
+      "forca": 19,
+      "destreza": 9,
+      "constituicao": 18,
+      "inteligencia": 9,
+      "sabedoria": 16,
+      "carisma": 10
+    },
+    "tracos": [
+      {
+        "nome": "Traços e características verificáveis (síntese)",
+        "resumo": "Regeneração com luz solar, moldar madeira e efeitos de pólen."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Ações verificáveis (síntese)",
+        "resumo": "Pancada com agarrão, estrangulamento e nuvem de pólen."
+      }
+    ],
+    "reacoes": [],
+    "acoes_bonus": [],
+    "acoes_lendarias": [],
+    "fonte": "https://www.5esrd.com/database/creature/witchalder/",
+    "fonte_tipo": "republicação terceirizada (5eSRD)",
+    "origem_pesquisa": "Pesquisa de ficha individual e identificação de publicação/edição; texto mecânico resumido, sem transcrever integralmente a obra.",
+    "estado": "MECANICA_RESUMIDA_PENDENTE_GATES",
+    "pendencias": [
+      "Confirmar termos/recargas da nuvem de pólen contra livro.",
+      "Conferir contra exemplar editorial, edição/errata e direitos/licenças antes da promoção."
+    ],
+    "imagem": {
+      "status": "PENDENTE",
+      "verificada": false
+    },
+    "integrada": false
+  },
+  "imagem": {
+    "arquivo": "operational/research/deep-mechanics/c/images/TF-419.webp",
+    "formato": "webp",
+    "blob_sha": "76f554f362f5583c082554574f118f233c4e6a7b",
+    "fonte": "https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Witchalder.webp",
+    "origem_repositorio": "TheGiddyLimit/homebrew",
+    "origem_caminho": "_img/ToB3/creature/Witchalder.webp",
+    "binario_presente": true,
+    "integridade_binaria_confirmada": true,
+    "validacao_visual_editorial": "PENDENTE",
+    "largura": null,
+    "altura": null,
+    "observacao": null
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "fonte_publicada_individual": "https://www.5esrd.com/database/creature/witchalder/",
+    "indice_editorial": "https://koboldpress.com/tools/kobold-press-monsters/",
+    "comparacao_exemplar_editorial_ou_errata": "PENDENTE",
+    "ausencia_categoria_no_bloco_individual": "CONFERIDA",
+    "data_conferencia": "2026-10-14"
+  }
+}
