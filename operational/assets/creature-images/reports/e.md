@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 101 / 195.**
+**Armazenadas e verificadas: 111 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -18,6 +18,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/752ce010bef069a0daba724d3f0d97caad14db4e — 10/10 verificadas: TF-143, TF-144, TF-147, TF-148, TF-149, TF-150, TF-151, TF-152, TF-153, TF-154
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/819e16a6e0721d8b97bc1f0d93568d61054ef8c1 — 10/10 verificadas: TF-155, TF-156, TF-157, TF-158, TF-159, TF-160, TF-161, TF-162, TF-163, TF-164
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/c182357971d4d8a09d5fd6a7f531abee48d8db03 — 10/10 verificadas: TF-165, TF-166, TF-167, TF-168, TF-169, TF-170, TF-171, TF-172, TF-173, TF-174
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2b2c0e6880675869044734d993c82311e9d6a28a — 10/10 verificadas: TF-175, TF-176, TF-177, TF-178, TF-179, TF-180, TF-181, TF-182, TF-186, TF-187
 
 ## Binários publicados e conferidos
 
@@ -122,23 +123,23 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-172 / Animated Offal: operational/assets/creature-images/TF-172.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Animated%20Offal.webp; 148230 bytes; 1200x1296 px; SHA-256: c812d3684df363e2840e340dba0a319772fceecb4639101b9cb674c732213a8b; commit: c182357971d4d8a09d5fd6a7f531abee48d8db03
 - TF-173 / Black Patch: operational/assets/creature-images/TF-173.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Black%20Patch.webp; 147862 bytes; 1200x1229 px; SHA-256: bf4ee1dd29be0d63720f55fdc3cb04e3f2615986a02ddfdb184ebf2d46020a6a; commit: c182357971d4d8a09d5fd6a7f531abee48d8db03
 - TF-174 / Oozasis: operational/assets/creature-images/TF-174.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Oozasis.webp; 63082 bytes; 717x800 px; SHA-256: 814aa2e60a06ff82889fd77d9f12f1ae3e88064b6c5cb8fe90e01c218fc7f72b; commit: c182357971d4d8a09d5fd6a7f531abee48d8db03
+- TF-175 / Ooze, Blood: operational/assets/creature-images/TF-175.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Bloodooze.jpg; 73118 bytes; 1000x655 px; SHA-256: 5d0ff347d3c7cd2e8045c14e57d800a4120c697b6675a9faa8cc1ba8bfcae5a5; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-176 / Ooze, Foxfire: operational/assets/creature-images/TF-176.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Foxfireooze.jpg; 58419 bytes; 809x700 px; SHA-256: e65bf88b13ba851be694240fd4f68c3dbd0e65635c3cfc39f057bfacb11eb91f; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-177 / Ooze, Giant Shark Bowl: operational/assets/creature-images/TF-177.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Giantsharkbowl.jpg; 63728 bytes; 775x700 px; SHA-256: 6239ae7f1f42cea223f9b66182a2cf0fdc4dd88d19431b9ebf67537a3f6cd6d0; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-178 / Ooze, Ruby: operational/assets/creature-images/TF-178.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Rubyooze.jpg; 68278 bytes; 587x700 px; SHA-256: c99c484fbdfe34cc66a0f2e45792782cbaedef71ad4f814bfe8e7c51de54069d; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-179 / Ooze, Shoal: operational/assets/creature-images/TF-179.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Shoal%20Ooze.webp; 234158 bytes; 1200x1241 px; SHA-256: c5d539818555c3853bb61bed221e801d32b2ddaf8c31c6abd93dd0553867890b; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-180 / Ooze, Sinoper: operational/assets/creature-images/TF-180.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Sinoper%20Ooze.webp; 177268 bytes; 1000x1640 px; SHA-256: cc2a800795550b5f1234fdd386b4f150e994076ff30f91ec5c1d5b550d03705e; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-181 / Ooze, Snow: operational/assets/creature-images/TF-181.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Snow%20Ooze.webp; 168646 bytes; 1200x1068 px; SHA-256: 9a9f7e63a6a5a4ce177986dd1e6fdfb28f9c59ee194070a5e5c6ce69d33bd98f; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-182 / Ooze, Tar: operational/assets/creature-images/TF-182.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Tar%20Ooze.webp; 149430 bytes; 1223x797 px; SHA-256: 4bd4ea76740f16e93879796c0c824f7c959290bd8c85703c2b45a61e11a1fa33; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-186 / Atavist: operational/assets/creature-images/TF-186.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Atavist.webp; 109426 bytes; 1030x1200 px; SHA-256: 05f6731faeeb530fbac88404ff884011bce8fc8bbb6aa2a103760f470514788d; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
+- TF-187 / Bearfolk: operational/assets/creature-images/TF-187.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Bearfolk.webp; 96550 bytes; 709x800 px; SHA-256: 0a5dc138e3fc53b35ee55c07162ccdac7b639b752b2bb680a79c5157f874e3ec; commit: 2b2c0e6880675869044734d993c82311e9d6a28a
 
 ## Não obtidos
 
 - TF-069 / Clockwork Servant: source_not_found; 
 - TF-097 / Ancient Amethyst Dragon: source_not_found; 
 - TF-099 / Ankou Soul Herald: duplicate_suspected; same SHA-256 as TF-090
-- TF-175 / Ooze, Blood: pending; 
-- TF-176 / Ooze, Foxfire: pending; 
-- TF-177 / Ooze, Giant Shark Bowl: pending; 
-- TF-178 / Ooze, Ruby: pending; 
-- TF-179 / Ooze, Shoal: pending; 
-- TF-180 / Ooze, Sinoper: pending; 
-- TF-181 / Ooze, Snow: pending; 
-- TF-182 / Ooze, Tar: pending; 
 - TF-185 / Alleyway Strangler: source_not_found; 
-- TF-186 / Atavist: pending; 
-- TF-187 / Bearfolk: pending; 
 - TF-188 / Behtu: pending; 
 - TF-189 / Black Knight Commander: pending; 
 - TF-190 / City Watch Captain: pending; 
