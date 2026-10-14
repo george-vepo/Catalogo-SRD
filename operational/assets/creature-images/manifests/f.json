@@ -16,16 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 114,
-    "verified_after_upload": 114,
-    "pending": 80,
-    "stored_bytes": 13171065,
-    "checkpoint_count": 26,
+    "persisted_binary_files": 118,
+    "verified_after_upload": 118,
+    "pending": 76,
+    "stored_bytes": 13175857,
+    "checkpoint_count": 27,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 80,
+    "partial_missing_files": 76,
     "blocked_confirmed": 0,
-    "partial_variant_art": 10
+    "partial_variant_art": 14
   },
   "checkpoints": [
     {
@@ -323,6 +323,17 @@
       ],
       "commit": "ad05a90834756241df8b4f42e6e29ff1086b567b",
       "validation": "verified after upload: source and GitHub image bytes equal, Git SHA identical; PNG format/dimensions/size and SHA-256 recorded. Variant accuracy and source rights marked PARTIAL."
+    },
+    {
+      "sequence": 27,
+      "images_added": [
+        "TF-467",
+        "TF-477",
+        "TF-503",
+        "TF-469"
+      ],
+      "commit": "3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e",
+      "validation": "GitHub-after-upload original bytes and destination identical, Git blob SHA identical; PNG 32×32 and SHA256 pre-validated; artwork exact features and license provenance PARTIAL."
     }
   ],
   "blocked_ids": [
@@ -373,13 +384,10 @@
     "TF-462",
     "TF-463",
     "TF-465",
-    "TF-467",
     "TF-468",
-    "TF-469",
     "TF-470",
     "TF-473",
     "TF-475",
-    "TF-477",
     "TF-478",
     "TF-480",
     "TF-481",
@@ -394,7 +402,6 @@
     "TF-500",
     "TF-501",
     "TF-502",
-    "TF-503",
     "TF-504",
     "TF-506",
     "TF-507",
@@ -3886,20 +3893,35 @@
     {
       "id": "TF-467",
       "name": "Corpse Fly",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/e27131731f89187b9842e9c6c95381a2e954aafd/packs/dcss-monsters-and-creatures/sprites/animals/giant_blowfly.png",
+      "repository_path": "operational/assets/creature-images/TF-467.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 940,
+      "sha256": "f8efec9fe4a029636e0c41c0d52b03ecb9b4725aa3dc0f990b90acf582d367e1",
+      "persistence_commit": "3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e",
+      "validation": {
+        "result": "passed",
+        "method": "GitHub original/destination file fetched with encoding=base64; full contents match exactly after upload, Git blob SHA identical; source PNG signature/IHDR/IEND, file size, SHA-256 verified prior to upload.",
+        "git_blob_sha": "3be8f52af13f2d7f922caf0623054714f94355d9",
+        "quality_note": "Fly shape consistent with corpse fly's monstrous fly adult; no disease-corrosive traits."
+      },
+      "state": "PARTIAL",
+      "source_repo": "Papyszoo/CC0-Public-Domain-Sprites",
+      "source_ref": "e27131731f89187b9842e9c6c95381a2e954aafd",
+      "source_path": "packs/dcss-monsters-and-creatures/sprites/animals/giant_blowfly.png",
+      "source_git_blob_sha": "3be8f52af13f2d7f922caf0623054714f94355d9",
+      "source_license": "CC0 1.0 Universal (curated sprite pack assertion)",
+      "license_evidence": [
+        "https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/main/packs/dcss-monsters-and-creatures/pack.json"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (per repository's CC0 release; optional if rights are indeed cleared)",
+      "rights_review": "Source repository claims CC0 for curated export, but per-artwork historical rights not independently confirmed."
     },
     {
       "id": "TF-468",
@@ -3922,20 +3944,36 @@
     {
       "id": "TF-469",
       "name": "Fateholder",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/animals/orb_spider.png",
+      "repository_path": "operational/assets/creature-images/TF-469.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 1082,
+      "sha256": "215e0349a8a1435150395912851212103df52b481f97b824b4e46dbbea11d319",
+      "persistence_commit": "3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e",
+      "validation": {
+        "result": "passed",
+        "method": "GitHub original/destination file fetched with encoding=base64; full contents match exactly after upload, Git blob SHA identical; source PNG signature/IHDR/IEND, file size, SHA-256 verified prior to upload.",
+        "git_blob_sha": "c6cd14d72f5a0cfc572ae9df7d0754b30328ddac",
+        "quality_note": "Arcane spider body fits the giant arachnid, but lacks eight multicolored eyes and ethereal thread."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/animals/orb_spider.png",
+      "source_git_blob_sha": "c6cd14d72f5a0cfc572ae9df7d0754b30328ddac",
+      "source_license": "CC0 1.0 Universal (curated tile release assertion)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (per repository's CC0 release; optional if rights are indeed cleared)",
+      "rights_review": "Source repository claims CC0 for curated export, but per-artwork historical rights not independently confirmed."
     },
     {
       "id": "TF-470",
@@ -4082,20 +4120,36 @@
     {
       "id": "TF-477",
       "name": "Grimalkin",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/unique/natasha.png",
+      "repository_path": "operational/assets/creature-images/TF-477.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 1280,
+      "sha256": "f42d51ad25553b05c4cefe30f17c910f9c8e3a95fb224d064e678458ceb9ad02",
+      "persistence_commit": "3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e",
+      "validation": {
+        "result": "passed",
+        "method": "GitHub original/destination file fetched with encoding=base64; full contents match exactly after upload, Git blob SHA identical; source PNG signature/IHDR/IEND, file size, SHA-256 verified prior to upload.",
+        "git_blob_sha": "c0a7d9cd92947134094f7a419ad587c9fa53c81f",
+        "quality_note": "Witchy black cat approximates Grimalkin alternate Tiny cat form, not actual panther-sized true form."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/unique/natasha.png",
+      "source_git_blob_sha": "c0a7d9cd92947134094f7a419ad587c9fa53c81f",
+      "source_license": "CC0 1.0 Universal (curated tile release assertion)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (per repository's CC0 release; optional if rights are indeed cleared)",
+      "rights_review": "Source repository claims CC0 for curated export, but per-artwork historical rights not independently confirmed."
     },
     {
       "id": "TF-478",
@@ -4522,20 +4576,36 @@
     {
       "id": "TF-503",
       "name": "Stuffed Crab",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/undead/zombies/zombie_crab.png",
+      "repository_path": "operational/assets/creature-images/TF-503.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 1490,
+      "sha256": "1ab5e58d37e71c805f32b72d47471b272aea6447472f1e72a15e0ae9754e8e9f",
+      "persistence_commit": "3bfdd7841ba5c4fa02276b033cbd71dd78de5e8e",
+      "validation": {
+        "result": "passed",
+        "method": "GitHub original/destination file fetched with encoding=base64; full contents match exactly after upload, Git blob SHA identical; source PNG signature/IHDR/IEND, file size, SHA-256 verified prior to upload.",
+        "git_blob_sha": "d95126535d863db71071f0d4979268a6d266e9e3",
+        "quality_note": "Undead crab species right; missing seven ghoul occupants; artwork incomplete for unique horror."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/undead/zombies/zombie_crab.png",
+      "source_git_blob_sha": "d95126535d863db71071f0d4979268a6d266e9e3",
+      "source_license": "CC0 1.0 Universal (curated tile release assertion)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (per repository's CC0 release; optional if rights are indeed cleared)",
+      "rights_review": "Source repository claims CC0 for curated export, but per-artwork historical rights not independently confirmed."
     },
     {
       "id": "TF-504",
