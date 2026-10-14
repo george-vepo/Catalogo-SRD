@@ -966,13 +966,15 @@
     "image_assets_missing": 59,
     "production_ready_images": 0,
     "statblocks_fully_structured_with_two_individual_sources_but_editorial_pending": 3,
-    "statblocks_fully_structured_at_source_level": 6,
+    "statblocks_fully_structured_at_source_level": 19,
     "source_level_structured_but_editorially_blocked": [
       "KP-S011"
     ],
     "image_binary_assets_from_e": 53,
     "image_binary_assets_from_f": 18,
-    "image_binary_preexisting_non_production": 2
+    "image_binary_preexisting_non_production": 2,
+    "new_statblocks_online_mechanics_structured_this_run": 13,
+    "new_statblocks_investigated_with_known_mechanical_conflict_this_run": 2
   },
   "checkpoints": [
     {
@@ -1410,6 +1412,51 @@
       "commit_url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/ade2f6873bc549ea1c5adcdc1db1567dd0f01b7e",
       "verified_persisted": true,
       "scope": "Complementação mecânica: XP, atributos e médias de dano"
+    },
+    {
+      "number": 25,
+      "sha": "46292bb7e0507008db210cb6598f5752577570ba",
+      "ids": [
+        "TF-028",
+        "TF-029",
+        "TF-030",
+        "TF-033",
+        "TF-034"
+      ],
+      "count": 5,
+      "scope": "Structuração individual OGL de cinco fichas; sem homologação editorial",
+      "commit_url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/46292bb7e0507008db210cb6598f5752577570ba",
+      "verified_persisted": true
+    },
+    {
+      "number": 26,
+      "sha": "7f765d0b4c419289dd9a29b4ebed803cab071ec3",
+      "ids": [
+        "TF-035",
+        "TF-036",
+        "TF-037",
+        "TF-038",
+        "TF-039"
+      ],
+      "count": 5,
+      "scope": "Quatro fichas aprofundadas; TF-039 diverge em dados de Bite na fonte",
+      "commit_url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/7f765d0b4c419289dd9a29b4ebed803cab071ec3",
+      "verified_persisted": true
+    },
+    {
+      "number": 27,
+      "sha": "0b0d5989a5c575a4b24195e32658f84c53fa5365",
+      "ids": [
+        "TF-040",
+        "TF-041",
+        "TF-042",
+        "TF-043",
+        "TF-045"
+      ],
+      "count": 5,
+      "scope": "Detalhamento de ações, bônus, lendárias, covil e efeitos regionais; TF-041 ambiguidade Multiattack",
+      "commit_url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/0b0d5989a5c575a4b24195e32658f84c53fa5365",
+      "verified_persisted": true
     }
   ],
   "corrections": [
@@ -1437,7 +1484,33 @@
     "latest_tree_audit_json_parsing": "historically validated 132; changed JSONs authored with JSON.stringify and spot readbacks, NOT fresh independent parse of all 132 in this checkpoint",
     "latest_tree_audit_image_sha_validation": "71 imported images matched original source blob SHA and byte size via recursive Git tree",
     "production_visual_qa_completed": 0,
-    "image_licence_qa_completed": 0
+    "image_licence_qa_completed": 0,
+    "latest_structured_checkpoint_ids": [
+      "TF-028",
+      "TF-029",
+      "TF-030",
+      "TF-033",
+      "TF-034",
+      "TF-035",
+      "TF-036",
+      "TF-037",
+      "TF-038",
+      "TF-039",
+      "TF-040",
+      "TF-041",
+      "TF-042",
+      "TF-043",
+      "TF-045"
+    ],
+    "latest_structured_checkpoint_count": 15,
+    "latest_readback_validated_by_individual_file_json_parse": 15,
+    "latest_editorial_book_or_errata_validation_count": 0,
+    "latest_known_source_numeric_discrepancy_ids": [
+      "TF-039"
+    ],
+    "latest_known_source_interpretation_ambiguity_ids": [
+      "TF-041"
+    ]
   },
   "limits": [
     "Registro não implica mecânica completa. Somente TF-211..TF-220 receberam transcrição estrutural aprofundada de fichas individuais neste fluxo, ainda sem confirmação de impressão/errata editorial.",
@@ -2515,6 +2588,33 @@
       ],
       "scope": "Divergência substantiva entre Tome of Beasts 2016 e revisão 2023 registrada em edition_discrepancy; edição-alvo não confirmada; bloqueio preservado",
       "editorial_complete": 0
+    },
+    {
+      "date": "2026-10-14",
+      "ids": [
+        "TF-028",
+        "TF-029",
+        "TF-030",
+        "TF-033",
+        "TF-034",
+        "TF-035",
+        "TF-036",
+        "TF-037",
+        "TF-038",
+        "TF-039",
+        "TF-040",
+        "TF-041",
+        "TF-042",
+        "TF-043",
+        "TF-045"
+      ],
+      "scope": "15 fichas individuais aprofundadas e gravadas: 13 reconstruções do statblock online sem conflito identificado e duas com divergência/ambiguidade explicitamente documentadas",
+      "mechanics_source_level_new": 13,
+      "mechanics_editorially_complete_new": 0,
+      "mechanical_conflicts": [
+        "TF-039 Bite dice/average",
+        "TF-041 Multiattack conditional Proboscis"
+      ]
     }
   ]
 }

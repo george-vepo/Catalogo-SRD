@@ -276,17 +276,18 @@
           "ability": "WIS",
           "dc": 15,
           "on_failure": {
-            "effect": "no_tether"
+            "effect": "tether_applies_to_unwilling_target"
           },
           "on_success": {
-            "effect": "tether_applies_to_willing_or_failed_target"
+            "effect": "unwilling_target_resists_tether"
           }
         },
         "effect": {
           "split_damage_evenly_between_target_and_aatxe": true,
           "aatxe_resistance": "all_damage_except_tether_transfer",
           "duration": "target_death_or_this_lair_action_used_again_or_aatxe_death"
-        }
+        },
+        "willing_target": "tether_applies_without_save"
       },
       {
         "name": "Celestial Motes",
@@ -395,6 +396,7 @@
     "online_statblock_exhaustively_structured": true,
     "primary_printing_or_errata_verified": false,
     "engine_review": false,
-    "final_approval": false
+    "final_approval": false,
+    "red_tether_wisdom_save_direction_reviewed_against_individual_source": true
   }
 }

@@ -1,3 +1,43 @@
+# SRD Card Game 607 — Grupo A: continuação de pesquisa de 15 fichas (14/10/2026)
+
+**PR #8 segue rascunho, sem merge; nenhuma ficha foi aprovada sem confrontação editorial.**
+
+## Estado verificável após os três novos checkpoints
+
+| Indicador | Total |
+|---|---:|
+| Escopo / JSONs preservados | 132 / 132 |
+| Fichas mecanicamente completas e homologadas | **0** |
+| Registros parciais | **131** |
+| Registros bloqueados | **1** (KP-S011) |
+| Statblocks com mecânicas completas no nível das fontes individuais online, ainda sem homologação editorial | **19** |
+| Fichas aprofundadas e persistidas nesta rodada | **15** |
+| Novas fichas com transcrição integral individual sem divergência detectada nesta rodada | **13** |
+| Fichas aprofundadas com conflito explícito | **2** (TF-039, TF-041) |
+| Imagens binárias mantidas na branch A | **73** |
+| Imagens ausentes | **59** |
+| Artes aprovadas para produção | **0** |
+
+### Checkpoints novos
+
+| Commit | IDs | Pesquisa real |
+|---|---|---|
+| [46292bb7](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/46292bb7e0507008db210cb6598f5752577570ba) | TF-028, TF-029, TF-030, TF-033, TF-034 | Fontes individuais com estatísticas, 15 características e ações, testes, economia de ações e reação |
+| [7f765d0b](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/7f765d0b4c419289dd9a29b4ebed803cab071ec3) | TF-035, TF-036, TF-037, TF-038, TF-039 | Mariposas e Pufferfish: cargas, duração, efeitos condicionais, recursos e discrepância de dano |
+| [0b0d5989](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/0b0d5989a5c575a4b24195e32658f84c53fa5365) | TF-040, TF-041, TF-042, TF-043, TF-045 | Ataques especiais, reações condicionais, ações lendárias, ações de covil e efeitos regionais |
+
+### Divergências reais preservadas
+
+- **TF-039 Giant Pufferfish:** a reprodução da edição apresenta Bite com média **7** associada a **2d8 + 3**, e Bite inflado de média **12** também com **2d8 + 3**. O dado impresso é internamente incompatível com a média e com a mecânica de dobrar dados em *Puff Up*. Não corrigir silenciosamente para 1d8 + 3 até confirmar errata/autorização editorial. A mecânica está registrada como **não resolvida** e não executável com segurança.
+- **TF-041 Giant Water Scorpion:** a frase sobre *Multiattack* usando duas *Claws* e, caso esteja agarrando uma criatura, poder usar *Proboscis* uma vez, não explicita se a probóscide substitui ou acrescenta um ataque. O comportamento na engine depende de conferência editorial; não foi inventado.
+- **TF-045 Aaxte/Aatxe:** o ID do catálogo é mantido, mas a transcrição individual e o índice oficial usam **Aatxe**; identidade alternativa registrada. Foram estruturadas as ações lendárias e de covil, além dos efeitos regionais. É necessária revisão independente de todos esses recursos.
+
+**Fonte principal desta rodada:** fichas individuais de [KPOGL](https://kpogl.wikidot.com/) e [5eSRD](https://www.5esrd.com/); ambas são reproduções de conteúdo OGL, não homologação do exemplar físico e de erratas da Kobold Press. Os URLs de cada criatura estão em `records/<ID>.json`.
+
+**Pendências:** validar edição e erratas oficiais, resolver ambiguidade dos casos sinalizados, revisar implementação na engine, obter as 59 imagens restantes e aprovar direitos/qualidade das 73 imagens atuais. A meta original permanece não concluída.
+
+---
+
 # SRD Card Game 607 — Grupo A — auditoria atualizada (2026-10-14)
 
 **Branch:** `chatgpt/srd607-deep-mechanics-a`  
