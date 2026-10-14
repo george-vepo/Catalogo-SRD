@@ -4,24 +4,29 @@
   "nome": "Wallflower",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 2,
-  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "estado_auditoria": "BLOQUEADA_REFERENCIA_EDITORIAL_GRICK_NA_BEAK",
   "mecanica_completa": false,
   "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Monstrous Menagerie",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/1660"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": "2",
+    "xp": 450,
+    "bonus_proficiencia": 2,
     "ca": 14,
+    "composicao_ca": "natural armor",
     "pv": 33,
     "dados_vida": "6d8+12",
+    "bloodied": 16,
     "porte": "Medium",
     "tipo": "Plant",
     "alinhamento": null,
+    "nota_alinhamento": "A5E não informa alinhamento no bloco",
     "atributos": {
       "forca": 14,
       "destreza": 14,
@@ -39,183 +44,186 @@
       "carisma": -3
     },
     "deslocamentos": {
-      "andar": 20,
-      "escalar": 20
+      "andar_ft": 20,
+      "escalar_ft": 20
     },
-    "pericias": {
-      "Stealth": 4
-    },
-    "salvaguardas": null,
+    "salvaguardas": [],
+    "pericias": [
+      {
+        "nome": "Stealth",
+        "bonus": 4
+      }
+    ],
     "sentidos": [
-      "darkvision 60 ft"
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
     ],
     "percepcao_passiva": 12,
     "idiomas": [],
+    "vulnerabilidades": [],
     "resistencias": [
-      "dano de armas não mágicas"
+      "damage from nonmagical weapons"
     ],
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "resistencias_condicao": [],
+    "maneuver_dc": 12
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Luring Scent",
-        "descricao_funcional": "Beast/humanoid/fey iniciando turno até 30 pés: CON CD12; falha move-se até planta e encerra turno; sucesso concede imunidade por 24h",
-        "gatilho": "início do turno dentro de 30 pés",
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
+        "categoria": "gatilho no início do turno",
+        "gatilho": "beast, humanoid ou fey inicia turno até 30 pés da Wallflower",
+        "alvos": [
+          "beast",
+          "humanoid",
+          "fey"
+        ],
+        "alcance_ft": 30,
         "teste_resistencia": {
           "atributo": "CON",
           "cd": 12
         },
-        "efeito_falha": "movimento na direção da planta e fim de turno",
-        "efeito_sucesso": "imunidade a Luring Scent por 24h",
-        "condicoes_aplicadas": [],
-        "duracao": "24h no sucesso",
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "imunidade_por_condicao": "criaturas imunes a charmed são imunes a este efeito",
+        "efeito_falha": {
+          "movimento": "aproxima-se da Wallflower tanto quanto conseguir",
+          "turno": "encerra turno após aproximação"
+        },
+        "efeito_sucesso": {
+          "imunidade": "imune a Luring Scent de todas as Wallflowers por 24 horas"
+        },
+        "frequencia": "por início de turno que preencha os requisitos"
       },
       {
         "nome": "Spider Climb",
-        "descricao_funcional": "Usa deslocamento de escalada em paredes difíceis e teto",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "categoria": "movimentação",
+        "efeito": "usa deslocamento de escalada em superfícies difíceis e teto"
       }
     ],
     "acoes": [
       {
         "nome": "Tentacles",
-        "descricao_funcional": "Ataque que também agarra o alvo",
-        "gatilho": null,
+        "categoria": "ataque corpo a corpo",
         "bonus_acerto": 4,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 9,
-        "dados_dano": "2d6",
-        "modificador_dano": 2,
-        "tipo_dano": "bludgeoning",
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [
-          "grappled"
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "bludgeoning"
+          }
         ],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": "só mantém alvo agarrado por tentáculos; fuga CD12",
-        "verificado_integralmente_na_fonte": true
+        "efeito_ao_acertar": {
+          "condicao": "grappled",
+          "escape_cd": 12,
+          "limite_alvo": "não pode atacar outra criatura com tentáculos enquanto durar este grapple"
+        },
+        "duracao_condicional": "enquanto grapple não terminar"
       }
     ],
     "ataques": [
       {
         "nome": "Tentacles",
-        "descricao_funcional": "Ataque que também agarra o alvo",
-        "gatilho": null,
+        "categoria": "ataque corpo a corpo",
         "bonus_acerto": 4,
         "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 9,
-        "dados_dano": "2d6",
-        "modificador_dano": 2,
-        "tipo_dano": "bludgeoning",
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [
-          "grappled"
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "bludgeoning"
+          }
         ],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": "só mantém alvo agarrado por tentáculos; fuga CD12",
-        "verificado_integralmente_na_fonte": true
+        "efeito_ao_acertar": {
+          "condicao": "grappled",
+          "escape_cd": 12,
+          "limite_alvo": "não pode atacar outra criatura com tentáculos enquanto durar este grapple"
+        },
+        "duracao_condicional": "enquanto grapple não terminar"
+      },
+      {
+        "nome": "Beak",
+        "categoria": "bonus action / melee weapon attack",
+        "bonus_acerto": 4,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ],
+        "pre_condicao_literal_da_fonte": "one creature grappled by the grick",
+        "interpretação_alvo": null,
+        "pendencia": "texto fonte refere 'grick', criatura diferente; não substituir por 'Wallflower' sem confirmação",
+        "usos": "como bônus, se precondição editorial for esclarecida"
       }
     ],
     "multiataque": null,
     "acoes_bonus": [
       {
         "nome": "Beak",
-        "descricao_funcional": "Bicada contra alvo agarrado; fonte diz 'grick' em vez de Wallflower",
-        "gatilho": null,
+        "categoria": "bonus action / melee weapon attack",
         "bonus_acerto": 4,
         "alcance_ft": 5,
-        "alvo": "criatura agarrada (termo editorial conflitante)",
-        "dano_medio": 9,
-        "dados_dano": "2d6",
-        "modificador_dano": 2,
-        "tipo_dano": "piercing",
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+2",
+            "media": 9,
+            "tipo": "piercing"
+          }
+        ],
+        "pre_condicao_literal_da_fonte": "one creature grappled by the grick",
+        "interpretação_alvo": null,
+        "pendencia": "texto fonte refere 'grick', criatura diferente; não substituir por 'Wallflower' sem confirmação",
+        "usos": "como bônus, se precondição editorial for esclarecida"
       }
     ],
     "reacoes": [],
     "acoes_lendarias": [],
     "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTE_BEAK",
+      "reacoes": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "conjuracao": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL"
+    }
   },
   "pendencias": [
-    "Texto editorial da bicada cita 'grick' em vez de 'wallflower'; tratar como possível erro editorial, não corrigir implicitamente.",
-    "Referência 'grick' na ação bônus Beak pode ser erro editorial; não corrigir sem evidência.",
-    "A5E: não converter automaticamente efeito de aproximação para regras da carta."
+    "A página oficial escreve grick na precondição de Beak, não Wallflower; precondição literal preservada e alvo operacional desconhecido.",
+    "Não presumir que imunidade a charmed se aplique ao próprio grapple, apenas a Luring Scent.",
+    "Imagem inexistente no diretório C, precisa de binário representativo.",
+    "Confrontar Monstrous Menagerie/errata antes de resolver referência grick."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.alinhamento",
-    "estatisticas.salvaguardas",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "Referência 'grick' na ação bônus Beak pode ser erro editorial; não corrigir sem evidência.",
-    "A5E: não converter automaticamente efeito de aproximação para regras da carta."
+    "correção editorial do alvo exigido na ação bônus Beak",
+    "arquivo de imagem física da criatura",
+    "conferência do Monstrous Menagerie"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/1660",
-      "tipo": "ficha individual no portal editorial A5E, consultada diretamente em 2026-10-13",
-      "conferida_nesta_execucao": true
+      "tipo": "ficha mecânica individual na ferramenta oficial A5E; conferida 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "origem": "EN Publishing / A5E"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico; não tratado como validação editorial independente",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -270,5 +278,13 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_oficial_individual": "https://a5e.tools/node/1660",
+    "confronto_com_livro_ou_errata": "PENDENTE",
+    "interpretações_ambíguas_nao_resolvidas": true
   }
 }

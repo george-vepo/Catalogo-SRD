@@ -4,21 +4,29 @@
   "nome": "Conjured Guardian",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 15,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_DADOS_DINAMICOS",
   "mecanica_completa": false,
   "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Gate Pass Gazette",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/5171"
   },
   "estatisticas": {
     "nd_catalogo": null,
     "nd_fonte": null,
+    "nd_textual": "—",
+    "nd_indice_web": 0,
+    "nota_nd": "Índice visual da página exibe 0, mas bloco oficial especifica Challenge —; ND não fixo, não promover 0 como mecânica.",
+    "xp": null,
+    "bonus_proficiencia": null,
+    "bonus_proficiencia_formula": "igual ao bônus de proficiência do conjurador",
     "ca": 17,
+    "composicao_ca": "natural armor",
     "pv": 55,
     "dados_vida": null,
+    "motivo_dados_vida_null": "bloco fonte imprime apenas HP 55, sem dados; não inferir",
     "porte": "Medium",
     "tipo": "Construct",
     "alinhamento": null,
@@ -39,18 +47,22 @@
       "carisma": -3
     },
     "deslocamentos": {
-      "andar": 30
+      "andar_ft": 30
     },
-    "pericias": null,
-    "salvaguardas": null,
+    "salvaguardas": [],
+    "pericias": [],
     "sentidos": [
-      "darkvision 60 ft"
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
     ],
     "percepcao_passiva": 10,
     "idiomas": [
-      "compreende idiomas do conjurador"
+      "entende idiomas falados pelo conjurador"
     ],
-    "resistencias": null,
+    "vulnerabilidades": [],
+    "resistencias": [],
     "imunidades_dano": [
       "poison"
     ],
@@ -62,192 +74,199 @@
       "petrified",
       "poisoned"
     ],
-    "vulnerabilidades": null
+    "resistencias_condicao": []
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Stone's Stupor (Stone Only)",
-        "descricao_funcional": "Início do turno a 10 pés: WIS contra CD magia do conjurador; falha rattled e velocidade metade até próximo turno",
-        "gatilho": "início turno de alvo a 10 pés",
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
+        "categoria": "característica passiva condicional",
+        "variantes": [
+          "Stone"
+        ],
+        "gatilho": "criatura visível inicia o turno a até 10 pés do guardian",
+        "alcance_ft": 10,
+        "alvos": "criatura selecionada pelo guardian",
         "teste_resistencia": {
           "atributo": "WIS",
           "cd": null,
-          "formula": "spell save DC do conjurador"
+          "formula": "CD de magia do conjurador"
         },
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [
-          "rattled"
-        ],
-        "duracao": "até início próximo turno",
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "efeito_falha": {
+          "condicao_a5e": "rattled",
+          "deslocamento": "metade",
+          "duracao": "até o início do próximo turno do alvo"
+        },
+        "efeito_sucesso": "nenhum efeito mencionado",
+        "frequencia": "por gatilho quando variante Stone ativa"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "descricao_funcional": "Duas pancadas Slam",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true
+        "categoria": "ação",
+        "sequencia": [
+          {
+            "acao": "Slam",
+            "quantidade": 2
+          }
+        ]
       },
       {
         "nome": "Poison Breath (Iron Only)",
-        "descricao_funcional": "Cone 15 pés; CON contra CD magia do conjurador; falha 6d6 poison, sucesso metade",
-        "gatilho": null,
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
+        "categoria": "ação condicional",
+        "variantes": [
+          "Iron"
+        ],
+        "area": {
+          "forma": "cone",
+          "comprimento_ft": 15
+        },
         "teste_resistencia": {
           "atributo": "CON",
           "cd": null,
-          "formula": "spell save DC do conjurador"
+          "formula": "CD de magia do conjurador"
         },
-        "efeito_falha": "21 (6d6) poison",
-        "efeito_sucesso": "metade",
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": "somente Iron",
-        "verificado_integralmente_na_fonte": true
+        "efeito_falha": {
+          "dano": {
+            "dados": "6d6",
+            "media": 21,
+            "tipo": "poison"
+          }
+        },
+        "efeito_sucesso": {
+          "dano": "metade de 6d6 poison"
+        }
       },
       {
         "nome": "Slam",
-        "descricao_funcional": "Ataque usa spell attack bonus do conjurador; dano básico + nível do slot",
-        "gatilho": null,
+        "categoria": "melee weapon attack",
         "bonus_acerto": null,
-        "alcance_ft": 5,
-        "alvo": "um alvo",
-        "dano_medio": 11,
-        "dados_dano": "2d6",
-        "modificador_dano": 4,
-        "tipo_dano": "bludgeoning",
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": null,
-        "verificado_integralmente_na_fonte": true,
         "bonus_acerto_formula": "spell attack bonus do conjurador",
-        "dano_adicional": "nível do slot"
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "nível do espaço de magia usado",
+            "media": null,
+            "tipo": "adicional não especificado no bloco"
+          }
+        ],
+        "nota_dano_extra": "fonte não informa um tipo separado para dano adicional por nível de spell slot; mantém dependência sem assumir tipo",
+        "condicao_de_escalonamento": "nível do espaço de magia que invocou o guardian"
       }
     ],
-    "ataques": [],
+    "ataques": [
+      {
+        "nome": "Slam",
+        "categoria": "melee weapon attack",
+        "bonus_acerto": null,
+        "bonus_acerto_formula": "spell attack bonus do conjurador",
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "bludgeoning"
+          },
+          {
+            "dados": "nível do espaço de magia usado",
+            "media": null,
+            "tipo": "adicional não especificado no bloco"
+          }
+        ],
+        "nota_dano_extra": "fonte não informa um tipo separado para dano adicional por nível de spell slot; mantém dependência sem assumir tipo",
+        "condicao_de_escalonamento": "nível do espaço de magia que invocou o guardian"
+      }
+    ],
     "multiataque": {
-      "nome": "Multiattack",
-      "descricao_funcional": "Duas pancadas Slam",
-      "gatilho": null,
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dano_medio": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "teste_resistencia": null,
-      "efeito_falha": null,
-      "efeito_sucesso": null,
-      "condicoes_aplicadas": [],
-      "duracao": null,
-      "frequencia": null,
-      "recarga": null,
-      "custo": null,
-      "limite": null,
-      "verificado_integralmente_na_fonte": true
+      "sequencia": [
+        {
+          "acao": "Slam",
+          "quantidade": 2
+        }
+      ]
     },
     "acoes_bonus": [],
     "reacoes": [
       {
         "nome": "Berserk Thrashing (Clay Only)",
-        "descricao_funcional": "Ao sofrer dano, faz Slam contra criatura aleatória ao alcance; sem alvo, move metade da velocidade em direção a inimigo visível",
-        "gatilho": "recebe dano",
-        "bonus_acerto": null,
-        "alcance_ft": null,
-        "alvo": null,
-        "dano_medio": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "teste_resistencia": null,
-        "efeito_falha": null,
-        "efeito_sucesso": null,
-        "condicoes_aplicadas": [],
-        "duracao": null,
-        "frequencia": null,
-        "recarga": null,
-        "custo": null,
-        "limite": "Clay Only",
-        "verificado_integralmente_na_fonte": true
+        "categoria": "reação",
+        "variante": [
+          "Clay"
+        ],
+        "gatilho": "Conjured Guardian sofre dano",
+        "efeito_se_alvo_ao_alcance": "faz Slam contra criatura aleatória dentro de 5 pés",
+        "efeito_sem_alvo": "move-se até metade do deslocamento em direção a inimigo visível",
+        "deslocamento_sem_alvo_ft": 15,
+        "nao_provoca_ataques_de_oportunidade": true
       }
     ],
     "acoes_lendarias": [],
     "acoes_covil": [],
+    "acoes_miticas": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "formas": [
+      {
+        "nome": "Stone",
+        "caracteristica": "Stone's Stupor"
+      },
+      {
+        "nome": "Iron",
+        "acao": "Poison Breath"
+      },
+      {
+        "nome": "Clay",
+        "reacao": "Berserk Thrashing"
+      }
+    ],
+    "dependencias_dinamicas": [
+      "conjurador: proficiência",
+      "conjurador: CD de magias",
+      "conjurador: bônus de ataque de magia",
+      "magia/nível do espaço utilizado"
+    ],
+    "custos_miticos": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "reacoes": "PRESENTE_APENAS_CLAY",
+      "acoes_lendarias": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL",
+      "conjuracao": "AUSENCIA_CONFERIDA_NA_FICHA_OFICIAL"
+    }
   },
   "pendencias": [
-    "No bloco editorial Challenge — e proficiência do conjurador: não usar CR0 do índice da página.",
-    "CD e acerto dinâmicos dependem de magia, invocador e slot."
+    "Challenge no bloco = travessão (—), embora o índice da página use 0; nunca atribuir ND0 fixo.",
+    "Valores de CD, ataque e proficiência dependem do conjurador; preservar fórmulas até integração com o motor.",
+    "Três variantes Stone/Iron/Clay usam habilidades condicionais e diferentes economias de ação; não mesclar efeitos.",
+    "Falta confirmar magia que conjura a criatura e duração/escala; ficha da criatura isoladamente não define essas regras.",
+    "Arquivo binário da imagem ainda faltando."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.nd_catalogo",
-    "estatisticas.nd_fonte",
-    "estatisticas.dados_vida",
-    "estatisticas.alinhamento",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.resistencias",
-    "estatisticas.vulnerabilidades",
-    "No bloco editorial Challenge — e proficiência do conjurador: não usar CR0 do índice da página.",
-    "CD e acerto dinâmicos dependem de magia, invocador e slot."
+    "valor numérico de ND não fornecido e possivelmente dependente da invocação",
+    "contexto completo da magia de invocação e duração",
+    "dados de vida não informados na ficha",
+    "imagem física ainda não obtida"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/5171",
-      "tipo": "ficha individual no portal editorial A5E, consultada diretamente em 2026-10-13",
-      "conferida_nesta_execucao": true
+      "tipo": "ficha mecânica individual na ferramenta oficial A5E; conferida 2026-10-14",
+      "conferida_nesta_execucao": true,
+      "origem": "EN Publishing / A5E"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico; não tratado como validação editorial independente",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -301,5 +320,13 @@
       "verificada": false
     },
     "integrada": false
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "sistema": "Level Up: Advanced 5E",
+    "fonte_oficial_individual": "https://a5e.tools/node/5171",
+    "confronto_com_livro_ou_errata": "PENDENTE",
+    "interpretações_ambíguas_nao_resolvidas": true
   }
 }

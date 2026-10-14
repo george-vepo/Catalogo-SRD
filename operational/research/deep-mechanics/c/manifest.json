@@ -291,6 +291,19 @@
       "commit": "4bb79b4994ca6529053ce0419279db889bc7d605",
       "leitura_persistencia": "CONFIRMADA, 2 fichas lidas via API",
       "tipo": "aprofundamento mecânico"
+    },
+    {
+      "numero": 18,
+      "inicio": "TF-417",
+      "fim": "TF-425",
+      "ids": [
+        "TF-417",
+        "TF-420",
+        "TF-425"
+      ],
+      "commit": "f869eacf0239a31a56bf2cd9e019862aa498680f",
+      "leitura_persistencia": "CONFIRMADA por consulta direta ao GitHub; hashes verificáveis",
+      "tipo": "3 fichas reconstruídas do stat block integral"
     }
   ],
   "atualizacao_detalhada_sha": "4bb79b4994ca6529053ce0419279db889bc7d605",
@@ -360,23 +373,28 @@
       "escopo": "next_batches[4]",
       "posicao": 2,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-414.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+      "status": "BLOQUEADA_REFERENCIA_EDITORIAL_GRICK_NA_BEAK",
       "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/1660",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Texto editorial da ação Beak referencia grick, não Wallflower; falta determinar interpretação correta.",
-        "Texto editorial da bicada cita 'grick' em vez de 'wallflower'; tratar como possível erro editorial, não corrigir implicitamente."
+        "A página oficial escreve grick na precondição de Beak, não Wallflower; precondição literal preservada e alvo operacional desconhecido.",
+        "Não presumir que imunidade a charmed se aplique ao próprio grapple, apenas a Luring Scent.",
+        "Imagem inexistente no diretório C, precisa de binário representativo.",
+        "Confrontar Monstrous Menagerie/errata antes de resolver referência grick."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "correção editorial do alvo exigido na ação bônus Beak",
+        "arquivo de imagem física da criatura",
+        "conferência do Monstrous Menagerie"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-415",
@@ -707,23 +725,29 @@
       "escopo": "next_batches[4]",
       "posicao": 14,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-428.json",
-      "status": "PARCIAL_NAO_VALIDADA",
+      "status": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_REVISAO_EDITORIAL",
       "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/2854",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "A5E: limite de ações lendárias e Legendary Resistance mudam conforme cabeças ativas.",
-        "Conferir recargas, testes de resistência e ações lendárias individualmente."
+        "Bloco integral estruturado da ferramenta oficial A5E e ações lendárias relacionadas à contagem de cabeças.",
+        "Confirmar com Dungeon Delver's Guide/errata a transição frightened→petrified de Stone Howl antes de implementar automatização.",
+        "A fonte não especifica qual cabeça desativa ao gastar Legendary Resistance; não forçar escolha automática.",
+        "Arquivo binário de imagem ainda ausente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "semântica exata da falha repetida em Stone Howl",
+        "procedimento de escolha da cabeça desativada",
+        "arquivo de imagem representativa",
+        "conferência editorial"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-431",
@@ -731,24 +755,30 @@
       "escopo": "next_batches[4]",
       "posicao": 15,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-431.json",
-      "status": "PARCIAL_NAO_VALIDADA",
+      "status": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_DADOS_DINAMICOS",
       "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/5171",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Challenge — no bloco editorial; CD e ataque dependem do conjurador, não fixar ND 0."
+        "Challenge no bloco = travessão (—), embora o índice da página use 0; nunca atribuir ND0 fixo.",
+        "Valores de CD, ataque e proficiência dependem do conjurador; preservar fórmulas até integração com o motor.",
+        "Três variantes Stone/Iron/Clay usam habilidades condicionais e diferentes economias de ação; não mesclar efeitos.",
+        "Falta confirmar magia que conjura a criatura e duração/escala; ficha da criatura isoladamente não define essas regras.",
+        "Arquivo binário da imagem ainda faltando."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV",
-        "ND não é constante; depende da magia"
+        "valor numérico de ND não fornecido e possivelmente dependente da invocação",
+        "contexto completo da magia de invocação e duração",
+        "dados de vida não informados na ficha",
+        "imagem física ainda não obtida"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-448",

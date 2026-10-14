@@ -2,6 +2,15 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 18/19 — pesquisa adicional de 14/10/2026
+
+Foram reconstruídas as fichas individuais **TF-417 Mandriano**, **TF-420 Mandriano Ancient** e **TF-425 Snow Terror**, consultando blocos completos e preservando a variante (sem reutilização mecânica). A diferença entre limite 12 undead via Consume the Spark e limite 20 zombies via Call the Dead da variante Ancient não foi resolvida por suposição. A imagem dos dois Mandrianos usa o mesmo blob e não está aprovada. As 3 fichas mantêm pendência de exemplar editorial/errata. Fonte: [Mandriano](https://kpogl.wikidot.com/monster:mandriano), [Ancient Mandriano](https://kpogl.wikidot.com/monster:ancient-mandriano), [Snow Terror](https://www.5esrd.com/database/creature/snow-terror/), [Tome of Beasts 2 transcrição](https://anyflip.com/aqmdu/uasq/basic/301-350).
+
+Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-431 Conjured Guardian** em fontes oficiais [A5E Wallflower](https://a5e.tools/node/1660), [A5E Cerberus Guardian](https://a5e.tools/node/2854), [A5E Conjured Guardian](https://a5e.tools/node/5171). TF-414 permanece bloqueada por referência a `grick` na ação bônus Beak. TF-428 preserva cabeças ativas/inativas, 4 ações lendárias e seus requisitos; evitar supor seleção automática de cabeça e efeito de falhas repetidas. TF-431 conserva ND textual `—` apesar do índice `0`; bônus de ataque, CD e proficiência dependem do conjurador.
+
+**Nenhuma promoção mecânica integral.** Imagens faltantes para TF-414, TF-428 e TF-431; os outros três têm imagens persistidas ainda sem aprovação visual.
+
+
 ## Checkpoint 17 — 14/10/2026
 
 - Commit: `4bb79b4994ca6529053ce0419279db889bc7d605`; read-back de `TF-424.json` e `TF-426.json`: **OK**.
@@ -69,14 +78,14 @@
 | TF-414 | Wallflower | BLOQUEADA | sim | [individual](https://a5e.tools/node/1660) | Texto editorial da ação Beak referencia grick, não Wallflower; falta determinar interpretação correta. |
 | TF-415 | Gloomflower | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/gloomflower/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
 | TF-416 | Wind Witch | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/wind-witch/) | Publicação e ND conferidos no índice editorial Kobold Press; conferir ficha mecânica e eventuais erratas no volume correto. |
-| TF-417 | Mandriano | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:mandriano) | Fonte KPOGL independente; comparar uso e limite de mortos-vivos com Creature Codex original. |
+| TF-417 | Mandriano | PARCIAL | sim | [individual](https://kpogl.wikidot.com/monster:mandriano) | Fonte KPOGL independente; comparar uso e limite de mortos-vivos com Creature Codex original. |
 | TF-418 | Sodwose | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/sodwose/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-419 | Witchalder | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/witchalder/) | Confirmar termos/recargas da nuvem de pólen contra livro. |
-| TF-420 | Mandriano, Ancient | PARCIAL | não | [individual](https://kpogl.wikidot.com/monster:ancient-mandriano) | Variante Ancient distinta de TF-417; KPOGL independente, confirmar edição. |
+| TF-420 | Mandriano, Ancient | PARCIAL | sim | [individual](https://kpogl.wikidot.com/monster:ancient-mandriano) | Variante Ancient distinta de TF-417; KPOGL independente, confirmar edição. |
 | TF-421 | Planar Flora, Execrable Shrub | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/execrable-shrub/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-423 | Spawn of Chernobog | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/spawn-of-chernobog/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-424 | Soul Eater | PARCIAL | sim | [individual](https://kpogl.wikidot.com/monster:soul-eater) | Revisar edição original vs revisão de Tome of Beasts 1 e condição precisa de Soul Drain; referência comunitária. |
-| TF-425 | Snow Terror | PARCIAL | não | [individual](https://www.5esrd.com/database/creature/snow-terror/) | Conferir ações e CDs em detalhe na fonte e suplemento original. |
+| TF-425 | Snow Terror | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/snow-terror/) | Conferir ações e CDs em detalhe na fonte e suplemento original. |
 | TF-426 | Planar Flora, Thorned Sulfurlord | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/thorned-sulfurlord/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-428 | Cerberus Guardian | PARCIAL | sim | [individual](https://a5e.tools/node/2854) | A5E: limite de ações lendárias e Legendary Resistance mudam conforme cabeças ativas. |
 | TF-431 | Conjured Guardian | PARCIAL | sim | [individual](https://a5e.tools/node/5171) | Challenge — no bloco editorial; CD e ataque dependem do conjurador, não fixar ND 0. |
