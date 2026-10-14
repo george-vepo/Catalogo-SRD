@@ -1,0 +1,891 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+  "reference_date": "2026-10-14",
+  "batch_number": 30,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 7,
+    "completas_com_ressalvas": 1,
+    "incompletas": 2,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 6,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 4,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 2
+  },
+  "evidence_limitations": [
+    "SHA/bytes das seis imagens confrontados com árvore Git e manifesto F; sem inspeção visual nova.",
+    "TF-334 PV e ND consolidados nulos; TF-342 referencia unidade sem definição no registro.",
+    "Fontes mecânicas secundárias; edições, licenças e adaptação pendentes."
+  ],
+  "records": [
+    {
+      "id": "TF-334",
+      "criatura": "Far Darrig",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "ND/PV nulos por conflito entre ND2/PV39 e ND3/PV84; não mesclar edições.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": null,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": 17,
+          "DES": 16,
+          "CON": 17,
+          "INT": 11,
+          "SAB": 15,
+          "CAR": 17
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Enchanted Antlers",
+            "Speak with Beasts"
+          ],
+          "ataques": [
+            "Antler Glaive"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Antler Glaive",
+            "Woodland Friends"
+          ],
+          "acoes_bonus": [
+            "Dismiss Woodland Friends"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [
+        "ND/PV nulos por conflito entre ND2/PV39 e ND3/PV84; não mesclar edições."
+      ],
+      "conflitos": [
+        "ND/PV nulos por conflito entre ND2/PV39 e ND3/PV84; não mesclar edições."
+      ],
+      "pendencias_editoriais": [
+        "ND/PV nulos por conflito entre ND2/PV39 e ND3/PV84; não mesclar edições.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-334.webp",
+        "sha_git": "f96bd11756af512bb5c4f0df4fa7fd3ea550cf53",
+        "bytes": 116728,
+        "dimensoes_declaradas": [
+          742,
+          1000
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna/confusão de edição e validar regras antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-334.json",
+        "sha": "2835f08109e01c95224d2dc63c15c361f1ace66d",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-335",
+      "criatura": "Woe Siphon",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Siphoning Fist: redução de PV máximos com salvaguarda CAR CD13; Cause Despair com repetição ao fim de cada turno.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "3",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 45,
+        "dados_vida": "6d8+18",
+        "atributos": {
+          "FOR": 18,
+          "DES": 17,
+          "CON": 16,
+          "INT": 5,
+          "SAB": 12,
+          "CAR": 7
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Detect Sentience"
+          ],
+          "ataques": [
+            "Siphoning Fist"
+          ],
+          "acoes": [
+            "Siphoning Fist",
+            "Cause Despair",
+            "Invisibility"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Siphoning Fist: redução de PV máximos com salvaguarda CAR CD13; Cause Despair com repetição ao fim de cada turno.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar e testar, verificar licença e imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-335.json",
+        "sha": "37fec7c33de8d0c87500e2dcce067ae4020217b7",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-336",
+      "criatura": "Far Dorocha",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "CA aumenta a 18 em penumbra/escuridão; Dark Invitation CAR CD15; conjuração CAR CD15.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "5",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 82,
+        "dados_vida": "15d8+15",
+        "atributos": {
+          "FOR": 10,
+          "DES": 18,
+          "CON": 13,
+          "INT": 14,
+          "SAB": 10,
+          "CAR": 18
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Traveler in Darkness",
+            "Under the Cloak of Night"
+          ],
+          "ataques": [
+            "Dirk"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Dirk",
+            "Dark Invitation"
+          ],
+          "acoes_bonus": [
+            "Shadow Traveler",
+            "Encerrar Dark Invitation"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": [
+            "Innate/Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "CA aumenta a 18 em penumbra/escuridão; Dark Invitation CAR CD15; conjuração CAR CD15.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar e testar, verificar licença e imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-336.json",
+        "sha": "9eb8575991292ae8c0cee5eed232a928ea512fcf",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-338",
+      "criatura": "Somberweave",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Web recarga 5–6, fuga FOR CD15; Shadow Shift CAR CD14.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "5",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 78,
+        "dados_vida": "12d8+24",
+        "atributos": {
+          "FOR": 14,
+          "DES": 19,
+          "CON": 14,
+          "INT": 10,
+          "SAB": 13,
+          "CAR": 16
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Shadow Webs",
+            "Shadow Sight",
+            "Spider Climb",
+            "Web Sense",
+            "Web Walker"
+          ],
+          "ataques": [
+            "Bite",
+            "Claws",
+            "Web"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Claws",
+            "Web",
+            "Shadow Shift"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Web recarga 5–6, fuga FOR CD15; Shadow Shift CAR CD14.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-338.webp",
+        "sha_git": "7345296a5c5f285194a5072edbe99486e5ca9608",
+        "bytes": 63466,
+        "dimensoes_declaradas": [
+          850,
+          758
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar e testar, verificar licença e imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-338.json",
+        "sha": "94f660b09defb001e2cb7f793a56b2ad78da1a18",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-339",
+      "criatura": "Malphas",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Multiattack tem alternativas 2 Longsword/3 Shadow Bolt; cegueira CON CD15; reação Shadow Call.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "6",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 135,
+        "dados_vida": "18d8+54",
+        "atributos": {
+          "FOR": 19,
+          "DES": 19,
+          "CON": 16,
+          "INT": 14,
+          "SAB": 13,
+          "CAR": 18
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Shadow-Infused Weapons",
+            "Sunlight Sensitivity"
+          ],
+          "ataques": [
+            "Longsword",
+            "Shadow Bolt"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Longsword",
+            "Shadow Bolt"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Shadow Call"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Multiattack tem alternativas 2 Longsword/3 Shadow Bolt; cegueira CON CD15; reação Shadow Call.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-339.webp",
+        "sha_git": "faea55dc79919b4ff1aaedb47d2ed1c3df08ca3f",
+        "bytes": 111352,
+        "dimensoes_declaradas": [
+          685,
+          1000
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar e testar, verificar licença e imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-339.json",
+        "sha": "e137e1b0b5a03606b2ff3afdf4faf1ec80fd2b17",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-340",
+      "criatura": "Wilderness Crone",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Transmigratory Strike remete a reincarnate e seleção de Beast elegível, dependentes de cotejo na edição.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "6",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 105,
+        "dados_vida": "14d8+42",
+        "atributos": {
+          "FOR": 16,
+          "DES": 10,
+          "CON": 17,
+          "INT": 15,
+          "SAB": 18,
+          "CAR": 8
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Beast Passivism",
+            "Speak with Beasts and Plants"
+          ],
+          "ataques": [
+            "Wild Staff"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Wild Staff",
+            "Needle Breath",
+            "Spellcasting"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Transmigratory Strike"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": [
+            "Innate/Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Transmigratory Strike remete a reincarnate e seleção de Beast elegível, dependentes de cotejo na edição.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-340.webp",
+        "sha_git": "bbc6f32fdb85f578c2226595f6ca3f67acbd1a7a",
+        "bytes": 93256,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar e testar, verificar licença e imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-340.json",
+        "sha": "95c874a9b09cd45155d20a2b9d1ac85e4278e581",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-341",
+      "criatura": "Shurale",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Tickle SAB CD15 e 3ª falha CON CD15; poderes de recuperação documentados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "7",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 105,
+        "dados_vida": "14d8+42",
+        "atributos": {
+          "FOR": 18,
+          "DES": 19,
+          "CON": 16,
+          "INT": 12,
+          "SAB": 15,
+          "CAR": 18
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Magic Weapons",
+            "Magic Resistance",
+            "Mirthful Regeneration"
+          ],
+          "ataques": [
+            "Battleaxe",
+            "Gore"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Battleaxe",
+            "Gore",
+            "Tickle"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": [
+            "Innate/Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Tickle SAB CD15 e 3ª falha CON CD15; poderes de recuperação documentados.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar e testar, verificar licença e imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-341.json",
+        "sha": "728b5b4d20ba586bda7119d07c27744df8f8ef3e",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-342",
+      "criatura": "Silenal",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Cause Row apresenta alternativa de unidade 'bar brawl' sem bloco ou regras próprias no registro.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "7",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 117,
+        "dados_vida": "18d6+54",
+        "atributos": {
+          "FOR": 10,
+          "DES": 18,
+          "CON": 16,
+          "INT": 10,
+          "SAB": 13,
+          "CAR": 19
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Drinking Buddy",
+            "Drunken Clarity",
+            "Hide in the Fray",
+            "Liquid Courage"
+          ],
+          "ataques": [
+            "Tankard",
+            "Darts"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Tankard",
+            "Darts",
+            "Cause Row"
+          ],
+          "acoes_bonus": [
+            "Hide in the Fray",
+            "Liquid Courage",
+            "Calm and Disperse"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [
+        "Cause Row apresenta alternativa de unidade 'bar brawl' sem bloco ou regras próprias no registro."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Cause Row apresenta alternativa de unidade 'bar brawl' sem bloco ou regras próprias no registro.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna/confusão de edição e validar regras antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-342.json",
+        "sha": "b7bae866d205fb757fef2fdcf2e7416786a54e36",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-343",
+      "criatura": "Fear Smith",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Distortion Gaze define efeitos de disoriented; Heart-Stopping Stare SAB CD16; conjuração CAR CD16.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "10",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 149,
+        "dados_vida": "23d8+46",
+        "atributos": {
+          "FOR": 11,
+          "DES": 17,
+          "CON": 14,
+          "INT": 11,
+          "SAB": 15,
+          "CAR": 18
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Distortion Gaze",
+            "Hidden Eye",
+            "Magic Resistance"
+          ],
+          "ataques": [
+            "Claw"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Claw",
+            "Heart-Stopping Stare",
+            "Spellcasting"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": [
+            "Innate/Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Distortion Gaze define efeitos de disoriented; Heart-Stopping Stare SAB CD16; conjuração CAR CD16.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-343.webp",
+        "sha_git": "633c126e4b7c08e101b1490e8575e37a6b73a5f2",
+        "bytes": 103652,
+        "dimensoes_declaradas": [
+          551,
+          1000
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar e testar, verificar licença e imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-343.json",
+        "sha": "26edb91f355a029d88e73d4e7de64fd69b12b01a",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    },
+    {
+      "id": "TF-344",
+      "criatura": "Pumpkin King",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Harvest Dance DES CD16; ações lendárias três pontos por rodada, Fire-Fallow 2, Cast a Spell 3.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "10",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 138,
+        "dados_vida": "12d12+60",
+        "atributos": {
+          "FOR": 20,
+          "DES": 8,
+          "CON": 21,
+          "INT": 12,
+          "SAB": 14,
+          "CAR": 18
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Legendary Resistance",
+            "Magic Resistance"
+          ],
+          "ataques": [
+            "Vine"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Vine",
+            "Harvest Dance"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [
+            "Move",
+            "Vine Attack",
+            "Fire-Fallow",
+            "Cast a Spell"
+          ],
+          "conjuracoes": [
+            "Innate/Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Harvest Dance DES CD16; ações lendárias três pontos por rodada, Fire-Fallow 2, Cast a Spell 3.",
+        "Validar edição/erratas e licença. Fonte mecânica secundária; revisão editorial independente pendente."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-344.webp",
+        "sha_git": "e8c7875ec2c764636c3f5ba50762c5be9367c5a4",
+        "bytes": 116036,
+        "dimensoes_declaradas": [
+          360,
+          279
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar e testar, verificar licença e imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-344.json",
+        "sha": "83e213e68b7f5895adea8e31c3ab3c0b90e5466b",
+        "source_commit": "bbff4c3d766e0e932af1a44dc73846a30904001c",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 30
+    }
+  ]
+}

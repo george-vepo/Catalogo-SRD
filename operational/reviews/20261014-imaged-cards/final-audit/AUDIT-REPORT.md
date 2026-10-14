@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 16 lotes validados, 160/395 fichas (235 restantes).
+**Situação:** EM ANDAMENTO — 30 lotes validados, 300/395 fichas (95 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -201,3 +201,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 7 completas em conteúdo, 2 com ressalvas (**TF-325**, ND5/6 entre edições; **TF-333**, XP 100 para ND 1/4 na fonte), 1 incompleta (**TF-320**, PV consolidado nulo por conflito entre valores 63/88/49). Nove imagens vinculadas via manifesto F com SHA/bytes previamente validados e **TF-326 ausente**. Dimensões inferiores a 500 px: TF-327, TF-328, TF-329, TF-331. Edição/erratas e revisão visual/jurídica permanecem pendentes.
 
 **Consolidado:** 290/395 (105 restantes); 179 completas, 69 com ressalvas, 41 incompletas e 1 não verificável; 212 imagens diretas, 68 por manifesto, 10 ausentes.
+
+
+## Lote 030 — TF-334–TF-344 (10 IDs conforme CSV)
+
+7 fichas completas em conteúdo, 1 com ressalvas (TF-340, Transmigratory Strike) e 2 incompletas (TF-334 com ND/PV nulos; TF-342, unidade bar brawl não definida em Cause Row). Seis imagens vinculadas via manifesto F com SHA/tamanho de árvore Git conferidos; quatro ausentes (TF-335, TF-336, TF-341 e TF-342). Imagens TF-340 (280×280) e TF-344 (360×279) têm lado inferior a 500 px. Licenças, inspeção visual e edição oficial não homologadas.
+
+**Consolidado:** 300/395 (95 restantes); 186 completas em conteúdo, 70 com ressalvas, 43 incompletas e 1 não verificável; 212 imagens diretas, 74 por manifesto, 14 ausentes.
