@@ -10,14 +10,17 @@
     "edition_family": "5e",
     "exact_printing": null,
     "challenge_rating": "4",
-    "size": null,
-    "type": null,
-    "alignment": null
+    "size": "Medium",
+    "type": "plant",
+    "alignment": "unaligned",
+    "experience_points": 1100,
+    "proficiency_bonus": 2,
+    "source_page": 45
   },
   "statistics": {
     "armor_class": 13,
     "hit_points": 55,
-    "hit_dice": null,
+    "hit_dice": "10d8+10",
     "ability_scores": {
       "STR": 14,
       "DEX": 12,
@@ -26,24 +29,148 @@
       "WIS": 3,
       "CHA": 1
     },
-    "speeds": null,
-    "senses": null,
-    "skills": null,
-    "saving_throws": null,
-    "languages": null,
-    "damage_resistances": null,
-    "damage_immunities": null,
-    "damage_vulnerabilities": null,
-    "condition_immunities": null
+    "speeds": {
+      "walk_ft": 10
+    },
+    "senses": {
+      "blindsight_ft": 30,
+      "blind_beyond_blindsight": true,
+      "passive_perception": 6
+    },
+    "skills": [],
+    "saving_throws": [],
+    "languages": [],
+    "damage_resistances": [
+      "bludgeoning",
+      "piercing"
+    ],
+    "damage_immunities": [],
+    "damage_vulnerabilities": [],
+    "condition_immunities": [
+      "blinded",
+      "deafened",
+      "frightened"
+    ],
+    "armor_class_type": "natural_armor",
+    "ability_modifiers": {
+      "STR": 2,
+      "DEX": 1,
+      "CON": 1,
+      "INT": -5,
+      "WIS": -4,
+      "CHA": -5
+    }
   },
   "mechanics": {
-    "traits": null,
-    "actions": null,
-    "bonus_actions": null,
-    "reactions": null,
-    "legendary_actions": null,
-    "spellcasting": null,
-    "other": null
+    "traits": [
+      {
+        "name": "False Appearance",
+        "category": "camouflage",
+        "precondition": "motionless",
+        "effect": {
+          "indistinguishable_from": "normal_cluster_of_vines"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "category": "multiattack",
+        "action_economy": "action",
+        "sequence": [
+          {
+            "attack": "Vine",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "Vine",
+        "category": "attack",
+        "action_economy": "action",
+        "attack_type": "melee_weapon",
+        "attack_bonus": 6,
+        "reach_ft": 5,
+        "targets": {
+          "count": 1,
+          "kind": "target"
+        },
+        "hit": {
+          "damage": [
+            {
+              "dice": "1d4",
+              "flat": 2,
+              "average": 4,
+              "type": "piercing"
+            },
+            {
+              "dice": "2d4",
+              "flat": 0,
+              "average": 5,
+              "type": "poison"
+            }
+          ],
+          "save": {
+            "ability": "CON",
+            "dc": 14,
+            "on_failure": {
+              "condition": "poisoned",
+              "duration": "1_minute"
+            },
+            "on_success": {
+              "poisoned": false
+            }
+          },
+          "if_target_creature": {
+            "condition": "grappled",
+            "escape_dc": 14,
+            "while_grappled": {
+              "condition": "restrained",
+              "repeat_save_each_round": {
+                "ability": null,
+                "dc": null,
+                "explicit_source": "a new saving throw each round",
+                "unverified_attribute_and_dc": true,
+                "on_failure": {
+                  "damage": [
+                    {
+                      "dice": "2d4",
+                      "average": 5,
+                      "type": "poison"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "max_simultaneously_grappled": 4,
+        "may_still_attack_other_targets_when_four_grappled": true,
+        "miss": {
+          "damage": 0
+        }
+      }
+    ],
+    "bonus_actions": [],
+    "reactions": [],
+    "legendary_actions": [],
+    "lair_actions": [],
+    "mythic_actions": [],
+    "spellcasting": [],
+    "other": [
+      {
+        "name": "Poisonous Weapons",
+        "category": "harvestable_equipment_rule",
+        "usable_after_vine_death": true,
+        "crafted_weapon": "whip_from_asp_vine_thorns",
+        "additional_damage_on_weapon_hit": {
+          "dice": "1d4",
+          "type": "poison"
+        },
+        "poison_potency_duration": "1_week",
+        "note": "Applies to crafted weapon, not an additional Asp Vine combat action."
+      }
+    ]
   },
   "prior_research_summary_unverified_for_implementation": [
     "Planta disfarçada; quatro tentáculos venenosos podem agarrar e restringir até quatro vítimas."
@@ -67,8 +194,8 @@
       "url": "https://kpogl.wikidot.com/monster:asp-vine",
       "type": "KPOGL, transcrição independente (não endossada pela editora)",
       "edition": "Tome of Beasts 3",
-      "scope": "traços, ações e resumo; não valida direitos nem edição física",
-      "verification": "citada em checkpoint anterior; exigir leitura e enumeração mecânica integral"
+      "scope": "Bloco individual lido integralmente: atributos, movimentação, defesas, sentidos, traços, ações e condicionais",
+      "verification": "Leitura individual em 14/10/2026, apenas nível de fonte online secundária; sem homologação da impressão ou engine."
     }
   ],
   "source_checkpoint": {
@@ -79,9 +206,9 @@
     "Não foi confirmada comparação integral de erratas/edições para esta entrada."
   ],
   "outstanding": [
-    "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
-    "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
-    "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial."
+    "Confrontar a transcrição KPOGL integral com a impressão e erratas editoriais da edição correspondente.",
+    "Verificar e homologar habilidades e economia de ações na engine; aprovação editorial continua pendente.",
+    "No dano repetido enquanto a vítima permanece agarrada, fonte diz apenas 'new saving throw each round'; atributo/CD desse novo teste não estão explicitados novamente."
   ],
   "image": {
     "status": "BINARIO_PERSISTIDO_INTEGRIDADE_POR_SHA_CONFIRMADA_APROVACAO_PENDENTE",
@@ -105,5 +232,17 @@
       "direitos",
       "arte final"
     ]
+  },
+  "statblock_verification": {
+    "source_level_structured": true,
+    "primary_edition_printing_verified": false,
+    "engine_tested": false,
+    "mechanically_homologated": false,
+    "checked_date": "2026-10-14",
+    "sources": [
+      "https://kpogl.wikidot.com/monster:asp-vine"
+    ],
+    "actions_economy_absences_verified_in_online_statblock": true,
+    "notes": "Estrutura mecânica fiel à transcrição KPOGL; fonte comunitária não endossada por Kobold Press. Impressão, errata e teste de engine não verificados."
   }
 }

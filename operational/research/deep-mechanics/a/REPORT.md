@@ -1,3 +1,13 @@
+# Grupo A — checkpoint 49: Black Crier, Corpse Mound e Asp Vine (14/10/2026)
+
+- **TF-250 Black Crier:** Bound by Calamity e limitação geográfica, Rejuvenation, ação diária Crier's Lament com resultados assimétricos de sucesso/falha, Bell Toll com exaustão na falha por cinco, Bell e Multiattack.
+- **TF-251 Corpse Mound:** Absorb the Dead e cura por CR/nível, Noxious Aura, Zombie Drop com limite de dez zumbis, Slam, Bone Shard e Envelop com limite de quatro vítimas e salvaguardas/ações de libertação. **INT 6 da transcrição revisada mantida**, INT 8 do original permanece divergência editorial explícita. Não inferido arredondamento para CR fracionário.
+- **TF-253 Asp Vine:** False Appearance, quatro Vine por Multiattack, dois danos, envenenamento, agarrar/restringir e quatro alvos simultâneos, teste recorrente de veneno com atributo/CD **não explicitados novamente**. Regra de equipamentos Poisonous Weapons isolada das ações.
+
+Fontes individuais: [Black Crier](https://kpogl.wikidot.com/monster:black-crier), [Corpse Mound](https://kpogl.wikidot.com/monster:corpse-mound), [Asp Vine](https://kpogl.wikidot.com/monster:asp-vine). Todas transcrições secundárias, ainda sem impressão/errata/engine homologadas. **57/132 fichas estruturadas no nível individual online, 75 ainda resumidas, 0 homologadas; 124/132 binários de imagem, 8 ausentes e 0 artes aprovadas.** Sem V-Bridge, merge ou mudança de outros grupos.
+
+---
+
 # Grupo A — checkpoint 48: Chimeric Phantom, Old Salt e Yowler (14/10/2026)
 
 - **TF-244 Chimeric Phantom:** medo automático condicionado no começo do turno a 10 pés, imunidade 24h no sucesso, incorporeidade, Multiattack 2× Maddening Grasp.
