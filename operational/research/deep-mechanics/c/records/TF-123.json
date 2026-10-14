@@ -4,14 +4,14 @@
   "nome": "Animal Lord, Queen of Scorpions",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 3,
-  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_ATRIBUICAO_EDITORIAL_5ESRD",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 2 (©2020)",
     "edicao": null,
-    "fonte_identidade": null
+    "fonte_identidade": "https://www.5esrd.com/database/creature/queen-of-scorpions/"
   },
   "estatisticas": {
     "nd_catalogo": "13",
@@ -19,7 +19,7 @@
     "ca": 17,
     "pv": 142,
     "dados_vida": "15d8+75",
-    "porte": "Medium",
+    "porte": "Medium (human and true), Huge (giant scorpion)",
     "tipo": "fey (shapechanger)",
     "alinhamento": "lawful evil",
     "atributos": {
@@ -39,33 +39,67 @@
       "CAR": 4
     },
     "deslocamentos": {
-      "andar": 40,
-      "escavar": 20,
-      "escalar": 40
+      "andar_ft": 40,
+      "escavacao_ft": 20,
+      "escalar_ft": 40,
+      "escavar_escalar_apenas": [
+        "scorpion",
+        "true"
+      ]
     },
-    "pericias": {
-      "Arcana": 8,
-      "Deception": 8,
-      "Perception": 7,
-      "Persuasion": 8,
-      "Stealth": 6
-    },
-    "salvaguardas": {
-      "CON": 9,
-      "WIS": 7,
-      "CHA": 8
-    },
+    "pericias": [
+      {
+        "nome": "Arcana",
+        "bonus": 8
+      },
+      {
+        "nome": "Deception",
+        "bonus": 8
+      },
+      {
+        "nome": "Perception",
+        "bonus": 7
+      },
+      {
+        "nome": "Persuasion",
+        "bonus": 8
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 6
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "CON",
+        "bonus": 9
+      },
+      {
+        "nome": "WIS",
+        "bonus": 7
+      },
+      {
+        "nome": "CHA",
+        "bonus": 8
+      }
+    ],
     "sentidos": [
-      "darkvision 60 ft.",
-      "tremorsense 120 ft."
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      },
+      {
+        "tipo": "tremorsense",
+        "alcance_ft": 120
+      }
     ],
     "percepcao_passiva": 17,
     "idiomas": [
       "all",
-      "telepathy 120 ft."
+      "telepathy 120 ft"
     ],
     "resistencias": [
-      "bludgeoning/piercing/slashing de ataques não mágicos"
+      "bludgeoning/piercing/slashing from nonmagical attacks"
     ],
     "imunidades_dano": [
       "acid",
@@ -79,484 +113,468 @@
       "poisoned",
       "stunned"
     ],
-    "vulnerabilidades": null
+    "vulnerabilidades": [],
+    "xp": 10000,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Arachnid Passivism",
-        "resumo_anterior": "Aranhas e escorpiões não a atacam voluntariamente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "spiders e scorpions não podem atacar Queen voluntariamente; compulsão mágica pode permitir"
       },
       {
         "nome": "Legendary Resistance",
-        "resumo_anterior": "3/dia, converte falha em sucesso.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "usos": {
+          "quantidade": 3,
+          "periodo": "dia"
+        },
+        "gatilho": "falha em save",
+        "efeito": "pode optar por sucesso"
       },
       {
         "nome": "Magic Resistance",
-        "resumo_anterior": "Vantagem em salvaguardas contra magia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem em saving throws contra spells/magical effects"
       },
       {
         "nome": "Magic Weapons",
-        "resumo_anterior": "Ataques com arma mágicos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "weapon attacks são mágicos"
       },
       {
         "nome": "Rejuvenation",
-        "resumo_anterior": "Reaparece após 1d6 dias no corpo de outro escorpião.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "morre",
+        "efeito": "alma se reforma no Astral Plane e após 1d6 dias ocupa outro scorpion no Material Plane, ganhando todos seus PV/abilities",
+        "impedir_definitivamente": "matar todos os scorpions no Material Plane"
       },
       {
         "nome": "Shapechanger",
-        "resumo_anterior": "Muda para escorpião gigante Huge, mulher humana Medium ou forma verdadeira com cauda; somente escorpião/verdadeira escavam e escalam.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": "ação",
+        "formas": [
+          {
+            "forma": "scorpion",
+            "porte": "Huge",
+            "escava_ft": 20,
+            "escalar_ft": 40
+          },
+          {
+            "forma": "human",
+            "porte": "Medium",
+            "escava_ft": 0,
+            "escalar_ft": 0
+          },
+          {
+            "forma": "true scorpion-tailed humanoid",
+            "porte": "Medium",
+            "escava_ft": 20,
+            "escalar_ft": 40
+          }
+        ],
+        "equipamento": "transforma junto",
+        "reverter_morte": "true",
+        "demais_estatisticas": "não mudam"
       },
       {
         "nome": "Speak with Arachnids",
-        "resumo_anterior": "Comunica-se com aranhas e escorpiões.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "comunica-se com spiders e scorpions sem compartilhar idioma"
       },
       {
         "nome": "Spider Climb",
-        "resumo_anterior": "Sobe inclusive tetos sem teste.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "escala paredes difíceis e tetos sem skill check"
       },
       {
         "nome": "Innate Spellcasting",
-        "resumo_anterior": "CAR CD16/+8; livres invisibility pessoal, pass without trace e poison spray; 3/dia giant insect para aranhas/escorpiões e ray of enfeeblement; 1/dia etherealness, eyebite e freedom of movement.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "atributo": "CHA",
+        "cd_magia": 16,
+        "bonus_ataque_magia": 8,
+        "componentes_materiais": false,
+        "at_will": [
+          {
+            "nome": "invisibility",
+            "limite": "self only"
+          },
+          "pass without trace",
+          "poison spray"
+        ],
+        "tres_por_dia_cada": [
+          {
+            "nome": "giant insect",
+            "alvo": "scorpions and spiders only"
+          },
+          "ray of enfeeblement"
+        ],
+        "um_por_dia_cada": [
+          "etherealness",
+          "eyebite",
+          "freedom of movement"
+        ]
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Humana: 2 scimitar; escorpião: 2 garras/1 ferrão; verdadeira: 1 ferrão e 2 scimitar.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia_por_forma": [
+          {
+            "forma": "human",
+            "sequencia": [
+              {
+                "acao": "Scimitar",
+                "quantidade": 2
+              }
+            ]
+          },
+          {
+            "forma": "scorpion",
+            "sequencia": [
+              {
+                "acao": "Claw",
+                "quantidade": 2
+              },
+              {
+                "acao": "Sting",
+                "quantidade": 1
+              }
+            ]
+          },
+          {
+            "forma": "true",
+            "sequencia": [
+              {
+                "acao": "Sting",
+                "quantidade": 1
+              },
+              {
+                "acao": "Scimitar",
+                "quantidade": 2
+              }
+            ]
+          }
+        ]
       },
       {
         "nome": "Claw",
-        "resumo_anterior": "+10, 5 pés, 2d8+6 contundente; agarra (escape CD17) em forma de escorpião.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "scorpion"
+        ],
+        "dano": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao": "grappled",
+          "escape_cd": 17,
+          "limite": "cada uma das duas claws pode agarrar um alvo, máximo de dois simultâneos"
+        }
       },
       {
         "nome": "Scimitar",
-        "resumo_anterior": "+10, 5 pés, 1d6+6 cortante e 1d6 veneno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "human",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "1d6+6",
+            "media": 9,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "poison"
+          }
+        ]
       },
       {
         "nome": "Sting",
-        "resumo_anterior": "+10, alcance 10 pés, 1d10+6 perfurante, CON CD17 para 6d6 veneno ou metade.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "formas": [
+          "scorpion",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "1d10+6",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ],
+        "teste_apos_acerto": {
+          "atributo": "CON",
+          "cd": 17,
+          "falha": {
+            "dano": {
+              "dados": "6d6",
+              "media": 21,
+              "tipo": "poison"
+            }
+          },
+          "sucesso": "metade de 6d6 poison"
+        }
       },
       {
         "nome": "Acidic Bile",
-        "resumo_anterior": "Recarga 5–6; linha 60 por 5 pés, DES CD17, 10d8 ácido ou metade; falha também envenena por até 1 min.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ação em área com recarga",
+        "recarga": {
+          "dado": "1d6",
+          "valores": [
+            5,
+            6
+          ]
+        },
+        "area": {
+          "tipo": "linha",
+          "comprimento_ft": 60,
+          "largura_ft": 5
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 17
+        },
+        "falha": {
+          "dano": {
+            "dados": "10d8",
+            "media": 45,
+            "tipo": "acid"
+          },
+          "condicao": "poisoned",
+          "duracao": "até 1 minuto",
+          "repetir_teste": "fim de cada turno; sucesso remove poison"
+        },
+        "sucesso": {
+          "dano": "metade de 10d8 acid",
+          "poisoned": false
+        }
+      },
+      {
+        "nome": "Shapechanger",
+        "referencia": "Shapechanger trait",
+        "custo": "uma ação"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Humana: 2 scimitar; escorpião: 2 garras/1 ferrão; verdadeira: 1 ferrão e 2 scimitar.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
         "nome": "Claw",
-        "resumo_anterior": "+10, 5 pés, 2d8+6 contundente; agarra (escape CD17) em forma de escorpião.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
-    "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Humana: 2 scimitar; escorpião: 2 garras/1 ferrão; verdadeira: 1 ferrão e 2 scimitar.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
-    },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": [
-      {
-        "nome": "At Will Spell",
-        "resumo_anterior": "Conjura uma magia à vontade.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Burrow",
-        "resumo_anterior": "Escava até velocidade sem ataques de oportunidade.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "scorpion"
+        ],
+        "dano": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "bludgeoning"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao": "grappled",
+          "escape_cd": 17,
+          "limite": "cada uma das duas claws pode agarrar um alvo, máximo de dois simultâneos"
+        }
       },
       {
         "nome": "Scimitar",
-        "resumo_anterior": "Custa duas ações, ataque com cimitarra.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "human",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "1d6+6",
+            "media": 9,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "poison"
+          }
+        ]
+      },
+      {
+        "nome": "Sting",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "formas": [
+          "scorpion",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "1d10+6",
+            "media": 11,
+            "tipo": "piercing"
+          }
+        ],
+        "teste_apos_acerto": {
+          "atributo": "CON",
+          "cd": 17,
+          "falha": {
+            "dano": {
+              "dados": "6d6",
+              "media": 21,
+              "tipo": "poison"
+            }
+          },
+          "sucesso": "metade de 6d6 poison"
+        }
       }
     ],
-    "acoes_covil": null,
+    "multiataque": {
+      "human": [
+        "Scimitar",
+        "Scimitar"
+      ],
+      "scorpion": [
+        "Claw",
+        "Claw",
+        "Sting"
+      ],
+      "true": [
+        "Sting",
+        "Scimitar",
+        "Scimitar"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome": "At Will Spell",
+        "custo": 1,
+        "efeito": "lança uma magia da lista at will"
+      },
+      {
+        "nome": "Burrow",
+        "custo": 1,
+        "formas": [
+          "scorpion",
+          "true"
+        ],
+        "efeito": "move até burrow speed sem provocar attacks of opportunity"
+      },
+      {
+        "nome": "Scimitar",
+        "custo": 2,
+        "formas": [
+          "human",
+          "true"
+        ],
+        "efeito": "executa um Scimitar attack"
+      }
+    ],
+    "custos_lendarios": {
+      "maximo": 3,
+      "limite_por_vez": 1,
+      "momento": "fim do turno de outra criatura",
+      "recuperacao": "início do próprio turno"
+    },
+    "acoes_covil": [],
+    "efeitos_regionais": [
+      {
+        "nome": "Arachnid Attraction",
+        "raio_milhas": 5,
+        "efeito": "atrai aranhas/escorpiões; Queen pode ver, ouvir ou falar através de qualquer arachnid"
+      },
+      {
+        "nome": "Arachnid Hiding",
+        "raio_milhas": 5,
+        "efeito": "spiders e scorpions em vantagem nos DEX(Stealth) Hide checks"
+      },
+      {
+        "nome": "No Trace",
+        "raio_milhas": 1,
+        "efeito": "não deixa evidência física salvo se desejar; criaturas e plantas nativas não a ferem nem tornam movimento mais lento",
+        "termino": "1d10 dias após sua morte"
+      }
+    ],
+    "acoes_miticas": [],
     "conjuracao": [
       {
         "nome": "Innate Spellcasting",
-        "resumo_anterior": "CAR CD16/+8; livres invisibility pessoal, pass without trace e poison spray; 3/dia giant insect para aranhas/escorpiões e ray of enfeeblement; 1/dia etherealness, eyebite e freedom of movement.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "atributo": "CHA",
+        "cd_magia": 16,
+        "bonus_ataque_magia": 8,
+        "componentes_materiais": false,
+        "at_will": [
+          {
+            "nome": "invisibility",
+            "limite": "self only"
+          },
+          "pass without trace",
+          "poison spray"
+        ],
+        "tres_por_dia_cada": [
+          {
+            "nome": "giant insect",
+            "alvo": "scorpions and spiders only"
+          },
+          "ray of enfeeblement"
+        ],
+        "um_por_dia_cada": [
+          "etherealness",
+          "eyebite",
+          "freedom of movement"
+        ]
       }
     ],
-    "custos_lendarios": null
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "reacoes": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_lendarias": "PRESENTES",
+      "acoes_covil": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "conjuracao": "PRESENTE"
+    }
   },
   "pendencias": [
-    "A página 5eSRD inclui parágrafo narrativo sobre a apresentação dos Animal Lords NO MEIO das linhas de REGIONAL EFFECTS. Esse trecho não é habilidade, foi descartado.",
-    "A página /queen-of-scorpions/ apresenta conteúdo parcial, mas a variante /animal-lord-queen-of-scorpions/ contém ficha e ações completas; registrar a canônica.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Página original /animal-lord-queen-of-scorpions/ identifica Animal Lord e Tome of Beasts 2; outra página mais íntegra /queen-of-scorpions/ exibe a mesma identidade mecânica (CR13, 142 PV) mas seção de copyright atribui Lasers & Liches. Não resolver proveniência até consultar publicação editorial.",
+    "Bloco completo de Legendary Actions e Acidic Bile foi extraído da segunda página, pois a primeira contém interpolação narrativa dentro de REGIONAL EFFECTS; não aproveitar o trecho injetado como regra.",
+    "Não há lair actions na ficha completa consultada; regional effects existem e estão registrados. Falta conferir livro original e imagem visual."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "proveniência editorial da segunda página 5eSRD versus Tome of Beasts 2",
+    "revisão editorial da ficha original / erratas",
+    "aprovação visual da imagem"
   ],
   "fontes": [
     {
+      "url": "https://www.5esrd.com/database/creature/queen-of-scorpions/",
+      "tipo": "Bloco mecânico individual completo consultado no 5eSRD em 2026-10-14",
+      "conferida_nesta_execucao": true
+    },
+    {
       "url": "https://www.5esrd.com/database/creature/animal-lord-queen-of-scorpions/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
+      "tipo": "página ligada à série Animal Lords; publicação Tome of Beasts 2, porém com trecho narrativo interpolado",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
-      "tipo": "checkpoint original",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint anterior como referência",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -743,5 +761,12 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "edicao": "D&D 5e",
+    "data": "2026-10-14",
+    "fonte_individual": "https://www.5esrd.com/database/creature/queen-of-scorpions/",
+    "verificacao_de_errata_editorial": "PENDENTE"
   }
 }

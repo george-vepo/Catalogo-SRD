@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 47,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 49,
     "fichas_integralmente_concluidas": 0,
     "parciais": 94,
     "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 84,
+    "registros_aproveitados_sem_nova_verificacao_integral": 82,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -448,6 +448,18 @@
       "commit": null,
       "leitura_persistencia": "PENDENTE",
       "tipo": "Kobold Press Fey com magia/legendary/lair/regional"
+    },
+    {
+      "numero": 30,
+      "inicio": "TF-122",
+      "fim": "TF-123",
+      "ids": [
+        "TF-122",
+        "TF-123"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE",
+      "tipo": "Queen Cats and Queen Scorpions — formas, legendary, lair e editorial"
     }
   ],
   "atualizacao_detalhada_sha": "9d6386ea894bfbb62d4e72f68b2dfe140fc44508",
@@ -1674,16 +1686,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 2,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-122.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_INDIVIDUAL_ESTRUTURADA_PENDENTE_LIVRO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/animal-lord-queen-of-cats/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
       "pendencias": [
-        "As formas determinam ações disponíveis; não permitir bite/claw em forma humana.",
-        "Ações de covil são registradas separadamente de ações de combate."
+        "Três formas têm ações próprias, lair actions e regionais separados; não confundir Moon Strike com Claw nem permitir Claw na forma humana.",
+        "Conferência do Creature Codex impresso e erratas ainda pendente, e imagem existente sem aprovação visual."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "conferência livro original Creature Codex",
+        "revisão visual de imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -1693,7 +1706,8 @@
         "bytes": 58661,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-123",
@@ -1701,16 +1715,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 3,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-123.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://www.5esrd.com/database/creature/animal-lord-queen-of-scorpions/",
+      "status": "BLOQUEADA_DIVERGENCIA_ATRIBUICAO_EDITORIAL_5ESRD",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/queen-of-scorpions/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
       "pendencias": [
-        "A página 5eSRD inclui parágrafo narrativo sobre a apresentação dos Animal Lords NO MEIO das linhas de REGIONAL EFFECTS. Esse trecho não é habilidade, foi descartado.",
-        "A página /queen-of-scorpions/ apresenta conteúdo parcial, mas a variante /animal-lord-queen-of-scorpions/ contém ficha e ações completas; registrar a canônica."
+        "Página original /animal-lord-queen-of-scorpions/ identifica Animal Lord e Tome of Beasts 2; outra página mais íntegra /queen-of-scorpions/ exibe a mesma identidade mecânica (CR13, 142 PV) mas seção de copyright atribui Lasers & Liches. Não resolver proveniência até consultar publicação editorial.",
+        "Bloco completo de Legendary Actions e Acidic Bile foi extraído da segunda página, pois a primeira contém interpolação narrativa dentro de REGIONAL EFFECTS; não aproveitar o trecho injetado como regra.",
+        "Não há lair actions na ficha completa consultada; regional effects existem e estão registrados. Falta conferir livro original e imagem visual."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "proveniência editorial da segunda página 5eSRD versus Tome of Beasts 2",
+        "revisão editorial da ficha original / erratas",
+        "aprovação visual da imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -1720,7 +1737,8 @@
         "bytes": 179042,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-124",

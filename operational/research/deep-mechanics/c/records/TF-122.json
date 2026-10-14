@@ -4,14 +4,14 @@
   "nome": "Animal Lord, Queen of Cats",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 2,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_FONTE_INDIVIDUAL_ESTRUTURADA_PENDENTE_LIVRO",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex (©2018)",
     "edicao": null,
-    "fonte_identidade": null
+    "fonte_identidade": "https://www.5esrd.com/database/creature/animal-lord-queen-of-cats/"
   },
   "estatisticas": {
     "nd_catalogo": "15",
@@ -19,7 +19,7 @@
     "ca": 17,
     "pv": 195,
     "dados_vida": "23d10+69",
-    "porte": "Large",
+    "porte": "Large true form, Medium human, Small cat",
     "tipo": "fey (shapechanger)",
     "alinhamento": "chaotic good",
     "atributos": {
@@ -39,30 +39,55 @@
       "CAR": 5
     },
     "deslocamentos": {
-      "andar": 50,
-      "escalar": 40
+      "andar_ft": 50,
+      "escalar_ft": 40,
+      "condicao_escalar": "cat e true forms"
     },
-    "pericias": {
-      "Acrobatics": 16,
-      "Deception": 10,
-      "Perception": 9,
-      "Stealth": 11
-    },
-    "salvaguardas": {
-      "STR": 7,
-      "CON": 8,
-      "WIS": 9
-    },
+    "pericias": [
+      {
+        "nome": "Acrobatics",
+        "bonus": 16
+      },
+      {
+        "nome": "Deception",
+        "bonus": 10
+      },
+      {
+        "nome": "Perception",
+        "bonus": 9
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 11
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 7
+      },
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 9
+      }
+    ],
     "sentidos": [
-      "truesight 60 ft."
+      {
+        "tipo": "truesight",
+        "alcance_ft": 60
+      }
     ],
     "percepcao_passiva": 19,
     "idiomas": [
       "all",
-      "telepathy 120 ft."
+      "telepathy 120 ft"
     ],
     "resistencias": [
-      "bludgeoning/piercing/slashing de ataques não mágicos"
+      "bludgeoning/piercing/slashing from nonmagical attacks"
     ],
     "imunidades_dano": [
       "radiant"
@@ -75,611 +100,470 @@
       "poisoned",
       "stunned"
     ],
-    "vulnerabilidades": null
+    "vulnerabilidades": [],
+    "xp": 13000,
+    "bonus_proficiencia": 5,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Cat Passivism",
-        "resumo_anterior": "Gatos e weretigers não atacam voluntariamente a rainha.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "cats e weretigers não podem atacar Queen voluntariamente; coerção mágica permite"
       },
       {
         "nome": "Keen Smell",
-        "resumo_anterior": "Vantagem na percepção ligada a odor.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem em WIS (Perception) que usa olfato"
       },
       {
         "nome": "Legendary Resistance",
-        "resumo_anterior": "3/dia; troca falha por sucesso.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "usos": {
+          "quantidade": 3,
+          "periodo": "dia"
+        },
+        "gatilho": "falha em saving throw",
+        "efeito": "pode optar por sucesso"
       },
       {
         "nome": "Magic Resistance",
-        "resumo_anterior": "Vantagem nas salvaguardas contra magia.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "vantagem em saving throws contra magia e magical effects"
       },
       {
         "nome": "Magic Weapons",
-        "resumo_anterior": "Ataques de armas são mágicos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "seus weapon attacks são mágicos"
       },
       {
         "nome": "Pounce",
-        "resumo_anterior": "Avanço de 20 pés com ataque de garra força teste FOR CD19 para não cair.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "pre_condicao": "anda ao menos 20 ft em linha reta em direção ao alvo e acerta Claw no mesmo turno",
+        "teste": {
+          "atributo": "STR",
+          "cd": 19
+        },
+        "falha": {
+          "condicao": "prone"
+        }
       },
       {
         "nome": "Rejuvenation",
-        "resumo_anterior": "Reencarna em outro gato do Plano Material após 1d6 dias.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "morre",
+        "efeito": "alma reforma no Astral Plane e ocupa outro cat no Material Plane em 1d6 dias, com todos PV e abilities",
+        "bloqueio_definitivo": "matar todos os cats do Material Plane"
       },
       {
         "nome": "Safe Fall",
-        "resumo_anterior": "Não sofre dano de queda.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "sempre cai em pé e não sofre falling damage"
       },
       {
         "nome": "Shapechanger",
-        "resumo_anterior": "Assume forma de mulher humana Medium, gata Small ou felina antropomórfica Large; somente gata e verdadeira escalam.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": "uma ação",
+        "formas": [
+          {
+            "forma": "human",
+            "porte": "Medium",
+            "escalar_ft": 0
+          },
+          {
+            "forma": "cat",
+            "porte": "Small",
+            "escalar_ft": 40
+          },
+          {
+            "forma": "true",
+            "porte": "Large",
+            "escalar_ft": 40
+          }
+        ],
+        "estatisticas": "não mudam além de porte e escalação",
+        "equipamento": "transforma junto"
       },
       {
         "nome": "Speak with Felines",
-        "resumo_anterior": "Comunica-se com felinos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "efeito": "comunica-se com gatos como se compartilhassem idioma"
       },
       {
         "nome": "Innate Spellcasting",
-        "resumo_anterior": "CAR CD19; livre dispel magic/invisibility (própria); 3/dia counterspell/pass without trace; 1/dia maze.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "atributo": "CHA",
+        "cd_magia": 19,
+        "componentes": [
+          "V"
+        ],
+        "at_will": [
+          {
+            "nome": "dispel magic"
+          },
+          {
+            "nome": "invisibility",
+            "limite": "self only"
+          }
+        ],
+        "tres_por_dia_cada": [
+          "counterspell",
+          "pass without trace"
+        ],
+        "um_por_dia_cada": [
+          "maze"
+        ]
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Humana: dois Moon Strike; felina/verdadeira: duas Claw ou Moon Strike mais uma Bite.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ação",
+        "sequencia_por_forma": [
+          {
+            "forma": "human",
+            "sequencia": [
+              {
+                "acao": "Moon Strike",
+                "quantidade": 2
+              }
+            ]
+          },
+          {
+            "forma": "cat",
+            "sequencia": [
+              {
+                "acao": "Claw ou Moon Strike",
+                "quantidade": 2
+              },
+              {
+                "acao": "Bite",
+                "quantidade": 1
+              }
+            ]
+          },
+          {
+            "forma": "true",
+            "sequencia": [
+              {
+                "acao": "Claw ou Moon Strike",
+                "quantidade": 2
+              },
+              {
+                "acao": "Bite",
+                "quantidade": 1
+              }
+            ]
+          }
+        ]
       },
       {
         "nome": "Bite",
-        "resumo_anterior": "+11, 5 pés, 2d8+6 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 11,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "cat",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Claw",
-        "resumo_anterior": "+11, 5 pés, 2d6+6 cortante mais 2d8 radiante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 11,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "cat",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "radiant"
+          }
+        ]
       },
       {
         "nome": "Moon Strike",
-        "resumo_anterior": "+10, 90 pés, 4d10 radiante; DES CD18 ou revela invisibilidade e favorece o próximo ataque até início do próximo turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 90,
+        "alvos": 1,
+        "formas": [
+          "human",
+          "cat",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "4d10",
+            "media": 22,
+            "tipo": "radiant"
+          }
+        ],
+        "teste_pos_acerto": {
+          "atributo": "DEX",
+          "cd": 18,
+          "efeito_falha": {
+            "condicao": "emite dim light a 5 ft",
+            "duracao": "até início do próximo turno da Queen",
+            "consequencias": [
+              "invisibility não traz benefício",
+              "não pode Hide",
+              "próximo ataque contra o alvo tem vantagem"
+            ]
+          },
+          "efeito_sucesso": "não emite luz nem efeitos secundários"
+        }
+      },
+      {
+        "nome": "Shapechanger",
+        "tipo": "ação descrita em trait",
+        "referencia": "Shapechanger"
       }
     ],
     "ataques": [
       {
-        "nome": "Multiattack",
-        "resumo_anterior": "Humana: dois Moon Strike; felina/verdadeira: duas Claw ou Moon Strike mais uma Bite.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
         "nome": "Bite",
-        "resumo_anterior": "+11, 5 pés, 2d8+6 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 11,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "cat",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "2d8+6",
+            "media": 15,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Claw",
-        "resumo_anterior": "+11, 5 pés, 2d6+6 cortante mais 2d8 radiante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 11,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "formas": [
+          "cat",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "2d6+6",
+            "media": 13,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "2d8",
+            "media": 9,
+            "tipo": "radiant"
+          }
+        ]
       },
       {
         "nome": "Moon Strike",
-        "resumo_anterior": "+10, 90 pés, 4d10 radiante; DES CD18 ou revela invisibilidade e favorece o próximo ataque até início do próximo turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 10,
+        "alcance_ft": 90,
+        "alvos": 1,
+        "formas": [
+          "human",
+          "cat",
+          "true"
+        ],
+        "dano": [
+          {
+            "dados": "4d10",
+            "media": 22,
+            "tipo": "radiant"
+          }
+        ],
+        "teste_pos_acerto": {
+          "atributo": "DEX",
+          "cd": 18,
+          "efeito_falha": {
+            "condicao": "emite dim light a 5 ft",
+            "duracao": "até início do próximo turno da Queen",
+            "consequencias": [
+              "invisibility não traz benefício",
+              "não pode Hide",
+              "próximo ataque contra o alvo tem vantagem"
+            ]
+          },
+          "efeito_sucesso": "não emite luz nem efeitos secundários"
+        }
       }
     ],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Humana: dois Moon Strike; felina/verdadeira: duas Claw ou Moon Strike mais uma Bite.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "human": [
+        "Moon Strike",
+        "Moon Strike"
+      ],
+      "cat_or_true": [
+        "Claw ou Moon Strike",
+        "Claw ou Moon Strike",
+        "Bite"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
+    "acoes_bonus": [],
+    "reacoes": [],
     "acoes_lendarias": [
       {
         "nome": "Leap",
-        "resumo_anterior": "Move até sua velocidade, ignorando terreno difícil urbano/florestal durante o salto.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": 1,
+        "efeito": "move até velocidade, salta/escalada sem impedimento; difficult terrain urbana/florestal não custa movimento adicional"
       },
       {
         "nome": "Swipe",
-        "resumo_anterior": "Ataque com garra (formas felina/verdadeira).",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": 1,
+        "formas": [
+          "cat",
+          "true"
+        ],
+        "efeito": "um ataque Claw"
       },
       {
         "nome": "Scurry",
-        "resumo_anterior": "Custa duas ações, move e pode se esconder.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "custo": 2,
+        "efeito": "move até velocidade e pode Hide"
       }
     ],
+    "custos_lendarios": {
+      "maximo": 3,
+      "limite_por_vez": 1,
+      "momento": "fim de turno de outra criatura",
+      "recuperacao": "início de turno da Queen"
+    },
     "acoes_covil": [
       {
         "nome": "Summon Felines",
-        "resumo_anterior": "Invoca 4 tigres ou 8 panteras.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "initiative count 20 (losing ties) no covil",
+        "alternativas": [
+          {
+            "criatura": "tigers",
+            "quantidade": 4
+          },
+          {
+            "criatura": "panthers",
+            "quantidade": 8
+          }
+        ],
+        "posicionamento": "em espaços desocupados vistos pela Queen",
+        "tempo": "agem imediatamente e nos próximos rounds na iniciativa 20",
+        "duracao": "até 1 hora ou até esta ação de covil ser usada de novo",
+        "controle": "seguem comandos"
       },
       {
-        "nome": "Moonlit Darkness",
-        "resumo_anterior": "Escuridão mágica em raio 20 pés, até 120 pés.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Magical Darkness",
+        "gatilho": "initiative count 20 no covil",
+        "alcance_ft": 120,
+        "area": {
+          "forma": "esfera",
+          "raio_ft": 20
+        },
+        "efeito": "como darkness, mas dissipa light criada por spell de 4th level ou menor em área de sobreposição",
+        "duracao": "até morte da Queen ou até repetir esta ação"
       },
       {
-        "nome": "Moonbeam",
-        "resumo_anterior": "Cilindro de luz lunar gera vulnerabilidade a dano radiante até próximo turno.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Moonlight Beam",
+        "gatilho": "initiative count 20 no covil",
+        "alcance_ft": 120,
+        "area": {
+          "forma": "cilindro",
+          "raio_ft": 15,
+          "altura_ft": 30
+        },
+        "alvos": "todas criaturas na área",
+        "efeito": "vulnerabilidade a dano radiant",
+        "duracao": "até iniciativa 20 da próxima rodada"
       }
     ],
+    "acoes_covil_regras": {
+      "momento": "initiative 20, losing ties",
+      "limitacao": "não repetir mesma ação duas rodadas seguidas"
+    },
+    "efeitos_regionais": [
+      {
+        "nome": "Cats Attraction",
+        "raio_milhas": 1,
+        "efeito": "atrai centenas de gatos de rua; Queen pode ver/ouvir/falar através deles"
+      },
+      {
+        "nome": "Deep Shadows",
+        "raio_milhas": 1,
+        "efeito": "DEX(Stealth) em vantagem; Queen pode suprimir onde vê sem ação"
+      },
+      {
+        "nome": "Moon Patch",
+        "raio_milhas": 1,
+        "pre_condicao": "à noite",
+        "efeito": "área de céu claro revela lua apesar do clima; em fases exceto lua nova/eclipses ilumina dimly",
+        "termino": "dissipa em 1d10 dias depois da morte"
+      }
+    ],
+    "acoes_miticas": [],
     "conjuracao": [
       {
         "nome": "Innate Spellcasting",
-        "resumo_anterior": "CAR CD19; livre dispel magic/invisibility (própria); 3/dia counterspell/pass without trace; 1/dia maze.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "atributo": "CHA",
+        "cd_magia": 19,
+        "componentes": [
+          "V"
+        ],
+        "at_will": [
+          {
+            "nome": "dispel magic"
+          },
+          {
+            "nome": "invisibility",
+            "limite": "self only"
+          }
+        ],
+        "tres_por_dia_cada": [
+          "counterspell",
+          "pass without trace"
+        ],
+        "um_por_dia_cada": [
+          "maze"
+        ]
       }
     ],
-    "custos_lendarios": null
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "reacoes": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "acoes_lendarias": "PRESENTES",
+      "acoes_covil": "PRESENTES",
+      "acoes_miticas": "AUSENCIA_CONFERIDA_NO_BLOCO",
+      "conjuracao": "PRESENTE"
+    }
   },
   "pendencias": [
-    "As formas determinam ações disponíveis; não permitir bite/claw em forma humana.",
-    "Ações de covil são registradas separadamente de ações de combate.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Três formas têm ações próprias, lair actions e regionais separados; não confundir Moon Strike com Claw nem permitir Claw na forma humana.",
+    "Conferência do Creature Codex impresso e erratas ainda pendente, e imagem existente sem aprovação visual."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "conferência livro original Creature Codex",
+    "revisão visual de imagem"
   ],
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/animal-lord-queen-of-cats/",
-      "tipo": "ficha individual referenciada no checkpoint anterior",
-      "conferida_nesta_execucao": false
+      "tipo": "Bloco mecânico individual completo consultado no 5eSRD em 2026-10-14",
+      "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-119_TF-123/research.json",
-      "tipo": "checkpoint original",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint anterior como referência",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -865,5 +749,12 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "edicao": "D&D 5e",
+    "data": "2026-10-14",
+    "fonte_individual": "https://www.5esrd.com/database/creature/animal-lord-queen-of-cats/",
+    "verificacao_de_errata_editorial": "PENDENTE"
   }
 }

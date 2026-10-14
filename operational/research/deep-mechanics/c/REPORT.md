@@ -2,6 +2,13 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 30 — Queen of Cats e Queen of Scorpions (14/10/2026)
+
+- **TF-122 Queen of Cats:** three forms human/cat/true com claw e bite proibidos em human form, Moon Strike com alvo luminoso após falha DES CD18, Pounce CD19, Shapechanger, Safe Fall, Rejuvenation, Innate Spellcasting CHA DC19, três legendary actions (Leap, Swipe, Scurry), 3 lair actions (tigers/panthers, magical darkness, moonlight) e três regional effects. Fonte https://www.5esrd.com/database/creature/animal-lord-queen-of-cats/. Permanece parcial até livro/errata e aprovação visual.
+- **TF-123 Queen of Scorpions:** humanoid/scorpion/true formas, grapple por claws, veneno de Scimitar/Sting, Acidic Bile 5–6 com dano 10d8 acid e poisoned 1 min, Innate Spellcasting CHA DC16, three legendary actions (At Will Spell, Burrow, Scimitar) e regional effects. Duas páginas 5eSRD possuem proveniências conflitantes: /animal-lord-queen-of-scorpions/ identifica Tome of Beasts 2 e contém texto narrativo interpolado; /queen-of-scorpions/ tem stat block íntegro, mas copyright Lasers & Liches. **BLOQUEADA** quanto à proveniência até confirmação editorial. Fontes https://www.5esrd.com/database/creature/animal-lord-queen-of-scorpions/ e https://www.5esrd.com/database/creature/queen-of-scorpions/.
+- Ambas possuem arte binária preexistente, não revisada visualmente; 0 fichas promovidas integrais. **49 fichas aprofundadas; 82 ainda sem revalidação; 94 parciais e 37 bloqueadas.**
+
+
 ## Checkpoint 29 — Ashen Custodian e Queen of Birds (14/10/2026)
 
 - TF-120 Ashen Custodian: Fire Controller em ação bônus (fogo não mágico e buff/debuff de fire elemental), Forest Cleanser +2d8 fire, Warming Presence cura/dano, Magic Resistance, Innate Spellcasting CHA DC15 com limites, duas Cleansing Strike +8 com alvo incendiado e dano 1d10 recorrente. Entrada 'Alternate Critical' pertence a **outro suplemento Monster Crits for 5e e foi excluída da ficha-base**, sem misturar edições. Fonte https://www.5esrd.com/database/creature/ashen-custodian/.
