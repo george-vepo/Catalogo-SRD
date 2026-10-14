@@ -4,9 +4,9 @@
   "nome": "Zimwi",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 14,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 1 (revisão 2023 no 5eSRD)",
@@ -41,235 +41,131 @@
     "deslocamentos": {
       "andar": 60
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 2
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Desperate Hunger",
-        "resumo_anterior": "Quando abaixo de metade dos PV, vantagem em ataques corpo a corpo contra não-constructos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "gatilho": "HP atual abaixo de metade do máximo",
+        "efeito": "Vantagem em melee attack rolls contra criaturas que não sejam Constructs"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Bite mais Claws; pode substituir Bite por Swallow.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Claws",
+            "quantidade": 1
+          },
+          {
+            "acao": "Bite",
+            "quantidade": 1
+          }
+        ],
+        "substituicao": "Pode trocar Bite por Swallow"
       },
       {
         "nome": "Bite",
-        "resumo_anterior": "+7, 2d8+4 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d8+4",
+            "media": 13,
+            "tipo": "piercing"
+          }
+        ]
       },
       {
         "nome": "Claws",
-        "resumo_anterior": "+7, 2d6+4 cortante; agarra até Medium, escape CD12.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "2d6+4",
+            "media": 11,
+            "tipo": "slashing"
+          }
+        ],
+        "condicao": "Em criatura Medium ou menor: grappled, escape DC12",
+        "limite": "Duas garras, cada uma agarra um alvo"
       },
       {
         "nome": "Swallow",
-        "resumo_anterior": "Engole criatura já agarrada até Medium; 3d6 ácido por turno; pode ter duas vítimas e regurgitar sob condições.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "pre_condicao": "Criatura Medium ou menor já grappled pelo zimwi",
+        "ataque": "Um novo Bite (+7, 2d8+4 piercing); apenas se acertar engole, encerrando grapple",
+        "efeitos": [
+          "swallowed: blinded e restrained",
+          "total cover contra ataques e efeitos de fora",
+          "3d6 acid (média 10) no início de cada turno do zimwi"
+        ],
+        "max_alvos_engolidos": 2,
+        "regurgitar": {
+          "gatilho": "20 ou mais pontos de dano sofridos em um só turno por criatura engolida",
+          "teste": {
+            "atributo": "CON",
+            "cd": 14,
+            "momento": "fim do turno"
+          },
+          "falha": "regurgita todos, prone até 5 ft"
+        },
+        "morte": "vítima não mais restrained, sai usando 5 ft de movimento e prone"
       }
     ],
-    "ataques": [
-      {
-        "nome": "Multiattack",
-        "resumo_anterior": "Bite mais Claws; pode substituir Bite por Swallow.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Bite",
-        "resumo_anterior": "+7, 2d8+4 perfurante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      },
-      {
-        "nome": "Claws",
-        "resumo_anterior": "+7, 2d6+4 cortante; agarra até Medium, escape CD12.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
+    "ataques": [],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Bite mais Claws; pode substituir Bite por Swallow.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Claws",
+        "Bite"
+      ],
+      "alternativa": [
+        "Claws",
+        "Swallow"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "A página é rotulada como revisão de Tome of Beasts 1; comparar com versão original para aprovação.",
-    "O alvo engolido fica com restrições e cobertura próprias, não é meramente agarrado.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "Fonte selecionada é revisão Tome of Beasts 1 ©2023 com CR5 HP110, Bite +7 e Swallow 3d6; a edição antiga traz CR4 HP76, Bite +6, ácido 4d6 e outra capacidade gástrica: não misturar.",
+    "Confirmar direitos de adaptação do texto SRD, publicação original e erratas; imagem binária ainda sem inspeção editorial."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto com edição/erratas/condições de licença originais",
+    "validação visual e direito de imagem"
   ],
   "fontes": [
     {
@@ -280,6 +176,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/zimwi-3pp/",
+      "tipo": "fonte individual detalhada checkpoint 34",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/ardrz/wtfw/basic/401-433",
+      "tipo": "edição histórica apenas para análise de divergência; NÃO usada como statblock atual",
       "conferida_nesta_execucao": true
     }
   ],
@@ -365,5 +271,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 34,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/zimwi-3pp/",
+    "publicacao": "Tome of Beasts 1 (revisão 2023 no 5eSRD)",
+    "aprovacao_editorial": "PENDENTE",
+    "nota": "Confronto de versões: Tome of Beasts antigo não substitui statblock da edição 2023. Fonte secundária antiga usada somente para detectar divergência."
   }
 }

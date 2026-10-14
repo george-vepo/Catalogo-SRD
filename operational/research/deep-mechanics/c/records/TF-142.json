@@ -4,9 +4,9 @@
   "nome": "Giant, Firestorm",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 22,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 3",
@@ -41,173 +41,156 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 6
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 5
+      },
+      {
+        "nome": "CON",
+        "bonus": 8
+      },
+      {
+        "nome": "WIS",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Giant"
+    ],
+    "resistencias": [],
     "imunidades_dano": [
       "cold",
       "fire"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 2900,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "hide armor"
   },
   "mecanicas": {
     "tracos": [],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Dois Obsidian Axe ou Firestorm Bolt.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "quantidade": 2,
+        "alternativas": [
+          "Obsidian Axe",
+          "Firestorm Bolt"
+        ],
+        "nota": "Fonte permite duas attacks usando essas opções, sem impor exclusividade por nome"
       },
       {
         "nome": "Obsidian Axe",
-        "resumo_anterior": "+9, alcance 10 pés, 3d8+6 cortante, 1d6 frio e 1d6 fogo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 9,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+6",
+            "media": 19,
+            "tipo": "slashing"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "cold"
+          },
+          {
+            "dados": "1d6",
+            "media": 3,
+            "tipo": "fire"
+          }
+        ]
       },
       {
         "nome": "Firestorm Bolt",
-        "resumo_anterior": "+6, 120 pés, 3d6+3 fogo e 3d6 frio.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged spell attack",
+        "bonus_acerto": 6,
+        "alcance_ft": 120,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d6+3",
+            "media": 13,
+            "tipo": "fire"
+          },
+          {
+            "dados": "3d6",
+            "media": 10,
+            "tipo": "cold"
+          }
+        ]
       },
       {
         "nome": "Lava Geyser",
-        "resumo_anterior": "Recarga 5–6, coluna 10 pés de raio e 40 de altura; DES CD16 contra 7d6 fogo e cobertura por lava endurecida.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "recarga": "5-6",
+        "alvo": "ponto no solo visível em até 60 ft",
+        "area": {
+          "formato": "cylinder",
+          "raio_ft": 10,
+          "altura_ft": 40
+        },
+        "terreno": {
+          "tipo": "difficult terrain",
+          "duracao": "1 minute"
+        },
+        "teste": {
+          "atributo": "DEX",
+          "cd": 16
+        },
+        "falha": {
+          "dano": {
+            "dados": "7d6",
+            "media": 24,
+            "tipo": "fire"
+          },
+          "condicao": "coated in hardened lava, speed pela metade até remover"
+        },
+        "sucesso": {
+          "dano": "metade de 7d6 fire",
+          "condicao": "não recebe hardened lava"
+        },
+        "remover_lava": "Uma criatura, inclusive a coberta, gasta sua ação para quebrar e remover a lava"
       }
     ],
-    "ataques": [
-      {
-        "nome": "Multiattack",
-        "resumo_anterior": "Dois Obsidian Axe ou Firestorm Bolt.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
+    "ataques": [],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Dois Obsidian Axe ou Firestorm Bolt.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "quantidade": 2,
+      "opcoes": [
+        "Obsidian Axe",
+        "Firestorm Bolt"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "A fonte chama a criatura Firestorm Giant, enquanto o catálogo ordena Giant, Firestorm; mesma identidade pelo índice Kobold Press.",
-    "Detalhes de efeitos prolongados da lava requerem verificação no trecho integral da ação antes de implementação.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "5eSRD exibe Lava Geyser truncado após coated; regra de sucesso/metade, velocidade reduzida e remoção por ação confrontada com reprodução do Tome of Beasts 3 (p.202), exige confirmação de licença/edição original antes de aprovar.",
+    "Não confundir Giant, Firestorm no catálogo com variação homônima nem converter seu Firestorm Bolt (ranged spell attack) para weapon attack.",
+    "Arte física requer validação visual editorial."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto com edição/erratas/condições de licença originais",
+    "validação visual e direito de imagem"
   ],
   "fontes": [
     {
@@ -218,6 +201,16 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/firestorm-giant/",
+      "tipo": "fonte individual detalhada checkpoint 34",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://anyflip.com/tkzwp/dofg/basic/201-250",
+      "tipo": "reprodução de livro para trecho truncado da Lava Geyser; requer verificação editorial/licença",
       "conferida_nesta_execucao": true
     }
   ],
@@ -302,5 +295,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 34,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/firestorm-giant/",
+    "publicacao": "Tome of Beasts 3",
+    "aprovacao_editorial": "PENDENTE",
+    "nota": "Ação de Lava Geyser reconstruída com livro reproduzido, sem reproduzir texto editorial protegido. Fonte adicional AnyFlip p.202."
   }
 }

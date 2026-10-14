@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 59,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 64,
     "fichas_integralmente_concluidas": 0,
     "parciais": 94,
     "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 72,
+    "registros_aproveitados_sem_nova_verificacao_integral": 67,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -500,6 +500,21 @@
       "commit": "6c3f2b0e93d367615fa1b11b38341157182c4473",
       "leitura_persistencia": "CONFIRMADA: cinco JSONs relidos via GitHub, IDs, estrutura e estados validados; 131 records, 96 imagens com hashes compatíveis.",
       "tipo": "cinco fichas Kobold Press: Phase Giant, Crimson Ogre, Belu, Chuhaister e Cacus"
+    },
+    {
+      "numero": 34,
+      "inicio": "TF-134",
+      "fim": "TF-143",
+      "ids": [
+        "TF-134",
+        "TF-140",
+        "TF-141",
+        "TF-142",
+        "TF-143"
+      ],
+      "commit": null,
+      "leitura_persistencia": "PENDENTE_READ_BACK",
+      "tipo": "Zimwi 2023 e quatro gigantes: Cave Desert Firestorm Haunted"
     }
   ],
   "atualizacao_detalhada_sha": "6c3f2b0e93d367615fa1b11b38341157182c4473",
@@ -2086,16 +2101,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 14,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-134.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://www.5esrd.com/database/creature/zimwi-3pp",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/zimwi-3pp/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "A página é rotulada como revisão de Tome of Beasts 1; comparar com versão original para aprovação.",
-        "O alvo engolido fica com restrições e cobertura próprias, não é meramente agarrado."
+        "Fonte selecionada é revisão Tome of Beasts 1 ©2023 com CR5 HP110, Bite +7 e Swallow 3d6; a edição antiga traz CR4 HP76, Bite +6, ácido 4d6 e outra capacidade gástrica: não misturar.",
+        "Confirmar direitos de adaptação do texto SRD, publicação original e erratas; imagem binária ainda sem inspeção editorial."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto com edição/erratas/condições de licença originais",
+        "validação visual e direito de imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2105,7 +2121,8 @@
         "bytes": 82702,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-135",
@@ -2264,16 +2281,17 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 20,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-140.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/giant-cave/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Homônimo /giant-cave-3/ pertence a Tome of Horrors, ND6 e CA14/PV137, portanto descartado.",
-        "Cave Giant Shaman do Tome of Beasts 2 é outra ficha, não variante automática."
+        "O homônimo /giant-cave-3/ de Tome of Horrors CR6 é criatura diferente.",
+        "Não misturar com Cave Giant Shaman; requer revisão original Creature Codex e imagem visual/autoria."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto com edição/erratas/condições de licença originais",
+        "validação visual e direito de imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2283,7 +2301,8 @@
         "bytes": 67041,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-141",
@@ -2291,16 +2310,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 21,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-141.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_EDICAO_E_TEXTO_CONTAMINADO",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/giant-desert-3pp/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "A página 5eSRD inclui trecho de descrição narrativa colado à ação Rock; removê-lo da mecânica.",
-        "Comparar edição ©2023 com Tome of Beasts 1 original antes de aprovação."
+        "BLOQUEIO DE PROVENIÊNCIA: republicação 5eSRD injeta narrativa ao final do texto de Rock, removida da transcrição mecânica.",
+        "Aprovação requer conferir statblock original Tome of Beasts 1 revisado 2023, erratas e licença, sem substituir pela edição anterior.",
+        "Imagem física ainda não validada visualmente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto com edição/erratas/condições de licença originais",
+        "validação visual e direito de imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2310,7 +2331,8 @@
         "bytes": 74934,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-142",
@@ -2318,16 +2340,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 22,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-142.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/firestorm-giant/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "A fonte chama a criatura Firestorm Giant, enquanto o catálogo ordena Giant, Firestorm; mesma identidade pelo índice Kobold Press.",
-        "Detalhes de efeitos prolongados da lava requerem verificação no trecho integral da ação antes de implementação."
+        "5eSRD exibe Lava Geyser truncado após coated; regra de sucesso/metade, velocidade reduzida e remoção por ação confrontada com reprodução do Tome of Beasts 3 (p.202), exige confirmação de licença/edição original antes de aprovar.",
+        "Não confundir Giant, Firestorm no catálogo com variação homônima nem converter seu Firestorm Bolt (ranged spell attack) para weapon attack.",
+        "Arte física requer validação visual editorial."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto com edição/erratas/condições de licença originais",
+        "validação visual e direito de imagem"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2337,7 +2361,8 @@
         "bytes": 179390,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-143",
@@ -2345,16 +2370,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 23,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-143.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/giant-haunted/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "pendencias": [
-        "Três espíritos reconstituem-se segundo regras narrativas; traços dados por espíritos são removidos individualmente.",
-        "Artigo Kobold Press 'Boss Fights: Haunted Giant' altera ficha para encontro especial com fases, NÃO é parte do bloco original do Creature Codex."
+        "BLOQUEIO MECÂNICO: fonte retira um traço concedido a cada espírito expulso, mas não indica associação espírito→traço ou escolha; não adotar ordem por suposição.",
+        "Steadfast é concedida pelos espíritos; imunidades charmed/frightened são condicionais, não necessariamente permanentes.",
+        "Artigo 'Boss Fights: Haunted Giant' cria encontro alternativo, não integra statblock original; revisão Creature Codex e imagem editoriais pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes"
+        "confronto com edição/erratas/condições de licença originais",
+        "validação visual e direito de imagem",
+        "vinculação individual de espíritos e traços"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -2364,7 +2392,8 @@
         "bytes": 67500,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-144",
@@ -4244,11 +4273,11 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 33,
-    "sha_validado": "6c3f2b0e93d367615fa1b11b38341157182c4473",
+    "checkpoint": 34,
+    "sha_validado": null,
     "escopo_ids": 131,
-    "aprofundadas": 59,
-    "sem_revisao_individual": 72,
+    "aprofundadas": 64,
+    "sem_revisao_individual": 67,
     "integralmente_aprovadas": 0,
     "parciais": 94,
     "bloqueadas": 37,

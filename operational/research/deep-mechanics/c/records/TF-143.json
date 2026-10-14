@@ -4,9 +4,9 @@
   "nome": "Giant, Haunted",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 23,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex",
@@ -41,235 +41,151 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "pericias": [
+      {
+        "nome": "Athletics",
+        "bonus": 8
+      },
+      {
+        "nome": "Perception",
+        "bonus": 2
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 2
+      },
+      {
+        "nome": "CON",
+        "bonus": 7
+      },
+      {
+        "nome": "WIS",
+        "bonus": 2
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "Giant"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "charmed",
+      "frightened"
+    ],
+    "vulnerabilidades": [],
+    "xp": 2300,
+    "bonus_proficiencia": 3,
+    "composicao_ca": "natural armor; +3 dos três espíritos incluído no valor? fonte diz reduzir AC 1 por espírito destruído, não discrimina valor base"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Ancestral Spirits",
-        "resumo_anterior": "Três espíritos ligados ao gigante, 15 PV cada, atingíveis apenas por radiante; perder um reduz CA em 1 e remove um traço recebido.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "quantidade": 3,
+        "cada_um": {
+          "incorporeo": true,
+          "raio_ft": 10,
+          "acoes": "não agem",
+          "ca": "igual à do gigante",
+          "salvaguardas": "iguais às do gigante",
+          "pv": 15,
+          "vulneravel_a": "somente dano radiant",
+          "imune_turn_undead": true
+        },
+        "perda_espirito": {
+          "ao_zerar_hp": "desaparece temporariamente",
+          "reducao_ca_por_espirito": 1,
+          "perda": "uma das traits dadas pelos espíritos"
+        },
+        "restauro": "Narrativa menciona retorno de 1 espírito por hora, mas não como ação de combate",
+        "ambiguidade": "A fonte não define qual dos três efeitos é perdido com qual espírito"
       },
       {
         "nome": "Reckless",
-        "resumo_anterior": "Vantagem corpo a corpo no próprio turno, mas ataques contra ele recebem vantagem.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "concedida_por": "Ancestral Spirits",
+        "momento": "início do turno",
+        "efeito": "Vantagem em melee weapon attacks até fim do turno; incoming attacks recebem vantagem até início do próximo turno"
       },
       {
         "nome": "See Invisibility",
-        "resumo_anterior": "Pode ver criaturas invisíveis e Plano Etéreo.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "concedida_por": "Ancestral Spirits",
+        "efeito": "Vê criaturas e objetos invisíveis, além do Ethereal Plane"
       },
       {
         "nome": "Steadfast",
-        "resumo_anterior": "Imunidade a enfeitiçado e amedrontado conferida por espírito.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "concedida_por": "Ancestral Spirits",
+        "efeito": "Imune a charmed e frightened enquanto possui o traço"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Dois Greatclub.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Greatclub",
+            "quantidade": 2
+          }
+        ]
       },
       {
         "nome": "Greatclub",
-        "resumo_anterior": "+8, alcance 10 pés, 3d8+5 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d8+5",
+            "media": 18,
+            "tipo": "bludgeoning"
+          }
+        ]
       },
       {
         "nome": "Rock",
-        "resumo_anterior": "+8, 60/240, 3d10+5 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 8,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "3d10+5",
+            "media": 21,
+            "tipo": "bludgeoning"
+          }
+        ]
       }
     ],
-    "ataques": [
-      {
-        "nome": "Multiattack",
-        "resumo_anterior": "Dois Greatclub.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
+    "ataques": [],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Dois Greatclub.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Greatclub",
+        "Greatclub"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Três espíritos reconstituem-se segundo regras narrativas; traços dados por espíritos são removidos individualmente.",
-    "Artigo Kobold Press 'Boss Fights: Haunted Giant' altera ficha para encontro especial com fases, NÃO é parte do bloco original do Creature Codex.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "BLOQUEIO MECÂNICO: fonte retira um traço concedido a cada espírito expulso, mas não indica associação espírito→traço ou escolha; não adotar ordem por suposição.",
+    "Steadfast é concedida pelos espíritos; imunidades charmed/frightened são condicionais, não necessariamente permanentes.",
+    "Artigo 'Boss Fights: Haunted Giant' cria encontro alternativo, não integra statblock original; revisão Creature Codex e imagem editoriais pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto com edição/erratas/condições de licença originais",
+    "validação visual e direito de imagem",
+    "vinculação individual de espíritos e traços"
   ],
   "fontes": [
     {
@@ -280,6 +196,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-haunted/",
+      "tipo": "fonte individual detalhada checkpoint 34",
       "conferida_nesta_execucao": true
     }
   ],
@@ -374,5 +295,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 34,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/giant-haunted/",
+    "publicacao": "Creature Codex",
+    "aprovacao_editorial": "PENDENTE",
+    "nota": "Três espíritos possuem HP próprios e restrição de dano radiant; retorno por hora mencionado na narrativa, sem conversão para ação."
   }
 }

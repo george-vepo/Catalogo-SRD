@@ -4,9 +4,9 @@
   "nome": "Giant, Desert",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 21,
-  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
+  "estado_auditoria": "BLOQUEADA_EDICAO_E_TEXTO_CONTAMINADO",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 1 (5eSRD revisão ©2023)",
@@ -41,194 +41,127 @@
     "deslocamentos": {
       "andar": 40
     },
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 8
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 4
+      },
+      {
+        "nome": "Survival",
+        "bonus": 8
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "STR",
+        "bonus": 12
+      },
+      {
+        "nome": "CON",
+        "bonus": 10
+      },
+      {
+        "nome": "CHA",
+        "bonus": 6
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 18,
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "resistencias": [],
     "imunidades_dano": [
       "fire"
     ],
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 5000,
+    "bonus_proficiencia": 4,
+    "composicao_ca": "natural armor"
   },
   "mecanicas": {
     "tracos": [
       {
         "nome": "Desert Walk",
-        "resumo_anterior": "Terreno difícil por areia e cascalho não custa movimento extra.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "terreno": "difficult terrain causado por sand/gravel",
+        "efeito": "Não paga movimento extra nesse terreno"
       },
       {
         "nome": "Sand Camouflage",
-        "resumo_anterior": "Vantagem para furtividade em terrenos arenosos.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "terreno": "sandy terrain",
+        "efeito": "Vantagem em DEX(Stealth) para Hide"
       }
     ],
     "acoes": [
       {
         "nome": "Multiattack",
-        "resumo_anterior": "Duas Falchion.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "sequencia": [
+          {
+            "acao": "Falchion",
+            "quantidade": 2
+          }
+        ]
       },
       {
         "nome": "Falchion",
-        "resumo_anterior": "+12, alcance 10 pés, 6d4+8 cortante.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": 10,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "6d4+8",
+            "media": 23,
+            "tipo": "slashing"
+          }
+        ]
       },
       {
         "nome": "Rock",
-        "resumo_anterior": "+12, 60/240, 4d10+8 contundente.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 12,
+        "alcance_ft": {
+          "normal": 60,
+          "longo": 240
+        },
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d10+8",
+            "media": 30,
+            "tipo": "bludgeoning"
+          }
+        ]
       }
     ],
-    "ataques": [
-      {
-        "nome": "Multiattack",
-        "resumo_anterior": "Duas Falchion.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
-      }
-    ],
+    "ataques": [],
     "multiataque": {
-      "nome": "Multiattack",
-      "resumo_anterior": "Duas Falchion.",
-      "bonus_acerto": null,
-      "alcance": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "gatilho": null,
-      "efeito_sucesso": null,
-      "efeito_falha": null,
-      "condicoes": null,
-      "recarga": null,
-      "frequencia": null,
-      "duracao": null,
-      "custo": null,
-      "limites": null,
-      "verificado_integralmente": false
+      "sequencia": [
+        "Falchion",
+        "Falchion"
+      ]
     },
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "A página 5eSRD inclui trecho de descrição narrativa colado à ação Rock; removê-lo da mecânica.",
-    "Comparar edição ©2023 com Tome of Beasts 1 original antes de aprovação.",
-    "Detalhar e reconferir gatilhos, danos, salvaguardas, duração, ações e custos em edição identificada."
+    "BLOQUEIO DE PROVENIÊNCIA: republicação 5eSRD injeta narrativa ao final do texto de Rock, removida da transcrição mecânica.",
+    "Aprovação requer conferir statblock original Tome of Beasts 1 revisado 2023, erratas e licença, sem substituir pela edição anterior.",
+    "Imagem física ainda não validada visualmente."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com a edição correta"
+    "confronto com edição/erratas/condições de licença originais",
+    "validação visual e direito de imagem"
   ],
   "fontes": [
     {
@@ -239,6 +172,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-124_TF-143/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/giant-desert-3pp/",
+      "tipo": "fonte individual detalhada checkpoint 34",
       "conferida_nesta_execucao": true
     }
   ],
@@ -327,5 +265,14 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 34,
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/giant-desert-3pp/",
+    "publicacao": "Tome of Beasts 1 (5eSRD revisão ©2023)",
+    "aprovacao_editorial": "PENDENTE",
+    "nota": "Texto 'The towering woman rises...' é descrição visual indevidamente colada em Rock, não regra de ação."
   }
 }

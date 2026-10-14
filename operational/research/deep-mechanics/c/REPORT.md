@@ -1,5 +1,14 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 34 — Zimwi e quatro gigantes (14/10/2026)
+
+- TF-134 Zimwi: Swallow integrado ao Multiattack com acerto em alvo já grappled, limite de duas vítimas, 3d6 acid por turno, regurgitação CON CD14 e saída após morte. **Edição 2023 ND5 distinta de edição antiga ND4**. Fonte https://www.5esrd.com/database/creature/zimwi-3pp/.
+- TF-140 Cave Giant: Sunlight Petrification com perda de 20 radiant no início do turno, efeito de movimento/ataques e petrificação somente se 0 HP no sol; 3 ataques Handaxe/Handaxe/Tusks. Fonte https://www.5esrd.com/database/creature/giant-cave/.
+- TF-141 Desert Giant: Sand Camouflage, Desert Walk, Falchion e Rock sem narrativa colada; conserva bloqueio da integridade editorial da fonte 2023. Fonte https://www.5esrd.com/database/creature/giant-desert-3pp/.
+- TF-142 Firestorm Giant: 3 danos na Obsidian Axe, Firestorm Bolt spell attack, Lava Geyser recarga 5–6 (cylinder, half dmg on success, lava speed half e remoção por uma ação) confrontada com reprodução do Tome of Beasts 3 p202. Fontes https://www.5esrd.com/database/creature/firestorm-giant/, https://anyflip.com/tkzwp/dofg/basic/201-250.
+- TF-143 Haunted Giant: três espíritos independentes com 15 HP, proteção/traços dependentes, restauração por hora na narrativa e ambiguidade não resolvida sobre qual traço termina por espírito. Fonte https://www.5esrd.com/database/creature/giant-haunted/.
+- Contagens antes da auditoria final: **64 individualmente aprofundadas, 67 restantes, 0 aprovadas integralmente; 94 parciais, 37 bloqueadas**. Imagens: 96 binários, 35 ausentes, 0 aprovadas visualmente. Não há aprovação editorial nem importação de imagem no lote.
+
 ## Checkpoint 33 — aprofundamento de cinco criaturas (14/10/2026)
 
 - **TF-128 Phase Giant**: Ethereal Jaunt com equipamento e fim de grapple; dois Spiked Fist com limite de uma captura por punho, impalamento condicional, ataque Rock e salvaguarda para prone. Fonte: https://www.robinloft.com/monsters/phase-giant/tome-of-beasts-2.
