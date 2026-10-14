@@ -4,14 +4,14 @@
   "nome": "Imprisoned Celestial",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 16,
-  "estado_auditoria": "PARCIAL_FICHA_ORIGEM_ESTRUTURADA_PENDENTE_ADAPTACAO_A5E",
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_CONFERENCIA_EDITORIAL",
   "mecanica_completa": false,
   "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Gate Pass Gazette",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/5406"
   },
   "estatisticas": {
     "nd_catalogo": null,
@@ -67,7 +67,11 @@
     "vulnerabilidades": [],
     "bloodied": 89,
     "proficiencia": 4,
-    "cd_manobra": 18
+    "cd_manobra": 18,
+    "xp": null,
+    "motivo_xp_null": "XP não informado no bloco oficial A5E",
+    "bonus_proficiencia": 4,
+    "maneuver_dc": 18
   },
   "mecanicas": {
     "tracos": [
@@ -198,32 +202,48 @@
           "encerra": true
         },
         "repeticao": "fim de cada turno",
-        "fonte_verificada": true
+        "fonte_verificada": true,
+        "alvos": "uma ou mais criaturas dentro de 30 ft",
+        "maximo_alvos": null,
+        "motivo_null": "a página oficial não fornece limite"
       }
     ],
     "reacoes": [],
     "acoes_lendarias": [],
     "acoes_covil": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "AUSENCIA_VERIFICADA",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA",
+      "acoes_covil": "AUSENCIA_VERIFICADA",
+      "acoes_miticas": "AUSENCIA_VERIFICADA",
+      "conjuracao": "AUSENCIA_VERIFICADA"
+    },
+    "acoes_miticas": []
   },
   "pendencias": [
-    "Publicação associada a Gate Pass Gazette #31; confirmar número da edição editorial.",
-    "Ficha A5E da fonte estruturada; adequação de regras ao jogo e revisão independente ainda pendentes."
+    "Edição exata de Gate Pass Gazette ainda não confirmada pelo livro.",
+    "Slow permite uma ou mais criaturas em 30 pés, sem limite de quantidade na fonte; não definir máximo artificial.",
+    "Divine Absorption substitui dano radiante recebido por cura, não aplica ambos.",
+    "Imagem física ainda pendente."
   ],
   "campos_nao_confirmados": [
-    "Integração das mecânicas A5E e revisão independente"
+    "número da edição editorial do Gate Pass Gazette",
+    "limite de alvos de Slow não impresso",
+    "imagem física"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/5406",
-      "tipo": "ficha individual na ferramenta editorial Level Up A5E (conferência direta 14/10/2026)",
+      "tipo": "bloco individual completo no site oficial A5E, verificado diretamente em 2026-10-14",
       "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico, não fonte editorial",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -280,5 +300,19 @@
     "integrada": false
   },
   "ficha_individual_estruturada_em_detalhe": true,
-  "ficha_origem_integral_verificada_na_pagina": true
+  "ficha_origem_integral_verificada_na_pagina": true,
+  "verificacao_editorial": {
+    "data": "2026-10-14",
+    "sistema": "Level Up Advanced 5E",
+    "bloco_oficial_individual": "https://a5e.tools/node/5406",
+    "confronto_publicacao_impressa": "PENDENTE",
+    "estatisticas_ataques_gatilhos_acoes_verificados_no_site": true
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Advanced 5E",
+    "pagina_individual": "https://a5e.tools/node/5406",
+    "data": "2026-10-14",
+    "exemplar_editorial_errata": "PENDENTE"
+  }
 }

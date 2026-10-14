@@ -2,6 +2,15 @@
 
 **Commit-base:** `a962c48a1169c2ef2be8137715a095a596753b32`. **Branch:** `chatgpt/srd607-deep-mechanics-c`. **Data:** 14/10/2026.
 
+## Checkpoint 20 — A5E (14/10/2026)
+
+- TF-448 Imprisoned Celestial: Divine Absorption, forma imutável, resistência mágica, Slam, Radiant Blast (5–6) e bônus Slow (5–6). Fonte oficial: https://a5e.tools/node/5406.
+- TF-449 Imprisoned Fiend: Acid Absorption, Berserk, Bloodied Fury, Slam reduz PV máximo, Fiendfire Breath aplica strife A5E. Não converter conceitos A5E. Fonte: https://a5e.tools/node/5407.
+- TF-459 Ankheg Empress: Bite 10 ft; Claws 15 ft; Acid Glob 30/90 ft; Acid Spray linha 60×10 ft ou no agarrado sem salvaguarda; Burrowing Ambush, Grabby, Monarch's Command, Cinch. **Divergência bloodied 65 contra metade de 174 = 87 mantida bloqueada**. Fonte: https://a5e.tools/node/3424.
+- TF-462 Behir Magus: mordida, agarrar/engolir, Lightning Breath e **quatro reações individuais** (Vengeful Breath, Blindness, Invisibility, Drain Charge). Fonte: https://a5e.tools/node/1465.
+- Referências visuais da espécie encontradas em site A5E para Ankheg e Behir. Não comprovam variantes Empress/Magus e nenhum arquivo binário foi gravado a partir das URLs; permanecem como candidatos.
+- Acumulado: 24 fichas aprofundadas, 107 sem revalidação; 0 completas, 103 parciais, 28 bloqueadas; 96 imagens físicas e 35 faltantes.
+
 ## Auditoria de read-back — 14/10/2026
 
 - **Checkpoints 18 e 19 efetivamente publicados**: `f869eacf0239a31a56bf2cd9e019862aa498680f` (TF-417/420/425) e `d128143197cd7cb21f2d5da96dda87cc738eafb7` (TF-414/428/431). Seis JSONs reabertos na branch, IDs exatos e sintaxe JSON verificados.
@@ -35,7 +44,7 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 - **TF-423 Spawn of Chernobog:** testes de infecção, dois sucessos para cura, cinco estágios progressivos de Night's Blood, transformação ao morrer, sensibilidade solar, Bite e Claws.
 - TF-412 permanece bloqueada pela discrepância `SAB 11 (+1)` da fonte; TF-419 pela `Perception +6`/passiva `15` da fonte. Não aplicar reparos automáticos.
 - Fontes: [Kobold Press](https://koboldpress.com/tools/kobold-press-monsters/), [Wind Witch](https://www.5esrd.com/database/creature/wind-witch/), [Execrable Shrub](https://www.5esrd.com/database/creature/execrable-shrub/), [Spawn of Chernobog](https://www.5esrd.com/database/creature/spawn-of-chernobog/).
-- Auditoria acumulada: **15 aprofundadas; 116 ainda sem revalidação detalhada; 0 mecanicamente integrais; 104 parciais; 27 bloqueadas; 96 imagens físicas e 35 faltantes**.
+- Auditoria acumulada: **15 aprofundadas; 116 ainda sem revalidação detalhada; 0 mecanicamente integrais; 103 parciais; 28 bloqueadas; 96 imagens físicas e 35 faltantes**.
 
 ## Checkpoint 15 — aprofundamento mecânico de 14/10/2026
 
@@ -50,8 +59,8 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 ## Resultado mensurável
 
 - **131/131 JSONs publicados**, cobrindo exatamente 40 IDs de `next_batches[4]` e 91 de `historical.slice(104,195)` em ordem do CSV; nenhum repetido.
-- **20 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
-- **111 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
+- **24 fichas consultadas diretamente em detalhe no histórico acumulado** (TF-414, TF-428, TF-431, TF-468, TF-470, TF-500, TF-502).
+- **107 fichas receberam consolidação estruturada de checkpoints anteriores**, mas NÃO foram revalidadas integralmente nesta rodada; suas lacunas estão explícitas.
 - **0 criaturas declaradas mecanicamente completas**, **104 parciais**, **27 bloqueadas** por conflito editorial, ausência de fonte ou mecânica específica.
 - Nenhuma alteração do CSV, ledger, `main`, branch base, PR #1 ou pesquisas A/B; nenhuma promoção canônica ou merge.
 - **JSONs válidos por serialização e leitura de retorno** ao publicar checkpoints de no máximo 10; cada registro mantém referência ao arquivo-fonte e os valores desconhecidos como `null`.
@@ -97,10 +106,10 @@ Aprofundadas também **TF-414 Wallflower**, **TF-428 Cerberus Guardian** e **TF-
 | TF-426 | Planar Flora, Thorned Sulfurlord | PARCIAL | sim | [individual](https://www.5esrd.com/database/creature/thorned-sulfurlord/) | revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes |
 | TF-428 | Cerberus Guardian | PARCIAL | sim | [individual](https://a5e.tools/node/2854) | A5E: limite de ações lendárias e Legendary Resistance mudam conforme cabeças ativas. |
 | TF-431 | Conjured Guardian | PARCIAL | sim | [individual](https://a5e.tools/node/5171) | Challenge — no bloco editorial; CD e ataque dependem do conjurador, não fixar ND 0. |
-| TF-448 | Imprisoned Celestial | PARCIAL | não | [individual](https://a5e.tools/node/5406) | Publicação associada a Gate Pass Gazette #31; confirmar número da edição editorial. |
-| TF-449 | Imprisoned Fiend | PARCIAL | não | [individual](https://a5e.tools/node/5407) | Publicação ligada a Gate Pass Gazette #31; tratar strife como A5E. |
-| TF-459 | Ankheg Empress | PARCIAL | não | [individual](https://a5e.tools/node/3424) | Confirmar alcance exato de cada ataque ácido. |
-| TF-462 | Behir Magus | PARCIAL | não | [individual](https://a5e.tools/node/1465) | Conferir quais reações são apenas da variante Magus e o texto de suas CDs. |
+| TF-448 | Imprisoned Celestial | PARCIAL | sim | [individual](https://a5e.tools/node/5406) | Publicação associada a Gate Pass Gazette #31; confirmar número da edição editorial. |
+| TF-449 | Imprisoned Fiend | PARCIAL | sim | [individual](https://a5e.tools/node/5407) | Publicação ligada a Gate Pass Gazette #31; tratar strife como A5E. |
+| TF-459 | Ankheg Empress | PARCIAL | sim | [individual](https://a5e.tools/node/3424) | Confirmar alcance exato de cada ataque ácido. |
+| TF-462 | Behir Magus | PARCIAL | sim | [individual](https://a5e.tools/node/1465) | Conferir quais reações são apenas da variante Magus e o texto de suas CDs. |
 | TF-468 | Faerie Chimera | BLOQUEADA | sim | [individual](https://a5e.tools/node/3239) | Breath Weapon descreve fire mas inflige cold; sem correção presumida. |
 | TF-470 | Fiendish Chimera | BLOQUEADA | sim | [individual](https://a5e.tools/node/3240) | Ações lendárias Bite/Claw e reação headbutt não correspondem aos nomes de ações da variante. |
 | TF-473 | Flying Lion | PARCIAL | não | [individual](https://a5e.tools/node/1663) | Texto da publicação possui terminologia de griffon; validar como variante, não como griffon genérico. |

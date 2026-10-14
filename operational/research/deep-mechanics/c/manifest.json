@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 20,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 24,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 104,
-    "bloqueadas": 27,
-    "registros_aproveitados_sem_nova_verificacao_integral": 111,
+    "parciais": 103,
+    "bloqueadas": 28,
+    "registros_aproveitados_sem_nova_verificacao_integral": 107,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -317,6 +317,20 @@
       "commit": "d128143197cd7cb21f2d5da96dda87cc738eafb7",
       "leitura_persistencia": "CONFIRMADA: 3 arquivos lidos após publicação no GitHub",
       "tipo": "fontes oficiais A5E; mecânicas estruturadas"
+    },
+    {
+      "numero": 20,
+      "inicio": "TF-448",
+      "fim": "TF-462",
+      "ids": [
+        "TF-448",
+        "TF-449",
+        "TF-459",
+        "TF-462"
+      ],
+      "commit": null,
+      "leitura_persistencia": "AGUARDANDO_READBACK",
+      "tipo": "A5E quatro fichas detalhadas"
     }
   ],
   "atualizacao_detalhada_sha": "d128143197cd7cb21f2d5da96dda87cc738eafb7",
@@ -811,23 +825,28 @@
       "escopo": "next_batches[4]",
       "posicao": 16,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-448.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/5406",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Publicação associada a Gate Pass Gazette #31; confirmar número da edição editorial."
+        "Edição exata de Gate Pass Gazette ainda não confirmada pelo livro.",
+        "Slow permite uma ou mais criaturas em 30 pés, sem limite de quantidade na fonte; não definir máximo artificial.",
+        "Divine Absorption substitui dano radiante recebido por cura, não aplica ambos.",
+        "Imagem física ainda pendente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "número da edição editorial do Gate Pass Gazette",
+        "limite de alvos de Slow não impresso",
+        "imagem física"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-449",
@@ -835,23 +854,28 @@
       "escopo": "next_batches[4]",
       "posicao": 17,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-449.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/5407",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Publicação ligada a Gate Pass Gazette #31; tratar strife como A5E."
+        "Confirmar edição exata do Gate Pass Gazette na fonte editorial.",
+        "Strife 1 na falha de Fiendfire Breath é mecânica A5E, sem conversão automática.",
+        "Bloodied Fury e Acid Absorption interagem quando o Fiend é exposto ao ácido que ele próprio causa; motor deve respeitar as duas regras.",
+        "Imagem física pendente."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "número exato da publicação",
+        "execução de efeitos interativos no motor A5E",
+        "imagem física"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-459",
@@ -859,23 +883,26 @@
       "escopo": "next_batches[4]",
       "posicao": 18,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-459.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "BLOQUEADA_DIVERGENCIA_BLOODIED_65_VS_87",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/3424",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Confirmar alcance exato de cada ataque ácido."
+        "A fonte oficial imprime bloodied 65 para 174 PV, mas metade de PV é 87; não corrigir sem errata.",
+        "Acid Glob alcance 30/90 ft; Acid Spray tem jato 60 x 10 ft ou banho de um único alvo já grappled sem salvaguarda.",
+        "Imagem oficial de ankheg genérico encontrada, mas ainda não é binário e não demonstra identidade de Empress."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "bloodied 65 vs 87",
+        "imagem física adequada à variante Empress"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-462",
@@ -883,23 +910,28 @@
       "escopo": "next_batches[4]",
       "posicao": 19,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-462.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_CONFERENCIA_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://a5e.tools/node/1465",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
       "pendencias": [
-        "Conferir quais reações são apenas da variante Magus e o texto de suas CDs."
+        "Quatro reações individuais com gatilho e uso 1/dia preservadas como variante Magus.",
+        "Blindness permite repetir salvaguarda no fim dos turnos mas a fonte não descreve explicitamente o resultado de sucesso repetido.",
+        "Fonte individual oficial A5E reestruturada; revisão do Monstrous Menagerie/errata ainda pendente.",
+        "Art oficial de behir encontrado, mas não demonstrado como Magus e não armazenado como binário."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV"
+        "semântica explícita do sucesso no teste repetido de Blindness",
+        "revisão editorial Monstrous Menagerie",
+        "imagem adequada à variante Magus"
       ],
       "validacao_integral": false,
       "imagem": {
         "estado": "PENDENTE_AQUISICAO",
         "arquivo": null,
         "validacao_visual": "NAO_INICIADA"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-468",

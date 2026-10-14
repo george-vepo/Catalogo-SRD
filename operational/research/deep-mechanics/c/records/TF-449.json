@@ -4,14 +4,14 @@
   "nome": "Imprisoned Fiend",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 17,
-  "estado_auditoria": "PARCIAL_FICHA_ORIGEM_ESTRUTURADA_COM_CONFLITO",
+  "estado_auditoria": "PARCIAL_FONTE_OFICIAL_ESTRUTURADA_PENDENTE_CONFERENCIA_EDITORIAL",
   "mecanica_completa": false,
   "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "Gate Pass Gazette",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/5407"
   },
   "estatisticas": {
     "nd_catalogo": null,
@@ -68,7 +68,11 @@
     "vulnerabilidades": [],
     "bloodied": 66,
     "proficiencia": 4,
-    "cd_manobra": 17
+    "cd_manobra": 17,
+    "xp": null,
+    "motivo_xp_null": "XP não informado no bloco oficial A5E",
+    "bonus_proficiencia": 4,
+    "maneuver_dc": 17
   },
   "mecanicas": {
     "tracos": [
@@ -106,7 +110,8 @@
           "tipo": "acid",
           "media": 7
         },
-        "fonte_verificada": true
+        "fonte_verificada": true,
+        "interacao_regra": "fiend sofre dano ácido em área mas Acid Absorption substitui dano ácido por cura; preservar as duas regras, sem calcular dupla aplicação"
       },
       {
         "nome": "False Appearance",
@@ -190,7 +195,8 @@
           "dano": "metade",
           "condicoes": []
         },
-        "fonte_verificada": true
+        "fonte_verificada": true,
+        "condicao_sistema": "strife da A5E"
       }
     ],
     "ataques": [
@@ -227,27 +233,38 @@
     "acoes_lendarias": [],
     "acoes_covil": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "AUSENCIA_VERIFICADA",
+      "reacoes": "AUSENCIA_VERIFICADA",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA",
+      "acoes_covil": "AUSENCIA_VERIFICADA",
+      "acoes_miticas": "AUSENCIA_VERIFICADA",
+      "conjuracao": "AUSENCIA_VERIFICADA"
+    },
+    "acoes_miticas": []
   },
   "pendencias": [
-    "Publicação ligada a Gate Pass Gazette #31; tratar strife como A5E.",
-    "Não converter strife para condição D&D 5e comum sem regra de adaptação",
-    "Ficha A5E da fonte estruturada; adequação de regras ao jogo e revisão independente ainda pendentes."
+    "Confirmar edição exata do Gate Pass Gazette na fonte editorial.",
+    "Strife 1 na falha de Fiendfire Breath é mecânica A5E, sem conversão automática.",
+    "Bloodied Fury e Acid Absorption interagem quando o Fiend é exposto ao ácido que ele próprio causa; motor deve respeitar as duas regras.",
+    "Imagem física pendente."
   ],
   "campos_nao_confirmados": [
-    "Integração das mecânicas A5E e revisão independente",
-    "Não converter strife para condição D&D 5e comum sem regra de adaptação"
+    "número exato da publicação",
+    "execução de efeitos interativos no motor A5E",
+    "imagem física"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/5407",
-      "tipo": "ficha individual na ferramenta editorial Level Up A5E (conferência direta 14/10/2026)",
+      "tipo": "bloco individual completo no site oficial A5E, verificado diretamente em 2026-10-14",
       "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico, não fonte editorial",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -304,5 +321,19 @@
     "integrada": false
   },
   "ficha_individual_estruturada_em_detalhe": true,
-  "ficha_origem_integral_verificada_na_pagina": true
+  "ficha_origem_integral_verificada_na_pagina": true,
+  "verificacao_editorial": {
+    "data": "2026-10-14",
+    "sistema": "Level Up Advanced 5E",
+    "bloco_oficial_individual": "https://a5e.tools/node/5407",
+    "confronto_publicacao_impressa": "PENDENTE",
+    "estatisticas_ataques_gatilhos_acoes_verificados_no_site": true
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Advanced 5E",
+    "pagina_individual": "https://a5e.tools/node/5407",
+    "data": "2026-10-14",
+    "exemplar_editorial_errata": "PENDENTE"
+  }
 }

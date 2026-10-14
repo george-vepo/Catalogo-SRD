@@ -4,14 +4,14 @@
   "nome": "Ankheg Empress",
   "escopo": "next_batches[4]",
   "indice_no_escopo": 18,
-  "estado_auditoria": "PARCIAL_FICHA_ORIGEM_ESTRUTURADA_COM_CONFLITO",
+  "estado_auditoria": "BLOQUEADA_DIVERGENCIA_BLOODIED_65_VS_87",
   "mecanica_completa": false,
   "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "EN Publishing",
     "publicacao": "To Save A Kingdom",
     "edicao": "Level Up: Advanced 5E",
-    "fonte_identidade": null
+    "fonte_identidade": "https://a5e.tools/node/3424"
   },
   "estatisticas": {
     "nd_catalogo": null,
@@ -63,7 +63,18 @@
     "bloodied_fonte": 65,
     "proficiencia": 3,
     "cd_manobra": 16,
-    "ca_quando_prone": 12
+    "ca_quando_prone": 12,
+    "xp": null,
+    "motivo_xp_null": "XP não informado no bloco oficial A5E",
+    "bonus_proficiencia": 3,
+    "maneuver_dc": 16,
+    "divergencia_bloodied": {
+      "pv": 174,
+      "metade_matematica": 87,
+      "bloodied_impresso": 65,
+      "estado": "SEM_CORRECAO_EDITORIAL"
+    },
+    "ca_prone": 12
   },
   "mecanicas": {
     "tracos": [
@@ -149,7 +160,38 @@
           "tipo": "acid"
         },
         "alternativa": "alvo agarrado automaticamente sofre dano sem save",
-        "fonte_verificada": true
+        "fonte_verificada": true,
+        "alternativas_formalizadas": [
+          {
+            "nome": "jato",
+            "area": {
+              "comprimento_ft": 60,
+              "largura_ft": 10
+            },
+            "teste": {
+              "atributo": "DEX",
+              "cd": 16
+            },
+            "falha": {
+              "dados": "6d8",
+              "media": 27,
+              "tipo": "acid"
+            },
+            "sucesso": "metade"
+          },
+          {
+            "nome": "banho_individual",
+            "pre_condicao": "alvo já grappled pela Empress",
+            "alvos": 1,
+            "dano": {
+              "dados": "6d8",
+              "media": 27,
+              "tipo": "acid"
+            },
+            "teste_resistencia": null,
+            "motivo_sem_teste": "a fonte exige sem salvaguarda"
+          }
+        ]
       },
       {
         "nome": "Burrowing Ambush",
@@ -212,10 +254,24 @@
       }
     ],
     "multiataque": {
-      "nome": "Multiattack",
-      "gatilho": "Ação",
-      "efeito": "Bite + Claws, ou dois Acid Glob",
-      "fonte_verificada": true
+      "alternativas": [
+        [
+          {
+            "acao": "Bite",
+            "quantidade": 1
+          },
+          {
+            "acao": "Claws",
+            "quantidade": 1
+          }
+        ],
+        [
+          {
+            "acao": "Acid Glob",
+            "quantidade": 2
+          }
+        ]
+      ]
     },
     "acoes_bonus": [
       {
@@ -249,27 +305,36 @@
     "acoes_lendarias": [],
     "acoes_covil": [],
     "conjuracao": [],
-    "custos_lendarios": null
+    "custos_lendarios": null,
+    "ausencias_de_secoes": {
+      "acoes_bonus": "PRESENTES",
+      "reacoes": "PRESENTES",
+      "acoes_lendarias": "AUSENCIA_VERIFICADA",
+      "acoes_covil": "AUSENCIA_VERIFICADA",
+      "acoes_miticas": "AUSENCIA_VERIFICADA",
+      "conjuracao": "AUSENCIA_VERIFICADA"
+    },
+    "acoes_miticas": []
   },
   "pendencias": [
-    "Confirmar alcance exato de cada ataque ácido.",
-    "O campo bloodied 65 não é metade de 174 (87): contradição numérica da página; preservar 65 até errata.",
-    "Ficha A5E da fonte estruturada; adequação de regras ao jogo e revisão independente ainda pendentes."
+    "A fonte oficial imprime bloodied 65 para 174 PV, mas metade de PV é 87; não corrigir sem errata.",
+    "Acid Glob alcance 30/90 ft; Acid Spray tem jato 60 x 10 ft ou banho de um único alvo já grappled sem salvaguarda.",
+    "Imagem oficial de ankheg genérico encontrada, mas ainda não é binário e não demonstra identidade de Empress."
   ],
   "campos_nao_confirmados": [
-    "Integração das mecânicas A5E e revisão independente",
-    "O campo bloodied 65 não é metade de 174 (87): contradição numérica da página; preservar 65 até errata."
+    "bloodied 65 vs 87",
+    "imagem física adequada à variante Empress"
   ],
   "fontes": [
     {
       "url": "https://a5e.tools/node/3424",
-      "tipo": "ficha individual na ferramenta editorial Level Up A5E (conferência direta 14/10/2026)",
+      "tipo": "bloco individual completo no site oficial A5E, verificado diretamente em 2026-10-14",
       "conferida_nesta_execucao": true
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/7ddaff46037d08d96260843dbfab9eaf5b1c1c94/operational/research/checkpoints/20261013_parallel-c_TF-412_TF-522/research.json",
-      "tipo": "checkpoint anterior",
-      "conferida_nesta_execucao": true
+      "tipo": "checkpoint histórico, não fonte editorial",
+      "conferida_nesta_execucao": false
     }
   ],
   "proveniencia": {
@@ -326,5 +391,25 @@
     "integrada": false
   },
   "ficha_individual_estruturada_em_detalhe": true,
-  "ficha_origem_integral_verificada_na_pagina": true
+  "ficha_origem_integral_verificada_na_pagina": true,
+  "verificacao_editorial": {
+    "data": "2026-10-14",
+    "sistema": "Level Up Advanced 5E",
+    "bloco_oficial_individual": "https://a5e.tools/node/3424",
+    "confronto_publicacao_impressa": "PENDENTE",
+    "estatisticas_ataques_gatilhos_acoes_verificados_no_site": true
+  },
+  "imagem": {
+    "arquivo": null,
+    "binario_presente": false,
+    "candidata_url": "https://a5e.tools/sites/default/files/monsters/Ankheg%20copy_0_0.jpg",
+    "candidata_status": "ARTE_DA_ESPECIE_VARIANTE_NAO_CONFIRMADA"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "sistema": "Advanced 5E",
+    "pagina_individual": "https://a5e.tools/node/3424",
+    "data": "2026-10-14",
+    "exemplar_editorial_errata": "PENDENTE"
+  }
 }
