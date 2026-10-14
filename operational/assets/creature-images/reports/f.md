@@ -1,5 +1,29 @@
 # SRD Card Game 607 — Imagens F: entrega parcial auditável
 
+## Auditoria atualizada — checkpoint 27 + revisão de licenças
+
+Data da auditoria: 2026-10-14. Head inspecionado: `b1d3a7cdec6202fa215ddbc41f61b8e22bee29bd`; árvore de imagens: `335fd84c97e5908f280b4a284de32d749757eb8f`.
+
+| Verificação | Resultado |
+|---|---|
+| CSV v27 do commit-base | 607 linhas, 23 previamente VERIFICADA, 584 pendentes |
+| Recorte F `pending_images[390:584]` | Exatamente 194 IDs reais e únicos |
+| Manifesto vs. seleção | 194 IDs, nomes e ordem idênticos ao CSV |
+| Binários na árvore Git | 118 arquivos reais, 13.175.857 bytes |
+| Comparação Git blob SHA/tamanho vs. manifesto | 118 de 118 sem divergência |
+| SHA-256 registrados no manifesto | 118 hashes distintos; ausência de duplicações conhecidas |
+| Arquivos alterados no PR vs. base | 120 = 118 imagens + 2 documentos F, sem alterações nos grupos D/E, CSV global ou verificados anteriores |
+| Binários ausentes | 76 registros com estado PARTIAL e pendência de aquisição |
+| Estado conservador de disponibilidade | 4 COMPLETE, 190 PARTIAL, 0 BLOCKED comprovados |
+| Direitos dos 84 homebrew-img | NÃO foi localizada autorização explícita para reutilização em outro jogo |
+| Direitos dos 8 Foundry public/assets | A origem declara uso NÃO COMERCIAL |
+| Refetch de todos os binários antigos nesta etapa | NÃO realizado; 100 registros históricos preservam validações anteriores |
+| Refetch binário dos novos checkpoints 24–27 | 18 imagens novas, todas comparadas bit a bit com origem e Git blob SHA após upload; metadados pré-upload de PNG/SHA-256 conferidos |
+
+**Leitura importante:** a integridade dos 118 Git blobs é diferente da elegibilidade das artes para uso comercial. Não se confirmou licença individual de todos os 118. A auditoria não considera o grupo F concluído para produção.
+
+A análise de 76 ausências não provou impedimento irreversível individual: imagens apropriadas com autorização e atribuição documentadas precisam ser pesquisadas/produzidas. Nenhuma URL, nome de arquivo, miniatura textual ou metadado foi contabilizado como PNG/WebP/JPEG. Nenhuma operação de merge foi realizada.
+
 ## Escopo e execução
 
 - Repositório: `george-vepo/SRD-Card-Game-607-Supervisor`; branch: `chatgpt/srd607-image-assets-f`; PR draft https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/5.
