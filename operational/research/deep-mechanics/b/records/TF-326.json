@@ -2,28 +2,39 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-326",
   "nome": "Linnorm, Vent",
-  "estado": "BLOQUEADO_MECANICA_INCOMPLETA",
+  "estado": "MECANICA_INDIVIDUALIZADA_FONTES_SECUNDARIAS_COTEJO_EDITORIAL_PENDENTE",
   "edicao": {
-    "sistema": "D&D 5e (publicação informada em checkpoint)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press / Open Design",
     "publicacao": "Tome of Beasts 2",
-    "editora": "Kobold Press",
-    "edicao_exata_verificada": false
+    "edicao_selecionada": "2020 (citação editorial na transcrição individual 5eSRD)",
+    "edicao_exata_verificada": false,
+    "observacao": "Não misturar variante Warlock Grimoire 2: esta apresenta voo 60 pés, Blood Sense, Legendary Resistance e dano distinto. Manter evidência separada."
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/linnorm-vent/",
-      "natureza": "secundaria_ou_transcricao_nao_reverificada"
+      "natureza": "reproducao_integral_secundaria",
+      "escopo": "identificação, estatísticas, traços e ações de Tome of Beasts 2 (2020)"
     },
     {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-parallel-b/operational/research/checkpoints/20261013_TF-302_TF-355/research.json",
-      "natureza": "checkpoint_preexistente"
+      "url": "https://anyflip.com/zmhlb/uysz/basic/201-250",
+      "natureza": "reproducao_do_volume_nao_editorial",
+      "escopo": "cotejo do texto identificado Tome of Beasts 2"
+    },
+    {
+      "url": "https://anyflip.com/usqxr/tlvu/basic/101-150",
+      "natureza": "evidencia_variante_nao_incorporada",
+      "escopo": "versão Warlock Grimoire 2, divergente"
     }
   ],
   "estatisticas": {
     "nd": "16",
+    "bonus_proficiencia": 5,
     "ca": 19,
+    "origem_ca": "armadura natural",
     "pv": 247,
-    "dados_vida": null,
+    "dados_vida": "15d20 + 90",
     "atributos": {
       "FOR": 25,
       "DES": 14,
@@ -32,46 +43,250 @@
       "SAB": 14,
       "CAR": 17
     },
-    "deslocamentos_ft": null,
-    "deslocamentos_texto": "caminhar 20; nadar 80 pés",
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias_dano": null,
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "modificadores": {
+      "FOR": 7,
+      "DES": 2,
+      "CON": 6,
+      "INT": 2,
+      "SAB": 2,
+      "CAR": 3
+    },
+    "deslocamentos_ft": {
+      "andar": 20,
+      "nadar": 80,
+      "voar": null,
+      "escalar": null,
+      "escavar": null
+    },
+    "pairar": false,
+    "salvaguardas": {
+      "FOR": 12,
+      "DES": 7,
+      "CON": 11,
+      "CAR": 8
+    },
+    "pericias": {
+      "Intimidation": 8,
+      "Perception": 7,
+      "Survival": 7
+    },
+    "resistencias_dano": [
+      "fire"
+    ],
+    "imunidades_dano": [
+      "cold"
+    ],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      {
+        "tipo": "blindsight",
+        "alcance_ft": 60
+      },
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 120
+      }
+    ],
+    "percepcao_passiva": 17,
+    "idiomas": [
+      "Common",
+      "Draconic"
+    ],
+    "telepatia_ft": null
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "acoes": [],
-  "ataques": [],
+  "qualidade_estatisticas": "COTEJADA_EM_DUAS_REPRODUCOES_NAO_EDITORIAIS",
+  "habilidades_passivas": [
+    {
+      "nome": "Amphibious",
+      "efeito": "Respira tanto ar quanto água.",
+      "ativacao": "passiva",
+      "excecoes": []
+    },
+    {
+      "nome": "Blood Scent",
+      "efeito": "Detecta cheiro de sangue na água a até 5 milhas e diferencia se é fresco ou antigo e o tipo de criatura de origem. Tem vantagem em testes de Sabedoria (Percepção) e (Sobrevivência) para localizar ou rastrear uma criatura abaixo do máximo de PV.",
+      "alcance_milhas": 5,
+      "gatilho": "perseguir criatura ferida ou detectar sangue na água",
+      "bonus": "vantagem em Perception e Survival na condição descrita",
+      "duracao": "enquanto atender às condições"
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "categoria": "multiataque",
+      "quantidade_ataques": 3,
+      "sequencia": [
+        "Bite",
+        "Tail",
+        "Tail"
+      ],
+      "acao_opcional_antes": [
+        "Frightful Presence"
+      ],
+      "alternativas": [],
+      "restricoes": [],
+      "gatilhos_adicionais": []
+    },
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite"
+    },
+    {
+      "nome": "Tail",
+      "categoria": "ataque",
+      "referencia_ataque": "Tail"
+    },
+    {
+      "nome": "Frightful Presence",
+      "categoria": "efeito_area",
+      "gatilho": "criaturas escolhidas, dentro de 120 pés e cientes da presença do linnorm",
+      "alcance_ft": 120,
+      "salvaguarda": {
+        "atributo": "SAB",
+        "cd": 16
+      },
+      "falha": {
+        "condicao": "frightened",
+        "duracao": "1 minuto"
+      },
+      "sucesso": {
+        "efeito": "não fica frightened; imunidade à Frightful Presence deste linnorm por 24 horas"
+      },
+      "repetir_teste": "ao final de cada turno; um sucesso encerra a condição e concede imunidade por 24 horas",
+      "recarga": null
+    },
+    {
+      "nome": "Inky Breath",
+      "categoria": "sopro",
+      "recarga": "5–6",
+      "area": {
+        "geometria": "cone",
+        "comprimento_ft": 60
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 19
+      },
+      "dano": [
+        {
+          "dados": "15d6",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ],
+      "falha": {
+        "dano": "15d6 necrotic",
+        "condicao": "blinded",
+        "duracao": "1 minuto"
+      },
+      "sucesso": {
+        "dano": "metade",
+        "condicao": null
+      },
+      "repetir_teste": "criatura blinded pode repetir CON CD19 ao final de cada turno, encerrando a cegueira em sucesso"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 12,
+      "alcance_ft": 10,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d10",
+          "modificador": 7,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "4d6",
+          "modificador": 0,
+          "tipo": "necrotic"
+        }
+      ],
+      "condicoes": [],
+      "recarga": null
+    },
+    {
+      "nome": "Tail",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 12,
+      "alcance_ft": 20,
+      "alvos": 1,
+      "dano": [
+        {
+          "dados": "2d8",
+          "modificador": 7,
+          "tipo": "bludgeoning"
+        }
+      ],
+      "efeito_condicional": {
+        "alvo_tamanho": "Large ou menor",
+        "limite_agarrados": 2,
+        "condicao": "grappled",
+        "cd_escape": 18,
+        "efeito_enquanto_agarrado": "restrained",
+        "encerramento": "até escapar do agarrão"
+      },
+      "recarga": null
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Síntese de características pesquisadas",
-      "resumo": "Dragão aquático que percebe sangue e é anfíbio"
-    }
-  ],
-  "pistas_de_acoes_nao_validadas": [
-    {
-      "nome": "Síntese de ações pesquisadas",
-      "resumo": "Ações especiais de linnorm ainda exigem transcrição verificada"
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "VARIANTE_WARLOCK_GRIMOIRE_2_SEPARADA",
   "campos_em_conflito": [],
   "bloqueado": true,
   "pendencias": [
-    "Confirmar bloco mecânico integral da edição correta contra ficha individual; resumos não constituem ações.",
-    "Registrar nominalmente TODOS os ataques, passivas, ações, ações bônus, reações, legendárias e regras de conjuração com dados/CD/duração/recarga/limites.",
-    "Revisar todas as ações, CDs, recargas, ataques, salvaguardas, resistências e condições contra a edição editorial correta antes de qualquer uso canônico."
+    "Confirmar texto e edição exata na publicação oficial e eventuais erratas antes de homologar.",
+    "Revisão independente e verificação editorial ainda pendentes; nenhuma promoção canônica."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Vent Linnorm",
+    "tipo": "dragon",
+    "tamanho": "Gargantuan",
+    "alinhamento": "neutral evil",
+    "nd": "16",
+    "bonus_proficiencia": 5
+  },
+  "multiataques": [
+    {
+      "nome": "Multiattack",
+      "quantidade_ataques": 3,
+      "sequencia": [
+        "Bite",
+        "Tail",
+        "Tail"
+      ],
+      "acoes_opcionais_antes": [
+        "Frightful Presence"
+      ]
+    }
+  ],
+  "mecanicas_especiais": [
+    {
+      "nome": "Limite de agarrões",
+      "efeito": "O ataque Tail agarra no máximo duas criaturas ao mesmo tempo nessa edição."
+    }
+  ],
+  "fontes_alternativas": [
+    {
+      "edicao": "Warlock Grimoire 2",
+      "url": "https://anyflip.com/usqxr/tlvu/basic/101-150",
+      "diferencas": [
+        "voo 60 ft",
+        "Blood Sense em vez de Blood Scent",
+        "Legendary Resistance (2/dia)",
+        "Bite e Tail com outros dados de dano e limites de agarrão"
+      ],
+      "usada_na_versao_principal": false
+    }
+  ]
 }
