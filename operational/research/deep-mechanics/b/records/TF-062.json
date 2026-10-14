@@ -2,19 +2,31 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-062",
   "nome": "Clockwork Beetle",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 1",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5e - publicação da Kobold Press indicada no KPOGL",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (p.60)",
+    "edicao_exata_verificada": false,
+    "edicao_consultada": "Transcrição comunitária KPOGL, página individual com indicação do volume/página; não é comparação direta com exemplar do editor.",
+    "recortes_de_edicao_ou_revisao_pendentes": true
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-beetle-3pp/",
-      "natureza": "fonte_secundaria_anterior_nao_reexaminada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-beetle",
+      "natureza": "secundaria_wiki_comunitaria_nao_endossada",
+      "consultada": "2026-10-13",
+      "escopo": "estatísticas, passivas e ações da transcrição individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_para_identidade",
+      "escopo": "confirmar publicação/identidade; não contém ficha detalhada"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-059_TF-063/research.json",
-      "natureza": "registro_herdado"
+      "natureza": "checkpoint_anterior",
+      "escopo": "continuidade; campos não validados nesta fonte"
     }
   ],
   "estatisticas": {
@@ -34,26 +46,18 @@
       "andar": 30,
       "voar": 50
     },
-    "deslocamentos_texto": null,
     "salvaguardas": {
-      "DEX": 5
+      "DES": 5
     },
     "pericias": {
       "Stealth": 5
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 11,
-    "idiomas": [
-      "entende idiomas do criador; não fala"
-    ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -61,41 +65,88 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "entende idiomas do criador, mas não fala"
+    ],
+    "proficiencia": 2
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [],
+  "qualidade_estatisticas": "ESTRUTURADA_APARTIR_FONTE_SECUNDARIA_NAO_CONFERIDA_NA_EDICAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não precisa ar, comida, água ou sono."
+    },
+    {
+      "nome": "Immutable Form",
+      "efeito": "Imune a magias/efeitos que alteram forma."
+    },
+    {
+      "nome": "Limited Telepathy",
+      "efeito": "Transmite mensagens e imagens simples magicamente para seu dono até 100 pés.",
+      "alcance_ft": 100
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas contra magia."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bite",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d6",
+          "modificador": 3,
+          "tipo": "piercing"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 10
+          },
+          "falha": "2d4 poison",
+          "sucesso": "metade 2d4 poison",
+          "dano_condicional": {
+            "dados": "2d4",
+            "modificador": 0,
+            "tipo": "poison"
+          }
+        }
+      ],
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Bite",
+      "categoria": "ataque",
+      "referencia_ataque": "Bite",
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Construct Nature",
-      "resumo": "Não precisa de ar, alimento, bebida ou sono."
-    },
-    {
-      "nome": "Immutable Form",
-      "resumo": "Imune a alterações da forma."
-    },
-    {
-      "nome": "Limited Telepathy",
-      "resumo": "Envia mensagens e imagens simples ao dono num alcance de 100 pés."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas mágicas."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": "CONFLITO DE FONTES: 5ecompendium reproduz 15 PV (6d4), KPOGL atribui 20 PV (8d4). Este registro escolhe KPOGL para transcrição de Tome of Beasts 1, mas a divergência não está resolvida editorialmente.",
   "pendencias": [
-    "Dados herdados de checkpoint anterior; exigir ficha individual integral, edição exata, confirmação de todos os campos e ações.",
-    "Campos nulos nas ações NÃO foram verificados nem podem ser presumidos.",
-    "A página 5eSRD localiza traits mas não apresenta seção de ações, apesar de ser ND1/2; não inventar ataques."
+    "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+    "CONFLITO DE FONTES: 5ecompendium reproduz 15 PV (6d4), KPOGL atribui 20 PV (8d4). Este registro escolhe KPOGL para transcrição de Tome of Beasts 1, mas a divergência não está resolvida editorialmente.",
+    "Anterior 5eSRD não apresentava seção de ações; KPOGL individual apresenta Bite com CON CD10.",
+    "Comparar exemplar original e revisado com erratas antes de qualquer homologação."
   ],
   "integrada": false
 }

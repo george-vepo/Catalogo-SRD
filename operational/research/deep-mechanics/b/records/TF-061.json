@@ -2,19 +2,31 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-061",
   "nome": "Clockwork Armadillo",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 3",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5e - publicação da Kobold Press indicada no KPOGL",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3 (p.86)",
+    "edicao_exata_verificada": false,
+    "edicao_consultada": "Transcrição comunitária KPOGL, página individual com indicação do volume/página; não é comparação direta com exemplar do editor.",
+    "recortes_de_edicao_ou_revisao_pendentes": true
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-armadillo/",
-      "natureza": "fonte_secundaria_anterior_nao_reexaminada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-armadillo",
+      "natureza": "secundaria_wiki_comunitaria_nao_endossada",
+      "consultada": "2026-10-13",
+      "escopo": "estatísticas, passivas e ações da transcrição individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_para_identidade",
+      "escopo": "confirmar publicação/identidade; não contém ficha detalhada"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-059_TF-063/research.json",
-      "natureza": "registro_herdado"
+      "natureza": "checkpoint_anterior",
+      "escopo": "continuidade; campos não validados nesta fonte"
     }
   ],
   "estatisticas": {
@@ -33,28 +45,20 @@
     "deslocamentos_ft": {
       "andar": 30
     },
-    "deslocamentos_texto": null,
     "salvaguardas": {
-      "DEX": 6
+      "DES": 6
     },
     "pericias": {
       "Acrobatics": 6,
       "Perception": 2,
       "Stealth": 6
     },
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 12,
-    "idiomas": [
-      "entende idiomas do criador; não fala"
-    ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -62,78 +66,111 @@
       "paralyzed",
       "petrified",
       "poisoned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 12,
+    "idiomas": [
+      "entende idiomas do criador, mas não fala"
+    ],
+    "proficiencia": 2
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
-    {
-      "nome": "Scissor Claws",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "+6, 5 pés, 1d4+4 cortante, CON CD11 ou solta item carregado.",
-      "confirmado": false
-    },
-    {
-      "nome": "Tuck In",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "Se enrola em armadura esférica, rola, resiste a dano físico e não pode atacar com garras; pode guardar objeto Small ou menor no casco se não estiver vestido/carregado. Desenrola e solta item como bônus.",
-      "confirmado": false
-    }
-  ],
-  "acoes_bonus": [],
-  "reacoes": [],
-  "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
+  "qualidade_estatisticas": "ESTRUTURADA_APARTIR_FONTE_SECUNDARIA_NAO_CONFERIDA_NA_EDICAO_EDITORIAL",
+  "habilidades_passivas": [
     {
       "nome": "Construct Nature",
-      "resumo": "Dispensa ar, bebida, comida e sono."
+      "efeito": "Não necessita de ar, comida, água nem sono."
     },
     {
       "nome": "Immutable Form",
-      "resumo": "Imune à alteração de forma."
+      "efeito": "Imune a alterações de forma por feitiço/efeito."
     },
     {
       "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas mágicas."
+      "efeito": "Vantagem em salvaguardas contra magia."
     },
     {
       "nome": "Overclocked",
-      "resumo": "Vantagem em iniciativa."
+      "efeito": "Vantagem em jogadas de iniciativa."
     }
   ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "ataques": [
+    {
+      "nome": "Scissor Claws",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "1d4",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ],
+      "efeitos": [
+        {
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 11
+          },
+          "falha": "alvo solta o item que segura",
+          "sucesso": "mantém item"
+        }
+      ],
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Scissor Claws",
+      "categoria": "ataque",
+      "referencia_ataque": "Scissor Claws",
+      "confirmado_na_fonte_secundaria": true
+    },
+    {
+      "nome": "Tuck In",
+      "categoria": "transformacao",
+      "efeito": "entra em estado de bola blindada. Rola para se mover, recebe resistência a contundente/perfurante/cortante e imunidade a prone, mas não pode usar Scissor Claws.",
+      "resistencias_enquanto_ativo": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "imunidade_condicao_enquanto_ativo": [
+        "prone"
+      ],
+      "restricao_ataques": [
+        "Scissor Claws"
+      ],
+      "objeto_guardavel": {
+        "tamanho": "igual ou menor que criatura",
+        "posicao": "até 5 pés",
+        "condicao": "não vestido ou portado"
+      },
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "acoes_bonus": [
+    {
+      "nome": "Uncurl and Release",
+      "categoria": "acao_bonus",
+      "precondicao": "Tuck In ativo",
+      "efeito": "desenrola corpo e libera objeto guardado",
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "conjuracoes": [],
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": "ND fracionário 1/4 confirmado na transcrição KPOGL; arredondamento 0.3 de catálogo anterior não é estatística ND da ficha.",
   "pendencias": [
-    "Dados herdados de checkpoint anterior; exigir ficha individual integral, edição exata, confirmação de todos os campos e ações.",
-    "Campos nulos nas ações NÃO foram verificados nem podem ser presumidos.",
-    "Catálogo ND 0.3, fonte 1/4; preservar ambos."
+    "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+    "ND fracionário 1/4 confirmado na transcrição KPOGL; arredondamento 0.3 de catálogo anterior não é estatística ND da ficha.",
+    "Validar edição Tome of Beasts 3 por fonte editorial antes de integração."
   ],
   "integrada": false
 }

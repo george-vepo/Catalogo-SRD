@@ -2,19 +2,31 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-063",
   "nome": "Clockwork Beetle Swarm",
-  "estado": "BLOQUEADO_HISTORICO_INCOMPLETO",
+  "estado": "DETALHADA_FONTE_SECUNDARIA_AGUARDA_VALIDACAO_EDITORIAL",
   "edicao": {
-    "publicacao": "Tome of Beasts 1",
-    "edicao_exata_verificada": false
+    "sistema": "D&D 5e - publicação da Kobold Press indicada no KPOGL",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (p.60)",
+    "edicao_exata_verificada": false,
+    "edicao_consultada": "Transcrição comunitária KPOGL, página individual com indicação do volume/página; não é comparação direta com exemplar do editor.",
+    "recortes_de_edicao_ou_revisao_pendentes": true
   },
   "fontes": [
     {
-      "url": "https://www.5esrd.com/database/creature/clockwork-beetle-swarm-3pp/",
-      "natureza": "fonte_secundaria_anterior_nao_reexaminada"
+      "url": "https://kpogl.wikidot.com/monster:clockwork-beetle-swarm",
+      "natureza": "secundaria_wiki_comunitaria_nao_endossada",
+      "consultada": "2026-10-13",
+      "escopo": "estatísticas, passivas e ações da transcrição individual"
+    },
+    {
+      "url": "https://koboldpress.com/tools/kobold-press-monsters/",
+      "natureza": "indice_editorial_para_identidade",
+      "escopo": "confirmar publicação/identidade; não contém ficha detalhada"
     },
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261011_TF-059_TF-063/research.json",
-      "natureza": "registro_herdado"
+      "natureza": "checkpoint_anterior",
+      "escopo": "continuidade; campos não validados nesta fonte"
     }
   ],
   "estatisticas": {
@@ -34,14 +46,8 @@
       "andar": 30,
       "voar": 50
     },
-    "deslocamentos_texto": null,
-    "salvaguardas": null,
-    "pericias": null,
-    "sentidos": [
-      "darkvision 60 ft."
-    ],
-    "percepcao_passiva": 11,
-    "idiomas": null,
+    "salvaguardas": {},
+    "pericias": {},
     "resistencias_dano": [
       "bludgeoning",
       "piercing",
@@ -51,7 +57,7 @@
       "poison",
       "psychic"
     ],
-    "vulnerabilidades_dano": null,
+    "vulnerabilidades_dano": [],
     "imunidades_condicao": [
       "charmed",
       "exhaustion",
@@ -63,55 +69,81 @@
       "prone",
       "restrained",
       "stunned"
-    ]
+    ],
+    "sentidos": [
+      "darkvision 60 ft"
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [],
+    "proficiencia": 2,
+    "tamanho": "Large Swarm of Tiny Constructs"
   },
-  "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "qualidade_estatisticas": "ESTRUTURADA_APARTIR_FONTE_SECUNDARIA_NAO_CONFERIDA_NA_EDICAO_EDITORIAL",
+  "habilidades_passivas": [
+    {
+      "nome": "Construct Nature",
+      "efeito": "Não precisa de ar, comida, água ou sono."
+    },
+    {
+      "nome": "Magic Resistance",
+      "efeito": "Vantagem em salvaguardas mágicas."
+    },
+    {
+      "nome": "Swarm",
+      "efeito": "Pode compartilhar espaço com criaturas e atravessar frestas para um Tiny Construct. Não recupera PV e não recebe PV temporários."
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Bites",
+      "tipo": "ataque_corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 0,
+      "alvos": "um alvo",
+      "dados_dano": [
+        {
+          "dados": "4d8",
+          "modificador": 0,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "1d6",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ],
+      "efeitos": [
+        {
+          "precondicao": "PV atual <= metade do máximo (<=26)",
+          "substituir_dano_piercing": {
+            "dados": "2d8",
+            "modificador": 0,
+            "tipo": "piercing"
+          }
+        }
+      ],
+      "confirmado_na_fonte_secundaria": true
+    }
+  ],
   "acoes": [
     {
       "nome": "Bites",
-      "categoria": "a_conferir",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvos": null,
-      "dados_dano": null,
-      "modificador_dano": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "limites": null,
-      "indicacao_herdada": "+5 contra alvo no espaço do enxame; 4d8 perfurante, ou 2d8 com metade dos PV ou menos, mais 1d6 veneno.",
-      "confirmado": false
+      "categoria": "ataque",
+      "referencia_ataque": "Bites",
+      "confirmado_na_fonte_secundaria": true
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Construct Nature",
-      "resumo": "Dispensa ar, alimentação, bebida e sono."
-    },
-    {
-      "nome": "Magic Resistance",
-      "resumo": "Vantagem em salvaguardas mágicas."
-    },
-    {
-      "nome": "Swarm",
-      "resumo": "Pode atravessar outros espaços e pequenas aberturas; não regenera PV nem ganha PV temporários."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": null,
+  "inventario_acoes_completo": true,
   "bloqueado": true,
+  "conflito_editorial": null,
   "pendencias": [
-    "Dados herdados de checkpoint anterior; exigir ficha individual integral, edição exata, confirmação de todos os campos e ações.",
-    "Campos nulos nas ações NÃO foram verificados nem podem ser presumidos."
+    "Embora as ações estejam individualizadas, a fonte de mecânica consultada é uma wiki comunitária, NÃO a ficha editorial. Não homologar, integrar ou considerar concluída a validação da edição.",
+    "Ataque tem mecânica de enxame (reduz 4d8 para 2d8 quando <=26 PV); não confundir com TF-062 singular.",
+    "Conferir edição Tome of Beasts 1 em exemplar editorial antes de integração."
   ],
   "integrada": false
 }
