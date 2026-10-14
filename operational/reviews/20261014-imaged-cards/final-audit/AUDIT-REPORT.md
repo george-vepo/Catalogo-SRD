@@ -147,3 +147,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 8 fichas completas em conteúdo e 2 com ressalvas: **TF-216**, divergência de vulnerabilidade a frio entre versões; **TF-221**, fórmula de dados de vida possivelmente incompatível com criatura Large. As dez imagens estão diretamente vinculadas ao grupo A, com SHA/tamanho correspondentes. Nenhuma imagem apresenta dimensão declarada inferior a 500 px. Sem homologação visual, editorial, de licença ou adaptação.
 
 **Consolidado:** 200/395 (195 restantes); 131 completas, 40 com ressalvas, 28 incompletas e 1 não verificável; 143 imagens diretas, 54 por manifesto, 3 ausentes.
+
+## Lote 021 — TF-223–TF-233 (10 IDs da ordem do CSV)
+
+9 fichas completas em conteúdo e 1 com ressalva (**TF-231**, descrição Spit Poison de A5E como ataque melee com distância 20/60 ft, pendente cotejo). Dez imagens com vínculo direto aos JSONs A, presentes com SHA e tamanho conferidos. Nenhuma possui dimensão declarada inferior a 500 px. Publicação original, adequação visual e licença permanecem sem homologação.
+
+**Consolidado:** 210/395 (185 restantes); 140 completas, 41 com ressalvas, 28 incompletas, 1 não verificável; 153 imagens diretas, 54 via manifesto, 3 ausentes.
