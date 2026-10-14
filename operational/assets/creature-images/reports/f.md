@@ -52,6 +52,27 @@ Situação mais recente: **124 binários**, **70 IDs sem arquivo**, 30 checkpoin
 
 **Riscos jurídicos previamente identificados continuam:** 84 imagens de `TheGiddyLimit/homebrew-img` sem licença de reutilização verificada, 8 arquivos de `FoundryVTT-Level-Up-Official/public/assets` explicitamente para uso não comercial. Os 100 arquivos de checkpoints legados não foram redownloaded/recomputados integralmente nesta rodada. Os 71 IDs sem arquivo estão listados individualmente abaixo. Não executar merge.
 
+## Reconciliação Git da continuidade — checkpoint 30
+
+No commit `8db779283dfec35501c174aeb62609b0d4064bc4`, árvore `c728d3c9c95a1c24e2a8719ca84081239754fa43`, foram auditados:
+
+| Medição | Evidência |
+|---|---|
+| CSV da base | 607 linhas, 23 `VERIFICADA`, 584 restantes |
+| Escopo grupo F | 194 IDs, de `pending_images[390:584]`, ordem e nomes coincidentes com o manifesto |
+| Arquivos reais na árvore | 124 blobs de imagens; 13.320.241 bytes |
+| Git blob SHA/tamanho em manifesto | 124/124 conferidos sem divergências |
+| SHA-256 individuais registrados | 124 hashes não repetidos; medição atual de SHA-256 feita nos novos assets, não integralmente repetida nos legados |
+| Faltantes identificados | 70 IDs distintos listados na tabela de pendências |
+| Diff do commit-base | 126 arquivos = 124 imagens F + `manifests/f.json` + `reports/f.md`; nenhum fora do diretório obrigatório |
+| Arte final com direitos registrados (`COMPLETE`) | 4 |
+| `PARTIAL` | 190, incluindo 70 sem arquivo e os demais com questões de autoria, direitos ou fidelidade à criatura |
+| `BLOCKED` individualmente comprovado | 0 |
+
+**Limitações:** a licença de 84 ilustrações `homebrew-img` ainda não foi localizada; oito outras obras de `FoundryVTT-Level-Up-Official` estão sob declaração de uso não comercial. Além disso, os novos sprites pequenos e folhas de animação precisam de design final. A integridade dos 124 arquivos no GitHub **não** constitui aprovação de uso comercial.
+
+**Auditoria de isolamento e PR:** nenhuma alteração em CSV global, imagens anteriormente `VERIFICADA` ou arquivos D/E. O PR permanece em modo Draft e não sofreu merge.
+
 ## Escopo e execução
 
 - Repositório: `george-vepo/SRD-Card-Game-607-Supervisor`; branch: `chatgpt/srd607-image-assets-f`; PR draft https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/5.
