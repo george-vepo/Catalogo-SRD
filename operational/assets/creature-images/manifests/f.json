@@ -16,16 +16,16 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 108,
-    "verified_after_upload": 108,
-    "pending": 86,
-    "stored_bytes": 13166020,
-    "checkpoint_count": 25,
+    "persisted_binary_files": 114,
+    "verified_after_upload": 114,
+    "pending": 80,
+    "stored_bytes": 13171065,
+    "checkpoint_count": 26,
     "complete_with_recorded_rights": 4,
     "partial_rights_review": 100,
-    "partial_missing_files": 86,
+    "partial_missing_files": 80,
     "blocked_confirmed": 0,
-    "partial_variant_art": 4
+    "partial_variant_art": 10
   },
   "checkpoints": [
     {
@@ -310,6 +310,19 @@
       ],
       "commit": "070f73d8ec70dcfbdaf1785de16d65ce2069e79a",
       "validation": "GitHub post-upload binary bytes equal sources, SHA-1 Git blob identities match; PNG integrity and SHA-256 pre-push; CC0/CC-BY3 provenance and art variant review documented"
+    },
+    {
+      "sequence": 26,
+      "images_added": [
+        "TF-393",
+        "TF-514",
+        "TF-446",
+        "TF-356",
+        "TF-513",
+        "TF-511"
+      ],
+      "commit": "ad05a90834756241df8b4f42e6e29ff1086b567b",
+      "validation": "verified after upload: source and GitHub image bytes equal, Git SHA identical; PNG format/dimensions/size and SHA-256 recorded. Variant accuracy and source rights marked PARTIAL."
     }
   ],
   "blocked_ids": [
@@ -332,7 +345,6 @@
     "TF-342",
     "TF-351",
     "TF-353",
-    "TF-356",
     "TF-358",
     "TF-360",
     "TF-370",
@@ -343,7 +355,6 @@
     "TF-384",
     "TF-386",
     "TF-389",
-    "TF-393",
     "TF-397",
     "TF-398",
     "TF-402",
@@ -354,7 +365,6 @@
     "TF-420",
     "TF-425",
     "TF-434",
-    "TF-446",
     "TF-447",
     "TF-448",
     "TF-449",
@@ -391,9 +401,6 @@
     "TF-508",
     "TF-509",
     "TF-510",
-    "TF-511",
-    "TF-513",
-    "TF-514",
     "TF-516",
     "TF-517",
     "TF-518",
@@ -2084,20 +2091,36 @@
     {
       "id": "TF-356",
       "name": "Grendel",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/ogre.png",
+      "repository_path": "operational/assets/creature-images/TF-356.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 459,
+      "sha256": "ca7bb3d39de4ee595258a5caa4718cfcff077970a0175024117e087449f3c34f",
+      "persistence_commit": "ad05a90834756241df8b4f42e6e29ff1086b567b",
+      "validation": {
+        "result": "passed",
+        "method": "Source and persisted GitHub file recovered as base64 and compared byte-for-byte; Git blob SHA matched; source PNG header, IEND, IHDR dimensions and bytes verified; pre-upload SHA-256 computed using tested JS SHA256.",
+        "git_blob_sha": "bacca8a73936d01fa933eda7c1a7cc89600177e8",
+        "quality_note": "Giant grotesque ogre closely related to Grendel mythology, but not an illustration of the uniquely named figure."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/ogre.png",
+      "source_git_blob_sha": "bacca8a73936d01fa933eda7c1a7cc89600177e8",
+      "source_license": "CC0 1.0 Universal (curated 2015 release; per-asset provenance unconfirmed)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (optional if CC0 source declaration applies)",
+      "rights_review": "Collection-level CC0 declaration only; historical original per-artwork rightsholder was not independently established; must validate before release."
     },
     {
       "id": "TF-358",
@@ -2679,20 +2702,36 @@
     {
       "id": "TF-393",
       "name": "Minotaur Conqueror",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/e27131731f89187b9842e9c6c95381a2e954aafd/packs/dcss-monsters-and-creatures/sprites/minotaur.png",
+      "repository_path": "operational/assets/creature-images/TF-393.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 878,
+      "sha256": "a4226d5296ab9f677d2ebff083f477caea6b8a6e6c14c1dab472bfc6525452c7",
+      "persistence_commit": "ad05a90834756241df8b4f42e6e29ff1086b567b",
+      "validation": {
+        "result": "passed",
+        "method": "Source and persisted GitHub file recovered as base64 and compared byte-for-byte; Git blob SHA matched; source PNG header, IEND, IHDR dimensions and bytes verified; pre-upload SHA-256 computed using tested JS SHA256.",
+        "git_blob_sha": "8994195081f376d5a23ea4ea78e5a4d354ebdecb",
+        "quality_note": "Minotaur warrior with an axe; large Conqueror variant and authority markers not depicted."
+      },
+      "state": "PARTIAL",
+      "source_repo": "Papyszoo/CC0-Public-Domain-Sprites",
+      "source_ref": "e27131731f89187b9842e9c6c95381a2e954aafd",
+      "source_path": "packs/dcss-monsters-and-creatures/sprites/minotaur.png",
+      "source_git_blob_sha": "8994195081f376d5a23ea4ea78e5a4d354ebdecb",
+      "source_license": "CC0 1.0 Universal (catalog pack declaration; asset-specific provenance unconfirmed)",
+      "license_evidence": [
+        "https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/main/packs/dcss-monsters-and-creatures/pack.json",
+        "https://github.com/crawl/tiles/blob/master/README.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (optional if CC0 source declaration applies)",
+      "rights_review": "Collection-level CC0 declaration only; historical original per-artwork rightsholder was not independently established; must validate before release."
     },
     {
       "id": "TF-394",
@@ -3609,20 +3648,36 @@
     {
       "id": "TF-446",
       "name": "Grave Guardian",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/nonliving/iron_golem.png",
+      "repository_path": "operational/assets/creature-images/TF-446.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 858,
+      "sha256": "6527899baff552ae87ff2fd5c504e676455c05415ad85dd9e5722c7aa2409ee8",
+      "persistence_commit": "ad05a90834756241df8b4f42e6e29ff1086b567b",
+      "validation": {
+        "result": "passed",
+        "method": "Source and persisted GitHub file recovered as base64 and compared byte-for-byte; Git blob SHA matched; source PNG header, IEND, IHDR dimensions and bytes verified; pre-upload SHA-256 computed using tested JS SHA256.",
+        "git_blob_sha": "e11d6e9ef8de44f6f88d656af6c4ad9c19863649",
+        "quality_note": "Metal armored humanoid resembles enchanted silver armor construct; lacks runes/scimitar."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/nonliving/iron_golem.png",
+      "source_git_blob_sha": "e11d6e9ef8de44f6f88d656af6c4ad9c19863649",
+      "source_license": "CC0 1.0 Universal (curated 2015 release; per-asset provenance unconfirmed)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (optional if CC0 source declaration applies)",
+      "rights_review": "Collection-level CC0 declaration only; historical original per-artwork rightsholder was not independently established; must validate before release."
     },
     {
       "id": "TF-447",
@@ -4620,56 +4675,104 @@
     {
       "id": "TF-511",
       "name": "Fiendbloom Awakened Tree",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/fungi_plants/treant.png",
+      "repository_path": "operational/assets/creature-images/TF-511.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 1460,
+      "sha256": "a2231517918397c63f389d7a522daa1e1f57fcb251d473b0cfb467a6026ff8ef",
+      "persistence_commit": "ad05a90834756241df8b4f42e6e29ff1086b567b",
+      "validation": {
+        "result": "passed",
+        "method": "Source and persisted GitHub file recovered as base64 and compared byte-for-byte; Git blob SHA matched; source PNG header, IEND, IHDR dimensions and bytes verified; pre-upload SHA-256 computed using tested JS SHA256.",
+        "git_blob_sha": "4f96d8481906ccb2093ce4485ce34d2a64e4eca1",
+        "quality_note": "Tree-form animated humanoid, but fiendbloom malignant flowering is not shown."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/fungi_plants/treant.png",
+      "source_git_blob_sha": "4f96d8481906ccb2093ce4485ce34d2a64e4eca1",
+      "source_license": "CC0 1.0 Universal (curated 2015 release; per-asset provenance unconfirmed)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (optional if CC0 source declaration applies)",
+      "rights_review": "Collection-level CC0 declaration only; historical original per-artwork rightsholder was not independently established; must validate before release."
     },
     {
       "id": "TF-513",
       "name": "Improved Spirit Soldier",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/crawl/tiles/blob/a6ea1655db5c044829d9eea19a232fa6fcac87b0/releases/Nov-2015/mon/holy/daeva.png",
+      "repository_path": "operational/assets/creature-images/TF-513.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 686,
+      "sha256": "c15a77d7f8d21fad3658cf93bb89f0b01e8a13ba81dbf27bb480680f4c751e85",
+      "persistence_commit": "ad05a90834756241df8b4f42e6e29ff1086b567b",
+      "validation": {
+        "result": "passed",
+        "method": "Source and persisted GitHub file recovered as base64 and compared byte-for-byte; Git blob SHA matched; source PNG header, IEND, IHDR dimensions and bytes verified; pre-upload SHA-256 computed using tested JS SHA256.",
+        "git_blob_sha": "9cef03b68fd4e48d4132b65a5ba014822a85e93d",
+        "quality_note": "Weapon-bearing celestial, but golden feathers rather than silver armor/spectral face."
+      },
+      "state": "PARTIAL",
+      "source_repo": "crawl/tiles",
+      "source_ref": "a6ea1655db5c044829d9eea19a232fa6fcac87b0",
+      "source_path": "releases/Nov-2015/mon/holy/daeva.png",
+      "source_git_blob_sha": "9cef03b68fd4e48d4132b65a5ba014822a85e93d",
+      "source_license": "CC0 1.0 Universal (curated 2015 release; per-asset provenance unconfirmed)",
+      "license_evidence": [
+        "https://github.com/crawl/tiles/blob/master/README.md",
+        "https://github.com/crawl/tiles/blob/master/TILES_UNDER_UNKNOWN_LICENSE.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (optional if CC0 source declaration applies)",
+      "rights_review": "Collection-level CC0 declaration only; historical original per-artwork rightsholder was not independently established; must validate before release."
     },
     {
       "id": "TF-514",
       "name": "Drainpipe Gargoyle",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
-      "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/e27131731f89187b9842e9c6c95381a2e954aafd/packs/dcss-monsters-and-creatures/sprites/nonliving/gargoyle.png",
+      "repository_path": "operational/assets/creature-images/TF-514.png",
+      "extension": ".png",
+      "mime_type": "image/png",
+      "dimensions": {
+        "width": 32,
+        "height": 32
       },
-      "state": "PARTIAL"
+      "size_bytes": 704,
+      "sha256": "a5e6a72d555be0779d23f7ff9e0228c9e9f9bed85c62a685f2b96bccac421dd7",
+      "persistence_commit": "ad05a90834756241df8b4f42e6e29ff1086b567b",
+      "validation": {
+        "result": "passed",
+        "method": "Source and persisted GitHub file recovered as base64 and compared byte-for-byte; Git blob SHA matched; source PNG header, IEND, IHDR dimensions and bytes verified; pre-upload SHA-256 computed using tested JS SHA256.",
+        "git_blob_sha": "46eb79886818ef826e48a90e627289c57563aa0f",
+        "quality_note": "Bat-winged gray gargoyle consistent with anatomy; no water-spouting action or puffed cheeks."
+      },
+      "state": "PARTIAL",
+      "source_repo": "Papyszoo/CC0-Public-Domain-Sprites",
+      "source_ref": "e27131731f89187b9842e9c6c95381a2e954aafd",
+      "source_path": "packs/dcss-monsters-and-creatures/sprites/nonliving/gargoyle.png",
+      "source_git_blob_sha": "46eb79886818ef826e48a90e627289c57563aa0f",
+      "source_license": "CC0 1.0 Universal (catalog pack declaration; asset-specific provenance unconfirmed)",
+      "license_evidence": [
+        "https://github.com/Papyszoo/CC0-Public-Domain-Sprites/blob/main/packs/dcss-monsters-and-creatures/pack.json",
+        "https://github.com/crawl/tiles/blob/master/README.md"
+      ],
+      "attribution": "Dungeon Crawl Stone Soup Team (optional if CC0 source declaration applies)",
+      "rights_review": "Collection-level CC0 declaration only; historical original per-artwork rightsholder was not independently established; must validate before release."
     },
     {
       "id": "TF-515",
