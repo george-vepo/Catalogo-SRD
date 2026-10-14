@@ -171,3 +171,9 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 6 fichas completas em conteúdo, 3 com ressalvas (**TF-254** e **TF-260**, versões editoriais divergentes; **TF-263**, bônus de ataque/componentes A5E) e 1 incompleta (**TF-264**, variante Sticky sem CD e dados de vida/proficiência não confirmados). Dez imagens diretamente vinculadas ao grupo A, com SHA/tamanho conferidos. Nenhuma dimensão declarada abaixo de 500 px. Sem homologação editorial, visual ou jurídica.
 
 **Consolidado:** 240/395 (155 restantes); 157 completas, 48 com ressalvas, 34 incompletas, 1 não verificável; 183 imagens diretas, 54 via manifesto e 3 ausentes.
+
+## Lote 025 — TF-265–TF-276 (10 IDs da ordem do CSV)
+
+2 completas em conteúdo, 7 com ressalvas (TF-266, 267, 269, 272, 273, 274, 276: dependências/ambiguidade de regras e versões) e 1 incompleta (**TF-265**, sem mecânicas). Oito imagens diretamente vinculadas com SHA e tamanho conferidos. **TF-274 e TF-276 não possuem imagem**, confirmado também no manifesto F; TF-272 (280×280) e TF-273 (373×669) têm dimensões reduzidas. Fonte primária, licença, inspeção visual e adaptação não homologadas.
+
+**Consolidado:** 250/395 (145 restantes); 159 completas, 55 com ressalvas, 35 incompletas e 1 não verificável; 191 imagens diretas, 54 por manifesto e 5 ausentes.
