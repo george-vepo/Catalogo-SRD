@@ -1,5 +1,17 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 40 — Voidpool, Yaga Goo, Animated Offal, Black Patch e Oozasis (14/10/2026)
+
+**[Commit de cinco fichas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/1f7260ec80a2f30c758aedf6ab8c7304c2c547c5)**. Read-back via GitHub confirmou JSON válido e ID correto de TF-170, TF-171, TF-172, TF-173 e TF-174; nenhuma foi marcada integralmente aprovada. As fontes são reproduções de texto mecânico, não prova de licença para uso das imagens.
+
+- **TF-170 Voidpool:** origem Tome of Beasts 2 p.362; 112 PV/CA8/ND5, portão planar só acumula progresso após FALHA STR CD13, três falhas levam ao Void; sucesso causa 2d6 force sem avanço do portal. Dois Pseudopod, grapple limitado a duas vítimas, Spider Climb. O antigo bloqueio de 404 foi superado por concordância entre reprodução e Robinloft; edição/licença permanecem pendentes. https://anyflip.com/myubd/cwps/basic/351-400 e https://www.robinloft.com/monsters/voidpool/tome-of-beasts-2
+- **TF-171 Yaga Goo:** ficha original Creature Codex p.389, ataques com Pseudopod; Foul Transit (4–6) teleporta 50ft e deixa poça por 1 minuto; Puddle Splash como reação exige poça livre, evita ataque melee e exige CON CD16 contra dano/poisoned. https://fliphtml5.com/nvljc/hodl/KOBOLD_PRESS._CREATURE_CODEX/390/
+- **TF-172 Animated Offal:** Tome of Beasts 3 p.38, Healing Sense por magias/poções, bônus CA/DEX/ataque condicionado, dois Pseudopod com grapple até dois alvos e Subsume como bônus, conversão de cura em HP temporários até 48, reprodução ao exceder. https://kpogl.wikidot.com/monster:animated-offal
+- **TF-173 Black Patch:** Tome of Beasts 3 p.58, movimento terrestre zero e natação, Eldritch Luminance com WIS CD15 repetível e imunidade posterior de 24h, duas Pseudopod com opção Viscid Suffocation quando alvo dentro do corpo, sufocamento/ácido e remoção por ação. https://www.5esrd.com/database/creature/black-patch/
+- **TF-174 Oozasis — BLOQUEIO EDITORIAL MANTIDO:** reconstruída EXCLUSIVAMENTE a ficha original de 2016: INT12 WIS22 CHA18, vulnerabilidade thunder, movimento climb, Mirage bônus, Engulf e Vapors com recarga por descanso. Fonte 2023 NÃO foi mesclada, pois contém stats e ações diferentes (INT8/WIS20/CHA13, vulnerabilidade cold, Pseudopod três vezes, Compelling Vapors). https://robinloft.com/monsters/oozasis/tome-of-beasts e https://www.5esrd.com/database/creature/oozasis-3pp/
+- **Auditoria:** 131 registros, 131 IDs únicos; 94 fichas aprofundadas e 37 sem revisão individual; 95 parciais, 36 bloqueadas; nenhuma aprovada integralmente. 96 blobs de imagens persistidos com 96 SHA coincidentes com manifesto; 35 faltantes, 0 validadas visualmente; 0 arquivos fora de C no diff. Nenhuma imagem importada neste lote.
+- **Pendências:** conferir edições legais, erratas e atribuição, autorização e inspeção da arte, e revisão editorial independente. PR #9 permanece Draft, não integrada.
+
 ## Checkpoint 39 — cinco oozes e reação Pluck (14/10/2026)
 
 **Mecânicas publicadas:** [commit 73d78e64c80f](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/73d78e64c80f1ab6f44843b55f9f8683457cb880). Cinco JSONs TF-165 a TF-169 existentes foram relidos por ID e sintaxe; fonte individual 5eSRD conferida, sem declarar aprovação editorial ou licença de imagens.

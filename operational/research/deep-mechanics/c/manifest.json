@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 89,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 94,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 94,
-    "bloqueadas": 37,
-    "registros_aproveitados_sem_nova_verificacao_integral": 42,
+    "parciais": 95,
+    "bloqueadas": 36,
+    "registros_aproveitados_sem_nova_verificacao_integral": 37,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -590,9 +590,24 @@
       "commit": "73d78e64c80f1ab6f44843b55f9f8683457cb880",
       "leitura_persistencia": "CONFIRMADA — 5 JSONs CP39 relidos e confrontados com fichas 5eSRD. Consolidação corrige reação Pluck em TF-168 e atualiza manifesto/relatório. 131 IDs, 89 aprofundadas, 94 parciais, 37 bloqueadas.",
       "tipo": "Manure, Mineral, Shadow, Sinkhole, Suppurating ooze"
+    },
+    {
+      "numero": 40,
+      "inicio": "TF-170",
+      "fim": "TF-174",
+      "ids": [
+        "TF-170",
+        "TF-171",
+        "TF-172",
+        "TF-173",
+        "TF-174"
+      ],
+      "commit": "1f7260ec80a2f30c758aedf6ab8c7304c2c547c5",
+      "leitura_persistencia": "CONFIRMADA — 5 JSONs relidos na branch após escrita, IDs e sintaxe corretos. Confronto com versões 2016/2023 da Oozasis, Voidpool na reprodução ToB2, 131 arquivos JSON e 96 blobs com hashes compatíveis.",
+      "tipo": "Voidpool Yaga Goo Animated Offal Black Patch Oozasis original 2016"
     }
   ],
-  "atualizacao_detalhada_sha": "73d78e64c80f1ab6f44843b55f9f8683457cb880",
+  "atualizacao_detalhada_sha": "1f7260ec80a2f30c758aedf6ab8c7304c2c547c5",
   "criaturas": [
     {
       "id": "TF-412",
@@ -3179,18 +3194,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 48,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-170.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": null,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://anyflip.com/myubd/cwps/basic/351-400",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-166_TF-170/research.json",
       "pendencias": [
-        "Índice da editora identifica Voidpool, Tome of Beasts 2, ND5, mas página 5eSRD /database/creature/voidpool/ retornou 404.",
-        "Encontrar fonte mecânica individual válida antes de preencher CA, PV e habilidades; não inferir da ficha de outras oozes."
+        "Fonte 5eSRD original 404 foi substituída por reprodução de Tome of Beasts 2 p.362 e ficha Robinloft concordante; autorização editorial ainda pendente.",
+        "Planar Portal: sucesso no teste causa 2d6 force mas não avança puxão; falha não causa dano e soma etapa para três falhas antes de escape.",
+        "Licença e identidade visual da imagem ainda sem aprovação."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "dados de PV",
-        "lista integral de ações"
+        "erratas/validação final na edição editorial autorizada",
+        "imagem: licenciamento, identidade e aprovação visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3200,7 +3215,8 @@
         "bytes": 149714,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-171",
@@ -3208,17 +3224,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 49,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-171.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://www.herebetaverns.com/srd/dnd-5e/monsters/yaga-goo",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://fliphtml5.com/nvljc/hodl/KOBOLD_PRESS._CREATURE_CODEX/390/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Fonte mecânica reproduzida em terceiros; ficha editorial deve ser revisada."
+        "Fonte reproduz Creature Codex p.389; confirmar edição autorizada e erratas.",
+        "Puddle Splash só funciona com poça Foul Transit livre; a reação evita o dano do ataque que a acionou.",
+        "Direitos/adequação da imagem pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "erratas/validação final na edição editorial autorizada",
+        "imagem: licenciamento, identidade e aprovação visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3228,7 +3245,8 @@
         "bytes": 51532,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-172",
@@ -3236,17 +3254,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 50,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-172.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://kpogl.wikidot.com/monster:animated-offal",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "KPOGL é wiki independente; acesso integral ao livro não comprovado."
+        "Fonte KPOGL é republicação independente OGL; conferir Tome of Beasts 3 p.38 em edição licenciada.",
+        "A reprodução dos temporary HP de Subsume tem teto 48 e criação de nova ooze quando excede.",
+        "Imagem física sem aprovação de licença/identidade."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "erratas/validação final na edição editorial autorizada",
+        "imagem: licenciamento, identidade e aprovação visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3256,7 +3275,8 @@
         "bytes": 148230,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-173",
@@ -3264,17 +3284,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 51,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-173.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/black-patch/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Regra de encantamento inclui salvaguardas repetidas: exigir verificação antes de implementar."
+        "Mesmerized não deve ser automaticamente substituído por charmed; movimentação e salvaguardas repetidas são regras específicas.",
+        "A ooze tem velocidade terrestre 0 e depende de água; Viscid Suffocation tem condições de gatilho local.",
+        "Fonte 5eSRD/Tome of Beasts 3 p.58 usada como referência; revisão editorial e licença visual ainda pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "erratas/validação final na edição editorial autorizada",
+        "imagem: licenciamento, identidade e aprovação visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3284,7 +3305,8 @@
         "bytes": 147862,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-174",
@@ -3292,17 +3314,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 52,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-174.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://www.5esrd.com/database/creature/oozasis-3pp",
+      "status": "BLOQUEADA_EDICOES_2016_2023_REQUER_REVISAO_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://robinloft.com/monsters/oozasis/tome-of-beasts",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "ATENÇÃO: página 5eSRD revisão 2023 diverge da versão original CR9, inclusive nos atributos/salvaguardas; CA/PV compatíveis, mas não combinar demais mecânicas das duas edições."
+        "EDIÇÃO ORIGINAL 2016: NÃO combinar com revisão 2023. Original: INT12 WIS22 CHA18, thunder vulnerability, climb, Mirage bônus, Engulf e Vapors descanso; revisão 2023 altera habilidades, salva e deslocamento.",
+        "As fontes de reprodução e Robinloft corroboram versão antiga, mas aprovação editorial/errata original continua bloqueada.",
+        "Licença e validação visual da imagem ainda pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "erratas/validação final na edição editorial autorizada",
+        "imagem: licenciamento, identidade e aprovação visual"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3312,7 +3335,8 @@
         "bytes": 63082,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-175",
@@ -4431,14 +4455,14 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 39,
-    "sha_validado": "73d78e64c80f1ab6f44843b55f9f8683457cb880",
+    "checkpoint": 40,
+    "sha_validado": "1f7260ec80a2f30c758aedf6ab8c7304c2c547c5",
     "escopo_ids": 131,
-    "aprofundadas": 89,
-    "sem_revisao_individual": 42,
+    "aprofundadas": 94,
+    "sem_revisao_individual": 37,
     "integralmente_aprovadas": 0,
-    "parciais": 94,
-    "bloqueadas": 37,
+    "parciais": 95,
+    "bloqueadas": 36,
     "imagens_binarias_fisicas": 96,
     "hashes_corretos": 96,
     "imagens_faltantes": 35,
