@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Imagens E
 
-**Armazenadas e verificadas: 183 / 195.**
+**Armazenadas e verificadas: 184 / 195.**
 
 Branch: chatgpt/srd607-image-assets-e
 Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
@@ -29,6 +29,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/65c6230d26b47cd70ccbe22195b4bdebfd4aba88 — 2/2 verificadas: TF-097, TF-240
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/22fc79040f6d595328fdc83ffa1c64cebbf7cb31 — 3/3 verificadas: TF-198, TF-209, TF-252
 - https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/2d0d20ab7c63f820940fd968cbfab00620e5d587 — 2/2 verificadas: TF-232, TF-242
+- https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/db3055fa21bbd7999e93a7c2f9e04d0ce0069357 — 1/1 verificadas: TF-263
 
 ## Binários publicados e conferidos
 
@@ -211,6 +212,7 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-259 / Chaos Creeper: operational/assets/creature-images/TF-259.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chaos%20Creeper.webp; 180606 bytes; 1000x1243 px; SHA-256: 5ce4ae776be0fd28a587dc622796daf74918e83f452d3d01cf1b998081f50411; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-260 / Vine Lord: operational/assets/creature-images/TF-260.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB/Vine%20Lord.webp; 74494 bytes; 607x800 px; SHA-256: 57f7fd154088cf56df1181be559601217b1675c7226657779ba1a779ed4960ac; commit: 2f4a256a44b692c61f5090b0eea669ecc9dad948
 - TF-261 / Vines of Nemthyr: operational/assets/creature-images/TF-261.jpg; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/CCodex/Vinesofnemthyr.jpg; 75036 bytes; 551x700 px; SHA-256: 12917479c6998554a79ac2934ebed273e79c5a63aabe738219dfa64682281838; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
+- TF-263 / Abrikandilu: operational/assets/creature-images/TF-263.png; origem: https://pf2.huijiwiki.com/wiki/%E6%96%87%E4%BB%B6%3AAbrikandilu.webp; 704995 bytes; 800x1035 px; SHA-256: 4266d4c1c21043f8bd97bab3c83f75ca2edcb2defdcf4032bb9b28caabce56d8; commit: db3055fa21bbd7999e93a7c2f9e04d0ce0069357
 - TF-265 / Alabroza, Bloodfiend: operational/assets/creature-images/TF-265.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Bloodfiend%20Alabroza.webp; 179890 bytes; 1200x1461 px; SHA-256: f02df608f4369c07ec31a13fdafeb441ff56e6dd4b860a770b56499808f84487; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
 - TF-266 / Chemosit: operational/assets/creature-images/TF-266.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB3/creature/Chemosit.webp; 92162 bytes; 1000x1200 px; SHA-256: 807dd9b503ee8147ff851a73d416bbd1438cab3c4f386216efb7e75e29f32f9d; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
 - TF-268 / Chatterlome: operational/assets/creature-images/TF-268.webp; origem: https://github.com/TheGiddyLimit/homebrew/blob/master/_img/ToB2/creature/Chatterlome.webp; 150754 bytes; 788x875 px; SHA-256: 39da3119e91b224edcf81eda520df6c59c179a95c791fd4f2893fed3158b4f57; commit: 356a9426a14d9d9b2adbb433e92e0b3ef33364e2
@@ -227,7 +229,6 @@ Commit-base: a962c48a1169c2ef2be8137715a095a596753b32
 - TF-231 / Accursed Guardian Naga: source_not_found; 
 - TF-239 / Aboleth, Nihileth, Nihilethic Dominator: source_not_found; 
 - TF-255 / Citrullus: source_not_found; 
-- TF-263 / Abrikandilu: blocked; <urlopen error timed out>
 - TF-264 / Abyssal Hordeling: source_not_found; 
 - TF-267 / Arx: source_not_found; 
 
