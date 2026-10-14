@@ -2,19 +2,19 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-109",
   "nome": "Beli",
-  "estado": "BLOQUEADO_CONFLITO_OU_EDICAO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Tome of Beasts 1 (5eSRD revisão ©2023)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/beli-3pp/",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-109_TF-113/research.json",
-      "natureza": "checkpoint"
+      "natureza": "reproducao_secundaria_5esrd",
+      "edicao": "Tome of Beasts 1 (2023)",
+      "consultado_em": "2026-10-14"
     }
   ],
   "estatisticas": {
@@ -35,14 +35,14 @@
       "voar": 30
     },
     "salvaguardas": {
-      "DEX": 5
+      "DES": 5
     },
     "pericias": {
       "Perception": 4,
       "Stealth": 5
     },
     "sentidos": [
-      "darkvision 60 ft."
+      "darkvision 60 ft"
     ],
     "percepcao_passiva": 14,
     "idiomas": [
@@ -50,95 +50,112 @@
       "Dwarvish",
       "Giant"
     ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "cold"
     ],
     "vulnerabilidades_dano": [
       "fire"
     ],
-    "imunidades_condicao": null
+    "imunidades_condicao": [],
+    "origem_ca": "natural armor",
+    "proficiencia": 2
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
-  "acoes": [
+  "habilidades_passivas": [
+    {
+      "nome": "Arctic Hunter",
+      "efeito": "vantagem em Stealth para esconder-se em neve e Perception baseada em visão em terreno nevado"
+    },
+    {
+      "nome": "Cold Regeneration",
+      "gatilho": "inicia turno em temperatura abaixo de congelamento",
+      "cura_pv": 3,
+      "bloqueio": "sofre dano fire; não funciona no turno seguinte",
+      "morte_especial": "só morre ao começar turno com zero PV sem conseguir regenerar"
+    },
+    {
+      "nome": "Flyby",
+      "efeito": "não provoca ataques de oportunidade ao deixar o alcance voando"
+    }
+  ],
+  "ataques": [
     {
       "nome": "Ice Dagger",
-      "indicacao_herdada": "+5, 5 pés, 1d4+3 perfurante e 2d4 frio.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 5,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d4",
+          "modificador": 3,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d4",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ]
     },
     {
       "nome": "Icy Shortbow",
-      "indicacao_herdada": "+5, 80/320 pés, 1d6+3 perfurante e 2d4 frio; CON CD13 contra exaustão, com imunidade temporária após sucesso.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "tipo": "distancia",
+      "bonus_acerto": 5,
+      "alcance_normal_ft": 80,
+      "alcance_maximo_ft": 320,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 3,
+          "tipo": "piercing"
+        },
+        {
+          "dados": "2d4",
+          "modificador": 0,
+          "tipo": "cold"
+        }
+      ],
+      "efeito": {
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": "um nível de exhaustion",
+        "sucesso": "imune a exhaustion de outros Icy Shortbows por 24h",
+        "sexta_exhaustion": "ao invés da sexta, PV 0 com death saves; fica imune 24h"
+      }
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Ice Dagger",
+      "referencia_ataque": "Ice Dagger"
+    },
+    {
+      "nome": "Icy Shortbow",
+      "referencia_ataque": "Icy Shortbow"
     },
     {
       "nome": "Invisibility",
-      "indicacao_herdada": "Fica invisível até atacar ou perder concentração, incluindo equipamentos carregados.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "efeito": "invisível até atacar ou perder concentração; equipamento invisível também"
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Arctic Hunter",
-      "resumo": "Vantagem para se esconder e perceber visualmente em terreno com neve."
-    },
-    {
-      "nome": "Cold Regeneration",
-      "resumo": "Em temperatura abaixo de zero, recupera 3 PV por turno; dano de fogo suprime por um turno e pode impedir retorno de 0 PV."
-    },
-    {
-      "nome": "Flyby",
-      "resumo": "Não provoca ataques de oportunidade quando se afasta voando."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "Edição da página é Tome of Beasts 1 ©2023; diferenças frente à publicação inicial não foram reconciliadas.; Licenciamento, imagem e revisão independente pendentes.",
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "Edição da página é Tome of Beasts 1 ©2023; diferenças frente à publicação inicial não foram reconciliadas."
+    "Confirmar em edição publicada e erratas editoriais; fonte secundária não é homologação.",
+    "Sem revisão independente, manter bloqueio."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Beli",
+    "tipo": "Small fey",
+    "alinhamento": "neutral evil"
+  }
 }

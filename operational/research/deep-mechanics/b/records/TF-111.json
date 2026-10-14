@@ -2,19 +2,19 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-111",
   "nome": "Chernomoi",
-  "estado": "BLOQUEADO_CONFLITO_OU_EDICAO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Tome of Beasts 1 (5eSRD revisão ©2023)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 1 (2023)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/chernomoi-3pp/",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-109_TF-113/research.json",
-      "natureza": "checkpoint"
+      "natureza": "reproducao_secundaria_5esrd",
+      "edicao": "Tome of Beasts 1 (2023)",
+      "consultado_em": "2026-10-14"
     }
   ],
   "estatisticas": {
@@ -34,14 +34,14 @@
       "andar": 20,
       "voar": 20
     },
-    "salvaguardas": null,
+    "salvaguardas": {},
     "pericias": {
       "Acrobatics": 6,
       "Perception": 2,
       "Stealth": 6
     },
     "sentidos": [
-      "darkvision 60 ft."
+      "darkvision 60 ft"
     ],
     "percepcao_passiva": 12,
     "idiomas": [
@@ -50,96 +50,103 @@
       "Sylvan"
     ],
     "resistencias_dano": [
-      "bludgeoning/piercing/slashing não mágicos de armas não prateadas"
+      "bludgeoning/piercing/slashing de ataques não mágicos que não sejam de armas prateadas"
     ],
-    "imunidades_dano": null,
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "origem_ca": "não especificada",
+    "proficiencia": 2
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
   "habilidades_passivas": [],
-  "ataques": [],
+  "ataques": [
+    {
+      "nome": "Scimitar",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d6",
+          "modificador": 4,
+          "tipo": "slashing"
+        }
+      ]
+    }
+  ],
   "acoes": [
     {
       "nome": "Scimitar",
-      "indicacao_herdada": "+6, 5 pés, 1d6+4 cortante.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "referencia_ataque": "Scimitar"
     },
     {
       "nome": "Shriek",
-      "indicacao_herdada": "Recarga 5–6; grito audível até 100 pés; criaturas até 60 pés fazem CON CD13 ou sofrem 3d6 trovão, metade em sucesso.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "recarga": "5–6",
+      "audivel_ate_ft": 100,
+      "area": {
+        "raio_ft": 60
+      },
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 13
+      },
+      "dano": {
+        "dados": "3d6",
+        "tipo": "thunder"
+      },
+      "sucesso": "metade"
     },
     {
       "nome": "Invisibility",
-      "indicacao_herdada": "Fica invisível até atacar, usar magia ou perder concentração.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "efeito": "invisível com equipamento até atacar, usar Spellcasting ou perder concentração"
     },
     {
       "nome": "Spellcasting",
-      "indicacao_herdada": "CAR CD13; livre: detect magic, mage hand, mending, message e prestidigitation. Uma vez/dia cada: detect poison and disease e dimension door.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "referencia_conjuracao": "Spellcasting"
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
-  "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "A página consultada é a edição ©2023 de Tome of Beasts 1. Comparação com versão anterior ainda pendente.; Imagem e direito de publicação pendentes.",
+  "conjuracoes": [
+    {
+      "nome": "Spellcasting",
+      "atributo": "CAR",
+      "cd": 13,
+      "componentes_materiais": false,
+      "magias": [
+        {
+          "usos": "à vontade",
+          "nomes": [
+            "detect magic",
+            "mage hand",
+            "mending",
+            "message",
+            "prestidigitation"
+          ]
+        },
+        {
+          "usos": "1/dia cada",
+          "nomes": [
+            "detect poison and disease",
+            "dimension door"
+          ]
+        }
+      ]
+    }
+  ],
+  "inventario_acoes_completo": true,
+  "conflito_editorial": null,
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "A página consultada é a edição ©2023 de Tome of Beasts 1. Comparação com versão anterior ainda pendente."
+    "Confirmar em edição publicada e erratas editoriais; fonte secundária não é homologação.",
+    "Sem revisão independente, manter bloqueio."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Chernomoi",
+    "tipo": "Tiny fey",
+    "alinhamento": "neutral"
+  }
 }

@@ -2,19 +2,19 @@
   "schema": "SRD_DEEP_MECHANICS_B_V1",
   "id": "TF-110",
   "nome": "Bereginyas",
-  "estado": "BLOQUEADO_CONFLITO_OU_EDICAO",
+  "estado": "MECANICA_INDIVIDUALIZADA_PENDENTE_HOMOLOGACAO",
   "edicao": {
-    "publicacao": "Tome of Beasts 1 (catálogo Kobold Press)",
+    "sistema": "D&D 5e",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 2 (2020)",
     "edicao_exata_verificada": false
   },
   "fontes": [
     {
       "url": "https://www.5esrd.com/database/creature/bereginyas-3pp/",
-      "natureza": "fonte_secundaria_indicada_no_checkpoint"
-    },
-    {
-      "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-109_TF-113/research.json",
-      "natureza": "checkpoint"
+      "natureza": "reproducao_secundaria_5esrd",
+      "edicao": "Tome of Beasts 2 (2020)",
+      "consultado_em": "2026-10-14"
     }
   ],
   "estatisticas": {
@@ -35,14 +35,14 @@
       "voar": 60
     },
     "salvaguardas": {
-      "DEX": 6
+      "DES": 6
     },
     "pericias": {
       "Perception": 5,
       "Stealth": 8
     },
     "sentidos": [
-      "darkvision 60 ft."
+      "darkvision 60 ft"
     ],
     "percepcao_passiva": 15,
     "idiomas": [
@@ -50,86 +50,110 @@
       "Elvish",
       "Sylvan"
     ],
-    "resistencias_dano": null,
+    "resistencias_dano": [],
     "imunidades_dano": [
       "bludgeoning"
     ],
-    "vulnerabilidades_dano": null,
-    "imunidades_condicao": null
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "origem_ca": "não especificada",
+    "proficiencia": 2
   },
   "qualidade_estatisticas": "PRELIMINAR_HERDADA_NAO_REVALIDADA",
-  "habilidades_passivas": [],
-  "ataques": [],
+  "habilidades_passivas": [
+    {
+      "nome": "Foul Form",
+      "gatilho": "criatura inicia turno a até 5 pés",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 14
+      },
+      "falha": {
+        "condicao": "poisoned"
+      },
+      "imunidade": "sucesso por 5 ou mais torna imune por 24h"
+    }
+  ],
+  "ataques": [
+    {
+      "nome": "Claw",
+      "tipo": "corpo_a_corpo",
+      "bonus_acerto": 6,
+      "alcance_ft": 5,
+      "dano": [
+        {
+          "dados": "1d8",
+          "modificador": 4,
+          "tipo": "slashing"
+        },
+        {
+          "dados": "1d8",
+          "modificador": 0,
+          "tipo": "poison"
+        }
+      ]
+    }
+  ],
   "acoes": [
     {
       "nome": "Multiattack",
-      "indicacao_herdada": "Duas garras; se ambas atingem o mesmo alvo, anexa-se a ele; o alvo ou aliado pode gastar ação e passar em FOR CD14 para removê-lo.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "categoria": "multiataque",
+      "sequencia": [
+        "Claw",
+        "Claw"
+      ],
+      "gatilho": "ambos acertam o mesmo alvo",
+      "efeito": "se fixa ao alvo e se move com ele; só pode usar Smother enquanto anexado",
+      "separacao": {
+        "custo": "ação de outra criatura ou vítima",
+        "teste": "FOR CD14"
+      },
+      "separa_voluntario": "5 pés de deslocamento"
     },
     {
       "nome": "Claw",
-      "indicacao_herdada": "+6, alcance 5 pés, 1d8+4 cortante e 1d8 veneno.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "referencia_ataque": "Claw"
     },
     {
       "nome": "Smother",
-      "indicacao_herdada": "Somente anexado a não-constructo/não-morto-vivo; CON CD14, 5d8 veneno ou metade; falha também inicia sufocamento.",
-      "bonus_acerto": null,
-      "alcance_ft": null,
-      "alvo": null,
-      "dados_dano": null,
-      "modificador": null,
-      "tipo_dano": null,
-      "cd": null,
-      "salvaguarda": null,
-      "duracao": null,
-      "condicoes": null,
-      "recarga": null,
-      "usos": null,
-      "confirmado": false
+      "precondicao": "fixado a criatura que não seja Construct ou Undead",
+      "salvaguarda": {
+        "atributo": "CON",
+        "cd": 14
+      },
+      "dano": {
+        "dados": "5d8",
+        "tipo": "poison"
+      },
+      "falha": [
+        "dano completo",
+        "fica sem ar e começa sufocamento",
+        "cada falha posterior reduz em 1 rodada o tempo restante de ar"
+      ],
+      "sucesso": "metade do dano e não sufoca",
+      "termino": [
+        "remoção do Bereginyas",
+        "morte da criatura",
+        "morte Bereginyas"
+      ]
     }
   ],
   "acoes_bonus": [],
   "reacoes": [],
   "acoes_lendarias": [],
   "conjuracoes": [],
-  "pistas_de_tracos_nao_validadas": [
-    {
-      "nome": "Foul Form",
-      "resumo": "Quem iniciar o turno a até 5 pés deve passar em CON CD14 ou fica envenenado; sucesso por margem de cinco concede imunidade à aura por 24 h."
-    }
-  ],
-  "inventario_acoes_completo": false,
-  "conflito_editorial": "Divergência comprovada: índice oficial Kobold Press atribui Bereginyas a Tome of Beasts 1, página 5eSRD copyright Tome of Beasts 2 ©2020. Não concluir que pertencem à mesma versão sem fonte editorial confirmatória.; Mesmo ND4 e criatura Tiny não bastam para promover ficha de publicação possivelmente distinta.; Imagem e direitos pendentes.",
+  "inventario_acoes_completo": true,
+  "conflito_editorial": "Registro anterior dizia Tome of Beasts 1; o bloco 5eSRD publicado atribui explicitamente a Tome of Beasts 2 ©2020. Edição divergente requer decisão editorial, sem mesclar versões.",
   "bloqueado": true,
   "pendencias": [
-    "Validar edição exata, todos os ataques, passivas, CDs, condições, reações e recargas em ficha individual.",
-    "Divergência comprovada: índice oficial Kobold Press atribui Bereginyas a Tome of Beasts 1, página 5eSRD copyright Tome of Beasts 2 ©2020. Não concluir que pertencem à mesma versão sem fonte editorial confirmatória.",
-    "Mesmo ND4 e criatura Tiny não bastam para promover ficha de publicação possivelmente distinta."
+    "Confirmar em edição publicada e erratas editoriais; fonte secundária não é homologação.",
+    "Sem revisão independente, manter bloqueio.",
+    "Registro anterior dizia Tome of Beasts 1; o bloco 5eSRD publicado atribui explicitamente a Tome of Beasts 2 ©2020. Edição divergente requer decisão editorial, sem mesclar versões."
   ],
-  "integrada": false
+  "integrada": false,
+  "identificacao": {
+    "nome_original": "Bereginyas",
+    "tipo": "Tiny fey",
+    "alinhamento": "neutral evil"
+  }
 }
