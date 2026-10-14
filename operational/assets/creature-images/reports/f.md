@@ -73,6 +73,20 @@ No commit `8db779283dfec35501c174aeb62609b0d4064bc4`, árvore `c728d3c9c95a1c24e
 
 **Auditoria de isolamento e PR:** nenhuma alteração em CSV global, imagens anteriormente `VERIFICADA` ou arquivos D/E. O PR permanece em modo Draft e não sofreu merge.
 
+## Auditoria atual — checkpoint 31 (2026-10-14)
+
+**Escopo confirmado diretamente no CSV v27 do commit-base:** 607 registros, 23 `VERIFICADA` e 584 pendentes. O recorte `pending_images[390:584]` contém 194 IDs, com nomes e ordem coincidentes com todas as 194 entradas do manifesto.
+
+**Auditoria da branch:** commit `33b77f9af791c33bccd5c6482e0c2437cbd7d9cc`, árvore `e6ec754c1f350e2cc73f09f38b9da55bc92d0793`. Existem **126 blobs binários de imagem**, **13.321.085 bytes**, e **68 IDs ainda sem arquivo**. Os 126 tamanhos e Git blob SHAs coincidem com seus registros no manifesto e não há hashes SHA-256 duplicados registrados. Os dois PNG adicionados agora foram relidos e comparados integralmente aos binários da fonte após a gravação e também passaram por verificação pré-upload de PNG, dimensões e SHA-256. Esta rodada **não refez o recálculo SHA-256 completo de todos os 124 arquivos anteriores**, sendo mantidos os valores de seus checkpoints.
+
+**Isolamento:** comparação com `a962c48a1169c2ef2be8137715a095a596753b32` = 128 caminhos (126 binários F + 2 arquivos de controle F), nenhum fora de `operational/assets/creature-images/`. CSV global, 23 imagens originalmente verificadas e arquivos D/E preservados. PR #5 segue Draft, sem merge.
+
+**Licenciamento e qualidade:** 84 binários herdados de `TheGiddyLimit/homebrew-img` carecem de autorização de reutilização comprovada, 8 `FoundryVTT-Level-Up-Official/public/assets` têm declaração de uso não comercial; não publicar comercialmente sem permissão/substituição. Novos PNG de Dungeon Crawl Stone Soup são de 32×32 e pertencem ao release cuja documentação declara curadoria CC0, mas os direitos históricos e os detalhes visuais exclusivos requerem revisão. Portanto, **4 registros COMPLETE, 190 PARTIAL, 0 BLOCKED individuais comprovados**. Dos parciais, 68 seguem sem imagem.
+
+**Candidatas não armazenadas:** [TF-475 Giant Lanternfish](https://opengameart.org/content/anglerfish-0) (CC0, download de PNG não recuperado) e [TF-425 Snow Terror](https://opengameart.org/content/angry-snowman-sprite) (OGA-BY 3.0, disponível como ZIP sem PNG extraído). Ambas seguem `pending_acquisition`. Nenhum link ou metadado foi tratado como arquivo.
+
+**Critério final de 194 imagens distintas, íntegras e com direitos de uso: ainda NÃO ATINGIDO.**
+
 ## Escopo e execução
 
 - Repositório: `george-vepo/SRD-Card-Game-607-Supervisor`; branch: `chatgpt/srd607-image-assets-f`; PR draft https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/pull/5.
@@ -327,7 +341,7 @@ Origem dos arquivos: [crawl/tiles](https://github.com/crawl/tiles) (declaração
 | TF-411 | Garlicle | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-414 | Wallflower | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-420 | Mandriano, Ancient | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
-| TF-425 | Snow Terror | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
+| TF-425 | Snow Terror | Arte candidata [Angry Snowman sprite](https://opengameart.org/content/angry-snowman-sprite) (CraftPix.net, OGA-BY 3.0) identificada, mas oferecida como ZIP de sprites ainda não adquirido/extraído e validado em PNG/WebP/JPG. **Sem binário, SHA-256 ou dimensões; permanece PARTIAL.** |
 | TF-434 | Crusher | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-447 | Hound Guardian | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
 | TF-448 | Imprisoned Celestial | Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo. |
