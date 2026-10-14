@@ -16,11 +16,11 @@
   },
   "summary": {
     "expected": 194,
-    "persisted_binary_files": 93,
-    "verified_after_upload": 93,
-    "pending": 101,
-    "stored_bytes": 12018022,
-    "checkpoint_count": 20
+    "persisted_binary_files": 95,
+    "verified_after_upload": 95,
+    "pending": 99,
+    "stored_bytes": 12322699,
+    "checkpoint_count": 21
   },
   "checkpoints": [
     {
@@ -255,6 +255,15 @@
       ],
       "commit": "c9a25e03079bf0c7848ec729bc7fbb75827b7aaf",
       "validation": "Source PNG signature+IHDR, size and SHA-256 pre-upload; destination refetched and full base64 identity plus Git blob SHA verified after upload; source rights require review"
+    },
+    {
+      "sequence": 21,
+      "images_added": [
+        "TF-399",
+        "TF-344"
+      ],
+      "commit": "beae4e8631a1fde3c09e0ab743374614b01dfdf5",
+      "validation": "Source JPEG/WebP header, dimensions, bytes, SHA-256 checked before upload. Target images refetched with GitHub; complete binary base64 matched original; Git blob hashes equal."
     }
   ],
   "blocked_ids": [
@@ -276,7 +285,6 @@
     "TF-336",
     "TF-341",
     "TF-342",
-    "TF-344",
     "TF-351",
     "TF-353",
     "TF-355",
@@ -296,7 +304,6 @@
     "TF-395",
     "TF-397",
     "TF-398",
-    "TF-399",
     "TF-402",
     "TF-405",
     "TF-408",
@@ -1681,19 +1688,27 @@
     {
       "id": "TF-344",
       "name": "Pumpkin King",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/GNchoo/dicekeep-art/blob/HEAD/casual/bosses/pumpkin-king.webp",
+      "repository_path": "operational/assets/creature-images/TF-344.webp",
+      "extension": ".webp",
+      "mime_type": "image/webp",
+      "dimensions": {
+        "width": 360,
+        "height": 279
+      },
+      "size_bytes": 116036,
+      "sha256": "d9d8209eb32f3b67cb15dec669ceb071aac5e39fef0e4085be499abd099c6000",
+      "persistence_commit": "beae4e8631a1fde3c09e0ab743374614b01dfdf5",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Original retrieved by GitHub fetch_file(base64), verified JPEG/WebP header and image dimensions; byte count/SHA-256 verified; persisted via real git blob and re-fetched from target branch. Normalized base64 fully identical to original, Git blob SHA identical.",
+        "git_blob_sha": "e8c7875ec2c764636c3f5ba50762c5be9367c5a4",
+        "quality_note": "Abóbora coroada com membros de cipó; sprite estilizado e resolução moderada, sujeito a revisão editorial."
+      },
+      "source_repo": "GNchoo/dicekeep-art",
+      "source_path": "casual/bosses/pumpkin-king.webp",
+      "source_git_blob_sha": "e8c7875ec2c764636c3f5ba50762c5be9367c5a4"
     },
     {
       "id": "TF-345",
@@ -2549,19 +2564,27 @@
     {
       "id": "TF-399",
       "name": "Mari Lwyd",
-      "status": "pending_acquisition",
-      "source_url": null,
-      "repository_path": null,
-      "extension": null,
-      "mime_type": null,
-      "dimensions": null,
-      "size_bytes": null,
-      "sha256": null,
-      "persistence_commit": null,
+      "status": "verified_after_upload",
+      "source_url": "https://github.com/WaffleFlayer/winter-ornaments/blob/HEAD/images/mari-lwyd.jpg",
+      "repository_path": "operational/assets/creature-images/TF-399.jpg",
+      "extension": ".jpg",
+      "mime_type": "image/jpeg",
+      "dimensions": {
+        "width": 1024,
+        "height": 1024
+      },
+      "size_bytes": 188641,
+      "sha256": "0d58f7ca006e3ab3b0d02c3e23caac0f3899ced8950b8227cca0d64709c7a449",
+      "persistence_commit": "beae4e8631a1fde3c09e0ab743374614b01dfdf5",
       "validation": {
-        "result": "not_run",
-        "reason": "Imagem adequada ainda não adquirida e validada individualmente; nenhum placeholder ou URL foi contabilizado como arquivo."
-      }
+        "result": "passed",
+        "method": "Original retrieved by GitHub fetch_file(base64), verified JPEG/WebP header and image dimensions; byte count/SHA-256 verified; persisted via real git blob and re-fetched from target branch. Normalized base64 fully identical to original, Git blob SHA identical.",
+        "git_blob_sha": "f854d21482e9bb530c1c2983c6c657e96a0c7669",
+        "quality_note": "Arte simplificada de Mari Lwyd, com caveira equina e manto; revisar estilo visual para o jogo."
+      },
+      "source_repo": "WaffleFlayer/winter-ornaments",
+      "source_path": "images/mari-lwyd.jpg",
+      "source_git_blob_sha": "f854d21482e9bb530c1c2983c6c657e96a0c7669"
     },
     {
       "id": "TF-400",
