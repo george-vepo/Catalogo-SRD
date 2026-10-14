@@ -144,11 +144,11 @@
   "metricas": {
     "jsons": 131,
     "ids_unicos": 131,
-    "pesquisas_detalhadas_diretamente_nesta_execucao": 94,
+    "pesquisas_detalhadas_diretamente_nesta_execucao": 99,
     "fichas_integralmente_concluidas": 0,
-    "parciais": 95,
-    "bloqueadas": 36,
-    "registros_aproveitados_sem_nova_verificacao_integral": 37,
+    "parciais": 96,
+    "bloqueadas": 35,
+    "registros_aproveitados_sem_nova_verificacao_integral": 32,
     "imagens_binarias_publicadas": 96,
     "imagens_pendentes_aquisicao": 35,
     "imagens_com_aprovacao_visual_editorial": 0,
@@ -605,9 +605,24 @@
       "commit": "1f7260ec80a2f30c758aedf6ab8c7304c2c547c5",
       "leitura_persistencia": "CONFIRMADA — 5 JSONs relidos na branch após escrita, IDs e sintaxe corretos. Confronto com versões 2016/2023 da Oozasis, Voidpool na reprodução ToB2, 131 arquivos JSON e 96 blobs com hashes compatíveis.",
       "tipo": "Voidpool Yaga Goo Animated Offal Black Patch Oozasis original 2016"
+    },
+    {
+      "numero": 41,
+      "inicio": "TF-175",
+      "fim": "TF-179",
+      "ids": [
+        "TF-175",
+        "TF-176",
+        "TF-177",
+        "TF-178",
+        "TF-179"
+      ],
+      "commit": "5adedab01e2a3386290f3acec11f3450652d7e8d",
+      "leitura_persistencia": "CONFIRMADA — cinco JSONs relidos via API GitHub com IDs e sintaxe válidos; TF-179 Shoal Ooze agora tem bloco completo 5eSRD/ToB3, e bloqueio de ausência de fonte superado, 96 imagens/hash intactos.",
+      "tipo": "Blood Foxfire Giant Shark Bowl Ruby Shoal oozes"
     }
   ],
-  "atualizacao_detalhada_sha": "1f7260ec80a2f30c758aedf6ab8c7304c2c547c5",
+  "atualizacao_detalhada_sha": "5adedab01e2a3386290f3acec11f3450652d7e8d",
   "criaturas": [
     {
       "id": "TF-412",
@@ -3344,17 +3359,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 53,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-175.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-blood/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Não usar homônimo /ooze-blood-2/, que é uma besta Tiny CR0."
+        "Homônimo ooze-blood-2 (Tiny beast CR0) NÃO corresponde à TF-175; bloco CR6 de Creature Codex mantido.",
+        "Blood Drain, Pseudopod e Overflow acumulam PV temporários como exceção publicada, com teto 38; dano radiant inibe apenas o traço no início do próximo turno, não remove PV temporários ganhos.",
+        "Conferir livro e erratas, autorização e identidade visual da arte antes de concluir."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência editorial/erratas/escopo de licenciamento",
+        "verificação de direito de uso, identidade e qualidade da arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3364,7 +3380,8 @@
         "bytes": 73118,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-176",
@@ -3372,17 +3389,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 54,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-176.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-foxfire/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Espalhamento de dano elétrico a alvos que portam metal exige revisão."
+        "Lightning Storm possui dano inicial na criatura gatilho e área separada 20ft contra criaturas com metal; conferir cumulatividade se a mesma criatura recebe ambos.",
+        "Resistência BPS só contra ataques não mágicos, não geral; voo 10ft hover preservado.",
+        "Conferir publicação, licenciamento e adequação visual da imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência editorial/erratas/escopo de licenciamento",
+        "verificação de direito de uso, identidade e qualidade da arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3392,7 +3410,8 @@
         "bytes": 58419,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-177",
@@ -3400,17 +3419,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 55,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-177.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
       "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Estrutura representa criatura composta; não assumir que o tubarão separado seja uma ficha independente."
+        "NÃO separar tubarão e ooze: Symbiotically Bound compartilha estatísticas; qualquer extrusão seria regra inventada.",
+        "Ooze Fish Bowl tem disadvantage no DEX ao entrar no espaço, capacidade 1 Large ou 6 Medium; separar escape interno e extração externa (resgatador sofre 3d10+6 piercing).",
+        "Conferir original Creature Codex p284 e autorização da imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência editorial/erratas/escopo de licenciamento",
+        "verificação de direito de uso, identidade e qualidade da arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3420,7 +3440,8 @@
         "bytes": 63728,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-178",
@@ -3428,17 +3449,18 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 56,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-178.json",
-      "status": "PARCIAL_NAO_VALIDADA",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-ruby",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/ooze-ruby/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Corrosão permanente depende de material e regras de equipamento; revisar antes de implementar."
+        "Corrosive Form reduz exclusivamente dano de arma metálica/madeira não mágica; munição se destrói após o acerto, teto destruição da arma em -5.",
+        "Acid Spray exige CON DC15 só ao FINAL do próximo turno do alvo restrained; petrificação na falha sem duração editorial especificada, não inferir.",
+        "Conferir Creature Codex e licença/identidade da imagem."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência editorial/erratas/escopo de licenciamento",
+        "verificação de direito de uso, identidade e qualidade da arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3448,7 +3470,8 @@
         "bytes": 68278,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-179",
@@ -3456,17 +3479,19 @@
       "escopo": "historical.slice(104,195)",
       "posicao": 57,
       "arquivo": "operational/research/deep-mechanics/c/records/TF-179.json",
-      "status": "BLOQUEADA_DIVERGENCIA_OU_FONTE",
-      "verificado_individualmente_em_detalhe_nesta_execucao": false,
-      "fonte_mecanica": "https://anyflip.com/myubd/nuoj/basic/301-350",
+      "status": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
+      "verificado_individualmente_em_detalhe_nesta_execucao": true,
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/shoal-ooze/",
       "fonte_proveniencia": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "pendencias": [
-        "Fonte secundária reproduzida; só dados básicos e identificação ND10/CA9/PV232 conferidos; bloco completo ainda pendente."
+        "Fonte individual 5eSRD e reprodução do Tome of Beasts 3 p308 localizadas: bloqueio anterior de fonte incompleta pode ser superado; conservação de revisão editorial/licença.",
+        "Mesmerizing Spiral incide em espectadores até 20ft, retestes no fim de cada turno, imunidade por 24h de todas shoal oozes; diferencia do Engulf.",
+        "Multiattack sequencia obrigatória espiral+3 pseudopods+Engulf e Engulf requer grapple prévio; fish e ooze compartilham um único bloco.",
+        "Licenciamento da imagem e aprovação visual pendentes."
       ],
       "lacunas": [
-        "revisão integral de todos os gatilhos, resultados de testes, recargas, frequência, duração, custos e variantes",
-        "seis atributos da fonte",
-        "dados de PV"
+        "conferência editorial/erratas/escopo de licenciamento",
+        "verificação de direito de uso, identidade e qualidade da arte"
       ],
       "validacao_integral": false,
       "imagem": {
@@ -3476,7 +3501,8 @@
         "bytes": 234158,
         "validacao_visual": "PENDENTE",
         "nota": "imagem ainda não revisada visualmente"
-      }
+      },
+      "pesquisa_detalhada_completa_na_fonte_individual": true
     },
     {
       "id": "TF-180",
@@ -4455,14 +4481,14 @@
   ],
   "ultima_auditoria": {
     "data": "2026-10-14",
-    "checkpoint": 40,
-    "sha_validado": "1f7260ec80a2f30c758aedf6ab8c7304c2c547c5",
+    "checkpoint": 41,
+    "sha_validado": "5adedab01e2a3386290f3acec11f3450652d7e8d",
     "escopo_ids": 131,
-    "aprofundadas": 94,
-    "sem_revisao_individual": 37,
+    "aprofundadas": 99,
+    "sem_revisao_individual": 32,
     "integralmente_aprovadas": 0,
-    "parciais": 95,
-    "bloqueadas": 36,
+    "parciais": 96,
+    "bloqueadas": 35,
     "imagens_binarias_fisicas": 96,
     "hashes_corretos": 96,
     "imagens_faltantes": 35,

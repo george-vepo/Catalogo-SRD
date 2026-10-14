@@ -1,5 +1,17 @@
 # SRD Card Game 607 — auditoria da pesquisa mecânica C
 
+## Checkpoint 41 — Blood, Foxfire, Giant Shark Bowl, Ruby e Shoal Oozes (14/10/2026)
+
+**[Commit mecânico verificado](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/5adedab01e2a3386290f3acec11f3450652d7e8d)**. Cinco fichas lidas após o push, mantidas como parciais até confronto editorial e autorização da arte. A ficha da Shoal Ooze deixa o bloqueio de ausência de fonte ao recuperar o bloco completo em Tome of Beasts 3 p308 e 5eSRD.
+
+- **TF-175 Blood Ooze (Creature Codex):** reação Overflow CON CD15, Blood Drain por contato ou melee, acumulação excepcional de PV temporários de três fontes até metade de 76 (=38), supressão condicional por radiant; não confundida com besta Tiny homônima CR0. https://www.5esrd.com/database/creature/ooze-blood/
+- **TF-176 Foxfire Ooze (Creature Codex):** voo com hover, vulnerabilidade a cold e resistência física somente não mágica; Lightning Storm com gatilho de metal e segunda área 20ft DEX CD16, Triple Pseudopod. Potencial dupla incidência para o gatilho requer revisão. https://www.5esrd.com/database/creature/ooze-foxfire/
+- **TF-177 Giant Shark Bowl (Creature Codex p284):** criatura simbiótica única, CA6 PV172, Bite+Pseudopod, Electrical Charge 1 minuto, Engulf DEX CD16, extração e escape STR DC15 com consequências diferentes, capacidade de uma Large ou seis Medium. https://www.5esrd.com/database/creature/ooze-giant-shark-bowl/ e https://anyflip.com/plzy/fzdt/basic/251-300
+- **TF-178 Ruby Ooze (Creature Codex):** Corrosive Form na arma de metal/madeira não mágicos até -5 damage rolls, Acid Spray recarga 5–6 DEX CD15 e Petrified por CON CD15 apenas no fim do PRÓXIMO turno da vítima restrita; fonte não fornece duração editorial da petrificação. https://www.5esrd.com/database/creature/ooze-ruby/
+- **TF-179 Shoal Ooze (Tome of Beasts 3 p308):** False Appearance antes do ataque, só respira embaixo d'água, fish e ooze compartilhando estatísticas. Multiattack SEQUENCIAL Mesmerizing Spiral + 3 Pseudopod + Engulf de já agarrado; WIS CD16, incapacitated e speed0 até 1 minuto com retestes, imunidade por 24h ao efeito de todas shoal oozes; engulf CON CD16 no início de cada turno da ooze, até 2 Huge ou 8 Large/menores. https://www.5esrd.com/database/creature/shoal-ooze/ e https://anyflip.com/myubd/nuoj/basic/301-350
+- **Auditoria:** 131 IDs e 131 registros JSON, 99/131 aprofundadas, 32 pendentes, 96 parciais, 35 bloqueadas, 0 integralmente aprovadas. 96/131 imagens físicas, 96 hashes correspondentes, 35 imagens faltantes, 0 validadas visualmente. Sem novos binários e sem alterações fora de C.
+- **Pendências:** errata e licença de cada conteúdo, revisão independente, arte legítima com proveniência e qualidade. PR Draft, sem merge.
+
 ## Checkpoint 40 — Voidpool, Yaga Goo, Animated Offal, Black Patch e Oozasis (14/10/2026)
 
 **[Commit de cinco fichas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/commit/1f7260ec80a2f30c758aedf6ab8c7304c2c547c5)**. Read-back via GitHub confirmou JSON válido e ID correto de TF-170, TF-171, TF-172, TF-173 e TF-174; nenhuma foi marcada integralmente aprovada. As fontes são reproduções de texto mecânico, não prova de licença para uso das imagens.
