@@ -7,8 +7,8 @@
   "branch": "chatgpt/srd607-parallel-a",
   "source_ledger": "operational/research/catalog-ledger-20261011-v27/campaign.json",
   "reference_commit": "a962c48a1169c2ef2be8137715a095a596753b32",
-  "method": "Confronto dos IDs exatos do ledger e CSV v27; consulta ao índice oficial Kobold Press e às fichas oficiais Level Up A5E; prévia oficial Tome of Beasts 3 e páginas individuais de terceiros. CA/PV/atributos pesquisados sempre com URL da ficha, sem validação integral de livro/erratas.",
-  "limits": "Todos os 40 têm CA, PV, seis atributos e síntese; KPOGL é wiki não oficial. Não constitui validação integral ou aprovação, exigindo direitos, edição e revisão independente.",
+  "method": "Consulta de páginas individuais 5eSRD e KPOGL em diálogo com índice Kobold Press; A5E em portal da própria editora. Traços e ações escritos em resumo. Divergências explícitas preservadas sem alteração arbitrária de estatísticas.",
+  "limits": "Todas 40 têm CA/PV/seis atributos e revisão de traços selecionados em fonte individual (37 fontes de terceiros, 3 A5E editoriais). Nenhuma validação integral ou autorização de licença; TF-269 e TF-301 mantêm divergências estatísticas entre fontes, sem normalização.",
   "source_urls": [
     "https://koboldpress.com/tools/kobold-press-monsters/",
     "https://a5e.tools/monsters",
@@ -756,7 +756,7 @@
         "carisma": 14
       },
       "habilidades_e_acoes_resumidas": [
-        "Variante sanguinária de Alabroza ND 4; poderes distintos da forma comum."
+        "Alabroza demoníaco mutável: transforma-se em humano ou névoa, hipnotiza, usa magia inata e prende a presa com bico drenador de sangue."
       ],
       "fontes": [
         {
@@ -786,7 +786,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://www.5esrd.com/database/creature/alabroza-bloodfiend/",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-266",
@@ -914,7 +919,7 @@
         "carisma": 10
       },
       "habilidades_e_acoes_resumidas": [
-        "Pequeno predador que usa ocultação e teleporte em baús."
+        "Diabo do baú com resistência à magia; usa quatro golpes de cinzel e teleporta-se entre baús e armários fechados."
       ],
       "fontes": [
         {
@@ -926,6 +931,11 @@
           "url": "https://www.5esrd.com/database/creature/chatterlome/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:chatterlome",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -944,7 +954,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:chatterlome",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-269",
@@ -963,7 +978,7 @@
         "carisma": 12
       },
       "habilidades_e_acoes_resumidas": [
-        "Demônio com ataques físicos e comportamento cruel; PV difere em fonte alternativa."
+        "Acelera em corrida tríplice, é suscetível a encanto e morde/arranha; acertar com ambas as garras gera pânico entre vítimas próximas."
       ],
       "fontes": [
         {
@@ -980,16 +995,23 @@
           "url": "https://www.robinloft.com/monsters/vexxeh/tome-of-beasts-2",
           "tipo": "evidência histórica, fonte editorial ou transcrição alternativa",
           "escopo": "versão ou possível divergência para comparação, não fonte das estatísticas selecionadas"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:vexxeh",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
         "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
-        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente.",
+        "RESOLVER DIVERGÊNCIA PV 105 x PV 94 contra livro/errata antes de integrar; não presumir que KPOGL e 5eSRD estão na mesma edição."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Não foi confirmada comparação integral de erratas/edições para esta entrada.",
-        "Vexxeh: transcrição Robinloft registra 94 PV contra 105 PV em 5eSRD; revisão de edição pendente."
+        "Vexxeh: transcrição Robinloft registra 94 PV contra 105 PV em 5eSRD; revisão de edição pendente.",
+        "KPOGL Tome of Beasts 2 apresenta PV 94, enquanto registro prévio de 5eSRD apresentou PV 105; mantidos PV 105 historicamente, SEM homologação até confirmar versão e errata."
       ],
       "imagem": {
         "status": "PENDENTE",
@@ -999,7 +1021,21 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:vexxeh",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      },
+      "divergencias_estatisticas_pendentes": [
+        {
+          "campo": "pv",
+          "valor_registrado": 105,
+          "valor_fonte_alternativa": 94,
+          "url": "https://kpogl.wikidot.com/monster:vexxeh",
+          "estado": "EDICAO_A_CONFIRMAR"
+        }
+      ]
     },
     {
       "id": "TF-270",
@@ -1018,7 +1054,7 @@
         "carisma": 15
       },
       "habilidades_e_acoes_resumidas": [
-        "Canídeo espectral amaldiçoado com uivo de terror e sede de sangue."
+        "Canídeo demoníaco atravessa águas, ganha vantagem contra feridos e realiza múltiplas mordidas; uivo e maldição sobrenaturais."
       ],
       "fontes": [
         {
@@ -1048,7 +1084,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:black-shuck",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-272",
@@ -1121,7 +1162,7 @@
         "carisma": 16
       },
       "habilidades_e_acoes_resumidas": [
-        "Criatura amorfa shoth de casta Sooze; separar da casta Oth."
+        "Shoth iniciante amorfo com ataque ácido; escolhe papel de trabalhador ou guerreiro, que muda CA/táticas; mescla-se a outros shoth feridos."
       ],
       "fontes": [
         {
@@ -1133,6 +1174,11 @@
           "url": "https://www.5esrd.com/database/creature/sooze/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:sooze",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1141,7 +1187,8 @@
         "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Shoth, Sooze e Shoth, Oth são entradas editoriais distintas."
+        "Shoth, Sooze e Shoth, Oth são entradas editoriais distintas.",
+        "Papel opcional 'Warrior' altera CA; CA base 12, opção Warrior +2 (14). Não fixar CA 14 para toda a espécie."
       ],
       "imagem": {
         "status": "PENDENTE",
@@ -1151,7 +1198,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:sooze",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-274",
@@ -1170,7 +1222,7 @@
         "carisma": 10
       },
       "habilidades_e_acoes_resumidas": [
-        "Morfologia maleável da variante Minor."
+        "Massa maleável imune a dano psíquico e capaz de curar-se com esse dano; altera aparência, agarra por tentáculo e drena máximo de PV."
       ],
       "fontes": [
         {
@@ -1182,6 +1234,11 @@
           "url": "https://www.5esrd.com/database/creature/malleable-minor/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:minor-malleable",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1200,7 +1257,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:minor-malleable",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-276",
@@ -1219,7 +1281,7 @@
         "carisma": 10
       },
       "habilidades_e_acoes_resumidas": [
-        "Forma intermediária dos Malleable com habilidades de absorção e mudança."
+        "Variante moderada amorfa que absorve formas menores para regenerar; drena poder psíquico, mantém forma controlada e pode dividir-se."
       ],
       "fontes": [
         {
@@ -1231,6 +1293,11 @@
           "url": "https://www.5esrd.com/database/creature/malleable-moderate/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:moderate-malleable",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1249,7 +1316,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:moderate-malleable",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-277",
@@ -1268,7 +1340,7 @@
         "carisma": 18
       },
       "habilidades_e_acoes_resumidas": [
-        "Shoth da casta Oth, com manifestações arcanas ou marciais."
+        "Shoth veterano com duas especializações exclusivas: arcanista com magia inata ou paladino com aura ofuscante; golpes ácidos e união com outros shoth."
       ],
       "fontes": [
         {
@@ -1280,6 +1352,11 @@
           "url": "https://www.5esrd.com/database/creature/oth/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:oth",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1288,7 +1365,8 @@
         "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Shoth, Oth e Shoth, Sooze são entradas distintas."
+        "Shoth, Oth e Shoth, Sooze são entradas distintas.",
+        "Oth 'Paladin of Shoth' tem +2 CA sobre base 15; forma 'Dripping Arcanist' tem magia própria. Não somar ambas."
       ],
       "imagem": {
         "status": "PENDENTE",
@@ -1298,7 +1376,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:oth",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-278",
@@ -1317,7 +1400,7 @@
         "carisma": 5
       },
       "habilidades_e_acoes_resumidas": [
-        "Morcego predador de objetos brilhantes com mobilidade aérea veloz."
+        "Voa sem provocar ataques de oportunidade, percebe joias à distância e troca dano de mordida por furto de objetos pequenos."
       ],
       "fontes": [
         {
@@ -1329,6 +1412,11 @@
           "url": "https://www.5esrd.com/database/creature/snatch-bat/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:snatch-bat",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1347,7 +1435,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:snatch-bat",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-279",
@@ -1432,7 +1525,7 @@
         "carisma": 16
       },
       "habilidades_e_acoes_resumidas": [
-        "Criatura voadora que perturba conjuração com tagarelice contínua."
+        "Balbucio impede conjuração e concentração próximas, voo evasivo, resistência mágica e visão radial que dificulta ataques coordenados."
       ],
       "fontes": [
         {
@@ -1463,7 +1556,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:mamura",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-283",
@@ -1482,7 +1580,7 @@
         "carisma": 6
       },
       "habilidades_e_acoes_resumidas": [
-        "Consegue produzir duplicatas e realizar assaltos coordenados."
+        "Duplica a si mesmo em quatro réplicas menores controladas telepaticamente; ganha vantagem em ataques junto às réplicas."
       ],
       "fontes": [
         {
@@ -1494,6 +1592,11 @@
           "url": "https://www.5esrd.com/database/creature/shukankor/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:shukankor",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1512,7 +1615,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:shukankor",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-284",
@@ -1531,7 +1639,7 @@
         "carisma": 10
       },
       "habilidades_e_acoes_resumidas": [
-        "Forma Major de criatura mutável."
+        "Malleable maior absorve aliados menores e dano psíquico, agarra, reduz máximo de PV e pode dividir-se ou juntar-se para formar variante maciça."
       ],
       "fontes": [
         {
@@ -1543,6 +1651,11 @@
           "url": "https://www.5esrd.com/database/creature/malleable-major/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:major-malleable",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1561,7 +1674,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:major-malleable",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-286",
@@ -1580,7 +1698,7 @@
         "carisma": 10
       },
       "habilidades_e_acoes_resumidas": [
-        "Forma Massive, muito resistente, com mutação corporal."
+        "Malleable maciço absorve exemplares menores, regenera por dano psíquico e ataca com múltiplos tentáculos que imobilizam presas."
       ],
       "fontes": [
         {
@@ -1592,6 +1710,11 @@
           "url": "https://www.5esrd.com/database/creature/malleable-massive/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:massive-malleable",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1610,7 +1733,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:massive-malleable",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-288",
@@ -1629,7 +1757,7 @@
         "carisma": 4
       },
       "habilidades_e_acoes_resumidas": [
-        "Pequena víbora pantanosa venenosa; índice escreve ND 0.3 e ficha ND 1/4."
+        "Víbora de pântano com camuflagem e mordida venenosa que pode paralisar por até um minuto; ND 1/4 na ficha."
       ],
       "fontes": [
         {
@@ -1662,7 +1790,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:swamp-adder",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-289",
@@ -1681,7 +1814,7 @@
         "carisma": 6
       },
       "habilidades_e_acoes_resumidas": [
-        "Criatura de comportamento grupal com carne tóxica."
+        "Animal de bando com carne venenosa; ataques de mordida coordenados derrubam a presa, com eficácia crescente entre aliados."
       ],
       "fontes": [
         {
@@ -1711,7 +1844,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:porcellina",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-290",
@@ -1730,7 +1868,7 @@
         "carisma": 5
       },
       "habilidades_e_acoes_resumidas": [
-        "Predador vítreo que se mimetiza com transparência."
+        "Predador aquático quase transparente; salto derruba e habilita constrição venenosa, reação cria nuvem de limo para fugir."
       ],
       "fontes": [
         {
@@ -1742,6 +1880,11 @@
           "url": "https://www.5esrd.com/database/creature/glass-gator-3pp/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:glass-gator",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1761,7 +1904,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:glass-gator",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-292",
@@ -1780,7 +1928,7 @@
         "carisma": 2
       },
       "habilidades_e_acoes_resumidas": [
-        "Víbora de mordida altamente venenosa."
+        "Víbora cujo veneno produz cegueira e dano recorrente; requer atenção à duração e testes de resistência."
       ],
       "fontes": [
         {
@@ -1811,7 +1959,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:zanskaran-viper",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-293",
@@ -1830,7 +1983,7 @@
         "carisma": 10
       },
       "habilidades_e_acoes_resumidas": [
-        "Vegetal planar que imobiliza, possui conexão sagrada e pode renascer."
+        "Ser vegetal de TIPO CELESTIAL, detecta boa índole, comunica-se por telepatia limitada, imobiliza com alcance e renasce se o terreno não for destruído."
       ],
       "fontes": [
         {
@@ -1850,7 +2003,8 @@
         "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
-        "Planar Flora é uma família de formas distintas; Hallowed Reeds não deve herdar Ecstatic Bloom."
+        "Planar Flora é uma família de formas distintas; Hallowed Reeds não deve herdar Ecstatic Bloom.",
+        "A classificação editorial é Celestial, não Plant; 'Planar Flora' indica família temática e não tipo de criatura."
       ],
       "imagem": {
         "status": "PENDENTE",
@@ -1860,7 +2014,13 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:hallowed-reed",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      },
+      "tipo_ficha_consultada": "Medium Celestial, embora agrupado em Planar Flora"
     },
     {
       "id": "TF-296",
@@ -1879,7 +2039,7 @@
         "carisma": 18
       },
       "habilidades_e_acoes_resumidas": [
-        "Armas cerimoniais; guia de espíritos, determinações divinas e efeitos contratuais."
+        "Anjo condutor de almas que se disfarça de demônio em planos inferiores, usa açoite radiante, libera espíritos de contratos e protege viajantes."
       ],
       "fontes": [
         {
@@ -1891,6 +2051,11 @@
           "url": "https://www.5esrd.com/database/creature/angel-psychopomp/",
           "tipo": "ficha individual em repositório terceiro (5eSRD)",
           "escopo": "CA, PV, seis atributos e síntese mecânica; não substitui verificação na edição editorial"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:psychopomp",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "FICHA_PARCIAL_COM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -1909,7 +2074,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:psychopomp",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-297",
@@ -1928,7 +2098,7 @@
         "carisma": 16
       },
       "habilidades_e_acoes_resumidas": [
-        "Ave celestial capaz de magias divinas e ataque com vento."
+        "Ave celestial voadora com magias inatas de diagnóstico e restauração, voo evasivo e ataques naturais; renasce noutro ponto do plano ao morrer."
       ],
       "fontes": [
         {
@@ -1958,7 +2128,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:simurg",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-298",
@@ -1977,7 +2152,7 @@
         "carisma": 21
       },
       "habilidades_e_acoes_resumidas": [
-        "Anjo musical com armas e canto sobrenatural."
+        "Anjo cantor com armas radiantes, magias de inspiração e cura, trombeta sônica e de invocação de espíritos e reação que melhora teste falho."
       ],
       "fontes": [
         {
@@ -2007,7 +2182,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://www.5esrd.com/database/creature/angel-song/",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-299",
@@ -2026,7 +2206,7 @@
         "carisma": 12
       },
       "habilidades_e_acoes_resumidas": [
-        "Anjo com armas sacras e deveres celestiais especiais."
+        "Anjo que escolhe dever Destructor, Executioner ou Punisher, mudando efeitos de ataques contra estruturas, alvo específico e punição duradoura."
       ],
       "fontes": [
         {
@@ -2038,6 +2218,11 @@
           "url": "https://www.5esrd.com/database/creature/angel-sammael/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:sammael",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -2056,7 +2241,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:sammael",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-300",
@@ -2075,7 +2265,7 @@
         "carisma": 18
       },
       "habilidades_e_acoes_resumidas": [
-        "Anjo associado a fogo e passagem celestial."
+        "Anjo abre passagem celestial com custo extremo, regenera salvo dano necrótico e usa ataques de luz/fogo e clarão cegante."
       ],
       "fontes": [
         {
@@ -2087,6 +2277,11 @@
           "url": "https://www.5esrd.com/database/creature/angel-zoryas/",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:zoryas",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
@@ -2105,7 +2300,12 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:zoryas",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      }
     },
     {
       "id": "TF-301",
@@ -2124,7 +2324,7 @@
         "carisma": 14
       },
       "habilidades_e_acoes_resumidas": [
-        "Planta planar restauradora, com efeitos de luz sagrada e renovação."
+        "Celestial do bosque: restaura aliados bons, afasta mortos-vivos, emite três raios radiantes e pode atordoar alvos não bondosos."
       ],
       "fontes": [
         {
@@ -2136,16 +2336,23 @@
           "url": "https://www.robinloft.com/monsters/ecstatic-bloom/creature-codex",
           "tipo": "ficha individual de reprodução ou wiki comunitária (fonte secundária não oficial)",
           "escopo": "CA, PV, seis atributos e descrição resumida de algumas mecânicas; requer comparação de edição e licença"
+        },
+        {
+          "url": "https://kpogl.wikidot.com/monster:ecstatic-bloom",
+          "tipo": "KPOGL reprodução não endossada por Kobold Press",
+          "escopo": "traços e ações da ficha individual em resumo; revisão editorial integral pendente"
         }
       ],
       "estado": "MECANICA_PARCIAL_EM_FONTE_SECUNDARIA_PENDENTE_GATES",
       "pendencias": [
         "Revisão independente, aprovação editorial, direitos de imagens e testes de integração pendentes.",
-        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente."
+        "Verificar integralidade das ações, reações, imunidades, ataques e erratas no livro original antes de integrar; fichas resumidas não foram auditadas por revisor independente.",
+        "RESOLVER DIVERGÊNCIA de Sabedoria 19/20; consulta direta ao Creature Codex/errata necessária para revisão canônica."
       ],
       "ambiguidades_ou_diferencas_de_edicao": [
         "Planar Flora, Ecstatic Bloom não é sinônimo de Hallowed Reeds (TF-293).",
-        "Ecstatic Bloom não equivale a Hallowed Reeds TF-293, apesar da família Planar Flora."
+        "Ecstatic Bloom não equivale a Hallowed Reeds TF-293, apesar da família Planar Flora.",
+        "KPOGL registra SAB 20 para Ecstatic Bloom; Robinloft registra SAB 19, atualmente armazenada. Divergência de ficha/edição sem validação editorial."
       ],
       "imagem": {
         "status": "PENDENTE",
@@ -2155,13 +2362,56 @@
       "aprovada": false,
       "mecanica_integral_validada": false,
       "revisao_independente_realizada": false,
-      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA"
+      "proveniencia_estatisticas": "FONTE_SECUNDARIA_E_DADOS_PARCIAS_DE_PESQUISA",
+      "conferencia_fonte_individual": {
+        "url": "https://kpogl.wikidot.com/monster:ecstatic-bloom",
+        "escopo": "seleção de traços e ações da criatura na página individual, não conferência integral do livro/errata",
+        "validacao_integral": false
+      },
+      "divergencias_estatisticas_pendentes": [
+        {
+          "campo": "sabedoria",
+          "valor_registrado": 19,
+          "valor_fonte_alternativa": 20,
+          "url": "https://kpogl.wikidot.com/monster:ecstatic-bloom",
+          "estado": "EDICAO_A_CONFIRMAR"
+        }
+      ]
     }
   ],
   "statblock_summary_count": 40,
   "fully_verified_canonical_mechanics_count": 0,
-  "unresolved_major_source_mismatch_ids": [],
-  "evidence_revision": "PARALLEL_A_INDIVIDUAL_SOURCES_V3",
-  "detailed_secondary_source_audit_count": 13,
-  "detailed_primary_a5e_source_audit_count": 3
+  "unresolved_major_source_mismatch_ids": [
+    "TF-269",
+    "TF-301"
+  ],
+  "evidence_revision": "PARALLEL_A_INDIVIDUAL_SOURCES_V4",
+  "detailed_secondary_source_audit_count": 37,
+  "detailed_primary_a5e_source_audit_count": 3,
+  "pending_statistic_crosschecks": [
+    {
+      "id": "TF-269",
+      "campo": "PV",
+      "valores": [
+        105,
+        94
+      ],
+      "fontes": [
+        "https://www.5esrd.com/database/creature/vexxeh/",
+        "https://kpogl.wikidot.com/monster:vexxeh"
+      ]
+    },
+    {
+      "id": "TF-301",
+      "campo": "SAB",
+      "valores": [
+        19,
+        20
+      ],
+      "fontes": [
+        "https://www.robinloft.com/monsters/ecstatic-bloom/creature-codex",
+        "https://kpogl.wikidot.com/monster:ecstatic-bloom"
+      ]
+    }
+  ]
 }
