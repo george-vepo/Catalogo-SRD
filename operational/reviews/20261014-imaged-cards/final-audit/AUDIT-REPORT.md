@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 9 lotes validados, 90/395 fichas (305 restantes).
+**Situação:** EM ANDAMENTO — 10 lotes validados, 100/395 fichas (295 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -74,4 +74,11 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 7 completas em conteúdo; 3 completas com ressalvas: TF-094 (Whirlpool indefinido em caso de sucesso), TF-095 (poder Prophesy Doom citado mas ausente) e TF-099 (INT +5/+3, atribuição das mecânicas de toca e discrepância de artes). Dez imagens vinculadas via manifestos com SHA e bytes conferidos: TF-094/095 no grupo B com direitos restritos **a uso não comercial**, demais oito pelo manifesto E; TF-099 dispõe de duas imagens diferentes nos diretórios B e central, sem validação da escolha final. TF-101 (472×700) e TF-103 (459×800) apresentam largura inferior a 500 px. Qualidade visual e licenças restantes não homologadas.
 
 **Consolidado:** 90/395, 55 completas, 15 com ressalvas, 19 incompletas e 1 não verificável; 49 imagens diretas, 38 por manifesto e 3 ausentes. O próximo ID correto após a reconciliação é TF-106; o checkpoint anterior indicava TF-092 indevidamente.
+
+
+## Lote 010 — TF-106–TF-115 (dez IDs da ordem do CSV)
+
+7 completas em conteúdo, 3 completas com ressalvas: TF-110 (origem editorial divergente Tome of Beasts 1 vs 2), TF-113 (homônimo/edições distintas do Clurichaun) e TF-115 (Acrobatics +3 apesar de DES 18, valor a conferir). As dez imagens físicas estão vinculadas pelo manifesto E, com SHA Git e bytes conferidos; TF-115 tem largura 481 px. TF-107 é a versão 2023 explicitamente escolhida, distinta da edição antiga. Não representa autorização de direitos, inspeção visual ou adaptação concluída.
+
+**Consolidado:** 100/395, 62 completas em conteúdo, 18 com ressalvas, 19 incompletas, 1 não verificável; 49 imagens diretas, 48 vinculadas por manifesto e 3 ausentes.
 
