@@ -4,115 +4,212 @@
   "nome": "City Watch Captain",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 65,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 1 (revisão ©2023)",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Tome of Beasts 1 revisão 2023",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/city-watch-captain-3pp/"
   },
   "estatisticas": {
     "nd_catalogo": "4",
     "nd_fonte": "4",
     "ca": 15,
     "pv": 91,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "14d8+28",
+    "porte": "Medium",
+    "tipo": "humanoid (any)",
+    "alinhamento": "any lawful",
+    "atributos": {
+      "FOR": 13,
+      "DES": 16,
+      "CON": 14,
+      "INT": 10,
+      "SAB": 11,
+      "CAR": 13
+    },
+    "modificadores": {
+      "FOR": 1,
+      "DES": 3,
+      "CON": 2,
+      "INT": 0,
+      "SAB": 0,
+      "CAR": 1
+    },
+    "deslocamentos": {
+      "andar": 30
+    },
+    "pericias": [
+      {
+        "nome": "Perception",
+        "bonus": 4
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [],
+    "percepcao_passiva": 14,
+    "idiomas": [
+      "any one language, usually Common"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "ca_origem": "chain shirt"
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Point Blank Fencer e Tactical Insight coordenam iniciativa",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Point Blank Fencer",
+        "rapier": "dado extra já incluso 2d8+3",
+        "crossbow": "ignora loading e não sofre disadvantage só por hostil a 5ft, outras causas permanecem"
+      },
+      {
+        "nome": "Tactical Insight",
+        "beneficio": "advantage initiative",
+        "aliados": "friendly within 30ft sob comando podem escolher iniciativa do captain em vez da própria quando inicia combate"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Multiattack com Rapier e Light Crossbow; Issue Orders concede reação a aliados.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "passo_opcional_antes": "Issue Orders",
+        "opcoes": [
+          [
+            "Rapier",
+            "Rapier"
+          ],
+          [
+            "Light Crossbow",
+            "Light Crossbow",
+            "Light Crossbow"
+          ],
+          [
+            "Rapier",
+            "Light Crossbow",
+            "Light Crossbow"
+          ]
+        ]
+      },
+      {
+        "nome": "Rapier",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+3",
+            "media": 12,
+            "tipo": "piercing"
+          }
+        ],
+        "substituicao_dano": "em vez de dano pode forçar drop de arma/item que segura, não preso/vestido",
+        "posicao_item": "espaço escolhido dentro 5ft do alvo"
+      },
+      {
+        "nome": "Light Crossbow",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 5,
+        "distancia_curta_ft": 80,
+        "distancia_longa_ft": 320,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Issue Orders",
+        "alvos": "até 2 aliados vistos em 30ft",
+        "economia": "cada aliado usa REACTION",
+        "opcoes": [
+          {
+            "nome": "Attack",
+            "efeito": "uma weapon attack com advantage"
+          },
+          {
+            "nome": "Defend",
+            "efeito": "+2 AC até início do próximo turno do captain"
+          },
+          {
+            "nome": "Reposition",
+            "efeito": "move metade do speed sem opportunity attacks"
+          }
+        ]
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Rapier",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d8+3",
+            "media": 12,
+            "tipo": "piercing"
+          }
+        ],
+        "substituicao_dano": "em vez de dano pode forçar drop de arma/item que segura, não preso/vestido",
+        "posicao_item": "espaço escolhido dentro 5ft do alvo"
+      },
+      {
+        "nome": "Light Crossbow",
+        "tipo": "ranged weapon attack",
+        "bonus_acerto": 5,
+        "distancia_curta_ft": 80,
+        "distancia_longa_ft": 320,
+        "dano": [
+          {
+            "dados": "1d8+3",
+            "media": 7,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "passo_opcional_antes": "Issue Orders",
+      "opcoes": [
+        [
+          "Rapier",
+          "Rapier"
+        ],
+        [
+          "Light Crossbow",
+          "Light Crossbow",
+          "Light Crossbow"
+        ],
+        [
+          "Rapier",
+          "Light Crossbow",
+          "Light Crossbow"
+        ]
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "A edição 2023 usa iniciativa coletiva opcional; não misturar com mecânicas SRD padrão.",
-    "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição."
+    "Issue Orders gasta reaction de cada um dos dois aliados e pode preceder as ações do Multiattack.",
+    "Point Blank Fencer já incluído no dano Rapier e não elimina demais motivos de disadvantage do crossbow.",
+    "Licença/edição e imagem ainda sem aprovação."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com edição correta"
+    "verificação de edição/erratas/uso legal",
+    "identidade e licença da imagem, revisão independente"
   ],
   "fontes": [
     {
@@ -123,6 +220,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/city-watch-captain-3pp/",
+      "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +281,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 43,
+    "publicacao": "Tome of Beasts 1 revisão 2023",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/city-watch-captain-3pp/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

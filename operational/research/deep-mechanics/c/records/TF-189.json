@@ -4,115 +4,242 @@
   "nome": "Black Knight Commander",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 64,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Tome of Beasts 1 (revisão ©2023)",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Tome of Beasts 1 revisão 2023",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/black-knight-commander-3pp/"
   },
   "estatisticas": {
     "nd_catalogo": "5",
     "nd_fonte": "5",
     "ca": 18,
     "pv": 91,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "14d8+28",
+    "porte": "Medium",
+    "tipo": "humanoid (any race)",
+    "alinhamento": "lawful evil",
+    "atributos": {
+      "FOR": 18,
+      "DES": 10,
+      "CON": 14,
+      "INT": 12,
+      "SAB": 13,
+      "CAR": 15
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 0,
+      "CON": 2,
+      "INT": 1,
+      "SAB": 1,
+      "CAR": 2
+    },
+    "deslocamentos": {
+      "andar": 30
+    },
+    "pericias": [
+      {
+        "nome": "Animal Handling",
+        "bonus": 7
+      },
+      {
+        "nome": "Athletics",
+        "bonus": 7
+      },
+      {
+        "nome": "Intimidation",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [
+      {
+        "nome": "DEX",
+        "bonus": 3
+      },
+      {
+        "nome": "WIS",
+        "bonus": 4
+      },
+      {
+        "nome": "CHA",
+        "bonus": 5
+      }
+    ],
+    "sentidos": [],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "any two languages"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "ca_origem": "plate"
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Hateful Presence beneficia dano de aliados, impede Help; Locked Saddle e Mounted Warrior",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Hateful Presence",
+        "alvos": "friendly creatures até 10ft",
+        "beneficio": "+2 a weapon damage rolls",
+        "restricao": "não podem usar Help action"
+      },
+      {
+        "nome": "Locked Saddle",
+        "precondicao": "montado",
+        "beneficio": "imune a forced prone, dismount ou forced move"
+      },
+      {
+        "nome": "Mounted Charge",
+        "precondicao": "montado, moveu >=20ft em linha reta rumo alvo e acerta Lance no mesmo turno",
+        "custo": "bonus action",
+        "efeito": "ordena montaria fazer um melee weapon attack como REACTION da montaria contra alvo"
+      },
+      {
+        "nome": "Mounted Warrior",
+        "montaria": "warhorse usual, barding CA15",
+        "movimento_montar_desmontar_ft": 5,
+        "efeito_montado": "mount não pode ser charmed/frightened"
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Multiattack de Lance/Mace com apoio de montaria; Frightful Charge exige estar montado.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "sequencia": [
+          "Lance",
+          "Mace",
+          "Mace"
+        ],
+        "dois_mace_mesmo_alvo": {
+          "precondicao": "ambos acertam",
+          "dano_extra": {
+            "dados": "2d6",
+            "media": 7,
+            "tipo": "bludgeoning"
+          }
+        },
+        "mounted": {
+          "precondicao": "há mount física",
+          "efeito": "montaria faz Hooves attack após ataques"
+        }
+      },
+      {
+        "nome": "Lance",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "1d12+4",
+            "media": 10,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Mace",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "bludgeoning"
+          }
+        ]
+      },
+      {
+        "nome": "Frightful Charge",
+        "recarga": "short ou long rest",
+        "precondicao": "montado",
+        "movimento": "até 30ft linha reta atravessa Large ou menor sem opportunity attacks",
+        "gatilho": "primeira entrada no espaço de alvo",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "dados": "8d6",
+            "media": 28,
+            "tipo": "bludgeoning"
+          },
+          "estado": "frightened por 1 minuto"
+        },
+        "sucesso": "metade sem frightened",
+        "repetir_frightened": "WIS DC15 no fim de cada turno termina efeito em sucesso"
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Lance",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 10,
+        "dano": [
+          {
+            "dados": "1d12+4",
+            "media": 10,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Mace",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 7,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "media": 7,
+            "tipo": "bludgeoning"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Lance",
+        "Mace",
+        "Mace"
+      ],
+      "dois_mace_mesmo_alvo": {
+        "precondicao": "ambos acertam",
+        "dano_extra": {
+          "dados": "2d6",
+          "media": 7,
+          "tipo": "bludgeoning"
+        }
+      },
+      "mounted": {
+        "precondicao": "há mount física",
+        "efeito": "montaria faz Hooves attack após ataques"
+      }
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Não aplicar ataques da montaria sem tê-la presente.",
-    "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição."
+    "Ações e benefícios condicionados à presença física de montaria: Hooves não faz parte do atacante sozinho; Mounted Charge usa reação da montaria.",
+    "Hateful Presence dá dano +2 aos aliados mas impede Help; Frightful Charge exige montaria e reteste WIS no fim de turno.",
+    "Edição/autorização da arte pendentes."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com edição correta"
+    "verificação de edição/erratas/uso legal",
+    "identidade e licença da imagem, revisão independente"
   ],
   "fontes": [
     {
@@ -123,6 +250,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/black-knight-commander-3pp/",
+      "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
       "conferida_nesta_execucao": true
     }
   ],
@@ -179,5 +311,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 43,
+    "publicacao": "Tome of Beasts 1 revisão 2023",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/black-knight-commander-3pp/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }

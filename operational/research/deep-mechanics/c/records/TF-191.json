@@ -4,114 +4,161 @@
   "nome": "Corpse Thief",
   "escopo": "historical.slice(104,195)",
   "indice_no_escopo": 66,
-  "estado_auditoria": "PARCIAL_NAO_VALIDADA",
+  "estado_auditoria": "PARCIAL_MECANICA_ESTRUTURADA_PENDENTE_EDITORIAL",
   "mecanica_completa": false,
-  "verificacao_detalhada_nesta_execucao": false,
+  "verificacao_detalhada_nesta_execucao": true,
   "identificacao": {
     "editora": "Kobold Press",
     "publicacao": "Creature Codex",
-    "edicao": null,
-    "fonte_identidade": null
+    "edicao": "Creature Codex (2018)",
+    "fonte_identidade": "https://www.5esrd.com/database/creature/corpse-thief/"
   },
   "estatisticas": {
-    "nd_catalogo": "0.5",
-    "nd_fonte": "0.5",
+    "nd_catalogo": "1/2",
+    "nd_fonte": "1/2",
     "ca": 13,
     "pv": 30,
-    "dados_vida": null,
-    "porte": null,
-    "tipo": null,
-    "alinhamento": null,
-    "atributos": null,
-    "modificadores": null,
-    "deslocamentos": null,
-    "pericias": null,
-    "salvaguardas": null,
-    "sentidos": null,
-    "percepcao_passiva": null,
-    "idiomas": null,
-    "resistencias": null,
-    "imunidades_dano": null,
-    "imunidades_condicao": null,
-    "vulnerabilidades": null
+    "dados_vida": "4d8+12",
+    "porte": "Medium",
+    "tipo": "humanoid",
+    "alinhamento": "neutral",
+    "atributos": {
+      "FOR": 12,
+      "DES": 17,
+      "CON": 16,
+      "INT": 11,
+      "SAB": 13,
+      "CAR": 6
+    },
+    "modificadores": {
+      "FOR": 1,
+      "DES": 3,
+      "CON": 3,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": -2
+    },
+    "deslocamentos": {
+      "andar": 30
+    },
+    "pericias": [
+      {
+        "nome": "Sleight of Hand",
+        "bonus": 5
+      },
+      {
+        "nome": "Stealth",
+        "bonus": 5
+      }
+    ],
+    "salvaguardas": [],
+    "sentidos": [
+      {
+        "tipo": "darkvision",
+        "alcance_ft": 60
+      }
+    ],
+    "percepcao_passiva": 11,
+    "idiomas": [
+      "Common"
+    ],
+    "resistencias": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "vulnerabilidades": [],
+    "xp": 100,
+    "bonus_proficiencia": 2,
+    "ca_origem": null
   },
   "mecanicas": {
     "tracos": [
       {
-        "nome": "Características verificadas (síntese)",
-        "resumo_anterior": "Object Reading examina item por dez minutos e obtém informações sobre seu último dono",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Object Reading",
+        "precondicao": "10 minutos de concentração num objeto",
+        "limite": "UMA utilização por objeto",
+        "alvo": "dono mais recente",
+        "dono_vivo": {
+          "efeito": "olha pelos olhos do dono por 10min, tipo clairvoyance mas perspectiva controlada pelo dono",
+          "teste": {
+            "atributo": "WIS",
+            "cd": 13
+          },
+          "sucesso": "dono percebe sensação de estar sendo observado"
+        },
+        "dono_morto": {
+          "efeito": "até cinco fatos sobre a vida, visões ligadas ao objeto, equivalente parcial a speak with dead",
+          "limite": "somente eventos presenciados pelo objeto"
+        }
       }
     ],
     "acoes": [
       {
-        "nome": "Ações pesquisadas (síntese)",
-        "resumo_anterior": "Duas garras e Steal com salvaguarda DES CD13.",
-        "bonus_acerto": null,
-        "alcance": null,
-        "alvo": null,
-        "dados_dano": null,
-        "modificador_dano": null,
-        "tipo_dano": null,
-        "cd": null,
-        "gatilho": null,
-        "efeito_sucesso": null,
-        "efeito_falha": null,
-        "condicoes": null,
-        "recarga": null,
-        "frequencia": null,
-        "duracao": null,
-        "custo": null,
-        "limites": null,
-        "verificado_integralmente": false
+        "nome": "Multiattack",
+        "sequencia": [
+          "Claw",
+          "Claw"
+        ]
+      },
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d4+3",
+            "media": 5,
+            "tipo": "piercing"
+          }
+        ]
+      },
+      {
+        "nome": "Steal",
+        "alvo": "uma criatura até 5ft",
+        "teste": {
+          "atributo": "DEX",
+          "cd": 13
+        },
+        "falha": "perde pequeno objeto não arma/armadura, do tamanho de uma mão"
       }
     ],
-    "ataques": [],
-    "multiataque": null,
-    "acoes_bonus": null,
-    "reacoes": null,
-    "acoes_lendarias": null,
-    "acoes_covil": null,
+    "ataques": [
+      {
+        "nome": "Claw",
+        "tipo": "melee weapon attack",
+        "bonus_acerto": 5,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "1d4+3",
+            "media": 5,
+            "tipo": "piercing"
+          }
+        ]
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "sequencia": [
+        "Claw",
+        "Claw"
+      ]
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
     "conjuracao": [],
     "custos_lendarios": null
   },
   "pendencias": [
-    "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição."
+    "Object Reading uma vez por objeto, últimas memórias limitadas a eventos associados ao objeto (se dono morto).",
+    "Steal não afeta armas nem armaduras; requer ação própria não embutida no Multiattack.",
+    "Original Creature Codex e imagem exigem revisão/uso autorizado."
   ],
   "campos_nao_confirmados": [
-    "estatisticas.dados_vida",
-    "estatisticas.porte",
-    "estatisticas.tipo",
-    "estatisticas.alinhamento",
-    "estatisticas.atributos",
-    "estatisticas.modificadores",
-    "estatisticas.deslocamentos",
-    "estatisticas.pericias",
-    "estatisticas.salvaguardas",
-    "estatisticas.sentidos",
-    "estatisticas.percepcao_passiva",
-    "estatisticas.idiomas",
-    "estatisticas.resistencias",
-    "estatisticas.imunidades_dano",
-    "estatisticas.imunidades_condicao",
-    "estatisticas.vulnerabilidades",
-    "mecânicas não confrontadas integralmente com edição correta"
+    "verificação de edição/erratas/uso legal",
+    "identidade e licença da imagem, revisão independente"
   ],
   "fontes": [
     {
@@ -122,6 +169,11 @@
     {
       "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
       "tipo": "checkpoint original",
+      "conferida_nesta_execucao": true
+    },
+    {
+      "url": "https://www.5esrd.com/database/creature/corpse-thief/",
+      "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
       "conferida_nesta_execucao": true
     }
   ],
@@ -178,5 +230,13 @@
     "binario_presente": true,
     "integridade_binaria_confirmada_na_origem": true,
     "validacao_visual_editorial": "PENDENTE"
+  },
+  "pesquisa_detalhada_completa_na_fonte_individual": true,
+  "verificacao_edicao": {
+    "data": "2026-10-14",
+    "checkpoint": 43,
+    "publicacao": "Creature Codex (2018)",
+    "fonte_mecanicas": "https://www.5esrd.com/database/creature/corpse-thief/",
+    "aprovacao_editorial": "PENDENTE"
   }
 }
