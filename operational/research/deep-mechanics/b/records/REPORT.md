@@ -1,3 +1,11 @@
+## Checkpoint Grupo B — 14/10/2026 — três imagens reais recuperadas da F
+
+Importados **três objetos Git binários sem recodificação**: [TF-327 Azer Forgemaster](../images/TF-327.webp) (WebP, 300×300, 113.414 bytes), [TF-344 Pumpkin King](../images/TF-344.webp) (WebP, 360×279, 116.036 bytes), [TF-399 Mari Lwyd](../images/TF-399.jpg) (JPEG, 1024×1024, 188.641 bytes). Referência: [manifesto F](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-image-assets-f/operational/assets/creature-images/manifests/f.json). Hashes SHA-256, Git SHA, origem e notas de qualidade foram incorporados aos manifestos B. A validação pós-commit precisa confirmar a persistência na branch B.
+
+**Estado registrado:** 132 JSONs estruturados na pesquisa (132 SHAs/bytes coincidentes na árvore Git antes deste checkpoint), 14 baseados em conteúdo editorial A5E e 118 em reproduções secundárias; **zero homologações independentes, zero integrações**. As imagens passam a **104/132**, restando **28 pendentes**. As **13 divergências herdadas da PR #4** continuam sem resolução editorial conclusiva. Qualidade visual e licença dos três binários precisam de revisão; não representam aprovação de direitos autorais. PR #6 permanece em DRAFT e sem merge.
+
+---
+
 ## Checkpoint 14/10/2026 — **132/132 inventários mecânicos individualizados, nenhuma homologação independente**
 
 **Estado verificado na branch B:** Existem **132/132 JSONs físicos** e **132/132 possuem inventários próprios de mecânicas individualizadas conforme as publicações e reproduções consultadas**; **zero** registros continuam com nível `INCOMPLETA_HERDADA` no manifesto. 14 registros foram estruturados a partir de fonte editorial A5E e 118 a partir de transcrições e reproduções secundárias. **Isso não equivale a 132 fichas integralmente homologadas**: a revisão independente, testes e cotejo com livro e erratas das respectivas edições seguem pendentes. Há **0 homologações independentes, 0 promoções canônicas e 0 merges**. **101/132 imagens são binários reais armazenados; 31 continuam ausentes**.

@@ -1,3 +1,17 @@
+## Checkpoint de imagens B — 14/10/2026 — 104/132 binários, 28 pendentes
+
+Três imagens reais **reutilizadas por SHA Git idêntico da branch F**, sem gerar placeholders ou links em lugar do arquivo. Fontes, bytes, dimensões, formato, SHA-256 de origem e licença pendente constam no manifesto.
+
+| ID | Criatura | Arquivo real B | Origem | Bytes | Dimensões | SHA Git |
+|---|---|---|---|---:|---|---|
+| TF-327 | Azer Forgemaster | [WEBP](TF-327.webp) | [Fonte](https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/azer.webp) | 113414 | 300×300 | `a0a515c1cd74460e7f111b2213b7e65fd5230a8c` |
+| TF-344 | Pumpkin King | [WEBP](TF-344.webp) | [Fonte](https://github.com/GNchoo/dicekeep-art/blob/HEAD/casual/bosses/pumpkin-king.webp) | 116036 | 360×279 | `e8c7875ec2c764636c3f5ba50762c5be9367c5a4` |
+| TF-399 | Mari Lwyd | [JPG](TF-399.jpg) | [Fonte](https://github.com/WaffleFlayer/winter-ornaments/blob/HEAD/images/mari-lwyd.jpg) | 188641 | 1024×1024 | `f854d21482e9bb530c1c2983c6c657e96a0c7669` |
+
+**Ressalvas:** TF-344 é um sprite estilizado de resolução moderada; TF-399 usa arte simplificada; TF-327 usa arte de azer com martelo, associada à identidade Forgemaster. Não foi certificada adequação editorial, licença de republicação nem homogeneidade estética. SHA-256 e correspondência byte a byte com os objetos F documentados no [manifesto](manifest.json). A persistência precisa de readback GitHub após commit.
+
+---
+
 ## Checkpoint 14/10/2026 — 101/132 arquivos binários reais verificados
 
 A partir desta continuação, **101 imagens** estão fisicamente no diretório B, com **31 ainda faltantes**. Importada a ilustração [TF-338 Somberweave](TF-338.webp) do lote F, por cópia do objeto Git binário real SHA `7345296a5c5f285194a5072edbe99486e5ca9608`, WebP 63.466 bytes, dimensões 850×758 e SHA-256 no manifesto `c285a415677fcd7bfccaebbb6f2cc1776cc7f993f90f0b02ce4f846916fc32fc`. Foi conferido o readback do objeto Git e a assinatura WebP. A fonte gráfica está identificada em *Book of Ebon Tides* como Somberweave; a adequação à edição de *Tome of Beasts 2* ainda exige homologação de identidade da imagem. Não foi usada URL como substituto do arquivo, e os demais 31 IDs permanecem pendentes.

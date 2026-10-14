@@ -32,13 +32,13 @@
     "merges": 0,
     "fichas_secundarias_estruturadas": 118,
     "fichas_com_acoes_individualizadas": 132,
-    "imagens_binarias_presentes": 101,
-    "imagens_pendentes": 31,
+    "imagens_binarias_presentes": 104,
+    "imagens_pendentes": 28,
     "imagens_no_escopo": 132,
     "fichas_homologadas_independentemente": 0
   },
   "integridade": {
-    "controle": "132 JSONs individuais indexados por SHA de blob; 47 mecânicas individualizadas mas nenhuma oficialmente homologada; 100 binários WebP/PNG/JPEG disponíveis, 32 ausentes, zero promoções canônicas.",
+    "controle": "Auditoria GitHub 14/10/2026: 132/132 JSONs físicos com SHA Git e bytes iguais ao manifesto na árvore da branch antes deste checkpoint; 101/101 imagens binárias físicas com SHA Git e bytes iguais; 3 blobs binários adicionais importados por identidade de SHA Git da branch F. Verificar os 104/104 após commit. Nenhuma homologação independente.",
     "checkpoints": 21,
     "limite_por_checkpoint": 10,
     "igualdade_exata_dos_ids": true,
@@ -47,7 +47,7 @@
     "total_bytes_json": 492156,
     "comparacao_pre_relatorio": "16 checkpoints de alterações de registros; nenhuma escrita de arquivo fora do diretório exclusivo B",
     "imagens_blobs_iguais_origem": 92,
-    "imagens_sem_arquivo": 40,
+    "imagens_sem_arquivo": 28,
     "auditoria_conciliacao_20261014": {
       "resultado": "9 hashes e bytes do manifesto ficaram antigos após edições existentes; corrigidos para valores lidos da API GitHub sem tocar JSON",
       "detalhes": [
@@ -144,6 +144,23 @@
         "incompletas": 71
       },
       "validacao": "SHA de cinco novas fichas relido; nove antigas já verificadas por SHA/conteúdo no checkpoint prévio"
+    },
+    "checkpoint_imagens_20261014": {
+      "lote": [
+        "TF-327",
+        "TF-344",
+        "TF-399"
+      ],
+      "origem": "chatgpt/srd607-image-assets-f",
+      "origem_head": "6ff8218b9e9a8c93af8464736e92d6480dbeea71",
+      "pre_auditoria": {
+        "json_fisicos": 132,
+        "json_sha_tamanho_iguais": 132,
+        "imagens_fisicas": 101,
+        "imagens_sha_tamanho_iguais": 101
+      },
+      "status": "GRAVACAO_EM_CHECKPOINT; VALIDAR_READBACK_GITHUB",
+      "licencas": "A análise de direitos e licenças não foi concluída"
     }
   },
   "commits_checkpoint": [
@@ -601,9 +618,28 @@
       "conflito_pr4": false,
       "bloqueado": false,
       "imagem": {
-        "status": "PENDENTE_IMAGEM",
-        "path": null,
-        "url": null
+        "status": "VERIFICADA_BINARIO_PRESENTE",
+        "path": "operational/research/deep-mechanics/b/images/TF-327.webp",
+        "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-327.webp",
+        "blob_sha": "a0a515c1cd74460e7f111b2213b7e65fd5230a8c",
+        "sha256": "d24724d51633e7374603df89e6a72eee032291c2f4ac6c59e39bf0107539817a",
+        "bytes": 113414,
+        "dimensions": {
+          "width": 300,
+          "height": 300
+        },
+        "source_branch": "chatgpt/srd607-image-assets-f",
+        "source_commit": "282ca570a68d6f4576e3c6a96f66ff0b197ba3b0",
+        "source_original_path": "operational/assets/creature-images/TF-327.webp",
+        "source_url": "https://github.com/Pjb518/FoundryVTT-Level-Up-Official/blob/main/public/assets/azer.webp",
+        "source_repository": "Pjb518/FoundryVTT-Level-Up-Official",
+        "source_repository_path": "public/assets/azer.webp",
+        "source_git_blob_sha": "a0a515c1cd74460e7f111b2213b7e65fd5230a8c",
+        "mime_type": "image/webp",
+        "extension": ".webp",
+        "qualidade_observacao": "A ficha original A5E usa imagem de Azer com martelo; a designação de forgemaster é compatível com a ferramenta mostrada.",
+        "licenca": "NAO_DETERMINADA_REQUER_AVALIACAO",
+        "validacao_visual": "IDENTIDADE_COMPATIVEL_COM_NOME; HOMOLOGACAO_ESTETICA_EDITORIAL_PENDENTE"
       }
     },
     {
@@ -979,9 +1015,28 @@
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
-        "status": "PENDENTE_IMAGEM",
-        "path": null,
-        "url": null
+        "status": "VERIFICADA_BINARIO_PRESENTE",
+        "path": "operational/research/deep-mechanics/b/images/TF-344.webp",
+        "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-344.webp",
+        "blob_sha": "e8c7875ec2c764636c3f5ba50762c5be9367c5a4",
+        "sha256": "d9d8209eb32f3b67cb15dec669ceb071aac5e39fef0e4085be499abd099c6000",
+        "bytes": 116036,
+        "dimensions": {
+          "width": 360,
+          "height": 279
+        },
+        "source_branch": "chatgpt/srd607-image-assets-f",
+        "source_commit": "beae4e8631a1fde3c09e0ab743374614b01dfdf5",
+        "source_original_path": "operational/assets/creature-images/TF-344.webp",
+        "source_url": "https://github.com/GNchoo/dicekeep-art/blob/HEAD/casual/bosses/pumpkin-king.webp",
+        "source_repository": "GNchoo/dicekeep-art",
+        "source_repository_path": "casual/bosses/pumpkin-king.webp",
+        "source_git_blob_sha": "e8c7875ec2c764636c3f5ba50762c5be9367c5a4",
+        "mime_type": "image/webp",
+        "extension": ".webp",
+        "qualidade_observacao": "Abóbora coroada com membros de cipó; sprite estilizado e resolução moderada, sujeito a revisão editorial.",
+        "licenca": "NAO_DETERMINADA_REQUER_AVALIACAO",
+        "validacao_visual": "IDENTIDADE_COMPATIVEL_COM_NOME; HOMOLOGACAO_ESTETICA_EDITORIAL_PENDENTE"
       }
     },
     {
@@ -1840,9 +1895,28 @@
       "conflito_pr4": false,
       "bloqueado": true,
       "imagem": {
-        "status": "PENDENTE_IMAGEM",
-        "path": null,
-        "url": null
+        "status": "VERIFICADA_BINARIO_PRESENTE",
+        "path": "operational/research/deep-mechanics/b/images/TF-399.jpg",
+        "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/chatgpt/srd607-deep-mechanics-b/operational/research/deep-mechanics/b/images/TF-399.jpg",
+        "blob_sha": "f854d21482e9bb530c1c2983c6c657e96a0c7669",
+        "sha256": "0d58f7ca006e3ab3b0d02c3e23caac0f3899ced8950b8227cca0d64709c7a449",
+        "bytes": 188641,
+        "dimensions": {
+          "width": 1024,
+          "height": 1024
+        },
+        "source_branch": "chatgpt/srd607-image-assets-f",
+        "source_commit": "beae4e8631a1fde3c09e0ab743374614b01dfdf5",
+        "source_original_path": "operational/assets/creature-images/TF-399.jpg",
+        "source_url": "https://github.com/WaffleFlayer/winter-ornaments/blob/HEAD/images/mari-lwyd.jpg",
+        "source_repository": "WaffleFlayer/winter-ornaments",
+        "source_repository_path": "images/mari-lwyd.jpg",
+        "source_git_blob_sha": "f854d21482e9bb530c1c2983c6c657e96a0c7669",
+        "mime_type": "image/jpeg",
+        "extension": ".jpg",
+        "qualidade_observacao": "Arte simplificada de Mari Lwyd, com caveira equina e manto; revisar estilo visual para o jogo.",
+        "licenca": "NAO_DETERMINADA_REQUER_AVALIACAO",
+        "validacao_visual": "IDENTIDADE_COMPATIVEL_COM_NOME; HOMOLOGACAO_ESTETICA_EDITORIAL_PENDENTE"
       }
     },
     {
@@ -3470,18 +3544,23 @@
     "novas_estruturadas": 18,
     "individualizadas": 132,
     "incompletas": 0,
-    "imagens_presentes": 101,
-    "imagens_pendentes": 31,
+    "imagens_presentes": 104,
+    "imagens_pendentes": 28,
     "homologacoes_independentes": 0,
     "divergencia_shroud": "TF-394 preserva edição 2016 CA13 PV9, versão 2023 possui CA11 PV13; não fundir.",
     "clurichaun": "TF-113 ND1/4 22 PV CA14 fonte Tome1 compatível; homônimo ND2 68 PV não fundido",
-    "nota": "132 inventários individualizados extraídos das fontes consultadas; nenhuma homologação editorial independente ou certificação contra edições originais."
+    "nota": "132 inventários individualizados extraídos das fontes consultadas; nenhuma homologação editorial independente ou certificação contra edições originais.",
+    "novas_imagens_cp": [
+      "TF-327",
+      "TF-344",
+      "TF-399"
+    ]
   },
   "data_atualizacao": "2026-10-14",
   "imagens_manifest": "operational/research/deep-mechanics/b/images/manifest.json",
   "imagens_snapshot": {
     "total": 132,
-    "binarias_presentes": 100,
-    "pendentes": 32
+    "binarias_presentes": 104,
+    "pendentes": 28
   }
 }
