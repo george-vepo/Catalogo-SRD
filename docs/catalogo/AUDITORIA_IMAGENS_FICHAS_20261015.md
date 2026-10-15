@@ -1,5 +1,7 @@
 # Auditoria de imagens e fichas — lote conservador de 15/10/2026
 
+> **Checkpoint histórico do lote 1.** A atualização posterior está em [AUDITORIA_LOTE2_20261015.md](AUDITORIA_LOTE2_20261015.md): **36** referências visuais e **1.284** cartas sem arte exibível após 1 nova aceitação, 7 novas recusas e 5 comparações mecânicas entre edições. Os números abaixo permanecem como retrato do checkpoint anterior.
+
 > **NÃO CONCLUÍDA.** Uma lista com 1.320 criaturas exige verificação individual da identidade, edição, enquadramento, fonte e direitos da arte, além de auditoria das regras. Este lote importa apenas itens verificáveis; todo o restante permanece pendente.
 
 ## Contagem do snapshot do site
