@@ -102,3 +102,10 @@
 
 - [Decisões de combate e 40 habilidades de suporte candidatas](DECISOES_COMBATE_E_SUPORTES_40_20261015.md): registra a orientação do administrador de **combate no estilo D&D 5e / SRD 5.2.1 sem movimentação, posicionamento ou mecânicas de alcance**; preserva dano, condições, duração, concentração, ações, recargas e testes; relaciona as 40 assinaturas propostas com prioridade buff útil → debuff útil → dano, transferindo buffs próprios aplicáveis à criatura ativa.
 - **Status:** documento de discussão, 40 seleções candidatas e **0 homologadas**. Transferência e economia de ações do suporte, duração, recargas e outras lacunas ainda exigem aprovação/revisão. Não importar para o catálogo oficial ou engine automaticamente.
+
+## Modelos visuais de cartas e símbolos (15/10/2026)
+
+- [Guia visual e imagens reais das 5 cartas-modelo + 14 tipos de criatura + 4 suportes](../../design/modelos-visuais-20261015/README.md).
+- Paleta por ND: Comum grafite/preta (0–5), Incomum verde (6–10), Rara roxa (11–15), Lendária dourada (16–20), Mítica vermelho-escuro (21+).
+- Ícones de habilidade **independentes da raridade**: Buff azul (três setas), Debuff roxo (espiral), Cura verde (cruz), Dano vermelho (impacto).
+- Essas cinco criaturas e seus efeitos são **exemplos fictícios de arte/UI**, não fichas oficiais, cartas liberadas ou habilidades homologadas. As **8 imagens ausentes** das Aberrações reais permanecem ausentes.
