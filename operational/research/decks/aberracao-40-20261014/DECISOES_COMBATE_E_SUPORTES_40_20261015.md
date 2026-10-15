@@ -63,7 +63,7 @@ Convenções: **B→Ativa** = buff que originalmente protege/beneficia a criatur
 | 24 | Chelicerae | Magical Discharge (D) | Destreza CD 15; 8d8 força, metade no sucesso. | Edição revisada versus original: **não misturar**; recarga especial. |
 | 25 | Crystalline Monolith | Psychic Burst (E/D) | Inteligência CD 15; 8d6 psíquico e Atordoado na falha. | Recarga 5–6 e novos testes; confirmar fonte bibliográfica. |
 | 26 | Ahu-Nixta, Cataphract | Fear (E) | Magia inata de medo, CD 15. | Confirmar recursos de magia integral. |
-| 27 | Astral Devourer | Serpent Spray (D/B→Ativa) | Destreza CD 16; 4d6 perfurante + 4d6 veneno, metade em sucesso; cura pelo maior dano perfurante individual transferida à ativa. | Recarga 6; **transferência da cura é homebrew**. |
+| 27 | Astral Devourer | **Serpent Spray (Cura→Ativa; dano associado)** | Destreza CD 16; 4d6 perfurante + 4d6 veneno na falha, metade no sucesso. A **criatura ativa** recuperaria PV iguais ao maior dano perfurante individual efetivamente causado pelo spray (proposta de transferência). | **Ícone: Cura verde.** Recarga 6; efeito misto dano + cura; sem cura se não houver dano perfurante causado; a transferência é homebrew não homologado. |
 | 28 | Ziphius | Telepathic Foresight (B→Ativa/E) | Sabedoria CD 15; vínculo concede vantagem ofensiva ou desvantagem nos ataques do alvo. | **Transferir beneficiário é homebrew**; confirmar duração/edição. |
 | 29 | Shukankor | Beak (D) | +10, 2d8+6 perfurante. | Many Eyes beneficiaria só testes raros; dano mais aplicável. |
 | 30 | Xhkarsh | Fate-Altering Stinger (E/D) | +8, 2d10+4 perfurante; Carisma CD 16 pode corromper o destino. | Fixar edição 2023 antes de executar. |
@@ -78,10 +78,24 @@ Convenções: **B→Ativa** = buff que originalmente protege/beneficia a criatur
 | 34 | Voidling | Shadow's Grasp (E/D) | Destreza CD 17; 14d6 necrótico e Contido na falha, conforme ficha. | Recarga 5–6, duração/testes, edição. |
 | 35 | Aboleth Brute | Bite (E/D) | +11; 4d12+6 perfurante, Agarrado e Contido, fuga CD 19. | Preservar impossibilidade de morder outro alvo durante o agarrão se pertinente. |
 | 36 | Forest Emperor | Rattle (E) | Sabedoria CD 18; pode impor Amedrontado. | Regra original de som, novos testes e imunidade após sucessos. |
-| 37 | Snallygaster | Regeneration (B→Ativa) | Proposta: ativa recupera 15 PV no início do seu turno se tiver ao menos 1 PV. | **Duração do efeito transferido ainda não definida**; conferir demais limitações da ficha. |
+| 37 | Snallygaster | **Regeneration (Cura→Ativa)** | Proposta: a **criatura ativa** recupera 15 PV no início do seu turno se tiver pelo menos 1 PV e o efeito de suporte ainda estiver ativo; respeitar limite dos PV máximos. | **Ícone: Cura verde.** Duração, ativação e permanência do efeito transferido indefinidas; ficha local TF-285 segue incompleta, embora a Regeneration esteja documentada na fonte pública. |
 | 38 | Malleable, Massive | Flesh Tendril (D/E) | +13, 5d6+8 contundente e Agarrado, fuga CD 18. | **Substitui Psychic Absorption** por ser pouco aplicável. |
 | 39 | Kalaraq Quori | Swarm of Eyes (E/D) | Sabedoria CD 21; 10d8 psíquico e possível Cego. | **Ficha externa Eberron não integrada**; recarga 6, novos testes. |
 | 40 | Greater Star Spawn Emissary | Mind Cloud (E/D) | Sabedoria CD 23; 5d12 psíquico e encerramento de magias em alvos elegíveis. | **Ficha externa Legacy não integrada**; ação lendária custa 3 ações lendárias na proposta — verificar edição e economia de ações. |
+
+### 3.4. Vagas de Cura selecionadas pelo administrador (15/10/2026)
+
+O administrador **aplicou duas vagas do tipo de suporte Cura** à proposta experimental de 40 cartas. **Não foram inseridas novas cartas** e não houve substituição das habilidades de assinatura existentes; apenas sua **categoria visual/função principal** foi atualizada. A contagem é **2/40 Cura candidatas** (uma Incomum e uma Rara), permanecendo 38 outras cartas sem mudança por esta decisão. No quadro de suporte, ambas usam **ícone verde de cruz**, independente da cor da raridade.
+
+| Ordem do deck | ID do catálogo de pesquisa | Criatura | Raridade | Assinatura mantida | Como funcionaria a Cura |
+|---|---|---|---|---|---|
+| **27** | **TF-009** | **Astral Devourer** | Incomum (verde) | *Serpent Spray* (Recarga 6) | Ataque com Destreza CD 16 e dano perfurante + veneno. **Somente se causar dano perfurante**, recupera na criatura ativa PV iguais ao **maior dano perfurante individual** efetivamente causado pelo spray; não é 4d6 de cura automática e não se somam danos de vários alvos. |
+| **37** | **TF-285** | **Snallygaster** | Rara (roxa) | *Regeneration* | Enquanto o efeito transferido durar, a criatura ativa com **ao menos 1 PV** recupera **15 PV no início do próprio turno**, sem exceder PV máximos; não reanima criatura a 0 PV. |
+
+- **Comprovação mecânica específica:** *Serpent Spray* em [5eSRD — Astral Devourer](https://www.5esrd.com/database/creature/astral-devourer/) (*Tome of Beasts 2*), e *Regeneration* em [5eSRD — Snallygaster](https://www.5esrd.com/database/creature/snallygaster/) (*Tome of Beasts 3*).
+- **Pendente:** *Regeneration* está comprovada como característica textual, mas a ficha mecânica local do Snallygaster em `operational/research/deep-mechanics/c/records/TF-285.json` ainda tem `mecanica_completa: false` e não foi validada integralmente. A classificação **Cura** não dispensa essa auditoria.
+- **Adaptação não-SRD:** ambas as fichas originais curam a própria criatura de origem; fazer a **criatura ativa do Card Game** receber o benefício é uma **regra homebrew proposta**. Custo de ativação, destino da carta de suporte, duração, manutenção de recargas e repetição da recuperação por rodada continuam sujeitos a regulamentação. **Não executar em partida oficial antes de aprovação.**
+- **Dados estruturados:** [SUPORTES_CURA_CANDIDATOS_2.csv](SUPORTES_CURA_CANDIDATOS_2.csv); não modificar `cards.csv` nem os IDs/ND/raridades por causa desta classificação.
 
 ## 4. Pontos críticos de implementação (NÃO DECIDIDOS)
 
