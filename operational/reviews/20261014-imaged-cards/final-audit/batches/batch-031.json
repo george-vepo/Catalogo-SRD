@@ -1,0 +1,937 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+  "reference_date": "2026-10-14",
+  "batch_number": 31,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 9,
+    "completas_com_ressalvas": 1,
+    "incompletas": 0,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 9,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 1,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 5
+  },
+  "evidence_limitations": [
+    "Integridade SHA e bytes das imagens verificada com metadados da árvore Git e manifesto F, sem inspeção visual nova.",
+    "Imagens de 32×32 pixels são sprites, não arte final homologada.",
+    "Variantes editoriais de Grendel preservadas; licença/edição/testes pendentes."
+  ],
+  "records": [
+    {
+      "id": "TF-345",
+      "criatura": "Animal Lord, Mouse King",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Ações de invocação, metamorfose e recursos lendários individualizados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": "11",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 150,
+        "dados_vida": "20d6+80",
+        "atributos": {
+          "FOR": 18,
+          "DES": 23,
+          "CON": 18,
+          "INT": 20,
+          "SAB": 18,
+          "CAR": 18
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Keen Sight",
+            "Legendary Resistance",
+            "Magic Resistance",
+            "Magic Weapons",
+            "Rejuvenation",
+            "Rodent Passivism",
+            "Shapechanger",
+            "Speak with Rodents",
+            "Special Equipment"
+          ],
+          "ataques": [
+            "King’s Blade",
+            "Bite"
+          ],
+          "acoes": [
+            "Multiattack",
+            "King’s Blade",
+            "Bite",
+            "Summon Rodents",
+            "Change Shape"
+          ],
+          "acoes_bonus": [
+            "Dismiss Summoned Rodents"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [
+            "King’s Blade",
+            "Move",
+            "Quick Casting"
+          ],
+          "conjuracoes": [
+            "Innate Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Ações de invocação, metamorfose e recursos lendários individualizados.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-345.webp",
+        "sha_git": "07144df4f24e414b84ce9323718374273d269e5f",
+        "bytes": 169384,
+        "dimensoes_declaradas": [
+          741,
+          970
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-345.json",
+        "sha": "dcfbabf492cec2de0809f15a5b451812153a6821",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-346",
+      "criatura": "Animal Lord, Lord of Vultures",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Bloco de habilidades de Lord of Vultures estruturado; ações de covil não descritas na reprodução.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": "12",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 152,
+        "dados_vida": "16d10+64",
+        "atributos": {
+          "FOR": 18,
+          "DES": 18,
+          "CON": 18,
+          "INT": 16,
+          "SAB": 17,
+          "CAR": 20
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Bird Passivism",
+            "Danger Sense",
+            "Legendary Resistance",
+            "Magic Resistance",
+            "Magic Weapons",
+            "Pack Tactics",
+            "Rejuvenation",
+            "Shapechanger",
+            "Speak with Birds"
+          ],
+          "ataques": [
+            "Spear",
+            "Beak",
+            "Talons"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Spear",
+            "Beak",
+            "Talons",
+            "Change Shape"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [
+            "Move",
+            "Wing Buffet",
+            "Dive Bomb"
+          ],
+          "conjuracoes": [
+            "Innate Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Bloco de habilidades de Lord of Vultures estruturado; ações de covil não descritas na reprodução.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-346.webp",
+        "sha_git": "bcbc9f21b9c96b8bab9763a909fa05afaf3c3acc",
+        "bytes": 116080,
+        "dimensoes_declaradas": [
+          1129,
+          1084
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-346.json",
+        "sha": "da20659d6bf6877f47462838363ea180a3f5608f",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-347",
+      "criatura": "Animal Lord, Bat King",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Invocação e conjuração próprias, ações lendárias; conferir edição original.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": "13",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 150,
+        "dados_vida": "20d6+80",
+        "atributos": {
+          "FOR": 16,
+          "DES": 20,
+          "CON": 19,
+          "INT": 19,
+          "SAB": 17,
+          "CAR": 16
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Bat Passivism",
+            "Keen Hearing",
+            "Legendary Resistance",
+            "Magic Resistance",
+            "Magic Weapons",
+            "Rejuvenation",
+            "Shapechanger",
+            "Speak to Bats"
+          ],
+          "ataques": [
+            "Blood Bite",
+            "Oblivion’s Mace"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Blood Bite",
+            "Oblivion’s Mace",
+            "Screech",
+            "Summon Bats",
+            "Change Shape"
+          ],
+          "acoes_bonus": [
+            "Dismiss Summoned Bats"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [
+            "At Will Spell",
+            "Detect",
+            "Flight"
+          ],
+          "conjuracoes": [
+            "Innate Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Invocação e conjuração próprias, ações lendárias; conferir edição original.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-347.webp",
+        "sha_git": "9a1e6c93ef718af572d5ccdfa66d0d81d1cf06d4",
+        "bytes": 88368,
+        "dimensoes_declaradas": [
+          795,
+          1125
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-347.json",
+        "sha": "060cf42365ad51d9cea701817a26b9c29eee3cb7",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-348",
+      "criatura": "Life Broker",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Regras de transferência/consumo de vida e mobilidade organizadas em fonte secundária.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "13",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 190,
+        "dados_vida": "20d8+100",
+        "atributos": {
+          "FOR": 15,
+          "DES": 19,
+          "CON": 20,
+          "INT": 19,
+          "SAB": 14,
+          "CAR": 20
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Draw Life Essence",
+            "Life Reading",
+            "Magic Resistance",
+            "Necrotic Weapons"
+          ],
+          "ataques": [
+            "Rapier"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Rapier",
+            "Life Feast"
+          ],
+          "acoes_bonus": [
+            "Quick-Footed"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Regras de transferência/consumo de vida e mobilidade organizadas em fonte secundária.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-348.webp",
+        "sha_git": "c4394eb4000480336ceee8d32d74f4e3b6b3bf32",
+        "bytes": 86812,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-348.json",
+        "sha": "74dd53aab78ffa8eb4a355c4be175e77ac136b05",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-349",
+      "criatura": "Animal Lord, Brother Ox",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Estrutura de ações, reação e habilidades lendárias disponibilizada na reprodução.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": "16",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 18,
+        "pv": 187,
+        "dados_vida": "15d12+90",
+        "atributos": {
+          "FOR": 21,
+          "DES": 18,
+          "CON": 22,
+          "INT": 17,
+          "SAB": 24,
+          "CAR": 19
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Bovine Passivism",
+            "Charge",
+            "Legendary Resistance",
+            "Magic Resistance",
+            "Magic Weapons",
+            "Rejuvenation",
+            "Shapechanger",
+            "Speak with Bovines"
+          ],
+          "ataques": [
+            "Gore",
+            "Unarmed Strike",
+            "Deflected Missile Throw"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Gore",
+            "Unarmed Strike",
+            "Ki Disruption",
+            "Change Shape"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Deflect Missiles"
+          ],
+          "acoes_lendarias": [
+            "Move",
+            "Wholeness",
+            "Stunning Strike"
+          ],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Estrutura de ações, reação e habilidades lendárias disponibilizada na reprodução.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-349.webp",
+        "sha_git": "6da9eaaa903dd453afe2650ed7bed0e411c6af7e",
+        "bytes": 100050,
+        "dimensoes_declaradas": [
+          879,
+          1117
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-349.json",
+        "sha": "b4a85321d322c247326e5551cc23203775d85915",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-350",
+      "criatura": "Ettin, Kobold",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Atributos, ataques, passivas e multiataque descritos.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "1",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 34,
+        "dados_vida": "4d8+16",
+        "atributos": {
+          "FOR": 17,
+          "DES": 11,
+          "CON": 18,
+          "INT": 6,
+          "SAB": 8,
+          "CAR": 7
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Bickering Heads",
+            "Might of Giants",
+            "Pack Tactics",
+            "Sunlight Sensitivity"
+          ],
+          "ataques": [
+            "Greatclub",
+            "Spear"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Greatclub",
+            "Spear"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Atributos, ataques, passivas e multiataque descritos.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-350.webp",
+        "sha_git": "005764951d73165e5393ce1d0291e17181cab112",
+        "bytes": 87682,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-350.json",
+        "sha": "6cbb4e567aaa6866503df13328eed575d9cb76ad",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-351",
+      "criatura": "Half-Demon Ogre",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Registro A5E: Breath Weapon com recarga 4–6 e DES CD14; Fiendish Glare SAB/WIS CD16; três ataques individualizados.",
+      "identidade": {
+        "origem": "EN Publishing/A5E",
+        "edicao": "To Save A Kingdom",
+        "cr": "3",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 68,
+        "dados_vida": "8d10+24",
+        "atributos": {
+          "FOR": 19,
+          "DES": 8,
+          "CON": 16,
+          "INT": 10,
+          "SAB": 10,
+          "CAR": 13
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [],
+          "ataques": [
+            "Mace",
+            "Sweeping Strike",
+            "Javelin"
+          ],
+          "acoes": [
+            "Breath Weapon"
+          ],
+          "acoes_bonus": [
+            "Fiendish Glare"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Registro A5E: Breath Weapon com recarga 4–6 e DES CD14; Fiendish Glare SAB/WIS CD16; três ataques individualizados.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-351.png",
+        "sha_git": "4884309c55d1bb3e90dc15ab52ae4afb65e87e16",
+        "bytes": 128753,
+        "dimensoes_declaradas": [
+          257,
+          550
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-351.json",
+        "sha": "7ad614ec3df5c9f2d6f5a33e09a81df1d0582552",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-353",
+      "criatura": "Manggus",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Estrutura de três cabeças, metamorfose e multiataque identificada; imagem ausente.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "5",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 127,
+        "dados_vida": "15d10+45",
+        "atributos": {
+          "FOR": 18,
+          "DES": 14,
+          "CON": 16,
+          "INT": 8,
+          "SAB": 7,
+          "CAR": 9
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Roaring Transformation",
+            "Shapechanger",
+            "Three-Headed"
+          ],
+          "ataques": [
+            "Bite",
+            "Greataxe"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Greataxe",
+            "Change Shape"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Estrutura de três cabeças, metamorfose e multiataque identificada; imagem ausente.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-353.json",
+        "sha": "d1792273b6578a6888cd602f505e4d5a2dc30aa7",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-355",
+      "criatura": "Giant, Hill Chief",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Registro A5E: recursos de terreno, lançamento e condições individualizados; sprite de 32×32 px.",
+      "identidade": {
+        "origem": "EN Publishing/A5E",
+        "edicao": "Monstrous Menagerie",
+        "cr": "8",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 126,
+        "dados_vida": "12d12+48",
+        "atributos": {
+          "FOR": 20,
+          "DES": 8,
+          "CON": 18,
+          "INT": 6,
+          "SAB": 10,
+          "CAR": 6
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Gullible"
+          ],
+          "ataques": [
+            "Greatclub",
+            "Rock"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Greatclub Sweep"
+          ],
+          "acoes_bonus": [
+            "Grab",
+            "Body Slam",
+            "Muddy Ground",
+            "Stomp"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Registro A5E: recursos de terreno, lançamento e condições individualizados; sprite de 32×32 px.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-355.png",
+        "sha_git": "737c02645188bc83574497858e47f0fc075ce254",
+        "bytes": 514,
+        "dimensoes_declaradas": [
+          32,
+          32
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-355.json",
+        "sha": "028bc248e4e27a33f99e229e8ff70d395a714297",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    },
+    {
+      "id": "TF-356",
+      "criatura": "Grendel",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Versão A5E (ND9/CA15/PV114) deve permanecer separada de Grendel de Viking Adventures (ND12/CA19/PV147); sprite 32×32.",
+      "identidade": {
+        "origem": "EN Publishing/A5E",
+        "edicao": "Mythological Figures & Maleficent Monsters",
+        "cr": "9",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 114,
+        "dados_vida": "12d10+48",
+        "atributos": {
+          "FOR": 22,
+          "DES": 15,
+          "CON": 18,
+          "INT": 11,
+          "SAB": 14,
+          "CAR": 7
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Big-Handed Grappling",
+            "Leap",
+            "Superior Hearing",
+            "Toxic Blood"
+          ],
+          "ataques": [
+            "Bite",
+            "Claw",
+            "Slam",
+            "Rock",
+            "Thrown Object"
+          ],
+          "acoes": [
+            "Multiattack"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Versão A5E (ND9/CA15/PV114) deve permanecer separada de Grendel de Viking Adventures (ND12/CA19/PV147); sprite 32×32."
+      ],
+      "pendencias_editoriais": [
+        "Versão A5E (ND9/CA15/PV114) deve permanecer separada de Grendel de Viking Adventures (ND12/CA19/PV147); sprite 32×32.",
+        "Sem homologação integral da edição, erratas e arte; adaptar e testar antes de promover."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-356.png",
+        "sha_git": "bacca8a73936d01fa933eda7c1a7cc89600177e8",
+        "bytes": 459,
+        "dimensoes_declaradas": [
+          32,
+          32
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar versão editorial sem mesclar variantes e testar regras.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-356.json",
+        "sha": "d0b6cc5a44dd53fb0856b7296d18aad1b31b45b0",
+        "source_commit": "bf0cf31ae5954967daa483d18cc9ebdc27530ee2",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 31
+    }
+  ]
+}

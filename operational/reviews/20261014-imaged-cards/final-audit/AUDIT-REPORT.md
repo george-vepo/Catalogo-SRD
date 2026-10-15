@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 30 lotes validados, 300/395 fichas (95 restantes).
+**Situação:** EM ANDAMENTO — 31 lotes validados, 310/395 fichas (85 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -208,3 +208,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 7 fichas completas em conteúdo, 1 com ressalvas (TF-340, Transmigratory Strike) e 2 incompletas (TF-334 com ND/PV nulos; TF-342, unidade bar brawl não definida em Cause Row). Seis imagens vinculadas via manifesto F com SHA/tamanho de árvore Git conferidos; quatro ausentes (TF-335, TF-336, TF-341 e TF-342). Imagens TF-340 (280×280) e TF-344 (360×279) têm lado inferior a 500 px. Licenças, inspeção visual e edição oficial não homologadas.
 
 **Consolidado:** 300/395 (95 restantes); 186 completas em conteúdo, 70 com ressalvas, 43 incompletas e 1 não verificável; 212 imagens diretas, 74 por manifesto, 14 ausentes.
+
+
+## Lote 031 — TF-345–TF-356 (10 IDs conforme CSV)
+
+9 fichas completas em conteúdo e 1 com ressalvas (TF-356: versão A5E de Grendel não mesclada com Viking Adventures). Imagens: 9 vinculadas via manifesto F com SHA/bytes Git conferidos e 1 ausente (TF-353). Cinco imagens com lado inferior a 500 px (TF-348, 350, 351, 355, 356); TF-355/356 usam sprites de 32×32 px. Sem aprovação visual/licenciamento ou validação editorial final.
+
+**Consolidado:** 310/395 (85 restantes); 195 completas em conteúdo, 71 com ressalvas, 43 incompletas, 1 não verificáveis; 212 imagens diretas, 83 por manifesto, 15 ausentes.
