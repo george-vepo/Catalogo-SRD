@@ -109,3 +109,14 @@
 - Paleta por ND: Comum grafite/preta (0–5), Incomum verde (6–10), Rara roxa (11–15), Lendária dourada (16–20), Mítica vermelho-escuro (21+).
 - Ícones de habilidade **independentes da raridade**: Buff azul (três setas), Debuff roxo (espiral), Cura verde (cruz), Dano vermelho (impacto).
 - Essas cinco criaturas e seus efeitos são **exemplos fictícios de arte/UI**, não fichas oficiais, cartas liberadas ou habilidades homologadas. As **8 imagens ausentes** das Aberrações reais permanecem ausentes.
+
+## Seleção das 2 cartas de suporte Cura (15/10/2026)
+
+O administrador escolheu **duas vagas Cura** na proposta do baralho de 40, ambas com **símbolo verde de cruz**:
+
+- **Ordem 27 — Astral Devourer (TF-009, ND 8, Incomum):** `Serpent Spray` (Recarga 6). Dano original mantido; sua recuperação condicionada ao dano perfurante causado seria transferida à criatura ativa.
+- **Ordem 37 — Snallygaster (TF-285, ND 15, Rara):** `Regeneration`. A criatura ativa receberia 15 PV no início do turno, caso tivesse ao menos 1 PV e o efeito permanecesse ativo.
+
+**Fontes**: [Astral Devourer](https://www.5esrd.com/database/creature/astral-devourer/) e [Snallygaster](https://www.5esrd.com/database/creature/snallygaster/). A seleção de `Cura` está registrada em [SUPORTES_CURA_CANDIDATOS_2.csv](SUPORTES_CURA_CANDIDATOS_2.csv) e [DECISOES_COMBATE_E_SUPORTES_40_20261015.md](DECISOES_COMBATE_E_SUPORTES_40_20261015.md).
+
+A classificação das **duas vagas** não altera os outros 38 suportes, não modifica os campos do `cards.csv`, não aprova a transferência homebrew e **não homologa** nenhuma habilidade. O registro local `TF-285` continua incompleto e ativação/duração dependem de regras futuras.
