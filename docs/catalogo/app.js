@@ -93,12 +93,13 @@ function mechanicsSummary(c){
   return section('Ficha de combate — registro do repositório',html);
 }
 function linksBlock(c) {
-  const f=c.mechanics||{},m=c.meta,art=c.artRecord||{},c0=c.celestial[0]||{};
+  const f=c.mechanics||{},m=c.meta,art=c.artRecord||{},c0=c.celestial[0]||{},curated=c.curated||{};
   const links=[
     [c0.sheet,'Ficha original / publicação de referência'],
     [f.url_ficha_individual_conhecida,'Ficha individual conhecida'],
     [f.url_referencia,'Referência do registro SRD'],
     [f.url_referencia_catalogo,'Catálogo editorial'],
+    [curated.source_url,'Fonte da imagem revisada'],
     [art.URL_pagina_origem,'Fonte da ilustração'],
     [m['URL CATÁLOGO'],'Página do catálogo'],
     [m['URL ÍNDICE ESTRUTURADO'],'Índice estruturado da fonte']
@@ -151,12 +152,12 @@ function openCard(index,fromLink) {
   const imageNote=c.art?
     '<p>Ilustração de referência (web), conforme arquivo de pesquisa. Fonte, edição e direitos de reprodução podem exigir revisão.</p>':
     '<p>Não há arte direta verificada e adequada para este registro. O catálogo não utiliza imagens de espécies parecidas como substituição.</p>';
-  const imageBlock=section('Imagem e licença',imageNote+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
+  const imageBlock=section('Imagem e licença',imageNote+(c.curated?'<p><strong>Revisão visual manual:</strong> '+esc(c.curated.evidence)+' · '+esc(c.curated.source_name)+' · '+esc(c.curated.source_version)+' · '+esc(c.curated.rights)+'</p>':'')+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
     (c.celestial[0]?.artNote?'<p>'+esc(c.celestial[0].artNote)+'</p>':''));
   $('detailInfo').innerHTML=top+status+deckBlock(c)+mechanicsSummary(c)+
     section('Identificação — todos os campos da megalista','<div class="meta-pairs">'+metaPairs+'</div>')+
     (c.audit?section('Controle de auditoria','<div class="meta-pairs">'+Object.entries(c.audit).map(([k,v])=>pair(k,v)).join('')+'</div>'):'')+
-    imageBlock+(c.alternates.length?section('Registro alternativo — identidade a conciliar','<p class="notice">O repositório contém KP-S007 (“Animated Instruments (Animated Symphony)”), enquanto a megalista utiliza TF-085. São mantidos como registros distintos, sem mesclar regras, aguardando reconciliação editorial.</p>'+c.alternates.map(x=>rawData(x.id+' · '+x.nome,x,true)).join('')):'')+(c.research.length?section('Pesquisas aprofundadas existentes','<div class="linkrow">'+c.research.map(x=>makeLink(x.url,'Pesquisa '+x.path.split('/')[3]+' · '+x.path.split('/').pop())).join('')+'</div><p>Arquivos de pesquisa do repositório; a existência não implica ficha homologada.</p>'):'')+linksBlock(c)+
+    imageBlock+(c.extra?section('Ficha de referência revisada — não homologada','<p class="notice">Referência D&D 5e conferida em pesquisa anterior, com revisão independente ainda pendente. Não transforma os dados em mecânica oficial do card game.</p>'+rawData('Estatísticas, traços, ações e condições da fonte',c.extra,true)):'')+(c.alternates.length?section('Registro alternativo — identidade a conciliar','<p class="notice">O repositório contém KP-S007 (“Animated Instruments (Animated Symphony)”), enquanto a megalista utiliza TF-085. São mantidos como registros distintos, sem mesclar regras, aguardando reconciliação editorial.</p>'+c.alternates.map(x=>rawData(x.id+' · '+x.nome,x,true)).join('')):'')+(c.research.length?section('Pesquisas aprofundadas existentes','<div class="linkrow">'+c.research.map(x=>makeLink(x.url,'Pesquisa '+x.path.split('/')[3]+' · '+x.path.split('/').pop())).join('')+'</div><p>Arquivos de pesquisa do repositório; a existência não implica ficha homologada.</p>'):'')+linksBlock(c)+
     section('Rastreabilidade','<p>Os dados provêm dos arquivos versionados no GitHub e preservam as classificações originais. A megalista provisória é distinta da homologação mecânica e jurídica da coleção.</p>');
   $('detailInfo').scrollTop=0;$('close').focus();
   if(!fromLink)history.replaceState(null,'','#c/'+index);
@@ -224,15 +225,17 @@ async function getJSON(path){
 }
 async function init(){
  try{
-   const [mega,srd,visuais,ledger,celestial,aberracao,aberrSupports,deepResearch]=await Promise.all([
+   const [mega,srd,visuais,ledger,celestial,aberracao,aberrSupports,deepResearch,curadoria,extraSheets]=await Promise.all([
      getJSON('data/megalista-1320.json'), getJSON('data/fichas-607.json'),
      getJSON('data/imagens-607.json'), getJSON('data/auditoria-607.json'),
      getJSON('data/deck-celestial-40.json'),getJSON('data/deck-aberracao-40.json'),
-     getJSON('data/suportes-aberracao.json'),getJSON('data/pesquisas-aprofundadas.json')
+     getJSON('data/suportes-aberracao.json'),getJSON('data/pesquisas-aprofundadas.json'),getJSON('data/curadoria-artes-20261015.json'),getJSON('data/fichas-referencia-verificadas.json')
    ]);
    const fichas=new Map(srd.fichas.map(x=>[x.id,x]));
    const imagens=new Map(visuais.records.map(x=>[x.ID,x]));
    const auditoria=new Map(ledger.records.map(x=>[x.ID,x]));
+   const approvedArts=new Map(curadoria.approved.filter(x=>x.rating==='REFERENCIA_VISUAL_ACEITA').map(x=>[x.id,x]));
+   const extraRecords=new Map(extraSheets.records.map(x=>[x.id,x]));
    const cByName=new Map(),aByName=new Map();
    for(const x of celestial.records){const n=norm(x.name);if(!cByName.has(n))cByName.set(n,[]);cByName.get(n).push(x);}
    const sp=new Map(aberrSupports.records.map(x=>[norm(x.nome),x]));
@@ -240,13 +243,15 @@ async function init(){
    const list=mega.records.map((m,i)=>{
      const name=m.NOME, id=m['ID NO JOGO']||'';
      const f=id?fichas.get(id):null,im=id?imagens.get(id):null,deep=id?(deepResearch.records[id]||[]):[];
+     const curated=id?approvedArts.get(id):null,extra=id?extraRecords.get(id):null;
      const cel=cByName.get(norm(name))||[],abe=aByName.get(norm(name))||[];
-     const web=(cel[0]&&cel[0].art)|| (im?.URL_imagem_direta || '');
+     const verifiedSource=im?.URL_imagem_direta && im?.Status_verificacao?.includes('MIME, dimensões e correspondência visual confirmados');
+     const web=curated?.image_url || (cel[0]&&cel[0].art) || (verifiedSource?im.URL_imagem_direta:'');
      const art=link(web)?web:'';
      const alternates=id==='TF-085'?[...srd.fichas.filter(x=>x.id==='KP-S007')]:[];
      const keyfields=[name,id,...alternates.map(x=>x.id),m.TIPO,m.FONTE,m.PUBLICAÇÃO,m.EDITORA,...(m['ALIASES CONSOLIDADOS']?[m['ALIASES CONSOLIDADOS']]:[])];
      return {index:i,name,nd:m.ND,rarity:m.RARIDADE,type:m.TIPO,meta:m,mechanics:f||null,artRecord:im||null,
-       audit:id?auditoria.get(id)||null:null,celestial:cel,aberracao:abe,research:deep,alternates,art,
+       audit:id?auditoria.get(id)||null:null,celestial:cel,aberracao:abe,research:deep,alternates,curated,extra,art,
        search:norm(keyfields.join(' '))};
    });
    if(list.length!==1320)throw Error('Esperados 1320 registros, recebidos '+list.length);
