@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 33 lotes validados, 330/395 fichas (65 restantes).
+**Situação:** EM ANDAMENTO — 34 lotes validados, 340/395 fichas (55 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -229,3 +229,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 7 completas em conteúdo e 3 com ressalvas (TF-382 ND5/ND6 em versões conflitantes; TF-386 variante A5E; TF-388 edição original/revisão divergentes). Seis imagens por manifesto F, quatro ausentes (TF-379, 381, 384, 386); TF-372 com largura 374px. Nenhuma arte, edição ou licença homologada.
 
 **Consolidado:** 330/395 (65 restantes); 211 completas, 75 com ressalvas, 43 incompletas e 1 não verificáveis; 212 diretas, 97 por manifesto, 21 ausentes.
+
+
+## Lote 034 — TF-389–TF-401 (10 IDs conforme CSV)
+
+8 fichas completas em conteúdo e 2 com ressalvas (TF-394 versões 2016/2023 divergentes; TF-401 diferenças de SAB/deslocamento entre edições). Sete imagens por manifesto F com SHA e tamanho de árvore Git conferidos; três ausentes (TF-389/397/398). TF-392 280×280, TF-393/395 sprites 32×32. Edições, licenças e arte final não homologadas.
+
+**Consolidado:** 340/395 (55 restantes); 219 completas, 77 com ressalvas, 43 incompletas, 1 não verificáveis; 212 diretas, 104 via manifesto, 24 ausentes.
