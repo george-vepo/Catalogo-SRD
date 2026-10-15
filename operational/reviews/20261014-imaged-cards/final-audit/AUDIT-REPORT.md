@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 34 lotes validados, 340/395 fichas (55 restantes).
+**Situação:** EM ANDAMENTO — 35 lotes validados, 350/395 fichas (45 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -236,3 +236,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 8 fichas completas em conteúdo e 2 com ressalvas (TF-394 versões 2016/2023 divergentes; TF-401 diferenças de SAB/deslocamento entre edições). Sete imagens por manifesto F com SHA e tamanho de árvore Git conferidos; três ausentes (TF-389/397/398). TF-392 280×280, TF-393/395 sprites 32×32. Edições, licenças e arte final não homologadas.
 
 **Consolidado:** 340/395 (55 restantes); 219 completas, 77 com ressalvas, 43 incompletas, 1 não verificáveis; 212 diretas, 104 via manifesto, 24 ausentes.
+
+
+## Lote 035 — TF-402–TF-412 (10 IDs conforme CSV)
+
+8 fichas completas em conteúdo e 2 incompletas (**TF-408** ND null/CD de Thrash não definida; **TF-412**, divergência SAB 11 (+1/+0) e ND do catálogo nulo, fonte C). Imagens: seis por manifesto F, uma direta (TF-412 em deep-mechanics/c/images, SHA Git conferido) e três ausentes (TF-402/408/411). Imagens pequenas TF-405 32×32 e TF-409 152×203. Edições e licenças não homologadas.
+
+**Consolidado:** 350/395 (45 restantes); 227 completas, 77 com ressalvas, 45 incompletas, 1 não verificáveis; 213 imagens diretas, 110 por manifesto, 27 ausentes.
