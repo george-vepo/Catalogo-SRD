@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 31 lotes validados, 310/395 fichas (85 restantes).
+**Situação:** EM ANDAMENTO — 32 lotes validados, 320/395 fichas (75 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -215,3 +215,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 9 fichas completas em conteúdo e 1 com ressalvas (TF-356: versão A5E de Grendel não mesclada com Viking Adventures). Imagens: 9 vinculadas via manifesto F com SHA/bytes Git conferidos e 1 ausente (TF-353). Cinco imagens com lado inferior a 500 px (TF-348, 350, 351, 355, 356); TF-355/356 usam sprites de 32×32 px. Sem aprovação visual/licenciamento ou validação editorial final.
 
 **Consolidado:** 310/395 (85 restantes); 195 completas em conteúdo, 71 com ressalvas, 43 incompletas, 1 não verificáveis; 212 imagens diretas, 83 por manifesto, 15 ausentes.
+
+
+## Lote 032 — TF-358–TF-370 (10 IDs conforme CSV)
+
+9 fichas completas em conteúdo e 1 com ressalvas (TF-361 mantém Elder Black Pudding A5E ND8/PV171 separado do homônimo ND4/PV130). Oito imagens por manifesto F com SHA/tamanho Git conferidos; duas ausentes (TF-358 e TF-370). Quatro imagens de baixa resolução (TF-361 32×32, TF-363/365/367 280×280). Edições, licenças e arte final não homologadas.
+
+**Consolidado:** 320/395 (75 restantes); 204 completas, 72 com ressalvas, 43 incompletas, 1 não verificáveis; 212 imagens diretas, 91 por manifesto, 17 ausentes.

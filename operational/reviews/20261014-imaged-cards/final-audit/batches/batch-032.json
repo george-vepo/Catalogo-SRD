@@ -1,0 +1,885 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+  "reference_date": "2026-10-14",
+  "batch_number": 32,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 9,
+    "completas_com_ressalvas": 1,
+    "incompletas": 0,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 8,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 2,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 4
+  },
+  "evidence_limitations": [
+    "Integridade das imagens por manifesto F e metadados da árvore Git, sem inspeção visual nova.",
+    "TF-361 variante A5E separada; imagem sprite baixa resolução não é arte final.",
+    "Fontes não homologadas; licença editorial e testes pendentes."
+  ],
+  "records": [
+    {
+      "id": "TF-358",
+      "criatura": "Giant, Void",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Magia Void Casting e reação Magic Absorption estruturadas; variantes opcionais não selecionadas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": 11,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 210,
+        "dados_vida": "20d12+80",
+        "atributos": {
+          "FOR": 24,
+          "DES": 10,
+          "CON": 18,
+          "INT": 18,
+          "SAB": 10,
+          "CAR": 14
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Void Casting"
+          ],
+          "ataques": [
+            "Slam"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Slam"
+          ],
+          "acoes_bonus": [
+            "Void Casting"
+          ],
+          "reacoes": [
+            "Magic Absorption"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": [
+            "Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Magia Void Casting e reação Magic Absorption estruturadas; variantes opcionais não selecionadas.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-358.json",
+        "sha": "7b0825e4ae9f84e7e716641a2f02364f606da5c8",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-361",
+      "criatura": "Elder Black Pudding",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Preservada versão A5E ND8/PV171 separadamente do homônimo 5e ND4/PV130.",
+      "identidade": {
+        "origem": "EN Publishing/A5E",
+        "edicao": "Monstrous Menagerie",
+        "cr": 8,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 7,
+        "pv": 171,
+        "dados_vida": "18d12+54",
+        "atributos": {
+          "FOR": 16,
+          "DES": 4,
+          "CON": 16,
+          "INT": 1,
+          "SAB": 6,
+          "CAR": 1
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Amorphous",
+            "Corrosive Body",
+            "Spider Climb",
+            "Sunlight Sensitivity",
+            "Ooze Nature"
+          ],
+          "ataques": [
+            "Pseudopod"
+          ],
+          "acoes": [
+            "Multiattack"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Split"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Preservada versão A5E ND8/PV171 separadamente do homônimo 5e ND4/PV130."
+      ],
+      "pendencias_editoriais": [
+        "Preservada versão A5E ND8/PV171 separadamente do homônimo 5e ND4/PV130.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-361.png",
+        "sha_git": "5550a23094330a29dea976613bee08aa64f5314c",
+        "bytes": 1052,
+        "dimensoes_declaradas": [
+          32,
+          32
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Confirmar edição escolhida sem mesclar variantes.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-361.json",
+        "sha": "724fe792e527cd243e3c0e8fb06828daf878ef0f",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-363",
+      "criatura": "Puffinfolk",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Ataque Peck e reação Quick and Nimble definidos.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "1/2",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 22,
+        "dados_vida": "4d6+8",
+        "atributos": {
+          "FOR": 12,
+          "DES": 18,
+          "CON": 15,
+          "INT": 12,
+          "SAB": 14,
+          "CAR": 10
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Blessings of the Sea Gods",
+            "Hardy Ocean Explorers",
+            "Oceanic Recall"
+          ],
+          "ataques": [
+            "Peck"
+          ],
+          "acoes": [
+            "Peck"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Quick and Nimble"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Ataque Peck e reação Quick and Nimble definidos.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-363.webp",
+        "sha_git": "7e1217d1ddf4aa0711ec583d9940b3127a6b7275",
+        "bytes": 82596,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-363.json",
+        "sha": "1d246299219850941b475c021e7cfddb1779dc40",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-364",
+      "criatura": "Simian, Kapi",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Tail Trip e Disengage registrados entre movimentos.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "1/2",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 13,
+        "dados_vida": "3d8",
+        "atributos": {
+          "FOR": 14,
+          "DES": 18,
+          "CON": 10,
+          "INT": 11,
+          "SAB": 13,
+          "CAR": 9
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Nimble Feet",
+            "Prehensile Tail"
+          ],
+          "ataques": [
+            "Quarterstaff",
+            "Tail Trip",
+            "Sling"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Quarterstaff",
+            "Tail Trip",
+            "Sling"
+          ],
+          "acoes_bonus": [
+            "Disengage"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Tail Trip e Disengage registrados entre movimentos.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-364.webp",
+        "sha_git": "a82579acc5199a670804951ca2bd161bb58daf08",
+        "bytes": 97320,
+        "dimensoes_declaradas": [
+          667,
+          862
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-364.json",
+        "sha": "7c6728ca8fec8ce86db82fcddbbcc8da6ac1337d",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-365",
+      "criatura": "Erina, Defender",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Reação Protective Interference individualizada.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": 1,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 44,
+        "dados_vida": "8d6+16",
+        "atributos": {
+          "FOR": 11,
+          "DES": 14,
+          "CON": 14,
+          "INT": 13,
+          "SAB": 12,
+          "CAR": 11
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Keen Smell",
+            "Hardy",
+            "Spines"
+          ],
+          "ataques": [
+            "Shortsword",
+            "Shortbow"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Shortsword",
+            "Shortbow"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Protective Interference"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Reação Protective Interference individualizada.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-365.webp",
+        "sha_git": "64df15e8b8e9bc788aeba3fc36b0c538f162977a",
+        "bytes": 86494,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-365.json",
+        "sha": "1f29a3932b5e78d2516beba1dbf399be80223e9f",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-366",
+      "criatura": "Simian, Vanara",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Distract e Quadrupedal Dash como ações bônus.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": 2,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 55,
+        "dados_vida": "10d8+10",
+        "atributos": {
+          "FOR": 14,
+          "DES": 16,
+          "CON": 12,
+          "INT": 11,
+          "SAB": 15,
+          "CAR": 12
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Standing Leap"
+          ],
+          "ataques": [
+            "Slam",
+            "Sling"
+          ],
+          "acoes": [
+            "Slam",
+            "Sling"
+          ],
+          "acoes_bonus": [
+            "Distract",
+            "Quadrupedal Dash"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Distract e Quadrupedal Dash como ações bônus.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-366.webp",
+        "sha_git": "0fddfb4f98d651673831fc0b283e1b23064a8deb",
+        "bytes": 153172,
+        "dimensoes_declaradas": [
+          766,
+          1007
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-366.json",
+        "sha": "7a7b3622b74a641275948b204e0344e414997c84",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-367",
+      "criatura": "Erina, Tussler",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mecânicas de espinhos e regeneração individualizadas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": 3,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 66,
+        "dados_vida": "12d6+24",
+        "atributos": {
+          "FOR": 12,
+          "DES": 16,
+          "CON": 14,
+          "INT": 13,
+          "SAB": 12,
+          "CAR": 11
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Arm Spine Regrowth",
+            "Expert Wrestler",
+            "Keen Smell",
+            "Hardy",
+            "Spines"
+          ],
+          "ataques": [
+            "Punching Spines",
+            "Throw Spine"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Punching Spines",
+            "Throw Spine"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Mecânicas de espinhos e regeneração individualizadas.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-367.webp",
+        "sha_git": "69796a3dcffc75d84f7d2a26c3d92d0712f7fc37",
+        "bytes": 89006,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-367.json",
+        "sha": "a5073d29f2f1fc2cacdb95c74e6fa52ce5cfcacd",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-368",
+      "criatura": "Gnoll Slaver",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Menace Captives e Rampage registrados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": 3,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 71,
+        "dados_vida": "11d8+22",
+        "atributos": {
+          "FOR": 18,
+          "DES": 15,
+          "CON": 14,
+          "INT": 12,
+          "SAB": 11,
+          "CAR": 12
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Rampage"
+          ],
+          "ataques": [
+            "Bite",
+            "Whip",
+            "Longbow"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Whip",
+            "Longbow",
+            "Menace Captives"
+          ],
+          "acoes_bonus": [
+            "Rampage"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Menace Captives e Rampage registrados.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-368.webp",
+        "sha_git": "cb4564c444be7f455d3656c8203e2d666cd6cefd",
+        "bytes": 227612,
+        "dimensoes_declaradas": [
+          930,
+          1187
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-368.json",
+        "sha": "7d09dda5c6c262198a4212901695c52e76bb9187",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-369",
+      "criatura": "Gnoll, Havoc Runner",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Ação bônus Lightning Lope individualizada.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 (2023, reprodução identificada)",
+        "cr": 3,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 58,
+        "dados_vida": "9d8+18",
+        "atributos": {
+          "FOR": 16,
+          "DES": 14,
+          "CON": 14,
+          "INT": 8,
+          "SAB": 12,
+          "CAR": 9
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Harrying Attacks",
+            "Pack Tactics"
+          ],
+          "ataques": [
+            "Battleaxe",
+            "Bite"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Battleaxe",
+            "Bite"
+          ],
+          "acoes_bonus": [
+            "Lightning Lope"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Ação bônus Lightning Lope individualizada.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-369.webp",
+        "sha_git": "982677d1b74c555154207a831ac4df03931375ed",
+        "bytes": 262474,
+        "dimensoes_declaradas": [
+          833,
+          1000
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-369.json",
+        "sha": "e41d92074110f6e238b7a1b610ce2b3174308a86",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    },
+    {
+      "id": "TF-370",
+      "criatura": "Simian, Sulsha",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Terrifying Display e Bomb no inventário de ações; imagem não adquirida.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": 4,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 90,
+        "dados_vida": "12d10+24",
+        "atributos": {
+          "FOR": 18,
+          "DES": 14,
+          "CON": 14,
+          "INT": 11,
+          "SAB": 12,
+          "CAR": 9
+        },
+        "atributos_seis": true
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Arboreal Tactician",
+            "Standing Leap"
+          ],
+          "ataques": [
+            "Bite",
+            "Slam",
+            "Tail Spur",
+            "Bomb"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Slam",
+            "Tail Spur",
+            "Bomb",
+            "Terrifying Display"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Terrifying Display e Bomb no inventário de ações; imagem não adquirida.",
+        "Validar edição editorial e erratas; revisão independente, integração e licença pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA_NESTA_AUDITORIA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar fonte, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-370.json",
+        "sha": "bec19f15347692cfc7bdbff11aac7d037b3745dd",
+        "source_commit": "0f0298820c9bc5ae32ed6e73e64c43518c086407",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 32
+    }
+  ]
+}
