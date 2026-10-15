@@ -52,3 +52,40 @@
 - [Índice de fontes de imagens e licenças não verificadas](https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/main/SRD_CYCLES/26-30/working/03_CONSTRUTOR/outputs/SRD_URLS_IMAGENS_607.csv)
 
 **NENHUMA IMPORTAÇÃO CANÔNICA / NENHUMA HOMOLOGAÇÃO.** Este pacote é para trabalho editorial e não modifica os estados da partida.
+
+
+## Atualização técnica — complementação da pesquisa (14/10/2026)
+
+**Fichas completas vinculadas ao SRD 5.2.1:** `fichas_srd521_integral_3.json` preserva os blocos integrais originais de **AT-001 Gibbering Mouther**, **AT-002 Roper** e **AT-003 Aboleth** que já constavam no arquivo de 607. Esses textos são do *SRD 5.2.1*, disponibilizado pela Wizards of the Coast sob **CC BY 4.0**. A atribuição exigida consta no novo arquivo. **Não se aplica licença CC às ilustrações de D&D Beyond.** Conferir a fidelidade e engine antes da homologação.
+
+**Sete incompletas:** `pesquisa_fichas_incompletas_7.json` incorpora apenas evidências numéricas e índices de mecânicas com URLs públicas, sem promover as fichas. Encontradas fontes para todos os sete IDs, sujeitas à revisão editorial, OGL, versão e engine.
+
+- **TF-004 Astral Snapper:** [Creature Codex 2018](https://www.5esrd.com/database/creature/astral-snapper/), ND 3, CA 12, PV 78.
+- **TF-013 Yavalnoi:** [Tome of Beasts 2](https://www.5esrd.com/database/creature/yavalnoi/), ND 6, CA 16, PV 126.
+- **TF-010 Chelicerae:** [Tome of Beasts 2023](https://www.5esrd.com/database/creature/chelicerae-3pp/), ND 7, CA 16, PV 153; ações revistas não devem ser mescladas com 2016.
+- **TF-014 Ziphius:** [Creature Codex 2018](https://www.5esrd.com/database/creature/ziphius/), ND 8, CA 16, PV 135.
+- **TF-012 Xhkarsh:** [Tome of Beasts 2023](https://www.5esrd.com/database/creature/xhkarsh-3pp/), ND 9, CA 18, PV 171. A versão original de 2016 tem **ND 8, CA 19, PV 133**; manter ambas separadas.
+- **TF-018 Voidling:** [Tome of Beasts 2023](https://www.5esrd.com/database/creature/voidling-3pp/), ND 11, CA 15, PV 180.
+- **TF-285 Snallygaster:** [Tome of Beasts 3](https://www.5esrd.com/database/creature/snallygaster/), ND 15, CA 16, PV 207; **não confundir** com Snallygast / ND 10 / Dragão de outra fonte.
+
+### Autorização de mecânicas versus imagens
+
+1. **SRD 5.2.1:** texto mecânico sob [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode), com atribuição; a licença não libera automaticamente as artes.
+2. **Kobold Press:** a licença [OGL 1.0a](https://koboldpress.com/open-game-license-version-1-0a/) abre somente o conteúdo designado como Open Game Content; **ilustração, certos nomes e outros elementos de identidade** podem ser reservados. Completar a referência e o aviso de copyright aplicável a cada livro antes de redistribuir o texto integral.
+3. **Livros D&D Beyond fora do SRD:** as cinco criaturas externas podem ter textos e imagens reservados. A existência de statblock em fontes auxiliares não concede autorização de reprodução.
+4. **Imagens no Git:** 25/40 possuem arquivos físicos existentes, mas **0/40 possuem licença/aceite visual documentados neste trabalho**. Os 15 restantes necessitam de imagem original ou explicitamente licenciada. A coluna `IMAGEM_APROVADA_PARA_CARDGAME` foi marcada `NAO` em todos os 40 registros, até evidência e aceite do administrador.
+5. **Combate:** não integrar à engine mecânicas que carecem de economia de ações, eventos, duração, alcance, condições, concentração, testes, recarga e recursos completos; esses campos ainda dependem da revisão de suas fontes e testes.
+
+### Estado real da entrega
+
+| Item | Evidência documentada | Pendente |
+|---|---:|---|
+| Cartas da proposta | 40 | validação final para jogar |
+| Fichas integrais SRD 5.2.1 reproduzidas com atribuição | 3 | teste de implementação SRD 5.2.1 |
+| Sete fichas incompletas com fonte individual e resumo auditável | 7 | extração e adaptação integral OGL + testes |
+| Outras 30 cartas | 30 com seus registros e fontes originais (algumas só em resumo, 5 candidatas externas) | auditoria, consolidação, eventual licença e testes |
+| Imagens locais já existentes | 25 | verificação de identidade, dimensões, créditos, licença e aceite |
+| Imagens ainda não incorporadas | 15 | pesquisar licenças ou criar arte original e obter aprovação |
+| Imagens homologadas | **0** | 40 aprovações individualizadas |
+
+**O PR é de pesquisa e integração documental.** NÃO é uma declaração de 40 fichas completas e 40 imagens aprovadas; alterações no catálogo ativo e no estado oficial seguem bloqueadas.
