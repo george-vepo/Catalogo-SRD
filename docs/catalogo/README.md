@@ -24,6 +24,16 @@ O site pode ser publicado via **GitHub Pages** apontando para a pasta `/docs` da
 - Itens sem imagem aprovada ou adequada recebem um ícone neutro; nunca é usada arte de outro monstro como substituta.
 - Os dados de pesquisa mais aprofundada nas trilhas `a/b/c` são indexados por ID e exibidos por links diretos aos arquivos correspondentes do repositório.
 
+
+## Lote adicional de auditoria (15/10/2026)
+
+Este snapshot adiciona dois arquivos de pesquisa, sem homologar itens automaticamente:
+
+- `data/curadoria-artes-20261015.json`: **4 referências web** aprovadas visualmente para uso ilustrativo no catálogo (AT-003, AT-009, AT-012, AT-024) e **5 candidatas recusadas**. Imagens continuam como links externos com direitos de reprodução não concedidos.
+- `data/fichas-referencia-verificadas.json`: **6 fichas mecânicas de referência** recuperadas dos JSONs detalhados do lote E (TF-059, TF-060, TF-061, TF-063, TF-064 e TF-065). O site exibe a referência detalhada separadamente, sem tratar a ficha como nova homologação do jogo.
+
+Atualmente, **35 das 1.320** espécies têm URL de imagem exibível a partir de qualquer uma das fontes registradas no site; **1.285 ainda não têm**. Arquivos binários não revisados do repositório **não são aceitos automaticamente**. Consulte o relatório `AUDITORIA_IMAGENS_FICHAS_20261015.md` para contagens, rejeições e pendências. 
+
 ## Dados versionados
 
 | Arquivo local em `data/` | Fonte | Escopo |
