@@ -1,0 +1,884 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+  "reference_date": "2026-10-14",
+  "batch_number": 19,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 2,
+    "completas_com_ressalvas": 2,
+    "incompletas": 6,
+    "nao_verificaveis": 0,
+    "imagem_direta": 9,
+    "imagem_manifesto": 1,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 1
+  },
+  "evidence_limitations": [
+    "Dados mecânicos dos JSONs, sem nova conferência nas fontes editoriais.",
+    "TF-203 a TF-210 só têm sínteses: incompletude explícita.",
+    "Integridade de imagens conforme metadados SHA/bytes GitHub; inspeção visual independente não realizada.",
+    "Arte e direitos de publicação não homologados."
+  ],
+  "records": [
+    {
+      "id": "TF-201",
+      "criatura": "Alpha Werewolf",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Regras de Level Up A5E estão estruturadas, mas licença não-SRD e condições A5E bloqueiam transposição.",
+      "identidade": {
+        "origem": "EN Publishing (Level Up A5E)",
+        "edicao": "Level Up A5E — Monstrous Menagerie (NÃO o Alpha Werewolf D&D 5e CR13)",
+        "cr": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 104,
+        "dados_vida": "16d8+32",
+        "atributos": {
+          "FOR": 14,
+          "DES": 14,
+          "CON": 14,
+          "INT": 10,
+          "SAB": 10,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30,
+          "forma_lobo": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 30,
+            "restricao": "somente wolf ou hybrid"
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Bloodied",
+            "Keen Hearing and Smell",
+            "Pack Tactics",
+            "Wolfsbane",
+            "Cursed Wounds"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Greatclub",
+            "Claw",
+            "Bite"
+          ],
+          "ataques": [
+            "Greatclub",
+            "Claw",
+            "Bite"
+          ],
+          "acoes_bonus": [
+            "Shapeshift",
+            "Frenzied Bite"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "a5e.tools diz que NÃO constitui A5ESRD aberto; licença do material precisa ser conferida em edição licenciada antes de aprovação."
+      ],
+      "pendencias_editoriais": [
+        "Alpha Werewolf escolhido é A5E CR6 104 PV, NÃO nome homônimo 5e CR13 180 PV. Vulnerabilidade Wolfsbane é condição de forma/cheiro, não dano normal.",
+        "Cursed Wounds aplica dano necrotic extra somente Claw e Bite; Shapeshift / Frenzied Bite condicionais.",
+        "a5e.tools diz que NÃO constitui A5ESRD aberto; licença do material precisa ser conferida em edição licenciada antes de aprovação.",
+        "XP não informado no bloco A5E consultado; campo mantido null, sem inferir valores de tabela D&D 5e (valor anterior 2300 foi descartado).",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-201.jpg",
+        "sha_git": "dfb6ce220edcf8fb39c9a805b89184cd054e91f5",
+        "bytes": 448110,
+        "dimensoes_declaradas": [
+          2500,
+          1835
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver proveniência editorial/condições de licença antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-201.json",
+        "sha": "5b76fd556fe64b0ba32d7c92648502ac889f5af7",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-202",
+      "criatura": "Bearfolk Thunderstomper",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Livro de origem conflitante: fonte 5eSRD indica Book of Ebon Tides, catálogo Tome of Beasts 3.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "FONTE 5eSRD indica Book of Ebon Tides (2022), manifesto identifica Tome of Beasts 3; resolver",
+        "cr": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 105,
+        "dados_vida": "14d8+42",
+        "atributos": {
+          "FOR": 18,
+          "DES": 15,
+          "CON": 16,
+          "INT": 9,
+          "SAB": 14,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          },
+          {
+            "tipo": "tremorsense",
+            "alcance_ft": 30
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Deceptive Steps",
+            "Keen Smell"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "War Flute",
+            "Thunder Stomp",
+            "Warsong",
+            "Spellcasting"
+          ],
+          "ataques": [
+            "Bite",
+            "War Flute"
+          ],
+          "acoes_bonus": [
+            "Frenzy",
+            "Taunt"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": [
+            "Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "BLOQUEIO PROVENIÊNCIA: o 5eSRD atribui © Book of Ebon Tides (2022) mas CSV classifica Tome of Beasts 3; confirmar publicação/licença correta."
+      ],
+      "pendencias_editoriais": [
+        "BLOQUEIO PROVENIÊNCIA: o 5eSRD atribui © Book of Ebon Tides (2022) mas CSV classifica Tome of Beasts 3; confirmar publicação/licença correta.",
+        "'Alternate Critical (Monster Crits for 5e)' na mesma página é regra externa opcional, EXCLUÍDA da mecânica-base.",
+        "Thunder Stomp não fornece efeito no sucesso; não inventar metade do dano. Imagem/edição ainda pendentes.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-202.webp",
+        "sha_git": "873f88e927c04df017ed517cebf793a903d6707e",
+        "bytes": 99674,
+        "dimensoes_declaradas": [
+          1000,
+          1166
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-202.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver proveniência editorial/condições de licença antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-202.json",
+        "sha": "98539f9a682c8ff74b378a11446a0fab1b6a9945",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-203",
+      "criatura": "Cueyatl Warchief",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Apenas resumos de traços e ataques; atributos, ações detalhadas e condições estão ausentes.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": null,
+        "cr": "7",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 117,
+        "dados_vida": null,
+        "atributos": null,
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Características verificadas (síntese)"
+          ],
+          "acoes": [
+            "Ações pesquisadas (síntese)"
+          ],
+          "ataques": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Atributos e mecanismos integrados ausentes ou resumidos sem detalhamento."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "A montaria tem bloco separado e só participa se presente.",
+        "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-203.webp",
+        "sha_git": "a4bc6ec456952e0ab16cf9d9d0c514c04507f916",
+        "bytes": 160202,
+        "dimensoes_declaradas": [
+          1200,
+          1029
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-203.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar e estruturar mecanicas integrais e atributos; depois validar imagem e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-203.json",
+        "sha": "5d3c4bfb76d129a3802900e9f022356181d3cc1d",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-204",
+      "criatura": "Thripper",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Traços e ações disponíveis apenas como síntese, sem inventário detalhado.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": null,
+        "cr": "6",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 104,
+        "dados_vida": null,
+        "atributos": null,
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Características verificadas (síntese)"
+          ],
+          "acoes": [
+            "Ações pesquisadas (síntese)"
+          ],
+          "ataques": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Atributos e mecanismos integrados ausentes ou resumidos sem detalhamento."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Fonte tem typo 'tripper' na multiattack, não confundir criatura ou generalizar counterspell.",
+        "Conferir integralmente ataques, CDs, durações, conjurações, recargas e edição.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-204.webp",
+        "sha_git": "cfb5dcc24b445ae3c388d6369d1afc5a762cc130",
+        "bytes": 243528,
+        "dimensoes_declaradas": [
+          1000,
+          1467
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-204.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar e estruturar mecanicas integrais e atributos; depois validar imagem e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-204.json",
+        "sha": "e29fe648c570dc1d8e7a99b082ef946b7919b322",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-205",
+      "criatura": "Yathon",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Bloco sintetizado e valor de CHA corrompido na fonte secundária.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": null,
+        "cr": "7",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 152,
+        "dados_vida": null,
+        "atributos": null,
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Características verificadas (síntese)"
+          ],
+          "acoes": [
+            "Ações pesquisadas (síntese)"
+          ],
+          "ataques": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Atributos e mecanismos integrados ausentes ou resumidos sem detalhamento."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "O bloco web mostra modificador CHA corrompido '7 (?2)' e alcance de Claw redundante; preservar dados claros e marcar tipografias.",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-205.webp",
+        "sha_git": "c0eeb448b689601c36a27e803fc52d18be41c4dd",
+        "bytes": 184170,
+        "dimensoes_declaradas": [
+          751,
+          1321
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-205.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar e estruturar mecanicas integrais e atributos; depois validar imagem e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-205.json",
+        "sha": "fa607ab9ae9d1a2dbcd83b98062e2b8c5ff426a1",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-206",
+      "criatura": "Zeitgeist",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Identidade humanoide identificada, mas mecânicas e atributos ainda sem detalhamento.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": null,
+        "cr": "6",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 82,
+        "dados_vida": null,
+        "atributos": null,
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Características verificadas (síntese)"
+          ],
+          "acoes": [
+            "Ações pesquisadas (síntese)"
+          ],
+          "ataques": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Atributos e mecanismos integrados ausentes ou resumidos sem detalhamento."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Uma ficha humanoide viva, não fantasma morto-vivo, apesar do nome; registrar duas CA.",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-206.webp",
+        "sha_git": "3b722a76244674f84c351c12f7a9b89aa6a4b39a",
+        "bytes": 177342,
+        "dimensoes_declaradas": [
+          652,
+          1022
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-206.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar e estruturar mecanicas integrais e atributos; depois validar imagem e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-206.json",
+        "sha": "918d539d99a2643e54a3a5185e028a7c210bc254",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-208",
+      "criatura": "Acid Ant",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Registro resumido e variante opcional Fungi Bloom não integrada.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": null,
+        "cr": "1/4",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 13,
+        "dados_vida": null,
+        "atributos": null,
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Características verificadas (síntese)"
+          ],
+          "acoes": [
+            "Ações pesquisadas (síntese)"
+          ],
+          "ataques": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Atributos e mecanismos integrados ausentes ou resumidos sem detalhamento."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "ND0.3 no catálogo representa CR1/4; descrição contém variante Fungi Bloom opcional, não incorporar ao bloco base.",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-208.jpg",
+        "sha_git": "27ba650656168fdc9688d8b39d4b4800c1b8c584",
+        "bytes": 56735,
+        "dimensoes_declaradas": [
+          584,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-208.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar e estruturar mecanicas integrais e atributos; depois validar imagem e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-208.json",
+        "sha": "32100ea2aba53d079f3e2270f0b030a1c94f91a7",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-210",
+      "criatura": "Agnibarra",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Registro resumido, sem parâmetros e ações detalhadas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": null,
+        "cr": "1",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 39,
+        "dados_vida": null,
+        "atributos": null,
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Características verificadas (síntese)"
+          ],
+          "acoes": [
+            "Ações pesquisadas (síntese)"
+          ],
+          "ataques": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Atributos e mecanismos integrados ausentes ou resumidos sem detalhamento."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Dano adicional de fogo por turno termina quando apagado, não aplicar permanentemente.",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-210.jpg",
+        "sha_git": "b106cc44de638d49e82e9b11310bd12be0710a1f",
+        "bytes": 50654,
+        "dimensoes_declaradas": [
+          452,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-210.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar e estruturar mecanicas integrais e atributos; depois validar imagem e licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-210.json",
+        "sha": "e1e8ca657a2f6057c919fe57609ea345c5cb0bd3",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-211",
+      "criatura": "Ahuizotl",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Tail Grab, ataque e deslocamento bônus especificados em ficha A.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "2",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 71,
+        "dados_vida": "13d6+26",
+        "atributos": {
+          "FOR": 16,
+          "DES": 15,
+          "CON": 14,
+          "INT": 6,
+          "SAB": 12,
+          "CAR": 6
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 30,
+          "swim_ft": 30
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 13
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Amphibious",
+            "Spiky Coat"
+          ],
+          "actions": [
+            "Multiattack",
+            "Bite",
+            "Claw",
+            "Tail Grab"
+          ],
+          "bonus_actions": [
+            "Tail Grab — deslocamento"
+          ],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+        "Revisão independente de todas as ações e condições ainda não realizada.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-211.jpg",
+        "sha_git": "05be26e6db170f86a6cd623d1ebb7d1f79cae944",
+        "bytes": 78801,
+        "dimensoes_declaradas": [
+          980,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-211.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir impressão original, adaptar/testar card game, validar arte/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-211.json",
+        "sha": "94acae2ee9455352a60d943d6e2d4e4f5075f38a",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    },
+    {
+      "id": "TF-212",
+      "criatura": "Alabroza",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Ataques Talons, Draining Fangs e condições de soltura estruturados em ficha A.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "1",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 45,
+        "dados_vida": "10d6+10",
+        "atributos": {
+          "FOR": 14,
+          "DES": 15,
+          "CON": 13,
+          "INT": 4,
+          "SAB": 15,
+          "CAR": 7
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 10,
+          "fly_ft": 50
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 12
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Bloodthirsty"
+          ],
+          "actions": [
+            "Multiattack",
+            "Talons",
+            "Draining Fangs"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Conferir transcrição de regras contra impressão/errata editorial exata; ainda não validada.",
+        "Revisão independente de todas as ações e condições ainda não realizada.",
+        "Verificação independente de edição e direitos pendentes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-212.webp",
+        "sha_git": "c45bad4a57a8c6af0e4f0ae32364052a1544c05b",
+        "bytes": 159586,
+        "dimensoes_declaradas": [
+          1000,
+          1091
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-212.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir impressão original, adaptar/testar card game, validar arte/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-212.json",
+        "sha": "b7353ece7feb6c1ebaccf7d6b09f55bd2df0e4be",
+        "source_commit": "bb85b97da3f7c5de973e0b917d0f5c87e78aa2eb",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 19
+    }
+  ]
+}

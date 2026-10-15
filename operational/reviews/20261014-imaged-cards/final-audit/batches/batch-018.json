@@ -1,0 +1,1319 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+  "reference_date": "2026-10-14",
+  "batch_number": 18,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 5,
+    "completas_com_ressalvas": 4,
+    "incompletas": 1,
+    "nao_verificaveis": 0,
+    "imagem_direta": 9,
+    "imagem_manifesto": 1,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 2
+  },
+  "evidence_limitations": [
+    "Ficha avaliada conforme JSON individual; não realizado cotejo editorial novo contra publicações originais.",
+    "Hashes e tamanhos das imagens diretas verificados via GitHub; TF-200 via manifesto E, SHA publicado anteriormente.",
+    "Dimensões declaradas em registros/manifesto, sem inspeção visual independente.",
+    "TF-200: arte gerada por IA e não homologada para identidade, direitos e uso editorial.",
+    "Ressalvas de versões, transcrição incompleta e licenciamento mantidas sem alteração canônica."
+  ],
+  "records": [
+    {
+      "id": "TF-191",
+      "criatura": "Corpse Thief",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Object Reading só vale uma vez por objeto; Steal não substitui os ataques Multiattack.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": "1/2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 30,
+        "dados_vida": "4d8+12",
+        "atributos": {
+          "FOR": 12,
+          "DES": 17,
+          "CON": 16,
+          "INT": 11,
+          "SAB": 13,
+          "CAR": 6
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Common"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Object Reading"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Claw",
+            "Steal"
+          ],
+          "ataques": [
+            "Claw"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Object Reading uma vez por objeto, últimas memórias limitadas a eventos associados ao objeto (se dono morto).",
+        "Steal não afeta armas nem armaduras; requer ação própria não embutida no Multiattack.",
+        "Original Creature Codex e imagem exigem revisão/uso autorizado.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-191.jpg",
+        "sha_git": "fd94d8633e7c8901b6530ba15238e87428a45847",
+        "bytes": 55246,
+        "dimensoes_declaradas": [
+          602,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-191.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game e conferir original, erratas, licença e arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-191.json",
+        "sha": "745a54db77e232dd0030035b6c33debf3564ccbe",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://anyflip.com/myubd/zdka/basic/51-100",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/corpse-thief/",
+            "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-192",
+      "criatura": "Cueyatl Moon Priest",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Magias clericais de nível 5 com slots estruturados; Night's Chill requer o cenário e as condições de iluminação corretos.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex (2018)",
+        "cr": "5",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 81,
+        "dados_vida": "18d6+18",
+        "atributos": {
+          "FOR": 10,
+          "DES": 12,
+          "CON": 12,
+          "INT": 10,
+          "SAB": 16,
+          "CAR": 12
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30,
+          "escalar": 20,
+          "nadar": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Common",
+          "Cueyatl"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amphibious",
+            "Jungle Camouflage",
+            "Slippery",
+            "Standing Leap",
+            "Spellcasting"
+          ],
+          "acoes": [
+            "Morningstar",
+            "Night's Chill"
+          ],
+          "ataques": [
+            "Morningstar"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": [
+            "Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Magias Cleric 5º nível, slots 4/3/2, WIS DC14, +6 spell attack; não criar usos ilimitados ou níveis superiores.",
+        "Night's Chill ignora alvos com total cover, só hostis; dissipa luz mágica em 30ft.",
+        "Fonte Here Be Taverns e reprodução Creature Codex coincidentes, mas original e imagem sem revisão legal.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-192.jpg",
+        "sha_git": "0a3f2a117ef74208fcf839468073ee79efaa7fb4",
+        "bytes": 49524,
+        "dimensoes_declaradas": [
+          503,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-192.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game e conferir original, erratas, licença e arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-192.json",
+        "sha": "8edd7226bdf13f967685ae1ca5bd6cff4edfb05b",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/cueyatl-moon-priest",
+            "tipo": "ficha individual pesquisada e parafraseada no checkpoint 43",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-193",
+      "criatura": "Cueyatl Sea Priest",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Slots druidas e tridente estruturados; Speak with Sea Life é restrita a grupos específicos.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex 2018",
+        "cr": "1",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 45,
+        "dados_vida": "10d6+10",
+        "atributos": {
+          "FOR": 10,
+          "DES": 12,
+          "CON": 12,
+          "INT": 10,
+          "SAB": 14,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30,
+          "escalar": 20,
+          "nadar": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Aquan",
+          "Cueyatl"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amphibious",
+            "Jungle Camouflage",
+            "Slippery",
+            "Standing Leap",
+            "Speak with Sea Life",
+            "Spellcasting"
+          ],
+          "acoes": [
+            "Trident"
+          ],
+          "ataques": [
+            "Trident"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": [
+            "Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Speak with Sea Life atinge somente beasts e monstrosities anfíbios ou aquáticos respiradores, não qualquer criatura marinha.",
+        "Druid level2 WIS CD12 +4, 3 slots 1º nível, duas cantrips; Trident +2 com dano poison sem salvação impressa.",
+        "Conferir edição original/legal e direitos/identidade da imagem.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-193.jpg",
+        "sha_git": "746f212cd6708438a0ba9651dae05048253c1c27",
+        "bytes": 54957,
+        "dimensoes_declaradas": [
+          494,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-193.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": true
+      },
+      "acao_recomendada": "Adaptar/testar card game e conferir original, erratas, licença e arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-193.json",
+        "sha": "4a085cdf1ac61a01713de914a48f36e86f821a72",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/cueyatl-sea-priest/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/cueyatl-sea-priest/",
+            "tipo": "verificação mecânica individual CP44 com separação de edições",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-194",
+      "criatura": "Cueyatl Warrior",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Conflito editorial: reproduções divergem em CA 13/12, STR save +2/+3 e dano. Não unificar.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex 2018 com conflito CA/STR save entre reproduções",
+        "cr": "1",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 36,
+        "dados_vida": "8d6+8",
+        "atributos": {
+          "FOR": 12,
+          "DES": 14,
+          "CON": 12,
+          "INT": 10,
+          "SAB": 11,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30,
+          "escalar": 20,
+          "nadar": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Cueyatl"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Amphibious",
+            "Jungle Camouflage",
+            "Slippery",
+            "Standing Leap"
+          ],
+          "acoes": [
+            "Battleaxe"
+          ],
+          "ataques": [
+            "Battleaxe"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "BLOQUEIO: 5eSRD CA13, STR save +2, ataque battleaxe +3/dano 1d8+2; Robinloft CA12 e STR save+3, além de fórmula de dano conflitante. Sem combinar fontes nem 'consertar' por inferência."
+      ],
+      "pendencias_editoriais": [
+        "BLOQUEIO: 5eSRD CA13, STR save +2, ataque battleaxe +3/dano 1d8+2; Robinloft CA12 e STR save+3, além de fórmula de dano conflitante. Sem combinar fontes nem 'consertar' por inferência.",
+        "Edição/errata original e imagem/legal não verificados.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-194.jpg",
+        "sha_git": "e17d73a851316fb265fe3cc8818d3d72cbbf93ba",
+        "bytes": 52763,
+        "dimensoes_declaradas": [
+          449,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-194.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": true
+      },
+      "acao_recomendada": "Resolver ressalvas editoriais e legais antes de adaptar/testar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-194.json",
+        "sha": "cc5fbf2fa8ded249a5b7e001e4f7f89146f7f8c2",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/cueyatl-warrior/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/cueyatl-warrior/",
+            "tipo": "verificação mecânica individual CP44 com separação de edições",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.robinloft.com/monsters/cueyatl-warrior/creature-codex",
+            "tipo": "verificação mecânica individual CP44 com separação de edições",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-195",
+      "criatura": "Tosculi, Drone",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Original 2016 Monstrosity e revisão 2023 Humanoid possuem ações e tipo distintos. JSON representa a edição 2016.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 ORIGINAL 2016 (não revisão 2023)",
+        "cr": "1/2",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 22,
+        "dados_vida": "4d6+8",
+        "atributos": {
+          "FOR": 8,
+          "DES": 16,
+          "CON": 14,
+          "INT": 8,
+          "SAB": 12,
+          "CAR": 4
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 20
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Tosculi"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Gliding Wings",
+            "Skittering"
+          ],
+          "acoes": [
+            "Claws",
+            "Light Crossbow"
+          ],
+          "ataques": [
+            "Claws",
+            "Light Crossbow"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "BLOQUEIO EDIÇÃO: original 2016 trata como Small MONSTROSITY com Gliding Wings, Skittering e Crossbow, enquanto revisão 2023 trata como HUMANOID, Crowd Tactics/Glide/Hive Sense, remove crossbow. Manter fichas separadas e resolver autorização de edição.",
+        "Comparação da publicação original/errata e licença visual pendentes."
+      ],
+      "pendencias_editoriais": [
+        "BLOQUEIO EDIÇÃO: original 2016 trata como Small MONSTROSITY com Gliding Wings, Skittering e Crossbow, enquanto revisão 2023 trata como HUMANOID, Crowd Tactics/Glide/Hive Sense, remove crossbow. Manter fichas separadas e resolver autorização de edição.",
+        "Comparação da publicação original/errata e licença visual pendentes.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-195.webp",
+        "sha_git": "868d654bdc5d2baf4eebbd92ef85afd545d3a957",
+        "bytes": 62842,
+        "dimensoes_declaradas": [
+          519,
+          800
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-195.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Resolver ressalvas editoriais e legais antes de adaptar/testar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-195.json",
+        "sha": "1d9556aff0bebd576c51ef71c6b0e5dcd8cc2859",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-drone",
+            "tipo": "verificação mecânica individual CP44 com separação de edições",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/tosculi-drone-3pp/",
+            "tipo": "verificação mecânica individual CP44 com separação de edições",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-196",
+      "criatura": "Tosculi, Elite Bow Raider",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Elite Bow Raider 2016 e 2023 têm CA, DES, ações e danos diferentes; JSON representa edição 2016.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 ORIGINAL 2016 (não revisão 2023)",
+        "cr": "5",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 97,
+        "dados_vida": "13d8+39",
+        "atributos": {
+          "FOR": 14,
+          "DES": 18,
+          "CON": 17,
+          "INT": 12,
+          "SAB": 14,
+          "CAR": 12
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30,
+          "voar": 60
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Gnoll",
+          "Infernal",
+          "Tosculi"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Deadly Precision",
+            "Evasive",
+            "Keen Smell",
+            "Skirmisher"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Claws",
+            "Longbow"
+          ],
+          "ataques": [
+            "Claws",
+            "Longbow"
+          ],
+          "acoes_bonus": [
+            "Skirmisher"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "BLOQUEIO EDIÇÕES: original 2016 CA16 DEX18 +4, Deadly Precision +2d8, Longbow +7 dano 3d8+4, Evasive, Keen Smell; revisão 2023 CA17 DEX24 +7, Archer, Hive Sense, Point Blank Hunter, +10 Claw/Longbow, Skirmisher Dash ou Disengage. Não mesclar.",
+        "Original 2016 de fonte dr-eigenvalue, necessita erratas/licença e validação de arte."
+      ],
+      "pendencias_editoriais": [
+        "BLOQUEIO EDIÇÕES: original 2016 CA16 DEX18 +4, Deadly Precision +2d8, Longbow +7 dano 3d8+4, Evasive, Keen Smell; revisão 2023 CA17 DEX24 +7, Archer, Hive Sense, Point Blank Hunter, +10 Claw/Longbow, Skirmisher Dash ou Disengage. Não mesclar.",
+        "Original 2016 de fonte dr-eigenvalue, necessita erratas/licença e validação de arte.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-196.webp",
+        "sha_git": "a74598d6a1b87a0e788264ec53bd0348fe0e809b",
+        "bytes": 62060,
+        "dimensoes_declaradas": [
+          747,
+          800
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-196.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Resolver ressalvas editoriais e legais antes de adaptar/testar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-196.json",
+        "sha": "4dc26c36ef3cf66b3f0e3daae32e6d6cf75f6ee6",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-elite-bow-raider",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://dr-eigenvalue.github.io/bestiary/creature/tosculi-elite-bow-raider",
+            "tipo": "verificação mecânica individual CP44 com separação de edições",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/tosculi-elite-bow-raider-3pp/",
+            "tipo": "verificação mecânica individual CP44 com separação de edições",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-197",
+      "criatura": "Tosculi, Jeweled Drone",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Protect the Queen consome reação e exige queen a 5 pés; Pheromones e luz registradas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex 2018",
+        "cr": "4",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 90,
+        "dados_vida": "12d6+48",
+        "atributos": {
+          "FOR": 10,
+          "DES": 18,
+          "CON": 18,
+          "INT": 14,
+          "SAB": 14,
+          "CAR": 17
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30,
+          "voar": 60
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Common",
+          "Infernal",
+          "Tosculi"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [
+          "charmed",
+          "frightened"
+        ],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Pheromones",
+            "Scintillating Carapace"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Claws",
+            "Scimitar"
+          ],
+          "ataques": [
+            "Claws",
+            "Scimitar"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Protect the Queen"
+          ],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Pheromones concede APENAS um dado d6 por vez e exige cheirar; Scintillating Carapace ativo só em bright light e há opção evitar olhar.",
+        "Protect the Queen exige hive queen até 5ft e reação da jeweled drone, condição essencial.",
+        "Verificar publicação, licença e identidade da imagem.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-197.jpg",
+        "sha_git": "95d0fce6f0f5ad05513de2a3ae5f870a682eaca2",
+        "bytes": 65411,
+        "dimensoes_declaradas": [
+          519,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-197.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game e conferir original, erratas, licença e arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-197.json",
+        "sha": "eb0bbdfffd669e60da1f43a1967e38c80193e863",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/tosculi-jeweled-drone/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/tosculi-jeweled-drone/",
+            "tipo": "verificação mecânica individual CP44 com separação de edições",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-198",
+      "criatura": "Tosculi, Warrior",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Prepare Host requer paralisia preexistente; revisão 2023 identificada.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 revisão 2023, distinto de original CR2",
+        "cr": "3",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 58,
+        "dados_vida": "9d6+27",
+        "atributos": {
+          "FOR": 12,
+          "DES": 20,
+          "CON": 16,
+          "INT": 10,
+          "SAB": 12,
+          "CAR": 12
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 20,
+          "voar": 60
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Tosculi"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Crowd Tactics",
+            "Hive Sense"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Claw",
+            "Stinger",
+            "Prepare Host"
+          ],
+          "ataques": [
+            "Claw",
+            "Stinger"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Tosculi Warrior do catálogo identifica explicitamente edição revisada 2023 CR3: Crowd Tactics/Hive Sense e Claw+Stinger; não mesclar original CR2.",
+        "Prepare Host só funciona em alvo já paralyzed por Stinger de tosculi e tem encerramento específico; livro/licença e imagem ainda pendentes.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-198.jpg",
+        "sha_git": "46d5b55cc026aaadc093270edf6c5a4335ba01e8",
+        "bytes": 50795,
+        "dimensoes_declaradas": [
+          540,
+          724
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-198.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Adaptar/testar card game e conferir original, erratas, licença e arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-198.json",
+        "sha": "62ded365b8ed0a86c96b7312410ac77d285494ef",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/tosculi-warrior-3pp/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/tosculi-warrior-3pp/",
+            "tipo": "pesquisa individual CP45, não equivalente a autorização de publicação",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-199",
+      "criatura": "Yakirian",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Consume Heart contém frase temporal truncada na fonte consultada; pré-condição crítica não verificável. Ficha mecanicamente incompleta nesse ponto.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex 2018, Yakirian base CR2 (Schism CR3 separado)",
+        "cr": "2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 67,
+        "dados_vida": "9d8+27",
+        "atributos": {
+          "FOR": 17,
+          "DES": 11,
+          "CON": 16,
+          "INT": 10,
+          "SAB": 12,
+          "CAR": 8
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Common",
+          "Yakirian",
+          "entende Void Speech, não fala"
+        ],
+        "resistencias": [
+          "cold"
+        ],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Resilient Soul"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Gore",
+            "Ritual Knife",
+            "Consume Heart"
+          ],
+          "ataques": [
+            "Gore",
+            "Ritual Knife"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Pré-condição temporal da ação Consume Heart truncada: prazo não comprovado."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "BLOQUEIO: edição online de Consume Heart contém frase truncada para prazo ('If the creature also less than 1 minute ago'); não assumir prazo como regra oficial até conferir livro original.",
+        "Não misturar variante Schism Yakirian CR3 com CR2 base; mantém resist cold, velocidade40ft e idiomas corretos.",
+        "Licença/imagem pendentes.",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-199.jpg",
+        "sha_git": "0ecd40972c61863f864e92fba1b60c8f64429721",
+        "bytes": 58600,
+        "dimensoes_declaradas": [
+          529,
+          700
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-199.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Recuperar condição temporal completa da regra Consume Heart e cotejar com fonte primária.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-199.json",
+        "sha": "1214364a3a91a587fb12128eb66797b728aa4d97",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://www.5esrd.com/database/creature/yakirian/",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://www.5esrd.com/database/creature/yakirian/",
+            "tipo": "pesquisa individual CP45, não equivalente a autorização de publicação",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    },
+    {
+      "id": "TF-200",
+      "criatura": "Aboleth Champion",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Regras Level Up A5E (Bloodied/rattled) e licença da fonte não-SRD impedem transposição automática ou publicação; conteúdo estruturado com ressalva.",
+      "identidade": {
+        "origem": "EN Publishing (Level Up A5E)",
+        "edicao": "Level Up Advanced 5E — Dungeon Delver's Guide (NÃO D&D 5e SRD)",
+        "cr": "7",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 135,
+        "dados_vida": "18d8+54",
+        "atributos": {
+          "FOR": 18,
+          "DES": 12,
+          "CON": 16,
+          "INT": 14,
+          "SAB": 14,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 30
+          }
+        ],
+        "idiomas": [
+          "Common",
+          "Deep Speech",
+          "one additional"
+        ],
+        "resistencias": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [
+            "Abolethic Agent",
+            "Bloodied",
+            "Maneuver DC"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Serrated Sword",
+            "Strangling Grasp",
+            "Mental Blast"
+          ],
+          "ataques": [
+            "Serrated Sword",
+            "Strangling Grasp"
+          ],
+          "acoes_bonus": [
+            "Vicious Taunt"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "acoes_covil": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "A5E: Bloodied e rattled NÃO converter automaticamente para 5e; Abolethic Agent depende de reação Self-Sacrifice do thrall.",
+        "Licença de a5e.tools é explícita: site não é A5ESRD nem fonte de open content. DADOS PARA VERIFICAÇÃO; não aprovar reprodução ou exportação sem checar A5E SRD licenciado."
+      ],
+      "pendencias_editoriais": [
+        "A5E: Bloodied e rattled NÃO converter automaticamente para 5e; Abolethic Agent depende de reação Self-Sacrifice do thrall.",
+        "Licença de a5e.tools é explícita: site não é A5ESRD nem fonte de open content. DADOS PARA VERIFICAÇÃO; não aprovar reprodução ou exportação sem checar A5E SRD licenciado.",
+        "Imagem/edição editorial pendentes.",
+        "XP não informado no bloco A5E consultado; campo mantido null, sem inferir valores de tabela D&D 5e (valor anterior 2900 foi descartado).",
+        "Original/erratas e direitos da imagem não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-200.webp",
+        "sha_git": "2f54e2e6c15bf43b2f5c56f3008eabf38dff6b92",
+        "bytes": 75628,
+        "dimensoes_declaradas": [
+          512,
+          512
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/e.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false,
+        "alerta_resolucao_metadata": false
+      },
+      "acao_recomendada": "Resolver ressalvas editoriais e legais antes de adaptar/testar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-200.json",
+        "sha": "e98d5953804a66d6c891e26f2355cf22e55d82be",
+        "source_commit": "e598d5018516995f5bd5b38a68b36310407a9e29",
+        "fontes": [
+          {
+            "url": "https://a5e.tools/node/2839",
+            "tipo": "ficha individual referenciada no checkpoint anterior",
+            "conferida_nesta_execucao": false,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://github.com/george-vepo/SRD-Card-Game-607-Supervisor/blob/a962c48a1169c2ef2be8137715a095a596753b32/operational/research/checkpoints/20261013_TF-171_TF-210/research.json",
+            "tipo": "checkpoint original",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          },
+          {
+            "url": "https://a5e.tools/node/2839",
+            "tipo": "pesquisa individual CP45, não equivalente a autorização de publicação",
+            "conferida_nesta_execucao": true,
+            "conferida_nesta_auditoria": false
+          }
+        ]
+      },
+      "lote": 18
+    }
+  ]
+}

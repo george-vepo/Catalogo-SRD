@@ -1,0 +1,916 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+  "reference_date": "2026-10-14",
+  "batch_number": 27,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 3,
+    "completas_com_ressalvas": 3,
+    "incompletas": 4,
+    "nao_verificaveis": 0,
+    "imagem_direta": 10,
+    "imagem_manifesto": 0,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 2
+  },
+  "evidence_limitations": [
+    "Ficha B e grupo A avaliados conforme fontes JSON internas, sem cotejo impresso adicional.",
+    "Qualidade visual não verificada independentemente; tokens 280x280 não homologados.",
+    "Registros sem ações foram mantidos incompletos."
+  ],
+  "records": [
+    {
+      "id": "TF-290",
+      "criatura": "Glass Gator",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Constricting Lunge, Silt Cloud e limites de grapple estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "1",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 45,
+        "dados_vida": "7d10+7",
+        "atributos": {
+          "FOR": 15,
+          "DES": 14,
+          "CON": 12,
+          "INT": 4,
+          "SAB": 10,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 30,
+          "swim_ft": 50
+        },
+        "sentidos": {
+          "blindsight_ft": 60,
+          "blind_beyond_blindsight": true,
+          "passive_perception": 12
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Amphibious",
+            "Constricting Lunge",
+            "Standing Leap",
+            "Transparent"
+          ],
+          "actions": [
+            "Claw",
+            "Constrict"
+          ],
+          "attacks": [],
+          "bonus_actions": [
+            "Lunge Constrict"
+          ],
+          "reactions": [
+            "Silt Cloud"
+          ],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Lunge requires both straight jump and Claw hit; bonus Constrict unlocked on target prone.",
+        "While holding a Constrict grapple, cannot Constrict another target.",
+        "Silt Cloud is stationary and requires water plus proximity to bottom.",
+        "Requer checagem editorial de impressão/errata, QA da engine e licença/arte antes de homologação.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-290.webp",
+        "sha_git": "b0c1d5caaafede2ce0ecad83be4a1cd695abdff7",
+        "bytes": 217936,
+        "dimensoes_declaradas": [
+          1000,
+          793
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-290.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir livro/errata, adaptar/testar e revisar arte/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-290.json",
+        "sha": "887bb1ea46071457b1cb43f760f002e8d8f849cd",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-292",
+      "criatura": "Snake, Zanskaran Viper",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Bite fixa condição poison/blinded e dano recorrente, com testes repetidos definidos.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "1",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 34,
+        "dados_vida": "4d10+12",
+        "atributos": {
+          "FOR": 15,
+          "DES": 11,
+          "CON": 17,
+          "INT": 2,
+          "SAB": 13,
+          "CAR": 2
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 30,
+          "climb_ft": 10,
+          "swim_ft": 30
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 11
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [],
+          "actions": [
+            "Bite"
+          ],
+          "attacks": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "The poisoned condition and blindness last until successful repeated save or one minute.",
+        "2d6 ongoing poison damage occurs at start of afflicted creature's turn.",
+        "Requer checagem editorial de impressão/errata, QA da engine e licença/arte antes de homologação.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-292.webp",
+        "sha_git": "2fa865894899d53366f7b91b55a1c2abfc770f0d",
+        "bytes": 230340,
+        "dimensoes_declaradas": [
+          560,
+          560
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-292.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir livro/errata, adaptar/testar e revisar arte/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-292.json",
+        "sha": "586162584f401a260aa472f4ad98962fffa0df5e",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-293",
+      "criatura": "Planar Flora, Hallowed Reeds",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Rebirth reinicia em até uma semana, mas prazo final de maturação não está definido.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "1/2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 22,
+        "dados_vida": "5d8",
+        "atributos": {
+          "FOR": 14,
+          "DES": 10,
+          "CON": 10,
+          "INT": 7,
+          "SAB": 14,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 10
+        },
+        "sentidos": {
+          "blindsight_ft": 30,
+          "blind_beyond_blindsight": true,
+          "passive_perception": 14
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Like Calls to Like",
+            "Limited Telepathy",
+            "Rebirth"
+          ],
+          "actions": [
+            "Searing Grasp"
+          ],
+          "attacks": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Rebirth reinicia em até uma semana, mas prazo final de maturação não está definido."
+      ],
+      "pendencias_editoriais": [
+        "The creature's published type is Celestial despite being categorized as planar flora. Do not overwrite with Plant.",
+        "Rebirth regrowth starts within one week unless ground charred or salted; its exact mature-ready time is not stated.",
+        "Verificar texto em impressão e erratas, licença/arte e engine antes de homologação editorial.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-293.webp",
+        "sha_git": "c32dc47975bc6709aa20407a10f00051a46ae8ef",
+        "bytes": 170512,
+        "dimensoes_declaradas": [
+          678,
+          973
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-293.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver os detalhes de regra ausentes antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-293.json",
+        "sha": "3ab540aeda9dabcf64839df57a234d14002838c0",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-296",
+      "criatura": "Angel, Psychopomp",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Spirit Usher não especifica alcance e Unmake Contract depende de política externa.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "4",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 68,
+        "dados_vida": "8d8+32",
+        "atributos": {
+          "FOR": 17,
+          "DES": 14,
+          "CON": 18,
+          "INT": 14,
+          "SAB": 16,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 40,
+          "fly_ft": 60
+        },
+        "sentidos": {
+          "darkvision_ft": 120,
+          "passive_perception": 15
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Death's Accomplice",
+            "Fiendish Countenance",
+            "Immortal Nature",
+            "Magic Resistance"
+          ],
+          "actions": [
+            "Multiattack",
+            "Lantern Flail",
+            "Divine Dictum",
+            "Unmake Contract"
+          ],
+          "attacks": [],
+          "bonus_actions": [
+            "Spirit Usher"
+          ],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Spirit Usher não especifica alcance e Unmake Contract depende de política externa."
+      ],
+      "pendencias_editoriais": [
+        "Spirit Usher text does not specify activation range: leave null instead of inventing.",
+        "Unmake Contract releases liens on souls without listing limitations for contract mechanics; engine needs external policy.",
+        "Image 280×280 is a token and remains unapproved.",
+        "Verificar texto em impressão e erratas, licença/arte e engine antes de homologação editorial.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-296.webp",
+        "sha_git": "57c7d2fafb9010921462a9ec0795b07c0096679c",
+        "bytes": 76808,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-296.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver os detalhes de regra ausentes antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-296.json",
+        "sha": "578a366ebaa1b989028d6906e8c8eec0fbd21282",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-297",
+      "criatura": "Simurg",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Conjuração inata lista magias/usos, mas efeitos e ações individuais não reabertos nesta execução.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "5",
+        "tamanho": "Gargantuan"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 108,
+        "dados_vida": "8d20+24",
+        "atributos": {
+          "FOR": 18,
+          "DES": 11,
+          "CON": 17,
+          "INT": 14,
+          "SAB": 17,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 20,
+          "fly_ft": 80
+        },
+        "sentidos": {
+          "darkvision_ft": 120,
+          "passive_perception": 16
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Flyby",
+            "Keen Sight",
+            "Innate Spellcasting"
+          ],
+          "actions": [
+            "Multiattack",
+            "Bite",
+            "Claws",
+            "Forceful Gale"
+          ],
+          "attacks": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": [
+            "Innate Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Conjuração inata lista magias/usos, mas efeitos e ações individuais não reabertos nesta execução."
+      ],
+      "pendencias_editoriais": [
+        "Spell list and per-day counts are in creature block, but effects, ranges, casting actions for each spell not individually verified; remain partial.",
+        "Cyclical resurrection is mentioned in narrative lore, not in combat statblock; do not invent rebirth timer or resource.",
+        "Verificar texto em impressão e erratas, licença/arte e engine antes de homologação editorial.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-297.webp",
+        "sha_git": "48bd657cc73e6de745bf3d2b41959b1c12caf5aa",
+        "bytes": 282468,
+        "dimensoes_declaradas": [
+          711,
+          1249
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-297.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver os detalhes de regra ausentes antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-297.json",
+        "sha": "46482f84e2e27a7ec74fca845a1b96484e3092c6",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-298",
+      "criatura": "Angel, Song",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ficha Angel, Song só possui estatísticas básicas, sem ações e traços completos.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "6",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 76,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": 12,
+          "DES": 16,
+          "CON": 16,
+          "INT": 18,
+          "SAB": 18,
+          "CAR": 21
+        },
+        "atributos_seis": true,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [],
+          "actions": [],
+          "attacks": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Sem inventário de ações, ataques e traits no JSON."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
+        "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
+        "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-298.webp",
+        "sha_git": "e98b75faf4dc4401f1c28b9e240bdcf517bcc216",
+        "bytes": 105296,
+        "dimensoes_declaradas": [
+          688,
+          950
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-298.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar ações/traços do original; revalidar editorialmente.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-298.json",
+        "sha": "dface03bfb65d5b6e04505c294859f1cf26891fb",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-299",
+      "criatura": "Angel, Sammael",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Angel, Sammael carece de todos os traços e ações no JSON.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "7",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 104,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": 18,
+          "DES": 10,
+          "CON": 14,
+          "INT": 10,
+          "SAB": 19,
+          "CAR": 12
+        },
+        "atributos_seis": true,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [],
+          "actions": [],
+          "attacks": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Sem inventário de ações, ataques e traits no JSON."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
+        "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
+        "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-299.webp",
+        "sha_git": "1fd991bf96304bf75d64695bcdc7a553adaf97fd",
+        "bytes": 174924,
+        "dimensoes_declaradas": [
+          786,
+          956
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-299.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar ações/traços do original; revalidar editorialmente.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-299.json",
+        "sha": "b8392363d4a79b3616e38548ab47c516e9edb8e4",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-300",
+      "criatura": "Angel, Zoryas",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Angel, Zoryas carece de ações e efeitos completos.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "8",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 104,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": 16,
+          "DES": 10,
+          "CON": 14,
+          "INT": 10,
+          "SAB": 18,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [],
+          "actions": [],
+          "attacks": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Sem inventário de ações, ataques e traits no JSON."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
+        "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
+        "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-300.webp",
+        "sha_git": "8fac9e6b7e9a328874948f044cc4b99467de8dcf",
+        "bytes": 108062,
+        "dimensoes_declaradas": [
+          706,
+          858
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-300.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar ações/traços do original; revalidar editorialmente.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-300.json",
+        "sha": "a6db944cdba859f03b2f3746a693eca504caa416",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-301",
+      "criatura": "Planar Flora, Ecstatic Bloom",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ecstatic Bloom carece de mecânicas individuais e dados de ações.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "11",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 171,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": 10,
+          "DES": 9,
+          "CON": 16,
+          "INT": 20,
+          "SAB": 19,
+          "CAR": 14
+        },
+        "atributos_seis": true,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [],
+          "actions": [],
+          "attacks": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Sem inventário de ações, ataques e traits no JSON."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
+        "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
+        "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-301.webp",
+        "sha_git": "24d783da250e94b3b96ddbf498b1123331edf5dd",
+        "bytes": 136916,
+        "dimensoes_declaradas": [
+          601,
+          805
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-301.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Estruturar ações/traços do original; revalidar editorialmente.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-301.json",
+        "sha": "6394e4ad4ec5268c009471671e697a2ccf0af84b",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    },
+    {
+      "id": "TF-302",
+      "criatura": "Angel, Shrouded",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Shrouded Angel do grupo B contém passivas, Justicar's Blade/Blast, Executioner's Judgment e conjuração especificadas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3 (p.29)",
+        "cr": "13",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 18,
+        "pv": 161,
+        "dados_vida": "17d8+85",
+        "atributos": {
+          "FOR": 18,
+          "DES": 20,
+          "CON": 20,
+          "INT": 16,
+          "SAB": 22,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40,
+          "voar": 60
+        },
+        "sentidos": [
+          "blindsight 30 ft",
+          "darkvision 120 ft"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Angelic Poison",
+            "Divine Awareness",
+            "Evasion",
+            "Immortal Nature",
+            "Magic Resistance"
+          ],
+          "actions": [
+            "Multiattack",
+            "Justicar's Blade",
+            "Justicar's Blast",
+            "Spellcasting"
+          ],
+          "attacks": [
+            "Justicar's Blade",
+            "Justicar's Blast"
+          ],
+          "bonus_actions": [],
+          "reactions": [
+            "Executioner's Judgment"
+          ],
+          "legendary_actions": [],
+          "spellcasting": [
+            "Spellcasting"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "A transcrição KPOGL indica todos os traços e ações listados; ainda é fonte secundária. Conferir ficha da edição impressa e erratas antes de homologação.",
+        "Sem revisão independente, testes de combate ou promoção canônica.",
+        "Licenciamento e adequação visual não homologados."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/b/images/TF-302.webp",
+        "sha_git": "2a990beeef514c9fdb4f6643e157e0426b9cf3f2",
+        "bytes": 84230,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/b/records/TF-302.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir livro/errata, adaptar/testar e revisar arte/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-302.json",
+        "sha": "e38598305df59aa9e0719557dc2fc655ec2af6a6",
+        "source_commit": "36ef511336a66b8f82200db16a06939f12b65b02",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 27
+    }
+  ]
+}

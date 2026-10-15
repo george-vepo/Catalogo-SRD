@@ -1,0 +1,937 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+  "reference_date": "2026-10-14",
+  "batch_number": 26,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 4,
+    "completas_com_ressalvas": 5,
+    "incompletas": 1,
+    "nao_verificaveis": 0,
+    "imagem_direta": 7,
+    "imagem_manifesto": 0,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 3,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 3
+  },
+  "evidence_limitations": [
+    "TF-285 possui miniatura 64x80 vinculada; não presumir adequação visual.",
+    "TF-283/284/286 sem binários A/central e manifest F pending.",
+    "Transcrição editorial, direitos, arte e testes independentes ainda não homologados."
+  ],
+  "records": [
+    {
+      "id": "TF-277",
+      "criatura": "Shoth, Oth",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Paladin of Shoth e Dripping Arcanist são versões mutuamente exclusivas; magias externas não foram reabertas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "5",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 119,
+        "dados_vida": "14d10+42",
+        "atributos": {
+          "FOR": 16,
+          "DES": 10,
+          "CON": 16,
+          "INT": 11,
+          "SAB": 14,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 30,
+          "climb_ft": 10
+        },
+        "sentidos": {
+          "blindsight_ft": 60,
+          "passive_perception": 15
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Amorphous",
+            "Multiple Roles"
+          ],
+          "actions": [
+            "Multiattack",
+            "Oozing Slam",
+            "Greatsword",
+            "Merge",
+            "Spray"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": [
+            "Dripping Arcanist"
+          ]
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Paladin of Shoth e Dripping Arcanist são versões mutuamente exclusivas; magias externas não foram reabertas."
+      ],
+      "pendencias_editoriais": [
+        "Dripping Arcanist e Paladin of Shoth são versões mutuamente exclusivas, não adicionar Greatsword e lista de magias à mesma instância.",
+        "As definições individuais das magias não foram reabertas; continuar PARCIAL, sem alegar teste integral de economia de conjuração.",
+        "Oth não é Sooze (TF-273); manter separação de criatura e variante.",
+        "Confrontar versão editorial impressa e errata, avaliar licença, testar implementações na engine e revisar qualquer arte associada.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-277.webp",
+        "sha_git": "4b42bd0d58e026240af18e79a3e0c006155ba30f",
+        "bytes": 103398,
+        "dimensoes_declaradas": [
+          645,
+          772
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-277.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver dependências mecânicas/ambiguidades antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-277.json",
+        "sha": "fca1bdc06916cf260b33830f33faf8e0386aae42",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-278",
+      "criatura": "Snatch Bat",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Pilfering Bite rouba em vez de causar dano; limite de item mantido.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "5",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 97,
+        "dados_vida": "15d8+30",
+        "atributos": {
+          "FOR": 16,
+          "DES": 20,
+          "CON": 14,
+          "INT": 6,
+          "SAB": 12,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 20,
+          "fly_ft": 40
+        },
+        "sentidos": {
+          "blindsight_ft": 60,
+          "blind_beyond_blindsight": true,
+          "passive_perception": 14
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Flyby",
+            "Treasure Sense"
+          ],
+          "actions": [
+            "Multiattack",
+            "Claw",
+            "Pilfering Bite"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Pilfering Bite substitui dano pelo roubo; não causa dano e rouba simultaneamente.",
+        "Regurgitar item segurado é sem custo de ação, mas deve anteceder outro Pilfering Bite.",
+        "Imagem TF-278 mede 280×280 e não está aprovada como arte final.",
+        "Confrontar versão editorial impressa e errata, avaliar licença, testar implementações na engine e revisar qualquer arte associada.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-278.webp",
+        "sha_git": "767e2da3c4da44dddad05a6260bcd4b4e668b5a8",
+        "bytes": 83964,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-278.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original, adaptar/testar e aprovar arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-278.json",
+        "sha": "5d436ee4517074544ea1766eaffe6394616a768e",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-279",
+      "criatura": "Fate Eater",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Alter Fate não determina duração para resultados 2/4/5, e divination não foi revalidada.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 130,
+        "dados_vida": "20d8+40",
+        "atributos": {
+          "FOR": 18,
+          "DES": 12,
+          "CON": 14,
+          "INT": 18,
+          "SAB": 16,
+          "CAR": 9
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 40,
+          "climb_ft": 40
+        },
+        "sentidos": {
+          "truesight_ft": 60,
+          "passive_perception": 13
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Visionary Flesh"
+          ],
+          "actions": [
+            "Multiattack",
+            "Bite",
+            "Alter Fate"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Alter Fate não determina duração para resultados 2/4/5, e divination não foi revalidada."
+      ],
+      "pendencias_editoriais": [
+        "Results 2/4/5 do not provide specific one-minute durations; do not invent.",
+        "Divination external spell reference not yet independently inspected.",
+        "Validar impressão/erratas, licença e mecânicas na engine antes de homologar.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-279.webp",
+        "sha_git": "fccd2d63349e86c269ed2b463c3748155dc83d10",
+        "bytes": 115858,
+        "dimensoes_declaradas": [
+          1000,
+          929
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-279.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver dependências mecânicas/ambiguidades antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-279.json",
+        "sha": "44f61e5e73c94ae7ff8bc1d0b0b1e9c553bf54f9",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-280",
+      "criatura": "Mamura",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Distracting Babble e Radial Eyes preservam restrições específicas sem extrapolar.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "6",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 112,
+        "dados_vida": "15d6+60",
+        "atributos": {
+          "FOR": 8,
+          "DES": 18,
+          "CON": 19,
+          "INT": 17,
+          "SAB": 11,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 20,
+          "fly_ft": 30
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 16
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Distracting Babble",
+            "Flyby",
+            "Magic Resistance",
+            "Radial Eyes"
+          ],
+          "actions": [
+            "Multiattack",
+            "Claw",
+            "Whiptail Stinger"
+          ],
+          "bonus_actions": [
+            "Shadow Stealth"
+          ],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Babble cancels failed casting without consuming spell slot, although casting action is spent.",
+        "Radial Eyes does not necessarily prohibit all Sneak Attack conditions; model the source's stated limitation.",
+        "Validar impressão/erratas, licença e mecânicas na engine antes de homologar.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-280.webp",
+        "sha_git": "491a97a44a0028ab0a7a6899d9cbbcc9b0f4fe84",
+        "bytes": 123950,
+        "dimensoes_declaradas": [
+          765,
+          1000
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-280.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original, adaptar/testar e aprovar arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-280.json",
+        "sha": "9c0a093535e909bed5391f84c6dbfb78c05f7587",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-283",
+      "criatura": "Shukankor",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Duplicating Terror invoca axe beak externo e replica vira criatura independente; dependência não estruturada no mesmo bloco.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "9",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 115,
+        "dados_vida": "11d12+44",
+        "atributos": {
+          "FOR": 22,
+          "DES": 12,
+          "CON": 18,
+          "INT": 8,
+          "SAB": 12,
+          "CAR": 6
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 50
+        },
+        "sentidos": {
+          "darkvision_ft": 120,
+          "passive_perception": 19
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Many Eyes",
+            "Self-made Pack"
+          ],
+          "actions": [
+            "Multiattack",
+            "Beak",
+            "Claws",
+            "Duplicating Terror"
+          ],
+          "bonus_actions": [
+            "Dismiss Duplicating Terror replicas"
+          ],
+          "reactions": [
+            "Sacrifice Replica"
+          ],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Duplicating Terror invoca axe beak externo e replica vira criatura independente; dependência não estruturada no mesmo bloco."
+      ],
+      "pendencias_editoriais": [
+        "Axe beak statistics referenced by Duplicating Terror are not embedded; engine must resolve the creature dependency.",
+        "When a replica survives 24 hours it becomes independent, and after a month grows to full Shukankor; persistent campaign state required.",
+        "Sem imagem binária persistida no diretório A: não marcar produção como pronta.",
+        "Confrontar impressão, errata e eventual divergência, testar regras de engine e avaliar licença/editorial.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "AUSENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver dependências mecânicas/ambiguidades antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-283.json",
+        "sha": "61bd22b4d72cccb5e8a000a9ff54911954a79c02",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-284",
+      "criatura": "Malleable, Major",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Sudden Separation reparte dano entre descendentes sem regra de arredondamento para valores ímpares.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "10",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 218,
+        "dados_vida": "23d12+69",
+        "atributos": {
+          "FOR": 22,
+          "DES": 8,
+          "CON": 17,
+          "INT": 19,
+          "SAB": 16,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 40,
+          "climb_ft": 40
+        },
+        "sentidos": {
+          "blindsight_ft": 90,
+          "blind_beyond_blindsight": true,
+          "passive_perception": 13
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Absorb Malleable",
+            "Amorphous",
+            "Controlled Mutability",
+            "Psychic Absorption",
+            "Spider Climb"
+          ],
+          "actions": [
+            "Multiattack",
+            "Flesh Tendril",
+            "Psychic Drain",
+            "Join Malleables",
+            "Separate Malleables"
+          ],
+          "bonus_actions": [
+            "Absorb Malleable"
+          ],
+          "reactions": [
+            "Sudden Separation"
+          ],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Sudden Separation reparte dano entre descendentes sem regra de arredondamento para valores ímpares."
+      ],
+      "pendencias_editoriais": [
+        "On hit stated 20 (4d6+6), although attack bonus +10 must not be interpreted as damage flat +10.",
+        "Reaction deals split damage evenly among offspring; source does not specify remainder/rounding for odd totals.",
+        "Sem imagem binária persistida no diretório A: não marcar produção como pronta.",
+        "Confrontar impressão, errata e eventual divergência, testar regras de engine e avaliar licença/editorial.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "AUSENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver dependências mecânicas/ambiguidades antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-284.json",
+        "sha": "5ac85f68d5ff4f5198695f84119b04020c9eb7f2",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-285",
+      "criatura": "Snallygaster",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Snallygaster com apenas dados básicos, sem atributos completos, traços ou ações implementáveis.",
+      "identidade": {
+        "origem": null,
+        "edicao": null,
+        "cr": "15",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 207,
+        "dados_vida": null,
+        "atributos": null,
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "tracos": [],
+          "acoes": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracao": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Traços/ações completos e seis atributos não constam no JSON."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Distinguir variante Tome of Beasts 3 CR15 de homônimo; revisão mecânica independente",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-285.png",
+        "sha_git": "e5543ad5908e290029033a68d7f711e950f3c1bc",
+        "bytes": 3383,
+        "dimensoes_declaradas": [
+          64,
+          80
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-285.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar statblock completo antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-285.json",
+        "sha": "91df09a2e117574b2ac6d09f3340460be6ab406e",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-286",
+      "criatura": "Malleable, Massive",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Sudden Separation sem regra de arredondamento; Massive não tem Join Malleables.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "16",
+        "tamanho": "Gargantuan"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 248,
+        "dados_vida": "16d20+80",
+        "atributos": {
+          "FOR": 26,
+          "DES": 8,
+          "CON": 20,
+          "INT": 21,
+          "SAB": 17,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 40,
+          "climb_ft": 40
+        },
+        "sentidos": {
+          "blindsight_ft": 120,
+          "blind_beyond_blindsight": true,
+          "passive_perception": 13
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Absorb Malleable",
+            "Amorphous",
+            "Controlled Mutability",
+            "Psychic Absorption",
+            "Spider Climb"
+          ],
+          "actions": [
+            "Multiattack",
+            "Flesh Tendril",
+            "Psychic Drain",
+            "Separate Malleables"
+          ],
+          "bonus_actions": [
+            "Absorb Malleable"
+          ],
+          "reactions": [
+            "Sudden Separation"
+          ],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Sudden Separation sem regra de arredondamento; Massive não tem Join Malleables."
+      ],
+      "pendencias_editoriais": [
+        "No Join Malleables at massive tier in source; do not invent it.",
+        "Grapple on Flesh Tendril applies to any creature, unlike Major's Huge-or-smaller limit.",
+        "Reaction triggering damage splitting remainder unspecified.",
+        "Sem imagem binária persistida no diretório A: não marcar produção como pronta.",
+        "Confrontar impressão, errata e eventual divergência, testar regras de engine e avaliar licença/editorial.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "AUSENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver dependências mecânicas/ambiguidades antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-286.json",
+        "sha": "4e5d7fecb1183567db952e14200ea0d3b1de8ceb",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-288",
+      "criatura": "Snake, Swamp Adder",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "CR 1/4 explicitamente preservado e dano base Bite fixo.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "1/4",
+        "tamanho": "Small"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 18,
+        "dados_vida": "4d6+4",
+        "atributos": {
+          "FOR": 4,
+          "DES": 16,
+          "CON": 12,
+          "INT": 1,
+          "SAB": 10,
+          "CAR": 4
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 30
+        },
+        "sentidos": {
+          "blindsight_ft": 10,
+          "passive_perception": 10
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Swamp Camouflage"
+          ],
+          "actions": [
+            "Bite"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Previous catalog CR 0.3 was rounded: source gives exact CR 1/4.",
+        "Base piercing damage is fixed one point, no roll.",
+        "Validar impressão/erratas, licença e mecânicas na engine antes de homologar.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-288.webp",
+        "sha_git": "5dac80d5e9e24e963fef6d3ca03aff4d70653110",
+        "bytes": 179230,
+        "dimensoes_declaradas": [
+          985,
+          1000
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-288.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original, adaptar/testar e aprovar arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-288.json",
+        "sha": "d440b904ae4f9b277664a8cdcb625e11c1c8bd64",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    },
+    {
+      "id": "TF-289",
+      "criatura": "Porcellina",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Veneno por contato/consumo não é rider de ataque; Squeal e Pack Tactics estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "1/2",
+        "tamanho": "Tiny"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 28,
+        "dados_vida": "8d4+8",
+        "atributos": {
+          "FOR": 8,
+          "DES": 16,
+          "CON": 12,
+          "INT": 3,
+          "SAB": 10,
+          "CAR": 6
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 40
+        },
+        "sentidos": {
+          "passive_perception": 12
+        }
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Keen Hearing and Smell",
+            "Pack Tactics",
+            "Poisonous Flesh"
+          ],
+          "actions": [
+            "Bite"
+          ],
+          "bonus_actions": [],
+          "reactions": [
+            "Squeal"
+          ],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Bite prone DC increases based on other porcellinas hitting target, with maximum 15.",
+        "Touch/consumption poison effects are not a normal attack rider.",
+        "Image 280x280 is a token and not cleared for production.",
+        "Requer checagem editorial de impressão/errata, QA da engine e licença/arte antes de homologação.",
+        "Publicação, licença, adequação visual e engine não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-289.webp",
+        "sha_git": "2ccb06cababa5557b09991e3b46ddea4d7452f18",
+        "bytes": 85190,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-289.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original, adaptar/testar e aprovar arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-289.json",
+        "sha": "f587e901d277073dbddbeec1f9f3fa3468c87305",
+        "source_commit": "43b9bd66e9cc6f67d68b65a37007743da72c7ec4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 26
+    }
+  ]
+}

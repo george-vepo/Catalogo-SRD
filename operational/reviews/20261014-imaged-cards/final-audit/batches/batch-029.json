@@ -1,0 +1,1006 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+  "reference_date": "2026-10-14",
+  "batch_number": 29,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 7,
+    "completas_com_ressalvas": 2,
+    "incompletas": 1,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 9,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 1,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 4
+  },
+  "evidence_limitations": [
+    "Imagens vinculadas por manifesto F com integridade de publicação declarada, sem inspeção visual nova.",
+    "TF-320 mantém PV null para não escolher valores concorrentes por inferência.",
+    "Edição original/licenças e testes não homologados."
+  ],
+  "records": [
+    {
+      "id": "TF-320",
+      "criatura": "Gnarljak",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "PV publicado varia em 63, 88 ou 49 conforme fontes; campo PV permanece null, impedindo ficha completa.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "6",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": null,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": 13,
+          "DES": 21,
+          "CON": 15,
+          "INT": 2,
+          "SAB": 14,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30
+        },
+        "sentidos": [
+          "blindsight 60 ft (cego além disso)"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Construct Nature",
+            "False Appearance"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Gnawing Bite",
+            "Chain Tail"
+          ],
+          "ataques": [
+            "Gnawing Bite",
+            "Chain Tail"
+          ],
+          "acoes_bonus": [
+            "Secure Tail"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [
+        "PV consolidado null; divergência 63/88/49 entre edições e fontes."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Validar em exemplar editorial da edição selecionada, incluindo possíveis erratas; não canonizar valores somente por transcrição KPOGL.",
+        "Conflito(s) da PR #4 mantidos sem mescla de estatísticas de edições.",
+        "PV 63 (14d6+14) aparecem na edição original; 88 (16d6+32) em transcrição revisada; outra reprodução reporta 49. PV da ficha consolidada preservado como null até escolher edição e cotejar no editor.",
+        "Diferenças de atributos (DES22 vs21), salvaguardas, resistências e armas entre versões impedem mescla.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-320.webp",
+        "sha_git": "dd8ecb3529af6c9286e0f8c237ff077944f7928e",
+        "bytes": 218342,
+        "dimensoes_declaradas": [
+          934,
+          1000
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Definir edição e validar PV original antes de completar ficha.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-320.json",
+        "sha": "9ccfc4a344c372faa6c065d4afc275409deb0458",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-325",
+      "criatura": "Lindwurm",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Lindwurm tem ND5 original contra ND6 em revisão, sem edição canônica definida.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1 (2023) — revisão identificada em reprodução 5eSRD",
+        "cr": null,
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 136,
+        "dados_vida": "16d10+48",
+        "atributos": {
+          "FOR": 18,
+          "DES": 20,
+          "CON": 16,
+          "INT": 6,
+          "SAB": 12,
+          "CAR": 8
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40,
+          "nadar": 20
+        },
+        "sentidos": [
+          "darkvision 60 ft",
+          "tremorsense 120 ft"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Ice Walk",
+            "Sure-Footed Skater"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Claw",
+            "Constrict"
+          ],
+          "ataques": [
+            "Bite",
+            "Claw",
+            "Constrict"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "ND 5 em edição original segundo PR #4, ND 6 no índice editorial atual e na reprodução 5eSRD do Tome of Beasts 1 (2023). ND principal fica null até o projeto escolher explicitamente a edição e validar no editor."
+      ],
+      "pendencias_editoriais": [
+        "Definir oficialmente a edição de catálogo antes de atribuir ND consolidado.",
+        "Cotejar 2023 com exemplar editorial/erratas; 5eSRD é reprodução secundária, não homologação.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-325.webp",
+        "sha_git": "1ac51e6c0939b5e88d9e2c94c1e32f0a3410f46c",
+        "bytes": 145090,
+        "dimensoes_declaradas": [
+          1000,
+          615
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver divergência editorial/matemática antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-325.json",
+        "sha": "f1e27ab91a6a06736645d805ec050556050ea10e",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-326",
+      "criatura": "Linnorm, Vent",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Linnorm Vent de outra variante é fonte separada, não deve mesclar habilidades.",
+      "identidade": {
+        "origem": "Kobold Press / Open Design",
+        "edicao": "Tome of Beasts 2",
+        "cr": "16",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 19,
+        "pv": 247,
+        "dados_vida": "15d20 + 90",
+        "atributos": {
+          "FOR": 25,
+          "DES": 14,
+          "CON": 23,
+          "INT": 14,
+          "SAB": 14,
+          "CAR": 17
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 20,
+          "nadar": 80,
+          "voar": null,
+          "escalar": null,
+          "escavar": null
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60
+          },
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 120
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Amphibious",
+            "Blood Scent"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Tail",
+            "Frightful Presence",
+            "Inky Breath"
+          ],
+          "ataques": [
+            "Bite",
+            "Tail"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confirmar texto e edição exata na publicação oficial e eventuais erratas antes de homologar.",
+        "Revisão independente e verificação editorial ainda pendentes; nenhuma promoção canônica.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "AUSENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar livro, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-326.json",
+        "sha": "74c244c850bd3e4ac629c225092e605333f349fe",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-327",
+      "criatura": "Azer Forgemaster",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Fiery Aura, Multiattack e Bonfire estruturados em A5E; adaptação de sistema pendente.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": "4",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 78,
+        "dados_vida": "12d8+24",
+        "atributos": {
+          "FOR": 18,
+          "DES": 14,
+          "CON": 14,
+          "INT": 12,
+          "SAB": 16,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 30
+        },
+        "sentidos": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Fiery Aura"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bonfire"
+          ],
+          "ataques": [
+            "Returning Hammer"
+          ],
+          "acoes_bonus": [
+            "Fire Step"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Revisão independente e validação final da edição/errata ainda não executadas; ficha não canônica.",
+        "Verificar eventuais particularidades de implementação e interoperabilidade A5E; não converter regras automaticamente.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-327.webp",
+        "sha_git": "a0a515c1cd74460e7f111b2213b7e65fd5230a8c",
+        "bytes": 113414,
+        "dimensoes_declaradas": [
+          300,
+          300
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar livro, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-327.json",
+        "sha": "f3311fd2688b54fe6aa980091158b9eef5c23443",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-328",
+      "criatura": "Gnyan",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Aura of Hope, Glorious Milk e Avalanche's Roar inventariados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "4",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 90,
+        "dados_vida": "12d10+24",
+        "atributos": {
+          "FOR": 17,
+          "DES": 19,
+          "CON": 15,
+          "INT": 12,
+          "SAB": 16,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 50
+        },
+        "sentidos": [
+          "darkvision 60 ft"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Aura of Hope",
+            "Glorious Milk",
+            "Pounce",
+            "Snow Camouflage",
+            "Snow Strider"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Claw",
+            "Avalanche’s Roar"
+          ],
+          "ataques": [
+            "Bite",
+            "Claw"
+          ],
+          "acoes_bonus": [
+            "Snow Step",
+            "Bite (Pounce)"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Comparar com exemplar editorial e erratas do volume correto; fonte secundária não certifica revisão.",
+        "Ainda sem homologação independente, testes de combate ou promoção canônica.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-328.webp",
+        "sha_git": "386308fa2bdea12726bdb471e92adbc4953fba53",
+        "bytes": 77614,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar livro, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-328.json",
+        "sha": "51b1b6f18ec3a841b00beff7f25b108e3c646da0",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-329",
+      "criatura": "Living Soot",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Brittle, Choking Air Form e Engulfing Sootstorm estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "7",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 142,
+        "dados_vida": "15d10+60",
+        "atributos": {
+          "FOR": 15,
+          "DES": 20,
+          "CON": 19,
+          "INT": 6,
+          "SAB": 10,
+          "CAR": 8
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 0,
+          "voar": 50,
+          "pairar": true
+        },
+        "sentidos": [
+          "darkvision 60 ft"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Brittle",
+            "Choking Air Form",
+            "Elemental Nature",
+            "False Appearance"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Slam",
+            "Constrict",
+            "Engulfing Sootstorm"
+          ],
+          "ataques": [
+            "Slam",
+            "Constrict"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Comparar com exemplar editorial e erratas do volume correto; fonte secundária não certifica revisão.",
+        "Ainda sem homologação independente, testes de combate ou promoção canônica.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-329.webp",
+        "sha_git": "1d929023a7c5d73d93ff6064f13bae5d89b32753",
+        "bytes": 85414,
+        "dimensoes_declaradas": [
+          280,
+          280
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar livro, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-329.json",
+        "sha": "64c2b2a4121b34bef57e1c0ba6b3fa29474ceea1",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-330",
+      "criatura": "Spark",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Electric Touch, Inhabit e Elemental Nature estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "7",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 104,
+        "dados_vida": "16d4+64",
+        "atributos": {
+          "FOR": 4,
+          "DES": 20,
+          "CON": 18,
+          "INT": 10,
+          "SAB": 12,
+          "CAR": 17
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 10,
+          "voar": 60,
+          "escalar": null,
+          "nadar": null,
+          "escavar": null
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Elemental Nature"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Electric Touch",
+            "Inhabit"
+          ],
+          "ataques": [
+            "Electric Touch"
+          ],
+          "acoes_bonus": [
+            "Leave Host"
+          ],
+          "reacoes": [
+            "Electric Touch (hospedeiro voluntário)"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Cotejo independente com exemplar editorial exato e erratas ainda não executado.",
+        "Manter status não canônico até verificação de ataques, ações, estatísticas e ausência de habilidades adicionais.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-330.webp",
+        "sha_git": "1575821a51c0daeb494f9038d3d1052e7f8c05d7",
+        "bytes": 126638,
+        "dimensoes_declaradas": [
+          1000,
+          639
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar livro, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-330.json",
+        "sha": "ddf669d41ca9b7aa5ff0bc788ba4869e3422d2fc",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-331",
+      "criatura": "Liosalfar",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Mesmerizing Radiance, Ray of Light e Darkness Hypersensitivity estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "10",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 132,
+        "dados_vida": "24d10",
+        "atributos": {
+          "FOR": 10,
+          "DES": 25,
+          "CON": 10,
+          "INT": 18,
+          "SAB": 18,
+          "CAR": 12
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 0,
+          "voar": 60,
+          "escalar": null,
+          "nadar": null,
+          "escavar": null
+        },
+        "sentidos": [
+          {
+            "tipo": "truesight",
+            "alcance_ft": 120
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Darkness Hypersensitivity",
+            "Elemental Nature",
+            "Inscrutable",
+            "Light Form"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Radiant Touch",
+            "Ray of Light",
+            "Mesmerizing Radiance"
+          ],
+          "ataques": [
+            "Radiant Touch",
+            "Ray of Light"
+          ],
+          "acoes_bonus": [
+            "Alterar raio luminoso",
+            "Sustentar Mesmerizing Radiance"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Cotejo independente com exemplar editorial exato e erratas ainda não executado.",
+        "Manter status não canônico até verificação de ataques, ações, estatísticas e ausência de habilidades adicionais.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-331.webp",
+        "sha_git": "79e40a62f66a37e954887f11803773330f2219d5",
+        "bytes": 74908,
+        "dimensoes_declaradas": [
+          413,
+          1000
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar livro, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-331.json",
+        "sha": "445ebba80568f35a6d0274d1c1eb7a5f5d6099a7",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-332",
+      "criatura": "Slow Storm",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Lightning Bolt, Static Shock e Eye of the Storm estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "15",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 19,
+        "pv": 220,
+        "dados_vida": "21d8+126",
+        "atributos": {
+          "FOR": 20,
+          "DES": 19,
+          "CON": 22,
+          "INT": 11,
+          "SAB": 18,
+          "CAR": 11
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 0,
+          "voar": 60,
+          "escalar": null,
+          "nadar": null,
+          "escavar": null
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 30
+          },
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 120
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Elemental Nature",
+            "Eye of the Storm"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Slam",
+            "Lightning Bolt",
+            "Static Shock"
+          ],
+          "ataques": [
+            "Slam",
+            "Lightning Bolt"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Cotejo independente com exemplar editorial exato e erratas ainda não executado.",
+        "Manter status não canônico até verificação de ataques, ações, estatísticas e ausência de habilidades adicionais.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-332.webp",
+        "sha_git": "de8a532fdf62d2262e7fabc2ee705921566af32e",
+        "bytes": 116472,
+        "dimensoes_declaradas": [
+          665,
+          1000
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar livro, adaptar/testar e conferir licença/arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-332.json",
+        "sha": "27dcd26da946c75b9212729cfc69eddaaf1c4c6f",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    },
+    {
+      "id": "TF-333",
+      "criatura": "Living Shade",
+      "grupo": "b",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "ND 1/4 com XP 100 inconsistentes com tabela 5e usual; confirmar edição.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": "1/4",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 18,
+        "dados_vida": "4d8",
+        "atributos": {
+          "FOR": 6,
+          "DES": 14,
+          "CON": 10,
+          "INT": 9,
+          "SAB": 10,
+          "CAR": 12
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 40,
+          "voar": null,
+          "escalar": null,
+          "nadar": null,
+          "escavar": null
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Amorphous",
+            "Shadow Stealth",
+            "Sunlight Sensitivity"
+          ],
+          "acoes": [
+            "Shadow Touch"
+          ],
+          "ataques": [
+            "Shadow Touch"
+          ],
+          "acoes_bonus": [
+            "Hide"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "KPOGL descreve ND 1/4 (100 XP), experiência incompatível com valor usual 5e; verificar edição/editorial."
+      ],
+      "pendencias_editoriais": [
+        "Cotejo independente com exemplar editorial exato e erratas ainda não executado.",
+        "Manter status não canônico até verificação de ataques, ações, estatísticas e ausência de habilidades adicionais.",
+        "Edição oficial/erratas, imagem e licença não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-333.webp",
+        "sha_git": "e1e1ec228e282d1c775ce03c1f87be662934e365",
+        "bytes": 92384,
+        "dimensoes_declaradas": [
+          702,
+          997
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver divergência editorial/matemática antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/b/records/TF-333.json",
+        "sha": "2324aa30f9d5cd08513527385717bf81c441aa42",
+        "source_commit": "251b5bbd3cec6c1dc8f4299d7c9bbdf1de3ef6f5",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 29
+    }
+  ]
+}

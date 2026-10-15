@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 16 lotes validados, 160/395 fichas (235 restantes).
+**Situação:** CONCLUÍDA DOCUMENTALMENTE — 40 lotes registrados, 395/395 fichas auditadas (0 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -124,3 +124,161 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 
 **Consolidado:** 160/395 (235 restantes); 107 completas em conteúdo, 31 com ressalvas, 21 incompletas, 1 não verificável; 105 imagens diretas, 52 via manifesto, 3 ausentes.
 
+## Lote 017 — TF-178–TF-190 (10 IDs conforme ordem do CSV)
+
+9 fichas completas em conteúdo e 1 completa com ressalvas: **TF-182**, por interação não resolvida entre Fire Hazard (ativação ao sofrer dano de fogo) e imunidade da criatura a dano de fogo. A ficha de TF-178 não especifica a duração/remoção da petrificação de Acid Spray; o conteúdo disponível foi preservado sem inventar regra. As dez imagens estão vinculadas diretamente aos registros, com presença física, SHA e tamanho conferidos no GitHub. TF-190 possui largura declarada de 469 px, inferior a 500 px. Revisão visual, licença, edição original/erratas e adaptação ao card game permanecem pendentes.
+
+**Consolidado:** 170/395 (225 restantes); 116 completas em conteúdo, 32 com ressalvas, 21 incompletas, 1 não verificável; 115 imagens diretas, 52 por manifesto e 3 ausentes.
+
+## Lote 018 — TF-191–TF-200 (10 IDs do CSV)
+
+5 completas em conteúdo, 4 com ressalvas (TF-194, TF-195, TF-196 por divergências entre fontes/edições; TF-200 por origem Level Up A5E não-SRD e restrições de licença) e 1 incompleta (**TF-199**: condição temporal de Consume Heart truncada, sem extrapolar). 9 imagens diretamente vinculadas com SHA/tamanho correspondentes; TF-200 vinculada via manifesto E, arte gerada por IA não oficial. Imagens declaradas de baixa largura (<500 px): TF-193, TF-194. Não houve homologação editorial, visual ou jurídica.
+
+**Consolidado:** 180/395 (215 restantes); 121 completas, 36 com ressalvas, 22 incompletas, 1 não verificável; 124 imagens diretas, 53 por manifesto e 3 ausentes.
+
+## Lote 019 — TF-201–TF-212 (10 IDs do CSV)
+
+2 fichas completas em conteúdo (TF-211, TF-212), 2 com ressalvas (TF-201 A5E não-SRD/licença e TF-202 Book of Ebon Tides vs Tome of Beasts 3) e 6 incompletas (**TF-203, TF-204, TF-205, TF-206, TF-208, TF-210**: registros C contêm apenas sínteses, não mecânicas nem atributos estruturados). Nove imagens diretamente vinculadas e uma (TF-201) via manifesto E, com SHA/tamanho conferidos; TF-210 tem largura declarada de 452 px. Edição, identidade visual e licenciamento não homologados.
+
+**Consolidado:** 190/395 (205 restantes); 123 completas, 38 com ressalvas, 28 incompletas, 1 não verificável; 133 imagens diretas, 54 por manifesto e 3 ausentes.
+
+## Lote 020 — TF-213–TF-222 (10 IDs da ordem do CSV)
+
+8 fichas completas em conteúdo e 2 com ressalvas: **TF-216**, divergência de vulnerabilidade a frio entre versões; **TF-221**, fórmula de dados de vida possivelmente incompatível com criatura Large. As dez imagens estão diretamente vinculadas ao grupo A, com SHA/tamanho correspondentes. Nenhuma imagem apresenta dimensão declarada inferior a 500 px. Sem homologação visual, editorial, de licença ou adaptação.
+
+**Consolidado:** 200/395 (195 restantes); 131 completas, 40 com ressalvas, 28 incompletas e 1 não verificável; 143 imagens diretas, 54 por manifesto, 3 ausentes.
+
+## Lote 021 — TF-223–TF-233 (10 IDs da ordem do CSV)
+
+9 fichas completas em conteúdo e 1 com ressalva (**TF-231**, descrição Spit Poison de A5E como ataque melee com distância 20/60 ft, pendente cotejo). Dez imagens com vínculo direto aos JSONs A, presentes com SHA e tamanho conferidos. Nenhuma possui dimensão declarada inferior a 500 px. Publicação original, adequação visual e licença permanecem sem homologação.
+
+**Consolidado:** 210/395 (185 restantes); 140 completas, 41 com ressalvas, 28 incompletas, 1 não verificável; 153 imagens diretas, 54 via manifesto, 3 ausentes.
+
+## Lote 022 — TF-234–TF-243 (10 IDs na ordem do CSV)
+
+6 completas em conteúdo, 1 com ressalva (TF-237: reteste de Stinger versus cura por greater restoration) e 3 incompletas (**TF-238, TF-239 e TF-240**, sem ações/traços estruturados). Dez imagens presentes diretamente vinculadas aos JSONs A e SHA/tamanho conferidos. Sem dimensões declaradas inferiores a 500 px. Licenciamento, publicação e inspeção visual continuam pendentes.
+
+**Consolidado:** 220/395 (175 restantes); 146 completas, 42 com ressalvas, 31 incompletas, 1 não verificável; 163 imagens diretas, 54 por manifesto, 3 ausentes.
+
+## Lote 023 — TF-244–TF-253 (10 IDs da ordem do CSV)
+
+5 completas em conteúdo, 3 com ressalvas (**TF-245**: Seaside Rejuvenation/save de Wisdom; **TF-251**: INT 6/8 e arredondamento de Absorb the Dead; **TF-253**: novo teste sem atributo/CD inequívocos) e 2 incompletas (**TF-249, TF-252**, sem ações/traços). As dez imagens A estão vinculadas e o SHA/tamanho físico corresponde; TF-252 tem altura declarada de 460 px. Licenciamento, imagem e impressão primária não homologados.
+
+**Consolidado:** 230/395 (165 restantes); 151 completas, 45 com ressalvas, 33 incompletas, 1 não verificável; 173 imagens diretas, 54 por manifesto e 3 ausentes.
+
+## Lote 024 — TF-254–TF-264 (10 IDs da ordem do CSV)
+
+6 fichas completas em conteúdo, 3 com ressalvas (**TF-254** e **TF-260**, versões editoriais divergentes; **TF-263**, bônus de ataque/componentes A5E) e 1 incompleta (**TF-264**, variante Sticky sem CD e dados de vida/proficiência não confirmados). Dez imagens diretamente vinculadas ao grupo A, com SHA/tamanho conferidos. Nenhuma dimensão declarada abaixo de 500 px. Sem homologação editorial, visual ou jurídica.
+
+**Consolidado:** 240/395 (155 restantes); 157 completas, 48 com ressalvas, 34 incompletas, 1 não verificável; 183 imagens diretas, 54 via manifesto e 3 ausentes.
+
+## Lote 025 — TF-265–TF-276 (10 IDs da ordem do CSV)
+
+2 completas em conteúdo, 7 com ressalvas (TF-266, 267, 269, 272, 273, 274, 276: dependências/ambiguidade de regras e versões) e 1 incompleta (**TF-265**, sem mecânicas). Oito imagens diretamente vinculadas com SHA e tamanho conferidos. **TF-274 e TF-276 não possuem imagem**, confirmado também no manifesto F; TF-272 (280×280) e TF-273 (373×669) têm dimensões reduzidas. Fonte primária, licença, inspeção visual e adaptação não homologadas.
+
+**Consolidado:** 250/395 (145 restantes); 159 completas, 55 com ressalvas, 35 incompletas e 1 não verificável; 191 imagens diretas, 54 por manifesto e 5 ausentes.
+
+## Lote 026 — TF-277–TF-289 (10 IDs da ordem do CSV)
+
+4 completas em conteúdo, 5 com ressalvas (TF-277, 279, 283, 284, 286 por variantes/regras dependentes de outros registros ou arredondamento não definido) e 1 incompleta (**TF-285**, sem atributos/ações estruturados). Sete imagens diretamente vinculadas; **TF-283, TF-284 e TF-286 ausentes**, também pendentes no manifesto F. TF-278 e TF-289 são tokens 280×280; TF-285 tem miniatura 64×80, todas de resolução insuficiente para inferir aptidão editorial. Licenças e adequação visual não homologadas.
+
+**Consolidado:** 260/395 (135 restantes); 163 completas, 60 com ressalvas, 36 incompletas e 1 não verificável; 198 imagens diretas, 54 via manifesto, 8 ausentes.
+
+## Lote 027 — TF-290–TF-302 (10 IDs do CSV)
+
+3 completas em conteúdo, 3 com ressalvas (TF-293 Rebirth, TF-296 Spirit Usher/contratos, TF-297 conjuração sem revisão dos efeitos) e 4 incompletas (**TF-298–TF-301**, registros somente básicos). Dez imagens vinculadas diretamente em A/B com SHA/tamanho conferidos; TF-296 e TF-302 têm tokens 280×280. Edição, inspeção visual e licenças permanecem não homologadas.
+
+**Consolidado:** 270/395 (125 restantes); 166 completas, 63 com ressalvas, 40 incompletas e 1 não verificável; 208 imagens diretas, 54 por manifesto, 8 ausentes.
+
+## Lote 028 — TF-303–TF-319 (10 IDs na ordem do CSV)
+
+6 fichas completas em conteúdo e 4 com ressalvas (TF-309, 316, 318, 319: inconsistências matemáticas/editoriais e versões distintas). Imagens: 4 diretas, 5 vinculadas via manifesto F (SHA/tamanho no manifesto verificado) e **1 ausente (TF-303)**. Tokens 280×280 identificados: TF-305, TF-316, TF-317. Nenhuma arte/edição/licença homologada.
+
+**Consolidado:** 280/395 (115 restantes); 172 completas, 67 com ressalvas, 40 incompletas e 1 não verificável; 212 imagens diretas, 59 por manifesto, 9 ausentes.
+
+## Lote 029 — TF-320–TF-333 (10 IDs conforme CSV)
+
+7 completas em conteúdo, 2 com ressalvas (**TF-325**, ND5/6 entre edições; **TF-333**, XP 100 para ND 1/4 na fonte), 1 incompleta (**TF-320**, PV consolidado nulo por conflito entre valores 63/88/49). Nove imagens vinculadas via manifesto F com SHA/bytes previamente validados e **TF-326 ausente**. Dimensões inferiores a 500 px: TF-327, TF-328, TF-329, TF-331. Edição/erratas e revisão visual/jurídica permanecem pendentes.
+
+**Consolidado:** 290/395 (105 restantes); 179 completas, 69 com ressalvas, 41 incompletas e 1 não verificável; 212 imagens diretas, 68 por manifesto, 10 ausentes.
+
+
+## Lote 030 — TF-334–TF-344 (10 IDs conforme CSV)
+
+7 fichas completas em conteúdo, 1 com ressalvas (TF-340, Transmigratory Strike) e 2 incompletas (TF-334 com ND/PV nulos; TF-342, unidade bar brawl não definida em Cause Row). Seis imagens vinculadas via manifesto F com SHA/tamanho de árvore Git conferidos; quatro ausentes (TF-335, TF-336, TF-341 e TF-342). Imagens TF-340 (280×280) e TF-344 (360×279) têm lado inferior a 500 px. Licenças, inspeção visual e edição oficial não homologadas.
+
+**Consolidado:** 300/395 (95 restantes); 186 completas em conteúdo, 70 com ressalvas, 43 incompletas e 1 não verificável; 212 imagens diretas, 74 por manifesto, 14 ausentes.
+
+
+## Lote 031 — TF-345–TF-356 (10 IDs conforme CSV)
+
+9 fichas completas em conteúdo e 1 com ressalvas (TF-356: versão A5E de Grendel não mesclada com Viking Adventures). Imagens: 9 vinculadas via manifesto F com SHA/bytes Git conferidos e 1 ausente (TF-353). Cinco imagens com lado inferior a 500 px (TF-348, 350, 351, 355, 356); TF-355/356 usam sprites de 32×32 px. Sem aprovação visual/licenciamento ou validação editorial final.
+
+**Consolidado:** 310/395 (85 restantes); 195 completas em conteúdo, 71 com ressalvas, 43 incompletas, 1 não verificáveis; 212 imagens diretas, 83 por manifesto, 15 ausentes.
+
+
+## Lote 032 — TF-358–TF-370 (10 IDs conforme CSV)
+
+9 fichas completas em conteúdo e 1 com ressalvas (TF-361 mantém Elder Black Pudding A5E ND8/PV171 separado do homônimo ND4/PV130). Oito imagens por manifesto F com SHA/tamanho Git conferidos; duas ausentes (TF-358 e TF-370). Quatro imagens de baixa resolução (TF-361 32×32, TF-363/365/367 280×280). Edições, licenças e arte final não homologadas.
+
+**Consolidado:** 320/395 (75 restantes); 204 completas, 72 com ressalvas, 43 incompletas, 1 não verificáveis; 212 imagens diretas, 91 por manifesto, 17 ausentes.
+
+
+## Lote 033 — TF-372–TF-388 (10 IDs conforme CSV)
+
+7 completas em conteúdo e 3 com ressalvas (TF-382 ND5/ND6 em versões conflitantes; TF-386 variante A5E; TF-388 edição original/revisão divergentes). Seis imagens por manifesto F, quatro ausentes (TF-379, 381, 384, 386); TF-372 com largura 374px. Nenhuma arte, edição ou licença homologada.
+
+**Consolidado:** 330/395 (65 restantes); 211 completas, 75 com ressalvas, 43 incompletas e 1 não verificáveis; 212 diretas, 97 por manifesto, 21 ausentes.
+
+
+## Lote 034 — TF-389–TF-401 (10 IDs conforme CSV)
+
+8 fichas completas em conteúdo e 2 com ressalvas (TF-394 versões 2016/2023 divergentes; TF-401 diferenças de SAB/deslocamento entre edições). Sete imagens por manifesto F com SHA e tamanho de árvore Git conferidos; três ausentes (TF-389/397/398). TF-392 280×280, TF-393/395 sprites 32×32. Edições, licenças e arte final não homologadas.
+
+**Consolidado:** 340/395 (55 restantes); 219 completas, 77 com ressalvas, 43 incompletas, 1 não verificáveis; 212 diretas, 104 via manifesto, 24 ausentes.
+
+
+## Lote 035 — TF-402–TF-412 (10 IDs conforme CSV)
+
+8 fichas completas em conteúdo e 2 incompletas (**TF-408** ND null/CD de Thrash não definida; **TF-412**, divergência SAB 11 (+1/+0) e ND do catálogo nulo, fonte C). Imagens: seis por manifesto F, uma direta (TF-412 em deep-mechanics/c/images, SHA Git conferido) e três ausentes (TF-402/408/411). Imagens pequenas TF-405 32×32 e TF-409 152×203. Edições e licenças não homologadas.
+
+**Consolidado:** 350/395 (45 restantes); 227 completas, 77 com ressalvas, 45 incompletas, 1 não verificáveis; 213 imagens diretas, 110 por manifesto, 27 ausentes.
+
+
+## Lote 036 — TF-413–TF-423 (10 IDs conforme CSV)
+
+6 fichas completas com ressalvas e 4 incompletas (**TF-414** erro editorial grick/Beak; **TF-415** CD ambígua na variante Soul Splice; **TF-420** limites 12/20 undead; **TF-423** progressão de cura por sucessos). Outras divergências TF-416 dados de vida, TF-417 dano de Swipe, TF-419 Perception. Nove imagens físicas diretas verificadas por árvore Git, uma ausente (TF-414); TF-417 e TF-420 compartilham o mesmo binário, requerem arte distinta/revisão. Dimensões das imagens diretas não aferidas e direitos não homologados.
+
+**Consolidado:** 360/395 (35 restantes); 227 completas, 83 com ressalvas, 49 incompletas e 1 não verificáveis; 222 imagens diretas, 110 via manifesto e 28 ausentes.
+
+
+## Lote 037 — TF-424–TF-468 (10 IDs conforme CSV)
+
+6 fichas com ressalvas e 4 incompletas (**TF-428**, Stone Howl/cabeças; **TF-431**, ficha dinâmica sem ND e dados de vida; **TF-459**, bloodied 65 contra 87; **TF-468**, Breath Weapon fire/cold e referências de ações lendárias). Três imagens diretas C, três por manifesto F e quatro ausentes (TF-448,449,462,468); TF-428 token 256×256 e TF-431/459 sprites 32×32. Identidades/licenças e edições não homologadas.
+
+**Consolidado:** 370/395 (25 restantes); 227 completas, 89 com ressalvas, 53 incompletas, 1 não verificáveis; 225 diretas, 113 manifesto, 32 ausentes.
+
+
+## Lote 038 — TF-469–TF-501 (10 IDs conforme CSV)
+
+1 ficha com ressalvas (TF-501), 9 incompletas: TF-469/483/493/494 carecem de dados estruturais; TF-470/473 apresentam referências de ataque inconsistentes; TF-476 sem parâmetros das ações lendárias; TF-499 Despair Aura não informa CD/atributo/gatilho; TF-500 depende de outras criaturas/regra. Três imagens por manifesto F (TF-469, 476, 493) e sete ausentes. TF-469 32×32 e TF-493 256×256 são imagens pequenas. Edições, licenças e qualidade não homologadas.
+
+**Consolidado:** 380/395 (15 restantes); 227 completas, 90 com ressalvas, 62 incompletas, 1 não verificáveis; 225 diretas, 116 manifesto, 39 ausentes.
+
+
+## Lote 039 — TF-502–TF-512 (10 IDs conforme CSV)
+
+3 fichas com ressalvas (TF-506/507/509) e 7 incompletas (TF-502 sem CD de Despair Aura; TF-503 Stuffing/ghouls; TF-504 erro Banshee; TF-505 Dust Storm sem resultado no sucesso; TF-510 PV/CON; TF-511 escopo doença; TF-512 atributos/ações ausentes). Cinco imagens vinculadas por manifesto F (TF-503,504,505,510,511), cinco ausentes; todas as cinco vinculadas têm lado <500 px e quatro são sprites de 32×32. Edições/licenças e arte não homologadas.
+
+**Consolidado:** 390/395 (5 restantes); 227 completas, 93 com ressalvas, 69 incompletas e 1 não verificáveis; 225 diretas, 121 por manifesto, 44 ausentes.
+
+
+## Lote 040 — TF-516–TF-522 (últimos 5 IDs conforme CSV)
+
+Cinco fichas incompletas: TF-516 ausência do bônus Stealth; TF-517 limite Shatter não declarado; TF-518 referência 'noble' em Ray of Frost; TF-521 PV/dados de vida, alcance e Clear the Way inconsistentes; TF-522 tipo do dano de Mark for Death ausente. Cinco imagens ausentes. Nenhuma regra, valor, arte ou licença foi inventada.
+
+**Consolidado:** 395/395 (0 restantes); 227 completas em conteúdo, 93 com ressalvas, 74 incompletas e 1 não verificáveis. Imagens 225 diretas, 121 via manifesto e 49 ausentes. Resoluções abaixo 500 pixels documentadas quando metadados disponíveis: 85.
+
+## Encerramento da auditoria documental
+
+Os 395 IDs exclusivos selecionados no CSV original foram avaliados exatamente em sua ordem, nos 40 lotes (39 de 10 cartas e o último de 5). Inconsistências mecânicas, divergências editoriais, imagens ausentes, limitações de licença e falta de revisão visual estão preservadas por registro. **Auditoria documental concluída não implica fichas completas, validação editorial, licenciamento comercial de imagens, testes de jogo, CI, merge, publicação de produto ou E2E.**

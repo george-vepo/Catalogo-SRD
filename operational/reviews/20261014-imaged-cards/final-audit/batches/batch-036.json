@@ -1,0 +1,1113 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+  "reference_date": "2026-10-14",
+  "batch_number": 36,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 0,
+    "completas_com_ressalvas": 6,
+    "incompletas": 4,
+    "nao_verificaveis": 0,
+    "imagem_direta": 9,
+    "imagem_manifesto": 0,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 1,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 0
+  },
+  "evidence_limitations": [
+    "Todos os dez registros do schema C mantêm mecanica_completa=false; classificar por auditabilidade do conteúdo, não homologação.",
+    "Nove imagens diretas com SHA/bytes na árvore Git. Dimensões diretas não verificadas e TF-417/420 compartilham arte.",
+    "Licenças, fonte editorial, identidade visual e testes não homologados."
+  ],
+  "records": [
+    {
+      "id": "TF-413",
+      "criatura": "Sinstar, Star Thrall",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "ND de catálogo null; transcrição ND2 com ações individualizadas, porém sem cotejo editorial Tome of Beasts 3.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3 (2022)",
+        "cr": null,
+        "nd_fonte": "2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 58,
+        "dados_vida": "9d8+18",
+        "atributos": {
+          "FOR": 17,
+          "DES": 10,
+          "CON": 15,
+          "INT": 3,
+          "SAB": 10,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "cego_alem_do_alcance": true
+          }
+        ],
+        "idiomas": [],
+        "resistencias_dano": [
+          "cold",
+          "fire"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "blinded",
+          "charmed",
+          "deafened",
+          "exhaustion",
+          "frightened",
+          "poisoned"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Spiny Defense",
+            "Telepathic Bond"
+          ],
+          "ataques": [
+            "Slam"
+          ],
+          "acoes": [
+            "Slam",
+            "Shoot Spines"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [
+        "ND de catálogo null; transcrição ND2 com ações individualizadas, porém sem cotejo editorial Tome of Beasts 3."
+      ],
+      "pendencias_editoriais": [
+        "Ficha mecânica integral extraída de uma transcrição individual identificada; revisão independente contra Tome of Beasts 3 pendente.",
+        "A imagem binária foi persistida com SHA idêntico, mas sem aprovação visual editorial da identidade.",
+        "Não confundir com Sinstar principal (ND17).",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-413.webp",
+        "sha_git": "42919c24819e97df137f5587107b0c4087b5e262",
+        "bytes": 276424,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-413.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar edição e variante, adaptar/testar somente após homologação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-413.json",
+        "sha": "6cbbe23c8065d2c696d671a7790d7ebcebbcd0c0",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-414",
+      "criatura": "Wallflower",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Beak menciona 'grick' na precondição em vez de Wallflower; alvo da mecânica é ambíguo.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": null,
+        "nd_fonte": "2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 33,
+        "dados_vida": "6d8+12",
+        "atributos": {
+          "FOR": 14,
+          "DES": 14,
+          "CON": 14,
+          "INT": 2,
+          "SAB": 14,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 20,
+          "escalar_ft": 20
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [],
+        "resistencias_dano": [
+          "damage from nonmagical weapons"
+        ],
+        "imunidades_dano": [],
+        "imunidades_condicao": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Luring Scent",
+            "Spider Climb"
+          ],
+          "ataques": [
+            "Tentacles",
+            "Beak"
+          ],
+          "acoes": [
+            "Tentacles"
+          ],
+          "acoes_bonus": [
+            "Beak"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Beak menciona 'grick' na precondição em vez de Wallflower; alvo da mecânica é ambíguo."
+      ],
+      "conflitos": [
+        "Beak menciona 'grick' na precondição em vez de Wallflower; alvo da mecânica é ambíguo."
+      ],
+      "pendencias_editoriais": [
+        "A página oficial escreve grick na precondição de Beak, não Wallflower; precondição literal preservada e alvo operacional desconhecido.",
+        "Não presumir que imunidade a charmed se aplique ao próprio grapple, apenas a Luring Scent.",
+        "Imagem inexistente no diretório C, precisa de binário representativo.",
+        "Confrontar Monstrous Menagerie/errata antes de resolver referência grick.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna mecânica/errata antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-414.json",
+        "sha": "0736b2c5fbf4f11fc662b1e20a1a3a284af31c4a",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-415",
+      "criatura": "Gloomflower",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Soul Splice opcional possui texto de CD impossível ('successful 20 DC 14'), dependente de magic jar; não estabelecer CD por hipótese.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "nd_fonte": "3",
+        "tamanho": "Tiny"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 44,
+        "dados_vida": "8d4+24",
+        "atributos": {
+          "FOR": 10,
+          "DES": 6,
+          "CON": 16,
+          "INT": 1,
+          "SAB": 6,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 10
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 120
+          }
+        ],
+        "idiomas": [
+          "entende idiomas conhecidos por criaturas a até 120 pés; não fala",
+          "telepathy 120 ft"
+        ],
+        "resistencias_dano": [],
+        "imunidades_dano": [],
+        "imunidades_condicao": [
+          "blinded",
+          "deafened",
+          "frightened"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Blur",
+            "Psychic Scream"
+          ],
+          "ataques": [
+            "Psychic Strike"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Psychic Strike",
+            "Corrupting Visions"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Soul Splice opcional possui texto de CD impossível ('successful 20 DC 14'), dependente de magic jar; não estabelecer CD por hipótese."
+      ],
+      "conflitos": [
+        "Soul Splice opcional possui texto de CD impossível ('successful 20 DC 14'), dependente de magic jar; não estabelecer CD por hipótese."
+      ],
+      "pendencias_editoriais": [
+        "A variante opcional Soul Splice apresenta teste de resistência textual incongruente ('successful 20 DC 14'); não preencher CD presumida.",
+        "Soul Splice depende do efeito da magia magic jar, cuja aplicação precisa ser conferida.",
+        "Imagens binárias persistidas, mas identidade visual ainda sem revisão editorial.",
+        "Conferir mecânicas contra Creature Codex e errata para completar ficha.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-415.jpg",
+        "sha_git": "4ba895d9edc641a6aab696782b81e1f1ae4337e9",
+        "bytes": 55622,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-415.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna mecânica/errata antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-415.json",
+        "sha": "a0e5989abc245c8fea715862a923b5203da23357",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-416",
+      "criatura": "Wind Witch",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Wind Witch Large com dados de vida 12d8+12 potencialmente divergentes da regra de porte; valor preservado literalmente.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": null,
+        "nd_fonte": "3",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 66,
+        "dados_vida": "12d8+12",
+        "atributos": {
+          "FOR": 6,
+          "DES": 16,
+          "CON": 12,
+          "INT": 6,
+          "SAB": 11,
+          "CAR": 8
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30,
+          "voo_ft": 60,
+          "voo_hover": true
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 60,
+            "cego_alem_do_alcance": true
+          }
+        ],
+        "idiomas": [
+          "entende Common; não fala"
+        ],
+        "resistencias_dano": [
+          "bludgeoning",
+          "piercing"
+        ],
+        "imunidades_dano": [],
+        "imunidades_condicao": [
+          "exhaustion",
+          "poisoned",
+          "prone"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Cursed Plant",
+            "Flammable",
+            "Tumbleweed Form"
+          ],
+          "ataques": [
+            "Slam"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Slam",
+            "Capture"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Bouncy Escape"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Wind Witch Large com dados de vida 12d8+12 potencialmente divergentes da regra de porte; valor preservado literalmente."
+      ],
+      "pendencias_editoriais": [
+        "Confirmar em Tome of Beasts 3 se a fórmula de PV 12d8+12 da ficha (criatura Large) é errata ou exceção.",
+        "Conferir editoralmente duração da condição de captura e dano condicional de Flammable; fonte individual detalhada disponível.",
+        "Revisão visual da imagem pendente.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-416.webp",
+        "sha_git": "371ea01a3352e321d33b566d21beed545ba940b5",
+        "bytes": 376128,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-416.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar edição e variante, adaptar/testar somente após homologação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-416.json",
+        "sha": "c0e78bcad39131f979fc639fa126d8adb5eabc4c",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-417",
+      "criatura": "Mandriano",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Mandriano Swipe publica 2d6+4 com FOR +2; não alterar dano sem errata; imagem idêntica à Ancient.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "nd_fonte": "5",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 60,
+        "dados_vida": "8d10+16",
+        "atributos": {
+          "FOR": 15,
+          "DES": 6,
+          "CON": 15,
+          "INT": 10,
+          "SAB": 10,
+          "CAR": 7
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "compreende Common",
+          "compreende Sylvan",
+          "não pode falar"
+        ],
+        "resistencias_dano": [
+          "necrotic",
+          "bludgeoning from nonmagical attacks",
+          "piercing from nonmagical attacks",
+          "slashing from nonmagical attacks"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "exhaustion",
+          "poisoned"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [],
+          "ataques": [
+            "Swipe"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Swipe",
+            "Consume the Spark"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Mandriano Swipe publica 2d6+4 com FOR +2; não alterar dano sem errata; imagem idêntica à Ancient."
+      ],
+      "pendencias_editoriais": [
+        "Comparar bloco KPOGL de Mandriano ao Creature Codex original e respectivas erratas.",
+        "Verificar valor de dano impresso 2d6+4 no Swipe com FOR +2; preservar o valor original.",
+        "Imagem existente é idêntica à da variante Ancient; requer arte distinta ou aprovação visual individual.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-417.jpg",
+        "sha_git": "bdd6eaad0308ff5543ca20d329a9ef9aa7c2539b",
+        "bytes": 69026,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-417.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar edição e variante, adaptar/testar somente após homologação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-417.json",
+        "sha": "e4e6d0f8ae1ea7b4d3ff6721b731167fa3e29131",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-418",
+      "criatura": "Sodwose",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Sodwose tem mecânicas detalhadas na fonte secundária, mas ND catálogo null e editorial ainda não cotejado.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": null,
+        "nd_fonte": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 127,
+        "dados_vida": "15d8+60",
+        "atributos": {
+          "FOR": 10,
+          "DES": 21,
+          "CON": 18,
+          "INT": 15,
+          "SAB": 14,
+          "CAR": 9
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 40,
+          "escalada_ft": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 120,
+            "cego_alem_do_alcance": true
+          }
+        ],
+        "idiomas": [
+          "Common",
+          "Sylvan"
+        ],
+        "resistencias_dano": [
+          "bludgeoning",
+          "piercing"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "blinded",
+          "charmed",
+          "exhaustion",
+          "frightened",
+          "poisoned",
+          "restrained",
+          "unconscious"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Grassland Camouflage",
+            "Scarecrow"
+          ],
+          "ataques": [
+            "Grass Whip"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Grass Whip",
+            "Entangle"
+          ],
+          "acoes_bonus": [
+            "Grass Step",
+            "Set Snare"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Sodwose tem mecânicas detalhadas na fonte secundária, mas ND catálogo null e editorial ainda não cotejado."
+      ],
+      "pendencias_editoriais": [
+        "Bloco mecânico completo reconstruído a partir da ficha individual 5eSRD, conferido com transcrição secundária; ainda requer conferência com exemplar editorial/errata do Tome of Beasts 3.",
+        "Imagem binária existente, mas identidade visual não aprovada.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-418.webp",
+        "sha_git": "d12a87b8de147c07d6a65eab936fc489eb53d149",
+        "bytes": 200968,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-418.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar edição e variante, adaptar/testar somente após homologação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-418.json",
+        "sha": "a2461a2ace386478f00ca590d88f014a91b89009",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-419",
+      "criatura": "Witchalder",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Witchalder passive Perception 15 impressa, mas Perception +6 indicaria 16; preservar discrepância.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": null,
+        "nd_fonte": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 102,
+        "dados_vida": "12d8+48",
+        "atributos": {
+          "FOR": 19,
+          "DES": 9,
+          "CON": 18,
+          "INT": 9,
+          "SAB": 16,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30
+        },
+        "sentidos": [],
+        "idiomas": [
+          "entende Sylvan; não fala"
+        ],
+        "resistencias_dano": [
+          "bludgeoning"
+        ],
+        "imunidades_dano": [],
+        "imunidades_condicao": [
+          "charmed",
+          "poisoned"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Deep Roots",
+            "False Appearance",
+            "Sunlight Regeneration",
+            "Speak with Plants"
+          ],
+          "ataques": [
+            "Slam"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Slam",
+            "Shape Wood",
+            "Throttle",
+            "Pollen Cloud"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Witchalder passive Perception 15 impressa, mas Perception +6 indicaria 16; preservar discrepância."
+      ],
+      "pendencias_editoriais": [
+        "Ficha individual detalhada conferida; revisão editorial contra Tome of Beasts 3 e errata pendente.",
+        "A ficha publica Perception +6, mas passive Perception 15; preservar valor impresso e esclarecer divergência com cálculo padrão.",
+        "Imagem binária existente, sem aprovação editorial da identidade.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-419.webp",
+        "sha_git": "76f554f362f5583c082554574f118f233c4e6a7b",
+        "bytes": 263232,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-419.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar edição e variante, adaptar/testar somente após homologação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-419.json",
+        "sha": "308260fc0e02b0cb3c0104a1846d31f5688758b3",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-420",
+      "criatura": "Mandriano, Ancient",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Consume the Spark (12 undead) e Call the Dead (20 zombies): não está definido se tetos de controle são independentes.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "nd_fonte": "8",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 102,
+        "dados_vida": "12d12+24",
+        "atributos": {
+          "FOR": 21,
+          "DES": 8,
+          "CON": 15,
+          "INT": 12,
+          "SAB": 10,
+          "CAR": 7
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 40
+        },
+        "sentidos": [],
+        "idiomas": [
+          "compreende Common",
+          "compreende Sylvan",
+          "não pode falar"
+        ],
+        "resistencias_dano": [
+          "necrotic",
+          "bludgeoning from nonmagical attacks",
+          "piercing from nonmagical attacks",
+          "slashing from nonmagical attacks"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "exhaustion",
+          "poisoned"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Siege Monster"
+          ],
+          "ataques": [
+            "Swipe"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Swipe",
+            "Consume the Spark",
+            "Call the Dead"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Consume the Spark (12 undead) e Call the Dead (20 zombies): não está definido se tetos de controle são independentes."
+      ],
+      "conflitos": [
+        "Consume the Spark (12 undead) e Call the Dead (20 zombies): não está definido se tetos de controle são independentes."
+      ],
+      "pendencias_editoriais": [
+        "Fonte Ancient Mandriano diferencia limite de 12 undead de Consume the Spark e 20 zombies de Call the Dead; não presumir se os recursos compartilham ou não um teto de controle.",
+        "Não herdar darkvision da variante Mandriano comum; seção de sentidos do Ancient lista somente Perception passiva.",
+        "Conferência com Creature Codex e errata ainda pendente.",
+        "Arquivo de imagem utiliza mesmo blob que TF-417, portanto exige revisão visual e imagem individual distinta quando adequada.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-420.jpg",
+        "sha_git": "bdd6eaad0308ff5543ca20d329a9ef9aa7c2539b",
+        "bytes": 69026,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-420.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna mecânica/errata antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-420.json",
+        "sha": "34233764a0736a24d06080d6d8e1f039fcca1582",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-421",
+      "criatura": "Planar Flora, Execrable Shrub",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Planar Flora é tipo fiend, não plant; ND catálogo null, exigir conferência da edição.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "nd_fonte": "1/2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 40,
+        "dados_vida": "9d8",
+        "atributos": {
+          "FOR": 12,
+          "DES": 14,
+          "CON": 10,
+          "INT": 7,
+          "SAB": 14,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 10,
+          "escavacao_ft": 10
+        },
+        "sentidos": [
+          {
+            "tipo": "tremorsense",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [],
+        "resistencias_dano": [
+          "piercing",
+          "poison"
+        ],
+        "imunidades_dano": [
+          "fire"
+        ],
+        "imunidades_condicao": [
+          "poisoned"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Healed by Blood",
+            "Like Calls to Like",
+            "Limited Telepathy"
+          ],
+          "ataques": [
+            "Burning Slash"
+          ],
+          "acoes": [
+            "Burning Slash",
+            "Smolder"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Planar Flora é tipo fiend, não plant; ND catálogo null, exigir conferência da edição."
+      ],
+      "pendencias_editoriais": [
+        "Conferir Creature Codex e errata antes de concluir; bloco individual totalmente reestruturado.",
+        "Diferenciar tipo fiend (ficha) da designação narrativa Planar Flora; não converter automaticamente em plant.",
+        "Imagem binária existente, sem revisão visual.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-421.jpg",
+        "sha_git": "f943a8d11d68510afe56871923b164b74e19d7c8",
+        "bytes": 62564,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-421.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar edição e variante, adaptar/testar somente após homologação.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-421.json",
+        "sha": "ff51a7c2bb93dca8298b9bd697376b49fb5aeaa4",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    },
+    {
+      "id": "TF-423",
+      "criatura": "Spawn of Chernobog",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Night's Blood: regra não determina se duas salvaguardas para cura precisam ser consecutivas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Creature Codex",
+        "cr": null,
+        "nd_fonte": "4",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 95,
+        "dados_vida": "10d10+40",
+        "atributos": {
+          "FOR": 22,
+          "DES": 12,
+          "CON": 18,
+          "INT": 10,
+          "SAB": 12,
+          "CAR": 12
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "entende Common, Umbral e Undercommon; não fala"
+        ],
+        "resistencias_dano": [
+          "necrotic"
+        ],
+        "imunidades_dano": [],
+        "imunidades_condicao": [
+          "charmed",
+          "frightened"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Night’s Blood",
+            "Sunlight Sensitivity"
+          ],
+          "ataques": [
+            "Bite",
+            "Claws"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Claws"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Night's Blood: regra não determina se duas salvaguardas para cura precisam ser consecutivas."
+      ],
+      "conflitos": [
+        "Night's Blood: regra não determina se duas salvaguardas para cura precisam ser consecutivas."
+      ],
+      "pendencias_editoriais": [
+        "Night’s Blood reconstruída com cinco estágios, gatilho inicial, CD, sucessos e transformações; conferir errata da progressão temporal.",
+        "A origem da doença depende de uma Bite acertar e de falha CON CD14; não transmitir em todo contato.",
+        "Aprovação visual e conferência editorial Creature Codex pendentes.",
+        "Manter bloqueio de promoção; validar edição/errata, licença e testes."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/c/images/TF-423.jpg",
+        "sha_git": "34ddf5dfb447ed444bd41c5eaa80e076ca1c1c4f",
+        "bytes": 48450,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/research/deep-mechanics/c/records/TF-423.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna mecânica/errata antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-423.json",
+        "sha": "0f6255a29d15406591909e211fcdda4ded89b014",
+        "source_commit": "99f317484eaf466ddfcf7018a5af5518a287f203",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 36
+    }
+  ]
+}

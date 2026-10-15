@@ -1,0 +1,553 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "b26032134abc8900a6e2aa13aa485db4584040f4",
+  "reference_date": "2026-10-14",
+  "batch_number": 40,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 5,
+  "actual_count": 5,
+  "summary": {
+    "total": 5,
+    "completas_em_conteudo": 0,
+    "completas_com_ressalvas": 0,
+    "incompletas": 5,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 0,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 5,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 0
+  },
+  "evidence_limitations": [
+    "Cinco fichas C com lacunas reais não corrigidas por hipótese.",
+    "Cinco imagens ausentes tanto de registro direto quanto de manifesto F; nenhum arquivo binário alterado.",
+    "Auditoria documental completa 395/395 não significa status canônico/homologação/CI/E2E."
+  ],
+  "records": [
+    {
+      "id": "TF-516",
+      "criatura": "Kanos Spawn",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Kanos Spawn: bônus de Stealth não impresso; Pack Tactics nomeia raptor e a Hide após Icy Breath requer revisão do timing.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Gate Pass Gazette",
+        "cr": null,
+        "nd_fonte": "4",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 78,
+        "dados_vida": "13d8+13",
+        "atributos": {
+          "FOR": 16,
+          "DES": 14,
+          "CON": 12,
+          "INT": 4,
+          "SAB": 12,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 60,
+          "escalar_ft": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 120
+          }
+        ],
+        "idiomas": [
+          "compreende Abyssal, não fala"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Pack Tactics",
+            "Wall Walker"
+          ],
+          "ataques": [
+            "Claw"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Claw",
+            "Icy Breath"
+          ],
+          "acoes_bonus": [
+            "Hide In Icy Breath"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Kanos Spawn: bônus de Stealth não impresso; Pack Tactics nomeia raptor e a Hide após Icy Breath requer revisão do timing."
+      ],
+      "conflitos": [
+        "bônus numérico de Stealth ausente",
+        "erro editorial em Pack Tactics",
+        "revisão de timing de ação bônus",
+        "imagem binária"
+      ],
+      "pendencias_editoriais": [
+        "Fonte da criatura chama o Kanos Spawn de raptor em Pack Tactics.",
+        "Campo Skills só contém Stealth sem modificador ou bônus numérico.",
+        "Rever o tempo exato da Hide após Icy Breath em publicação original e obter imagem física.",
+        "Rever fonte/errata, licenças e integração antes de promover a carta."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna editorial e adquirir imagem autorizada antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-516.json",
+        "sha": "b0f813a5e9a0709c9e6f7d8622eeee8768d2ae55",
+        "source_commit": "b26032134abc8900a6e2aa13aa485db4584040f4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 40
+    },
+    {
+      "id": "TF-517",
+      "criatura": "Imp Flock",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Imp Flock: frequência de Shatter não declarada e Chaos of Combat alterna adjacency e espaço da swarm.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "To Save A Kingdom",
+        "cr": null,
+        "nd_fonte": "5",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 19,
+        "pv": 49,
+        "dados_vida": "14d4+14",
+        "atributos": {
+          "FOR": 6,
+          "DES": 17,
+          "CON": 13,
+          "INT": 11,
+          "SAB": 12,
+          "CAR": 14
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 20,
+          "voo_ft": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "Common",
+          "Infernal"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Chaos of Combat",
+            "Devil's Sight",
+            "Evil",
+            "Innate Spellcasting",
+            "Swarm"
+          ],
+          "ataques": [
+            "Hellswarm"
+          ],
+          "acoes": [
+            "Hellswarm"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": [
+            null
+          ]
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Imp Flock: frequência de Shatter não declarada e Chaos of Combat alterna adjacency e espaço da swarm."
+      ],
+      "conflitos": [
+        "limite de uso de shatter não declarado",
+        "alcance efetivo de Chaos of Combat",
+        "imagem binária"
+      ],
+      "pendencias_editoriais": [
+        "Shatter consta de Innate Spellcasting, mas sem número de usos ou frequência.",
+        "Chaos of Combat tem redação inconsistente entre adjacent e ativação no espaço da swarm.",
+        "Imagem física ausente.",
+        "Rever fonte/errata, licenças e integração antes de promover a carta."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna editorial e adquirir imagem autorizada antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-517.json",
+        "sha": "b02def738f0091ac7db006ca6626513c45d0ebd6",
+        "source_commit": "b26032134abc8900a6e2aa13aa485db4584040f4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 40
+    },
+    {
+      "id": "TF-518",
+      "criatura": "Infernal Dwarf",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Infernal Dwarf: Ray of Frost diz 'the noble's next turn', entidade alheia à ficha; tempo do efeito sem resolução editorial.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "To Save A Kingdom",
+        "cr": null,
+        "nd_fonte": "3",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 65,
+        "dados_vida": "10d8+20",
+        "atributos": {
+          "FOR": 14,
+          "DES": 11,
+          "CON": 14,
+          "INT": 15,
+          "SAB": 12,
+          "CAR": 13
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 25
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 120
+          }
+        ],
+        "idiomas": [
+          "Dwarvish",
+          "Infernal"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Bone Armaments",
+            "Lawful Evil",
+            "Spellcasting",
+            "United in Action"
+          ],
+          "ataques": [
+            "Bone Warhammer",
+            "Ray of Frost",
+            "Ray of Enfeeblement",
+            "Vampiric Touch"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bone Warhammer",
+            "Ray of Frost",
+            "Thunderwave",
+            "Darkness",
+            "Ray of Enfeeblement",
+            "Vampiric Touch"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Shield"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": [
+            "Spellcasting"
+          ]
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Infernal Dwarf: Ray of Frost diz 'the noble's next turn', entidade alheia à ficha; tempo do efeito sem resolução editorial."
+      ],
+      "conflitos": [
+        "alvo temporal de Ray of Frost: 'noble' vs Infernal Dwarf",
+        "edição To Save A Kingdom/errata",
+        "imagem física"
+      ],
+      "pendencias_editoriais": [
+        "A fonte oficial do Ray of Frost determina redução do deslocamento até 'the noble's next turn', entidade não existente na ficha Infernal Dwarf; preservar referência literal.",
+        "Conjuração de 5º nível, 4/3/2 spell slots e reação Shield estão estruturados; aguardam confronto com To Save A Kingdom e errata.",
+        "Falta arquivo binário de imagem.",
+        "Rever fonte/errata, licenças e integração antes de promover a carta."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna editorial e adquirir imagem autorizada antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-518.json",
+        "sha": "9cd4a0ee197eef3fe7c0000789e22d989076dab9",
+        "source_commit": "b26032134abc8900a6e2aa13aa485db4584040f4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 40
+    },
+    {
+      "id": "TF-521",
+      "criatura": "Bugbear Door Breaker",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Bugbear Door Breaker: 60 PV difere da fórmula 5d10+10; Long Arms alcance 10 ft contra Gauntlets 5 ft; Clear the Way sem efeito no sucesso.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Gate Pass Gazette",
+        "cr": null,
+        "nd_fonte": "3",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 60,
+        "dados_vida": "5d10+10",
+        "atributos": {
+          "FOR": 17,
+          "DES": 10,
+          "CON": 15,
+          "INT": 11,
+          "SAB": 10,
+          "CAR": 8
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30
+        },
+        "sentidos": [],
+        "idiomas": [
+          "qualquer um"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Loading Weapon",
+            "Specialized Weaponry",
+            "Smoky Sight",
+            "Long Arms"
+          ],
+          "ataques": [
+            "Explosive Gauntlets"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Explosive Gauntlets",
+            "Clear the Way"
+          ],
+          "acoes_bonus": [
+            "Reload"
+          ],
+          "reacoes": [
+            "Smoke Screen"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Bugbear Door Breaker: 60 PV difere da fórmula 5d10+10; Long Arms alcance 10 ft contra Gauntlets 5 ft; Clear the Way sem efeito no sucesso."
+      ],
+      "conflitos": [
+        "60 PV versus 5d10+10",
+        "reach 5 versus 10 ft",
+        "efeito de sucesso de Clear the Way ausente",
+        "imagem binária"
+      ],
+      "pendencias_editoriais": [
+        "Bloco oficial imprime 60 PV (5d10+10), fórmula incompatível com a média matemática 37,5.",
+        "Long Arms indica alcance 10 ft, ação Explosive Gauntlets imprime reach 5 ft; preservar conflito.",
+        "Clear the Way termina com 'or' sem explicitar efeitos/dano no sucesso; não inferir.",
+        "Requer confirmar original Gate Pass Gazette/errata e imagem física.",
+        "Rever fonte/errata, licenças e integração antes de promover a carta."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna editorial e adquirir imagem autorizada antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-521.json",
+        "sha": "dcee6afc2129952248037b14ec835d8523a49e2b",
+        "source_commit": "b26032134abc8900a6e2aa13aa485db4584040f4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 40
+    },
+    {
+      "id": "TF-522",
+      "criatura": "Crime Boss",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Crime Boss: dano adicional de Mark for Death sem tipo especificado; cotejo editorial necessário.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": null,
+        "nd_fonte": "6",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 127,
+        "dados_vida": "15d8+60",
+        "atributos": {
+          "FOR": 18,
+          "DES": 14,
+          "CON": 18,
+          "INT": 16,
+          "SAB": 16,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30
+        },
+        "sentidos": [],
+        "idiomas": [
+          "any two"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [],
+          "ataques": [
+            "Shortsword",
+            "Dagger"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Shortsword",
+            "Dagger",
+            "Mark for Death"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Command Bodyguard",
+            "Offhand Dagger"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Crime Boss: dano adicional de Mark for Death sem tipo especificado; cotejo editorial necessário."
+      ],
+      "conflitos": [
+        "tipo de dano do Mark for Death",
+        "imagem"
+      ],
+      "pendencias_editoriais": [
+        "Tipo de dano adicional do Mark for Death não está declarado explicitamente.",
+        "Conferir a edição impressa Monstrous Menagerie, além de adquirir imagem real.",
+        "Rever fonte/errata, licenças e integração antes de promover a carta."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Resolver lacuna editorial e adquirir imagem autorizada antes de integrar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-522.json",
+        "sha": "88a0faf5e28f1322bf8f76591c22e585935de813",
+        "source_commit": "b26032134abc8900a6e2aa13aa485db4584040f4",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 40
+    }
+  ]
+}

@@ -1,0 +1,1069 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+  "reference_date": "2026-10-14",
+  "batch_number": 23,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 5,
+    "completas_com_ressalvas": 3,
+    "incompletas": 2,
+    "nao_verificaveis": 0,
+    "imagem_direta": 10,
+    "imagem_manifesto": 0,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 0,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 1
+  },
+  "evidence_limitations": [
+    "Registro mecânico verificado a partir dos JSONs A, sem nova inspeção da fonte editorial.",
+    "Imagens verificadas por SHA/bytes na árvore GitHub; qualidade visual/identidade não homologadas."
+  ],
+  "records": [
+    {
+      "id": "TF-244",
+      "criatura": "Chimeric Phantom",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Frightening Madness, Incorporeal Movement e Maddening Grasp detalhados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "2",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 11,
+        "pv": 36,
+        "dados_vida": "8d8",
+        "atributos": {
+          "FOR": 12,
+          "DES": 13,
+          "CON": 10,
+          "INT": 13,
+          "SAB": 14,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 0,
+          "fly_ft": 40,
+          "hover": true
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 11
+        },
+        "idiomas": {
+          "known": "languages_known_by_any_constituent_soul_in_life"
+        },
+        "resistencias": [
+          "acid",
+          "cold",
+          "fire",
+          "lightning",
+          "thunder",
+          "nonmagical_attack_bludgeoning",
+          "nonmagical_attack_piercing",
+          "nonmagical_attack_slashing"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "charmed",
+          "exhaustion",
+          "frightened",
+          "grappled",
+          "paralyzed",
+          "petrified",
+          "poisoned",
+          "prone",
+          "restrained"
+        ],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Frightening Madness",
+            "Incorporeal Movement",
+            "Undead Nature"
+          ],
+          "actions": [
+            "Multiattack",
+            "Maddening Grasp"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Comparar impressão editorial, erratas e eventuais versões divergentes com o modelo estruturado.",
+        "Executar revisão independente e testes de regras/condições no motor antes de homologar.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-244.webp",
+        "sha_git": "0b2e79cf4319845799e610aa432c7c87665a8eb9",
+        "bytes": 224644,
+        "dimensoes_declaradas": [
+          817,
+          1222
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-244.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original/errata, adaptar/testar, revisar imagem/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-244.json",
+        "sha": "884ff6abfeb83682c72770158af22e1e3bb85c27",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-245",
+      "criatura": "Old Salt",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Save de Wisdom e condição de Seaside Rejuvenation com divergência matemática/limite sem resolução.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "5",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 117,
+        "dados_vida": "18d8+36",
+        "atributos": {
+          "FOR": 13,
+          "DES": 16,
+          "CON": 15,
+          "INT": 10,
+          "SAB": 14,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 30,
+          "swim_ft": 30
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 12
+        },
+        "idiomas": {
+          "known": "languages_known_in_life"
+        },
+        "resistencias": [
+          "necrotic"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "poisoned"
+        ],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Experienced Sailor",
+            "Seaside Rejuvenation",
+            "Undead Nature"
+          ],
+          "actions": [
+            "Multiattack",
+            "Desiccating Slam",
+            "Wave of Seawater"
+          ],
+          "bonus_actions": [
+            "Cunning Action"
+          ],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Save de Wisdom e condição de Seaside Rejuvenation com divergência matemática/limite sem resolução."
+      ],
+      "pendencias_editoriais": [
+        "Comparar impressão editorial, erratas e eventuais versões divergentes com o modelo estruturado.",
+        "Executar revisão independente e testes de regras/condições no motor antes de homologar.",
+        "Investigar discrepância matemática de Wisdom saving throw (+3 na transcrição versus proficiência +3).",
+        "Esclarecer reaparecimento da Seaside Rejuvenation se só permanecer a condição de nome não limpo sem acusador vivo.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-245.webp",
+        "sha_git": "3aab420c93306e4e507e6fd36642f7733591137f",
+        "bytes": 98574,
+        "dimensoes_declaradas": [
+          703,
+          1200
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-245.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir regra divergente em fonte primária antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-245.json",
+        "sha": "90cbdbf22e2b432f92440ac5baea18c2fc08e2af",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-246",
+      "criatura": "Yowler",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Living Projection e sequência Multiattack/Yowl detalhadas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "0.5",
+        "tamanho": "Tiny"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 22,
+        "dados_vida": "4d4+12",
+        "atributos": {
+          "FOR": 3,
+          "DES": 15,
+          "CON": 16,
+          "INT": 3,
+          "SAB": 10,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 40,
+          "climb_ft": 30
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 12
+        },
+        "idiomas": [],
+        "resistencias": [
+          "necrotic"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "frightened",
+          "poisoned"
+        ],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Living Projection",
+            "Undead Nature"
+          ],
+          "actions": [
+            "Multiattack",
+            "Bite",
+            "Claws",
+            "Yowl"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Comparar impressão editorial, erratas e eventuais versões divergentes com o modelo estruturado.",
+        "Executar revisão independente e testes de regras/condições no motor antes de homologar.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-246.webp",
+        "sha_git": "7fa1c7994c8435e1bf6e02314d132697fddeec02",
+        "bytes": 137572,
+        "dimensoes_declaradas": [
+          1191,
+          706
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-246.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original/errata, adaptar/testar, revisar imagem/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-246.json",
+        "sha": "aa45dd56da5b377ca0c76b5d20c7b29658b7c64b",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-247",
+      "criatura": "Ash Phoenix",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Rejuvenation, Ash Storm, Wind Weakness e Undead Nature estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "9",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 105,
+        "dados_vida": "14d10+28",
+        "atributos": {
+          "FOR": 17,
+          "DES": 20,
+          "CON": 15,
+          "INT": 8,
+          "SAB": 14,
+          "CAR": 9
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 0,
+          "fly_ft": 90,
+          "hover": true
+        },
+        "sentidos": {
+          "darkvision_ft": 120,
+          "passive_perception": 15
+        },
+        "idiomas": [],
+        "resistencias": [
+          "nonmagical_attack_bludgeoning",
+          "nonmagical_attack_piercing",
+          "nonmagical_attack_slashing"
+        ],
+        "imunidades_dano": [
+          "necrotic",
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "exhaustion",
+          "paralyzed",
+          "petrified",
+          "poisoned",
+          "prone"
+        ],
+        "vulnerabilidades": [
+          "radiant"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "False Appearance",
+            "Rejuvenation",
+            "Shadow Stealth",
+            "Wind Weakness",
+            "Undead Nature"
+          ],
+          "actions": [
+            "Multiattack",
+            "Ash Talons",
+            "Ash Storm"
+          ],
+          "bonus_actions": [
+            "Hide (Shadow Stealth)"
+          ],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confrontar cada dado e regra com exemplar editorial correto, impressão e erratas da Kobold Press.",
+        "Realizar revisão independente da transcrição, do modelo de ações/condições e teste da engine antes de MECANICA_COMPLETA_VERIFICADA.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-247.webp",
+        "sha_git": "261b1614776fb5752cc328c2e14fb3ce8c10a95c",
+        "bytes": 200912,
+        "dimensoes_declaradas": [
+          915,
+          1046
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-247.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original/errata, adaptar/testar, revisar imagem/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-247.json",
+        "sha": "b6fc0ad218e78d9a69701bfdbab928bd7be90fdc",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-248",
+      "criatura": "Ogrepede",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Haphazard Charge e Multiattack estruturados; sem evidência de conflito novo.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "6",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 142,
+        "dados_vida": "15d12+45",
+        "atributos": {
+          "FOR": 21,
+          "DES": 9,
+          "CON": 17,
+          "INT": 5,
+          "SAB": 5,
+          "CAR": 3
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 40,
+          "climb_ft": 20
+        },
+        "sentidos": {
+          "darkvision_ft": 90,
+          "passive_perception": 7
+        },
+        "idiomas": {
+          "understands": "languages_known_in_life",
+          "can_speak": false
+        },
+        "resistencias": [],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "charmed",
+          "exhaustion",
+          "poisoned",
+          "prone"
+        ],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Haphazard Charge",
+            "Overwhelming Assault",
+            "Undead Nature"
+          ],
+          "actions": [
+            "Multiattack",
+            "Bite",
+            "Slam"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confrontar cada dado e regra com exemplar editorial correto, impressão e erratas da Kobold Press.",
+        "Realizar revisão independente da transcrição, do modelo de ações/condições e teste da engine antes de MECANICA_COMPLETA_VERIFICADA.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-248.webp",
+        "sha_git": "1c9cea40a5aa175be8f887557b41012299642104",
+        "bytes": 191182,
+        "dimensoes_declaradas": [
+          1197,
+          820
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-248.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original/errata, adaptar/testar, revisar imagem/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-248.json",
+        "sha": "8dc2c97cadb3d2a3b2fe9673657e3b8861936076",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-249",
+      "criatura": "Aboleth, Nihileth",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Nenhum bloco estruturado de ações e traços no registro; somente estatísticas básicas.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "13",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 157,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": 21,
+          "DES": 9,
+          "CON": 15,
+          "INT": 18,
+          "SAB": 15,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": null,
+        "sentidos": null,
+        "idiomas": null,
+        "resistencias": null,
+        "imunidades_dano": null,
+        "imunidades_condicao": null,
+        "vulnerabilidades": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [],
+          "actions": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Não há ações e traços estruturados; consultar o bloco original."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Fórmula exata dos PV, deslocamentos, habilidades treinadas, sentidos, idiomas e defesas não transcritos em nível de implementação.",
+        "Identificar e estruturar individualmente todos os traços, ataques, ações, CDs, condições, recargas, conjurações e reações; o resumo histórico não substitui leitura da ficha.",
+        "Confirmar impressão/errata da publicação e verificar integralidade contra a edição correta.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-249.webp",
+        "sha_git": "8595fe4c98a8886bc6883e4a805cfacd0d08291d",
+        "bytes": 78758,
+        "dimensoes_declaradas": [
+          1006,
+          600
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-249.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar bloco original completo e estruturar traços, ações, custos e CDs.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-249.json",
+        "sha": "11b590e46f8567db007e1d1b0081a459251d836b",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-250",
+      "criatura": "Black Crier",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_EM_CONTEUDO",
+      "motivo_classificacao": "Bound by Calamity, Bell, Bell Toll e Crier's Lament estruturados.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 2",
+        "cr": "11",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 150,
+        "dados_vida": "20d8+60",
+        "atributos": {
+          "FOR": 14,
+          "DES": 19,
+          "CON": 16,
+          "INT": 11,
+          "SAB": 20,
+          "CAR": 12
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 30,
+          "fly_ft": 30,
+          "hover": true
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 15
+        },
+        "idiomas": {
+          "understands": "all_languages",
+          "can_speak": false
+        },
+        "resistencias": [
+          "necrotic",
+          "psychic",
+          "nonmagical_attack_bludgeoning",
+          "nonmagical_attack_piercing",
+          "nonmagical_attack_slashing"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "charmed",
+          "exhaustion",
+          "frightened",
+          "paralyzed",
+          "poisoned",
+          "stunned"
+        ],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Bound by Calamity",
+            "Rejuvenation",
+            "Undead Nature"
+          ],
+          "actions": [
+            "Multiattack",
+            "Bell",
+            "Bell Toll",
+            "Crier's Lament"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confrontar a transcrição KPOGL integral com a impressão e erratas editoriais da edição correspondente.",
+        "Verificar e homologar habilidades e economia de ações na engine; aprovação editorial continua pendente.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-250.webp",
+        "sha_git": "540f52ee31019f6b67910728e198444fa1674609",
+        "bytes": 101804,
+        "dimensoes_declaradas": [
+          714,
+          938
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-250.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir original/errata, adaptar/testar, revisar imagem/licença.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-250.json",
+        "sha": "173f124109061b7497bddb0ffc40b1104bb4d3d9",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-251",
+      "criatura": "Corpse Mound",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Divergência INT 6/8 entre edições e arredondamento de cura Absorb the Dead não esclarecido.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 1",
+        "cr": "11",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 16,
+        "pv": 207,
+        "dados_vida": "18d12+90",
+        "atributos": {
+          "FOR": 24,
+          "DES": 11,
+          "CON": 21,
+          "INT": 6,
+          "SAB": 10,
+          "CAR": 8
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 30
+        },
+        "sentidos": {
+          "darkvision_ft": 60,
+          "passive_perception": 10
+        },
+        "idiomas": {
+          "understands": [
+            "Common"
+          ],
+          "can_speak": false
+        },
+        "resistencias": [
+          "necrotic"
+        ],
+        "imunidades_dano": [
+          "poison"
+        ],
+        "imunidades_condicao": [
+          "charmed",
+          "exhaustion",
+          "frightened",
+          "poisoned"
+        ],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "Absorb the Dead",
+            "Noxious Aura",
+            "Zombie Drop",
+            "Undead Nature"
+          ],
+          "actions": [
+            "Multiattack",
+            "Slam",
+            "Bone Shard",
+            "Envelop"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Divergência INT 6/8 entre edições e arredondamento de cura Absorb the Dead não esclarecido."
+      ],
+      "pendencias_editoriais": [
+        "Confrontar a transcrição KPOGL integral com a impressão e erratas editoriais da edição correspondente.",
+        "Verificar e homologar habilidades e economia de ações na engine; aprovação editorial continua pendente.",
+        "Conciliar explicitamente INT 6 no bloco da revisão versus INT 8 relatado na edição original, antes de homologar.",
+        "Decidir arredondamento de cura do traço Absorb the Dead para CR fracionário com referência primária; fonte secundária não especifica.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-251.webp",
+        "sha_git": "4ae8cf452f026cba4fcdbb0abc9371c8578a05c0",
+        "bytes": 78438,
+        "dimensoes_declaradas": [
+          851,
+          800
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-251.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir regra divergente em fonte primária antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-251.json",
+        "sha": "ec213c384ce77344f352a17ed2fcbc483089be49",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-252",
+      "criatura": "Adult Black Dragon Lich",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Nenhum traço ou ação estruturada; ficha Adult Black Dragon Lich permanece parcial.",
+      "identidade": {
+        "origem": "EN Publishing / Level Up A5E",
+        "edicao": "Monstrous Menagerie",
+        "cr": "17",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 19,
+        "pv": 253,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": 22,
+          "DES": 14,
+          "CON": 20,
+          "INT": 14,
+          "SAB": 12,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": null,
+        "sentidos": null,
+        "idiomas": null,
+        "resistencias": null,
+        "imunidades_dano": null,
+        "imunidades_condicao": null,
+        "vulnerabilidades": null
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [],
+          "actions": [],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": false
+      },
+      "lacunas": [
+        "Não há ações e traços estruturados; consultar o bloco original."
+      ],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Verificar fórmula de PV, movimentos, sentidos, perícias, idiomas, resistências, imunidades e defesas na fonte da edição exata.",
+        "Enumerar cada habilidade/ação e detalhar bônus, alcance, dados, alvos, salvaguardas, CD, duração, gatilhos, recargas, limites de uso e magias individualmente.",
+        "Reconciliar edições e erratas sem misturar valores; conferir integralidade editorial.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-252.png",
+        "sha_git": "a4094cc4da52a8656bbefe452f6c171b8b8b8874",
+        "bytes": 452191,
+        "dimensoes_declaradas": [
+          650,
+          460
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-252.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar bloco original completo e estruturar traços, ações, custos e CDs.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-252.json",
+        "sha": "9df6950d4af8a0ae21588d8eb5f7659acdf2caa8",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    },
+    {
+      "id": "TF-253",
+      "criatura": "Asp Vine",
+      "grupo": "a",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Novo saving throw para vítima agarrada carece de atributo/CD inequívocos na fonte.",
+      "identidade": {
+        "origem": "Kobold Press",
+        "edicao": "Tome of Beasts 3",
+        "cr": "4",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 55,
+        "dados_vida": "10d8+10",
+        "atributos": {
+          "FOR": 14,
+          "DES": 12,
+          "CON": 12,
+          "INT": 1,
+          "SAB": 3,
+          "CAR": 1
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "walk_ft": 10
+        },
+        "sentidos": {
+          "blindsight_ft": 30,
+          "blind_beyond_blindsight": true,
+          "passive_perception": 6
+        },
+        "idiomas": [],
+        "resistencias": [
+          "bludgeoning",
+          "piercing"
+        ],
+        "imunidades_dano": [],
+        "imunidades_condicao": [
+          "blinded",
+          "deafened",
+          "frightened"
+        ],
+        "vulnerabilidades": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "traits": [
+            "False Appearance"
+          ],
+          "actions": [
+            "Multiattack",
+            "Vine"
+          ],
+          "bonus_actions": [],
+          "reactions": [],
+          "legendary_actions": [],
+          "spellcasting": []
+        },
+        "inventario_acoes_completo": true
+      },
+      "lacunas": [],
+      "conflitos": [
+        "Novo saving throw para vítima agarrada carece de atributo/CD inequívocos na fonte."
+      ],
+      "pendencias_editoriais": [
+        "Confrontar a transcrição KPOGL integral com a impressão e erratas editoriais da edição correspondente.",
+        "Verificar e homologar habilidades e economia de ações na engine; aprovação editorial continua pendente.",
+        "No dano repetido enquanto a vítima permanece agarrada, fonte diz apenas 'new saving throw each round'; atributo/CD desse novo teste não estão explicitados novamente.",
+        "Licença, edição e imagem não homologadas."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_DIRETAMENTE",
+      "imagem": {
+        "caminho": "operational/research/deep-mechanics/a/images/TF-253.webp",
+        "sha_git": "b65b951b4048a2081a191b744d2360838e053222",
+        "bytes": 201920,
+        "dimensoes_declaradas": [
+          1000,
+          1564
+        ],
+        "vinculo_origem": "operational/research/deep-mechanics/a/records/TF-253.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Conferir regra divergente em fonte primária antes de adaptar.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/a/records/TF-253.json",
+        "sha": "5da42b6f90f2f75929eae850f33910806877d87d",
+        "source_commit": "ee3081d94d1f7afc89831b77eb4900755c9ba2c9",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 23
+    }
+  ]
+}
