@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 39 lotes validados, 390/395 fichas (5 restantes).
+**Situação:** CONCLUÍDA DOCUMENTALMENTE — 40 lotes registrados, 395/395 fichas auditadas (0 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -271,3 +271,14 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 3 fichas com ressalvas (TF-506/507/509) e 7 incompletas (TF-502 sem CD de Despair Aura; TF-503 Stuffing/ghouls; TF-504 erro Banshee; TF-505 Dust Storm sem resultado no sucesso; TF-510 PV/CON; TF-511 escopo doença; TF-512 atributos/ações ausentes). Cinco imagens vinculadas por manifesto F (TF-503,504,505,510,511), cinco ausentes; todas as cinco vinculadas têm lado <500 px e quatro são sprites de 32×32. Edições/licenças e arte não homologadas.
 
 **Consolidado:** 390/395 (5 restantes); 227 completas, 93 com ressalvas, 69 incompletas e 1 não verificáveis; 225 diretas, 121 por manifesto, 44 ausentes.
+
+
+## Lote 040 — TF-516–TF-522 (últimos 5 IDs conforme CSV)
+
+Cinco fichas incompletas: TF-516 ausência do bônus Stealth; TF-517 limite Shatter não declarado; TF-518 referência 'noble' em Ray of Frost; TF-521 PV/dados de vida, alcance e Clear the Way inconsistentes; TF-522 tipo do dano de Mark for Death ausente. Cinco imagens ausentes. Nenhuma regra, valor, arte ou licença foi inventada.
+
+**Consolidado:** 395/395 (0 restantes); 227 completas em conteúdo, 93 com ressalvas, 74 incompletas e 1 não verificáveis. Imagens 225 diretas, 121 via manifesto e 49 ausentes. Resoluções abaixo 500 pixels documentadas quando metadados disponíveis: 85.
+
+## Encerramento da auditoria documental
+
+Os 395 IDs exclusivos selecionados no CSV original foram avaliados exatamente em sua ordem, nos 40 lotes (39 de 10 cartas e o último de 5). Inconsistências mecânicas, divergências editoriais, imagens ausentes, limitações de licença e falta de revisão visual estão preservadas por registro. **Auditoria documental concluída não implica fichas completas, validação editorial, licenciamento comercial de imagens, testes de jogo, CI, merge, publicação de produto ou E2E.**
