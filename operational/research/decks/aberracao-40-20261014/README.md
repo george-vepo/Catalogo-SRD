@@ -89,3 +89,11 @@
 | Imagens homologadas | **0** | 40 aprovações individualizadas |
 
 **O PR é de pesquisa e integração documental.** NÃO é uma declaração de 40 fichas completas e 40 imagens aprovadas; alterações no catálogo ativo e no estado oficial seguem bloqueadas.
+
+## Atualização visual — imagens realmente gravadas na pesquisa
+
+- **7 arquivos WebP adicionados** em `images-web-pesquisa/`: Cranium Rat, Gazer, Mindwitness, Kalaraq Quori, Greater Star Spawn Emissary, Gibbering Mouther (AT-001) e Roper (AT-002).
+- O índice `cards.csv` referencia esses sete caminhos físicos; contagem atual **32/40 com arquivo local** (25 anteriores + 7 novos).
+- O arquivo `imagens-pesquisadas-15.csv` rastreia as 15 pendências originais e inclui as **8 que continuam sem imagem local**: Minor/Moderate/Major/Massive Malleable, Maw Swarm, Mayday, Shukankor e Aboleth Brute.
+- A galeria visual `IMAGENS_PESQUISADAS.md` mostra as 7 imagens incorporadas e documenta os links de pesquisa restantes. Não confundir imagem localizada/referenciada com arquivo binário integrado.
+- **Arte de pesquisa, não homologação**; a proveniência está documentada e versões visuais de edições distintas não substituem atributos.
