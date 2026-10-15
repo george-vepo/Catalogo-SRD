@@ -15,7 +15,7 @@
 | Referências de imagem exibíveis no site | 35 | **36** |
 | Criaturas sem referência exibível | 1.285 | **1.284** |
 
-Os valores de imagens foram reproduzidos com a mesma precedência do `docs/catalogo/app.js`: `curadoria.approved` → arte do deck Celestial → imagem com verificação do controle 607. O JSON `fichas-607.json` foi recontado pelo blob Git `44d786dffc72e3ba3e83435b072f81b7eb2876f9`: 607 IDs distintos, 108 textos integrais e 113 integrações externas. **A estatística antiga `fichas_mecanicamente_integradas_com_fatos_e_resumos_proprios=104` no cabeçalho do JSON está defasada em relação à contagem dos registros efetivos (113).** A megalista liga explicitamente 606 IDs do conjunto 607; o registro `KP-S007` mantém-se como associação independente e não deve ser fundido.
+Os valores de imagens foram reproduzidos com a mesma precedência do `docs/catalogo/app.js`: `curadoria.approved` → arte do deck Celestial → imagem com verificação do controle 607. O JSON `fichas-607.json` foi recontado pelo blob Git `44d786dffc72e3ba3e83435b072f81b7eb2876f9`: 607 IDs distintos, 108 textos integrais e 113 integrações externas. **O indicador histórico `fichas_mecanicamente_integradas_com_fatos_e_resumos_proprios=104` no cabeçalho do JSON diverge da contagem atual do campo `mecanica_externa_integrada` (113).** Pode haver diferença de definição ou de checkpoint; não foi alterado sem conciliação formal. A megalista liga explicitamente 606 IDs do conjunto 607; o registro `KP-S007` mantém-se como associação independente e não deve ser fundido.
 
 ## 1 referência visual adicionada
 
