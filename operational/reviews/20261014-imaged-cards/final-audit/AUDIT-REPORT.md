@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 35 lotes validados, 350/395 fichas (45 restantes).
+**Situação:** EM ANDAMENTO — 36 lotes validados, 360/395 fichas (35 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -243,3 +243,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 8 fichas completas em conteúdo e 2 incompletas (**TF-408** ND null/CD de Thrash não definida; **TF-412**, divergência SAB 11 (+1/+0) e ND do catálogo nulo, fonte C). Imagens: seis por manifesto F, uma direta (TF-412 em deep-mechanics/c/images, SHA Git conferido) e três ausentes (TF-402/408/411). Imagens pequenas TF-405 32×32 e TF-409 152×203. Edições e licenças não homologadas.
 
 **Consolidado:** 350/395 (45 restantes); 227 completas, 77 com ressalvas, 45 incompletas, 1 não verificáveis; 213 imagens diretas, 110 por manifesto, 27 ausentes.
+
+
+## Lote 036 — TF-413–TF-423 (10 IDs conforme CSV)
+
+6 fichas completas com ressalvas e 4 incompletas (**TF-414** erro editorial grick/Beak; **TF-415** CD ambígua na variante Soul Splice; **TF-420** limites 12/20 undead; **TF-423** progressão de cura por sucessos). Outras divergências TF-416 dados de vida, TF-417 dano de Swipe, TF-419 Perception. Nove imagens físicas diretas verificadas por árvore Git, uma ausente (TF-414); TF-417 e TF-420 compartilham o mesmo binário, requerem arte distinta/revisão. Dimensões das imagens diretas não aferidas e direitos não homologados.
+
+**Consolidado:** 360/395 (35 restantes); 227 completas, 83 com ressalvas, 49 incompletas e 1 não verificáveis; 222 imagens diretas, 110 via manifesto e 28 ausentes.
