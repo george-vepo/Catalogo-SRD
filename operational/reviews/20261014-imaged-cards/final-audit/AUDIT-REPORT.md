@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 32 lotes validados, 320/395 fichas (75 restantes).
+**Situação:** EM ANDAMENTO — 33 lotes validados, 330/395 fichas (65 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -222,3 +222,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 9 fichas completas em conteúdo e 1 com ressalvas (TF-361 mantém Elder Black Pudding A5E ND8/PV171 separado do homônimo ND4/PV130). Oito imagens por manifesto F com SHA/tamanho Git conferidos; duas ausentes (TF-358 e TF-370). Quatro imagens de baixa resolução (TF-361 32×32, TF-363/365/367 280×280). Edições, licenças e arte final não homologadas.
 
 **Consolidado:** 320/395 (75 restantes); 204 completas, 72 com ressalvas, 43 incompletas, 1 não verificáveis; 212 imagens diretas, 91 por manifesto, 17 ausentes.
+
+
+## Lote 033 — TF-372–TF-388 (10 IDs conforme CSV)
+
+7 completas em conteúdo e 3 com ressalvas (TF-382 ND5/ND6 em versões conflitantes; TF-386 variante A5E; TF-388 edição original/revisão divergentes). Seis imagens por manifesto F, quatro ausentes (TF-379, 381, 384, 386); TF-372 com largura 374px. Nenhuma arte, edição ou licença homologada.
+
+**Consolidado:** 330/395 (65 restantes); 211 completas, 75 com ressalvas, 43 incompletas e 1 não verificáveis; 212 diretas, 97 por manifesto, 21 ausentes.
