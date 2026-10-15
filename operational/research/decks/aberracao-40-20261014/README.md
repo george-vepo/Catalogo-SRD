@@ -101,7 +101,7 @@
 ## Registro de decisões do duelo e das habilidades de suporte (15/10/2026)
 
 - [Decisões de combate e 40 habilidades de suporte candidatas](DECISOES_COMBATE_E_SUPORTES_40_20261015.md): registra a orientação do administrador de **combate no estilo D&D 5e / SRD 5.2.1 sem movimentação, posicionamento ou mecânicas de alcance**; preserva dano, condições, duração, concentração, ações, recargas e testes; relaciona as 40 assinaturas propostas com prioridade buff útil → debuff útil → dano, transferindo buffs próprios aplicáveis à criatura ativa.
-- **Status:** documento de discussão, 40 seleções candidatas e **0 homologadas**. Transferência e economia de ações do suporte, duração, recargas e outras lacunas ainda exigem aprovação/revisão. Não importar para o catálogo oficial ou engine automaticamente.
+- **Status:** 40 habilidades candidatas e **0 homologadas**. **A regra de uso das cartas de suporte já foi definida**: sem custo de ativação, com duração, acúmulo e demais mecânicas conforme a ficha original/SRD; a carta usada vai para a pilha de descarte. Transferências próprias e fichas incompletas ainda exigem revisão. Não importar para o catálogo oficial ou engine automaticamente.
 
 ## Modelos visuais de cartas e símbolos (15/10/2026)
 
@@ -119,4 +119,11 @@ O administrador escolheu **duas vagas Cura** na proposta do baralho de 40, ambas
 
 **Fontes**: [Astral Devourer](https://www.5esrd.com/database/creature/astral-devourer/) e [Snallygaster](https://www.5esrd.com/database/creature/snallygaster/). A seleção de `Cura` está registrada em [SUPORTES_CURA_CANDIDATOS_2.csv](SUPORTES_CURA_CANDIDATOS_2.csv) e [DECISOES_COMBATE_E_SUPORTES_40_20261015.md](DECISOES_COMBATE_E_SUPORTES_40_20261015.md).
 
-A classificação das **duas vagas** não altera os outros 38 suportes, não modifica os campos do `cards.csv`, não aprova a transferência homebrew e **não homologa** nenhuma habilidade. O registro local `TF-285` continua incompleto e ativação/duração dependem de regras futuras.
+A classificação das **duas vagas** não altera os outros 38 suportes, não modifica os campos do `cards.csv`, não aprova a transferência homebrew e **não homologa** nenhuma habilidade. O registro local `TF-285` continua incompleto. **O uso de suporte não tem custo, a carta vai para o descarte e a duração/acúmulo seguem a ficha e o SRD**, sem criar regras extras.
+
+## Regra de suporte definida pelo administrador (15/10/2026)
+
+- **Sem custo de ativação:** jogar uma carta de suporte não consome ação, ação bônus ou reação.
+- **Regras da ficha e SRD:** duração, concentração, acúmulo, efeitos, condições, CDs, recargas, usos e demais limitações são os da habilidade original/SRD, sem inventar prazos ou empilhamentos próprios.
+- **Destino da carta:** depois de utilizada, ela vai para a **pilha de descarte**; efeitos que tenham duração própria não terminam apenas pelo descarte.
+- Esta regra do fluxo de suporte foi definida. A classificação mecânica e a transferência de benefícios de criaturas específicas continuam candidatas à auditoria; **não promover as 40 fichas a homologadas**.
