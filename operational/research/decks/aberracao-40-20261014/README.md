@@ -97,3 +97,8 @@
 - O arquivo `imagens-pesquisadas-15.csv` rastreia as 15 pendências originais e inclui as **8 que continuam sem imagem local**: Minor/Moderate/Major/Massive Malleable, Maw Swarm, Mayday, Shukankor e Aboleth Brute.
 - A galeria visual `IMAGENS_PESQUISADAS.md` mostra as 7 imagens incorporadas e documenta os links de pesquisa restantes. Não confundir imagem localizada/referenciada com arquivo binário integrado.
 - **Arte de pesquisa, não homologação**; a proveniência está documentada e versões visuais de edições distintas não substituem atributos.
+
+## Registro de decisões do duelo e das habilidades de suporte (15/10/2026)
+
+- [Decisões de combate e 40 habilidades de suporte candidatas](DECISOES_COMBATE_E_SUPORTES_40_20261015.md): registra a orientação do administrador de **combate no estilo D&D 5e / SRD 5.2.1 sem movimentação, posicionamento ou mecânicas de alcance**; preserva dano, condições, duração, concentração, ações, recargas e testes; relaciona as 40 assinaturas propostas com prioridade buff útil → debuff útil → dano, transferindo buffs próprios aplicáveis à criatura ativa.
+- **Status:** documento de discussão, 40 seleções candidatas e **0 homologadas**. Transferência e economia de ações do suporte, duração, recargas e outras lacunas ainda exigem aprovação/revisão. Não importar para o catálogo oficial ou engine automaticamente.
