@@ -74,7 +74,7 @@ Convenções: **B→Ativa** = buff que originalmente protege/beneficia a criatur
 
 | # | Carta | Seleção (classe) | Efeito resumido registrado | Revisão necessária |
 |---:|---|---|---|---|
-| 33 | Ancient Aboleth | Legendary Resistance (B→Ativa) | Proposta: a ativa pode transformar falha em resistência em sucesso. | Fonte tem 3/dia; **quantos usos são transferidos permanece INDEFINIDO**; verificar custo de ativação. |
+| 33 | Ancient Aboleth | Legendary Resistance (B→Ativa) | Proposta: a ativa pode transformar falha em resistência em sucesso. | Fonte tem 3/dia; preservar os usos e limites conforme ficha/SRD. A carta de suporte não possui custo de ativação e segue para o descarte; validar transferência individual à ativa. |
 | 34 | Voidling | Shadow's Grasp (E/D) | Destreza CD 17; 14d6 necrótico e Contido na falha, conforme ficha. | Recarga 5–6, duração/testes, edição. |
 | 35 | Aboleth Brute | Bite (E/D) | +11; 4d12+6 perfurante, Agarrado e Contido, fuga CD 19. | Preservar impossibilidade de morder outro alvo durante o agarrão se pertinente. |
 | 36 | Forest Emperor | Rattle (E) | Sabedoria CD 18; pode impor Amedrontado. | Regra original de som, novos testes e imunidade após sucessos. |
@@ -118,4 +118,4 @@ O administrador **aplicou duas vagas do tipo de suporte Cura** à proposta exper
 
 ## 6. Critério de aceite futuro
 
-Aprovar uma habilidade individual somente após: confirmar identificação + edição da criatura; localizar habilidade na ficha; validar números e condições de uso; estabelecer forma de ativação do suporte e transferência se cabível; verificar economia de ações/recursos e persistência; testar o motor sem movimento/alcance. Enquanto isso, **40 escolhas candidatas / 0 homologações**.
+Aprovar uma habilidade individual somente após: confirmar identificação + edição da criatura; localizar a habilidade na ficha; validar números, pré-condições e resultados; aplicar a regra já definida de suporte **sem custo de ativação, duração/acúmulo SRD e carta para a pilha de descarte**; confirmar a fidelidade da transferência se cabível, recursos e testes do motor sem movimento/alcance. Enquanto isso, **40 escolhas candidatas / 0 homologações**.
