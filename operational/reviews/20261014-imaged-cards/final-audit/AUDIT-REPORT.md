@@ -1,6 +1,6 @@
 # SRD Card Game 607 — Auditoria final (parcial)
 
-**Situação:** EM ANDAMENTO — 38 lotes validados, 380/395 fichas (15 restantes).
+**Situação:** EM ANDAMENTO — 39 lotes validados, 390/395 fichas (5 restantes).
 
 **Fonte:** branch `chatgpt/srd607-audit-imaged-cards-20261014`, snapshot anterior à auditoria `c75c62c616e34af98593ecc0de895dd2f7dabeaf`; CSV `operational/research/catalog-ledger-20261011-v27/catalog-status.csv` (`Mecanica_completa=NAO`: 395 de 607).
 
@@ -264,3 +264,10 @@ Foram processadas **30 fichas de 395**: 10 completas em conteúdo, 1 completa co
 1 ficha com ressalvas (TF-501), 9 incompletas: TF-469/483/493/494 carecem de dados estruturais; TF-470/473 apresentam referências de ataque inconsistentes; TF-476 sem parâmetros das ações lendárias; TF-499 Despair Aura não informa CD/atributo/gatilho; TF-500 depende de outras criaturas/regra. Três imagens por manifesto F (TF-469, 476, 493) e sete ausentes. TF-469 32×32 e TF-493 256×256 são imagens pequenas. Edições, licenças e qualidade não homologadas.
 
 **Consolidado:** 380/395 (15 restantes); 227 completas, 90 com ressalvas, 62 incompletas, 1 não verificáveis; 225 diretas, 116 manifesto, 39 ausentes.
+
+
+## Lote 039 — TF-502–TF-512 (10 IDs conforme CSV)
+
+3 fichas com ressalvas (TF-506/507/509) e 7 incompletas (TF-502 sem CD de Despair Aura; TF-503 Stuffing/ghouls; TF-504 erro Banshee; TF-505 Dust Storm sem resultado no sucesso; TF-510 PV/CON; TF-511 escopo doença; TF-512 atributos/ações ausentes). Cinco imagens vinculadas por manifesto F (TF-503,504,505,510,511), cinco ausentes; todas as cinco vinculadas têm lado <500 px e quatro são sprites de 32×32. Edições/licenças e arte não homologadas.
+
+**Consolidado:** 390/395 (5 restantes); 227 completas, 93 com ressalvas, 69 incompletas e 1 não verificáveis; 225 diretas, 121 por manifesto, 44 ausentes.

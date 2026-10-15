@@ -1,0 +1,1056 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+  "reference_date": "2026-10-14",
+  "batch_number": 39,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 0,
+    "completas_com_ressalvas": 3,
+    "incompletas": 7,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 5,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 5,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 5
+  },
+  "evidence_limitations": [
+    "Mecânicas ausentes/incongruentes mantidas como incompletas; edições não canonizadas.",
+    "Imagens por manifesto F verificadas em Git, sem inspeção visual; cinco pequenas dimensões <=300px.",
+    "Direitos de arte e E2E não comprovados."
+  ],
+  "records": [
+    {
+      "id": "TF-502",
+      "criatura": "Ghasthopper",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Ghasthopper Despair Aura menciona salvaguarda sem atributo, CD ou gatilho; regra central incompleta.",
+      "identidade": {
+        "origem": null,
+        "edicao": null,
+        "cr": null,
+        "nd_fonte": "2",
+        "tamanho": "Tiny"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 31,
+        "dados_vida": "7d4+14",
+        "atributos": {
+          "FOR": 2,
+          "DES": 16,
+          "CON": 14,
+          "INT": 6,
+          "SAB": 14,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 10,
+          "voar": 30
+        },
+        "sentidos": [
+          "darkvision 30 ft"
+        ],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Despair Aura",
+            "Incorporeal Movement",
+            "Smoky Signals"
+          ],
+          "ataques": [
+            "Bleak Vibrations",
+            "Drain Health"
+          ],
+          "acoes": [
+            "Bleak Vibrations",
+            "Drain Health"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Ghasthopper Despair Aura menciona salvaguarda sem atributo, CD ou gatilho; regra central incompleta."
+      ],
+      "conflitos": [
+        "estatisticas.nd_catalogo",
+        "estatisticas.alinhamento",
+        "estatisticas.vulnerabilidades",
+        "Despair Aura menciona saving throw sem especificar quando ocorre, atributo e CD; não inventar.",
+        "Bloqueio anterior era falha de extração; ficha atual permite recuperar CA/PV/atributos/ações, mas aura segue incompleta."
+      ],
+      "pendencias_editoriais": [
+        "Página não legível; CA/PV e mecânicas não confirmados",
+        "Despair Aura menciona saving throw sem especificar quando ocorre, atributo e CD; não inventar.",
+        "Bloqueio anterior era falha de extração; ficha atual permite recuperar CA/PV/atributos/ações, mas aura segue incompleta.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar fonte, corrigir lacuna editorial sem inventar parâmetros e validar imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-502.json",
+        "sha": "287c81ba4e82dd634df12bab7c7d059b89134c36",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-503",
+      "criatura": "Stuffed Crab",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Stuffed Crab: saída dos ghouls possui erro literal 'takes crawls out' na fonte; fuga de Stuffing sem procedimento completo.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Gate Pass Gazette #2",
+        "cr": null,
+        "nd_fonte": "6",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 104,
+        "dados_vida": "16d12",
+        "atributos": {
+          "FOR": 20,
+          "DES": 4,
+          "CON": 10,
+          "INT": 10,
+          "SAB": 1,
+          "CAR": 8
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 40,
+          "nadar_ft": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "blindsight",
+            "alcance_ft": 30
+          },
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Ghouls",
+            "Ghouls on 0 HP"
+          ],
+          "ataques": [
+            "Pincer"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Pincer"
+          ],
+          "acoes_bonus": [
+            "Stuffing"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Stuffed Crab: saída dos ghouls possui erro literal 'takes crawls out' na fonte; fuga de Stuffing sem procedimento completo."
+      ],
+      "conflitos": [
+        "procedimento de saída dos ghouls",
+        "procedimento de fuga de Stuffing",
+        "imagem"
+      ],
+      "pendencias_editoriais": [
+        "CONFIRMADO NO SRD EDITORIAL ORIGINAL DE GATE PASS GAZETTE #2: texto da saída dos ghouls após 0 PV já contém 'takes crawls out' no PDF p.15; permanece sem correção por errata.",
+        "Stuffing especifica escape CD16, mas não procedimento detalhado de fuga.",
+        "Imagem física ausente.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-503.png",
+        "sha_git": "d95126535d863db71071f0d4979268a6d266e9e3",
+        "bytes": 1490,
+        "dimensoes_declaradas": [
+          32,
+          32
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar fonte, corrigir lacuna editorial sem inventar parâmetros e validar imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-503.json",
+        "sha": "3a5777a074040adcff2e1784b6287fc292b659e9",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-504",
+      "criatura": "Warlord's Ghost",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Warlord's Ghost: referências Banshee em ações e falta resultado do sucesso em Baleful Wail.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": null,
+        "nd_fonte": "4",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 58,
+        "dados_vida": "13d8",
+        "atributos": {
+          "FOR": 8,
+          "DES": 16,
+          "CON": 10,
+          "INT": 12,
+          "SAB": 10,
+          "CAR": 18
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30,
+          "voo_ft": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "languages it spoke in life"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Death Howl",
+            "Detect Life",
+            "Incorporeal Movement",
+            "Undead Nature",
+            "Unquiet Spirit"
+          ],
+          "ataques": [],
+          "acoes": [
+            "Presage Death",
+            "Baleful Wail"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Wounded Warning"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Warlord's Ghost: referências Banshee em ações e falta resultado do sucesso em Baleful Wail."
+      ],
+      "conflitos": [
+        "banshee versus warlord na referência Baleful Wail",
+        "efeito sucesso de Baleful Wail",
+        "imagem"
+      ],
+      "pendencias_editoriais": [
+        "Banshee citado no texto de Presage Death e de Combat em ficha Warlord's Ghost; não substituído por suposição.",
+        "Resultado no sucesso de Baleful Wail não declarado.",
+        "Sem imagem física.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-504.png",
+        "sha_git": "f4b1f0be9fd7298b01fdccd3a7173e93231f67a1",
+        "bytes": 408,
+        "dimensoes_declaradas": [
+          32,
+          32
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar fonte, corrigir lacuna editorial sem inventar parâmetros e validar imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-504.json",
+        "sha": "1e085c44a32c2b56ead7fdc3a766d5c1c176467b",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-505",
+      "criatura": "Demilich Mastermind",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Demilich Mastermind: Dust Storm não informa resultado de sucesso; ações de covil opcionais não podem ser presumidas.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": null,
+        "nd_fonte": "18",
+        "tamanho": "Tiny"
+      },
+      "estatisticas": {
+        "ca": 20,
+        "pv": 319,
+        "dados_vida": "58d4+174",
+        "atributos": {
+          "FOR": 10,
+          "DES": 24,
+          "CON": 16,
+          "INT": 24,
+          "SAB": 22,
+          "CAR": 20
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 0,
+          "voo_ft": 30,
+          "hover": true
+        },
+        "sentidos": [
+          {
+            "tipo": "truesight",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "compreende idiomas de sua vida, não fala"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Avoidance",
+            "Legendary Resistance",
+            "Undead Nature",
+            "Soul Vessel"
+          ],
+          "ataques": [],
+          "acoes": [
+            "Devour Soul"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Reflection Arcane",
+            "Skull Shock"
+          ],
+          "acoes_lendarias": [
+            "Cranial Transposition",
+            "Dust Storm",
+            "Ringing Laugh",
+            "Telekinesis"
+          ],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Demilich Mastermind: Dust Storm não informa resultado de sucesso; ações de covil opcionais não podem ser presumidas."
+      ],
+      "conflitos": [
+        "resultado sucesso Dust Storm",
+        "quais features de covil são escolhidas",
+        "imagem física"
+      ],
+      "pendencias_editoriais": [
+        "O efeito do sucesso em Dust Storm não está no bloco individual: não aplicar metade do dano por inferência.",
+        "Características de covil são sugestões opcionais, não Lair Actions do monstro.",
+        "Soul Vessel consta na descrição editorial e pode afetar retorno, mas precisa confronto com Monstrous Menagerie/errata.",
+        "Imagem física da variante ainda falta.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-505.webp",
+        "sha_git": "0c3460cac54b9acd0008d289b2594d7bd5215dfa",
+        "bytes": 106778,
+        "dimensoes_declaradas": [
+          300,
+          300
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar fonte, corrigir lacuna editorial sem inventar parâmetros e validar imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-505.json",
+        "sha": "0550ff1fea8a79f2ed9326e70776f7ddcf8c0bd9",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-506",
+      "criatura": "Mariner Ghost Swarm",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Mariner Ghost Swarm Elite Recovery atua como ação mesmo listada entre traits; cotejar fonte To Save A Kingdom.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "To Save A Kingdom",
+        "cr": null,
+        "nd_fonte": "11",
+        "tamanho": "Huge swarm"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 340,
+        "dados_vida": "40d12+80",
+        "atributos": {
+          "FOR": 9,
+          "DES": 14,
+          "CON": 15,
+          "INT": 15,
+          "SAB": 14,
+          "CAR": 20
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 0,
+          "voo_ft": 50,
+          "nadar_ft": 50,
+          "hover": true
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 120
+          }
+        ],
+        "idiomas": [
+          "Common"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Elite Recovery",
+            "Ethereal Sight",
+            "Incorporeal Movement",
+            "Swarm of Ghosts",
+            "Turn Resistance"
+          ],
+          "ataques": [
+            "Withering Cutlasses",
+            "Magic Blast"
+          ],
+          "acoes": [
+            "Elite Recovery",
+            "Withering Cutlasses",
+            "Magic Blast",
+            "Etherealness"
+          ],
+          "acoes_bonus": [
+            "Spirit Absorption"
+          ],
+          "reacoes": [
+            "Painful Wail"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Fonte individual confere Elite Recovery apesar de estar na seção de traits; trata-se explicitamente de ação.",
+        "O efeito de ressurreição da Spirit Absorption depende de retorno em menos de uma hora.",
+        "Confrontar To Save A Kingdom/errata e obter imagem binária.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar publicação, adaptar/testar e obter arte autorizada.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-506.json",
+        "sha": "b8fcbd4417f18b185cf68966c16f9778f02236ba",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-507",
+      "criatura": "Fogborn Skeleton Horde",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Fogborn Skeleton Horde detalha dispersão 1d4 e cinco ou mais esqueletos, mas ainda requer confronto com o livro/errata.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "To Save A Kingdom",
+        "cr": null,
+        "nd_fonte": "4",
+        "tamanho": "Large group of Medium undead"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 65,
+        "dados_vida": "10d8+20",
+        "atributos": {
+          "FOR": 10,
+          "DES": 14,
+          "CON": 14,
+          "INT": 6,
+          "SAB": 8,
+          "CAR": 5
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30,
+          "nadar_ft": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "compreende os idiomas que sabia em vida",
+          "não fala"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Undead Nature",
+            "Fogwalk",
+            "Water Walker",
+            "Area Vulnerability",
+            "Horde",
+            "Horde Dispersal"
+          ],
+          "ataques": [
+            "Shortsword",
+            "Shortbow"
+          ],
+          "acoes": [
+            "Shortsword",
+            "Shortbow"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Fonte individual distingue essa variante da Skeleton Horde genérica; conserva 5+ esqueletos e dispersão 1d4 com 6 PV cada.",
+        "Faltam confronto com To Save A Kingdom/errata e arte física da variante.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar publicação, adaptar/testar e obter arte autorizada.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-507.json",
+        "sha": "da5b976ba55747274dde039babc35279374010cd",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-509",
+      "criatura": "Fogborn Zombie Horde",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Fogborn Zombie Horde possui Fogwalk/Water Walker e interação Bite/Grab, mas precisa de cotejo editorial.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "To Save A Kingdom",
+        "cr": null,
+        "nd_fonte": "4",
+        "tamanho": "Large group of Medium undead"
+      },
+      "estatisticas": {
+        "ca": 8,
+        "pv": 75,
+        "dados_vida": "10d8+30",
+        "atributos": {
+          "FOR": 12,
+          "DES": 6,
+          "CON": 16,
+          "INT": 3,
+          "SAB": 6,
+          "CAR": 4
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 20,
+          "nadar_ft": 20
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "compreende os idiomas que sabia em vida",
+          "não fala"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Area Vulnerability",
+            "Horde",
+            "Horde Dispersal",
+            "Undead Nature",
+            "Fogwalk",
+            "Water Walker"
+          ],
+          "ataques": [
+            "Grab",
+            "Bite"
+          ],
+          "acoes": [
+            "Grab",
+            "Bite"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Mantida distinção de Zombie Horde genérica: a forma Fogborn tem Fogwalk e Water Walker.",
+        "Recuperação por Bite depende de agarrão existente e dano efetivamente causado; não afirmar que supera PV máximos.",
+        "Faltam confronto com To Save A Kingdom/errata e arte física da variante.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar publicação, adaptar/testar e obter arte autorizada.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-509.json",
+        "sha": "656d4cee85e1940a495ff865503084be392472f0",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-510",
+      "criatura": "Infernal Mammoth",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Infernal Mammoth tem CON 20 mas PV 104 (11d12+33), incompatível com modificador +5 usual; requer errata.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "To Save A Kingdom",
+        "cr": null,
+        "nd_fonte": "5",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 104,
+        "dados_vida": "11d12+33",
+        "atributos": {
+          "FOR": 24,
+          "DES": 8,
+          "CON": 20,
+          "INT": 4,
+          "SAB": 10,
+          "CAR": 6
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 120
+          }
+        ],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Siege Platform",
+            "Trampling Charge"
+          ],
+          "ataques": [
+            "Gore",
+            "Stomp"
+          ],
+          "acoes": [
+            "Gore",
+            "Stomp"
+          ],
+          "acoes_bonus": [
+            "Opportunity Step"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Infernal Mammoth tem CON 20 mas PV 104 (11d12+33), incompatível com modificador +5 usual; requer errata."
+      ],
+      "conflitos": [
+        "fórmula de PV versus CON20",
+        "procedimento sem comandante",
+        "imagem"
+      ],
+      "pendencias_editoriais": [
+        "Contradição editorial: imprime 104 (11d12+33) para CON20 (+5), que normalmente implicaria 11d12+55. Preservar ambos sem alterar.",
+        "Siege Platform funciona por comando de infernal dwarf; não atribuir comportamento sem ele.",
+        "Revisar To Save A Kingdom/errata e obter imagem física.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-510.png",
+        "sha_git": "22c2d6ce2acc1cf252c1fe304353c390eb19f05f",
+        "bytes": 896,
+        "dimensoes_declaradas": [
+          32,
+          32
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar fonte, corrigir lacuna editorial sem inventar parâmetros e validar imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-510.json",
+        "sha": "5d0da0c1fe4378941ca406f7fad827ae98f16f7c",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-511",
+      "criatura": "Fiendbloom Awakened Tree",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Fiendbloom Awakened Tree: Hellspore Seeding afeta each creature, mas doença A5E externa parece limitar-se a humanoids.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "To Save A Kingdom",
+        "cr": null,
+        "nd_fonte": "2",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 51,
+        "dados_vida": "6d12+12",
+        "atributos": {
+          "FOR": 18,
+          "DES": 6,
+          "CON": 14,
+          "INT": 10,
+          "SAB": 10,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 20
+        },
+        "sentidos": [],
+        "idiomas": [
+          "one language known by creator"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "False Appearance",
+            "Doubletyped",
+            "Dreaded Winter",
+            "Hellspore Seeding"
+          ],
+          "ataques": [
+            "Slam"
+          ],
+          "acoes": [
+            "Slam"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Fiendbloom Awakened Tree: Hellspore Seeding afeta each creature, mas doença A5E externa parece limitar-se a humanoids."
+      ],
+      "conflitos": [
+        "confirmação editorial do tier em To Save A Kingdom",
+        "imagem física",
+        "aplicação de Hellspore Blight a não-humanoides"
+      ],
+      "pendencias_editoriais": [
+        "Hellspore Blight é regra externa A5E; a ficha publica DC14, correspondente ao tier 2.",
+        "Ainda faltam imagem física e confirmação do livro/errata.",
+        "Divergência de escopo: Hellspore Seeding afeta 'each creature', mas a regra da doença se refere a humanoids; confirmar alcance antes da implementação.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-511.png",
+        "sha_git": "4f96d8481906ccb2093ce4485ce34d2a64e4eca1",
+        "bytes": 1460,
+        "dimensoes_declaradas": [
+          32,
+          32
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar fonte, corrigir lacuna editorial sem inventar parâmetros e validar imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-511.json",
+        "sha": "75bec259f9d3081c73f9d81871fb67a3cd2f8a0d",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    },
+    {
+      "id": "TF-512",
+      "criatura": "Anzû",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Anzû carece de atributos, dados de vida e blocos mecânicos individuais; a fonte não pode ser presumida.",
+      "identidade": {
+        "origem": null,
+        "edicao": null,
+        "cr": null,
+        "nd_fonte": "14",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 18,
+        "pv": 230,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": null,
+          "DES": null,
+          "CON": null,
+          "INT": null,
+          "SAB": null,
+          "CAR": null
+        },
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": [],
+        "idiomas": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [],
+          "ataques": [],
+          "acoes": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Anzû carece de atributos, dados de vida e blocos mecânicos individuais; a fonte não pode ser presumida."
+      ],
+      "conflitos": [
+        "estatisticas.nd_catalogo",
+        "estatisticas.dados_vida",
+        "estatisticas.porte",
+        "estatisticas.tipo",
+        "estatisticas.alinhamento",
+        "estatisticas.atributos",
+        "estatisticas.modificadores",
+        "estatisticas.deslocamentos",
+        "estatisticas.pericias",
+        "estatisticas.salvaguardas",
+        "estatisticas.sentidos",
+        "estatisticas.percepcao_passiva",
+        "estatisticas.idiomas",
+        "estatisticas.resistencias",
+        "estatisticas.imunidades_dano",
+        "estatisticas.imunidades_condicao"
+      ],
+      "pendencias_editoriais": [
+        "Fonte Mythological Figures & Maleficent Monsters; comparar variante do catálogo",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Sem homologação editorial, revisão visual ou E2E."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Cotejar fonte, corrigir lacuna editorial sem inventar parâmetros e validar imagem.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-512.json",
+        "sha": "03208108cc232dbbc83591c916e6b0bfd64db3e1",
+        "source_commit": "48eae0bea39f17f0d827c7dbd43ffe36998f2909",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 39
+    }
+  ]
+}
