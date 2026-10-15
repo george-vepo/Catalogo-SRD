@@ -1,0 +1,1053 @@
+{
+  "schema": "SRD607_FINAL_AUDIT_BATCH_V1",
+  "branch": "chatgpt/srd607-audit-imaged-cards-continuation-20261014",
+  "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+  "reference_date": "2026-10-14",
+  "batch_number": 38,
+  "execution_origin": "CHAT_INTERACTIVE_DIRECT_GITHUB",
+  "vbridge_runtime": "NOT_VERIFIED",
+  "computer_use": "NOT_EXECUTED",
+  "expected_count": 10,
+  "actual_count": 10,
+  "summary": {
+    "total": 10,
+    "completas_em_conteudo": 0,
+    "completas_com_ressalvas": 1,
+    "incompletas": 9,
+    "nao_verificaveis": 0,
+    "imagem_direta": 0,
+    "imagem_manifesto": 3,
+    "imagem_sem_vinculo": 0,
+    "imagem_ausente": 7,
+    "vinculo_quebrado": 0,
+    "resolucao_baixa_por_metadados": 2
+  },
+  "evidence_limitations": [
+    "Muitos registros C não possuem atributos/dados de vida/ações; classificados conservadoramente como incompletos.",
+    "Imagens TF-469/476/493 confirmadas pela árvore Git e manifesto; sem análise visual.",
+    "Dados de edições de variantes e autorização comercial não homologados."
+  ],
+  "records": [
+    {
+      "id": "TF-469",
+      "criatura": "Fateholder",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Fateholder tem apenas CA/PV/ND parcial, sem atributos, dados de vida e ações individualizadas; ficha não verificável integralmente.",
+      "identidade": {
+        "origem": null,
+        "edicao": null,
+        "cr": "13",
+        "nd_fonte": "13",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 17,
+        "pv": 210,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": null,
+          "DES": null,
+          "CON": null,
+          "INT": null,
+          "SAB": null,
+          "CAR": null
+        },
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": [],
+        "idiomas": [],
+        "resistencias_dano": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [],
+          "ataques": [],
+          "acoes": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Fateholder tem apenas CA/PV/ND parcial, sem atributos, dados de vida e ações individualizadas; ficha não verificável integralmente."
+      ],
+      "conflitos": [
+        "estatisticas.dados_vida",
+        "estatisticas.porte",
+        "estatisticas.tipo",
+        "estatisticas.alinhamento",
+        "estatisticas.atributos",
+        "estatisticas.modificadores",
+        "estatisticas.deslocamentos",
+        "estatisticas.pericias",
+        "estatisticas.salvaguardas",
+        "estatisticas.sentidos",
+        "estatisticas.percepcao_passiva",
+        "estatisticas.idiomas",
+        "estatisticas.resistencias",
+        "estatisticas.imunidades_dano",
+        "estatisticas.imunidades_condicao"
+      ],
+      "pendencias_editoriais": [
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-469.png",
+        "sha_git": "c6cd14d72f5a0cfc572ae9df7d0754b30328ddac",
+        "bytes": 1082,
+        "dimensoes_declaradas": [
+          32,
+          32
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-469.json",
+        "sha": "34693aa9347b140906bdd66c9fdef6339836f33b",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-470",
+      "criatura": "Fiendish Chimera",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Fiendish Chimera possui Winged Charge referindo headbutt inexistente e ações lendárias Bite/Claw com nomes incompatíveis com ataques.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": null,
+        "nd_fonte": "7",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 114,
+        "dados_vida": "12d10+48",
+        "atributos": {
+          "FOR": 18,
+          "DES": 10,
+          "CON": 18,
+          "INT": 3,
+          "SAB": 16,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30,
+          "voo_ft": 60
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [],
+        "resistencias_dano": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Reactive Heads",
+            "Three Heads",
+            "Wakeful"
+          ],
+          "ataques": [
+            "Nightmare Trample",
+            "Bat Bite",
+            "Hellhound Claw"
+          ],
+          "acoes": [
+            "Nightmare Trample",
+            "Bat Bite",
+            "Hellhound Claw",
+            "Hellhound Breath Weapon"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [
+            "Tail Swipe",
+            "Winged Charge"
+          ],
+          "acoes_lendarias": [
+            "Bite",
+            "Claw"
+          ],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Fiendish Chimera possui Winged Charge referindo headbutt inexistente e ações lendárias Bite/Claw com nomes incompatíveis com ataques."
+      ],
+      "conflitos": [
+        "resolução editorial das referências de ações",
+        "referência headbutt de Winged Charge",
+        "arquivo físico de imagem",
+        "revisão editorial independente"
+      ],
+      "pendencias_editoriais": [
+        "Winged Charge referencia headbutt que não consta do bloco de ataques Fiendish Chimera (há Nightmare Trample).",
+        "Ações lendárias Bite/Claw não coincidem exatamente com Bat Bite/Hellhound Claw; confirmar errata.",
+        "Não substituir nomes por suposição; imagem binária ainda falta.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-470.json",
+        "sha": "4cbf6550813296d70b2f700154bdb1f30b0108a9",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-473",
+      "criatura": "Flying Lion",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Flying Lion Multiattack menciona griffon, beak e talons, mas sua ficha tem Bite e Talons; não converter por inferência.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": null,
+        "nd_fonte": "3",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 12,
+        "pv": 57,
+        "dados_vida": "6d10+24",
+        "atributos": {
+          "FOR": 18,
+          "DES": 14,
+          "CON": 18,
+          "INT": 2,
+          "SAB": 16,
+          "CAR": 8
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 30,
+          "voo_ft": 80
+        },
+        "sentidos": [],
+        "idiomas": [],
+        "resistencias_dano": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Keen Smell"
+          ],
+          "ataques": [
+            "Bite",
+            "Talons"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Bite",
+            "Talons"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Flying Lion Multiattack menciona griffon, beak e talons, mas sua ficha tem Bite e Talons; não converter por inferência."
+      ],
+      "conflitos": [
+        "relação Beak x Bite na variante Flying Lion",
+        "texto reaproveitado de griffon e correção editorial",
+        "imagem física representativa"
+      ],
+      "pendencias_editoriais": [
+        "Multiattack publicado declara griffon atacando com beak e talons; Flying Lion lista Bite e Talons, não Beak. Não transformar Beak em Bite por inferência.",
+        "Talons condiciona dano superior e grapple a começar 20 ft acima do alvo; registrar condições de alcance.",
+        "Imagem binária da variante Flying Lion não armazenada; revisão editorial pendente.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-473.json",
+        "sha": "6497addcfa40b51bc8162413d05ca03157ea1626",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-476",
+      "criatura": "Greater Sphinx",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Greater Sphinx possui tag Legendary, mas não apresenta custos, quantidade ou descrições integrais de legendary actions; Planar Jaunt tem precondição contraditória.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Monstrous Menagerie",
+        "cr": null,
+        "nd_fonte": "17",
+        "tamanho": "Huge"
+      },
+      "estatisticas": {
+        "ca": 20,
+        "pv": 220,
+        "dados_vida": "21d12+84",
+        "atributos": {
+          "FOR": 22,
+          "DES": 14,
+          "CON": 18,
+          "INT": 18,
+          "SAB": 22,
+          "CAR": 20
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 40,
+          "voo_ft": 60
+        },
+        "sentidos": [
+          {
+            "tipo": "truesight",
+            "alcance_ft": 120
+          }
+        ],
+        "idiomas": [
+          "Celestial",
+          "Common",
+          "telepathy 120 ft"
+        ],
+        "resistencias_dano": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Inscrutable",
+            "Legendary Resistance",
+            "Innate Spellcasting"
+          ],
+          "ataques": [
+            "Claw"
+          ],
+          "acoes": [
+            "Multiattack",
+            "Claw",
+            "Dispel Magic",
+            "Flame Strike",
+            "Roar"
+          ],
+          "acoes_bonus": [
+            "Speed Time",
+            "Planar Jaunt"
+          ],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": [
+            null
+          ]
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Greater Sphinx possui tag Legendary, mas não apresenta custos, quantidade ou descrições integrais de legendary actions; Planar Jaunt tem precondição contraditória."
+      ],
+      "conflitos": [
+        "quantidade, custos, descrição e recarga das ações lendárias não publicadas no bloco oficial",
+        "contradição willing targets x banir foes em Planar Jaunt",
+        "arquivo de imagem real",
+        "revisão editorial Monstrous Menagerie"
+      ],
+      "pendencias_editoriais": [
+        "Fonte oficial apresenta a tag Legendary e em Combat cita Claw, Teleport e Slow Time como legendary actions, mas nenhum bloco Legendary Actions ou custos/limites aparece na ficha; não inventar quantidades nem mecânica.",
+        "Planar Jaunt exige alvos dispostos, enquanto Combat recomenda usar para banir inimigos; preservar conflito sem trocar precondição.",
+        "Greater Sphinx é CR 17, não Sphinx CR 11; lista inata e Roar três fases detalhadas.",
+        "Imagem binária desta variante ainda não existe.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-476.webp",
+        "sha_git": "6332c1dbb9329c56e6897088dd79f9671e7a1771",
+        "bytes": 393594,
+        "dimensoes_declaradas": [
+          600,
+          600
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-476.json",
+        "sha": "9fda11c8a7d06e8a16bd31f2307fb13bd3fdab25",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-483",
+      "criatura": "Squashling",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Squashling carece de atributos, dados de vida, mecânicas detalhadas, Seed Shot e Charming Aspect.",
+      "identidade": {
+        "origem": null,
+        "edicao": null,
+        "cr": null,
+        "nd_fonte": "1",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 13,
+        "pv": 36,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": null,
+          "DES": null,
+          "CON": null,
+          "INT": null,
+          "SAB": null,
+          "CAR": null
+        },
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": [],
+        "idiomas": [],
+        "resistencias_dano": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [],
+          "ataques": [],
+          "acoes": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Squashling carece de atributos, dados de vida, mecânicas detalhadas, Seed Shot e Charming Aspect."
+      ],
+      "conflitos": [
+        "estatisticas.nd_catalogo",
+        "estatisticas.dados_vida",
+        "estatisticas.porte",
+        "estatisticas.tipo",
+        "estatisticas.alinhamento",
+        "estatisticas.atributos",
+        "estatisticas.modificadores",
+        "estatisticas.deslocamentos",
+        "estatisticas.pericias",
+        "estatisticas.salvaguardas",
+        "estatisticas.sentidos",
+        "estatisticas.percepcao_passiva",
+        "estatisticas.idiomas",
+        "estatisticas.resistencias",
+        "estatisticas.imunidades_dano"
+      ],
+      "pendencias_editoriais": [
+        "Lacunas nos efeitos Seed Shot e Charming Aspect",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-483.json",
+        "sha": "47ac51e16c6cc8f9b2ae66c4a92c178937fedb4a",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-493",
+      "criatura": "Rock Troll",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Rock Troll carece de atributos, dados de vida e mecânicas do bloco específico; não substituir por regras genéricas de troll.",
+      "identidade": {
+        "origem": null,
+        "edicao": null,
+        "cr": null,
+        "nd_fonte": "6",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 18,
+        "pv": 84,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": null,
+          "DES": null,
+          "CON": null,
+          "INT": null,
+          "SAB": null,
+          "CAR": null
+        },
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": [],
+        "idiomas": [],
+        "resistencias_dano": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [],
+          "ataques": [],
+          "acoes": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Rock Troll carece de atributos, dados de vida e mecânicas do bloco específico; não substituir por regras genéricas de troll."
+      ],
+      "conflitos": [
+        "estatisticas.nd_catalogo",
+        "estatisticas.dados_vida",
+        "estatisticas.porte",
+        "estatisticas.tipo",
+        "estatisticas.alinhamento",
+        "estatisticas.atributos",
+        "estatisticas.modificadores",
+        "estatisticas.deslocamentos",
+        "estatisticas.pericias",
+        "estatisticas.salvaguardas",
+        "estatisticas.sentidos",
+        "estatisticas.percepcao_passiva",
+        "estatisticas.idiomas",
+        "estatisticas.resistencias",
+        "estatisticas.imunidades_dano"
+      ],
+      "pendencias_editoriais": [
+        "Não aplicar lore geral de troll; conferir frio e trovejante no bloco específico",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_VINCULADA_POR_MANIFESTO",
+      "imagem": {
+        "caminho": "operational/assets/creature-images/TF-493.png",
+        "sha_git": "f66f3a3ce435270ba332dc8a15538b8a91f5134c",
+        "bytes": 116923,
+        "dimensoes_declaradas": [
+          256,
+          256
+        ],
+        "vinculo_origem": "operational/assets/creature-images/manifests/f.json",
+        "sha_conferido": true,
+        "tamanho_conferido": true,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-493.json",
+        "sha": "d797cb51dfa1bfa3131464697b0a3cdfef8d1fed",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-494",
+      "criatura": "Askwise Keeper",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Askwise Keeper apresenta PV 2, sem dados de vida e atributos; lore menciona voo sem deslocamento de voo mecânico.",
+      "identidade": {
+        "origem": null,
+        "edicao": null,
+        "cr": null,
+        "nd_fonte": "1/4",
+        "tamanho": null
+      },
+      "estatisticas": {
+        "ca": 15,
+        "pv": 2,
+        "dados_vida": null,
+        "atributos": {
+          "FOR": null,
+          "DES": null,
+          "CON": null,
+          "INT": null,
+          "SAB": null,
+          "CAR": null
+        },
+        "atributos_seis": false,
+        "deslocamentos": null,
+        "sentidos": [],
+        "idiomas": [],
+        "resistencias_dano": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [],
+          "ataques": [],
+          "acoes": [],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Askwise Keeper apresenta PV 2, sem dados de vida e atributos; lore menciona voo sem deslocamento de voo mecânico."
+      ],
+      "conflitos": [
+        "estatisticas.nd_catalogo",
+        "estatisticas.dados_vida",
+        "estatisticas.porte",
+        "estatisticas.tipo",
+        "estatisticas.alinhamento",
+        "estatisticas.atributos",
+        "estatisticas.modificadores",
+        "estatisticas.deslocamentos",
+        "estatisticas.pericias",
+        "estatisticas.salvaguardas",
+        "estatisticas.sentidos",
+        "estatisticas.percepcao_passiva",
+        "estatisticas.idiomas",
+        "estatisticas.resistencias",
+        "estatisticas.imunidades_dano"
+      ],
+      "pendencias_editoriais": [
+        "Texto menciona voo, mas não há velocidade de voo no bloco",
+        "Recuperar e validar dados mecânicos completos em fonte individual antes da conclusão.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-494.json",
+        "sha": "3cdc0084694551e1007de652523ac2c8ea106efd",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-499",
+      "criatura": "Cloud of Ghasthoppers",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Cloud of Ghasthoppers Despair Aura menciona save bem-sucedido sem CD, atributo ou gatilho; Hungry Strike citado sem ação correspondente.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Gate Pass Gazette #24",
+        "cr": null,
+        "nd_fonte": "4",
+        "tamanho": "Medium swarm of Tiny"
+      },
+      "estatisticas": {
+        "ca": 14,
+        "pv": 78,
+        "dados_vida": "12d8+24",
+        "atributos": {
+          "FOR": 2,
+          "DES": 16,
+          "CON": 14,
+          "INT": 6,
+          "SAB": 14,
+          "CAR": 10
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 10,
+          "voo_ft": 30
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 30
+          }
+        ],
+        "idiomas": [],
+        "resistencias_dano": [
+          "necrotic"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Despair Aura",
+            "Incorporeal Movement",
+            "Smoky Signals",
+            "Swarm"
+          ],
+          "ataques": [
+            "Bleak Vibrations",
+            "Drain Health"
+          ],
+          "acoes": [
+            "Bleak Vibrations",
+            "Drain Health"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Cloud of Ghasthoppers Despair Aura menciona save bem-sucedido sem CD, atributo ou gatilho; Hungry Strike citado sem ação correspondente."
+      ],
+      "conflitos": [
+        "atributo, CD e gatilho da salvaguarda de Despair Aura",
+        "confronto com livro/errata",
+        "imagem"
+      ],
+      "pendencias_editoriais": [
+        "Número da publicação confirmado no índice editorial oficial: Gate Pass Gazette #24; a lacuna em Despair Aura continua sem resposta no bloco individual.",
+        "A fonte oficial de Despair Aura fala em successful saving throw mas não define CD, atributo nem quando o teste ocorre.",
+        "Texto de Behavior menciona Hungry Strike, que não integra lista de ações; não acrescentar por inferência.",
+        "Imagem binária ainda ausente.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-499.json",
+        "sha": "7446d06399a9a371727df4fa6ec91d2bab16afba",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-500",
+      "criatura": "Gorger Zombie Horde",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_INCOMPLETA",
+      "motivo_classificacao": "Gorger Zombie Horde atribuição editorial divergente e regras de criaturas geradas dependentes de outras fichas A5E ainda não auditadas.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Gate Pass Gazette (Source da ficha atual; edição histórica divergente)",
+        "cr": null,
+        "nd_fonte": "4",
+        "tamanho": "Large"
+      },
+      "estatisticas": {
+        "ca": 8,
+        "pv": 75,
+        "dados_vida": "10d8+30",
+        "atributos": {
+          "FOR": 12,
+          "DES": 6,
+          "CON": 16,
+          "INT": 3,
+          "SAB": 6,
+          "CAR": 4
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar": 20
+        },
+        "sentidos": [
+          "darkvision 60 ft"
+        ],
+        "idiomas": [
+          "compreende idiomas que sabia vivo, não fala"
+        ],
+        "resistencias_dano": []
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Area Vulnerability",
+            "Horde",
+            "Sickening Dispersal",
+            "Undead Nature"
+          ],
+          "ataques": [
+            "Infested Slam"
+          ],
+          "acoes": [
+            "Infested Slam"
+          ],
+          "acoes_bonus": [],
+          "reacoes": [],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [
+        "Gorger Zombie Horde atribuição editorial divergente e regras de criaturas geradas dependentes de outras fichas A5E ainda não auditadas."
+      ],
+      "conflitos": [
+        "estatisticas.nd_catalogo",
+        "estatisticas.alinhamento",
+        "estatisticas.pericias",
+        "estatisticas.salvaguardas",
+        "estatisticas.resistencias",
+        "Página editorial consultada indica Source Gate Pass Gazette; levantamento anterior citava Monstrous Menagerie: preservar divergência histórica.",
+        "Regras de criaturas geradas dependem de outras fichas A5E não revisadas nesta rodada."
+      ],
+      "pendencias_editoriais": [
+        "Index de monstros indica Gate Pass Gazette, mas campo Source da ficha pode citar Monstrous Menagerie: divergência editorial de atribuição.",
+        "Página editorial consultada indica Source Gate Pass Gazette; levantamento anterior citava Monstrous Menagerie: preservar divergência histórica.",
+        "Regras de criaturas geradas dependem de outras fichas A5E não revisadas nesta rodada.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Recuperar mecânicas/cotejar divergências antes de converter; não preencher lacunas por inferência.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-500.json",
+        "sha": "f258101387c328b01f283c31c4d546ea79835f14",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    },
+    {
+      "id": "TF-501",
+      "criatura": "Lost Prospector",
+      "grupo": "c",
+      "status_catalogo": "NAO",
+      "classificacao_ficha": "FICHA_COMPLETA_COM_RESSALVAS",
+      "motivo_classificacao": "Lost Prospector tem ataques, possessão e passivas individualizados; cotejo da edição Gate Pass Gazette e licença ainda pendentes.",
+      "identidade": {
+        "origem": "EN Publishing",
+        "edicao": "Gate Pass Gazette",
+        "cr": null,
+        "nd_fonte": "4",
+        "tamanho": "Medium"
+      },
+      "estatisticas": {
+        "ca": 11,
+        "pv": 58,
+        "dados_vida": "13d8",
+        "atributos": {
+          "FOR": 8,
+          "DES": 12,
+          "CON": 10,
+          "INT": 10,
+          "SAB": 12,
+          "CAR": 16
+        },
+        "atributos_seis": true,
+        "deslocamentos": {
+          "andar_ft": 0,
+          "voo_ft": 40
+        },
+        "sentidos": [
+          {
+            "tipo": "darkvision",
+            "alcance_ft": 60
+          }
+        ],
+        "idiomas": [
+          "languages it spoke in life"
+        ],
+        "resistencias_dano": [
+          "acid",
+          "fire",
+          "lightning",
+          "thunder",
+          "damage from nonmagical weapons"
+        ]
+      },
+      "mecanicas": {
+        "secoes": {
+          "habilidades_passivas": [
+            "Ethereal Sight",
+            "Incorporeal",
+            "Undead Nature",
+            "Unquiet Spirit",
+            "Gold Sense",
+            "Touch of Greed"
+          ],
+          "ataques": [
+            "Withering Touch"
+          ],
+          "acoes": [
+            "Withering Touch",
+            "Ethereal Jaunt",
+            "Horrifying Visage",
+            "Possession"
+          ],
+          "acoes_bonus": [
+            "End Possession"
+          ],
+          "reacoes": [
+            "Horrifying Visage"
+          ],
+          "acoes_lendarias": [],
+          "conjuracoes": []
+        },
+        "mecanica_completa_no_registro": false
+      },
+      "lacunas": [],
+      "conflitos": [],
+      "pendencias_editoriais": [
+        "Confronto com exemplar/errata de Gate Pass Gazette ainda pendente.",
+        "Falta imagem binária individual.",
+        "Não homologado para adaptação final ou distribuição de arte."
+      ],
+      "adaptacao_card_game": "PENDENTE",
+      "homologacao_editorial": "PENDENTE",
+      "classificacao_imagem": "IMAGEM_AUSENTE",
+      "imagem": {
+        "caminho": null,
+        "sha_git": null,
+        "bytes": null,
+        "dimensoes_declaradas": null,
+        "vinculo_origem": null,
+        "sha_conferido": false,
+        "tamanho_conferido": false,
+        "identidade_visual": "NAO_VERIFICADA_INDEPENDENTEMENTE",
+        "qualidade": "NAO_VERIFICADA_VISUALMENTE",
+        "licenca": "NAO_COMPROVADA",
+        "aprovacao_producao": false
+      },
+      "acao_recomendada": "Validar edição, integrar com regras A5E e conferir arte.",
+      "evidencia": {
+        "path": "operational/research/deep-mechanics/c/records/TF-501.json",
+        "sha": "29b653388300981b308ffd64031f83f2e743e1bf",
+        "source_commit": "9bd5c95c762a15ca53be9f0db871b3749f6d5c64",
+        "fonte_verificada_nesta_auditoria": false
+      },
+      "lote": 38
+    }
+  ]
+}
