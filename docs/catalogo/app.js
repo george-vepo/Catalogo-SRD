@@ -37,13 +37,16 @@ function referenceDetails(extra) {
   if (!extra) return '';
   const p = extra.provenance || {};
   const external = extra.reference_scope === 'EXTERNAL_THIRD_PARTY_SOURCE_SUMMARY';
-  const partial = external && String(p.verification_method || '').startsWith('INDICE_TEXTUAL_');
+  const method = String(p.verification_method || '').toUpperCase();
+  const partial = external && /INDICE|BLOQUEAD|PARCIAL|TEXTO_2023/.test(method);
   const title = external ? 'Ficha de terceiro resumida — não homologada' : 'Ficha de referência revisada — não homologada';
   const warning = external
-    ? (partial ? 'Fonte identificada por índice textual, mas leitura direta incompleta ou bloqueada. Este resumo é parcial, de terceiros, não é SRD 5.2.1 e não está homologado para o jogo.' : 'Resumo próprio de referência externa consultada. Não equivale à transcrição integral nem à mecânica homologada do card game.')
+    ? (partial ? 'A origem pode estar bloqueada e a conferência inclui índice ou espelho não oficial. Este resumo é de terceiros, não é SRD 5.2.1 e continua sem homologação para o jogo.' : 'Resumo próprio de referência externa consultada. Não equivale à transcrição integral nem à mecânica homologada do card game.')
     : 'Referência D&D 5e conferida em pesquisa anterior, com revisão independente ainda pendente. Não transforma os dados em mecânica oficial do card game.';
   const source = p.source_url || p.mechanical_source || '';
-  const sourceLink = source ? '<div class="linkrow">' + makeLink(source, 'Abrir fonte original') + '</div>' : '';
+  const alternate = p.source_alt_url || p.crosscheck_url || '';
+  const sourceLink = '<div class="linkrow">' + (source ? makeLink(source, 'Fonte original / portal de referência') : '') +
+    (alternate && alternate !== source ? makeLink(alternate, 'Referência secundária (não oficial)') : '') + '</div>';
   return section(title, '<p class="notice">' + esc(warning) + '</p>' + sourceLink +
     rawData(external ? 'Resumo e proveniência' : 'Estatísticas, traços, ações e condições da fonte', extra, true));
 }
