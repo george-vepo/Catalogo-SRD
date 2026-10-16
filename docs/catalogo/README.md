@@ -32,13 +32,19 @@ Este snapshot adiciona dois arquivos de pesquisa, sem homologar itens automatica
 - `data/curadoria-artes-20261015.json`: **4 referências web** aprovadas visualmente para uso ilustrativo no catálogo (AT-003, AT-009, AT-012, AT-024) e **5 candidatas recusadas**. Imagens continuam como links externos com direitos de reprodução não concedidos.
 - `data/fichas-referencia-verificadas.json`: **6 fichas mecânicas detalhadas de referência** recuperadas do lote E e **6 novos resumos próprios de fontes externas** no lote 5 (KP-S013 a KP-S018). O site já lê esse arquivo e exibe essas referências quando a carta é aberta; elas não alteram a ficha original, o SRD 5.2.1 ou a homologação de regras.
 
-No snapshot integrado até o PR #19 havia **35 referências visuais** e 1.285 espécies sem imagem. O PR #20, ainda sujeito a revisão/merge, propõe **36 referências visuais** e 1.284 espécies sem imagem. Os lotes seguintes não aceitam novas imagens; arquivos binários não revisados não são aceitos automaticamente. Consulte `AUDITORIA_IMAGENS_FICHAS_20261015.md` e os relatórios dos lotes seguintes. 
+No snapshot integrado até o PR #19 havia **35 referências visuais** e 1.285 espécies sem imagem. O PR #20 propõe **36 referências** e 1.284 sem imagem; o lote 6 acrescenta **Mammoth (AT-015)** como referência artística histórica com proveniência de domínio público, chegando a **37 referências** e **1.283 pendentes** no cenário empilhado, **somente após os merges autorizados**. Arquivos binários não revisados não são aceitos automaticamente. Consulte os relatórios de auditoria dos lotes 2 a 6. 
 
 ## Lote 5 — referências de terceiros (15/10/2026)
 
 Acrescentados ao painel existente **6 resumos próprios de fichas externas** (KP-S013 Giant, Jotun; KP-S014 Pustulent Shambler; KP-S015 Ooze, Scintillating; KP-S016 First Servant; KP-S017 Vesiculosa; KP-S018 Sinstar), mantendo os 6 detalhamentos anteriores. As páginas 5esrd foram conferidas diretamente para três espécies; as outras três utilizaram índices textuais de pesquisa, com acesso direto intermitente ou bloqueado. Cada registro identifica esse limite, origem e publicação.
 
 **Esses seis registros são referências não homologadas**, não fichas SRD 5.2.1 ou integrações à engine. O painel mostra resumos factuais, não transcrições integrais dos livros. CA/PV/ND são dados já existentes no catálogo-base; habilidades adicionais ficam separadas da mecânica canônica. Nenhuma arte foi autorizada ou acrescentada. Relatório: `AUDITORIA_LOTE5_FICHAS_20261015.md`.
+
+## Lote 6 — Mammoth e direitos da arte (15/10/2026)
+
+Nova **referência visual de domínio público documentado** para **AT-015 Mammoth**: [pintura de Charles R. Knight, 1908](https://commons.wikimedia.org/wiki/File:Imperial_mammoth_by_Knight.jpg), [acervo do AMNH](https://digitalcollections.amnh.org/archive/Imperial-Mammoth-2URM1THLZ0V.html). A obra representa um mamute-colombiano (Mammuthus columbi), espécie real correspondente à denominação genérica **Mammoth**, não uma arte oficial de D&D. Sem arte cortada, textos ou moldura; dimensões de **1.009×689 px**, horizonte amplo e figura inteira. Domínio público EUA documentado pelo Wikimedia Commons; no Brasil o autor faleceu em 1953 e aplica-se o prazo geral do art. 41 da Lei 9.610/1998. Revisão jurídica de distribuição para outros países e de uso comercial final ainda pendente.
+
+A antiga **candidata Mammoth rejeitada** continua registrada em `curadoria-artes-20261015.json` → `rejected_history`, e não foi apagada. **Apenas a URL de referência artística mudou**, sem copiar arquivo, alterar mecânicas, interface ou regras. Lote sujeito aos PRs #20–#23 e sua revisão. Consulte `AUDITORIA_LOTE6_MAMMOTH_20261015.md`.
 
 ## Dados versionados
 
