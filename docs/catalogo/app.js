@@ -33,6 +33,20 @@ function rawData(title, value, isOpen) {
   const content = typeof value === 'string' ? value : JSON.stringify(value,null,2);
   return '<details ' + (isOpen ? 'open' : '') + '><summary>' + esc(title) + '</summary><pre>' + esc(content) + '</pre></details>';
 }
+function referenceDetails(extra) {
+  if (!extra) return '';
+  const p = extra.provenance || {};
+  const external = extra.reference_scope === 'EXTERNAL_THIRD_PARTY_SOURCE_SUMMARY';
+  const partial = external && String(p.verification_method || '').startsWith('INDICE_TEXTUAL_');
+  const title = external ? 'Ficha de terceiro resumida — não homologada' : 'Ficha de referência revisada — não homologada';
+  const warning = external
+    ? (partial ? 'Fonte identificada por índice textual, mas leitura direta incompleta ou bloqueada. Este resumo é parcial, de terceiros, não é SRD 5.2.1 e não está homologado para o jogo.' : 'Resumo próprio de referência externa consultada. Não equivale à transcrição integral nem à mecânica homologada do card game.')
+    : 'Referência D&D 5e conferida em pesquisa anterior, com revisão independente ainda pendente. Não transforma os dados em mecânica oficial do card game.';
+  const source = p.source_url || p.mechanical_source || '';
+  const sourceLink = source ? '<div class="linkrow">' + makeLink(source, 'Abrir fonte original') + '</div>' : '';
+  return section(title, '<p class="notice">' + esc(warning) + '</p>' + sourceLink +
+    rawData(external ? 'Resumo e proveniência' : 'Estatísticas, traços, ações e condições da fonte', extra, true));
+}
 function currentList() { return appState.filtered; }
 function render(reset) {
   if (reset) appState.limit=60;
@@ -157,7 +171,7 @@ function openCard(index,fromLink) {
   $('detailInfo').innerHTML=top+status+deckBlock(c)+mechanicsSummary(c)+
     section('Identificação — todos os campos da megalista','<div class="meta-pairs">'+metaPairs+'</div>')+
     (c.audit?section('Controle de auditoria','<div class="meta-pairs">'+Object.entries(c.audit).map(([k,v])=>pair(k,v)).join('')+'</div>'):'')+
-    imageBlock+(c.extra?section('Ficha de referência revisada — não homologada','<p class="notice">Referência D&D 5e conferida em pesquisa anterior, com revisão independente ainda pendente. Não transforma os dados em mecânica oficial do card game.</p>'+rawData('Estatísticas, traços, ações e condições da fonte',c.extra,true)):'')+(c.alternates.length?section('Registro alternativo — identidade a conciliar','<p class="notice">O repositório contém KP-S007 (“Animated Instruments (Animated Symphony)”), enquanto a megalista utiliza TF-085. São mantidos como registros distintos, sem mesclar regras, aguardando reconciliação editorial.</p>'+c.alternates.map(x=>rawData(x.id+' · '+x.nome,x,true)).join('')):'')+(c.research.length?section('Pesquisas aprofundadas existentes','<div class="linkrow">'+c.research.map(x=>makeLink(x.url,'Pesquisa '+x.path.split('/')[3]+' · '+x.path.split('/').pop())).join('')+'</div><p>Arquivos de pesquisa do repositório; a existência não implica ficha homologada.</p>'):'')+linksBlock(c)+
+    imageBlock+referenceDetails(c.extra)+(c.alternates.length?section('Registro alternativo — identidade a conciliar','<p class="notice">O repositório contém KP-S007 (“Animated Instruments (Animated Symphony)”), enquanto a megalista utiliza TF-085. São mantidos como registros distintos, sem mesclar regras, aguardando reconciliação editorial.</p>'+c.alternates.map(x=>rawData(x.id+' · '+x.nome,x,true)).join('')):'')+(c.research.length?section('Pesquisas aprofundadas existentes','<div class="linkrow">'+c.research.map(x=>makeLink(x.url,'Pesquisa '+x.path.split('/')[3]+' · '+x.path.split('/').pop())).join('')+'</div><p>Arquivos de pesquisa do repositório; a existência não implica ficha homologada.</p>'):'')+linksBlock(c)+
     section('Rastreabilidade','<p>Os dados provêm dos arquivos versionados no GitHub e preservam as classificações originais. A megalista provisória é distinta da homologação mecânica e jurídica da coleção.</p>');
   $('detailInfo').scrollTop=0;$('close').focus();
   if(!fromLink)history.replaceState(null,'','#c/'+index);
