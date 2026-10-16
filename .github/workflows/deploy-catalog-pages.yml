@@ -1,0 +1,90 @@
+name: Publicar catálogo SRD Card Game
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - '.github/workflows/deploy-catalog-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verificar catálogo e 30 imagens locais
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f docs/index.html
+          test -f docs/catalogo/index.html
+          test -f docs/catalogo/galeria-artes-20261015.html
+          node --check docs/catalogo/app.js
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path("docs/catalogo")
+          required = [
+              "megalista-1320.json",
+              "fichas-607.json",
+              "imagens-607.json",
+              "auditoria-607.json",
+              "deck-celestial-40.json",
+              "deck-aberracao-40.json",
+              "suportes-aberracao.json",
+              "pesquisas-aprofundadas.json",
+              "curadoria-artes-20261015.json",
+              "fichas-referencia-verificadas.json",
+              "artes-geradas-20261015.json",
+          ]
+          for name in required:
+              json.loads((root / "data" / name).read_text(encoding="utf-8"))
+
+          manifest = json.loads((root / "data/artes-geradas-20261015.json").read_text(encoding="utf-8"))
+          records = manifest["records"]
+          if len(records) != 30:
+              raise SystemExit(f"Esperadas 30 artes, encontradas {len(records)}")
+
+          for item in records:
+              rel = item["image_url"]
+              if not rel.startswith("assets/artes-geradas-20261015/") or not rel.endswith(".webp"):
+                  raise SystemExit(f"Caminho inválido para {item['name']}: {rel}")
+              filename = root / rel
+              if not filename.is_file():
+                  raise SystemExit(f"Imagem ausente: {filename}")
+              data = filename.read_bytes()
+              if data[:4] != b"RIFF" or data[8:12] != b"WEBP":
+                  raise SystemExit(f"Imagem WebP inválida: {filename}")
+
+          print(f"Catálogo pronto: {len(records)} imagens verificadas.")
+          PY
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar conteúdo da pasta docs
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+      - name: Publicar site
+        id: deployment
+        uses: actions/deploy-pages@v4

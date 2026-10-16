@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c141c">
+<meta name="description" content="Bestiário navegável do SRD Card Game: 1.320 criaturas, 14 tipos, fichas, imagens e suportes disponíveis no repositório.">
+<title>Catálogo Geral · SRD Card Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<div class="container"><header class="topbar">
+<a class="brand" href="#top" aria-label="Ir ao topo"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2L24 15L37 20L24 25L20 38L16 25L3 20L16 15Z"/><circle cx="20" cy="20" r="4"/></svg><span>SRD <span style="color:#d5b679">CARD GAME</span></span></a>
+<div class="top-mark">Arquivo geral · 14 tipos · <a style="color:#dfc38f" href="galeria-artes-20261015.html">Galeria de artes geradas ↗</a></div>
+</header></div>
+<section class="hero container" id="top">
+<div class="eyebrow">BESTIÁRIO · CATÁLOGO DO PROJETO</div>
+<h1>Arquivo das <em>Criaturas</em></h1>
+<p class="hero-sub">1.320 criaturas distintas catalogadas. Fichas de combate, ilustrações de referência, pesquisas e habilidades existentes no repositório.</p>
+<div class="ornament" aria-hidden="true">✧</div>
+</section>
+<div class="tools"><div class="container tools-inner">
+<label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Pesquisar criatura, ID ou publicação..." aria-label="Pesquisar cartas" autocomplete="off"></label>
+<select id="type" class="rarity" aria-label="Filtrar tipo"><option value="all">Todos os 14 tipos</option></select>
+<select id="rarity" class="rarity" aria-label="Filtrar raridade"><option value="all">Todas as raridades</option><option value="Comum">Comum</option><option value="Incomum">Incomum</option><option value="Rara">Rara</option><option value="Lendária">Lendária</option><option value="Mítica">Mítica</option></select>
+<select id="scope" class="rarity" aria-label="Filtrar coleção ou informação">
+<option value="all">Todas as 1.320</option>
+<option value="607">Catálogo base 607</option>
+<option value="external">Entradas externas</option>
+<option value="celestial">Baralho Celestial</option>
+<option value="aberracao">Baralho Aberrações</option>
+<option value="image">Com ilustração</option>
+<option value="full">Ficha integral local</option>
+<option value="support">Com suporte documentado</option>
+</select>
+<div class="result-count"><strong id="count">—</strong> de 1.320</div>
+</div></div>
+<main class="container catalog">
+<div id="status" class="status-top" role="status">Carregando arquivos do repositório…</div>
+<div id="gallery" class="gallery" aria-label="Galeria de criaturas"><div id="loading">Abrindo o bestiário…</div></div>
+<div class="loadmore-wrap"><button id="more" class="loadmore" style="display:none" type="button">Carregar mais cartas</button></div>
+</main>
+<footer>SRD Card Game · <strong>Catálogo Geral</strong> · Dados de pesquisa e fontes do repositório. Não presume homologação de fichas, imagens ou suportes.</footer>
+<div id="modal" class="overlay" role="dialog" aria-modal="true" aria-label="Ficha completa da criatura" aria-hidden="true"><div class="detail" id="detail">
+<button class="detail-close" id="close" title="Fechar" aria-label="Fechar carta">×</button>
+<button class="navprev" id="prev" title="Carta anterior" aria-label="Carta anterior">‹</button><button class="navnext" id="next" title="Próxima carta" aria-label="Próxima carta">›</button>
+<div class="detail-art"><div id="detailArt" class="detail-art-image"></div><div id="imageActions" class="image-actions"></div></div>
+<div id="detailInfo" class="detail-right"></div>
+</div></div>
+<div id="lightbox" class="overlay image-overlay" role="dialog" aria-label="Imagem inteira ampliada" aria-hidden="true">
+<div class="light-head" id="lightTitle"></div><button id="lightClose" class="light-close" aria-label="Fechar imagem">×</button><div id="lightContent"></div>
+<div class="light-controls"><button id="zoomOut" title="Diminuir zoom">−</button><span id="zoomPct">100%</span><button id="zoomIn" title="Aumentar zoom">+</button><button id="zoomReset" title="Redefinir zoom" style="font-size:12px;padding:0 11px">Repor</button></div></div>
+<template id="missingImage"><div class="placeholder" aria-label="Ilustração não localizada"><svg viewBox="0 0 180 230" aria-hidden="true"><circle cx="90" cy="110" r="68"/><circle cx="90" cy="110" r="53"/><path d="M90 30L102 91L151 110L102 129L90 188L77 129L29 110L77 91Z"/><circle cx="90" cy="110" r="12"/></svg></div></template>
+<script src="app.js" defer></script>
+</body>
+</html>
