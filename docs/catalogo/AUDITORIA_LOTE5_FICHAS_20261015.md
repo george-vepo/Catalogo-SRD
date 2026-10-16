@@ -1,11 +1,11 @@
 # Lote 5 — seis referências mecânicas de terceiros (15/10/2026)
 
-> **Pesquisa integrada ao painel, não homologação de combate.** Base: PR #22; sequência de dependência #20 → #21 → #22 → este lote. Os arquivos originais `fichas-607.json`, `auditoria-607.json`, engine, baralhos, arte binária e UI não foram alterados.
+> **Pesquisa integrada ao painel, não homologação de combate.** Base: PR #22; sequência de dependência #20 → #21 → #22 → este lote. Os arquivos originais `fichas-607.json`, `auditoria-607.json`, engine, baralhos e arte binária não foram alterados. O `app.js` recebeu uma **alteração localizada somente na apresentação do painel ampliado**, preservando grade, filtros e navegação.
 
 ## Resultado verificável
 
 - **6 referências novas** (KP-S013–KP-S018) acrescentadas a `data/fichas-referencia-verificadas.json`, preservando os seis registros detalhados de TF-059 a TF-065 e todo seu conteúdo.
-- A aplicação **já consome** `extraSheets.records` e cruza o campo `id` com a megalista; portanto, os resumos estarão acessíveis ao abrir cada uma das seis cartas após a integração deste PR, sem precisar mudar a interface.
+- A aplicação **já consumia** `extraSheets.records` e cruzava o campo `id` com a megalista. Após merge, os seis resumos serão exibidos ao abrir as cartas. Foi adicionada somente uma apresentação específica no detalhe para indicar fonte parcial, não homologação e **link clicável à ficha original**.
 - Todas as seis identidades, NDs, CAs e PVs coincidem com `fichas-607.json`; nada foi sobregravado. Fonte individual, obra e status de leitura registrados por criatura.
 - Três páginas lidas diretamente; três entradas verificadas por índice textual indexado, com bloqueio intermitente da leitura direta. Nenhuma foi classificada como `COMPLETA_CANONICA`.
 
@@ -29,6 +29,6 @@ A transcrição integral dos livros, direitos de redistribuição/impressão, co
 - IDs únicos nas 12 referências; 6 referências antigas preservadas sem mudanças; 6 novas verificadas contra o JSON original para nome, ND, CA e PV.
 - 3 leituras diretas e 3 fontes indexadas explicitamente separadas; fontes e editoras versionadas.
 - Contagens do catálogo visual não se alteram: após o PR #20 proposto, **36/1.320** possuem referência web exibível; **1.284** continuam sem referência.
-- Sem testes de navegador HTTP/E2E, sem execução no Windows V-Bridge, sem licença de arte ou revisão independente; estes critérios continuam pendentes.
+- JavaScript compilado sintaticamente e verificado o mapeamento por ID. Não foram realizados testes de navegador HTTP/E2E, execução no Windows V-Bridge, licença de arte ou revisão independente; esses critérios continuam pendentes.
 
 **Aceite específico deste lote:** os seis resumos ficam disponíveis no painel após merge pela lógica já existente, mas não são fichas completas homologadas do card game.
