@@ -30,9 +30,15 @@ O site pode ser publicado via **GitHub Pages** apontando para a pasta `/docs` da
 Este snapshot adiciona dois arquivos de pesquisa, sem homologar itens automaticamente:
 
 - `data/curadoria-artes-20261015.json`: **4 referências web** aprovadas visualmente para uso ilustrativo no catálogo (AT-003, AT-009, AT-012, AT-024) e **5 candidatas recusadas**. Imagens continuam como links externos com direitos de reprodução não concedidos.
-- `data/fichas-referencia-verificadas.json`: **6 fichas mecânicas de referência** recuperadas dos JSONs detalhados do lote E (TF-059, TF-060, TF-061, TF-063, TF-064 e TF-065). O site exibe a referência detalhada separadamente, sem tratar a ficha como nova homologação do jogo.
+- `data/fichas-referencia-verificadas.json`: **6 fichas mecânicas detalhadas de referência** recuperadas do lote E e **6 novos resumos próprios de fontes externas** no lote 5 (KP-S013 a KP-S018). O site já lê esse arquivo e exibe essas referências quando a carta é aberta; elas não alteram a ficha original, o SRD 5.2.1 ou a homologação de regras.
 
-Atualmente, **35 das 1.320** espécies têm URL de imagem exibível a partir de qualquer uma das fontes registradas no site; **1.285 ainda não têm**. Arquivos binários não revisados do repositório **não são aceitos automaticamente**. Consulte o relatório `AUDITORIA_IMAGENS_FICHAS_20261015.md` para contagens, rejeições e pendências. 
+No snapshot integrado até o PR #19 havia **35 referências visuais** e 1.285 espécies sem imagem. O PR #20, ainda sujeito a revisão/merge, propõe **36 referências visuais** e 1.284 espécies sem imagem. Os lotes seguintes não aceitam novas imagens; arquivos binários não revisados não são aceitos automaticamente. Consulte `AUDITORIA_IMAGENS_FICHAS_20261015.md` e os relatórios dos lotes seguintes. 
+
+## Lote 5 — referências de terceiros (15/10/2026)
+
+Acrescentados ao painel existente **6 resumos próprios de fichas externas** (KP-S013 Giant, Jotun; KP-S014 Pustulent Shambler; KP-S015 Ooze, Scintillating; KP-S016 First Servant; KP-S017 Vesiculosa; KP-S018 Sinstar), mantendo os 6 detalhamentos anteriores. As páginas 5esrd foram conferidas diretamente para três espécies; as outras três utilizaram índices textuais de pesquisa, com acesso direto intermitente ou bloqueado. Cada registro identifica esse limite, origem e publicação.
+
+**Esses seis registros são referências não homologadas**, não fichas SRD 5.2.1 ou integrações à engine. O painel mostra resumos factuais, não transcrições integrais dos livros. CA/PV/ND são dados já existentes no catálogo-base; habilidades adicionais ficam separadas da mecânica canônica. Nenhuma arte foi autorizada ou acrescentada. Relatório: `AUDITORIA_LOTE5_FICHAS_20261015.md`.
 
 ## Dados versionados
 
