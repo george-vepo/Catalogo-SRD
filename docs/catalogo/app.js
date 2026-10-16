@@ -2,6 +2,8 @@
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const link = value => /^https:\/\/[^"'<> ]+/i.test(value||'') ? value : '';
+// SRD_CATALOGO_ARTES_GERADAS_20261015: accept only whitelisted local assets.
+const artSrc = value => (/^https:\/\/[^\"'<> ]+/i.test(value||'') || /^assets\/artes-geradas-20261015\/[a-z0-9-]+\.webp$/i.test(value||'')) ? value : '';
 const norm = value => String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
 const $gallery = $('gallery');
 const placeholder = () => $('missingImage').innerHTML.trim();
@@ -9,7 +11,7 @@ const classes = {'Comum':'common','Incomum':'uncommon','Rara':'rare','Lendária'
 const stop = text => { $('status').textContent = text; };
 const appState = {all:[], filtered:[], limit:60, active:null, lastFocus:null, zoom:1, x:0, y:0, drag:null};
 function safeImage(url, label) {
-  if (!link(url)) return placeholder();
+  if (!artSrc(url)) return placeholder();
   return '<img loading="lazy" referrerpolicy="no-referrer" src="' + esc(url) + '" alt="' + esc(label) + '">';
 }
 function onImageError(img) {
@@ -37,13 +39,16 @@ function referenceDetails(extra) {
   if (!extra) return '';
   const p = extra.provenance || {};
   const external = extra.reference_scope === 'EXTERNAL_THIRD_PARTY_SOURCE_SUMMARY';
-  const partial = external && String(p.verification_method || '').startsWith('INDICE_TEXTUAL_');
+  const method = String(p.verification_method || '').toUpperCase();
+  const partial = external && /INDICE|BLOQUEAD|PARCIAL|TEXTO_2023/.test(method);
   const title = external ? 'Ficha de terceiro resumida — não homologada' : 'Ficha de referência revisada — não homologada';
   const warning = external
-    ? (partial ? 'Fonte identificada por índice textual, mas leitura direta incompleta ou bloqueada. Este resumo é parcial, de terceiros, não é SRD 5.2.1 e não está homologado para o jogo.' : 'Resumo próprio de referência externa consultada. Não equivale à transcrição integral nem à mecânica homologada do card game.')
+    ? (partial ? 'A origem pode estar bloqueada e a conferência inclui índice ou espelho não oficial. Este resumo é de terceiros, não é SRD 5.2.1 e continua sem homologação para o jogo.' : 'Resumo próprio de referência externa consultada. Não equivale à transcrição integral nem à mecânica homologada do card game.')
     : 'Referência D&D 5e conferida em pesquisa anterior, com revisão independente ainda pendente. Não transforma os dados em mecânica oficial do card game.';
   const source = p.source_url || p.mechanical_source || '';
-  const sourceLink = source ? '<div class="linkrow">' + makeLink(source, 'Abrir fonte original') + '</div>' : '';
+  const alternate = p.source_alt_url || p.crosscheck_url || '';
+  const sourceLink = '<div class="linkrow">' + (source ? makeLink(source, 'Fonte original / portal de referência') : '') +
+    (alternate && alternate !== source ? makeLink(alternate, 'Referência secundária (não oficial)') : '') + '</div>';
   return section(title, '<p class="notice">' + esc(warning) + '</p>' + sourceLink +
     rawData(external ? 'Resumo e proveniência' : 'Estatísticas, traços, ações e condições da fonte', extra, true));
 }
@@ -163,10 +168,10 @@ function openCard(index,fromLink) {
     (c.aberracao.length?'<span class="pill">Deck Aberração</span>':'')+'</div>'+
     '<div class="stats">'+stat(c.nd,'NÍVEL DE DESAFIO')+stat(f?.CA??c.celestial[0]?.ac??'—','CLASSE DE ARMADURA')+stat(f?.PV??c.celestial[0]?.hp??'—','PV MÁXIMOS')+'</div>';
   let metaPairs=Object.entries(m).map(([k,v])=>pair(k,v)).join('');
-  const imageNote=c.art?
+  const imageNote=c.generated?'<p>Arte digital gerada em ChatGPT em revisão. Não é ilustração oficial da criatura, nem homologação da ficha ou dos direitos editoriais.</p>':c.art?
     '<p>Ilustração de referência (web), conforme arquivo de pesquisa. Fonte, edição e direitos de reprodução podem exigir revisão.</p>':
     '<p>Não há arte direta verificada e adequada para este registro. O catálogo não utiliza imagens de espécies parecidas como substituição.</p>';
-  const imageBlock=section('Imagem e licença',imageNote+(c.curated?'<p><strong>Revisão visual manual:</strong> '+esc(c.curated.evidence)+' · '+esc(c.curated.source_name)+' · '+esc(c.curated.source_version)+' · '+esc(c.curated.rights)+'</p>':'')+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
+  const imageBlock=section('Imagem e licença',imageNote+(c.generated?'<p><strong>Proveniência da arte:</strong> '+esc(c.generated.origin)+'. '+esc(c.generated.review_note)+'</p>':'')+(c.curated?'<p><strong>Revisão visual manual:</strong> '+esc(c.curated.evidence)+' · '+esc(c.curated.source_name)+' · '+esc(c.curated.source_version)+' · '+esc(c.curated.rights)+'</p>':'')+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
     (c.celestial[0]?.artNote?'<p>'+esc(c.celestial[0].artNote)+'</p>':''));
   $('detailInfo').innerHTML=top+status+deckBlock(c)+mechanicsSummary(c)+
     section('Identificação — todos os campos da megalista','<div class="meta-pairs">'+metaPairs+'</div>')+
@@ -239,17 +244,19 @@ async function getJSON(path){
 }
 async function init(){
  try{
-   const [mega,srd,visuais,ledger,celestial,aberracao,aberrSupports,deepResearch,curadoria,extraSheets]=await Promise.all([
+   const [mega,srd,visuais,ledger,celestial,aberracao,aberrSupports,deepResearch,curadoria,extraSheets,generatedArts]=await Promise.all([
      getJSON('data/megalista-1320.json'), getJSON('data/fichas-607.json'),
      getJSON('data/imagens-607.json'), getJSON('data/auditoria-607.json'),
      getJSON('data/deck-celestial-40.json'),getJSON('data/deck-aberracao-40.json'),
-     getJSON('data/suportes-aberracao.json'),getJSON('data/pesquisas-aprofundadas.json'),getJSON('data/curadoria-artes-20261015.json'),getJSON('data/fichas-referencia-verificadas.json')
+     getJSON('data/suportes-aberracao.json'),getJSON('data/pesquisas-aprofundadas.json'),getJSON('data/curadoria-artes-20261015.json'),getJSON('data/fichas-referencia-verificadas.json'),getJSON('data/artes-geradas-20261015.json')
    ]);
    const fichas=new Map(srd.fichas.map(x=>[x.id,x]));
    const imagens=new Map(visuais.records.map(x=>[x.ID,x]));
    const auditoria=new Map(ledger.records.map(x=>[x.ID,x]));
    const approvedArts=new Map(curadoria.approved.filter(x=>x.rating==='REFERENCIA_VISUAL_ACEITA').map(x=>[x.id,x]));
    const extraRecords=new Map(extraSheets.records.map(x=>[x.id,x]));
+   const generatedById=new Map(generatedArts.records.filter(x=>x.principal&&x.catalog_id).map(x=>[x.catalog_id,x]));
+   const generatedByName=new Map(generatedArts.records.filter(x=>x.principal&&x.catalog_name).map(x=>[norm(x.catalog_name),x]));
    const cByName=new Map(),aByName=new Map();
    for(const x of celestial.records){const n=norm(x.name);if(!cByName.has(n))cByName.set(n,[]);cByName.get(n).push(x);}
    const sp=new Map(aberrSupports.records.map(x=>[norm(x.nome),x]));
@@ -258,14 +265,15 @@ async function init(){
      const name=m.NOME, id=m['ID NO JOGO']||'';
      const f=id?fichas.get(id):null,im=id?imagens.get(id):null,deep=id?(deepResearch.records[id]||[]):[];
      const curated=id?approvedArts.get(id):null,extra=id?extraRecords.get(id):null;
+     const generated=(id&&generatedById.get(id))||generatedByName.get(norm(name))||null;
      const cel=cByName.get(norm(name))||[],abe=aByName.get(norm(name))||[];
      const verifiedSource=im?.URL_imagem_direta && im?.Status_verificacao?.includes('MIME, dimensões e correspondência visual confirmados');
-     const web=curated?.image_url || (cel[0]&&cel[0].art) || (verifiedSource?im.URL_imagem_direta:'');
-     const art=link(web)?web:'';
+     const web=generated?.image_url || curated?.image_url || (cel[0]&&cel[0].art) || (verifiedSource?im.URL_imagem_direta:'');
+     const art=artSrc(web)?web:'';
      const alternates=id==='TF-085'?[...srd.fichas.filter(x=>x.id==='KP-S007')]:[];
      const keyfields=[name,id,...alternates.map(x=>x.id),m.TIPO,m.FONTE,m.PUBLICAÇÃO,m.EDITORA,...(m['ALIASES CONSOLIDADOS']?[m['ALIASES CONSOLIDADOS']]:[])];
      return {index:i,name,nd:m.ND,rarity:m.RARIDADE,type:m.TIPO,meta:m,mechanics:f||null,artRecord:im||null,
-       audit:id?auditoria.get(id)||null:null,celestial:cel,aberracao:abe,research:deep,alternates,curated,extra,art,
+       audit:id?auditoria.get(id)||null:null,celestial:cel,aberracao:abe,research:deep,alternates,curated,generated,extra,art,
        search:norm(keyfields.join(' '))};
    });
    if(list.length!==1320)throw Error('Esperados 1320 registros, recebidos '+list.length);
@@ -276,7 +284,7 @@ async function init(){
    const nImg=list.filter(x=>x.art).length;
    const nInt=list.filter(x=>x.mechanics?.ficha_integral_texto_local).length;
    const nSupport=list.filter(x=>x.celestial.length||x.aberracao.some(a=>a.support)).length;
-   stop('1.320 criaturas · '+fichas.size+' fichas mecânicas · '+nInt+' textos integrais locais · '+nImg+' referências visuais · '+nSupport+' criaturas com suporte candidato');
+   stop('1.320 criaturas · '+fichas.size+' fichas mecânicas · '+nInt+' textos integrais locais · '+nImg+' artes e referências visuais · '+nSupport+' criaturas com suporte candidato');
    render(true);
    const hash=decodeURIComponent(location.hash.slice(1));
    if(hash.startsWith('c/')){const idx=Number(hash.slice(2));if(Number.isInteger(idx)&&idx>=0&&idx<list.length)openCard(idx,true)}

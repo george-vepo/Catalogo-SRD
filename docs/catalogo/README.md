@@ -36,7 +36,7 @@ No snapshot integrado até o PR #19 havia **35 referências visuais** e 1.285 es
 
 ## Lote 5 — referências de terceiros (15/10/2026)
 
-Acrescentados ao painel existente **6 resumos próprios de fichas externas** (KP-S013 Giant, Jotun; KP-S014 Pustulent Shambler; KP-S015 Ooze, Scintillating; KP-S016 First Servant; KP-S017 Vesiculosa; KP-S018 Sinstar), mantendo os 6 detalhamentos anteriores. As páginas 5esrd foram conferidas diretamente para três espécies; as outras três utilizaram índices textuais de pesquisa, com acesso direto intermitente ou bloqueado. Cada registro identifica esse limite, origem e publicação.
+Acrescentados ao painel existente **6 resumos próprios de fichas externas** (KP-S013 Giant, Jotun; KP-S014 Pustulent Shambler; KP-S015 Ooze, Scintillating; KP-S016 First Servant; KP-S017 Vesiculosa; KP-S018 Sinstar), mantendo os 6 detalhamentos anteriores. Três páginas 5esrd foram consultadas diretamente no lote 5; na revisão do lote 7, Sinstar recebeu conferência direta em referência secundária KPOGL (não oficial), Vesiculosa teve sua edição 2023 confrontada com fontes indexadas e a diferença para 2016 documentada, enquanto First Servant segue com acesso direto bloqueado. Cada registro distingue fonte, edição, limites de leitura e pendências.
 
 **Esses seis registros são referências não homologadas**, não fichas SRD 5.2.1 ou integrações à engine. O painel mostra resumos factuais, não transcrições integrais dos livros. CA/PV/ND são dados já existentes no catálogo-base; habilidades adicionais ficam separadas da mecânica canônica. Nenhuma arte foi autorizada ou acrescentada. Relatório: `AUDITORIA_LOTE5_FICHAS_20261015.md`.
 
@@ -45,6 +45,12 @@ Acrescentados ao painel existente **6 resumos próprios de fichas externas** (KP
 Nova **referência visual de domínio público documentado** para **AT-015 Mammoth**: [pintura de Charles R. Knight, 1908](https://commons.wikimedia.org/wiki/File:Imperial_mammoth_by_Knight.jpg), [acervo do AMNH](https://digitalcollections.amnh.org/archive/Imperial-Mammoth-2URM1THLZ0V.html). A obra representa um mamute-colombiano (Mammuthus columbi), espécie real correspondente à denominação genérica **Mammoth**, não uma arte oficial de D&D. Sem arte cortada, textos ou moldura; dimensões de **1.009×689 px**, horizonte amplo e figura inteira. Domínio público EUA documentado pelo Wikimedia Commons; no Brasil o autor faleceu em 1953 e aplica-se o prazo geral do art. 41 da Lei 9.610/1998. Revisão jurídica de distribuição para outros países e de uso comercial final ainda pendente.
 
 A antiga **candidata Mammoth rejeitada** continua registrada em `curadoria-artes-20261015.json` → `rejected_history`, e não foi apagada. **Apenas a URL de referência artística mudou**, sem copiar arquivo, alterar mecânicas, interface ou regras. Lote sujeito aos PRs #20–#23 e sua revisão. Consulte `AUDITORIA_LOTE6_MAMMOTH_20261015.md`.
+
+## Lote 7 — distinção entre edições e fontes (15/10/2026)
+
+Foi confirmada pela [Kobold Press](https://koboldpress.com/tome-of-beasts-1-what-changed/) a existência de uma **revisão de Tome of Beasts 1 em 2023** distinta da publicação original de 2016. Para **KP-S017 Vesiculosa**, o resumo do catálogo mantém a edição **2023** (PV 232, DES 15, escavação 20 pés), enquanto uma referência histórica da versão 2016 aponta **PV 203, DES 10, escavação 5 pés**. A divergência é registrada, não corrigida por mesclagem ou inferência. Os dados 2016 ainda exigem cotejamento com publicação original antes de homologação.
+
+A ficha **KP-S018 Sinstar** foi conferida pela página completa de um [espelho secundário KPOGL](https://kpogl.wikidot.com/monster:sinstar) e recebeu resumos próprios de ataques, condições, ações lendárias e recursos de covil. O painel agora distingue a origem primária (5esrd, com bloqueio de acesso intermitente) da referência secundária **não oficial**. Ambas continuam **referências externas não homologadas**. A contagem permanece 12 referências de consulta, 607 registros de base e 37 imagens propostas após os PRs empilhados. Ver `AUDITORIA_LOTE7_EDICOES_FONTES_20261015.md`.
 
 ## Dados versionados
 
