@@ -41,3 +41,9 @@ Inventariar as fichas por ID canônico, SHA-256, fonte/edição e pendências, i
 Além dos 3 arquivos iniciais, foram arquivados mais **11 WebP** sem duplicar os registros que já existiam: Gazer (sem ID canônico), Ahu-Nixta (TF-001), Asanbosam (TF-003), Astral Snapper (TF-004), Birgemon Seal (TF-005), Xenabsorber (TF-006), Yann-An-Oed (TF-007), Light Eater (TF-272), Shoth, Sooze (TF-273), Malleable, Minor (TF-274) e Maw Swarm (TF-275). Todas as 14 imagens são rotuladas como arte autoral com publicação autorizada e correspondência editorial em revisão.
 
 **Ainda não concluído:** não foram importadas as centenas de imagens em `Imagens/Novas`, nem as fichas completas além das 3 SRD do primeiro lote. A pasta `Em Revisao` não deve ser aprovada automaticamente. O arquivo de manifesto não inclui dados pessoais, tokens ou URLs privados do Drive.
+
+## Lote adicional — Imagens / Novas (21/10/2026)
+
+Quatro PNGs originários da pasta **Novas** foram ligados por ID canônico exato: **TF-018 Voidling, TF-017 Ancient Aboleth, TF-015 Aboleth Brute e TF-012 Xhkarsh**. Os nomes dos arquivos incluem `candidata-nao-homologada`, portanto o manifesto guarda explicitamente `preview_na_grade: false`: estas imagens aparecem apenas no painel de detalhes com aviso de revisão e não substituem as imagens principais do catálogo. A autorização do usuário cobre sua publicação, não a homologação visual ou mecânica.
+
+O inventário passa a **19 imagens autorais** e **12 fichas SRD complementares** no manifesto, preservando 1.320 registros. A pasta Novas contém mais arquivos do que a primeira página listada pelo Drive; não declarar inventário integral com base no retorno limitado da consulta. Priorizar próximos lotes após deduplicação por ID e revisão visual da espécie.
