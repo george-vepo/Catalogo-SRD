@@ -80,7 +80,9 @@ function render(reset) {
     const frame=document.createElement('div');frame.className='art-frame';frame.innerHTML=safeImage(c.art,'Ilustração de referência de '+c.name);
     const img=frame.querySelector('img');if(img)img.addEventListener('error',()=>onImageError(img),{once:true});
     const name=document.createElement('span');name.className='creature-name';name.textContent=c.name;
-    btn.append(frame,name);btn.addEventListener('click',()=>openCard(c.index));
+    btn.append(frame,name);
+    if(c.artIsDrive){const label=document.createElement('span');label.className='drive-art-notice';label.textContent='Arte do autor · em revisão';btn.append(label);}
+    btn.addEventListener('click',()=>openCard(c.index));
     frag.append(btn);
   });
   $gallery.append(frag);
@@ -187,12 +189,12 @@ function openCard(index,fromLink) {
     (c.aberracao.length?'<span class="pill">Deck Aberração</span>':'')+'</div>'+
     '<div class="stats">'+stat(c.nd,'NÍVEL DE DESAFIO')+stat(f?.CA??c.celestial[0]?.ac??'—','CLASSE DE ARMADURA')+stat(f?.PV??c.celestial[0]?.hp??'—','PV MÁXIMOS')+'</div>';
   let metaPairs=Object.entries(m).map(([k,v])=>pair(k,v)).join('');
-  const imageNote=c.generated?'<p>Arte digital gerada em ChatGPT em revisão. Não é ilustração oficial da criatura, nem homologação da ficha ou dos direitos editoriais.</p>':c.art?
+  const imageNote=c.artIsDrive?'<p>Imagem criada pelo usuário e publicada com sua autorização em 21/10/2026. Identidade e estilo editorial ainda em revisão; não é ilustração oficial D&D nem altera a ficha da criatura.</p>':c.generated?'<p>Arte digital gerada em ChatGPT em revisão. Não é ilustração oficial da criatura, nem homologação da ficha ou dos direitos editoriais.</p>':c.art?
     '<p>Ilustração de referência (web), conforme arquivo de pesquisa. Fonte, edição e direitos de reprodução podem exigir revisão.</p>':
     '<p>Não há arte direta verificada e adequada para este registro. O catálogo não utiliza imagens de espécies parecidas como substituição.</p>';
   const candidataDrive = c.driveArt ?
     '<div class="notice"><strong>Arte adicional do Drive — ' + esc(c.driveArt.status) +
-    ':</strong> imagem candidata, sem substituição da ilustração principal nem autorização de reprodução homologada.</div>' +
+    ':</strong> imagem criada pelo usuário, com publicação autorizada no Catálogo SRD. A identidade visual permanece em revisão.</div>' +
     safeImage(c.driveArt.arquivo, 'Arte candidata do Drive de ' + c.name) +
     '<p class="src-note">' + esc(c.driveArt.revisao_visual) + ' · ' + esc(c.driveArt.direitos) + '</p>' : '';
   const imageBlock=section('Imagem e licença',imageNote+candidataDrive+(c.generated?'<p><strong>Proveniência da arte:</strong> '+esc(c.generated.origin)+'. '+esc(c.generated.review_note)+'</p>':'')+(c.curated?'<p><strong>Revisão visual manual:</strong> '+esc(c.curated.evidence)+' · '+esc(c.curated.source_name)+' · '+esc(c.curated.source_version)+' · '+esc(c.curated.rights)+'</p>':'')+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
@@ -298,12 +300,19 @@ async function init(){
      const cel=cByName.get(norm(name))||[],abe=aByName.get(norm(name))||[];
      const verifiedSource=im?.URL_imagem_direta && im?.Status_verificacao?.includes('MIME, dimensões e correspondência visual confirmados');
      const web=generated?.image_url || curated?.image_url || (cel[0]&&cel[0].art) || (verifiedSource?im.URL_imagem_direta:'');
-     const art=artSrc(web)?web:'';
+     const driveArt=driveArtById.get(id)||(!id&&driveArtByName.get(norm(name)))||null;
+    // Apenas IDs exatos podem receber arte de prévia na grade. Referências sem
+    // ID canônico continuam somente no painel de detalhes, sem inventar ID.
+    const existingArt=artSrc(web)?web:'';
+    const artIsDrive=Boolean(!existingArt && id && driveArt?.id_catalogo===id &&
+      driveArt?.direitos==='CRIADA_PELO_USUARIO_PUBLICACAO_AUTORIZADA_20261021' &&
+      artSrc(driveArt.arquivo));
+    const art=existingArt || (artIsDrive?driveArt.arquivo:'');
      const alternates=id==='TF-085'?[...srd.fichas.filter(x=>x.id==='KP-S007')]:[];
      const keyfields=[name,id,...alternates.map(x=>x.id),m.TIPO,m.FONTE,m.PUBLICAÇÃO,m.EDITORA,...(m['ALIASES CONSOLIDADOS']?[m['ALIASES CONSOLIDADOS']]:[])];
      return {index:i,name,nd:m.ND,rarity:m.RARIDADE,type:m.TIPO,meta:m,mechanics:f||null,artRecord:im||null,
-       audit:id?auditoria.get(id)||null:null,celestial:cel,aberracao:abe,research:deep,alternates,curated,generated,extra,art,
-       driveArt:driveArtById.get(id)||(!id&&driveArtByName.get(norm(name)))||null,
+       audit:id?auditoria.get(id)||null:null,celestial:cel,aberracao:abe,research:deep,alternates,curated,generated,extra,art,artIsDrive,
+       driveArt,
        driveFicha:driveFichaById.get(id)||null,
        search:norm(keyfields.join(' '))};
    });
@@ -315,7 +324,7 @@ async function init(){
    const nImg=list.filter(x=>x.art).length;
    const nInt=list.filter(x=>x.mechanics?.ficha_integral_texto_local).length;
    const nSupport=list.filter(x=>x.celestial.length||x.aberracao.some(a=>a.support)).length;
-   stop('1.320 criaturas · '+fichas.size+' fichas mecânicas · '+nInt+' textos integrais locais · '+nImg+' artes e referências visuais · '+nSupport+' criaturas com suporte candidato · '+driveImport.artes.length+' artes e '+driveImport.fichas.length+' fichas complementares do Drive (em revisão)');
+   stop('1.320 criaturas · '+fichas.size+' fichas mecânicas · '+nInt+' textos integrais locais · '+nImg+' artes e referências visuais · '+nSupport+' criaturas com suporte candidato · '+driveImport.artes.length+' artes autorais (publicação autorizada, identidade em revisão) e '+driveImport.fichas.length+' fichas complementares do Drive');
    render(true);
    const hash=decodeURIComponent(location.hash.slice(1));
    if(hash.startsWith('c/')){const idx=Number(hash.slice(2));if(Number.isInteger(idx)&&idx>=0&&idx<list.length)openCard(idx,true)}
