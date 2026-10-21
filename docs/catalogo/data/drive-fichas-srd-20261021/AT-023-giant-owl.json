@@ -1,0 +1,148 @@
+{
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-011",
+  "data_validacao": "2026-10-17T00:29:16-03:00",
+  "ORDEM_PRIORIZADA": 41,
+  "ORDEM_1320": 186,
+  "CHAVE": "AT-023",
+  "ID_CATALOGO": "AT-023",
+  "nome": "Giant Owl",
+  "tipo_catalogo": "Celestial",
+  "ND_catalogo": "1/4",
+  "classe_catalogo": "Comum",
+  "origem_publicacao_catalogo": "Catálogo ativo v1.1",
+  "edicao_fonte_considerada": "SRD 5.2.1 (2024/2025) — Giant Owl Celestial",
+  "origem": "CATÁLOGO 607",
+  "status_ficha": "COMPLETA_MECANICAS_VALIDADA",
+  "homologacao_administrativa": false,
+  "edicao_combate_card_game": "SRD 5.2.1 (aplicação de regras comuns sem alterar ficha legada)",
+  "fontes_consultadas": [
+    "/SRD Card Game/Decks/Celestial/Fichas por criatura/01_Giant_Owl.md",
+    "/SRD Card Game/Decks/Celestial/Fichas SRD integrais/giant_owl_srd521_paginas_352-353.pdf",
+    "https://rules.omnisgm.com/en/dnd/srd-5.2/animals/giant-owl/",
+    "https://www.fantasygrounds.com/library/5e/dd-srd-5-2-1/animals"
+  ],
+  "avisos_auditoria": [
+    "Não confundir com Giant Owl do SRD 5.1, que era Beast, tinha INT 8/WIS 13, Talons +3 e dano 2d6+1.",
+    "A classificação Celestial no SRD 5.2.1 coincide com o catálogo do jogo; a distinção é de edição."
+  ],
+  "pendencias_card_game": [
+    "Homologação final de uso de magias divinatórias fora de arena e dos suportes selecionados; mecânica da criatura é integral SRD.",
+    "Não usar como referência o stat block Beast do SRD 5.1."
+  ],
+  "tracos": [
+    {
+      "name": "Flyby",
+      "effect": "não provoca ataque de oportunidade ao sair do alcance do inimigo voando"
+    }
+  ],
+  "acoes": [
+    {
+      "name": "Talons",
+      "kind": "melee_attack_roll",
+      "attack_bonus": 4,
+      "reach_ft": 5,
+      "damage": [
+        {
+          "dice": "1d10",
+          "flat": 2,
+          "average": 7,
+          "type": "slashing"
+        }
+      ]
+    },
+    {
+      "name": "Spellcasting",
+      "ability": "WIS",
+      "components": false,
+      "at_will": [
+        "Detect Evil and Good",
+        "Detect Magic"
+      ],
+      "one_per_day_each": [
+        "Clairvoyance"
+      ]
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": [],
+  "acoes_covil": [],
+  "acoes_miticas": [],
+  "conjuracao": [
+    {
+      "name": "Spellcasting",
+      "ability": "WIS",
+      "components": false,
+      "at_will": [
+        "Detect Evil and Good",
+        "Detect Magic"
+      ],
+      "one_per_day_each": [
+        "Clairvoyance"
+      ]
+    }
+  ],
+  "recursos": [
+    {
+      "name": "Clairvoyance",
+      "per_day": 1
+    }
+  ],
+  "porte": "Large",
+  "alinhamento": "neutral",
+  "ca": 12,
+  "pv_maximos": 19,
+  "formula_pv": "3d10+3",
+  "iniciativa": {
+    "modificador": 2,
+    "score": 12,
+    "fonte": "texto integral SRD 5.2.1"
+  },
+  "atributos": {
+    "STR": 13,
+    "DEX": 15,
+    "CON": 12,
+    "INT": 10,
+    "WIS": 14,
+    "CHA": 10
+  },
+  "bonus_proficiencia": 2,
+  "deslocamento_ft": {
+    "walk": 5,
+    "fly": 60
+  },
+  "salvaguardas": {
+    "STR": 1,
+    "DEX": 2,
+    "CON": 1,
+    "INT": 0,
+    "WIS": 4,
+    "CHA": 0
+  },
+  "pericias": {
+    "Perception": 6,
+    "Stealth": 6
+  },
+  "resistencias_dano": [
+    "necrotic",
+    "radiant"
+  ],
+  "imunidades_dano": [],
+  "imunidades_condicao": [],
+  "sentidos": {
+    "darkvision_ft": 120,
+    "passive_perception": 16
+  },
+  "idiomas": {
+    "spoken": [
+      "Celestial"
+    ],
+    "understands": [
+      "Common",
+      "Elvish",
+      "Sylvan"
+    ],
+    "cannot_speak_understood_languages": true
+  }
+}

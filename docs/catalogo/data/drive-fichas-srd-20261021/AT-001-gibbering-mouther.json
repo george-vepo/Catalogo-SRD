@@ -1,0 +1,201 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+  "identificacao": {
+    "nome_canonico": "Gibbering Mouther",
+    "chave": "AT-001",
+    "id_catalogo": "AT-001",
+    "ordem_priorizada": 8,
+    "ordem_1320": 14,
+    "deck_origem": "Aberração",
+    "tipo": "Aberração",
+    "nd": "2",
+    "classe": "Comum",
+    "editora": "SRD 5.2.1",
+    "publicacao": "Catálogo ativo v1.1",
+    "origem_catalogo": "CATÁLOGO 607"
+  },
+  "estatisticas_e_mecanicas": {
+    "tamanho": "Médio",
+    "alinhamento": "caótico e neutro",
+    "ca": 9,
+    "ca_tipo": "SRD 5.2.1 (valor de ficha)",
+    "pv": 52,
+    "pv_formula": "7d8+21",
+    "deslocamentos_pes": {
+      "terrestre": 20,
+      "voo": null,
+      "natacao": 20,
+      "escalada": null,
+      "pairar": false
+    },
+    "atributos": {
+      "FOR": 10,
+      "DES": 8,
+      "CON": 16,
+      "INT": 3,
+      "SAB": 10,
+      "CAR": 6
+    },
+    "modificadores_atributos": {
+      "FOR": 0,
+      "DES": -1,
+      "CON": 3,
+      "INT": -4,
+      "SAB": 0,
+      "CAR": -2
+    },
+    "iniciativa_bonus": -1,
+    "proficiencia_bonus": 2,
+    "salvaguardas": {},
+    "pericias": {},
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 10
+    },
+    "idiomas": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicoes": [
+      "caído"
+    ],
+    "tracos": [
+      {
+        "nome": "Aberrant Ground",
+        "area": {
+          "formato": "emanação",
+          "raio_pes": 10
+        },
+        "efeito": "A superfície terrestre dentro da emanação é terreno difícil."
+      },
+      {
+        "nome": "Gibbering",
+        "gatilho": "Uma criatura começa seu turno a até 20 pés enquanto o Gibbering Mouther está balbuciando e não está incapacitado.",
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 10
+        },
+        "falha": {
+          "dado": "1d8",
+          "resultados": [
+            {
+              "intervalo": "1-4",
+              "efeito": "A vítima não faz nada durante esse turno."
+            },
+            {
+              "intervalo": "5-6",
+              "efeito": "A vítima não usa ação nem ação bônus e gasta todo o movimento em direção aleatória."
+            },
+            {
+              "intervalo": "7-8",
+              "efeito": "A vítima realiza ataque corpo a corpo contra criatura aleatória ao alcance; sem alvo viável não faz nada."
+            }
+          ]
+        },
+        "sucesso": "Sem efeito nesta ocorrência.",
+        "nota_edicao": "SRD 5.2.1 não acrescenta perda de reações e não condiciona o gatilho a ouvir como na versão 2014."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Bite",
+        "economia": "acao",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 2,
+        "alcance_pes": 5,
+        "dano": {
+          "dados": "2d6",
+          "tipo": "perfurante",
+          "media": 7
+        },
+        "efeito_ao_acertar": {
+          "condicao": "caído",
+          "alvo_tamanho_maximo": "Médio",
+          "teste_adicional": null
+        },
+        "efeito_especial": "Caso a Mordida reduza o alvo a zero PV, o alvo morre e o corpo é absorvido, restando os equipamentos."
+      },
+      {
+        "nome": "Blinding Spittle",
+        "economia": "acao",
+        "recarga": "5-6 em 1d6 no início do turno, conforme regras de recarga aplicáveis",
+        "area": {
+          "tipo": "esfera",
+          "raio_pes": 10,
+          "centro_a_ate_pes": 30
+        },
+        "salvaguarda": {
+          "atributo": "DES",
+          "cd": 10
+        },
+        "falha": {
+          "dano": {
+            "dados": "2d6",
+            "tipo": "radiante",
+            "media": 7
+          },
+          "condicao": "cego",
+          "duracao": "Até o final do próximo turno do Gibbering Mouther"
+        },
+        "sucesso": "Sem efeito previsto na ficha."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "magias": [],
+    "multiataque": null,
+    "recargas": [
+      {
+        "recurso": "Blinding Spittle",
+        "dados": "1d6",
+        "resultados_recarga": [
+          5,
+          6
+        ]
+      }
+    ]
+  },
+  "auditoria": {
+    "data_execucao_local": "2026-10-16",
+    "modo": "manual_lote_de_4",
+    "ficha_anterior": "resumo_deck_nao_homologado",
+    "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/08_Gibbering_Mouther.md",
+    "regra_de_edicao": "Somente a ficha do Gibbering Mouther do SRD 5.2.1 (2024); nenhuma estatística legada 2014.",
+    "status_validacao_mecanica": "CONCLUIDA",
+    "homologacao_de_carta_pelo_administrador": false,
+    "observacoes": [
+      "Ficha original SRD integral foi conferida diretamente no PDF do projeto, p. 288 (página impressa).",
+      "Os resultados de 1d8 do traço Gibbering foram preservados com granularidade para o árbitro."
+    ],
+    "pendencias_operacionais": [],
+    "divergencias": [
+      {
+        "campo": "edicao/estatisticas",
+        "fonte_divergente": "SRD 2014: 67 PV, deslocamento 10 pés, Bite 5d6, Blinding Spittle sem dano; versão possui Multiattack.",
+        "valor_adotado": "SRD 5.2.1: 52 PV, deslocamento 20 pés, Bite 2d6, Blinding Spittle com dano radiante 2d6; nenhum Multiattack listado."
+      }
+    ],
+    "fontes": [
+      {
+        "classe": "fonte_primaria_local",
+        "titulo": "SRD 5.2.1 (2024), p. 288, Monstros: Gibbering Mouther",
+        "caminho_local": "/mnt/data/SRD_CC_v5.2.1.pdf",
+        "url": "https://www.dndbeyond.com/srd"
+      },
+      {
+        "classe": "transcricao_publica_edicao_correta",
+        "titulo": "OmnisGM — Gibbering Mouther, SRD 5.2.1",
+        "url": "https://rules.omnisgm.com/en/dnd/srd-5.2/monsters-a-z/gibbering-mouther/"
+      },
+      {
+        "classe": "referencia_licenca",
+        "titulo": "SRD 5.2.1 CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "campos_nao_listados": "Não se presumem habilidades extras ou bônus não indicados no bloco original.",
+    "habilidade_suporte_deck": "Proposta separada: não incorporada automaticamente à ficha base.",
+    "atribuicao_licenca": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+  }
+}
