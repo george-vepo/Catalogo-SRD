@@ -102,5 +102,8 @@ for item in correspondencias:
     assert item["id_catalogo"] in by_id
     assert by_id[item["id_catalogo"]]["NOME"] == item["nome"]
     assert item["status"] in {"CANDIDATA", "REVISAR", "REJEITADA"}
-    assert any(a["id_catalogo"] == item["id_catalogo"] for a in manifest["artes"]) == item["ja_no_manifesto"], item["id_catalogo"]
+    # ja_no_manifesto registra a fotografia da auditoria de 21/10, não o estado atual.
+    # Novas integrações podem adicionar um ID que naquela data ainda não estava importado.
+    if item["ja_no_manifesto"]:
+        assert any(a["id_catalogo"] == item["id_catalogo"] for a in manifest["artes"]), item["id_catalogo"]
 print("Auditoria Drive Novas OK: 567 arquivos; correspondências cruzadas sem homologação.")
