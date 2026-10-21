@@ -179,3 +179,28 @@ assert 'id="show-missing"' in html and "id_na_megalista_web" in js
 assert "textContent" in js and "innerHTML" not in js
 assert "nenhuma informação foi homologada" in js.lower()
 print("Consulta preliminar 635 OK: IDs, metadados canônicos, 29 faltantes, 136 booster SIM, sem mecânicas.")
+
+
+# Auditoria não destrutiva das fichas v2.1 localizadas no Drive (sem homologação).
+v21_audit_path = ROOT / "auditoria/fichas-v21-29-ids-ausentes-20261021.json"
+v21 = json.loads(v21_audit_path.read_text("utf-8"))
+assert v21["schema"] == "SRD_AUDITORIA_FICHAS_V21_IDS_AUSENTES_V1"
+assert v21["indicadores_extraidos_do_resumo"]["criaturas_distintas_com_json"] == 139
+assert v21["indicadores_extraidos_do_resumo"]["json_vinculados_ao_catalogo_ativo"] == 68
+assert v21["indicadores_extraidos_do_resumo"]["documentos_integrais_no_acervo"] == 146
+assert v21["ids_ausentes_web_total"] == len(v21["registros"]) == 29
+assert v21["ids_homebrew_preservados_sem_json"] == 28
+assert v21["id_terceiros_sem_json"] == "KP-S007"
+assert {r["id_catalogo"] for r in v21["registros"]} == {
+    r["id_catalogo"] for r in concil["ids_ativos_ausentes_web"]
+}
+for item in v21["registros"]:
+    assert item["declaracao_json_v2_1"] == "SEM JSON NESTE ACERVO"
+    assert item["documento_integral_associado_na_v2_1"] is False
+    assert item["conclusao"] == "FICHA_INTEGRAL_NAO_RECUPERADA"
+    assert item["nao_inferir_mecanicas"] is True
+    assert item["id_catalogo"] not in by_id
+    if item["id_catalogo"] != "KP-S007":
+        assert item["situacao_indice_v2_0"] == "PRESERVADA"
+        assert item["declaracao_ficha_v2_0"] == "FICHA COMPLETA ORIGINAL"
+print("Auditoria v2.1 OK: 29 IDs ausentes sem JSON (28 homebrew preservados, 1 referência externa).")
