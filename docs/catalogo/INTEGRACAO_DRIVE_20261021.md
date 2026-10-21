@@ -59,3 +59,7 @@ Foram publicados quatro WebPs autorais identificados por ID e nome canônico: **
 ## Segundo lote WebP otimizado (21/10/2026)
 
 Mais **8 artes autorais candidatas** foram incorporadas em formato WebP: TF-009 Astral Devourer, TF-010 Chelicerae, TF-013 Yavalnoi, TF-014 Ziphius, TF-283 Shukankor, TF-284 Malleable, Major, TF-286 Malleable, Massive e AT-025 Unicorn. Todas foram verificadas por nome e ID canônico, associadas a SHA-256 do PNG de origem e do WebP final. Arquivos permanecem `CANDIDATA_NOVAS_NAO_HOMOLOGADA` com `preview_na_grade: false` e sem substituir artes aprovadas. Total **31 artes candidatas no manifesto e 14 fichas complementares**; continuam **1.320 criaturas**.
+
+## Terceiro lote WebP otimizado — 21/10/2026
+
+Mais **12 artes de autoria do usuário** foram transferidas em WebP: AT-011 Allosaurus, AT-026 Deva, AT-028 Sphinx of Lore, AT-031 Sphinx of Valor, TF-024 Beetle, Lantern, TF-025 Beetle, Sniffer, TF-026 Bilby, TF-031 Crab, Razorback, TF-035 Giant Moth, TF-037 Giant Moth, Shockwing, TF-280 Mamura e TF-292 Snake, Zanskaran Viper. Origem: Drive `Imagens/Novas`, com correspondência exata de nome/ID com a megalista e hash SHA-256 do PNG de origem e do WebP. Imagens ilustrativas **CANDIDATA_NOVAS_NAO_HOMOLOGADA**, não homologadas nem substituindo artes aprovadas (`preview_na_grade=false`, `substitui_arte_aprovada=false`). Total no manifesto: **43 artes autorais adicionais e 14 fichas complementares**. Os 1.320 registros originais continuam intactos.
