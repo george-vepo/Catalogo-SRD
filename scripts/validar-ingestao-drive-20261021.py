@@ -14,7 +14,7 @@ assert len(mega["records"]) == 1320
 
 by_id = {c["ID NO JOGO"]: c for c in mega["records"] if c["ID NO JOGO"]}
 by_name = {c["NOME"]: c for c in mega["records"]}
-assert len(manifest["artes"]) == 15
+assert len(manifest["artes"]) == 19
 assert len(manifest["fichas"]) == 12
 ids_art = set()
 for art in manifest["artes"]:
@@ -79,4 +79,4 @@ assert "driveArt?.id_catalogo===id" in script
 assert "Arte do autor · em revisão" in script
 assert "driveArt?.preview_na_grade!==false" in script
 assert "ficha.identificacao?.ID_CATALOGO" in script
-print("Validação completa: 1320 registros preservados; 15 artes autorais e 12 fichas SRD complementares.")
+print("Validação completa: 1320 registros preservados; 19 artes autorais e 12 fichas SRD complementares.")
