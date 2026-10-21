@@ -3,7 +3,7 @@ const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const link = value => /^https:\/\/[^"'<> ]+/i.test(value||'') ? value : '';
 // SRD_CATALOGO_ARTES_GERADAS_20261015: accept only whitelisted local assets.
-const artSrc = value => (/^https:\/\/[^\"'<> ]+/i.test(value||'') || (/^assets\/(?:artes-geradas-20261015|drive-candidatas-20261021)\/[a-z0-9-]+\.webp$/i.test(value||''))) ? value : '';
+const artSrc = value => (/^https:\/\/[^\"'<> ]+/i.test(value||'') || (/^assets\/(?:artes-geradas-20261015|drive-candidatas-20261021)\/[a-z0-9-]+\.(?:webp|png)$/i.test(value||''))) ? value : '';
 const norm = value => String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
 const $gallery = $('gallery');
 const placeholder = () => $('missingImage').innerHTML.trim();
@@ -156,7 +156,7 @@ async function carregarFichaDrive(c) {
   try {
     const ficha = await getJSON(c.driveFicha.arquivo);
     if (appState.active !== c || !target.isConnected) return;
-    const recebido = ficha.identificacao?.id_catalogo || ficha.ID_CATALOGO || '';
+    const recebido = ficha.identificacao?.id_catalogo || ficha.identificacao?.ID_CATALOGO || ficha.ID_CATALOGO || '';
     if (!id || id !== c.driveFicha.id_catalogo || recebido !== id) {
       target.textContent = 'Identidade da ficha divergente: dados não exibidos.';
       return;
@@ -306,6 +306,7 @@ async function init(){
     const existingArt=artSrc(web)?web:'';
     const artIsDrive=Boolean(!existingArt && id && driveArt?.id_catalogo===id &&
       driveArt?.direitos==='CRIADA_PELO_USUARIO_PUBLICACAO_AUTORIZADA_20261021' &&
+      driveArt?.preview_na_grade!==false &&
       artSrc(driveArt.arquivo));
     const art=existingArt || (artIsDrive?driveArt.arquivo:'');
      const alternates=id==='TF-085'?[...srd.fichas.filter(x=>x.id==='KP-S007')]:[];

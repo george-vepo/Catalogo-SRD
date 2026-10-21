@@ -1,0 +1,178 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-019",
+  "data_execucao_local": "2026-10-17",
+  "identificacao": {
+    "ORDEM_PRIORIZADA": 71,
+    "ORDEM_1320": 228,
+    "CHAVE": "AT-030",
+    "ID_CATALOGO": "AT-030",
+    "nome_catalogo": "Planetar",
+    "tipo_catalogo": "Celestial",
+    "nd": "16",
+    "classe": "Lendária",
+    "deck": "Celestial",
+    "ids_copias": [
+      "CE-035"
+    ],
+    "editora_catalogo": "SRD 5.2.1",
+    "publicacao_catalogo": "Catálogo ativo v1.1",
+    "homologacao_administrativa": false
+  },
+  "estado": {
+    "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+    "destino_biblioteca": "Completas",
+    "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+    "homologacao_administrativa": false,
+    "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+  },
+  "ficha": {
+    "porte": "Grande",
+    "tipo_mecanico_fonte": "Celestial (Anjo)",
+    "alinhamento": "Leal e Bom",
+    "CA": 19,
+    "PV_maximos": 262,
+    "formula_PV": "21d10+147",
+    "nd_fonte": "16",
+    "xp_fonte": 15000,
+    "bonus_proficiencia": 5,
+    "iniciativa_bonus": 10,
+    "iniciativa_total_SRD": 20,
+    "deslocamentos_pes": {
+      "terrestre": 40,
+      "voo": 120,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 24,
+      "DES": 20,
+      "CON": 24,
+      "INT": 19,
+      "SAB": 22,
+      "CAR": 25
+    },
+    "salvaguardas_fonte": {
+      "FOR": 12,
+      "DES": 5,
+      "CON": 12,
+      "INT": 4,
+      "SAB": 11,
+      "CAR": 12
+    },
+    "pericias_fonte": {
+      "Percepção": 11
+    },
+    "resistencias_dano": [
+      "radiante"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "exaustão",
+      "amedrontado"
+    ],
+    "sentidos": {
+      "visao_verdadeira_pes": 120,
+      "percepcao_passiva": 21
+    },
+    "idiomas": [
+      "todos"
+    ],
+    "telepatia_pes": 120,
+    "tracos": [
+      {
+        "nome": "Divine Awareness",
+        "efeito": "Sabe quando escuta uma mentira."
+      },
+      {
+        "nome": "Exalted Restoration",
+        "efeito": "Quando morre fora do Monte Celestia, reaparece instantaneamente no Monte Celestia com PV totais.",
+        "regra_card_game": "Não reverte automaticamente derrota a zero PV nem retorna a carta ao campo."
+      },
+      {
+        "nome": "Magic Resistance",
+        "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "efeito": "Três ataques Radiant Sword OU dois usos de Holy Burst."
+      },
+      {
+        "nome": "Radiant Sword",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 12,
+        "alcance_pes": 10,
+        "dano": [
+          {
+            "dados": "2d6+7",
+            "tipo": "cortante",
+            "media": 14
+          },
+          {
+            "dados": "4d8",
+            "tipo": "radiante",
+            "media": 18
+          }
+        ]
+      },
+      {
+        "nome": "Holy Burst",
+        "tipo": "salvaguarda",
+        "CD": 20,
+        "atributo": "DES",
+        "area": "Esfera de 20 pés de raio em um ponto visível até 120 pés",
+        "alvos": "Cada inimigo na área",
+        "dano": "7d6 radiante",
+        "media": 24,
+        "sucesso": "Metade do dano"
+      },
+      {
+        "nome": "Spellcasting",
+        "atributo": "CAR",
+        "CD": 20,
+        "componentes": "Sem materiais",
+        "magias": {
+          "à vontade": [
+            "detect evil and good"
+          ],
+          "1/dia cada": [
+            "commune",
+            "control weather",
+            "dispel evil and good",
+            "raise dead"
+          ]
+        }
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Divine Aid",
+        "usos_por_dia": 2,
+        "efeito": "Conjura Cure Wounds, Invisibility, Lesser Restoration ou Remove Curse, usando CAR como atributo.",
+        "observacao": "Concentração para Invisibility se aplica normalmente."
+      }
+    ]
+  },
+  "suporte_candidato_na_pesquisa_deck": {
+    "estado": "CANDIDATO_NAO_HOMOLOGADO",
+    "fonte_documental_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/35_Planetar.md",
+    "descricao": "Divine Aid, 2 usos/dia, escolher Invisibility como uma das opções; adaptação como suporte não homologada."
+  },
+  "auditoria": {
+    "fontes": [
+      "/SRD Card Game/Decks/Celestial/Fichas SRD integrais/planetar_srd521_paginas_315-316.pdf"
+    ],
+    "checagem_biblioteca": "Listadas Fichas/Completas, Fichas/Em Pesquisa e resumos Celestial antes de consultar a web; sem JSON para esta CHAVE.",
+    "metodo": "Bloco oficial SRD 5.2.1 extraído de PDF local, ou fonte externa indicada no deck confrontada com cópia do texto original da publicação.",
+    "ressalvas": [
+      "Ressurreição fora do Monte Celestia é do bloco SRD, mas não autoriza reposição de carta ou cura automática no Card Game.",
+      "Ações multiataque são alternativas: três espadas OU dois Holy Bursts."
+    ],
+    "nao_inventar_atributos": true,
+    "nao_criar_imagem": true,
+    "homologacao_administrativa": false
+  }
+}

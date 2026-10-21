@@ -1,0 +1,260 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-017",
+  "data_execucao_local": "2026-10-17",
+  "identificacao": {
+    "ORDEM_PRIORIZADA": 65,
+    "ORDEM_1320": 215,
+    "CHAVE": "AT-028",
+    "ID_CATALOGO": "AT-028",
+    "nome_catalogo": "Sphinx of Lore",
+    "tipo_catalogo": "Celestial",
+    "nd": "11",
+    "classe": "Rara",
+    "deck": "Celestial",
+    "ids_copias": [
+      "CE-029"
+    ],
+    "publicacao_catalogo": "Catálogo ativo v1.1",
+    "editora_catalogo": "SRD 5.2.1",
+    "homologacao_administrativa": false
+  },
+  "estado": {
+    "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+    "homologacao_administrativa": false,
+    "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+    "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+  },
+  "ficha": {
+    "porte": "Grande",
+    "tipo_mecanico_fonte": "Celestial",
+    "alinhamento": "Leal e Neutro",
+    "CA": 17,
+    "PV_maximos": 170,
+    "formula_PV": "20d10+60",
+    "nd_fonte": "11",
+    "iniciativa_bonus": 10,
+    "iniciativa_valor_SR521": 20,
+    "bonus_proficiencia": 4,
+    "xp_fonte": {
+      "fora_do_covil": 7200,
+      "no_covil": 8400
+    },
+    "deslocamentos_pes": {
+      "terrestre": 40,
+      "voo": 60
+    },
+    "atributos": {
+      "FOR": 18,
+      "DES": 15,
+      "CON": 16,
+      "INT": 18,
+      "SAB": 18,
+      "CAR": 18
+    },
+    "salvaguardas_fonte": {
+      "FOR": 4,
+      "DES": 2,
+      "CON": 3,
+      "INT": 4,
+      "SAB": 4,
+      "CAR": 4
+    },
+    "pericias": {
+      "Arcanismo": 12,
+      "História": 12,
+      "Percepção": 8,
+      "Religião": 12
+    },
+    "resistencias_dano": [
+      "necrótico",
+      "radiante"
+    ],
+    "imunidades_dano": [
+      "psíquico"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado"
+    ],
+    "sentidos": {
+      "visao_verdadeira_pes": 120,
+      "percepcao_passiva": 18
+    },
+    "idiomas_e_telepatia": {
+      "fala": [
+        "Celestial",
+        "Comum"
+      ]
+    },
+    "tracos": [
+      {
+        "nome": "Inscrutable",
+        "efeito": "Magia não pode observar a esfinge remotamente nem detectar seus pensamentos sem permissão; testes de Sabedoria (Intuição) sobre intenções ou sinceridade têm desvantagem."
+      },
+      {
+        "nome": "Legendary Resistance",
+        "limite": "3/dia, ou 4/dia em covil",
+        "efeito": "Se falhar em uma salvaguarda, pode optar por ser bem-sucedida."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "economia": "acao",
+        "efeito": "Três ataques Claw."
+      },
+      {
+        "nome": "Claw",
+        "economia": "acao",
+        "bonus_ataque": 8,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dados": "3d6+4",
+            "tipo": "cortante",
+            "media_publicada": 14
+          }
+        ]
+      },
+      {
+        "nome": "Mind-Rending Roar",
+        "economia": "acao",
+        "recarga": "5-6",
+        "area": {
+          "tipo": "emanação",
+          "raio_pes": 300,
+          "alvos": "todos os inimigos na emanação"
+        },
+        "salvaguarda": {
+          "atributo": "SAB",
+          "CD": 16
+        },
+        "falha": "10d6 de dano psíquico (média 35) e Incapacitado até o começo do próximo turno da esfinge.",
+        "sucesso": "Sem dano/efeito especificado no bloco para sucesso; não inferir meio dano.",
+        "dano": [
+          {
+            "dados": "10d6",
+            "tipo": "psíquico",
+            "media_publicada": 35
+          }
+        ]
+      },
+      {
+        "nome": "Spellcasting",
+        "economia": "acao",
+        "atributo": "INT",
+        "cd_salvaguarda": 16,
+        "componentes": "Sem componentes materiais",
+        "magias_sem_limite": [
+          "Detect Magic",
+          "Identify",
+          "Mage Hand",
+          "Minor Illusion",
+          "Prestidigitation"
+        ],
+        "magias_1_dia_cada": [
+          "Dispel Magic",
+          "Legend Lore",
+          "Locate Object",
+          "Plane Shift",
+          "Remove Curse",
+          "Tongues"
+        ]
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome": "Arcane Prowl",
+        "custo_usos": 1,
+        "efeito": "Teleporta-se até 30 pés para espaço desocupado que possa ver e executa um ataque Claw."
+      },
+      {
+        "nome": "Weight of Years",
+        "custo_usos": 1,
+        "alvo": "Uma criatura visível até 120 pés",
+        "salvaguarda": {
+          "atributo": "CON",
+          "CD": 16
+        },
+        "falha": "O alvo recebe 1 nível de Exaustão e aparenta ter 3d10 anos adicionais enquanto tiver Exaustão.",
+        "limite_repeticao": "Após sucesso ou falha, não pode usar novamente até o começo do próximo turno da esfinge."
+      }
+    ],
+    "acoes_covil": [],
+    "conjuracao": {
+      "atributo": "INT",
+      "cd_salvaguarda": 16,
+      "sem_material": true,
+      "acoes": [
+        "Detect Magic, Identify, Mage Hand, Minor Illusion, Prestidigitation (à vontade)",
+        "Dispel Magic, Legend Lore, Locate Object, Plane Shift, Remove Curse, Tongues (1/dia cada)"
+      ]
+    },
+    "recursos_limitados": [
+      {
+        "recurso": "Legendary Resistance",
+        "usos_dia": 3,
+        "no_covil": 4
+      },
+      {
+        "recurso": "Usos de Ação Lendária",
+        "por_rodada": 3,
+        "no_covil": 4,
+        "recupera": "Começo do próprio turno; ações após turno de outra criatura"
+      },
+      {
+        "recurso": "Mind-Rending Roar",
+        "recarga": "5-6"
+      },
+      {
+        "recurso": "Dispel Magic",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Legend Lore",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Locate Object",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Plane Shift",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Remove Curse",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Tongues",
+        "usos_dia": 1
+      }
+    ]
+  },
+  "auditoria": {
+    "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/29_Sphinx_of_Lore.md",
+    "fonte_estatisticas": "/SRD Card Game/Decks/Celestial/Fichas SRD integrais/sphinx_of_lore_srd521_paginas_327-328.pdf",
+    "edicao_mecanica": "SRD 5.2.1 (edição 2024); PDF integral localizado na Biblioteca do projeto",
+    "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto; não converter mecanicamente blocos Kobold Press para SRD 2024",
+    "fontes_cruzadas": [],
+    "dados_de_fonte_separados_de_regras_card_game": true,
+    "alertas": [
+      "Legendary Resistance 3/dia ou 4/dia no covil; ações lendárias 3 por turno, ou 4 no covil, repostas no começo do próprio turno.",
+      "Mind-Rending Roar atinge inimigos em emanação de 300 pés; não é automaticamente ação de suporte independente.",
+      "Weight of Years produz Exaustão e efeito cosmético de idade, e sua reutilização fica bloqueada até o início do próximo turno da esfinge.",
+      "Fonte SRD não concede ações de covil próprias neste bloco; o benefício de covil documentado se limita às quantidades indicadas."
+    ],
+    "pendencias_card_game": [
+      "Documentar decisão administrativa sobre retorno à vida/transformação e efeitos em outros aliados quando cabível.",
+      "Não presumir arena, terreno, covil ou alvos aliados extras.",
+      "Não adaptar habilidades de suporte do deck sem regra homologada."
+    ],
+    "nao_duplicar_ficha_por_copia": true,
+    "copia_referencia_deck": "CE-029"
+  }
+}

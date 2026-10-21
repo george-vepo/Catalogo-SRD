@@ -1,0 +1,195 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-017",
+  "data_execucao_local": "2026-10-17",
+  "identificacao": {
+    "ORDEM_PRIORIZADA": 62,
+    "ORDEM_1320": 209,
+    "CHAVE": "AT-026",
+    "ID_CATALOGO": "AT-026",
+    "nome_catalogo": "Deva",
+    "tipo_catalogo": "Celestial",
+    "nd": "10",
+    "classe": "Incomum",
+    "deck": "Celestial",
+    "ids_copias": [
+      "CE-026"
+    ],
+    "publicacao_catalogo": "Catálogo ativo v1.1",
+    "editora_catalogo": "SRD 5.2.1",
+    "homologacao_administrativa": false
+  },
+  "estado": {
+    "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+    "homologacao_administrativa": false,
+    "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+    "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+  },
+  "ficha": {
+    "porte": "Médio",
+    "tipo_mecanico_fonte": "Celestial (Anjo)",
+    "alinhamento": "Leal e Bom",
+    "CA": 17,
+    "PV_maximos": 229,
+    "formula_PV": "27d8+108",
+    "nd_fonte": "10",
+    "iniciativa_bonus": 4,
+    "iniciativa_valor_SR521": 14,
+    "bonus_proficiencia": 4,
+    "xp_fonte": 5900,
+    "deslocamentos_pes": {
+      "terrestre": 30,
+      "voo": 90,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 18,
+      "DES": 18,
+      "CON": 18,
+      "INT": 17,
+      "SAB": 20,
+      "CAR": 20
+    },
+    "salvaguardas_fonte": {
+      "FOR": 4,
+      "DES": 4,
+      "CON": 4,
+      "INT": 3,
+      "SAB": 9,
+      "CAR": 9
+    },
+    "pericias": {
+      "Intuição": 9,
+      "Percepção": 9
+    },
+    "resistencias_dano": [
+      "radiante"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "exaustão",
+      "amedrontado"
+    ],
+    "sentidos": {
+      "visao_no_escuro_pes": 120,
+      "percepcao_passiva": 19
+    },
+    "idiomas_e_telepatia": {
+      "fala": "todos os idiomas",
+      "telepatia_pes": 120
+    },
+    "tracos": [
+      {
+        "nome": "Exalted Restoration",
+        "efeito": "Se morrer fora do Monte Celestia, o corpo desaparece; outro corpo surge imediatamente no Monte Celestia, com todos os PV.",
+        "adaptacao_card_game": "Não anula automaticamente derrota a 0 PV; retorno em outro plano não repõe a carta no campo."
+      },
+      {
+        "nome": "Magic Resistance",
+        "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "economia": "acao",
+        "efeito": "Efetua dois ataques Holy Mace."
+      },
+      {
+        "nome": "Holy Mace",
+        "economia": "acao",
+        "bonus_ataque": 8,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dados": "1d6+4",
+            "tipo": "contundente",
+            "media_publicada": 7
+          },
+          {
+            "dados": "4d8",
+            "tipo": "radiante",
+            "media_publicada": 18
+          }
+        ]
+      },
+      {
+        "nome": "Spellcasting",
+        "economia": "acao",
+        "atributo": "CAR",
+        "cd_salvaguarda": 17,
+        "componentes": "Sem componentes materiais",
+        "magias_sem_limite": [
+          "Detect Evil and Good",
+          "Shapechange"
+        ],
+        "especificacoes_shapechange": "Apenas forma de Besta ou Humanoide; não recebe PV temporários; dispensa concentração e PV temporários para manter a magia, conforme bloco da criatura.",
+        "magias_1_dia_cada": [
+          "Commune",
+          "Raise Dead"
+        ]
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Divine Aid",
+        "usos_dia": 2,
+        "efeito": "Conjura uma opção: Cure Wounds, Lesser Restoration ou Remove Curse, com o mesmo atributo da conjuração (CAR).",
+        "economia": "acao_bonus"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": {
+      "atributo": "CAR",
+      "cd_salvaguarda": 17,
+      "sem_material": true,
+      "acoes": [
+        "Detect Evil and Good (à vontade)",
+        "Shapechange (à vontade; modificações expressas)",
+        "Commune (1/dia)",
+        "Raise Dead (1/dia)"
+      ],
+      "acao_bonus": [
+        "Divine Aid: Cure Wounds / Lesser Restoration / Remove Curse (pool 2/dia)"
+      ]
+    },
+    "recursos_limitados": [
+      {
+        "recurso": "Divine Aid",
+        "usos_dia": 2
+      },
+      {
+        "recurso": "Commune",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Raise Dead",
+        "usos_dia": 1
+      }
+    ]
+  },
+  "auditoria": {
+    "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/26_Deva.md",
+    "fonte_estatisticas": "/SRD Card Game/Decks/Celestial/Fichas SRD integrais/deva_srd521_paginas_279-280.pdf",
+    "edicao_mecanica": "SRD 5.2.1 (edição 2024); PDF integral localizado na Biblioteca do projeto",
+    "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto; não converter mecanicamente blocos Kobold Press para SRD 2024",
+    "fontes_cruzadas": [],
+    "dados_de_fonte_separados_de_regras_card_game": true,
+    "alertas": [
+      "Exalted Restoration remete ao Monte Celestia e não permite retornar ao campo após derrota sem regra aprovada.",
+      "Divine Aid é ação bônus do próprio Deva; a habilidade de suporte do deck é apenas uma candidata, não uma carta de suporte homologada.",
+      "Shapechange segue as exceções expressas do bloco SRD 5.2.1, sem importar uma versão anterior."
+    ],
+    "pendencias_card_game": [
+      "Documentar decisão administrativa sobre retorno à vida/transformação e efeitos em outros aliados quando cabível.",
+      "Não presumir arena, terreno, covil ou alvos aliados extras.",
+      "Não adaptar habilidades de suporte do deck sem regra homologada."
+    ],
+    "nao_duplicar_ficha_por_copia": true,
+    "copia_referencia_deck": "CE-026"
+  }
+}

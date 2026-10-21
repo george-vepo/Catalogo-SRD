@@ -1,0 +1,232 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-015",
+  "data_execucao_local": "2026-10-17T01:52:42-03:00",
+  "identificacao": {
+    "ORDEM_PRIORIZADA": 54,
+    "ORDEM_1320": 199,
+    "CHAVE": "AT-025",
+    "ID_CATALOGO": "AT-025",
+    "nome_catalogo": "Unicorn",
+    "nome_na_fonte": "Unicorn",
+    "tipo_catalogo": "Celestial",
+    "tipo_mecanico_fonte": "Celestial",
+    "nd": "5",
+    "classe": "Comum",
+    "deck": "Celestial",
+    "ids_copias": [
+      "CE-017",
+      "CE-018"
+    ],
+    "publicacao_catalogo": "Catálogo ativo v1.1",
+    "homologacao_administrativa": false
+  },
+  "estado": {
+    "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+    "homologacao_administrativa": false,
+    "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+    "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+  },
+  "ficha": {
+    "porte": "Grande",
+    "alinhamento": "leal e bom",
+    "CA": 12,
+    "CA_origem": "CA sem subtipo especificado no bloco SRD 5.2.1",
+    "PV_maximos": 97,
+    "formula_PV": "13d10+26",
+    "deslocamentos_pes": {
+      "terrestre": 50
+    },
+    "atributos": {
+      "FOR": 18,
+      "DES": 14,
+      "CON": 15,
+      "INT": 11,
+      "SAB": 17,
+      "CAR": 16
+    },
+    "iniciativa_bonus": 8,
+    "iniciativa_origem": "Valor expresso no SRD 5.2.1",
+    "bonus_proficiencia": 3,
+    "salvaguardas_fonte": {},
+    "pericias": {},
+    "resistencias_dano": [],
+    "sentidos": {
+      "percepcao_passiva": 13,
+      "visao_no_escuro_pes": 60
+    },
+    "idiomas_e_telepatia": {
+      "falados": [
+        "Celestial",
+        "Elvish",
+        "Sylvan"
+      ],
+      "telepatia_pes": 120
+    },
+    "tracos": [
+      {
+        "nome": "Legendary Resistance",
+        "usos_dia": 3,
+        "efeito": "Após falhar uma salvaguarda, pode optar por ter sucesso."
+      },
+      {
+        "nome": "Magic Resistance",
+        "efeito": "Vantagem em salvaguardas contra magias e demais efeitos mágicos."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "efeito": "Efetua um ataque Hooves e um ataque Radiant Horn."
+      },
+      {
+        "nome": "Hooves",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dado": "2d6+4",
+            "tipo": "contundente",
+            "media_publicada": 11
+          }
+        ]
+      },
+      {
+        "nome": "Radiant Horn",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dado": "1d10+4",
+            "tipo": "radiante",
+            "media_publicada": 9
+          }
+        ]
+      },
+      {
+        "nome": "Spellcasting",
+        "atributo": "CAR",
+        "CD_salvaguarda": 14,
+        "sem_componentes": true,
+        "efeito": "Conjura uma magia permitida na lista de Spellcasting, consumindo sua frequência correspondente."
+      }
+    ],
+    "conjuracao": [
+      {
+        "nome": "Spellcasting",
+        "atributo": "CAR",
+        "CD": 14,
+        "sem_componentes": true,
+        "a_vontade": [
+          "Detect Evil and Good",
+          "Druidcraft"
+        ],
+        "uma_por_dia_cada": [
+          "Calm Emotions",
+          "Dispel Evil and Good",
+          "Entangle",
+          "Pass without Trace",
+          "Word of Recall"
+        ]
+      },
+      {
+        "nome": "Unicorn’s Blessing",
+        "acao": "bônus",
+        "limite": "3 usos totais/dia",
+        "magias": [
+          "Cure Wounds",
+          "Lesser Restoration"
+        ]
+      }
+    ],
+    "recursos_limitados": [
+      {
+        "nome": "Legendary Resistance",
+        "usos": 3,
+        "periodo": "dia"
+      },
+      {
+        "nome": "Unicorn’s Blessing",
+        "usos": 3,
+        "periodo": "dia compartilhado entre ambas as magias"
+      },
+      {
+        "nome": "Legendary Actions",
+        "usos": 3,
+        "periodo": "recupera início de cada turno do unicórnio",
+        "gatilho": "imediatamente após turno de outra criatura"
+      },
+      {
+        "nome": "Spellcasting 1/Day Each",
+        "usos": 1,
+        "periodo": "dia por magia",
+        "lista": [
+          "Calm Emotions",
+          "Dispel Evil and Good",
+          "Entangle",
+          "Pass without Trace",
+          "Word of Recall"
+        ]
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Unicorn’s Blessing",
+        "usos_dia": 3,
+        "alcance": "toque do chifre em outra criatura",
+        "efeito": "Conjura Cure Wounds ou Lesser Restoration usando CAR; escolha de magia do jogador e consumo de um dos três usos totais."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome": "Charging Horn",
+        "custo": 1,
+        "efeito": "Movimenta-se até metade do deslocamento sem provocar ataques de oportunidade e realiza um ataque Radiant Horn."
+      },
+      {
+        "nome": "Shimmering Shield",
+        "custo": 1,
+        "alcance_pes": 60,
+        "alvo": "si próprio ou criatura visível",
+        "efeito": "O alvo ganha 10 (3d6) PV temporários; CA aumenta em 2 até o fim do próximo turno do unicórnio. PV temporários seguem sua duração normal, distinta da CA."
+      }
+    ],
+    "acoes_covil": [],
+    "imunidades_dano": [
+      "veneno"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "paralisado",
+      "envenenado"
+    ]
+  },
+  "suporte_candidato_na_pesquisa_deck": {
+    "habilidade": "Shimmering Shield",
+    "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "regra_original": "Ação lendária de 1 uso, alvo próprio ou visível a até 60 pés, concede 3d6 PV temporários e CA +2 até o fim do próximo turno."
+  },
+  "auditoria": {
+    "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/17_Unicorn.md",
+    "caminho_no_controle_original": "/SRD Card Game/Decks/Celestial/Fichas por criatura/14_Unicorn.md",
+    "divergencia_caminho_controle": "O CSV aponta para 14_Unicorn.md, mas o arquivo existente com nome e CHAVE compatíveis é 17_Unicorn.md. Não editar a fila original.",
+    "fonte_estatisticas": "https://www.dndbeyond.com/sources/dnd/srd-5.2.1",
+    "fonte_primaria_local": "/SRD Card Game/Decks/Celestial/Fichas SRD integrais/unicorn_srd521_paginas_334-335.pdf",
+    "edicao_mecanica": "SRD 5.2.1",
+    "regra_combativa": "SRD 5.2.1 rege a resolução geral; efeitos da edição Kobold Press 5e original conservados, sem importação silenciosa de redações de 2024",
+    "dados_de_fonte_separados_de_regras_card_game": true,
+    "alertas": [
+      "O controle aponta para 14_Unicorn.md, mas o arquivo correto no deck é 17_Unicorn.md (também 18_Unicorn.md).",
+      "O bloco não concede cura automática após combate; não converter PV temporários em PV máximos."
+    ],
+    "pendencias_card_game": [
+      "A ação lendária exige gatilho depois do turno de outra criatura e economia própria de 3 usos; definir como funciona com uma única criatura ativa por jogador.",
+      "Unicorn’s Blessing afeta outra criatura e precisa de alvos legais; não permite automaticamente curar carta na mão.",
+      "Shimmering Shield: bônus de CA termina no fim do próximo turno do unicórnio; PV temporários não expiram automaticamente nesse momento.",
+      "Compatibilizar as magias listadas com o SRD 5.2.1, respeitando recursos e condições da arena."
+    ],
+    "nenhum_dado_inventado_para_lacuna": true
+  }
+}

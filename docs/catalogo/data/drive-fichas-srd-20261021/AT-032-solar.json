@@ -1,0 +1,249 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-020",
+  "data_execucao_local": "2026-10-17",
+  "identificacao": {
+    "ORDEM_PRIORIZADA": 75,
+    "ORDEM_1320": 233,
+    "CHAVE": "AT-032",
+    "ID_CATALOGO": "AT-032",
+    "nome_catalogo": "Solar",
+    "tipo_catalogo": "Celestial",
+    "nd": "21",
+    "classe": "Mítica",
+    "deck": "Celestial",
+    "ids_copias": [
+      "CE-039"
+    ],
+    "editora_catalogo": "SRD 5.2.1",
+    "publicacao_catalogo": "Catálogo ativo v1.1",
+    "homologacao_administrativa": false
+  },
+  "estado": {
+    "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+    "destino_biblioteca": "Completas",
+    "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+    "homologacao_administrativa": false,
+    "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+  },
+  "ficha": {
+    "porte": "Grande",
+    "tipo_mecanico_fonte": "Celestial (Anjo)",
+    "alinhamento": "Leal e Bom",
+    "CA": 21,
+    "PV_maximos": 297,
+    "formula_PV": "22d10+176",
+    "nd_fonte": "21",
+    "xp_fonte": 33000,
+    "bonus_proficiencia": 7,
+    "iniciativa_bonus": 20,
+    "iniciativa_total_SRD": 30,
+    "deslocamentos_pes": {
+      "terrestre": 50,
+      "voo": 150,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 26,
+      "DES": 22,
+      "CON": 26,
+      "INT": 25,
+      "SAB": 25,
+      "CAR": 30
+    },
+    "salvaguardas_impressas_srd": {
+      "FOR": 8,
+      "DES": 6,
+      "CON": 8,
+      "INT": 7,
+      "SAB": 7,
+      "CAR": 10
+    },
+    "pericias_fonte": {
+      "Percepcao": 14
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "veneno",
+      "radiante"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "exaustão",
+      "amedrontado",
+      "envenenado"
+    ],
+    "sentidos": {
+      "visao_verdadeira_pes": 120,
+      "percepcao_passiva": 24
+    },
+    "idiomas": [
+      "todos"
+    ],
+    "telepatia_pes": 120,
+    "tracos": [
+      {
+        "nome": "Divine Awareness",
+        "efeito": "Reconhece quando escuta mentira."
+      },
+      {
+        "nome": "Exalted Restoration",
+        "efeito": "Se morrer fora do Monte Celestia, corpo desaparece e revive instantaneamente com todos os PV em um corpo novo naquele plano.",
+        "regra_card_game": "Não remove automaticamente derrota a 0 PV ou coloca a carta de volta no campo."
+      },
+      {
+        "nome": "Legendary Resistance",
+        "usos": "4/dia",
+        "efeito": "Escolhe sucesso em salvaguarda falhada."
+      },
+      {
+        "nome": "Magic Resistance",
+        "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "efeito": "Duas vezes Flying Sword, podendo substituir um desses ataques por Slaying Bow."
+      },
+      {
+        "nome": "Flying Sword",
+        "tipo": "ataque corpo a corpo OU à distância",
+        "bonus_ataque": 15,
+        "alcance_pes": 10,
+        "distancia_pes": 120,
+        "dano": [
+          {
+            "dados": "4d6+8",
+            "tipo": "cortante",
+            "media_publicada": 22
+          },
+          {
+            "dados": "8d8",
+            "tipo": "radiante",
+            "media_publicada": 36
+          }
+        ],
+        "efeito_apos_ataque": "A espada retorna magicamente à mão ou paira em até 5 pés após ataque à distância, acerte ou erre."
+      },
+      {
+        "nome": "Slaying Bow",
+        "economia": "substitui um dos dois ataques de Multiattack ou ação própria",
+        "salvaguarda": "DES",
+        "CD": 21,
+        "alcance_pes": 600,
+        "alvo": "uma criatura que possa ver",
+        "falha_com_PV_ate_100": "O alvo morre, sem rolagem de dano especificada nesse caso.",
+        "falha_com_PV_acima_100": {
+          "dano": [
+            {
+              "dados": "4d8+6",
+              "tipo": "perfurante",
+              "media_publicada": 24
+            },
+            {
+              "dados": "8d8",
+              "tipo": "radiante",
+              "media_publicada": 36
+            }
+          ]
+        },
+        "sucesso": "O bloco não lista efeito de sucesso; não presumir dano nem morte."
+      },
+      {
+        "nome": "Spellcasting",
+        "habilidade": "CAR",
+        "CD": 25,
+        "componentes_materiais": "dispensados",
+        "magias_sem_limite": [
+          "Detect Evil and Good"
+        ],
+        "magias_1_por_dia_cada": [
+          "Commune",
+          "Control Weather",
+          "Dispel Evil and Good",
+          "Resurrection"
+        ]
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Divine Aid",
+        "usos": "3/dia",
+        "efeito": "Conjura Cure Wounds (versão de 2º nível), Lesser Restoration ou Remove Curse como ação bônus usando CAR; escolhas dentro dos 3 usos totais."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias_economia": {
+      "usos_por_rodada": 3,
+      "momento": "imediatamente após turno de outra criatura",
+      "recuperacao": "início do próprio turno"
+    },
+    "acoes_lendarias": [
+      {
+        "nome": "Blinding Gaze",
+        "custo": 1,
+        "alcance_pes": 120,
+        "salvaguarda": "CON",
+        "CD": 25,
+        "falha": "Alvo fica cego por 1 minuto; o texto não estabelece repetição de salvaguarda.",
+        "limite": "Independentemente de falha ou sucesso, não pode usar novamente até início do próximo turno."
+      },
+      {
+        "nome": "Radiant Teleport",
+        "custo": 1,
+        "teleporte_pes": 60,
+        "efeito": "Teleporta até um espaço desocupado visível; a chegada irradia 10 pés",
+        "salvaguarda": "DES",
+        "CD": 25,
+        "falha": {
+          "dados": "2d10",
+          "tipo": "radiante",
+          "media_publicada": 11
+        },
+        "sucesso": "metade do dano"
+      }
+    ],
+    "recursos_limitados": [
+      {
+        "nome": "Legendary Resistance",
+        "limite": 4,
+        "periodo": "dia"
+      },
+      {
+        "nome": "Divine Aid",
+        "limite": 3,
+        "periodo": "dia"
+      },
+      {
+        "nome": "Ações lendárias",
+        "limite": 3,
+        "periodo": "rodada"
+      },
+      {
+        "nome": "Magias 1/dia",
+        "limite": 1,
+        "periodo": "dia",
+        "por_magia": true
+      }
+    ]
+  },
+  "suporte_candidato_na_pesquisa_deck": {
+    "habilidade": "Divine Aid — Cure Wounds 2º nível",
+    "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "efeito_na_fonte": "Magia conjurada pela própria criatura com ação bônus, dentro de 3 usos totais por dia."
+  },
+  "auditoria": {
+    "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/39_Solar.md",
+    "fonte_pdf": "/SRD Card Game/Decks/Celestial/Fichas SRD integrais/solar_srd521_paginas_326-327.pdf",
+    "edicao": "SRD_CC_v5.2.1",
+    "alertas": [
+      "Slaying Bow é salvaguarda DES CD21, não ataque convencional; não inventar dano em sucesso.",
+      "Exalted Restoration não anula automaticamente perda de ponto ao alcançar 0 PV.",
+      "Iniciativa SRD +20 (30), diferente do simples modificador de DES +6.",
+      "A magia Divine Aid usa regras de conjuração SRD 5.2.1, não misturar automaticamente com 2014."
+    ],
+    "nenhum_dado_inventado_para_lacuna": true
+  }
+}

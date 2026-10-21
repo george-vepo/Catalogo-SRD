@@ -1,0 +1,216 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-017",
+  "data_execucao_local": "2026-10-17",
+  "identificacao": {
+    "ORDEM_PRIORIZADA": 64,
+    "ORDEM_1320": 211,
+    "CHAVE": "AT-027",
+    "ID_CATALOGO": "AT-027",
+    "nome_catalogo": "Guardian Naga",
+    "tipo_catalogo": "Celestial",
+    "nd": "10",
+    "classe": "Incomum",
+    "deck": "Celestial",
+    "ids_copias": [
+      "CE-028"
+    ],
+    "publicacao_catalogo": "Catálogo ativo v1.1",
+    "editora_catalogo": "SRD 5.2.1",
+    "homologacao_administrativa": false
+  },
+  "estado": {
+    "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+    "homologacao_administrativa": false,
+    "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+    "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+  },
+  "ficha": {
+    "porte": "Grande",
+    "tipo_mecanico_fonte": "Celestial",
+    "alinhamento": "Leal e Bom",
+    "CA": 18,
+    "PV_maximos": 136,
+    "formula_PV": "16d10+48",
+    "nd_fonte": "10",
+    "iniciativa_bonus": 4,
+    "iniciativa_valor_SR521": 14,
+    "bonus_proficiencia": 4,
+    "xp_fonte": 5900,
+    "deslocamentos_pes": {
+      "terrestre": 40,
+      "escalada": 40,
+      "natacao": 40
+    },
+    "atributos": {
+      "FOR": 19,
+      "DES": 18,
+      "CON": 16,
+      "INT": 16,
+      "SAB": 19,
+      "CAR": 18
+    },
+    "salvaguardas_fonte": {
+      "FOR": 4,
+      "DES": 8,
+      "CON": 7,
+      "INT": 7,
+      "SAB": 8,
+      "CAR": 8
+    },
+    "pericias": {
+      "Arcanismo": 11,
+      "História": 11,
+      "Religião": 11
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "veneno"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "paralisado",
+      "envenenado",
+      "restrito"
+    ],
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 14
+    },
+    "idiomas_e_telepatia": {
+      "fala": [
+        "Celestial",
+        "Comum"
+      ]
+    },
+    "tracos": [
+      {
+        "nome": "Celestial Restoration",
+        "efeito": "Morta, retorna à vida após 1d6 dias com todos os PV, exceto se Dispel Evil and Good for conjurada em seus restos mortais.",
+        "adaptacao_card_game": "Não é cura instantânea nem impede a derrota por 0 PV."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "economia": "acao",
+        "efeito": "Dois ataques Bite; pode substituir qualquer um por Poisonous Spittle."
+      },
+      {
+        "nome": "Bite",
+        "economia": "acao",
+        "bonus_ataque": 8,
+        "alcance_pes": 10,
+        "dano": [
+          {
+            "dados": "2d12+4",
+            "tipo": "perfurante",
+            "media_publicada": 17
+          },
+          {
+            "dados": "4d10",
+            "tipo": "veneno",
+            "media_publicada": 22
+          }
+        ]
+      },
+      {
+        "nome": "Poisonous Spittle",
+        "economia": "acao / substitui Bite no Multiattack",
+        "alvo": "uma criatura que a naga veja até 60 pés",
+        "distancia_pes": 60,
+        "salvaguarda": {
+          "atributo": "CON",
+          "CD": 16
+        },
+        "dano": [
+          {
+            "dados": "7d8",
+            "tipo": "veneno",
+            "media_publicada": 31
+          }
+        ],
+        "falha": "Dano integral e condição Cego até o começo do próximo turno da naga.",
+        "sucesso": "Metade do dano, sem condição Cego."
+      },
+      {
+        "nome": "Spellcasting",
+        "economia": "acao",
+        "atributo": "SAB",
+        "cd_salvaguarda": 16,
+        "componentes": "Sem componentes somáticos ou materiais",
+        "magias_sem_limite": [
+          "Thaumaturgy"
+        ],
+        "magias_1_dia_cada": [
+          "Clairvoyance",
+          "Cure Wounds (nível 6)",
+          "Flame Strike (nível 6)",
+          "Geas",
+          "True Seeing"
+        ]
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": {
+      "atributo": "SAB",
+      "cd_salvaguarda": 16,
+      "sem_somatico": true,
+      "sem_material": true,
+      "acoes": [
+        "Thaumaturgy (à vontade)",
+        "Clairvoyance (1/dia)",
+        "Cure Wounds (1/dia, versão de 6º nível)",
+        "Flame Strike (1/dia, versão de 6º nível)",
+        "Geas (1/dia)",
+        "True Seeing (1/dia)"
+      ]
+    },
+    "recursos_limitados": [
+      {
+        "recurso": "Clairvoyance",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Cure Wounds nível 6",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Flame Strike nível 6",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "Geas",
+        "usos_dia": 1
+      },
+      {
+        "recurso": "True Seeing",
+        "usos_dia": 1
+      }
+    ]
+  },
+  "auditoria": {
+    "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/28_Guardian_Naga.md",
+    "fonte_estatisticas": "/SRD Card Game/Decks/Celestial/Fichas SRD integrais/guardian_naga_srd521_paginas_296-297.pdf",
+    "edicao_mecanica": "SRD 5.2.1 (edição 2024); PDF integral localizado na Biblioteca do projeto",
+    "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto; não converter mecanicamente blocos Kobold Press para SRD 2024",
+    "fontes_cruzadas": [],
+    "dados_de_fonte_separados_de_regras_card_game": true,
+    "alertas": [
+      "Celestial Restoration leva 1d6 dias; não evita derrota nem gera retorno automático à mão/monte/campo.",
+      "Poisonous Spittle pode substituir qualquer ataque Bite no Multiattack; alvo deve estar visível a 60 pés.",
+      "Spellcasting da versão 5.2.1 dispensa componentes somáticos e materiais, e Cure Wounds/Flame Strike usam nível 6."
+    ],
+    "pendencias_card_game": [
+      "Documentar decisão administrativa sobre retorno à vida/transformação e efeitos em outros aliados quando cabível.",
+      "Não presumir arena, terreno, covil ou alvos aliados extras.",
+      "Não adaptar habilidades de suporte do deck sem regra homologada."
+    ],
+    "nao_duplicar_ficha_por_copia": true,
+    "copia_referencia_deck": "CE-028"
+  }
+}
