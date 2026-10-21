@@ -64,7 +64,7 @@ assert "const existingArt=artSrc(web)?web:'';" in script, "Arte principal já ex
 assert "const art=existingArt || (artIsDrive?driveArt.arquivo:'');" in script
 assert "driveArt?.id_catalogo===id" in script, "Só a identidade canônica exata pode receber imagem"
 assert "drive-art-notice" in script, "Prévia precisa de rótulo de revisão"
-assert "driveArt:driveArtById.get(id)" in script
+assert "const driveArt=driveArtById.get(id)" in script
 assert "driveFicha:driveFichaById.get(id)" in script
 assert "const artIsDrive=" in script
 assert "driveArt?.id_catalogo===id" in script
