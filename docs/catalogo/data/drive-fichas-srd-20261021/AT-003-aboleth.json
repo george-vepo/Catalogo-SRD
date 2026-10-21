@@ -1,0 +1,203 @@
+{
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-009",
+  "data_validacao": "2026-10-17T00:18:08-03:00",
+  "ORDEM_PRIORIZADA": 31,
+  "ORDEM_1320": 63,
+  "CHAVE": "AT-003",
+  "ID_CATALOGO": "AT-003",
+  "nome": "Aboleth",
+  "tipo": "Aberração",
+  "ND_catalogo": 10,
+  "classe_catalogo": "Incomum",
+  "origem_publicacao_catalogo": "Catálogo ativo v1.1 / SRD 5.2.1",
+  "edicao_fonte_considerada": "SRD 5.2.1 (2024)",
+  "url_fonte_principal": "https://rules.omnisgm.com/en/dnd/srd-5.2/monsters-a-z/",
+  "status_ficha": "COMPLETA_MECANICAS_VALIDADA",
+  "homologacao_administrativa": false,
+  "edicao_combate_card_game": "SRD 5.2.1",
+  "pendencias_card_game": [
+    "Eldritch Restoration: renascimento posterior precisa de aprovação para efeito nas zonas/pontuação",
+    "Dominate Mind: controle de criatura ativa adversária exige decisão de como jogadores declaram ações",
+    "Mucus Cloud e variantes no covil dependem de arena e regras do administrador"
+  ],
+  "fontes_consultadas": [
+    "/SRD Card Game/Decks/Aberração/Fichas por criatura/31_Aboleth.md",
+    "https://rules.omnisgm.com/en/dnd/srd-5.2/monsters-a-z/",
+    "https://www.fantasygrounds.com/library/5e/dd-srd-5-2-1/monsters-a-z"
+  ],
+  "porte": "Large",
+  "alinhamento": "Lawful Evil",
+  "ca": 17,
+  "pv_maximos": 150,
+  "formula_pv": "20d10+40",
+  "iniciativa": {
+    "modificador": 7,
+    "valor_passivo": 17,
+    "fonte": "SRD"
+  },
+  "deslocamento_ft": {
+    "andar": 10,
+    "nadar": 40
+  },
+  "atributos": {
+    "STR": 21,
+    "DEX": 9,
+    "CON": 15,
+    "INT": 18,
+    "WIS": 15,
+    "CHA": 18
+  },
+  "salvaguardas": {
+    "STR": 5,
+    "DEX": 3,
+    "CON": 6,
+    "INT": 8,
+    "WIS": 6,
+    "CHA": 4
+  },
+  "bonus_proficiencia": 4,
+  "pericias": {
+    "History": 12,
+    "Perception": 10
+  },
+  "sentidos": {
+    "darkvision_ft": 120,
+    "percepcao_passiva": 20
+  },
+  "idiomas": [
+    "Deep Speech",
+    "telepathy 120 ft."
+  ],
+  "imunidades_dano": [],
+  "resistencias_dano": [],
+  "vulnerabilidades_dano": [],
+  "imunidades_condicao": [],
+  "tracos": [
+    {
+      "nome": "Amphibious",
+      "efeito": "Respira em ar e na água."
+    },
+    {
+      "nome": "Eldritch Restoration",
+      "efeito": "Se for destruído, renasce com todos PV após 5d10 dias no Far Realm ou outro local determinado pelo narrador; não prevalece sobre derrota imediata do Card Game sem regra aprovada."
+    },
+    {
+      "nome": "Legendary Resistance",
+      "usos": {
+        "fora_covil": 3,
+        "no_covil": 4,
+        "recuperacao": "dia"
+      },
+      "gatilho": "Quando falhar em salvaguarda",
+      "efeito": "Pode escolher ter sucesso."
+    },
+    {
+      "nome": "Mucus Cloud",
+      "requisito": "submerso",
+      "gatilho": "final do próprio turno",
+      "area": "emanação 5 ft.",
+      "salvaguarda": {
+        "atributo": "CON",
+        "CD": 14
+      },
+      "falha": "Alvo amaldiçoado, pele viscosa, respira ar/água e só recupera PV submerso; fora d’água sofre 1d12 ácido a cada 10 minutos, salvo hidratação"
+    },
+    {
+      "nome": "Probing Telepathy",
+      "gatilho": "Comunicação telepática por criatura visível",
+      "efeito": "Conhece os maiores desejos do interlocutor."
+    }
+  ],
+  "acoes": [
+    {
+      "nome": "Multiattack",
+      "economia": "action",
+      "sequencia": [
+        {
+          "nome": "Tentacle",
+          "quantidade": 2
+        },
+        {
+          "escolher_um": [
+            "Consume Memories",
+            "Dominate Mind (se disponível)"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Tentacle",
+      "economia": "action",
+      "tipo": "melee attack roll",
+      "bonus_acerto": 9,
+      "alcance_ft": 15,
+      "dano": {
+        "dados": "2d6+5",
+        "tipo": "bludgeoning",
+        "medio": 12
+      },
+      "efeitos": {
+        "tamanho_alvo_ate": "Large",
+        "condicao": "Grappled",
+        "CD_escapar": 14,
+        "max_tentaculos": 4
+      }
+    },
+    {
+      "nome": "Consume Memories",
+      "economia": "action",
+      "alcance_ft": 30,
+      "alvo": "Criatura Charmed ou Grappled pelo aboleth",
+      "salvaguarda": {
+        "atributo": "INT",
+        "CD": 16
+      },
+      "dano": {
+        "dados": "3d6",
+        "medio": 10,
+        "tipo": "psychic",
+        "sucesso": "metade"
+      },
+      "memorias": "Se humanoide reduzido a 0 PV por esta ação, aboleth obtém memórias."
+    },
+    {
+      "nome": "Dominate Mind",
+      "economia": "action",
+      "usos": 2,
+      "recuperacao": "dia",
+      "alcance_ft": 30,
+      "alvo": "Criatura visível",
+      "salvaguarda": {
+        "atributo": "WIS",
+        "CD": 16
+      },
+      "falha": "Charmed e sob controle quando a até 60 pés; telepatia a qualquer distância",
+      "termino": "Aboleth morre, muda de plano, ou salvaguarda bem-sucedida ao receber dano ou a cada 24h passado a pelo menos 1 milha do aboleth"
+    }
+  ],
+  "acoes_bonus": [],
+  "reacoes": [],
+  "acoes_lendarias": {
+    "usos_por_rodada": 3,
+    "no_covil": 4,
+    "recuperacao": "inicio do turno do aboleth",
+    "momento": "imediatamente após o turno de outra criatura",
+    "opcoes": [
+      {
+        "nome": "Lash",
+        "custo": 1,
+        "efeito": "Faz um ataque Tentacle"
+      },
+      {
+        "nome": "Psychic Drain",
+        "custo": 1,
+        "condicao": "Pelo menos uma criatura Charmed ou Grappled",
+        "efeito": "Usa Consume Memories e recupera 1d10 (média 5) PV"
+      }
+    ]
+  },
+  "acoes_covil": [],
+  "conjuracao": [],
+  "recargas": []
+}

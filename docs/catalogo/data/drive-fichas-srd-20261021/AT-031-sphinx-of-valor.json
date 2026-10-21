@@ -1,0 +1,199 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+  "projeto": "SRD Card Game",
+  "lote": "MANUAL-LOTE-019",
+  "data_execucao_local": "2026-10-17",
+  "identificacao": {
+    "ORDEM_PRIORIZADA": 72,
+    "ORDEM_1320": 229,
+    "CHAVE": "AT-031",
+    "ID_CATALOGO": "AT-031",
+    "nome_catalogo": "Sphinx of Valor",
+    "tipo_catalogo": "Celestial",
+    "nd": "17",
+    "classe": "Lendária",
+    "deck": "Celestial",
+    "ids_copias": [
+      "CE-036"
+    ],
+    "editora_catalogo": "SRD 5.2.1",
+    "publicacao_catalogo": "Catálogo ativo v1.1",
+    "homologacao_administrativa": false
+  },
+  "estado": {
+    "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+    "destino_biblioteca": "Completas",
+    "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+    "homologacao_administrativa": false,
+    "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+  },
+  "ficha": {
+    "porte": "Grande",
+    "tipo_mecanico_fonte": "Celestial",
+    "alinhamento": "Leal e Neutro",
+    "CA": 17,
+    "PV_maximos": 199,
+    "formula_PV": "19d10+95",
+    "nd_fonte": "17",
+    "xp_fonte": 18000,
+    "xp_no_covil": 20000,
+    "bonus_proficiencia": 6,
+    "iniciativa_bonus": 12,
+    "iniciativa_total_SRD": 22,
+    "deslocamentos_pes": {
+      "terrestre": 40,
+      "voo": 60
+    },
+    "atributos": {
+      "FOR": 22,
+      "DES": 10,
+      "CON": 20,
+      "INT": 16,
+      "SAB": 23,
+      "CAR": 18
+    },
+    "salvaguardas_fonte": {
+      "FOR": 6,
+      "DES": 6,
+      "CON": 11,
+      "INT": 9,
+      "SAB": 12,
+      "CAR": 4
+    },
+    "pericias_fonte": {
+      "Arcanismo": 9,
+      "Percepção": 12,
+      "Religião": 15
+    },
+    "resistencias_dano": [
+      "necrótico",
+      "radiante"
+    ],
+    "imunidades_dano": [
+      "psíquico"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado"
+    ],
+    "sentidos": {
+      "visao_verdadeira_pes": 120,
+      "percepcao_passiva": 22
+    },
+    "idiomas": [
+      "Celestial",
+      "Comum"
+    ],
+    "tracos": [
+      {
+        "nome": "Inscrutable",
+        "efeito": "Magia não observa à distância nem detecta pensamentos sem permissão; testes de Intuição para apurar intenções/sinceridade têm desvantagem."
+      },
+      {
+        "nome": "Legendary Resistance",
+        "usos_por_dia": 3,
+        "usos_no_covil_por_dia": 4,
+        "efeito": "Pode escolher obter sucesso em salvaguarda na qual falhou."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "efeito": "Dois ataques Claw e usa Roar conforme disponibilidade e sequência."
+      },
+      {
+        "nome": "Claw",
+        "bonus_ataque": 12,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dados": "4d6+6",
+            "media": 20,
+            "tipo": "cortante"
+          }
+        ]
+      },
+      {
+        "nome": "Roar",
+        "usos_por_dia": 3,
+        "sequencia": "Primeiro, segundo, terceiro; reinicia apenas após Descanso Longo",
+        "area": "Cada inimigo em emanação de 500 pés",
+        "efeitos": [
+          {
+            "ativacao": 1,
+            "salvaguarda": "SAB CD 20",
+            "falha": "Amedrontado por 1 minuto."
+          },
+          {
+            "ativacao": 2,
+            "salvaguarda": "SAB CD 20",
+            "falha": "Paralisado; repetir salvaguarda no fim de cada turno; sucesso encerra; após 1 minuto, êxito automático."
+          },
+          {
+            "ativacao": 3,
+            "salvaguarda": "CON CD 20",
+            "falha": "8d10 trovejante (média 44) e Caído",
+            "sucesso": "Metade do dano, sem Caído."
+          }
+        ]
+      },
+      {
+        "nome": "Spellcasting",
+        "atributo": "SAB",
+        "CD": 20,
+        "componentes": "Sem materiais",
+        "magias": {
+          "à vontade": [
+            "detect evil and good",
+            "thaumaturgy"
+          ],
+          "1/dia cada": [
+            "detect magic",
+            "dispel magic",
+            "greater restoration",
+            "heroes’ feast",
+            "zone of truth"
+          ]
+        }
+      }
+    ],
+    "acoes_lendarias": {
+      "usos_por_rodada": 3,
+      "usos_no_covil": 4,
+      "regeneracao": "Início de seu turno",
+      "gatilho": "Imediatamente após o turno de outra criatura",
+      "opcoes": [
+        {
+          "nome": "Arcane Prowl",
+          "efeito": "Teleporta até 30 pés para espaço vazio visível, então um ataque Claw."
+        },
+        {
+          "nome": "Weight of Years",
+          "alvo": "Uma criatura visível até 120 pés",
+          "salvaguarda": "CON CD 16",
+          "falha": "Uma graduação de Exaustão; enquanto tiver exaustão parece 3d10 anos mais velho.",
+          "limite": "Não usar novamente antes do começo do próximo turno da esfinge."
+        }
+      ]
+    }
+  },
+  "suporte_candidato_na_pesquisa_deck": {
+    "estado": "CANDIDATO_NAO_HOMOLOGADO",
+    "fonte_documental_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/36_Sphinx_of_Valor.md",
+    "descricao": "Roar como suporte é apenas proposta; exige ordem de três usos e respectivos testes."
+  },
+  "auditoria": {
+    "fontes": [
+      "/SRD Card Game/Decks/Celestial/Fichas SRD integrais/sphinx_of_valor_srd521_paginas_328-329.pdf"
+    ],
+    "checagem_biblioteca": "Listadas Fichas/Completas, Fichas/Em Pesquisa e resumos Celestial antes de consultar a web; sem JSON para esta CHAVE.",
+    "metodo": "Bloco oficial SRD 5.2.1 extraído de PDF local, ou fonte externa indicada no deck confrontada com cópia do texto original da publicação.",
+    "ressalvas": [
+      "Três rugidos têm sequência fixa; não permitir escolher livremente um deles.",
+      "Legendary Action Uses aumentam para 4 no covil conforme SRD; ambiente/covil depende de aprovação e implementação."
+    ],
+    "nao_inventar_atributos": true,
+    "nao_criar_imagem": true,
+    "homologacao_administrativa": false
+  }
+}
