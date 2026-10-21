@@ -63,3 +63,9 @@ Mais **8 artes autorais candidatas** foram incorporadas em formato WebP: TF-009 
 ## Terceiro lote WebP otimizado — 21/10/2026
 
 Mais **12 artes de autoria do usuário** foram transferidas em WebP: AT-011 Allosaurus, AT-026 Deva, AT-028 Sphinx of Lore, AT-031 Sphinx of Valor, TF-024 Beetle, Lantern, TF-025 Beetle, Sniffer, TF-026 Bilby, TF-031 Crab, Razorback, TF-035 Giant Moth, TF-037 Giant Moth, Shockwing, TF-280 Mamura e TF-292 Snake, Zanskaran Viper. Origem: Drive `Imagens/Novas`, com correspondência exata de nome/ID com a megalista e hash SHA-256 do PNG de origem e do WebP. Imagens ilustrativas **CANDIDATA_NOVAS_NAO_HOMOLOGADA**, não homologadas nem substituindo artes aprovadas (`preview_na_grade=false`, `substitui_arte_aprovada=false`). Total no manifesto: **43 artes autorais adicionais e 14 fichas complementares**. Os 1.320 registros originais continuam intactos.
+
+## Quarto lote WebP otimizado — 21/10/2026
+
+Foram adicionadas **6 artes autorais em revisão**: TF-045 Aaxte, TF-046 Archon, Word, TF-047 Archon, Ursan, TF-276 Malleable, Moderate, TF-293 Planar Flora, Hallowed Reeds, TF-295 Greater Spirit Soldier. Cada arquivo registra SHA-256 do PNG de origem e do WebP de publicação, sem modificar a ficha-base ou mecânicas. A megalista mantém **1.320 registros**; manifesto passa de 43 para **49 imagens candidatas** e mantém **14 fichas**.
+
+A pré-triagem de 8 arquivos reteve **TF-008 Ahu-Nixta Cataphract**, cuja arte aparenta equipamento mecânico/tecnológico, e **TF-048 Astri**, cuja espécie visual requer confirmação. Nenhuma das duas foi adicionada ao manifesto neste lote. Não promover candidatas à grade ou a artes aprovadas sem homologação.
