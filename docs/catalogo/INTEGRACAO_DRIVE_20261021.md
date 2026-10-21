@@ -55,3 +55,7 @@ Integração de mais **2 fichas estruturadas** em JSON diretamente de `Fichas/Co
 ## Primeiro lote WebP otimizado importado (21/10/2026)
 
 Foram publicados quatro WebPs autorais identificados por ID e nome canônico: **AT-003 Aboleth, AT-009 Cat, AT-010 Owl e AT-024 Pegasus**. Os PNGs originais foram convertidos para WebP e verificados com SHA-256. Estas artes permanecem **CANDIDATA_NOVAS_NAO_HOMOLOGADA**, com `preview_na_grade: false` e `substitui_arte_aprovada: false`, exibidas somente nos detalhes e sem alterar atributos de combate. A importação utilizou uma cópia temporária no Google Drive como ponte para o GitHub, preservando os dados da pasta de origem. O manifesto passa a **23 artes candidatas e 14 fichas complementares**; os 1.320 registros de criaturas seguem inalterados.
+
+## Segundo lote WebP otimizado (21/10/2026)
+
+Mais **8 artes autorais candidatas** foram incorporadas em formato WebP: TF-009 Astral Devourer, TF-010 Chelicerae, TF-013 Yavalnoi, TF-014 Ziphius, TF-283 Shukankor, TF-284 Malleable, Major, TF-286 Malleable, Massive e AT-025 Unicorn. Todas foram verificadas por nome e ID canônico, associadas a SHA-256 do PNG de origem e do WebP final. Arquivos permanecem `CANDIDATA_NOVAS_NAO_HOMOLOGADA` com `preview_na_grade: false` e sem substituir artes aprovadas. Total **31 artes candidatas no manifesto e 14 fichas complementares**; continuam **1.320 criaturas**.
