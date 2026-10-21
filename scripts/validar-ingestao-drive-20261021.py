@@ -15,7 +15,7 @@ assert len(mega["records"]) == 1320
 by_id = {c["ID NO JOGO"]: c for c in mega["records"] if c["ID NO JOGO"]}
 by_name = {c["NOME"]: c for c in mega["records"]}
 assert len(manifest["artes"]) == 19
-assert len(manifest["fichas"]) == 12
+assert len(manifest["fichas"]) == 14
 ids_art = set()
 for art in manifest["artes"]:
     cid, name = art["id_catalogo"], art["nome"]
@@ -61,7 +61,7 @@ for entry in manifest["fichas"]:
     assert full.is_file(), str(full)
     item = json.loads(full.read_text("utf-8"))
     identificacao = item.get("identificacao") or {}
-    actual = identificacao.get("id_catalogo") or identificacao.get("ID_CATALOGO") or item.get("ID_CATALOGO")
+    actual = identificacao.get("id_catalogo") or identificacao.get("ID_CATALOGO") or item.get("ID_CATALOGO") or item.get("id_catalogo")
     assert actual == cid, (cid, actual)
     print("ficha SRD complementar OK:", cid, len(full.read_bytes()), "bytes")
 
@@ -79,7 +79,8 @@ assert "driveArt?.id_catalogo===id" in script
 assert "Arte do autor · em revisão" in script
 assert "driveArt?.preview_na_grade!==false" in script
 assert "ficha.identificacao?.ID_CATALOGO" in script
-print("Validação completa: 1320 registros preservados; 19 artes autorais e 12 fichas SRD complementares.")
+assert "ficha.id_catalogo" in script, "Fichas JSON planas do Drive precisam de validação de ID"
+print("Validação completa: 1320 registros preservados; 19 artes autorais e 14 fichas SRD complementares.")
 
 
 # Auditoria de metadados do Drive Novas (não altera catálogo nem aprova arte).
