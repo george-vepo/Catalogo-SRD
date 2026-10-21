@@ -156,7 +156,7 @@ async function carregarFichaDrive(c) {
   try {
     const ficha = await getJSON(c.driveFicha.arquivo);
     if (appState.active !== c || !target.isConnected) return;
-    const recebido = ficha.identificacao?.id_catalogo || ficha.identificacao?.ID_CATALOGO || ficha.ID_CATALOGO || '';
+    const recebido = ficha.identificacao?.id_catalogo || ficha.identificacao?.ID_CATALOGO || ficha.ID_CATALOGO || ficha.id_catalogo || '';
     if (!id || id !== c.driveFicha.id_catalogo || recebido !== id) {
       target.textContent = 'Identidade da ficha divergente: dados não exibidos.';
       return;
