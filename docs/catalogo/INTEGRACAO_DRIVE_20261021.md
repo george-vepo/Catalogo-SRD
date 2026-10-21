@@ -51,3 +51,7 @@ O inventário passa a **19 imagens autorais** e **12 fichas SRD complementares**
 ## Fichas originais SRD: Cat e Owl (21/10/2026)
 
 Integração de mais **2 fichas estruturadas** em JSON diretamente de `Fichas/Completas`: **AT-009 Cat** e **AT-010 Owl**. Esses arquivos usam esquema plano com `id_catalogo` na raiz, diferente das fichas anteriores. O site e o validador passaram a conferir também esse campo; o conteúdo original foi preservado sem inferir habilidades e sem substituir a ficha-base. Ambas declaram edição SRD 5.2.1 e continuam sem homologação administrativa. Total atualizado: **19 artes candidatas e 14 fichas complementares**, com 1.320 criaturas intactas. O inventário da pasta Imagens/Novas agora está em `auditoria/drive-novas-inventario-20261021.json` (567 arquivos), distinto dos assets publicados.
+
+## Primeiro lote WebP otimizado importado (21/10/2026)
+
+Foram publicados quatro WebPs autorais identificados por ID e nome canônico: **AT-003 Aboleth, AT-009 Cat, AT-010 Owl e AT-024 Pegasus**. Os PNGs originais foram convertidos para WebP e verificados com SHA-256. Estas artes permanecem **CANDIDATA_NOVAS_NAO_HOMOLOGADA**, com `preview_na_grade: false` e `substitui_arte_aprovada: false`, exibidas somente nos detalhes e sem alterar atributos de combate. A importação utilizou uma cópia temporária no Google Drive como ponte para o GitHub, preservando os dados da pasta de origem. O manifesto passa a **23 artes candidatas e 14 fichas complementares**; os 1.320 registros de criaturas seguem inalterados.
