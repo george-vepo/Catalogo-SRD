@@ -1,0 +1,30 @@
+name: Validar importação de fichas e imagens do Drive
+on:
+  pull_request:
+    paths:
+      - "docs/catalogo/app.js"
+      - "docs/catalogo/data/drive-import-20261021.json"
+      - "docs/catalogo/data/drive-fichas-srd-20261021/**"
+      - "docs/catalogo/assets/drive-candidatas-20261021/**"
+      - "scripts/validar-ingestao-drive-20261021.py"
+      - ".github/workflows/validar-ingestao-drive.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar-drive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Sintaxe do catálogo web
+        run: node --check docs/catalogo/app.js
+      - name: Cruzar IDs, fichas originais e imagens com a megalista
+        run: python scripts/validar-ingestao-drive-20261021.py
