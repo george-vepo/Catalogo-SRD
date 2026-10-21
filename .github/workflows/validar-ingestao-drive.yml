@@ -6,6 +6,9 @@ on:
       - "docs/catalogo/data/drive-import-20261021.json"
       - "docs/catalogo/data/drive-fichas-srd-20261021/**"
       - "docs/catalogo/assets/drive-candidatas-20261021/**"
+      - "docs/catalogo/consulta-ativos-635.*"
+      - "docs/catalogo/data/catalogo-ativo-635-consulta-20261021.json"
+      - "auditoria/catalogo-ativo-v2-635-vs-megalista-1320-20261021.json"
       - "scripts/validar-ingestao-drive-20261021.py"
       - "scripts/importar_artes_drive.py"
       - "tests/test_importar_artes_drive.py"
@@ -33,5 +36,7 @@ jobs:
         run: python -m unittest discover -s tests -p "test_importar_artes_drive.py" -v
       - name: Sintaxe do catálogo web
         run: node --check docs/catalogo/app.js
+      - name: Sintaxe da consulta de auditoria dos 635 IDs
+        run: node --check docs/catalogo/consulta-ativos-635.js
       - name: Cruzar IDs, fichas originais e imagens com a megalista
         run: python scripts/validar-ingestao-drive-20261021.py

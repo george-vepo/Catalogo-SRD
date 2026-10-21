@@ -126,3 +126,47 @@ assert sum(item["situacao_catalogo"] != "PRESERVADA" for item in ausentes) == 1
 assert {item["id_catalogo"] for item in ausentes if item["situacao_catalogo"] != "PRESERVADA"} == {"KP-S007"}
 assert all(item["id_catalogo"] not in by_id for item in ausentes)
 print("Conciliação ativa 635 × megalista 1320 OK: 606 IDs comuns, 29 sem correspondência.")
+
+
+# Consulta isolada, somente leitura, com 635 IDs reais extraídos do XLSX canônico.
+preview_path = SITE / "data/catalogo-ativo-635-consulta-20261021.json"
+consulta = json.loads(preview_path.read_text("utf-8"))
+assert consulta["schema"] == "SRD_CATALOGO_ATIVO_CONSULTA_PRELIMINAR_V1"
+assert consulta["resumo"] == {
+    "total_ativos_planilha": 635,
+    "ids_ja_na_megalista_web": 606,
+    "ids_ausentes_megalista_web": 29,
+}
+assert len(consulta["sha256_fonte_xlsx"]) == 64
+linhas = consulta["registros"]
+assert len(linhas) == 635
+ids_consulta = [r["id"] for r in linhas]
+assert len(ids_consulta) == len(set(ids_consulta)) == 635
+assert set(ids_consulta) == set(concil["ids_ativos_635"])
+assert sum(bool(r["id_na_megalista_web"]) for r in linhas) == 606
+assert sum(not r["id_na_megalista_web"] for r in linhas) == 29
+assert sum(r["elegivel_booster_origem"] == "SIM" for r in linhas) == 136
+assert len({r["tipo"] for r in linhas}) == 14
+faltantes_por_id = {r["id_catalogo"]: r for r in concil["ids_ativos_ausentes_web"]}
+for row in linhas:
+    cid = row["id"]
+    assert cid and row["nome"] and row["tipo"] and row["nd"] and row["raridade"]
+    assert row["id_na_megalista_web"] == (cid in by_id)
+    assert not any(k in row for k in ("ca", "pv", "ataques", "habilidades", "acoes"))
+    assert isinstance(row["linha_planilha"], int) and 2 <= row["linha_planilha"] <= 636
+    if cid in faltantes_por_id:
+        previous = faltantes_por_id[cid]
+        for key, older in (
+            ("nome", "nome"), ("tipo", "tipo"), ("nd", "nd"), ("raridade", "raridade"),
+            ("situacao_catalogo", "situacao_catalogo"),
+            ("status_ficha_origem", "status_ficha_origem"),
+            ("elegivel_booster_origem", "elegivel_booster_origem"),
+        ):
+            assert row[key] == previous[older], (cid, key)
+html = (SITE / "consulta-ativos-635.html").read_text("utf-8")
+js = (SITE / "consulta-ativos-635.js").read_text("utf-8")
+assert "catalogo-ativo-635-consulta-20261021.json" in js
+assert 'id="show-missing"' in html and "id_na_megalista_web" in js
+assert "textContent" in js and "innerHTML" not in js
+assert "nenhuma informação foi homologada" in js.lower()
+print("Consulta preliminar 635 OK: IDs, metadados canônicos, 29 faltantes, 136 booster SIM, sem mecânicas.")
