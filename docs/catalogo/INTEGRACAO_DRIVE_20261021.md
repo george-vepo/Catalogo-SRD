@@ -69,3 +69,9 @@ Mais **12 artes de autoria do usuário** foram transferidas em WebP: AT-011 Allo
 Foram adicionadas **6 artes autorais em revisão**: TF-045 Aaxte, TF-046 Archon, Word, TF-047 Archon, Ursan, TF-276 Malleable, Moderate, TF-293 Planar Flora, Hallowed Reeds, TF-295 Greater Spirit Soldier. Cada arquivo registra SHA-256 do PNG de origem e do WebP de publicação, sem modificar a ficha-base ou mecânicas. A megalista mantém **1.320 registros**; manifesto passa de 43 para **49 imagens candidatas** e mantém **14 fichas**.
 
 A pré-triagem de 8 arquivos reteve **TF-008 Ahu-Nixta Cataphract**, cuja arte aparenta equipamento mecânico/tecnológico, e **TF-048 Astri**, cuja espécie visual requer confirmação. Nenhuma das duas foi adicionada ao manifesto neste lote. Não promover candidatas à grade ou a artes aprovadas sem homologação.
+
+## Quinto lote WebP candidato e conciliação ativa (21/10/2026)
+
+Seis artes autorais adicionadas com validação de IDs, nomes e SHA-256: KP-A001 Crystalline Monolith, TF-296 Angel Psychopomp, TF-297 Simurg, TF-300 Angel Zoryas, TF-304 Living Star, TF-513 Improved Spirit Soldier. Todos os registros continuam como candidatas sem homologação e fora da grade; 1.320 registros de criaturas e 14 fichas complementares mantidos. Total proposto no manifesto: **55 artes adicionais**.
+
+A auditoria `auditoria/catalogo-ativo-v2-635-vs-megalista-1320-20261021.json` relaciona os **29 IDs** do Excel ativo v2.0 (635) que não aparecem na megalista web (606 IDs preenchidos): **28 com status PRESERVADA e 1 KP-S007 com ficha local pendente**. A auditoria não altera a base, não atribui IDs aos 714 registros históricos vazios e não inventa mecânicas. KP-A003 e KP-S002 ficaram retidos para revisão visual antes de qualquer publicação.

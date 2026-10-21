@@ -107,3 +107,22 @@ for item in correspondencias:
     if item["ja_no_manifesto"]:
         assert any(a["id_catalogo"] == item["id_catalogo"] for a in manifest["artes"]), item["id_catalogo"]
 print("Auditoria Drive Novas OK: 567 arquivos; correspondências cruzadas sem homologação.")
+
+# Reconciliação não destrutiva entre catálogo ativo 635 e megalista histórica.
+concil = json.loads((ROOT / "auditoria/catalogo-ativo-v2-635-vs-megalista-1320-20261021.json").read_text("utf-8"))
+assert concil["schema"] == "SRD_CATALOGO_CONCILIACAO_V1"
+ids_ativos = concil["ids_ativos_635"]
+ausentes = concil["ids_ativos_ausentes_web"]
+assert len(ids_ativos) == len(set(ids_ativos)) == 635
+assert len(ausentes) == 29
+assert len(by_id) == 606
+assert len(mega["records"]) - len(by_id) == 714
+ids_ausentes = {item["id_catalogo"] for item in ausentes}
+assert len(ids_ausentes) == len(ausentes)
+assert set(ids_ativos) - set(by_id) == ids_ausentes
+assert set(by_id) - set(ids_ativos) == set()
+assert sum(item["situacao_catalogo"] == "PRESERVADA" for item in ausentes) == 28
+assert sum(item["situacao_catalogo"] != "PRESERVADA" for item in ausentes) == 1
+assert {item["id_catalogo"] for item in ausentes if item["situacao_catalogo"] != "PRESERVADA"} == {"KP-S007"}
+assert all(item["id_catalogo"] not in by_id for item in ausentes)
+print("Conciliação ativa 635 × megalista 1320 OK: 606 IDs comuns, 29 sem correspondência.")
