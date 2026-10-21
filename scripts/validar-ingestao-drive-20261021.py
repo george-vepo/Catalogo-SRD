@@ -60,7 +60,10 @@ for entry in manifest["fichas"]:
 script = (SITE / "app.js").read_text("utf-8")
 assert "driveImport.artes" in script and "driveImport.fichas" in script
 assert "carregarFichaDrive" in script and "drive-candidatas-20261021" in script
-assert "const art=artSrc(web)?web:'';" in script, "Arte não deve substituir imagem principal"
+assert "const existingArt=artSrc(web)?web:'';" in script, "Arte principal já existente deve ter precedência"
+assert "const art=existingArt || (artIsDrive?driveArt.arquivo:'');" in script
+assert "driveArt?.id_catalogo===id" in script, "Só a identidade canônica exata pode receber imagem"
+assert "drive-art-notice" in script, "Prévia precisa de rótulo de revisão"
 assert "driveArt:driveArtById.get(id)" in script
 assert "driveFicha:driveFichaById.get(id)" in script
 assert "const artIsDrive=" in script
