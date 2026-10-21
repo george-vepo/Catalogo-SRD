@@ -1,0 +1,226 @@
+{
+  "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+  "identificacao": {
+    "nome_canonico": "Roper",
+    "chave": "AT-002",
+    "id_catalogo": "AT-002",
+    "ordem_priorizada": 17,
+    "ordem_1320": 37,
+    "deck_origem": "Aberração",
+    "ids_copias_ou_referencias": [
+      "AB-REF-017"
+    ],
+    "tipo": "Aberração",
+    "nd": "5",
+    "classe": "Comum",
+    "editora": "SRD 5.2.1",
+    "publicacao": "Catálogo ativo v1.1",
+    "origem_catalogo": "CATÁLOGO 607",
+    "edicao_ficha": "SRD 5.2.1 (publicado em 2025; regras D&D 2024)"
+  },
+  "estatisticas_e_mecanicas": {
+    "tamanho": "Grande",
+    "alinhamento": "neutro e mau",
+    "ca": 20,
+    "ca_tipo": "SRD 5.2.1 (valor de ficha)",
+    "pv": 93,
+    "pv_formula": "11d10+33",
+    "deslocamentos_pes": {
+      "terrestre": 10,
+      "voo": null,
+      "natacao": null,
+      "escalada": 20,
+      "pairar": false
+    },
+    "atributos": {
+      "FOR": 18,
+      "DES": 8,
+      "CON": 17,
+      "INT": 7,
+      "SAB": 16,
+      "CAR": 6
+    },
+    "modificadores_atributos": {
+      "FOR": 4,
+      "DES": -1,
+      "CON": 3,
+      "INT": -2,
+      "SAB": 3,
+      "CAR": -2
+    },
+    "iniciativa_bonus": 5,
+    "iniciativa_valor_passivo": 15,
+    "proficiencia_bonus": 3,
+    "salvaguardas": {},
+    "salvaguardas_exibidas": {
+      "FOR": 4,
+      "DES": -1,
+      "CON": 3,
+      "INT": -2,
+      "SAB": 3,
+      "CAR": -2
+    },
+    "pericias": {
+      "Percepção": 6,
+      "Furtividade": 5
+    },
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 16
+    },
+    "idiomas": [],
+    "xp": 1800,
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicoes": [],
+    "tracos": [
+      {
+        "nome": "Spider Climb",
+        "efeito": "Pode escalar superfícies difíceis, inclusive tetos, sem realizar teste de atributo."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Tentacle",
+        "economia": "acao",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 7,
+        "alcance_pes": 60,
+        "dano": null,
+        "efeito_ao_acertar": {
+          "condicoes": [
+            "agarrado",
+            "envenenado"
+          ],
+          "agarrado": {
+            "cd_fuga": 14,
+            "causa": "Um dos seis tentáculos do Roper",
+            "duracao": "Até encerrar o agarrão."
+          },
+          "envenenado": {
+            "duracao": "Até o término do agarrão."
+          }
+        },
+        "tentaculos_totais": 6,
+        "tentaculo_alvejavel_individualmente": {
+          "ca": 20,
+          "pv": 10,
+          "imunidades_dano": [
+            "veneno",
+            "psíquico"
+          ],
+          "efeito_ao_destruir": "Liberta a criatura agarrada por aquele tentáculo.",
+          "dano_aplicado_ao_roper": 0,
+          "regeneracao": "Tentáculo destruído regenera no início do próximo turno do Roper."
+        },
+        "nota": "Tentacle não causa dano no acerto; não inventar dano."
+      },
+      {
+        "nome": "Reel",
+        "economia": "acao",
+        "tipo": "acao_de_puxar",
+        "efeito": "Puxa cada criatura agarrada pelo Roper até 30 pés em linha reta na direção dele.",
+        "distancia_maxima_pes": 30,
+        "requisito": "Alvos agarrados pelo Roper."
+      },
+      {
+        "nome": "Bite",
+        "economia": "acao",
+        "tipo": "ataque_corpo_a_corpo",
+        "bonus_acerto": 7,
+        "alcance_pes": 5,
+        "dano": {
+          "dados": "3d8+4",
+          "tipo": "perfurante",
+          "media": 17
+        }
+      }
+    ],
+    "multiataque": {
+      "nome": "Multiattack",
+      "economia": "acao",
+      "sequencia": [
+        {
+          "acao": "Tentacle",
+          "vezes": 2
+        },
+        {
+          "acao": "Reel",
+          "vezes": 1
+        },
+        {
+          "acao": "Bite",
+          "vezes": 2
+        }
+      ],
+      "descricao": "Realiza dois ataques Tentacle, usa Reel e realiza dois ataques Bite, nessa ordem.",
+      "nota": "Cada Bite requer alvo no seu alcance de 5 pés; Reel puxa até 30 pés, sem garantir automaticamente alcance."
+    },
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "magias": [],
+    "recargas": [],
+    "recursos_de_combate": [
+      {
+        "recurso": "Tentáculos",
+        "capacidade_total": 6,
+        "pv_por_tentaculo": 10,
+        "ca_por_tentaculo": 20,
+        "regeneracao": "No início do próximo turno do Roper quando destruído."
+      }
+    ]
+  },
+  "auditoria": {
+    "data_execucao_local": "2026-10-19",
+    "modo": "manual_uma_criatura",
+    "ficha_anterior": "resumo_deck_com_bloco_integral_srd_sem_json_individual",
+    "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/17_Roper.md",
+    "regra_de_edicao": "Somente SRD 5.2.1, página 320; não importar o Roper SRD 5.1/2014.",
+    "status_validacao_mecanica": "CONCLUIDA_FICHA_MECANICA_SRD_5_2_1",
+    "homologacao_de_carta_pelo_administrador": false,
+    "observacoes": [
+      "Roper SRD 5.2.1 p. 320 conferido diretamente no PDF do projeto, comparado à transcrição pública em D&D Beyond e Fantasy Grounds.",
+      "O modificador de iniciativa +5 está expresso na fonte embora a Destreza seja 8 (modificador -1); não recalcular a iniciativa pela Destreza.",
+      "O SRD lista os seis bônus de salvaguarda iguais aos modificadores; nenhuma proficiência específica em salvaguarda foi inferida.",
+      "Poisoned/Grappled são efeitos sobre o alvo da ação Tentacle; não são imunidades gerais do Roper.",
+      "As imunidades a veneno e psíquico pertencem exclusivamente a cada tentáculo atacável, não ao Roper.",
+      "Tentacle atinge sem causar dano direto; a mordida tem alcance de 5 pés e não pode alcançar automaticamente um alvo puxado de distância maior.",
+      "A habilidade de suporte Tentacle (E) consta como candidata no Markdown e não integra o bloco da criatura nem está aprovada."
+    ],
+    "pendencias_operacionais": [
+      "Aprovação administrativa da carta e eventual habilidade de suporte Tentacle (E) ainda não comprovada.",
+      "Regras de arena, posicionamento e alcance 60 pés/5 pés precisam ser aplicadas no combate; não presumir mordida após puxar 30 pés.",
+      "Especificar na aplicação os identificadores/estados dos seis tentáculos, seus PV, criaturas agarradas, condições e regeneração entre turnos.",
+      "Nenhum estado de partida, recursos dinâmicos ou zonas foram alterados nesta pesquisa."
+    ],
+    "divergencias": [],
+    "fontes": [
+      {
+        "classe": "fonte_primaria_local",
+        "titulo": "System Reference Document 5.2.1, página impressa 320 — Roper",
+        "caminho_local": "/mnt/data/SRD_CC_v5.2.1.pdf",
+        "url": "https://www.dndbeyond.com/srd"
+      },
+      {
+        "classe": "fonte_oficial_web",
+        "titulo": "D&D Beyond Basic Rules 2024 — Creature Stat Blocks — Roper",
+        "url": "https://www.dndbeyond.com/sources/dnd/br-2024/creature-stat-blocks"
+      },
+      {
+        "classe": "fonte_srd_publica",
+        "titulo": "Fantasy Grounds — D&D SRD 5.2.1, Roper",
+        "url": "https://www.fantasygrounds.com/library/5e/dd-srd-5-2-1/monsters-a-z"
+      },
+      {
+        "classe": "referencia_licenca",
+        "titulo": "Creative Commons Attribution 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "campos_nao_listados": "Não há no bloco de Roper resistências gerais, imunidades gerais, magias, ações bônus, reações, recargas ou ações lendárias; não inferidos.",
+    "habilidade_suporte_deck": "Candidata: Tentacle (E), +7, agarrado/envenenado, fuga CD 14; não ativada sem aprovação.",
+    "atribuicao_licenca": "This work includes material from the System Reference Document 5.2.1 (“SRD 5.2.1”) by Wizards of the Coast LLC, available at https://www.dndbeyond.com/srd. The SRD 5.2.1 is licensed under the Creative Commons Attribution 4.0 International License, available at https://creativecommons.org/licenses/by/4.0/legalcode."
+  }
+}
