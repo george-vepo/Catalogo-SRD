@@ -152,6 +152,15 @@ for row in linhas:
     cid = row["id"]
     assert cid and row["nome"] and row["tipo"] and row["nd"] and row["raridade"]
     assert row["id_na_megalista_web"] == (cid in by_id)
+    # Para os 606 IDs comuns, a fonte ativa e o arquivo web devem concordar
+    # sobre identidade, tipo, ND e raridade; jamais aplicar correções automáticas.
+    if cid in by_id:
+        historical = by_id[cid]
+        for active_field, web_field in (
+            ("nome", "NOME"), ("tipo", "TIPO"),
+            ("nd", "ND"), ("raridade", "RARIDADE"),
+        ):
+            assert str(row[active_field]).strip().casefold() == str(historical[web_field]).strip().casefold(), (cid, active_field)
     assert not any(k in row for k in ("ca", "pv", "ataques", "habilidades", "acoes"))
     assert isinstance(row["linha_planilha"], int) and 2 <= row["linha_planilha"] <= 636
     if cid in faltantes_por_id:
