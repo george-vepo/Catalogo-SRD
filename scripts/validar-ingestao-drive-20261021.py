@@ -14,7 +14,7 @@ assert len(mega["records"]) == 1320
 
 by_id = {c["ID NO JOGO"]: c for c in mega["records"] if c["ID NO JOGO"]}
 by_name = {c["NOME"]: c for c in mega["records"]}
-assert len(manifest["artes"]) == 3
+assert len(manifest["artes"]) == 14
 assert len(manifest["fichas"]) == 3
 ids_art = set()
 for art in manifest["artes"]:
@@ -23,7 +23,8 @@ for art in manifest["artes"]:
     ids_art.add(cid or name)
     assert art["status"].startswith("CANDIDATA_")
     assert art["substitui_arte_aprovada"] is False
-    assert art["direitos"] == "USO_E_REPUBLICACAO_PENDENTES_DE_CONFIRMACAO"
+    assert art["direitos"] == "CRIADA_PELO_USUARIO_PUBLICACAO_AUTORIZADA_20261021"
+    assert "Autorização explícita do autor" in art["permissao_publicacao"]
     record = by_id[cid] if cid else by_name[name]
     assert record["NOME"] == name
     if not cid:
@@ -62,4 +63,7 @@ assert "carregarFichaDrive" in script and "drive-candidatas-20261021" in script
 assert "const art=artSrc(web)?web:'';" in script, "Arte não deve substituir imagem principal"
 assert "driveArt:driveArtById.get(id)" in script
 assert "driveFicha:driveFichaById.get(id)" in script
-print("Validação completa: 1320 registros preservados; 3 artes e 3 fichas complementares.")
+assert "const artIsDrive=" in script
+assert "driveArt?.id_catalogo===id" in script
+assert "Arte do autor · em revisão" in script
+print("Validação completa: 1320 registros preservados; 14 artes autorais e 3 fichas complementares.")
