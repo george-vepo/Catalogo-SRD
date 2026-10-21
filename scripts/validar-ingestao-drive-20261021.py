@@ -14,8 +14,8 @@ assert len(mega["records"]) == 1320
 
 by_id = {c["ID NO JOGO"]: c for c in mega["records"] if c["ID NO JOGO"]}
 by_name = {c["NOME"]: c for c in mega["records"]}
-assert len(manifest["artes"]) == 14
-assert len(manifest["fichas"]) == 3
+assert len(manifest["artes"]) == 15
+assert len(manifest["fichas"]) == 12
 ids_art = set()
 for art in manifest["artes"]:
     cid, name = art["id_catalogo"], art["nome"]
@@ -34,8 +34,15 @@ for art in manifest["artes"]:
     full = SITE / rel
     assert full.is_file(), str(full)
     raw = full.read_bytes()
-    assert 150_000 <= len(raw) <= 2_000_000, len(raw)
-    assert raw[:4] == b"RIFF" and raw[8:12] == b"WEBP"
+    if rel.suffix.lower() == ".webp":
+        assert 150_000 <= len(raw) <= 2_000_000, len(raw)
+        assert raw[:4] == b"RIFF" and raw[8:12] == b"WEBP"
+    elif rel.suffix.lower() == ".png":
+        assert art["preview_na_grade"] is False, "Novas candidatas só no detalhe"
+        assert 100_000 <= len(raw) <= 5_000_000, len(raw)
+        assert raw.startswith(b"\x89PNG\r\n\x1a\n"), "Assinatura PNG inválida"
+    else:
+        raise AssertionError("Formato de imagem não permitido: " + str(rel))
     print("arte candidata OK:", cid or name, len(raw), "bytes")
 
 ids_sheet = set()
@@ -53,7 +60,8 @@ for entry in manifest["fichas"]:
     full = SITE / rel
     assert full.is_file(), str(full)
     item = json.loads(full.read_text("utf-8"))
-    actual = (item.get("identificacao") or {}).get("id_catalogo") or item.get("ID_CATALOGO")
+    identificacao = item.get("identificacao") or {}
+    actual = identificacao.get("id_catalogo") or identificacao.get("ID_CATALOGO") or item.get("ID_CATALOGO")
     assert actual == cid, (cid, actual)
     print("ficha SRD complementar OK:", cid, len(full.read_bytes()), "bytes")
 
@@ -69,4 +77,6 @@ assert "driveFicha:driveFichaById.get(id)" in script
 assert "const artIsDrive=" in script
 assert "driveArt?.id_catalogo===id" in script
 assert "Arte do autor · em revisão" in script
-print("Validação completa: 1320 registros preservados; 14 artes autorais e 3 fichas complementares.")
+assert "driveArt?.preview_na_grade!==false" in script
+assert "ficha.identificacao?.ID_CATALOGO" in script
+print("Validação completa: 1320 registros preservados; 15 artes autorais e 12 fichas SRD complementares.")
