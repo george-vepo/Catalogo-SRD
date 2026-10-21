@@ -75,3 +75,16 @@ A pré-triagem de 8 arquivos reteve **TF-008 Ahu-Nixta Cataphract**, cuja arte a
 Seis artes autorais adicionadas com validação de IDs, nomes e SHA-256: KP-A001 Crystalline Monolith, TF-296 Angel Psychopomp, TF-297 Simurg, TF-300 Angel Zoryas, TF-304 Living Star, TF-513 Improved Spirit Soldier. Todos os registros continuam como candidatas sem homologação e fora da grade; 1.320 registros de criaturas e 14 fichas complementares mantidos. Total proposto no manifesto: **55 artes adicionais**.
 
 A auditoria `auditoria/catalogo-ativo-v2-635-vs-megalista-1320-20261021.json` relaciona os **29 IDs** do Excel ativo v2.0 (635) que não aparecem na megalista web (606 IDs preenchidos): **28 com status PRESERVADA e 1 KP-S007 com ficha local pendente**. A auditoria não altera a base, não atribui IDs aos 714 registros históricos vazios e não inventa mecânicas. KP-A003 e KP-S002 ficaram retidos para revisão visual antes de qualquer publicação.
+
+## Consulta preliminar do catálogo ativo (21/10/2026)
+
+A página isolada [Consulta dos 635 IDs](consulta-ativos-635.html) foi criada para auditar, sem modificar a interface oficial do arquivo geral, os dados da aba Catalogo ativo do Excel SRD_Card_Game_Catalogo_Ativo_v2_0_635.xlsx.
+
+- Arquivo de consulta: data/catalogo-ativo-635-consulta-20261021.json, com **635 IDs extraídos diretamente do Excel**, situação da ficha, estado do booster, tipo, ND, raridade e proveniência por linha.
+- **606 IDs** têm correspondência de identificador na megalista de 1.320 linhas; **29 IDs** constam apenas da planilha ativa. Nenhum ID foi atribuído às **714 linhas históricas sem ID**.
+- A planilha contém **136 registros com Elegível booster literalmente SIM**; os demais valores são preservados em vez de serem convertidos em aprovação.
+- A página é somente leitura, possui filtros de auditoria e não expõe CA, PV ou ataques sem ficha completa verificada.
+- Um teste do CI compara o arquivo diretamente com o conjunto de 635 IDs e com os metadados dos 29 registros ausentes registrados na auditoria. O local de origem do arquivo XLSX é registrado por SHA-256.
+- **Não é decisão administrativa** sobre ativação, alteração de catálogo, regras, cartas ou publicação de mecânicas. A tela padrão index.html continua exibindo o arquivo geral de 1.320 entradas.
+
+Relacionado à issue #42.

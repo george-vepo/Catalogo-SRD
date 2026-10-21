@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c141c">
+<meta name="robots" content="noindex">
+<title>Consulta preliminar dos 635 IDs · SRD Card Game</title>
+<style>
+:root{color-scheme:dark;--bg:#0c141c;--panel:#162431;--ink:#f0eee8;--muted:#b7c2c9;--gold:#e7c78c;--line:#344552}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55}
+main{width:min(1330px,95%);margin:auto;padding:28px 0 72px}a{color:var(--gold)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #e2c78e;outline-offset:2px}
+header{display:flex;justify-content:space-between;gap:24px;align-items:center;padding:10px 0 20px;border-bottom:1px solid var(--line)}
+.brand{text-decoration:none;font-weight:800;letter-spacing:.07em;color:var(--ink)}.eyebrow{text-transform:uppercase;letter-spacing:.15em;color:var(--gold);font-size:.8rem}
+h1{font-size:clamp(2rem,4.8vw,3.2rem);line-height:1.1;margin:16px 0}.sub{max-width:900px;color:var(--muted)}.notice{border-left:4px solid var(--gold);background:#1a2834;padding:16px 20px;border-radius:5px;margin:25px 0}.notice strong{color:var(--gold)}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:24px 0}.metric{padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:10px}.metric strong{font-size:1.8rem;display:block}.metric span{color:var(--muted);font-size:.81rem}
+.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+.control{display:flex;flex-direction:column;gap:6px}.control label{color:var(--muted);font-size:.78rem}
+input,select,button{font:inherit;color:var(--ink);background:#10202d;border:1px solid #637281;border-radius:8px;padding:11px 12px;min-width:0}
+button{cursor:pointer;background:#294456;border-color:#61788b}button:hover{background:#34566d}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}
+.meta{font-size:.83rem;color:var(--muted);margin-top:18px}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:11px}table{width:100%;border-collapse:collapse;min-width:1090px}
+th,td{text-align:left;padding:12px 11px;border-bottom:1px solid #354451;vertical-align:top}th{font-size:.79rem;color:var(--gold);background:#213442;position:sticky;top:0}td{font-size:.85rem}tr:nth-child(even){background:#13222d}td strong{font-weight:650}
+td small{display:block;margin-top:3px}.secondary{color:var(--muted)}.monospace{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;white-space:nowrap}
+.smaller{font-size:.75rem}.covered,.missing{font-size:.75rem;font-weight:700;white-space:nowrap}.covered{color:#b3dacb}.missing{color:#ffd2a1}
+.count{margin:18px 0;color:var(--muted)}#more{display:block;margin:22px auto}#more[hidden]{display:none}
+footer{border-top:1px solid var(--line);margin-top:32px;padding-top:18px;color:var(--muted);font-size:.8rem}
+@media(max-width:750px){header{display:block}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.controls{grid-template-columns:1fr}.metric{padding:13px}}
+</style>
+<script src="consulta-ativos-635.js" defer></script>
+</head>
+<body>
+<main>
+<header><a class="brand" href="../catalogo/">SRD CARD GAME</a><span class="eyebrow">Ferramenta de conciliação · somente leitura</span></header>
+<section aria-labelledby="title">
+<h1 id="title">Consulta preliminar dos <span style="color:var(--gold)">635 IDs</span></h1>
+<p class="sub">Exibição de auditoria derivada da planilha <em>SRD Card Game — Catálogo Ativo v2.0</em>. Não altera o catálogo geral de 1.320 registros, não efetiva substituições e não constitui aprovação de ficha ou aptidão para duelo.</p>
+</section>
+<div class="notice" role="note"><strong>Atenção:</strong> “registro no catálogo ativo” não equivale a mecânicas verificadas, booster autorizado ou arte homologada. As situações de ficha e de booster abaixo reproduzem literalmente a planilha. Os 29 IDs ausentes da megalista são apresentados somente como metadados, sem CA, PV, ataques ou habilidades inferidos.</div>
+<div class="metrics">
+<div class="metric"><strong id="total">—</strong><span>IDs do Excel ativo</span></div>
+<div class="metric"><strong id="common">—</strong><span>IDs também na base web</span></div>
+<div class="metric"><strong id="missing">—</strong><span>IDs ausentes da base web</span></div>
+<div class="metric"><strong id="booster-yes">—</strong><span>Booster “SIM” na planilha</span></div>
+</div>
+<p id="source" class="meta"></p>
+<div class="controls" role="search" aria-label="Filtros da auditoria">
+<div class="control"><label for="q">Pesquisar nome, ID ou editora</label><input id="q" type="search" placeholder="Ex.: AT-006, Aboleth…"></div>
+<div class="control"><label for="type">Tipo</label><select id="type"><option value="">Todos os tipos</option></select></div>
+<div class="control"><label for="rarity">Raridade</label><select id="rarity"><option value="">Todas as raridades</option></select></div>
+<div class="control"><label for="situation">Situação literal da planilha</label><select id="situation"><option value="">Todas as situações</option></select></div>
+<div class="control"><label for="coverage">Cobertura do arquivo web</label><select id="coverage"><option value="">Todos</option><option value="present">ID presente</option><option value="missing">ID ausente</option></select></div>
+<div class="control"><label for="booster">Indicador de booster da planilha</label><select id="booster"><option value="">Todos</option><option value="sim">Texto igual a SIM</option><option value="other">Outros estados</option></select></div>
+</div>
+<div class="actions"><button id="show-missing" type="button">Ver os 29 IDs ausentes</button><button id="clear" type="button">Limpar filtros</button></div>
+<p id="load-status" class="meta" role="status">Carregando registros…</p>
+<p id="shown" class="count"></p>
+<div class="table-wrap">
+<table><caption style="text-align:left;padding:12px 10px;color:var(--muted)">Consulta de metadados, não ficha de combate</caption><thead><tr>
+<th scope="col">ID</th><th scope="col">Criatura / publicação</th><th scope="col">Tipo</th><th scope="col">ND</th><th scope="col">Raridade</th><th scope="col">Situação no Excel</th><th scope="col">Ficha e booster (origem)</th><th scope="col">Web</th>
+</tr></thead><tbody id="rows"></tbody></table>
+</div>
+<button id="more" type="button" hidden>Carregar mais</button>
+<footer>Fonte: catálogo ativo v2.0, aba “Catalogo ativo”, 635 registros. Comparação de IDs com a megalista web de 1.320 registros. Esta página não grava dados nem altera o jogo. <a href="./">Voltar ao arquivo geral</a>.</footer>
+</main>
+</body>
+</html>
