@@ -7,6 +7,9 @@ on:
       - "docs/catalogo/data/drive-fichas-srd-20261021/**"
       - "docs/catalogo/assets/drive-candidatas-20261021/**"
       - "scripts/validar-ingestao-drive-20261021.py"
+      - "scripts/importar_artes_drive.py"
+      - "tests/test_importar_artes_drive.py"
+      - "docs/catalogo/IMPORTACAO_ARTES_DRIVE.md"
       - ".github/workflows/validar-ingestao-drive.yml"
   workflow_dispatch:
 
@@ -24,6 +27,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Instalar dependência de testes de conversão
+        run: python -m pip install Pillow==11.3.0
+      - name: Testar importação e deduplicação local
+        run: python -m unittest discover -s tests -p "test_importar_artes_drive.py" -v
       - name: Sintaxe do catálogo web
         run: node --check docs/catalogo/app.js
       - name: Cruzar IDs, fichas originais e imagens com a megalista

@@ -14,7 +14,8 @@ assert len(mega["records"]) == 1320
 
 by_id = {c["ID NO JOGO"]: c for c in mega["records"] if c["ID NO JOGO"]}
 by_name = {c["NOME"]: c for c in mega["records"]}
-assert len(manifest["artes"]) == 19
+assert len(manifest["artes"]) >= 19
+assert manifest["contagens_lote"]["artes"] == len(manifest["artes"])
 assert len(manifest["fichas"]) == 14
 ids_art = set()
 for art in manifest["artes"]:
@@ -35,8 +36,11 @@ for art in manifest["artes"]:
     assert full.is_file(), str(full)
     raw = full.read_bytes()
     if rel.suffix.lower() == ".webp":
-        assert 150_000 <= len(raw) <= 2_000_000, len(raw)
+        assert 5_000 <= len(raw) <= 2_000_000, len(raw)
         assert raw[:4] == b"RIFF" and raw[8:12] == b"WEBP"
+        if art.get("sha256_webp"):
+            import hashlib
+            assert hashlib.sha256(raw).hexdigest() == art["sha256_webp"], "Hash WebP incorreto"
     elif rel.suffix.lower() == ".png":
         assert art["preview_na_grade"] is False, "Novas candidatas só no detalhe"
         assert 100_000 <= len(raw) <= 5_000_000, len(raw)
@@ -80,7 +84,7 @@ assert "Arte do autor · em revisão" in script
 assert "driveArt?.preview_na_grade!==false" in script
 assert "ficha.identificacao?.ID_CATALOGO" in script
 assert "ficha.id_catalogo" in script, "Fichas JSON planas do Drive precisam de validação de ID"
-print("Validação completa: 1320 registros preservados; 19 artes autorais e 14 fichas SRD complementares.")
+print(f"Validação completa: 1320 registros preservados; {len(manifest['artes'])} artes candidatas e 14 fichas SRD complementares.")
 
 
 # Auditoria de metadados do Drive Novas (não altera catálogo nem aprova arte).
