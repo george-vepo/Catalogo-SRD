@@ -3,7 +3,7 @@ const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const link = value => /^https:\/\/[^"'<> ]+/i.test(value||'') ? value : '';
 // SRD_CATALOGO_ARTES_GERADAS_20261015: accept only whitelisted local assets.
-const artSrc = value => (/^https:\/\/[^\"'<> ]+/i.test(value||'') || /^assets\/artes-geradas-20261015\/[a-z0-9-]+\.webp$/i.test(value||'')) ? value : '';
+const artSrc = value => (/^https:\/\/[^\"'<> ]+/i.test(value||'') || (/^assets\/(?:artes-geradas-20261015|drive-candidatas-20261021)\/[a-z0-9-]+\.webp$/i.test(value||''))) ? value : '';
 const norm = value => String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
 const $gallery = $('gallery');
 const placeholder = () => $('missingImage').innerHTML.trim();
@@ -147,6 +147,25 @@ function deckBlock(c) {
   }
   return parts.join('');
 }
+async function carregarFichaDrive(c) {
+  const target = $('driveFichaConteudo');
+  if (!target || !c.driveFicha) return;
+  const id = c.meta['ID NO JOGO'] || '';
+  try {
+    const ficha = await getJSON(c.driveFicha.arquivo);
+    if (appState.active !== c || !target.isConnected) return;
+    const recebido = ficha.identificacao?.id_catalogo || ficha.ID_CATALOGO || '';
+    if (!id || id !== c.driveFicha.id_catalogo || recebido !== id) {
+      target.textContent = 'Identidade da ficha divergente: dados não exibidos.';
+      return;
+    }
+    target.innerHTML = '<p class="notice">Arquivo de referência importado do Drive, com edição declarada ' +
+      esc(c.driveFicha.edicao) + '. Não substitui ficha-base nem constitui homologação administrativa.</p>' +
+      rawData('Ver JSON da ficha estruturada original', ficha, false);
+  } catch (err) {
+    if (appState.active === c && target.isConnected) target.textContent = 'Ficha complementar indisponível: ' + String(err.message||err);
+  }
+}
 function openCard(index,fromLink) {
   const c=appState.all[index];if(!c)return;
   appState.lastFocus=appState.lastFocus||document.activeElement;
@@ -171,14 +190,21 @@ function openCard(index,fromLink) {
   const imageNote=c.generated?'<p>Arte digital gerada em ChatGPT em revisão. Não é ilustração oficial da criatura, nem homologação da ficha ou dos direitos editoriais.</p>':c.art?
     '<p>Ilustração de referência (web), conforme arquivo de pesquisa. Fonte, edição e direitos de reprodução podem exigir revisão.</p>':
     '<p>Não há arte direta verificada e adequada para este registro. O catálogo não utiliza imagens de espécies parecidas como substituição.</p>';
-  const imageBlock=section('Imagem e licença',imageNote+(c.generated?'<p><strong>Proveniência da arte:</strong> '+esc(c.generated.origin)+'. '+esc(c.generated.review_note)+'</p>':'')+(c.curated?'<p><strong>Revisão visual manual:</strong> '+esc(c.curated.evidence)+' · '+esc(c.curated.source_name)+' · '+esc(c.curated.source_version)+' · '+esc(c.curated.rights)+'</p>':'')+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
+  const candidataDrive = c.driveArt ?
+    '<div class="notice"><strong>Arte adicional do Drive — ' + esc(c.driveArt.status) +
+    ':</strong> imagem candidata, sem substituição da ilustração principal nem autorização de reprodução homologada.</div>' +
+    safeImage(c.driveArt.arquivo, 'Arte candidata do Drive de ' + c.name) +
+    '<p class="src-note">' + esc(c.driveArt.revisao_visual) + ' · ' + esc(c.driveArt.direitos) + '</p>' : '';
+  const imageBlock=section('Imagem e licença',imageNote+candidataDrive+(c.generated?'<p><strong>Proveniência da arte:</strong> '+esc(c.generated.origin)+'. '+esc(c.generated.review_note)+'</p>':'')+(c.curated?'<p><strong>Revisão visual manual:</strong> '+esc(c.curated.evidence)+' · '+esc(c.curated.source_name)+' · '+esc(c.curated.source_version)+' · '+esc(c.curated.rights)+'</p>':'')+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
     (c.celestial[0]?.artNote?'<p>'+esc(c.celestial[0].artNote)+'</p>':''));
   $('detailInfo').innerHTML=top+status+deckBlock(c)+mechanicsSummary(c)+
     section('Identificação — todos os campos da megalista','<div class="meta-pairs">'+metaPairs+'</div>')+
     (c.audit?section('Controle de auditoria','<div class="meta-pairs">'+Object.entries(c.audit).map(([k,v])=>pair(k,v)).join('')+'</div>'):'')+
-    imageBlock+referenceDetails(c.extra)+(c.alternates.length?section('Registro alternativo — identidade a conciliar','<p class="notice">O repositório contém KP-S007 (“Animated Instruments (Animated Symphony)”), enquanto a megalista utiliza TF-085. São mantidos como registros distintos, sem mesclar regras, aguardando reconciliação editorial.</p>'+c.alternates.map(x=>rawData(x.id+' · '+x.nome,x,true)).join('')):'')+(c.research.length?section('Pesquisas aprofundadas existentes','<div class="linkrow">'+c.research.map(x=>makeLink(x.url,'Pesquisa '+x.path.split('/')[3]+' · '+x.path.split('/').pop())).join('')+'</div><p>Arquivos de pesquisa do repositório; a existência não implica ficha homologada.</p>'):'')+linksBlock(c)+
+    imageBlock+(c.driveFicha?section('Ficha complementar do Drive — sem homologação',
+       '<div id="driveFichaConteudo">Carregando ficha estruturada...</div>'):'')+referenceDetails(c.extra)+(c.alternates.length?section('Registro alternativo — identidade a conciliar','<p class="notice">O repositório contém KP-S007 (“Animated Instruments (Animated Symphony)”), enquanto a megalista utiliza TF-085. São mantidos como registros distintos, sem mesclar regras, aguardando reconciliação editorial.</p>'+c.alternates.map(x=>rawData(x.id+' · '+x.nome,x,true)).join('')):'')+(c.research.length?section('Pesquisas aprofundadas existentes','<div class="linkrow">'+c.research.map(x=>makeLink(x.url,'Pesquisa '+x.path.split('/')[3]+' · '+x.path.split('/').pop())).join('')+'</div><p>Arquivos de pesquisa do repositório; a existência não implica ficha homologada.</p>'):'')+linksBlock(c)+
     section('Rastreabilidade','<p>Os dados provêm dos arquivos versionados no GitHub e preservam as classificações originais. A megalista provisória é distinta da homologação mecânica e jurídica da coleção.</p>');
   $('detailInfo').scrollTop=0;$('close').focus();
+  if (c.driveFicha) carregarFichaDrive(c);
   if(!fromLink)history.replaceState(null,'','#c/'+index);
 }
 function closeCard(){
@@ -244,11 +270,11 @@ async function getJSON(path){
 }
 async function init(){
  try{
-   const [mega,srd,visuais,ledger,celestial,aberracao,aberrSupports,deepResearch,curadoria,extraSheets,generatedArts]=await Promise.all([
+   const [mega,srd,visuais,ledger,celestial,aberracao,aberrSupports,deepResearch,curadoria,extraSheets,generatedArts,driveImport]=await Promise.all([
      getJSON('data/megalista-1320.json'), getJSON('data/fichas-607.json'),
      getJSON('data/imagens-607.json'), getJSON('data/auditoria-607.json'),
      getJSON('data/deck-celestial-40.json'),getJSON('data/deck-aberracao-40.json'),
-     getJSON('data/suportes-aberracao.json'),getJSON('data/pesquisas-aprofundadas.json'),getJSON('data/curadoria-artes-20261015.json'),getJSON('data/fichas-referencia-verificadas.json'),getJSON('data/artes-geradas-20261015.json')
+     getJSON('data/suportes-aberracao.json'),getJSON('data/pesquisas-aprofundadas.json'),getJSON('data/curadoria-artes-20261015.json'),getJSON('data/fichas-referencia-verificadas.json'),getJSON('data/artes-geradas-20261015.json'),getJSON('data/drive-import-20261021.json')
    ]);
    const fichas=new Map(srd.fichas.map(x=>[x.id,x]));
    const imagens=new Map(visuais.records.map(x=>[x.ID,x]));
@@ -257,6 +283,9 @@ async function init(){
    const extraRecords=new Map(extraSheets.records.map(x=>[x.id,x]));
    const generatedById=new Map(generatedArts.records.filter(x=>x.principal&&x.catalog_id).map(x=>[x.catalog_id,x]));
    const generatedByName=new Map(generatedArts.records.filter(x=>x.principal&&x.catalog_name).map(x=>[norm(x.catalog_name),x]));
+   const driveArtById = new Map(driveImport.artes.filter(x=>x.id_catalogo).map(x=>[x.id_catalogo,x]));
+   const driveArtByName = new Map(driveImport.artes.filter(x=>!x.id_catalogo).map(x=>[norm(x.nome),x]));
+   const driveFichaById = new Map(driveImport.fichas.map(x=>[x.id_catalogo,x]));
    const cByName=new Map(),aByName=new Map();
    for(const x of celestial.records){const n=norm(x.name);if(!cByName.has(n))cByName.set(n,[]);cByName.get(n).push(x);}
    const sp=new Map(aberrSupports.records.map(x=>[norm(x.nome),x]));
@@ -274,6 +303,8 @@ async function init(){
      const keyfields=[name,id,...alternates.map(x=>x.id),m.TIPO,m.FONTE,m.PUBLICAÇÃO,m.EDITORA,...(m['ALIASES CONSOLIDADOS']?[m['ALIASES CONSOLIDADOS']]:[])];
      return {index:i,name,nd:m.ND,rarity:m.RARIDADE,type:m.TIPO,meta:m,mechanics:f||null,artRecord:im||null,
        audit:id?auditoria.get(id)||null:null,celestial:cel,aberracao:abe,research:deep,alternates,curated,generated,extra,art,
+       driveArt:driveArtById.get(id)||(!id&&driveArtByName.get(norm(name)))||null,
+       driveFicha:driveFichaById.get(id)||null,
        search:norm(keyfields.join(' '))};
    });
    if(list.length!==1320)throw Error('Esperados 1320 registros, recebidos '+list.length);
@@ -284,7 +315,7 @@ async function init(){
    const nImg=list.filter(x=>x.art).length;
    const nInt=list.filter(x=>x.mechanics?.ficha_integral_texto_local).length;
    const nSupport=list.filter(x=>x.celestial.length||x.aberracao.some(a=>a.support)).length;
-   stop('1.320 criaturas · '+fichas.size+' fichas mecânicas · '+nInt+' textos integrais locais · '+nImg+' artes e referências visuais · '+nSupport+' criaturas com suporte candidato');
+   stop('1.320 criaturas · '+fichas.size+' fichas mecânicas · '+nInt+' textos integrais locais · '+nImg+' artes e referências visuais · '+nSupport+' criaturas com suporte candidato · '+driveImport.artes.length+' artes e '+driveImport.fichas.length+' fichas complementares do Drive (em revisão)');
    render(true);
    const hash=decodeURIComponent(location.hash.slice(1));
    if(hash.startsWith('c/')){const idx=Number(hash.slice(2));if(Number.isInteger(idx)&&idx>=0&&idx<list.length)openCard(idx,true)}
