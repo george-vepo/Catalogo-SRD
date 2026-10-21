@@ -80,3 +80,22 @@ assert "Arte do autor · em revisão" in script
 assert "driveArt?.preview_na_grade!==false" in script
 assert "ficha.identificacao?.ID_CATALOGO" in script
 print("Validação completa: 1320 registros preservados; 19 artes autorais e 12 fichas SRD complementares.")
+
+
+# Auditoria de metadados do Drive Novas (não altera catálogo nem aprova arte).
+auditoria = json.loads((ROOT / "auditoria/drive-novas-inventario-20261021.json").read_text("utf-8"))
+assert auditoria["schema"] == "CATALOGO_DRIVE_NOVAS_AUDITORIA_V1"
+resumo = auditoria["resumo"]
+correspondencias = auditoria["correspondencias"]
+assert resumo["arquivos"] == 567 and resumo["paginas"] == 6
+assert sum(resumo["por_rotulo"].values()) == resumo["arquivos"]
+assert resumo["correspondencias_com_catalogo"] == len(correspondencias)
+assert len(set(x["id_catalogo"] for x in correspondencias)) == resumo["ids_distintos"]
+assert resumo["sem_correspondencia"] + len(correspondencias) == resumo["arquivos"]
+assert sum(not x["ja_no_manifesto"] for x in correspondencias) == resumo["correspondencias_nao_manifestadas"]
+for item in correspondencias:
+    assert item["id_catalogo"] in by_id
+    assert by_id[item["id_catalogo"]]["NOME"] == item["nome"]
+    assert item["status"] in {"CANDIDATA", "REVISAR", "REJEITADA"}
+    assert any(a["id_catalogo"] == item["id_catalogo"] for a in manifest["artes"]) == item["ja_no_manifesto"], item["id_catalogo"]
+print("Auditoria Drive Novas OK: 567 arquivos; correspondências cruzadas sem homologação.")
