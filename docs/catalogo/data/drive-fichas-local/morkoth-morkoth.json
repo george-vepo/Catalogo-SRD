@@ -1,0 +1,239 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Morkoth",
+  "origem_arquivo": "EXT-0073-morkoth-ficha (1).json",
+  "sha256_origem": "4578fa36f46082f4f15b0d66371dc7659a8d55a5897f07a2572059615d069e70",
+  "conteudo_original": {
+    "chave": "EXT-0073-morkoth",
+    "ordem_priorizada": 116,
+    "ordem_1320": 73,
+    "nome": "Morkoth",
+    "tipo": "Aberração",
+    "nd": 11,
+    "raridade": "Rara",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "5e Mordenkainen Presents: Monsters of the Multiverse (2022)",
+    "tamanho": "Grande",
+    "tendencia": "Normalmente caótico e mau",
+    "classe_armadura": 17,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 165,
+    "dados_vida": "22d10 + 44",
+    "deslocamentos_pes": {
+      "andar": 25,
+      "nadar": 50
+    },
+    "atributos": {
+      "FOR": 14,
+      "DES": 14,
+      "CON": 14,
+      "INT": 20,
+      "SAB": 15,
+      "CAR": 13
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": 2,
+      "CON": 2,
+      "INT": 5,
+      "SAB": 2,
+      "CAR": 1
+    },
+    "testes_resistencia": {
+      "DES": 6,
+      "INT": 9,
+      "SAB": 6
+    },
+    "pericias": {
+      "Arcanismo": 9,
+      "História": 9,
+      "Percepção": 10,
+      "Furtividade": 6
+    },
+    "sentidos": {
+      "visao_as_cegas_pes": 30,
+      "visao_no_escuro_pes": 120,
+      "percepcao_passiva": 20
+    },
+    "idiomas": [
+      "telepatia 120 pés"
+    ],
+    "xp": 7200,
+    "bonus_proficiencia": 4,
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [],
+    "caracteristicas": [
+      {
+        "nome_original": "Amphibious",
+        "efeito": "Respira ar e água."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz duas Bite e uma Tentacles, OU três Bite."
+      },
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 6,
+        "alcance_pes": 5,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "cortante",
+            "dados": "2d6 + 2",
+            "media": 9
+          },
+          {
+            "tipo": "psíquico",
+            "dados": "3d6",
+            "media": 10
+          }
+        ]
+      },
+      {
+        "nome_original": "Tentacles",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 6,
+        "alcance_pes": 15,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "concussão",
+            "dados": "3d8 + 2",
+            "media": 15
+          }
+        ],
+        "efeito": "Se alvo for Grande ou menor, fica agarrado (escapar CD 14) e impedido [restrained]. Enquanto agarrado, sofre 15 (3d8 + 2) concussão no começo de CADA TURNO DO MORKOTH; morkoth não pode usar tentáculos em outro alvo."
+      },
+      {
+        "nome_original": "Hypnosis",
+        "efeito": "Cone de 30 pés; cada criatura faz salvaguarda SAB CD 17. Falha: enfeitiçada por 1 minuto, tenta se aproximar e usa ação Disparada até ficar a 5 pés. Repete teste ao final de cada turno e toda vez que sofre dano; sucesso encerra efeito. Alvo que passa no teste ou encerra encanto tem vantagem em salvaguardas contra esta Hipnose por 24 horas."
+      },
+      {
+        "nome_original": "Spellcasting",
+        "efeito": "Conjura magia como ação, usando INT, CD 17 e sem componentes materiais: detect magic e mage hand à vontade; darkness, dimension door, dispel magic, lightning bolt e sending 3/dia cada."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome_original": "Spell Reflection",
+        "efeito": "Após passar em salvaguarda contra magia OU ataque mágico errar o morkoth, pode escolher outra criatura visível a até 120 pés (inclusive conjurador) e a magia a tem como alvo. Se a magia exigia salvaguarda, novo alvo salva; se era ataque, rola o ataque novamente para o novo alvo."
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [
+      {
+        "nome_original": "Cast a Spell",
+        "efeito": "Na iniciativa 20 (perde empate) em seu covil, conjura darkness, dispel magic ou misty step sem gastar espaço de magia; requer aprovação de arena."
+      },
+      {
+        "nome_original": "Hypnotize",
+        "efeito": "Na iniciativa 20, usa Hypnosis originando em ponto a até 120 pés; não precisa ver ponto; requer covil."
+      }
+    ],
+    "efeitos_regionais": [
+      {
+        "nome_original": "Alter Water",
+        "efeito": "Em seu covil, sem ação inicia mudança na água que ocorre após 1 minuto, podendo torná-la respirável/transparente como ar ou água normal."
+      },
+      {
+        "nome_original": "Locate Creatures and Objects",
+        "efeito": "Detecta novas chegadas à ilha; gasta ação para localizar criatura ou objeto na ilha, somente em cenário de covil."
+      },
+      {
+        "nome_original": "Lost Possessions",
+        "efeito": "Ao terminar descanso curto/longo na ilha há menos de um ano, visitante realiza salvaguarda INT CD 10 ou perde temporariamente posse do inventário; dependeria de regras e privacidade do Card Game."
+      },
+      {
+        "nome_original": "Supernatural Lure",
+        "efeito": "Entrada de covil pode impor salvaguarda SAB CD 15 a criatura até 30 pés que a vê; falha gera impulso de ir em direção ao morkoth. Repetição do teste nas condições da publicação; depende de arena."
+      }
+    ],
+    "recursos_limitados": [
+      {
+        "recurso": "darkness",
+        "usos_maximos": 3,
+        "periodo": "dia"
+      },
+      {
+        "recurso": "dimension door",
+        "usos_maximos": 3,
+        "periodo": "dia"
+      },
+      {
+        "recurso": "dispel magic",
+        "usos_maximos": 3,
+        "periodo": "dia"
+      },
+      {
+        "recurso": "lightning bolt",
+        "usos_maximos": 3,
+        "periodo": "dia"
+      },
+      {
+        "recurso": "sending",
+        "usos_maximos": 3,
+        "periodo": "dia"
+      }
+    ],
+    "magias": [
+      {
+        "nome": "detect magic",
+        "usos": "à vontade"
+      },
+      {
+        "nome": "mage hand",
+        "usos": "à vontade"
+      },
+      {
+        "nome": "darkness",
+        "usos": "3/dia cada"
+      },
+      {
+        "nome": "dimension door",
+        "usos": "3/dia cada"
+      },
+      {
+        "nome": "dispel magic",
+        "usos": "3/dia cada"
+      },
+      {
+        "nome": "lightning bolt",
+        "usos": "3/dia cada"
+      },
+      {
+        "nome": "sending",
+        "usos": "3/dia cada"
+      }
+    ],
+    "fontes": [
+      {
+        "tipo": "reprodução_Monsters_of_the_Multiverse_p185_187",
+        "url": "https://anyflip.com/irwjb/onqf/basic/151-200"
+      },
+      {
+        "tipo": "conferência_edição_2022_AideDD",
+        "url": "https://www.aidedd.org/dnd/monstres.php?vo=morkoth"
+      }
+    ],
+    "notas_de_validacao": [
+      "Na publicação, Morkoth encontrado no próprio covil muda ND de 11 para 12; a carta permanece ND 11 e raridade Rara até regra explícita de arena aprovada.",
+      "Manter versão 2022: tamanho Grande, 165 PV e mordida com 3d6 psíquico adicional; não usar dados 2016 de Volo (Médio, 130 PV).",
+      "Ações de covil e efeitos regionais são seções de fonte e NÃO ficam ativos automaticamente.",
+      "Spell Reflection exige reação, sucesso em salvaguarda/erro do ataque mágico e novo alvo visível. Não presumir alvos extras.",
+      "Tentáculos causam dano periódico no começo do turno do Morkoth, não no início do turno do alvo.",
+      "Acesso a coleções/objetos do covil não revela cartas ocultas."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "nd_covil_fonte": 12
+  },
+  "documentos_complementares": []
+}

@@ -1,0 +1,206 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "KP-S005",
+  "nome_catalogo": "Yaojing",
+  "origem_arquivo": "KP-S005-yaojing-ficha (1).json",
+  "sha256_origem": "87d966c72ce92cde6a862432753e190825213132c2a712c953348154acfa762b",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-019",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 70,
+      "ORDEM_1320": 227,
+      "CHAVE": "KP-S005",
+      "ID_CATALOGO": "KP-S005",
+      "nome_catalogo": "Yaojing",
+      "tipo_catalogo": "Celestial",
+      "nd": "15",
+      "classe": "Rara",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-034"
+      ],
+      "editora_catalogo": "Kobold Press (terceiros)",
+      "publicacao_catalogo": "Tome of Beasts 2",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "destino_biblioteca": "Completas",
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "homologacao_administrativa": false,
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Médio",
+      "tipo_mecanico_fonte": "Celestial",
+      "alinhamento": "Neutro e Bom",
+      "CA": 15,
+      "PV_maximos": 202,
+      "formula_PV": "27d8+81",
+      "nd_fonte": "15",
+      "xp_fonte": 13000,
+      "bonus_proficiencia": 5,
+      "deslocamentos_pes": {
+        "terrestre": 40
+      },
+      "atributos": {
+        "FOR": 14,
+        "DES": 21,
+        "CON": 16,
+        "INT": 16,
+        "SAB": 18,
+        "CAR": 21
+      },
+      "iniciativa_bonus": 5,
+      "iniciativa_origem": "Derivada de DES +5; versão original 5e não imprime iniciativa separada",
+      "salvaguardas_fonte": {
+        "DES": 10,
+        "SAB": 9,
+        "CAR": 10
+      },
+      "pericias_fonte": {
+        "Intuição": 9,
+        "Percepção": 9
+      },
+      "resistencias_dano": [
+        "radiante",
+        "contundente/cortante/perfurante de ataques não mágicos"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "surdo",
+        "exausto",
+        "amedrontado"
+      ],
+      "sentidos": {
+        "visao_verdadeira_pes": 60,
+        "percepcao_passiva": 19
+      },
+      "idiomas": [
+        "todos os idiomas",
+        "telepatia até 120 pés"
+      ],
+      "tracos": [
+        {
+          "nome": "Charlatan’s Bane",
+          "efeito": "Percebe mentiras ouvidas e tem vantagem em Intuição para identificar enganação."
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        },
+        {
+          "nome": "Magic Weapons",
+          "efeito": "Seus ataques com armas são mágicos."
+        },
+        {
+          "nome": "Motion Blur",
+          "gatilho": "Move pelo menos 10 pés em seu turno",
+          "efeito": "Ataques contra ela têm desvantagem até o começo de seu próximo turno."
+        },
+        {
+          "nome": "Innate Spellcasting",
+          "atributo": "CAR",
+          "CD": 18,
+          "componentes": "Sem componentes verbais ou materiais na edição impressa consultada.",
+          "magias": {
+            "à vontade": [
+              "detect evil and good",
+              "silence"
+            ],
+            "3/dia cada": [
+              "beacon of hope",
+              "bestow curse"
+            ],
+            "1/dia cada": [
+              "death ward",
+              "dispel evil and good"
+            ]
+          }
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "economia": "ação",
+          "efeito": "Usa Blasphemer’s Bane e faz três ataques; não confundir com três ações."
+        },
+        {
+          "nome": "Sacred Fist",
+          "tipo": "ataque corpo a corpo com arma",
+          "bonus_ataque": 10,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "dados": "2d8+5",
+              "media": 14,
+              "tipo": "contundente"
+            },
+            {
+              "dados": "3d8",
+              "media": 13,
+              "tipo": "radiante"
+            }
+          ]
+        },
+        {
+          "nome": "Sacred Bolt",
+          "tipo": "ataque mágico à distância",
+          "bonus_ataque": 10,
+          "alcance_pes": 60,
+          "dano": [
+            {
+              "dados": "5d8",
+              "media": 22,
+              "tipo": "radiante"
+            }
+          ]
+        },
+        {
+          "nome": "Blasphemer’s Bane",
+          "alcance_pes": 30,
+          "alvo": "Uma criatura visível",
+          "salvaguarda": "SAB CD 18",
+          "falha": "Alvo não pode conjurar nem sustentar concentração em magia até o início do próximo turno do yaojing."
+        },
+        {
+          "nome": "Radiant Spin",
+          "recarga": "5–6",
+          "area": "Criaturas a até 10 pés",
+          "salvaguarda": "DES CD 18",
+          "falha": {
+            "dano": "5d8 contundente + 5d8 radiante",
+            "media": "22+22",
+            "empurrar_pes": 10
+          },
+          "sucesso": "Metade do dano; sem empurrão."
+        }
+      ]
+    },
+    "suporte_candidato_na_pesquisa_deck": {
+      "estado": "CANDIDATO_NAO_HOMOLOGADO",
+      "fonte_documental_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/34_Yaojing.md",
+      "descricao": "Blasphemer’s Bane, SAB CD 18, duração até o início do próximo turno do yaojing; suporte é apenas proposta."
+    },
+    "auditoria": {
+      "fontes": [
+        "https://www.robinloft.com/monsters/yaojing/tome-of-beasts-2",
+        "https://anyflip.com/fgoih/caps/basic/351-400"
+      ],
+      "checagem_biblioteca": "Listadas Fichas/Completas, Fichas/Em Pesquisa e resumos Celestial antes de consultar a web; sem JSON para esta CHAVE.",
+      "metodo": "Bloco oficial SRD 5.2.1 extraído de PDF local, ou fonte externa indicada no deck confrontada com cópia do texto original da publicação.",
+      "ressalvas": [
+        "O silêncio voluntário na descrição da espécie é contexto narrativo; não transformar em proibição universal de telepatia/magia em combate.",
+        "Blasphemer’s Bane é usado pelo Multiattack antes dos três ataques."
+      ],
+      "nao_inventar_atributos": true,
+      "nao_criar_imagem": true,
+      "homologacao_administrativa": false
+    }
+  },
+  "documentos_complementares": []
+}

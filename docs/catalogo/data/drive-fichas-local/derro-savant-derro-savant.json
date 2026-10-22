@@ -1,0 +1,190 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Derro Savant",
+  "origem_arquivo": "EXT-0019-derro-savant-ficha (1).json",
+  "sha256_origem": "f628c99a673e2bd4c58bd8e1f60afa6cbaeea392584316d3bb9751caac4646d4",
+  "conteudo_original": {
+    "chave": "EXT-0019-derro-savant",
+    "ordem_priorizada": 84,
+    "ordem_1320": 19,
+    "nome": "Derro Savant",
+    "tipo": "Aberração",
+    "raridade": "Comum",
+    "nd": "3",
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "editora": "Wizards of the Coast",
+    "edicao": "2022 (MPMM); não misturar com Tome of Foes 2018",
+    "origem": "CANDIDATO EXTERNO",
+    "tamanho": "Pequeno",
+    "tendencia": "tipicamente caótico e mau",
+    "classe_armadura": 13,
+    "classe_armadura_origem": "armadura de couro",
+    "pontos_vida": {
+      "media": 36,
+      "dados": "8d6 + 8"
+    },
+    "deslocamento_pes": {
+      "terrestre": 30
+    },
+    "atributos": {
+      "FOR": 9,
+      "DES": 14,
+      "CON": 12,
+      "INT": 11,
+      "SAB": 5,
+      "CAR": 14
+    },
+    "modificadores": {
+      "FOR": -1,
+      "DES": 2,
+      "CON": 1,
+      "INT": 0,
+      "SAB": -3,
+      "CAR": 2
+    },
+    "salvaguardas_especificas": {},
+    "pericias": {
+      "Furtividade": 4
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": {
+      "visao_escuro_pes": 120,
+      "percepcao_passiva": 7
+    },
+    "idiomas": [
+      "Anão",
+      "Subcomum"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Magic Resistance",
+        "efeito": "Vantagem nas salvaguardas contra magias e outros efeitos mágicos."
+      },
+      {
+        "nome_original": "Sunlight Sensitivity",
+        "efeito": "Sob luz solar, desvantagem nas jogadas de ataque e testes de Sabedoria (Percepção) que dependam da visão."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Quarterstaff",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 1,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "media": 2,
+            "dados": "1d6 - 1",
+            "tipo": "concussão"
+          }
+        ]
+      },
+      {
+        "nome_original": "Chromatic Beam",
+        "tipo": "efeito mágico de área",
+        "frequencia": "ação, sem limite indicado no bloco",
+        "area": {
+          "forma": "linha",
+          "comprimento_pes": 60,
+          "largura_pes": 5
+        },
+        "salvaguarda": {
+          "atributo": "DES",
+          "cd": 12
+        },
+        "dano": [
+          {
+            "media": 21,
+            "dados": "6d6",
+            "tipo": "radiante",
+            "resultado": "falha; sucesso metade"
+          }
+        ],
+        "efeito": "Todas as criaturas na linha realizam a salvaguarda, sem jogada de ataque."
+      },
+      {
+        "nome_original": "Spellcasting",
+        "tipo": "conjuração",
+        "atributo": "CAR",
+        "cd_magia": 12,
+        "componente": "usar a descrição individual da magia aplicável",
+        "magias": [
+          {
+            "nome_original": "mage hand",
+            "frequencia": "à vontade"
+          },
+          {
+            "nome_original": "message",
+            "frequencia": "à vontade"
+          },
+          {
+            "nome_original": "prestidigitation",
+            "frequencia": "à vontade"
+          },
+          {
+            "nome_original": "invisibility",
+            "frequencia": "1/dia"
+          },
+          {
+            "nome_original": "sleep",
+            "frequencia": "1/dia"
+          },
+          {
+            "nome_original": "spider climb",
+            "frequencia": "1/dia"
+          }
+        ],
+        "observacao": "A ficha MPMM apresenta conjuração na seção Ações; magias diárias possuem contagens individuais."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "invisibility",
+        "usos_por_dia": 1
+      },
+      {
+        "recurso": "sleep",
+        "usos_por_dia": 1
+      },
+      {
+        "recurso": "spider climb",
+        "usos_por_dia": 1
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "notas_de_validacao": [
+      "Fonte de 2022: ND 3, CA 13 e 36 PV; Chromatic Beam substitui conjuração ofensiva da versão 2018.",
+      "Sem Multiattack, ação bônus ou reação próprios indicados na ficha.",
+      "Componentes, alcance, duração, concentração e efeitos das magias exigem consulta ao texto de regras apropriado, sem inventar parâmetros.",
+      "Magias e áreas estão sujeitas às regras SRD 5.2.1 e do Card Game; nenhuma habilidade extra de suporte aprovada automaticamente."
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_publicacao_2022",
+        "url": "https://anyflip.com/dpfen/iecm/basic/51-100",
+        "uso": "bloco completo do Derro Savant, página 92 (MPMM)"
+      },
+      {
+        "tipo": "outra_reproducao_publicacao_2022",
+        "url": "https://anyflip.com/mingj/iqki/basic/51-100",
+        "uso": "confirmação dos valores de ações e conjuração"
+      },
+      {
+        "tipo": "analise_diferencas_edicao",
+        "url": "https://www.dungeonsports.com/mordenkainen-presents-updated-stat-blocks/",
+        "uso": "distinguir as edições 2018 e 2022"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

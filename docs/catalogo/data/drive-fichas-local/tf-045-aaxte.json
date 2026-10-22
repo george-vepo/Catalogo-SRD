@@ -1,0 +1,229 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-045",
+  "nome_catalogo": "Aaxte",
+  "origem_arquivo": "TF-045-aaxte-ficha (1).json",
+  "sha256_origem": "62e369d507e497acca2ef10cb7f7934c6bc078f254a7a1b5bb98573bc78329f6",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-014",
+    "data_execucao_local": "2026-10-17T01:47:47-03:00",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 50,
+      "ORDEM_1320": 195,
+      "CHAVE": "TF-045",
+      "ID_CATALOGO": "TF-045",
+      "nome_catalogo": "Aaxte",
+      "nome_na_fonte": "Aatxe",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "Celestial",
+      "nd": "5",
+      "classe": "Comum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-010",
+        "CE-011"
+      ],
+      "publicacao_catalogo": "Creature Codex",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Grande",
+      "alinhamento": "leal e bom",
+      "CA": 14,
+      "CA_origem": "armadura natural",
+      "PV_maximos": 105,
+      "formula_PV": "10d10+50",
+      "deslocamentos_pes": {
+        "terrestre": 50
+      },
+      "atributos": {
+        "FOR": 22,
+        "DES": 12,
+        "CON": 20,
+        "INT": 10,
+        "SAB": 14,
+        "CAR": 14
+      },
+      "iniciativa_bonus": 1,
+      "iniciativa_origem": "Modificador de DES +1 derivado; não há iniciativa explícita no bloco de Creature Codex",
+      "bonus_proficiencia": 3,
+      "pericias": {
+        "Atletismo": 9,
+        "Intimidacao": 5
+      },
+      "sentidos": {
+        "percepcao_passiva": 12
+      },
+      "idiomas_e_telepatia": {
+        "compreende": "todos os idiomas",
+        "fala": "incapaz de falar na forma verdadeira; limitações na forma humanoide"
+      },
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "amedrontado"
+      ],
+      "tracos": [
+        {
+          "nome": "Charge",
+          "efeito": "Se mover pelo menos 20 pés em linha reta para o alvo antes de acertar Gore no mesmo turno, causa +2d8 perfurante; criatura deve superar salvaguarda FOR CD 15 ou fica caída."
+        },
+        {
+          "nome": "Know Thoughts",
+          "economia": "acao",
+          "alcance_pes": 30,
+          "efeito": "Lê pensamentos superficiais de uma criatura, como parte limitada de detect thoughts, sem limite de duração; troca o alvo com uma ação e encerra com ação bônus."
+        },
+        {
+          "nome": "Limited Speech (Humanoid Form Only)",
+          "efeito": "Na forma humanoide fala apenas ideias e frases simples; compreende conversas normalmente."
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        },
+        {
+          "nome": "Shapechanger",
+          "economia": "acao",
+          "efeito": "Assume forma de humanoide macho Médio que já viu, ou retorna à forma verdadeira; mantém estatísticas exceto tamanho, equipamento não transforma; retorna à forma original quando morre."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Gore",
+          "bonus_ataque": 9,
+          "alcance_pes": 5,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dado": "3d8+6",
+              "tipo": "perfurante",
+              "media_publicada": 19
+            }
+          ]
+        },
+        {
+          "nome": "Paw the Earth",
+          "economia": "acao",
+          "area": "todas as criaturas em até 30 pés",
+          "salvaguarda": "Sabedoria",
+          "CD": 15,
+          "falha": "amedrontado por até 1 minuto",
+          "repeticao": "salvaguarda ao fim de cada turno; sucesso encerra",
+          "imunidade_temporaria": "se superar ou terminar o efeito, imune ao Paw the Earth desse aatxe por 24 horas"
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Encerrar Know Thoughts",
+          "efeito": "Pode terminar a leitura de pensamentos com uma ação bônus."
+        }
+      ],
+      "acoes_lendarias": [
+        {
+          "nome": "Detect",
+          "custo": 1,
+          "efeito": "Teste de Percepção (Sabedoria)."
+        },
+        {
+          "nome": "Gore",
+          "custo": 2,
+          "efeito": "Um ataque de Gore."
+        },
+        {
+          "nome": "Bulwark",
+          "custo": 3,
+          "alvo": "aliado a até 5 pés",
+          "efeito": "O próximo ataque que acertaria esse aliado acerta o aatxe no lugar."
+        },
+        {
+          "nome": "Punish (variante corrompida)",
+          "custo": 3,
+          "substitui": "Bulwark apenas para Aatxe corrompido leal e mau",
+          "efeito": "Próximo ataque que acertaria o aatxe acerta o agressor em vez disso."
+        }
+      ],
+      "acoes_lendarias_economia": {
+        "pontos_por_rodada": 3,
+        "regenera": "início do próprio turno",
+        "momento": "fim do turno de outra criatura",
+        "uma_opcao_por_vez": true
+      },
+      "acoes_covil": [
+        {
+          "nome": "Muck",
+          "momento": "iniciativa 20 (perde empates)",
+          "area": "raio 20 pés em ponto visível até 120 pés",
+          "salvaguarda": "DES",
+          "CD": 15,
+          "efeito": "terreno difícil e contido em falha; ação e teste FOR CD15 para libertar a si ou outro; dissolve se usar ação de covil novamente ou morrer"
+        },
+        {
+          "nome": "Tether",
+          "momento": "iniciativa 20 (perde empates)",
+          "alcance_pes": 30,
+          "salvaguarda": "SAB",
+          "CD": 15,
+          "efeito": "Dano ao alvo tethered é dividido igualmente com Aatxe. Aatxe ganha resistência a todos os danos exceto dano transferido pelo vínculo. Termina quando alvo morre, covil usado de novo ou Aatxe morre."
+        },
+        {
+          "nome": "Motes of Light",
+          "momento": "iniciativa 20 (perde empates)",
+          "area": "hostis em até 20 pés",
+          "salvaguarda": "DES",
+          "CD": 15,
+          "efeito": "alvo brilha luz fraca 10 pés, não se beneficia de invisibilidade, ataques contra ele têm vantagem se atacante puder vê-lo; expira na iniciativa 20 da rodada seguinte"
+        }
+      ],
+      "efeitos_regionais": [
+        "luz não mágica +10 pés perto do covil",
+        "aves alertam ameaças e criaturas à espreita",
+        "animais predadores evitam seres inteligentes"
+      ],
+      "recursos_limitados": [
+        {
+          "nome": "Ações lendárias",
+          "limite": 3,
+          "periodo": "rodada"
+        }
+      ],
+      "reacoes": [],
+      "conjuracao": [],
+      "salvaguardas_fonte": {},
+      "resistencias_dano": [],
+      "imunidades_dano": []
+    },
+    "suporte_candidato_na_pesquisa_deck": {
+      "habilidade": "Paw the Earth",
+      "status": "CANDIDATA_NAO_HOMOLOGADA",
+      "regra_original": "SAB CD15, medo até 1 min, criaturas num raio de 30 pés, imunidade de 24 h após sucesso/encerramento"
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/10_Aaxte.md",
+      "fonte_deck_duplicada_copia": "11_Aaxte.md",
+      "fonte_pesquisa_consolidada": "/SRD Card Game/Decks/Celestial/Fichas por criatura/FICHAS_36_PESQUISA.json",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/aatxe/",
+      "edicao_mecanica": "Creature Codex",
+      "regra_combativa": "SRD_CC_v5.2.1.pdf; descrições de magias da edição original não foram substituídas automaticamente",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "O nome no catálogo/deck é Aaxte mas a criatura da fonte é Aatxe; alias conservado, CHAVE mantida.",
+        "Fonte inclui variante corrompida e efeitos de covil; opção não ativa automaticamente em arena do Card Game."
+      ],
+      "pendencias_card_game": [
+        "Definir arena/covil e elegibilidade de efeitos regionais; Paw the Earth afeta todas as criaturas na área.",
+        "Bulwark requer aliado até 5 pés, não presumir outra criatura aliada ativa.",
+        "Variação corrompida Punish substitui Bulwark apenas se a variante for explicitamente autorizada."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

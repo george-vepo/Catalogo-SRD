@@ -1,0 +1,199 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Pescavitus",
+  "origem_arquivo": "EXT-0190-pescavitus-ficha (1).json",
+  "sha256_origem": "8472585a5bf6efacb40b56cf0abeda6fa0dba1a8510f6465c18c218989ea0c87",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-012",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 45,
+      "ORDEM_1320": 190,
+      "CHAVE": "EXT-0190-pescavitus",
+      "ID_CATALOGO": null,
+      "nome_catalogo": "Pescavitus",
+      "nome_na_fonte": "Pescavitus",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "celestial",
+      "nd": "1",
+      "classe": "Comum",
+      "deck": "Celestial",
+      "copia_referencia": "CE-005",
+      "editora": "Kobold Press",
+      "publicacao_catalogo": "Tome of Beasts 3",
+      "origem_catalogo": "CANDIDATO EXTERNO"
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "ficha_previa_deck": "RESUMO_NAO_HOMOLOGADO",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Pequeno",
+      "alinhamento": "neutro e bom",
+      "CA": 13,
+      "PV_maximos": 44,
+      "formula_PV": "8d6+16",
+      "deslocamentos_pes": {
+        "terrestre": 0,
+        "natacao": 60
+      },
+      "atributos": {
+        "FOR": 12,
+        "DES": 17,
+        "CON": 15,
+        "INT": 15,
+        "SAB": 10,
+        "CAR": 16
+      },
+      "iniciativa_bonus": 3,
+      "iniciativa_origem": "modificador DES calculado; bônus específico não indicado na ficha fonte",
+      "bonus_proficiencia": 2,
+      "bonus_proficiencia_origem": "ND e bloco da fonte para 42/44/45; inferência padrão a partir de ND para 43 (não impresso no bloco)",
+      "salvaguardas_profissionais_fonte": {
+        "SAB": 2,
+        "CAR": 5
+      },
+      "pericias": {},
+      "resistencias_dano": [
+        "radiante"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [],
+      "sentidos": {
+        "visao_no_escuro_pes": 120,
+        "percepcao_passiva": 10
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "Celestial"
+        ],
+        "telepatia_pes": 60
+      },
+      "tracos": [
+        {
+          "nome": "Celestial Weapons",
+          "efeito": "Ataques com arma são mágicos e causam +2d4 radiante, já incluído no dano do ataque Slam. Não aplicar duas vezes."
+        },
+        {
+          "nome": "Immortal Nature",
+          "efeito": "Não precisa comer, beber ou dormir."
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        },
+        {
+          "nome": "Piscine Curse",
+          "gatilho": "Uma criatura reduz o pescavitus a 0 PV",
+          "efeito": "Salvaguarda de Carisma CD 13; falha causa maldição por 5 dias: para detecção é considerado ínfero, recebe metade do benefício de cura mágica e nenhum benefício de descanso longo. Consumir carne do pescavitus também causa a maldição automaticamente; remove curse ou magia semelhante encerra.",
+          "salvaguarda": {
+            "atributo": "CAR",
+            "CD": 13
+          },
+          "duracao_dias": 5,
+          "regra_card_game": "Efeitos prolongados entre combates, montes ou após retirada de campo exigem decisão administrativa, mas gatilho mecânico da fonte está identificado."
+        },
+        {
+          "nome": "Water Breathing",
+          "efeito": "Só respira debaixo d’água."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Slam",
+          "economia": "acao",
+          "categoria": "ataque_corpo_a_corpo",
+          "bonus_ataque": 5,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dice": "1d6+3",
+              "tipo": "contundente",
+              "media_publicada": 6
+            },
+            {
+              "dice": "2d4",
+              "tipo": "radiante",
+              "media_publicada": 5
+            }
+          ],
+          "alcance_corpo_a_corpo_pes": 5
+        },
+        {
+          "nome": "Air Bubble",
+          "economia": "acao",
+          "recarga": "após descanso curto ou longo",
+          "alvo": "qualquer quantidade de criaturas que estejam tocando o pescavitus",
+          "efeito": "Criaturas beneficiadas respiram debaixo d’água e recebem natação de 20 pés se não tinham deslocamento de natação.",
+          "duracao_reserva_ar_horas": 24,
+          "divisao": "24 horas de ar divididas entre a quantidade de criaturas respirando",
+          "regra_card_game": "Sem extensão automática a cartas não ativas; falta regra de duração entre combates e descanso."
+        },
+        {
+          "nome": "Healing Touch",
+          "economia": "acao",
+          "usos": "3/dia",
+          "alcance": "toque",
+          "alvo": "outra criatura, não o próprio pescavitus",
+          "cura": {
+            "dice": "1d8+1",
+            "tipo": "pontos_de_vida",
+            "media_publicada": 5
+          },
+          "remove": [
+            "doença",
+            "veneno",
+            "cegueira",
+            "surdez"
+          ],
+          "observacao": "Não diz remover todas as condições ou curar ilimitadamente."
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "acoes_miticas": [],
+      "conjuracao": [],
+      "recursos_limitados": [
+        {
+          "nome": "Air Bubble",
+          "recarga": "descanso_curto_ou_longo"
+        },
+        {
+          "nome": "Healing Touch",
+          "limite": 3,
+          "periodo": "dia"
+        }
+      ],
+      "observacoes_mecanicas": []
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/05_Pescavitus.md",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/pescavitus/",
+      "fontes_cruzadas": [],
+      "escopo_de_verificacao": "bloco mecânico da publicação identificada, não a habilidade de suporte adaptada",
+      "edicao_mecanica": "Tome of Beasts 3",
+      "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto; evitar substituição automática de magias/tratamentos legados",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "O modificador +2d4 radiante de Celestial Weapons já está incorporado no Slam.",
+        "A fonte não apresenta imunidade à condição envenenado, apesar de remover veneno ao usar Healing Touch."
+      ],
+      "pendencias_card_game": [
+        "Depende de ambiente com água porque só respira submerso; regras de arena aquática não podem ser criadas automaticamente.",
+        "Piscine Curse dura cinco dias na fonte e interfere em descanso longo; definir integração no Card Game.",
+        "Healing Touch cura outra criatura por toque e, portanto, não se converte automaticamente em suporte aplicado de fora do campo.",
+        "Air Bubble só beneficia criaturas tocando o pescavitus na execução original."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

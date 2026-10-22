@@ -1,0 +1,189 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Ley Wanderer",
+  "origem_arquivo": "EXT-0051-ley-wanderer-ficha (1).json",
+  "sha256_origem": "d33f167d0f163e91b53f71122b4ec8a2993f25273917a9cd1e0aa87f7f7d558d",
+  "conteudo_original": {
+    "chave": "EXT-0051-ley-wanderer",
+    "ordem_priorizada": 102,
+    "ordem_1320": 51,
+    "nome": "Ley Wanderer",
+    "tipo": "Aberração",
+    "nd": "7",
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da publicação indicada na fila; não misturar edições",
+    "tamanho": "Enorme",
+    "tendencia": "Neutro",
+    "classe_armadura": 15,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 136,
+    "dados_vida": "16d12 + 32",
+    "deslocamentos_pes": {
+      "andar": 10,
+      "voar": 40,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 14,
+      "DES": 9,
+      "CON": 14,
+      "INT": 19,
+      "SAB": 11,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": -1,
+      "CON": 2,
+      "INT": 4,
+      "SAB": 0,
+      "CAR": 0
+    },
+    "testes_resistencia": {
+      "FOR": 5,
+      "DES": 2,
+      "INT": 7
+    },
+    "pericias": {
+      "Arcanismo": 7,
+      "Percepção": 3
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "concussão, perfurante e cortante de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "psíquico"
+    ],
+    "imunidades_condicoes": [],
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 13
+    },
+    "idiomas": [
+      "Todos os idiomas"
+    ],
+    "telepatia_pes": 120,
+    "xp": 2900,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Sense Magic",
+        "efeito": "Sente magia até 120 pés, à vontade, como detectar magia, mas a característica em si não é mágica."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Realiza três ataques Slam ou Psychic Lash, em qualquer combinação."
+      },
+      {
+        "nome_original": "Slam",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 5,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 6,
+            "formula": "1d8 + 2",
+            "tipo": "concussão"
+          },
+          {
+            "medio": 9,
+            "formula": "2d8",
+            "tipo": "psíquico"
+          }
+        ]
+      },
+      {
+        "nome_original": "Psychic Lash",
+        "tipo": "ataque mágico corpo a corpo ou à distância",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 17,
+            "formula": "3d8 + 4",
+            "tipo": "psíquico"
+          }
+        ],
+        "alcance_distancia_pes": 120
+      },
+      {
+        "nome_original": "Dispelling Burst",
+        "recarga": "5-6",
+        "area": {
+          "tipo": "emanação centrada na criatura",
+          "raio_pes": 30
+        },
+        "teste_resistencia": {
+          "atributo": "INT",
+          "cd": 15
+        },
+        "dano": {
+          "medio": 27,
+          "formula": "6d8",
+          "tipo": "psíquico"
+        },
+        "sucesso": "Metade do dano.",
+        "efeito_adicional": "Cada magia de nível 3 ou inferior na área termina imediatamente; criatura ganha 5 PV temporários por magia terminada desta forma."
+      },
+      {
+        "nome_original": "Teleport",
+        "usos_por_dia": 3,
+        "efeito": "Teleporta a si mesmo e até seis criaturas voluntárias de mãos dadas com ele e equipamentos até um local familiar a até 100 milhas; até 300 milhas se rico em energia mágica (como linha ley)."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Drain Magic Item",
+        "efeito": "Drena item mágico segurado: itens com cargas perdem 1d6 cargas; itens com usos diários perdem 1 uso; itens de uso único são destruídos; outros itens ficam suprimidos por 1 minuto. Ganha 5 PV temporários por item drenado; item recupera sua magia após 24 horas."
+      }
+    ],
+    "reacoes": [
+      {
+        "nome_original": "Absorb Spell",
+        "gatilho": "Criatura visível até 30 pés conjura uma magia.",
+        "efeito": "Tenta anular magia como counterspell, mas sempre faz teste de atributo de conjuração +7, independentemente do nível. Se tiver êxito, ganha 5 PV temporários por nível da magia anulada.",
+        "bonus_teste": 7
+      }
+    ],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Dispelling Burst",
+        "recarga": "5-6"
+      },
+      {
+        "recurso": "Teleport",
+        "usos_maximos": 3,
+        "periodo": "dia"
+      }
+    ],
+    "notas_de_validacao": [
+      "Magias em Dispelling Burst e Absorb Spell só existem se efetivamente lançadas; não inventar feitiços ou itens para o oponente.",
+      "A ação Teleport é de deslocamento de viagem, e requer regra de arena; não implica fuga, vitória ou retorno ao duelo automaticamente.",
+      "Absorb Spell exige reação disponível, visão, distância e teste, mesmo contra magia de nível baixo.",
+      "Drain Magic Item não cria item mágico no Card Game e não pode consumir recurso inexistente."
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_TOB3",
+        "url": "https://anyflip.com/tkzwp/dofg/basic/251-300",
+        "pagina_impressa": 260
+      },
+      {
+        "tipo": "indice_oficial_KoboldPress",
+        "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

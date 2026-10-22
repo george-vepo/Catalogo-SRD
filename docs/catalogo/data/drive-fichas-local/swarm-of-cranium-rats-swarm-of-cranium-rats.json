@@ -1,0 +1,182 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Swarm of Cranium Rats",
+  "origem_arquivo": "EXT-0041-swarm-of-cranium-rats-ficha (1).json",
+  "sha256_origem": "09eece52680eb90032249d4576b34ec661ffd55544bf1703e144f7631f792196",
+  "conteudo_original": {
+    "chave": "EXT-0041-swarm-of-cranium-rats",
+    "ordem_priorizada": 97,
+    "ordem_1320": 41,
+    "nome": "Swarm of Cranium Rats",
+    "tipo": "Aberração",
+    "nd": "5",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "5e da edição indicada na fila, não misturar edições",
+    "tamanho": "Médio (enxame de aberrações Miúdas)",
+    "tendencia": "Tipicamente leal e mau",
+    "classe_armadura": 12,
+    "classe_armadura_detalhe": null,
+    "pontos_vida": 76,
+    "dados_vida": "17d8",
+    "deslocamentos_pes": {
+      "andar": 30
+    },
+    "atributos": {
+      "FOR": 9,
+      "DES": 14,
+      "CON": 10,
+      "INT": 15,
+      "SAB": 11,
+      "CAR": 14
+    },
+    "modificadores": {
+      "FOR": -1,
+      "DES": 2,
+      "CON": 0,
+      "INT": 2,
+      "SAB": 0,
+      "CAR": 2
+    },
+    "testes_resistencia": {},
+    "pericias": {},
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "concussão",
+      "perfurante",
+      "cortante"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado",
+      "agarrado",
+      "paralisado",
+      "petrificado",
+      "caído",
+      "impedido",
+      "atordoado"
+    ],
+    "sentidos": {
+      "visao_no_escuro_pes": 30,
+      "percepcao_passiva": 10
+    },
+    "idiomas": [],
+    "telepatia_pes": 30,
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Swarm",
+        "efeito": "Pode ocupar espaço de outra criatura e vice-versa, atravessar aberturas por onde passa um rato Minúsculo; não recupera PV nem ganha PV temporários."
+      },
+      {
+        "nome_original": "Telepathic Shroud",
+        "efeito": "Imune a efeitos que detectem emoções ou leiam pensamentos, bem como a todas magias de adivinhação."
+      },
+      {
+        "nome_original": "Psionic Spellcasting Restriction",
+        "pre_condicao": "Apenas enquanto PV atuais > metade de PV máximos (ou seja, acima de 38 com 76 máximos).",
+        "efeito": "Conjuração Psionics indisponível em 38 PV ou menos."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Bites",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 5,
+        "alcance_pes": 0,
+        "pre_condicao": "Alvo no mesmo espaço do enxame",
+        "componentes_dano": [
+          {
+            "medio": 14,
+            "formula": "4d6",
+            "tipo": "perfurante"
+          }
+        ],
+        "dano_alternativo_pv_baixos": [
+          {
+            "medio": 7,
+            "formula": "2d6",
+            "tipo": "perfurante"
+          }
+        ],
+        "limiar_reducao_mordida": "Se PV atuais <= 38 (metade de 76).",
+        "dano_adicional": [
+          {
+            "medio": 22,
+            "formula": "5d8",
+            "tipo": "psíquico"
+          }
+        ]
+      },
+      {
+        "nome_original": "Spellcasting (Psionics)",
+        "tipo": "conjuração",
+        "atributo_magia": "INT",
+        "cd_magia": 13,
+        "pre_condicao": "PV atuais > 38",
+        "componentes_materiais_verbais_somaticos": "não requer componentes",
+        "magias": {
+          "a_vontade": [
+            "command",
+            "comprehend languages",
+            "detect thoughts"
+          ],
+          "1_dia_cada": [
+            "confusion",
+            "dominate monster"
+          ]
+        }
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Illumination",
+        "efeito": "Controla iluminação do cérebro: luz fraca em raio 5 pés, ou luz plena de 5 a 20 pés com luz fraca adicional de mesmo raio; ou apaga a luz."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "confusion",
+        "usos_maximos": 1,
+        "restabelecimento": "dia",
+        "pre_condicao": "PV atuais > 38"
+      },
+      {
+        "recurso": "dominate monster",
+        "usos_maximos": 1,
+        "restabelecimento": "dia",
+        "pre_condicao": "PV atuais > 38"
+      }
+    ],
+    "notas_de_validacao": [
+      "Usar Monsters of the Multiverse 2022: 76 (17d8) PV, tipo Aberração e 22 (5d8) dano psíquico adicional de Bites; NÃO usar a edição Volo com 36 (8d8) PV.",
+      "Enxame não constitui um tipo próprio no catálogo do Card Game; tipo permanece Aberração.",
+      "Swarm impede regeneração, cura e PV temporários da fonte; não presumir múltiplas cartas.",
+      "Psionics cessa quando PV chegam a metade ou menos; dominação de outra criatura não autoriza múltiplos combatentes do mesmo jogador."
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_MP_MM_2022",
+        "url": "https://files.spawningpool.net/docs/Vault2.0.-.TTRPG-Gamebooks/Dungeons%20%26%20Dragons%20%5Bmulti%5D/Monster%20books/Monsters%20of%20the%20Multiverse%20%28HQ%29%20%28BW%29.pdf",
+        "pagina_impressa": 83
+      },
+      {
+        "tipo": "transcricao_MP_MM_2022",
+        "url": "https://mgroot.eu/mobs?mob=Swarm+Of+Cranium+Rats"
+      },
+      {
+        "tipo": "referencia_bestiario_MP_MM",
+        "url": "https://www.aidedd.org/dnd/monstres.php?vo=swarm-of-cranium-rats"
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

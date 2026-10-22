@@ -1,0 +1,236 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-002",
+  "nome_catalogo": "Ahu-Nixta, Drudge",
+  "origem_arquivo": "TF-002-ahu-nixta-drudge-ficha.json",
+  "sha256_origem": "637efe47c93756829b6823e392ce93a99da08b099385599c11cd63a4e9f08268",
+  "conteudo_original": {
+    "chave": "TF-002",
+    "ordem_1320": 5,
+    "nome_original": "Ahu-Nixta, Drudge",
+    "nome_pt": "Ahu-Nixta, Serviçal",
+    "publicacao": "Tome of Beasts 2",
+    "editora": "Kobold Press",
+    "tipo": "Aberração",
+    "tamanho": "Médio",
+    "tendencia": "Neutro e mau",
+    "nivel_desafio": "1/2",
+    "experiencia": 100,
+    "classe_armadura": 13,
+    "armadura": "Encapsulamento mecânico de relojoaria",
+    "pontos_vida": 26,
+    "dados_vida": "4d8 + 8",
+    "deslocamento_pes": {
+      "terrestre": 30,
+      "voo": 30,
+      "voo_pairado": true,
+      "natacao": 30
+    },
+    "atributos": {
+      "FOR": 15,
+      "DES": 12,
+      "CON": 14,
+      "INT": 12,
+      "SAB": 10,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": 1,
+      "CON": 2,
+      "INT": 1,
+      "SAB": 0,
+      "CAR": 0
+    },
+    "pericias": {
+      "Percepção": 2
+    },
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "veneno",
+      "psíquico"
+    ],
+    "imunidades_condicao": [
+      "enfeitiçado",
+      "exaustão",
+      "amedrontado",
+      "paralisado",
+      "petrificado",
+      "envenenado",
+      "caído"
+    ],
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 11
+    },
+    "idiomas": [
+      "Fala Profunda (Deep Speech)",
+      "Fala do Vazio (Void Speech)"
+    ],
+    "caracteristicas": [
+      {
+        "nome": "Carapaça mecânica",
+        "resumo_original": "O corpo alienígena, de forma pouco definida, permanece protegido dentro de uma estrutura articulada. O serviçal depende inteiramente dessa carapaça para sobreviver; ao ser destruída, ele morre."
+      },
+      {
+        "nome": "Forma imutável",
+        "resumo_original": "A armadura e o organismo dentro dela são imunes a magias e a quaisquer outros efeitos que alterem suas respectivas formas, enquanto a criatura permanecer encapsulada."
+      },
+      {
+        "nome": "Conjuração inata",
+        "atributo": "INT",
+        "cd_resistencia": 11,
+        "bonus_ataque_magico": 3,
+        "componentes_materiais": false,
+        "magias": [
+          {
+            "nome_original": "fire bolt",
+            "frequencia": "à vontade",
+            "dano": "1d10, conforme a versão referenciada",
+            "mecanica_combate_srd_521": {
+              "tipo": "ataque de magia à distância",
+              "acao": "Magia (ação)",
+              "alcance_pes": 120,
+              "bonus_ataque": 3,
+              "dano": "1d10",
+              "tipo_dano": "fogo",
+              "outros_efeitos": "Objetos inflamáveis não vestidos nem carregados começam a arder ao serem atingidos.",
+              "nota_versao": "Valor de dano 1d10 expresso na ficha do Tome of Beasts 2; resolução conforme SRD 5.2.1."
+            }
+          },
+          {
+            "nome_original": "fear",
+            "frequencia": "1/dia",
+            "mecanica_combate_srd_521": {
+              "acao": "Magia (ação)",
+              "nivel_magia": 3,
+              "area": "Cone de 30 pés originado no conjurador",
+              "teste_resistencia": "Sabedoria",
+              "cd": 11,
+              "duracao": "Concentração, até 1 minuto",
+              "efeito": "Em falha, o alvo solta objetos segurados e fica Amedrontado. Enquanto afetado, usa a ação Disparada para se afastar por caminho mais seguro, salvo se não houver para onde ir. No fim de turno sem linha de visão ao conjurador, repete o teste e encerra o efeito em sucesso.",
+              "nota_versao": "Frequência 1/dia e CD 11 do Tome of Beasts 2; resolução conforme SRD 5.2.1."
+            }
+          }
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Lâminas giratórias",
+        "tipo": "Ataque corpo a corpo com arma",
+        "bonus_ataque": 4,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "dano_medio": 7,
+        "dano_dados": "2d4 + 2",
+        "tipo_dano": "cortante"
+      }
+    ],
+    "descricao_original": "Uma aberração de consistência mole e irregular ocupa o interior de um invólucro de engrenagens e braços mecânicos. Sua forma frágil ganha mobilidade e instrumentos de combate graças à estrutura artificial. Entre os ahu-nixta, os serviçais são uma categoria subordinada.",
+    "status_ficha": "COMPLETA_VALIDADA_FONTES_PUBLICAS",
+    "notas_validacao": [
+      "Ficha cotejada com o bloco público Ahu-Nixta Drudge (5eSRD), a listagem editorial oficial da Kobold Press e uma transcrição independente; não confundir com Ahu-Nixta padrão, Cataphract ou Mechanon.",
+      "A percepção passiva 11 é impressa na ficha, embora Perception +2 resulte em 12 pela regra geral. Preservado 11; divergência editorial documentada, sem corrigir por suposição.",
+      "Corrigido texto da Forma Imutável: a fonte estabelece IMUNIDADE a qualquer magia ou efeito de mudança de forma, e não mera resistência a magia.",
+      "A conjuração inata usa INT, CD 11, ataque +3, ignora componentes materiais; Fire Bolt é à vontade (1d10), e Fear é 1/dia.",
+      "Efeitos de combate das magias descritos com SRD 5.2.1 (regras operacionais do jogo), sem importar atributos de variantes ou reatribuir estatísticas 2024 à ficha publicada em Tome of Beasts 2.",
+      "Não há seções impressas de salvaguardas proficientes, ações bônus, reações, lendárias, míticas ou de covil; listas vazias descrevem essa ausência na fonte.",
+      "O site oficial da editora comprova identificação/ND/porte/tipo e o livro; a mecânica integral foi cotejada em fontes públicas, não em exemplar licenciado do livro."
+    ],
+    "fontes": [
+      {
+        "tipo": "ficha_mecanica_publica",
+        "titulo": "5th Edition SRD — Ahu-Nixta Drudge",
+        "url": "https://www.5esrd.com/database/creature/ahu-nixta-drudge/"
+      },
+      {
+        "tipo": "indice_editorial_oficial",
+        "titulo": "Kobold Press — Search 5E Kobold Press Monsters",
+        "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+      },
+      {
+        "tipo": "checagem_secundaria_independente",
+        "titulo": "The Bardic Lexicon — Ahu-Nixta Drudge",
+        "url": "https://chaidgpt.github.io/TheBardicLexicon/playerResources/monsterPages/a/ahuNixtraDredge.html"
+      },
+      {
+        "tipo": "referencia_mecanica",
+        "titulo": "System Reference Document 5.2.1 — Fear e Fire Bolt",
+        "url": "https://www.dndbeyond.com/srd"
+      }
+    ],
+    "verificado_em_sao_paulo": "2026-10-16T23:14:23-03:00",
+    "id_catalogo": "TF-002",
+    "ordem_priorizada": 1,
+    "deck_origem": "Aberração",
+    "classe": "Comum",
+    "bonus_proficiencia": 2,
+    "iniciativa_modificador": 1,
+    "testes_resistencia_proficientes": [],
+    "percepcao_passiva_publicada": 11,
+    "percepcao_passiva_esperada_por_regra_geral": 12,
+    "vulnerabilidades_dano": [],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_miticas": [],
+    "acoes_covil": [],
+    "multiataque": null,
+    "recargas_nao_magicas": [],
+    "usos_limitados": [
+      {
+        "nome": "fear",
+        "frequencia": "1/dia",
+        "usos": 1
+      }
+    ],
+    "restricoes_acoes": [
+      "Não há ação Multiataque listada: Lâminas giratórias é uma ação que realiza um ataque."
+    ],
+    "nota_campos_vazios": "As listas vazias denotam ausência de seção ou de capacidade listada nas fontes verificadas, não uma habilidade negativa inventada.",
+    "validacao": {
+      "situacao": "CONCLUIDA",
+      "verificado_em_sao_paulo": "2026-10-16T23:14:23-03:00",
+      "execucao": "MANUAL",
+      "chave": "TF-002",
+      "ordem_priorizada": 1,
+      "pontos_conferidos": [
+        "identidade",
+        "edição/publicação",
+        "classe por ND",
+        "CA",
+        "PV e fórmula",
+        "deslocamentos",
+        "atributos e modificadores",
+        "proficiência",
+        "perícias e passiva",
+        "sentidos",
+        "idiomas",
+        "resistências, imunidades e vulnerabilidades",
+        "traços",
+        "ataques e dano",
+        "ausência de multiataque",
+        "magias e recursos",
+        "ações bônus, reações, lendárias/míticas/covil ausentes na fonte"
+      ],
+      "divergencias": [
+        {
+          "campo": "percepcao_passiva",
+          "valor_impresso": 11,
+          "valor_derivado": 12,
+          "tratamento": "preservar fonte e sinalizar inconsistência"
+        },
+        {
+          "campo": "Forma imutável",
+          "problema_anterior": "Redação dizia apenas resiste a efeitos mágicos",
+          "correcao": "Imune a toda magia ou efeito que altere forma"
+        }
+      ],
+      "lacunas_relevantes": [],
+      "ficha_previa_sha256": "b565f136d5b1454ab46ce829f27b8aee0b9dd2e4327672da0415b9dc39fe5c2d",
+      "criterio": "Correspondência cruzada do bloco mecânico 5eSRD com transcrição independente, identificação da editora e SRD 5.2.1 nas magias."
+    }
+  },
+  "documentos_complementares": []
+}

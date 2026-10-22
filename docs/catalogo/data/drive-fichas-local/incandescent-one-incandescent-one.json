@@ -1,0 +1,202 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Incandescent One",
+  "origem_arquivo": "EXT-0207-incandescent-one-ficha (1).json",
+  "sha256_origem": "a74f4c705738b84b2fd38cf6f69d171f14d16ec1df4cc05b9150a67e73777b97",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-016",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 61,
+      "ORDEM_1320": 207,
+      "CHAVE": "EXT-0207-incandescent-one",
+      "ID_CATALOGO": null,
+      "nome_catalogo": "Incandescent One",
+      "tipo_catalogo": "Celestial",
+      "nd": "9",
+      "classe": "Incomum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-025"
+      ],
+      "publicacao_catalogo": "Tome of Beasts 3",
+      "editora_catalogo": "Kobold Press",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "COMPLETA_FONTE_SEM_HOMOLOGACAO",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "tipo_mecanico_fonte": "Celestial",
+      "CA": 16,
+      "PV_maximos": 144,
+      "nd_fonte": "9",
+      "atributos": {
+        "FOR": 16,
+        "DES": 18,
+        "CON": 18,
+        "INT": 11,
+        "SAB": 17,
+        "CAR": 18
+      },
+      "salvaguardas_fonte": {
+        "CON": 8,
+        "SAB": 7,
+        "CAR": 8
+      },
+      "pericias": {
+        "Intuição": 7,
+        "Percepção": 7
+      },
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": 60,
+        "pairar": true,
+        "natacao": 60
+      },
+      "resistencias_dano": [
+        "frio",
+        "radiante",
+        "contundente de ataques não mágicos",
+        "perfurante de ataques não mágicos",
+        "cortante de ataques não mágicos"
+      ],
+      "imunidades_dano": [
+        "veneno"
+      ],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exaustão",
+        "amedrontado",
+        "agarrado",
+        "envenenado",
+        "caído",
+        "restrito"
+      ],
+      "sentidos": {
+        "visao_verdadeira_pes": 120,
+        "percepcao_passiva": 17
+      },
+      "idiomas": [
+        "todos"
+      ],
+      "tracos": [
+        {
+          "nome": "Aqueous Form",
+          "efeito": "Pode entrar e parar no espaço de criatura hostil; atravessa aberturas a partir de 1 pé sem se espremer"
+        },
+        {
+          "nome": "Amphibious",
+          "efeito": "Respira ar e água"
+        },
+        {
+          "nome": "Flyby",
+          "efeito": "Não provoca ataques de oportunidade ao sair voando do alcance inimigo"
+        },
+        {
+          "nome": "Immortal Nature",
+          "efeito": "Não necessita alimentação, água ou sono"
+        },
+        {
+          "nome": "Luminous",
+          "efeito": "Emite penumbra num raio de 5 pés"
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magia e outros efeitos mágicos"
+        },
+        {
+          "nome": "Magic Weapons",
+          "efeito": "Ataques com armas contam como mágicos"
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Escolhe dois ataques Slam OU três ataques Astral Bolt"
+        },
+        {
+          "nome": "Slam",
+          "bonus_ataque": 8,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "formula": "2d6+4",
+              "tipo": "contundente",
+              "media_na_fonte": 11
+            },
+            {
+              "formula": "4d8",
+              "tipo": "frio",
+              "media_na_fonte": 18
+            }
+          ]
+        },
+        {
+          "nome": "Astral Bolt",
+          "tipo_ataque": "magia à distância",
+          "bonus_ataque": 8,
+          "alcance_pes": 120,
+          "dano": [
+            {
+              "formula": "4d6+4",
+              "tipo": "radiante",
+              "media_na_fonte": 18
+            }
+          ],
+          "efeito": "O próximo ataque contra o alvo antes de terminar o próximo turno do Incandescent One tem vantagem"
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Celestial Inspiration",
+          "alcance_pes": 60,
+          "alvo": "Uma criatura que possa ver",
+          "duracao": "Antes do começo do próximo turno do Incandescent One",
+          "efeito": "Alvo soma 1d4 em cada jogada de ataque ou teste de resistência realizado nesse período"
+        }
+      ],
+      "reacoes": [],
+      "magias": [],
+      "recursos_limitados": [],
+      "porte": "Médio",
+      "alinhamento": "caótico e bom",
+      "CA_origem": "armadura natural",
+      "formula_PV": "17d8+68",
+      "telepatia_pes": 120,
+      "iniciativa_bonus": 4,
+      "proficiencia_bonus": 4
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/25_Incandescent_One.md",
+      "fonte_mecanica": [
+        "https://www.5esrd.com/database/creature/incandescent-one/",
+        "https://kpogl.wikidot.com/monster:incandescent-one"
+      ],
+      "fonte_primaria_pdf_na_biblioteca": false,
+      "observacoes": [
+        "É candidato externo sem ID do catálogo 607; usa CHAVE operacional atribuída na fila, não fabrica ID_CATALOGO.",
+        "Celestial Inspiration é ação bônus original do monstro; uso como suporte depende de aprovação.",
+        "A criatura tem imunidades a agarrado, caído e restrito, que não devem ser omitidas mesmo no campo 1x1.",
+        "A transcrição associa 2.300 XP ao ND 9; não corrigido silenciosamente."
+      ],
+      "inconsistencias": [
+        "Fonte publica ND 9 com 2.300 XP, mas 2.300 XP normalmente corresponde a ND 6; ND 9 preservado conforme ficha e catálogo; XP registrado apenas como metadado em auditoria, não usado para regras."
+      ],
+      "homologacao_de_suporte": false,
+      "regras_gerais": "SRD CC 5.2.1; atributos e ações mantidos na edição da fonte Kobold Press, sem mesclar edições.",
+      "dados_deducidos": [
+        "Iniciativa +4 calculada por DES 18."
+      ],
+      "validacao_fonte": "MECANICA_CONFERIDA",
+      "metadado_xp_publicado": 2300
+    }
+  },
+  "documentos_complementares": []
+}

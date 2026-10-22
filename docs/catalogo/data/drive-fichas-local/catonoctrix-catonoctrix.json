@@ -1,0 +1,220 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Catonoctrix",
+  "origem_arquivo": "EXT-0065-catonoctrix-ficha (1).json",
+  "sha256_origem": "f299f8aef4a5bf4a8e48fc8dc33eb3d7c6f5f56dc12c25e620983cba078fdc7a",
+  "conteudo_original": {
+    "chave": "EXT-0065-catonoctrix",
+    "ordem_priorizada": 110,
+    "ordem_1320": 65,
+    "nome": "Catonoctrix",
+    "tipo": "Aberração",
+    "nd": 10,
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e original de Tome of Beasts 3; não misturar com fichas de outras edições",
+    "tamanho": "Grande",
+    "tendencia": "Neutro e mau",
+    "classe_armadura": 18,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 168,
+    "dados_vida": "16d10 + 80",
+    "deslocamentos_pes": {
+      "andar": 40,
+      "voar": 80
+    },
+    "atributos": {
+      "FOR": 21,
+      "DES": 12,
+      "CON": 21,
+      "INT": 18,
+      "SAB": 15,
+      "CAR": 19
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": 1,
+      "CON": 5,
+      "INT": 4,
+      "SAB": 2,
+      "CAR": 4
+    },
+    "testes_resistencia": {
+      "DES": 5,
+      "CON": 9,
+      "INT": 8,
+      "CAR": 8
+    },
+    "pericias": {
+      "Arcanismo": 8,
+      "História": 8,
+      "Intuição": 6,
+      "Investigação": 8,
+      "Percepção": 6,
+      "Furtividade": 5
+    },
+    "sentidos": {
+      "visao_no_escuro_pes": 120,
+      "visao_verdadeira_pes": 30,
+      "percepcao_passiva": 16
+    },
+    "idiomas": [
+      "Comum",
+      "Dracônico",
+      "Língua Profunda"
+    ],
+    "xp": 5900,
+    "bonus_proficiencia": 4,
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "psíquico"
+    ],
+    "imunidades_condicoes": [],
+    "caracteristicas": [
+      {
+        "nome_original": "Pierce the Veil",
+        "efeito": "Se uma criatura que o catonoctrix pode ver está atordoada pelo próprio Mind Ravage, aprende um segredo conhecido por esse alvo."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz uma Mordida e duas Garras OU três Psychic Bolts. Pode substituir exatamente um ataque por Spellcasting."
+      },
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 9,
+        "alcance_pes": 10,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "perfurante",
+            "dados": "3d8 + 5",
+            "media": 18
+          },
+          {
+            "tipo": "psíquico",
+            "dados": "2d6",
+            "media": 7
+          }
+        ]
+      },
+      {
+        "nome_original": "Claw",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 9,
+        "alcance_pes": 5,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "cortante",
+            "dados": "3d6 + 5",
+            "media": 15
+          }
+        ]
+      },
+      {
+        "nome_original": "Psychic Bolt",
+        "tipo": "ataque à distância",
+        "bonus_ataque": 8,
+        "alcance_pes": null,
+        "distancia_pes": "60",
+        "dano": [
+          {
+            "tipo": "psíquico",
+            "dados": "4d6 + 4",
+            "media": 18
+          }
+        ],
+        "ataque_magico": true
+      },
+      {
+        "nome_original": "Mind Ravage",
+        "efeito": "Criaturas num raio de 20 pés fazem salvaguarda INT CD 16. Falha: 45 (10d8) psíquico e atordoado por até 1 minuto. Sucesso: metade do dano, sem atordoamento. Alvo atordoado repete salvaguarda ao final de cada turno e encerra a condição com sucesso.",
+        "recarga": "5–6"
+      },
+      {
+        "nome_original": "Spellcasting (Psionics)",
+        "efeito": "Conjura sem componentes, usando INT, CD 15. Detect thoughts e divination à vontade; confusion, scrying e suggestion uma vez ao dia cada."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome_original": "Precognitive Dodge",
+        "efeito": "Em resposta a um ataque que acertaria, adiciona +4 à CA contra esse ataque se puder ver o atacante a até 30 pés."
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "efeitos_regionais": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Mind Ravage",
+        "recarga": "5–6"
+      },
+      {
+        "recurso": "confusion",
+        "usos_maximos": 1,
+        "periodo": "dia"
+      },
+      {
+        "recurso": "scrying",
+        "usos_maximos": 1,
+        "periodo": "dia"
+      },
+      {
+        "recurso": "suggestion",
+        "usos_maximos": 1,
+        "periodo": "dia"
+      }
+    ],
+    "magias": [
+      {
+        "nome": "detect thoughts",
+        "usos": "à vontade"
+      },
+      {
+        "nome": "divination",
+        "usos": "à vontade"
+      },
+      {
+        "nome": "confusion",
+        "usos": "1/dia cada"
+      },
+      {
+        "nome": "scrying",
+        "usos": "1/dia cada"
+      },
+      {
+        "nome": "suggestion",
+        "usos": "1/dia cada"
+      }
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_Tome_of_Beasts_3_pagina_75",
+        "url": "https://anyflip.com/tkzwp/hhez/basic/51-100"
+      },
+      {
+        "tipo": "transcricao",
+        "url": "https://5esrd.old.opengamingnetwork.com/database/creature/catonoctrix/"
+      }
+    ],
+    "notas_de_validacao": [
+      "Pierce the Veil requer alvo atordoado por Mind Ravage; revelar segredo de personagem é efeito narrativo e não revela mão/deck ou informação oculta.",
+      "Mind Ravage afeta todos os alvos em 20 pés e sua recarga é 5–6; não transformar automaticamente em dano a alvos inexistentes.",
+      "Spellcasting pode substituir UM ataque em Multiattack e conserva custo/recursos; magias de 1/dia devem ser rastreadas por nome.",
+      "Precognitive Dodge exige que possa ver o atacante dentro de 30 pés; +4 CA somente para o ataque que acionou a reação.",
+      "Magias de divinação, segredo e manipulação não dão acesso a informações ocultas dos jogadores."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "telepatia_pes": 120
+  },
+  "documentos_complementares": []
+}

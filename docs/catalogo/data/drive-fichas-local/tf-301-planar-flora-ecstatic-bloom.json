@@ -1,0 +1,169 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-301",
+  "nome_catalogo": "Planar Flora, Ecstatic Bloom",
+  "origem_arquivo": "TF-301-ecstatic-bloom-ficha (1).json",
+  "sha256_origem": "12192dd15536562c3d4cd4cd061dfa60df7c8e85b6bef12d67251ba265b90229",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-018",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 66,
+      "ORDEM_1320": 213,
+      "CHAVE": "TF-301",
+      "ID_CATALOGO": "TF-301",
+      "nome_catalogo": "Planar Flora, Ecstatic Bloom",
+      "tipo_catalogo": "Celestial",
+      "nd": "11",
+      "classe": "Rara",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-030"
+      ],
+      "publicacao_catalogo": "Creature Codex",
+      "editora_catalogo": "Kobold Press",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_FONTE_COMPLETA_COM_ALERTA_TIPOGRAFICO_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE",
+      "destino_biblioteca": "Completas"
+    },
+    "ficha": {
+      "porte": "Enorme",
+      "tipo_mecanico_fonte": "Celestial",
+      "alinhamento": "Neutro e Bom",
+      "CA": 15,
+      "PV_maximos": 171,
+      "formula_PV": "18d12+54",
+      "nd_fonte": "11",
+      "xp_fonte": 7200,
+      "deslocamentos_pes": {
+        "terrestre": 10
+      },
+      "atributos": {
+        "FOR": 10,
+        "DES": 9,
+        "CON": 16,
+        "INT": 20,
+        "SAB": 19,
+        "CAR": 14
+      },
+      "iniciativa_bonus": -1,
+      "iniciativa_origem": "Calculado do valor de Destreza 9; fonte não fornece iniciativa própria",
+      "salvaguardas_fonte": {
+        "INT": 9,
+        "SAB": 9
+      },
+      "pericias_fonte": {
+        "Intuição": 9,
+        "Percepção": 9
+      },
+      "vulnerabilidades_dano": [
+        "fogo"
+      ],
+      "resistencias_dano": [],
+      "imunidades_dano": [
+        "radiante"
+      ],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "amedrontado"
+      ],
+      "sentidos": {
+        "visao_verdadeira_pes": 120,
+        "cego_alem_120_pes": true,
+        "percepcao_passiva": 19
+      },
+      "idiomas": [
+        "todos os idiomas"
+      ],
+      "telepatia_pes": 120,
+      "tracos": [
+        {
+          "nome": "Aura of Life",
+          "gatilho": "Morto-vivo começa o próprio turno até 30 pés",
+          "teste": "SAB CD 17",
+          "falha": "Expulso (turned) até o fim do próximo turno desse morto-vivo"
+        },
+        {
+          "nome": "Blessed Regrowth",
+          "momento": "Início de cada turno da criatura",
+          "cura": "1d8 (média impressa 4) PV para a flor e cada criatura de alinhamento Bom a até 10 pés",
+          "excecao": "Após receber dano de fogo, não funciona no início do turno seguinte",
+          "regra_de_morte_fonte": "A flor só morre se começar seu turno com 0 PV e não recuperar PV desse traço",
+          "conflito_card_game": "No Card Game há derrota imediata aos 0 PV; a regra de morte da criatura NÃO é homologada como exceção"
+        },
+        {
+          "nome": "Foster the Trees",
+          "efeito": "Alabaster trees num raio de 60 pés têm vantagem em todas as salvaguardas; requer existência desses alvos, sem criá-los"
+        },
+        {
+          "nome": "Like Calls to Like",
+          "efeito": "Reconhece se uma criatura a até 120 pés é de alinhamento Bom"
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Três ataques Gilded Beam"
+        },
+        {
+          "nome": "Gilded Beam",
+          "bonus_ataque": 9,
+          "alcance_distancia_pes": "150",
+          "dano": [
+            {
+              "dados": "6d8",
+              "tipo": "radiante",
+              "media_publicada": 27
+            }
+          ],
+          "natureza": "Ataque de magia à distância"
+        },
+        {
+          "nome": "Castigate",
+          "recarga": "Após descanso curto ou longo",
+          "alcance_pes": 30,
+          "alvos": "Cada criatura não Boa com Inteligência de pelo menos 5 na área",
+          "teste": "SAB CD 17",
+          "falha": "Atordoado até o fim do próximo turno do alvo"
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "recursos_limitados": [
+        {
+          "recurso": "Castigate",
+          "reposicao": "descanso curto ou longo"
+        }
+      ]
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/30_Planar_Flora_Ecstatic_Bloom.md",
+      "referencia_mecanica_publica": "https://5esrd.old.opengamingnetwork.com/database/creature/ecstatic-bloom/",
+      "referencia_cruzada": "https://anyflip.com/cmjgl/hgvn/basic/301-350",
+      "edicao_da_criatura": "Creature Codex",
+      "diretriz_edicao": "Mecânicas 5e da publicação Kobold Press original; SRD_CC_v5.2.1 apenas para procedimentos gerais de combate",
+      "fonte_primaria_pdf_na_biblioteca": false,
+      "separacao_mecanica_e_suporte": true,
+      "habilidade_suporte_deck": "Candidata apenas; não homologada e não concedida como carta de suporte",
+      "divergencias_e_alertas": [
+        "Wisdom 19 é matematicamente +4, mas o texto-base de Creature Codex imprime 19 (+5), salvaguarda SAB +9 e perícias +9; preservados os bônus publicados sem corrigir silenciosamente.",
+        "Robinloft apresenta outras salvaguardas/perícias (+8/+12) conflitantes; adotada reprodução do Creature Codex/5eSRD (+9).",
+        "Blessed Regrowth prevê sobrevivência/início do turno com 0 PV, enquanto o Card Game determina derrota ao atingir 0 PV; não ativar essa exceção sem decisão do administrador."
+      ],
+      "pendencias_administrador": [
+        "Definir tratamento de Blessed Regrowth diante da derrota imediata a 0 PV.",
+        "Aprovar uso de alinhamento, criaturas aliadas e entidades secundárias (Alabaster Trees) se participarem da partida."
+      ],
+      "regras_de_jogo_inventadas": false
+    }
+  },
+  "documentos_complementares": []
+}

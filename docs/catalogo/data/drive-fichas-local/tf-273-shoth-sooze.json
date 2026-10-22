@@ -1,0 +1,239 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-273",
+  "nome_catalogo": "Shoth, Sooze",
+  "origem_arquivo": "TF-273-shoth-sooze-ficha.json",
+  "sha256_origem": "6ac0af0760ceaf63803af1f40a319b7dda0aebc3c08ec1da7811fce2b073a9c9",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Shoth, Sooze",
+      "chave": "TF-273",
+      "id_catalogo": "TF-273",
+      "ordem_priorizada": 5,
+      "ordem_1320": 9,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "1/2",
+      "classe": "Comum",
+      "editora": "Kobold Press",
+      "publicacao": "Creature Codex",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Médio",
+      "subtipo": "Shoth",
+      "alinhamento": "leal e neutro",
+      "ca": 12,
+      "ca_tipo": "armadura natural",
+      "pv": 49,
+      "pv_formula": "11d8",
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": null,
+        "natacao": null,
+        "escalada": 10,
+        "pairar": false
+      },
+      "atributos": {
+        "FOR": 14,
+        "DES": 10,
+        "CON": 10,
+        "INT": 10,
+        "SAB": 14,
+        "CAR": 16
+      },
+      "iniciativa_bonus": 0,
+      "proficiencia_bonus": 2,
+      "salvaguardas": {},
+      "pericias": {
+        "Percepcao": 4
+      },
+      "sentidos": {
+        "percepcao_as_cegas_pes": 60,
+        "percepcao_passiva": 14
+      },
+      "idiomas": [
+        "todos os idiomas",
+        "telepatia 100 pés"
+      ],
+      "resistencias_dano": [
+        "ácido",
+        "frio",
+        "fogo"
+      ],
+      "imunidades_dano": [],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [],
+      "tracos": [
+        {
+          "nome": "Amorphous",
+          "efeito": "Corpo e equipamento atravessam passagem de largura mínima de uma polegada sem precisar se espremer."
+        },
+        {
+          "nome": "Multiple Roles",
+          "escolha_obrigatoria": "Escolher exatamente UMA variante entre Laborer e Warrior antes de utilizar a criatura na partida. Não acumular vantagens."
+        }
+      ],
+      "variantes_mutuamente_exclusivas": [
+        {
+          "nome": "Laborer",
+          "ca": 12,
+          "adiciona_imunidades_condicoes": [
+            "exaustão"
+          ],
+          "acoes_bonus": [
+            {
+              "nome": "Dash",
+              "economia": "acao_bonus",
+              "usos_por_dia": 3
+            }
+          ]
+        },
+        {
+          "nome": "Warrior",
+          "ca": 14,
+          "bonus_ca": 2,
+          "acoes_adicionais": [
+            "Longsword"
+          ],
+          "vantagem_ataques": "Vantagem ao atacar criatura adjacente (até 5 pés) de pelo menos um aliado do Shoth que não esteja incapacitado."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Oozing Slam",
+          "economia": "acao",
+          "tipo": "ataque_corpo_a_corpo_com_arma",
+          "bonus_acerto": 4,
+          "alcance_pes": 5,
+          "alvos": 1,
+          "dano": {
+            "dados": "1d4+2",
+            "tipo": "contundente"
+          },
+          "dano_adicional": {
+            "dados": "1d4",
+            "tipo": "ácido"
+          }
+        },
+        {
+          "nome": "Longsword",
+          "economia": "acao",
+          "pre_requisito": "variante Warrior",
+          "tipo": "ataque_corpo_a_corpo_com_arma",
+          "bonus_acerto": 4,
+          "alcance_pes": 5,
+          "alvos": 1,
+          "dano_uma_mao": {
+            "dados": "1d8+2",
+            "tipo": "cortante"
+          },
+          "dano_duas_maos": {
+            "dados": "1d10+2",
+            "tipo": "cortante"
+          }
+        },
+        {
+          "nome": "Merge",
+          "economia": "acao",
+          "pre_requisitos": [
+            "PV atuais abaixo de metade dos PV máximos",
+            "outra criatura do tipo Shoth até 10 pés",
+            "Shoth receptor não recebeu outra fusão nas últimas 24 horas"
+          ],
+          "efeito": "Une-se ao Shoth receptor e transfere todos os PV que ainda possui para ele. O receptor pode ultrapassar seus PV máximos normais. O Shoth doador deixa de existir separadamente no combate. É necessária decisão administrativa para interagir com as zonas do Card Game quando houver outro Shoth em campo.",
+          "limite_receptor": "uma fusão por período de 24 horas"
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Dash (Laborer)",
+          "economia": "acao_bonus",
+          "pre_requisito": "variante Laborer",
+          "usos_por_dia": 3
+        }
+      ],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "magias": [],
+      "multiataque": null,
+      "recargas": [
+        {
+          "recurso": "Dash (Laborer)",
+          "usos_por_dia": 3,
+          "recuperacao": "diária"
+        }
+      ],
+      "mecanica_anterior_reutilizada": {
+        "campos": "estatisticas e mecanicas do Markdown 05_Shoth_Sooze.md",
+        "confirmada_por": "Creature Codex original (2018), p. 334 (Sooze; numeração impressa)"
+      },
+      "modificadores_atributos": {
+        "FOR": 2,
+        "DES": 0,
+        "CON": 0,
+        "INT": 0,
+        "SAB": 2,
+        "CAR": 3
+      }
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4",
+      "ficha_anterior": "resumo_deck_nao_homologado",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/05_Shoth_Sooze.md",
+      "regra_de_edicao": "atributos mantidos conforme publicação original; SRD 5.2.1 utilizado como referência de resolução, sem substituir estatísticas pela edição 2024",
+      "status_validacao_mecanica": "CONCLUIDA",
+      "homologacao_de_carta_pelo_administrador": false,
+      "status_aprovacao_catalogo": "CATALOGO_607",
+      "nao_inferir_ausencia_de_ataques_especiais": true,
+      "observacoes": [
+        "Não alterar/reproduzir mecanicamente a habilidade de suporte opcional escolhida no deck: é proposta separada da ficha original."
+      ],
+      "pendencias_operacionais": [
+        "Escolher variante Laborer ou Warrior antes de uma utilização concreta; interações de Merge com regras de zonas exigem decisão do árbitro."
+      ],
+      "fontes": [
+        {
+          "classe": "publicacao_original_identificada",
+          "referencia": "Kobold Press, Creature Codex (2018), Shoth: Sooze, p. 334",
+          "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+        },
+        {
+          "classe": "transcricao_publica",
+          "referencia": "Here Be Taverns — Sooze",
+          "url": "https://www.herebetaverns.com/srd/dnd-5e/monsters/sooze"
+        },
+        {
+          "classe": "transcricao_publica",
+          "referencia": "Creature Codex — Sooze, p. 334",
+          "url": "https://fliphtml5.com/nvljc/hodl/KOBOLD_PRESS._CREATURE_CODEX/335/"
+        }
+      ],
+      "revalidacao_2026_10_19": {
+        "data": "2026-10-19",
+        "resultado": "CONCLUIDA_VALIDACAO_MECANICA",
+        "escopo": "uma_criatura",
+        "confirmado": "Ficha de Creature Codex original (2018), Shoth, Sooze, pagina impressa 334; atributos e habilidades coincidem com fontes consultadas",
+        "correcao": "Corrigida somente a referencia bibliografica da pagina 333 para 334; a numeracao 335 no visualizador digital corresponde a pagina impressa 334",
+        "regras": "SRD 5.2.1 apenas para resolucao geral; nenhuma estatistica copiada da Creature Codex Revised (2026)",
+        "variantes": "Laborer ou Warrior, jamais ambas. A proposta de carta de suporte Warrior no MD nao e habilidade concedida automaticamente.",
+        "merge": "Efeito mecanico original preservado; funcionamento com zonas e limite de uma criatura ativa exige decisao administrativa se ocorrer durante partida.",
+        "ressalva_errata": "Nenhuma ocorrencia de Shoth encontrada no texto da pagina publica de errata consultada em 19/10/2026; nao equivale a garantia universal de inexistencia de erratas futuras.",
+        "fontes": {
+          "editor_original": "https://koboldpress.com/kpstore/product/creature-codex-for-5th-edition-dnd-pdf/",
+          "indice_oficial": "https://koboldpress.com/tools/kobold-press-monsters/",
+          "bloco_publico": "https://www.herebetaverns.com/srd/dnd-5e/monsters/sooze",
+          "pagina_original_digitalizada": "https://fliphtml5.com/nvljc/hodl/KOBOLD_PRESS._CREATURE_CODEX/335/",
+          "indice_original": "https://anyflip.com/myubd/zdka/basic/401-426",
+          "errata": "https://koboldpress.com/errata/",
+          "revisao_2026": "https://koboldpress.com/creature-codex-revised-changelog-what-changed-june-5-2026/"
+        },
+        "hash_sha256_versao_anterior": "2179fac18ca041921fec5cc2c2e0b3caf48403d7546235cec288ddb79161cff6",
+        "homologacao_carta_administrador": false
+      }
+    }
+  },
+  "documentos_complementares": []
+}

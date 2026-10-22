@@ -1,0 +1,166 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Dolgaunt",
+  "origem_arquivo": "EXT-0020-dolgaunt-ficha (1).json",
+  "sha256_origem": "45ca4c77eea8c65e4e4aeecc8ec6bb19f42485b58b80687ff0738178c7ce0f18",
+  "conteudo_original": {
+    "chave": "EXT-0020-dolgaunt",
+    "ordem_priorizada": 85,
+    "ordem_1320": 20,
+    "nome": "Dolgaunt",
+    "tipo": "Aberração",
+    "raridade": "Comum",
+    "nd": "3",
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "publicacao": "Eberron: Rising from the Last War",
+    "editora": "Wizards of the Coast",
+    "edicao": "5e da publicação original, 2019",
+    "origem": "CANDIDATO EXTERNO",
+    "tamanho": "Médio",
+    "tendencia": "leal e mau",
+    "classe_armadura": 16,
+    "classe_armadura_origem": "Unarmored Defense: 10 + DES (+4) + SAB (+2); apenas sem armadura ou escudo",
+    "pontos_vida": {
+      "media": 33,
+      "dados": "6d8 + 6"
+    },
+    "deslocamento_pes": {
+      "terrestre": 40
+    },
+    "atributos": {
+      "FOR": 14,
+      "DES": 18,
+      "CON": 12,
+      "INT": 13,
+      "SAB": 14,
+      "CAR": 11
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": 4,
+      "CON": 1,
+      "INT": 1,
+      "SAB": 2,
+      "CAR": 0
+    },
+    "salvaguardas_especificas": {},
+    "pericias": {
+      "Acrobacia": 6,
+      "Percepção": 4,
+      "Furtividade": 6
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "cego"
+    ],
+    "sentidos": {
+      "percepcao_cega_pes": 120,
+      "cego_alem_deste_raio": true,
+      "percepcao_passiva": 14
+    },
+    "idiomas": [
+      "Fala Profunda",
+      "Goblin"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Evasion",
+        "efeito": "Se um efeito permitir salvaguarda de DES para sofrer metade do dano, sofre zero no sucesso e metade na falha; não funciona incapacitado."
+      },
+      {
+        "nome_original": "Unarmored Defense",
+        "efeito": "Sua CA inclui o modificador de SAB enquanto não vestir armadura nem portar escudo."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Executa dois ataques de Tentacle e dois de Unarmed Strike. Pode substituir até dois ataques de Tentacle por Vitality Drain, desde que haja alvos já agarrados pelos tentáculos."
+      },
+      {
+        "nome_original": "Tentacle",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alcance_pes": 15,
+        "alvos": 1,
+        "dano": [
+          {
+            "media": 7,
+            "dados": "1d6 + 4",
+            "tipo": "concussão"
+          }
+        ],
+        "condicoes": [
+          {
+            "condicao": "agarrado",
+            "restricao_alvo": "criatura Grande ou menor",
+            "cd_escape": 12,
+            "observacao": "A criatura possui dois tentáculos. Cada tentáculo ocupado não pode atacar outro alvo até acabar o agarrão."
+          }
+        ]
+      },
+      {
+        "nome_original": "Unarmed Strike",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "media": 6,
+            "dados": "1d4 + 4",
+            "tipo": "concussão"
+          }
+        ]
+      },
+      {
+        "nome_original": "Vitality Drain",
+        "tipo": "salvaguarda em alvo agarrado",
+        "requisito": "uma criatura já agarrada por um de seus tentáculos",
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 11
+        },
+        "dano": [
+          {
+            "media": 9,
+            "dados": "2d8",
+            "tipo": "necrótico",
+            "resultado": "somente na falha"
+          }
+        ],
+        "cura": "Recupera PV iguais à metade do dano necrótico efetivamente sofrido pelo alvo; não exceder PV máximos pelas regras gerais."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "notas_de_validacao": [
+      "Ficha Eberron de 2019, ND 3, CA 16, 33 PV.",
+      "Não trocar pelo Dolgrim; são criaturas diferentes e possuem IDs distintos.",
+      "Distinção entre ataques de tentáculo e substituição por Vitality Drain faz parte da economia de Multiattack; não são ataques extras.",
+      "Agarrão usa CD 12; drenagem usa CD 11, valores distintos na fonte.",
+      "Cura é pelo dano necrótico recebido, sujeito a resistências/imunidades e ao limite de PV máximos.",
+      "Efeitos de agarrão e condições precisam ser resolvidos pelo SRD 5.2.1 e pelas regras do Card Game, sem novos poderes de suporte."
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_publicacao_2019",
+        "url": "https://online.anyflip.com/tqblu/xfac/files/basic-html/page291.html",
+        "uso": "bloco integral página 290/291 de Eberron: Rising from the Last War"
+      },
+      {
+        "tipo": "confirmacao_independente",
+        "url": "https://dnd-5e.fandom.com/wiki/Dolgaunt",
+        "uso": "atributos e ações, inclusive Distância 15 pés de Tentacle, Evasion e Vitality Drain"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

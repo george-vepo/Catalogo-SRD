@@ -1,0 +1,440 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-283",
+  "nome_catalogo": "Shukankor",
+  "origem_arquivo": "TF-283-shukankor-ficha (1).json",
+  "sha256_origem": "daa3abf3644f051fa6d41e3b7b6ac07379b2044765365d8706ef3050595a187f",
+  "conteudo_original": {
+    "schema": "srd-card-game-ficha-pesquisa-v1",
+    "criatura": "Shukankor",
+    "CHAVE": "TF-283",
+    "ID_CATALOGO": "TF-283",
+    "ORDEM_PRIORIZADA": 29,
+    "ORDEM_1320": 59,
+    "deck": "Aberração",
+    "tipo_catalogo": "Aberração",
+    "classe_catalogo": "Incomum",
+    "ND_catalogo": 9,
+    "fonte_publicacao": "Tome of Beasts 2 (5e, 2020)",
+    "CA": 17,
+    "PV_maximo": 115,
+    "status_validacao": "VALIDACAO_MECANICA_CONCLUIDA_SEM_HOMOLOGACAO",
+    "homologacao_administrativa": false,
+    "data_validacao": "2026-10-17T00:11:45-03:00",
+    "origem_biblioteca": "/SRD Card Game/Decks/Aberração/Fichas por criatura/29_Shukankor.md",
+    "fontes_pesquisa_web": [
+      {
+        "url": "https://www.robinloft.com/monsters/shukankor/tome-of-beasts-2",
+        "tipo": "referência pública; confirmação cruzada, não substitui a ficha do deck"
+      },
+      {
+        "url": "https://www.5esrd.com/database/creature/shukankor/",
+        "tipo": "referência pública; confirmação cruzada, não substitui a ficha do deck"
+      },
+      {
+        "url": "https://anyflip.com/aqmdu/uasq/basic/301-350",
+        "tipo": "referência pública; confirmação cruzada, não substitui a ficha do deck"
+      }
+    ],
+    "ficha_existente_preservada": {
+      "estatisticas": {
+        "armor_class": 17,
+        "hit_points": 115,
+        "hit_dice": "11d12+44",
+        "ability_scores": {
+          "STR": 22,
+          "DEX": 12,
+          "CON": 18,
+          "INT": 8,
+          "WIS": 12,
+          "CHA": 6
+        },
+        "speeds": {
+          "walk_ft": 50
+        },
+        "senses": {
+          "darkvision_ft": 120,
+          "passive_perception": 19
+        },
+        "skills": {
+          "Athletics": 10,
+          "Perception": 9
+        },
+        "saving_throws": [],
+        "languages": [
+          "Deep Speech"
+        ],
+        "damage_resistances": [
+          {
+            "types": [
+              "bludgeoning",
+              "piercing",
+              "slashing"
+            ],
+            "source": "nonmagical_attacks"
+          }
+        ],
+        "damage_immunities": [
+          "poison"
+        ],
+        "damage_vulnerabilities": [],
+        "condition_immunities": [
+          "poisoned"
+        ],
+        "armor_class_type": "natural_armor",
+        "ability_modifiers": {
+          "STR": 6,
+          "DEX": 1,
+          "CON": 4,
+          "INT": -1,
+          "WIS": 1,
+          "CHA": -2
+        }
+      },
+      "mecanicas": {
+        "traits": [
+          {
+            "name": "Many Eyes",
+            "category": "advantage",
+            "skill_checks": {
+              "Perception": "when_relying_on_sight"
+            },
+            "saving_throws": {
+              "vs_blinded": true
+            }
+          },
+          {
+            "name": "Self-made Pack",
+            "category": "conditional_attack_advantage",
+            "condition": {
+              "one_or_more_of_own_replicas_within_ft_of_target": 5,
+              "replica_not_incapacitated": true
+            }
+          }
+        ],
+        "actions": [
+          {
+            "name": "Multiattack",
+            "category": "multiattack",
+            "action_economy": "action",
+            "sequence": [
+              {
+                "attack": "Beak",
+                "count": 1
+              },
+              {
+                "attack": "Claws",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "name": "Beak",
+            "category": "attack",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 10,
+            "reach_ft": 10,
+            "targets": {
+              "count": 1
+            },
+            "hit": {
+              "damage": [
+                {
+                  "dice": "2d8",
+                  "flat": 6,
+                  "average": 15,
+                  "type": "piercing"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Claws",
+            "category": "attack",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 10,
+            "reach_ft": 5,
+            "targets": {
+              "count": 1
+            },
+            "hit": {
+              "damage": [
+                {
+                  "dice": "2d6",
+                  "flat": 6,
+                  "average": 13,
+                  "type": "slashing"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Duplicating Terror",
+            "category": "summon_replicas",
+            "action_economy": "action",
+            "uses_per_day": 1,
+            "spawn_count": 4,
+            "replica_statblock": "axe beak",
+            "trait_overrides": [
+              "Many Eyes",
+              "Self-made Pack"
+            ],
+            "control": {
+              "telepathy_ft": 120,
+              "replicas_allies": true,
+              "obey_commands": true
+            },
+            "duration": "until_killed_or_dismissed",
+            "dismiss_cost": "bonus_action",
+            "on_death_or_dismiss": "replica_disintegrates_to_green_goo",
+            "after_hours_alive": 24,
+            "then": {
+              "control_link_severed": true,
+              "replica_becomes_independent": true,
+              "after_additional_time": "1_month",
+              "matures_to": "full_shukankor"
+            }
+          }
+        ],
+        "bonus_actions": [
+          {
+            "name": "Dismiss Duplicating Terror replicas",
+            "category": "dismiss_summons",
+            "action_economy": "bonus_action",
+            "precondition": "one_or_more_replica_alive_and_bound",
+            "effect": "dismiss_replicas"
+          }
+        ],
+        "reactions": [
+          {
+            "name": "Sacrifice Replica",
+            "category": "redirect_attack",
+            "action_economy": "reaction",
+            "trigger": "visible_creature_targets_shukankor_with_attack",
+            "require_replica_within_ft": 5,
+            "redirect_target": "chosen_replica",
+            "replica_becomes_attack_target": true
+          }
+        ],
+        "legendary_actions": [],
+        "lair_actions": [],
+        "mythic_actions": [],
+        "spellcasting": [],
+        "other": [
+          {
+            "name": "Axe beak dependency",
+            "category": "external_statblock",
+            "creature": "axe_beak",
+            "mechanical_details_referenced_not_embedded": true
+          }
+        ]
+      }
+    },
+    "distincao_fontes": "ficha_existente_preservada = arquivo pré-existente na Biblioteca; mecanicas_validadas = interpretação operacional após confronto externo; adaptações do card game dependem de administrador",
+    "mecanicas_validadas": {
+      "traits": [
+        {
+          "name": "Many Eyes",
+          "category": "advantage",
+          "skill_checks": {
+            "Perception": "when_relying_on_sight"
+          },
+          "saving_throws": {
+            "vs_blinded": true
+          }
+        },
+        {
+          "name": "Self-made Pack",
+          "category": "conditional_attack_advantage",
+          "condition": {
+            "one_or_more_of_own_replicas_within_ft_of_target": 5,
+            "replica_not_incapacitated": true
+          }
+        }
+      ],
+      "actions": [
+        {
+          "name": "Multiattack",
+          "category": "multiattack",
+          "action_economy": "action",
+          "sequence": [
+            {
+              "attack": "Beak",
+              "count": 1
+            },
+            {
+              "attack": "Claws",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Beak",
+          "category": "attack",
+          "action_economy": "action",
+          "attack_type": "melee_weapon",
+          "attack_bonus": 10,
+          "reach_ft": 10,
+          "targets": {
+            "count": 1
+          },
+          "hit": {
+            "damage": [
+              {
+                "dice": "2d8",
+                "flat": 6,
+                "average": 15,
+                "type": "piercing"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Claws",
+          "category": "attack",
+          "action_economy": "action",
+          "attack_type": "melee_weapon",
+          "attack_bonus": 10,
+          "reach_ft": 5,
+          "targets": {
+            "count": 1
+          },
+          "hit": {
+            "damage": [
+              {
+                "dice": "2d6",
+                "flat": 6,
+                "average": 13,
+                "type": "slashing"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Duplicating Terror",
+          "category": "summon_replicas",
+          "action_economy": "action",
+          "uses_per_day": 1,
+          "spawn_count": 4,
+          "replica_statblock": "axe beak",
+          "trait_overrides": [
+            "Many Eyes",
+            "Self-made Pack"
+          ],
+          "control": {
+            "telepathy_ft": 120,
+            "replicas_allies": true,
+            "obey_commands": true
+          },
+          "duration": "until_killed_or_dismissed",
+          "dismiss_cost": "bonus_action",
+          "on_death_or_dismiss": "replica_disintegrates_to_green_goo",
+          "after_hours_alive": 24,
+          "then": {
+            "control_link_severed": true,
+            "replica_becomes_independent": true,
+            "after_additional_time": "1_month",
+            "matures_to": "full_shukankor"
+          }
+        }
+      ],
+      "bonus_actions": [
+        {
+          "name": "Dismiss Duplicating Terror replicas",
+          "category": "dismiss_summons",
+          "action_economy": "bonus_action",
+          "precondition": "one_or_more_replica_alive_and_bound",
+          "effect": "dismiss_replicas"
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Sacrifice Replica",
+          "category": "redirect_attack",
+          "action_economy": "reaction",
+          "trigger": "visible_creature_targets_shukankor_with_attack",
+          "require_replica_within_ft": 5,
+          "redirect_target": "chosen_replica",
+          "replica_becomes_attack_target": true
+        }
+      ],
+      "legendary_actions": [],
+      "lair_actions": [],
+      "mythic_actions": [],
+      "spellcasting": [],
+      "other": [
+        {
+          "name": "Axe beak dependency",
+          "category": "external_statblock",
+          "creature": "axe_beak",
+          "mechanical_details_referenced_not_embedded": true
+        }
+      ]
+    },
+    "notas_auditoria": [
+      "Sem inventar atributos do Axe Beak: referência externa mantida, sua ficha separada deve ser consultada para resolver combates de réplicas",
+      "Reação Sacrifice Replica exige atacante visível, alvo original o Shukankor e réplica a 5 pés"
+    ],
+    "pendencias_card_game": [
+      "Duplicating Terror cria quatro réplicas Axe Beak: requer bloco de estatísticas específico e aprovação da coexistência com uma única criatura ativa",
+      "Sacrifice Replica exige réplica próxima e reação disponível, não redirecionar sem cumprir o gatilho",
+      "Duplicating Terror é 1/dia; não reiniciar entre combates sem regra de descanso"
+    ],
+    "atributos": {
+      "STR": 22,
+      "DEX": 12,
+      "CON": 18,
+      "INT": 8,
+      "WIS": 12,
+      "CHA": 6
+    },
+    "iniciativa_mod": 1,
+    "deslocamento_ft": {
+      "walk_ft": 50
+    },
+    "salvaguardas": [],
+    "pericias": {
+      "Athletics": 10,
+      "Perception": 9
+    },
+    "sentidos": [
+      "darkvision 120 ft."
+    ],
+    "idiomas": [
+      "Deep Speech"
+    ],
+    "resistencias_dano": [
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "source": "nonmagical_attacks"
+      }
+    ],
+    "imunidades_dano": [
+      "poison"
+    ],
+    "imunidades_condicao": [
+      "poisoned"
+    ],
+    "vulnerabilidades_dano": [],
+    "formula_pv": "11d12+44",
+    "bonus_proficiencia": 4,
+    "porte": "Huge",
+    "tipo_fonte": "aberration",
+    "alinhamento": "chaotic evil",
+    "percepcao_passiva": 19,
+    "auditoria_campos": {
+      "CA": "conferido",
+      "PV": "conferido",
+      "ND": "conferido",
+      "acoes": "conferidas conforme edição identificada",
+      "apto_jogo_sem_adaptacao": false
+    }
+  },
+  "documentos_complementares": []
+}

@@ -1,0 +1,169 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-285",
+  "nome_catalogo": "Snallygaster",
+  "origem_arquivo": "TF-285-snallygaster-ficha (1).json",
+  "sha256_origem": "b7198be277942b2e8c9fcbd1ee149e1ced0633ce92e603a80eea324905853221",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-010",
+    "data_validacao": "2026-10-17T03:23:19+00:00",
+    "tipo": "Aberração",
+    "classe_catalogo": "Rara",
+    "homologacao_administrativa": "PENDENTE",
+    "edicao_combate_card_game": "SRD 5.2.1 (regras gerais; não substituir estatísticas de criatura)",
+    "regra_interpretacao": "Distinguir versão de publicação original, habilidades passivas e regras do Card Game; nenhuma adaptação não aprovada é executável.",
+    "ORDEM_PRIORIZADA": 37,
+    "ORDEM_1320": 84,
+    "CHAVE": "TF-285",
+    "ID_CATALOGO": "TF-285",
+    "nome": "Snallygaster",
+    "ND_catalogo": 15,
+    "origem_publicacao_catalogo": "Tome of Beasts 3",
+    "arquivo_deck_pesquisa": "/SRD Card Game/Decks/Aberração/Fichas por criatura/37_Snallygaster.md",
+    "fontes_consultadas": [
+      {
+        "edicao": "Tome of Beasts 3",
+        "url": "https://www.5esrd.com/database/creature/snallygaster/",
+        "uso": "transcrição pública da edição e mecânicas"
+      },
+      {
+        "edicao": "Tome of Beasts 3, p. 348",
+        "url": "https://anyflip.com/myubd/nuoj/basic/301-350",
+        "uso": "comparação dos efeitos e poderes"
+      }
+    ],
+    "status_ficha": "COMPLETA_MECANICAMENTE_SEM_HOMOLOGACAO_ADMINISTRATIVA",
+    "edicao_fonte_considerada": "Tome of Beasts 3",
+    "url_fonte_principal": "https://www.5esrd.com/database/creature/snallygaster/",
+    "porte": "Huge",
+    "alinhamento": "unaligned",
+    "ca": 16,
+    "pv_maximos": 207,
+    "formula_pv": "18d12+90",
+    "bonus_proficiencia": 5,
+    "iniciativa": 0,
+    "atributos": {
+      "FOR": 24,
+      "DES": 10,
+      "CON": 21,
+      "INT": 4,
+      "SAB": 14,
+      "CAR": 12
+    },
+    "deslocamento_ft": {
+      "andar": 30,
+      "voar": 30,
+      "hover": true
+    },
+    "salvaguardas": {
+      "FOR": 12,
+      "CON": 10,
+      "SAB": 7
+    },
+    "pericias": {},
+    "imunidades_dano": [
+      "ácido",
+      "trovejante"
+    ],
+    "resistencias_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [
+      "amedrontado"
+    ],
+    "sentidos": [
+      "visão no escuro 120 pés",
+      "Percepção passiva 12"
+    ],
+    "idiomas": [],
+    "tracos": [
+      {
+        "nome": "Magic Resistance",
+        "efeito": "vantagem em salvaguardas contra magia e outros efeitos mágicos"
+      },
+      {
+        "nome": "Regeneration",
+        "cura_pv": 15,
+        "gatilho": "início do seu turno",
+        "requisito": "pelo menos 1 PV; limitado a PV máximos"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "composicao": "1 Slimy Tentacles + 3 Talons",
+        "gatilho": "se 2 ataques Talons atingirem uma criatura",
+        "salvaguarda": "FOR CD 18",
+        "falha": "dano adicional 2d10 perfurante e alvo caído"
+      },
+      {
+        "nome": "Slimy Tentacles",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 12,
+        "alcance_ft": 15,
+        "dano": [
+          {
+            "dados": "3d8+7",
+            "tipo": "contundente"
+          }
+        ],
+        "efeitos": [
+          "agarrado (fuga CD 18)",
+          "contido enquanto agarrado",
+          "4d8 ácido no início de cada turno do alvo enquanto agarrado",
+          "não pode usar os tentáculos em outro alvo durante agarrão"
+        ]
+      },
+      {
+        "nome": "Talons",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 12,
+        "alcance_ft": 5,
+        "dano": [
+          {
+            "dados": "2d12+7",
+            "tipo": "perfurante"
+          }
+        ]
+      },
+      {
+        "nome": "Screech",
+        "tipo": "ação de área",
+        "recarga": "5-6",
+        "cone_ft": 60,
+        "CD": 18,
+        "salvaguarda": "CON",
+        "dano": "14d6 trovejante",
+        "falha": "atordoado por até 1 minuto; repetir CON ao fim de cada turno para encerrar",
+        "sucesso": "metade do dano, sem atordoamento"
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Nimble Flier",
+        "requisito": "estar voando",
+        "efeito": "Dash ou Disengage"
+      }
+    ],
+    "reacoes": [
+      {
+        "nome": "Parry Spell",
+        "gatilho": "bem-sucedido em salvaguarda contra magia de nível 5 ou menor que visa exclusivamente o snallygaster",
+        "efeito": "magia não tem efeito; se sucesso por ≥5, reflete contra conjurador com o nível de espaço, CD, bônus de ataque e atributo do conjurador"
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": null,
+    "pendencias_card_game": [
+      "Regeneração só ativa se pelo menos 1 PV e nunca restaura criatura derrotada; não conceder cura automática de batalha",
+      "Interação de voo, alcance, agarrão e prisão exige arena/posicionamento",
+      "Reflexo de magia exige resolver critérios de alvo único e nível de magia da fonte"
+    ],
+    "observacoes_mecanicas": [
+      "Markdown do deck apresentava apenas CA/PV, agora completado com ações, bônus e reação da fonte",
+      "Não confundir com Snallygast ou Dragon Snallygaster (criaturas diferentes)"
+    ]
+  },
+  "documentos_complementares": []
+}

@@ -1,0 +1,226 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Empyrean Kobold",
+  "origem_arquivo": "EXT-0210-empyrean-kobold-ficha (1).json",
+  "sha256_origem": "cba7368a029dcddbc43340cffd33a83f95c4a0eadb143d2db94d717c28195bf2",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-017",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 63,
+      "ORDEM_1320": 210,
+      "CHAVE": "EXT-0210-empyrean-kobold",
+      "ID_CATALOGO": null,
+      "nome_catalogo": "Empyrean Kobold",
+      "tipo_catalogo": "Celestial",
+      "nd": "10",
+      "classe": "Incomum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-027"
+      ],
+      "publicacao_catalogo": "Tome of Beasts 3",
+      "editora_catalogo": "Kobold Press",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "COMPLETA_FONTE_EXTERNA_SEM_HOMOLOGACAO",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Pequeno",
+      "tipo_mecanico_fonte": "Celestial",
+      "alinhamento": "Neutro",
+      "CA": 18,
+      "PV_maximos": 150,
+      "formula_PV": "20d6+80",
+      "nd_fonte": "10",
+      "iniciativa_bonus": 4,
+      "iniciativa_valor_SR521": null,
+      "bonus_proficiencia": 4,
+      "xp_fonte": 5900,
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": 90
+      },
+      "atributos": {
+        "FOR": 19,
+        "DES": 18,
+        "CON": 18,
+        "INT": 17,
+        "SAB": 20,
+        "CAR": 18
+      },
+      "salvaguardas_fonte": {
+        "CON": 8,
+        "SAB": 9,
+        "CAR": 8
+      },
+      "pericias": {
+        "Intuição": 9,
+        "Percepção": 9
+      },
+      "resistencias_dano": [
+        "ácido",
+        "frio",
+        "fogo",
+        "elétrico",
+        "veneno",
+        "contundente de ataques não mágicos",
+        "perfurante de ataques não mágicos",
+        "cortante de ataques não mágicos"
+      ],
+      "imunidades_dano": [
+        "radiante"
+      ],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exaustão",
+        "amedrontado",
+        "envenenado"
+      ],
+      "sentidos": {
+        "visao_no_escuro_pes": 120,
+        "percepcao_passiva": 19
+      },
+      "idiomas_e_telepatia": {
+        "fala": "todos os idiomas",
+        "telepatia_pes": 120
+      },
+      "tracos": [
+        {
+          "nome": "Aura of Draconic Virtue",
+          "alcance_pes": 30,
+          "efeito": "Kobolds aliados a até 30 pés recebem vantagem em ataques e testes de atributo; no começo do turno, pode excluir quaisquer kobolds da aura, sem ação."
+        },
+        {
+          "nome": "Elemental Weapons",
+          "efeito": "Ataques com arma são mágicos; acertando um ataque com arma, acrescenta 3d8 de ácido, frio, fogo, eletricidade ou veneno, escolhido pela criatura (já contabilizado no Claw)."
+        },
+        {
+          "nome": "Immortal Nature",
+          "efeito": "Não precisa de comida, bebida ou sono."
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "economia": "acao",
+          "efeito": "Três ataques Claw; pode substituir um ataque por Divine Command."
+        },
+        {
+          "nome": "Claw",
+          "economia": "acao",
+          "bonus_ataque": 8,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "dados": "1d6+4",
+              "tipo": "cortante",
+              "media_publicada": 7
+            },
+            {
+              "dados": "3d8",
+              "tipo": "ácido, frio, fogo, eletricidade ou veneno (escolha)",
+              "media_publicada": 13
+            }
+          ]
+        },
+        {
+          "nome": "Invoke the Dragon Gods",
+          "economia": "acao",
+          "recarga": "5-6",
+          "area": {
+            "forma": "cone",
+            "comprimento_pes": 60
+          },
+          "salvaguarda": {
+            "atributo": "DES",
+            "CD": 16
+          },
+          "dano": [
+            {
+              "dados": "14d6",
+              "tipo": "ácido, frio, fogo, eletricidade ou veneno (escolha)",
+              "media_publicada": 49
+            }
+          ],
+          "falha": "Dano integral",
+          "sucesso": "Metade do dano"
+        },
+        {
+          "nome": "Divine Command",
+          "economia": "acao / substitui um Claw no Multiattack",
+          "efeito": "Escolhe alvo visível dentro da Aura of Draconic Virtue e ordena a um kobold dentro da aura realizar um ataque com arma contra esse alvo usando a reação desse kobold."
+        },
+        {
+          "nome": "Invisibility",
+          "economia": "acao",
+          "efeito": "Fica invisível, incluindo equipamento; termina ao atacar ou quando cessar a concentração, como a concentração de uma magia.",
+          "concentracao": true
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [
+        {
+          "nome": "Draconic Ascension",
+          "gatilho": "Um kobold que a criatura veja é reduzido a 0 PV",
+          "efeito": "Reencarna esse kobold como dragão filhote (wyrmling) de tipo condizente com sua virtude.",
+          "limite": "Até dois kobolds por hora",
+          "economia": "reacao"
+        }
+      ],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "conjuracao": [],
+      "recursos_limitados": [
+        {
+          "recurso": "Invoke the Dragon Gods",
+          "recarga": "5-6"
+        },
+        {
+          "recurso": "Draconic Ascension",
+          "limite": "2 por hora; requer alvo kobold elegível"
+        },
+        {
+          "recurso": "Invisibility",
+          "concentracao": true
+        }
+      ]
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/27_Empyrean_Kobold.md",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/empyrean-kobold/",
+      "edicao_mecanica": "Kobold Press — Tome of Beasts 3, 5e original, bloco Empyrean Kobold",
+      "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto; não converter mecanicamente blocos Kobold Press para SRD 2024",
+      "fontes_cruzadas": [
+        "https://www.5esrd.com/database/creature/empyrean-kobold/",
+        "https://koboldpress.com/kpstore/product/tome-of-beasts-3-for-5th-edition/"
+      ],
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "ID_CATALOGO ausente no controle; CHAVE operacional não equivale a ID de catálogo aprovado.",
+        "Divine Command requer kobold aliado; não pressupor kobolds adicionais no campo.",
+        "Draconic Ascension transforma outro kobold em dragão filhote, e o limite é por hora; não invocar wyrmling nem criar carta automaticamente.",
+        "Invisibility exige concentração do próprio Empyrean Kobold, não transfere Invisibilidade a outra carta como suporte."
+      ],
+      "pendencias_card_game": [
+        "Documentar decisão administrativa sobre retorno à vida/transformação e efeitos em outros aliados quando cabível.",
+        "Não presumir arena, terreno, covil ou alvos aliados extras.",
+        "Não adaptar habilidades de suporte do deck sem regra homologada."
+      ],
+      "nao_duplicar_ficha_por_copia": true,
+      "copia_referencia_deck": "CE-027"
+    }
+  },
+  "documentos_complementares": []
+}

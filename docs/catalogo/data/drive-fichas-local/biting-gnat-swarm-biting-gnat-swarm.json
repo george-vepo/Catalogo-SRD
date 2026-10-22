@@ -1,0 +1,152 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Biting Gnat Swarm",
+  "origem_arquivo": "EXT-0103-biting-gnat-swarm-ficha (1).json",
+  "sha256_origem": "d74aa4fd25a048ac20e44312902cccc9b40ddacad0ee05f2bbbcdf0ebc0d5923",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-036",
+    "data_validacao": "2026-10-19",
+    "status_ficha": "COMPLETA_MECANICAS_VALIDADA_COM_RESSALVAS",
+    "homologacao_administrativa": false,
+    "regra_combate": "SRD 5.2.1; preservar as condições e os valores mecânicos da edição indicada para cada criatura",
+    "raridade": "Comum",
+    "tipo": "Besta",
+    "tendencia": "Sem alinhamento",
+    "testes_resistencia": {},
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "concussão",
+      "perfurante",
+      "cortante"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado",
+      "agarrado",
+      "paralisado",
+      "petrificado",
+      "caído",
+      "impedido",
+      "atordoado"
+    ],
+    "idiomas": [],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "recursos_limitados": [],
+    "conjuracao": null,
+    "bonus_proficiencia": 2,
+    "ordem_priorizada": 139,
+    "ordem_1320": 103,
+    "chave": "EXT-0103-biting-gnat-swarm",
+    "id_catalogo": null,
+    "nome": "Biting Gnat Swarm",
+    "nd": 0.25,
+    "nd_registro_fila": "1/4",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "origem": "CANDIDATO EXTERNO",
+    "edicao": "Tome of Beasts 3 (5e)",
+    "tamanho": "Média (enxame de Bestas Minúsculas)",
+    "subtipo_fonte": "Enxame de Bestas Minúsculas — \"Enxame\" não é um tipo de carta separado",
+    "classe_armadura": 13,
+    "pontos_vida": 16,
+    "dados_vida": "3d8 + 3",
+    "deslocamentos_pes": {
+      "caminhar": 10,
+      "escalar": 10,
+      "voar": 30
+    },
+    "atributos": {
+      "FOR": 2,
+      "DES": 17,
+      "CON": 12,
+      "INT": 1,
+      "SAB": 10,
+      "CAR": 1
+    },
+    "sentidos": {
+      "percepcao_passiva": 10
+    },
+    "pericias": {},
+    "xp": 50,
+    "caracteristicas": [
+      {
+        "nome_original": "Blood Sense",
+        "efeito": "Identifica por olfato a localização de criaturas de sangue quente a até 20 pés."
+      },
+      {
+        "nome_original": "Distracting Buzz",
+        "gatilho": "Uma criatura que não esteja surda começa o turno no mesmo espaço do enxame.",
+        "salvaguarda": {
+          "atributo": "SAB",
+          "cd": 10
+        },
+        "falha": "Fica distraída por 1 minuto: desvantagem em jogadas de ataque e testes de atributo que usem INT, SAB ou CAR.",
+        "repeticao": "Repete salvaguarda no fim de cada turno, encerrando em sucesso.",
+        "sucesso": "Imune a Distracting Buzz desse enxame durante os próximos 10 minutos."
+      },
+      {
+        "nome_original": "Swarm",
+        "efeito": "Pode ocupar o espaço de outra criatura e vice-versa; pode atravessar abertura grande o bastante para Besta Minúscula. Não recupera PV e não ganha PV temporários."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Bites",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 5,
+        "alcance_pes": 0,
+        "dano": [
+          {
+            "dados": "2d4",
+            "media": 5,
+            "tipo": "perfurante"
+          }
+        ],
+        "alvo": "Uma criatura no espaço ocupado pelo enxame.",
+        "limiar_meia_vida": "Quando PV atuais <= 8, o dano é 2 (1d4) perfurante.",
+        "dano_meia_vida": [
+          {
+            "dados": "1d4",
+            "media": 2,
+            "tipo": "perfurante"
+          }
+        ],
+        "salvaguarda": {
+          "atributo": "CON",
+          "cd": 11
+        },
+        "falha": "Alvo fica cego por 1 minuto.",
+        "repeticao": "O alvo pode repetir a salvaguarda ao fim de cada turno ou gastar uma ação para limpar os insetos de seus olhos, encerrando a cegueira."
+      }
+    ],
+    "fontes": [
+      "https://anyflip.com/tkzwp/dofg/basic/351-400",
+      "https://anyflip.com/usqxr/neqk/basic/351-400"
+    ],
+    "pendencias_card_game": [
+      "Tratar o enxame como uma única carta de Besta; não transformar insetos individuais em cartas/aliados.",
+      "Distracting Buzz e Bites exigem compartilhamento de espaço; posicionamento e tamanho da arena dependem de aprovação do administrador.",
+      "A condição cego e a imunidade de 10 minutos devem ser acompanhadas sem ignorar regras de duração.",
+      "Regra de não recuperar PV ou ganhar PV temporários prevalece da fonte."
+    ],
+    "notas_de_validacao": [
+      "O texto da fonte nomeia Swarm of Biting Gnats em uma salvaguarda, mas o nome canônico no bestiário é Biting Gnat Swarm; preservados CD 10 e CD 11 sem misturar efeitos."
+    ],
+    "modificadores": {
+      "FOR": -4,
+      "DES": 3,
+      "CON": 1,
+      "INT": -5,
+      "SAB": 0,
+      "CAR": -5
+    },
+    "iniciativa_modificador": 3
+  },
+  "documentos_complementares": []
+}

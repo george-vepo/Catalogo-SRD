@@ -1,0 +1,220 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-017",
+  "nome_catalogo": "Ancient Aboleth",
+  "origem_arquivo": "TF-017-ancient-aboleth-ficha (1).json",
+  "sha256_origem": "88a4e4ca7698c4488abbc908925a251620719f3874038004a4f73a9c57a9ada5",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-009",
+    "data_validacao": "2026-10-17T00:18:08-03:00",
+    "ORDEM_PRIORIZADA": 33,
+    "ORDEM_1320": 69,
+    "CHAVE": "TF-017",
+    "ID_CATALOGO": "TF-017",
+    "nome": "Ancient Aboleth",
+    "tipo": "Aberração",
+    "ND_catalogo": 11,
+    "classe_catalogo": "Rara",
+    "origem_publicacao_catalogo": "Monstrous Menagerie",
+    "edicao_fonte_considerada": "Level Up A5E / Monstrous Menagerie",
+    "url_fonte_principal": "https://a5e.tools/node/1459",
+    "status_ficha": "COMPLETA_MECANICAS_FONTE_VALIDADA",
+    "homologacao_administrativa": false,
+    "edicao_combate_card_game": "SRD 5.2.1",
+    "pendencias_card_game": [
+      "Elite Recovery pode usar enquanto incapaz ou inconsciente desde que com pelo menos 1 PV; usar a definição de bloodied conforme ficha A5E, não inventar extensão a 0 PV",
+      "Sea Change e long rest causam efeitos de duração fora do combate; ajustar somente mediante regra aprovada",
+      "Baleful Charm/Telepathic Summon dependem de controle do adversário e reações; preservar a declaração do jogador",
+      "Uso de conjuração A5E não implica importar regras A5E para o SRD 5.2.1",
+      "Legendaries e ações bloodied devem obedecer economia original sem execução automática fora da vez"
+    ],
+    "fontes_consultadas": [
+      "/SRD Card Game/Decks/Aberração/Fichas por criatura/33_Ancient_Aboleth.md",
+      "https://a5e.tools/node/1459"
+    ],
+    "sistema_da_ficha": "A5E, nao SRD 5.2.1; combate do Card Game segue SRD para resolucao onde aplicavel",
+    "porte": "Huge",
+    "alinhamento": null,
+    "ca": 17,
+    "pv_maximos": 342,
+    "formula_pv": "36d10+144",
+    "bloodied_pv": 171,
+    "iniciativa": {
+      "modificador": 1,
+      "fonte": "DERIVADA de DEX 12; A5E não publica bônus de iniciativa no bloco"
+    },
+    "atributos": {
+      "FOR": {
+        "valor": 20,
+        "modificador": 5
+      },
+      "DES": {
+        "valor": 12,
+        "modificador": 1
+      },
+      "CON": {
+        "valor": 18,
+        "modificador": 4
+      },
+      "INT": {
+        "valor": 20,
+        "modificador": 5
+      },
+      "SAB": {
+        "valor": 20,
+        "modificador": 5
+      },
+      "CAR": {
+        "valor": 18,
+        "modificador": 4
+      }
+    },
+    "bonus_proficiencia": 4,
+    "deslocamento_ft": {
+      "walk_ft": 10,
+      "swim_ft": 40
+    },
+    "salvaguardas": {
+      "DEX": 5,
+      "CON": 8,
+      "INT": 9,
+      "WIS": 9
+    },
+    "pericias": {
+      "Deception": 8,
+      "History": 9,
+      "Stealth": 5
+    },
+    "sentidos": [
+      "blindsight 30 ft.",
+      "darkvision 120 ft."
+    ],
+    "percepcao_passiva": 15,
+    "idiomas": [
+      "Deep Speech",
+      "telepathy 120 ft."
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [],
+    "resistencias_dano": [],
+    "vulnerabilidades_dano": [],
+    "tracos": [
+      {
+        "nome": "Amphibious",
+        "resumo_mecanico": "Respira ar e água."
+      },
+      {
+        "nome": "Legendary Resistance (3/day)",
+        "resumo_mecanico": "Quando falha em salvaguarda, pode escolher ter sucesso. Cada uso escurece um dos três olhos; com todos negros, fica cego além do alcance de blindsight até completar descanso longo."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "resumo_mecanico": "Faz três ataques de Tentacle."
+      },
+      {
+        "nome": "Tentacle",
+        "resumo_mecanico": "Ataque corpo a corpo +9, alcance 15 ft.; 4d6+5 bludgeoning, ou pode escolher causar 0 dano. Criatura atingida faz salvaguarda de Constituição CD 16 ou contrai Sea Change; sucesso concede imunidade à doença por 24h. A doença impõe desvantagem em salvaguardas de Sabedoria; após 1h surgem guelras e pele viscosa, e sem pelo menos 1h submersa a cada 12h a criatura começa a sufocar. Magia de remoção de doença com espaço de 4º nível ou superior cura; termina 24h após a morte do aboleth.",
+        "ataque": "+9",
+        "alcance": "15 ft.",
+        "dano": [
+          {
+            "dados": "4d6+5",
+            "tipo": "bludgeoning; pode causar 0"
+          }
+        ],
+        "salvaguarda": "Constitution DC 16; disease"
+      },
+      {
+        "nome": "Slimy Cloud (1/day; while bloodied; underwater)",
+        "resumo_mecanico": "Esfera de raio 30 ft. Cada criatura exceto aboleths na área faz salvaguarda de Constituição CD 16; falha causa 8d10 poison e condição Poisoned por 1 minuto. A área fica heavily obscured por 1 minuto ou até corrente forte dissipar a nuvem.",
+        "uso": "1/day; while bloodied; underwater",
+        "salvaguarda": "Constitution DC 16"
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": {
+      "usos_por_rodada": 2,
+      "momento": "fim do turno de outra criatura",
+      "recuperacao": "inicio do turno",
+      "opcoes": [
+        {
+          "nome": "Move",
+          "resumo_mecanico": "Move até o deslocamento de natação sem provocar ataques de oportunidade."
+        },
+        {
+          "nome": "Telepathic Summon",
+          "resumo_mecanico": "Uma criatura a até 90 ft. faz salvaguarda de Sabedoria CD 16; falha obriga-a a usar sua reação, se disponível, para mover-se até o deslocamento em direção ao aboleth pela rota mais direta sem evitar ataques de oportunidade. É efeito mágico de encanto.",
+          "salvaguarda": "Wisdom DC 16"
+        },
+        {
+          "nome": "Baleful Charm (custa 2 ações)",
+          "resumo_mecanico": "Alvo a até 60 ft. que contraiu Sea Change faz salvaguarda de Sabedoria CD 16; falha fica Charmed até o aboleth morrer. Repete o teste a cada 24h e ao sofrer dano do aboleth ou aliados. Encantado, comunica-se telepaticamente a qualquer distância e obedece ordens.",
+          "uso": "2 legendary actions",
+          "salvaguarda": "Wisdom DC 16"
+        },
+        {
+          "nome": "Soul Drain (custa 2 ações)",
+          "resumo_mecanico": "Uma criatura Charmed sofre 4d10 psychic; o aboleth recupera PV iguais ao dano.",
+          "uso": "2 legendary actions"
+        }
+      ]
+    },
+    "acoes_especiais_bloodied": [
+      {
+        "nome": "Elite Recovery (while bloodied)",
+        "resumo_mecanico": "Encerra um efeito negativo que o afete; pode usar mesmo inconsciente ou incapacitado se tiver ao menos 1 PV."
+      },
+      {
+        "nome": "Look Upon My Works (while bloodied; 1/day)",
+        "resumo_mecanico": "Cada criatura a até 90 ft. faz salvaguarda de Sabedoria CD 16; falha sofre 6d10 psychic ao ver fragmento de memórias do aboleth. Depois do dano, esquece a visão, mas pode aprender uma informação de lore.",
+        "uso": "1/day; while bloodied",
+        "salvaguarda": "Wisdom DC 16"
+      },
+      {
+        "nome": "Lunging Attack (while bloodied)",
+        "resumo_mecanico": "Move até o deslocamento de natação sem provocar ataques de oportunidade e faz um ataque de Tentacle."
+      }
+    ],
+    "acoes_covil": [],
+    "conjuracao": {
+      "atributo": "CHA",
+      "cd": 16,
+      "ataque_magia": null,
+      "sem_componentes": [
+        "todos"
+      ],
+      "3/day": [
+        "detect thoughts (120 ft.)",
+        "project image (1 mile)",
+        "major image"
+      ]
+    },
+    "recargas": [
+      {
+        "nome": "Legendary Resistance",
+        "usos": 3,
+        "recuperacao": "dia"
+      },
+      {
+        "nome": "Slimy Cloud",
+        "usos": 1,
+        "recuperacao": "dia",
+        "requer_bloodied": true
+      },
+      {
+        "nome": "Look Upon My Works",
+        "usos": 1,
+        "recuperacao": "dia",
+        "requer_bloodied": true
+      }
+    ],
+    "dados_suporte_nao_aprovados": [
+      "Transferência de Legendary Resistance como suporte para outra criatura ativa é proposta, não regra homologada"
+    ]
+  },
+  "documentos_complementares": []
+}

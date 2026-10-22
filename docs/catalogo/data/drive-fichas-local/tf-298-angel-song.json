@@ -1,0 +1,236 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-298",
+  "nome_catalogo": "Angel, Song",
+  "origem_arquivo": "TF-298-angel-song-ficha (1).json",
+  "sha256_origem": "d56098fdddd5226ac79372ef1ba9959c45c2a8b1f0f513a6e576b8ba4fb5c088",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-015",
+    "data_execucao_local": "2026-10-17T01:52:42-03:00",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 55,
+      "ORDEM_1320": 200,
+      "CHAVE": "TF-298",
+      "ID_CATALOGO": "TF-298",
+      "nome_catalogo": "Angel, Song",
+      "nome_na_fonte": "Song Angel",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "Celestial",
+      "nd": "6",
+      "classe": "Incomum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-019"
+      ],
+      "publicacao_catalogo": "Creature Codex",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Grande",
+      "alinhamento": "leal e bom",
+      "CA": 15,
+      "CA_origem": "armadura natural",
+      "PV_maximos": 76,
+      "formula_PV": "9d10+27",
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": 60
+      },
+      "atributos": {
+        "FOR": 12,
+        "DES": 16,
+        "CON": 16,
+        "INT": 18,
+        "SAB": 18,
+        "CAR": 21
+      },
+      "iniciativa_bonus": 3,
+      "iniciativa_origem": "Inferido apenas pelo modificador de DES do bloco de 2018; iniciativa não declarada na fonte",
+      "bonus_proficiencia": 3,
+      "salvaguardas_fonte": {
+        "SAB": 7,
+        "CAR": 8
+      },
+      "pericias": {
+        "Intuicao": 7,
+        "Atuacao": 11
+      },
+      "resistencias_dano": [
+        "radiante",
+        "contundente de ataques não mágicos",
+        "perfurante de ataques não mágicos",
+        "cortante de ataques não mágicos"
+      ],
+      "sentidos": {
+        "percepcao_passiva": 14,
+        "visao_no_escuro_pes": 120
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "todos"
+        ],
+        "telepatia_pes": 120
+      },
+      "tracos": [
+        {
+          "nome": "Angelic Weapons",
+          "efeito": "Ataques com arma são mágicos; acrescenta 4d8 de dano radiante (já incluso no ataque Scimitar)."
+        },
+        {
+          "nome": "Innate Spellcasting",
+          "atributo": "CAR",
+          "CD": 16,
+          "sem_componentes_materiais": true,
+          "efeito": "Conjura magias inatas na frequência listada."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Scimitar",
+          "bonus_ataque": 6,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "dado": "2d6+3",
+              "tipo": "cortante",
+              "media_publicada": 10
+            },
+            {
+              "dado": "4d8",
+              "tipo": "radiante",
+              "media_publicada": 18
+            }
+          ]
+        },
+        {
+          "nome": "Horn of Blasting",
+          "recarga": "5-6",
+          "cone_pes": 30,
+          "audivel_ate_pes": 600,
+          "salvaguarda": "CON",
+          "CD": 15,
+          "falha": {
+            "dano": {
+              "dado": "5d6",
+              "tipo": "trovejante",
+              "media_publicada": 17
+            },
+            "condicao": "surdo por 1 minuto"
+          },
+          "sucesso": "Metade do dano e não fica surdo",
+          "excecao": "Criaturas e objetos de vidro ou cristal têm desvantagem na salvaguarda e recebem 10d6 trovejante (média publicada 35) em vez do dano normal."
+        },
+        {
+          "nome": "Horn of Spirits",
+          "recarga": "descanso longo",
+          "efeito": "Convoca 3d4+3 (média publicada 10) espíritos guerreiros até 60 pés: usam ficha de Tribal Warrior, exceto um campeão antigo com ficha de Berserker. Obedecem às ordens do anjo; somem após 1 hora ou a 0 PV.",
+          "dependencias_fichas": [
+            "Tribal Warrior",
+            "Berserker"
+          ]
+        },
+        {
+          "nome": "Change Shape",
+          "efeito": "Pode assumir forma de humanoide com ND menor ou igual ao seu, ou retornar à original. Mantém fala e estatísticas gerais, mas substitui CA, deslocamentos, FOR, DES e sentidos especiais pelos da forma assumida; ganha capacidades da nova forma que lhe faltavam, exceto habilidades de classe, ações lendárias e de covil. Reverte ao morrer.",
+          "limite": "exige ficha da forma escolhida, sem inventá-la"
+        }
+      ],
+      "conjuracao": [
+        {
+          "nome": "Innate Spellcasting",
+          "atributo": "CAR",
+          "CD": 16,
+          "sem_componentes_materiais": true,
+          "a_vontade": [
+            "Alter Self",
+            "Calm Emotions",
+            "Charm Person",
+            "Create Food and Water",
+            "Detect Evil and Good"
+          ],
+          "tres_por_dia_cada": [
+            "Enthrall",
+            "Silence",
+            "Zone of Truth"
+          ],
+          "uma_por_dia_cada": [
+            "Irresistible Dance",
+            "Mass Cure Wounds"
+          ]
+        }
+      ],
+      "recursos_limitados": [
+        {
+          "nome": "Horn of Blasting",
+          "recarga": "5-6"
+        },
+        {
+          "nome": "Horn of Spirits",
+          "limite": "1 por descanso longo"
+        },
+        {
+          "nome": "Enthrall, Silence, Zone of Truth",
+          "usos": 3,
+          "periodo": "dia por magia"
+        },
+        {
+          "nome": "Irresistible Dance, Mass Cure Wounds",
+          "usos": 1,
+          "periodo": "dia por magia"
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [
+        {
+          "nome": "Heavenly Inspiration",
+          "gatilho": "Criatura visível falha teste de atributo, falha salvaguarda ou erra ataque com arma",
+          "requisito": "O alvo precisa ouvir o cântico",
+          "efeito": "O alvo repete a jogada fracassada com vantagem."
+        }
+      ],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exausto",
+        "amedrontado"
+      ]
+    },
+    "suporte_candidato_na_pesquisa_deck": {
+      "habilidade": "Heavenly Inspiration",
+      "status": "CANDIDATA_NAO_HOMOLOGADA",
+      "regra_original": "Reação a falha em teste ou salvaguarda ou erro com arma de criatura visível que ouve o canto; repete a rolagem com vantagem."
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/19_Angel_Song.md",
+      "caminho_no_controle_original": "/SRD Card Game/Decks/Celestial/Fichas por criatura/15_Angel_Song.md",
+      "divergencia_caminho_controle": "O CSV aponta para 15_Angel_Song.md, mas o arquivo existente com nome e CHAVE compatíveis é 19_Angel_Song.md. Não editar a fila original.",
+      "fonte_estatisticas": "https://fliphtml5.com/qfukk/crsz/5e_Creature_Codex/",
+      "fonte_primaria_local": null,
+      "edicao_mecanica": "Kobold Press Creature Codex, edição original 5e (2018)",
+      "regra_combativa": "SRD 5.2.1 rege a resolução geral; efeitos da edição Kobold Press 5e original conservados, sem importação silenciosa de redações de 2024",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "O controle aponta para 15_Angel_Song.md, mas arquivo correto é 19_Angel_Song.md.",
+        "A reação é poder original do anjo; transferi-la à mão como suporte depende de aprovação específica."
+      ],
+      "pendencias_card_game": [
+        "Horn of Spirits invoca múltiplas entidades; Card Game mantém uma criatura ativa por jogador. Necessita decisão sobre unidades adicionais, fichas e ações próprias.",
+        "Change Shape depende de estatísticas da forma selecionada; não conceder formas nem recursos sem ficha e decisão administrativa.",
+        "Heavenly Inspiration requer criatura visível e audição, além de ação de reação disponível e evento de falha.",
+        "Efeitos das magias da edição 2018 não devem ser substituídos por versões de 2024 sem aprovação."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

@@ -88,7 +88,7 @@ def index_source(source: Path, catalog: dict, existing_ids: set[str]):
     return selected, refusals
 
 
-def convert_webp(source: Path) -> bytes:
+def convert_webp(source: Path, *, strict: bool = True) -> bytes:
     try:
         from PIL import Image, ImageOps
     except ImportError as exc:
@@ -97,7 +97,7 @@ def convert_webp(source: Path) -> bytes:
 
     with Image.open(source) as original:
         original.load()
-        if original.width * original.height > MAX_PIXELS:
+        if strict and original.width * original.height > MAX_PIXELS:
             raise ValueError(f"Imagem grande demais: {source.name}")
         image = ImageOps.exif_transpose(original)
         image.thumbnail((960, 1440), Image.Resampling.LANCZOS)
@@ -108,7 +108,7 @@ def convert_webp(source: Path) -> bytes:
         data = buffer.getvalue()
         if not data.startswith(b"RIFF") or data[8:12] != b"WEBP":
             raise ValueError("Codificação WebP inválida")
-        if not 5_000 <= len(data) <= MAX_IMAGE_BYTES:
+        if strict and not 5_000 <= len(data) <= MAX_IMAGE_BYTES:
             raise ValueError(f"Tamanho WebP inesperado ({len(data)}): {source.name}")
         return data
 

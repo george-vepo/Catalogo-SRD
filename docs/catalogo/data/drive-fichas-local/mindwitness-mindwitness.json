@@ -1,0 +1,245 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Mindwitness",
+  "origem_arquivo": "EXT-0035-mindwitness-ficha (1).json",
+  "sha256_origem": "e73819ff18033f857ea7be48e33ec8832ead89c85f1cc6f3e4a684137e485c79",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Mindwitness",
+      "chave": "EXT-0035-mindwitness",
+      "id_catalogo": null,
+      "ordem_priorizada": 20,
+      "ordem_1320": 35,
+      "deck_origem": "Aberração",
+      "tipo_catalogo": "Aberração",
+      "nd_catalogo": "5",
+      "classe_catalogo": "Comum",
+      "editora_catalogo": "Wizards of the Coast",
+      "publicacao_catalogo": "Mordenkainen Presents: Monsters of the Multiverse",
+      "edicao_estudada": "Mordenkainen Presents: Monsters of the Multiverse (2022), p. 181",
+      "origem_catalogo": "CANDIDATO EXTERNO"
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Grande (Large)",
+      "alinhamento": "Typically Lawful Neutral",
+      "armor_class": 15,
+      "armor_class_type": "natural_armor",
+      "hit_points": 75,
+      "hit_dice": "10d10+20",
+      "ability_scores": {
+        "STR": 10,
+        "DEX": 14,
+        "CON": 14,
+        "INT": 15,
+        "WIS": 15,
+        "CHA": 10
+      },
+      "ability_modifiers": {
+        "STR": 0,
+        "DEX": 2,
+        "CON": 2,
+        "INT": 2,
+        "WIS": 2,
+        "CHA": 0
+      },
+      "initiative_bonus_derived_dex": 2,
+      "proficiency_bonus": 3,
+      "speeds": {
+        "walk_ft": 0,
+        "fly_ft": 20,
+        "hover": true
+      },
+      "saving_throws": {
+        "INT": 5,
+        "WIS": 5
+      },
+      "skills": {
+        "Perception": 8
+      },
+      "senses": {
+        "darkvision_ft": 120,
+        "passive_perception": 18
+      },
+      "languages": {
+        "spoken": [
+          "Deep Speech",
+          "Undercommon"
+        ],
+        "telepathy_ft": 600
+      },
+      "damage_resistances": [],
+      "damage_immunities": [],
+      "damage_vulnerabilities": [],
+      "condition_immunities": [
+        "prone"
+      ],
+      "mecanicas": {
+        "traits": [
+          {
+            "name": "Telepathic Hub",
+            "details": "Ao receber mensagem telepatica, pode retransmiti-la a ate 7 criaturas que consiga ver dentro de 600 pes."
+          }
+        ],
+        "actions": [
+          {
+            "name": "Multiattack",
+            "action_economy": "action",
+            "choose_one_sequence": [
+              [
+                {
+                  "name": "Bite",
+                  "count": 1
+                },
+                {
+                  "name": "Tentacles",
+                  "count": 1
+                }
+              ],
+              [
+                {
+                  "name": "Eye Ray",
+                  "count": 3
+                }
+              ]
+            ],
+            "note": "Tres usos de Eye Ray cada qual sorteia 1d6, repetindo resultados ja usados nesse turno; nao sao 3 raios com sorteio feito uma vez."
+          },
+          {
+            "name": "Bite",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 5,
+            "reach_ft": 5,
+            "target": "one target",
+            "damage": [
+              {
+                "dice": "4d6+2",
+                "type": "piercing",
+                "avg": 16
+              }
+            ]
+          },
+          {
+            "name": "Tentacles",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 5,
+            "reach_ft": 10,
+            "target": "one creature",
+            "damage": [
+              {
+                "dice": "4d8+2",
+                "type": "psychic",
+                "avg": 20
+              }
+            ],
+            "additional_on_hit": {
+              "condition": "grappled",
+              "max_target_size": "Large",
+              "escape_dc": 13,
+              "saving_throw": {
+                "ability": "INT",
+                "dc": 13,
+                "failure": "restrained while grappled"
+              }
+            }
+          },
+          {
+            "name": "Eye Ray",
+            "action_economy": "action",
+            "range_ft": 120,
+            "target": "one visible target",
+            "random_selection": {
+              "dice": "1d6",
+              "reroll_any_ray_already_used_this_turn": true,
+              "rays": [
+                {
+                  "d6": 1,
+                  "nome": "Aversion Ray",
+                  "teste": "CHA",
+                  "dc": 13,
+                  "falha": "Desvantagem em jogadas de ataque por 1 minuto.",
+                  "repetir_teste": "fim de cada turno do alvo; sucesso encerra."
+                },
+                {
+                  "d6": 2,
+                  "nome": "Fear Ray",
+                  "teste": "WIS",
+                  "dc": 13,
+                  "falha": "Frightened por 1 minuto.",
+                  "repetir_teste": "fim de cada turno do alvo; sucesso encerra."
+                },
+                {
+                  "d6": 3,
+                  "nome": "Psychic Ray",
+                  "teste": "INT",
+                  "dc": 13,
+                  "falha": {
+                    "dano": "6d8",
+                    "tipo": "psychic",
+                    "media": 27
+                  },
+                  "repetir_teste": null
+                },
+                {
+                  "d6": 4,
+                  "nome": "Slowing Ray",
+                  "teste": "DEX",
+                  "dc": 13,
+                  "falha": "Metade do deslocamento por 1 minuto; sem reactions; usa action OU bonus action no turno, nao ambas.",
+                  "repetir_teste": "fim de cada turno do alvo; sucesso encerra."
+                },
+                {
+                  "d6": 5,
+                  "nome": "Stunning Ray",
+                  "teste": "CON",
+                  "dc": 13,
+                  "falha": "Stunned por 1 minuto.",
+                  "repetir_teste": "fim de cada turno do alvo; sucesso encerra na edicao MPMM (NAO usar inicio de turno da versao de Volo)."
+                },
+                {
+                  "d6": 6,
+                  "nome": "Telekinetic Ray",
+                  "teste": "STR quando alvo e criatura",
+                  "dc": 13,
+                  "falha": "Alvo criatura movido ate 30 pes em qualquer direcao e restrained ate inicio do proximo turno do mindwitness ou ate o mindwitness ficar incapacitado.",
+                  "objeto": "Objeto nao vestido/portado de ate 300 libras movido ate 30 pes, controle fino possivel; sem teste de resistencia descrito para objeto."
+                }
+              ]
+            }
+          }
+        ],
+        "bonus_actions": [],
+        "reactions": [],
+        "legendary_actions": [],
+        "lair_actions": [],
+        "spellcasting": []
+      },
+      "alerta_edicao": "Livro de controle MPMM prevalece sobre Markdown deck Volo; MPMM: tentaculos alcance 10ft e restrained; Multiattack com escolha 3 Eye Rays. Diferenca em repeticao do Stunning Ray: fim do turno na MPMM."
+    },
+    "auditoria": {
+      "status_validacao_mecanica": "MECANICA_VERIFICADA_CANDIDATO_EXTERNO_NAO_HOMOLOGADO",
+      "homologacao_administrativa": "NAO_APROVADA_NESTA_EXECUCAO",
+      "data_utc": "2026-10-17T02:57:57.784368+00:00",
+      "confirmacao_previa_na_biblioteca": "Sem JSON desta CHAVE em /Fichas/Completas nem /Fichas/Em Pesquisa antes da execução; documento do deck encontrado e aproveitado",
+      "fonte_deck": "/SRD Card Game/Decks/Aberração/Fichas por criatura/20_Mindwitness.md",
+      "fontes_web": [
+        "https://anyflip.com/mingj/xcwz/basic/151-200",
+        "https://5e.tools/bestiary/mindwitness-mpmm.html",
+        "https://www.dndbeyond.com/forums/d-d-beyond-general/release-issues-support/140925-monsters-of-the-multiverse-issues-and-support?page=5"
+      ],
+      "criterio_edicao": "Respeitar edicao catalogada; nunca mesclar versoes",
+      "pendencias": [
+        "Falta aprovacao do candidato externo EXT-0035-mindwitness antes de coloca-lo no catalogo ativo.",
+        "O Markdown do deck cita Volo; ele NAO e a edicao aplicada nesta ficha.",
+        "Telepathic Hub requer multiplos alvos; sem alteracao unilateral da regra uma criatura ativa."
+      ],
+      "verificacoes": [
+        "CA 15, PV 75, Large, MPMM 2022, Multitataque duas fisicas ou tres Eye Rays, Tentacles 10ft restrained, seis raios mecanicamente separados; referencia MPMM contra Volo conferida."
+      ]
+    }
+  },
+  "documentos_complementares": []
+}

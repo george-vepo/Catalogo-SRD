@@ -1,0 +1,189 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Neogi Master",
+  "origem_arquivo": "EXT-0029-neogi-master-ficha (1).json",
+  "sha256_origem": "99e29e8902cb19db9179f0e8f62eb5a3430f010f3cd7ea5b74c5f0a7a042d523",
+  "conteudo_original": {
+    "chave": "EXT-0029-neogi-master",
+    "ordem_priorizada": 91,
+    "ordem_1320": 29,
+    "nome": "Neogi Master",
+    "tipo": "Aberração",
+    "nd": "4",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "5e da edição especificada na fila, sem mistura com outras edições",
+    "tamanho": "Médio (warlock)",
+    "tendencia": "Tipicamente leal e mau",
+    "classe_armadura": 15,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 71,
+    "dados_vida": "11d8 + 22",
+    "deslocamentos_pes": {
+      "andar": 30,
+      "escalar": 30
+    },
+    "atributos": {
+      "FOR": 6,
+      "DES": 16,
+      "CON": 14,
+      "INT": 16,
+      "SAB": 12,
+      "CAR": 18
+    },
+    "modificadores": {
+      "FOR": -2,
+      "DES": 3,
+      "CON": 2,
+      "INT": 3,
+      "SAB": 1,
+      "CAR": 4
+    },
+    "testes_resistencia": {
+      "SAB": 3
+    },
+    "pericias": {
+      "Arcanismo": 5,
+      "Enganação": 6,
+      "Intimidação": 6,
+      "Percepção": 3,
+      "Persuasão": 6
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [],
+    "sentidos": {
+      "visao_escuro_pes": 120,
+      "percepcao_passiva": 13
+    },
+    "idiomas": [
+      "Comum",
+      "Deep Speech",
+      "Subcomum",
+      "telepatia 30 pés"
+    ],
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "caracteristicas": [
+      {
+        "nome_original": "Devil's Sight",
+        "efeito": "Escuridão mágica não impede sua visão no escuro."
+      },
+      {
+        "nome_original": "Mental Fortitude",
+        "efeito": "Vantagem em salvaguardas contra enfeitiçado e amedrontado; magia não pode fazê-lo dormir."
+      },
+      {
+        "nome_original": "Spider Climb",
+        "efeito": "Escala superfícies difíceis e tetos de cabeça para baixo, sem teste de atributo."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz um ataque Bite e um ataque Claw, OU dois ataques Tentacle of Hadar."
+      },
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 6,
+            "formula": "1d6 + 3",
+            "tipo": "perfurante"
+          },
+          {
+            "medio": 14,
+            "formula": "4d6",
+            "tipo": "veneno"
+          }
+        ],
+        "alcance_pes": 5,
+        "efeito": "Salvaguarda CON CD 12 ou envenenado por 1 minuto; repetir ao final de cada turno para encerrar."
+      },
+      {
+        "nome_original": "Claw",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 8,
+            "formula": "2d4 + 3",
+            "tipo": "perfurante"
+          }
+        ],
+        "alcance_pes": 5
+      },
+      {
+        "nome_original": "Tentacle of Hadar",
+        "tipo": "ataque mágico à distância",
+        "bonus_ataque": 6,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 14,
+            "formula": "3d6 + 4",
+            "tipo": "necrótico"
+          }
+        ],
+        "alcance_normal_pes": 120,
+        "efeito": "O alvo não pode realizar reações até o fim do próximo turno do neogi."
+      },
+      {
+        "nome_original": "Spellcasting",
+        "atributo_conjuracao": "CAR",
+        "cd_magia": 14,
+        "efeito": "Conjura uma das magias listadas, seguindo a economia de ações de cada magia na edição aplicável.",
+        "magias_à_vontade": [
+          "guidance",
+          "mage hand",
+          "minor illusion",
+          "prestidigitation"
+        ],
+        "magias_1_por_dia_cada": [
+          "dimension door",
+          "hold person",
+          "hunger of Hadar"
+        ]
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Enslave",
+        "recarga": "após descanso curto ou longo",
+        "alcance_pes": 30,
+        "teste_resistencia": {
+          "atributo": "SAB",
+          "cd": 14
+        },
+        "efeito": "Alvo visível fica enfeitiçado por até 1 dia, até neogi morrer ou afastar-se mais de 1 milha; obedece comandos, não pode usar reações; comunicação telepática até 1 milha; sempre que sofrer dano, pode repetir salvaguarda para encerrar."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [],
+    "notas_de_validacao": [
+      "Neogi Master da versão Monsters of the Multiverse 2022; não confundir com o Neogi adulto nem versão de Volo 2016.",
+      "Multiattack oferece alternativas exclusivas: Bite + Claw ou dois Tentacles of Hadar.",
+      "Enslave é ação bônus, recarregada em descanso curto/longo; controle do adversário no Card Game exige decisão administrativa.",
+      "Spellcasting requer regras de conjuração, concentração e consumo dos recursos limitados e não fornece ações adicionais."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "fontes": [
+      {
+        "tipo": "publicação_Mordenkainen_Monsters_of_the_Multiverse",
+        "url": "https://anyflip.com/lphgc/bspx/basic/151-200",
+        "pagina_impressa": 192,
+        "uso": "bloco mecânico da edição 2022"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

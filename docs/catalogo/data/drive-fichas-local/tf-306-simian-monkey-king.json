@@ -1,0 +1,240 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-306",
+  "nome_catalogo": "Simian, Monkey King",
+  "origem_arquivo": "TF-306-simian-monkey-king-ficha (1).json",
+  "sha256_origem": "7befa39be75cef1bacfc45a666e10c56288fd3bd497ccccb065c4fc8d18555d4",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-020",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 76,
+      "ORDEM_1320": 232,
+      "CHAVE": "TF-306",
+      "ID_CATALOGO": "TF-306",
+      "nome_catalogo": "Simian, Monkey King",
+      "tipo_catalogo": "Celestial",
+      "nd": "21",
+      "classe": "Mítica",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-040"
+      ],
+      "editora_catalogo": "Kobold Press",
+      "publicacao_catalogo": "Creature Codex",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "destino_biblioteca": "Completas",
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "homologacao_administrativa": false,
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Médio",
+      "tipo_mecanico_fonte": "Celestial (Símio)",
+      "alinhamento": "Neutro",
+      "CA": 21,
+      "CA_origem": "armadura natural",
+      "PV_maximos": 262,
+      "formula_PV": "25d8+150",
+      "nd_fonte": "21",
+      "xp_fonte": 33000,
+      "bonus_proficiencia": 7,
+      "iniciativa_bonus": 7,
+      "iniciativa_origem": "DES +7; derivada pois não há iniciativa explícita no bloco original",
+      "deslocamentos_pes": {
+        "terrestre": 60,
+        "voo": 60
+      },
+      "atributos": {
+        "FOR": 19,
+        "DES": 24,
+        "CON": 22,
+        "INT": 16,
+        "SAB": 21,
+        "CAR": 17
+      },
+      "salvaguardas_fonte": {
+        "DES": 14,
+        "CON": 13,
+        "SAB": 12
+      },
+      "pericias_fonte": {
+        "Acrobacia": 14,
+        "Enganacao": 10,
+        "Intuicao": 12,
+        "Percepcao": 12,
+        "Furtividade": 14
+      },
+      "resistencias_dano": [],
+      "imunidades_dano": [
+        "necrótico",
+        "veneno",
+        "radiante"
+      ],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "amedrontado",
+        "envenenado",
+        "atordoado"
+      ],
+      "sentidos": {
+        "visao_verdadeira_pes": 120,
+        "percepcao_passiva": 22
+      },
+      "idiomas": [
+        "Celestial",
+        "Comum",
+        "Simian"
+      ],
+      "tracos": [
+        {
+          "nome": "Legendary Resistance",
+          "usos": "3/dia",
+          "efeito": "Escolhe sucesso em salvaguarda na qual falhou."
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        },
+        {
+          "nome": "Simian Affinity",
+          "alcance_pes": 120,
+          "efeito": "Comunica-se com primatas como se compartilhassem um idioma; pode controlar primatas de INT 8 ou menos a até 120 pés.",
+          "regra_card_game": "Controle de outras criaturas não autoriza automaticamente múltiplas criaturas aliadas ativas."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Três ataques Golden Staff OU dois Golden Staff e um Tail."
+        },
+        {
+          "nome": "Golden Staff",
+          "tipo": "ataque corpo a corpo",
+          "bonus_ataque": 14,
+          "alcance_pes": 10,
+          "dano": [
+            {
+              "dados": "2d10+7",
+              "tipo": "contundente",
+              "media_publicada": 18
+            },
+            {
+              "dados": "2d6",
+              "tipo": "radiante",
+              "media_publicada": 7
+            }
+          ]
+        },
+        {
+          "nome": "Enlightened Ray",
+          "tipo": "ataque mágico à distância",
+          "bonus_ataque": 12,
+          "alcance_pes": 100,
+          "dano": [
+            {
+              "dados": "4d8",
+              "tipo": "radiante",
+              "media_publicada": 18
+            }
+          ],
+          "salvaguarda": "CAR",
+          "CD": 18,
+          "falha": "Atordoado até fim do próximo turno do alvo; ação separada, NÃO incluída automaticamente em Multiattack."
+        },
+        {
+          "nome": "Tail",
+          "tipo": "ataque corpo a corpo",
+          "bonus_ataque": 14,
+          "alcance_pes": 10,
+          "dano": [
+            {
+              "dados": "2d8+7",
+              "tipo": "contundente",
+              "media_publicada": 16
+            }
+          ],
+          "salvaguarda": "DES",
+          "CD": 22,
+          "falha": "Caído"
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [
+        {
+          "nome": "Drunken Dodge",
+          "gatilho": "acertado por ataque de arma",
+          "efeito": "Resistência a danos contundente, perfurante e cortante até o fim daquele turno."
+        }
+      ],
+      "acoes_lendarias_economia": {
+        "usos_por_rodada": 3,
+        "momento": "fim de turno de outra criatura",
+        "recuperacao": "início do próprio turno",
+        "uma_opcao_por_vez": true
+      },
+      "acoes_lendarias": [
+        {
+          "nome": "Great Leap",
+          "custo": 1,
+          "efeito": "Move até o próprio deslocamento sem provocar ataques de oportunidade."
+        },
+        {
+          "nome": "Quick Staff",
+          "custo": 1,
+          "efeito": "Um ataque Golden Staff."
+        },
+        {
+          "nome": "Golden Burst",
+          "custo": 3,
+          "alcance_pes": 10,
+          "salvaguarda": "CAR",
+          "CD": 18,
+          "alvos": "criaturas escolhidas dentro de 10 pés",
+          "falha": {
+            "dados": "8d8",
+            "tipo": "radiante",
+            "media_publicada": 36
+          },
+          "sucesso": "metade"
+        }
+      ],
+      "recursos_limitados": [
+        {
+          "nome": "Legendary Resistance",
+          "limite": 3,
+          "periodo": "dia"
+        },
+        {
+          "nome": "Ações lendárias",
+          "limite": 3,
+          "periodo": "rodada"
+        }
+      ]
+    },
+    "suporte_candidato_na_pesquisa_deck": {
+      "habilidade": "Drunken Dodge",
+      "status": "CANDIDATA_HOMEBREW_NAO_HOMOLOGADA",
+      "efeito_na_fonte": "Reação pessoal quando atingido por ataque de arma, resistência B/P/S até fim do turno",
+      "modificacao_proposta": "Transferir benefício a criatura ativa; NÃO consta da ficha original e não ativar automaticamente."
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/40_Simian_Monkey_King.md",
+      "fonte_mecanica": "https://www.5esrd.com/database/creature/simian-monkey-king/",
+      "fonte_reproducao_publicacao": "https://anyflip.com/rbal/xxsx/basic/301-350",
+      "edicao": "Creature Codex (2018)",
+      "alertas": [
+        "Enlightened Ray não faz parte do Multiattack explicitado.",
+        "Drunken Dodge é reação do próprio Monkey King; proposta de transferência a aliado é homebrew não aprovada.",
+        "Simian Affinity não cria novas cartas nem ignora limite de uma criatura ativa."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

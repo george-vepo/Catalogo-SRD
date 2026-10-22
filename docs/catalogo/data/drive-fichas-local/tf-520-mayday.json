@@ -1,0 +1,164 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-520",
+  "nome_catalogo": "Mayday",
+  "origem_arquivo": "TF-520-mayday-ficha (1).json",
+  "sha256_origem": "35fd3ea08be9d8a66728ef24f3ab3b3fec81766bdea0945bfe9fb431c555ed0d",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Mayday",
+      "chave": "TF-520",
+      "id_catalogo": "TF-520",
+      "ordem_priorizada": 14,
+      "ordem_1320": 27,
+      "deck_origem": "Aberração",
+      "tipo_catalogo": "Aberração",
+      "nd_catalogo": "4",
+      "classe_catalogo": "Comum",
+      "editora_catalogo": "EN Publishing",
+      "publicacao_catalogo": "A5E — diversos suplementos",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Gargantuesco",
+      "alinhamento": "não informado na fonte",
+      "ca": 14,
+      "ca_origem": "armadura natural",
+      "pv": 300,
+      "pv_formula": "24d20+48",
+      "bloodied": 150,
+      "deslocamentos_fonte": {
+        "terrestre_pes": 0,
+        "voo_pes": 80,
+        "qualificador_voo": "spacefaring average (A5E)"
+      },
+      "atributos": {
+        "FOR": 18,
+        "DES": 14,
+        "CON": 18,
+        "INT": 6,
+        "SAB": 14,
+        "CAR": 8
+      },
+      "modificadores_atributos": {
+        "FOR": 4,
+        "DES": 2,
+        "CON": 4,
+        "INT": -2,
+        "SAB": 2,
+        "CAR": -1
+      },
+      "iniciativa_uso_fonte": "Destreza +2 (12); Insight +2 (12); Perception +2 (12) — apresentação A5E; ordem SRD depende das regras do Card Game",
+      "bonus_proficiencia": 2,
+      "maneuver_dc_a5e": 14,
+      "testes_resistencia": {
+        "STR": 4,
+        "DEX": 2,
+        "CON": 4,
+        "INT": -2,
+        "WIS": 2,
+        "CHA": -1
+      },
+      "pericias": {
+        "situacao": "não discriminadas no bloco original"
+      },
+      "percepcao_passiva": 12,
+      "sentidos": {
+        "percepcao_passiva": 12
+      },
+      "idiomas": [],
+      "resistencias_dano": [],
+      "imunidades_dano": [],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [],
+      "tracos": [
+        {
+          "nome": "Communicator",
+          "resumo_mecanico": "Pode escutar e replicar perfeitamente qualquer comunicação eletrônica, mas não altera a mensagem nem cria comunicação original."
+        },
+        {
+          "nome": "False Appearance",
+          "resumo_mecanico": "Enquanto imóvel, é indistinguível de objeto inanimado, como uma nave espacial."
+        },
+        {
+          "nome": "Sticky",
+          "resumo_mecanico": "Criatura ou objeto que toca Mayday fica preso. Uma criatura ou nave pode usar ação para fazer teste de Força CD 24; sucesso encerra o efeito. Mayday também pode encerrá-lo voluntariamente ou o efeito termina quando morre."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "resumo_mecanico": "Faz um ataque Pseudopod e um ataque Bite."
+        },
+        {
+          "nome": "Bite",
+          "resumo_mecanico": "Ataque corpo a corpo +6, alcance corpo a corpo conforme termo da fonte; um alvo preso a Mayday; 46 (4d20+4) piercing.",
+          "ataque": "+6",
+          "alcance": "melee range (termo da fonte)",
+          "dano": [
+            {
+              "dados": "4d20+4",
+              "tipo": "piercing"
+            }
+          ]
+        },
+        {
+          "nome": "Pseudopod",
+          "resumo_mecanico": "Ataque corpo a corpo +6, alcance “short” conforme termo da fonte; um alvo que não esteja preso; 22 (4d8+4) bludgeoning. Alvo fica sujeito a Sticky e é puxado para alcance corpo a corpo.",
+          "ataque": "+6",
+          "alcance": "short (termo da fonte)",
+          "dano": [
+            {
+              "dados": "4d8+4",
+              "tipo": "bludgeoning"
+            }
+          ]
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Shapeshift",
+          "resumo_mecanico": "Muda para forma aproximada de objeto que tenha visto, como nave, destroços ou asteroide, ou retorna à forma verdadeira de massa prateada. Objetos que carrega ou criaturas/objetos presos não se transformam; estatísticas não mudam; reverte ao morrer."
+        }
+      ],
+      "multiataque": {
+        "sequencia": [
+          "Pseudopod",
+          "Bite"
+        ],
+        "pre_requisito_mordida": "alvo já aderido ao Mayday"
+      },
+      "reacoes": "não listadas na publicação consultada",
+      "acoes_lendarias": "não listadas na publicação consultada",
+      "conjuracao": "não listada na publicação consultada",
+      "alcance_pseudopod_a5e": "short (termo original sem conversão arbitrária para pés)",
+      "alcance_mordida_a5e": "melee range (termo original sem conversão arbitrária para pés)",
+      "observacao_fonte": "ND 4 e PV 300 foram mantidos conforme publicação; combinação atípica não é erro corrigível por suposição"
+    },
+    "auditoria": {
+      "status_ficha": "CONCLUÍDA NA FONTE — aplicação em duelo condicionada à adaptação aprovada de regras A5E",
+      "status_homologacao": "NÃO HOMOLOGADA",
+      "ficha_anterior": "pesquisa estruturada em Decks, sem JSON na pasta Completas",
+      "edicao_sistema": "Level Up Advanced 5th Edition / Voidrunner’s Codex (não é SRD 5.2.1)",
+      "data_execucao_local": "2026-10-16T23:51:29-03:00",
+      "fontes": [
+        {
+          "url": "https://a5e.tools/node/5326",
+          "natureza": "ferramenta da editora EN Publishing; bloco público consultado"
+        },
+        {
+          "caminho_biblioteca": "/SRD Card Game/Decks/Aberração/Fichas por criatura/14_Mayday.md",
+          "natureza": "pesquisa prévia reutilizada"
+        }
+      ],
+      "pendencias": [
+        "Determinar por regra aprovada a equivalência de melee range e short do A5E para a arena do Card Game",
+        "A fonte A5E usa terminologia e combate próprios; não converter efeitos/ações silenciosamente ao SRD 5.2.1",
+        "Mecânica Sticky alcança criaturas ou veículos; interações com cartas e arena dependem de decisão do administrador"
+      ],
+      "direitos": "Redação resumida original, preservando fatos mecânicos; não inclui transcrição integral do texto de terceiros."
+    }
+  },
+  "documentos_complementares": []
+}

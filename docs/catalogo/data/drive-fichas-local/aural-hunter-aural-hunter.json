@@ -1,0 +1,162 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Aural Hunter",
+  "origem_arquivo": "EXT-0032-aural-hunter-ficha (1).json",
+  "sha256_origem": "37619f8b5caf8eb5196f97923fb06ef25e91378f739f66f497d9351260706a03",
+  "conteudo_original": {
+    "chave": "EXT-0032-aural-hunter",
+    "ordem_priorizada": 93,
+    "ordem_1320": 32,
+    "nome": "Aural Hunter",
+    "tipo": "Aberração",
+    "nd": "5",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da edição especificada na fila, sem mistura com outras edições",
+    "tamanho": "Grande",
+    "tendencia": "Caótico e mau",
+    "classe_armadura": 15,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 127,
+    "dados_vida": "15d10 + 45",
+    "deslocamentos_pes": {
+      "andar": 40,
+      "escalar": 30
+    },
+    "atributos": {
+      "FOR": 16,
+      "DES": 14,
+      "CON": 16,
+      "INT": 7,
+      "SAB": 19,
+      "CAR": 6
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 2,
+      "CON": 3,
+      "INT": -2,
+      "SAB": 4,
+      "CAR": -2
+    },
+    "testes_resistencia": {},
+    "pericias": {
+      "Percepção": 7,
+      "Furtividade": 5
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "cego"
+    ],
+    "sentidos": {
+      "visao_cegas_normal_pes": 60,
+      "visao_cegas_surdo_pes": 20,
+      "cego_alem_alcance_visao_cegas": true,
+      "percepcao_passiva": 17
+    },
+    "idiomas": [],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Blind Senses",
+        "efeito": "Não pode usar visão às cegas se estiver simultaneamente surdo e incapaz de sentir odores."
+      },
+      {
+        "nome_original": "Keen Hearing",
+        "efeito": "Vantagem em testes de Percepção dependentes da audição."
+      },
+      {
+        "nome_original": "Sonic Sensitivity",
+        "gatilho": "Sofre dano trovejante",
+        "efeito": "Fica surdo até o fim do seu próximo turno."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz dois ataques Claws e um Rib Hooks; pode trocar um ataque por Consume Sound (quando elegível)."
+      },
+      {
+        "nome_original": "Claws",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 12,
+            "formula": "2d8 + 3",
+            "tipo": "cortante"
+          }
+        ],
+        "alcance_pes": 5
+      },
+      {
+        "nome_original": "Rib Hooks",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 10,
+            "formula": "2d6 + 3",
+            "tipo": "perfurante"
+          }
+        ],
+        "alcance_pes": 5,
+        "efeito": "Se alvo for Grande ou menor e a criatura não estiver agarrando outra, alvo fica agarrado (escapar CD 15)."
+      },
+      {
+        "nome_original": "Consume Sound",
+        "pre_condicao": "Alvo agarrado pelo Aural Hunter, pode ouvir e falar; Aural Hunter não pode estar surdo.",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "dano_falha": [
+          {
+            "medio": 14,
+            "formula": "4d6",
+            "tipo": "necrótico"
+          }
+        ],
+        "dano_sucesso": "metade",
+        "efeito_falha": "Alvo fica surdo e incapaz de falar até fim do próximo turno dele.",
+        "efeito_sucesso": "Continua capaz de ouvir e falar.",
+        "cura": "O Aural Hunter recupera PV iguais ao dano causado.",
+        "restricoes": "Sem efeito em alvo que já esteja surdo e incapaz de falar; indisponível se o Aural Hunter estiver surdo."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [],
+    "notas_de_validacao": [
+      "A publicação distingue raio de visão às cegas 60 pés normal versus 20 pés enquanto surdo; Blind Senses impede uso quando surdo E incapaz de cheirar. Não reduzir a zero automaticamente só por surdez.",
+      "Sonic Sensitivity aciona surdez ao sofrer dano trovejante, limitando Consume Sound e alcance da percepção.",
+      "Consume Sound substitui UM dos três ataques, em vez de somar uma quarta ação; só afeta alvo já agarrado.",
+      "A cura de Consume Sound requer dano efetivamente causado e não ultrapassa os PV máximos pelas regras gerais."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "fontes": [
+      {
+        "tipo": "KPOGL_Tome_of_Beasts_3",
+        "url": "https://kpogl.wikidot.com/monster:aural-hunter",
+        "pagina_impressa": 47,
+        "uso": "texto de ficha, traços, efeitos e ataques"
+      },
+      {
+        "tipo": "reproducao_publicacao_TOB3",
+        "url": "https://anyflip.com/myubd/nuoj/basic",
+        "pagina_impressa": 47,
+        "uso": "conferência da mesma edição"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

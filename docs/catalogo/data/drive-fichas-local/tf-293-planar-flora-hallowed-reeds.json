@@ -1,0 +1,164 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-293",
+  "nome_catalogo": "Planar Flora, Hallowed Reeds",
+  "origem_arquivo": "TF-293-hallowed-reeds-ficha (1).json",
+  "sha256_origem": "1c5e8029d344576f211dead9f44ca680fb1740ae9d403c32fae1c7b524ed1c55",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-012",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 43,
+      "ORDEM_1320": 188,
+      "CHAVE": "TF-293",
+      "ID_CATALOGO": "TF-293",
+      "nome_catalogo": "Planar Flora, Hallowed Reeds",
+      "nome_na_fonte": "Hallowed Reed",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "celestial",
+      "nd": "1/2",
+      "classe": "Comum",
+      "deck": "Celestial",
+      "copia_referencia": "CE-003",
+      "editora": "Kobold Press",
+      "publicacao_catalogo": "Creature Codex",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "ficha_previa_deck": "RESUMO_NAO_HOMOLOGADO",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Médio",
+      "alinhamento": "neutro e bom",
+      "CA": 13,
+      "PV_maximos": 22,
+      "formula_PV": "5d8",
+      "deslocamentos_pes": {
+        "terrestre": 10,
+        "voo": 0,
+        "pairar": false
+      },
+      "atributos": {
+        "FOR": 14,
+        "DES": 10,
+        "CON": 10,
+        "INT": 7,
+        "SAB": 14,
+        "CAR": 10
+      },
+      "iniciativa_bonus": 0,
+      "iniciativa_origem": "modificador DES calculado; bônus específico não indicado na ficha fonte",
+      "bonus_proficiencia": 2,
+      "bonus_proficiencia_origem": "ND e bloco da fonte para 42/44/45; inferência padrão a partir de ND para 43 (não impresso no bloco)",
+      "salvaguardas_profissionais_fonte": {},
+      "pericias": {
+        "Percepcao": 4
+      },
+      "resistencias_dano": [
+        "contundente",
+        "perfurante"
+      ],
+      "imunidades_dano": [
+        "radiante"
+      ],
+      "imunidades_condicoes": [],
+      "sentidos": {
+        "percepcao_as_cegas_pes": 30,
+        "cego_alem_desse_alcance": true,
+        "percepcao_passiva": 14
+      },
+      "idiomas_e_telepatia": {
+        "falados": [],
+        "telepatia_condicional": {
+          "alcance_pes": 100,
+          "destinatarios": "apenas criaturas de alinhamento bom",
+          "meio": "imagens e emoções"
+        }
+      },
+      "tracos": [
+        {
+          "nome": "Like Calls to Like",
+          "efeito": "Sabe se uma criatura a 30 pés possui alinhamento bom."
+        },
+        {
+          "nome": "Limited Telepathy",
+          "efeito": "Comunica-se telepaticamente com outra criatura boa a até 100 pés, sobretudo por imagens e emoções."
+        },
+        {
+          "nome": "Rebirth",
+          "efeito": "Ao morrer, novo conjunto de caniços cresce no mesmo local a partir de uma semana após a morte; carbonizar ou salgar o local impede esse crescimento.",
+          "regra_card_game": "Não criar nova carta, cópia ou criatura ativa; regra de derrota da arena prevalece, salvo aprovação administrativa."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Searing Grasp",
+          "economia": "acao",
+          "categoria": "ataque_corpo_a_corpo",
+          "bonus_ataque": 4,
+          "alvo": "uma criatura",
+          "dano": [
+            {
+              "dice": "1d4+2",
+              "tipo": "radiante",
+              "media_publicada": 4
+            }
+          ],
+          "alcance_corpo_a_corpo_pes": 15,
+          "efeitos": {
+            "condicao_imposta": [
+              "agarrado",
+              "restrito"
+            ],
+            "CD_escape": 12,
+            "dano_no_inicio_turno_alvo": {
+              "dice": "1d4",
+              "tipo": "radiante",
+              "media_publicada": 2
+            },
+            "duracao": "enquanto agarrado",
+            "limite": "Hallowed Reed não pode agarrar outro alvo enquanto o agarrão durar.",
+            "excecao": "Ínferos e mortos-vivos têm desvantagem em testes de atributo para escapar do agarrão."
+          }
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "acoes_miticas": [],
+      "conjuracao": [],
+      "recursos_limitados": [],
+      "observacoes_mecanicas": []
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/03_Planar_Flora_Hallowed_Reeds.md",
+      "fonte_estatisticas": "https://5esrd.old.opengamingnetwork.com/database/creature/hallowed-reed/",
+      "fontes_cruzadas": [
+        "https://www.robinloft.com/monsters/hallowed-reed/creature-codex",
+        "https://anyflip.com/jfxvv/hkoa/basic/301-350"
+      ],
+      "escopo_de_verificacao": "bloco mecânico da publicação identificada, não a habilidade de suporte adaptada",
+      "edicao_mecanica": "Creature Codex",
+      "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto; evitar substituição automática de magias/tratamentos legados",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "Estatísticas verificadas em transcrições da publicação Creature Codex de Kobold Press e em espelhos (5eSRD antigo e Robinloft).",
+        "Bônus de proficiência +2 não aparece impresso na fonte Creature Codex; usado apenas como referência derivada de ND 1/2."
+      ],
+      "pendencias_card_game": [
+        "A continuidade de agarrado/restrito exige que a criatura permaneça em campo conforme a regra de combate, mesmo que suportes propostos permitam descartar cartas.",
+        "Rebirth não gera cartas/cópias novas no baralho nem substitui o vencedor após 0 PV.",
+        "O nome no deck está no plural Hallowed Reeds; o nome da espécie no bloco é Hallowed Reed."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

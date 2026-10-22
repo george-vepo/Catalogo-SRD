@@ -1,0 +1,157 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Leashed Lesion",
+  "origem_arquivo": "EXT-0021-leashed-lesion-ficha (1).json",
+  "sha256_origem": "8066e2f1eff22fd85a4985b825e3497365952b0b00b3aa0ee02ecd6f5ad18882",
+  "conteudo_original": {
+    "chave": "EXT-0021-leashed-lesion",
+    "ordem_priorizada": 86,
+    "ordem_1320": 21,
+    "nome": "Leashed Lesion",
+    "tipo": "Aberração",
+    "nd": "3",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "publicacao": "Tome of Beasts 3",
+    "editora": "Kobold Press",
+    "edicao": "5e, conforme publicação da fila (sem mistura com outras edições)",
+    "tamanho": "Grande",
+    "tendencia": "Caótico e mau",
+    "classe_armadura": 15,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 65,
+    "dados_vida": "10d10 + 10",
+    "deslocamentos_pes": {
+      "andar": 40
+    },
+    "atributos": {
+      "FOR": 15,
+      "DES": 11,
+      "CON": 12,
+      "INT": 6,
+      "SAB": 9,
+      "CAR": 14
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": 0,
+      "CON": 1,
+      "INT": -2,
+      "SAB": -1,
+      "CAR": 2
+    },
+    "testes_resistencia": {},
+    "pericias": {},
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "necrótico"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [],
+    "sentidos": {
+      "percepcao_cega_pes": 120,
+      "percepcao_passiva": 9
+    },
+    "idiomas": [
+      "Entende Void Speech, mas não fala"
+    ],
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "caracteristicas": [],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Realiza um ataque Bite e dois ataques Claw como uma ação de Multiataque; não somar Draining Burst."
+      },
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 4,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 6,
+            "formula": "1d8 + 2",
+            "tipo": "perfurante"
+          },
+          {
+            "medio": 5,
+            "formula": "2d4",
+            "tipo": "necrótico"
+          }
+        ],
+        "efeito": "O leashed lesion e qualquer criatura agarrada por Life Tether recuperam PV iguais ao dano necrótico efetivamente causado por esta mordida."
+      },
+      {
+        "nome_original": "Claw",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 4,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 5,
+            "formula": "1d6 + 2",
+            "tipo": "cortante"
+          }
+        ]
+      },
+      {
+        "nome_original": "Draining Burst",
+        "frequencia": "Recarga 5–6",
+        "tipo": "efeito de área",
+        "alcance_pes": 120,
+        "area": {
+          "tipo": "esfera em ponto visível",
+          "raio_pes": 20
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 12
+        },
+        "componentes_dano": [
+          {
+            "medio": 13,
+            "formula": "3d8",
+            "tipo": "necrótico",
+            "sucesso": "metade"
+          }
+        ],
+        "efeito": "Cada criatura na área realiza CON CD 12; o monstro e qualquer criatura agarrada por Life Tether ganham 13 (3d8) PV temporários cada. Sem cálculo de cura adicional ao dano."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Life Tether",
+        "efeito": "Conecta um laço simbiótico à criatura na concavidade de suas costas; enquanto conectado, tal criatura fica agarrada pelo leashed lesion. Se uma criatura estiver na concavidade sem o laço, recebe 7 (2d6) perfurante no final do turno do lesion e ele se cura em quantidade igual ao dano causado. O lesion ou a criatura podem desfazer o laço com ação bônus. Só um laço ativo por vez.",
+        "requisitos": "Outra criatura montada na reentrância de suas costas; não é invocada por esta ação."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "nome": "Draining Burst",
+        "recarga": "5–6"
+      }
+    ],
+    "notas_de_validacao": [
+      "A fonte de Tome of Beasts 3 indica CA 15, 65 PV, ND 3, resistência necrótica e ação Life Tether como ação bônus.",
+      "Life Tether interage com uma segunda criatura já presente; o Card Game limita cada jogador a uma criatura ativa. Uso com montaria/aliado exige decisão do administrador, sem criar carta ou segundo combatente.",
+      "Cura usa dano necrótico realmente infligido; respeitar resistência e imunidade do alvo, PV máximos e economia de ações.",
+      "Draining Burst concede PV temporários distintos de recuperação de PV; efeitos não podem ser inventados ou misturados."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "fontes": [
+      {
+        "tipo": "reproducao_publicacao_TOB3",
+        "url": "https://anyflip.com/tkzwp/dofg/basic/251-300",
+        "pagina_impressa": "260",
+        "uso": "bloco completo e economia de ações Leashed Lesion"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

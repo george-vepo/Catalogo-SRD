@@ -1,0 +1,281 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-279",
+  "nome_catalogo": "Fate Eater",
+  "origem_arquivo": "TF-279-fate-eater-ficha.json",
+  "sha256_origem": "c90bbbfd6df488d419de800feff10349cfc8597e551438714fee97fb0117a578",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Fate Eater",
+      "chave": "TF-279",
+      "id_catalogo": "TF-279",
+      "ordem_priorizada": 21,
+      "ordem_1320": 43,
+      "deck_origem": "Aberração",
+      "tipo_catalogo": "Aberração",
+      "nd_catalogo": "6",
+      "classe_catalogo": "Incomum",
+      "editora_catalogo": "Kobold Press",
+      "publicacao_catalogo": "Tome of Beasts 1 (2023, edição revisada)",
+      "edicao_estudada": "Tome of Beasts 1 (2023, edição revisada) — selecionada pelo administrador em 2026-10-19",
+      "origem_catalogo": "CATÁLOGO 607",
+      "edicao_aprovada": "2023 revisada",
+      "tipo_publicado": "Aberração",
+      "tamanho_publicado": "Médio",
+      "alinhamento_publicado": "Neutro",
+      "nd_publicado": 6,
+      "xp_publicado": 2300,
+      "bonus_proficiencia_publicado": 3
+    },
+    "estatisticas_e_mecanicas": {
+      "estatisticas": {
+        "armor_class": 16,
+        "hit_points": 130,
+        "hit_dice": "20d8+40",
+        "ability_scores": {
+          "STR": 18,
+          "DEX": 12,
+          "CON": 14,
+          "INT": 18,
+          "WIS": 16,
+          "CHA": 9
+        },
+        "speeds": {
+          "walk_ft": 40,
+          "climb_ft": 40
+        },
+        "senses": {
+          "truesight_ft": 60,
+          "passive_perception": 13
+        },
+        "skills": {
+          "Arcana": 7,
+          "History": 7,
+          "Insight": 6,
+          "Religion": 7
+        },
+        "saving_throws": {
+          "CON": 5
+        },
+        "languages": {
+          "understands": "all_languages",
+          "can_speak": false,
+          "telepathy_ft": 100
+        },
+        "damage_resistances": [],
+        "damage_immunities": [],
+        "damage_vulnerabilities": [],
+        "condition_immunities": [
+          "charmed",
+          "frightened"
+        ],
+        "armor_class_type": "natural_armor",
+        "ability_modifiers": {
+          "STR": 4,
+          "DEX": 1,
+          "CON": 2,
+          "INT": 4,
+          "WIS": 3,
+          "CHA": -1
+        },
+        "size": "Medium",
+        "alignment": "neutral",
+        "challenge": 6,
+        "xp": 2300,
+        "proficiency_bonus": 3,
+        "hit_points_formula": "20d8+40"
+      },
+      "mecanicas": {
+        "traits": [
+          {
+            "name": "Visionary Flesh",
+            "category": "postmortem_consumption",
+            "trigger": "consumes_fate_eater_flesh",
+            "save": {
+              "ability": "CON",
+              "dc": 15
+            },
+            "failure": {
+              "condition": "poisoned",
+              "duration": "1_hour"
+            },
+            "success": {
+              "spell_effect": "divination",
+              "details": "spell reference not fully transcribed"
+            }
+          }
+        ],
+        "actions": [
+          {
+            "name": "Multiattack",
+            "category": "multiattack",
+            "action_economy": "action",
+            "sequence": [
+              {
+                "attack": "Bite",
+                "count": 2
+              }
+            ]
+          },
+          {
+            "name": "Bite",
+            "category": "attack",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 7,
+            "reach_ft": 5,
+            "targets": {
+              "count": 1
+            },
+            "hit": {
+              "damage": [
+                {
+                  "dice": "2d8",
+                  "flat": 4,
+                  "average": 13,
+                  "type": "slashing"
+                },
+                {
+                  "dice": "2d6",
+                  "flat": 0,
+                  "average": 7,
+                  "type": "necrotic"
+                }
+              ]
+            },
+            "miss": {
+              "damage": 0
+            }
+          },
+          {
+            "name": "Alter Fate",
+            "category": "save_random_effect",
+            "action_economy": "action",
+            "recharge": "5-6",
+            "target": {
+              "count": 1,
+              "visible": true,
+              "range_ft": 30
+            },
+            "save": {
+              "ability": "CHA",
+              "dc": 15,
+              "on_failure": {
+                "damage": [
+                  {
+                    "dice": "8d8",
+                    "average": 36,
+                    "type": "psychic"
+                  }
+                ],
+                "random_effect": "1d6"
+              },
+              "on_success": {
+                "damage_multiplier": 0.5,
+                "no_random_effect": true
+              }
+            },
+            "outcomes": [
+              {
+                "roll": 1,
+                "name": "Forgotten Training",
+                "duration": "1_minute",
+                "effect": "lose_one_random_class_feature"
+              },
+              {
+                "roll": 2,
+                "name": "Lost Potential",
+                "duration": null,
+                "effect": "reduce_one_random_ability_score_by_2"
+              },
+              {
+                "roll": 3,
+                "name": "Seeing the Alternates",
+                "duration": "1_minute",
+                "condition": "incapacitated"
+              },
+              {
+                "roll": 4,
+                "name": "Shifting Memories",
+                "duration": null,
+                "effect": "lose_one_random_skill_proficiency_gain_another_random_skill_proficiency"
+              },
+              {
+                "roll": 5,
+                "name": "Took the Lesser Path",
+                "duration": null,
+                "effect": "current_hp_becomes_current_maximum_hp",
+                "observacao_fiel_fonte": "O valor atual de PV torna-se o novo PV máximo; não significa cura automática."
+              },
+              {
+                "roll": 6,
+                "name": "Untied from the Loop",
+                "duration": "1_minute",
+                "effect": "movement_direction_random",
+                "observacao_fiel_fonte": "A direção aleatória se aplica quando o alvo se move; não cria movimento compulsório."
+              }
+            ],
+            "repeat_save": {
+              "short_effects": "end_of_each_affected_turn",
+              "other_effects": "end_of_each_long_rest",
+              "ability": "CHA",
+              "dc": 15,
+              "success_ends": true,
+              "observacao_fiel_fonte": "Duração de 1 minuto ou menos: salvaguarda no fim de cada turno; demais efeitos: fim de cada descanso longo."
+            }
+          }
+        ],
+        "bonus_actions": [],
+        "reactions": [],
+        "legendary_actions": [],
+        "lair_actions": [],
+        "mythic_actions": [],
+        "spellcasting": [],
+        "other": [
+          {
+            "name": "Divination spell",
+            "category": "external_rule_dependency",
+            "verified_spell_effects": false
+          }
+        ]
+      },
+      "observacoes_tecnicas": {
+        "edicao_ativa": "Tome of Beasts 1 (2023 Edition)",
+        "edicao_excluida_desta_ficha": "Tome of Beasts 2016: 182 PV, Spectral Bite, conjuração; conservar apenas no histórico comparativo",
+        "tipo": "Medium Aberration (neutral); sem vinculo automatico com a edicao 2016",
+        "alter_fate": "Aplicar salvaguarda CD 15, 8d8 psíquico e tabela 1d6 apenas na falha; recarga 5-6. O destino alterado não se acumula com ações imaginadas.",
+        "visionary_flesh": "Traço dependente de ingestão real da carne; efeito divination não expande sozinho o jogo sem regra aplicável.",
+        "nao_listado_na_fonte": "Nenhum ataque lendário, reação, ação bônus ou conjuração inata foi listado no bloco 2023; não inventar.",
+        "magia_divination": "Referência ao efeito da magia, não capacidade geral de conjurar magias no combate.",
+        "suporte_proposto": "Alter Fate (E/D) é proposta homebrew do deck; NÃO aprovada por esta escolha de edição."
+      }
+    },
+    "auditoria": {
+      "status_ficha": "MECANICAMENTE_COMPLETA_EDICAO_2023",
+      "status_homologacao": "PENDENTE_ADAPTACAO_E_HOMOLOGACAO_DAS_REGRAS_CARD_GAME",
+      "decisao_administrador": "EDICAO_2023_REVISADA_SELECIONADA_PELO_USUARIO_EM_2026-10-19",
+      "escopo_da_decisao": "Seleção da edição original a usar. Não equivale a aprovação de homebrew, suporte (E/D), habilidades de classe ou novas regras de arena.",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/fate-eater-3pp/",
+      "fonte_publicacao": "https://koboldpress.com/tome-of-beasts-1-on-sale-now/",
+      "fonte_deck": "/SRD Card Game/Decks/Aberração/Fichas por criatura/21_Fate_Eater.md",
+      "fonte_comparativa_arquivo": "/SRD Card Game/Fichas/Em Pesquisa/TF-279-fate-eater-comparacao-edicoes-pesquisa.json",
+      "resultado_validacao": "2023: CA16, PV130, 2 Bite, Alter Fate 5-6, tabela de seis resultados, Visionary Flesh; transcrito sem mistura com 2016",
+      "pendencias": [
+        "HOMOLOGAÇÃO DA CARTA NÃO APROVADA: a escolha de edição apenas encerra a dúvida bibliográfica.",
+        "Alter Fate pode alterar característica de classe, atributos, proficiências, PV máximo e direção de deslocamento; verificar aplicabilidade às criaturas/carta, zonas e condições conforme regras homologadas do Card Game.",
+        "Resultados persistentes de Alter Fate exigem definir gestão de efeitos entre combates e descansos longos, sem criar regra nova automaticamente.",
+        "Visionary Flesh depende de ingestão; divination aplica-se se houver suporte às magias e condição desencadeadora.",
+        "Habilidade de suporte candidata Alter Fate (E/D) no Markdown não foi homologada.",
+        "Não inferir imune a sono nem combinar a imunidade unconscious da errata de 2016 com charmed e frightened de 2023."
+      ],
+      "fontes": [
+        "https://www.5esrd.com/database/creature/fate-eater-3pp/",
+        "https://koboldpress.com/tome-of-beasts-1-on-sale-now/",
+        "https://koboldpress.com/tome-of-beasts-1-what-changed/"
+      ],
+      "data_ultima_revisao": "2026-10-19"
+    }
+  },
+  "documentos_complementares": []
+}

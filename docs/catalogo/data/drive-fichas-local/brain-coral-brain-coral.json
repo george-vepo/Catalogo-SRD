@@ -1,0 +1,197 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Brain Coral",
+  "origem_arquivo": "EXT-0033-brain-coral-ficha (1).json",
+  "sha256_origem": "fbd14ae6a9092c1687f60454834cae304a7dfe741f46dde9435c7dfad0d6b8a1",
+  "conteudo_original": {
+    "chave": "EXT-0033-brain-coral",
+    "ordem_priorizada": 94,
+    "ordem_1320": 33,
+    "nome": "Brain Coral",
+    "tipo": "Aberração",
+    "nd": "5",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da edição indicada na fila, não misturar edições",
+    "tamanho": "Enorme",
+    "tendencia": "Neutro e mau",
+    "classe_armadura": 14,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 119,
+    "dados_vida": "14d12 + 28",
+    "deslocamentos_pes": {
+      "andar": 0,
+      "nadar": 120
+    },
+    "atributos": {
+      "FOR": 16,
+      "DES": 6,
+      "CON": 14,
+      "INT": 18,
+      "SAB": 14,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": -2,
+      "CON": 2,
+      "INT": 4,
+      "SAB": 2,
+      "CAR": 0
+    },
+    "testes_resistencia": {
+      "INT": 5
+    },
+    "pericias": {
+      "Percepção": 5
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "psíquico"
+    ],
+    "imunidades_condicoes": [
+      "cego",
+      "enfeitiçado",
+      "surdo",
+      "amedrontado",
+      "envenenado",
+      "caído"
+    ],
+    "sentidos": {
+      "visao_cegas_pes": 120,
+      "cego_alem_visao_cegas": true,
+      "percepcao_passiva": 15
+    },
+    "idiomas": [
+      "Comum",
+      "Fala Profunda"
+    ],
+    "telepatia_pes": 120,
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Colony Cluster",
+        "estado_inicial": {
+          "espira_central": 1,
+          "clusters_pequenos": 3
+        },
+        "max_clusters_ativos": 5,
+        "distancia_maxima_clusters_pes": 120,
+        "deslocamento_compartilhado_nado_pes": 120,
+        "pool_pv_compartilhado": true,
+        "acao_no_mesmo_turno": true,
+        "dano_area_uma_vez": true,
+        "perda_cluster": "Para cada turno em que Brain Coral sofre 15 ou mais dano, um dos clusters é destruído.",
+        "regeneracao_clusters": "No fim de seu turno, se sofreu dano no turno anterior, expulsa um cluster por cada 15 dano sofrido, nunca acima de cinco.",
+        "fora_alcance": "Cluster por mais de 24 horas além de 120 pés fica dormente e vira novo Brain Coral após 30 dias.",
+        "nota_jogo": "Clusters não são cartas independentes. Controle separado de posições, ataque e limite de uma criatura ativa precisa aprovação."
+      },
+      {
+        "nome_original": "Water Breathing",
+        "efeito": "Respira apenas debaixo d’água."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Uma Pseudopod da espira central mais uma Pseudopod por cluster ativo, com origem na espira ou cluster a alcance; aplicar ação única de Multiattack."
+      },
+      {
+        "nome_original": "Pseudopod",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 7,
+            "formula": "1d8 + 3",
+            "tipo": "concussão"
+          }
+        ]
+      },
+      {
+        "nome_original": "Reef Poison Spray",
+        "recarga": "5-6",
+        "area": {
+          "tipo": "raio",
+          "origem": "espira central",
+          "raio_pes": 15
+        },
+        "teste_resistencia": {
+          "atributo": "INT",
+          "cd": 15
+        },
+        "falha": {
+          "dano": [
+            {
+              "medio": 21,
+              "formula": "6d6",
+              "tipo": "veneno"
+            }
+          ],
+          "condicao": "incapacitado até final do próximo turno do alvo"
+        },
+        "sucesso": {
+          "dano": "metade",
+          "condicao": null
+        }
+      },
+      {
+        "nome_original": "Beasts of the Sea",
+        "usos": "1/dia",
+        "pre_condicao": "Estar submerso",
+        "evocacao_opcoes": [
+          "2d4 caranguejos gigantes",
+          "2 cavalos-marinhos gigantes ou tubarões-de-recife",
+          "1 enxame de quippers"
+        ],
+        "chegada": "1d4 rodadas",
+        "duracao": "1 hora, até morte ou dispensa como ação bônus",
+        "restricao_card_game": "A invocação de aliados requer decisão administrativa; não criar cartas automaticamente."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Dismiss Beasts of the Sea",
+        "efeito": "Dispensa criaturas convocadas por Beasts of the Sea, se presentes."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Reef Poison Spray",
+        "recarga": "5-6"
+      },
+      {
+        "recurso": "Beasts of the Sea",
+        "usos_maximos": 1,
+        "restabelecimento": "dia"
+      }
+    ],
+    "notas_de_validacao": [
+      "Salvar +5 no teste INT conforme a ficha impressa, apesar de INT 18 (+4) e proficiência +3 resultarem aritmeticamente em +7: conflito da publicação, não corrigir sem decisão.",
+      "Colony Cluster com múltiplas partes e Beasts of the Sea não autorizam múltiplas criaturas ou cartas em campo.",
+      "Respiração exclusivamente aquática exige cenário/arena regulamentado; ausência de arena definida requer decisão administrativa."
+    ],
+    "fontes": [
+      {
+        "tipo": "publicacao_KoboldPress_TOB3",
+        "url": "https://anyflip.com/tkzwp/hhez/basic/51-100",
+        "pagina_impressa": 67
+      },
+      {
+        "tipo": "transcricao_KPOGL_TOB3",
+        "url": "https://kpogl.wikidot.com/monster:brain-coral"
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

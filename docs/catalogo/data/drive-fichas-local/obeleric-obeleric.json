@@ -1,0 +1,180 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Obeleric",
+  "origem_arquivo": "EXT-0023-obeleric-ficha (1).json",
+  "sha256_origem": "e32f97c160995bdc92ac9e55bfa0d7af89d31e32ea21770642b84e1ae184c13c",
+  "conteudo_original": {
+    "chave": "EXT-0023-obeleric",
+    "ordem_priorizada": 88,
+    "ordem_1320": 23,
+    "nome": "Obeleric",
+    "tipo": "Aberração",
+    "nd": "3",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "publicacao": "Tome of Beasts 3",
+    "editora": "Kobold Press",
+    "edicao": "5e, conforme publicação da fila (sem mistura com outras edições)",
+    "tamanho": "Médio",
+    "tendencia": "Caótico e mau",
+    "classe_armadura": 15,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 75,
+    "dados_vida": "10d8 + 30",
+    "deslocamentos_pes": {
+      "andar": 30,
+      "escavar": 15
+    },
+    "atributos": {
+      "FOR": 16,
+      "DES": 14,
+      "CON": 16,
+      "INT": 7,
+      "SAB": 12,
+      "CAR": 7
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 2,
+      "CON": 3,
+      "INT": -2,
+      "SAB": 1,
+      "CAR": -2
+    },
+    "testes_resistencia": {},
+    "pericias": {
+      "Percepção": 3
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "petrificado",
+      "caído"
+    ],
+    "sentidos": {
+      "sentido_tremor_pes": 30,
+      "percepcao_passiva": 12
+    },
+    "idiomas": [
+      "Entende Comum e Void Speech, mas não fala"
+    ],
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "caracteristicas": [
+      {
+        "nome_original": "False Appearance",
+        "efeito": "Enquanto imóvel e em forma defensiva, é indistinguível de uma rocha comum."
+      },
+      {
+        "nome_original": "Ricochet Charge",
+        "restricao": "Somente forma defensiva",
+        "efeito": "Se avançar 15 pés em linha reta e acertar Boulder Bash no mesmo turno, alvo tem desvantagem na salvaguarda contra cair. Se o alvo cair, pode mover até 15 pés diretamente a outro alvo sem provocar ataque de oportunidade do primeiro e realizar um Boulder Bash adicional como ação bônus se o segundo alvo estiver ao alcance."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "restricao": "Forma verdadeira, não forma defensiva",
+        "efeito": "Faz dois ataques, escolhendo Tentacle Slam ou Spit Acid, de acordo com o bloco da publicação."
+      },
+      {
+        "nome_original": "Boulder Bash",
+        "restricao": "Somente forma defensiva",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 5,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 14,
+            "formula": "2d10 + 3",
+            "tipo": "concussão"
+          }
+        ],
+        "efeito": "Alvo testa FOR CD 13 ou fica caído."
+      },
+      {
+        "nome_original": "Tentacle Slam",
+        "restricao": "Somente forma verdadeira",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 5,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 8,
+            "formula": "2d4 + 3",
+            "tipo": "concussão"
+          },
+          {
+            "medio": 3,
+            "formula": "1d6",
+            "tipo": "ácido"
+          }
+        ]
+      },
+      {
+        "nome_original": "Spit Acid",
+        "restricao": "Somente forma verdadeira",
+        "tipo": "ataque à distância com arma",
+        "bonus_ataque": 4,
+        "alcance_normal_pes": 20,
+        "alcance_longo_pes": 60,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 9,
+            "formula": "2d6 + 2",
+            "tipo": "ácido"
+          }
+        ],
+        "efeito": "Ao atingir, alvo recebe mais 3 (1d6) de dano ácido no início do próximo turno dele."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Defensive Roll",
+        "efeito": "Transforma-se de forma verdadeira em forma de rocha defensiva ou vice-versa. Enquanto defensivo, resiste a dano concussão, perfuração e cortante de ataques não mágicos e não pode usar Tentacle Slam, Spit Acid nem Reflux. Ricochet Charge condiciona um segundo Boulder Bash em ação bônus."
+      }
+    ],
+    "reacoes": [
+      {
+        "nome_original": "Reflux",
+        "gatilho": "Ao sofrer dano concussão e estando na forma verdadeira",
+        "alcance_pes": 5,
+        "teste_resistencia": {
+          "atributo": "DES",
+          "cd": 13
+        },
+        "efeito": "Uma criatura em até 5 pés sofre 3 (1d6) ácido numa falha. Não pode reagir assim na forma defensiva."
+      }
+    ],
+    "acoes_lendarias": [],
+    "recursos_limitados": [],
+    "notas_de_validacao": [
+      "A publicação Tome of Beasts 3, página 294, indica Percepção +3 e Percepção passiva 12; estes valores impressos foram preservados, apesar da incompatibilidade aritmética usual (10 + 3 = 13).",
+      "A resistência física é apenas da Defensive Roll e limitada a ataques não mágicos; não é resistência permanente.",
+      "Boulder Bash tem ação base e eventual ataque extra condicionado por Ricochet Charge; não aplicar Multiattack na forma defensiva.",
+      "A criatura é imune a caído, mas sua ação pode deixar outros alvos caídos; não confundir condições.",
+      "Trocar formas e segundo ataque de ricochete requerem economia de ações bônus, portanto não conceder ações adicionais indevidas."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "fontes": [
+      {
+        "tipo": "entrada_OGL_TOB3",
+        "url": "https://kpogl.wikidot.com/monster:obeleric",
+        "pagina_impressa": "294",
+        "uso": "bloco original, ações e estados"
+      },
+      {
+        "tipo": "reproducao_publicacao_TOB3",
+        "url": "https://anyflip.com/plzy/jxhb/basic/251-300",
+        "pagina_impressa": "294",
+        "uso": "confirmação das estatísticas publicadas"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

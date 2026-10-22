@@ -1,0 +1,164 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Mindshard",
+  "origem_arquivo": "EXT-0028-mindshard-ficha (1).json",
+  "sha256_origem": "200c576556e866660c3003cb73a5a37315fad4bd4ec578c6234c61078228eb4e",
+  "conteudo_original": {
+    "chave": "EXT-0028-mindshard",
+    "ordem_priorizada": 90,
+    "ordem_1320": 28,
+    "nome": "Mindshard",
+    "tipo": "Aberração",
+    "nd": "4",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da edição especificada na fila, sem mistura com outras edições",
+    "tamanho": "Pequeno",
+    "tendencia": "Neutro e mau",
+    "classe_armadura": 16,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 81,
+    "dados_vida": "18d6 + 18",
+    "deslocamentos_pes": {
+      "andar": 0,
+      "voar": 40,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 1,
+      "DES": 16,
+      "CON": 12,
+      "INT": 11,
+      "SAB": 15,
+      "CAR": 19
+    },
+    "modificadores": {
+      "FOR": -5,
+      "DES": 3,
+      "CON": 1,
+      "INT": 0,
+      "SAB": 2,
+      "CAR": 4
+    },
+    "testes_resistencia": {
+      "CON": 3,
+      "INT": 2
+    },
+    "pericias": {},
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "veneno"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado",
+      "envenenado",
+      "caído"
+    ],
+    "sentidos": {
+      "visao_cegas_pes": 60,
+      "cego_alem_raio_visao_cegas": true,
+      "percepcao_passiva": 12
+    },
+    "idiomas": [
+      "Deep Speech",
+      "telepatia 60 pés"
+    ],
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "caracteristicas": [
+      {
+        "nome_original": "Mindleech Aura",
+        "alcance_pes": 15,
+        "gatilho": "Uma criatura enfeitiçada entra pela primeira vez na área em um turno ou começa o turno a até 15 pés.",
+        "efeito": "A criatura enfeitiçada sofre 7 (2d6) pontos de dano psíquico."
+      },
+      {
+        "nome_original": "Translucent",
+        "efeito": "Invisível para criaturas situadas a mais de 60 pés dele."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Realiza dois ataques Refracted Light Beam."
+      },
+      {
+        "nome_original": "Refracted Light Beam",
+        "tipo": "ataque mágico corpo a corpo ou à distância",
+        "bonus_ataque": 6,
+        "alcance_pes": 5,
+        "alcance_normal_pes": 60,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 10,
+            "formula": "2d6 + 3",
+            "tipo": "radiante"
+          }
+        ]
+      },
+      {
+        "nome_original": "Light Construction",
+        "recarga": "5-6 no início do turno",
+        "alcance_pes": 60,
+        "area_raio_pes": 20,
+        "teste_resistencia": {
+          "atributo": "SAB",
+          "cd": 14
+        },
+        "dano_falha": [
+          {
+            "medio": 14,
+            "formula": "4d6",
+            "tipo": "psíquico"
+          }
+        ],
+        "dano_sucesso": "metade",
+        "efeito_falha": "Enfeitiçado e incapacitado por 1 minuto; repetir salvaguarda no fim de cada turno, encerrando ambas as condições no sucesso.",
+        "efeito_sucesso": "Não fica enfeitiçado nem incapacitado."
+      },
+      {
+        "nome_original": "Refract Mind",
+        "usos_por_dia": 1,
+        "restricao": "Alvo humanoide com 0 PV, Inteligência 5 ou superior; alcance de toque implícito na ação de puxar o corpo para dentro.",
+        "efeito": "O humanoide morre e surgem 2d4 cultistas em espaços desocupados a até 15 pés, idênticos em aparência e memória ao alvo, aliados do Mindshard sob comandos telepáticos.",
+        "criaturas_criadas": "2d4 cultistas",
+        "situacao_no_card_game": "PENDENTE_APROVACAO_ADMINISTRADOR; não criar cartas ou múltiplas criaturas no campo"
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome_original": "Enthralling Defense",
+        "gatilho": "Uma criatura vista pelo Mindshard, a até 30 pés, acerta-o com ataque.",
+        "teste_resistencia": {
+          "atributo": "CAR",
+          "cd": 14
+        },
+        "efeito": "Se falhar, o atacante fica enfeitiçado até o fim do próximo turno dele."
+      }
+    ],
+    "acoes_lendarias": [],
+    "recursos_limitados": [],
+    "notas_de_validacao": [
+      "A característica Refract Mind exige humanoide com 0 PV e cria 2d4 cultistas; conflita com uma criatura ativa e cartas existentes; documentar, mas não executar sem decisão administrativa.",
+      "Preservado o valor publicado de dano do raio (10, 2d6 + 3) mesmo que use ataque mágico +6.",
+      "A aura só afeta criaturas enfeitiçadas, e Light Construction pode enfeitiçar/incapacitar por 1 minuto."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "fontes": [
+      {
+        "tipo": "publicação_Tome_of_Beasts_3",
+        "url": "https://anyflip.com/plzy/jxhb/basic/251-300",
+        "pagina_impressa": 271,
+        "uso": "estatísticas e habilidades completas da edição de 2023"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

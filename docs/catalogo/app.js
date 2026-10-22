@@ -3,7 +3,7 @@ const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const link = value => /^https:\/\/[^"'<> ]+/i.test(value||'') ? value : '';
 // SRD_CATALOGO_ARTES_GERADAS_20261015: accept only whitelisted local assets.
-const artSrc = value => (/^https:\/\/[^\"'<> ]+/i.test(value||'') || (/^assets\/(?:artes-geradas-20261015|drive-candidatas-20261021)\/[a-z0-9-]+\.(?:webp|png)$/i.test(value||''))) ? value : '';
+const artSrc = value => (/^https:\/\/[^\"'<> ]+/i.test(value||'') || (/^assets\/(?:artes-geradas-20261015|drive-candidatas-20261021|drive-locais)\/[a-z0-9-]+\.(?:webp|png)$/i.test(value||''))) ? value : '';
 const norm = value => String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
 const $gallery = $('gallery');
 const placeholder = () => $('missingImage').innerHTML.trim();
@@ -157,7 +157,11 @@ async function carregarFichaDrive(c) {
     const ficha = await getJSON(c.driveFicha.arquivo);
     if (appState.active !== c || !target.isConnected) return;
     const recebido = ficha.identificacao?.id_catalogo || ficha.identificacao?.ID_CATALOGO || ficha.ID_CATALOGO || ficha.id_catalogo || '';
-    if (!id || id !== c.driveFicha.id_catalogo || recebido !== id) {
+    const envelope = ficha.schema === 'CATALOGO_FICHA_LOCAL_V1';
+    const identityOk = envelope
+      ? ficha.id_catalogo === id && ficha.nome_catalogo === c.name && c.driveFicha.nome === c.name
+      : !!id && id === c.driveFicha.id_catalogo && recebido === id;
+    if (!identityOk) {
       target.textContent = 'Identidade da ficha divergente: dados não exibidos.';
       return;
     }
@@ -192,12 +196,13 @@ function openCard(index,fromLink) {
   const imageNote=c.artIsDrive?'<p>Imagem criada pelo usuário e publicada com sua autorização em 21/10/2026. Identidade e estilo editorial ainda em revisão; não é ilustração oficial D&D nem altera a ficha da criatura.</p>':c.generated?'<p>Arte digital gerada em ChatGPT em revisão. Não é ilustração oficial da criatura, nem homologação da ficha ou dos direitos editoriais.</p>':c.art?
     '<p>Ilustração de referência (web), conforme arquivo de pesquisa. Fonte, edição e direitos de reprodução podem exigir revisão.</p>':
     '<p>Não há arte direta verificada e adequada para este registro. O catálogo não utiliza imagens de espécies parecidas como substituição.</p>';
+  const localArtHtml=(c.localArts||[]).map(x=>safeImage(x.arquivo, x.nome_catalogo||'Imagem importada')+'<p class="src-note">'+esc(x.origens.join(', '))+'</p>').join('');
   const candidataDrive = c.driveArt ?
     '<div class="notice"><strong>Arte adicional do Drive — ' + esc(c.driveArt.status) +
     ':</strong> imagem criada pelo usuário, com publicação autorizada no Catálogo SRD. A identidade visual permanece em revisão.</div>' +
     safeImage(c.driveArt.arquivo, 'Arte candidata do Drive de ' + c.name) +
     '<p class="src-note">' + esc(c.driveArt.revisao_visual) + ' · ' + esc(c.driveArt.direitos) + '</p>' : '';
-  const imageBlock=section('Imagem e licença',imageNote+candidataDrive+(c.generated?'<p><strong>Proveniência da arte:</strong> '+esc(c.generated.origin)+'. '+esc(c.generated.review_note)+'</p>':'')+(c.curated?'<p><strong>Revisão visual manual:</strong> '+esc(c.curated.evidence)+' · '+esc(c.curated.source_name)+' · '+esc(c.curated.source_version)+' · '+esc(c.curated.rights)+'</p>':'')+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
+  const imageBlock=section('Imagem e licença',imageNote+candidataDrive+localArtHtml+(c.generated?'<p><strong>Proveniência da arte:</strong> '+esc(c.generated.origin)+'. '+esc(c.generated.review_note)+'</p>':'')+(c.curated?'<p><strong>Revisão visual manual:</strong> '+esc(c.curated.evidence)+' · '+esc(c.curated.source_name)+' · '+esc(c.curated.source_version)+' · '+esc(c.curated.rights)+'</p>':'')+(c.artRecord?.Status_verificacao?'<p>'+esc(c.artRecord.Status_verificacao)+'</p>':'')+
     (c.celestial[0]?.artNote?'<p>'+esc(c.celestial[0].artNote)+'</p>':''));
   $('detailInfo').innerHTML=top+status+deckBlock(c)+mechanicsSummary(c)+
     section('Identificação — todos os campos da megalista','<div class="meta-pairs">'+metaPairs+'</div>')+
@@ -287,7 +292,13 @@ async function init(){
    const generatedByName=new Map(generatedArts.records.filter(x=>x.principal&&x.catalog_name).map(x=>[norm(x.catalog_name),x]));
    const driveArtById = new Map(driveImport.artes.filter(x=>x.id_catalogo).map(x=>[x.id_catalogo,x]));
    const driveArtByName = new Map(driveImport.artes.filter(x=>!x.id_catalogo).map(x=>[norm(x.nome),x]));
-   const driveFichaById = new Map(driveImport.fichas.map(x=>[x.id_catalogo,x]));
+   const driveFichaById = new Map(driveImport.fichas.filter(x=>x.id_catalogo).map(x=>[x.id_catalogo,x]));
+   const localArts = driveImport.artes_locais || [];
+   const acervo = [...driveImport.artes.map(x=>({...x,nome_catalogo:x.nome,origens:[x.origem_arquivo||x.nome]})), ...localArts];
+   $('acervoCount').textContent = 'Acervo de imagens importadas ('+acervo.length+')';
+   $('acervoLocal').innerHTML = acervo.map(x=>'<figure class="acervo-item">'+safeImage(x.arquivo,x.nome_catalogo||x.origens[0])+'<figcaption><strong>'+esc(x.nome_catalogo||'Vínculo com criatura pendente')+'</strong><p>'+esc(x.origens.join(', '))+'</p></figcaption></figure>').join('');
+   const driveFichaNames = driveImport.fichas.filter(x=>!x.id_catalogo);
+   const driveFichaByName = new Map(driveFichaNames.filter(x=>driveFichaNames.filter(y=>y.nome===x.nome).length===1).map(x=>[x.nome,x]));
    const cByName=new Map(),aByName=new Map();
    for(const x of celestial.records){const n=norm(x.name);if(!cByName.has(n))cByName.set(n,[]);cByName.get(n).push(x);}
    const sp=new Map(aberrSupports.records.map(x=>[norm(x.nome),x]));
@@ -314,7 +325,8 @@ async function init(){
      return {index:i,name,nd:m.ND,rarity:m.RARIDADE,type:m.TIPO,meta:m,mechanics:f||null,artRecord:im||null,
        audit:id?auditoria.get(id)||null:null,celestial:cel,aberracao:abe,research:deep,alternates,curated,generated,extra,art,artIsDrive,
        driveArt,
-       driveFicha:driveFichaById.get(id)||null,
+       localArts:localArts.filter(x=>x.nome_catalogo===name && x.id_catalogo===id),
+       driveFicha:(id?driveFichaById.get(id):driveFichaByName.get(m.NOME))||null,
        search:norm(keyfields.join(' '))};
    });
    if(list.length!==1320)throw Error('Esperados 1320 registros, recebidos '+list.length);

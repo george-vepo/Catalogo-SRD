@@ -1,0 +1,224 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-302",
+  "nome_catalogo": "Angel, Shrouded",
+  "origem_arquivo": "TF-302-angel-shrouded-ficha (1).json",
+  "sha256_origem": "d0ad7f82ec21f594e7c7009b128cb402ed42d2987aee455aae01ced432383645",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-018",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 67,
+      "ORDEM_1320": 220,
+      "CHAVE": "TF-302",
+      "ID_CATALOGO": "TF-302",
+      "nome_catalogo": "Angel, Shrouded",
+      "tipo_catalogo": "Celestial",
+      "nd": "13",
+      "classe": "Rara",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-031"
+      ],
+      "publicacao_catalogo": "Tome of Beasts 3",
+      "editora_catalogo": "Kobold Press",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE",
+      "destino_biblioteca": "Completas"
+    },
+    "ficha": {
+      "porte": "Médio",
+      "tipo_mecanico_fonte": "Celestial",
+      "alinhamento": "Caótico e Bom",
+      "CA": 18,
+      "PV_maximos": 161,
+      "formula_PV": "17d8+85",
+      "nd_fonte": "13",
+      "xp_fonte": 10000,
+      "deslocamentos_pes": {
+        "terrestre": 40,
+        "voo": 60
+      },
+      "atributos": {
+        "FOR": 18,
+        "DES": 20,
+        "CON": 20,
+        "INT": 16,
+        "SAB": 22,
+        "CAR": 10
+      },
+      "iniciativa_bonus": 5,
+      "iniciativa_origem": "Derivado de Destreza +5, não impresso como iniciativa na fonte",
+      "salvaguardas_fonte": {
+        "FOR": 9,
+        "DES": 10,
+        "SAB": 11,
+        "CAR": 5
+      },
+      "pericias_fonte": {
+        "Intuição": 11,
+        "Percepção": 11,
+        "Furtividade": 10
+      },
+      "resistencias_dano": [
+        "veneno",
+        "radiante",
+        "contundente de ataques não mágicos",
+        "perfurante de ataques não mágicos",
+        "cortante de ataques não mágicos"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exaustão",
+        "amedrontado",
+        "envenenado"
+      ],
+      "sentidos": {
+        "sentido_cego_pes": 30,
+        "visao_no_escuro_pes": 120,
+        "percepcao_passiva": 21
+      },
+      "idiomas": [
+        "todos os idiomas"
+      ],
+      "telepatia_pes": 120,
+      "bonus_proficiencia": 5,
+      "tracos": [
+        {
+          "nome": "Angelic Poison",
+          "efeito": "Ataques com armas são mágicos. Seu veneno pode afetar criaturas resistentes/imunes a dano de veneno ou à condição envenenado; essas criaturas têm vantagem na salvaguarda contra o veneno do anjo",
+          "nota": "Exceção expressa da ficha, não generalizável a outros venenos"
+        },
+        {
+          "nome": "Divine Awareness",
+          "efeito": "Sabe quando escuta uma mentira"
+        },
+        {
+          "nome": "Evasion",
+          "efeito": "Em efeitos que permitem DES para metade do dano, sucesso nega o dano e falha recebe metade"
+        },
+        {
+          "nome": "Immortal Nature",
+          "efeito": "Dispensa alimento, bebida e sono"
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias/efeitos mágicos"
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Três ataques de Justicar’s Blade ou Justicar’s Blast"
+        },
+        {
+          "nome": "Justicar’s Blade",
+          "bonus_ataque": 10,
+          "alcance_corpo_a_corpo_pes": 5,
+          "dano": [
+            {
+              "dados": "2d8+5",
+              "tipo": "cortante",
+              "media_publicada": 13
+            },
+            {
+              "dados": "4d6",
+              "tipo": "veneno",
+              "media_publicada": 14
+            }
+          ],
+          "outros_efeitos": "Alvo faz CON CD 17; em falha fica Envenenado até Lesser Restoration ou magia semelhante; Angelic Poison pode superar imunidades específicas"
+        },
+        {
+          "nome": "Justicar’s Blast",
+          "bonus_ataque": 11,
+          "alcance_distancia_pes": "120",
+          "dano": [
+            {
+              "dados": "4d8+6",
+              "tipo": "radiante",
+              "media_publicada": 24
+            }
+          ],
+          "natureza": "Ataque de magia à distância"
+        },
+        {
+          "nome": "Spellcasting",
+          "atributo": "SAB",
+          "cd_salvaguarda": 19,
+          "componentes": "Sem material",
+          "sem_limite": [
+            "bane",
+            "bless",
+            "locate creature"
+          ],
+          "3_por_dia_cada": [
+            "invisibility (somente em si)",
+            "healing word (5º círculo)",
+            "nondetection"
+          ]
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [
+        {
+          "nome": "Executioner’s Judgment",
+          "gatilho": "Criatura envenenada por este anjo começa seu turno",
+          "escolha_alvo": "Alvo pode se arrepender ou recusar (não escolher sem declaração do jogador)",
+          "nao_se_arrepende": "CON CD 17; falha reduz a 0 PV; sucesso recebe 5d8 (média 22) de dano radiante",
+          "se_arrepende": "Próxima ação é escolhida pelo anjo entre instruções específicas de Command (aproximar-se, cair, fugir, prostrar-se ou parar)",
+          "recarga_especial": "Após uso, só volta a ficar disponível quando o anjo causar dano de veneno a um alvo envenenado",
+          "observacao": "Não é efeito de morte automática sem rolagem; observar gatilho, escolha e economia de reações"
+        }
+      ],
+      "acoes_lendarias": [],
+      "recursos_limitados": [
+        {
+          "recurso": "invisibility",
+          "usos_dia": 3
+        },
+        {
+          "recurso": "healing word (5º círculo)",
+          "usos_dia": 3
+        },
+        {
+          "recurso": "nondetection",
+          "usos_dia": 3
+        },
+        {
+          "recurso": "Executioner’s Judgment",
+          "reposicao": "Precisa causar novo dano de veneno a alvo envenenado após uso"
+        }
+      ]
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/31_Angel_Shrouded.md",
+      "referencia_mecanica_publica": "https://www.5esrd.com/database/creature/angel-shrouded/",
+      "referencia_cruzada": "https://www.5esrd.com/srd-content-source/tome-of-beasts-3/",
+      "edicao_da_criatura": "Tome of Beasts 3",
+      "diretriz_edicao": "Mecânicas 5e da publicação Kobold Press original; SRD_CC_v5.2.1 apenas para procedimentos gerais de combate",
+      "fonte_primaria_pdf_na_biblioteca": false,
+      "separacao_mecanica_e_suporte": true,
+      "habilidade_suporte_deck": "Candidata apenas; não homologada e não concedida como carta de suporte",
+      "divergencias_e_alertas": [
+        "Angelic Poison expressamente afeta alvos normalmente resistentes/imunes a veneno e à condição; não aplicar exceção a outras criaturas.",
+        "Executioner’s Judgment pode levar a 0 PV sob salvaguarda CON CD 17 e apresenta escolha de arrependimento; essa decisão exige a declaração do jogador e não dispensa teste.",
+        "Magias foram mantidas com nomenclatura da edição de origem sem importar automaticamente alterações de 2024."
+      ],
+      "pendencias_administrador": [
+        "Definir qual jogador faz a opção de arrependimento e os comandos válidos dentro da ação do card game.",
+        "Confirmar resolução de envenenamento persistente entre combates."
+      ],
+      "regras_de_jogo_inventadas": false
+    }
+  },
+  "documentos_complementares": []
+}

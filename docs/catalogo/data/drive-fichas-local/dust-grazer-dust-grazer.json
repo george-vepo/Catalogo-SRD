@@ -1,0 +1,124 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Dust Grazer",
+  "origem_arquivo": "EXT-0025-dust-grazer-ficha (1).json",
+  "sha256_origem": "db4297890c89172d6a8f1043906b2b3e099afe92878a71aae18a5e291a199b18",
+  "conteudo_original": {
+    "chave": "EXT-0025-dust-grazer",
+    "ordem_1320": 25,
+    "nome": "Dust Grazer",
+    "publicacao": "Tome of Beasts 3",
+    "editora": "Kobold Press / Open Design",
+    "edicao": "5e da publicação Tome of Beasts 3",
+    "tamanho": "Grande",
+    "tipo": "Aberração",
+    "tendencia": "Sem alinhamento",
+    "classe_armadura": 12,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 105,
+    "dados_vida": "10d10 + 50",
+    "deslocamentos_pes": {
+      "andar": 0,
+      "voo": 30,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 19,
+      "DES": 7,
+      "CON": 20,
+      "INT": 2,
+      "SAB": 7,
+      "CAR": 2
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": -2,
+      "CON": 5,
+      "INT": -4,
+      "SAB": -2,
+      "CAR": -4
+    },
+    "testes_resistencia": {},
+    "pericias": {},
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "veneno"
+    ],
+    "imunidades_condicoes": [
+      "envenenado"
+    ],
+    "sentidos": {
+      "percepcao_cega_pes": 120,
+      "cego_alem_da_percepcao_cega": true,
+      "percepcao_passiva": 8
+    },
+    "idiomas": [],
+    "nd": "4",
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "caracteristicas": [
+      {
+        "nome_original": "Death Spores",
+        "nome_pt": "Esporos Mortais",
+        "gatilho": "Ao morrer",
+        "alcance_pes": 20,
+        "teste_resistencia": "CON CD 14",
+        "efeito": "A morte libera esporos num raio de 20 pés. Falha na resistência: 14 (4d6) de dano de veneno e infecção pela doença dos esporos. Criaturas imunes à condição envenenado não contraem essa doença. Enquanto infectada, a criatura fica envenenada e só recupera PV por meios mágicos. A cada 24 horas, novo teste CON CD 14; na falha sofre 7 (2d6) de veneno e o máximo de PV cai pelo mesmo valor. A redução dura até um descanso longo após a cura. Se o máximo de PV cair a zero, o alvo morre e, após dois dias, retorna como um Dust Grazer de seu tamanho; cresce até Grande durante uma semana."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Tendril",
+        "nome_pt": "Tentáculo",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 6,
+        "alcance_pes": 15,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 11,
+            "formula": "2d6 + 4",
+            "tipo": "concussão"
+          },
+          {
+            "medio": 7,
+            "formula": "2d6",
+            "tipo": "ácido"
+          }
+        ],
+        "efeito": "Ao acertar criatura, agarra o alvo (escapar CD 14) se não estiver agarrando outra criatura."
+      },
+      {
+        "nome_original": "Absorb",
+        "nome_pt": "Absorver",
+        "efeito": "Faz um ataque de Tentáculo contra criatura Média ou menor que já esteja agarrando. Ao acertar, incorpora-a ao próprio corpo e o agarrão termina. Alvo incorporado fica cego e impedido, com cobertura total contra efeitos externos, sofrendo 7 (2d6) de ácido no início de cada turno da aberração. Só pode manter um alvo incorporado. Se o alvo causar 10 ou mais de dano ao monstro num único turno, o monstro testa CON CD 15 ao final desse turno; na falha, expele o alvo, que cai caído a até 5 pés de distância, sofrendo queda se estiver no ar. Quando o monstro morre, o alvo deixa de estar impedido, mas testa os Esporos Mortais com desvantagem."
+      }
+    ],
+    "descricao_original": "Massa de carne irregular coberta por fungos viscosos, que flutua sobre regiões devastadas e arrasta numerosos filamentos flexíveis até o solo para devorar matéria orgânica.",
+    "estado_ficha": "COMPLETA_CONFERIDA_EM_FONTES_PUBLICAS",
+    "observacoes": "Estatísticas verificadas no 5th Edition SRD e na entrada da publicação. A vulnerabilidade ao fogo da postagem sobre fraquezas opcionais é uma proposta, NÃO faz parte desta ficha.",
+    "fontes": [
+      {
+        "titulo": "5th Edition SRD — Dust Grazer",
+        "url": "https://www.5esrd.com/database/creature/dust-grazer/"
+      },
+      {
+        "titulo": "Tome of Beasts 3 — entrada Dust Grazer",
+        "url": "https://anyflip.com/tkzwp/dofg/basic/151-200"
+      },
+      {
+        "titulo": "Kobold Press — índice de monstros",
+        "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+      }
+    ]
+  },
+  "documentos_complementares": [
+    {
+      "nome": "EXT-0025-dust-grazer-ficha.md",
+      "sha256": "69148e1f399b1db26c6d80d34a47677aa2d7424d690e68242a73264edc67bf84",
+      "texto": "# Dust Grazer — ficha de referência\n\n\n\n**CHAVE:** `EXT-0025-dust-grazer` | **ORDEM_1320:** 25\n\n**Publicação:** Tome of Beasts 3 — 5e da publicação Tome of Beasts 3\n\n**Tipo/Tamanho/Alinhamento:** Aberração / Grande / Sem alinhamento\n\n\n\n**CA:** 12 | **PV:** 105 (10d10 + 50) | **ND:** 4 (1100 XP)\n\n**Movimento:** {'andar': 0, 'voo': 30, 'pairar': True}\n\n**Atributos:** FOR 19; DES 7; CON 20; INT 2; SAB 7; CAR 2\n\n\n\n## Defesas e sentidos\n\n- Resistências a dano: —\n\n- Vulnerabilidades: —\n\n- Imunidades a dano: veneno\n\n- Imunidades a condições: envenenado\n\n- Testes de resistência: {}\n\n- Perícias: {}\n\n- Sentidos: {'percepcao_cega_pes': 120, 'cego_alem_da_percepcao_cega': True, 'percepcao_passiva': 8}\n\n- Idiomas: —\n\n\n\n## Características\n\n**Death Spores (Esporos Mortais).** A morte libera esporos num raio de 20 pés. Falha na resistência: 14 (4d6) de dano de veneno e infecção pela doença dos esporos. Criaturas imunes à condição envenenado não contraem essa doença. Enquanto infectada, a criatura fica envenenada e só recupera PV por meios mágicos. A cada 24 horas, novo teste CON CD 14; na falha sofre 7 (2d6) de veneno e o máximo de PV cai pelo mesmo valor. A redução dura até um descanso longo após a cura. Se o máximo de PV cair a zero, o alvo morre e, após dois dias, retorna como um Dust Grazer de seu tamanho; cresce até Grande durante uma semana.\n\n\n\n## Ações\n\n**Tendril (Tentáculo).** Ataque +6; alcance 15 pés; danos: 11 (2d6 + 4) concussão, 7 (2d6) ácido. Ao acertar criatura, agarra o alvo (escapar CD 14) se não estiver agarrando outra criatura.\n\n**Absorb (Absorver).** Faz um ataque de Tentáculo contra criatura Média ou menor que já esteja agarrando. Ao acertar, incorpora-a ao próprio corpo e o agarrão termina. Alvo incorporado fica cego e impedido, com cobertura total contra efeitos externos, sofrendo 7 (2d6) de ácido no início de cada turno da aberração. Só pode manter um alvo incorporado. Se o alvo causar 10 ou mais de dano ao monstro num único turno, o monstro testa CON CD 15 ao final desse turno; na falha, expele o alvo, que cai caído a até 5 pés de distância, sofrendo queda se estiver no ar. Quando o monstro morre, o alvo deixa de estar impedido, mas testa os Esporos Mortais com desvantagem.\n\n\n\n## Aparência\n\nMassa de carne irregular coberta por fungos viscosos, que flutua sobre regiões devastadas e arrasta numerosos filamentos flexíveis até o solo para devorar matéria orgânica.\n\n\n\n## Verificação\n\nEstatísticas verificadas no 5th Edition SRD e na entrada da publicação. A vulnerabilidade ao fogo da postagem sobre fraquezas opcionais é uma proposta, NÃO faz parte desta ficha.\n\n\n\n## Fontes\n\n- 5th Edition SRD — Dust Grazer: https://www.5esrd.com/database/creature/dust-grazer/\n\n- Tome of Beasts 3 — entrada Dust Grazer: https://anyflip.com/tkzwp/dofg/basic/151-200\n\n- Kobold Press — índice de monstros: https://koboldpress.com/tools/kobold-press-monsters/\n"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-015",
+  "nome_catalogo": "Aboleth Brute",
+  "origem_arquivo": "TF-015-aboleth-brute-ficha (1).json",
+  "sha256_origem": "df276eb3e6b8bc754f04c6909061b93a589308e91f1733ad801ce658f32ffbdc",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-010",
+    "data_validacao": "2026-10-17T03:23:19+00:00",
+    "tipo": "Aberração",
+    "classe_catalogo": "Rara",
+    "homologacao_administrativa": "PENDENTE",
+    "edicao_combate_card_game": "SRD 5.2.1 (regras gerais; não substituir estatísticas de criatura)",
+    "regra_interpretacao": "Distinguir versão de publicação original, habilidades passivas e regras do Card Game; nenhuma adaptação não aprovada é executável.",
+    "ORDEM_PRIORIZADA": 35,
+    "ORDEM_1320": 76,
+    "CHAVE": "TF-015",
+    "ID_CATALOGO": "TF-015",
+    "nome": "Aboleth Brute",
+    "ND_catalogo": 13,
+    "origem_publicacao_catalogo": "Dungeon Delver's Guide",
+    "arquivo_deck_pesquisa": "/SRD Card Game/Decks/Aberração/Fichas por criatura/35_Aboleth_Brute.md",
+    "fontes_consultadas": [
+      {
+        "edicao": "Level Up A5E - Dungeon Delver’s Guide",
+        "url": "https://a5e.tools/node/2819",
+        "uso": "fonte da editora, bloco mecânico integral acessível"
+      }
+    ],
+    "status_ficha": "COMPLETA_MECANICAMENTE_SEM_HOMOLOGACAO_ADMINISTRATIVA",
+    "edicao_fonte_considerada": "Dungeon Delver's Guide (Level Up A5E)",
+    "url_fonte_principal": "https://a5e.tools/node/2819",
+    "porte": "Large",
+    "ca": 18,
+    "pv_maximos": 210,
+    "formula_pv": "20d10+100",
+    "bloodied": 105,
+    "bonus_proficiencia": 5,
+    "CD_manobra": 19,
+    "iniciativa": 2,
+    "atributos": {
+      "FOR": 22,
+      "DES": 14,
+      "CON": 20,
+      "INT": 20,
+      "SAB": 20,
+      "CAR": 18
+    },
+    "deslocamento_ft": {
+      "andar": 10,
+      "nadar": 40
+    },
+    "salvaguardas": {
+      "DES": 7,
+      "CON": 10,
+      "INT": 10,
+      "SAB": 10
+    },
+    "pericias": {
+      "Enganação": 9,
+      "História": 10,
+      "Intimidação": 9,
+      "Furtividade": 7
+    },
+    "resistencias_dano": [
+      "veneno",
+      "psíquico"
+    ],
+    "imunidades_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      "percepção às cegas 30 pés",
+      "visão no escuro 120 pés",
+      "Percepção passiva 15"
+    ],
+    "idiomas": [
+      "Deep Speech",
+      "telepatia 120 pés"
+    ],
+    "tracos": [
+      {
+        "nome": "Amphibious",
+        "mecanica": "Respira no ar e na água."
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "tipo": "ação",
+        "resumo": "Um Bite e dois Tentacle."
+      },
+      {
+        "nome": "Bite",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 11,
+        "alcance_ft": 5,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d12+6",
+            "tipo": "perfurante"
+          }
+        ],
+        "efeitos": [
+          "alvo agarrado (fuga CD 19)",
+          "alvo contido durante agarrão",
+          "não pode morder outra criatura enquanto agarrão persiste"
+        ]
+      },
+      {
+        "nome": "Tentacle",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 11,
+        "alcance_ft": 15,
+        "alvos": 1,
+        "dano": [
+          {
+            "dados": "4d6+6",
+            "tipo": "contundente"
+          }
+        ],
+        "CD": 18,
+        "salvaguarda": "CON",
+        "falha": "doença Sea Change: desvantagem em salvaguardas de SAB; após 1h guelras e pele viscosa; precisa ficar imerso por ≥1h a cada 12h ou começa sufocar",
+        "sucesso": "imunidade ao Sea Change por 24h",
+        "remoção": "Magia que remova doença com espaço de magia de nível 4+; ou 24h após a morte do aboleth"
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome": "Ink Jet",
+        "recarga": "5-6",
+        "requisito": "submerso",
+        "efeito": "Nuvem de raio 30 pés, obscurecimento pesado por 1 min ou dispersão por forte corrente; desloca até seu movimento sem ataques de oportunidade"
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": null,
+    "pendencias_card_game": [
+      "A5E possui regras próprias de doenças e bloodied; não importar automaticamente para SRD 5.2.1",
+      "Doença Sea Change e duração de 1h/12h requerem decisão sobre tempo entre combates e arena",
+      "Ação bônus Ink Jet só pode ocorrer debaixo d’água; confirmar arena"
+    ],
+    "observacoes_mecanicas": [
+      "Seção de fonte não lista ações lendárias, covil ou reações; não assumir habilidades extras."
+    ]
+  },
+  "documentos_complementares": []
+}

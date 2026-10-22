@@ -1,0 +1,166 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Haladron",
+  "origem_arquivo": "EXT-0187-haladron-ficha (1).json",
+  "sha256_origem": "e8be251d03fc9a8fcc1817ef4777930af781bcc206ee4f5cf393efd40d3e1dcf",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-012",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 42,
+      "ORDEM_1320": 187,
+      "CHAVE": "EXT-0187-haladron",
+      "ID_CATALOGO": null,
+      "nome_catalogo": "Haladron",
+      "nome_na_fonte": "Haladron",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "celestial",
+      "nd": "1/2",
+      "classe": "Comum",
+      "deck": "Celestial",
+      "copia_referencia": "CE-002",
+      "editora": "Kobold Press",
+      "publicacao_catalogo": "Tome of Beasts 3",
+      "origem_catalogo": "CANDIDATO EXTERNO"
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "ficha_previa_deck": "RESUMO_NAO_HOMOLOGADO",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Minúsculo",
+      "alinhamento": "leal e bom",
+      "CA": 13,
+      "PV_maximos": 28,
+      "formula_PV": "8d4+8",
+      "deslocamentos_pes": {
+        "terrestre": 0,
+        "voo": 60,
+        "pairar": true
+      },
+      "atributos": {
+        "FOR": 13,
+        "DES": 12,
+        "CON": 12,
+        "INT": 15,
+        "SAB": 15,
+        "CAR": 10
+      },
+      "iniciativa_bonus": 1,
+      "iniciativa_origem": "modificador DES calculado; bônus específico não indicado na ficha fonte",
+      "bonus_proficiencia": 2,
+      "bonus_proficiencia_origem": "ND e bloco da fonte para 42/44/45; inferência padrão a partir de ND para 43 (não impresso no bloco)",
+      "salvaguardas_profissionais_fonte": {},
+      "pericias": {
+        "Investigacao": 4
+      },
+      "resistencias_dano": [
+        "radiante"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "exausto",
+        "envenenado",
+        "caído",
+        "inconsciente"
+      ],
+      "sentidos": {
+        "visao_no_escuro_pes": 60,
+        "percepcao_passiva": 12
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "Celestial",
+          "Comum"
+        ],
+        "telepatia_pes": 30
+      },
+      "tracos": [
+        {
+          "nome": "Flyby",
+          "efeito": "Não provoca ataque de oportunidade quando deixa o alcance de um inimigo voando."
+        },
+        {
+          "nome": "Immortal Nature",
+          "efeito": "Não precisa de comida, bebida ou sono."
+        },
+        {
+          "nome": "Immutable Form",
+          "efeito": "Imune a magias e efeitos que alterem sua forma."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Bolt of Law",
+          "economia": "acao",
+          "categoria": "ataque_magico_distancia",
+          "bonus_ataque": 4,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dice": "1d8+2",
+              "tipo": "radiante",
+              "media_publicada": 6
+            },
+            {
+              "dice": "1d8",
+              "tipo": "trovejante",
+              "media_publicada": 4
+            }
+          ],
+          "alcance_distancia_pes": 60
+        },
+        {
+          "nome": "Stitch",
+          "economia": "acao",
+          "usos": "3/dia",
+          "alcance": "toque",
+          "alvo": "um objeto ou uma criatura",
+          "efeito_objeto": "Repara uma única quebra ou rasgo de objeto, sem vestígios do dano anterior.",
+          "efeito_criatura": "Uma criatura tocada recupera 1d6 PV (média publicada 3).",
+          "cura_dados": "1d6",
+          "cura_media_publicada": 3,
+          "regra_card_game": "Não equivale a habilidade de suporte de carta fora do campo sem aprovação."
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "acoes_miticas": [],
+      "conjuracao": [],
+      "recursos_limitados": [
+        {
+          "nome": "Stitch",
+          "limite": 3,
+          "periodo": "dia"
+        }
+      ],
+      "observacoes_mecanicas": []
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/02_Haladron.md",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/haladron/",
+      "fontes_cruzadas": [],
+      "escopo_de_verificacao": "bloco mecânico da publicação identificada, não a habilidade de suporte adaptada",
+      "edicao_mecanica": "Tome of Beasts 3",
+      "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto; evitar substituição automática de magias/tratamentos legados",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "O deck tem apenas resumo e informa que a ficha integral não estava anexada. A ficha completa foi conferida na web da edição declarada."
+      ],
+      "pendencias_card_game": [
+        "A habilidade de suporte Stitch foi proposta, não homologada para uso a partir da mão ou fora do campo.",
+        "A imunidade a inconsciente não cancela automaticamente a derrota a 0 PV prevista no jogo."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

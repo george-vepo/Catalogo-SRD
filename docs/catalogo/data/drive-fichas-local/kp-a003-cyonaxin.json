@@ -1,0 +1,225 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "KP-A003",
+  "nome_catalogo": "Cyonaxin",
+  "origem_arquivo": "KP-A003-cyonaxin-ficha (1).json",
+  "sha256_origem": "dafacb73ade3d533345647996e6485af6085ce0039f1891711f94274602c642f",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-016",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 59,
+      "ORDEM_1320": 205,
+      "CHAVE": "KP-A003",
+      "ID_CATALOGO": "KP-A003",
+      "nome_catalogo": "Cyonaxin",
+      "tipo_catalogo": "Celestial",
+      "nd": "8",
+      "classe": "Incomum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-023"
+      ],
+      "publicacao_catalogo": "Tome of Beasts 3",
+      "editora_catalogo": "Kobold Press (terceiros)",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "COMPLETA_FONTE_SEM_HOMOLOGACAO",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "tipo_mecanico_fonte": "Celestial",
+      "CA": 16,
+      "PV_maximos": 117,
+      "nd_fonte": "8",
+      "atributos": {
+        "FOR": 15,
+        "DES": 22,
+        "CON": 14,
+        "INT": 10,
+        "SAB": 15,
+        "CAR": 19
+      },
+      "salvaguardas_fonte": {
+        "SAB": 5,
+        "CAR": 7
+      },
+      "pericias": {
+        "Acrobacia": 9,
+        "Atletismo": 5,
+        "Enganação": 7,
+        "Furtividade": 9,
+        "Sobrevivência": 5
+      },
+      "deslocamentos_pes": {
+        "terrestre": 50,
+        "natacao": 20
+      },
+      "resistencias_dano": [
+        "veneno",
+        "radiante"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "paralisado",
+        "envenenado",
+        "atordoado"
+      ],
+      "sentidos": {
+        "visao_escuro_pes": 60,
+        "percepcao_passiva": 12
+      },
+      "idiomas": [
+        "Celestial",
+        "Comum"
+      ],
+      "tracos": [
+        {
+          "nome": "Blur of Motion",
+          "gatilho": "Move-se 30 pés ou mais no seu turno",
+          "efeito": "Ataques à distância contra ele têm desvantagem até começar o próximo turno"
+        },
+        {
+          "nome": "Chain Breaker",
+          "efeito": "Dano dobrado contra objetos usados para restringir criaturas"
+        },
+        {
+          "nome": "Evasion",
+          "efeito": "Em teste DES com metade do dano no sucesso: nenhum dano em sucesso e metade em falha"
+        },
+        {
+          "nome": "Freedom of Movement",
+          "efeito": "Ignora terreno difícil; magia não reduz deslocamento nem causa restrição; gasta 5 pés para escapar de agarrão ou amarras não mágicas"
+        },
+        {
+          "nome": "Keen Smell",
+          "efeito": "Vantagem em testes de SAB (Percepção) baseados em cheiro"
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magia e efeitos mágicos"
+        },
+        {
+          "nome": "Magic Weapons",
+          "efeito": "Ataques com armas são mágicos"
+        },
+        {
+          "nome": "Pounce",
+          "gatilho": "Desloca-se ao menos 20 pés diretamente até a criatura e acerta Claw nesse turno",
+          "salvaguarda": "FOR CD 15",
+          "falha": "Alvo cai no chão",
+          "bonus": "Se alvo estiver caído, pode fazer Bite como ação bônus"
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Um Bite e dois Claw"
+        },
+        {
+          "nome": "Bite",
+          "bonus_ataque": 9,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "formula": "3d6+6",
+              "tipo": "perfurante",
+              "media_na_fonte": 16
+            },
+            {
+              "formula": "3d6",
+              "tipo": "radiante",
+              "media_na_fonte": 10
+            }
+          ]
+        },
+        {
+          "nome": "Claw",
+          "bonus_ataque": 9,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "formula": "3d4+6",
+              "tipo": "cortante",
+              "media_na_fonte": 13
+            }
+          ]
+        },
+        {
+          "nome": "Frightful Yowl",
+          "recarga": "6",
+          "alcance_pes": 60,
+          "alvos": "Criaturas hostis que conseguem ouvir",
+          "salvaguarda": "SAB CD 15",
+          "falha": "Amedrontado até 1 minuto",
+          "repeticao": "Novo teste ao final de cada turno; sucesso encerra",
+          "desvantagem": "Criaturas que agarram ou restringem outra fazem teste com desvantagem"
+        },
+        {
+          "nome": "Liberating Churr",
+          "recarga": "5–6",
+          "alcance_pes": 90,
+          "alvos": "Amigos que conseguem ouvir",
+          "duracao": "Até o início do próximo turno do Cyonaxin",
+          "efeito": "Concede efeitos da própria Freedom of Movement e garras em ataques desarmados; garras causam 1d6 + modificador de FOR cortante em vez do dano usual"
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Free Runner",
+          "efeito": "Executa a ação Disparada/Dash"
+        },
+        {
+          "nome": "Pounce – Bite",
+          "condicao": "Somente após Pounce se o alvo estiver caído",
+          "efeito": "Um ataque Bite"
+        }
+      ],
+      "reacoes": [],
+      "magias": [],
+      "recursos_limitados": [
+        {
+          "recurso": "Frightful Yowl",
+          "recarga": "6"
+        },
+        {
+          "recurso": "Liberating Churr",
+          "recarga": "5–6"
+        }
+      ],
+      "porte": "Médio",
+      "alinhamento": "caótico e bom",
+      "formula_PV": "18d8+36",
+      "iniciativa_bonus": 6,
+      "proficiencia_bonus": 3
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/23_Cyonaxin.md",
+      "fonte_mecanica": [
+        "https://5esrd.old.opengamingnetwork.com/database/creature/cyonaxin/",
+        "https://runerollers.com/apps/platform/library/bestiary/cyonaxin-tob3",
+        "https://www.dndgrove.com/bestiary/8/cyonaxin"
+      ],
+      "fonte_primaria_pdf_na_biblioteca": false,
+      "observacoes": [
+        "Na transcrição do DnDGrove consta Perception +2, mas o bloco do Tome of Beasts 3 enumera Acrobacia, Atletismo, Enganação, Furtividade e Sobrevivência; usado rol completo e Percepção passiva 12.",
+        "A fonte de 2022–2023 confirma ND 8, CA 16, PV 117 e habilidades.",
+        "Liberating Churr é ação original do Cyonaxin; uso como carta de suporte continua pendente.",
+        "Pounce e Blur of Motion exigem posicionamento e deslocamento regulamentados no Card Game."
+      ],
+      "inconsistencias": [],
+      "homologacao_de_suporte": false,
+      "regras_gerais": "SRD CC 5.2.1; atributos e ações mantidos na edição da fonte Kobold Press, sem mesclar edições.",
+      "dados_deducidos": [
+        "Iniciativa +6 baseada em DES 22; RuneRollers também a exibe."
+      ],
+      "validacao_fonte": "MECANICA_CONFERIDA"
+    }
+  },
+  "documentos_complementares": []
+}

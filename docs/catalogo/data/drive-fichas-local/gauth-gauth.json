@@ -1,0 +1,236 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Gauth",
+  "origem_arquivo": "EXT-0044-gauth-ficha (1).json",
+  "sha256_origem": "16c967aa43904fa357209cb84f100ca8fe9b02d4107a9d9e0a41222bd56bbc04",
+  "conteudo_original": {
+    "chave": "EXT-0044-gauth",
+    "ordem_priorizada": 99,
+    "ordem_1320": 44,
+    "nome": "Gauth",
+    "tipo": "Aberração",
+    "nd": "6",
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "5e conforme publicação original da fila; não misturar edições",
+    "tamanho": "Médio (contemplador)",
+    "tendencia": "Tipicamente leal e mau",
+    "classe_armadura": 15,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 52,
+    "dados_vida": "7d8 + 21",
+    "deslocamentos_pes": {
+      "andar": 0,
+      "voar": 20,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 10,
+      "DES": 14,
+      "CON": 16,
+      "INT": 15,
+      "SAB": 15,
+      "CAR": 13
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 2,
+      "CON": 3,
+      "INT": 2,
+      "SAB": 2,
+      "CAR": 1
+    },
+    "testes_resistencia": {
+      "INT": 5,
+      "SAB": 5,
+      "CAR": 4
+    },
+    "pericias": {
+      "Percepção": 5
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "caído"
+    ],
+    "sentidos": {
+      "visao_no_escuro_pes": 120,
+      "percepcao_passiva": 15
+    },
+    "idiomas": [
+      "Fala Profunda",
+      "Subcomum"
+    ],
+    "telepatia_pes": null,
+    "xp": 2300,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Stunning Gaze",
+        "gatilho": "No início do turno de criatura a até 30 pés que veja o olho central do Gauth, desde que o Gauth a veja e não esteja incapacitado.",
+        "teste_resistencia": {
+          "atributo": "SAB",
+          "cd": 14
+        },
+        "falha": "Atordoado até o início do próximo turno da vítima.",
+        "evitar_olhar": "Exceto se surpreso, a criatura pode desviar o olhar no início de seu turno; não verá o Gauth até o início do seu próximo turno, e terá de testar imediatamente se tornar a olhá-lo."
+      },
+      {
+        "nome_original": "Death Throes",
+        "gatilho": "Quando o Gauth morre",
+        "raio_pes": 10,
+        "teste_resistencia": {
+          "atributo": "DES",
+          "cd": 14
+        },
+        "falha": {
+          "dano": {
+            "medio": 13,
+            "formula": "3d8",
+            "tipo": "força"
+          }
+        },
+        "sucesso": {
+          "dano": "metade"
+        }
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 3,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 9,
+            "formula": "2d8",
+            "tipo": "perfurante"
+          }
+        ]
+      },
+      {
+        "nome_original": "Eye Rays",
+        "economia": "ação",
+        "quantidade_raios": 3,
+        "sorteio": "Rolar três d6, repetindo resultados duplicados, obtendo três raios distintos.",
+        "alvo": "Um a três alvos visíveis até 120 pés; no duelo individual pode concentrar os três raios no mesmo alvo, se elegível.",
+        "raios": [
+          {
+            "d6": 1,
+            "nome_original": "Devour Magic Ray",
+            "teste_resistencia": {
+              "atributo": "DES",
+              "cd": 14
+            },
+            "falha": "Um item mágico aleatório do alvo perde propriedades mágicas até o início do próximo turno do Gauth; se usa cargas, também perde 1d4 cargas; não afeta consumíveis de uso único.",
+            "nota": "Se o oponente não tiver item mágico elegível, não presumir outro efeito nem criar itens."
+          },
+          {
+            "d6": 2,
+            "nome_original": "Enervation Ray",
+            "teste_resistencia": {
+              "atributo": "CON",
+              "cd": 14
+            },
+            "falha": {
+              "dano": {
+                "medio": 18,
+                "formula": "4d8",
+                "tipo": "necrótico"
+              }
+            },
+            "sucesso": {
+              "dano": "metade"
+            }
+          },
+          {
+            "d6": 3,
+            "nome_original": "Fire Ray",
+            "teste_resistencia": {
+              "atributo": "DES",
+              "cd": 14
+            },
+            "falha": {
+              "dano": {
+                "medio": 22,
+                "formula": "4d10",
+                "tipo": "fogo"
+              }
+            },
+            "sucesso": {
+              "dano": 0
+            }
+          },
+          {
+            "d6": 4,
+            "nome_original": "Paralyzing Ray",
+            "teste_resistencia": {
+              "atributo": "CON",
+              "cd": 14
+            },
+            "falha": {
+              "condicao": "paralisado",
+              "duracao": "até 1 minuto",
+              "nova_salvaguarda": "final de cada turno da vítima"
+            }
+          },
+          {
+            "d6": 5,
+            "nome_original": "Pushing Ray",
+            "teste_resistencia": {
+              "atributo": "FOR",
+              "cd": 14
+            },
+            "falha": {
+              "empurrar_pes_ate": 15,
+              "velocidade_reduzida": "metade até início do próximo turno do Gauth"
+            }
+          },
+          {
+            "d6": 6,
+            "nome_original": "Sleep Ray",
+            "teste_resistencia": {
+              "atributo": "SAB",
+              "cd": 14
+            },
+            "falha": {
+              "condicao": "inconsciente por sono",
+              "duracao": "1 minuto, ou até sofrer dano ou outra criatura usar ação para acordá-la"
+            },
+            "imunidade_alvo": "construtos e mortos-vivos não são afetados"
+          }
+        ]
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [],
+    "notas_de_validacao": [
+      "É a versão de Mordenkainen Presents: Monsters of the Multiverse (2022), CA 15 e PV 52; não substituir por variantes de Volo nem homebrew.",
+      "O resultado de cada um dos três raios de Eye Rays deve ser sorteado por d6 com repetição dos duplicados, e os testes devem ser executados separadamente.",
+      "Stunning Gaze requer avaliação do olhar e de linha de visão; não é acionado sem considerar a decisão de desviar o olhar.",
+      "Death Throes ao morrer: administrar interação com derrota imediata a 0 PV exclusivamente mediante decisão administrativa.",
+      "Itens mágicos não são presumidos existentes; Devour Magic Ray não permite criar item mágico no duelo."
+    ],
+    "fontes": [
+      {
+        "tipo": "transcricao_MP_MM_2022",
+        "url": "https://fliphtml5.com/fqkpd/gdoo/Monsters_of_the_Multiverse_Colored/",
+        "pagina_impressa": 133
+      },
+      {
+        "tipo": "reproducao_MP_MM_2022",
+        "url": "https://anyflip.com/mingj/iqki/basic/101-150"
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

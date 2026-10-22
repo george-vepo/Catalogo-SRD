@@ -16,7 +16,8 @@ by_id = {c["ID NO JOGO"]: c for c in mega["records"] if c["ID NO JOGO"]}
 by_name = {c["NOME"]: c for c in mega["records"]}
 assert len(manifest["artes"]) >= 19
 assert manifest["contagens_lote"]["artes"] == len(manifest["artes"])
-assert len(manifest["fichas"]) == 14
+assert len(manifest["fichas"]) >= 14
+assert manifest["contagens_lote"].get("fichas", len(manifest["fichas"])) == len(manifest["fichas"])
 ids_art = set()
 for art in manifest["artes"]:
     cid, name = art["id_catalogo"], art["nome"]
@@ -50,10 +51,40 @@ for art in manifest["artes"]:
     print("arte candidata OK:", cid or name, len(raw), "bytes")
 
 ids_sheet = set()
+local_hashes = set()
+for art in manifest.get("artes_locais", []):
+    import hashlib
+    assert art["sha256_origem"] not in local_hashes
+    local_hashes.add(art["sha256_origem"])
+    assert all("rejeitada" not in name.casefold() for name in art["origens"])
+    rel = Path(art["arquivo"])
+    assert rel.parts[:2] == ("assets", "drive-locais")
+    raw = (SITE / rel).read_bytes()
+    assert raw[:4] == b"RIFF" and raw[8:12] == b"WEBP"
+    assert hashlib.sha256(raw).hexdigest() == art["sha256_webp"]
+    if art["nome_catalogo"]:
+        record = by_id[art["id_catalogo"]] if art["id_catalogo"] else by_name[art["nome_catalogo"]]
+        assert record["NOME"] == art["nome_catalogo"]
+print("Acervo local OK:", len(local_hashes), "imagens")
 for entry in manifest["fichas"]:
     cid, name = entry["id_catalogo"], entry["nome"]
-    assert cid not in ids_sheet
-    ids_sheet.add(cid)
+    identity = cid or name
+    assert identity not in ids_sheet
+    ids_sheet.add(identity)
+    rel = Path(entry["arquivo"])
+    if rel.parts[:2] == ("data", "drive-fichas-local"):
+        record = by_id[cid] if cid else by_name[name]
+        assert record["NOME"] == name and record["ID NO JOGO"] == cid
+        item = json.loads((SITE / rel).read_text("utf-8"))
+        assert item["schema"] == "CATALOGO_FICHA_LOCAL_V1"
+        assert item["id_catalogo"] == cid and item["nome_catalogo"] == name
+        assert isinstance(item["conteudo_original"], dict)
+        assert item["sha256_origem"] == entry["sha256_origem"]
+        assert len(item["sha256_origem"]) == 64
+        assert entry["substitui_ficha_base"] is False
+        assert "SEM_HOMOLOGACAO" in entry["status"]
+        print("ficha local complementar OK:", identity)
+        continue
     assert cid.startswith("AT-"), "Este lote importa apenas conteúdo SRD 5.2.1"
     assert by_id[cid]["NOME"] == name
     assert entry["edicao"] == "SRD 5.2.1"
@@ -77,14 +108,14 @@ assert "const art=existingArt || (artIsDrive?driveArt.arquivo:'');" in script
 assert "driveArt?.id_catalogo===id" in script, "Só a identidade canônica exata pode receber imagem"
 assert "drive-art-notice" in script, "Prévia precisa de rótulo de revisão"
 assert "const driveArt=driveArtById.get(id)" in script
-assert "driveFicha:driveFichaById.get(id)" in script
+assert "driveFicha:(id?driveFichaById.get(id):driveFichaByName.get(m.NOME))" in script
 assert "const artIsDrive=" in script
 assert "driveArt?.id_catalogo===id" in script
 assert "Arte do autor · em revisão" in script
 assert "driveArt?.preview_na_grade!==false" in script
 assert "ficha.identificacao?.ID_CATALOGO" in script
 assert "ficha.id_catalogo" in script, "Fichas JSON planas do Drive precisam de validação de ID"
-print(f"Validação completa: 1320 registros preservados; {len(manifest['artes'])} artes candidatas e 14 fichas SRD complementares.")
+print(f"Validação completa: 1320 registros preservados; {len(manifest['artes'])} artes candidatas e {len(manifest['fichas'])} fichas complementares.")
 
 
 # Auditoria de metadados do Drive Novas (não altera catálogo nem aprova arte).

@@ -1,0 +1,260 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Belashyrra",
+  "origem_arquivo": "EXT-0092-belashyrra-ficha (1).json",
+  "sha256_origem": "3ab5944714eb28bf23edc3f73e27a7e2ba27edd7fd35b11a276dc86a76dd9218",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-033",
+    "data_validacao": "2026-10-19T02:27:54-03:00",
+    "ordem_priorizada": 128,
+    "ordem_1320": 92,
+    "chave": "EXT-0092-belashyrra",
+    "id_catalogo": null,
+    "nome": "Belashyrra",
+    "tipo": "Aberração",
+    "nd": 22,
+    "raridade": "Mítica",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Eberron: Rising from the Last War",
+    "edicao": "5e da publicação indicada (não confundir com reedições ou homebrew)",
+    "status_ficha": "COMPLETA_MECANICAS_VALIDADA_COM_RESSALVAS",
+    "homologacao_administrativa": false,
+    "regra_combate": "SRD 5.2.1 quando aplicável; sem integrar exceções das fichas externas que contrariem o manual do Card Game",
+    "fontes": [
+      "https://online.anyflip.com/tqblu/xfac/files/basic-html/page287.html",
+      "https://mgroot.eu/mobs?mob=Belashyrra",
+      "https://dnd-wiki.org/wiki/Belashyrra_%285e%29"
+    ],
+    "tamanho": "Médio",
+    "tendencia": "caótico e mau",
+    "classe_armadura": 19,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 304,
+    "dados_vida": "32d8 + 160",
+    "deslocamentos_pes": {
+      "caminhada": 40,
+      "voo": 40,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 24,
+      "DES": 21,
+      "CON": 20,
+      "INT": 25,
+      "SAB": 22,
+      "CAR": 23
+    },
+    "modificadores": {
+      "FOR": 7,
+      "DES": 5,
+      "CON": 5,
+      "INT": 7,
+      "SAB": 6,
+      "CAR": 6
+    },
+    "testes_resistencia": {
+      "INT": 14,
+      "SAB": 13,
+      "CAR": 13
+    },
+    "pericias": {
+      "Arcanismo": 14,
+      "Percepção": 13
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "veneno",
+      "psíquico"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "cego",
+      "enfeitiçado",
+      "exausto",
+      "amedrontado",
+      "envenenado",
+      "caído"
+    ],
+    "sentidos": {
+      "visão verdadeira_pes": 120,
+      "percepcao_passiva": 23
+    },
+    "idiomas": [
+      "Deep Speech",
+      "telepatia 120 pés"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Alien Mind",
+        "teste": {
+          "atributo": "INT",
+          "cd": 22
+        },
+        "efeito": "Criatura que lê seus pensamentos ou lhe causa dano psíquico faz INT CD 22: na falha fica atordoada por até 1 minuto, podendo repetir ao fim dos turnos."
+      },
+      {
+        "nome_original": "Eye Thief",
+        "efeito": "Enxerga pelos olhos de criaturas a até 120 pés e pode lançar Eye Ray a partir do espaço delas."
+      },
+      {
+        "nome_original": "Legendary Resistance",
+        "usos": "3/dia",
+        "efeito": "Transforma falha em teste de resistência em sucesso."
+      },
+      {
+        "nome_original": "Magic Resistance",
+        "efeito": "Vantagem nos testes contra magia e efeitos mágicos."
+      },
+      {
+        "nome_original": "Regeneration",
+        "efeito": "Recupera 20 PV no começo do turno; não funciona no turno após sofrer dano radiante. Fonte original só considera morta se iniciar turno com 0 PV sem regenerar; Card Game exige aprovação para exceção."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Realiza 2 ataques Claw e 1 Eye Ray."
+      },
+      {
+        "nome_original": "Claw",
+        "tipo": "corpo a corpo",
+        "bonus_ataque": 14,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dados": "3d6 + 7",
+            "media": 17,
+            "tipo": "cortante"
+          }
+        ]
+      },
+      {
+        "nome_original": "Eye Ray — Psyche-Reconstruction Ray",
+        "teste": {
+          "atributo": "SAB",
+          "cd": 22
+        },
+        "alcance_pes": 120,
+        "dano": [
+          {
+            "dados": "9d10",
+            "media": 49,
+            "tipo": "psíquico",
+            "metade_em_sucesso": true
+          }
+        ],
+        "efeito": "Se causar redução a 0 PV, na fonte o alvo morre e se converte em spectator subordinado; transformação NÃO homologada para o Card Game."
+      },
+      {
+        "nome_original": "Eye Ray — Domination Ray",
+        "teste": {
+          "atributo": "SAB",
+          "cd": 22
+        },
+        "alcance_pes": 120,
+        "efeito": "Falha: enfeitiçado 1 minuto ou até receber dano; obedece instruções telepáticas sem ação."
+      },
+      {
+        "nome_original": "Eye Ray — Mind-Weakening Ray",
+        "teste": {
+          "atributo": "INT",
+          "cd": 22
+        },
+        "alcance_pes": 120,
+        "dano": [
+          {
+            "dados": "8d8",
+            "media": 36,
+            "tipo": "psíquico"
+          }
+        ],
+        "efeito": "Falha: também impede conjurar magias/ativar itens mágicos por até 1 minuto, repetindo INT no fim dos turnos para encerrar."
+      },
+      {
+        "nome_original": "Eye Ray — Blinding Ray",
+        "teste": {
+          "atributo": "CON",
+          "cd": 22
+        },
+        "alcance_pes": 120,
+        "dano": [
+          {
+            "dados": "3d12",
+            "media": 19,
+            "tipo": "radiante"
+          }
+        ],
+        "efeito": "Alvo e criaturas a 10 pés: falha causa dano e cegueira por até 1 minuto; repete CON no fim dos turnos, e Belashyrra enxerga pelo alvo cego."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Teleport",
+        "efeito": "Teleporta até 30 pés para posição livre e visível."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome_original": "Claw",
+        "custo": 1,
+        "efeito": "Faz um Claw."
+      },
+      {
+        "nome_original": "Implant Fear",
+        "custo": 2,
+        "alcance_pes": 60,
+        "teste": {
+          "atributo": "SAB",
+          "cd": 22
+        },
+        "efeito": "Falha: 22 (4d10) psíquico, deve gastar reação disponível para se afastar ao máximo."
+      },
+      {
+        "nome_original": "Rend Reality",
+        "custo": 3,
+        "alcance_pes": 10,
+        "teste": {
+          "atributo": "CON",
+          "cd": 22
+        },
+        "efeito": "Falha: 19 (3d12) de força e 1 nível de exaustão."
+      }
+    ],
+    "acoes_covil": [
+      {
+        "nome_original": "Ações de covil da Cidadela dos Olhos",
+        "efeito": "Fonte apresenta ações e efeitos regionais específicos do covil; sem arena oficial homologada não atribuir ações automáticas de covil.",
+        "estado": "referência ambiental, verificar detalhes na publicação quando necessário"
+      }
+    ],
+    "recursos_limitados": [
+      {
+        "nome": "Legendary Resistance",
+        "usos": 3,
+        "periodo": "dia"
+      },
+      {
+        "nome": "Ações lendárias",
+        "pontos": 3,
+        "renova": "início do próprio turno"
+      }
+    ],
+    "conjuracao": null,
+    "bonus_proficiencia": 7,
+    "xp": 41000,
+    "pendencias_card_game": [
+      "Regeneração e regra especial de morte da fonte conflitam com derrota imediata a 0 PV no Card Game; pendente de decisão administrativa.",
+      "Psyche-Reconstruction Ray gera spectator sob controle na fonte, mas não pode gerar segunda criatura/carta sem regra aprovada.",
+      "Efeitos de covil e influência regional apenas referência; ND base 22, não alterar para ND de covil 23."
+    ],
+    "notas_de_validacao": [
+      "Dados derivados da fonte indicada no catálogo; resumos funcionais em português, não fac-símile do texto editorial.",
+      "Raridade calculada exclusivamente pelo ND; as capacidades registradas não homologam regras de arena ou vitória."
+    ]
+  },
+  "documentos_complementares": []
+}

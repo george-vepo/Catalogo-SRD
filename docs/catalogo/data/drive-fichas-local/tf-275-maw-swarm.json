@@ -1,0 +1,180 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-275",
+  "nome_catalogo": "Maw Swarm",
+  "origem_arquivo": "tf-275-maw-swarm-ficha.json",
+  "sha256_origem": "3f36ed3257f8daa55cb4258ad017dc56de4120406cab5480564247b39cb7ca1c",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Maw Swarm",
+      "chave": "TF-275",
+      "id_catalogo": "TF-275",
+      "ordem_priorizada": 13,
+      "ordem_1320": 26,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "4",
+      "classe": "Comum",
+      "editora": "EN Publishing",
+      "publicacao": "Dungeon Delver's Guide",
+      "origem_catalogo": "CATÁLOGO 607",
+      "composicao_fonte": "Enxame Médio de aberrações Miúdas (Medium swarm of Tiny aberrations)"
+    },
+    "estatisticas_e_mecanicas": {
+      "salvaguardas": {},
+      "resistencias_dano": [
+        "contundente",
+        "perfurante",
+        "cortante"
+      ],
+      "imunidades_dano": [],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [
+        "cego",
+        "enfeiticado",
+        "amedrontado",
+        "agarrado",
+        "paralisado",
+        "petrificado",
+        "caido",
+        "contido",
+        "atordoado",
+        "inconsciente"
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "magias": null,
+      "recargas": [],
+      "tamanho": "Médio",
+      "ca": 13,
+      "pv": 71,
+      "pv_formula": "11d8+22",
+      "deslocamentos_pes": {
+        "terrestre": 0,
+        "voo": 40,
+        "natacao": 40,
+        "escalada": null,
+        "paira": true
+      },
+      "atributos": {
+        "FOR": 10,
+        "DES": 16,
+        "CON": 14,
+        "INT": 3,
+        "SAB": 10,
+        "CAR": 6
+      },
+      "modificadores_atributos": {
+        "FOR": 0,
+        "DES": 3,
+        "CON": 2,
+        "INT": -4,
+        "SAB": 0,
+        "CAR": -2
+      },
+      "iniciativa_bonus": 3,
+      "iniciativa_origem": "modificador de DES derivado; sem bônus extra listado",
+      "proficiencia_bonus": 2,
+      "pericias": {},
+      "sentidos": {
+        "visao_no_escuro_pes": 60
+      },
+      "idiomas": [
+        "Deep Speech"
+      ],
+      "tracos": [
+        {
+          "nome": "Aberrant Physiology",
+          "mecanica": "Não precisa respirar nem dormir."
+        },
+        {
+          "nome": "Swarm",
+          "mecanica": "Pode ocupar espaço de outra criatura e passar por aberturas suficientes para uma criatura Miúda. Não pode receber pontos de vida ou PV temporários."
+        },
+        {
+          "nome": "Whispers of the Weird",
+          "mecanica": "Criaturas capazes de ouvir e que iniciem turno a até 5 pés fazem resistência de SAB CD 13; falha causa 3d6 psíquico.",
+          "gatilho": "início do turno de alvo a até 5 pés",
+          "cd": 13,
+          "salvaguarda": "SAB",
+          "dano": "3d6",
+          "tipo_dano": "psiquico"
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Bites",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 5,
+          "alcance_pes": 0,
+          "dano": "4d6+3",
+          "dano_sangrando": "2d6+3",
+          "tipo_dano": "perfurante",
+          "media_dano": 17,
+          "media_dano_sangrando": 10
+        }
+      ],
+      "multiataque": null,
+      "sistema": "Level Up Advanced 5th Edition (A5E)",
+      "alinhamento": null,
+      "percepcao_passiva": 10,
+      "xp": 1100,
+      "nd": 4,
+      "sangrando_ate_pv": 35,
+      "cd_manobra": 13,
+      "comportamento_publicado": "No texto descritivo combate, avança para dentro do espaço do não-aberrante mais próximo, ataca e luta até a morte; não é ação automática adicional para o Card Game."
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4_reuso_de_pesquisa_biblioteca",
+      "ficha_anterior": "RESUMO_DECK_NAO_HOMOLOGADO",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/13_Maw_Swarm.md",
+      "status_validacao_mecanica": "CONCLUIDA",
+      "homologacao_de_carta_pelo_administrador": false,
+      "regra_de_edicao": "Aplicar estatísticas conforme publicação registrada. SRD 5.2.1 usado apenas para resolução geral pertinente, sem converter ficha legada ou A5E.",
+      "observacoes": [
+        "Fonte original A5E oficial confirmada; não converter valores ou condições para D&D 5e automaticamente.",
+        "O alcance 0 pé e as resistências A5E foram mantidos conforme publicados.",
+        "Complementado o subtipo/constituição do enxame e os 1.100 XP confirmados na ficha impressa, p. 227; todos os atributos e efeitos de combate do JSON anterior conferidos sem divergências com a página oficial A5E.",
+        "Bloodied é gatilho presente na ficha original: 35 PV ou menos reduz dados do ataque Bites para 2d6+3; não adicionar penalidade genérica sem fonte."
+      ],
+      "pendencias_operacionais": [
+        "A arena precisa permitir compartilhar espaço e ataque com alcance 0 pé.",
+        "Mecanismos de sangue (bloodied) e efeitos A5E devem permanecer na ficha original até definição do árbitro.",
+        "Homologação administrativa da mecânica de enxame sobreposição de espaços/alcance 0 pé e da eventual habilidade de suporte permanece não comprovada; nenhuma regra homebrew foi ativada."
+      ],
+      "divergencias": [
+        "Existe outra publicação amostral com Maw Swarm ND 3 e PV 104; não foi incorporada, pois difere do Dungeon Delver's Guide (A5E)."
+      ],
+      "fontes": [
+        {
+          "tipo": "ferramenta_oficial_editora",
+          "titulo": "Level Up A5E Tools — Maw Swarm / Dungeon Delver's Guide",
+          "url": "https://a5e.tools/node/2840"
+        },
+        {
+          "tipo": "edicao_e_sistema",
+          "titulo": "Level Up: Advanced 5th Edition — documentação de compatibilidade",
+          "url": "https://www.a5e.tools/"
+        },
+        {
+          "tipo": "transcricao_de_publicacao_correspondente",
+          "titulo": "Dungeon Delver's Guide, p. 227 (estatísticas e 1.100 XP)",
+          "url": "https://anyflip.com/aofke/wjfo/basic/201-250"
+        },
+        {
+          "tipo": "regras_do_sistema_da_publicacao",
+          "titulo": "A5E Introduction to Monsters — Bloodied",
+          "url": "https://a5e.tools/rules/introduction-monsters"
+        }
+      ],
+      "sem_reproducao_extensa_de_texto_protegido": true,
+      "estado_no_card_game": "MECANICA_ORIGINAL_VERIFICADA; ADAPTACOES_NAO_APROVADAS_NAO_IMPLEMENTADAS",
+      "data_revalidacao_local": "2026-10-19",
+      "referencia_publicacao": "Dungeon Delver's Guide, p. 227"
+    }
+  },
+  "documentos_complementares": []
+}

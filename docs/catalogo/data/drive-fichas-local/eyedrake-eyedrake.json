@@ -1,0 +1,252 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Eyedrake",
+  "origem_arquivo": "EXT-0056-eyedrake-ficha (1).json",
+  "sha256_origem": "83a5c401dc9245f682e05b37f540668fc11d0c0554cd0fb5e76b6a75c7da4c18",
+  "conteudo_original": {
+    "chave": "EXT-0056-eyedrake",
+    "ordem_priorizada": 105,
+    "ordem_1320": 56,
+    "nome": "Eyedrake",
+    "tipo": "Aberração",
+    "nd": "8",
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Fizban's Treasury of Dragons",
+    "edicao": "5e da publicação indicada na fila; não misturar edições",
+    "tamanho": "Grande",
+    "tendencia": "Tipicamente leal e mau",
+    "classe_armadura": 16,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 119,
+    "dados_vida": "14d10 + 42",
+    "deslocamentos_pes": {
+      "andar": 0,
+      "voar": 30,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 16,
+      "DES": 10,
+      "CON": 16,
+      "INT": 14,
+      "SAB": 14,
+      "CAR": 16
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 0,
+      "CON": 3,
+      "INT": 2,
+      "SAB": 2,
+      "CAR": 3
+    },
+    "testes_resistencia": {
+      "CON": 6,
+      "SAB": 5
+    },
+    "pericias": {
+      "Percepção": 8,
+      "Furtividade": 6
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "caído"
+    ],
+    "sentidos": {
+      "visao_no_escuro_pes": 120,
+      "percepcao_passiva": 18
+    },
+    "idiomas": [
+      "Fala Profunda",
+      "Dracônico"
+    ],
+    "telepatia_pes": null,
+    "xp": 3900,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Unusual Nature",
+        "efeito": "Não precisa comer ou beber."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alcance_pes": 10,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 13,
+            "formula": "3d6 + 3",
+            "tipo": "perfurante"
+          }
+        ]
+      },
+      {
+        "nome_original": "Antimagic Breath",
+        "recarga": "6",
+        "area": {
+          "tipo": "cone",
+          "alcance_pes": 30
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "dano": {
+          "medio": 39,
+          "formula": "6d12",
+          "tipo": "energético"
+        },
+        "sucesso": "Metade do dano.",
+        "efeito_adicional": "Cada magia de 3º nível ou inferior termina nas criaturas e objetos escolhidos pelo Eyedrake dentro da área."
+      },
+      {
+        "nome_original": "Eye Rays",
+        "quantidade_por_acao": 3,
+        "selecao": "Sorteia 3 raios diferentes entre 6; rerrola resultados duplicados, cada um contra criatura visível até 60 pés.",
+        "alcance_pes": 60,
+        "raios": [
+          {
+            "numero": 1,
+            "nome_original": "Freezing Ray",
+            "teste_resistencia": {
+              "atributo": "CON",
+              "cd": 14
+            },
+            "falha": {
+              "dano": {
+                "medio": 17,
+                "formula": "5d6",
+                "tipo": "frio"
+              },
+              "efeito": "Deslocamento reduzido pela metade até o fim do próximo turno do alvo."
+            },
+            "sucesso": "Metade do dano, sem redução do deslocamento."
+          },
+          {
+            "numero": 2,
+            "nome_original": "Debilitating Ray",
+            "teste_resistencia": {
+              "atributo": "CON",
+              "cd": 14
+            },
+            "falha": {
+              "dano": {
+                "medio": 7,
+                "formula": "2d6",
+                "tipo": "trovejante"
+              },
+              "efeito": "Incapacitado até o fim do próximo turno do alvo."
+            },
+            "sucesso": "Sem dano e sem efeito."
+          },
+          {
+            "numero": 3,
+            "nome_original": "Repulsion Ray",
+            "teste_resistencia": {
+              "atributo": "FOR",
+              "cd": 14
+            },
+            "falha": {
+              "dano": {
+                "medio": 14,
+                "formula": "4d6",
+                "tipo": "energético"
+              },
+              "efeito": "Empurrado até 60 pés para longe do Eyedrake."
+            },
+            "sucesso": "Sem dano e sem empurrão."
+          },
+          {
+            "numero": 4,
+            "nome_original": "Fire Ray",
+            "teste_resistencia": {
+              "atributo": "DES",
+              "cd": 14
+            },
+            "falha": {
+              "dano": {
+                "medio": 21,
+                "formula": "6d6",
+                "tipo": "fogo"
+              }
+            },
+            "sucesso": "Metade do dano."
+          },
+          {
+            "numero": 5,
+            "nome_original": "Paralyzing Ray",
+            "teste_resistencia": {
+              "atributo": "CON",
+              "cd": 14
+            },
+            "falha": {
+              "efeito": "Paralisado por 1 minuto.",
+              "novo_teste": "Fim de cada turno do alvo, removendo em sucesso."
+            },
+            "sucesso": "Sem efeito."
+          },
+          {
+            "numero": 6,
+            "nome_original": "Death Ray",
+            "teste_resistencia": {
+              "atributo": "DES",
+              "cd": 14
+            },
+            "falha": {
+              "dano": {
+                "medio": 28,
+                "formula": "8d6",
+                "tipo": "necrótico"
+              },
+              "efeito": "Alvo morre se o raio reduzi-lo a 0 PV."
+            },
+            "sucesso": "Metade do dano; efeito de morte condicionado à redução a 0 PV pelo raio conforme texto da ação."
+          }
+        ]
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Antimagic Breath",
+        "recarga": "6"
+      }
+    ],
+    "notas_de_validacao": [
+      "Eye Rays: três resultados aleatórios distintos (rerrolar duplicatas); não são três raios escolhidos livremente.",
+      "Eye Rays é UMA ação que produz três raios, não três ações independentes nem uma Multiattack extra.",
+      "Death Ray contém efeito de morte imediata se atingir 0 PV; regra de derrota/placar do Card Game prevalece e exige deliberação para efeitos adicionais.",
+      "Antimagic Breath encerra magias de nível 3 ou inferior apenas em criaturas/objetos escolhidos pelo Eyedrake na área e não equivale a campo antimágico permanente.",
+      "Sem deslocamento terrestre: 0 pés, voo 30 pés (pairando); arena/altura precisam de definição."
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_Fizban_original",
+        "url": "https://fliphtml5.com/DnD5E/Fizbans-Treasury-Of-Dragons/Fizbans_Treasury_Of_Dragons/202/",
+        "pagina_impressa": 199
+      },
+      {
+        "tipo": "transcricao_5e",
+        "url": "https://www.aidedd.org/dnd/monstres.php?vo=eyedrake"
+      },
+      {
+        "tipo": "publicacao_oficial_WotC",
+        "url": "https://www.dndbeyond.com/sources/dnd/ftod",
+        "pagina_impressa": 199
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

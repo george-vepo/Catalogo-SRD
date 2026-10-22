@@ -1,0 +1,184 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-304",
+  "nome_catalogo": "Living Star",
+  "origem_arquivo": "TF-304-living-star-ficha (1).json",
+  "sha256_origem": "a11db93337ab9b571ae17e9369a0187c3226c401b68b4d1c83b41e625d833139",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-019",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 73,
+      "ORDEM_1320": 230,
+      "CHAVE": "TF-304",
+      "ID_CATALOGO": "TF-304",
+      "nome_catalogo": "Living Star",
+      "tipo_catalogo": "Celestial",
+      "nd": "19",
+      "classe": "Lendária",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-037"
+      ],
+      "editora_catalogo": "Kobold Press",
+      "publicacao_catalogo": "Creature Codex",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "destino_biblioteca": "Completas",
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "homologacao_administrativa": false,
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Enorme",
+      "tipo_mecanico_fonte": "Celestial",
+      "alinhamento": "Qualquer",
+      "CA": 19,
+      "PV_maximos": 207,
+      "formula_PV": "18d12+90",
+      "nd_fonte": "19",
+      "xp_fonte": 22000,
+      "bonus_proficiencia": 6,
+      "iniciativa_bonus": 6,
+      "iniciativa_origem": "DES +6 calculada; não é iniciativa adicional impressa",
+      "deslocamentos_pes": {
+        "terrestre": 0,
+        "voo": 60
+      },
+      "atributos": {
+        "FOR": 24,
+        "DES": 22,
+        "CON": 21,
+        "INT": 21,
+        "SAB": 19,
+        "CAR": 22
+      },
+      "salvaguardas_fonte": {
+        "DES": 12,
+        "CON": 11,
+        "SAB": 10
+      },
+      "pericias_fonte": {
+        "Acrobacia": 12,
+        "Intuição": 10,
+        "Percepção": 10,
+        "Persuasão": 12
+      },
+      "resistencias_dano": [
+        "contundente/cortante/perfurante de ataques não mágicos"
+      ],
+      "imunidades_dano": [
+        "necrótico",
+        "veneno",
+        "radiante"
+      ],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "amedrontado",
+        "envenenado",
+        "atordoado"
+      ],
+      "sentidos": {
+        "visao_verdadeira_pes": 120,
+        "percepcao_passiva": 20
+      },
+      "idiomas": [
+        "Celestial",
+        "Comum"
+      ],
+      "tracos": [
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        },
+        {
+          "nome": "Starshine",
+          "gatilho": "Uma criatura inicia o turno a até 30 pés",
+          "salvaguarda": "INT CD 19",
+          "falha": "Cego por 1 minuto",
+          "imunidade_pos_sucesso_ou_fim": "24 horas para esta Living Star."
+        },
+        {
+          "nome": "Supernova",
+          "gatilho": "Morte da Living Star",
+          "area": "Cada criatura a até 30 pés",
+          "salvaguarda": "DES CD 19",
+          "falha": "16d6 radiante (média 56)",
+          "sucesso": "Metade do dano.",
+          "observacao": "Alvo reduzido a 0 PV por essa explosão morre na ficha de origem; combate Card Game encerra ao cair a 0 PV e o efeito após morte precisa de decisão administrativa."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Três ataques Starflare; pode substituir um deles por Silvered Ray."
+        },
+        {
+          "nome": "Starflare",
+          "tipo": "ataque corpo a corpo",
+          "bonus_ataque": 13,
+          "alcance_pes": 10,
+          "dano": [
+            {
+              "dados": "3d8+7",
+              "media": 20,
+              "tipo": "contundente"
+            },
+            {
+              "dados": "4d6",
+              "media": 14,
+              "tipo": "radiante"
+            }
+          ]
+        },
+        {
+          "nome": "Silvered Ray",
+          "tipo": "ataque mágico à distância",
+          "bonus_ataque": 12,
+          "alcance_pes": 150,
+          "dano": [
+            {
+              "dados": "4d10+6",
+              "media": 28,
+              "tipo": "radiante"
+            }
+          ],
+          "efeito": "Alvo faz salvaguarda CAR CD 19; falha: Atordoado até o fim do seu próximo turno."
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Resize",
+          "efeito": "Altera o próprio tamanho como enlarge/reduce, mas seus ataques causam +2d4 de dano quando ampliada, ou -2d4 quando reduzida.",
+          "observacao": "Mudança de tamanho não cria outra carta."
+        }
+      ],
+      "natureza": "Não precisa respirar, comer, beber nem dormir."
+    },
+    "suporte_candidato_na_pesquisa_deck": {
+      "estado": "CANDIDATO_NAO_HOMOLOGADO",
+      "fonte_documental_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/37_Living_Star.md",
+      "descricao": "Silvered Ray é ataque incluído no Multiattack (substitui um Starflare), não ação extra livre."
+    },
+    "auditoria": {
+      "fontes": [
+        "https://robinloft.com/monsters/living-star/creature-codex",
+        "https://anyflip.com/xswt/qviw/basic/251-300"
+      ],
+      "checagem_biblioteca": "Listadas Fichas/Completas, Fichas/Em Pesquisa e resumos Celestial antes de consultar a web; sem JSON para esta CHAVE.",
+      "metodo": "Bloco oficial SRD 5.2.1 extraído de PDF local, ou fonte externa indicada no deck confrontada com cópia do texto original da publicação.",
+      "ressalvas": [
+        "Supernova é gatilho de morte da ficha original; interação com pontuação imediata ao alcançar 0 PV exige decisão do administrador.",
+        "Resize altera tamanho, não identidade, raridade ou número de criaturas em campo."
+      ],
+      "nao_inventar_atributos": true,
+      "nao_criar_imagem": true,
+      "homologacao_administrativa": false
+    }
+  },
+  "documentos_complementares": []
+}

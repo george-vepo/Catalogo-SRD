@@ -1,0 +1,149 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-513",
+  "nome_catalogo": "Improved Spirit Soldier",
+  "origem_arquivo": "TF-513-improved-spirit-soldier-ficha (1).json",
+  "sha256_origem": "a8a2fc7b5b6a72d2bd5ed14880ce09f9173988896aa462350faa727fad5a8edc",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-013",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 46,
+      "ORDEM_1320": 191,
+      "CHAVE": "TF-513",
+      "ID_CATALOGO": "TF-513",
+      "nome_catalogo": "Improved Spirit Soldier",
+      "nome_na_fonte": "Improved Spirit Soldier",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "Celestial",
+      "nd": "2",
+      "classe": "Comum",
+      "deck": "Celestial",
+      "copia_referencia": "CE-006",
+      "publicacao_catalogo": "EN Publishing — A5E — To Save A Kingdom",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "tipo": "Celestial",
+      "salvaguardas_fonte": {},
+      "pericias": {
+        "Percepcao": 4,
+        "Religiao": 4,
+        "Furtividade": 4
+      },
+      "resistencias_dano": [
+        "veneno",
+        "radiante"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "envenenado"
+      ],
+      "tracos": [
+        {
+          "nome": "Good",
+          "efeito": "Irradia aura Good (alinhamento/elemento A5E; funcionamento de aura fora de A5E não homologado)."
+        },
+        {
+          "nome": "Pack Tactics",
+          "efeito": "Vantagem nas jogadas de ataque contra criatura quando pelo menos um aliado do soldado estiver a até 5 pés do alvo e não estiver incapacitado."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Holy Blade",
+          "economia": "acao",
+          "categoria": "ataque_corpo_a_corpo",
+          "bonus_ataque": 4,
+          "alcance_pes": 5,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dado": "2d6+3",
+              "tipo": "cortante",
+              "media_publicada": 10
+            },
+            {
+              "dado": "2d4",
+              "tipo": "radiante",
+              "media_publicada": 5
+            }
+          ],
+          "efeito_acerto_criatura": {
+            "salvaguarda": "Forca",
+            "CD": 13,
+            "falha": "Caído"
+          }
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Celestial Step",
+          "economia": "acao_bonus",
+          "efeito": "Teleporta para espaço desocupado visível a até 15 pés.",
+          "distancia_pes": 15
+        }
+      ],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "conjuracao": [],
+      "recursos_limitados": [],
+      "porte": "Grande",
+      "alinhamento": "Good (A5E)",
+      "CA": 15,
+      "PV_maximos": 37,
+      "formula_PV": "5d10+10",
+      "bloodied_A5E": 18,
+      "deslocamentos_pes": {
+        "terrestre": 50
+      },
+      "atributos": {
+        "FOR": 17,
+        "DES": 15,
+        "CON": 15,
+        "INT": 10,
+        "SAB": 14,
+        "CAR": 11
+      },
+      "iniciativa_bonus": 2,
+      "iniciativa_origem": "Modificador de Destreza; bloco não informa bônus expresso",
+      "bonus_proficiencia": 2,
+      "CD_manobra_A5E": 13,
+      "sentidos": {
+        "visao_no_escuro_pes": 60,
+        "percepcao_passiva": 14
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "Celestial",
+          "Comum"
+        ]
+      }
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/06_Improved_Spirit_Soldier.md",
+      "fonte_estatisticas": "https://a5e.tools/node/3432",
+      "edicao_mecanica": "A5E — To Save A Kingdom",
+      "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto, sem substituir regras A5E/Kobold automaticamente",
+      "fontes_cruzadas": [],
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [],
+      "pendencias_card_game": [
+        "Pack Tactics depende de um aliado a até 5 pés; o Card Game tem uma criatura ativa por jogador, portanto não presumir aliado adicional.",
+        "Good aura e CD de manobra são terminologia A5E; compatibilização precisa de aprovação.",
+        "Celestial Step requer regra de posicionamento; não converter em troca de carta."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

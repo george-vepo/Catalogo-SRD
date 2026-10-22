@@ -1,0 +1,200 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-005",
+  "nome_catalogo": "Birgemon Seal",
+  "origem_arquivo": "TF-005-birgemon-seal-ficha (1).json",
+  "sha256_origem": "08ecc003da652d40c66d4de2160a1e3141507a1d3a80207208bce738cff3f03d",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Birgemon Seal",
+      "chave": "TF-005",
+      "id_catalogo": "TF-005",
+      "ordem_priorizada": 7,
+      "ordem_1320": 13,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "2",
+      "classe": "Comum",
+      "editora": "Kobold Press",
+      "publicacao": "Tome of Beasts 3",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Médio",
+      "alinhamento": "sem alinhamento",
+      "ca": 12,
+      "ca_tipo": "não especificada",
+      "pv": 60,
+      "pv_formula": "8d8+24",
+      "deslocamentos_pes": {
+        "terrestre": 20,
+        "voo": null,
+        "natacao": 60,
+        "escalada": null,
+        "pairar": false
+      },
+      "atributos": {
+        "FOR": 12,
+        "DES": 15,
+        "CON": 16,
+        "INT": 4,
+        "SAB": 12,
+        "CAR": 9
+      },
+      "modificadores_atributos": {
+        "FOR": 1,
+        "DES": 2,
+        "CON": 3,
+        "INT": -3,
+        "SAB": 1,
+        "CAR": -1
+      },
+      "iniciativa_bonus": 2,
+      "proficiencia_bonus": 2,
+      "salvaguardas": {},
+      "pericias": {
+        "Percepcao": 3,
+        "Furtividade": 4
+      },
+      "sentidos": {
+        "visao_no_escuro_pes": 60,
+        "percepcao_passiva": 13
+      },
+      "idiomas": [],
+      "resistencias_dano": [
+        "ácido",
+        "frio"
+      ],
+      "imunidades_dano": [],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [],
+      "tracos": [
+        {
+          "nome": "Frozen to the Spot",
+          "efeito": "Enquanto sobre neve ou gelo, não pode ser deslocado à força."
+        },
+        {
+          "nome": "Hold Breath",
+          "efeito": "Pode permanecer sem respirar por até 90 minutos."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Bite",
+          "economia": "acao_ou_parte_multiataque",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 4,
+          "alcance_pes": 5,
+          "alvos": 1,
+          "dano": {
+            "dados": "2d4+2",
+            "tipo": "perfurante",
+            "media": 7
+          }
+        },
+        {
+          "nome": "Toothy Maw",
+          "economia": "acao_ou_parte_multiataque",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 4,
+          "alcance_pes": 5,
+          "alvos": 1,
+          "dano": {
+            "dados": "2d6+2",
+            "tipo": "perfurante",
+            "media": 9
+          }
+        },
+        {
+          "nome": "Tendril",
+          "economia": "acao_ou_parte_multiataque",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 4,
+          "alcance_pes": 15,
+          "alvos": 1,
+          "dano": {
+            "dados": null,
+            "tipo": null,
+            "media": 0
+          },
+          "efeito_ao_acertar": {
+            "condicao": "agarrado",
+            "tamanho_maximo": "Médio",
+            "cd_escape": 13,
+            "limite_por_tentaculo": "O mesmo tentáculo fica indisponível para agarrar outro alvo até liberar o anterior",
+            "condicao_adicional": "Alvo agarrado por dois ou mais tentáculos também fica contido"
+          }
+        },
+        {
+          "nome": "Reel",
+          "economia": "acao_ou_substitui_tres_tendril_do_multiataque",
+          "efeito": "Puxa cada alvo que a criatura já está agarrando até 10 pés em linha reta em sua direção."
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Ice Slide",
+          "economia": "acao_bonus",
+          "pre_requisito": "Mover-se ao menos 10 pés em linha reta sobre neve ou gelo durante o turno",
+          "efeito": "Pode deslizar até 40 pés."
+        }
+      ],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "magias": [],
+      "multiataque": {
+        "economia": "acao",
+        "sequencia": "Uma Mordida (Bite), uma Boca Dentada (Toothy Maw) e três Tentáculos (Tendril), ou substituir o conjunto dos três Tendril por um Reel.",
+        "observacao": "Os três ataques de tentáculo não devem ser confundidos com três ações independentes ou dano automático."
+      },
+      "recargas": []
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4",
+      "ficha_anterior": "resumo_deck_nao_homologado",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/07_Birgemon_Seal.md",
+      "regra_de_edicao": "Atributos e habilidades na edição da publicação indicada; SRD 5.2.1 apenas regras gerais para fontes não-SRD.",
+      "status_validacao_mecanica": "CONCLUIDA",
+      "homologacao_de_carta_pelo_administrador": false,
+      "observacoes": [
+        "A ação Tendril não possui dano listado no bloco consultado, apenas agarrão e possível condição contido.",
+        "Terreno frio/neve é requisito mecânico de Frozen to the Spot e Ice Slide; não presumir arena nevada."
+      ],
+      "pendencias_operacionais": [],
+      "divergencias": [
+        {
+          "campo": "pericias",
+          "fonte_divergente": "D&D Grove resume Percepção como +1 e não informa Furtividade +4.",
+          "valor_adotado": "Percepção +3 e Furtividade +4, coincidentes no livro Tome of Beasts 3 e 5eSRD."
+        }
+      ],
+      "fontes": [
+        {
+          "classe": "publicacao_original",
+          "titulo": "Kobold Press, Tome of Beasts 3, Birgemon Seal",
+          "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+        },
+        {
+          "classe": "transcricao_publica_conferida",
+          "titulo": "5eSRD — Birgemon Seal",
+          "url": "https://www.5esrd.com/database/creature/birgemon-seal/"
+        },
+        {
+          "classe": "transcricao_livro",
+          "titulo": "Tome of Beasts 3, trecho com bloco Birgemon Seal",
+          "url": "https://anyflip.com/plzy/jxhb/basic/51-100"
+        },
+        {
+          "classe": "secundaria_divergente",
+          "titulo": "D&D Grove — Birgemon Seal",
+          "url": "https://www.dndgrove.com/bestiary/2/birgemon-seal"
+        }
+      ],
+      "campos_nao_listados": "Não se presumem habilidades extras ou bônus não indicados no bloco original.",
+      "habilidade_suporte_deck": "Proposta separada: não incorporada automaticamente à ficha base."
+    }
+  },
+  "documentos_complementares": []
+}

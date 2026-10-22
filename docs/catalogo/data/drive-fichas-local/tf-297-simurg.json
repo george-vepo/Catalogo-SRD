@@ -1,0 +1,212 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-297",
+  "nome_catalogo": "Simurg",
+  "origem_arquivo": "TF-297-simurg-ficha (1).json",
+  "sha256_origem": "80ce63acbf39ff36a3f7f30dcf807037b370c700edf0b655a6d96060475fe2fd",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-014",
+    "data_execucao_local": "2026-10-17T01:47:47-03:00",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 53,
+      "ORDEM_1320": 198,
+      "CHAVE": "TF-297",
+      "ID_CATALOGO": "TF-297",
+      "nome_catalogo": "Simurg",
+      "nome_na_fonte": "Simurg",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "Celestial",
+      "nd": "5",
+      "classe": "Comum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-015",
+        "CE-016"
+      ],
+      "publicacao_catalogo": "Creature Codex",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Colossal (Gargantuan)",
+      "alinhamento": "neutro e bom",
+      "CA": 15,
+      "CA_origem": "armadura natural",
+      "PV_maximos": 108,
+      "formula_PV": "8d20+24",
+      "deslocamentos_pes": {
+        "terrestre": 20,
+        "voo": 80
+      },
+      "atributos": {
+        "FOR": 18,
+        "DES": 11,
+        "CON": 17,
+        "INT": 14,
+        "SAB": 17,
+        "CAR": 16
+      },
+      "iniciativa_bonus": 0,
+      "iniciativa_origem": "Modificador de DES +0; não expresso como iniciativa no bloco original",
+      "bonus_proficiencia": 3,
+      "salvaguardas_fonte": {
+        "DES": 3,
+        "CON": 6,
+        "SAB": 6,
+        "CAR": 6
+      },
+      "pericias": {
+        "Percepcao": 6
+      },
+      "resistencias_dano": [
+        "radiante"
+      ],
+      "sentidos": {
+        "visao_no_escuro_pes": 120,
+        "percepcao_passiva": 16
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "todos"
+        ],
+        "telepatia_pes": 120
+      },
+      "tracos": [
+        {
+          "nome": "Flyby",
+          "efeito": "Não provoca ataque de oportunidade quando voa para fora do alcance inimigo."
+        },
+        {
+          "nome": "Keen Sight",
+          "efeito": "Vantagem em testes Percepção que dependem da visão."
+        },
+        {
+          "nome": "Innate Spellcasting",
+          "atributo": "Sabedoria",
+          "CD": 14,
+          "componentes_materiais": false,
+          "efeito": "Lista de magias inatas com limites por dia (ver conjuração)."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Três ataques: um Bite e dois Claws."
+        },
+        {
+          "nome": "Bite",
+          "bonus_ataque": 7,
+          "alcance_pes": 5,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dado": "2d8+4",
+              "tipo": "perfurante",
+              "media_publicada": 13
+            }
+          ]
+        },
+        {
+          "nome": "Claws",
+          "bonus_ataque": 7,
+          "alcance_pes": 5,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dado": "2d6+4",
+              "tipo": "cortante",
+              "media_publicada": 11
+            }
+          ]
+        },
+        {
+          "nome": "Forceful Gale",
+          "recarga": "5–6",
+          "area": "cone de 30 pés",
+          "salvaguarda": "Força",
+          "CD": 15,
+          "falha": "6d8 contundente (média 27), empurra 10 pés para longe e deixa caído",
+          "sucesso": "metade do dano, sem empurrar nem deixar caído"
+        }
+      ],
+      "conjuracao": [
+        {
+          "nome": "Innate Spellcasting",
+          "atributo": "SAB",
+          "CD": 14,
+          "sem_componentes_materiais": true,
+          "a_vontade": [
+            "detect poison and disease",
+            "detect thoughts",
+            "spare the dying"
+          ],
+          "duas_por_dia_cada": [
+            "cure wounds",
+            "lesser restoration",
+            "purify food and drink"
+          ],
+          "uma_por_dia_cada": [
+            "greater restoration",
+            "remove curse"
+          ],
+          "observacao": "A ficha de Creature Codex é edição original; efeitos dos feitiços SRD 5.2.1 não substituídos automaticamente."
+        }
+      ],
+      "recursos_limitados": [
+        {
+          "nome": "Forceful Gale",
+          "recarga": "5–6"
+        },
+        {
+          "nome": "cure wounds / lesser restoration / purify food and drink",
+          "limite": 2,
+          "periodo": "dia",
+          "por_magia": true
+        },
+        {
+          "nome": "greater restoration / remove curse",
+          "limite": 1,
+          "periodo": "dia",
+          "por_magia": true
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "imunidades_dano": [],
+      "imunidades_condicoes": []
+    },
+    "suporte_candidato_na_pesquisa_deck": {
+      "habilidade": "Cure Wounds",
+      "status": "CANDIDATA_NAO_HOMOLOGADA",
+      "regra_original": "2/dia; cura por magia inata baseada em SAB +3; diferenças entre edições exigem regulamentação"
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/15_Simurg.md",
+      "fonte_deck_duplicada_copia": "16_Simurg.md",
+      "fonte_pesquisa_consolidada": "/SRD Card Game/Decks/Celestial/Fichas por criatura/FICHAS_36_PESQUISA.json",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/simurg/",
+      "edicao_mecanica": "Creature Codex",
+      "regra_combativa": "SRD_CC_v5.2.1.pdf; descrições de magias da edição original não foram substituídas automaticamente",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "Fonte usa grafia Simurg; não inventar mecanismo de renascimento em combate a partir de descrição narrativa do ciclo de vida."
+      ],
+      "pendencias_card_game": [
+        "Magias de Creature Codex devem usar edição compatibilizada aprovada; não aplicar silenciosamente cure wounds de SRD 5.2.1.",
+        "Reborn elsewhere upon death é descrição ecológica/narrativa e não ressuscita automaticamente uma carta derrotada.",
+        "Forceful Gale requer resolução de área, deslocamento e caído na arena."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

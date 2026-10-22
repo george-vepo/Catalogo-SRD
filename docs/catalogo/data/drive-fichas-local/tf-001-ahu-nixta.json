@@ -1,0 +1,290 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-001",
+  "nome_catalogo": "Ahu-Nixta",
+  "origem_arquivo": "tf-001-ahu-nixta-ficha.json",
+  "sha256_origem": "9edd8007940262b3dee5e7a91bdb634f276421c682102c4585ad348bb7aaf779",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Ahu-Nixta",
+      "chave": "TF-001",
+      "id_catalogo": "TF-001",
+      "ordem_priorizada": 10,
+      "ordem_1320": 17,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "3",
+      "classe": "Comum",
+      "editora": "Kobold Press",
+      "publicacao": "Creature Codex",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "salvaguardas": {},
+      "resistencias_dano": [],
+      "imunidades_dano": [
+        "veneno",
+        "psiquico"
+      ],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [
+        "enfeiticado",
+        "exaustao",
+        "amedrontado",
+        "paralisado",
+        "petrificado",
+        "envenenado",
+        "caido"
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Enter or Exit Clockwork Armor",
+          "mecanica": "Entra ou sai da armadura usando uma ação bônus; o estado da forma controla os atributos ativos."
+        }
+      ],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "magias": {
+        "habilidade": "INT",
+        "cd_resistencia": 14,
+        "bonus_ataque_magico": 6,
+        "componentes_materiais_exigidos": false,
+        "a_vontade": [
+          "fear",
+          "fire bolt",
+          "telekinesis"
+        ],
+        "dano_fire_bolt": "2d10 conforme bloco original",
+        "mecanicas_para_combate_srd_521": {
+          "fear": {
+            "frequencia": "à vontade pela ficha Creature Codex de 2018",
+            "nivel": 3,
+            "acao": "ação para conjurar",
+            "alcance": "próprio",
+            "area": "cone de 30 pés",
+            "salvaguarda": "Sabedoria CD 14 (CD específica da criatura)",
+            "efeito": "Falha: solta itens nas mãos, recebe a condição Amedrontado; a cada turno deve usar Disparada para afastar-se por rota segura se houver. Sem linha de visão para o conjurador no fim do turno, repete a salvaguarda, encerrando a magia em sucesso.",
+            "concentracao": true,
+            "duracao_maxima": "1 minuto",
+            "fonte_regras": "SRD 5.2.1, p. 129 (impressa)",
+            "nota_versao": "Texto de resolução SRD 5.2.1; edição da ficha de origem permanece Creature Codex 2018."
+          },
+          "fire_bolt": {
+            "frequencia": "à vontade",
+            "acao": "ação para conjurar",
+            "tipo_ataque": "magia à distância",
+            "alcance_pes": 120,
+            "bonus_acerto": 6,
+            "dano_dados": "2d10",
+            "tipo_dano": "fogo",
+            "efeito_adicional": "Objeto inflamável atingido começa a queimar caso não esteja sendo usado ou carregado.",
+            "fonte_dano": "Creature Codex 2018, bloco Ahu-Nixta (2d10 expresso). Não substituir pelo dado-base 1d10 do truque SRD.",
+            "fonte_regras": "SRD 5.2.1, p. 131 (impressa)"
+          },
+          "telekinesis": {
+            "frequencia": "à vontade",
+            "nivel": 5,
+            "acao": "ação para conjurar e ação Mágica em turnos posteriores para manipular",
+            "alcance_pes": 60,
+            "duracao_maxima": "10 minutos",
+            "concentracao": true,
+            "criatura": "Alvo Enorme ou menor visível (Huge ou menor); salvaguarda de Força CD 14. Na falha, mover até 30 pés dentro do alcance e aplicar Contido até o fim do próximo turno do conjurador, com regras específicas para suspensão no ar e renovação.",
+            "objeto": "Objeto Enorme ou menor: deslocar até 30 pés dentro do alcance; se usado ou carregado, portador faz salvaguarda de Força CD 14.",
+            "fonte_regras": "SRD 5.2.1, pp. 167–168 (impressas)",
+            "nota_versao": "A versão 2014 da magia pode divergir da versão SRD 5.2.1. Este campo descreve apenas a referência de resolução exigida pelo projeto; adaptação definitiva de edições depende da política aprovada, não altera a ficha original."
+          }
+        }
+      },
+      "recargas": [],
+      "tamanho": "Grande",
+      "ca": 14,
+      "pv": 67,
+      "pv_formula": "9d10+18",
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": 30,
+        "natacao": 30,
+        "escalada": null,
+        "paira": true,
+        "paira_fonte": "Errata oficial Creature Codex, Kobold Press, 29/05/2025, p. 11: voo 30 pés (hover)"
+      },
+      "atributos": {
+        "FOR": 17,
+        "DES": 15,
+        "CON": 14,
+        "INT": 19,
+        "SAB": 13,
+        "CAR": 10
+      },
+      "modificadores_atributos": {
+        "FOR": 3,
+        "DES": 2,
+        "CON": 2,
+        "INT": 4,
+        "SAB": 1,
+        "CAR": 0
+      },
+      "iniciativa_bonus": 2,
+      "iniciativa_origem": "modificador de DES derivado; sem bônus extra listado",
+      "proficiencia_bonus": 2,
+      "pericias": {
+        "Percepcao": 3
+      },
+      "sentidos": {
+        "visao_no_escuro_pes": 60
+      },
+      "idiomas": [
+        "Deep Speech",
+        "Void Speech"
+      ],
+      "tracos": [
+        {
+          "nome": "Clockwork Encasement",
+          "mecanica": "Quando a proteção mecânica perde todos os PV, a criatura emerge com o bloco alternativo de 37 PV; perde ataques físicos e quase todas as imunidades, mas mantém conjuração. Pode manipular objetos com apêndices sem realizar ataques."
+        },
+        {
+          "nome": "Immutable Form",
+          "mecanica": "A armadura e o ocupante dentro dela são imunes a efeitos que mudariam sua forma."
+        },
+        {
+          "nome": "Innate Spellcasting",
+          "mecanica": "Inteligência; CD 14 e bônus +6 para ataques mágicos. Fear, Fire Bolt (2d10) e Telekinesis à vontade, sem componentes materiais."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Whirring Blades",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 5,
+          "alcance_pes": 5,
+          "dano": "2d4+3",
+          "tipo_dano": "cortante",
+          "media_dano": 8
+        },
+        {
+          "nome": "Pronged Scepter",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 5,
+          "alcance_pes": 10,
+          "dano": "1d6+3",
+          "tipo_dano": "perfurante",
+          "media_dano": 6
+        },
+        {
+          "nome": "Bashing Rod",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 5,
+          "alcance_pes": 5,
+          "dano": "1d10+3",
+          "tipo_dano": "contundente",
+          "media_dano": 8
+        }
+      ],
+      "multiataque": {
+        "ataques_corpo_a_corpo": 3,
+        "substituicao": "Pode trocar dois dos ataques pela conjuração de uma magia à vontade."
+      },
+      "alinhamento": "neutro e mau",
+      "ca_origem": "armadura mecânica",
+      "percepcao_passiva": 13,
+      "xp": 700,
+      "forma_interna": {
+        "gatilho": "armadura reduzida a 0 PV",
+        "ca": 12,
+        "pv": 37,
+        "pv_formula": "5d10+10",
+        "forca": 9,
+        "deslocamentos_pes": {
+          "terrestre": 20,
+          "voo": 20,
+          "natacao": 20
+        },
+        "imunidades_dano": [
+          "psiquico"
+        ],
+        "imunidades_condicoes": [
+          "caido"
+        ],
+        "acoes_de_ataque_disponiveis": false,
+        "conjuracao_disponivel": true
+      },
+      "observacao_combate": "PV da forma interna são um segundo bloco de 37 PV, não cura nem reposição de mão."
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4_reuso_de_pesquisa_biblioteca",
+      "ficha_anterior": "RESUMO_DECK_NAO_HOMOLOGADO",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/10_Ahu_Nixta.md",
+      "status_validacao_mecanica": "CONCLUIDA_COM_ERRATA_OFICIAL_APLICADA",
+      "homologacao_de_carta_pelo_administrador": false,
+      "regra_de_edicao": "Aplicar estatísticas conforme publicação registrada. SRD 5.2.1 usado apenas para resolução geral pertinente, sem converter ficha legada ou A5E.",
+      "observacoes": [
+        "O resumo pré-existente no deck foi reutilizado, sem misturar a ficha Drudge ou a variante Cataphract.",
+        "Imunidades dependem do estado da armadura.",
+        "Errata oficial Kobold Press 29/05/2025, p. 11, corrige velocidade de voo 30 pés para pairado (hover). Campo anterior paira=false estava incorreto; agora paira=true.",
+        "A ficha permanece da edição Creature Codex 2018. Creature Codex Revised 2026 (5.5E) é publicação distinta, não mesclada.",
+        "Detalhadas Fear, Fire Bolt e Telekinesis como referências de resolução SRD 5.2.1; os dados próprios da criatura (CD14, +6, Fire Bolt 2d10, uso à vontade) continuam os originais de 2018."
+      ],
+      "pendencias_operacionais": [
+        "Definir se a regra de derrota imediata aos 0 PV do Card Game permite emergir da armadura com nova barra de 37 PV.",
+        "Confirmar interpretação das magias antigas pelo árbitro sem trocar sua edição.",
+        "Decisão do administrador: regra de derrota imediata a 0 PV do Card Game versus segunda forma com 37 PV ao quebrar a armadura.",
+        "Decisão do administrador: convenção de uso das magias da edição 2018 sob resolução geral SRD 5.2.1, em especial Telekinesis.",
+        "O bloco da forma interna não repete explicitamente a etiqueta hover; a errata de 2025 modifica a linha principal de deslocamento. Interpretar conservação de pairar sem alteração adicional requer validação administrativa se influenciar combate."
+      ],
+      "divergencias": [
+        "JSON anterior negava hover no voo da forma protegida; fonte oficial corrige para pairar."
+      ],
+      "fontes": [
+        {
+          "tipo": "indice_oficial",
+          "titulo": "Creature Codex — Kobold Press",
+          "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+        },
+        {
+          "tipo": "transcricao_mecanica_publica",
+          "titulo": "Ahu-Nixta — Open Gaming Network 5e",
+          "url": "https://5esrd.old.opengamingnetwork.com/database/creature/ahu-nixta/"
+        },
+        {
+          "tipo": "mecanica_geral",
+          "titulo": "SRD 5.2.1 — regras gerais",
+          "url": "https://www.dndbeyond.com/srd"
+        },
+        {
+          "tipo": "errata_oficial_2025",
+          "titulo": "Kobold Press Errata 29/05/2025 — Creature Codex, p. 11, Ahu-Nixta",
+          "url": "https://koboldpress.com/errata/",
+          "uso": "Correcao de deslocamento: fly 30 ft. (hover)"
+        },
+        {
+          "tipo": "ficha_publica_comparativa",
+          "titulo": "5th Edition SRD — Ahu-Nixta original",
+          "url": "https://5esrd.old.opengamingnetwork.com/database/creature/ahu-nixta/",
+          "uso": "Conferencia atributos, ataques, duas formas, magia original (antes da errata de hover)"
+        },
+        {
+          "tipo": "ficha_independente",
+          "titulo": "Robinloft Ahu-Nixta Creature Codex",
+          "url": "https://robinloft.com/monsters/ahu-nixta/creature-codex",
+          "uso": "Comparacao da edicao Creature Codex original"
+        },
+        {
+          "tipo": "referencia_mecanica_projeto",
+          "titulo": "SRD 5.2.1, magias Fear, Fire Bolt, Telekinesis",
+          "url": "https://www.dndbeyond.com/srd",
+          "uso": "Interpretacao do combate conforme manual do Card Game, sem mudar valores da edicao 2018"
+        }
+      ],
+      "sem_reproducao_extensa_de_texto_protegido": true,
+      "estado_no_card_game": "MECANICA_ORIGINAL_VERIFICADA; ADAPTACOES_NAO_APROVADAS_NAO_IMPLEMENTADAS",
+      "data_ultima_revisao_local": "2026-10-19",
+      "modo_ultima_revisao": "pesquisa_manual_uma_criatura_validacao_errata_oficial_e_fontes_publicas",
+      "fonte_original_identificada": "Creature Codex (2018), Ahu-Nixta, p. 11, Kobold Press; errata 29/05/2025",
+      "sha256_antes_da_revisao": "fec934342a0554fd54a408f0f1354b85c8919ea54c97dce9b806c1944d7a21b8",
+      "status_card_game": "MECANICA_FICHA_VALIDADA; INTEGRACAO_ARENA_0_PV_E_EDICOES_PENDENTES"
+    }
+  },
+  "documentos_complementares": []
+}

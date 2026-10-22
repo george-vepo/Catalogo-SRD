@@ -1,0 +1,204 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-274",
+  "nome_catalogo": "Malleable, Minor",
+  "origem_arquivo": "TF-274-malleable-minor-ficha (1).json",
+  "sha256_origem": "78b5c7cb0d1d16d13a1c5a46740ff1fe77bc0e586178b34e805d11ee12de6c14",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Malleable, Minor",
+      "chave": "TF-274",
+      "id_catalogo": "TF-274",
+      "ordem_priorizada": 6,
+      "ordem_1320": 11,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "1",
+      "classe": "Comum",
+      "editora": "Kobold Press",
+      "publicacao": "Tome of Beasts 2",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Médio",
+      "alinhamento": "caótico e mau",
+      "ca": 11,
+      "ca_tipo": "armadura natural",
+      "pv": 32,
+      "pv_formula": "5d8+10",
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": null,
+        "natacao": null,
+        "escalada": 30,
+        "pairar": false
+      },
+      "atributos": {
+        "FOR": 16,
+        "DES": 8,
+        "CON": 14,
+        "INT": 15,
+        "SAB": 14,
+        "CAR": 10
+      },
+      "modificadores_atributos": {
+        "FOR": 3,
+        "DES": -1,
+        "CON": 2,
+        "INT": 2,
+        "SAB": 2,
+        "CAR": 0
+      },
+      "iniciativa_bonus": -1,
+      "proficiencia_bonus": 2,
+      "salvaguardas": {
+        "INT": 4,
+        "SAB": 4,
+        "CAR": 2
+      },
+      "pericias": {},
+      "sentidos": {
+        "percepcao_as_cegas_pes": 30,
+        "cego_alem_desse_alcance": true,
+        "percepcao_passiva": 12
+      },
+      "idiomas": [
+        "todos os idiomas",
+        "telepatia 60 pés"
+      ],
+      "resistencias_dano": [],
+      "imunidades_dano": [
+        "psíquico"
+      ],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [
+        "cego",
+        "caído"
+      ],
+      "tracos": [
+        {
+          "nome": "Amorphous",
+          "efeito": "Atravessa aberturas de pelo menos 1 polegada sem a penalidade de espremer-se."
+        },
+        {
+          "nome": "Controlled Mutability",
+          "efeito": "Mudanças de forma provocadas externamente desaparecem ao fim do próximo turno do malleable. Usando uma ação, pode assumir formas físicas básicas, mas mantém aparência visceral e não obtém atributos ou poderes da forma copiada."
+        },
+        {
+          "nome": "Psychic Absorption",
+          "gatilho": "Receberia dano psíquico",
+          "efeito": "Em lugar do dano, recupera PV no valor do dano psíquico que receberia; cura sujeita ao PV máximo."
+        },
+        {
+          "nome": "Spider Climb",
+          "efeito": "Escala paredes difíceis e tetos sem teste."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Flesh Tendril",
+          "economia": "acao",
+          "tipo": "ataque_corpo_a_corpo_com_arma",
+          "bonus_acerto": 5,
+          "alcance_pes": 5,
+          "alvos": 1,
+          "dano": {
+            "dados": "2d6+3",
+            "tipo": "contundente",
+            "media": 10
+          },
+          "efeito_ao_acertar": {
+            "condicao": "agarrado",
+            "alvo_tamanho_maximo": "Médio",
+            "cd_escape": 12
+          }
+        },
+        {
+          "nome": "Psychic Drain",
+          "economia": "acao",
+          "pre_requisito": "Alvo já agarrado por este malleable",
+          "salvaguarda": {
+            "atributo": "INT",
+            "cd": 12
+          },
+          "falha": {
+            "dados": "1d8",
+            "tipo": "psíquico",
+            "media": 4
+          },
+          "sucesso": "metade do dano psíquico, arredondada para baixo",
+          "efeito": "Reduz PV máximos do alvo na quantidade de dano psíquico efetivamente sofrido; redução termina após descanso longo. Caso o máximo chegue a 0, alvo morre e vira um malleable menor segundo a fonte.",
+          "restricao_card_game": "A geração de nova criatura/carta/zona não tem regra aprovada; suspender essa parte sem criar cópias."
+        },
+        {
+          "nome": "Join Malleables",
+          "economia": "acao_simultanea_dos_participantes",
+          "requisito": "Pelo menos quatro malleables menores do grupo a até 10 pés; cada um usa sua ação simultaneamente",
+          "opcoes": [
+            {
+              "participantes": 4,
+              "resultado": "Malleable, Moderate",
+              "chave": "TF-276"
+            },
+            {
+              "participantes": 8,
+              "resultado": "Malleable, Major",
+              "chave": "TF-284"
+            },
+            {
+              "participantes": 16,
+              "resultado": "Malleable, Massive",
+              "chave": "TF-286"
+            }
+          ],
+          "efeito": "Nova criatura com soma dos PV atuais, preservando condições, magias e efeitos de participantes; iniciativa conjunta, em espaço vazio anteriormente ocupado por um deles.",
+          "restricao_card_game": "Regras da arena/cartas permitem normalmente somente 1 ativa por lado; não executar sem decisão administrativa para simultaneidade, criação e zonas."
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "magias": [],
+      "multiataque": null,
+      "recargas": []
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4",
+      "ficha_anterior": "resumo_deck_nao_homologado",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/06_Malleable_Minor.md",
+      "regra_de_edicao": "Atributos e habilidades na edição da publicação indicada; SRD 5.2.1 apenas regras gerais para fontes não-SRD.",
+      "status_validacao_mecanica": "CONCLUIDA",
+      "homologacao_de_carta_pelo_administrador": false,
+      "observacoes": [
+        "Dados completos do bloco original 5e; passiva 12 condiz com SAB +2. Absorção psíquica não concede PV acima do máximo."
+      ],
+      "pendencias_operacionais": [
+        "Join Malleables pode exigir mais criaturas em campo do que o Card Game permite.",
+        "Psychic Drain pode transformar uma criatura derrotada, mas criação/entrada de cartas não está aprovada."
+      ],
+      "divergencias": [],
+      "fontes": [
+        {
+          "classe": "fonte_primaria_identificada",
+          "titulo": "Kobold Press, Tome of Beasts 2 (estatísticas originais de Minor Malleable)",
+          "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+        },
+        {
+          "classe": "transcricao_mecanica_publica",
+          "titulo": "5eSRD — Malleable, Minor",
+          "url": "https://www.5esrd.com/database/creature/malleable-minor/"
+        },
+        {
+          "classe": "contraprova_texto_edicao_5e",
+          "titulo": "Tome of Beasts 2, páginas 251–300 (reprodução pública para conferência)",
+          "url": "https://anyflip.com/zijip/drkg/basic/251-300"
+        }
+      ],
+      "campos_nao_listados": "Não se presumem habilidades extras ou bônus não indicados no bloco original.",
+      "habilidade_suporte_deck": "Proposta separada: não incorporada automaticamente à ficha base."
+    }
+  },
+  "documentos_complementares": []
+}

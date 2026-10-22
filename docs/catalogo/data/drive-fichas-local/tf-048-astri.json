@@ -1,0 +1,218 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-048",
+  "nome_catalogo": "Astri",
+  "origem_arquivo": "TF-048-astri-ficha (1).json",
+  "sha256_origem": "acd8d3446741591eb88ed986a5948f132e54a838ecd37b8ef0b1208da851e2a1",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-016",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 58,
+      "ORDEM_1320": 203,
+      "CHAVE": "TF-048",
+      "ID_CATALOGO": "TF-048",
+      "nome_catalogo": "Astri",
+      "tipo_catalogo": "Celestial",
+      "nd": "8",
+      "classe": "Incomum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-022"
+      ],
+      "publicacao_catalogo": "Tome of Beasts 2",
+      "editora_catalogo": "Kobold Press",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "COMPLETA_FONTE_SEM_HOMOLOGACAO",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "tipo_mecanico_fonte": "Celestial",
+      "CA": 15,
+      "PV_maximos": 112,
+      "nd_fonte": "8",
+      "atributos": {
+        "FOR": 12,
+        "DES": 21,
+        "CON": 18,
+        "INT": 15,
+        "SAB": 16,
+        "CAR": 20
+      },
+      "salvaguardas_fonte": {
+        "SAB": 6,
+        "CAR": 8
+      },
+      "pericias": {
+        "Percepção": 6,
+        "Furtividade": 8,
+        "Sobrevivência": 9
+      },
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "escavacao": 30
+      },
+      "resistencias_dano": [
+        "veneno",
+        "contundente de ataques não mágicos",
+        "perfurante de ataques não mágicos",
+        "cortante de ataques não mágicos"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exaustão"
+      ],
+      "sentidos": {
+        "visao_escuro_pes": 90,
+        "percepcao_passiva": 16
+      },
+      "idiomas": [
+        "Comum"
+      ],
+      "tracos": [
+        {
+          "nome": "Enforce Good Deeds",
+          "gatilho": "Criatura recebe auxílio do astri, por exemplo alimento ou cura",
+          "salvaguarda": "SAB CD 16",
+          "falha": "Efeito de geas por 30 dias; obrigação de auxiliar seres não hostis feridos ou exaustos",
+          "observacao": "Envolve campanhas e compromissos prolongados; regra de jogo pendente"
+        },
+        {
+          "nome": "Helping Hand",
+          "efeito": "Pode usar Ajudar como ação bônus no próprio turno"
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos"
+        },
+        {
+          "nome": "Magic Weapons",
+          "efeito": "Ataques com armas contam como mágicos"
+        },
+        {
+          "nome": "Innate Spellcasting",
+          "atributo": "CAR",
+          "cd_magia": 16,
+          "bonus_ataque_magico": 8,
+          "componentes": "Sem materiais; não inferir dispensa de demais componentes"
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Três ataques Bite"
+        },
+        {
+          "nome": "Bite",
+          "bonus_ataque": 8,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "formula": "1d8+5",
+              "tipo": "perfurante",
+              "media_na_fonte": 9
+            },
+            {
+              "formula": "2d6",
+              "tipo": "radiante",
+              "media_na_fonte": 7
+            }
+          ]
+        },
+        {
+          "nome": "Healing Touch",
+          "usos_dia": 3,
+          "alcance": "toque em outra criatura",
+          "cura": {
+            "formula": "3d8+1",
+            "media_na_fonte": 14
+          },
+          "remover": [
+            "doença",
+            "veneno",
+            "cegueira",
+            "surdez"
+          ]
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [
+        {
+          "nome": "Defensive Counter",
+          "gatilho": "Criatura a até 5 pés faz ataque contra outra criatura que não o astri",
+          "condicao": "O astri consegue ver o atacante",
+          "efeito": "Realiza um ataque Bite contra o atacante"
+        }
+      ],
+      "magias": [
+        {
+          "frequencia": "à vontade",
+          "magias": [
+            "create or destroy water",
+            "detect poison and disease",
+            "produce flame",
+            "purify food and drink"
+          ]
+        },
+        {
+          "frequencia": "3/dia cada",
+          "magias": [
+            "bless",
+            "create food and water",
+            "lesser restoration"
+          ]
+        },
+        {
+          "frequencia": "1/dia",
+          "magias": [
+            "remove curse"
+          ]
+        }
+      ],
+      "recursos_limitados": [
+        {
+          "recurso": "Healing Touch",
+          "usos_dia": 3
+        },
+        {
+          "recurso": "Magias inatas",
+          "distribuicao": "3/dia cada e 1/dia cada conforme lista"
+        }
+      ],
+      "porte": "Pequeno",
+      "alinhamento": "caótico e bom",
+      "formula_PV": "15d6+60",
+      "telepatia_pes": 120,
+      "iniciativa_bonus": 5,
+      "proficiencia_bonus": 3
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/22_Astri.md",
+      "fonte_mecanica": [
+        "https://www.5esrd.com/database/creature/astri/"
+      ],
+      "fonte_primaria_pdf_na_biblioteca": false,
+      "observacoes": [
+        "O arquivo do deck é resumo, a ficha completa foi pesquisada na fonte indicada.",
+        "Na página 5esrd consta Alternate Critical, mas a própria página atribui o item a Monster Crits for 5e; não foi incorporado ao monstro de Tome of Beasts 2.",
+        "Healing Touch da fonte é uma ação do astri, não uma carta de suporte aprovada."
+      ],
+      "inconsistencias": [],
+      "homologacao_de_suporte": false,
+      "regras_gerais": "SRD CC 5.2.1; atributos e ações mantidos na edição da fonte Kobold Press, sem mesclar edições.",
+      "dados_deducidos": [
+        "Iniciativa +5 calculada de DES 21; não consta iniciativa explícita no bloco original.",
+        "Bônus de proficiência +3 obtido do ND 8 e modificadores publicados; não consta explicitamente na transcrição 5esrd."
+      ],
+      "validacao_fonte": "MECANICA_CONFERIDA"
+    }
+  },
+  "documentos_complementares": []
+}

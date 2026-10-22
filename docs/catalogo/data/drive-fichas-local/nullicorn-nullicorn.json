@@ -1,0 +1,196 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Nullicorn",
+  "origem_arquivo": "EXT-0036-nullicorn-ficha (1).json",
+  "sha256_origem": "30dcb993389416379edec5c6784e215d8a9d803a9cb0a6139310484465cd8c41",
+  "conteudo_original": {
+    "chave": "EXT-0036-nullicorn",
+    "ordem_priorizada": 95,
+    "ordem_1320": 36,
+    "nome": "Nullicorn",
+    "tipo": "Aberração",
+    "nd": "5",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da edição indicada na fila, não misturar edições",
+    "tamanho": "Grande",
+    "tendencia": "Caótico e mau",
+    "classe_armadura": 12,
+    "classe_armadura_detalhe": null,
+    "pontos_vida": 105,
+    "dados_vida": "14d10 + 28",
+    "deslocamentos_pes": {
+      "andar": 50
+    },
+    "atributos": {
+      "FOR": 18,
+      "DES": 14,
+      "CON": 15,
+      "INT": 11,
+      "SAB": 17,
+      "CAR": 16
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 2,
+      "CON": 2,
+      "INT": 0,
+      "SAB": 3,
+      "CAR": 3
+    },
+    "testes_resistencia": {},
+    "pericias": {},
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "necrótico",
+      "veneno"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "paralisado",
+      "envenenado"
+    ],
+    "sentidos": {
+      "visao_cegas_pes": 120,
+      "cego_alem_visao_cegas": true,
+      "percepcao_passiva": 13
+    },
+    "idiomas": [
+      "Celestial",
+      "Élfico",
+      "Silvestre"
+    ],
+    "telepatia_pes": 60,
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Magic Evasion",
+        "efeito": "Quando um feitiço ou efeito mágico permitir salvaguarda para metade do dano: sucesso evita todo dano; falha sofre metade."
+      },
+      {
+        "nome_original": "Limited Magic Immunity",
+        "efeito": "Ao final do turno do Nullicorn, qualquer feitiço/efeito mágico com duração que esteja afetando-o termina imediatamente (exemplo: hold monster, mage armor)."
+      },
+      {
+        "nome_original": "Magic Resistance",
+        "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+      },
+      {
+        "nome_original": "Nullifying Blight",
+        "tipo": "doença",
+        "incubacao": "1d4 horas",
+        "efeito": "Após incubação, enquanto doença não curada, perde 5 (2d4) PV no início do turno se portar ou vestir item mágico e cada vez que lança magia ou ativa item mágico.",
+        "progressao": "Ao fim de descanso longo, salvaguarda CON CD 13; falha aumenta dano perdido a cada uso de magia em 2 (1d4).",
+        "cura": "Sucesso em três salvaguardas desse tipo encerra doença."
+      },
+      {
+        "nome_original": "Sense Magic",
+        "efeito": "Detecta magia dentro de 120 pés à vontade; semelhante a detect magic, mas não é mágico."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Dois ataques Hooves e um Void Horn."
+      },
+      {
+        "nome_original": "Hooves",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 11,
+            "formula": "2d6 + 4",
+            "tipo": "concussão"
+          }
+        ]
+      },
+      {
+        "nome_original": "Void Horn",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 8,
+            "formula": "1d8 + 4",
+            "tipo": "energia"
+          }
+        ],
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "efeito_falha": "Contrai doença Nullifying Blight."
+      },
+      {
+        "nome_original": "Spread Blight",
+        "recarga": "5-6",
+        "area": {
+          "tipo": "raio",
+          "centro": "nullicorn",
+          "raio_pes": 20
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 13
+        },
+        "falha": {
+          "dano": [
+            {
+              "medio": 18,
+              "formula": "4d8",
+              "tipo": "necrótico"
+            }
+          ],
+          "efeito": "Contrai doença Nullifying Blight."
+        },
+        "sucesso": {
+          "dano": "metade",
+          "efeito": "Não contrai doença."
+        },
+        "errata_aplicada": true
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Spread Blight",
+        "recarga": "5-6"
+      }
+    ],
+    "notas_de_validacao": [
+      "Errata oficial da Kobold Press (Tome of Beasts 3, pág. 292) corrige texto truncado de Spread Blight; salvaguarda bem-sucedida toma metade do dano e não contrai doença.",
+      "Nullifying Blight requer incubação 1d4 horas; não aplicar dano instantâneo adicional no momento da infecção.",
+      "Magic Evasion só para danos de magia/efeitos mágicos com salvaguarda que normalmente reduz dano pela metade."
+    ],
+    "fontes": [
+      {
+        "tipo": "publicacao_TOB3",
+        "url": "https://anyflip.com/plzy/jxhb/basic/251-300",
+        "pagina_impressa": 292
+      },
+      {
+        "tipo": "transcricao_nullicorn",
+        "url": "https://5esrd.old.opengamingnetwork.com/database/creature/nullicorn/"
+      },
+      {
+        "tipo": "errata_oficial_KoboldPress",
+        "url": "https://koboldpress.com/errata/",
+        "pagina_impressa": 292
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

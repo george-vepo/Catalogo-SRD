@@ -1,0 +1,209 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-272",
+  "nome_catalogo": "Light Eater",
+  "origem_arquivo": "TF-272-light-eater-ficha.json",
+  "sha256_origem": "b64c03ec6eaf86327c8ba39455d36ca8e3716c1843c2acf3e616f2f3d9376eda",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Light Eater",
+      "chave": "TF-272",
+      "id_catalogo": "TF-272",
+      "ordem_priorizada": 4,
+      "ordem_1320": 8,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "1/2",
+      "classe": "Comum",
+      "editora": "Kobold Press",
+      "publicacao": "Tome of Beasts 3",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Pequeno",
+      "alinhamento": "sem alinhamento",
+      "ca": 14,
+      "ca_tipo": "armadura natural",
+      "pv": 26,
+      "pv_formula": "4d6+12",
+      "deslocamentos_pes": {
+        "terrestre": 10,
+        "voo": 40,
+        "natacao": null,
+        "escalada": null,
+        "pairar": true
+      },
+      "atributos": {
+        "FOR": 8,
+        "DES": 14,
+        "CON": 16,
+        "INT": 4,
+        "SAB": 17,
+        "CAR": 8
+      },
+      "iniciativa_bonus": 2,
+      "proficiencia_bonus": 2,
+      "salvaguardas": {},
+      "pericias": {
+        "Percepcao": 5,
+        "Furtividade": 4
+      },
+      "sentidos": {
+        "percepcao_as_cegas_pes": 120,
+        "cego_alem_desse_alcance": true,
+        "percepcao_passiva": 15
+      },
+      "idiomas": [],
+      "resistencias_dano": [],
+      "imunidades_dano": [
+        "fogo",
+        "radiante"
+      ],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [
+        "caído"
+      ],
+      "tracos": [
+        {
+          "nome": "False Appearance",
+          "condicao": "Permanecer imóvel em luz fraca ou escuridão",
+          "efeito": "Nesse estado, não se distingue de uma pedra comum."
+        },
+        {
+          "nome": "Light Absorption",
+          "gatilho": "Início do próprio turno a até 5 pés de uma fonte luminosa",
+          "efeito": "Enquanto permanecer a até 100 pés da fonte afetada, converte luz plena em luz fraca e luz fraca em escuridão. Ao extinguir por completo a luz dessa fonte, emite luz plena colorida por 20 pés e luz fraca por mais 20 pés durante 1 hora. Apaga chama não mágica; dissipa iluminação criada por magia de nível 2 ou inferior. Não há dissipação indicada para magias de nível superior."
+        },
+        {
+          "nome": "Light Sense",
+          "efeito": "Localiza precisamente fontes de luz a até 100 pés e percebe a direção geral de uma fonte a até 1 milha."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Tentacle",
+          "economia": "acao",
+          "tipo": "ataque_corpo_a_corpo_com_arma",
+          "bonus_acerto": 4,
+          "alcance_pes": 5,
+          "alvos": 1,
+          "dano": {
+            "dados": "1d6+2",
+            "tipo": "contundente"
+          }
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [
+        {
+          "nome": "Emergency Flare",
+          "economia": "reacao",
+          "gatilho": "Quando sofre dano",
+          "recarga": "descanso curto ou longo",
+          "area": {
+            "forma": "raio",
+            "raio_pes": 30,
+            "origem": "criatura"
+          },
+          "alvos": "cada criatura dentro de 30 pés",
+          "salvaguarda": {
+            "atributo": "CON",
+            "cd": 12
+          },
+          "falha": {
+            "condicao": "cego",
+            "duracao": "até 1 minuto",
+            "repeticao": "Nova salvaguarda de CON CD 12 no fim de cada turno do alvo; sucesso encerra"
+          },
+          "sucesso": "sem condição"
+        }
+      ],
+      "acoes_lendarias": [],
+      "magias": [],
+      "multiataque": null,
+      "recargas": [
+        {
+          "recurso": "Emergency Flare",
+          "recupera": "descanso curto ou longo"
+        }
+      ],
+      "variantes_opcionais": [
+        {
+          "nome": "Familiar",
+          "status": "opcional; não ativada por padrão",
+          "pre_requisito": "Serve voluntariamente como familiar de outra criatura",
+          "efeito": "Vínculo telepático; companheiro percebe os sentidos da criatura dentro de 1 milha; resistência a dano radiante para o companheiro enquanto estiver a até 10 pés; o Light Eater pode encerrar o vínculo."
+        }
+      ],
+      "mecanica_anterior_reutilizada": {
+        "campos": "estatisticas e mecanicas do Markdown 04_Light_Eater.md",
+        "confirmada_por": "Tome of Beasts 3, p. 261"
+      },
+      "modificadores_atributos": {
+        "FOR": -1,
+        "DES": 2,
+        "CON": 3,
+        "INT": -3,
+        "SAB": 3,
+        "CAR": -1
+      }
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4",
+      "ficha_anterior": "resumo_deck_nao_homologado",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/04_Light_Eater.md",
+      "regra_de_edicao": "atributos mantidos conforme publicação original; SRD 5.2.1 utilizado como referência de resolução, sem substituir estatísticas pela edição 2024",
+      "status_validacao_mecanica": "CONCLUIDA",
+      "homologacao_de_carta_pelo_administrador": false,
+      "status_aprovacao_catalogo": "CATALOGO_607",
+      "nao_inferir_ausencia_de_ataques_especiais": true,
+      "observacoes": [
+        "Não alterar/reproduzir mecanicamente a habilidade de suporte opcional escolhida no deck: é proposta separada da ficha original."
+      ],
+      "pendencias_operacionais": [],
+      "fontes": [
+        {
+          "classe": "publicacao_original_identificada",
+          "referencia": "Kobold Press, Tome of Beasts 3 (2023), Light Eater, p. 262",
+          "url": "https://koboldpress.com/tools/"
+        },
+        {
+          "classe": "transcricao_publica",
+          "referencia": "Tome of Beasts 3, seções 251–300 (inclui Light Eater)",
+          "url": "https://anyflip.com/tkzwp/dofg/basic/251-300"
+        },
+        {
+          "classe": "catalogo_autor",
+          "referencia": "Kobold Press — monster catalog",
+          "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+        },
+        {
+          "classe": "errata_oficial_verificada",
+          "referencia": "Kobold Press — Errata Tome of Beasts 3, 29/05/2025. Não localizada alteração específica de Light Eater.",
+          "url": "https://koboldpress.com/errata/"
+        }
+      ],
+      "revalidacao_2026_10_19": {
+        "data_execucao_local": "2026-10-19",
+        "tipo": "auditoria_manual_uma_criatura",
+        "resultado": "CONCLUIDA_VALIDACAO_MECANICA",
+        "status_carta": "CATALOGO_607; homologacao_administrativa_nao_comprovada",
+        "edicao_confirmada": "Kobold Press, Tome of Beasts 3 (2023), página 262",
+        "criterio": "cotejo campo a campo do JSON com ficha pública transcrita e consulta à errata oficial",
+        "divergencias_corrigidas": [
+          "pagina de fonte bibliografica p. 261 -> p. 262"
+        ],
+        "divergencias_mecanicas": [],
+        "lacunas_mecanicas_bloqueantes": [],
+        "fonte_texto_mecanico": "https://anyflip.com/tkzwp/dofg/basic/251-300",
+        "fonte_publicacao_editorial": "https://koboldpress.com/kpstore/product/tome-of-beasts-3-for-5th-edition/",
+        "fonte_errata": "https://koboldpress.com/errata/",
+        "nota": "Habilidade de suporte Tentacle (D) apresentada no Markdown do deck não é uma habilidade de suporte oficial e não foi incorporada como regra nova. Variante Familiar permanece opcional, não ativada. Sem alterações a CA, PV, habilidades, ataque, recarga ou imunidades.",
+        "sha256_versao_anterior": "201c689c6c2d3df7413f246e9aa2d9fb8311f0254c934115475217e5c4bdfcc6"
+      }
+    }
+  },
+  "documentos_complementares": []
+}

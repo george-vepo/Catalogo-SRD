@@ -1,0 +1,243 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Dyrrn",
+  "origem_arquivo": "EXT-0094-dyrrn-ficha (1).json",
+  "sha256_origem": "7e02983a4b9e7144ee0df8f6b0f55161c3b4b36c68644cb309807e96473a9862",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-034",
+    "data_validacao": "2026-10-19",
+    "ordem_priorizada": 130,
+    "ordem_1320": 94,
+    "chave": "EXT-0094-dyrrn",
+    "id_catalogo": "",
+    "nome": "Dyrrn",
+    "tipo": "Aberração",
+    "nd": 24,
+    "raridade": "Mítica",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Eberron: Rising from the Last War",
+    "edicao": "Eberron: Rising from the Last War (2019)",
+    "status_ficha": "COMPLETA_MECANICAS_VALIDADA_COM_RESSALVAS",
+    "homologacao_administrativa": false,
+    "regra_combate": "SRD 5.2.1; requisitos originais das habilidades da edição de cada criatura preservados",
+    "fontes": [
+      "https://online.anyflip.com/tqblu/xfac/files/basic-html/page289.html",
+      "https://online.anyflip.com/tqblu/xfac/files/basic-html/page288.html",
+      "https://onyx5e.com/en/bestiary/dyrrn/"
+    ],
+    "tamanho": "Média",
+    "tendencia": "Caótico e mau",
+    "classe_armadura": 21,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 325,
+    "dados_vida": "31d8 + 186",
+    "deslocamentos_pes": {
+      "caminhar": 40,
+      "voar": 40,
+      "pairar": true
+    },
+    "iniciativa_modificador": 5,
+    "atributos": {
+      "FOR": 26,
+      "DES": 21,
+      "CON": 22,
+      "INT": 26,
+      "SAB": 23,
+      "CAR": 24
+    },
+    "modificadores": {
+      "FOR": 8,
+      "DES": 5,
+      "CON": 6,
+      "INT": 8,
+      "SAB": 6,
+      "CAR": 7
+    },
+    "testes_resistencia": {
+      "INT": 15,
+      "SAB": 13,
+      "CAR": 14
+    },
+    "pericias": {
+      "Arcanismo": 15,
+      "História": 15,
+      "Intuição": 13,
+      "Percepção": 13
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "veneno",
+      "psíquico"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "cego",
+      "enfeitiçado",
+      "exaustão",
+      "amedrontado",
+      "envenenado",
+      "caído"
+    ],
+    "sentidos": {
+      "visao_verdadeira_pes": 120,
+      "percepcao_passiva": 23
+    },
+    "idiomas": [
+      "Fala Profunda",
+      "telepatia 120 pés"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Alien Mind",
+        "efeito": "Se outra criatura tentar ler seus pensamentos ou causar dano psíquico a Dyrrn, ela realiza resistência INT CD 23; falha deixa atordoada até 1 minuto, repetindo o teste ao final dos próprios turnos."
+      },
+      {
+        "nome_original": "Legendary Resistance",
+        "limite": "3/dia",
+        "efeito": "Transforma falha em teste de resistência em sucesso."
+      },
+      {
+        "nome_original": "Magic Resistance",
+        "efeito": "Vantagem em testes de resistência contra magias e efeitos mágicos."
+      },
+      {
+        "nome_original": "Regeneration",
+        "recuperacao_pv": 20,
+        "gatilho": "início do turno",
+        "bloqueio": "dano radiante no turno anterior",
+        "efeito_original_a_0_pv": "A fonte diz que morre apenas se iniciar turno a 0 PV sem regenerar; no Card Game derrota imediata a 0 PV prevalece salvo homologação."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Um Tentacle Whip e um Corruption; substitui Tentacle Whip por Extract Brain somente se houver alvo agarrado válido."
+      },
+      {
+        "nome_original": "Tentacle Whip",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 15,
+        "alcance_pes": 10,
+        "dano": [
+          {
+            "dados": "3d10 + 8",
+            "media": 24,
+            "tipo": "cortante"
+          }
+        ],
+        "efeito": "Se alvo de tamanho Médio ou menor, agarrado (escapar CD 23), puxado para espaço desocupado a até 5 pés de Dyrrn; resistência INT CD 23 ou atordoado enquanto durar agarramento. Duas chicotadas disponíveis, cada uma ocupada até soltar alvo."
+      },
+      {
+        "nome_original": "Corruption",
+        "alcance_pes": 60,
+        "salvaguarda": "CON",
+        "cd": 23,
+        "falha": {
+          "dano": "4d6 + 8",
+          "media": 22,
+          "tipo": "necrótico",
+          "duracao": "até 1 minuto",
+          "efeitos": [
+            "desvantagem em ataques",
+            "velocidade pela metade",
+            "para conjurar, INT CD 15 ou magia falha e é gasta"
+          ]
+        },
+        "repeticao": "nova resistência CON ao fim de cada turno"
+      },
+      {
+        "nome_original": "Extract Brain",
+        "requisito": "alvo incapacitado e agarrado por Dyrrn",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 15,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dados": "10d10",
+            "media": 55,
+            "tipo": "perfurante"
+          }
+        ],
+        "efeito": "Se reduzir alvo a 0 PV, a fonte descreve a morte por extração de cérebro; não altera automaticamente a regra de derrota no Card Game."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Teleport",
+        "efeito": "Teleporta até 30 pés para espaço desocupado visível."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome_original": "Tentacle Whip",
+        "custo": 1,
+        "efeito": "Realiza um ataque Tentacle Whip."
+      },
+      {
+        "nome_original": "Spawn Aberration",
+        "custo": 2,
+        "efeito": "Cria um intellect devourer adjacente, controlado por Dyrrn, que atua na iniciativa após Dyrrn; requer aprovação para o duelo com uma criatura ativa."
+      },
+      {
+        "nome_original": "Mind Blast",
+        "custo": 3,
+        "area": "cone de 60 pés",
+        "salvaguarda": "INT CD 23",
+        "falha": {
+          "dano": "5d8 + 8 psíquico",
+          "media": 30,
+          "condicao": "atordoado até 1 minuto"
+        },
+        "repeticao": "INT no final dos próprios turnos"
+      }
+    ],
+    "acoes_covil": [
+      {
+        "nome_original": "Corruption no covil",
+        "iniciativa": 20,
+        "efeito": "Usa Corruption; não pode repetir o mesmo efeito em rodadas consecutivas."
+      },
+      {
+        "nome_original": "Tentáculos no terreno",
+        "iniciativa": 20,
+        "area": "quadrado de 30 pés a até 120 pés",
+        "teste": "FOR CD 23",
+        "falha": "restrito ao entrar, iniciar ou terminar turno; escapar com ação e Atletismo FOR ou Acrobacia DES CD 23",
+        "duracao": "até iniciativa 20 da rodada seguinte"
+      },
+      {
+        "nome_original": "Dano mental no covil",
+        "iniciativa": 20,
+        "teste": "SAB CD 23 em criaturas escolhidas visíveis até 120 pés",
+        "falha": "4d12 (26) psíquico; salvo imunidade a psíquico, INT -1d4 por falha, com morte ao chegar a INT 0 conforme fonte"
+      }
+    ],
+    "recursos_limitados": [
+      {
+        "nome": "Legendary Resistance",
+        "quantidade": 3,
+        "recarga": "dia"
+      },
+      {
+        "nome": "Ações lendárias",
+        "quantidade": 3,
+        "recarga": "início do próprio turno"
+      }
+    ],
+    "conjuracao": null,
+    "bonus_proficiencia": 7,
+    "xp": 62000,
+    "pendencias_card_game": [
+      "Regeneração original após 0 PV contradiz derrota imediata do Card Game; não aplicar exceção sem homologação.",
+      "Spawn Aberration gera outra criatura e viola a configuração de uma criatura ativa por jogador; requisito pendente.",
+      "Teleporte, deslocamento e ações de covil dependem de arena aprovada.",
+      "Tentacle Whip exige controle de agarramento e de dois apêndices."
+    ],
+    "notas_de_validacao": []
+  },
+  "documentos_complementares": []
+}

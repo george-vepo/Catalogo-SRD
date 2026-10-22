@@ -1,0 +1,159 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Neogi",
+  "origem_arquivo": "EXT-0022-neogi-ficha (1).json",
+  "sha256_origem": "2f91d008ea8426704fcf67e7714b674d58c031606ae1adb2ebd410abef3c3058",
+  "conteudo_original": {
+    "chave": "EXT-0022-neogi",
+    "ordem_priorizada": 87,
+    "ordem_1320": 22,
+    "nome": "Neogi",
+    "tipo": "Aberração",
+    "nd": "3",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "editora": "Wizards of the Coast",
+    "edicao": "Monsters of the Multiverse, 2022; não usar Volo’s Guide to Monsters ou Neogi Master",
+    "tamanho": "Pequeno",
+    "tendencia": "Tipicamente leal e mau",
+    "classe_armadura": 15,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 33,
+    "dados_vida": "6d6 + 12",
+    "deslocamentos_pes": {
+      "andar": 30,
+      "escalar": 30
+    },
+    "atributos": {
+      "FOR": 6,
+      "DES": 16,
+      "CON": 14,
+      "INT": 13,
+      "SAB": 12,
+      "CAR": 15
+    },
+    "modificadores": {
+      "FOR": -2,
+      "DES": 3,
+      "CON": 2,
+      "INT": 1,
+      "SAB": 1,
+      "CAR": 2
+    },
+    "testes_resistencia": {},
+    "pericias": {
+      "Intimidação": 4,
+      "Percepção": 3
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [],
+    "sentidos": {
+      "visao_escuro_pes": 60,
+      "percepcao_passiva": 13
+    },
+    "idiomas": [
+      "Comum",
+      "Fala Profunda",
+      "Subcomum"
+    ],
+    "xp": 700,
+    "bonus_proficiencia": 2,
+    "caracteristicas": [
+      {
+        "nome_original": "Mental Fortitude",
+        "efeito": "Vantagem em salvaguardas contra as condições enfeitiçado e amedrontado; magia não pode fazer o neogi dormir."
+      },
+      {
+        "nome_original": "Spider Climb",
+        "efeito": "Escala superfícies difíceis, incluindo tetos de cabeça para baixo, sem teste de atributo."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Realiza um ataque Bite e dois ataques Claw com a mesma ação. Não confundir com a opção Tentacle of Hadar, exclusiva do Neogi Master."
+      },
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 5,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 6,
+            "formula": "1d6 + 3",
+            "tipo": "perfurante"
+          },
+          {
+            "medio": 14,
+            "formula": "4d6",
+            "tipo": "veneno"
+          }
+        ],
+        "efeito": "Alvo deve obter sucesso em CON CD 12 ou fica envenenado por 1 minuto. Repete a salvaguarda no fim de cada um de seus turnos para encerrar o efeito."
+      },
+      {
+        "nome_original": "Claw",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 5,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 8,
+            "formula": "2d4 + 3",
+            "tipo": "cortante"
+          }
+        ]
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Enslave",
+        "frequencia": "Recupera após descanso curto ou longo",
+        "tipo": "habilidade de encanto",
+        "alcance_pes": 30,
+        "requisito": "Uma criatura visível",
+        "teste_resistencia": {
+          "atributo": "SAB",
+          "cd": 14
+        },
+        "efeito": "Na falha, alvo fica magicamente enfeitiçado por até 1 dia, até a morte do neogi, ou até ficar a mais de 1 milha dele; obedece comandos, não pode usar reações; comunicação telepática entre ambos até 1 milha. Cada vez que sofre dano pode repetir SAB CD 14 e encerrar o efeito no sucesso."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "nome": "Enslave",
+        "recarga": "após descanso curto ou longo"
+      }
+    ],
+    "notas_de_validacao": [
+      "Neogi, ND 3, CA 15, 33 PV, Multiattack Bite + 2 Claw; não confundir com Neogi Master, cujas magias e Tentacle of Hadar não pertencem ao Neogi comum.",
+      "Em Monsters of the Multiverse (2022), Enslave é ação bônus, e não ação, com recarga após descanso curto ou longo.",
+      "Enslave controla criatura alheia e sua interação com o limite de criatura ativa, controladores e ações precisa de decisão administrativa; não se cria carta nem criatura adicional.",
+      "A versão 2022 preserva dano cortante de Claw; não misturar com ataques/perfis de outras versões."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "fontes": [
+      {
+        "tipo": "reproducao_publicacao_MPMM_2022",
+        "url": "https://anyflip.com/kueew/luzk/basic/151-200",
+        "pagina_impressa": "192",
+        "uso": "bloco Neogi em separado do Neogi Master"
+      },
+      {
+        "tipo": "confirmacao_por_produto",
+        "url": "https://www.fantasygrounds.com/library/dnd5e/npcs/neogi/",
+        "uso": "metadados ND 3, CA 15, 33 PV, vinculação à edição MPMM"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

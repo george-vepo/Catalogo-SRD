@@ -1,0 +1,482 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-009",
+  "nome_catalogo": "Astral Devourer",
+  "origem_arquivo": "TF-009-astral-devourer-ficha.json",
+  "sha256_origem": "b5e6c9bde658074334f0cbd1e5872c58e0ba14ec00d12edfcc9965de9470504e",
+  "conteudo_original": {
+    "schema": "srd-card-game-ficha-pesquisa-v1",
+    "criatura": "Astral Devourer",
+    "CHAVE": "TF-009",
+    "ID_CATALOGO": "TF-009",
+    "ORDEM_PRIORIZADA": 27,
+    "ORDEM_1320": 55,
+    "deck": "Aberração",
+    "tipo_catalogo": "Aberração",
+    "classe_catalogo": "Incomum",
+    "ND_catalogo": 8,
+    "fonte_publicacao": "Tome of Beasts 2 (5e, 2020)",
+    "CA": 16,
+    "PV_maximo": 90,
+    "status_validacao": "VALIDACAO_MECANICA_CONCLUIDA_SEM_HOMOLOGACAO",
+    "homologacao_administrativa": false,
+    "data_validacao": "2026-10-19",
+    "origem_biblioteca": "/SRD Card Game/Decks/Aberração/Fichas por criatura/27_Astral_Devourer.md",
+    "fontes_pesquisa_web": [
+      {
+        "url": "https://www.dndgrove.com/bestiary/8/astral-devourer",
+        "tipo": "referência pública; confirmação cruzada, não substitui a ficha do deck"
+      },
+      {
+        "url": "https://www.5esrd.com/database/creature/astral-devourer/",
+        "tipo": "referência pública; confirmação cruzada, não substitui a ficha do deck"
+      },
+      {
+        "url": "https://fliphtml5.com/rboli/yddi/kobold-press-tome-of-beasts-2-5e2020pdf_compress/32/",
+        "tipo": "referência pública; confirmação cruzada, não substitui a ficha do deck"
+      }
+    ],
+    "ficha_existente_preservada": {
+      "fonte_publicacao": "Tome of Beasts 2",
+      "editora_fonte": "Kobold Press / Open Design LLC",
+      "sistema": "D&D 5e; metadados confirmados no índice oficial Kobold Press; bloco mecânico consultado em transcrições secundárias.",
+      "terreno_fonte": [
+        "Badlands",
+        "Planar"
+      ],
+      "porte": "Medium",
+      "tipo_fonte": "swarm of Tiny aberrations",
+      "alinhamento": "chaotic evil",
+      "nd_fonte": "8",
+      "ca": 16,
+      "ca_base": "natural armor",
+      "pv": 90,
+      "formula_pv": "12d8 + 36",
+      "deslocamento": {
+        "walk_ft": 30,
+        "fly_ft": 30,
+        "fly_hover": true,
+        "swim_ft": 30
+      },
+      "salvaguardas": {
+        "DEX": 6,
+        "INT": 5
+      },
+      "pericias": {
+        "Perception": 6,
+        "Stealth": 6
+      },
+      "resistencias_dano": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "imunidades_dano": [
+        "poison",
+        "psychic"
+      ],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicao": [
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "stunned"
+      ],
+      "sentidos": [
+        "darkvision 60 ft."
+      ],
+      "percepcao_passiva": 16,
+      "idiomas": [
+        "Deep Speech",
+        "Void Speech"
+      ],
+      "bonus_proficiencia": 3,
+      "bonus_proficiencia_origem": "derivado do ND 8 pela progressão de D&D 5e; não aparece como campo separado nas transcrições consultadas",
+      "tracos": [
+        {
+          "nome": "Collective Mind",
+          "resumo_mecanico": "Os indivíduos que formam o enxame compartilham uma mente. Pode comunicar-se telepaticamente com qualquer serpente individual a até 1 mile e não pode ser surpreendido."
+        },
+        {
+          "nome": "Magic Resistance",
+          "resumo_mecanico": "Tem vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        },
+        {
+          "nome": "Swarm",
+          "resumo_mecanico": "Pode ocupar o espaço de outra criatura, e vice-versa, e atravessar qualquer abertura que caiba uma serpente Tiny. Não recupera PV nem recebe PV temporários, exceto por Serpent Spray e Recombine."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "resumo_mecanico": "Faz dois ataques corpo a corpo."
+        },
+        {
+          "nome": "Hungering Serpents",
+          "resumo_mecanico": "Ataque corpo a corpo +7, alcance 0 ft., contra um alvo no espaço do enxame; causa 8 (2d8) piercing e 14 (4d6) poison. Com metade dos PV ou menos, o dano piercing passa a 4 (1d8). A transcrição da página impressa registra média 8 para 2d8; Robinloft calcula 9.",
+          "ataque": "+7",
+          "alcance": "0 ft.",
+          "dano": [
+            {
+              "dados": "2d8 (ou 1d8 com metade dos PV ou menos)",
+              "tipo": "piercing; média impressa 8"
+            },
+            {
+              "dados": "4d6",
+              "tipo": "poison"
+            }
+          ]
+        },
+        {
+          "nome": "Serpent Spray (Recharge 6)",
+          "resumo_mecanico": "Arremessa serpentes astrais. Cada criatura a até 20 ft. faz salvaguarda de Destreza CD 16; sofre 14 (4d6) piercing e 14 (4d6) poison em falha, ou metade do dano em sucesso. Recupera PV iguais ao maior valor individual de dano piercing causado pelo spray.",
+          "uso": "Recharge 6",
+          "salvaguarda": "Dexterity DC 16",
+          "alcance": "20 ft.",
+          "dano": [
+            {
+              "dados": "4d6",
+              "tipo": "piercing"
+            },
+            {
+              "dados": "4d6",
+              "tipo": "poison"
+            }
+          ]
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [
+        {
+          "nome": "Divide",
+          "resumo_mecanico": "Quando sofre dano bludgeoning, piercing ou slashing e tem ao menos 10 PV, se for Small ou maior pode dividir-se em dois devourers novos. Cada um recebe metade dos PV originais (arredondada para baixo), fica uma categoria de tamanho menor e compartilha mente coletiva com o outro enquanto separados por até 1 mile."
+        },
+        {
+          "nome": "Recombine",
+          "resumo_mecanico": "Quando um ou mais devourers Small ou menores da mesma mente coletiva estão a até 5 ft. entre si, podem combinar-se. A nova criatura fica uma categoria de tamanho maior que a maior forma original e soma os PV; o total não pode exceder o máximo normal de PV de um devourer Medium."
+        }
+      ],
+      "conjuracao": null,
+      "secoes_nao_listadas": [
+        "vulnerabilidades de dano",
+        "ações bônus",
+        "ações lendárias",
+        "ações míticas",
+        "ações de covil",
+        "conjuração"
+      ],
+      "fontes_adicionais": [
+        {
+          "titulo": "Índice oficial Kobold Press 5e",
+          "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+        },
+        {
+          "titulo": "Produto oficial Tome of Beasts 2 (5e)",
+          "url": "https://koboldpress.com/kpstore/product/tome-of-beasts-2-for-5th-edition-hardcover-pdf/"
+        },
+        {
+          "titulo": "Cópia secundária da página impressa A29",
+          "url": "https://fliphtml5.com/rboli/yddi/kobold-press-tome-of-beasts-2-5e2020pdf_compress/32/"
+        },
+        {
+          "titulo": "5eSRD (página individual exige JavaScript)",
+          "url": "https://www.5esrd.com/database/creature/astral-devourer/"
+        },
+        {
+          "titulo": "Robinloft (secundária; divergências mecânicas)",
+          "url": "https://www.robinloft.com/monsters/astral-devourer/tome-of-beasts-2"
+        }
+      ],
+      "classe_fonte": "O índice oficial confirma D&D 5e, Tome of Beasts 2, Medium Aberration e ND 8. A mecânica vem de D&D Grove e de cópia secundária da página impressa A29; 5eSRD exige JavaScript. A impressão registra Challenge 8, dano médio 8 e resistências B/P/S sem qualificador; Robinloft diverge (CR 5 próprio, média 9 para 2d8 e resistência só contra ataques não mágicos). Natação 30 ft. aparece na impressão e no resultado indexado 5eSRD, mas é omitida por Grove/Robinloft.",
+      "completa": true,
+      "variante": "Medium swarm of Tiny aberrations, D&D 5e, Tome of Beasts 2; não confundir com outras criaturas chamadas Astral Devourer.",
+      "atributos": {
+        "FOR": {
+          "valor": 13,
+          "modificador": 1
+        },
+        "DES": {
+          "valor": 16,
+          "modificador": 3
+        },
+        "CON": {
+          "valor": 17,
+          "modificador": 3
+        },
+        "INT": {
+          "valor": 14,
+          "modificador": 2
+        },
+        "SAB": {
+          "valor": 16,
+          "modificador": 3
+        },
+        "CAR": {
+          "valor": 12,
+          "modificador": 1
+        }
+      },
+      "iniciativa": {
+        "modificador_base_des": 3,
+        "valor_formatado": "+3",
+        "origem": "derivada do modificador de Destreza; fonte não informa bônus adicional"
+      },
+      "fonte_url": "https://www.dndgrove.com/bestiary/8/astral-devourer",
+      "data_verificacao": "2026-10-10",
+      "secoes_cobertas": [
+        "identidade",
+        "porte",
+        "tipo",
+        "ND",
+        "CA",
+        "PV e fórmula",
+        "deslocamento",
+        "atributos e modificadores",
+        "salvaguardas",
+        "perícias",
+        "sentidos",
+        "idiomas",
+        "defesas",
+        "traços",
+        "ações",
+        "recursos e recargas",
+        "CDs e condições",
+        "reações"
+      ],
+      "secoes_nao_listadas_na_fonte": [
+        "vulnerabilidades de dano",
+        "ações bônus",
+        "ações lendárias",
+        "ações míticas",
+        "ações de covil",
+        "conjuração"
+      ],
+      "transcricao_integral": false,
+      "observacao_direitos": "Fatos mecânicos e resumo próprio; sem reprodução integral da redação externa."
+    },
+    "distincao_fontes": "ficha_existente_preservada = arquivo pré-existente na Biblioteca; mecanicas_validadas = interpretação operacional após confronto externo; adaptações do card game dependem de administrador",
+    "mecanicas_validadas": {
+      "tracos": [
+        {
+          "nome": "Collective Mind",
+          "resumo_mecanico": "Os indivíduos que formam o enxame compartilham uma mente. Pode comunicar-se telepaticamente com qualquer serpente individual a até 1 mile e não pode ser surpreendido."
+        },
+        {
+          "nome": "Magic Resistance",
+          "resumo_mecanico": "Tem vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        },
+        {
+          "nome": "Swarm",
+          "resumo_mecanico": "Pode ocupar o espaço de outra criatura, e vice-versa, e atravessar qualquer abertura que caiba uma serpente Tiny. Não recupera PV nem recebe PV temporários, exceto por Serpent Spray e Recombine."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "resumo_mecanico": "Faz dois ataques corpo a corpo."
+        },
+        {
+          "nome": "Hungering Serpents",
+          "resumo_mecanico": "Ataque corpo a corpo +7, alcance 0 ft., contra um alvo no espaço do enxame; causa 8 (2d8) piercing e 14 (4d6) poison. Com metade dos PV ou menos, o dano piercing passa a 4 (1d8). A transcrição da página impressa registra média 8 para 2d8; Robinloft calcula 9.",
+          "ataque": "+7",
+          "alcance": "0 ft.",
+          "dano": [
+            {
+              "dados": "2d8 (ou 1d8 com metade dos PV ou menos)",
+              "tipo": "piercing; média impressa 8"
+            },
+            {
+              "dados": "4d6",
+              "tipo": "poison"
+            }
+          ]
+        },
+        {
+          "nome": "Serpent Spray (Recharge 6)",
+          "resumo_mecanico": "Arremessa serpentes astrais. Cada criatura a até 20 ft. faz salvaguarda de Destreza CD 16; sofre 14 (4d6) piercing e 14 (4d6) poison em falha, ou metade do dano em sucesso. Recupera PV iguais ao maior valor individual de dano piercing causado pelo spray.",
+          "uso": "Recharge 6",
+          "salvaguarda": "Dexterity DC 16",
+          "alcance": "20 ft.",
+          "dano": [
+            {
+              "dados": "4d6",
+              "tipo": "piercing"
+            },
+            {
+              "dados": "4d6",
+              "tipo": "poison"
+            }
+          ]
+        }
+      ],
+      "reacoes": [
+        {
+          "nome": "Divide",
+          "resumo_mecanico": "Quando sofre dano bludgeoning, piercing ou slashing e tem ao menos 10 PV, se for Small ou maior pode dividir-se em dois devourers novos. Cada um recebe metade dos PV originais (arredondada para baixo), fica uma categoria de tamanho menor e compartilha mente coletiva com o outro enquanto separados por até 1 mile."
+        },
+        {
+          "nome": "Recombine",
+          "resumo_mecanico": "Quando um ou mais devourers Small ou menores da mesma mente coletiva estão a até 5 ft. entre si, podem combinar-se. A nova criatura fica uma categoria de tamanho maior que a maior forma original e soma os PV; o total não pode exceder o máximo normal de PV de um devourer Medium."
+        }
+      ],
+      "acoes_bonus": [],
+      "acoes_lendarias": [],
+      "multiataque": {
+        "quantidade": 2,
+        "tipo": "ataques corpo a corpo"
+      },
+      "serpent_spray": {
+        "tipo": "ação",
+        "recarga": "6",
+        "area_raio_ft": 20,
+        "cd": 16,
+        "salvaguarda": "DEX",
+        "falha": {
+          "piercing": "4d6",
+          "poison": "4d6"
+        },
+        "sucesso": "metade de cada componente de dano",
+        "cura": "igual ao maior dano perfurante individual efetivamente causado por Serpent Spray",
+        "restricao": "cura somente por Serpent Spray ou Recombine"
+      },
+      "hungering_serpents": {
+        "bonus_ataque": 7,
+        "alcance_ft": 0,
+        "alvo": "no espaço do enxame",
+        "piercing_pv_acima_metade": "2d8",
+        "piercing_pv_metade_ou_menos": "1d8",
+        "poison": "4d6"
+      },
+      "divisao_recombinacao": {
+        "divide": "reação depois de sofrer dano físico; duas entidades novas recebem cada uma floor(PV_original/2), tamanho menor, requisito PV>=10 e tamanho Small ou maior",
+        "recombine": "reação indicada pela fonte; corpos Small ou menores da mesma mente, até 5 pés, somam PV com limite 90"
+      }
+    },
+    "notas_auditoria": [
+      "Fonte impressa indica Medium swarm of Tiny aberrations: enxame não é um novo tipo de catálogo; tipo permanece Aberração",
+      "Omitido em D&D Grove, swim 30 ft. confirmado na fonte impressa",
+      "Média impressa 8 para 2d8 contraria média matemática usual 9; conservar dados 2d8 e não usar a média conflitante como dano fixo",
+      "Robinloft atribui restrição não-mágica à resistência que não consta na página impressa; preferida a especificação da fonte impressa sem qualificador"
+    ],
+    "pendencias_card_game": [
+      "Divide e Recombine geram múltiplas entidades; árbitro deve decidir compatibilidade com 1 criatura ativa",
+      "Serpent Spray pode alcançar mais de um alvo: definir mapa e alvos antes do ataque",
+      "Suporte proposto no deck para transferir cura a criatura ativa é homebrew NÃO homologado e não faz parte da ficha oficial"
+    ],
+    "atributos": {
+      "STR": 13,
+      "DEX": 16,
+      "CON": 17,
+      "INT": 14,
+      "WIS": 16,
+      "CHA": 12
+    },
+    "iniciativa_mod": 3,
+    "porte": "Medium",
+    "alinhamento": "chaotic evil",
+    "tipo_fonte": "swarm of Tiny aberrations",
+    "deslocamento_ft": {
+      "walk_ft": 30,
+      "fly_ft": 30,
+      "fly_hover": true,
+      "swim_ft": 30
+    },
+    "salvaguardas": {
+      "DEX": 6,
+      "INT": 5
+    },
+    "pericias": {
+      "Perception": 6,
+      "Stealth": 6
+    },
+    "sentidos": [
+      "darkvision 60 ft."
+    ],
+    "percepcao_passiva": 16,
+    "idiomas": [
+      "Deep Speech",
+      "Void Speech"
+    ],
+    "resistencias_dano": [
+      "bludgeoning",
+      "piercing",
+      "slashing"
+    ],
+    "imunidades_dano": [
+      "poison",
+      "psychic"
+    ],
+    "imunidades_condicao": [
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "poisoned",
+      "prone",
+      "restrained",
+      "stunned"
+    ],
+    "vulnerabilidades_dano": [],
+    "bonus_proficiencia": 3,
+    "formula_pv": "12d8 + 36",
+    "auditoria_campos": {
+      "CA": "conferido",
+      "PV": "conferido",
+      "ND": "conferido",
+      "acoes": "conferidas conforme edição identificada",
+      "apto_jogo_sem_adaptacao": false
+    },
+    "XP": 3900,
+    "fonte_pagina_impressa": 30,
+    "edicao_oficial_mais_recente_verificada": {
+      "publicacao": "Tome of Beasts 2",
+      "ano_edicao": 2020,
+      "editora": "Kobold Press",
+      "sistema": "D&D 5e",
+      "pagina_impressa": 30,
+      "status": "Edição mais recente identificada até 2026-10-19; nenhuma revisão posterior desta criatura foi confirmada",
+      "fonte_editora": "https://koboldpress.com/kpstore/product/tome-of-beasts-2-for-5th-edition/",
+      "conferencia_pagina_impressa_reproduzida": "https://fliphtml5.com/rboli/yddi/kobold-press-tome-of-beasts-2-5e2020pdf_compress/32/",
+      "fonte_secundaria": "https://www.5esrd.com/database/creature/astral-devourer/"
+    },
+    "errata_oficial_verificada": {
+      "fonte": "https://koboldpress.com/errata/",
+      "data_publicada": "2025-05-29",
+      "correcao_para_criatura": false,
+      "nota": "A seção Tome of Beasts 2 não apresenta entrada para Astral Devourer ou para a página 30."
+    },
+    "auditoria_2026_10_19": {
+      "resultado": "MECANICAS_CONFERIDAS_SEM_DIVERGENCIAS_RELEVANTES; REFERENCIAS_E_XP_COMPLEMENTADOS",
+      "status_administrativo": "FICHA_VALIDADA_MECANICAMENTE_SEM_HOMOLOGACAO_DO_SUPORTE_OU_DAS_REGRAS_DE_MULTIPLAS_ENTIDADES",
+      "fonte_documental": "Deck 27_Astral_Devourer.md, JSON anterior da Biblioteca e página 30 impressa do Tome of Beasts 2 (2020) em reprodução de terceiro",
+      "campos_conferidos": [
+        "identidade",
+        "tipo enxame de aberracoes Minúsculas, catalogado Aberração",
+        "ND 8, CA 16, PV 90 (12d8 + 36), XP 3900",
+        "movimentos 30/voo 30 pairar/natacao 30",
+        "atributos, saves, pericias, resistencias, imunidades, sentidos e idiomas",
+        "Collective Mind, Magic Resistance, Swarm",
+        "Multiattack, Hungering Serpents, Serpent Spray recarga 6",
+        "reacoes Divide e Recombine"
+      ],
+      "peculiaridades_da_fonte": [
+        "O impresso indica média 8 para 2d8 e média 4 para 1d8. Médias aritméticas usuais são 9 e 4,5; preservar os dados e não substituir por outro valor fixo arbitrário.",
+        "A versão secundária D&D Grove omite a natação de 30 pés; a página impressa a confirma.",
+        "No Livro, Medium swarm of Tiny aberrations descreve tamanho/composição; Enxame não é um 15º tipo do catálogo.",
+        "O alcance 0 ft do ataque exige que o alvo esteja no espaço do enxame.",
+        "As resistências B/P/S no impresso não incluem a limitação a ataques não mágicos presente em alguns sites secundários."
+      ],
+      "dependencias_de_regras": [
+        "Divide e Recombine podem gerar mais de uma entidade: o sistema de uma criatura ativa por jogador não aprova a multiplicação automática.",
+        "Serpent Spray afeta todas as criaturas na área de 20 pés e exige regras de posicionamento e alvos.",
+        "O Serpent Spray oficial cura o próprio enxame conforme o maior dano perfurante individual; transferir cura à carta ativa é proposta homebrew não homologada.",
+        "Reactions seguem a economia de ações, sem permissões excepcionais automáticas."
+      ],
+      "sem_alteracao_mecanica": true,
+      "controles_globais_nao_alterados": true
+    }
+  },
+  "documentos_complementares": []
+}

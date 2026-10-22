@@ -1,0 +1,285 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Cave Sovereign",
+  "origem_arquivo": "EXT-0085-cave-sovereign-ficha (1).json",
+  "sha256_origem": "4b0b46367d284afabf69794779b7d5757a6ce54d68190f76100d42f781bc9078",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-032",
+    "data_validacao": "2026-10-18T18:45:00-03:00",
+    "ordem_priorizada": 124,
+    "ordem_1320": 85,
+    "chave": "EXT-0085-cave-sovereign",
+    "id_catalogo": null,
+    "nome": "Cave Sovereign",
+    "tipo": "Aberração",
+    "nd": 16,
+    "raridade": "Lendária",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "Tome of Beasts 3",
+    "status_ficha": "COMPLETA_MECANICAS_VALIDADA_COM_RESSALVAS",
+    "homologacao_administrativa": false,
+    "regra_combate": "SRD 5.2.1 quando aplicável; poderes originais 5e mantidos, sem adaptação não aprovada",
+    "fontes": [
+      "https://www.5esrd.com/database/creature/cave-sovereign/",
+      "https://anyflip.com/plzy/jxhb/basic/51-100"
+    ],
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "veneno",
+      "radiante",
+      "concussão, perfuração e corte não mágicos exceto com adamantina"
+    ],
+    "imunidades_dano": [
+      "psíquico"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado"
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Um Bite e dois Slam; pode substituir o Bite por Tail, mantendo dois Slam."
+      },
+      {
+        "nome_original": "Bite",
+        "tipo": "corpo a corpo",
+        "bonus_ataque": 12,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dados": "4d8 + 7",
+            "media": 25,
+            "tipo": "perfurante"
+          },
+          {
+            "dados": "2d10",
+            "media": 11,
+            "tipo": "veneno"
+          }
+        ]
+      },
+      {
+        "nome_original": "Slam",
+        "tipo": "corpo a corpo",
+        "bonus_ataque": 12,
+        "alcance_pes": 10,
+        "dano": [
+          {
+            "dados": "3d10 + 7",
+            "media": 23,
+            "tipo": "concussão"
+          }
+        ]
+      },
+      {
+        "nome_original": "Tail",
+        "tipo": "corpo a corpo",
+        "bonus_ataque": 12,
+        "alcance_pes": 10,
+        "dano": [
+          {
+            "dados": "3d12 + 7",
+            "media": 26,
+            "tipo": "cortante"
+          }
+        ],
+        "efeito": "Se alvo Grande ou menor, agarrado (escapar CD 18) e restringido; cauda fica ocupada enquanto durar esse agarramento."
+      },
+      {
+        "nome_original": "Consume Soul",
+        "recarga": "5-6",
+        "efeito": "Seleciona até 3 criaturas a 60 pés que estejam incapacitadas ou atordoadas por Deathlights: SAB CD 18; falha sofre 55 (10d10) psíquico, sucesso metade; se atordoado pelo poder, testa com desvantagem. Recupera PV iguais à metade do dano psíquico total causado. Humanoide morto por esse efeito retorna como zumbi subordinado em 1d4 rodadas, limitado a 30 zumbis, salvo revivido ou corpo destruído."
+      },
+      {
+        "nome_original": "Spellcasting (Psionics)",
+        "efeito": "Conjura uma magia listada sem componentes; CAR, CD 18."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome_original": "Move",
+        "custo": 1,
+        "efeito": "Movimenta até deslocamento, sem ataques de oportunidade."
+      },
+      {
+        "nome_original": "Telekinetic Reel",
+        "custo": 1,
+        "efeito": "Puxa 20 pés em linha reta uma criatura visível incapacitada ou atordoada por Deathlights."
+      },
+      {
+        "nome_original": "Cast a Spell",
+        "custo": 2,
+        "efeito": "Usa Spellcasting."
+      },
+      {
+        "nome_original": "Tail Attack",
+        "custo": 2,
+        "efeito": "Faz um Tail."
+      }
+    ],
+    "acoes_covil": [
+      {
+        "nome_original": "Disorienting Topography",
+        "efeito": "Até 3 criaturas visíveis a 60 pés, SAB CD18; falha trata áreas dentro de 120 pés como terreno difícil até iniciativa 20 da próxima rodada."
+      },
+      {
+        "nome_original": "Disrupt Light",
+        "efeito": "Até 3 alvos a 60 pés, SAB CD18; na falha luz intensa passa a penumbra; penumbra a escuridão; escuridão a escuridão mágica até próxima iniciativa 20, sem alterar brilho de Deathlights."
+      },
+      {
+        "nome_original": "Maddening Landscape",
+        "efeito": "Até três criaturas visíveis a 60 pés, SAB CD18; falha gera loucura breve aleatória por 1d4 rodadas."
+      }
+    ],
+    "recursos_limitados": [
+      {
+        "nome": "Legendary Resistance",
+        "usos": 3,
+        "periodo": "dia"
+      },
+      {
+        "nome": "Consume Soul",
+        "recarga": "5-6"
+      },
+      {
+        "nome": "ações lendárias",
+        "pontos": 3,
+        "renova": "início do turno"
+      },
+      {
+        "nome": "dimension door",
+        "usos": 3,
+        "periodo": "dia"
+      },
+      {
+        "nome": "telekinesis",
+        "usos": 3,
+        "periodo": "dia"
+      },
+      {
+        "nome": "hallucinatory terrain",
+        "usos": 1,
+        "periodo": "dia"
+      }
+    ],
+    "pendencias_card_game": [
+      "Lair actions existem apenas se arena/covil aprovados; não ativá-las automaticamente.",
+      "Deathlights depende de iluminação, linha de visão e opção de desviar os olhos.",
+      "Consume Soul pode converter morto em zumbi na fonte; a regra de 1 criatura ativa e derrota aos 0 PV impede criar carta ou continuar combate sem decisão administrativa.",
+      "Ações lendárias só no fim do turno do oponente e dependem da economia de ações aprovada."
+    ],
+    "notas_de_validacao": [
+      "O bloco principal informa ND 16 e 253 PV. Um índice da reprodução de Tome of Beasts 3 classifica Cave Sovereign entre criaturas de ND 19; prevalece o bloco específico e a fila, ND 16."
+    ],
+    "tamanho": "Enorme",
+    "tendencia": "caótico e mau",
+    "classe_armadura": 18,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 253,
+    "dados_vida": "22d12 + 110",
+    "deslocamentos_pes": {
+      "andar": 40,
+      "escalar": 30
+    },
+    "atributos": {
+      "FOR": 25,
+      "DES": 8,
+      "CON": 20,
+      "INT": 16,
+      "SAB": 12,
+      "CAR": 20
+    },
+    "modificadores": {
+      "FOR": 7,
+      "DES": -1,
+      "CON": 5,
+      "INT": 3,
+      "SAB": 1,
+      "CAR": 5
+    },
+    "bonus_proficiencia": 5,
+    "xp": 15000,
+    "testes_resistencia": {
+      "CON": 10,
+      "INT": 8,
+      "SAB": 6
+    },
+    "pericias": {
+      "Percepção": 6
+    },
+    "sentidos": {
+      "visao_no_escuro_pes": 120,
+      "percepcao_tremor_pes": 60,
+      "percepcao_passiva": 16
+    },
+    "idiomas": [
+      "compreende todos mas não fala",
+      "telepatia 120 pés"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Deathlights",
+        "efeito": "Início do turno de criatura que enxergue antenas a até 30 pés, se soberano puder vê-la e não estiver incapacitado: SAB CD 18. Falha por >=5: atordoado até início do turno seguinte; demais falhas: incapacitado e velocidade 0 pelo mesmo período. Criatura não surpreendida pode desviar olhar desde início do turno para evitar teste, mas não enxerga o soberano; olhar novamente exige teste imediato."
+      },
+      {
+        "nome_original": "Illumination",
+        "efeito": "Antenas irradiam penumbra 5 pés, ampliada para 20 pés se qualquer criatura estiver incapacitada ou atordoada por Deathlights; pode suprimir no início do próprio turno quando ninguém afetado."
+      },
+      {
+        "nome_original": "Inscrutable",
+        "efeito": "Não pode ter emoções ou pensamentos lidos nem sofrer divinação recusada; Intuição para perceber intenção tem desvantagem."
+      },
+      {
+        "nome_original": "Legendary Resistance",
+        "efeito": "3/dia converte resistência falhada em sucesso."
+      },
+      {
+        "nome_original": "Magic Resistance",
+        "efeito": "Vantagem em testes de resistência contra magias e efeitos mágicos."
+      },
+      {
+        "nome_original": "Sinuous Form",
+        "efeito": "Pode atravessar abertura suficientemente grande para uma criatura Pequena se houver espaço para o volume."
+      },
+      {
+        "nome_original": "Spider Climb",
+        "efeito": "Escala paredes e tetos sem testes de habilidade."
+      }
+    ],
+    "conjuracao": {
+      "atributo": "CAR",
+      "cd": 18,
+      "componentes": "nenhum",
+      "magias": [
+        {
+          "nome": "detect thoughts",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "mage hand (invisível)",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "dimension door",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "telekinesis",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "hallucinatory terrain",
+          "usos": "1/dia (como ação)"
+        }
+      ]
+    }
+  },
+  "documentos_complementares": []
+}

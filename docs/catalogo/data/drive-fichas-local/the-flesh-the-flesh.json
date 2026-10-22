@@ -1,0 +1,189 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "The Flesh",
+  "origem_arquivo": "EXT-0030-the-flesh-ficha (1).json",
+  "sha256_origem": "f2b74a47f05fb38fa4edcd4cea2ef9a68e8f619a462b697795ba5dc2f1186da1",
+  "conteudo_original": {
+    "chave": "EXT-0030-the-flesh",
+    "ordem_priorizada": 92,
+    "ordem_1320": 30,
+    "nome": "The Flesh",
+    "tipo": "Aberração",
+    "nd": "4",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da edição especificada na fila, sem mistura com outras edições",
+    "tamanho": "Médio",
+    "tendencia": "Neutro e mau",
+    "classe_armadura": 14,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 78,
+    "dados_vida": "12d8 + 24",
+    "deslocamentos_pes": {
+      "andar": 30,
+      "escalar_em_forma_verdadeira": 30,
+      "nadar_em_forma_verdadeira": 30
+    },
+    "atributos": {
+      "FOR": 18,
+      "DES": 14,
+      "CON": 14,
+      "INT": 8,
+      "SAB": 13,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 2,
+      "CON": 2,
+      "INT": -1,
+      "SAB": 1,
+      "CAR": 0
+    },
+    "testes_resistencia": {},
+    "pericias": {
+      "Enganação": 4,
+      "Intuição": 5
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado"
+    ],
+    "sentidos": {
+      "visao_escuro_pes": 60,
+      "percepcao_passiva": 11
+    },
+    "idiomas": [
+      "Idiomas conhecidos pelo hospedeiro em vida"
+    ],
+    "xp": 1100,
+    "bonus_proficiencia": 2,
+    "caracteristicas": [
+      {
+        "nome_original": "Amphibious",
+        "efeito": "Respira água e ar."
+      },
+      {
+        "nome_original": "Amorphous",
+        "restricao": "Apenas forma verdadeira",
+        "efeito": "Pode atravessar espaço de até 1 polegada sem se espremer."
+      },
+      {
+        "nome_original": "Mimicry",
+        "restricao": "Apenas forma assumida",
+        "efeito": "Imita sons e voz do corpo assumido; criatura que ouvir pode detectar imitação com teste SAB (Intuição) CD 14."
+      },
+      {
+        "nome_original": "Regeneration",
+        "cura_por_turno": 5,
+        "gatilho": "No início do seu turno",
+        "bloqueio": "Se sofreu dano ácido ou fogo desde o turno anterior, não regenera no início do próximo turno.",
+        "efeito": "No bestiário, morre apenas se começar turno a 0 PV sem regenerar.",
+        "situacao_no_card_game": "Regra aprovada de derrota imediata a 0 PV prevalece até orientação expressa do administrador."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz dois ataques Slam OU dois ataques Manipulate Flesh, conforme texto da edição original."
+      },
+      {
+        "nome_original": "Slam",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 11,
+            "formula": "2d6 + 4",
+            "tipo": "concussão"
+          }
+        ],
+        "alcance_pes": 5
+      },
+      {
+        "nome_original": "Manipulate Flesh",
+        "efeito": "Escolhe uma das opções Manifold Bite, Tentacle ou Acidic Mucus para cada ataque."
+      },
+      {
+        "nome_original": "Manifold Bite",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 14,
+            "formula": "4d4 + 4",
+            "tipo": "perfurante"
+          }
+        ],
+        "alcance_pes": 5,
+        "efeito": "O alvo não pode recuperar PV até o início do próximo turno de The Flesh."
+      },
+      {
+        "nome_original": "Tentacle",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 11,
+            "formula": "2d6 + 4",
+            "tipo": "concussão"
+          }
+        ],
+        "alcance_pes": 10,
+        "efeito": "Alvo agarrado (escapar CD 13) e contido enquanto durar o agarrão; até dois tentáculos, cada um segura um alvo."
+      },
+      {
+        "nome_original": "Acidic Mucus",
+        "tipo": "ataque à distância com arma",
+        "bonus_ataque": 4,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 14,
+            "formula": "4d6",
+            "tipo": "ácido"
+          }
+        ],
+        "alcance_normal_pes": 60,
+        "efeito": "Alvo sofre mais 7 (2d6) ácido no início de seu próximo turno, a não ser que use imediatamente a reação para remover o muco."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Assume Form",
+        "alcance_pes": 5,
+        "requisito": "Cadáver de humanoide ou besta de tamanho Médio ou menor ao alcance",
+        "efeito": "Consome cadáver e assume sua forma; estatísticas não se alteram exceto tamanho; equipamentos fundidos não podem ser usados; reverte ao morrer, usar Manipulate Flesh ou usar Assume Form transformado.",
+        "situacao_no_card_game": "Não cria nova carta e não permite invocar outra criatura; precisa de cadáver válido em campo e validação de zona."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [],
+    "notas_de_validacao": [
+      "Regeneration diz que pode continuar a 0 PV até início do turno; conflito explícito com a regra aprovada do Card Game: criatura a 0 PV perde e vai ao cemitério. Não executar exceção até decisão administrativa.",
+      "Assume Form requer cadáver de espécie/tamanho específico; não presumir cadáver no campo a partir do cemitério.",
+      "O deslocamento de escalar/nadar de 30 pés ocorre somente em forma verdadeira.",
+      "A fonte imprime a média correta 14 (4d4 + 4) para Manifold Bite e 7 (2d6) para o muco persistente."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "fontes": [
+      {
+        "tipo": "publicação_Tome_of_Beasts_3",
+        "url": "https://anyflip.com/myubd/nuoj/basic/351-400",
+        "pagina_impressa": 367,
+        "uso": "ficha completa da edição original, incluindo regeneração e formas"
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

@@ -1,0 +1,329 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-010",
+  "nome_catalogo": "Chelicerae",
+  "origem_arquivo": "TF-010-chelicerae-ficha.json",
+  "sha256_origem": "8ae5ddc1bde6984b45c16a1ff5189d0b0353baad323aacb57490fdda21db6de4",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Chelicerae",
+      "chave": "TF-010",
+      "id_catalogo": "TF-010",
+      "ordem_priorizada": 24,
+      "ordem_1320": 49,
+      "deck_origem": "Aberração",
+      "tipo_catalogo": "Aberração",
+      "nd_catalogo": "7",
+      "classe_catalogo": "Incomum",
+      "editora_catalogo": "Kobold Press",
+      "publicacao_catalogo": "Tome of Beasts 1",
+      "edicao_estudada": "Tome of Beasts 1 (2023 Edition)",
+      "edicao_aprovada": "2023 revisada: edição oficial mais recente efetivamente publicada, conforme orientação do administrador em 2026-10-19",
+      "tipo_publicado": "Aberração",
+      "tamanho_publicado": "Grande",
+      "alinhamento_publicado": "Neutro e Mau",
+      "nd_publicado": 7,
+      "xp_publicado": 2900,
+      "bonus_proficiencia_publicado": 3
+    },
+    "estatisticas_e_mecanicas": {
+      "estatisticas": {
+        "armor_class": 16,
+        "armor_class_type": "natural_armor",
+        "hit_points": 153,
+        "hit_dice": "18d10+54",
+        "ability_scores": {
+          "STR": 22,
+          "DEX": 17,
+          "CON": 17,
+          "INT": 18,
+          "WIS": 15,
+          "CHA": 14
+        },
+        "ability_modifiers": {
+          "STR": 6,
+          "DEX": 3,
+          "CON": 3,
+          "INT": 4,
+          "WIS": 2,
+          "CHA": 2
+        },
+        "speeds": {
+          "walk_ft": 40,
+          "climb_ft": 30
+        },
+        "senses": {
+          "darkvision_ft": 60,
+          "passive_perception": 15
+        },
+        "skills": {
+          "Acrobatics": 6,
+          "Athletics": 9,
+          "Perception": 5,
+          "Stealth": 6
+        },
+        "saving_throws": {
+          "DEX": 6,
+          "WIS": 5,
+          "CHA": 5
+        },
+        "languages": [
+          "understands Common but cannot speak"
+        ],
+        "damage_resistances": [],
+        "damage_immunities": [
+          "poison"
+        ],
+        "damage_vulnerabilities": [],
+        "condition_immunities": [
+          "charmed",
+          "poisoned"
+        ],
+        "size": "Large",
+        "alignment": "neutral_evil",
+        "challenge": 7,
+        "xp": 2900,
+        "proficiency_bonus": 3
+      },
+      "mecanicas": {
+        "traits": [
+          {
+            "name": "Magic Resistance",
+            "category": "saving_throw_advantage",
+            "against": [
+              "spells",
+              "magical_effects"
+            ],
+            "description": "Vantagem em testes de resistência contra magias e outros efeitos mágicos."
+          },
+          {
+            "name": "Spider Climb",
+            "category": "movement",
+            "description": "Escala superfícies difíceis, inclusive tetos, sem teste de atributo."
+          }
+        ],
+        "actions": [
+          {
+            "name": "Multiattack",
+            "category": "multiattack",
+            "action_economy": "action",
+            "sequence": [
+              {
+                "attack": "Bite",
+                "count": 1
+              },
+              {
+                "attack": "Claw",
+                "count": 2
+              }
+            ],
+            "alternative": "Pode substituir a Bite por um uso de Spellcasting, preservando duas Claw.",
+            "source_text_meaning": "The chelicerae makes one Bite attack and two Claw attacks. It can replace the Bite attack with a use of Spellcasting."
+          },
+          {
+            "name": "Bite",
+            "category": "attack",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 9,
+            "reach_ft": 5,
+            "targets": {
+              "count": 1
+            },
+            "hit": {
+              "damage": [
+                {
+                  "dice": "2d10",
+                  "flat": 6,
+                  "average": 17,
+                  "type": "piercing"
+                }
+              ]
+            },
+            "on_hit_save": {
+              "ability": "CON",
+              "dc": 15,
+              "on_failure": {
+                "condition": "poisoned",
+                "duration": "1_minute",
+                "additional_condition": "unconscious_while_poisoned_this_way",
+                "repeat_save": {
+                  "ability": "CON",
+                  "dc": 15,
+                  "timing": "end_of_each_target_turn",
+                  "success_ends": "poisoned_and_linked_unconscious"
+                }
+              },
+              "on_success": {
+                "condition": null
+              }
+            },
+            "grapple_on_hit": {
+              "condition": "grappled",
+              "target_size_max": "Medium",
+              "precondition": "Chelicerae não tem outra criatura agarrada",
+              "escape_dc": 15,
+              "independent_of_poison_save": true
+            }
+          },
+          {
+            "name": "Claw",
+            "category": "attack",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 9,
+            "reach_ft": 10,
+            "targets": {
+              "count": 1
+            },
+            "hit": {
+              "damage": [
+                {
+                  "dice": "2d8",
+                  "flat": 6,
+                  "average": 15,
+                  "type": "slashing"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Magical Discharge",
+            "category": "area_action",
+            "action_economy": "action",
+            "recharge": "special",
+            "area": {
+              "shape": "radius",
+              "radius_ft": 15,
+              "center": "self",
+              "targets": "each creature within 15 ft."
+            },
+            "save": {
+              "ability": "DEX",
+              "dc": 15
+            },
+            "on_failure": {
+              "damage": {
+                "dice": "8d8",
+                "average": 36,
+                "type": "force"
+              }
+            },
+            "on_success": {
+              "damage": "half_of_8d8_force"
+            },
+            "recharge_conditions": [
+              "successfully_siphons_magic_from_a_creature",
+              "finishes_a_long_rest"
+            ],
+            "cannot_use_again_until_recharged": true
+          },
+          {
+            "name": "Spellcasting",
+            "category": "spellcasting_action",
+            "action_economy": "action",
+            "spellcasting_ability": "INT",
+            "save_dc": 15,
+            "components": {
+              "material_required": false,
+              "verbal_required": false,
+              "somatic": "not specified by monster text, obey general spell rules"
+            },
+            "at_will": [
+              "mage hand",
+              "minor illusion"
+            ],
+            "per_day_each": {
+              "haste": 1,
+              "hold person": 1,
+              "invisibility": 1,
+              "phantasmal killer": 1
+            },
+            "notes": "Mecânicas e efeitos completos de cada magia devem ser consultados no texto aplicável das regras de combate; não inferir usos adicionais."
+          }
+        ],
+        "bonus_actions": [
+          {
+            "name": "Nimble Moves",
+            "category": "movement",
+            "action_economy": "bonus_action",
+            "options": [
+              "Dash",
+              "Disengage"
+            ]
+          },
+          {
+            "name": "Siphon Magic",
+            "category": "resource_recharge",
+            "action_economy": "bonus_action",
+            "target": "spellcaster_being_grappled_by_chelicerae",
+            "save": {
+              "ability": "INT",
+              "dc": 15
+            },
+            "on_failure": {
+              "target_loses": "one spell slot of the highest level it can cast",
+              "chelicerae_gains": "one expended use of its Spellcasting"
+            },
+            "on_success": "no siphon",
+            "note": "Não pressupor que o alvo possua espaços de magia, nem escolher uma magia recuperada sem decisão de regra ou jogador; o texto diz apenas regains an expended use of its Spellcasting."
+          }
+        ],
+        "reactions": [],
+        "legendary_actions": [],
+        "lair_actions": [],
+        "mythic_actions": [],
+        "spellcasting": [
+          "mage hand",
+          "minor illusion",
+          "haste",
+          "hold person",
+          "invisibility",
+          "phantasmal killer"
+        ],
+        "other": []
+      },
+      "observacoes_tecnicas": {
+        "edicao_ativa": "Tome of Beasts 1, 2023 edition (5E), copyright Open Design LLC 2023",
+        "iniciativa": "Fonte 2023 não apresenta linha de iniciativa. Derivação de DEX: +3; utilizar procedimento do SRD 5.2.1 e regras aprovadas.",
+        "bite": "Salvaguarda contra veneno CON CD 15; alvo envenenado também fica inconsciente; salvaguarda ao final do turno encerra condição. Agarrão em Médio ou menor aplica-se no acerto se não houver outra presa, independentemente do resultado da salvaguarda.",
+        "recharge": "Magical Discharge NÃO tem recarga 5-6; recupera após Siphon Magic bem-sucedido ou descanso longo.",
+        "edition_historical": "Edição original de 2016 usa INT 14, conjuração de oitavo nível e Siphon Spell Slots, Bite alcance 10 pés e CDs 16: não misturar com 2023.",
+        "version_in_preorder": "Tome of Beasts 1 Revised (5.5E) anunciado para março de 2027, ainda não publicado na data desta execução (2026-10-19).",
+        "support_homebrew": "Magical Discharge (D) é suporte proposto no deck e não homologado como jogada independente.",
+        "combat_scope": "Somente dados mecânicos da publicação. Efeitos aplicáveis devem respeitar SRD 5.2.1 e regras aprovadas de fase/arena/zonas."
+      }
+    },
+    "auditoria": {
+      "status_ficha": "MECANICAMENTE_COMPLETA_EDICAO_2023",
+      "status_homologacao": "PENDENTE_ADAPTACAO_E_HOMOLOGACAO_DAS_REGRAS_CARD_GAME",
+      "decisao_administrador": "REGRA_GERAL: PRIORIZAR_EDICAO_OFICIAL_MAIS_RECENTE",
+      "escopo_da_decisao": "Escolha da edição não aprova automaticamente suporte homebrew, arena, efeitos de magias ou novos mecanismos de saque e recursos.",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/chelicerae-3pp/",
+      "fonte_publicacao": "https://koboldpress.com/kpstore/product/tome-of-beasts-1-2023-edition/",
+      "fonte_deck": "/SRD Card Game/Decks/Aberração/Fichas por criatura/24_Chelicerae.md",
+      "fonte_comparativa_arquivo": "/SRD Card Game/Fichas/Em Pesquisa/TF-010-chelicerae-pesquisa-edicoes.json",
+      "resultado_validacao": "2023: Grande Aberração, CA16, PV153, ND7, Bite +9 alcance 5 ft. + duas Claw +9 alcance 10 ft.; Magical Discharge 8d8 força CD15, Siphon Magic, 4 magias 1/dia cada.",
+      "errata_verificada": "Errata da Kobold Press atualizada em 2025-05-29: Chelicerae aparece na seção de Tome of Beasts (original 2016), mas não na seção Tome of Beasts (2023); não transportar correção 2016 para o bloco 2023.",
+      "verificacao_de_publicacao_mais_recente": "Próxima revisão anunciada 5.5E para março de 2027, não lançada em outubro de 2026.",
+      "fontes": [
+        "https://www.5esrd.com/database/creature/chelicerae-3pp/",
+        "https://koboldpress.com/kpstore/product/tome-of-beasts-1-2023-edition/",
+        "https://koboldpress.com/errata/",
+        "https://koboldpress.com/kpstore/product/tome-of-beasts-1-revised-5-5e/",
+        "https://koboldpress.com/tome-of-beasts-1-what-changed/"
+      ],
+      "pendencias": [
+        "Homologação administrativa da carta e do suporte Magical Discharge (D) não comprovada.",
+        "Posicionamento: área 15 pés Magical Discharge; alcances 5 e 10 pés; agarre e libertação CD15 dependem de arena e regras aprovadas.",
+        "Siphon Magic exige alvo conjurador agarrado com um espaço de magia de nível apropriado; sem slot não inventar efeito.",
+        "O recurso de Magical Discharge só recarrega conforme texto da fonte. Não presumir descanso longo ou recuperação entre combates.",
+        "Spellcasting e suas magias exigem consultar magias pertinentes e aplicar economia de ações/concentração conforme SRD 5.2.1.",
+        "Gravar/retomar condições poisoned e unconscious com seus respectivos testes; não converter efeitos automaticamente."
+      ],
+      "data_ultima_revisao": "2026-10-19"
+    }
+  },
+  "documentos_complementares": []
+}

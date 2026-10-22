@@ -1,0 +1,162 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "KP-S002",
+  "nome_catalogo": "Forest Emperor",
+  "origem_arquivo": "KP-S002-forest-emperor-ficha (1).json",
+  "sha256_origem": "91b7208e2f7ad7be432217deaadac85e21565f6ae62fb62e5f8222565d0a5b30",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-010",
+    "data_validacao": "2026-10-17T03:23:19+00:00",
+    "tipo": "Aberração",
+    "classe_catalogo": "Rara",
+    "homologacao_administrativa": "PENDENTE",
+    "edicao_combate_card_game": "SRD 5.2.1 (regras gerais; não substituir estatísticas de criatura)",
+    "regra_interpretacao": "Distinguir versão de publicação original, habilidades passivas e regras do Card Game; nenhuma adaptação não aprovada é executável.",
+    "ORDEM_PRIORIZADA": 36,
+    "ORDEM_1320": 82,
+    "CHAVE": "KP-S002",
+    "ID_CATALOGO": "KP-S002",
+    "nome": "Forest Emperor",
+    "ND_catalogo": 15,
+    "origem_publicacao_catalogo": "Tome of Beasts 2",
+    "arquivo_deck_pesquisa": "/SRD Card Game/Decks/Aberração/Fichas por criatura/36_Forest_Emperor.md",
+    "fontes_consultadas": [
+      {
+        "edicao": "Tome of Beasts 2 (2020)",
+        "url": "https://5esrd.old.opengamingnetwork.com/database/creature/forest-emperor/",
+        "uso": "transcrição mecânica secundária"
+      },
+      {
+        "edicao": "Tome of Beasts 2 (2020), p. 155",
+        "url": "https://anyflip.com/plzy/hbkp/basic/151-200",
+        "uso": "cópia de referência publicada e metadados do bloco"
+      }
+    ],
+    "status_ficha": "COMPLETA_MECANICAMENTE_SEM_HOMOLOGACAO_ADMINISTRATIVA",
+    "edicao_fonte_considerada": "Tome of Beasts 2 (2020)",
+    "url_fonte_principal": "https://5esrd.old.opengamingnetwork.com/database/creature/forest-emperor/",
+    "porte": "Huge",
+    "alinhamento": "neutral evil",
+    "ca": 18,
+    "pv_maximos": 161,
+    "formula_pv": "14d12+70",
+    "bonus_proficiencia": 5,
+    "iniciativa": 1,
+    "atributos": {
+      "FOR": 23,
+      "DES": 12,
+      "CON": 21,
+      "INT": 12,
+      "SAB": 20,
+      "CAR": 8
+    },
+    "deslocamento_ft": {
+      "andar": 30,
+      "escalar": 30,
+      "voar": 60
+    },
+    "salvaguardas": {
+      "CON": 10,
+      "SAB": 10
+    },
+    "pericias": {
+      "Natureza": 6,
+      "Percepção": 10,
+      "Furtividade": 6
+    },
+    "imunidades_dano": [
+      "ácido",
+      "frio",
+      "contundente de ataques não mágicos"
+    ],
+    "resistencias_dano": [],
+    "vulnerabilidades_dano": [],
+    "imunidades_condicao": [],
+    "sentidos": [
+      "visão no escuro 60 pés",
+      "Percepção passiva 20"
+    ],
+    "idiomas": [
+      "Common",
+      "Giant"
+    ],
+    "tracos": [
+      {
+        "nome": "Forest Camouflage",
+        "efeito": "Vantagem em testes de Furtividade para se esconder em terreno florestal"
+      },
+      {
+        "nome": "Keen Smell",
+        "efeito": "Vantagem em testes de Percepção baseados no olfato"
+      },
+      {
+        "nome": "Rattle",
+        "gatilho": "início do turno de cada criatura capaz de ouvir e até 60 pés",
+        "CD": 18,
+        "salvaguarda": "SAB",
+        "falha": "amedrontado até início do próximo turno da criatura",
+        "imunidade": "após duas salvaguardas bem-sucedidas, imune por 24h"
+      }
+    ],
+    "acoes": [
+      {
+        "nome": "Multiattack",
+        "composicao": "2 Acidic Claw e 1 Tail",
+        "efeito_condicional": "se ambas garras acertarem o mesmo alvo, CON CD 18 ou PV máximo do alvo reduzidos em 2d6 (média 7) e Forest Emperor recupera a mesma quantidade; redução até descanso longo, morte se máximo chegar a 0"
+      },
+      {
+        "nome": "Acidic Claw",
+        "bonus_ataque": 11,
+        "alcance_ft": 5,
+        "tipo": "ataque corpo a corpo",
+        "dano": [
+          {
+            "dados": "3d6+6",
+            "tipo": "cortante"
+          },
+          {
+            "dados": "2d6",
+            "tipo": "ácido"
+          }
+        ]
+      },
+      {
+        "nome": "Tail",
+        "bonus_ataque": 11,
+        "alcance_ft": 15,
+        "tipo": "ataque corpo a corpo",
+        "dano": [
+          {
+            "dados": "2d10+6",
+            "tipo": "contundente"
+          }
+        ]
+      },
+      {
+        "nome": "Toxic Nectar Spray",
+        "tipo": "ação de área",
+        "recarga": "5-6",
+        "cone_ft": 60,
+        "CD": 18,
+        "salvaguarda": "DES",
+        "dano": "12d6 ácido",
+        "sucesso": "metade"
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "conjuracao": null,
+    "pendencias_card_game": [
+      "Efeito de Rattle pressupõe criatura capaz de ouvir e distância/posicionamento",
+      "Redução de PV máximo e recuperação associada persistem conforme fonte, sem cura automática entre combates",
+      "Imunidade a dano contundente exclusivamente de ataques não mágicos; manter distinção"
+    ],
+    "observacoes_mecanicas": [
+      "Dados de iniciativa +1 derivados de Destreza, sem bônus especial confirmado."
+    ]
+  },
+  "documentos_complementares": []
+}

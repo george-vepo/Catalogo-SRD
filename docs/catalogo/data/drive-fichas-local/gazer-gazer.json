@@ -1,0 +1,217 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Gazer",
+  "origem_arquivo": "EXT-0007-gazer-ficha (1).json",
+  "sha256_origem": "30c91bed19bd95d1b47b59d9e1bfdd8ba66032130279068e8e4be1f2736750ae",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Gazer",
+      "chave": "EXT-0007-gazer",
+      "id_catalogo": null,
+      "ordem_priorizada": 3,
+      "ordem_1320": 7,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "1/2",
+      "classe": "Comum",
+      "editora": "Wizards of the Coast",
+      "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+      "origem_catalogo": "CANDIDATO EXTERNO"
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Miúdo",
+      "subtipo": "Beholder",
+      "alinhamento": "tipicamente neutro e mau",
+      "ca": 13,
+      "ca_tipo": "não especificado",
+      "pv": 13,
+      "pv_formula": "3d4+6",
+      "deslocamentos_pes": {
+        "terrestre": 0,
+        "voo": 30,
+        "natacao": null,
+        "escalada": null,
+        "pairar": true
+      },
+      "atributos": {
+        "FOR": 3,
+        "DES": 17,
+        "CON": 14,
+        "INT": 3,
+        "SAB": 10,
+        "CAR": 7
+      },
+      "iniciativa_bonus": 3,
+      "proficiencia_bonus": 2,
+      "salvaguardas": {
+        "SAB": 2
+      },
+      "pericias": {
+        "Percepcao": 4,
+        "Furtividade": 5
+      },
+      "sentidos": {
+        "visao_escuro_pes": 60,
+        "percepcao_passiva": 14
+      },
+      "idiomas": [],
+      "resistencias_dano": [],
+      "imunidades_dano": [],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [
+        "caído"
+      ],
+      "tracos": [
+        {
+          "nome": "Mimicry",
+          "efeito": "Consegue reproduzir sons simples de fala previamente ouvidos em qualquer idioma; ouvinte pode perceber a imitação com teste de Sabedoria (Intuição) CD 10."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Bite",
+          "economia": "acao",
+          "tipo": "ataque_corpo_a_corpo_com_arma",
+          "bonus_acerto": 5,
+          "alcance_pes": 5,
+          "alvos": 1,
+          "dano": {
+            "dados": null,
+            "tipo": "perfurante",
+            "valor_fixo": 1
+          }
+        },
+        {
+          "nome": "Eye Rays",
+          "economia": "acao",
+          "alcance_pes": 60,
+          "alvos": "um ou dois alvos visíveis",
+          "selecao": "Sortear dois resultados em 1d4, repetindo dados iguais; não escolher os tipos de raios. É permitido distribuir os dois raios entre um ou dois alvos visíveis no alcance.",
+          "raios": [
+            {
+              "resultado_d4": 1,
+              "nome": "Dazing Ray",
+              "salvaguarda": {
+                "atributo": "SAB",
+                "cd": 12
+              },
+              "falha": {
+                "condicao": "enfeitiçado",
+                "duracao": "até o início do próximo turno do Gazer",
+                "efeitos_adicionais": [
+                  "deslocamento reduzido à metade",
+                  "desvantagem nas jogadas de ataque"
+                ]
+              },
+              "sucesso": "sem efeito"
+            },
+            {
+              "resultado_d4": 2,
+              "nome": "Fear Ray",
+              "salvaguarda": {
+                "atributo": "SAB",
+                "cd": 12
+              },
+              "falha": {
+                "condicao": "amedrontado",
+                "duracao": "até o início do próximo turno do Gazer"
+              },
+              "sucesso": "sem efeito"
+            },
+            {
+              "resultado_d4": 3,
+              "nome": "Frost Ray",
+              "salvaguarda": {
+                "atributo": "DES",
+                "cd": 12
+              },
+              "falha": {
+                "dano": {
+                  "dados": "3d6",
+                  "tipo": "frio",
+                  "valor_medio": 10
+                }
+              },
+              "sucesso": "sem dano"
+            },
+            {
+              "resultado_d4": 4,
+              "nome": "Telekinetic Ray",
+              "alvos_validos": [
+                "criatura de tamanho Médio ou menor",
+                "objeto Miúdo não vestido nem carregado"
+              ],
+              "efeito_criatura": {
+                "salvaguarda": {
+                  "atributo": "FOR",
+                  "cd": 12
+                },
+                "falha": "empurrar até 30 pés diretamente para longe do Gazer",
+                "sucesso": "sem deslocamento"
+              },
+              "efeito_objeto": "mover até 30 pés em qualquer direção, podendo efetuar manipulação delicada de objeto simples"
+            }
+          ]
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Aggressive",
+          "economia": "acao_bonus",
+          "efeito": "Move até seu deslocamento na direção de uma criatura hostil que consiga enxergar."
+        }
+      ],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "magias": [],
+      "multiataque": null,
+      "recargas": [],
+      "modificadores_atributos": {
+        "FOR": -4,
+        "DES": 3,
+        "CON": 2,
+        "INT": -4,
+        "SAB": 0,
+        "CAR": -2
+      }
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4",
+      "ficha_anterior": "resumo_deck_nao_homologado",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/03_Gazer.md",
+      "regra_de_edicao": "atributos mantidos conforme publicação original; SRD 5.2.1 utilizado como referência de resolução, sem substituir estatísticas pela edição 2024",
+      "status_validacao_mecanica": "CONCLUIDA",
+      "homologacao_de_carta_pelo_administrador": false,
+      "status_aprovacao_catalogo": "CANDIDATO_EXTERNO_NAO_APROVADO",
+      "nao_inferir_ausencia_de_ataques_especiais": true,
+      "observacoes": [
+        "Não alterar/reproduzir mecanicamente a habilidade de suporte opcional escolhida no deck: é proposta separada da ficha original."
+      ],
+      "pendencias_operacionais": [
+        "Aprovação da criatura externa e vínculo de ID_CATALOGO pelo administrador."
+      ],
+      "fontes": [
+        {
+          "classe": "publicacao_original_identificada",
+          "referencia": "Mordenkainen Presents: Monsters of the Multiverse (2022), p. 134",
+          "url": "https://www.dndbeyond.com/monsters",
+          "observacao": "Dados mecânicos cotejados com transcrição pública correspondente à publicação."
+        },
+        {
+          "classe": "transcricao_publica",
+          "referencia": "AideDD — Gazer",
+          "url": "https://www.aidedd.org/dnd/monstres.php?vo=gazer"
+        },
+        {
+          "classe": "referencia_de_publicacao",
+          "referencia": "Monsters of the Multiverse — Gazer, p. 134",
+          "url": "https://fliphtml5.com/fqkpd/gdoo/Monsters_of_the_Multiverse_Colored/135/"
+        }
+      ]
+    }
+  },
+  "documentos_complementares": []
+}

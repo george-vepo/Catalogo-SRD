@@ -1,0 +1,150 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Star Spawn Mangler",
+  "origem_arquivo": "EXT-0040-star-spawn-mangler-ficha (1).json",
+  "sha256_origem": "998f5b5646e47c71fd00745a64e67d4c699f18fe3580a5649c76f438e520bcf1",
+  "conteudo_original": {
+    "chave": "EXT-0040-star-spawn-mangler",
+    "ordem_priorizada": 96,
+    "ordem_1320": 40,
+    "nome": "Star Spawn Mangler",
+    "tipo": "Aberração",
+    "nd": "5",
+    "raridade": "Comum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "5e da edição indicada na fila, não misturar edições",
+    "tamanho": "Médio",
+    "tendencia": "Tipicamente caótico e mau",
+    "classe_armadura": 14,
+    "classe_armadura_detalhe": null,
+    "pontos_vida": 71,
+    "dados_vida": "13d8 + 13",
+    "deslocamentos_pes": {
+      "andar": 40,
+      "escalar": 40
+    },
+    "atributos": {
+      "FOR": 8,
+      "DES": 18,
+      "CON": 12,
+      "INT": 11,
+      "SAB": 12,
+      "CAR": 7
+    },
+    "modificadores": {
+      "FOR": -1,
+      "DES": 4,
+      "CON": 1,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": -2
+    },
+    "testes_resistencia": {
+      "DES": 7,
+      "CON": 4
+    },
+    "pericias": {
+      "Furtividade": 7
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "frio"
+    ],
+    "imunidades_dano": [
+      "psíquico"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado",
+      "caído"
+    ],
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 11
+    },
+    "idiomas": [
+      "Fala Profunda"
+    ],
+    "xp": 1800,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Ambusher",
+        "efeito": "Vantagem em rolagens de iniciativa."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Duas Claw attacks."
+      },
+      {
+        "nome_original": "Claw",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 8,
+            "formula": "1d8 + 4",
+            "tipo": "cortante"
+          }
+        ],
+        "dano_condicional": {
+          "pre_condicao": "Ataque com vantagem",
+          "componentes_dano": [
+            {
+              "medio": 7,
+              "formula": "2d6",
+              "tipo": "psíquico"
+            }
+          ]
+        }
+      },
+      {
+        "nome_original": "Flurry of Claws",
+        "recarga": "5-6",
+        "efeito": "Faz seis Claw attacks; antes ou depois, pode mover até seu deslocamento sem provocar ataques de oportunidade.",
+        "economia_acoes": "ação única que substitui Multiattack."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Shadow Stealth",
+        "pre_condicao": "Em penumbra ou escuridão",
+        "efeito": "Pode usar Esconder-se como ação bônus."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Flurry of Claws",
+        "recarga": "5-6"
+      }
+    ],
+    "notas_de_validacao": [
+      "Edição MPMM 2022: Claw causa +7 (2d6) psíquico APENAS se ataque feito com vantagem.",
+      "Flurry of Claws é ação recarregável (seis ataques) e não deve ser somada à Multiattack regular no mesmo turno.",
+      "Imunidade à condição caído é da publicação."
+    ],
+    "fontes": [
+      {
+        "tipo": "transcricao_MP_MM_2022",
+        "url": "https://fliphtml5.com/fqkpd/gdoo/Monsters_of_the_Multiverse_Colored/230/",
+        "pagina_impressa": 229
+      },
+      {
+        "tipo": "publicacao_oficial_WotC",
+        "url": "https://www.dndbeyond.com/sources/dnd/motm",
+        "pagina_impressa": 229
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

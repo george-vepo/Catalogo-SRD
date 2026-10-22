@@ -1,0 +1,224 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-300",
+  "nome_catalogo": "Angel, Zoryas",
+  "origem_arquivo": "TF-300-angel-zoryas-ficha (1).json",
+  "sha256_origem": "ff8a69588620e64e8fe92d37c46b23bf4369fc5657674f9d43801f4c060f55fd",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-015",
+    "data_execucao_local": "2026-10-17T01:52:42-03:00",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 57,
+      "ORDEM_1320": 202,
+      "CHAVE": "TF-300",
+      "ID_CATALOGO": "TF-300",
+      "nome_catalogo": "Angel, Zoryas",
+      "nome_na_fonte": "Zoryas",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "Celestial",
+      "nd": "8",
+      "classe": "Incomum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-021"
+      ],
+      "publicacao_catalogo": "Creature Codex",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Médio",
+      "alinhamento": "leal e bom",
+      "CA": 14,
+      "CA_origem": "armadura natural",
+      "PV_maximos": 104,
+      "formula_PV": "16d8+32",
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": 40
+      },
+      "atributos": {
+        "FOR": 16,
+        "DES": 10,
+        "CON": 14,
+        "INT": 10,
+        "SAB": 18,
+        "CAR": 18
+      },
+      "iniciativa_bonus": 0,
+      "iniciativa_origem": "Inferido apenas pelo modificador de DES do bloco de 2018; iniciativa não declarada na fonte",
+      "bonus_proficiencia": 3,
+      "salvaguardas_fonte": {
+        "CAR": 7
+      },
+      "pericias": {
+        "Intuicao": 7,
+        "Percepcao": 7
+      },
+      "resistencias_dano": [
+        "fogo",
+        "radiante",
+        "contundente de ataques não mágicos",
+        "perfurante de ataques não mágicos",
+        "cortante de ataques não mágicos"
+      ],
+      "sentidos": {
+        "percepcao_passiva": 17,
+        "visao_verdadeira_pes": 60
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "todos"
+        ],
+        "telepatia_pes": 120
+      },
+      "tracos": [
+        {
+          "nome": "Fire and Light",
+          "efeito": "Ataques com armas são mágicos e adicionam 3d8 fogo ou radiante, já incluso no Morningstar; tipo escolhido antes da rolagem de ataque."
+        },
+        {
+          "nome": "Regeneration",
+          "cura_no_inicio_turno": 10,
+          "interrupcao": "Se receber dano necrótico, não regenera no início do seu próximo turno.",
+          "condicao_destruicao_original": "Corpo destruído somente se começar o turno a 0 PV sem regenerar."
+        },
+        {
+          "nome": "Sun’s Guidance",
+          "usos_dia": 3,
+          "efeito": "O próprio anjo tem vantagem em ataques corpo a corpo até o fim do seu próximo turno. Tipo de ação para ativação não indicado no bloco de origem."
+        },
+        {
+          "nome": "Open Celestial Gate",
+          "acao": "ação",
+          "efeito": "Abre portal circular para o plano celestial, luz brilhante em raio de 15 pés e penumbra por mais 15 pés, dura 1 hora, pode fechar como ação bônus; o próprio anjo não pode atravessar.",
+          "custo_ao_fechar": "Vai a 0 PV e permanece inconsciente seis dias; acorda restaurado ao nascer do sol do sétimo dia."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Faz dois ataques Morningstar."
+        },
+        {
+          "nome": "Morningstar",
+          "bonus_ataque": 6,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "dado": "1d8+3",
+              "tipo": "perfurante",
+              "media_publicada": 7
+            },
+            {
+              "dado": "3d8",
+              "tipo": "radiante OU fogo",
+              "media_publicada": 13
+            }
+          ],
+          "observacao": "Escolher radiante ou fogo antes do ataque. Não aplica ambos."
+        },
+        {
+          "nome": "Open Celestial Gate",
+          "efeito": "Abrir portal interplanar; duração até 1 hora, luz 15+15 pés; não pode atravessá-lo; ao fechar desmaia a 0 PV por seis dias."
+        },
+        {
+          "nome": "Light of Dawn",
+          "recarga": "descanso longo",
+          "area_raio_pes": 30,
+          "salvaguarda": "SAB",
+          "CD": 16,
+          "falha": "Cego por 1d4 rodadas; morto-vivo sofre ainda 3d8 fogo (média 13).",
+          "sucesso": "Não sofre a condição de cegueira",
+          "adicional": "Dissipa até três magias ou efeitos mágicos de nível 3 ou inferior na área, segundo a fonte."
+        },
+        {
+          "nome": "Dusk’s Arrival",
+          "recarga": "descanso longo",
+          "area_raio_pes": 30,
+          "salvaguarda": "CON",
+          "CD": 16,
+          "falha": {
+            "dano": {
+              "dado": "4d8",
+              "tipo": "frio",
+              "media_publicada": 18
+            }
+          },
+          "sucesso": "metade do dano",
+          "adicional": "Apaga luz natural e mágica; área com escuridão semelhante à magia Darkness até o fim do próximo turno do anjo."
+        }
+      ],
+      "conjuracao": [],
+      "recursos_limitados": [
+        {
+          "nome": "Sun’s Guidance",
+          "usos": 3,
+          "periodo": "dia",
+          "tipo_acao": "não declarado na fonte"
+        },
+        {
+          "nome": "Light of Dawn",
+          "limite": "1 por descanso longo"
+        },
+        {
+          "nome": "Dusk’s Arrival",
+          "limite": "1 por descanso longo"
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Close Celestial Gate",
+          "requisito": "Portal aberto",
+          "efeito": "Pode fechar o portal a qualquer momento; sofre o custo de ficar a 0 PV e inconsciente por seis dias."
+        }
+      ],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "cego",
+        "enfeitiçado",
+        "surdo",
+        "exausto",
+        "amedrontado"
+      ]
+    },
+    "suporte_candidato_na_pesquisa_deck": {
+      "habilidade": "Sun’s Guidance",
+      "status": "HOME BREW_CANDIDATA_NAO_HOMOLOGADA",
+      "regra_original": "Usa em si própria: vantagem em ataques corpo a corpo até fim do próximo turno, três vezes ao dia.",
+      "modificacao_proposta_deck": "Aplicar benefício à criatura ativa, o que difere do texto da publicação."
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/21_Angel_Zoryas.md",
+      "caminho_no_controle_original": "/SRD Card Game/Decks/Celestial/Fichas por criatura/17_Angel_Zoryas.md",
+      "divergencia_caminho_controle": "O CSV aponta para 17_Angel_Zoryas.md, mas o arquivo existente com nome e CHAVE compatíveis é 21_Angel_Zoryas.md. Não editar a fila original.",
+      "fonte_estatisticas": "https://kpogl.wikidot.com/monster:zoryas",
+      "fonte_primaria_local": null,
+      "edicao_mecanica": "Kobold Press Creature Codex, edição original 5e (2018)",
+      "regra_combativa": "SRD 5.2.1 rege a resolução geral; efeitos da edição Kobold Press 5e original conservados, sem importação silenciosa de redações de 2024",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "O controle aponta para 17_Angel_Zoryas.md, mas o Markdown correto é 21_Angel_Zoryas.md.",
+        "Sun’s Guidance aparece entre traços, sem categoria explícita de ação; não inventar ativação de ação bônus."
+      ],
+      "pendencias_card_game": [
+        "Sun’s Guidance no original afeta exclusivamente a própria Zoryas; transferir benefício a outra criatura é homebrew e não foi aprovado.",
+        "Regeneration na fonte permite recuperação a partir de 0 PV; o Card Game estabelece derrota imediata e envio ao cemitério a 0 PV. Exige decisão administrativa, não sobrescrever.",
+        "Open Celestial Gate e sua consequência ao fechar (0 PV por seis dias) conflitam com o fim do combate e a regra de 1 criatura ativa; não simular viagens planares sem regras de arena.",
+        "Light of Dawn / Dusk’s Arrival têm alcance em área, condições e recargas a respeitar."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

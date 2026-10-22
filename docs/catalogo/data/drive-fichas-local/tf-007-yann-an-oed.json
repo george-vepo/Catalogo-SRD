@@ -1,0 +1,211 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-007",
+  "nome_catalogo": "Yann-An-Oed",
+  "origem_arquivo": "TF-007-yann-an-oed-ficha (1).json",
+  "sha256_origem": "9b5ccf1cd82d92917182142dec0597e34fa647cf95ac8e74c9928dd88a4d559b",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Yann-An-Oed",
+      "chave": "TF-007",
+      "id_catalogo": "TF-007",
+      "ordem_priorizada": 9,
+      "ordem_1320": 16,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "2",
+      "classe": "Comum",
+      "editora": "Kobold Press",
+      "publicacao": "Creature Codex",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Enorme",
+      "alinhamento": "neutro",
+      "ca": 12,
+      "ca_tipo": "armadura natural",
+      "pv": 47,
+      "pv_formula": "5d12+15",
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": null,
+        "natacao": 40,
+        "escalada": null,
+        "pairar": false
+      },
+      "atributos": {
+        "FOR": 15,
+        "DES": 11,
+        "CON": 17,
+        "INT": 8,
+        "SAB": 14,
+        "CAR": 7
+      },
+      "modificadores_atributos": {
+        "FOR": 2,
+        "DES": 0,
+        "CON": 3,
+        "INT": -1,
+        "SAB": 2,
+        "CAR": -2
+      },
+      "iniciativa_bonus": 0,
+      "proficiencia_bonus": 2,
+      "salvaguardas": {},
+      "pericias": {
+        "Percepcao": 4,
+        "Furtividade": 2
+      },
+      "sentidos": {
+        "percepcao_as_cegas_pes": 60,
+        "percepcao_passiva": 14
+      },
+      "idiomas": [
+        "Aquan",
+        "telepatia 120 pés"
+      ],
+      "resistencias_dano": [],
+      "imunidades_dano": [],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [],
+      "tracos": [
+        {
+          "nome": "Amphibious",
+          "efeito": "Respira tanto na água quanto no ar."
+        },
+        {
+          "nome": "Underwater Camouflage",
+          "efeito": "Tem vantagem em testes de Destreza (Furtividade) feitos submerso."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Bite",
+          "economia": "acao",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 4,
+          "alcance_pes": 5,
+          "alvos": 1,
+          "dano": {
+            "dados": "2d8+2",
+            "tipo": "perfurante",
+            "media": 11
+          }
+        },
+        {
+          "nome": "Tentacles",
+          "economia": "acao",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 4,
+          "alcance_pes": 15,
+          "alvos": 1,
+          "dano": {
+            "dados": "2d4+2",
+            "tipo": "contundente",
+            "media": 7
+          },
+          "efeito_ao_acertar": {
+            "tamanho_maximo": "Grande",
+            "condicoes": [
+              "agarrado",
+              "contido enquanto agarrado"
+            ],
+            "cd_escape": 12,
+            "maximo_alvos_agarrados_simultaneamente": 2
+          }
+        },
+        {
+          "nome": "Swallow",
+          "economia": "acao",
+          "pre_requisitos": "Alvo Grande ou menor atualmente agarrado por este Yann-An-Oed; no máximo uma criatura engolida simultaneamente.",
+          "procedimento": "Realiza ataque Bite contra o alvo agarrado; se acerta, o engole e encerra agarrão.",
+          "alvo_engolido": {
+            "condicoes": [
+              "cego",
+              "contido"
+            ],
+            "cobertura": "total contra ataques e efeitos do exterior",
+            "dano_no_inicio_do_turno_yann": {
+              "dados": "2d6",
+              "tipo": "ácido",
+              "media": 7
+            }
+          },
+          "regurgitacao": {
+            "gatilho": "A criatura engolida inflige 10 ou mais dano no mesmo turno",
+            "teste": {
+              "atributo": "CON",
+              "cd": 11,
+              "quem_faz": "Yann-An-Oed",
+              "quando": "final do turno da criatura engolida"
+            },
+            "falha": "Regurgita a criatura engolida, que cai em espaço a até 10 pés, condição caído."
+          },
+          "apos_morte": "Criatura engolida deixa de estar contida e pode sair com 10 pés de movimento, ficando caída."
+        },
+        {
+          "nome": "Hoot",
+          "economia": "acao",
+          "recarga": "ao concluir descanso curto ou longo",
+          "area": {
+            "raio_pes": 120,
+            "requisito": "Alvo pode ouvir o chamado"
+          },
+          "salvaguarda": {
+            "atributo": "SAB",
+            "cd": 12
+          },
+          "falha": "Alvo devolve o chamado se puder emitir som; se responder, Yann-An-Oed consegue rastreá-lo exatamente por uma hora, mesmo oculto magicamente ou em outro plano.",
+          "sucesso": "Não precisa responder ao chamado."
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "magias": [],
+      "multiataque": null,
+      "recargas": [
+        {
+          "recurso": "Hoot",
+          "recuperacao": "descanso curto ou longo"
+        }
+      ]
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4",
+      "ficha_anterior": "resumo_deck_nao_homologado",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/09_Yann_An_Oed.md",
+      "regra_de_edicao": "Atributos e habilidades na edição da publicação indicada; SRD 5.2.1 apenas regras gerais para fontes não-SRD.",
+      "status_validacao_mecanica": "CONCLUIDA",
+      "homologacao_de_carta_pelo_administrador": false,
+      "observacoes": [
+        "Bloco mecânico inclui ataque Swallow com sua própria mordida e regras de regurgitação; não pressupõe Multiattack.",
+        "Hoot não indica dano ou aplicação de condição de combate; marca alvo para rastreamento."
+      ],
+      "pendencias_operacionais": [],
+      "divergencias": [],
+      "fontes": [
+        {
+          "classe": "publicacao_original_identificada",
+          "titulo": "Kobold Press, Creature Codex (2018), Yann-An-Oed",
+          "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+        },
+        {
+          "classe": "transcricao_publica",
+          "titulo": "5eSRD — Yann-An-Oed",
+          "url": "https://www.5esrd.com/database/creature/yann-an-oed/"
+        },
+        {
+          "classe": "confirmacao_independente",
+          "titulo": "D&D Grove — Yann-An-Oed, Creature Codex",
+          "url": "https://www.dndgrove.com/bestiary/2/yann-an-oed"
+        }
+      ],
+      "campos_nao_listados": "Não se presumem habilidades extras ou bônus não indicados no bloco original.",
+      "habilidade_suporte_deck": "Proposta separada: não incorporada automaticamente à ficha base."
+    }
+  },
+  "documentos_complementares": []
+}

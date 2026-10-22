@@ -1,0 +1,215 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Tsucora Quori",
+  "origem_arquivo": "EXT-0053-tsucora-quori-ficha (1).json",
+  "sha256_origem": "3802e6217f7740ad546bc336327412e1b753331d8ab4b12c7d1d0c46feb131f2",
+  "conteudo_original": {
+    "chave": "EXT-0053-tsucora-quori",
+    "ordem_priorizada": 104,
+    "ordem_1320": 53,
+    "nome": "Tsucora Quori",
+    "tipo": "Aberração",
+    "nd": "7",
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Eberron: Rising from the Last War",
+    "edicao": "5e da publicação indicada na fila; não misturar edições",
+    "tamanho": "Médio",
+    "tendencia": "Leal e mau",
+    "classe_armadura": 16,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 68,
+    "dados_vida": "8d8 + 32",
+    "deslocamentos_pes": {
+      "andar": 40
+    },
+    "atributos": {
+      "FOR": 17,
+      "DES": 14,
+      "CON": 18,
+      "INT": 14,
+      "SAB": 14,
+      "CAR": 16
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": 2,
+      "CON": 4,
+      "INT": 2,
+      "SAB": 2,
+      "CAR": 3
+    },
+    "testes_resistencia": {
+      "SAB": 5,
+      "CAR": 6
+    },
+    "pericias": {
+      "Intuição": 5,
+      "Percepção": 5
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "psíquico"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado"
+    ],
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 15
+    },
+    "idiomas": [
+      "Comum",
+      "Quori"
+    ],
+    "telepatia_pes": null,
+    "xp": 2900,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Innate Spellcasting (Psionics)",
+        "atributo_conjuracao": "CAR",
+        "cd_magia": 14,
+        "componentes": "nenhum",
+        "magias": [
+          {
+            "nome_original": "charm person",
+            "frequencia": "à vontade"
+          },
+          {
+            "nome_original": "fear",
+            "frequencia": "1/dia"
+          }
+        ]
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Exatamente um Pincer, um Claws e um Stinger (três ataques no total)."
+      },
+      {
+        "nome_original": "Pincer",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 8,
+            "formula": "1d10 + 3",
+            "tipo": "concussão"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao": "agarrado",
+          "limite_tamanho": "Grande ou menor",
+          "cd_escapar": 14,
+          "limite": "Possui duas pinças e pode agarrar uma criatura por pinça."
+        }
+      },
+      {
+        "nome_original": "Claws",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 13,
+            "formula": "4d4 + 3",
+            "tipo": "cortante"
+          }
+        ]
+      },
+      {
+        "nome_original": "Stinger",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 6,
+        "alcance_pes": 10,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 8,
+            "formula": "1d10 + 3",
+            "tipo": "perfurante"
+          },
+          {
+            "medio": 10,
+            "formula": "3d6",
+            "tipo": "psíquico"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "teste_resistencia": {
+            "atributo": "SAB",
+            "cd": 14
+          },
+          "falha": "Amedrontado do Tsucora Quori por 1 minuto.",
+          "novo_teste": "Fim de cada turno do alvo, removendo em sucesso."
+        }
+      },
+      {
+        "nome_original": "Possession",
+        "recarga": "6",
+        "alvo": "Humanoide visível até 5 pés",
+        "teste_resistencia": {
+          "atributo": "CAR",
+          "cd": 14
+        },
+        "falha": "O quori desaparece; o alvo fica incapacitado e perde o controle do corpo, mas permanece consciente. O quori controla o corpo, não pode ser alvo de ataques, magias ou efeitos, mantém alinhamento, INT, SAB, CAR e imunidades a enfeitiçado/amedrontado, e usa os demais valores do hospedeiro, sem obter conhecimentos, características de classe ou proficiências do hospedeiro.",
+        "termino": "Corpo hospedeiro chega a 0 PV, quori encerra como ação bônus, ou efeito que o expulse (por exemplo dispel evil and good); reaparece em espaço livre até 5 pés do corpo.",
+        "imunidade_pos_resistencia": "Alvo bem-sucedido ou após possessão termina: imune à Possession deste quori por 24 horas."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "End Possession",
+        "pre_condicao": "Quori mantém um hospedeiro possuído",
+        "efeito": "Encerra sua própria Possession como ação bônus, reaparecendo em espaço livre até 5 pés do corpo."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "fear",
+        "usos_maximos": 1,
+        "periodo": "dia"
+      },
+      {
+        "recurso": "Possession",
+        "recarga": "6"
+      }
+    ],
+    "notas_de_validacao": [
+      "Aplicada errata oficial de Eberron p.307: dano psíquico de Stinger é 10 (3d6), não 10 (3d10).",
+      "Possession exige humanoide; um oponente Aberração, Celestial etc. não é alvo válido só por ser a criatura adversária.",
+      "Possession e controle de corpo desafiam regra de uma criatura ativa/zonas; mecanismo de persistência a 0 PV ou recompensa de vitória depende de decisão do administrador.",
+      "Multiaction de Tsucora é um ataque de cada tipo; não selecionar arbitrariamente três ferrões.",
+      "Charm person é uma magia que normalmente visa humanoide; preservar restrições de alvo da magia."
+    ],
+    "fontes": [
+      {
+        "tipo": "ficha_publicada_Eberron",
+        "url": "https://anyflip.com/xvcmb/qfvx/basic/301-326",
+        "pagina_impressa": 307
+      },
+      {
+        "tipo": "errata_oficial_WotC",
+        "url": "https://www.dndbeyond.com/sources/dnd/sae/eberron-rising-from-the-last-war",
+        "pagina_impressa": 307
+      },
+      {
+        "tipo": "transcricao_ficha_2019",
+        "url": "https://dnd-5e.fandom.com/wiki/Tsucora_Quori"
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

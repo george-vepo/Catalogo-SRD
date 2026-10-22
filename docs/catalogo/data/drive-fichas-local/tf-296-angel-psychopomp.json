@@ -1,0 +1,212 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-296",
+  "nome_catalogo": "Angel, Psychopomp",
+  "origem_arquivo": "TF-296-angel-psychopomp-ficha (1).json",
+  "sha256_origem": "879b6f2ec883e0ac19f459543c7e3646c2281f0c6159eb59ff6ad22c6543326a",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-013",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 49,
+      "ORDEM_1320": 194,
+      "CHAVE": "TF-296",
+      "ID_CATALOGO": "TF-296",
+      "nome_catalogo": "Angel, Psychopomp",
+      "nome_na_fonte": "Angel, Psychopomp",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "Celestial",
+      "nd": "4",
+      "classe": "Comum",
+      "deck": "Celestial",
+      "copia_referencia": "CE-009",
+      "publicacao_catalogo": "Kobold Press — Tome of Beasts 3",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "tipo": "Celestial",
+      "salvaguardas_fonte": {
+        "CON": 6,
+        "SAB": 5,
+        "CAR": 6
+      },
+      "pericias": {
+        "Enganacao": 6,
+        "Historia": 4,
+        "Intimidacao": 6,
+        "Percepcao": 5
+      },
+      "resistencias_dano": [
+        "necrótico",
+        "radiante",
+        "contundente/cortante/perfurante de armas não mágicas"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exausto",
+        "amedrontado",
+        "envenenado"
+      ],
+      "tracos": [
+        {
+          "nome": "Death’s Accomplice",
+          "efeito": "Quando causa dano radiante, pode optar por causar dano necrótico no lugar."
+        },
+        {
+          "nome": "Fiendish Countenance",
+          "efeito": "Nos planos nativos de demônios/diabos, aparenta ínfero local. Não é detectável como Celestial até revelar sua natureza (sem ação) ou usar Divine Dictum, Spirit Usher ou Unmake Contract."
+        },
+        {
+          "nome": "Immortal Nature",
+          "efeito": "Não precisa comer, beber ou dormir."
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "economia": "acao",
+          "efeito": "Realiza dois ataques de Lantern Flail."
+        },
+        {
+          "nome": "Lantern Flail",
+          "economia": "ataque",
+          "bonus_ataque": 5,
+          "alcance_pes": 5,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dado": "1d10+3",
+              "tipo": "contundente",
+              "media_publicada": 8
+            },
+            {
+              "dado": "1d8",
+              "tipo": "radiante",
+              "media_publicada": 4
+            }
+          ],
+          "dano_adicional_se_alvo_infero_ou_morto_vivo": {
+            "dado": "3d6",
+            "tipo": "radiante",
+            "media_publicada": 10
+          }
+        },
+        {
+          "nome": "Divine Dictum",
+          "economia": "acao",
+          "recarga": "5–6",
+          "area_alvos": "criaturas à escolha que possa ver até 30 pés",
+          "salvaguarda": "Sabedoria",
+          "CD": 14,
+          "falha": {
+            "dado": "5d8",
+            "tipo": "radiante",
+            "media_publicada": 22
+          },
+          "sucesso": "metade do dano",
+          "efeito_adicional": "Cada criatura à escolha enfeitiçada, amedrontada ou possuída até 60 pés pode optar por encerrar a condição."
+        },
+        {
+          "nome": "Unmake Contract",
+          "economia": "acao",
+          "usos": "1/dia",
+          "alcance_pes": 60,
+          "alvo": "criatura que possa ver ou ouvir",
+          "efeito": "Liberta o alvo de quaisquer ônus/reivindicações sobre sua alma; não causa dano ou impõe condição em combate por si só."
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "nome": "Spirit Usher",
+          "economia": "acao_bonus",
+          "usos": "3/dia",
+          "duracao": "1 hora",
+          "alvo": "uma criatura (alcance não especificado na transcrição consultada)",
+          "efeito": "Celestiais, ínferos e mortos-vivos têm desvantagem nos ataques contra a criatura protegida; a protegida não pode ser enfeitiçada, amedrontada ou possuída por eles; ganha 11 PV temporários e se morta não pode ser reanimada como morto-vivo por 1 ano."
+        }
+      ],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "conjuracao": [],
+      "recursos_limitados": [
+        {
+          "nome": "Divine Dictum",
+          "recarga": "5–6"
+        },
+        {
+          "nome": "Unmake Contract",
+          "limite": 1,
+          "periodo": "dia"
+        },
+        {
+          "nome": "Spirit Usher",
+          "limite": 3,
+          "periodo": "dia"
+        }
+      ],
+      "porte": "Médio",
+      "alinhamento": "leal e neutro",
+      "CA": 14,
+      "CA_origem": "armadura natural",
+      "PV_maximos": 68,
+      "formula_PV": "8d8+32",
+      "deslocamentos_pes": {
+        "terrestre": 40,
+        "voo": 60
+      },
+      "atributos": {
+        "FOR": 17,
+        "DES": 14,
+        "CON": 18,
+        "INT": 14,
+        "SAB": 16,
+        "CAR": 18
+      },
+      "iniciativa_bonus": 2,
+      "iniciativa_origem": "Modificador DES, sem bônus expresso no bloco Kobold",
+      "bonus_proficiencia": 2,
+      "sentidos": {
+        "visao_no_escuro_pes": 120,
+        "percepcao_passiva": 15
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "todos"
+        ],
+        "telepatia_pes": 60
+      }
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/09_Angel_Psychopomp.md",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/angel-psychopomp/",
+      "edicao_mecanica": "Tome of Beasts 3",
+      "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto, sem substituir regras A5E/Kobold automaticamente",
+      "fontes_cruzadas": [],
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "A transcrição consultada não especifica alcance numérico de Spirit Usher; não foi inventado."
+      ],
+      "pendencias_card_game": [
+        "Spirit Usher é uma ação bônus usada pela criatura presente; não transformar em suporte da mão ou cemitério sem homologação.",
+        "Unmake Contract não gera efeito numérico sem alvo narrativo elegível; não criar mecânica.",
+        "Duração de 1 ano após morte e 1 hora de proteção dependem de regras de partida aplicáveis."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

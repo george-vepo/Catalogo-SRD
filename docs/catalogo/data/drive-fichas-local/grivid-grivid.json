@@ -1,0 +1,183 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Grivid",
+  "origem_arquivo": "EXT-0072-grivid-ficha (1).json",
+  "sha256_origem": "a09244d1f0db5f88f06f10b4095b455742d6f202b78cc8230a2e5c12933e5e6d",
+  "conteudo_original": {
+    "chave": "EXT-0072-grivid",
+    "ordem_priorizada": 115,
+    "ordem_1320": 72,
+    "nome": "Grivid",
+    "tipo": "Aberração",
+    "nd": 11,
+    "raridade": "Rara",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e original de Tome of Beasts 3",
+    "tamanho": "Grande",
+    "tendencia": "Neutro",
+    "classe_armadura": 17,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 180,
+    "dados_vida": "19d10 + 76",
+    "deslocamentos_pes": {
+      "andar": 50
+    },
+    "atributos": {
+      "FOR": 21,
+      "DES": 16,
+      "CON": 18,
+      "INT": 2,
+      "SAB": 15,
+      "CAR": 5
+    },
+    "modificadores": {
+      "FOR": 5,
+      "DES": 3,
+      "CON": 4,
+      "INT": -4,
+      "SAB": 2,
+      "CAR": -3
+    },
+    "testes_resistencia": {
+      "DES": 7,
+      "SAB": 6
+    },
+    "pericias": {
+      "Percepção": 6
+    },
+    "sentidos": {
+      "tremorsense_pes": 60,
+      "percepcao_passiva": 16
+    },
+    "idiomas": [],
+    "xp": 7200,
+    "bonus_proficiencia": 4,
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [],
+    "caracteristicas": [
+      {
+        "nome_original": "Cheek Worm Regrowth",
+        "efeito": "Começa com reserva de 20 vermes nas bochechas; vermes utilizados regeneram quando termina descanso longo. A publicação escreve “gravid” por aparente erro de grafia; o nome canônico na fila é Grivid."
+      },
+      {
+        "nome_original": "Keen Sight",
+        "efeito": "Vantagem em testes de SAB (Percepção) baseados em visão."
+      },
+      {
+        "nome_original": "Parasitic Cheek Worm",
+        "efeito": "Ataques pertinentes podem inserir um verme se ainda houver reserva e alvo falhar salvaguarda. Enquanto infestada por ao menos um verme, criatura fica envenenada; no início dos turnos da criatura infestada recebe 5 (2d4) veneno. Uma criatura pode gastar uma ação e passar em SAB (Medicina) CD 12 para retirar um verme; efeito que cura doença remove e mata um verme. Com morte do Grivid todos os vermes já instalados morrem e infestação acaba."
+      },
+      {
+        "nome_original": "Worm Regeneration",
+        "efeito": "No início do turno do Grivid, se ele tiver pelo menos 1 PV, recupera 5 PV para cada verme infestando outra criatura; a fonte usa contagem de vermes individuais."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Escolhe entre: uma Bite e duas Kick; OU três Spit Worm."
+      },
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 9,
+        "alcance_pes": 10,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "perfurante",
+            "dados": "3d8 + 5",
+            "media": 18
+          },
+          {
+            "tipo": "veneno",
+            "dados": "2d6",
+            "media": 7
+          }
+        ],
+        "efeito": "Se possuir ao menos um verme, alvo realiza salvaguarda CON CD 16 ou recebe um verme parasita."
+      },
+      {
+        "nome_original": "Kick",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 9,
+        "alcance_pes": 5,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "concussão",
+            "dados": "3d8 + 5",
+            "media": 18
+          }
+        ],
+        "efeito": "Alvo faz salvaguarda FOR CD 16 ou fica caído."
+      },
+      {
+        "nome_original": "Spit Worm",
+        "tipo": "ataque à distância",
+        "bonus_ataque": 7,
+        "alcance_pes": null,
+        "distancia_pes": "20/60",
+        "dano": [
+          {
+            "tipo": "concussão",
+            "dados": "3d6 + 3",
+            "media": 13
+          },
+          {
+            "tipo": "veneno",
+            "dados": "2d6",
+            "media": 7
+          }
+        ],
+        "efeito": "Se tiver pelo menos um verme, alvo faz salvaguarda CON CD 16 ou fica infestado com um verme parasita."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Consume Worms",
+        "efeito": "Consome até 3 vermes da própria reserva; para cada um consumido, recupera 5 (2d4) PV."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "efeitos_regionais": [],
+    "recursos_limitados": [
+      {
+        "recurso": "vermes_nas_bochechas",
+        "usos_maximos": 20,
+        "periodo": "restabelecidos após descanso longo"
+      },
+      {
+        "recurso": "Consume Worms",
+        "limite_por_acao_bonus": 3
+      }
+    ],
+    "magias": [],
+    "fontes": [
+      {
+        "tipo": "reprodução_ficha_Tome_of_Beasts_3_p221",
+        "url": "https://anyflip.com/ldtnw/xiwu/basic/201-250"
+      },
+      {
+        "tipo": "catálogo_oficial_Kobold_Press",
+        "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+      }
+    ],
+    "notas_de_validacao": [
+      "Há um erro de nome na característica “Cheek Worm Regrowth”: o texto cita gravid, mas nome da criatura é Grivid; a mecânica de vinte vermes foi preservada.",
+      "Dano periódico do parasita é 2d4 por turno da criatura infestada enquanto houver ao menos um, não 2d4 multiplicado automaticamente pela quantidade de vermes.",
+      "Cura do Grivid por Worm Regeneration exige PV atuais de pelo menos 1; a regra do Card Game o derrota a 0.",
+      "Vermes são recursos/efeitos, nunca novos cards/monstros ativos. Não conceder recuperação gratuita entre combates.",
+      "Alvo pode empregar ação para tentativa de Medicina; quando alvo cai a 0 PV, decisão do administrador pode ser necessária para persistência dos vermes."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

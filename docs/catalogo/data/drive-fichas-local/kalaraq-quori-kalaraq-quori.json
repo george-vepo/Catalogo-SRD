@@ -1,0 +1,242 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Kalaraq Quori",
+  "origem_arquivo": "EXT-0088-kalaraq-quori-ficha (1).json",
+  "sha256_origem": "225643cb54ba3e154e7ba5c3e3560398cf643343f27e4011a935887ee4c91769",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-011",
+    "data_validacao": "2026-10-17T00:29:16-03:00",
+    "ORDEM_PRIORIZADA": 39,
+    "ORDEM_1320": 88,
+    "CHAVE": "EXT-0088-kalaraq-quori",
+    "ID_CATALOGO": null,
+    "nome": "Kalaraq Quori",
+    "tipo_catalogo": "Aberração",
+    "ND_catalogo": "19",
+    "classe_catalogo": "Lendária",
+    "origem_publicacao_catalogo": "Eberron: Rising from the Last War",
+    "edicao_fonte_considerada": "Eberron: Rising from the Last War (2019), D&D 5e legada",
+    "origem": "CANDIDATO EXTERNO",
+    "status_ficha": "COMPLETA_MECANICAS_VALIDADA_FONTE_SECUNDARIA",
+    "homologacao_administrativa": false,
+    "edicao_combate_card_game": "SRD 5.2.1 (aplicação de regras comuns sem alterar ficha legada)",
+    "fontes_consultadas": [
+      "/SRD Card Game/Decks/Aberração/Fichas por criatura/39_Kalaraq_Quori.md",
+      "https://onyx5e.com/en/bestiary/kalaraq-quori/",
+      "https://www.dndbeyond.com/monsters",
+      "https://dnd-5e.fandom.com/wiki/Kalaraq_Quori"
+    ],
+    "avisos_auditoria": [
+      "Candidato externo não aprovado; não há ficha primária íntegra arquivada na Biblioteca.",
+      "Transcrição secundária isolada usa 151 PV; 161 (19d8+76) é o valor concordante em fontes detalhadas; registrar discrepância.",
+      "As magias do bloco legado têm efeitos próprios e não devem ser substituídas silenciosamente por versões 2024."
+    ],
+    "pendencias_card_game": [
+      "Homologação de criatura externa e fonte oficial primária.",
+      "Soul Binding no 0 PV, exaustão prolongada, Mind Seed e Possession precisam de regras para zonas, morte instantânea e controle do jogador.",
+      "Magias de D&D 2014 e compatibilidade SRD 5.2.1 exigem política de edição explícita.",
+      "Spellcasting, duração e componentes dependem de fichas das magias; não inventar detalhes ausentes."
+    ],
+    "tracos": [
+      {
+        "name": "All-Around Vision",
+        "effect": "não pode ser surpreendido enquanto não estiver incapacitado"
+      },
+      {
+        "name": "Incorporeal Movement",
+        "effect": "atravessa criaturas e objetos tratando-os como terreno difícil",
+        "end_turn_inside_object_damage": {
+          "dice": "1d10",
+          "average": 5,
+          "type": "force"
+        }
+      },
+      {
+        "name": "Magic Resistance",
+        "effect": "vantagem nos testes de resistência contra magias e outros efeitos mágicos"
+      }
+    ],
+    "acoes": [
+      {
+        "name": "Multiattack",
+        "choose_one": [
+          {
+            "name": "Soul Binding",
+            "count": 2
+          },
+          {
+            "name": "Arcane Blast",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "name": "Arcane Blast",
+        "kind": "ranged_spell_attack",
+        "attack_bonus": 13,
+        "range_ft": 120,
+        "damage": [
+          {
+            "dice": "1d10",
+            "flat": 7,
+            "type": "force",
+            "average": 12
+          }
+        ]
+      },
+      {
+        "name": "Soul Binding",
+        "kind": "melee_spell_attack",
+        "attack_bonus": 13,
+        "reach_ft": 5,
+        "damage": [
+          {
+            "dice": "4d10",
+            "flat": 7,
+            "type": "necrotic",
+            "average": 29
+          }
+        ],
+        "on_reduce_to_zero": "alvo morre e alma fica presa até destruição do quori ou efeito Wish; requer decisão Card Game"
+      },
+      {
+        "name": "Mind Seed",
+        "uses": "1/day",
+        "target": "one humanoid within touch",
+        "save": {
+          "ability": "INT",
+          "dc": 21
+        },
+        "on_failure": "maldição com +1 exaustão a cada 24h; descanso longo não elimina; a nível 6 converte-se em servo em vez de morrer",
+        "remove_curse": "Remove Curse / Greater Restoration antes de servo; Wish após servo"
+      },
+      {
+        "name": "Swarm of Eyes",
+        "recharge": "6",
+        "range_ft": 60,
+        "aoe": {
+          "shape": "sphere",
+          "radius_ft": 30
+        },
+        "save": {
+          "ability": "WIS",
+          "dc": 21
+        },
+        "on_failure": {
+          "damage": "10d8 psychic",
+          "blind_minute": 1
+        },
+        "on_success": {
+          "half_damage": true,
+          "blind": false
+        },
+        "repeat_save": "end_of_turn_for_blinded"
+      },
+      {
+        "name": "Possession",
+        "recharge": "6",
+        "target": "humanoid visible within 5 feet",
+        "save": {
+          "ability": "CHA",
+          "dc": 21
+        },
+        "on_failure": "alvo incapacitado, quori desaparece e assume controle; mantém INT/WIS/CHA e outras particularidades; termina por 0 PV do corpo, dispulsão ou ação bônus do quori",
+        "immunity_after_end_hours": 24
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "acoes_miticas": [],
+    "conjuracao": [
+      {
+        "name": "Innate Spellcasting (Psionics)",
+        "ability": "CHA",
+        "save_dc": 21,
+        "spell_attack_bonus": 13,
+        "components": false,
+        "at_will": [
+          "arcane eye"
+        ],
+        "three_per_day_each": [
+          "clairvoyance",
+          "confusion",
+          "dream",
+          "eyebite"
+        ]
+      }
+    ],
+    "recursos": [],
+    "porte": "Medium",
+    "alinhamento": "lawful evil",
+    "ca": 18,
+    "pv_maximos": 161,
+    "formula_pv": "19d8+76",
+    "iniciativa": {
+      "modificador": 5,
+      "origem": "DEX 21"
+    },
+    "atributos": {
+      "STR": 12,
+      "DEX": 21,
+      "CON": 18,
+      "INT": 23,
+      "WIS": 24,
+      "CHA": 25
+    },
+    "bonus_proficiencia": 6,
+    "deslocamento_ft": {
+      "walk": 30,
+      "fly": 60,
+      "hover": true
+    },
+    "salvaguardas": {
+      "INT": 12,
+      "WIS": 13,
+      "CHA": 13
+    },
+    "pericias": {
+      "Deception": 13,
+      "Perception": 13,
+      "Persuasion": 13
+    },
+    "resistencias_dano": [
+      "cold",
+      "necrotic",
+      "poison",
+      "psychic",
+      {
+        "types": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "qualifier": "nonmagical attacks"
+      }
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicao": [
+      "blinded",
+      "charmed",
+      "exhaustion",
+      "frightened",
+      "grappled",
+      "paralyzed",
+      "petrified",
+      "prone",
+      "restrained"
+    ],
+    "sentidos": {
+      "truesight_ft": 120,
+      "passive_perception": 23
+    },
+    "idiomas": {
+      "all_languages": true,
+      "telepathy_ft": 120
+    }
+  },
+  "documentos_complementares": []
+}

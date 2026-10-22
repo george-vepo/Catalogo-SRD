@@ -1,0 +1,162 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Star Spawn Seer",
+  "origem_arquivo": "EXT-0079-star-spawn-seer-ficha (1).json",
+  "sha256_origem": "248d877fc759bbd1c361a0c4a9d49068e26ffb6400c03916cfe1eb956f132f73",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-031",
+    "data_validacao": "2026-10-18T18:30:13-03:00",
+    "ordem_priorizada": 120,
+    "ordem_1320": 79,
+    "chave": "EXT-0079-star-spawn-seer",
+    "id_catalogo": null,
+    "nome": "Star Spawn Seer",
+    "tipo": "Aberração",
+    "nd": 13,
+    "raridade": "Rara",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "status_ficha": "COMPLETA_MECANICAS_VALIDADA_COM_RESSALVAS",
+    "homologacao_administrativa": false,
+    "regra_combate": "SRD 5.2.1 quando aplicável; regras originais das fichas A5E/5e são identificadas, sem adaptações não aprovadas",
+    "fontes": [
+      "https://fliphtml5.com/fqkpd/gdoo/Monsters_of_the_Multiverse_Colored/231/",
+      "https://runerollers.com/apps/platform/library/bestiary/star-spawn-seer-mpmm",
+      "https://www.dndbeyond.com/sources/dnd/motm"
+    ],
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "frio",
+      "concussão, perfurante e cortante de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "psíquico"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado"
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz dois ataques, cada um Comet Staff ou Psychic Orb, em combinação permitida."
+      },
+      {
+        "nome_original": "Comet Staff",
+        "tipo": "corpo a corpo",
+        "bonus_ataque": 11,
+        "alcance_pes": 5,
+        "dano": [
+          {
+            "dados": "1d8 + 6",
+            "media": 10,
+            "tipo": "concussão"
+          },
+          {
+            "dados": "4d8",
+            "media": 18,
+            "tipo": "psíquico"
+          }
+        ],
+        "efeito": "Se alvo é criatura, CON CD 19 ou incapacitado até fim do próximo turno dele."
+      },
+      {
+        "nome_original": "Psychic Orb",
+        "tipo": "ataque mágico à distância",
+        "bonus_ataque": 11,
+        "distancia_pes": 120,
+        "dano": [
+          {
+            "dados": "5d10",
+            "media": 27,
+            "tipo": "psíquico"
+          }
+        ]
+      },
+      {
+        "nome_original": "Collapse Distance",
+        "efeito": "Uma criatura visível a 30 pés: SAB CD 19. Falha: teleporta alvo/equipamento até 60 pés para espaço desocupado visível, e cada criatura a 10 pés do espaço original sofre 39 (6d12) psíquico. Sucesso: alvo sofre 19 (3d12) psíquico, sem teleporte.",
+        "recarga": "6"
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [
+      {
+        "nome_original": "Bend Space",
+        "efeito": "Ao ser acertado por uma jogada de ataque, se houver OUTRO star spawn visível a 60 pés, troca posição com ele (e equipamentos), que recebe o ataque em vez do seer. Sem outro star spawn, pré-requisito não atendido."
+      }
+    ],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "recursos_limitados": [
+      {
+        "nome": "Collapse Distance",
+        "recarga": "6"
+      }
+    ],
+    "pendencias_card_game": [
+      "Bend Space requer outro star spawn em campo, e o Card Game limita a uma criatura ativa por jogador; não criar companheiro ou alvo substituto para viabilizar a reação.",
+      "Collapse Distance depende de espaço desocupado, linhas de visão, raio de 10 pés e arena definida.",
+      "Out-of-Phase Movement pode atravessar criaturas ou objetos; implementação exige geometria e posicionamento aprovados."
+    ],
+    "notas_de_validacao": [
+      "Edição de 2022: Comet Staff é 1d8+6 + 4d8, sem alternância da edição antiga. Collapse Distance falha afeta cada criatura dentro de 10 pés da posição inicial, inclusive o próprio alvo se ali estiver segundo aplicação literal; não inventar exclusões."
+    ],
+    "tamanho": "Médio",
+    "tendencia": "normalmente neutro e mau",
+    "classe_armadura": 17,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 153,
+    "dados_vida": "18d8 + 72",
+    "deslocamentos_pes": {
+      "andar": 30
+    },
+    "atributos": {
+      "FOR": 14,
+      "DES": 12,
+      "CON": 18,
+      "INT": 22,
+      "SAB": 19,
+      "CAR": 16
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": 1,
+      "CON": 4,
+      "INT": 6,
+      "SAB": 4,
+      "CAR": 3
+    },
+    "bonus_proficiencia": 5,
+    "xp": 10000,
+    "testes_resistencia": {
+      "DES": 6,
+      "INT": 11,
+      "SAB": 9,
+      "CAR": 8
+    },
+    "pericias": {
+      "Percepção": 9
+    },
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 19
+    },
+    "idiomas": [
+      "Comum",
+      "Deep Speech",
+      "Undercommon"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Out-of-Phase Movement",
+        "efeito": "Pode mover-se por criaturas/objetos como terreno difícil, sem provocar ataques de oportunidade. Criatura atravessada sofre 5 (1d10) psíquico, máximo 1 vez por turno por criatura; se terminar o turno dentro de objeto, sofre 5 (1d10) força."
+      }
+    ]
+  },
+  "documentos_complementares": []
+}

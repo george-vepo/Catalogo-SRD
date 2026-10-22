@@ -1,0 +1,200 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Midnight Sun",
+  "origem_arquivo": "EXT-0052-midnight-sun-ficha (1).json",
+  "sha256_origem": "de566b1345dfa4decc2ebf0c046cede3af75460d686fa9219539bcebbf5aa83b",
+  "conteudo_original": {
+    "chave": "EXT-0052-midnight-sun",
+    "ordem_priorizada": 103,
+    "ordem_1320": 52,
+    "nome": "Midnight Sun",
+    "tipo": "Aberração",
+    "nd": "7",
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da publicação indicada na fila; não misturar edições",
+    "tamanho": "Grande",
+    "tendencia": "Neutro e mau",
+    "classe_armadura": 16,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 136,
+    "dados_vida": "16d10 + 48",
+    "deslocamentos_pes": {
+      "andar": 0,
+      "voar": 60,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 10,
+      "DES": 16,
+      "CON": 16,
+      "INT": 11,
+      "SAB": 18,
+      "CAR": 15
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 3,
+      "CON": 3,
+      "INT": 0,
+      "SAB": 4,
+      "CAR": 2
+    },
+    "testes_resistencia": {
+      "DES": 6,
+      "SAB": 7,
+      "CAR": 5
+    },
+    "pericias": {
+      "Percepção": 7
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "ácido",
+      "frio",
+      "fogo",
+      "elétrico",
+      "trovejante",
+      "concussão, perfurante e cortante de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "veneno"
+    ],
+    "imunidades_condicoes": [
+      "cego",
+      "enfeitiçado",
+      "surdo",
+      "exaustão",
+      "amedrontado",
+      "agarrado",
+      "paralisado",
+      "petrificado",
+      "envenenado",
+      "caído",
+      "impedido",
+      "inconsciente"
+    ],
+    "sentidos": {
+      "visao_cegas_pes": 120,
+      "cego_alem_visao_cegas": true,
+      "percepcao_passiva": 17
+    },
+    "idiomas": [
+      "Fala Profunda"
+    ],
+    "telepatia_pes": null,
+    "xp": 2900,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Changing Form",
+        "efeito": "Forma muda automaticamente conforme a iluminação no espaço, inclusive tipo de dano e imunidade/vulnerabilidade.",
+        "formas": [
+          {
+            "nome_original": "Day Form",
+            "condicao": "mais da metade do corpo em escuridão",
+            "aparencia": "orbe de luz que não emite luz",
+            "dano": "radiante",
+            "imunidade": "radiante",
+            "vulnerabilidade": "necrótico"
+          },
+          {
+            "nome_original": "Night Form",
+            "condicao": "mais da metade do corpo em luz forte ou penumbra",
+            "aparencia": "orbe escuro",
+            "dano": "necrótico",
+            "imunidade": "necrótico",
+            "vulnerabilidade": "radiante"
+          },
+          {
+            "nome_original": "Twilight Form",
+            "condicao": "exatamente metade iluminada e metade na escuridão",
+            "aparencia": "orbe mesclado",
+            "dano": "energético",
+            "imunidade_condicional": null,
+            "vulnerabilidade_condicional": null
+          }
+        ]
+      },
+      {
+        "nome_original": "Energy Being",
+        "efeito": "Atravessa passagens de apenas 1 polegada sem espremer-se; pode entrar e permanecer no espaço hostil. Na primeira entrada no espaço de uma criatura por turno, causa 3 (1d6) de dano do tipo de sua forma atual."
+      },
+      {
+        "nome_original": "Reality Inversion",
+        "efeito": "Criatura que começa o turno no espaço ou até 5 pés do Midnight Sun tem vantagem e desvantagem invertidas, em qualquer circunstância/característica, até o início do próximo turno da vítima."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Três Energy Blast."
+      },
+      {
+        "nome_original": "Energy Blast",
+        "tipo": "ataque mágico corpo a corpo ou à distância",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 14,
+            "formula": "3d6 + 4",
+            "tipo": "tipo determinado por Changing Form"
+          }
+        ],
+        "alcance_distancia_pes": 120
+      },
+      {
+        "nome_original": "Energy Pulse",
+        "recarga": "5-6",
+        "area": {
+          "tipo": "emanação centrada na criatura",
+          "raio_pes": 15
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "dano": {
+          "medio": 28,
+          "formula": "8d6",
+          "tipo": "determinado por Changing Form"
+        },
+        "sucesso": "Metade do dano."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Energy Pulse",
+        "recarga": "5-6"
+      }
+    ],
+    "notas_de_validacao": [
+      "As vulnerabilidades/imunidades radiante ou necrótico NÃO são simultâneas: derivam da forma/iluminação no espaço.",
+      "Day Form ocorre na escuridão, Night Form ocorre na luz: manter a nomenclatura paradoxal da publicação.",
+      "Twilight Form não recebe imunidade/vulnerabilidade condicional de Day/Night não expressa pela fonte.",
+      "A mudança de forma exige registro de iluminação na arena; não supor dia/noite nem estado padrão sem dados oficiais.",
+      "Reality Inversion afeta tanto vantagens quanto desvantagens, respeitando duração e raio."
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_TOB3",
+        "url": "https://anyflip.com/tkzwp/dofg/basic/251-300",
+        "pagina_impressa": 270
+      },
+      {
+        "tipo": "indice_oficial_KoboldPress",
+        "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

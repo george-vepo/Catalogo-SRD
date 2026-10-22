@@ -1,0 +1,200 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Star-Nosed Diopsid",
+  "origem_arquivo": "EXT-0060-star-nosed-diopsid-ficha (1).json",
+  "sha256_origem": "a0e12a07464373bd1c07bf3e91bf19cd639ea54e37933aa66bdf9e143f5c4ee3",
+  "conteudo_original": {
+    "chave": "EXT-0060-star-nosed-diopsid",
+    "ordem_priorizada": 107,
+    "ordem_1320": 60,
+    "nome": "Star-Nosed Diopsid",
+    "tipo": "Aberração",
+    "nd": 9,
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da publicação indicada na fila; não misturar versões 2016, 2019 ou revisões 2022",
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "concussão, perfuração e cortante de ataques não mágicos"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [],
+    "testes_resistencia": {
+      "CON": 7,
+      "INT": 7,
+      "SAB": 7
+    },
+    "pericias": {
+      "Percepção": 7,
+      "Furtividade": 6
+    },
+    "acoes_bonus": [
+      {
+        "nome_original": "Extend Share Senses",
+        "pre_condicao": "Share Senses ativado em humanoide envenenado próximo",
+        "efeito": "Estende observação até o início do turno seguinte."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Control Envenomed",
+        "usos_maximos": 3,
+        "periodo": "dia"
+      }
+    ],
+    "fontes": [
+      {
+        "tipo": "transcricao_Tome_of_Beasts_3",
+        "url": "https://www.5esrd.com/database/creature/star-nosed-diopsid/"
+      },
+      {
+        "tipo": "reproducao_publicacao",
+        "url": "https://anyflip.com/tkzwp/dofg/basic/351-400",
+        "pagina_impressa": 355
+      },
+      {
+        "tipo": "errata_oficial_KoboldPress",
+        "url": "https://koboldpress.com/errata/"
+      }
+    ],
+    "notas_de_validacao": [
+      "Mutagenic Venom tem requisito estrito de Humanoide e intervalo de 24 horas; não reduzir PV máximo a cada rodada nem criar cartas novas por transformação.",
+      "Share Senses/Control Envenomed exigem humanoide já envenenado, até 300 pés; presença de segunda criatura/arena requer aprovação.",
+      "A ficha prevê telepatia de 100 pés, ampliada a 300 pés entre diopsids; não usar 300 pés contra todas as criaturas.",
+      "Não confundir envenenado por veneno mutagênico com aplicação irrestrita da condição genérica poisoned: fonte descreve efeito específico."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "tamanho": "Grande",
+    "tendencia": "Leal e mau",
+    "classe_armadura": 16,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 153,
+    "dados_vida": "18d10 + 54",
+    "deslocamentos_pes": {
+      "andar": 30,
+      "escavar": 15,
+      "voar": 30
+    },
+    "atributos": {
+      "FOR": 19,
+      "DES": 14,
+      "CON": 17,
+      "INT": 17,
+      "SAB": 16,
+      "CAR": 15
+    },
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "tremorsense_pes": 60,
+      "percepcao_passiva": 17
+    },
+    "idiomas": [
+      "Fala Profunda",
+      "Subcomum"
+    ],
+    "telepatia_pes": 100,
+    "xp": 5000,
+    "bonus_proficiencia": 4,
+    "caracteristicas": [
+      {
+        "nome_original": "Mutagenic Venom",
+        "efeito": "Humanoide afetado pelo veneno trata os diopsids como se enfeitiçado. A cada 24 horas testa CON CD 16; na falha, PV máximos diminuem 5 (2d4) até terminar descanso longo após veneno removido; morte se PV máximo chegar a 0, seguida de transformação em novo diopsid e perda das lembranças. Remoção por greater restoration ou magia equivalente.",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 16,
+          "frequencia": "a cada 24 horas após envenenamento"
+        },
+        "efeito_continuado": "O dano e a transformação não ocorrem instantaneamente; exigem passagem de tempo e condições da habilidade.",
+        "alvo_valido": "humanoide"
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Um Stinger mais dois ataques Tentacle, na mesma ação."
+      },
+      {
+        "nome_original": "Stinger",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 8,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 26,
+            "formula": "4d10 + 4",
+            "tipo": "perfurante"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao_alvo": "humanoide",
+          "teste_resistencia": {
+            "atributo": "CON",
+            "cd": 16
+          },
+          "falha": "aplica Mutagenic Venom"
+        }
+      },
+      {
+        "nome_original": "Tentacle",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 8,
+        "alcance_pes": 10,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 17,
+            "formula": "3d8 + 4",
+            "tipo": "concussão"
+          }
+        ],
+        "efeito_ao_acertar": {
+          "condicao": "agarrado",
+          "limite_tamanho": "Grande ou menor",
+          "cd_escapar": 16,
+          "limite": "Somente se o diopsid ainda não agarrar outras duas criaturas."
+        }
+      },
+      {
+        "nome_original": "Share Senses",
+        "distancia_maxima_pes": 300,
+        "alvo_exigido": "humanoide envenenado",
+        "efeito": "Enxerga e ouve pelos sentidos do alvo, incluindo sentidos especiais, até o início do próximo turno; pode prolongar por ação bônus a cada turno."
+      },
+      {
+        "nome_original": "Control Envenomed",
+        "usos_maximos": 3,
+        "periodo": "dia",
+        "distancia_maxima_pes": 300,
+        "alvo_exigido": "humanoide envenenado",
+        "teste_resistencia": {
+          "atributo": "SAB",
+          "cd": 16
+        },
+        "falha": "Segue sugestão como spell suggestion, sem consciência da influência.",
+        "sucesso": {
+          "dano": {
+            "medio": 11,
+            "formula": "2d10",
+            "tipo": "psíquico"
+          },
+          "adicional": "desvantagem no próximo teste para resistir a esta habilidade"
+        }
+      }
+    ],
+    "modificadores": {
+      "FOR": 4,
+      "DES": 2,
+      "CON": 3,
+      "INT": 3,
+      "SAB": 3,
+      "CAR": 2
+    }
+  },
+  "documentos_complementares": []
+}

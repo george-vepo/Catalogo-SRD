@@ -1,0 +1,215 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-299",
+  "nome_catalogo": "Angel, Sammael",
+  "origem_arquivo": "TF-299-angel-sammael-ficha (1).json",
+  "sha256_origem": "f2410e2cbc976f4026fd330ac9b4c9369d81ce35c528f626d1d6ff9ebe47ea92",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-015",
+    "data_execucao_local": "2026-10-17T01:52:42-03:00",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 56,
+      "ORDEM_1320": 201,
+      "CHAVE": "TF-299",
+      "ID_CATALOGO": "TF-299",
+      "nome_catalogo": "Angel, Sammael",
+      "nome_na_fonte": "Sammael",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "Celestial",
+      "nd": "7",
+      "classe": "Incomum",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-020"
+      ],
+      "publicacao_catalogo": "Creature Codex",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Médio",
+      "alinhamento": "neutro e bom",
+      "CA": 16,
+      "CA_origem": "armadura natural",
+      "PV_maximos": 104,
+      "formula_PV": "16d8+32",
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": 40
+      },
+      "atributos": {
+        "FOR": 18,
+        "DES": 10,
+        "CON": 14,
+        "INT": 10,
+        "SAB": 19,
+        "CAR": 12
+      },
+      "iniciativa_bonus": 0,
+      "iniciativa_origem": "Inferido apenas pelo modificador de DES do bloco de 2018; iniciativa não declarada na fonte",
+      "bonus_proficiencia": 3,
+      "salvaguardas_fonte": {
+        "SAB": 7,
+        "CAR": 4
+      },
+      "pericias": {
+        "Intuicao": 7,
+        "Percepcao": 7
+      },
+      "resistencias_dano": [
+        "radiante",
+        "contundente de ataques não mágicos",
+        "perfurante de ataques não mágicos",
+        "cortante de ataques não mágicos"
+      ],
+      "sentidos": {
+        "percepcao_passiva": 17,
+        "visao_no_escuro_pes": 120
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "todos"
+        ],
+        "telepatia_pes": 120
+      },
+      "tracos": [
+        {
+          "nome": "Angelic Weapons",
+          "efeito": "Ataques com armas são mágicos; +2d8 radiante já incluídos nos danos descritos."
+        },
+        {
+          "nome": "Sacred Duty",
+          "efeito": "Alterna entre Destructor, Executioner ou Punisher como ação bônus. Ataques disponíveis dependem da forma.",
+          "formas": [
+            {
+              "nome": "Destructor",
+              "efeito": "Ataques com arma causam o dobro de dano em objetos e estruturas."
+            },
+            {
+              "nome": "Executioner",
+              "efeito": "Tem vantagem em ataques contra uma vítima específica indicada pela divindade; conhece a localização dela no mesmo plano."
+            },
+            {
+              "nome": "Punisher",
+              "efeito": "Se reduzir uma criatura a 0 PV, ela perde 1d6 de Carisma, média publicada 3, até Greater Restoration ou magia equivalente."
+            }
+          ]
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Realiza dois ataques corpo a corpo permitidos pela forma atual."
+        },
+        {
+          "nome": "Greataxe",
+          "restricao_forma": "Executioner",
+          "bonus_ataque": 7,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "dado": "1d12+4",
+              "tipo": "cortante",
+              "media_publicada": 10
+            },
+            {
+              "dado": "2d8",
+              "tipo": "radiante",
+              "media_publicada": 9
+            }
+          ],
+          "efeito": "Criatura acertada: salvaguarda SAB CD 16; na falha fica amedrontada até o fim do próximo turno dela."
+        },
+        {
+          "nome": "Slam",
+          "restricao_forma": "Destructor",
+          "bonus_ataque": 7,
+          "alcance_pes": 5,
+          "dano": [
+            {
+              "dado": "2d6+4",
+              "tipo": "fogo",
+              "media_publicada": 11
+            },
+            {
+              "dado": "2d8",
+              "tipo": "radiante",
+              "media_publicada": 9
+            }
+          ],
+          "efeito": "Criatura acertada: salvaguarda FOR CD 16; na falha é empurrada 10 pés para longe do anjo."
+        },
+        {
+          "nome": "Whip",
+          "restricao_forma": "Punisher",
+          "bonus_ataque": 7,
+          "alcance_pes": 10,
+          "dano": [
+            {
+              "dado": "1d4+4",
+              "tipo": "cortante",
+              "media_publicada": 6
+            },
+            {
+              "dado": "2d8",
+              "tipo": "radiante",
+              "media_publicada": 9
+            }
+          ],
+          "efeito": "Criatura acertada: salvaguarda CON CD 16; na falha fica atordoada até o fim do próximo turno dela. PV máximos do alvo diminuem pela quantidade de dano radiante sofrido até um descanso curto ou longo."
+        }
+      ],
+      "conjuracao": [],
+      "recursos_limitados": [],
+      "acoes_bonus": [
+        {
+          "nome": "Sacred Duty",
+          "efeito": "Trocar forma entre Destructor, Executioner e Punisher. Apenas ataques da forma escolhida ficam disponíveis."
+        }
+      ],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exausto",
+        "amedrontado"
+      ]
+    },
+    "suporte_candidato_na_pesquisa_deck": {
+      "habilidade": "Whip (Punisher Form)",
+      "status": "CANDIDATA_NAO_HOMOLOGADA",
+      "regra_original": "Ataque +7, alcance 10 pés, 1d4+4 cortante e 2d8 radiante; alvo faz CON CD 16 contra atordoamento, e PV máximos diminuem pelo radiante. Exige forma Punisher."
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/20_Angel_Sammael.md",
+      "caminho_no_controle_original": "/SRD Card Game/Decks/Celestial/Fichas por criatura/16_Angel_Sammael.md",
+      "divergencia_caminho_controle": "O CSV aponta para 16_Angel_Sammael.md, mas o arquivo existente com nome e CHAVE compatíveis é 20_Angel_Sammael.md. Não editar a fila original.",
+      "fonte_estatisticas": "https://kpogl.wikidot.com/monster:sammael",
+      "fonte_primaria_local": null,
+      "edicao_mecanica": "Kobold Press Creature Codex, edição original 5e (2018)",
+      "regra_combativa": "SRD 5.2.1 rege a resolução geral; efeitos da edição Kobold Press 5e original conservados, sem importação silenciosa de redações de 2024",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "O controle aponta para 16_Angel_Sammael.md, mas o Markdown correto é 20_Angel_Sammael.md.",
+        "No material de origem a Whip somente está disponível em Punisher e não se aplica ao Dexter/Executioner."
+      ],
+      "pendencias_card_game": [
+        "A divindade determina o alvo privilegiado de Executioner; não criar automaticamente um alvo escolhido pelo sistema.",
+        "A forma Punisher reduz CAR ao levar alvo a 0 PV, além da derrota imediata pela regra do Card Game; decidir pertinência pós-combate.",
+        "Redução de PV máximos da Whip dura até descanso curto/longo, sem recuperação automática entre combates.",
+        "Controle de ação bônus e confirmação de forma ativa antes de qualquer ataque; não misturar ataques das três formas."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

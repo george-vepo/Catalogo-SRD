@@ -1,0 +1,232 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Elder Brain",
+  "origem_arquivo": "EXT-0080-elder-brain-ficha (1).json",
+  "sha256_origem": "b1cbc16e0081bdbbfa3c10f0cc52ba6a636f29fd89666caab565cbdcc0d86810",
+  "conteudo_original": {
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-031",
+    "data_validacao": "2026-10-18T18:30:13-03:00",
+    "ordem_priorizada": 121,
+    "ordem_1320": 80,
+    "chave": "EXT-0080-elder-brain",
+    "id_catalogo": null,
+    "nome": "Elder Brain",
+    "tipo": "Aberração",
+    "nd": 14,
+    "raridade": "Rara",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "status_ficha": "COMPLETA_MECANICAS_VALIDADA_COM_RESSALVAS",
+    "homologacao_administrativa": false,
+    "regra_combate": "SRD 5.2.1 quando aplicável; regras originais das fichas A5E/5e são identificadas, sem adaptações não aprovadas",
+    "fontes": [
+      "https://dumbdecision.de/monsters/elder-brain-mpmm",
+      "https://anyflip.com/sqwmo/naem/basic/101-150",
+      "https://www.dndbeyond.com/sources/dnd/motm"
+    ],
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [],
+    "acoes": [
+      {
+        "nome_original": "Tentacle",
+        "tipo": "corpo a corpo",
+        "bonus_ataque": 7,
+        "alcance_pes": 30,
+        "dano": [
+          {
+            "dados": "4d8 + 2",
+            "media": 20,
+            "tipo": "concussão"
+          }
+        ],
+        "efeito": "Se o alvo é Enorme ou menor, fica agarrado (escapar CD 15) e sofre 9 (1d8+5) psíquico ao INÍCIO de cada turno seu até cessar o agarramento. Até quatro alvos agarrados."
+      },
+      {
+        "nome_original": "Mind Blast",
+        "efeito": "Criaturas à escolha do Elder Brain a até 60 pés: INT CD 18; na falha sofrem 32 (5d10+5) psíquico e ficam atordoadas até 1 minuto; repetem INT ao final de cada turno para encerrar.",
+        "recarga": "5-6"
+      },
+      {
+        "nome_original": "Spellcasting (Psionics)",
+        "efeito": "Conjura uma das magias listadas, sem componentes, INT, CD 18, como ação."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Psychic Link",
+        "efeito": "Somente criatura INCAPACITADA e detectada por Creature Sense. Liga mente e sentidos; alvo pode gastar ação para encerrar com CAR CD 18; sucesso encerra e causa ao alvo 10 (3d6) psíquico. Ligação termina além de 5 milhas; até 10 vínculos simultâneos; Elder Brain pode terminá-la sem ação."
+      },
+      {
+        "nome_original": "Sense Thoughts",
+        "efeito": "Somente alvo que tenha Psychic Link ativo: conhece estado emocional e pensamentos dominantes (preocupações, amores, ódios)."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": {
+      "quantidade_por_rodada": 3,
+      "recupera": "início de seu turno",
+      "regra": "Uma ação lendária por vez, ao fim do turno de outra criatura. Gastos seguem opções.",
+      "opcoes": [
+        {
+          "nome_original": "Break Concentration",
+          "efeito": "Requer alvo com Psychic Link ativo a até 120 pés; encerra concentração em magia conjurada pelo alvo, que sofre 2 (1d4) psíquico por nível da magia."
+        },
+        {
+          "nome_original": "Psychic Pulse",
+          "efeito": "Requer alvo com Psychic Link ativo a até 120 pés; alvo e inimigos do Elder Brain em 30 pés do alvo sofrem 10 (3d6) psíquico."
+        },
+        {
+          "nome_original": "Sever Psychic Link",
+          "efeito": "Requer alvo com Psychic Link ativo a até 120 pés; rompe vínculo e impõe desvantagem em testes de atributo, ataques e salvaguardas até o fim do próximo turno do alvo."
+        },
+        {
+          "nome_original": "Tentacle",
+          "efeito": "Executa um ataque Tentacle, gastando DUAS ações lendárias."
+        }
+      ]
+    },
+    "acoes_covil": [],
+    "recursos_limitados": [
+      {
+        "nome": "Legendary Resistance",
+        "usos": 3,
+        "periodo": "dia"
+      },
+      {
+        "nome": "Mind Blast",
+        "recarga": "5-6"
+      },
+      {
+        "nome": "modify memory",
+        "usos": 3,
+        "periodo": "dia"
+      },
+      {
+        "nome": "dominate monster",
+        "usos": 1,
+        "periodo": "dia"
+      },
+      {
+        "nome": "plane shift",
+        "usos": 1,
+        "periodo": "dia",
+        "restricao": "self only"
+      },
+      {
+        "nome": "ações lendárias",
+        "quantidade_por_rodada": 3
+      }
+    ],
+    "pendencias_card_game": [
+      "As ações lendárias Break Concentration, Psychic Pulse e Sever Psychic Link dependem de Psychic Link estabelecido antes; Psychic Link exige alvo já incapacitado. Não presumir ligação gratuita.",
+      "Há limite de uma criatura ativa por jogador: 4 tentáculos agarrando e até 10 links são capacidades do bloco original, não novas criaturas do duelo.",
+      "Uso de Mind Blast em múltiplos alvos e telepatia de 5 milhas depende de arena, distância e visibilidade aprovadas.",
+      "Ações lendárias só ao fim do turno da outra criatura e conforme economia de ações do SRD; reação não é livre."
+    ],
+    "notas_de_validacao": [
+      "Edição Mordenkainen Presents: Monsters of the Multiverse (2022), p.120; não misturar a versão original do Volo’s Guide."
+    ],
+    "tamanho": "Grande",
+    "subtipo": "Mind Flayer",
+    "tendencia": "normalmente leal e mau",
+    "classe_armadura": 10,
+    "pontos_vida": 210,
+    "dados_vida": "20d10 + 100",
+    "deslocamentos_pes": {
+      "andar": 5,
+      "nadar": 10
+    },
+    "atributos": {
+      "FOR": 15,
+      "DES": 10,
+      "CON": 20,
+      "INT": 21,
+      "SAB": 19,
+      "CAR": 24
+    },
+    "modificadores": {
+      "FOR": 2,
+      "DES": 0,
+      "CON": 5,
+      "INT": 5,
+      "SAB": 4,
+      "CAR": 7
+    },
+    "bonus_proficiencia": 5,
+    "xp": 11500,
+    "testes_resistencia": {
+      "INT": 10,
+      "SAB": 9,
+      "CAR": 12
+    },
+    "pericias": {
+      "Arcanismo": 10,
+      "Enganação": 12,
+      "Intuição": 14,
+      "Intimidação": 12,
+      "Persuasão": 12
+    },
+    "sentidos": {
+      "percepcao_cega_pes": 120,
+      "percepcao_passiva": 14
+    },
+    "idiomas": [
+      "entende Comum, Deep Speech e Undercommon, mas não fala",
+      "telepatia 5 milhas"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Creature Sense",
+        "efeito": "Ciente de criaturas num raio de 5 milhas com INT>=4; sabe distância, direção e valor de INT; mind blank, nondetection ou magia similar bloqueiam."
+      },
+      {
+        "nome_original": "Legendary Resistance (3/Day)",
+        "efeito": "Se falhar um teste de resistência, pode escolher ter sucesso; três usos por dia."
+      },
+      {
+        "nome_original": "Magic Resistance",
+        "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+      },
+      {
+        "nome_original": "Telepathic Hub",
+        "efeito": "Pode manter conversas telepáticas com até 10 criaturas simultâneas, permitindo que se ouçam mutuamente."
+      }
+    ],
+    "conjuracao": {
+      "atributo": "INT",
+      "cd": 18,
+      "componentes": "nenhum",
+      "economia": "ação",
+      "magias": [
+        {
+          "nome": "detect thoughts",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "levitate",
+          "usos": "à vontade"
+        },
+        {
+          "nome": "modify memory",
+          "usos": "3/dia"
+        },
+        {
+          "nome": "dominate monster",
+          "usos": "1/dia"
+        },
+        {
+          "nome": "plane shift",
+          "usos": "1/dia",
+          "restricao": "apenas o próprio Elder Brain"
+        }
+      ]
+    }
+  },
+  "documentos_complementares": []
+}

@@ -1,0 +1,214 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Mortifera",
+  "origem_arquivo": "EXT-0047-mortifera-ficha (1).json",
+  "sha256_origem": "13a2c52b08bef665ac5d06d0413ab0e97dbc5c2b12a19d23b0a7f7903060355f",
+  "conteudo_original": {
+    "chave": "EXT-0047-mortifera",
+    "ordem_priorizada": 101,
+    "ordem_1320": 47,
+    "nome": "Mortifera",
+    "tipo": "Aberração",
+    "nd": "6",
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e conforme publicação original da fila; não misturar edições",
+    "tamanho": "Grande",
+    "tendencia": "Caótico e neutro",
+    "classe_armadura": 16,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 135,
+    "dados_vida": "18d10 + 36",
+    "deslocamentos_pes": {
+      "andar": 30,
+      "nadar": 30
+    },
+    "atributos": {
+      "FOR": 18,
+      "DES": 16,
+      "CON": 15,
+      "INT": 8,
+      "SAB": 10,
+      "CAR": 5
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 3,
+      "CON": 2,
+      "INT": -1,
+      "SAB": 0,
+      "CAR": -3
+    },
+    "testes_resistencia": {},
+    "pericias": {
+      "Percepção": 3,
+      "Furtividade": 5
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "frio",
+      "fogo",
+      "veneno"
+    ],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "cego",
+      "surdo",
+      "exaustão",
+      "envenenado"
+    ],
+    "sentidos": {
+      "visao_cegas_pes": 60,
+      "cego_alem_visao_cegas": true,
+      "percepcao_passiva": 13
+    },
+    "idiomas": [],
+    "telepatia_pes": null,
+    "xp": 2300,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Amphibious",
+        "efeito": "Respira ar e água."
+      },
+      {
+        "nome_original": "False Appearance",
+        "efeito": "Enquanto imóvel e submersa em água, é indistinguível de um leito de flores de lótus."
+      },
+      {
+        "nome_original": "Magic Resistance",
+        "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+      },
+      {
+        "nome_original": "Poisonous Tendrils",
+        "gatilho": "No início do turno de criatura agarrada pela Mortifera",
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 15
+        },
+        "falha": "Envenenado por 1 minuto",
+        "novo_teste": "Ao final de cada turno da vítima; sucesso encerra efeito."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz um Fanged Tentacles e dois Slam, OU três Slam. Pode substituir dois ataques Slam por um Chomp (apenas se houver alvo agarrado).",
+        "requisito_chomp": "alvo agarrado pela Mortifera"
+      },
+      {
+        "nome_original": "Fanged Tentacles",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 7,
+        "alcance_pes": 10,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 9,
+            "formula": "2d4 + 4",
+            "tipo": "perfurante"
+          },
+          {
+            "medio": 9,
+            "formula": "2d8",
+            "tipo": "veneno"
+          }
+        ],
+        "efeito_ao_acertar": "Alvo fica agarrado (escapar CD 15) e impedido; enquanto durar o agarramento não pode usar Fanged Tentacles contra outro alvo."
+      },
+      {
+        "nome_original": "Slam",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 10,
+            "formula": "1d12 + 4",
+            "tipo": "concussão"
+          }
+        ]
+      },
+      {
+        "nome_original": "Chomp",
+        "pre_condicao": "Alvo já agarrado pela Mortifera",
+        "efeito": "Puxa a criatura até 5 pés em direção à mandíbula central.",
+        "teste_resistencia": {
+          "atributo": "FOR",
+          "cd": 15
+        },
+        "falha": {
+          "danos": [
+            {
+              "medio": 10,
+              "formula": "3d6",
+              "tipo": "perfurante"
+            },
+            {
+              "medio": 13,
+              "formula": "3d8",
+              "tipo": "veneno"
+            }
+          ]
+        },
+        "sucesso": {
+          "dano": "metade de cada componente"
+        }
+      },
+      {
+        "nome_original": "Poison Spray",
+        "recarga": "5-6",
+        "area": {
+          "tipo": "cone",
+          "comprimento_pes": 30
+        },
+        "teste_resistencia": {
+          "atributo": "DES",
+          "cd": 15
+        },
+        "falha": {
+          "dano": {
+            "medio": 27,
+            "formula": "6d8",
+            "tipo": "veneno"
+          }
+        },
+        "sucesso": {
+          "dano": "metade"
+        }
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Poison Spray",
+        "recarga": "5-6"
+      }
+    ],
+    "notas_de_validacao": [
+      "Multiattack tem dois arranjos originais: 1 Fanged Tentacles + 2 Slam, ou 3 Slam; Chomp substitui dois Slam apenas com alvo agarrado.",
+      "Poisonous Tendrils testa no início do turno do alvo agarrado, independentemente de Chomp.",
+      "False Appearance exige ambiente aquático com condições de imersão e posicionamento reconhecidos; não presumir essas condições em qualquer arena.",
+      "Resistência a veneno e imunidade à condição envenenado são propriedades distintas e ambas se aplicam segundo a fonte."
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_TOB3",
+        "url": "https://anyflip.com/tkzwp/dofg/basic/251-300",
+        "pagina_impressa": 278
+      },
+      {
+        "tipo": "indice_oficial_KoboldPress",
+        "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

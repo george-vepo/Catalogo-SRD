@@ -1,0 +1,168 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-004",
+  "nome_catalogo": "Astral Snapper",
+  "origem_arquivo": "tf-004-astral-snapper-ficha.json",
+  "sha256_origem": "9c635e531b50ba5968875045d8f3984595b83fd0fad389056219f17e7af596ad",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Astral Snapper",
+      "chave": "TF-004",
+      "id_catalogo": "TF-004",
+      "ordem_priorizada": 11,
+      "ordem_1320": 18,
+      "deck_origem": "Aberração",
+      "tipo": "Aberração",
+      "nd": "3",
+      "classe": "Comum",
+      "editora": "Kobold Press",
+      "publicacao": "Creature Codex",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "salvaguardas": {
+        "CON": 4
+      },
+      "resistencias_dano": [
+        {
+          "tipos": [
+            "contundente",
+            "cortante"
+          ],
+          "restricao": "apenas ataques não mágicos"
+        }
+      ],
+      "imunidades_dano": [],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "magias": null,
+      "recargas": [],
+      "tamanho": "Médio",
+      "ca": 12,
+      "pv": 78,
+      "pv_formula": "12d8+24",
+      "deslocamentos_pes": {
+        "terrestre": 40,
+        "voo": null,
+        "natacao": null,
+        "escalada": null,
+        "paira": false
+      },
+      "atributos": {
+        "FOR": 12,
+        "DES": 15,
+        "CON": 14,
+        "INT": 12,
+        "SAB": 16,
+        "CAR": 8
+      },
+      "modificadores_atributos": {
+        "FOR": 1,
+        "DES": 2,
+        "CON": 2,
+        "INT": 1,
+        "SAB": 3,
+        "CAR": -1
+      },
+      "iniciativa_bonus": 2,
+      "iniciativa_origem": "modificador de DES derivado; sem bônus extra listado",
+      "proficiencia_bonus": 2,
+      "pericias": {
+        "Arcanismo": 4,
+        "Enganacao": 1,
+        "Percepcao": 5,
+        "Furtividade": 4
+      },
+      "sentidos": {
+        "visao_no_escuro_pes": 60
+      },
+      "idiomas": [
+        "Deep Speech"
+      ],
+      "tracos": [
+        {
+          "nome": "Astral Devour",
+          "mecanica": "Depois de invadir um hospedeiro por uma passagem astral, o Astral Snapper permanece alojado no Plano Astral. Ao concluir cada descanso longo, o hospedeiro realiza salvaguarda de Sabedoria CD 13: em sucesso, expulsa o parasita para um espaço desocupado a até 10 pés no Plano Material, onde ele fica atordoado por 1 rodada; em falha, a Constituição do hospedeiro diminui 1d4. Constituição 0 causa a morte do hospedeiro e o parasita emerge fisicamente em tamanho normal. A redução de Constituição dura até o hospedeiro completar descanso longo após a expulsão. Enquanto alojado, o parasita só pode ser visto por quem enxerga o Plano Astral, tem desvantagem em testes de Sabedoria (Percepção) e fica efetivamente atordoado até sofrer dano.",
+          "gatilho": "descanso longo do hospedeiro após invasão",
+          "salvaguarda": "SAB",
+          "cd": 13,
+          "efeito_falha": "reduzir CON em 1d4; morte com CON 0",
+          "efeito_sucesso": "expulsão e atordoamento por 1 rodada",
+          "condicao_enquanto_alojado": "Efetivamente atordoado até sofrer dano; não é somente incapacidade parcial.",
+          "penalidade_percepcao_enquanto_alojado": "Desvantagem em Sabedoria (Percepção).",
+          "visibilidade_enquanto_alojado": "Visível somente a criaturas capazes de enxergar o Plano Astral.",
+          "saida_se_hospedeiro_morrer": "Sai do hospedeiro para o Plano Material, plenamente corpóreo e com tamanho original."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Claws",
+          "tipo": "ataque_corpo_a_corpo",
+          "bonus_acerto": 4,
+          "alcance_pes": 5,
+          "dano": "2d6+2",
+          "tipo_dano": "cortante",
+          "media_dano": 9
+        }
+      ],
+      "multiataque": {
+        "ataques": "duas Garras",
+        "gatilho_especial": "se ambas acertarem o mesmo alvo, salvaguarda de SAB CD 13; falha cria passagem astral e instala Astral Devour."
+      },
+      "alinhamento": "neutro e mau",
+      "percepcao_passiva": 15,
+      "xp": 700
+    },
+    "auditoria": {
+      "data_execucao_local": "2026-10-16",
+      "modo": "manual_lote_de_4_reuso_de_pesquisa_biblioteca",
+      "ficha_anterior": "RESUMO_DECK_NAO_HOMOLOGADO",
+      "ficha_deck_origem": "/SRD Card Game/Decks/Aberração/Fichas por criatura/11_Astral_Snapper.md",
+      "status_validacao_mecanica": "CONCLUIDA_APOS_CORRECAO_PONTUAL",
+      "homologacao_de_carta_pelo_administrador": false,
+      "regra_de_edicao": "Aplicar estatísticas conforme publicação registrada. SRD 5.2.1 usado apenas para resolução geral pertinente, sem converter ficha legada ou A5E.",
+      "observacoes": [
+        "A ficha de deck tinha 42 campos null e trechos corrompidos por codificação. Foram usados o bloco original da edição Creature Codex e a transcrição mecânica correspondente.",
+        "Não aplicar a atualização Creature Codex Revised (2026) a esta ficha da publicação antiga.",
+        "Auditoria 2026-10-19: todas as estatísticas-base conferidas; texto de Astral Devour retificado conforme edição 2018. Creature Codex Revised (2026) não aplicado. Ainda sem homologação administrativa da adaptação ao Card Game."
+      ],
+      "pendencias_operacionais": [
+        "A habilidade Astral Devour interage com descanso longo, parasitismo, redução de atributo e planos; aplicação ao combate curto do Card Game requer decisão do administrador."
+      ],
+      "divergencias": [
+        {
+          "campo": "tracos.Astral Devour",
+          "antes": "indicação imprecisa de incapacidade parcial e dificuldade de detecção; saída física após CON 0 não explícita",
+          "correcao": "Atordoamento efetivo até receber dano, desvantagem em Percepção, visibilidade astral restrita, saída física com CON 0",
+          "fonte": "Creature Codex 2018 p. 43; https://5esrd.old.opengamingnetwork.com/database/creature/astral-snapper/"
+        }
+      ],
+      "fontes": [
+        {
+          "tipo": "indice_oficial",
+          "titulo": "Kobold Press — índice Creature Codex",
+          "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+        },
+        {
+          "tipo": "transcricao_publicacao",
+          "titulo": "Creature Codex 2018 — página 43, Astral Snapper",
+          "url": "https://fliphtml5.com/qfukk/crsz/5e_Creature_Codex/"
+        },
+        {
+          "tipo": "transcricao_mecanica_publica",
+          "titulo": "Astral Snapper — Open Gaming Network 5e",
+          "url": "https://5esrd.old.opengamingnetwork.com/database/creature/astral-snapper/"
+        }
+      ],
+      "sem_reproducao_extensa_de_texto_protegido": true,
+      "estado_no_card_game": "MECANICA_ORIGINAL_VERIFICADA; ADAPTACOES_NAO_APROVADAS_NAO_IMPLEMENTADAS",
+      "data_ultima_revisao": "2026-10-19",
+      "metodo_ultima_revisao": "confronto_arquivo_do_deck_json_existente_creature_codex_2018_e_transcricao_publica"
+    }
+  },
+  "documentos_complementares": []
+}

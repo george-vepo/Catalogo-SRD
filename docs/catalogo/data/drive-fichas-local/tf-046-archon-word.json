@@ -1,0 +1,236 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-046",
+  "nome_catalogo": "Archon, Word",
+  "origem_arquivo": "TF-046-word-archon-ficha (1).json",
+  "sha256_origem": "88c7fe6024ce0ae36fd6e014ae6344774e4313d909a321c15b9aff30d9c68d54",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-012",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 44,
+      "ORDEM_1320": 189,
+      "CHAVE": "TF-046",
+      "ID_CATALOGO": "TF-046",
+      "nome_catalogo": "Archon, Word",
+      "nome_na_fonte": "Word Archon",
+      "tipo_catalogo": "Celestial",
+      "tipo_mecanico_fonte": "celestial",
+      "nd": "1",
+      "classe": "Comum",
+      "deck": "Celestial",
+      "copia_referencia": "CE-004",
+      "editora": "Kobold Press",
+      "publicacao_catalogo": "Tome of Beasts 3",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_DA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "ficha_previa_deck": "RESUMO_NAO_HOMOLOGADO",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE"
+    },
+    "ficha": {
+      "porte": "Minúsculo",
+      "alinhamento": "leal e bom",
+      "CA": 13,
+      "PV_maximos": 28,
+      "formula_PV": "8d4+8",
+      "deslocamentos_pes": {
+        "terrestre": 0,
+        "voo": 90,
+        "pairar": true
+      },
+      "atributos": {
+        "FOR": 10,
+        "DES": 14,
+        "CON": 13,
+        "INT": 13,
+        "SAB": 17,
+        "CAR": 16
+      },
+      "iniciativa_bonus": 2,
+      "iniciativa_origem": "modificador DES calculado; bônus específico não indicado na ficha fonte",
+      "bonus_proficiencia": 2,
+      "bonus_proficiencia_origem": "ND e bloco da fonte para 42/44/45; inferência padrão a partir de ND para 43 (não impresso no bloco)",
+      "salvaguardas_profissionais_fonte": {
+        "SAB": 5,
+        "CAR": 5
+      },
+      "pericias": {
+        "Persuasao": 5
+      },
+      "resistencias_dano": [
+        "radiante"
+      ],
+      "imunidades_dano": [
+        "necrótico",
+        "veneno"
+      ],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exausto",
+        "amedrontado",
+        "envenenado",
+        "caído"
+      ],
+      "sentidos": {
+        "visao_no_escuro_pes": 120,
+        "percepcao_passiva": 13
+      },
+      "idiomas_e_telepatia": {
+        "falados": [
+          "todos os idiomas"
+        ],
+        "telepatia_pes": 60
+      },
+      "tracos": [
+        {
+          "nome": "Immortal Nature",
+          "efeito": "Não precisa de comida, bebida ou sono."
+        },
+        {
+          "nome": "Keen Sight",
+          "efeito": "Vantagem em testes de Sabedoria (Percepção) baseados na visão."
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias e outros efeitos mágicos."
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Slam",
+          "economia": "acao",
+          "categoria": "ataque_corpo_a_corpo",
+          "bonus_ataque": 4,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dice": "2d4+2",
+              "tipo": "radiante",
+              "media_publicada": 7
+            }
+          ],
+          "alcance_corpo_a_corpo_pes": 5
+        },
+        {
+          "nome": "Forceful Words",
+          "economia": "acao",
+          "categoria": "ataque_magico_distancia",
+          "bonus_ataque": 5,
+          "alvo": "um alvo",
+          "dano": [
+            {
+              "dice": "2d6+3",
+              "tipo": "radiante",
+              "media_publicada": 10
+            }
+          ],
+          "alcance_distancia_pes": 90
+        },
+        {
+          "nome": "Share Smite",
+          "economia": "acao",
+          "usos": "3/dia",
+          "alcance_pes": 30,
+          "alvo": "uma criatura com arma que possa ver e ouvir o archon",
+          "duracao": "1 minuto",
+          "gatilho": "primeiro ataque com arma que acerta em cada turno",
+          "dano_adicional_normal": {
+            "dice": "2d8",
+            "tipo": "radiante",
+            "media_publicada": 9
+          },
+          "dano_adicional_contra_infero_ou_morto_vivo": {
+            "dice": "3d8",
+            "tipo": "radiante",
+            "media_publicada": 13
+          },
+          "aplicacao": "2d8 e 3d8 são alternativas, não cumulativos.",
+          "regra_card_game": "Não adaptar como suporte fora do campo sem regra de manutenção da fonte, visão e audição."
+        },
+        {
+          "nome": "Spellcasting",
+          "economia": "acao",
+          "atributo": "CAR",
+          "CD_magias": 13,
+          "componentes": "dispensa componentes materiais e somáticos, segundo o bloco",
+          "a_vontade": [
+            "dancing lights",
+            "message",
+            "true strike"
+          ],
+          "uma_vez_dia_cada": [
+            "faerie fire",
+            "heroism"
+          ],
+          "nota_regras": "Não presumir efeitos do SRD 5.1 ao resolver com SRD 5.2.1. Checar versão aplicável a true strike, faerie fire e heroism."
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "acoes_covil": [],
+      "acoes_miticas": [],
+      "conjuracao": [
+        {
+          "nome": "Spellcasting",
+          "atributo": "CAR",
+          "CD_salvaguarda": 13,
+          "sem_componentes_somaticos_materiais": true,
+          "a_vontade": [
+            "dancing lights",
+            "message",
+            "true strike"
+          ],
+          "uma_vez_dia_cada": [
+            "faerie fire",
+            "heroism"
+          ]
+        }
+      ],
+      "recursos_limitados": [
+        {
+          "nome": "Share Smite",
+          "limite": 3,
+          "periodo": "dia"
+        },
+        {
+          "nome": "faerie fire",
+          "limite": 1,
+          "periodo": "dia"
+        },
+        {
+          "nome": "heroism",
+          "limite": 1,
+          "periodo": "dia"
+        }
+      ],
+      "observacoes_mecanicas": []
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/04_Archon_Word.md",
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/word-archon/",
+      "fontes_cruzadas": [],
+      "escopo_de_verificacao": "bloco mecânico da publicação identificada, não a habilidade de suporte adaptada",
+      "edicao_mecanica": "Tome of Beasts 3",
+      "edicao_regras_de_combate": "SRD_CC_v5.2.1.pdf do projeto; evitar substituição automática de magias/tratamentos legados",
+      "dados_de_fonte_separados_de_regras_card_game": true,
+      "alertas": [
+        "A versão publicada indica magias sob Spellcasting como ação, não há autorização para transformar em ação bônus.",
+        "A fonte registra necrotic e poison como imunidades de dano, e poisoned como imunidade de condição; preservar separação."
+      ],
+      "pendencias_card_game": [
+        "A magia true strike mudou entre edições; não misturar o efeito da publicação Kobold de 2022 com o SRD 5.2.1 sem decisão de regra.",
+        "Share Smite requer archon visível e audível no momento da aplicação; suporte da mão/descartado depende de aprovação.",
+        "Concentração e demais efeitos de spellcasting seguem regras de magia que deverão ser consultadas no SRD oficial quando usadas."
+      ],
+      "nenhum_dado_inventado_para_lacuna": true
+    }
+  },
+  "documentos_complementares": []
+}

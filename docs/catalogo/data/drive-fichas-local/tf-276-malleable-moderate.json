@@ -1,0 +1,374 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-276",
+  "nome_catalogo": "Malleable, Moderate",
+  "origem_arquivo": "TF-276-malleable-moderate-ficha.json",
+  "sha256_origem": "3d5d64e57fbb6dae30dd1d941dcbcc796574e454d1813d1eb327a89098394bba",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Malleable, Moderate",
+      "chave": "TF-276",
+      "id_catalogo": "TF-276",
+      "ordem_priorizada": 16,
+      "ordem_1320": 34,
+      "deck_origem": "Aberração",
+      "tipo_catalogo": "Aberração",
+      "nd_catalogo": "5",
+      "classe_catalogo": "Comum",
+      "editora_catalogo": "Kobold Press",
+      "publicacao_catalogo": "Tome of Beasts 2",
+      "origem_catalogo": "CATÁLOGO 607",
+      "xp_publicacao": 1800,
+      "pagina_publicacao": 253,
+      "ano_publicacao": 2020
+    },
+    "estatisticas_e_mecanicas": {
+      "tamanho": "Grande",
+      "alinhamento": "caótico e mau",
+      "ca": 12,
+      "ca_origem": "natural_armor",
+      "pv": 136,
+      "pv_formula": "16d10+48",
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "escalada": 30,
+        "voo": null,
+        "natacao": null
+      },
+      "atributos": {
+        "STR": 18,
+        "DEX": 8,
+        "CON": 16,
+        "INT": 17,
+        "WIS": 15,
+        "CHA": 10
+      },
+      "modificadores_atributos": {
+        "STR": 4,
+        "DEX": -1,
+        "CON": 3,
+        "INT": 3,
+        "WIS": 2,
+        "CHA": 0
+      },
+      "iniciativa_bonus": -1,
+      "proficiencia_bonus": 3,
+      "testes_resistencia": {
+        "INT": 6,
+        "WIS": 5,
+        "CHA": 3
+      },
+      "pericias": {},
+      "sentidos": {
+        "blindsight_ft": 60,
+        "blind_beyond_blindsight": true,
+        "passive_perception": 12
+      },
+      "idiomas": {
+        "spoken": "all_languages",
+        "telepathy_ft": 60
+      },
+      "resistencias_dano": [],
+      "imunidades_dano": [
+        "psychic"
+      ],
+      "vulnerabilidades_dano": [],
+      "imunidades_condicoes": [
+        "blinded",
+        "prone"
+      ],
+      "tracos": [
+        {
+          "name": "Absorb Malleable",
+          "category": "absorb_smaller",
+          "trigger": "bonus_action",
+          "precondition": "one_minor_malleable_within_5ft",
+          "effect": {
+            "remove_absorbed_actor": true,
+            "heal_hp": "minor_remaining_hp",
+            "inherits_target_conditions_spells_magical_effects": true
+          }
+        },
+        {
+          "name": "Amorphous",
+          "category": "movement",
+          "minimum_gap_inches": 1,
+          "no_squeezing_required": true
+        },
+        {
+          "name": "Controlled Mutability",
+          "category": "shape_change",
+          "outside_change_reverts_at": "end_of_malleable_next_turn",
+          "self_action_shape_change": {
+            "cost": "action",
+            "shape": "any",
+            "visual_constraint": "inside_out_fleshy_creature",
+            "no_statistics_or_abilities_of_imitated_creature": true
+          }
+        },
+        {
+          "name": "Psychic Absorption",
+          "category": "damage_to_healing",
+          "trigger": "would_take_psychic_damage",
+          "psychic_damage_taken": 0,
+          "hp_restored": "amount_of_psychic_damage_would_have_been_taken"
+        },
+        {
+          "name": "Spider Climb",
+          "category": "movement",
+          "upside_down_and_difficult_surface_without_ability_check": true
+        }
+      ],
+      "acoes": [
+        {
+          "name": "Multiattack",
+          "category": "multiattack",
+          "action_economy": "action",
+          "sequence": [
+            {
+              "attack": "Flesh Tendril",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Flesh Tendril",
+          "category": "attack",
+          "action_economy": "action",
+          "attack_type": "melee_weapon",
+          "attack_bonus": 7,
+          "reach_ft": 10,
+          "targets": {
+            "count": 1
+          },
+          "hit": {
+            "damage": [
+              {
+                "dice": "3d6",
+                "flat": 4,
+                "average": 14,
+                "type": "bludgeoning"
+              }
+            ],
+            "if_target_max_size": "Large",
+            "condition": "grappled",
+            "escape_dc": 14
+          },
+          "miss": {
+            "damage": 0
+          }
+        },
+        {
+          "name": "Psychic Drain",
+          "category": "single_target_save",
+          "action_economy": "action",
+          "precondition": "target_currently_grappled_by_malleable",
+          "target_count": 1,
+          "save": {
+            "ability": "INT",
+            "dc": 14,
+            "on_failure": {
+              "damage": [
+                {
+                  "dice": "5d8",
+                  "flat": 0,
+                  "average": 22,
+                  "type": "psychic"
+                }
+              ]
+            },
+            "on_success": {
+              "damage_multiplier": 0.5
+            }
+          },
+          "effect": {
+            "reduce_hp_maximum_by": "actual_psychic_damage_taken",
+            "until": "target_finishes_long_rest",
+            "if_max_hp_zero": {
+              "target_dies": true,
+              "target_becomes": "minor_malleable"
+            }
+          }
+        },
+        {
+          "name": "Join Malleables",
+          "category": "group_fusion",
+          "action_economy": "action",
+          "participants": "moderate_malleables_within_10ft_all_use_action_simultaneously",
+          "valid_choices": [
+            {
+              "count": 2,
+              "result": "major_malleable"
+            },
+            {
+              "count": 4,
+              "result": "massive_malleable"
+            }
+          ],
+          "effect": {
+            "new_hp": "sum_current_hp_of_participants",
+            "inherit_all": [
+              "conditions",
+              "spells",
+              "magical_effects"
+            ],
+            "initiative": "participant_initiative_count",
+            "position": "any_previously_occupied_space"
+          }
+        },
+        {
+          "name": "Separate Malleables",
+          "category": "split",
+          "action_economy": "action",
+          "result": {
+            "count": 4,
+            "creature": "minor_malleable",
+            "hp_each_formula": "floor(current_moderate_hp/4)",
+            "inherit": [
+              "conditions",
+              "spells",
+              "magical_effects"
+            ],
+            "initiative": "same_as_original_moderate",
+            "position": "unoccupied_space_formerly_occupied_by_moderate"
+          }
+        }
+      ],
+      "acoes_bonus": [
+        {
+          "name": "Absorb Malleable",
+          "category": "absorb_smaller",
+          "action_economy": "bonus_action",
+          "target": "one_minor_malleable_within_5ft",
+          "effect": "heal_equal_to_absorbed_current_hp_and_inherit_effects"
+        }
+      ],
+      "reacoes": [
+        {
+          "name": "Sudden Separation",
+          "category": "split_reaction",
+          "action_economy": "reaction",
+          "trigger": "takes_10_or_more_damage_from_one_attack",
+          "effect": "use_Separate_Malleables_immediately",
+          "damage_distribution": "divide_triggering_attack_damage_evenly_among_four_resulting_minors",
+          "damage_rounding_rule": null
+        }
+      ],
+      "acoes_lendarias": [],
+      "magias": [],
+      "multiataque": {
+        "quantidade": 2,
+        "ataque": "Flesh Tendril",
+        "ataque_bonus": 7,
+        "alcance_pes": 10,
+        "dano": "3d6+4 contundente",
+        "aplica_agarrao_em_alvo_tamanho_Grande_ou_menor": true,
+        "fuga_cd": 14
+      },
+      "acoes_de_divisao_fusao": [
+        {
+          "nome": "Join Malleables",
+          "mecanica": {
+            "name": "Join Malleables",
+            "category": "group_fusion",
+            "action_economy": "action",
+            "participants": "moderate_malleables_within_10ft_all_use_action_simultaneously",
+            "valid_choices": [
+              {
+                "count": 2,
+                "result": "major_malleable"
+              },
+              {
+                "count": 4,
+                "result": "massive_malleable"
+              }
+            ],
+            "effect": {
+              "new_hp": "sum_current_hp_of_participants",
+              "inherit_all": [
+                "conditions",
+                "spells",
+                "magical_effects"
+              ],
+              "initiative": "participant_initiative_count",
+              "position": "any_previously_occupied_space"
+            }
+          }
+        },
+        {
+          "nome": "Separate Malleables",
+          "mecanica": {
+            "name": "Separate Malleables",
+            "category": "split",
+            "action_economy": "action",
+            "result": {
+              "count": 4,
+              "creature": "minor_malleable",
+              "hp_each_formula": "floor(current_moderate_hp/4)",
+              "inherit": [
+                "conditions",
+                "spells",
+                "magical_effects"
+              ],
+              "initiative": "same_as_original_moderate",
+              "position": "unoccupied_space_formerly_occupied_by_moderate"
+            }
+          }
+        }
+      ]
+    },
+    "auditoria": {
+      "status_ficha": "COMPLETA MECANICAMENTE NA FONTE — sem homologação administrativa para Card Game",
+      "status_homologacao": "NÃO COMPROVADA",
+      "ficha_anterior": "pesquisa estruturada existente no deck, não homologada",
+      "edicao_mecanica_validada": "Tome of Beasts 2, 5e",
+      "data_execucao_local": "2026-10-16T23:51:29-03:00",
+      "fontes": [
+        {
+          "url": "https://5esrd.old.opengamingnetwork.com/database/creature/malleable-moderate/",
+          "natureza": "transcrição pública mecânica da publicação"
+        },
+        {
+          "url": "https://www.robinloft.com/monsters/moderate-malleable/tome-of-beasts-2",
+          "natureza": "fonte secundária de comparação"
+        },
+        {
+          "caminho_biblioteca": "/SRD Card Game/Decks/Aberração/Fichas por criatura/16_Malleable_Moderate.md",
+          "natureza": "pesquisa prévia detalhada reutilizada"
+        },
+        {
+          "url": "https://www.5esrd.com/database/creature/malleable-moderate/",
+          "natureza": "transcrição pública verificada na revisão de 19/10/2026"
+        },
+        {
+          "url": "https://anyflip.com/plzy/hbkp/basic/251-300",
+          "natureza": "cópia consultável da publicação (Tome of Beasts 2, 2020, p. 253)"
+        },
+        {
+          "url": "https://koboldpress.com/errata/",
+          "natureza": "errata da editora consultada em 19/10/2026"
+        }
+      ],
+      "pendencias": [
+        "Join Malleables, Separate Malleables, Absorb Malleable e Sudden Separation precisam de decisão operacional para arena com uma criatura ativa por jogador",
+        "Divisão da criatura em quatro entidades e transferência/distribuição de condições não altera automaticamente a regra de cartas e zonas do Card Game",
+        "Sem conversão inventada de criaturas produzidas em novas cartas do deck ou da mão",
+        "Arredondamento da distribuição de dano na reação Sudden Separation não foi especificado na fonte.",
+        "Flesh Tendril (D/E) do deck é homebrew candidato, sem homologação administrativa.",
+        "A utilização da progressão por fusão/absorção depende da regra de uma criatura ativa e da proibição de criar cartas fora das zonas oficiais."
+      ],
+      "direitos": "Dados e mecânicas em redação estruturada própria; sem transcrição integral de obra de terceiros.",
+      "data_validacao": "2026-10-19",
+      "resultado_validacao": "CONCLUIDA_VALIDACAO_MECANICA_DA_FONTE_SEM_HOMOLOGACAO_CARD_GAME",
+      "observacoes_validacao": [
+        "Valores de atributos, salvaguardas, CA, PV, sentidos, velocidades, dano, agarrão e ações conferidos com Tome of Beasts 2 (2020), p. 253 e transcrição pública.",
+        "A errata Kobold Press 29/05/2025 de Tome of Beasts 2 não lista alteração para a criatura ou a página 253.",
+        "Absorb Malleable é UMA ação bônus descrita como traço e representada na seção de ações bônus do JSON; não concede duas utilizações independentes.",
+        "Sudden Separation informa divisão uniforme do dano em quatro entidades, mas a fonte não explicita regra de arredondamento desse dano; não inventar.",
+        "Flesh Tendril (D/E) no resumo do deck é proposta de suporte não homologada, separada da ação da ficha oficial."
+      ]
+    }
+  },
+  "documentos_complementares": []
+}

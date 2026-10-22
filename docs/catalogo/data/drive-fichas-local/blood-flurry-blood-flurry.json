@@ -1,0 +1,161 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Blood Flurry",
+  "origem_arquivo": "EXT-0064-blood-flurry-ficha (1).json",
+  "sha256_origem": "cdd93046a67722b0f3cffec82c57753409ffa4d82ab5f71ea7fb17f71ec815d9",
+  "conteudo_original": {
+    "chave": "EXT-0064-blood-flurry",
+    "ordem_priorizada": 109,
+    "ordem_1320": 64,
+    "nome": "Blood Flurry",
+    "tipo": "Aberração",
+    "nd": 10,
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e da publicação indicada na fila; não misturar versões 2016, 2019 ou revisões 2022",
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "frio",
+      "concussão",
+      "perfurante",
+      "cortante"
+    ],
+    "imunidades_dano": [
+      "veneno"
+    ],
+    "imunidades_condicoes": [
+      "enfeitiçado",
+      "amedrontado",
+      "agarrado",
+      "paralisado",
+      "petrificado",
+      "envenenado",
+      "caído",
+      "restrito",
+      "atordoado"
+    ],
+    "testes_resistencia": {},
+    "pericias": {},
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [],
+    "fontes": [
+      {
+        "tipo": "transcricao_Tome_of_Beasts_3",
+        "url": "https://www.5esrd.com/database/creature/blood-flurry/"
+      },
+      {
+        "tipo": "reproducao_original_Tome_of_Beasts_3",
+        "url": "https://anyflip.com/plzy/jxhb/basic/51-100",
+        "pagina_impressa": 55
+      },
+      {
+        "tipo": "errata_oficial_KoboldPress",
+        "url": "https://koboldpress.com/errata/"
+      }
+    ],
+    "notas_de_validacao": [
+      "Enxame é apresentação e característica da ficha, NÃO novo tipo de criatura: tipo oficial de carta permanece Aberração.",
+      "Swarm proíbe ganhar PV temporários e qualquer cura; preservada restrição explícita mesmo se habilidade externa pudesse restaurar PV.",
+      "Dano de Free Bleeding Cuts cai para 3d8 com metade ou menos dos PV; dois ataques no Multiattack, e alvo deve compartilhar o espaço.",
+      "A descrição do sangramento usa PERDA DE PV no início do turno, não dano de tipo específico; sem criar tipo de dano ou mecanismo de cumulatividade de múltiplas feridas não declarado.",
+      "Rust Vulnerability descreve suscetibilidade mas não traz um valor de dano adicional genérico; efeitos específicos de ferrugem exigem fonte.",
+      "O deslocamento pelo espaço do inimigo e a interação com economia de ações do duelo dependem da arena aprovada."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "tamanho": "Médio (enxame de Aberrações Miúdas)",
+    "tendencia": "Neutro e mau",
+    "classe_armadura": 17,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 144,
+    "dados_vida": "17d8 + 68",
+    "deslocamentos_pes": {
+      "andar": 15,
+      "voar": 40
+    },
+    "atributos": {
+      "FOR": 5,
+      "DES": 21,
+      "CON": 18,
+      "INT": 6,
+      "SAB": 12,
+      "CAR": 10
+    },
+    "sentidos": {
+      "visao_no_escuro_pes": 60,
+      "percepcao_passiva": 11
+    },
+    "idiomas": [
+      "Compreende Primordial, não fala"
+    ],
+    "telepatia_pes": null,
+    "xp": 5900,
+    "bonus_proficiencia": 4,
+    "caracteristicas": [
+      {
+        "nome_original": "Blood Sense",
+        "efeito": "Detecta por cheiro posição de criaturas a até 30 pés, exceto Mortos-vivos e Constructos."
+      },
+      {
+        "nome_original": "False Appearance",
+        "efeito": "Imóvel no chão ou levado por ventos naturais, indistinguível de flocos de neve; deixa de funcionar se consumiu sangue nas últimas 24 horas."
+      },
+      {
+        "nome_original": "Rust Vulnerability",
+        "efeito": "Suscetível a efeitos que danificam metal ferroso, como antenas de rust monster; sem multiplicador numérico definido pelo bloco."
+      },
+      {
+        "nome_original": "Swarm",
+        "efeito": "Pode ocupar espaço de outra criatura e atravessar aberturas grandes o bastante para Aberração Miúda; não pode recuperar PV nem ganhar PV temporários."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Executa duas utilizações de Free Bleeding Cuts."
+      },
+      {
+        "nome_original": "Free Bleeding Cuts",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 9,
+        "alcance_pes": 0,
+        "alvos": 1,
+        "restricao": "alvo no mesmo espaço do enxame",
+        "componentes_dano": [
+          {
+            "medio": 27,
+            "formula": "6d8",
+            "tipo": "cortante"
+          }
+        ],
+        "dano_se_pv_metade_ou_menos": {
+          "medio": 13,
+          "formula": "3d8",
+          "tipo": "cortante"
+        },
+        "efeito_ao_acertar": {
+          "alvo_valido": "criatura que não seja Morto-vivo nem Constructo",
+          "teste_resistencia": {
+            "atributo": "CON",
+            "cd": 16
+          },
+          "falha": "ferimento sangrante causa perda de 13 (3d8) PV no início de cada turno do alvo, até ser estancado ou receber cura mágica",
+          "interrupcao": "qualquer criatura usa uma ação e tem êxito em Medicina (SAB) CD 12; ou alvo recebe cura mágica"
+        }
+      }
+    ],
+    "modificadores": {
+      "FOR": -3,
+      "DES": 5,
+      "CON": 4,
+      "INT": -2,
+      "SAB": 1,
+      "CAR": 0
+    }
+  },
+  "documentos_complementares": []
+}

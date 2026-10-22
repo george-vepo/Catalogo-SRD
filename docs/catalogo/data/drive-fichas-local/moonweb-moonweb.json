@@ -1,0 +1,185 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Moonweb",
+  "origem_arquivo": "EXT-0046-moonweb-ficha (1).json",
+  "sha256_origem": "3b5d841279232b5c03ea87e6a196bcd327e8ded3cd67eeb423ac39572c1196e3",
+  "conteudo_original": {
+    "chave": "EXT-0046-moonweb",
+    "ordem_priorizada": 100,
+    "ordem_1320": 46,
+    "nome": "Moonweb",
+    "tipo": "Aberração",
+    "nd": "6",
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Kobold Press",
+    "publicacao": "Tome of Beasts 3",
+    "edicao": "5e conforme publicação original da fila; não misturar edições",
+    "tamanho": "Médio",
+    "tendencia": "Sem alinhamento",
+    "classe_armadura": 16,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 97,
+    "dados_vida": "13d8 + 39",
+    "deslocamentos_pes": {
+      "andar": 0,
+      "voar": 30,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 10,
+      "DES": 18,
+      "CON": 16,
+      "INT": 1,
+      "SAB": 16,
+      "CAR": 6
+    },
+    "modificadores": {
+      "FOR": 0,
+      "DES": 4,
+      "CON": 3,
+      "INT": -5,
+      "SAB": 3,
+      "CAR": -2
+    },
+    "testes_resistencia": {},
+    "pericias": {
+      "Percepção": 6,
+      "Furtividade": 7
+    },
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [
+      "concussão, perfurante e cortante de ataques não mágicos"
+    ],
+    "imunidades_dano": [
+      "veneno",
+      "psíquico"
+    ],
+    "imunidades_condicoes": [
+      "cego",
+      "enfeitiçado",
+      "surdo",
+      "exaustão",
+      "amedrontado",
+      "envenenado",
+      "caído"
+    ],
+    "sentidos": {
+      "visao_cegas_pes": 120,
+      "cego_alem_visao_cegas": true,
+      "percepcao_passiva": 16
+    },
+    "idiomas": [],
+    "telepatia_pes": null,
+    "xp": 2300,
+    "bonus_proficiencia": 3,
+    "caracteristicas": [
+      {
+        "nome_original": "Alien Nature",
+        "efeito": "Não precisa respirar ar nem dormir."
+      },
+      {
+        "nome_original": "Transparent",
+        "efeito": "Vantagem em testes de Furtividade enquanto imóvel ou sob iluminação fraca."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz um Dissolving Bite e um Tendrils."
+      },
+      {
+        "nome_original": "Dissolving Bite",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 13,
+            "formula": "2d8 + 4",
+            "tipo": "perfurante"
+          },
+          {
+            "medio": 9,
+            "formula": "2d8",
+            "tipo": "ácido"
+          }
+        ],
+        "efeito_ao_acertar": "O Moonweb recupera PV iguais ao dano ácido realmente causado ao alvo; não ultrapassa os PV máximos."
+      },
+      {
+        "nome_original": "Tendrils",
+        "tipo": "ataque corpo a corpo com arma",
+        "bonus_ataque": 7,
+        "alcance_pes": 10,
+        "alvos": 1,
+        "componentes_dano": [
+          {
+            "medio": 11,
+            "formula": "2d6 + 4",
+            "tipo": "perfurante"
+          }
+        ],
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": {
+          "condicao": "paralisado",
+          "duracao": "até 1 minuto",
+          "novo_teste": "ao fim de cada turno do alvo"
+        }
+      },
+      {
+        "nome_original": "Etheric Pulse",
+        "recarga": "6",
+        "area": {
+          "tipo": "esfera centrada no Moonweb",
+          "raio_pes": 30
+        },
+        "teste_resistencia": {
+          "atributo": "CON",
+          "cd": 14
+        },
+        "falha": "Alvo fica parcialmente etéreo. Seus ataques causam dano normal ao Moonweb mesmo quando não mágicos; outros seres resistem ao dano não mágico desse alvo. Moonweb detecta precisamente sua localização e tem vantagem nos ataques contra ele.",
+        "novo_teste": "Fim de cada turno do alvo; sucesso encerra o efeito."
+      }
+    ],
+    "acoes_bonus": [
+      {
+        "nome_original": "Ethereal Jaunt",
+        "economia": "ação bônus",
+        "efeito": "Desloca-se magicamente entre o Plano Material e o Plano Etéreo em qualquer direção."
+      }
+    ],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "recursos_limitados": [
+      {
+        "recurso": "Etheric Pulse",
+        "recarga": "6"
+      }
+    ],
+    "notas_de_validacao": [
+      "Ethereal Jaunt depende da existência do Plano Etéreo/arena regulamentada. Não presumir invulnerabilidade ou vantagem fora da definição da fonte.",
+      "Recuperação por Dissolving Bite calcula-se pelo dano ácido efetivamente causado, respeitando PV máximos; nenhuma cura automática entre combates.",
+      "Etheric Pulse define estado parcialmente etéreo e relações de dano; conservar até expirar por testes, sem impor efeitos não escritos.",
+      "Moonweb possui inteligência 1 (-5); não atribuir comunicação ou plano consciente não previstos."
+    ],
+    "fontes": [
+      {
+        "tipo": "reproducao_TOB3",
+        "url": "https://anyflip.com/tkzwp/dofg/basic/251-300",
+        "pagina_impressa": 276
+      },
+      {
+        "tipo": "indice_oficial_KoboldPress",
+        "url": "https://koboldpress.com/tools/kobold-press-monsters/"
+      }
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME"
+  },
+  "documentos_complementares": []
+}

@@ -1,0 +1,294 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-280",
+  "nome_catalogo": "Mamura",
+  "origem_arquivo": "TF-280-mamura-ficha.json",
+  "sha256_origem": "4cc889229e3fe7fd77228086f0bff156265dd6f21d9f05e1b084f2dee7d9d179",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Mamura",
+      "chave": "TF-280",
+      "id_catalogo": "TF-280",
+      "ordem_priorizada": 22,
+      "ordem_1320": 45,
+      "deck_origem": "Aberração",
+      "tipo_catalogo": "Aberração",
+      "nd_catalogo": "6",
+      "classe_catalogo": "Incomum",
+      "editora_catalogo": "Kobold Press",
+      "publicacao_catalogo": "Tome of Beasts 1",
+      "edicao_estudada": "Tome of Beasts 1 (2023, edição revisada)",
+      "edicao_aprovada": "2023 revisada, por regra global do usuário de priorizar edições oficiais mais recentes, informada em 2026-10-19",
+      "tipo_publicado": "Aberração",
+      "tamanho_publicado": "Pequeno",
+      "alinhamento_publicado": "Neutro e Mau",
+      "nd_publicado": 6,
+      "xp_publicado": 2300,
+      "bonus_proficiencia_publicado": 3
+    },
+    "estatisticas_e_mecanicas": {
+      "estatisticas": {
+        "armor_class": 16,
+        "hit_points": 112,
+        "hit_dice": "15d6+60",
+        "ability_scores": {
+          "STR": 8,
+          "DEX": 18,
+          "CON": 19,
+          "INT": 17,
+          "WIS": 11,
+          "CHA": 16
+        },
+        "speeds": {
+          "walk_ft": 20,
+          "fly_ft": 30
+        },
+        "senses": {
+          "darkvision_ft": 60,
+          "passive_perception": 16
+        },
+        "skills": {
+          "Acrobatics": 7,
+          "Perception": 6,
+          "Stealth": 7
+        },
+        "saving_throws": {
+          "DEX": 7,
+          "CON": 7,
+          "CHA": 6
+        },
+        "languages": [
+          "Common",
+          "Goblin",
+          "Sylvan",
+          "Void Speech"
+        ],
+        "damage_resistances": [
+          {
+            "types": [
+              "bludgeoning",
+              "piercing",
+              "slashing"
+            ],
+            "from": "nonmagical_attacks"
+          }
+        ],
+        "damage_immunities": [],
+        "damage_vulnerabilities": [],
+        "condition_immunities": [],
+        "armor_class_type": "natural_armor",
+        "ability_modifiers": {
+          "STR": -1,
+          "DEX": 4,
+          "CON": 4,
+          "INT": 3,
+          "WIS": 0,
+          "CHA": 3
+        },
+        "size": "Small",
+        "alignment": "neutral_evil",
+        "challenge": 6,
+        "xp": 2300,
+        "proficiency_bonus": 3,
+        "hit_points_formula": "15d6+60"
+      },
+      "mecanicas": {
+        "traits": [
+          {
+            "name": "Distracting Babble",
+            "category": "anti_spell",
+            "radius_ft": 20,
+            "concentrating_spellcaster_starts_turn": {
+              "save": {
+                "ability": "CON",
+                "dc": 15
+              },
+              "on_failure": "lose_concentration"
+            },
+            "spellcaster_attempts_to_cast": {
+              "save": {
+                "ability": "CON",
+                "dc": 15
+              },
+              "on_failure": {
+                "cast_fails": true,
+                "spell_slot_spent": false,
+                "action_bonus_or_reaction_spent": true
+              }
+            },
+            "action_economy": "passive_trait"
+          },
+          {
+            "name": "Flyby",
+            "category": "movement",
+            "opportunity_attack_when_flying_out_of_reach": false
+          },
+          {
+            "name": "Magic Resistance",
+            "category": "saving_throw_advantage",
+            "against": [
+              "spells",
+              "magical_effects"
+            ]
+          },
+          {
+            "name": "Radial Eyes",
+            "category": "defense",
+            "advantage_on_sight_perception_checks": true,
+            "advantage_on_saves_vs_blinded": true,
+            "if_not_blinded": {
+              "enemy_advantage_from_surrounding_or_ally_distraction_disabled": true,
+              "examples": [
+                "Pack Tactics",
+                "Sneak Attack"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "name": "Multiattack",
+            "category": "multiattack",
+            "action_economy": "action",
+            "sequence": [
+              {
+                "attack": "Claw",
+                "count": 3
+              },
+              {
+                "attack": "Whiptail Stinger",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "name": "Claw",
+            "category": "attack",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 7,
+            "reach_ft": 5,
+            "hit": {
+              "damage": [
+                {
+                  "dice": "1d8",
+                  "flat": 4,
+                  "average": 8,
+                  "type": "slashing"
+                }
+              ]
+            },
+            "targets": {
+              "count": 1
+            }
+          },
+          {
+            "name": "Whiptail Stinger",
+            "category": "attack",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 7,
+            "reach_ft": 10,
+            "hit": {
+              "damage": [
+                {
+                  "dice": "1d8",
+                  "flat": 4,
+                  "average": 8,
+                  "type": "piercing"
+                }
+              ]
+            },
+            "on_hit_save": {
+              "ability": "CON",
+              "dc": 15,
+              "on_failure": {
+                "extra_damage": [
+                  {
+                    "dice": "2d6",
+                    "average": 7,
+                    "type": "poison"
+                  }
+                ],
+                "condition": "poisoned",
+                "duration": "1_minute_or_until_successful_save",
+                "ongoing_damage": {
+                  "dice": "1d6",
+                  "average": 3,
+                  "type": "poison",
+                  "timing": "start_of_affected_turn"
+                },
+                "repeat_save": {
+                  "ability": "CON",
+                  "dc": 15,
+                  "timing": "end_of_affected_turn",
+                  "success_ends": true
+                }
+              },
+              "on_success": {
+                "extra_damage": 0,
+                "condition": null
+              }
+            },
+            "targets": {
+              "count": 1
+            }
+          }
+        ],
+        "bonus_actions": [
+          {
+            "name": "Shadow Stealth",
+            "category": "hide",
+            "action_economy": "bonus_action",
+            "precondition": "dim_light_or_darkness",
+            "observacao": "Requer luz fraca ou escuridão; usa a ação Esconder-se como ação bônus."
+          }
+        ],
+        "reactions": [],
+        "legendary_actions": [],
+        "lair_actions": [],
+        "mythic_actions": [],
+        "spellcasting": [],
+        "other": []
+      },
+      "observacoes_tecnicas": {
+        "edicao_ativa": "Tome of Beasts 1 (2023), edição revisada — estatísticas publicadas pela Kobold Press / 5eSRD",
+        "edicao_anterior_arquivada": "Tome of Beasts (2016): 97 PV, Claw envenena e Whiptail Stinger alcance 5 pés; não combinar com a revisão 2023",
+        "iniciativa": "O bloco 2023 não imprime uma linha de iniciativa independente; modificador de DEX é +4, usado conforme as regras do combate quando aplicável.",
+        "multiataque": "3 Claw + 1 Whiptail Stinger; não substituir pelos ataques da edição 2016.",
+        "ferrão": "Na falha da salvaguarda CON CD 15, além do dano base ocorre dano 2d6 veneno e poisoned por até 1 minuto; 1d6 veneno no início de cada turno afetado e nova salvaguarda no fim de cada turno.",
+        "babble": "Efeito passivo antimagia no raio de 20 pés; falha na conjuração consome ação/ação bônus/reação mas não espaço de magia, segundo a fonte 2023.",
+        "no_statblock": "Fonte 2023 não lista ações lendárias, magias, reações ou ataques à distância; não inventar.",
+        "suporte_proposto": "Whiptail Stinger (E/D) é uma proposta homebrew presente no deck; não homologada apenas pela escolha da edição."
+      }
+    },
+    "auditoria": {
+      "status_ficha": "MECANICAMENTE_COMPLETA_EDICAO_2023",
+      "status_homologacao": "PENDENTE_ADAPTACAO_E_HOMOLOGACAO_DAS_REGRAS_CARD_GAME",
+      "decisao_administrador": "REGRA_GERAL_INFORMADA_EM_2026-10-19: PRIORIZAR_SEMPRE_A_EDICAO_OFICIAL_MAIS_RECENTE",
+      "escopo_da_decisao": "A seleção da fonte mais recente resolve a edição, não equivale a homologar a carta, suporte, arena, economia de ações ou efeitos fora do bloco oficial.",
+      "resultado_validacao": "2023: Small Aberration, CA16, PV112, ND6, Multiattack 3 Claw + 1 Whiptail Stinger, Distracting Babble CON CD15, Shadow Stealth; edição 2016 preservada apenas em pesquisa histórica.",
+      "fontes": [
+        "https://www.5esrd.com/database/creature/mamura-3pp/",
+        "https://koboldpress.com/kpstore/product/tome-of-beasts-1-2023-edition-hardcover/",
+        "https://koboldpress.com/errata/",
+        "https://koboldpress.com/tome-of-beasts-1-what-changed/"
+      ],
+      "fonte_estatisticas": "https://www.5esrd.com/database/creature/mamura-3pp/",
+      "fonte_publicacao": "https://koboldpress.com/kpstore/product/tome-of-beasts-1-2023-edition-hardcover/",
+      "fonte_deck": "/SRD Card Game/Decks/Aberração/Fichas por criatura/22_Mamura.md",
+      "fonte_comparativa_arquivo": "/SRD Card Game/Fichas/Em Pesquisa/TF-280-mamura-pesquisa-edicoes.json",
+      "errata_verificada": "Errata Kobold Press 2023 atualizada em 29/05/2025; não identificada entrada nominal Mamura na consulta de 19/10/2026.",
+      "pendencias": [
+        "Homologação de carta não automática; situação no catálogo ativo permanece a verificar/aprovar separadamente.",
+        "Habilidade candidata Whiptail Stinger (E/D) do deck não homologada.",
+        "Definir/aplicar apenas regras aprovadas de arena, voo, deslocamento, linha de visão e posicionamento.",
+        "Distracting Babble exige localizar conjurador dentro de 20 pés e resolver economia de ações/concentração com regras aceitas.",
+        "Condição poisoned e veneno periódico por até 1 minuto requerem registrar testes e duração entre turnos; não criar regras de descanso/limpeza entre combates."
+      ],
+      "data_ultima_revisao": "2026-10-19"
+    }
+  },
+  "documentos_complementares": []
+}

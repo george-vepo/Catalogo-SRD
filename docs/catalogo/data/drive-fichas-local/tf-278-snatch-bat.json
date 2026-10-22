@@ -1,0 +1,234 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-278",
+  "nome_catalogo": "Snatch Bat",
+  "origem_arquivo": "TF-278-snatch-bat-ficha (1).json",
+  "sha256_origem": "2df76e9d1fe3c38593bd9eb9ad0cbe4c732c927347141e84191dceacc15d5ce8",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Auditada_v1",
+    "identificacao": {
+      "nome_canonico": "Snatch Bat",
+      "chave": "TF-278",
+      "id_catalogo": "TF-278",
+      "ordem_priorizada": 19,
+      "ordem_1320": 39,
+      "deck_origem": "Aberração",
+      "tipo_catalogo": "Aberração",
+      "nd_catalogo": "5",
+      "classe_catalogo": "Comum",
+      "editora_catalogo": "Kobold Press",
+      "publicacao_catalogo": "Tome of Beasts 3",
+      "edicao_estudada": "Tome of Beasts 3 (2022 copyright OGL)",
+      "origem_catalogo": "CATÁLOGO 607"
+    },
+    "estatisticas_e_mecanicas": {
+      "estatisticas": {
+        "armor_class": 16,
+        "hit_points": 97,
+        "hit_dice": "15d8+30",
+        "ability_scores": {
+          "STR": 16,
+          "DEX": 20,
+          "CON": 14,
+          "INT": 6,
+          "WIS": 12,
+          "CHA": 5
+        },
+        "speeds": {
+          "walk_ft": 20,
+          "fly_ft": 40
+        },
+        "senses": {
+          "blindsight_ft": 60,
+          "blind_beyond_blindsight": true,
+          "passive_perception": 14
+        },
+        "skills": {
+          "Perception": 4,
+          "Sleight_of_Hand": 8,
+          "Stealth": 8
+        },
+        "saving_throws": [],
+        "languages": {
+          "understands": [
+            "Deep Speech",
+            "Umbral"
+          ],
+          "can_speak": false
+        },
+        "damage_resistances": [
+          "force",
+          "psychic"
+        ],
+        "damage_immunities": [],
+        "damage_vulnerabilities": [],
+        "condition_immunities": [
+          "blinded",
+          "charmed",
+          "exhaustion"
+        ],
+        "armor_class_type": "natural_armor",
+        "ability_modifiers": {
+          "STR": 3,
+          "DEX": 5,
+          "CON": 2,
+          "INT": -2,
+          "WIS": 1,
+          "CHA": -3
+        }
+      },
+      "mecanicas": {
+        "traits": [
+          {
+            "name": "Flyby",
+            "category": "movement",
+            "effect": {
+              "opportunity_attack_triggered_by_flying_out_of_enemy_reach": false
+            }
+          },
+          {
+            "name": "Treasure Sense",
+            "category": "object_sense",
+            "targets": [
+              "precious_metals",
+              "gemstones",
+              "jewelry"
+            ],
+            "pinpoint_scent_within_ft": 60,
+            "direction_sensed_within_miles": 1
+          }
+        ],
+        "actions": [
+          {
+            "name": "Multiattack",
+            "category": "multiattack",
+            "action_economy": "action",
+            "choose_one_sequence": [
+              [
+                {
+                  "attack": "Claw",
+                  "count": 3
+                }
+              ],
+              [
+                {
+                  "attack": "Claw",
+                  "count": 2
+                },
+                {
+                  "attack": "Pilfering Bite",
+                  "count": 1
+                }
+              ]
+            ]
+          },
+          {
+            "name": "Claw",
+            "category": "attack",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 8,
+            "reach_ft": 5,
+            "targets": {
+              "count": 1
+            },
+            "hit": {
+              "damage": [
+                {
+                  "dice": "2d6",
+                  "flat": 5,
+                  "average": 12,
+                  "type": "slashing"
+                }
+              ]
+            },
+            "miss": {
+              "damage": 0
+            }
+          },
+          {
+            "name": "Pilfering Bite",
+            "category": "attack_or_steal",
+            "action_economy": "action",
+            "attack_type": "melee_weapon",
+            "attack_bonus": 8,
+            "reach_ft": 10,
+            "targets": {
+              "count": 1
+            },
+            "on_hit_choose_one": [
+              {
+                "mode": "damage",
+                "damage": [
+                  {
+                    "dice": "2d4",
+                    "flat": 5,
+                    "average": 10,
+                    "type": "piercing"
+                  }
+                ]
+              },
+              {
+                "mode": "steal_instead_of_damage",
+                "item_requirements": {
+                  "worn_or_carried_by_target": true,
+                  "max_weight_lb": 10,
+                  "must_not_be_weapon": true,
+                  "must_not_be_wrapped_around_or_firmly_attached_to_target": true
+                },
+                "stores_item_in": "long_neck_arm",
+                "requires_regurgitating_held_item_before_next_pilfering_bite": true,
+                "regurgitation_action_cost": "none"
+              }
+            ],
+            "miss": {
+              "damage": 0
+            }
+          }
+        ],
+        "bonus_actions": [],
+        "reactions": [],
+        "legendary_actions": [],
+        "lair_actions": [],
+        "mythic_actions": [],
+        "spellcasting": [],
+        "other": [
+          {
+            "name": "Pilfered Item Capacity",
+            "category": "inventory_state",
+            "maximum_items_carried_in_neck_arm_before_next_bite": 1,
+            "must_regurgitate_first": true,
+            "regurgitation_action_cost": "none",
+            "note": "Creature might carry elsewhere but source only explicitly establishes the long neck-arm held item."
+          }
+        ]
+      },
+      "observacoes_tecnicas": {
+        "tamanho": "Medium / Medio",
+        "alinhamento": "Chaotic Neutral",
+        "iniciativa_bonus_derivado_da_destreza": 5,
+        "bonus_proficiencia": 3,
+        "roubo_item": "Pilfering Bite permite furtar no lugar de dano e exige item elegivel, conforme original; sem inventar equipamento para cartas."
+      }
+    },
+    "auditoria": {
+      "status_validacao_mecanica": "MECANICA_VERIFICADA",
+      "homologacao_administrativa": "NAO_APROVADA_NESTA_EXECUCAO",
+      "data_utc": "2026-10-17T02:57:57.783797+00:00",
+      "confirmacao_previa_na_biblioteca": "Sem JSON desta CHAVE em /Fichas/Completas nem /Fichas/Em Pesquisa antes da execução; documento do deck encontrado e aproveitado",
+      "fonte_deck": "/SRD Card Game/Decks/Aberração/Fichas por criatura/19_Snatch_Bat.md",
+      "fontes_web": [
+        "https://www.5esrd.com/database/creature/snatch-bat/",
+        "https://anyflip.com/tkzwp/dofg/basic/301-350"
+      ],
+      "criterio_edicao": "Respeitar edicao catalogada; nunca mesclar versoes",
+      "pendencias": [
+        "A opcao de roubo de item de Pilfering Bite depende da existencia de itens/equipamentos no Card Game; no contexto sem itens a modalidade de dano nao se altera."
+      ],
+      "verificacoes": [
+        "CA 16, PV 97, ND 5, bonus ataque +8, dano das garras 2d6+5 e mordida 2d4+5, voo 40, tres garras OU duas garras e Pilfering Bite."
+      ]
+    }
+  },
+  "documentos_complementares": []
+}

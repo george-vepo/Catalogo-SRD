@@ -1,0 +1,204 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Balhannoth",
+  "origem_arquivo": "EXT-0070-balhannoth-ficha (1).json",
+  "sha256_origem": "728651123e36a095e998f6e876ab1c43e041205a242d46b200790fa5d7539bca",
+  "conteudo_original": {
+    "chave": "EXT-0070-balhannoth",
+    "ordem_priorizada": 113,
+    "ordem_1320": 70,
+    "nome": "Balhannoth",
+    "tipo": "Aberração",
+    "nd": 11,
+    "raridade": "Rara",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "5e original de Mordenkainen Presents: Monsters of the Multiverse; não misturar com fichas de outras edições",
+    "tamanho": "Grande",
+    "tendencia": "Tipicamente caótico e mau",
+    "classe_armadura": 17,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 114,
+    "dados_vida": "12d10 + 48",
+    "deslocamentos_pes": {
+      "andar": 25,
+      "escalar": 25
+    },
+    "atributos": {
+      "FOR": 17,
+      "DES": 8,
+      "CON": 18,
+      "INT": 6,
+      "SAB": 15,
+      "CAR": 8
+    },
+    "modificadores": {
+      "FOR": 3,
+      "DES": -1,
+      "CON": 4,
+      "INT": -2,
+      "SAB": 2,
+      "CAR": -1
+    },
+    "testes_resistencia": {
+      "CON": 8
+    },
+    "pericias": {
+      "Percepção": 6
+    },
+    "sentidos": {
+      "visao_as_cegas_pes": 500,
+      "cego_alem_desse_raio": true,
+      "percepcao_passiva": 16
+    },
+    "idiomas": [
+      "Compreende Língua Profunda; não consta fala"
+    ],
+    "xp": 7200,
+    "bonus_proficiencia": 4,
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [],
+    "imunidades_condicoes": [
+      "cego"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Legendary Resistance (2/Day)",
+        "efeito": "Ao falhar em salvaguarda, pode optar por ser bem-sucedido, consumindo um dos dois usos diários."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Faz exatamente uma Bite e duas Tentacle."
+      },
+      {
+        "nome_original": "Bite",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 7,
+        "alcance_pes": 5,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "perfurante",
+            "dados": "3d10 + 3",
+            "media": 19
+          }
+        ]
+      },
+      {
+        "nome_original": "Tentacle",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 7,
+        "alcance_pes": 10,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "concussão",
+            "dados": "2d6 + 3",
+            "media": 10
+          }
+        ],
+        "agarramento": {
+          "cd_escapar": 15,
+          "condicoes": [
+            "agarrado",
+            "restrito"
+          ],
+          "move_para_perto_pes": 5,
+          "numero_total_tentaculos": 4,
+          "tentaculo_em_uso_indisponivel_contra_outros": true
+        }
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [
+      {
+        "nome_original": "Bite",
+        "efeito": "Uma Bite contra criatura que mantém agarrada."
+      },
+      {
+        "nome_original": "Teleport",
+        "efeito": "Teleporta até 60 pés para espaço vazio que pode ver, com equipamentos e criaturas agarradas."
+      },
+      {
+        "nome_original": "Vanish",
+        "efeito": "Fica invisível por até dez minutos ou até imediatamente depois de efetuar rolagem de ataque."
+      }
+    ],
+    "acoes_covil": [
+      {
+        "nome_original": "Teleport",
+        "efeito": "Na iniciativa 20, pode escolher criatura a até 500 pés; SAB CD16 ou teleporta a espaço vazio dentro de 60 pés do Balhannoth."
+      },
+      {
+        "nome_original": "Vanish",
+        "efeito": "Na iniciativa 20, criatura a até 500 pés testa SAB CD16; se falhar Balhannoth fica invisível APENAS para ela por até 1 minuto ou até atacar."
+      },
+      {
+        "nome_original": "Warp Terrain",
+        "efeito": "Em área de até 500 pés quadrados, modifica a aparência de matéria inanimada em 10 minutos conforme desejo detectado de um humanoide; sem criar mecanismos ou propriedades mágicas, e perdura até morte ou nova ação de covil."
+      }
+    ],
+    "efeitos_regionais": [
+      {
+        "nome_original": "Sense Desires",
+        "efeito": "Percebe desejos mais fortes de humanoides a até uma milha e se eles envolvem lugar."
+      },
+      {
+        "nome_original": "Supernatural Lure",
+        "efeito": "Criaturas a até uma milha sentem estar perto do que mais desejam; sensação intensifica perto do covil; efeitos terminam quando o Balhannoth morre."
+      }
+    ],
+    "recursos_limitados": [
+      {
+        "recurso": "Legendary Resistance",
+        "usos_maximos": 2,
+        "periodo": "dia"
+      },
+      {
+        "recurso": "Ações lendárias",
+        "usos_maximos": 3,
+        "periodo": "rodada"
+      }
+    ],
+    "magias": [],
+    "fontes": [
+      {
+        "tipo": "transcricao_livro_2022_pag_55",
+        "url": "https://studylib.net/doc/27313917/monsters-of-the-multiverse-5e-dnd"
+      },
+      {
+        "tipo": "reproducao_MotM_2022",
+        "url": "https://fliphtml5.com/fqkpd/gdoo/Monsters_of_the_Multiverse_Colored/"
+      }
+    ],
+    "notas_de_validacao": [
+      "Aplicar apenas versão MotM 2022: Bite 3d10 +3 (média19) e Multiattack fixo 1 Bite + 2 Tentacles. Versão antiga de 4 Tentacles e Bite 4d10+3 NÃO integra esta ficha.",
+      "Tentacle causa agarrado/restrito apenas se acertar, CD15 para escapar, desloca 5 pés em direção ao Balhannoth; cada tentáculo que agarra alvo fica indisponível contra outro.",
+      "Legendary Resistance é 2/dia na edição 2022. Ações lendárias até três por rodada, no final do turno de outra criatura; não são ações bônus.",
+      "Ações de covil requerem arena/covil efetivo; região e desejos de humanoides não criam vantagem automática ou leitura de cartas ocultas.",
+      "Teleport lendário carrega alvos agarrados, exigindo espaço vazio que veja; distância 60 pés; sem criar nova área de jogo.",
+      "Vanish lendário dura até 10 min ou logo após rolagem de ataque. Telepatia 1 milha não revela mão ou monte adversário."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "telepatia_pes": 5280,
+    "economia_acoes_lendarias": {
+      "usos_por_rodada": 3,
+      "recupera": "início de seu próprio turno",
+      "ativacao": "final do turno de outra criatura",
+      "restricao": "uma opção de cada vez"
+    },
+    "economia_acoes_covil": {
+      "iniciativa": 20,
+      "empates": "perde",
+      "limite": "não repetir mesma opção em duas rodadas consecutivas",
+      "requer_covil": true
+    }
+  },
+  "documentos_complementares": []
+}

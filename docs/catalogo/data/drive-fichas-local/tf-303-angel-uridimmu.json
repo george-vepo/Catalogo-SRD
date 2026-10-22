@@ -1,0 +1,232 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "TF-303",
+  "nome_catalogo": "Angel, Uridimmu",
+  "origem_arquivo": "TF-303-angel-uridimmu-ficha (1).json",
+  "sha256_origem": "fd0a0840a54f7357358ea03118d8d45ceb3147a78874cfaccc30523413015dc0",
+  "conteudo_original": {
+    "esquema": "SRD_Card_Game_Ficha_Mecanica_Auditada_v1.2",
+    "projeto": "SRD Card Game",
+    "lote": "MANUAL-LOTE-018",
+    "data_execucao_local": "2026-10-17",
+    "identificacao": {
+      "ORDEM_PRIORIZADA": 68,
+      "ORDEM_1320": 224,
+      "CHAVE": "TF-303",
+      "ID_CATALOGO": "TF-303",
+      "nome_catalogo": "Angel, Uridimmu",
+      "tipo_catalogo": "Celestial",
+      "nd": "14",
+      "classe": "Rara",
+      "deck": "Celestial",
+      "ids_copias": [
+        "CE-032"
+      ],
+      "publicacao_catalogo": "Tome of Beasts 2",
+      "editora_catalogo": "Kobold Press",
+      "homologacao_administrativa": false
+    },
+    "estado": {
+      "status": "FICHA_MECANICA_FONTE_COMPLETA_NAO_HOMOLOGADA",
+      "homologacao_administrativa": false,
+      "compatibilidade_regra_de_jogo": "PENDENTE_REGRAS_ESPECIFICAS",
+      "arte_ou_imagem": "NAO_AVALIADA_NESTE_LOTE",
+      "destino_biblioteca": "Completas"
+    },
+    "ficha": {
+      "porte": "Grande",
+      "tipo_mecanico_fonte": "Celestial",
+      "alinhamento": "Leal e Bom",
+      "CA": 18,
+      "PV_maximos": 150,
+      "formula_PV": "12d10+84",
+      "nd_fonte": "14",
+      "xp_fonte": 11500,
+      "deslocamentos_pes": {
+        "terrestre": 30,
+        "voo": 90
+      },
+      "atributos": {
+        "FOR": 22,
+        "DES": 17,
+        "CON": 24,
+        "INT": 14,
+        "SAB": 18,
+        "CAR": 21
+      },
+      "iniciativa_bonus": 3,
+      "iniciativa_origem": "Derivado de Destreza +3",
+      "salvaguardas_fonte": {
+        "CON": 12,
+        "SAB": 9,
+        "CAR": 10
+      },
+      "pericias_fonte": {
+        "Intuição": 14,
+        "Percepção": 9
+      },
+      "resistencias_dano": [
+        "fogo",
+        "elétrico",
+        "radiante",
+        "contundente de ataques não mágicos",
+        "perfurante de ataques não mágicos",
+        "cortante de ataques não mágicos"
+      ],
+      "imunidades_dano": [],
+      "imunidades_condicoes": [
+        "enfeitiçado",
+        "exaustão",
+        "amedrontado"
+      ],
+      "sentidos": {
+        "visao_verdadeira_pes": 90,
+        "percepcao_passiva": 19
+      },
+      "idiomas": [
+        "todos os idiomas"
+      ],
+      "telepatia_pes": 60,
+      "tracos": [
+        {
+          "nome": "Chaos Mace",
+          "efeito": "Ataques da maça são mágicos. O dano extra de 4d8 pode ser fogo, elétrico ou radiante, à escolha a cada ataque; já está computado em Mace"
+        },
+        {
+          "nome": "Heroic Aura",
+          "alcance_pes": 20,
+          "efeito": "Criaturas aliadas ficam imunes a Enfeitiçado/Amedrontado e podem adicionar 1d4 a jogadas de ataque ou salvaguardas",
+          "interrompida": "Não funciona em campo antimagia nem dentro de templo/santuário/estrutura dedicada a divindade caótica",
+          "limite_jogo": "Não cria criaturas aliadas para o Card Game"
+        },
+        {
+          "nome": "Magic Resistance",
+          "efeito": "Vantagem em salvaguardas contra magias/efeitos mágicos"
+        },
+        {
+          "nome": "Innate Spellcasting",
+          "atributo": "CAR",
+          "cd_salvaguarda": 18,
+          "componentes": "Sem componentes materiais",
+          "sem_limite": [
+            "detect evil and good",
+            "light",
+            "protection from evil and good"
+          ],
+          "3_por_dia_cada": [
+            "dispel magic",
+            "glyph of warding",
+            "lightning bolt"
+          ],
+          "1_por_dia_cada": [
+            "flame strike",
+            "heal",
+            "wall of fire"
+          ]
+        }
+      ],
+      "acoes": [
+        {
+          "nome": "Multiattack",
+          "efeito": "Um ataque Bite e dois ataques Mace"
+        },
+        {
+          "nome": "Bite",
+          "bonus_ataque": 11,
+          "alcance_corpo_a_corpo_pes": 5,
+          "dano": [
+            {
+              "dados": "3d8+6",
+              "tipo": "perfurante",
+              "media_publicada": 19
+            }
+          ]
+        },
+        {
+          "nome": "Mace",
+          "bonus_ataque": 11,
+          "alcance_corpo_a_corpo_pes": 5,
+          "dano": [
+            {
+              "dados": "2d6+6",
+              "tipo": "contundente",
+              "media_publicada": 13
+            },
+            {
+              "dados": "4d8",
+              "tipo": "fogo ou elétrico ou radiante (escolher ao atacar)",
+              "media_publicada": 18
+            }
+          ]
+        },
+        {
+          "nome": "Heavenly Roar",
+          "recarga": "5-6",
+          "area": "Cone de 30 pés",
+          "teste": "CON CD 18",
+          "falha": "10d8 (média 45) trovejante; se falhar por 5 ou mais, Amedrontado por até 1 minuto",
+          "sucesso": "Metade do dano, sem medo",
+          "repeticao": "Amedrontados repetem o teste no fim do turno, encerrando no sucesso",
+          "vantagem_desvantagem": "Demônios/diabos (fiends) têm desvantagem no teste"
+        }
+      ],
+      "acoes_bonus": [],
+      "reacoes": [],
+      "acoes_lendarias": [],
+      "conjuracao": {
+        "atributo": "CAR",
+        "cd_salvaguarda": 18,
+        "sem_limite": [
+          "detect evil and good",
+          "light",
+          "protection from evil and good"
+        ],
+        "3_por_dia_cada": [
+          "dispel magic",
+          "glyph of warding",
+          "lightning bolt"
+        ],
+        "1_por_dia_cada": [
+          "flame strike",
+          "heal",
+          "wall of fire"
+        ]
+      },
+      "recursos_limitados": [
+        {
+          "recurso": "Heavenly Roar",
+          "recarga": "5-6"
+        },
+        {
+          "recurso": "Magias 3/dia cada",
+          "quantidade_por_magia": 3
+        },
+        {
+          "recurso": "Magias 1/dia cada",
+          "quantidade_por_magia": 1
+        }
+      ]
+    },
+    "auditoria": {
+      "fonte_deck": "/SRD Card Game/Decks/Celestial/Fichas por criatura/32_Angel_Uridimmu.md",
+      "referencia_mecanica_publica": "https://www.5esrd.com/database/creature/angel-uridimmu/",
+      "referencia_cruzada": "https://www.5esrd.com/database/creature/angel-uridimmu/",
+      "edicao_da_criatura": "Tome of Beasts 2",
+      "diretriz_edicao": "Mecânicas 5e da publicação Kobold Press original; SRD_CC_v5.2.1 apenas para procedimentos gerais de combate",
+      "fonte_primaria_pdf_na_biblioteca": false,
+      "separacao_mecanica_e_suporte": true,
+      "habilidade_suporte_deck": "Candidata apenas; não homologada e não concedida como carta de suporte",
+      "divergencias_e_alertas": [
+        "A aura beneficia aliados próximos na fonte; não autoriza uma segunda criatura ativa no Card Game.",
+        "Heal consta 1/dia, é magia da criatura e não suporte homologado jogado da mão.",
+        "Os tipos de dano da maça são escolhas a cada ataque, não dano cumulativo das três energias."
+      ],
+      "pendencias_administrador": [
+        "Definir efeitos de aura com apenas uma criatura ativa por jogador e regras de aliados.",
+        "Definir efeitos de concentração e áreas de glyph/wall no campo do jogo."
+      ],
+      "regras_de_jogo_inventadas": false
+    }
+  },
+  "documentos_complementares": []
+}

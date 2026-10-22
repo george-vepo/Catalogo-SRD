@@ -1,0 +1,139 @@
+{
+  "schema": "CATALOGO_FICHA_LOCAL_V1",
+  "id_catalogo": "",
+  "nome_catalogo": "Death Kiss",
+  "origem_arquivo": "EXT-0066-death-kiss-ficha (1).json",
+  "sha256_origem": "abc8c55e8af2f637424bc18d07486997252584df83fc1f16e7593115958ebf36",
+  "conteudo_original": {
+    "chave": "EXT-0066-death-kiss",
+    "ordem_priorizada": 111,
+    "ordem_1320": 66,
+    "nome": "Death Kiss",
+    "tipo": "Aberração",
+    "nd": 10,
+    "raridade": "Incomum",
+    "origem": "CANDIDATO EXTERNO",
+    "editora": "Wizards of the Coast",
+    "publicacao": "Mordenkainen Presents: Monsters of the Multiverse",
+    "edicao": "5e original de Mordenkainen Presents: Monsters of the Multiverse; não misturar com fichas de outras edições",
+    "tamanho": "Grande",
+    "tendencia": "Tipicamente neutro e mau",
+    "classe_armadura": 15,
+    "classe_armadura_detalhe": "armadura natural",
+    "pontos_vida": 142,
+    "dados_vida": "15d10 + 60",
+    "deslocamentos_pes": {
+      "andar": 0,
+      "voar": 30,
+      "pairar": true
+    },
+    "atributos": {
+      "FOR": 18,
+      "DES": 14,
+      "CON": 18,
+      "INT": 10,
+      "SAB": 12,
+      "CAR": 10
+    },
+    "modificadores": {
+      "FOR": 4,
+      "DES": 2,
+      "CON": 4,
+      "INT": 0,
+      "SAB": 1,
+      "CAR": 0
+    },
+    "testes_resistencia": {
+      "CON": 8,
+      "SAB": 5
+    },
+    "pericias": {
+      "Percepção": 5
+    },
+    "sentidos": {
+      "visao_no_escuro_pes": 120,
+      "percepcao_passiva": 15
+    },
+    "idiomas": [
+      "Língua Profunda",
+      "Subcomum"
+    ],
+    "xp": 5900,
+    "bonus_proficiencia": 4,
+    "vulnerabilidades_dano": [],
+    "resistencias_dano": [],
+    "imunidades_dano": [
+      "elétrico"
+    ],
+    "imunidades_condicoes": [
+      "caído"
+    ],
+    "caracteristicas": [
+      {
+        "nome_original": "Lightning Blood",
+        "efeito": "Criatura a até 5 pés que acertar o Death Kiss com ataque corpo a corpo causando cortante ou perfurante recebe 5 (1d10) elétrico a cada acerto válido."
+      }
+    ],
+    "acoes": [
+      {
+        "nome_original": "Multiattack",
+        "efeito": "Três Tentacle. Cada Tentacle pode ser substituído por um Blood Drain, no máximo um por tentáculo que mantenha alvo agarrado."
+      },
+      {
+        "nome_original": "Tentacle",
+        "tipo": "ataque corpo a corpo",
+        "bonus_ataque": 8,
+        "alcance_pes": 20,
+        "distancia_pes": null,
+        "dano": [
+          {
+            "tipo": "perfurante",
+            "dados": "2d6 + 4",
+            "media": 11
+          }
+        ],
+        "agarramento": {
+          "tamanho_maximo": "Enorme",
+          "cd_escapar": 14,
+          "condicao": [
+            "agarrado",
+            "restrito"
+          ],
+          "limite_tentaculos": 10,
+          "bloqueia_tentaculo_naquele_alvo": true
+        }
+      },
+      {
+        "nome_original": "Blood Drain",
+        "efeito": "Uma criatura agarrada por tentáculo faz CON CD 16. Falha: 22 (4d10) elétrico; Death Kiss recupera metade dos PV de dano infligidos. Sem dano ou recuperação no sucesso."
+      }
+    ],
+    "acoes_bonus": [],
+    "reacoes": [],
+    "acoes_lendarias": [],
+    "acoes_covil": [],
+    "efeitos_regionais": [],
+    "recursos_limitados": [],
+    "magias": [],
+    "fontes": [
+      {
+        "tipo": "transcricao_livro_2022_pag_85",
+        "url": "https://studylib.net/doc/27313917/monsters-of-the-multiverse-5e-dnd"
+      },
+      {
+        "tipo": "transcricao_MotM",
+        "url": "https://dumbdecision.de/monsters/death-kiss-mpmm"
+      }
+    ],
+    "notas_de_validacao": [
+      "Usar 2022: 142 PV, CA 15 e dano do Tentacle 2d6 + 4 (média 11). Versão anterior Volo possui PV e dano diferentes.",
+      "Cada ataque de tentáculo pode prender criatura Grande-Enorme? Texto exato: tamanho Enorme ou menor; ficha conserva essa condição.",
+      "Substituir Tentacle por Blood Drain no Multiattack exige tentáculo específico mantendo agarramento; no máximo uma substituição por tentáculo agarrando, respeitar três ataques.",
+      "Blood Drain recupera metade do dano elétrico causado em falha de CON CD16; não cura automaticamente em salvaguarda bem-sucedida.",
+      "Lightning Blood exige ataque corpo a corpo cortante/perfurante a até 5 pés; não reflete dano de qualquer fonte."
+    ],
+    "estado_ficha": "MECANICAS_DA_PUBLICACAO_CONFERIDAS_SEM_HOMOLOGACAO_CARD_GAME",
+    "subtipo": "beholder"
+  },
+  "documentos_complementares": []
+}
