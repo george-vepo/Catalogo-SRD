@@ -30,9 +30,13 @@
     "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
     "provenance": {
       "edition": "Kobold Press Tome of Beasts 3, D&D 5e",
-      "statblock_status": "PENDENTE_HOMOLOGACAO",
+      "statblock_status": "PESQUISA_5E_FONTE_COMPLETA_PENDENTE_HOMOLOGACAO",
       "sources": [
         "https://www.5esrd.com/database/creature/avestruzii/",
+        "https://koboldpress.com/tools/kobold-press-monsters/"
+      ],
+      "source_urls": [
+        "https://5esrd.old.opengamingnetwork.com/database/creature/avestruzii/",
         "https://koboldpress.com/tools/kobold-press-monsters/"
       ]
     },
@@ -52,8 +56,70 @@
     "resource_limits_from_source": "Conforme ficha; não duplicar recursos",
     "unresolved": [
       "Gatilho e reserva de reação após uso pré-iniciativa",
-      "Compatibilizar pré-requisito de deslocamento anterior com arena sem movimentação"
+      "Compatibilizar pré-requisito de deslocamento anterior com arena sem movimentação",
+      "Approval of concrete adaptation for pre-initiative use needed; do not invent event/duration"
     ],
-    "usable_in_official_combat": false
-  }
+    "usable_in_official_combat": false,
+    "verified_source_ability_is_on_original_statblock": true
+  },
+  "statblock": {
+    "status": "PESQUISA_5E_FONTE_COMPLETA_PENDENTE_HOMOLOGACAO",
+    "edition": "Tome of Beasts 3 (Kobold Press)",
+    "ca": 14,
+    "pv": 22,
+    "pv_dice": "3d8+9",
+    "initiative_modifier": 0,
+    "ability_scores": {
+      "STR": 14,
+      "DEX": 10,
+      "CON": 16,
+      "INT": 8,
+      "WIS": 10,
+      "CHA": 10
+    },
+    "skills": {
+      "Athletics": 4,
+      "Perception": 2
+    },
+    "languages": [
+      "Common",
+      "Terran"
+    ],
+    "actions": [
+      {
+        "name": "Battleaxe",
+        "attack_bonus": 4,
+        "damage": "1d8+2 slashing (1d10+2 two-handed)"
+      },
+      {
+        "name": "Claw",
+        "attack_bonus": 4,
+        "damage": "1d4+2 slashing"
+      },
+      {
+        "name": "Shortbow",
+        "attack_bonus": 2,
+        "damage": "1d6 piercing"
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Dig In",
+        "summary": "One melee weapon hit against itself may be resisted; must see attacker and not have moved on previous turn"
+      }
+    ],
+    "sources": [
+      "https://5esrd.old.opengamingnetwork.com/database/creature/avestruzii/",
+      "https://koboldpress.com/tools/kobold-press-monsters/"
+    ],
+    "pending_application": [
+      "Dig In has movement prerequisite; arena ignores movement but non-distance conditions should be preserved."
+    ]
+  },
+  "visual": {
+    "status": "CANDIDATA_EM_REVISAO",
+    "repo_path": "docs/catalogo/assets/draw-candidates/ML-0719-avestruzii-candidata.webp",
+    "method": "ImageGen original, existing low-resolution candidate"
+  },
+  "research_notes": "Mechanics are independently summarized, not a reproduction of copyrighted official full statblocks. Review against source edition before official combat."
 }
