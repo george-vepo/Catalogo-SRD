@@ -1,5 +1,5 @@
 {
-  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V1",
+  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V2",
   "status": "PENDENTE_HOMOLOGACAO",
   "source_type": "5e external research; mechanics summary, not a reprint",
   "model_id": "TF-365",
@@ -21,14 +21,37 @@
     "https://5esrd.old.opengamingnetwork.com/database/creature/erina-defender-3pp/"
   ],
   "review_notes": "Do not erase non-distance conditions when applying Card Game range house rule",
-  "support_candidate": {
+  "support": {
     "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "approved": false,
     "source_ability": "Protective Interference",
     "category": "Buff",
-    "original_mechanics_summary": "Proposta: impor desvantagem a um ataque contra a criatura ativa",
-    "limitations": "Somente no ataque elegível e sob condições originais, transferência precisa de aprovação",
-    "priority": "Cura -> Buff -> Debuff -> Dano",
-    "applications_per_combat": 1,
-    "approval_required": true
+    "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
+    "provenance": {
+      "edition": "Kobold Press 5e",
+      "statblock_status": "PENDENTE_HOMOLOGACAO",
+      "sources": [
+        "https://5esrd.old.opengamingnetwork.com/database/creature/erina-defender-3pp/"
+      ]
+    },
+    "targeting": "Criatura ativa do mesmo jogador; transferência da habilidade própria é homebrew pendente de validação",
+    "activation_window": "Ao ser alvo de uma jogada de ataque elegível, condicionado ao gatilho da fonte",
+    "prerequisites": "Protetor deve ver atacante e empunhar arma corpo a corpo, requisitos da ficha não são removidos",
+    "effect_text_candidate": "Proposta: impor desvantagem à jogada de ataque elegível contra a criatura ativa, conforme Protective Interference.",
+    "restrictions": [
+      "Somente no ataque elegível e sob condições originais, transferência precisa de aprovação",
+      "Não criar CD, bônus, danos nem duração sem fonte integral",
+      "Uma aplicação da carta de suporte por combate",
+      "Jogar suporte não consome ação/ação bônus/reação; carta usada segue ao cemitério",
+      "Aplicar apenas após homologação pelo administrador"
+    ],
+    "duration": "Conforme habilidade original; NÃO DETERMINADA para uso como suporte até homologação",
+    "uses_per_combat": 1,
+    "resource_limits_from_source": "Conforme ficha; não duplicar recursos",
+    "unresolved": [
+      "Como satisfazer os requisitos do protetor quando carta de suporte já foi descartada?",
+      "Janela de ativação de uma reação originalmente dependente de ataque futuro"
+    ],
+    "usable_in_official_combat": false
   }
 }
