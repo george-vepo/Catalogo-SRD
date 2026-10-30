@@ -30,10 +30,14 @@
     "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
     "provenance": {
       "edition": "Fizban's Treasury of Dragons 2021, D&D 5e",
-      "statblock_status": "PENDENTE_HOMOLOGACAO",
+      "statblock_status": "PESQUISA_5E_FONTE_COMPLETA_PENDENTE_HOMOLOGACAO",
       "sources": [
         "https://www.aidedd.org/dnd/monstres.php?vo=dragonborn-of-tiamat",
         "https://www.dndbeyond.com/monsters"
+      ],
+      "source_urls": [
+        "https://onyx5e.com/en/bestiary/dragonborn-of-tiamat/",
+        "https://www.fantasygrounds.com/library/dnd5e/npcs/dragonborn-of-tiamat/"
       ]
     },
     "targeting": "Criatura ativa do mesmo jogador; transferência da habilidade própria é homebrew pendente de validação",
@@ -52,8 +56,84 @@
     "resource_limits_from_source": "Conforme ficha; não duplicar recursos",
     "unresolved": [
       "Definir duração da reserva de um efeito reativo após o suporte pré-iniciativa",
-      "Confirmar edição e disponibilidade da habilidade na ficha integral"
+      "Confirmar edição e disponibilidade da habilidade na ficha integral",
+      "Approval of concrete adaptation for pre-initiative use needed; do not invent event/duration"
     ],
-    "usable_in_official_combat": false
-  }
+    "usable_in_official_combat": false,
+    "verified_source_ability_is_on_original_statblock": true
+  },
+  "statblock": {
+    "status": "PESQUISA_5E_FONTE_COMPLETA_PENDENTE_HOMOLOGACAO",
+    "edition": "Fizban's Treasury of Dragons (2021)",
+    "ca": 18,
+    "pv": 85,
+    "pv_dice": "10d8+40",
+    "initiative_modifier": 0,
+    "ability_scores": {
+      "STR": 20,
+      "DEX": 11,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 16
+    },
+    "saving_throws": {
+      "STR": 8,
+      "CON": 7,
+      "WIS": 4,
+      "CHA": 6
+    },
+    "skills": {
+      "Athletics": 8,
+      "Intimidation": 6,
+      "Perception": 4
+    },
+    "condition_immunities": [
+      "Frightened"
+    ],
+    "languages": [
+      "Common",
+      "Draconic"
+    ],
+    "traits": [
+      {
+        "name": "Legendary Resistance",
+        "limit": "1/day",
+        "summary": "Once per day, turn a failed save into a success"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "summary": "Two greataxe attacks"
+      },
+      {
+        "name": "Greataxe",
+        "attack_bonus": 8,
+        "damage": "1d12+5 slashing + 3d8 necrotic"
+      },
+      {
+        "name": "Necrotic Breath",
+        "recharge": "6",
+        "save": "Wisdom DC15",
+        "damage": "8d8 necrotic on failed save, half on success",
+        "condition": "Frightened for up to 1 minute on failure; new save end each affected turn"
+      }
+    ],
+    "sources": [
+      "https://onyx5e.com/en/bestiary/dragonborn-of-tiamat/",
+      "https://www.fantasygrounds.com/library/dnd5e/npcs/dragonborn-of-tiamat/"
+    ],
+    "pending_application": [
+      "Breath cone and targeting must follow Card Game arena rule; no invented AOE."
+    ]
+  },
+  "visual": {
+    "status": "PREVIA_INADEQUADA_PENDENTE_ARTE_FINAL",
+    "repo_path": "docs/catalogo/assets/draw-candidates/ML-0828-dragonborn-tiamat-preview-candidata.webp",
+    "method": "Crop of original ImageGen UI depiction",
+    "image_size": "144x192",
+    "quality_note": "Not a standalone, full creature illustration; do not classify as approved."
+  },
+  "research_notes": "Mechanics are independently summarized, not a reproduction of copyrighted official full statblocks. Review against source edition before official combat."
 }
