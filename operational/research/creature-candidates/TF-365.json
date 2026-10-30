@@ -29,8 +29,11 @@
     "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
     "provenance": {
       "edition": "Kobold Press 5e",
-      "statblock_status": "PENDENTE_HOMOLOGACAO",
+      "statblock_status": "PESQUISA_5E_FONTE_COMPLETA_PENDENTE_HOMOLOGACAO",
       "sources": [
+        "https://5esrd.old.opengamingnetwork.com/database/creature/erina-defender-3pp/"
+      ],
+      "source_urls": [
         "https://5esrd.old.opengamingnetwork.com/database/creature/erina-defender-3pp/"
       ]
     },
@@ -50,8 +53,75 @@
     "resource_limits_from_source": "Conforme ficha; não duplicar recursos",
     "unresolved": [
       "Como satisfazer os requisitos do protetor quando carta de suporte já foi descartada?",
-      "Janela de ativação de uma reação originalmente dependente de ataque futuro"
+      "Janela de ativação de uma reação originalmente dependente de ataque futuro",
+      "Approval of concrete adaptation for pre-initiative use needed; do not invent event/duration"
     ],
-    "usable_in_official_combat": false
-  }
+    "usable_in_official_combat": false,
+    "verified_source_ability_is_on_original_statblock": true
+  },
+  "statblock": {
+    "status": "PESQUISA_5E_FONTE_COMPLETA_PENDENTE_HOMOLOGACAO",
+    "edition": "Kobold Press 5e (Erina Defender)",
+    "ca": 15,
+    "pv": 44,
+    "pv_dice": "8d6+16",
+    "initiative_modifier": 2,
+    "ability_scores": {
+      "STR": 11,
+      "DEX": 14,
+      "CON": 14,
+      "INT": 13,
+      "WIS": 12,
+      "CHA": 11
+    },
+    "skills": {
+      "Athletics": 4,
+      "Perception": 3
+    },
+    "damage_resistances": [
+      "Poison"
+    ],
+    "languages": [
+      "Common",
+      "Erina"
+    ],
+    "traits": [
+      "Keen Smell",
+      "Hardy (advantage on poison saves)",
+      "Spines (2d4 piercing under source trigger)"
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "summary": "Two Shortsword or Shortbow attacks"
+      },
+      {
+        "name": "Shortsword",
+        "attack_bonus": 4,
+        "damage": "1d6+2 piercing"
+      },
+      {
+        "name": "Shortbow",
+        "attack_bonus": 4,
+        "damage": "1d6+2 piercing"
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Protective Interference",
+        "summary": "Impose disadvantage against attack targeted at adjacent ally; must see ally and attacker, wield a melee weapon"
+      }
+    ],
+    "sources": [
+      "https://5esrd.old.opengamingnetwork.com/database/creature/erina-defender-3pp/"
+    ],
+    "pending_application": [
+      "Range is removed by Card Game but seeing the target and melee-weapon requirements persist."
+    ]
+  },
+  "visual": {
+    "status": "IMAGEM_EXISTENTE_REPOSITORIO",
+    "repo_path": "operational/assets/creature-images/TF-365.webp"
+  },
+  "research_notes": "Mechanics are independently summarized, not a reproduction of copyrighted official full statblocks. Review against source edition before official combat."
 }
