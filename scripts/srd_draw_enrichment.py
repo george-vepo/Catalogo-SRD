@@ -69,8 +69,12 @@ def inspect(root: Path, model_id: str, expected_name: str | None = None) -> dict
     support = (research or {}).get("support")
     support_approved = bool(support and support.get("approved") is True and support.get("usable_in_official_combat") is True)
     support_present = bool(support and support.get("source_ability") and support.get("status"))
+    visual = (research or {}).get("visual") or {}
+    preview_inadequate = visual.get("status") in {"PREVIA_INADEQUADA_PENDENTE_ARTE_FINAL", "IMAGEM_REJEITADA"}
+    original_images = [p for p in images if p.startswith("operational/assets/creature-images/")]
+    usable_images = original_images if preview_inadequate else images
     tasks = []
-    if not images:
+    if not usable_images:
         tasks.append({"kind": "GENERATE_IMAGE", "executor": "ChatGPT ImageGen", "required": True})
     if not full:
         tasks.append({"kind": "RESEARCH_5E_STATBLOCK", "executor": "Pesquisa 5e e curadoria", "required": True})
@@ -79,7 +83,8 @@ def inspect(root: Path, model_id: str, expected_name: str | None = None) -> dict
     elif not support_approved:
         tasks.append({"kind": "REVIEW_SUPPORT", "executor": "Administrador", "required": True})
     return {"schema": "SRD_DRAW_MODEL_ENRICHMENT_V1", "model": model,
-            "image": {"available": bool(images), "paths": images, "approved": False},
+            "image": {"available": bool(usable_images), "paths": images, "approved": False,
+                      "requires_final_art": preview_inadequate, "status": visual.get("status")},
             "statblock": {"full_verified": full, "catalogue_status": original.get("status_ficha") if original else None,
                           "research_status": research.get("status") if research else None},
             "support": {"present": support_present, "approved": support_approved,
