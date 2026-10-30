@@ -1,0 +1,20 @@
+name: Validar integração do DRAW
+on:
+  pull_request:
+    paths:
+      - "scripts/srd_draw_enrichment.py"
+      - "tests/test_srd_draw_enrichment.py"
+      - "operational/research/creature-candidates/**"
+      - ".github/workflows/validate-draw-hook.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test-draw-hook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_srd_draw_enrichment.py' -v
