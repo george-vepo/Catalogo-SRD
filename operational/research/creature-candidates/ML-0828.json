@@ -1,5 +1,5 @@
 {
-  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V1",
+  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V2",
   "status": "PENDENTE_HOMOLOGACAO",
   "source_type": "5e external research; mechanics summary, not a reprint",
   "model_id": "ML-0828",
@@ -22,14 +22,38 @@
     "https://www.dndbeyond.com/monsters"
   ],
   "review_notes": "Do not substitute Dragonborn of Sardior or Bahamut",
-  "support_candidate": {
+  "support": {
     "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "approved": false,
     "source_ability": "Legendary Resistance",
     "category": "Buff",
-    "original_mechanics_summary": "Proposta: transformar uma salvaguarda falha da ativa em sucesso",
-    "limitations": "Uma aplicação, sujeito ao gatilho de falha, origem 1/dia, transferência sob revisão",
-    "priority": "Cura -> Buff -> Debuff -> Dano",
-    "applications_per_combat": 1,
-    "approval_required": true
+    "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
+    "provenance": {
+      "edition": "Fizban's Treasury of Dragons 2021, D&D 5e",
+      "statblock_status": "PENDENTE_HOMOLOGACAO",
+      "sources": [
+        "https://www.aidedd.org/dnd/monstres.php?vo=dragonborn-of-tiamat",
+        "https://www.dndbeyond.com/monsters"
+      ]
+    },
+    "targeting": "Criatura ativa do mesmo jogador; transferência da habilidade própria é homebrew pendente de validação",
+    "activation_window": "Após falhar em um teste de resistência elegível, conforme gatilho da habilidade de origem",
+    "prerequisites": "Usos da fonte: 1/dia; suporte aplica somente uma vez por combate",
+    "effect_text_candidate": "Proposta: transformar uma falha em teste de resistência da criatura ativa em sucesso, seguindo a resistência lendária da fonte.",
+    "restrictions": [
+      "Uma aplicação, sujeito ao gatilho de falha, origem 1/dia, transferência sob revisão",
+      "Não criar CD, bônus, danos nem duração sem fonte integral",
+      "Uma aplicação da carta de suporte por combate",
+      "Jogar suporte não consome ação/ação bônus/reação; carta usada segue ao cemitério",
+      "Aplicar apenas após homologação pelo administrador"
+    ],
+    "duration": "Conforme habilidade original; NÃO DETERMINADA para uso como suporte até homologação",
+    "uses_per_combat": 1,
+    "resource_limits_from_source": "Conforme ficha; não duplicar recursos",
+    "unresolved": [
+      "Definir duração da reserva de um efeito reativo após o suporte pré-iniciativa",
+      "Confirmar edição e disponibilidade da habilidade na ficha integral"
+    ],
+    "usable_in_official_combat": false
   }
 }
