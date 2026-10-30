@@ -1,0 +1,48 @@
+{
+  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V2",
+  "status": "FICHA_SRD_REFERENCIADA_SUPORTE_PENDENTE",
+  "model_id": "AT-096",
+  "canonical_name": "Berserker",
+  "type": "Humanoide",
+  "challenge_rating": "2",
+  "edition": "SRD 5.2.1",
+  "authoritative_statblock": {
+    "source_repo_path": "docs/catalogo/data/fichas-607.json",
+    "record_id": "AT-096",
+    "source_status": "FICHA INTEGRAL LOCAL",
+    "armor_class": 13,
+    "hit_points": 67,
+    "initiative_modifier": 1,
+    "ability_used_for_support": "Bloodied Frenzy",
+    "note": "Ficha SRD existente permanece inalterada. Suporte é camada específica do Card Game."
+  },
+  "support": {
+    "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "approved": false,
+    "source_ability": "Bloodied Frenzy",
+    "category": "Buff",
+    "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
+    "provenance": {
+      "edition": "SRD 5.2.1",
+      "statblock_path": "docs/catalogo/data/fichas-607.json",
+      "record_id": "AT-096"
+    },
+    "targeting": "Criatura ativa do mesmo jogador; transferência de efeito próprio é homebrew pendente",
+    "activation_window": "A habilidade original é passiva quando Bloodied; aplicação única do suporte pré-iniciativa precisa de regra de duração/gatilho aprovada",
+    "prerequisites": "A criatura ativa deve estar Bloodied, conforme definição da edição; sem converter efeito em bônus irrestrito",
+    "effect_text_candidate": "Proposta: enquanto for elegível pelo estado Bloodied, a criatura ativa recebe vantagem em jogadas de ataque e testes de resistência, conforme Bloodied Frenzy da ficha.",
+    "restrictions": [
+      "Uma aplicação do suporte por combate",
+      "Efeito originalmente passivo/recorrente: definir como uma única aplicação sem inventar duração",
+      "Suporte usado segue ao cemitério sem gastar ação/ação bônus/reação",
+      "Não aplicar antes de homologação"
+    ],
+    "duration": "Pendente; não inventar duração para transformar efeito passivo",
+    "uses_per_combat": 1,
+    "unresolved": [
+      "Como operacionalizar benefício passivo após aplicação pré-iniciativa?",
+      "Não transformar disparador Bloodied em efeito permanente"
+    ],
+    "usable_in_official_combat": false
+  }
+}
