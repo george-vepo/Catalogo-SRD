@@ -1,5 +1,5 @@
 {
-  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V1",
+  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V2",
   "status": "PENDENTE_HOMOLOGACAO",
   "source_type": "5e external research; mechanics summary, not a reprint",
   "model_id": "ML-1045",
@@ -21,14 +21,38 @@
     "https://www.aidedd.org/dnd/monstres.php?vo=choldrith"
   ],
   "review_notes": "Use 2022 spell list; do not mix 2016 spell slots",
-  "support_candidate": {
+  "support": {
     "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "approved": false,
     "source_ability": "Fey Ancestry",
     "category": "Buff",
-    "original_mechanics_summary": "Proposta: permitir que a ativa tenha vantagem apenas na salvaguarda contra Enfeitiçado quando aplicável",
-    "limitations": "Passiva original, aplicação única e transferência precisam de aprovação",
-    "priority": "Cura -> Buff -> Debuff -> Dano",
-    "applications_per_combat": 1,
-    "approval_required": true
+    "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
+    "provenance": {
+      "edition": "Mordenkainen Presents: Monsters of the Multiverse 2022",
+      "statblock_status": "PENDENTE_HOMOLOGACAO",
+      "sources": [
+        "https://mace-compendium.com/bestiary/choldrith-mpmm/",
+        "https://www.aidedd.org/dnd/monstres.php?vo=choldrith"
+      ]
+    },
+    "targeting": "Criatura ativa do mesmo jogador; transferência da habilidade própria é homebrew pendente de validação",
+    "activation_window": "Durante a etapa de suporte pré-iniciativa, condicionado à elegibilidade do gatilho original",
+    "prerequisites": "Somente para resistência contra condição Enfeitiçado; não é vantagem geral contra magias",
+    "effect_text_candidate": "Proposta: a criatura ativa recebe a proteção de Fey Ancestry para salvaguardas para evitar ou encerrar Enfeitiçado, respeitando os gatilhos da fonte.",
+    "restrictions": [
+      "Passiva original, aplicação única e transferência precisam de aprovação",
+      "Não criar CD, bônus, danos nem duração sem fonte integral",
+      "Uma aplicação da carta de suporte por combate",
+      "Jogar suporte não consome ação/ação bônus/reação; carta usada segue ao cemitério",
+      "Aplicar apenas após homologação pelo administrador"
+    ],
+    "duration": "Conforme habilidade original; NÃO DETERMINADA para uso como suporte até homologação",
+    "uses_per_combat": 1,
+    "resource_limits_from_source": "Conforme ficha; não duplicar recursos",
+    "unresolved": [
+      "Como tornar um traço passivo de uso contínuo em aplicação única sem inventar duração?",
+      "Confirmar texto e edição da habilidade antes da homologação"
+    ],
+    "usable_in_official_combat": false
   }
 }
