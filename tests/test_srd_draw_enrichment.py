@@ -41,6 +41,18 @@ class TestDrawEnrichment(unittest.TestCase):
         p.mkdir(parents=True)
         (p/'AT-096.webp').write_bytes(b'fake-picture-nonzero')
         self.assertNotIn('GENERATE_IMAGE',[t['kind'] for t in inspect(self.root,'AT-096')['tasks']])
+    def test_inadequate_preview_does_not_satisfy_image_requirement(self):
+        p=self.root/'operational/research/creature-candidates/ML-0001.json'
+        p.parent.mkdir(parents=True)
+        p.write_text(json.dumps({'model_id':'ML-0001','visual':{'status':'PREVIA_INADEQUADA_PENDENTE_ARTE_FINAL'}}),encoding='utf-8')
+        a=self.root/'docs/catalogo/assets/draw-candidates'
+        a.mkdir(parents=True)
+        (a/'ML-0001-preview.webp').write_bytes(b'RIFFxxxxWEBPxxxx')
+        data=inspect(self.root,'ML-0001')
+        self.assertIn('GENERATE_IMAGE',[t['kind'] for t in data['tasks']])
+        self.assertTrue(data['image']['requires_final_art'])
+        self.assertIn('docs/catalogo/assets/draw-candidates/ML-0001-preview.webp',data['image']['paths'])
+
     def test_private_metadata_is_rejected(self):
         with self.assertRaises(ValueError):reject_private({'model_id':'ML-0001','hand':['private']})
         with self.assertRaises(ValueError):reject_private({'support':{'copy_id':'private'}})
