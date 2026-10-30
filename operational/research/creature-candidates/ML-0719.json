@@ -1,5 +1,5 @@
 {
-  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V1",
+  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V2",
   "status": "PENDENTE_HOMOLOGACAO",
   "source_type": "5e external research; mechanics summary, not a reprint",
   "model_id": "ML-0719",
@@ -22,14 +22,38 @@
     "https://koboldpress.com/tools/kobold-press-monsters/"
   ],
   "review_notes": "Movement prerequisite unresolved in combat without movement; do not waive it automatically",
-  "support_candidate": {
+  "support": {
     "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "approved": false,
     "source_ability": "Dig In",
     "category": "Buff",
-    "original_mechanics_summary": "Proposta: conceder resistência à ativa contra um ataque de arma corpo a corpo que a acertaria",
-    "limitations": "Requer ver o atacante e verificação do gatilho original; apenas uma aplicação",
-    "priority": "Cura -> Buff -> Debuff -> Dano",
-    "applications_per_combat": 1,
-    "approval_required": true
+    "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
+    "provenance": {
+      "edition": "Kobold Press Tome of Beasts 3, D&D 5e",
+      "statblock_status": "PENDENTE_HOMOLOGACAO",
+      "sources": [
+        "https://www.5esrd.com/database/creature/avestruzii/",
+        "https://koboldpress.com/tools/kobold-press-monsters/"
+      ]
+    },
+    "targeting": "Criatura ativa do mesmo jogador; transferência da habilidade própria é homebrew pendente de validação",
+    "activation_window": "Reação ao ataque corpo a corpo que acertaria, quando aplicável; a janela pré-iniciativa e a reserva do efeito precisam de aprovação",
+    "prerequisites": "Criatura beneficiária vê o atacante; requisitos de movimento de Dig In permanecem vinculantes",
+    "effect_text_candidate": "Proposta: conferir à criatura ativa a resistência contra um ataque corpo a corpo elegível que a atingiria, nas mesmas condições da habilidade Dig In.",
+    "restrictions": [
+      "Requer ver o atacante e verificação do gatilho original; apenas uma aplicação",
+      "Não criar CD, bônus, danos nem duração sem fonte integral",
+      "Uma aplicação da carta de suporte por combate",
+      "Jogar suporte não consome ação/ação bônus/reação; carta usada segue ao cemitério",
+      "Aplicar apenas após homologação pelo administrador"
+    ],
+    "duration": "Conforme habilidade original; NÃO DETERMINADA para uso como suporte até homologação",
+    "uses_per_combat": 1,
+    "resource_limits_from_source": "Conforme ficha; não duplicar recursos",
+    "unresolved": [
+      "Gatilho e reserva de reação após uso pré-iniciativa",
+      "Compatibilizar pré-requisito de deslocamento anterior com arena sem movimentação"
+    ],
+    "usable_in_official_combat": false
   }
 }
