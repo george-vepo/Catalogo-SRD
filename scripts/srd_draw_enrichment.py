@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-MODEL_ID = re.compile(r"(?:ML-\d{4}|AT-\d{3}|TF-\d{3}|KP-[AS]-\d{3}|EXT-\d{4})\Z")
+MODEL_ID = re.compile(r"(?:ML-\d{4}|AT-\d{3}|TF-\d{3}|KP-[AS]\d{3}|EXT-\d{4})\Z")
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp"}
 PRIVATE_FIELDS = {"copy_id", "card_instance_id", "hand", "deck", "deck_order", "draw_order", "pile", "player", "player_id", "shuffle_seed", "game_state", "private_state"}
 ROOT_RESEARCH = Path("operational/research/creature-candidates")
@@ -115,6 +115,12 @@ def stage(root: Path, model_id: str, research_file: Path | None, image_file: Pat
             raise ValueError("Suporte só pode ser enviado como candidato não homologado")
         if support.get("category") not in {"Cura", "Buff", "Debuff", "Dano"}:
             raise ValueError("Categoria de suporte inválida")
+        if not support.get("effect_text_candidate"):
+            raise ValueError("Texto do efeito de suporte ausente")
+        valid_sources = any(str(x).startswith(("https://", "http://")) for x in research.get("sources", []))
+        ref = research.get("authoritative_statblock")
+        if not valid_sources and not (isinstance(ref, dict) and ref.get("record_id") and ref.get("source_repo_path")):
+            raise ValueError("É obrigatória uma fonte de ficha verificável")
         target = root / ROOT_RESEARCH / (model_id + ".json")
         if target.exists():
             existing = read_json(target)
