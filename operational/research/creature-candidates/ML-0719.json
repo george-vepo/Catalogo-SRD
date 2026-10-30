@@ -1,0 +1,35 @@
+{
+  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V1",
+  "status": "PENDENTE_HOMOLOGACAO",
+  "source_type": "5e external research; mechanics summary, not a reprint",
+  "model_id": "ML-0719",
+  "canonical_name": "Avestruzii",
+  "edition": "Kobold Press Tome of Beasts 3, D&D 5e",
+  "type": "Humanoide",
+  "challenge_rating": "1/2",
+  "armor_class": 14,
+  "hit_points": 22,
+  "hit_dice": "3d8+9",
+  "initiative_modifier": 0,
+  "abilities_summary": {
+    "battleaxe": "+4; 1d8+2 slashing, two-handed 1d10+2",
+    "claw": "+4; 1d4+2 slashing",
+    "shortbow": "+2; 1d6 piercing",
+    "dig_in": "Reaction to one incoming melee weapon hit; must see attacker, must not have moved during its previous turn"
+  },
+  "sources": [
+    "https://www.5esrd.com/database/creature/avestruzii/",
+    "https://koboldpress.com/tools/kobold-press-monsters/"
+  ],
+  "review_notes": "Movement prerequisite unresolved in combat without movement; do not waive it automatically",
+  "support_candidate": {
+    "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "source_ability": "Dig In",
+    "category": "Buff",
+    "original_mechanics_summary": "Proposta: conceder resistência à ativa contra um ataque de arma corpo a corpo que a acertaria",
+    "limitations": "Requer ver o atacante e verificação do gatilho original; apenas uma aplicação",
+    "priority": "Cura -> Buff -> Debuff -> Dano",
+    "applications_per_combat": 1,
+    "approval_required": true
+  }
+}
