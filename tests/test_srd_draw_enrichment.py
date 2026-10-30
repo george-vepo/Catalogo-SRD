@@ -46,7 +46,7 @@ class TestDrawEnrichment(unittest.TestCase):
         with self.assertRaises(ValueError):reject_private({'support':{'copy_id':'private'}})
     def test_candidate_stage_and_inspect(self):
         incoming=self.root/'proposal.json'
-        incoming.write_text(json.dumps({'model_id':'ML-0001','canonical_name':'Model A','status':'PENDENTE_HOMOLOGACAO','support':{'status':'CANDIDATA_NAO_HOMOLOGADA','approved':False,'category':'Buff','source_ability':'Real Ability'}}),encoding='utf-8')
+        incoming.write_text(json.dumps({'model_id':'ML-0001','canonical_name':'Model A','status':'PENDENTE_HOMOLOGACAO','sources':['https://example.org/monster'],'support':{'status':'CANDIDATA_NAO_HOMOLOGADA','approved':False,'category':'Buff','source_ability':'Real Ability','effect_text_candidate':'Aplicação única sujeita a revisão'}}),encoding='utf-8')
         paths=stage(self.root,'ML-0001',incoming,None)
         self.assertEqual(paths,['operational/research/creature-candidates/ML-0001.json'])
         info=inspect(self.root,'ML-0001')
@@ -54,8 +54,14 @@ class TestDrawEnrichment(unittest.TestCase):
         self.assertIn('REVIEW_SUPPORT',[t['kind'] for t in info['tasks']])
     def test_cannot_stage_approved_support(self):
         incoming=self.root/'proposal.json'
-        incoming.write_text(json.dumps({'model_id':'ML-0001','canonical_name':'Model A','status':'PENDENTE_HOMOLOGACAO','support':{'status':'CANDIDATA_NAO_HOMOLOGADA','approved':True,'category':'Buff','source_ability':'Ability'}}),encoding='utf-8')
+        incoming.write_text(json.dumps({'model_id':'ML-0001','canonical_name':'Model A','status':'PENDENTE_HOMOLOGACAO','sources':['https://example.org/monster'],'support':{'status':'CANDIDATA_NAO_HOMOLOGADA','approved':True,'category':'Buff','source_ability':'Ability','effect_text_candidate':'Efeito candidato'}}),encoding='utf-8')
         with self.assertRaises(ValueError):stage(self.root,'ML-0001',incoming,None)
+    def test_kp_catalogue_id_supported(self):
+        p=self.root/'docs/catalogo/data/megalista-1320.json'
+        d=json.loads(p.read_text());d['records'].append({'NOME':'KP creature','ID NO JOGO':'KP-S018','TIPO':'Planta','ND':'17','RARIDADE':'Lendária','FONTE':'Kobold Press'});p.write_text(json.dumps(d));self.assertEqual(canonical_model(self.root,'KP-S018')['name'],'KP creature')
+    def test_reject_unverified_research_without_source(self):
+        p=self.root/'proposal.json';p.write_text(json.dumps({'model_id':'ML-0001','canonical_name':'Model A','status':'PENDENTE_HOMOLOGACAO','support':{'status':'CANDIDATA_NAO_HOMOLOGADA','approved':False,'category':'Buff','source_ability':'Fake','effect_text_candidate':'Pending'}}));
+        with self.assertRaises(ValueError):stage(self.root,'ML-0001',p,None)
     def test_mismatched_id_name_rejected(self):
         with self.assertRaises(ValueError):inspect(self.root,'ML-0001','Different')
     def test_copy_id_not_accepted_as_model_id(self):
