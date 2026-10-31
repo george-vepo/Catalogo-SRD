@@ -1,0 +1,93 @@
+{
+  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V2",
+  "status": "FICHA_SRD_REFERENCIADA_SUPORTE_PENDENTE",
+  "model_id": "AT-096",
+  "canonical_name": "Berserker",
+  "type": "Humanoide",
+  "challenge_rating": "2",
+  "edition": "SRD 5.2.1",
+  "authoritative_statblock": {
+    "source_repo_path": "docs/catalogo/data/fichas-607.json",
+    "record_id": "AT-096",
+    "source_status": "FICHA INTEGRAL LOCAL",
+    "armor_class": 13,
+    "hit_points": 67,
+    "initiative_modifier": 1,
+    "ability_used_for_support": "Bloodied Frenzy",
+    "note": "Ficha SRD existente permanece inalterada. Suporte é camada específica do Card Game."
+  },
+  "support": {
+    "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "approved": false,
+    "source_ability": "Bloodied Frenzy",
+    "category": "Buff",
+    "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
+    "provenance": {
+      "edition": "SRD 5.2.1",
+      "statblock_path": "docs/catalogo/data/fichas-607.json",
+      "record_id": "AT-096"
+    },
+    "targeting": "Criatura ativa do mesmo jogador; transferência de efeito próprio é homebrew pendente",
+    "activation_window": "A habilidade original é passiva quando Bloodied; aplicação única do suporte pré-iniciativa precisa de regra de duração/gatilho aprovada",
+    "prerequisites": "A criatura ativa deve estar Bloodied, conforme definição da edição; sem converter efeito em bônus irrestrito",
+    "effect_text_candidate": "Proposta: enquanto for elegível pelo estado Bloodied, a criatura ativa recebe vantagem em jogadas de ataque e testes de resistência, conforme Bloodied Frenzy da ficha.",
+    "restrictions": [
+      "Uma aplicação do suporte por combate",
+      "Efeito originalmente passivo/recorrente: definir como uma única aplicação sem inventar duração",
+      "Suporte usado segue ao cemitério sem gastar ação/ação bônus/reação",
+      "Não aplicar antes de homologação"
+    ],
+    "duration": "Pendente; não inventar duração para transformar efeito passivo",
+    "uses_per_combat": 1,
+    "unresolved": [
+      "Como operacionalizar benefício passivo após aplicação pré-iniciativa?",
+      "Não transformar disparador Bloodied em efeito permanente"
+    ],
+    "usable_in_official_combat": false
+  },
+  "visual": {
+    "status": "CANDIDATA_EM_REVISAO",
+    "repo_path": "docs/catalogo/assets/draw-candidates/AT-096-berserker-candidata-1024x1536.webp",
+    "previous_candidate": {
+      "repo_path": "operational/assets/creature-images/AT-096.webp",
+      "status": "IMAGEM_EXISTENTE_REPOSITORIO"
+    },
+    "method": "ChatGPT ImageGen original, standalone creature illustration; WebP export",
+    "image_size": "1024x1536",
+    "format": "WEBP",
+    "size_bytes": 504430,
+    "sha256": "ed29e23e578040032af187d7d972f05df926971fea680c42db0f8a085b5d3116",
+    "visual_review_status": "REVISADA_VISUALMENTE_POR_ASSISTENTE; APROVACAO_DO_USUARIO_PENDENTE",
+    "rights_status": "PENDENTE_VERIFICACAO",
+    "note": "Arte visual candidata. Ficha, suporte, raridade e estado de jogo permanecem inalterados."
+  },
+  "statblock": {
+    "status": "FICHA_INTEGRAL_LOCAL_SRD_5_2_1",
+    "edition": "SRD 5.2.1",
+    "source_path": "docs/catalogo/data/fichas-607.json",
+    "record_id": "AT-096",
+    "ca": 13,
+    "pv": 67,
+    "initiative_modifier": 1,
+    "ability_scores": {
+      "STR": 16,
+      "DEX": 12,
+      "CON": 17,
+      "INT": 9,
+      "WIS": 11,
+      "CHA": 9
+    },
+    "actions": [
+      {
+        "name": "Greataxe",
+        "attack_bonus": 5,
+        "damage": "1d12+3 slashing"
+      }
+    ],
+    "traits": [
+      "Bloodied Frenzy"
+    ]
+  },
+  "rarity": "Comum",
+  "rarity_basis": "Manual do Duelo de Criaturas SRD v0.9 — ND 0–5 Comum; ND 6–10 Incomum; classificação do Card Game, não do D&D"
+}

@@ -1,0 +1,202 @@
+{
+  "schema": "SRD_CREATURE_RESEARCH_CANDIDATE_V2",
+  "status": "PENDENTE_HOMOLOGACAO",
+  "source_type": "5e external research; mechanics summary, not a reprint",
+  "model_id": "ML-0828",
+  "canonical_name": "Dragonborn of Tiamat",
+  "edition": "Fizban's Treasury of Dragons 2021, D&D 5e",
+  "type": "Humanoide",
+  "challenge_rating": "7",
+  "armor_class": 18,
+  "hit_points": 85,
+  "hit_dice": "10d8+40",
+  "initiative_modifier": 0,
+  "abilities_summary": {
+    "multiattack": "as original publication",
+    "greataxe": "as original publication",
+    "necrotic_breath": "Recharge 6",
+    "legendary_resistance": "1/day; success instead of failed saving throw"
+  },
+  "sources": [
+    "https://www.aidedd.org/dnd/monstres.php?vo=dragonborn-of-tiamat",
+    "https://www.dndbeyond.com/monsters"
+  ],
+  "review_notes": "Do not substitute Dragonborn of Sardior or Bahamut",
+  "support": {
+    "status": "CANDIDATA_NAO_HOMOLOGADA",
+    "approved": false,
+    "source_ability": "Legendary Resistance",
+    "category": "Buff",
+    "category_priority": "Cura → Buff → Debuff → Dano (ordem aprovada 2026-10-15)",
+    "provenance": {
+      "edition": "Fizban's Treasury of Dragons 2021, D&D 5e",
+      "statblock_status": "PESQUISA_5E_FONTE_COMPLETA_PENDENTE_HOMOLOGACAO",
+      "sources": [
+        "https://www.aidedd.org/dnd/monstres.php?vo=dragonborn-of-tiamat",
+        "https://www.dndbeyond.com/monsters"
+      ],
+      "source_urls": [
+        "https://onyx5e.com/en/bestiary/dragonborn-of-tiamat/",
+        "https://www.fantasygrounds.com/library/dnd5e/npcs/dragonborn-of-tiamat/"
+      ]
+    },
+    "targeting": "Criatura ativa do mesmo jogador; transferência da habilidade própria é homebrew pendente de validação",
+    "activation_window": "Após falhar em um teste de resistência elegível, conforme gatilho da habilidade de origem",
+    "prerequisites": "Usos da fonte: 1/dia; suporte aplica somente uma vez por combate",
+    "effect_text_candidate": "Proposta: transformar uma falha em teste de resistência da criatura ativa em sucesso, seguindo a resistência lendária da fonte.",
+    "restrictions": [
+      "Uma aplicação, sujeito ao gatilho de falha, origem 1/dia, transferência sob revisão",
+      "Não criar CD, bônus, danos nem duração sem fonte integral",
+      "Uma aplicação da carta de suporte por combate",
+      "Jogar suporte não consome ação/ação bônus/reação; carta usada segue ao cemitério",
+      "Aplicar apenas após homologação pelo administrador"
+    ],
+    "duration": "Conforme habilidade original; NÃO DETERMINADA para uso como suporte até homologação",
+    "uses_per_combat": 1,
+    "resource_limits_from_source": "Conforme ficha; não duplicar recursos",
+    "unresolved": [
+      "Definir duração da reserva de um efeito reativo após o suporte pré-iniciativa",
+      "Confirmar edição e disponibilidade da habilidade na ficha integral",
+      "Approval of concrete adaptation for pre-initiative use needed; do not invent event/duration"
+    ],
+    "usable_in_official_combat": false,
+    "verified_source_ability_is_on_original_statblock": true
+  },
+  "statblock": {
+    "status": "PESQUISA_5E_FONTE_COMPLETA_PENDENTE_HOMOLOGACAO",
+    "edition": "Fizban's Treasury of Dragons (2021)",
+    "ca": 18,
+    "pv": 85,
+    "pv_dice": "10d8+40",
+    "initiative_modifier": 0,
+    "ability_scores": {
+      "STR": 20,
+      "DEX": 11,
+      "CON": 18,
+      "INT": 10,
+      "WIS": 12,
+      "CHA": 16
+    },
+    "saving_throws": {
+      "STR": 8,
+      "CON": 7,
+      "WIS": 4,
+      "CHA": 6
+    },
+    "skills": {
+      "Athletics": 8,
+      "Intimidation": 6,
+      "Perception": 4
+    },
+    "condition_immunities": [
+      "Frightened"
+    ],
+    "languages": [
+      "Common",
+      "Draconic"
+    ],
+    "traits": [
+      {
+        "name": "Legendary Resistance",
+        "limit": "1/day",
+        "summary": "Once per day, turn a failed save into a success"
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "summary": "Two greataxe attacks"
+      },
+      {
+        "name": "Greataxe",
+        "attack_bonus": 8,
+        "damage": "1d12+5 slashing + 3d8 necrotic"
+      },
+      {
+        "name": "Necrotic Breath",
+        "recharge": "6",
+        "save": "Wisdom DC15",
+        "damage": "8d8 necrotic on failed save, half on success",
+        "condition": "Frightened for up to 1 minute on failure; new save end each affected turn"
+      }
+    ],
+    "sources": [
+      "https://onyx5e.com/en/bestiary/dragonborn-of-tiamat/",
+      "https://www.fantasygrounds.com/library/dnd5e/npcs/dragonborn-of-tiamat/"
+    ],
+    "pending_application": [
+      "Breath cone and targeting must follow Card Game arena rule; no invented AOE."
+    ]
+  },
+  "visual": {
+    "status": "APROVADA_VISUALMENTE_PELO_USUARIO_PENDENTE_REVISAO_PUBLICACAO",
+    "repo_path": "docs/catalogo/assets/draw-candidates/ML-0828-dragonborn-tiamat-usuario-1024x1536.webp",
+    "asset_role": "ARTE_EM_RESOLUCAO_INTEGRAL_RECOMPRIMIDA_WEBP",
+    "render_size": "1024x1536",
+    "github_asset_committed": true,
+    "original_user_upload": {
+      "upload_filename": "1793404943962.png",
+      "actual_mime_detected": "image/jpeg",
+      "original_dimensions": "1024x1536",
+      "sha256": "7f149793fcd091504e0674f60138cb5884463e2b4b0dce431d462b0e98a081a7",
+      "provenance": "Imagem fornecida pelo usuário no chat em 2026-10-30; processo de criação e titularidade de direitos não verificados",
+      "original_file_published_to_github": false
+    },
+    "card_preview": {
+      "format": "WEBP",
+      "dimensions": "192x288",
+      "sha256": "a3913a1d913928be053c042c6186b3d8e2f63d74cf9fc6a0b5459bc625e5ee0d",
+      "git_blob_sha": "11fe0f62d7bfc4758d430ef4e17f2ffc205501db",
+      "created_by": "Resize/re-encode do arquivo fornecido pelo usuário, sem alterações criativas",
+      "visual_review_status": "APROVADA_PELO_USUARIO"
+    },
+    "review_notes": [
+      "Arte fornecida pelo usuário aprovada visualmente; uso na carta permitido no protótipo",
+      "Arte em resolução 1024×1536 publicada no PR como WebP recomprimido (não arquivo JPEG original)",
+      "Direitos de reprodução pública e homologação editorial continuam pendentes",
+      "Ficha, suporte e estado de jogo não são alterados pela arte"
+    ],
+    "previous_record": {
+      "status": "PREVIA_INADEQUADA_PENDENTE_ARTE_FINAL",
+      "repo_path": "docs/catalogo/assets/draw-candidates/ML-0828-dragonborn-tiamat-preview-candidata.webp",
+      "method": "Crop of original ImageGen UI depiction",
+      "image_size": "144x192",
+      "quality_note": "Not a standalone, full creature illustration; do not classify as approved.",
+      "pending_original_art": {
+        "status": "GERADA_LOCALMENTE_PUBLICACAO_BINARIA_PENDENTE",
+        "file_name": "ML-0828-dragonborn-tiamat-1024.webp",
+        "dimensions": "1024x1536",
+        "file_format": "WEBP",
+        "sha256": "bcdf9b1eb257851add7c79a530216f3a32e005967834ee95cb950d7ea1f2b23e",
+        "creation_method": "ChatGPT ImageGen original, 2026-10-30",
+        "visual_review_status": "CANDIDATA_PENDENTE_REVISAO",
+        "github_asset_committed": false,
+        "note": "O arquivo binário novo não está nesta branch; arte anterior segue como prévia inadequada. Não classificar como final nem homologada."
+      }
+    },
+    "user_visual_selection": {
+      "date": "2026-10-30",
+      "confirmation": "Pode seguir",
+      "scope": "O usuário autorizou continuar usando a arte exibida para Dragonborn of Tiamat no Card Game",
+      "not_confirmed": [
+        "Autoria e titularidade de direitos",
+        "Permissão de uso público",
+        "Homologação de ficha e suporte",
+        "Merge no catálogo principal"
+      ]
+    },
+    "full_resolution_asset": {
+      "path": "docs/catalogo/assets/draw-candidates/ML-0828-dragonborn-tiamat-usuario-1024x1536.webp",
+      "dimensions": "1024x1536",
+      "format": "WEBP",
+      "size_bytes": 183782,
+      "sha256": "5759bffd959aab2ab2dfef19da8939c8afd92a73b69d1da6f29fac56f2251a8b",
+      "git_blob_sha": "d6e3370d8f15f76b3b44935d282c79ed2481fcd8",
+      "source": "Recompressão WebP de imagem enviada pelo usuário",
+      "status": "APROVADA_VISUALMENTE_PELO_USUARIO"
+    }
+  },
+  "research_notes": "Mechanics are independently summarized, not a reproduction of copyrighted official full statblocks. Review against source edition before official combat.",
+  "rarity": "Incomum",
+  "rarity_basis": "Manual do Duelo de Criaturas SRD v0.9 — ND 0–5 Comum; ND 6–10 Incomum; classificação do Card Game, não do D&D"
+}
