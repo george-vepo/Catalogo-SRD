@@ -1,8 +1,30 @@
-# Referências visuais — 15 pendências do baralho de Aberrações
+# Referências visuais — baralho de 40 Aberrações
+
+## Atualização de estado — 23/11/2026
+
+- Há **40/40 arquivos de imagem** na branch de pesquisa: os 32 arquivos anteriores e **8 ilustrações originais candidatas** geradas agora.
+- As oito novas artes estão em `images-web-candidatas/`, em WebP 1024×1536. O manifesto com fonte de identidade, origem e SHA-256 é `IMAGENS_ORIGINAIS_CANDIDATAS_20261123.csv`.
+- **0/40 imagens estão homologadas para o Card Game.** As novas artes são candidatas originais; precisam de revisão humana de identidade, qualidade e aceite antes de uso público.
+- Também foi preparado `SUPORTES_PRECOMBATE_CANDIDATOS_20261123.md`: 40 efeitos homebrew candidatos, **0 homologados**, sem integração na mesa.
+- Os números e pendências descritos abaixo refletem o estado histórico de 14–15/10/2026 e são superados por esta atualização.
+
+### Oito ilustrações originais candidatas
+
+| Criatura | Arte | Referência para identidade | Estado |
+|---|---|---|---|
+| Malleable, Minor (TF-274) | <img src="images-web-candidatas/TF-274-Malleable-Minor.webp" alt="Arte candidata original de Malleable, Minor" width="130"> | [Ficha / identidade](https://www.5esrd.com/database/creature/malleable-minor/) | Original gerada; revisão humana pendente |
+| Malleable, Moderate (TF-276) | <img src="images-web-candidatas/TF-276-Malleable-Moderate.webp" alt="Arte candidata original de Malleable, Moderate" width="130"> | [Ficha / identidade](https://www.5esrd.com/database/creature/malleable-moderate/) | Original gerada; revisão humana pendente |
+| Malleable, Major (TF-284) | <img src="images-web-candidatas/TF-284-Malleable-Major.webp" alt="Arte candidata original de Malleable, Major" width="130"> | [Ficha / identidade](https://www.5esrd.com/database/creature/malleable-major/) | Original gerada; revisão humana pendente |
+| Malleable, Massive (TF-286) | <img src="images-web-candidatas/TF-286-Malleable-Massive.webp" alt="Arte candidata original de Malleable, Massive" width="130"> | [Ficha / identidade](https://koboldpress.com/tools/kobold-press-monsters/) | Original gerada; revisão humana pendente |
+| Maw Swarm (TF-275) | <img src="images-web-candidatas/TF-275-Maw-Swarm.webp" alt="Arte candidata original de Maw Swarm" width="130"> | [Ficha / identidade](https://a5e.tools/node/2840) | Original gerada; revisão humana pendente |
+| Mayday (TF-520) | <img src="images-web-candidatas/TF-520-Mayday.webp" alt="Arte candidata original de Mayday" width="130"> | [Ficha / identidade](https://a5e.tools/node/5326) | Original gerada; revisão humana pendente |
+| Shukankor (TF-283) | <img src="images-web-candidatas/TF-283-Shukankor.webp" alt="Arte candidata original de Shukankor" width="130"> | [Ficha / identidade](https://www.robinloft.com/monsters/shukankor/tome-of-beasts-2) | Original gerada; revisão humana pendente |
+| Aboleth Brute (TF-015) | <img src="images-web-candidatas/TF-015-Aboleth-Brute.webp" alt="Arte candidata original de Aboleth Brute" width="130"> | [Ficha / identidade](https://a5e.tools/node/2819) | Original gerada; revisão humana pendente |
+
 
 > Pesquisa de imagens para os testes. **Arquivos locais não significam arte oficial, licença aprovada ou ficha mecânica concluída.** Não integrar à produção automaticamente.
 
-**Estado atualizado:** 25/40 com arquivo pré-existente no repositório + **7 arquivos WebP adicionados nesta pesquisa** = **32/40 com imagem local**. Faltam **8 arquivos**. Os sete foram copiados diretamente de um acervo público de imagens da 5etools hospedado no GitHub, com a trilha da fonte no CSV.
+**Estado histórico de 15/10/2026:** 25/40 com arquivo pré-existente + 7 WebP = 32/40; a atualização de 23/11/2026 acima acrescenta as 8 artes originais candidatas e atualiza o total para 40/40. Os sete foram copiados diretamente de um acervo público de imagens da 5etools hospedado no GitHub, com a trilha da fonte no CSV.
 
 ## Sete imagens incorporadas à branch
 
@@ -16,7 +38,7 @@
 | Gibbering Mouther | ![Gibbering Mouther](images-web-pesquisa/AT-001.webp) | [Bestiário XMM](https://github.com/5etools-mirror-3/5etools-img/blob/main/bestiary/XMM/Gibbering%20Mouther.webp) |
 | Roper | ![Roper](images-web-pesquisa/AT-002.webp) | [Bestiário XMM](https://github.com/5etools-mirror-3/5etools-img/blob/main/bestiary/XMM/Roper.webp) |
 
-## Oito cartas com links pesquisados, mas sem bytes de imagem no Git
+## Oito cartas que ainda não tinham imagem binária no snapshot de 15/10/2026
 
 | Criatura | Fonte de pesquisa | Situação |
 |---|---|---|
