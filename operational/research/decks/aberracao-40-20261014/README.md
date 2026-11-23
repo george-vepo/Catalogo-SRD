@@ -1,10 +1,18 @@
-# SRD Card Game — baralho experimental de 40 Aberrações (14/10/2026)
+# SRD Card Game — baralho experimental de 40 Aberrações
+
+## Estado atual — 23/11/2026
+
+- **40/40 cartas com arquivo visual** na branch: 32 imagens de pesquisa anteriores e 8 ilustrações originais candidatas em `images-web-candidatas/`.
+- **0/40 imagens homologadas**. As artes novas têm dimensões 1024×1536 e hashes registrados em `IMAGENS_ORIGINAIS_CANDIDATAS_20261123.csv`; a identidade e o aceite visual ainda precisam de revisão humana.
+- **40/40 efeitos de suporte propostos** em `SUPORTES_PRECOMBATE_CANDIDATOS_20261123.md`; todos homebrew candidatos, **0 homologados**. Não há integração no jogo.
+- Os totais de 25/40, 32/40 e 15 imagens faltantes nos quadros abaixo são fotografias históricas de 14–15/10/2026; a atualização atual os supera.
+
 
 > **REVISÃO / PESQUISA, NÃO HOMOLOGADO.** Nenhuma das 5 criaturas externas foi inserida no catálogo canônico; nenhum arquivo de imagem externo foi reproduzido. Nenhuma ficha incompleta é apresentada como completa.
 
 ## Escopo e entregas
 
-- `cards.csv`: **40 cartas**, com `NOME;ND;FONTE;TIPO;RARIDADE`, IDs dos 35 registros originais, classificação da ficha, caminhos de arte **já existente** e links de referência.
+- `cards.csv`: **40 cartas**, com `NOME;ND;FONTE;TIPO;RARIDADE`, IDs, estado das fichas, caminhos dos arquivos visuais e links de identidade; os caminhos novos apontam para artes candidatas ainda não homologadas.
 - `fichas_catalogo_35.json`: recorte dos **35 registros preexistentes** de `SRD_CYCLES/26-30/working/03_CONSTRUTOR/outputs/SRD_FICHAS_607.json`, sem criar CA, PV, ataques ou habilidades. Para pesquisas recentes, apontar à coluna `ARQUIVO_FICHA_EXISTENTE` e às fichas individuais da auditoria.
 - As **5 externas** (Cranium Rat, Gazer, Mindwitness, Kalaraq Quori e Greater Star Spawn Emissary) aparecem como **candidatas**, apenas com fontes públicas de identificação, não com transcrições integrais ou imagens copiadas.
 
@@ -19,10 +27,10 @@
 | Fichas `FICHA_COMPLETA_EM_CONTEUDO` (auditoria 2026-10-14) | 2 |
 | Fichas `FICHA_COMPLETA_COM_RESSALVAS` (mesma auditoria) | 9 |
 | Fichas `FICHA_INCOMPLETA` (mesma auditoria) | 7 |
-| 35 originais com arquivo de imagem encontrado no Git | 25 |
-| 35 originais sem arquivo de imagem local | 10 |
-| Externas sem arquivo de imagem integrado | 5 |
-| TOTAL sem arquivo de imagem integrado | 15 |
+| 35 originais com arquivo de imagem encontrado no Git (snapshot 14/10/2026) | 25 |
+| 35 originais sem arquivo de imagem local (snapshot 14/10/2026) | 10 |
+| Externas sem arquivo de imagem integrado (snapshot 14/10/2026) | 5 |
+| TOTAL sem arquivo de imagem integrado (snapshot 14/10/2026) | 15 |
 
 **Cuidado com o status histórico:** parte das 17 fichas com `SIM` contém `MECÂNICA INTEGRADA; RESUMO PRÓPRIO DA FONTE`, não um bloco integral de ações/regras pronto para engine. Para as outras 18, a auditoria final classifica conteúdo de forma mais granular. Campos vazios de CA/PV nos originais não foram preenchidos por inferência.
 
@@ -68,7 +76,7 @@
 - **TF-018 Voidling:** [Tome of Beasts 2023](https://www.5esrd.com/database/creature/voidling-3pp/), ND 11, CA 15, PV 180.
 - **TF-285 Snallygaster:** [Tome of Beasts 3](https://www.5esrd.com/database/creature/snallygaster/), ND 15, CA 16, PV 207; **não confundir** com Snallygast / ND 10 / Dragão de outra fonte.
 
-### Autorização de mecânicas versus imagens
+### Autorização de mecânicas versus imagens — fotografia de 14/10/2026
 
 1. **SRD 5.2.1:** texto mecânico sob [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode), com atribuição; a licença não libera automaticamente as artes.
 2. **Kobold Press:** a licença [OGL 1.0a](https://koboldpress.com/open-game-license-version-1-0a/) abre somente o conteúdo designado como Open Game Content; **ilustração, certos nomes e outros elementos de identidade** podem ser reservados. Completar a referência e o aviso de copyright aplicável a cada livro antes de redistribuir o texto integral.
@@ -76,7 +84,7 @@
 4. **Imagens no Git:** 25/40 possuem arquivos físicos existentes, mas **0/40 possuem licença/aceite visual documentados neste trabalho**. Os 15 restantes necessitam de imagem original ou explicitamente licenciada. A coluna `IMAGEM_APROVADA_PARA_CARDGAME` foi marcada `NAO` em todos os 40 registros, até evidência e aceite do administrador.
 5. **Combate:** não integrar à engine mecânicas que carecem de economia de ações, eventos, duração, alcance, condições, concentração, testes, recarga e recursos completos; esses campos ainda dependem da revisão de suas fontes e testes.
 
-### Estado real da entrega
+### Estado real da entrega — snapshot inicial de 14/10/2026
 
 | Item | Evidência documentada | Pendente |
 |---|---:|---|
@@ -90,18 +98,19 @@
 
 **O PR é de pesquisa e integração documental.** NÃO é uma declaração de 40 fichas completas e 40 imagens aprovadas; alterações no catálogo ativo e no estado oficial seguem bloqueadas.
 
-## Atualização visual — imagens realmente gravadas na pesquisa
+## Estado visual — atualização de 23/11/2026
 
 - **7 arquivos WebP adicionados** em `images-web-pesquisa/`: Cranium Rat, Gazer, Mindwitness, Kalaraq Quori, Greater Star Spawn Emissary, Gibbering Mouther (AT-001) e Roper (AT-002).
-- O índice `cards.csv` referencia esses sete caminhos físicos; contagem atual **32/40 com arquivo local** (25 anteriores + 7 novos).
-- O arquivo `imagens-pesquisadas-15.csv` rastreia as 15 pendências originais e inclui as **8 que continuam sem imagem local**: Minor/Moderate/Major/Massive Malleable, Maw Swarm, Mayday, Shukankor e Aboleth Brute.
-- A galeria visual `IMAGENS_PESQUISADAS.md` mostra as 7 imagens incorporadas e documenta os links de pesquisa restantes. Não confundir imagem localizada/referenciada com arquivo binário integrado.
+- `cards.csv` e `imagens-pesquisadas-15.csv` agora apontam para os 8 arquivos WebP originais candidatos adicionados em 23/11; total local **40/40**.
+- `IMAGENS_ORIGINAIS_CANDIDATAS_20261123.csv` registra fonte usada para identidade, dimensões, origem e SHA-256.
+- A galeria mostra as oito artes e conserva o estado anterior de 15/10 identificado como histórico. **0/40 imagens homologadas**.
 - **Arte de pesquisa, não homologação**; a proveniência está documentada e versões visuais de edições distintas não substituem atributos.
 
-## Registro de decisões do duelo e das habilidades de suporte (15/10/2026)
+## Registro de decisões do duelo e das habilidades de suporte — snapshot 15/10/2026
 
-- [Decisões de combate e 40 habilidades de suporte candidatas](DECISOES_COMBATE_E_SUPORTES_40_20261015.md): registra a orientação do administrador de **combate no estilo D&D 5e / SRD 5.2.1 sem movimentação, posicionamento ou mecânicas de alcance**; preserva dano, condições, duração, concentração, ações, recargas e testes; relaciona as 40 assinaturas propostas com prioridade buff útil → debuff útil → dano, transferindo buffs próprios aplicáveis à criatura ativa.
-- **Status:** documento de discussão, 40 seleções candidatas e **0 homologadas**. Transferência e economia de ações do suporte, duração, recargas e outras lacunas ainda exigem aprovação/revisão. Não importar para o catálogo oficial ou engine automaticamente.
+- [Decisões de combate e assinaturas candidatas](DECISOES_COMBATE_E_SUPORTES_40_20261015.md): registra as regras históricas do duelo e a pesquisa das 40 assinaturas; consultar a atualização de 23/11 para o novo timing pré-combate.
+- [40 efeitos de jogo para suporte](SUPORTES_PRECOMBATE_CANDIDATOS_20261123.md): propostas homebrew para análise, 0 homologadas.
+- **Status:** 40 habilidades candidatas e **0 homologadas**. **A regra de uso das cartas de suporte já foi definida**: sem custo de ativação, com duração, acúmulo e demais mecânicas conforme a ficha original/SRD; a carta usada vai para a pilha de descarte. Transferências próprias e fichas incompletas ainda exigem revisão. Não importar para o catálogo oficial ou engine automaticamente.
 
 ## Modelos visuais de cartas e símbolos (15/10/2026)
 
@@ -119,4 +128,11 @@ O administrador escolheu **duas vagas Cura** na proposta do baralho de 40, ambas
 
 **Fontes**: [Astral Devourer](https://www.5esrd.com/database/creature/astral-devourer/) e [Snallygaster](https://www.5esrd.com/database/creature/snallygaster/). A seleção de `Cura` está registrada em [SUPORTES_CURA_CANDIDATOS_2.csv](SUPORTES_CURA_CANDIDATOS_2.csv) e [DECISOES_COMBATE_E_SUPORTES_40_20261015.md](DECISOES_COMBATE_E_SUPORTES_40_20261015.md).
 
-A classificação das **duas vagas** não altera os outros 38 suportes, não modifica os campos do `cards.csv`, não aprova a transferência homebrew e **não homologa** nenhuma habilidade. O registro local `TF-285` continua incompleto e ativação/duração dependem de regras futuras.
+A classificação das **duas vagas** não altera os outros 38 suportes, não modifica os campos do `cards.csv`, não aprova a transferência homebrew e **não homologa** nenhuma habilidade. O registro local `TF-285` continua incompleto. **O uso de suporte não tem custo, a carta vai para o descarte e a duração/acúmulo seguem a ficha e o SRD**, sem criar regras extras.
+
+## Regra de suporte histórica de 15/10/2026 — consultar atualização pré-combate de 23/11/2026
+
+- **Sem custo de ativação:** jogar uma carta de suporte não consome ação, ação bônus ou reação.
+- **Regras da ficha e SRD:** duração, concentração, acúmulo, efeitos, condições, CDs, recargas, usos e demais limitações são os da habilidade original/SRD, sem inventar prazos ou empilhamentos próprios.
+- **Destino da carta:** depois de utilizada, ela vai para a **pilha de descarte**; efeitos que tenham duração própria não terminam apenas pelo descarte.
+- Esta regra do fluxo de suporte foi definida. A classificação mecânica e a transferência de benefícios de criaturas específicas continuam candidatas à auditoria; **não promover as 40 fichas a homologadas**.
